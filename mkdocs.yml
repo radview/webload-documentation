@@ -1,0 +1,52 @@
+site_name: RADView Documentation
+site_description: The latest product documentation for RADView.
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.sections
+
+nav:
+  - Home: index.md
+  - Quick Start: quickstart.md
+  - Analytics Users Guide:
+    - Introduction: analytics-user-guide/introduction.md
+    - WebLOAD Analytics System Overview: analytics-user-guide/overview.md
+    - Getting Started: analytics-user-guide/getting_started.md
+    - Generating Charts: analytics-user-guide/generating_charts.md
+    - Changing Chart Settings: analytics-user-guide/changing_chart_settings.md
+    - Generating Reports: analytics-user-guide/generating_reports.md
+    - Working with Load Sessions: analytics-user-guide/load_sessions.md
+    - Working with Templates: analytics-user-guide/templates.md
+    - Working with Portfolios: analytics-user-guide/portfolios.md
+    - Defining Your Preferences: analytics-user-guide/defining_preferences.md
+    - Appendix A. WebLOAD Analytics File System Structure: analytics-user-guide/appendix_a.md
+    - Appendix B. Understanding the Statistics: analytics-user-guide/appendix_b.md
+    - Appendix C. Running Analytics in Command Line Mode: analytics-user-guide/appendix_c.md
+    - Appendix D. Understanding the Templates: analytics-user-guide/appendix_d.md
+    - Appendix E. Glossary: analytics-user-guide/glossary.md
+  - Dashboard User Guide:
+    - Introduction: dashboard-user-guide/introduction.md
+    - Installation: dashboard-user-guide/installation.md
+    - Getting Started: dashboard-user-guide/getting_started.md
+    - Managing Test: dashboard-user-guide/manage_tests.md
+    - Managing Sessions: dashboard-user-guide/manage_sessions.md
+    - Managing Resources: dashboard-user-guide/managing_resources.md
+    - Using Dashboards: dashboard-user-guide/using_dashboards.md
+    - Customizing a Dashboard: dashboard-user-guide/customizing_dashboard.md
+    - Managing Dashboards: dashboard-user-guide/managing_dashboards.md
+    - Sharing a Dashboard or Panel: dashboard-user-guide/sharing_dashboards.md
+    - Creating and Playing a Playlist: dashboard-user-guide/creating_playlist.md
+    - Managing Load Generators: dashboard-user-guide/managing_load_generators.md
+    - Managing Organizations, Users, and Admins: dashboard-user-guide/managing_organizations.md
+    - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard-user-guide/appendix_a.md
+  - Installation Guide: installation.md 
+
+
+
+  
+
