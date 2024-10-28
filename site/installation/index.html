@@ -1,0 +1,2396 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The latest product documentation for RADView.">
+      
+      
+      
+      
+        <link rel="prev" href="../dashboard-user-guide/appendix_a/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Installation Guide - RADView Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RADView Documentation" class="md-header__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADView Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quickstart/" class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../analytics-user-guide/introduction/" class="md-tabs__link">
+          
+  
+  Analytics Users Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dashboard-user-guide/introduction/" class="md-tabs__link">
+          
+  
+  Dashboard User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Installation Guide
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RADView Documentation" class="md-nav__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RADView Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analytics Users Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Analytics Users Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/generating_charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/changing_chart_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/generating_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/load_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/portfolios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/defining_preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics-user-guide/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/manage_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/manage_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/managing_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/using_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/customizing_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/managing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/sharing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/creating_playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/managing_load_generators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/managing_organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-user-guide/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#webload-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebLOAD Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebLOAD Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-more-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to Get More Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to Get More Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-support-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Support Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-platforms-for-webload-load-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Platforms (for WebLOAD Load Machines)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-webload-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-webload-for-windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-installation-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Installation Wizard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading WebLOAD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-webload-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing and Configuring the WebLOAD Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing and Configuring the WebLOAD Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-database-when-postgre-sql-is-already-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Database when Postgre SQL is Already Installed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-database-on-a-dedicated-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing and Configuring the Database on a Dedicated Machine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-postgre-sql-to-allow-remote-database-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Postgre SQL to Allow Remote Database Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-clients-to-work-with-the-remote-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Clients to Work with the Remote Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-third-party-software-for-server-side-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Third Party Software for Server-side Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-webload-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-webload-load-engine-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the WebLOAD Load Engine for Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-load-engine-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Load Engine on Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-third-party-software-for-server-side-monitoring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Third Party Software for Server-side Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-and-updating-the-webload-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering and Updating the WebLOAD License
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registering and Updating the WebLOAD License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-administration-through-the-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      License administration through the UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-license-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard License Registration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trial-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trial License
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webrm-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebRM Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-administration-through-the-command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      License administration through the Command Line Interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-connection-to-the-oracle-database-using-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Connection to the Oracle Database using WebLOAD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling WebLOAD
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#webload-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebLOAD Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebLOAD Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-more-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to Get More Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to Get More Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-support-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Support Website
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-platforms-for-webload-load-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Platforms (for WebLOAD Load Machines)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-webload-for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-webload-for-windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-installation-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Installation Wizard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading WebLOAD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-webload-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing and Configuring the WebLOAD Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing and Configuring the WebLOAD Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-database-when-postgre-sql-is-already-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Database when Postgre SQL is Already Installed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-and-configuring-the-database-on-a-dedicated-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing and Configuring the Database on a Dedicated Machine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-postgre-sql-to-allow-remote-database-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Postgre SQL to Allow Remote Database Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-clients-to-work-with-the-remote-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Clients to Work with the Remote Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-third-party-software-for-server-side-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Third Party Software for Server-side Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-webload-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WebLOAD for Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing WebLOAD for Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-webload-load-engine-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the WebLOAD Load Engine for Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-load-engine-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Load Engine on Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-third-party-software-for-server-side-monitoring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Third Party Software for Server-side Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-and-updating-the-webload-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering and Updating the WebLOAD License
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registering and Updating the WebLOAD License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-administration-through-the-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      License administration through the UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-license-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard License Registration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trial-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trial License
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webrm-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebRM Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-administration-through-the-command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      License administration through the Command Line Interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-connection-to-the-oracle-database-using-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Connection to the Oracle Database using WebLOAD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling WebLOAD
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to WebLOAD, the premier  performance, scalability, and reliability testing solution for internet applications.  </p>
+<p>WebLOAD is easy to use and delivers maximum testing performance and value. WebLOAD verifies the scalability and integrity of internet applications by generating a load composed of Virtual Clients that simulate real-world traffic. Probing Clients let you refine the testing process by acting as a single user that measures the performance of targeted activities, and provides individual performance statistics of the internet application under load.  </p>
+<p>This section provides a brief introduction to WebLOAD technical support, including both documentation and online support. </p>
+<p>IMPORTANT NOTE: In previous WebLOAD versions, a WebLOAD script was called an “Agenda”. From version 12.0, it is referred to simply as a script. Wherever “Agenda” is still displayed, we are referring to the WebLOAD script. </p>
+<p>WebLOAD Recorder was formerly referred to as WebLOAD IDE. </p>
+<h2 id="webload-documentation">WebLOAD Documentation</h2>
+<p>WebLOAD is supplied with the following documentation: </p>
+<p><strong>WebLOAD™ Installation Guide</strong> </p>
+<p>Instructions for installing WebLOAD and its add-ons. </p>
+<p><strong>WebLOAD™ Recorder User’s Guide</strong> </p>
+<p>Instructions for recording, editing, and debugging load test scripts to be executed by WebLOAD to test your Web-based applications. </p>
+<p><strong>WebLOAD™ Console User’s Guide</strong> </p>
+<p>A guide to using WebLOAD console, RadView’s load/scalability testing tool to easily and efficiently test your Web-based applications. This guide also includes a quick start section containing instructions for getting started quickly with WebLOAD using the RadView Software test site. </p>
+<p><strong>WebLOAD™ Analytics User’s Guide</strong> </p>
+<p>Instructions on how to use WebLOAD Analytics to analyze data and create custom, informative reports after running a WebLOAD test session. </p>
+<p><strong>WebRM™ User’s Guide</strong> </p>
+<p>Instructions for managing testing resources with the WebLOAD Resource Manager. </p>
+<p><strong>WebLOAD™ Scripting Guide</strong> </p>
+<p>Complete information on scripting and editing JavaScript scripts for use in WebLOAD and WebLOAD Recorder. </p>
+<p><strong>WebLOAD™ JavaScript Reference Guide</strong> </p>
+<p>Complete reference information on all JavaScript objects, variables, and functions used in WebLOAD and WebLOAD Recorder test scripts. </p>
+<p><strong>WebLOAD™ Extensibility SDK</strong> </p>
+<p>Instructions on how to develop extensions to tailor WebLOAD to specific working environments. </p>
+<p><strong>WebLOAD™ Automation Guide</strong> </p>
+<p>Instructions for automatically running WebLOAD tests and reports from the command line, or by using the WebLOAD plugin for Jenkins  </p>
+<p><strong>WebLOAD™ Cloud User Guide</strong> </p>
+<p>Instructions for using RadView’s WebLOAD Cloud to view, analyze and compare load sessions in a web browser, with full control and customization of the display. </p>
+<p>The guides are distributed with the WebLOAD software in online help format. The guides are also supplied as Adobe Acrobat files. View and print these files using the Adobe Acrobat Reader. Install the Reader from the Adobe website <a href="http://www.adobe.com/">http://www.adobe.com.</a> ![ref2]</p>
+<h3 id="where-to-get-more-information">Where to Get More Information</h3>
+<p>This section contains information on how to obtain technical support from RadView worldwide, should you encounter any problems. </p>
+<h4 id="online-help">Online Help</h4>
+<p>WebLOAD provides a comprehensive on-line help system with step-by-step instructions for common tasks. </p>
+<p>You can press the <strong>F1</strong> key on any open dialog box for an explanation of the options or select <strong>Help</strong>  <strong>Contents</strong> to open the on-line help contents and index. </p>
+<h4 id="technical-support-website">Technical Support Website</h4>
+<p>The technical support pages on our website contain: </p>
+<ul>
+<li>The option of opening a ticket </li>
+<li>Links to WebLOAD documentation </li>
+</ul>
+<h4 id="technical-support">Technical Support</h4>
+<p>For technical support in your use of this product, contact: </p>
+<table>
+<thead>
+<tr>
+<th><strong>North  American Headquarters</strong></th>
+<th><strong>International  Headquarters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e-mail: <a href="mailto:support@RadView.com">support@RadView.com</a> Phone: 1-888-RadView  (1-888-723-8439)  (Toll Free)  908-526-7756  Fax:    908-864-8099</td>
+<td>e-mail: <a href="mailto:support@RadView.com">support@RadView.com</a> Phone: +972-3-915-7060  Fax:    +972-3-915-7011</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-requirements">System Requirements</h2>
+<p>WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder, WebLOAD Analytics, WebLOAD Probing Client, and WebRM can only be run on Windows platforms. WebLOAD Load Machines can be run on Windows, and Linux platforms. </p>
+<p><strong>Note:</strong> For any installation, you must have Administrator rights for the computer on which you are installing. </p>
+<h3 id="windows-platforms">Windows Platforms</h3>
+<p><strong>WebLOAD System Requirements</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Requirements</strong></th>
+<th><strong>WebLOAD Console, WebLOAD Recorder, WebLOAD Analytics, WebLOAD  Probing Client, and WebRM</strong></th>
+<th><strong>Load Machine</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer / Processor</td>
+<td>IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor</td>
+<td>IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor; Pentium 4 is recommended</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td> Windows 2000 Professional   Windows XP Pro (SP2)   Windows Vista   Windows 7   Windows 8   Windows Server 2003   Windows Server 2008   Windows Server 2012</td>
+<td> Windows 2000 Server / Advanced Server   Windows XP Pro (SP2)   Windows Vista   Windows 7   Windows Server 2003, Standard and Enterprise Editions   Windows Server 2008</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>1 GB RAM (minimum); 4 GB  is recommended</td>
+<td>1 GB RAM (minimum); 4 GB is recommended</td>
+</tr>
+<tr>
+<td>Free Disk Space</td>
+<td>2 GB</td>
+<td>2 GB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="linux-platforms-for-webload-load-machines">Linux Platforms (for WebLOAD Load Machines)</h3>
+<p><em>Table 4: WebLOAD Load Machine System Requirements</em> </p>
+<table>
+<thead>
+<tr>
+<th><strong>Requirements</strong></th>
+<th><strong>Load  Machine</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardware</td>
+<td>IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor; Pentium 4 is recommended</td>
+</tr>
+<tr>
+<td>Version</td>
+<td> Fedora Core 3 or higher   Red Hat Enterprise Linux 3  or higher   CentOS 6   Java Runtime Environment  (JRE) 1.6 or higher</td>
+</tr>
+<tr>
+<td>Free Disk Space</td>
+<td>2 GB</td>
+</tr>
+<tr>
+<td>Swap Space</td>
+<td>RAM*2</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>1 GB RAM (minimum); 4 GB is recommended</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Notes:</strong></p>
+<p>WebLOAD components in each major version will work with all other components of the same version. WebLOAD components are not compatible with other components of a different version. Verify that the WebLOAD components have been upgraded to Version 10.0 on all participating hosts. Running WebLOAD Console Version 10.0 with an earlier version of Load Generator (running on different Hosts) may cause unexpected behavior. </p>
+<p>The WebLOAD license file is limited to the computer system (machine) on which WebLOAD is initially installed. Before installing WebLOAD, make sure you are installing on the machine with which you intend to work. </p>
+<p>When installing WebLOAD with Unicode support on a system running an English MS Windows, Japanese must be configured as the default Windows language.</p>
+</blockquote>
+<h2 id="installing-webload-for-windows">Installing WebLOAD for Windows</h2>
+<p>This chapter provides step-by-step instructions for installing WebLOAD on a PC running Windows systems. </p>
+<h3 id="installing-webload-for-windows_1">Installing WebLOAD for Windows</h3>
+<p>You can choose either of the following installation methods: </p>
+<ul>
+<li><a href="#_page10_x54.00_y384.04"><em>Command Line Installation</em> </a></li>
+<li><a href="#_page11_x54.00_y167.04"><em>Using the Installation Wizard</em> </a></li>
+</ul>
+<h4 id="command-line-installation">Command Line Installation</h4>
+<p>To perform a command line installation, run the following command: </p>
+<p><code>&lt; WebLOAD executable installation file &gt; [flags]</code> </p>
+<p>Where the flags (case sensitive) are: </p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/SILENT</td>
+<td>Silent mode</td>
+</tr>
+<tr>
+<td>/DIR="<destination  directory>”</td>
+<td>Destination directory</td>
+</tr>
+<tr>
+<td>/TYPE=Agent</td>
+<td>Install a Load Generator only</td>
+</tr>
+<tr>
+<td>/TYPE=Dashboard</td>
+<td>Install the Web Dashboard only</td>
+</tr>
+<tr>
+<td>/SERVICE</td>
+<td>Install TestTalk as a service</td>
+</tr>
+<tr>
+<td>/DOMAIN="<domain name>"</td>
+<td>The domain in  which to install for service installation</td>
+</tr>
+<tr>
+<td>/USERNAME="<user  name>"</td>
+<td>The user name for service  installation</td>
+</tr>
+<tr>
+<td>/PASS="<user password>"</td>
+<td>The password of the service  installation</td>
+</tr>
+<tr>
+<td>/MANUAL</td>
+<td>How to start the  service. If not set, the service will start automatically</td>
+</tr>
+<tr>
+<td>/NOCHECK</td>
+<td>Do not check for a previous installation</td>
+</tr>
+</tbody>
+</table>
+<h4 id="using-the-installation-wizard">Using the Installation Wizard</h4>
+<p>When you install WebLOAD on your computer, the installation program asks you for the components to install. As part of the installation process, WebLOAD installs a database management system (PostgreSQL 8.3) for use with WebLOAD Analytics. For more information about PostgreSQL, refer to<a href="http://www.postgresql-support.de/"> www.postgresql-support.de.</a> </p>
+<p>Install the WebLOAD components as follows: </p>
+<ul>
+<li>Install the full WebLOAD product on computers that will be used to run the WebLOAD Console. </li>
+<li>Install only the Load Generator or the Probing Client software on a computer that will be a dedicated Load Machine. There is no need to install the full product on computers that will be used as Load Machines. </li>
+</ul>
+<p><strong>To install WebLOAD on your system:</strong> </p>
+<ol>
+<li>Browse to the location of the WebLOAD executable (*.exe) installation file. </li>
+<li>Double-click the file. The WebLOAD Installation Wizard appears. </li>
+<li>Follow the instructions in the Installation Wizard. </li>
+<li>In the Select Components screen. </li>
+<li>Select the type of installation. For Load Machines and Probing Clients, select <strong>Load Generator only</strong>. </li>
+<li>Specify whether to install the <strong>Load Generator As Service</strong>.  </li>
+<li>If you select this option, TestTalk is installed as a service. Since a service can be started automatically, this is especially useful for machines that serve only as Load Generators.  </li>
+<li>If you do not select this option, TestTalk is installed as an executable file. </li>
+<li>Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. </li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#_page20_x54.00_y155.04"><code></code><em>Registering and Updating the WebLOAD License</em> </a>(on page<a href="#_page20_x54.00_y155.04"> 17)</a>. </p>
+</blockquote>
+<p>Installing WebRM</p>
+<p><strong>To install WebRM:</strong> </p>
+<ol>
+<li>
+<p>Browse to the location of the WebRM-10.0.xxx.en.exe installation file. </p>
+</li>
+<li>
+<p>Double-click the file. The WebRM Installation Wizard appears. </p>
+</li>
+<li>
+<p>The WebRM Installation Wizard displays the Select Destination Location dialog box. On the Select Destination Location dialog box, browse to the location where you would like WebRM installed. By default, this location is C:\Program Files\RadView\WebRM. </p>
+</li>
+<li>
+<p>Click <strong>Next</strong>. </p>
+</li>
+<li>
+<p>The WebRM Installation Wizard displays the Select License Location dialog box. This dialog box displays your HostID and enables you to browse to the License location. </p>
+</li>
+</ol>
+<p><strong>Note:</strong> If you have already received your WebRM License file, skip to step<a href="#_page12_x54.00_y564.04"> 9.</a></p>
+<ol>
+<li>If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to<a href="mailto:support@radview.com"> support@radview.com.</a> </li>
+</ol>
+<p>A WebRM license file (*.lic) will be sent to you.  </p>
+<ol>
+<li>
+<p>After receiving the file, save it on the hard drive of your WebRM machine and then double-click the WebRM executable installation file to restart the installation process. </p>
+</li>
+<li>
+<p>On the Select License dialog box, browse to the location where you saved your WebRM license, select the file and click <strong>Next.</strong></p>
+</li>
+</ol>
+<p><img alt="WebRM Installation Wizard – Select Start Menu Folder" src="../images/webrm_installation_select_start.png" /></p>
+<ol>
+<li>WebRM begins the installation. When the WebRM installation process is complete, a dialog box appears stating that the WebRM installation has completed successfully. Click <strong>Finish</strong>. </li>
+</ol>
+<h4 id="upgrading-webload">Upgrading WebLOAD</h4>
+<p><strong>To upgrade WebLOAD:</strong> </p>
+<ol>
+<li>Close TestTalk. </li>
+<li>Close all browser windows that are open.  </li>
+<li>Uninstall the existing WebLOAD version. </li>
+</ol>
+<p>For instructions on the uninstall procedure, see<a href="#_page28_x72.00_y155.04"><code></code><em>Uninstalling WebLOAD</em> </a>(on page<a href="#_page28_x72.00_y155.04"> 25)</a>. </p>
+<ol>
+<li>Install the new version of WebLOAD. </li>
+</ol>
+<p>For installation instructions, see<a href="#_page10_x54.00_y259.04"><code></code><em>Installing WebLOAD for Windows</em> </a>(on page<a href="#_page10_x54.00_y259.04"> 7)</a>. </p>
+<h3 id="installing-and-configuring-the-webload-analytics">Installing and Configuring the WebLOAD Analytics</h3>
+<p>WebLOAD stores information from Load Sessions in a Postgre SQL database for use with WebLOAD Analytics. You can install Postgre SQL and the WebLOAD Analytics database during the WebLOAD installation or manually after WebLOAD has already been installed. You might want to perform manual installation in the following situations: </p>
+<ul>
+<li>If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to<a href="#_page14_x54.00_y318.04"><code></code><em>Creating the Database when Postgre SQL is Already Installed</em> </a>on page<a href="#_page14_x54.00_y318.04"> 11.</a> </li>
+<li>If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to <a href="#_page14_x54.00_y514.04"><em>Installing and Configuring the Database on a Dedicated Machine</em> </a>on page<a href="#_page14_x54.00_y514.04"> 11.</a> </li>
+</ul>
+<h4 id="creating-the-database-when-postgre-sql-is-already-installed">Creating the Database when Postgre SQL is Already Installed</h4>
+<p>If Postgre SQL is already installed on your machine, you do not have to reinstall it during the WebLOAD installation. However, you must complete the following steps in order to create the WebLOAD Analytics database in Postgre SQL so that it can be used by WebLOAD Analytics. </p>
+<p><strong>To create the WebLOAD Analytics database after WebLOAD was installed:</strong> </p>
+<ul>
+<li>Run deploy–database.bat from the C:\Program Files\RadView\WebLOAD\bin\database folder. </li>
+</ul>
+<h4 id="installing-and-configuring-the-database-on-a-dedicated-machine">Installing and Configuring the Database on a Dedicated Machine</h4>
+<p>You can run the Postgre SQL database using a dedicated machine with several WebLOAD Analytics client applications. </p>
+<p><strong>To install and configure the database on a dedicated machine:</strong> </p>
+<ol>
+<li>Install Postgre SQL.  </li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> It is recommended to install Postgre SQL Version 8.3. You can download the application from<a href="http://www.postgresql.org/download/"> http://www.postgresql.org/download/ </a>and install it using its default installation settings. </p>
+</blockquote>
+<ol>
+<li>
+<p>Copy all the files from the C:\Program Files\RadView\WebLOAD\bin\database directory to a temporary folder on the dedicated server. </p>
+</li>
+<li>
+<p>Run deploy–database.bat from the temporary folder to which you copied the files in the previous step. The WebLOAD Analytics database is created. </p>
+</li>
+<li>
+<p>Configure Postgre SQL to allow remote connections. For more information, see <a href="#_page15_x54.00_y251.04"><em>Configuring Postgre SQL to Allow Remote Database Connections</em> </a>on page<a href="#_page15_x54.00_y251.04"> 12.</a>  </p>
+</li>
+<li>
+<p>Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see<a href="#_page16_x54.00_y248.04"><em>Configuring Clients to Work with the Remote Database</em> </a>on page<a href="#_page16_x54.00_y248.04"> 13.</a> </p>
+</li>
+</ol>
+<h3 id="configuring-postgre-sql-to-allow-remote-database-connections">Configuring Postgre SQL to Allow Remote Database Connections</h3>
+<p>For WebLOAD Analytics clients to work with the remote database, you must perform the following configuration steps on the host machine.  </p>
+<p><strong>To configure a remote database connection through Postgre SQL:</strong> </p>
+<ol>
+<li>Run <strong>Start</strong> &gt; <strong>PostgreSql 8.3</strong> &gt; <strong>PgAdmin III</strong>. The PgAdmin III application opens. </li>
+<li>Edit the postgresql.conf file, as follows: </li>
+<li>Select <strong>File</strong> &gt; <strong>Open</strong>.  </li>
+<li>Browse to C:\program files\Postgres\Data\, select postgresql.conf, and click <strong>Open</strong>. The postgresql.conf configuration file opens. </li>
+<li>Change the value of listen_address to *. This configures the server to listen to all addresses. </li>
+<li>
+<p>Enable the value and save the file. </p>
+</li>
+<li>
+<p>Edit the Pg_hba.conf file, as follows: </p>
+</li>
+<li>Select <strong>File</strong> &gt; <strong>Open</strong>.  </li>
+<li>Browse to C:\program files\Postgres\Data\, select Pg_hba.conf, and click <strong>Open</strong>. The Pg_hba.conf configuration file opens. </li>
+<li>Add a new entry with the following parameters:<ul>
+<li>Type = host </li>
+<li>Database = all </li>
+<li>User = all </li>
+<li>IP address = <IP subnet mask>.0.1.1/24, where <IP subnet mask> is your organization’s IP subnet mask. </li>
+<li>Method = md5 </li>
+</ul>
+</li>
+<li>Enable the entry and save the file. </li>
+</ol>
+<h3 id="configuring-clients-to-work-with-the-remote-database">Configuring Clients to Work with the Remote Database</h3>
+<p><strong>To configure a remote database connection through Postgre SQL:</strong> </p>
+<ol>
+<li>
+<p>Open WebLOAD Analytics on the client machine. </p>
+</li>
+<li>
+<p>Select <strong>Window</strong>  <strong>Preferences</strong>  <strong>Database</strong>. </p>
+</li>
+<li>
+<p>Enter the server’s IP address and name in the Database host name field. </p>
+</li>
+<li>
+<p>Click <strong>OK</strong>. </p>
+</li>
+</ol>
+<h3 id="installing-third-party-software-for-server-side-monitoring">Installing Third Party Software for Server-side Monitoring</h3>
+<p>WebLOAD Console provides a Performance Measurements Manager (PMM) for monitoring the performance of various data sources such as server-side applications, databases, stream technology, system, and Web server measurements in real-time while your test is running. </p>
+<p>Some data sources require initial configuration to enable monitoring by the PMM. For more information, see the <em>Enabling Data Sources Monitoring</em> section in the <em>WebLOAD Console User’s Guide</em>. </p>
+<h2 id="installing-webload-for-linux">Installing WebLOAD for Linux</h2>
+<p>This chapter contains the instructions for installing the WebLOAD Load Engine on a machine running a Linux operating system. </p>
+<h3 id="installing-the-webload-load-engine-for-linux">Installing the WebLOAD Load Engine for Linux</h3>
+<p><strong>To install the WebLOAD Load Engine on your system:</strong> </p>
+<ol>
+<li>Select or create a directory for installing the WebLOAD Load Engine. This directory will be referred to as the working directory. </li>
+<li>Download the WebLOAD-linux.version.tar.gz compressed file from a server to the working directory. </li>
+<li>Uncompress and extract the tar file in the working directory using the following command: </li>
+</ol>
+<p>tar –zvxf WebLOAD-linux-version.tar.gz </p>
+<ol>
+<li>Change directories by typing the following: </li>
+</ol>
+<p>cd radview/webload<version number>/linux/bin </p>
+<ol>
+<li>Run setup by typing the following: </li>
+</ol>
+<p>./setup </p>
+<p>During the setup process, the webload.ini configuration file is created. </p>
+<ol>
+<li>When prompted, enter the path to the Java runtime libraries. The default path to the libraries is displayed. If you are working with a different version of Java, enter the path of the libraries using the following: </li>
+</ol>
+<p>/usr/java/jre/lib/i386/server:/usr/java/jre/lib/i386/native-threads  </p>
+<p>The path information is stored in the LD_LIBRARY_PATH variable. </p>
+<blockquote>
+<p><strong>Note:</strong> The directories containing the Java libraries are separated with a colon (:). </p>
+<p><strong>Important:</strong> The WebLOAD Load Generator will not function properly without the correct paths for the Java libraries. </p>
+</blockquote>
+<h3 id="running-the-load-engine-on-linux">Running the Load Engine on Linux</h3>
+<p>When running the Load Engine on Linux, Load Engine runs with TestTalk. TestTalk enables communication between the different components of the WebLOAD module. When running the Load Generator through Linux you generally need to connect with other WebLOAD modules running on a remote Windows machine (for example WebLOAD Console). To connect with these remote modules, you must run TestTalk. Once TestTalk is running, you can access the remote WebLOAD modules. The remote module then initiates the communication with TestTalk and then TestTalk loads the Load Generator. </p>
+<blockquote>
+<p><strong>Note:</strong> If the Load Generator is running and TestTalk is not running, the remote ![ref8] WebLOAD application will not be able to access the Load Generator. </p>
+</blockquote>
+<p><strong>To run TestTalk on your system:</strong> </p>
+<ol>
+<li>Open the linux/bin directory within your working directory by typing the following: </li>
+</ol>
+<p>cd <working-directory>/linux/bin </p>
+<ol>
+<li>Run TestTalk by typing the following: ./starttestalk </li>
+</ol>
+<p>TestTalk starts running. </p>
+<p><strong>To stop running TestTalk:</strong> </p>
+<ul>
+<li>From the linux/bin directory, run ./stoptesttalk  </li>
+</ul>
+<h3 id="installing-third-party-software-for-server-side-monitoring_1">Installing Third Party Software for Server-side Monitoring</h3>
+<p>WebLOAD Console provides a Performance Measurements Manager (PMM) for monitoring the performance of various data sources such as server-side applications, databases, stream technology, system, and Web server measurements in real-time while your test is running. </p>
+<p>Some data sources require initial configuration to enable monitoring by the PMM. For more information, see the <em>Enabling Data Sources Monitoring</em> section in the <em>WebLOAD Console User’s Guide</em>. </p>
+<h2 id="registering-and-updating-the-webload-license">Registering and Updating the  WebLOAD License</h2>
+<p>Your WebLOAD license must be registered before you can start working with WebLOAD. WebLOAD licenses that have expired must also be renewed or updated before you can continue working with WebLOAD. When installing a new major or minor version of WebLOAD, make sure that you have an adequate license for that specific version. All license registration and updating is accomplished through the Update License dialog box. </p>
+<p>You can register and update your WebLOAD license either through an Update License application, or through the Command Line Interface. </p>
+<h3 id="license-administration-through-the-ui">License administration through the UI</h3>
+<h3 id="standard-license-registration">Standard License Registration</h3>
+<p><strong>To open the Update License dialog box:</strong> </p>
+<ul>
+<li>At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the<strong> License</strong> dialog box opens automatically, ![ref10]</li>
+</ul>
+<p><strong>Note:</strong> After a WebLOAD installation, you may be prompted to restart your computer before the Update License dialog box appears. In this case, the License dialog box will appear automatically after the computer restarts. </p>
+<p>-Or- </p>
+<p>At any other time, from the Windows desktop, select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License</strong>. </p>
+<p>The License dialog box includes the following sections: </p>
+<ul>
+<li>License Details </li>
+<li>Update License ![ref2]</li>
+</ul>
+<p>These sections are used to register and update your WebLOAD authorization license information. </p>
+<p><strong>To complete or update your license registration:</strong> </p>
+<ol>
+<li>If you are registering a new license after an initial WebLOAD installation, access the Update License dialog box. The Update License dialog box is opened automatically after a successful WebLOAD installation is completed. </li>
+</ol>
+<p>-Or- </p>
+<p>If you are updating your license registration after your current license has expired, from the Windows desktop, select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License</strong>. </p>
+<p>The Update License dialog box appears. </p>
+<p><img alt="Update License Dialog Box" src="../images/update_license.png" /></p>
+<ol>
+<li>Create an email message with the following information: </li>
+<li>Copy the Host ID displayed in the text box into the email. </li>
+<li>Add your name, company, address, and phone number to the email message. </li>
+<li>Send the email to license@radview.com. </li>
+</ol>
+<p>A WebLOAD license file (*.lic) will be sent to you. </p>
+<ol>
+<li>Select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License</strong> to open the Update License** dialog box and install the license key. </li>
+<li>By default, the <strong>Use a license file</strong> radio button is selected. This assumes that your license file is located on your local computer system. </li>
+</ol>
+<p>For information on installing a floating license, or connecting to a license server, see<a href="#_page23_x109.00_y468.04"><code></code><em>WebRM Server</em> </a>(on page<a href="#_page23_x109.00_y468.04"> 20)</a>. </p>
+<p>For information on installing a license for an evaluation of WebLOAD, see<a href="#_page22_x54.00_y571.04"> Trial License </a></p>
+<p><code></code>(on page<a href="#_page22_x54.00_y571.04"> 19)</a>. </p>
+<ol>
+<li>Click the browse button next to the <strong>Use a license file</strong> text box to browse to the location of the license (*.lic) file sent to you by a RadView representative. </li>
+<li>Select the correct license file and click <strong>Open</strong> to return to the Update License dialog box. </li>
+<li>Click <strong>OK</strong> to load the new license. </li>
+</ol>
+<p>If the license registration was successful, a message box appears indicating a successful license update. </p>
+<p>You can now begin working with WebLOAD. </p>
+<blockquote>
+<p><strong>Note:</strong> After loading the license, you can optionally click <strong>License Information</strong> to view the license’s full details.</p>
+</blockquote>
+<p>If the license registration was not successful, an error message appears. </p>
+<p>If you are not able to successfully register a valid license file, contact RadView Support for assistance. </p>
+<h3 id="trial-license">Trial License</h3>
+<p>You can install a trial version of WebLOAD, which provides 50 virtual clients, and is available for 30 days. </p>
+<p><strong>To use the WebLOAD evaluation:</strong> </p>
+<ol>
+<li>After installing WebLOAD, the Update License** dialog box opens,  -Or- </li>
+</ol>
+<p>To open the Update License dialog box manually, select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License.</strong> </p>
+<p>The Update License dialog box appears. ![ref2]</p>
+<p><img alt="Update License Dialog Box" src="../images/30day_update_licesne.png" /></p>
+<ol>
+<li>Select <strong>30-day trial</strong>. </li>
+<li>Click <strong>OK</strong> or <strong>Apply</strong> to install the license for the trial. </li>
+</ol>
+<p>You can now begin working with the trial version of WebLOAD. </p>
+<h3 id="webrm-server">WebRM Server</h3>
+<p>The WebRM Server is a stand-alone tool that manages all resource distribution to WebLOAD Console, which is the machine used to run loads in a WebRM environment. It is the method that controls the number of users allowed to access the product concurrently. </p>
+<p>WebRM for virtual clients is available and defined as a pool of virtual (probing) clients that can concurrently be used by members of a testing team and monitored by the WebRM Server. </p>
+<p>During installation of the WebRM server, you are prompted for the WebRM file that defines: </p>
+<ul>
+<li>The number of concurrent applications for the WebLOAD Console. </li>
+<li>The number of concurrent Virtual and Probing Clients. </li>
+</ul>
+<p>Installation also creates a FlexLM Service that controls the operation. ![ref2]</p>
+<p>The WebRM Server displays a list of the number of resources (Virtual and Probing Clients) that the Console is using. The WebRM Server enables a testing team to share resources. </p>
+<p>This section describes how to connect to the WebRM Server and how to view the license details. </p>
+<p><strong><em>Connecting to the WebRM Server</em>  To connect to the WebRM Server:</strong> </p>
+<ol>
+<li>
+<p>After installing WebLOAD, the Update License dialog box opens, </p>
+<p>-Or- </p>
+</li>
+</ol>
+<p>To open the Update License dialog box manually, select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License.</strong> </p>
+<p>The Update License dialog box appears. </p>
+<p><img alt="Update License Dialog Box – WebRM Server Installation" src="../images/update_license_webrm.png" /></p>
+<ol>
+<li>Select <strong>Connect to the WebRM License Server</strong>. </li>
+<li>Click the <strong>Browse</strong> button and select the machine where WebRM is installed. </li>
+<li>Click <strong>OK</strong>. </li>
+</ol>
+<p>A connection to the selected license server is attempted. </p>
+<ul>
+<li>If the connection is successful, a success message appears. </li>
+<li>If the connection is not successful, a failure message appears. </li>
+</ul>
+<p><strong><em>Viewing License Details</em></strong> </p>
+<p>After selecting the license server, you can view the current license details in the License Details section of the Update License dialog box.  </p>
+<h3 id="license-administration-through-the-command-line-interface">License administration through the Command Line Interface</h3>
+<p>You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. </p>
+<h2 id="configuring-connection-to-the-oracle-database-using-webload">Configuring Connection to the Oracle  Database using WebLOAD</h2>
+<p>Connecting to the Oracle Database using WebLOAD requires that you install the Oracle Data Access Components (ODAC) on your computer. For information on ODAC, refer to the appropriate Oracle documentation. </p>
+<blockquote>
+<p><strong>Note:</strong> You need to be assigned a valid username and user privileges for Oracle so that ![ref8] you can connect to the Oracle database. </p>
+</blockquote>
+<p>The following procedure is confirmed to work with Oracle Database version 11<em>g</em>, and is also expected to work with Oracle Database version 10<em>g</em>. </p>
+<p><strong>To configure your computer to enable connection to the Oracle database using WebLOAD:</strong> </p>
+<ol>
+<li>
+<p>Navigate to $ORACLE_HOME\NETWORK\ADMIN. </p>
+</li>
+<li>
+<p>Open tnsnames.ora for editing. </p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> If tnsnames.ora does not exist, create it. ![ref8]</p>
+<p>The default content is as follows: </p>
+<p><code>&lt;tns\_name&gt; =</code>  </p>
+<p><code>(DESCRIPTION =</code>  </p>
+<p><code>(ADDRESS = (PROTOCOL = TCP)(HOST = &lt;host or ip&gt;)(PORT = 1521))    (CONNECT\_DATA =</code>  </p>
+<p><code>(SERVER = DEDICATED)</code> </p>
+<p><code>(SERVER\_NAME = &lt;instance\_name&gt;)</code> </p>
+<p><code>)</code> </p>
+<p><code>)</code> </p>
+</blockquote>
+<ol>
+<li>Make the following definitions in the file: </li>
+</ol>
+<p>​       tns_name = <tns name configured in the listener on the server (default orcl)> host = <hostname or IP address of the server> </p>
+<p>​       instance name = <instance configured on the server (default orcl)> </p>
+<p>​       Log out and log in, or restart, to activate the environmental variables. </p>
+<h2 id="uninstalling-webload">Uninstalling WebLOAD</h2>
+<p>When you uninstall WebLOAD, you are prompted to remove PostgreSQL 8.3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL 8.3 installed in order to maintain all the information stored in the database. </p>
+<p><strong>To uninstall WebLOAD:</strong> </p>
+<ol>
+<li>Close all WebLOAD modules including TestTalk. </li>
+<li>Close all browser windows that are open.  </li>
+<li>Select <strong>Start</strong> &gt; <strong>Settings</strong> &gt; <strong>Control Panel</strong>. </li>
+<li>Double-click the <strong>Add/Remove Programs</strong> icon. </li>
+<li>Click the <strong>Change or Remove Programs</strong> tab. </li>
+<li>Click <strong>Radview WebLOAD Professional</strong>, and then click <strong>Change/Remove</strong>. </li>
+</ol>
+<p>The Uninstall Wizard appears. Once the uninstall procedure is complete, you may be prompted to restart your machine. </p>
+<blockquote>
+<p><strong>Note:</strong> Uninstalling WebLOAD removes all the WebLOAD program file directories, including all the WebLOAD installation files. User files that are copied into these directories (such as user-defined extensions) are not deleted. WebLOAD load templates, load sessions, and script files are not removed – they can be used with all WebLOAD upgrades.</p>
+<p><strong>Caution:</strong> Close TestTalk and all browser windows before uninstalling WebLOAD. Failure to close TestTalk and all browser windows results in outdated files remaining on your disk, which could adversely affect future installations of the program. 
+</p>
+</blockquote>
+<p><strong>To uninstall WebRM:</strong> </p>
+<ol>
+<li>
+<p>Select <strong>Start</strong> &gt; <strong>Settings</strong> &gt; <strong>Control Panel</strong>. </p>
+</li>
+<li>
+<p>Double-click the <strong>Add/Remove Programs</strong> icon. </p>
+</li>
+<li>
+<p>Click the <strong>Add or Remove Programs</strong> tab. </p>
+</li>
+<li>
+<p>Click <strong>RadView WebRM</strong>, and then click <strong>Change/Remove</strong>.</p>
+</li>
+</ol>
+<p>The Uninstall Wizard appears. The uninstall procedure is completed following a confirmation request. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
