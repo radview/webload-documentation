@@ -44,6 +44,25 @@ nav:
     - Managing Load Generators: dashboard-user-guide/managing_load_generators.md
     - Managing Organizations, Users, and Admins: dashboard-user-guide/managing_organizations.md
     - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard-user-guide/appendix_a.md
+  - Recorder User Guide:
+    - Introduction: recorder-user-guide/introduction.md
+    - Overview: recorder-user-guide/overview.md
+    - Before you Begin: recorder-user-guide/before_you_begin.md
+    - QuickStart: recorder-user-guide/quick_start.md
+    - Recording Scripts: recorder-user-guide/recording_scripts.md
+    - Editing Scripts: recorder-user-guide/editing_scripts.md
+    - Correlating Scripts: recorder-user-guide/correlating_scripts.md
+    - Running and Debugging Scripts: recorder-user-guide/running_debugging_scripts.md
+    - Working with GIT: recorder-user-guide/working_with_git.md
+    - Configuring the WebLOAD Recorder Options: recorder-user-guide/configuring_recorder_options.md
+    - Appendix A - The WebLOAD Recorder Toolbox Set: recorder-user-guide/appendix_a.md
+    - Appendix B - WebLOAD Recorder File Types: recorder-user-guide/appendix_b.md
+    - Appendix C - Launching WebLOAD Recorder: recorder-user-guide/appendix_c.md
+    - Appendix D - Converting Certificate Files: recorder-user-guide/appendix_d.md
+    - Appendix E - Recording Mobile Applications: recorder-user-guide/appendix_e.md
+    - Appendix F - Integrating with Perfecto Mobile: recorder-user-guide/appendix_f.md
+    - Appendix G - Selenium Integration: recorder-user-guide/appendix_g.md
+    - Appendix H - Glossary: recorder-user-guide/appendix_h.md
   - Installation Guide: installation.md 
 
 
