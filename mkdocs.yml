@@ -12,8 +12,9 @@ theme:
 
 nav:
   - Home: index.md
+  - Installation: installation.md 
   - Quick Start: quickstart.md
-  - Analytics Users Guide:
+  - Analytics:
     - Introduction: analytics-user-guide/introduction.md
     - WebLOAD Analytics System Overview: analytics-user-guide/overview.md
     - Getting Started: analytics-user-guide/getting_started.md
@@ -29,7 +30,7 @@ nav:
     - Appendix C. Running Analytics in Command Line Mode: analytics-user-guide/appendix_c.md
     - Appendix D. Understanding the Templates: analytics-user-guide/appendix_d.md
     - Appendix E. Glossary: analytics-user-guide/glossary.md
-  - Dashboard User Guide:
+  - Dashboard:
     - Introduction: dashboard-user-guide/introduction.md
     - Installation: dashboard-user-guide/installation.md
     - Getting Started: dashboard-user-guide/getting_started.md
@@ -44,7 +45,7 @@ nav:
     - Managing Load Generators: dashboard-user-guide/managing_load_generators.md
     - Managing Organizations, Users, and Admins: dashboard-user-guide/managing_organizations.md
     - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard-user-guide/appendix_a.md
-  - Recorder User Guide:
+  - Recorder:
     - Introduction: recorder-user-guide/introduction.md
     - Overview: recorder-user-guide/overview.md
     - Before you Begin: recorder-user-guide/before_you_begin.md
@@ -63,7 +64,21 @@ nav:
     - Appendix F - Integrating with Perfecto Mobile: recorder-user-guide/appendix_f.md
     - Appendix G - Selenium Integration: recorder-user-guide/appendix_g.md
     - Appendix H - Glossary: recorder-user-guide/appendix_h.md
-  - Installation Guide: installation.md 
+  - Scripting:
+    - Introduction: scripting-guide/introduction.md
+    - Programming your JavaScript Script: scripting-guide/programming_your_javascript.md
+    - Advanced JavaScript Script Features: scripting-guide/advanced_javascript_features.md
+    - Working with HTTP Protocol: scripting-guide/working_with_http.md
+    - Using Asynchronous Requests: scripting-guide/using_asynchronous.md
+    - Appendix A - Scripting Samples: scripting-guide/appendix_a.md
+    - Appendix B - LiveConnect Overview: scripting-guide/appendix_b.md
+  - Automation:
+    - Introduction: automation-guide/introduction.md
+    - Overview: automation-guide/overview.md
+    - Running WebLOAD from the Command Line: automation-guide/webload_cli.md
+    - Running WebLOAD in Jenkins: automation-guide/webload_jenkins.md
+    - Running WebLOAD Using the OpenAPI: automation-guide/webload_openapi.md
+    
 
 
 
