@@ -1,0 +1,4058 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The latest product documentation for RADView.">
+      
+      
+      
+      
+        <link rel="prev" href="../create_template_wizard/">
+      
+      
+        <link rel="next" href="../config_load_template/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Creating Load Templates with Goal-Oriented Test - RADView Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-load-templates-with-goal-oriented-test" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RADView Documentation" class="md-header__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADView Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating Load Templates with Goal-Oriented Test
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../analytics/introduction/" class="md-tabs__link">
+          
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  Console
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/introduction/" class="md-tabs__link">
+          
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recorder/introduction/" class="md-tabs__link">
+          
+  
+  Recorder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scripting/introduction/" class="md-tabs__link">
+          
+  
+  Scripting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../automation/introduction/" class="md-tabs__link">
+          
+  
+  Automation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RADView Documentation" class="md-nav__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RADView Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/load_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/portfolios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/defining_preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Console
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducing_webload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_load_templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan_test_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect_webrm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage_load_templates_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_template_wizard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-goal-oriented-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Goal-Oriented Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-goal-oriented-test-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the Goal-Oriented Test Work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-goal-oriented-test-wizard-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal-Oriented Test Wizard Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-goal-oriented-test-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening the Goal-Oriented Test Wizard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-a-script-or-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a Script or Mix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-single-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Single Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-mix-of-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running a Mix of Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Mix of Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining a Mix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining a Mix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-script-from-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a script from a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-a-script-from-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing a script from a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-performance-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Performance Measurements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-host-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Host Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Host Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-host-computers-to-the-host-computers-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Host Computers to the Host Computers List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-a-host-computer-as-a-load-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating a Host Computer as a Load Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-all-host-computers-as-load-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating all Host Computers as Load Machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-a-host-computer-as-a-probing-client-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating a Host Computer as a Probing Client Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-host-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a Host Computer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-probing-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Probing Clients
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-performance-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining Performance Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining Performance Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-the-goal-definition-dialog-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      About the Goal Definition Dialog Box
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Goal Definition Dialog Box">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-performance-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Performance Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Performance Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-goal-an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring a Goal - An Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a Goal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-and-using-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting and Using Defaults
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting and Using Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-set-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      To set defaults:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-use-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      To use defaults:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-the-acceleration-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining the Acceleration Rate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-webload-consoles-action-once-the-goals-are-reached" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining WebLOAD Console’s Action Once the Goals are Reached
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining WebLOAD Console’s Action Once the Goals are Reached">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-continue-with-the-same-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select Continue with the same acceleration.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finishing-the-goal-oriented-test-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finishing the Goal-Oriented Test Wizard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-goal-oriented-test-default-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing the Goal-Oriented Test Default Report
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_load_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_global_opt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Global Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_script_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Script Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../func_verifi_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_test_analyze_results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_a_load_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running a Load Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../viewing_log_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistics_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_drilling_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_measurements_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Recorder
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/before_you_begin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Before you Begin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/quick_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QuickStart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/recording_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recording Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/editing_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scripting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/programming_your_javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/advanced_javascript_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/working_with_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/using_asynchronous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD Using the OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-goal-oriented-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Goal-Oriented Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-goal-oriented-test-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the Goal-Oriented Test Work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-goal-oriented-test-wizard-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal-Oriented Test Wizard Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-goal-oriented-test-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening the Goal-Oriented Test Wizard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-a-script-or-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting a Script or Mix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-single-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Single Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-mix-of-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running a Mix of Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Mix of Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining a Mix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining a Mix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-script-from-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a script from a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-a-script-from-a-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing a script from a Mix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-performance-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Performance Measurements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-host-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Host Computers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Host Computers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-host-computers-to-the-host-computers-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Host Computers to the Host Computers List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-a-host-computer-as-a-load-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating a Host Computer as a Load Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-all-host-computers-as-load-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating all Host Computers as Load Machines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designating-a-host-computer-as-a-probing-client-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designating a Host Computer as a Probing Client Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-host-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a Host Computer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-probing-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Probing Clients
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-performance-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining Performance Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining Performance Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-the-goal-definition-dialog-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      About the Goal Definition Dialog Box
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Goal Definition Dialog Box">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-performance-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Performance Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Performance Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-goal-an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring a Goal - An Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a Goal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-and-using-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting and Using Defaults
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting and Using Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-set-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      To set defaults:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-use-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      To use defaults:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-the-acceleration-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining the Acceleration Rate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-webload-consoles-action-once-the-goals-are-reached" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining WebLOAD Console’s Action Once the Goals are Reached
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining WebLOAD Console’s Action Once the Goals are Reached">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-continue-with-the-same-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select Continue with the same acceleration.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finishing-the-goal-oriented-test-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finishing the Goal-Oriented Test Wizard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-goal-oriented-test-default-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing the Goal-Oriented Test Default Report
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="creating-load-templates-with-goal-oriented-test">Creating Load Templates with Goal- Oriented Test</h1>
+<p>WebLOAD Console offers the Goal-Oriented Test Wizard, a unique feature that enables goal-seeking performance testing.</p>
+<h2 id="using-the-goal-oriented-test">Using the Goal-Oriented Test</h2>
+<p>The Goal-Oriented Test is a predictive feature within WebLOAD Console that identifies the performance threshold of a Web application. You define one or multiple performance parameters and the Goal-Oriented Test automatically creates a schedule and increases the load until your Web application performance falls below the user- defined profile. The Goal-Oriented Test incorporates intelligent, distributed load generation capabilities for virtually unlimited load generation.</p>
+<p>Using the Goal-Oriented Test wizard to create a Load Template, you define:</p>
+<ul>
+<li>The script(s) to run</li>
+<li>The Load Machines on which the load is generated</li>
+<li>The performance goals to achieve</li>
+</ul>
+<p>You can also specify script options including the type of browser to emulate, connection speed, and playback sleep time options.</p>
+<blockquote>
+<p><strong>Note:</strong> You cannot use the Goal-Oriented Test wizard if you have not yet recorded (or otherwise created) any scripts. If you do not have any scripts to work with, you must exit the wizard and create a script using one of the authoring tools, such as WebLOAD Recorder.</p>
+</blockquote>
+<h2 id="how-does-the-goal-oriented-test-work">How does the Goal-Oriented Test Work?</h2>
+<p>When operating WebLOAD Console manually, you specify the number of Virtual Clients that WebLOAD Console should simulate. The evaluation of the SUT’s performance is based on this number. For example, you might configure WebLOAD Console to test the performance of your Web application when 200 Virtual Clients perform a certain function simultaneously. WebLOAD Console runs the test and may report that when 200 Virtual Clients are running, the application Response Time is “x”.</p>
+<p>The Goal-Oriented Test is different. The Goal-Oriented Test enables you to specify the performance goals that you want to achieve, and WebLOAD Console generates a Goal- Oriented Test test that automatically schedules a test to achieve the specified goals. For example, if your performance goal is for your application server’s response time not to exceed three seconds, the Goal-Oriented Test devises the test for you. The</p>
+<p>Goal-Oriented Test tells you how many users your application server is able to accommodate when your performance goals are met.</p>
+<p>The Goal-Oriented Test is a unique WebLOAD Console feature. It enables you to devise your test to reflect the real way that you want to see your application performance. Many times, you do not know the number of clients that will access your site, but you do know the quality of service you want to achieve. Rather than running multiple tests to measure the performance at different loads, you can run the Goal- Oriented Test once, measuring the performance level you desire.</p>
+<h2 id="the-goal-oriented-test-wizard-workflow">The Goal-Oriented Test Wizard Workflow</h2>
+<p>The following diagram illustrates the Goal-Oriented Test Wizard workflow.</p>
+<p><img alt="Goal-Oriented Test Wizard Workflow Diagram" src="../../images/console_users_guide_1008.png" /></p>
+<h2 id="opening-the-goal-oriented-test-wizard">Opening the Goal-Oriented Test Wizard</h2>
+<p><strong>To open the Goal-Oriented Test Wizard:</strong></p>
+<ol>
+<li>Select <strong>Goal-Oriented Test Wizard</strong> from the Console shortcut dialog box at the system startup,</li>
+</ol>
+<p>-Or-</p>
+<p>Click <strong>Goal-Oriented Test Wizard</strong> in the Home tab of the ribbon. The Goal-Oriented Test Wizard Welcome dialog box opens.</p>
+<p><img alt="Goal-Oriented Test Wizard Welcome Dialog Box" src="../../images/console_users_guide_1010.png" /></p>
+<ol>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The Goal-Oriented Test Wizard progresses to the Script Type screen.</p>
+<h2 id="selecting-a-script-or-mix">Selecting a Script or Mix</h2>
+<p>The next step in configuring a Goal-Oriented test is to define the type of script you want to run during your test session. Scripts are test scripts (scenarios) that describe user activity, and are used to test your Web application.</p>
+<p><img alt="Script Type Selection Dialog Box" src="../../images/console_users_guide_1011.png" /></p>
+<p>WebLOAD Console supports two types of scripts:</p>
+<ul>
+<li><strong>Single Scripts</strong> – which are lone test-scripts.</li>
+<li><strong>Mix of Scripts</strong> – which are a combination of scripts used to simulate groups of users performing different activities on the system under test (SUT) at the same time.</li>
+</ul>
+<p><strong>To run a single script:</strong></p>
+<ol>
+<li>Select <strong>Single Script</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>WebLOAD Console progresses to the Script Selection screen. See <a href="#_bookmark153">*Running Single</a> <em><a href="#_bookmark153">Scripts* </a></em>(on page <a href="#_bookmark154">140</a>).</p>
+<p><strong>To run a Mix of Scripts:</strong></p>
+<ol>
+<li>Select <strong>Mix</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>WebLOAD Console progresses to the Mix Selection screen. See <a href="#_bookmark155">*Running a Mix of</a> <em><a href="#_bookmark155">Scripts* </a></em>(on page <a href="#_bookmark156">141</a>).</p>
+<h2 id="running-single-scripts">Running Single Scripts</h2>
+<p>You must have a script to continue configuring a test with the Goal-Oriented Test Wizard. If you do not have any scripts to work with, you must exit the wizard and go into one of the authoring tools, for example WebLOAD Recorder, and create a script.</p>
+<p><img alt="Script Selection Dialog Box" src="../../images/console_users_guide_1012.png" /></p>
+<p><strong>To run a script:</strong></p>
+<ol>
+<li>Select the source of the script to be used for this test. Click the ![ref6] button and select an existing script from your system.</li>
+<li>To optionally open and view or edit the selected script, click <strong>View</strong>. WebLOAD Recorder opens displaying the selected script.</li>
+<li>To optionally configure runtime options exclusive to this script, click <strong>Options</strong>.</li>
+</ol>
+<p>The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see <a href="#_bookmark223">*Setting Script</a><a href="#_bookmark223"> Options* </a>(on page <a href="#_bookmark224">211</a>).</p>
+<ol>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The Goal-Oriented Test Wizard progresses to the PMM Settings screen. See</p>
+<p><a href="#_bookmark161"><em>Selecting Performance Measurements</em> </a>(on page <a href="#_bookmark161">145</a>).</p>
+<h2 id="running-a-mix-of-scripts">Running a Mix of Scripts</h2>
+<p>Using the Goal-Oriented Test Wizard you can run your test using a saved Mix or create a new Mix of scripts through the wizard. The following illustration shows the process for selecting a Mix of scripts to be used in a Goal-Oriented Test test.</p>
+<p><img alt="" src="../../images/console_users_guide_1015.png" /><img alt="" src="../../images/console_users_guide_1016.png" /></p>
+<p><img alt="" src="../../images/console_users_guide_1017.png" />![ref7]<img alt="" src="../../images/console_users_guide_1018.png" /><img alt="" src="../../images/console_users_guide_1019.png" /><img alt="" src="../../images/console_users_guide_1020.png" /></p>
+<p>Using Mix you can prepare a combination of scripts, each performing a specific activity. Then you can tune your testing by changing the combination of scripts, and changing the weight of each script in the Mix.</p>
+<p>Combining scripts through a Mix can simulate different groups of users performing different activities on the SUT at the same time. Using a Mix is another way you can create test scenarios emulating real-life behavior.</p>
+<p><img alt="Mix Selection Dialog Box" src="../../images/console_users_guide_1021.png" /></p>
+<p><strong>To run a Mix of scripts:</strong></p>
+<ol>
+<li>
+<p>Select the source for the Script Mix to be used for this test from the <strong>Mix Selection</strong> dialog box. You can either:</p>
+</li>
+<li>
+<p>Select <strong>Use an Existing Mix</strong> and click the  ![ref6] button to select a *.mix file from your system.</p>
+</li>
+<li>
+<p>Select <strong>Create a Mix</strong> to configure a new Mix.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+<p>WebLOAD Console progresses to the Mix Definition dialog box. See <a href="#_bookmark158"><em>Defining a Mix</em></a>(on page <a href="#_bookmark157">142</a>).</p>
+<h3 id="defining-a-mix">Defining a Mix</h3>
+<p>A Mix is a set of scripts, each performing different activity, to simulate groups of users performing different activities on the SUT at the same time. If you selected <strong>Use an Existing Mix</strong> on the script / Mix Selection screen, the selected Mix appears on the screen, enabling you to modify the Mix. You can also create a new Mix.</p>
+<p><img alt="Mix Definition Dialog Box" src="../../images/console_users_guide_1022.png" /></p>
+<h4 id="creating-a-mix">Creating a Mix</h4>
+<p><strong>To create a Mix:</strong></p>
+<ol>
+<li>Enter a descriptive name in the <strong>Mix name</strong> field.</li>
+<li>Specify whether the relative weights of the script refer to execution time or to number of virtual clients:</li>
+<li><strong>Based on the number of virtual clients</strong> – The mix interprets the relative weights in terms of number of virtual users. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution runs script A with 25% of the virtual users and script B with 75% of the users.</li>
+<li>
+<p><strong>Based on the execution time</strong> – The mix interprets the relative weights in terms of time. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution run script A for 25% of the time and script B for 75% of the time.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+</li>
+</ol>
+<p>The Open dialog box appears, enabling you to select the script to add to the Mix.</p>
+<ol>
+<li>
+<p>Select a script from your file system and click <strong>Open</strong>. The script is added to the Mix.</p>
+</li>
+<li>
+<p>Optionally, select the script and set any of the following parameters:</p>
+</li>
+<li>
+<p><strong>Script name</strong> – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.</p>
+</li>
+<li><strong>Weight</strong> – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.</li>
+<li><strong>Browser</strong> and <strong>Version</strong> – Select the browser type and browser version. Alternatively, click the Change button ![ref9] to edit the user agent definition. See <a href="#_bookmark239"><em>Adding a Browser</em> Version Definitions </a>(on page <a href="#_bookmark236">223</a>).</li>
+<li><strong>Bandwidth</strong> – Specify a bandwidth. You can do this in one of two ways:<ul>
+<li>Select a bandwidth from the drop-down list.</li>
+<li>Enter a number, to specify that number of bits per second.</li>
+</ul>
+</li>
+<li>
+<p><strong>Max Connections</strong> – Specify the number of max connections for the load generator.</p>
+</li>
+<li>
+<p>Optionally, click <strong>Options</strong> to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.</p>
+</li>
+</ol>
+<p>The Script Options dialog box opens. For information on setting the Script Options, see <a href="#_bookmark223"><em>Setting Script Options</em> </a>(on page <a href="#_bookmark224">211</a>).</p>
+<ol>
+<li>
+<p>Repeat steps <a href="#_bookmark159">3 </a>through <a href="#_bookmark160">6 </a>to add additional scripts to the Mix.</p>
+</li>
+<li>
+<p>In the Weight box, type or select the relative weight for the Script. Click <strong>Make Equal</strong> to assign equal weight to all of the Scripts in the Mix.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<p>The Mix configuration is saved with the extension *.mix.</p>
+<ol>
+<li>
+<p>Click <strong>Next</strong>.</p>
+<p>WebLOAD Console progresses to the PMM Settings screen. See <a href="#_bookmark161">*Selecting</a> <em><a href="#_bookmark161">Performance Measurements* </a></em>(on page <a href="#_bookmark161">145</a>).</p>
+</li>
+</ol>
+<h4 id="deleting-a-script-from-a-mix">Deleting a script from a Mix</h4>
+<p><strong>To delete a script from a Mix:</strong></p>
+<ol>
+<li>Select the Script you want to delete from the Mix.</li>
+<li>Click <strong>Remove</strong>.</li>
+</ol>
+<h4 id="viewing-a-script-from-a-mix">Viewing a script from a Mix</h4>
+<p><strong>To view a script from a Mix in the WebLOAD Recorder:</strong></p>
+<ol>
+<li>Select the script you want to view.</li>
+<li>Click <strong>View</strong>.</li>
+</ol>
+<p>The WebLOAD Recorder is launched, and displays the selected script.</p>
+<h4 id="selecting-performance-measurements">Selecting Performance Measurements</h4>
+<p>You can optionally open the Performance Measurements Manager and configure WebLOAD Console to collect performance statistics from your application server, database, and Web server while the test is running.</p>
+<p><img alt="Performance Measurements Manage Dialog Box" src="../../images/console_users_guide_1027.png" /></p>
+<ol>
+<li>Click <strong>Add Monitors</strong> to the Performance Measurements Manager and configure the performance statistics to monitor and display in real-time during the test.</li>
+</ol>
+<p>The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see <a href="#_bookmark456"><em>Performance Measurements Manager</em> </a>(on page <a href="#_bookmark455">363</a>).</p>
+<ol>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The Goal-Oriented Test Wizard progresses to the Host Selection screen. See</p>
+<p><a href="#_bookmark162"><em>Selecting Host Computers</em> </a>(on page <a href="#_bookmark163">146</a>).</p>
+<h2 id="selecting-host-computers">Selecting Host Computers</h2>
+<p>After selecting the script to use for the test, WebLOAD Console displays the Host Selection dialog box.</p>
+<p><img alt="Host Selection Dialog Box" src="../../images/console_users_guide_1028.png" /></p>
+<p>Hosts are the computer systems participating in the test session. In this dialog box you define the hosts to participate in the Goal-Oriented test. Host computers can be dedicated, local computers, or they can be computers which are rented on a temporary basis from the Amazon™ Elastic Compute Cloud™ (EC2). Hosts can act as Load Machines or Probing Client Machines.</p>
+<p>For more information about setting up EC2 computers as host computers, refer to</p>
+<p><a href="#_bookmark116"><em>Setting Up Cloud Computers</em> </a>(on page <a href="#_bookmark116">108</a>).</p>
+<p><strong>Load Machines:</strong></p>
+<p>By selecting a list of Load Machines, you define a pool of Hosts that WebLOAD Console uses to generate a load until the Goal-Oriented Test goal is reached. To reach your defined goal, WebLOAD Console may need to generate a large number of users accessing the SUT. The number of users that can be generated on each host depends on the power of each host machine. Defining many machines as Load Machines allows for the simulation of more users throughout the Goal-Oriented test.</p>
+<p><strong>Probing Client Machines:</strong></p>
+<p>WebLOAD Console reports exact measurements for single Probing Clients. By defining Probing Client Machines on different hosts, you will receive exact performance measurements for that client, rather than averages calculated for users generated on Load Generators. By defining a list of Probing Client Machines, you can receive accurate measurements at different locations (depending on the location of the host).</p>
+<p>Therefore, it is recommended that you define at least one Probing Client Machine in a Goal-Oriented Test Session, see <a href="#_bookmark175"><em>Defining Performance Goals</em> </a>(on page <a href="#_bookmark176">151</a>).</p>
+<blockquote>
+<p><strong>Note:</strong> If you are running a script with Perfecto Mobile script, define a single Load Machine or a single Probing Client in order to simulate a single user.</p>
+</blockquote>
+<h3 id="adding-host-computers-to-the-host-computers-list">Adding Host Computers to the Host Computers List</h3>
+<p><strong>To add a host computer to the host computers list:</strong></p>
+<ol>
+<li>In the Host Selection dialog box (<a href="#_bookmark164">Figure 79</a>), click <strong>Add</strong>. The Add Host Computer dialog box appears.</li>
+</ol>
+<p><img alt="Add Host Computer Dialog Box" src="../../images/console_users_guide_1029.png" /></p>
+<ol>
+<li>
+<p>To add a local host computer, select <strong>Add by host name or IP address</strong> and enter the host computer name or IP address in the <strong>Address</strong> field.</p>
+</li>
+<li>
+<p>To add cloud host machines:</p>
+</li>
+<li>
+<p>Select <strong>Add Cloud host</strong>.</p>
+<p>If you have not yet created a WebLOAD cloud account, a dialog box appears. Click <strong>OK</strong> and the Cloud Accounts dialog box appears (<a href="#_bookmark118">Figure 52</a>). Create one or more WebLOAD cloud accounts as described in <a href="#_bookmark117">*Creating WebLOAD Cloud</a> <em><a href="#_bookmark117">Accounts* </a></em>(on page <a href="#_bookmark117">109</a>).</p>
+</li>
+<li>
+<p>Select a WebLOAD cloud account from the <strong>Name</strong> drop-down box.</p>
+</li>
+<li>
+<p>In the <strong>Number of Machines</strong> field, enter the number of machines you wish to add from the selected WebLOAD cloud account.</p>
+</li>
+<li>
+<p>Repeat steps <a href="#_bookmark167">b</a>-<a href="#_bookmark168">c </a>to specify machines from another WebLOAD cloud account.</p>
+<p>Optionally, click <strong>Cloud Options</strong> to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears (<a href="#_bookmark118">Figure 52</a>). For information about the available actions, refer to the explanations following <a href="#_bookmark118">Figure 52</a>.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box <a href="#_bookmark164">(Figure 79</a>), and is listed by the host name or IP address you entered.</p>
+</li>
+<li>
+<p>If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “&lt;<em>WebLOAD Cloud Account Name</em>&gt;&lt;<em>X</em>&gt;” where X is a number that is incremented for each added cloud host machine.</p>
+<p>For defining Host Computers as Load Machines and Probing Clients, see <a href="#_bookmark125">*Designating a</a> <em><a href="#_bookmark125">Host Computer as a Load Machine* </a></em>(on page <a href="#_bookmark166">148</a>) and <a href="#_bookmark127">*Designating a Host Computer as a</a> <em><a href="#_bookmark127">Probing Client Machine* </a></em>(on page <a href="#_bookmark170">149</a>).</p>
+</li>
+</ol>
+<h3 id="designating-a-host-computer-as-a-load-machine">Designating a Host Computer as a Load Machine</h3>
+<p><strong>To designate a host computer as a Load Machine:</strong></p>
+<ol>
+<li>Select a host from the Host Computer window.</li>
+</ol>
+<p>To add hosts not yet defined to the Host Computer window, see <a href="#_bookmark165">*Adding Host</a> <em><a href="#_bookmark165">Computers to the Host Computers List* </a></em>(on page <a href="#_bookmark165">147</a>).</p>
+<ol>
+<li>Click the single arrow key ![ref11] adjacent to the Load Machine or Probing Clients window.</li>
+</ol>
+<p>The selected host moves to the Load Machine or Probing Clients window.</p>
+<ol>
+<li>
+<p>Repeat steps 1 and 2 to define all of the hosts participating in the test.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+<p>After configuring the hosts participating in the Goal-Oriented test, the Goal- Oriented Test Wizard prompts you for the goals you want to achieve.</p>
+<p>The Goal Definition dialog box appears, see <a href="#_bookmark175"><em>Defining Performance Goals</em> </a>(on page <a href="#_bookmark175">151</a>).</p>
+<blockquote>
+<p><strong>Note:</strong> If you define a Probing Client host, the Probing Client Script Selection dialog box appears</p>
+</blockquote>
+<h3 id="designating-all-host-computers-as-load-machines">Designating all Host Computers as Load Machines</h3>
+<p><strong>To designate all Host Computers as Load Machines:</strong></p>
+<ul>
+<li>Click the double arrow key ![ref11] adjacent to the Load Machine window. All of the host computers move to the Load Machine window.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> At least one system must be configured as a Load Machine to continue working with the wizard.</p>
+</blockquote>
+<h3 id="designating-a-host-computer-as-a-probing-client-machine">Designating a Host Computer as a Probing Client Machine</h3>
+<p><strong>To designate a host computer as a Probing Client Machine:</strong></p>
+<ol>
+<li>Select the host from the Host Computer window.</li>
+<li>Click the single arrow key ![ref13] adjacent to the Probing Client Machines window. The selected host moves to the Probing Client Machine window.</li>
+</ol>
+<h3 id="deleting-a-host-computer">Deleting a Host Computer</h3>
+<p><strong>To delete a host computer:</strong></p>
+<ol>
+<li>Select the host name from the Host Computer list.</li>
+<li>Click <strong>Delete</strong>.</li>
+</ol>
+<p>The host is deleted from the Host Computer list.</p>
+<h2 id="configuring-probing-clients">Configuring Probing Clients</h2>
+<p>If you designate a host computer as a Probing Client Machine, you are prompted to assign a script for each Probing Client participating in the test session. The following screen is displayed:</p>
+<p><img alt="Probing Client Machine Script Selection Dialog Box" src="../../images/console_users_guide_1033.png" /></p>
+<p><strong>To assign a script for a Probing Client machine:</strong></p>
+<ol>
+<li>Browse your file system for the script by clicking the button next to the Script Path field. The path and the name of the script you select are displayed in the fields.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<h2 id="defining-performance-goals">Defining Performance Goals</h2>
+<p>After defining the host computers participating in your test, the Goal-Oriented Test Wizard prompts you for the performance goals you want to achieve in your test session.</p>
+<p><img alt="Selecting Goal-Oriented Test Performance Goals Dialog Box" src="../../images/console_users_guide_1034.jpeg" /></p>
+<h3 id="about-the-goal-definition-dialog-box">About the Goal Definition Dialog Box</h3>
+<p><img alt="Goal Definition Dialog Box" src="../../images/console_users_guide_1035.png" /></p>
+<p>The Goal Definition dialog box enables you to define the performance goals for the Goal-Oriented test. The defined goals are displayed at the top of the dialog box where you can see at a glance all of the participants in the test, the measurements being tested and the goals to be achieved.</p>
+<p>On the bottom of the dialog box define the (OR/AND) conditions of the goals where you specify whether at least one or all of the goals must be met. The buttons on the lower half of the dialog box are used for defining and editing these goals.</p>
+<h4 id="the-goal-table">The Goal Table</h4>
+<p>The goal table in the center of the dialog box contains the following fields:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Field Name</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Source</td>
+<td style="text-align: left;"><p>The source you are tracking to determine when your goal is reached. The source can be either:</p><p>- A Probing Client Machine</p><p>- A Load Machine</p><p>The source for Load Machines is “Total” because your results are the average of all Virtual Clients. The Source for Probing Client Machines is the name of the Probing Client.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Measurement</td>
+<td style="text-align: left;"><p>The measurement or activity that you are testing such as:</p><p>- Response Time</p><p>- Hits Per Second</p><p>- Round Time</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">The type of measurement or activity being tested. This is the current slice average or current slice sum.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Op</td>
+<td style="text-align: left;">The operator is the condition of the test. This may be either &gt;= or &lt;= depending on the measurement being tracked. Here you indicate whether the results should be greater than, or less than the desired value for the goal to be reached. For example, if the measurement being tracked were Response Time, you would select the operator &gt;= to achieve the goal when the time needed to receive a response from the server exceeds the limit for this goal.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Value</td>
+<td style="text-align: left;">The limit that determines when this goal is achieved.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Report</td>
+<td style="text-align: left;">When this field is checked, the default Integrated Report includes the measurement for which the performance goal is defined. The Report field is selected by default.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operator">Operator</h4>
+<p>Below the Goal Table are the Operator radio buttons. When more than one goal is defined, the Operator enables you to establish the conditions under which the goal will be achieved.</p>
+<ul>
+<li>Select <strong>OR</strong> to require only one expression to be true for the goal to be achieved.</li>
+<li>Select <strong>AND</strong> to require all expressions to be true for the goal to be achieved.</li>
+</ul>
+<h4 id="control-buttons">Control Buttons</h4>
+<p>Below the Operator radio buttons, are the following control buttons:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Button</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Add Goal</td>
+<td style="text-align: left;">Open the Add Goal dialog box to add a new measurement to the test goals.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Delete a test goal.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Defaults</td>
+<td style="text-align: left;">Open the Default Goals dialog box. For more information on using Defaults, see <a href="#_bookmark181"><em>Setting and Using Defaults</em> </a>(on page <a href="#_bookmark179">157</a>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Set As Defaults</td>
+<td style="text-align: left;">Set the current goals as default measurements and save them for future use.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adding-performance-goals">Adding Performance Goals</h3>
+<p>Goals are configured by defining boundary values for selected WebLOAD Console measurements. Goals define the performance level you expect from the SUT. WebLOAD Console increases the load and runs the test until the defined goals are reached.</p>
+<p><strong>To add performance goals:</strong></p>
+<ol>
+<li>Click the <strong>Add Goal</strong> button to add measurements on which to base your goals.</li>
+</ol>
+<p>The Goal Definition dialog box opens. All of the WebLOAD Console built-in measurements are displayed in a tree structure.</p>
+<p><img alt="" src="../images/console_users_guide_1036.jpeg" /></p>
+<ol>
+<li>
+<p>Optionally add a previously-defined custom measurement of type Timer to the tree, as follows:</p>
+</li>
+<li>
+<p>Click <strong>Add Timer</strong>. A new node appears in the Goal Definition dialog box, with an empty name field.</p>
+</li>
+<li>
+<p>Enter the timer’s name in the name field.</p>
+</li>
+<li>
+<p>Optionally add to the tree, measurements based on a previously-defined transaction (which you created when editing the script in the WebLOAD Recorder), as follows:</p>
+</li>
+<li>
+<p>Click <strong>Add Transaction</strong>.</p>
+</li>
+<li>
+<p>In the Add Transaction dialog box that appears, enter the transaction name.</p>
+<p>Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined “Login” transaction, the following seven measurements are added.</p>
+<p><img alt="Goal Definition Dialog Box – Result of Add Transaction Action" src="../images/console_users_guide_1037.jpeg" /></p>
+</li>
+<li>
+<p>To create rule conditions, select the checkbox adjacent to the measurements to include in the goal definition.</p>
+</li>
+</ol>
+<p>For example, to define a test goal for the response time not to exceed 5 seconds, select the checkbox adjacent to Response Time.</p>
+<blockquote>
+<p><strong>Note</strong>: A gray circle next to a measurement indicates that no default subcomponents are defined (the upper level component cannot be selected). To select subcomponents, click the + to expand the tree.</p>
+</blockquote>
+<ol>
+<li>Click <strong>OK</strong>. </li>
+</ol>
+<p>WebLOAD Console closes the list and opens a row for each of the selected measurements in the Goal Definition dialog box. </p>
+<p><img alt="Selecting Goal-Oriented Test Performance Goals Dialog Box" src="../../images/console_users_guide_1038.jpeg" /></p>
+<ol>
+<li>
+<p>Click in the <strong>Op</strong> field and select an operator from the drop-down list.</p>
+</li>
+<li>
+<p>Click in the <strong>Value</strong> field and type a boundary value for the goal.</p>
+</li>
+<li>
+<p>Ensure that the Report field is checked to include the goal measurement in the Goal-Oriented Test default Integrated Report.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+<p>WebLOAD Console displays the Acceleration dialog box. For additional information, see <a href="#_bookmark183"><em>Defining the Acceleration Rate</em> </a>(on page <a href="#_bookmark182">158</a>).</p>
+<h4 id="configuring-a-goal-an-example">Configuring a Goal - An Example</h4>
+<p>Suppose your goal is for your Web application server Response Time not to exceed five seconds.</p>
+<p><strong>To configure the goal:</strong></p>
+<ol>
+<li>Click <strong>Add Goal</strong>.</li>
+</ol>
+<p>The Goal Definition window is displayed.</p>
+<ol>
+<li>Select <strong>Response Time</strong> from the list of measurements and click OK.</li>
+</ol>
+<p>This measurement is displayed in the table on the Goal Definition dialog box.</p>
+<ol>
+<li>Because the goal is for the Response Time not to exceed five seconds, select the operator <strong>&gt;=</strong> and the Goal Value <strong>5</strong> by modifying the Op and Goal Value cells.</li>
+</ol>
+<p>When you run the test, WebLOAD Console increases the load on the SUT until the Response Time for each simulated user reaches or exceeds five seconds and then it stops the test.</p>
+<h4 id="deleting-a-goal">Deleting a Goal</h4>
+<p><strong>To delete a goal:</strong></p>
+<ol>
+<li>Select the goal to be deleted on the Goal Definition screen by clicking the number to the left of the goal.</li>
+<li>Click <strong>Delete</strong>.</li>
+</ol>
+<p>The goal is removed from the Goal Definition dialog box.</p>
+<h3 id="setting-and-using-defaults">Setting and Using Defaults</h3>
+<p>The Goal-Oriented Test Wizard enables you to save goals that you have defined, and reuse them in subsequent tests. To do this, set your defined goals as the default, and then use the defaults in later tests.</p>
+<h4 id="setting-defaults">Setting Defaults</h4>
+<p>The Set As Default button sets all of the Goals located on the Goal Definition dialog box as defaults. This operation overrides any previous default configurations.</p>
+<h4 id="to-set-defaults"><strong>To set defaults:</strong></h4>
+<ol>
+<li>Configure the test goals that you want to save as the default.</li>
+<li>Click <strong>Set As Defaults</strong>.</li>
+</ol>
+<h4 id="using-defaults">Using Defaults</h4>
+<h4 id="to-use-defaults"><strong>To use defaults:</strong></h4>
+<ol>
+<li>On the Goal Definition dialog box, click <strong>Default</strong>. The Goal Defaults dialog box appears.</li>
+</ol>
+<p><img alt="Goal Defaults Dialog Box" src="../../images/console_users_guide_1039.png" /></p>
+<ol>
+<li>
+<p>Select the goal to be included in the Goal-Oriented Test test session by selecting the number to the left of the goal (use the Ctrl or Shift keys to select more than one goal).</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p>The goal(s) are added to the test definition.</p>
+<h2 id="defining-the-acceleration-rate">Defining the Acceleration Rate</h2>
+<p>The Goal-Oriented Test increases the number of Virtual Clients accessing the application until the performance goals are met. The acceleration rate is the rate at which WebLOAD Console increases the number of Virtual Clients accessing the SUT at each acceleration step. Use a large number of clients for a fast acceleration to reach your goals quickly. Set WebLOAD Console to increment the number of Virtual Clients more slowly for fine-tuned results.</p>
+<p><img alt="Acceleration Dialog Box" src="../../images/console_users_guide_1040.jpeg" /></p>
+<p><strong>To define the acceleration rate:</strong></p>
+<ol>
+<li>
+<p>Click the slider and move up and down the scale to select an acceleration rate. RadView recommends:</p>
+</li>
+<li>
+<p>Accelerating at a rate of 15 Virtual Clients to reach your goals quickly.</p>
+</li>
+<li>Accelerating at a rate of 5 Virtual Clients for fine-tuned results.</li>
+<li>Type or select the initial load to begin the Goal-Oriented Test Session in the Start load with Virtual Clients box.</li>
+<li>The Goal-Oriented Test automatically optimizes the load distribution of Virtual Clients among the Load Generators participating in the test. To override this feature and distribute the load evenly between the Load Generators select the Distribute load evenly amongst Load Generators checkbox.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The wizard progresses to the Goals Achieved dialog box.</p>
+<blockquote>
+<p><strong>Note:</strong> The number of users that WebLOAD Console can generate on any given Load Machine in an efficient manner (so that the addition of users will not reduce the performance on that machine) is dependent on the power of the host machine. When WebLOAD Console estimates that it has reached the maximum output on a specific host, a log message is sent. WebLOAD Console continues to accelerate the load until the end of the Goal-Oriented test session.</p>
+</blockquote>
+<h2 id="defining-webload-consoles-action-once-the-goals-are-reached">Defining WebLOAD Console’s Action Once the Goals are Reached</h2>
+<p>After configuring your Goal-Oriented test you must define WebLOAD Console’s response once the test goals are reached.</p>
+<p><img alt="Goals Achieved Dialog Box" src="../../images/console_users_guide_1041.jpeg" /></p>
+<p>The Goal-Oriented Test can be set to stop, to continue testing under the same load, or to continue accelerating the number of Virtual Clients.</p>
+<p><strong>To set WebLOAD Console to stop:</strong></p>
+<ol>
+<li>Select <strong>Stop</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The wizard progresses to the Finish dialog box.</p>
+<p><strong>To set WebLOAD Console to continue running with the same load:</strong></p>
+<ol>
+<li>Select <strong>Continue with the same load</strong>.</li>
+<li>Type or select the amount of time (in minutes) that WebLOAD Console should continue running with the same load after the test goals are reached.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The wizard progresses to the Finish dialog box.</p>
+<p><strong>To set WebLOAD Console to continue accelerating the number of Virtual Clients:</strong></p>
+<ol>
+<li>
+<h4 id="select-continue-with-the-same-acceleration">Select <strong>Continue with the same acceleration</strong>.</h4>
+</li>
+<li>Type or select the amount of time (in minutes) that WebLOAD Console should continue accelerating the load after the test goals are reached.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<p>The wizard progresses to the Finish dialog box.</p>
+<h2 id="finishing-the-goal-oriented-test-wizard">Finishing the Goal-Oriented Test Wizard</h2>
+<p>The product of your testing is the WebLOAD report, where you can see how your Web application handles the load that you tested. The Goal-Oriented Test Wizard automatically generates a predefined report that measures:</p>
+<ul>
+<li>Load Size (the number of Virtual Clients being generated)</li>
+<li>The WebLOAD Console measurements for which goals are defined</li>
+</ul>
+<p>WebLOAD Console saves all of the values for the complete set of measurements. You can decide after the test has run to display the results never before requested.</p>
+<p><img alt="Goal-Oriented Test Wizard – Finish Dialog Box" src="../../images/console_users_guide_1042.jpeg" /></p>
+<p><strong>To finish the Goal-Oriented Test Wizard:</strong></p>
+<ol>
+<li>From the Finish dialog box, click <strong>Finish</strong>.</li>
+</ol>
+<p>A message box appears asking if you want to save the current Load Template.</p>
+<p><img alt="Save Current Load Template Message Box" src="../images/console_users_guide_1043.jpeg" /></p>
+<ol>
+<li>Click <strong>Yes</strong> to save the current Load Template as a *.tpl file.</li>
+</ol>
+<p>Load Templates contain the parameters that you defined for the test, such as the participating hosts in a test and the test plan. Using Load Templates saves you the time of reconfiguring the Load Session when repeating tests.</p>
+<p>The Goal-Oriented Test Wizard is finished and the test begins. WebLOAD Console displays the Goal-Oriented Test Default Report.</p>
+<h2 id="viewing-the-goal-oriented-test-default-report">Viewing the Goal-Oriented Test Default Report</h2>
+<p>When running a Goal-Oriented test session, the WebLOAD Goal-Oriented Test Default Report opens automatically in Chart View.</p>
+<p><img alt="Default Report" src="../../images/console_users_guide_1044.jpeg" /></p>
+<p>Real-time results are displayed in graphs on the right side of the Console screen. The following elements are displayed on the screen:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elements</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ribbon</td>
+<td style="text-align: left;">Contains options for configuring and controlling the Goal-Oriented test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Session Tree</td>
+<td style="text-align: left;">Presents a graphical display of your Goal-Oriented test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Results Window</td>
+<td style="text-align: left;">All of the reports opened during the Goal-Oriented test session will appear in this window. Use the tabs located at the top and bottom of the window to view different reports.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status Bar</td>
+<td style="text-align: left;">Indicates the program status.</td>
+</tr>
+</tbody>
+</table>
+<p>The Goal-Oriented Test Session continues running until the performance goals are achieved. When the performance goals are reached, WebLOAD Console displays a message box with the test results.</p>
+<p>The following is an example of a Test Results message box:</p>
+<p><img alt="Test Results Message Box" src="../../images/console_users_guide_1045.png" /></p>
+<p>Click <strong>Details</strong> to examine the original goal settings and statistics for them. A complete report displayed as follows:</p>
+<p><img alt="Details Report Window" src="../../images/console_users_guide_1046.png" /></p>
+<blockquote>
+<p><strong>Note:</strong> You can view the Details Report window while the test is running by right- clicking the <strong>Load Session</strong> icon in the Session Tree.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
