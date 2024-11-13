@@ -1,0 +1,3379 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The latest product documentation for RADView.">
+      
+      
+      
+      
+        <link rel="prev" href="../appendix_b/">
+      
+      
+        <link rel="next" href="../appendix_d/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Appendix C - HTTP Protocol Status Messages - RADView Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#appendix-c-http-protocol-status-messages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RADView Documentation" class="md-header__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADView Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Appendix C - HTTP Protocol Status Messages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../analytics/introduction/" class="md-tabs__link">
+          
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../console/introduction/" class="md-tabs__link">
+          
+  
+  Console
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/introduction/" class="md-tabs__link">
+          
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recorder/introduction/" class="md-tabs__link">
+          
+  
+  Recorder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scripting/introduction/" class="md-tabs__link">
+          
+  
+  Scripting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../automation/introduction/" class="md-tabs__link">
+          
+  
+  Automation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  JavaScript Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RADView Documentation" class="md-nav__button md-logo" aria-label="RADView Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RADView Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/load_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/portfolios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/defining_preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Console
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introducing_webload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/plan_test_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/connect_webrm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/manage_load_templates_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_template_wizard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_test_goal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/config_load_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_global_opt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Global Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_script_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Script Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/func_verifi_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/run_test_analyze_results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/running_a_load_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running a Load Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/viewing_log_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/statistics_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/data_drilling_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/export_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/performance_measurements_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Recorder
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/before_you_begin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Before you Begin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/quick_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QuickStart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/recording_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recording Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/editing_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scripting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/programming_your_javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/advanced_javascript_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/working_with_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/using_asynchronous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD Using the OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro_java_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_javascript_ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actions_objects_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internet_protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xmlparser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XML Parser Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../websocket_object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebSocket Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informational-1xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informational 1XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success 2XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection 3XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-error-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Error 4XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-error-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Error 5XX
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informational-1xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informational 1XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success 2XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection 3XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-error-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Error 4XX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-error-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Error 5XX
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="appendix-c-http-protocol-status-messages">Appendix C: HTTP Protocol Status Messages</h1>
+<p>This appendix documents the HTTP protocol status messages that you may see over the course of a typical test session. The status-code definitions provided in this appendix include a list of method(s) that the status code may follow and any meta information required in the response. The material included here is part of the HTTP protocol standard provided by the IETF.</p>
+<p>The HTTP protocol status messages fall into the following categories:</p>
+<ul>
+<li>Informational (<em>1XX</em>)</li>
+<li>Success (<em>2XX</em>)</li>
+<li>Redirection (<em>3XX</em>)</li>
+<li>Client Error (<em>4XX</em>)</li>
+<li>Server Error (<em>5XX</em>)</li>
+</ul>
+<h2 id="informational-1xx">Informational 1XX</h2>
+<p>The <em>1XX</em> class of status code indicates a provisional response, consisting only of the Status-Line and optional headers, and is terminated by an empty line. There are no required headers for this class of status code. Since HTTP/1.0 did not define any <em>1XX</em> status codes, servers <em>must not</em> send a <em>1XX</em> response to an HTTP/1.0 client except under experimental conditions.</p>
+<p>A client must be prepared to accept one or more <em>1XX</em> status responses prior to a regular response, even if the client does not expect a 100 (Continue) status message. Unexpected <em>1XX</em> status responses may be ignored by a user agent.</p>
+<p>Proxies must forward <em>1XX</em> responses, unless the connection between the proxy and its client has been closed, or unless the proxy itself requested the generation of the <em>1XX</em> response. (For example, if a proxy adds an “Expect: 100-continue” field when it forwards a request, then it need not forward the corresponding 100 (Continue) response(s).)</p>
+<table>
+<thead>
+<tr>
+<th><strong>Message</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100  Continue</td>
+<td>The client should continue  with request. This interim response is used to inform the client that the  initial part of the request has been received and has not yet been rejected  by the server. The client should continue by sending the remainder of the request  or, if the request has already been completed, ignore this response. The  server must send a final response after the request has been completed.</td>
+</tr>
+<tr>
+<td>101  Switching Protocols</td>
+<td>The client has requested,  via the Upgrade message header field, a  change in the application protocol being used on this connection. This  response indicates that the server understands and is willing to comply with  the client’s request. The server will switch protocols to those defined by  the response’s Upgrade header field immediately  after the empty line which terminates this 101 response.  The protocol should be  switched only when it is advantageous to do so. For example, switching to a  newer version of HTTP is advantageous over older versions, and switching to a  real-time, synchronous protocol might be advantageous when delivering  resources that use such features.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="success-2xx">Success 2XX</h2>
+<p>The <em>2XX</em> class of status code indicates that the client’s request was successfully received, understood, and accepted.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Message</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200  OK</td>
+<td>The request has succeeded.  The information returned with a 200 response is dependent on  the method used in the request. For example:  GET-an entity corresponding  to the requested resource is sent in the  response  HEAD-the entity-header fields  corresponding to the requested resource are sent in the response without any  message-body  POST-an entity describing or  containing the result of the action  TRACE-an entity containing the  request message as received by the end server</td>
+</tr>
+<tr>
+<td>201  _Created</td>
+<td>The request has been  fulfilled and resulted in a new resource being created. The newly created  resource can be referenced by the URI(s) returned in the entity of the  response, with the most specific URI for the resource identified by the Location header field.  A 201 response should include an entity containing a list of resource  characteristics and location(s) from which the user or user agent can choose  the one most appropriate. The entity format is specified by the media type  identified in the Content-Type header field. The origin  server must create the resource before returning a 201 status code. If the  action cannot be carried out immediately, the server should respond with 202 (Accepted) response instead.  A 201 response may contain an ETag  response  header field indicating the current value of the entity tag for the requested  variant just created.</td>
+</tr>
+<tr>
+<td>202  Accepted</td>
+<td>The request has been accepted for  processing, but the processing has not been completed. The request may or may  not eventually be acted upon, depending on whether or not it is authorized or  disallowed when processing actually takes place. There is no facility for re-  sending a status code from an asynchronous operation such as this.  The 202 response is intentionally non-committal.  Its purpose is to allow a server to accept a request for some other process  (perhaps a batch-oriented process that is only run once per day) without  requiring that the user agent’s connection to the server persist until the  process is completed. The entity returned with this response should include  an indication of the request’s current status and either a pointer to a  status monitor or some estimate of when the user can expect the request to be  fulfilled.</td>
+</tr>
+<tr>
+<td>203  Non-Authoritative Information</td>
+<td>The metainformation being  returned in the entity-header is not the definitive set that is usually  obtained from the origin server. This information has been gathered from a  local or a third-party copy. The set presented may be a subset or superset of  the original version. For example, including local annotation information  about the resource might result in a superset of the metainformation known by  the origin server. Use of this response code is not required and is only  appropriate when the response would otherwise be a generic (perhaps  non-informative) 200 (OK).</td>
+</tr>
+<tr>
+<td>204  No Content</td>
+<td>The server has fulfilled  the request, does not need to return an entity- body, and might want to  return updated metainformation. The response may include new or updated  metainformation in the form of entity-headers, which if present should be  associated with the requested variant.  If the client is a user  agent, it <em>should not change its  document view</em> from that which caused the request to be sent. This  response is primarily intended to allow input for actions to take place  without causing a change to the user agent’s active document view, although  any new or updated metainformation should be applied to the document  currently in the user agent’s active view.  The 204 response must not include a message-body, and thus  is always terminated by the first empty line after the header fields.</td>
+</tr>
+<tr>
+<td>205  Reset Content</td>
+<td>The server has fulfilled the request and the user  agent <em>should reset the document view</em> which  caused the request to be sent. This response is primarily intended to allow  input for actions to take place via user input, followed by a clearing of the  form in which the input is entered so that the user can easily initiate  another input action. The response must not include an entity.</td>
+</tr>
+<tr>
+<td>206  Partial Content</td>
+<td>The server has fulfilled the partial GET request for the resource. The request must have  included a Range header field indicating  the desired range. The request may have also included an If-  Range header field to make the  request conditional.  The response must include one of the following  header fields:  <br> Content-Range header field indicating the range included with  this response.  <br> A multipart/byteranges Content-Type field including  Content-Range fields for each part.  If a Content-Length  header field  is present in the response, its value must match the actual number of OCTETs  transmitted in the message-body.  <br> Date  <br> ETag and/or Content-Location, if the header would have  been sent in a 200 response to the same request  <br> Expires, Cache-Control, and/or Vary, if the field-value might differ from that  sent in any previous response for the same  variant.  If the 206 response is the result of an If-Range request that used a strong cache validator, the  response should not include other entity- headers. If the response is the  result of an If-Range request that used a weak  validator, the response must not include other entity- headers; this prevents  inconsistencies between cached entity-bodies and updated headers. Otherwise,  the response must include all of the entity-headers that would have been  returned with a 200 (OK) response to the same  request.  A cache must not combine a  206 response with other previously cached content if the ETag or Last-Modified headers do not match exactly.  A cache that does not  support Range and  Content-Range headers must not cache 206 (Partial) responses.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redirection-3xx">Redirection 3XX</h2>
+<p>The <em>3XX</em> class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request. The action required may be carried out by the user agent without interaction with the user if and only if the method used in the second request is GET or HEAD. A client should detect infinite redirection loops, since such loops generate network traffic for each redirection.</p>
+<blockquote>
+<p><br><strong>Note:</strong> Previous versions of this specification recommended a maximum of five redirections. Content developers should be aware that there might be clients that implement such a fixed limitation.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Message</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>300  Multiple Choices</td>
+<td>The requested resource corresponds to any  one of a set of representations, each with its own specific location.  Agent-driven negotiation information is being provided so that the user (or  user agent) can select a preferred representation and redirect its request to  that location.  Unless it was a HEAD  request, the  response should include an entity containing a list of resource  characteristics and location(s) from which the user or user agent can choose  the one most appropriate. The entity format is specified by the media type  identified in the Content-Type header field. Depending  upon the format and the capabilities of the user agent, the most appropriate  choice may be selected automatically. However, this specification does not  define any standard for such automatic selection.  If the server has a  preferred choice of representation, it should include the specific URI for  that representation in the  Location field. User agents may use the Location field value for automatic redirection. This  response is cacheable unless otherwise indicated.</td>
+</tr>
+<tr>
+<td>301  Moved Permanently</td>
+<td>The requested resource has  been assigned a new permanent URI and any future references to this resource  should use one of the returned URIs. Clients with link editing capabilities  ought to automatically re- link references to the Request-URI  to one or  more of the new references returned by the server, where possible. This  response is cacheable unless otherwise indicated.  The new permanent URI  should be identified by the Location field  in the response. Unless the request method was HEAD, the entity of the  response should contain a short hypertext note with a hyperlink to the new  URI(s).  If the 301 status code is received in response to a request  other than GET or HEAD, the user agent must not  automatically redirect the request unless it can be confirmed by the user,  since this might change the conditions under which the request was issued.  <br><strong>Note:</strong> When automatically  redirecting a POST request after receiving a 301 status code, some existing HTTP/1.0 user agents  will erroneously change it into a GET request.</td>
+</tr>
+<tr>
+<td>302  Found</td>
+<td>The requested resource <em>temporarily</em> resides under a different  URI. Since the redirection might be altered on occasion, the client should  continue to use the Request-URI for  future requests. This response is only cacheable if indicated by a Cache-Control or  Expires header field.  The temporary URI should  be identified by the Location field in the response. Unless the request method was HEAD, the entity of the  response should contain a short hypertext note with a hyperlink to the new  URI(s).  If the 302 status code is received in response to a request  other than GET or HEAD, the user agent must not  automatically redirect the request unless it can be confirmed by the user,  since this might change the conditions under which the request was issued.  <br><strong>Note:</strong> RFC 1945 and RFC 2068 specify that the client is not allowed to  change the method on the redirected request. However, most existing user  agent implementations treat 302 as if it were a 303 response,  performing a GET on the  Location field-value regardless of the original request  method. The status codes 303 and 307 have  been added for servers that wish to make unambiguously clear which kind of  reaction is expected of the client.</td>
+</tr>
+<tr>
+<td>303  See Other</td>
+<td>The response to the  request can be found under a different URI and should be retrieved using a GET  method on  that resource. This method exists primarily to allow the output of a POST-activated script to  redirect the user agent to a selected resource. The new URI is not a substitute reference for the  originally requested resource. The 303 response must not be  cached, but the response to the second (redirected) request might be cacheable.  The different URI should  be identified by the Location field in the response. Unless the request method was HEAD, the entity of the  response should contain a short hypertext note with a hyperlink to the new  URI(s).  <br><strong>Note:</strong> Many pre-HTTP/1.1 user agents do not understand the 303 status. When interoperability with such clients is  a concern, the 302 status code may be used instead, since most user agents react to a 302 response as described here for 303.</td>
+</tr>
+<tr>
+<td>304  Not Modified</td>
+<td>If the client has  performed a conditional GET request and access is allowed, but the  document has not been modified, the server should respond with this status  code. The 304 response  must not contain a message-body, and thus is always terminated by the first  empty line after the header fields.  The response must include the following header  fields:  <br> Date, unless its omission is required. f a  clockless origin server obeys these rules, and proxies and clients add their  own Date to any response received without one, (as already  specified by [RFC 2068]), caches  will operate correctly.  <br> ETag and/or  Content-Location, if the header would have  been sent in a 200 response to the same request.  <br> Expires, Cache-Control, and/or Vary, if the field-value might differ from that  sent in any previous response for the same  variant.  If the conditional GET  used a strong  cache validator, the response should not include other entity-headers. If the  conditional GET used  a weak validator, the response <em>must not</em>  include other entity-headers.  This prevents  inconsistencies between cached entity-bodies and updated headers.  If a 304 response indicates an  entity not currently cached, then the cache must disregard the response and  repeat the request without the conditional.  If a cache uses a received  304 response to update a cache  entry, the cache must update the entry to reflect any new field values given in the  response.</td>
+</tr>
+<tr>
+<td>305  Use Proxy</td>
+<td>The requested resource  must be accessed through the proxy identified by the Location field. The Location field gives the URI  of the proxy. The recipient is expected to repeat this single request via the proxy. 305 responses must only be generated by origin  servers.  <br><strong>Note:</strong> RFC 2068 did not clearly state that 305 was intended to redirect a single request, and to  be generated by origin servers only. Nevertheless, not observing these  limitations has significant security consequences.</td>
+</tr>
+<tr>
+<td>306  (Unused)</td>
+<td>The 306 status code was used in a  previous version of the specification. This code is currently not in use.  However, the code is reserved for future application.</td>
+</tr>
+<tr>
+<td>307  Temporary Redirect</td>
+<td>The requested resource  resides temporarily under a different URI. Since the redirection may be  altered on occasion, the client should continue to use the Request-URI for future requests. This response is only  cacheable if indicated by a Cache-Control or  Expires header field.  The temporary URI should  be identified by the Location field in the response. Unless the request method was HEAD, the entity of the  response should contain a short hypertext note with a hyperlink to the new  URI(s), since many pre-HTTP/1.1 user agents do not understand the 307  status.  Therefore, the note should contain the information necessary for a user to  repeat the original request on the new URI.  If the 307 status code is received in response to a request  other than GET or HEAD, the user agent must not  automatically redirect the request unless it can be confirmed by the user,  since this might change the conditions under which the request was issued.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="client-error-4xx">Client Error 4XX</h2>
+<p>The <em>4XX</em> class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method. User agents should display any included entity to the user.</p>
+<p>If the client is sending data, a server implementation using TCP should be careful to ensure that the client acknowledges receipt of the packet(s) containing the response, before the server closes the input connection. If the client continues sending data to the server after the close, the server’s TCP stack will send a reset packet to the client, which may erase the client’s unacknowledged input buffers before they can be read and interpreted by the HTTP application.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Message</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400  Bad Request</td>
+<td>The request could not be  understood by the server due to malformed syntax. The client should not  repeat the request without modifications.</td>
+</tr>
+<tr>
+<td>401  Unauthorized</td>
+<td>The request requires user  authentication. The response must include a WWW-Authenticate  header field  containing a challenge applicable to the  requested resource. The client may repeat the request with a suitable Authorization  header field.  If the request already included Authorization credentials, then the 401  response  indicates that authorization has been refused for those credentials. If the 401  response  contains the same challenge as the prior response, and the user agent has  already attempted authentication at least  once, then the user should be presented the entity that was identified  in the response, since that entity might include relevant diagnostic  information.</td>
+</tr>
+<tr>
+<td>402  Payment Required</td>
+<td>This code is reserved for future use.</td>
+</tr>
+<tr>
+<td>403  Forbidden</td>
+<td>The server understood the  request, but is refusing to fulfill it. Authorization will not help and the  request should not be repeated. If  the request method was not HEAD and the server wishes to make public why  the request has not been fulfilled, it should describe the reason for the  refusal in the entity. If the server does not wish to make this information  available to the client, the status code  404 (Not Found) can be used instead.</td>
+</tr>
+<tr>
+<td>404  Not Found</td>
+<td>The server has not found anything matching  the Request-URI. No indication is given  of whether the condition is temporary or permanent. The 410  (Gone) status code should be  used if the server knows, through some internally configurable mechanism,  that an old resource is permanently unavailable and has no forwarding  address. This status code is essentially a generic, neutral response,  commonly used when the server does not wish to reveal exactly why the request  has been refused, or when no other response is applicable.</td>
+</tr>
+<tr>
+<td>405  Method Not Allowed</td>
+<td>The method specified in  the Request-Line is not allowed for the  resource identified by the Request-URI. The response must  include an Allow header  containing a list of valid methods for the requested resource.</td>
+</tr>
+<tr>
+<td>406  Not Acceptable</td>
+<td>The resource identified by  the request is only capable of generating  response entities which have content characteristics not acceptable according  to the accept headers sent in the request.  Unless it was a HEAD request, the response should include an entity  containing a list of available entity characteristics and location(s) from  which the user or user agent can choose the one most appropriate. The entity  format is specified by the media type identified in the Content-Type header field. Depending upon the format and the  capabilities of the user agent, selection of the most appropriate choice may  be performed automatically. However, this specification does not define any  standard for such automatic selection.  <br><strong>Note:</strong> HTTP/1.1 servers are allowed to return responses which are not  acceptable according to the Accept Headers sent in the request. In some  cases, this may even be preferable to sending a 406  response.  User agents are encouraged to inspect the headers of an incoming response to  determine if it is acceptable. If the response could be unacceptable, a user  agent should temporarily stop receipt of more data and query the user for a  decision on further actions.</td>
+</tr>
+<tr>
+<td>407  Proxy Authentication  Required</td>
+<td>This code is similar to 401  (Unauthorized), but indicates that the  client must first authenticate itself with the proxy. The proxy must return a  Proxy-Authenticate header field containing a  challenge applicable to the proxy for the requested resource. The client may  repeat the request with a suitable Proxy-Authorization  header field.</td>
+</tr>
+<tr>
+<td>408  Request Timeout</td>
+<td>The client did not produce  a request within the time that the server was prepared to wait. The client  may repeat the request without modifications at any later time.</td>
+</tr>
+<tr>
+<td>409  Conflict</td>
+<td>The request could not be  completed due to a conflict with the current state of the resource. This code  is only allowed in situations where it is expected that the user might be  able to resolve the conflict and resubmit the request. The response body should  include enough information for the user to recognize the source of the  conflict.  Ideally, the response entity would include enough  information for the user or user agent to fix the problem; however, that  might not be possible and is not required.  Conflicts are most likely to occur in response to  a PUT request. For example, if  versioning were being used and the entity being PUT included changes to a resource which  conflict with those made by an earlier (third-party) request, the server  might use the 409 response to indicate that it can’t complete the  request. In this case, the response entity would likely contain a list of the  differences between the two versions in a format defined by the response Content-Type.</td>
+</tr>
+<tr>
+<td>410  Gone</td>
+<td>The requested resource is  no longer available at the server and no forwarding address is known. This  condition should be considered permanent. Clients with link editing  capabilities should delete references to the Request-URI after user approval. If the server does not know,  or has no facility to determine, whether or not the condition is permanent,  the status code 404 (Not Found) should be used instead.  This response is cacheable unless indicated otherwise.  The 410 response is primarily intended to assist  the task of web maintenance by notifying the recipient that the resource is  intentionally unavailable and that the server owners desire that remote links  to that resource be removed. Such an event is common for limited-time,  promotional services and for resources belonging to individuals no longer  working at the server’s site. It is not necessary to mark all permanently  unavailable resources as “gone” or to keep the mark for any length of  time-that is left to the discretion of the server owner.</td>
+</tr>
+<tr>
+<td>411  Length Required</td>
+<td>The server refuses to  accept the request without a defined Content-Length. The client may repeat  the request if it adds a valid Content-Length header field containing the length of the  message-body in the request message.</td>
+</tr>
+<tr>
+<td>412  Precondition Failed</td>
+<td>The precondition given in  one or more of the request-header fields evaluated to false  when it was  tested on the server. This response code allows the client to place  preconditions on the current resource metainformation (header field data) and  thus prevent the requested method from being applied to a resource other than  the one intended.</td>
+</tr>
+<tr>
+<td>413  Request Entity Too Large</td>
+<td>The server is refusing to  process a request because the request entity is larger than the server is  willing or able to process. The server may close the connection to prevent  the client from continuing the request.  If the condition is  temporary, the server should include a Retry- After header field to indicate that it is temporary and  after what time period has elapsed may the client try again.</td>
+</tr>
+<tr>
+<td>414  Request-URI Too Long</td>
+<td>The server is refusing to  service the request because the Request- URI is longer than the server is willing to interpret.  This rare condition is only likely to occur when a client has improperly  converted a POST request to a GET request with long query information, when  the client has descended into a URI “black hole” of redirection (for example,  a redirected URI prefix that points to a suffix of itself), or when the  server is under attack by a client attempting to exploit security holes  present in some servers using fixed-length buffers for reading or  manipulating the Request-URI.</td>
+</tr>
+<tr>
+<td>415  Unsupported Media Type</td>
+<td>The server is refusing to service the request  because the entity of the request is in a format not supported by the  requested resource for the requested method.</td>
+</tr>
+<tr>
+<td>416  Requested Range Not  Satisfiable</td>
+<td>A server should return a response with this  status code if:  <br> A request included a Range request-header field.  <br> None of the  range-specifier values in this field overlap the current extent of the selected resource.  <br> The  request did not include an If-Range request-header field. For  byte-ranges, this means that the first-byte-pos of all of the  byte-range-spec values were greater than  the current length of  the selected resource.  When this status code is  returned for a byte-range request, the response should include a Content-Range  entity-header  field specifying the current length of the selected resource. This response  must not use the multipart/byteranges content-type.</td>
+</tr>
+<tr>
+<td>417  Expectation Failed</td>
+<td>The expectation identified  in an Expect request-header field could  not be met by this server, or, if the server is a proxy, the server has  unambiguous evidence that the request could not be met by the next- hop  server.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="server-error-5xx">Server Error 5XX</h2>
+<p>The <em>5XX</em> class of status code is intended for cases in which the server is aware that it has erred or is incapable of performing the request. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. User agents should display any included entity to the user. These response codes are applicable to any request method.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Message</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500  Internal Server Error</td>
+<td>The server encountered an  unexpected condition which prevented it from fulfilling the request.</td>
+</tr>
+<tr>
+<td>501  Not Implemented</td>
+<td>The server does not  support the functionality required to fulfill the request. This is the  appropriate response when the server does not recognize the request method  and is not capable of supporting it for any resource.</td>
+</tr>
+<tr>
+<td>502  Bad Gateway</td>
+<td>The server, while acting as a gateway or  proxy, received an invalid response from the upstream server it accessed in  attempting to fulfill the request.</td>
+</tr>
+<tr>
+<td>503  Service Unavailable</td>
+<td>The server is currently  unable to handle the request due to a temporary overloading or maintenance of  the server. The implication is that this is a temporary condition which will  be alleviated after some delay. If known, the length of the delay may be indicated  in a Retry-After header. If no Retry-After is given, the client should handle the response as it would for a 500 response.<br><br><strong>Note:</strong> The existence of the 503 status code does not imply that a server must use it  when becoming overloaded. Some servers may wish to simply refuse the  connection.</td>
+</tr>
+<tr>
+<td>504  Gateway Timeout</td>
+<td>The server, while acting  as a gateway or proxy, did not receive a timely response from the upstream  server specified by the URI (e.g. HTTP, FTP, LDAP) or some other auxiliary  server (e.g. DNS) it needed to access in attempting to complete the request.  <br><strong>Note:</strong> Implementers should note that  some deployed proxies are known to return 400 or 500 when DNS lookups time out.</td>
+</tr>
+<tr>
+<td>505  HTTP Version Not Supported</td>
+<td>The server does not  support, or refuses to support, the HTTP protocol version that was used in  the request message. The server is indicating that it is unable or unwilling  to complete the request using the same major version as the client. The  response should contain an entity describing why that version is not  supported and what other protocols are supported by that server.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
