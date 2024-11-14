@@ -3777,8 +3777,8 @@
 <h3 id="installing-webload-for-windows_1">Installing WebLOAD for Windows</h3>
 <p>You can choose either of the following installation methods: </p>
 <ul>
-<li><a href="#_page10_x54.00_y384.04"><em>Command Line Installation</em> </a></li>
-<li><a href="#_page11_x54.00_y167.04"><em>Using the Installation Wizard</em> </a></li>
+<li><a href="#command-line-installation"><em>Command Line Installation</em> </a></li>
+<li><a href="#using-the-installation-wizard"><em>Using the Installation Wizard</em> </a></li>
 </ul>
 <h4 id="command-line-installation">Command Line Installation</h4>
 <p>To perform a command line installation, run the following command: </p>
@@ -3854,7 +3854,7 @@
 <li>Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. </li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#_page20_x54.00_y155.04"><code></code><em>Registering and Updating the WebLOAD License</em> </a>(on page<a href="#_page20_x54.00_y155.04"> 17)</a>. </p>
+<p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#registering_and_updating_the_webload_license"><code></code><em>Registering and Updating the WebLOAD License</em> </a>. </p>
 </blockquote>
 <p>Installing WebRM</p>
 <p><strong>To install WebRM:</strong> </p>
@@ -3875,7 +3875,7 @@
 <p>The WebRM Installation Wizard displays the Select License Location dialog box. This dialog box displays your HostID and enables you to browse to the License location. </p>
 </li>
 </ol>
-<p><strong>Note:</strong> If you have already received your WebRM License file, skip to step<a href="#_page12_x54.00_y564.04"> 9.</a></p>
+<p><strong>Note:</strong> If you have already received your WebRM License file, skip to step 9.</p>
 <ol>
 <li>If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to<a href="mailto:support@radview.com"> support@radview.com.</a> </li>
 </ol>
@@ -3899,16 +3899,16 @@
 <li>Close all browser windows that are open.  </li>
 <li>Uninstall the existing WebLOAD version. </li>
 </ol>
-<p>For instructions on the uninstall procedure, see<a href="#_page28_x72.00_y155.04"><code></code><em>Uninstalling WebLOAD</em> </a>(on page<a href="#_page28_x72.00_y155.04"> 25)</a>. </p>
+<p>For instructions on the uninstall procedure, see<a href="#uninstalling-webload"><code></code><em>Uninstalling WebLOAD</em> </a>. </p>
 <ol>
 <li>Install the new version of WebLOAD. </li>
 </ol>
-<p>For installation instructions, see<a href="#_page10_x54.00_y259.04"><code></code><em>Installing WebLOAD for Windows</em> </a>(on page<a href="#_page10_x54.00_y259.04"> 7)</a>. </p>
+<p>For installation instructions, see<a href="#installing-webload-for-windows"><code></code><em>Installing WebLOAD for Windows</em> </a>. </p>
 <h3 id="installing-and-configuring-the-webload-analytics">Installing and Configuring the WebLOAD Analytics</h3>
 <p>WebLOAD stores information from Load Sessions in a Postgre SQL database for use with WebLOAD Analytics. You can install Postgre SQL and the WebLOAD Analytics database during the WebLOAD installation or manually after WebLOAD has already been installed. You might want to perform manual installation in the following situations: </p>
 <ul>
-<li>If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to<a href="#_page14_x54.00_y318.04"><code></code><em>Creating the Database when Postgre SQL is Already Installed</em> </a>on page<a href="#_page14_x54.00_y318.04"> 11.</a> </li>
-<li>If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to <a href="#_page14_x54.00_y514.04"><em>Installing and Configuring the Database on a Dedicated Machine</em> </a>on page<a href="#_page14_x54.00_y514.04"> 11.</a> </li>
+<li>If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to<a href="#creating-the-database-when-postgre-sql-is-already-installed"><code></code><em>Creating the Database when Postgre SQL is Already Installed</em> </a>. </li>
+<li>If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to <a href="#installing-and-configuring-the-database-on-a-dedicated-machine"><em>Installing and Configuring the Database on a Dedicated Machine</em> </a>. </li>
 </ul>
 <h4 id="creating-the-database-when-postgre-sql-is-already-installed">Creating the Database when Postgre SQL is Already Installed</h4>
 <p>If Postgre SQL is already installed on your machine, you do not have to reinstall it during the WebLOAD installation. However, you must complete the following steps in order to create the WebLOAD Analytics database in Postgre SQL so that it can be used by WebLOAD Analytics. </p>
@@ -3933,10 +3933,10 @@
 <p>Run deploy–database.bat from the temporary folder to which you copied the files in the previous step. The WebLOAD Analytics database is created. </p>
 </li>
 <li>
-<p>Configure Postgre SQL to allow remote connections. For more information, see <a href="#_page15_x54.00_y251.04"><em>Configuring Postgre SQL to Allow Remote Database Connections</em> </a>on page<a href="#_page15_x54.00_y251.04"> 12.</a>  </p>
+<p>Configure Postgre SQL to allow remote connections. For more information, see <a href="#configuring-postgre-sql-to-allow-remote-database-connections"><em>Configuring Postgre SQL to Allow Remote Database Connections</em> </a>.  </p>
 </li>
 <li>
-<p>Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see<a href="#_page16_x54.00_y248.04"><em>Configuring Clients to Work with the Remote Database</em> </a>on page<a href="#_page16_x54.00_y248.04"> 13.</a> </p>
+<p>Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see<a href="#configuring-clients-to-work-with-the-remote-database"><em>Configuring Clients to Work with the Remote Database</em> </a>. </p>
 </li>
 </ol>
 <h3 id="configuring-postgre-sql-to-allow-remote-database-connections">Configuring Postgre SQL to Allow Remote Database Connections</h3>
@@ -4071,9 +4071,8 @@
 <li>Select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License</strong> to open the Update License** dialog box and install the license key. </li>
 <li>By default, the <strong>Use a license file</strong> radio button is selected. This assumes that your license file is located on your local computer system. </li>
 </ol>
-<p>For information on installing a floating license, or connecting to a license server, see<a href="#_page23_x109.00_y468.04"><code></code><em>WebRM Server</em> </a>(on page<a href="#_page23_x109.00_y468.04"> 20)</a>. </p>
-<p>For information on installing a license for an evaluation of WebLOAD, see<a href="#_page22_x54.00_y571.04"> Trial License </a></p>
-<p><code></code>(on page<a href="#_page22_x54.00_y571.04"> 19)</a>. </p>
+<p>For information on installing a floating license, or connecting to a license server, see<a href="#webrm-server"><code></code><em>WebRM Server</em> </a>. </p>
+<p>For information on installing a license for an evaluation of WebLOAD, see<a href="#trial-license"> Trial License </a>. </p>
 <ol>
 <li>Click the browse button next to the <strong>Use a license file</strong> text box to browse to the location of the license (*.lic) file sent to you by a RadView representative. </li>
 <li>Select the correct license file and click <strong>Open</strong> to return to the Update License dialog box. </li>

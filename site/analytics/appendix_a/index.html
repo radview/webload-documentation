@@ -2956,7 +2956,7 @@
 
 
 <h1 id="appendix-a-webload-analytics-file-system-structure">Appendix A - WebLOAD Analytics File System Structure</h1>
-<p>The WebLOAD Analytics file structure consists of system files, database files, log files, and files containing templates and template elements. The table below describes the WebLOAD file structure and its contents. The folders listed in the table below are located in the <WebLOAD directory>\bin folder.  </p>
+<p>The WebLOAD Analytics file structure consists of system files, database files, log files, and files containing templates and template elements. The table below describes the WebLOAD file structure and its contents. The folders listed in the table below are located in the <code>&lt;WebLOAD directory&gt;</code>\bin folder.</p>
 <table>
 <thead>
 <tr>
@@ -2979,11 +2979,11 @@
 </tr>
 <tr>
 <td>Gallery[Category]</td>
-<td>A Category folder can be a group of templates, such as Pages Analysis  or any one of the following special categories:   Portfolios.   _Master Templates.   _System Templates.</td>
+<td>A Category folder can be a group of templates, such as Pages Analysis  or any one of the following special categories:<code>&lt;br&gt;</code>Portfolios.  <code>&lt;br&gt;</code>_Master Templates.  <code>&lt;br&gt;</code>_System Templates.</td>
 </tr>
 <tr>
 <td>Gallery[Category]\ [Template]</td>
-<td>A Template folder exists  for every template in WebLOAD Analytics, such as Load Size Summary or HTTP  Responses.  A template consists of the following files:   .jrxml – JasperReports template file. Defines static templates structure,  can be edited using iReport. See<a href="#_bookmark73"> <em>Using JasperSoft iReport</em> </a>on page <a href="#_bookmark73">61</a>)   .jasper –  JasperReports compiled report. Generated automatically from .jrxml   .system.xml –  Defines a system defined interactive report.   .user.xml – Stores user defined settings, when using Save Chart As Template.   systemChart.xml – Stores graph configuration (such as colors, line  types, etc.)  userChart.xml – Stores user graph configuration.</td>
+<td>A Template folder exists  for every template in WebLOAD Analytics, such as Load Size Summary or HTTP  Responses.  A template consists of the following files:<code>&lt;br&gt;</code>.jrxml – JasperReports template file. Defines static templates structure,  can be edited using iReport.   <code>&lt;br&gt;</code>.jasper –  JasperReports compiled report. Generated automatically from .jrxml  <code>&lt;br&gt;</code>.system.xml –  Defines a system defined interactive report.  <code>&lt;br&gt;</code>.user.xml – Stores user defined settings, when using Save Chart As Template.  <code>&lt;br&gt;</code>systemChart.xml – Stores graph configuration (such as colors, line  types, etc.)  userChart.xml – Stores user graph configuration.</td>
 </tr>
 <tr>
 <td>Gallery[Category]\  [Template]\SUBREPORTS</td>
@@ -3003,7 +3003,7 @@
 </tr>
 <tr>
 <td>Gallery\  _Master  Templates</td>
-<td>This category is intended for advanced  users and cannot be accessed from WebLOAD Analytics.  The category contains the  master templates used by charts and reports. The master template of a report  defines the report appearance. The master template of a chart is used in  conjunction with the template to define the appearance of the chart. RadView  recommends that only advanced users should modify these templates.  When  you add a master template, it is available for selection in the Preferences window  (for more information, see <a href="#_bookmark81"><em>Defining Your Analytics Preferences</em>   </a>on  page <a href="#_bookmark81">67</a>).</td>
+<td>This category is intended for advanced  users and cannot be accessed from WebLOAD Analytics.  The category contains the  master templates used by charts and reports. The master template of a report  defines the report appearance. The master template of a chart is used in  conjunction with the template to define the appearance of the chart. RadView  recommends that only advanced users should modify these templates.  When  you add a master template, it is available for selection in the Preferences window.</td>
 </tr>
 <tr>
 <td>Gallery\  _System Templates</td>

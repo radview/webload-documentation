@@ -42,7 +42,7 @@ The following table describes the log window options:
 
   The Log Window appears. The Log window is both floating and dockable, and can be placed in any part of the screen.
   
-  ![Log Window](../images/console_users_guide_2031.png)
+  ![Log Window](../images/console_users_guide_2031.jpg)
 
 
 

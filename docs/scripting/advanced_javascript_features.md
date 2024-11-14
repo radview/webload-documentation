@@ -52,7 +52,7 @@ WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each
 
 
 
-Data Island XML DOM objects expose both aspects of each XML DOM object, (as described in [*WebLOAD XML DOM Objects* ](#_bookmark65)(on page [65](#_bookmark66))):
+Data Island XML DOM objects expose both aspects of each XML DOM object:
 
 - The standard HTML properties id, src, and innerHTML. These properties refer to text strings found within the HTML document.
 - The XML Document Interface. The interface provides access to the properties and methods of the XML DOM object.
@@ -915,7 +915,7 @@ The following script fragments illustrates this sequence:
 
    `wlHttp.Post(“Http://demosite/bookstore.exe?operation=](http://demosite/bookstore.exe?operation=upd)upd ate”)`
 
-> **Note:** The WLXmlDocument(xmlStr) constructor must be passed complete, self- contained XML strings *only*. The DTD section must not contain any external references when using this form of the constructor. See [*Document Type Definition (DTD)* ](#_bookmark72)(on page [86](#_bookmark73)), for more information.
+> **Note:** The WLXmlDocument(xmlStr) constructor must be passed complete, self- contained XML strings *only*. The DTD section must not contain any external references when using this form of the constructor. 
 
 
 
@@ -1327,7 +1327,7 @@ For example, to reference the Java class Lassie contained in the package dogs, w
 
 ***Accessing Java Objects from JavaScript scripts***
 
-Java objects found in JavaScript scripts are accessed according to the rules listed here. Detailed explanations and examples illustrating these rules are provided in the Netscape websites listed in [*Working with Java* ](#_bookmark75)(on page [87](#_bookmark74)).
+Java objects found in JavaScript scripts are accessed according to the rules listed here. Detailed explanations and examples illustrating these rules are provided in the Netscape websites listed in [*Working with Java* ](#working-with-java).
 
 - To access a built-in Java object, use the package java. This package acts as a flag, informing the compiler that it is about to start work with a built-in Java object. You may then continue to work directly with that object, its properties, and methods.
 
@@ -1365,7 +1365,7 @@ Java objects found in JavaScript scripts are accessed according to the rules lis
   
   `…`
 
-Use the Packages keyword to access any user-defined class whose definition is included in the CLASSPATH library list, described in [*Requirements* ](#_bookmark77)(on page [88](#_bookmark76)).
+Use the Packages keyword to access any user-defined class whose definition is included in the CLASSPATH library list.
 
 ### Forestalling Errors
 Most common compilation and runtime errors can be prevented if you follow the instructions in this guide. Usually, you won’t have any problems as long as you verify that Java was installed correctly and specify Java objects with the correct full path and argument list. This section lists the most common potential pitfalls, in an effort to prevent problems before they occur.
@@ -1423,7 +1423,7 @@ Most common compilation and runtime errors can be prevented if you follow the in
   Realize that working with Java from your JavaScript script is really very simple and intuitive, as illustrated in the simple examples found in the remainder of this section. You simply must take care to specify objects correctly. Careless spelling mistakes will trigger errors, as they would in most programming languages.
 
 ### Example: passing simple variables between Java and JavaScript
-You may pass any legal JavaScript variable or object as a parameter to a Java object or method. Conversions between basic variable types, such as integer, string, or Boolean, will be completed automatically. Return values will also convert correctly. Conversions between Java and JavaScript types are based on the conversion tables listed in [*Data](#_bookmark165) *[Type Conversions* ](#_bookmark165)*(on page [185](#_bookmark164)).
+You may pass any legal JavaScript variable or object as a parameter to a Java object or method. Conversions between basic variable types, such as integer, string, or Boolean, will be completed automatically. Return values will also convert correctly. 
 
 The following example illustrates passing basic values between Java and JavaScript objects. The Java class method expects two parameters, a string and an integer, and returns the concatenation of both parameters into a single string. Conversions between Java and JavaScript strings and integers are completed automatically.
 
@@ -1514,7 +1514,7 @@ Now create an instance of the **Java object JavaDog** in the JavaScript code by 
 
 `javaDog = new Packages.JavaDog(Lassie)`
 
-> **Note:** The JavaScript code uses the Packages class to identify JavaDog as a locally defined Java object, as described in [*Identifying Java Objects in JavaScript scripts* ](#_bookmark78)(on page [90](#_bookmark78)).
+> **Note:** The JavaScript code uses the Packages class to identify JavaDog as a locally defined Java object.
 >
 
 The Java property javaDog.dogColor has the value chocolate because the getMember method in the Java constructor assigns the value of Lassie.color to dogColor.
@@ -1526,7 +1526,7 @@ Detailed explanations of the JSObject class are provided in [http://developer.ne
 ### **Automatic Timers And Counters For Java Objects**
 WebLOAD provides automatic timers and counters that wrap around every Java class method invocation found in your script. Automatic timers and counters allow you to effortlessly measure and quantify the behavior and response time of each specific Java component individually, enabling the most comprehensive testing of your Java-based application.
 
-Every time your JavaScript script calls a Java class method, a timer and a counter are automatically created for that method. The results are included in the Statistics Report for that test session. These automatic Java timers are in addition to the standard WebLOAD Timer functions, which may be called from the Java side of your script as well as the standard JavaScript side. An example illustrating JavaScript Timer calls from Java code appears in [*Calling a WebLOAD API from a Java Application* ](#_bookmark83)(on page [98](#_bookmark84)).
+Every time your JavaScript script calls a Java class method, a timer and a counter are automatically created for that method. The results are included in the Statistics Report for that test session. These automatic Java timers are in addition to the standard WebLOAD Timer functions, which may be called from the Java side of your script as well as the standard JavaScript side. 
 
 For example, assume you are communicating with a server using the Java socket class:
 
@@ -1593,8 +1593,8 @@ The counter and timer information is collected and displayed automatically, ever
 ### Calling a WebLOAD API from a Java Application
 This section describes two methods for calling WebLOAD JavaScript functions from the java code:
 
-- [*Using the WebLoadWrapper to call WebLOAD API from a Java Application*](#_bookmark85)
-- [*Legacy method of calling WebLOAD API from a Java Application*](#_bookmark87)
+- [*Using the WebLoadWrapper to call WebLOAD API from a Java Application*](#using-the-webloadwrapper-to-call-webload-api-from-a-java-application)
+- [*Legacy method of calling WebLOAD API from a Java Application*](#legacy-method-of-calling-webload-api-from-a-java-application)
 
 #### Using the WebLoadWrapper to call WebLOAD API from a Java Application
 
@@ -1627,13 +1627,13 @@ It can be used to call the following WebLOAD functions from within Java:
 
 
 
-If you would like to call any JavaScript method directly from your Java code WITHOUT using the WebLoadWrapper methods, or you need to use a method that WebLoadWrapper does not wrap (see [*Functions supported by WebLoadWrapper*](#_bookmark86)), you can use the following method which is part of WebLoadWrapper:
+If you would like to call any JavaScript method directly from your Java code WITHOUT using the WebLoadWrapper methods, or you need to use a method that WebLoadWrapper does not wrap, you can use the following method which is part of WebLoadWrapper:
 
 `Object getWebLoadRootObject()` – Returns the JSObject of the calling JavaScript You can then use the returned JSObject to call the method you’d like. For example
 
 `getWebLoadRootObject().eval("InfoMessage('test')");`
 
-Once you get the JSObject, use it as described in [*Legacy method of calling WebLOAD API](#_bookmark87) *[from a Java Application* ](#_bookmark87)*on page [99.](#_bookmark87)
+Once you get the JSObject, use it as described in [Legacy method of calling WebLOAD API from a Java Application](#legacy-method-of-calling-webload-api-from-a-java-application).
 
 ##### Example: using WebLoadWrapper
 
@@ -1922,7 +1922,7 @@ Specify any additional classpath needed to run external classes by setting the f
 
 > **Note:** Creating a Java Selenium project is outside the scope of this document. For information, refer to the Selenium website at [http://www.seleniumhq.org/.](http://www.seleniumhq.org/)
 
-A Java class that calls Selenium is still a Java class and can be called directly from a WebLOAD agenda using the Java integration capability described in [*Working with Java](#_bookmark75)* (on page [87](#_bookmark75)). For example, if you have the following Selenium Java code:
+A Java class that calls Selenium is still a Java class and can be called directly from a WebLOAD agenda using the Java integration capability described in [Working with Java](#working-with-java). For example, if you have the following Selenium Java code:
 
 ```java
 // This is an example of a Selenium script in Java code. It does not relate to WebLOAD
@@ -1940,18 +1940,18 @@ driver = new FireFoxDriver(); driver.[get("http://www.google.com](http://www.goo
 }
 ```
 
-You can call that code from WebLOAD, as described in [*Working with Java](#_bookmark75)* (on page [87](#_bookmark75)[98](#_bookmark75)), using:
+You can call that code from WebLOAD, as described in [*Working with Java](#working-with-java), using:
 
 `obj = new Packages.com.example.MyClass(); obj.seleniumFunc();`
 
 However, WebLOAD will not have visibility into the activity occurring within the function call seleniumFunc; for example, if several pages are being downloaded, WebLOAD will not be able to time this activity for each page. The WebLoadDriver object enables adding timers, transactions and other WebLOAD methods directly inside the Java code.
 
 ### Working with WebLoadDriver
-WebLoadDriver is a Selenium WebDriver wrapper that supports WebLOAD interaction. WebLoadDriver inherits WebLoadWrapper, which is described in [*Using](#_bookmark85) *[the WebLoadWrapper* ](#_bookmark85)*(on page [98](#_bookmark85)).
+WebLoadDriver is a Selenium WebDriver wrapper that supports WebLOAD interaction. WebLoadDriver inherits WebLoadWrapper, which is described in [*Using the WebLoadWrapper* ](#using-the-webloadwrapper-to-call-webload-api-from-a-java-application)*).
 
 WebLoadDriver provides the following:
 
-- Supports all the WebLoadWrapper functionality described in [*Using the](#_bookmark85)[ WebLoadWrapper* ](#_bookmark85)(on page [98](#_bookmark85))
+- Supports all the WebLoadWrapper functionality described in [*Using the WebLoadWrapper* ](#using-the-webloadwrapper-to-call-webload-api-from-a-java-application)
 - Implements the Selenium WebDriver interface
 - Adds ‘reportStatistics’ functionality that sends timers from the browsers to WebLOAD. Refer to the *Selenium Report Statistics* section in the *WebLOAD Recorder User Guide*.
 
@@ -1961,7 +1961,7 @@ WebLoadDriver provides the following:
 
    C:\ProgramData\RadView\WebLOAD\extensions\java\rvselenium.jar
 
-1. In your Java class, import com.radview.webload.selenium.WebLoadDriver.
+2. In your Java class, import com.radview.webload.selenium.WebLoadDriver.
 
 Keep in mind that WebLoadDriver is a Selenium WebDriver wrapper that supports WebLOAD interaction. When not running in WebLOAD context, it ignores WebLOAD, allowing your class to be executed as usual.
 
@@ -2011,7 +2011,7 @@ Packages.com.radview.webload.WebLoadWrapper.setThreadWebLoadRoot Object(this);
 obj = new  Packages.com.example.MyClass(); obj.seleniumFunc();
 ```
 
-For an explanation of how to instantiate and use your Selenium Java class, see [*LiveConnect Overview* ](#_bookmark151)(on page [177](#_bookmark151)).
+For an explanation of how to instantiate and use your Selenium Java class, see LiveConnect Overview.
 
 ### **For more information on working with Selenium**
 For more information on working with Selenium, see:
@@ -2026,7 +2026,7 @@ For more information on working with Selenium, see:
 ### What is COM
 Microsoft’s Component Object Model (COM) provides a way for distinct software components to communicate with each other. COM technology provides universally reusable binary components. These components can be mixed and matched over versions and years, accessed by applications written in any of a variety of languages, running on any of a variety of platforms, located either locally or over a network. COM automation simplifies application development by maximizing component reusability while increasing the application’s universality. Today, most Windows users rely on COM technology, often without even realizing it. For example, suppose you wish to work with a restricted website. Access to the application behind that website is controlled by a security database. To work with that application, you must first enter your name and password. A COM component will automatically access the database and verify your permission status.
 
-COM components are objects that consist of a combination of properties, methods, and interfaces. An object’s interface is simply a set of methods together with a defined set of standards for what those methods do and how they are accessed, their parameters and return values. WebLOAD JavaScript provides direct object access to any component that has a COM wrapping and an IDispatch interface. These are known as ActiveX objects. See [*ActiveX Object Interfaces* ](#_bookmark97)(on page [107](#_bookmark96)), for more information.
+COM components are objects that consist of a combination of properties, methods, and interfaces. An object’s interface is simply a set of methods together with a defined set of standards for what those methods do and how they are accessed, their parameters and return values. WebLOAD JavaScript provides direct object access to any component that has a COM wrapping and an IDispatch interface. These are known as ActiveX objects. 
 
 An ActiveX object is viewed and manipulated exactly as any other JavaScript object within the script. WebLOAD encapsulates COM automation functionality, providing an interface between JavaScript scripts and ActiveX objects. For example, a WebLOAD JavaScript script is able to fully test an ASP Web page or a Web page that manipulates an ADO database. In both of these technologies, ActiveX objects are widely used.
 
@@ -2069,7 +2069,7 @@ A typical website is often the front end of an application that includes many Ac
 
    This section describes how to activate ActiveX objects from your WebLOAD JavaScript script.
 
-   **Note:** The object you are accessing must already exist and be registered. When working with a remote server, through DCOM over HTTP, the object you are accessing should reside on the remote server. (This is described in [*DCOM over HTTP* ](#_bookmark106)(on page [115](#_bookmark105))).
+   **Note:** The object you are accessing must already exist and be registered. When working with a remote server, through DCOM over HTTP, the object you are accessing should reside on the remote server.
 
    When working locally, the COM object you are accessing should reside on the Load Generator.
 
@@ -2118,7 +2118,7 @@ At this point, now that you have created a reference to an ActiveX object, the f
 
 
 
-This section describes how to work with local ActiveX objects in your WebLOAD JavaScript script. For an example illustrating working with ActiveX objects on a remote server, see [*DCOM over HTTP* ](#_bookmark106)(on page [115](#_bookmark105)).
+This section describes how to work with local ActiveX objects in your WebLOAD JavaScript script. For an example illustrating working with ActiveX objects on a remote server, see [*DCOM over HTTP* ](#dcom-over-http).
 
 Work with your ActiveX objects properties and methods as you would with any JavaScript object’s properties and methods, using the following syntax:
 
@@ -2189,7 +2189,7 @@ When the data type is known, WebLOAD automatically converts between JavaScript d
 
 If TypeInfo information is not accessible, WebLOAD uses a basic common-sense heuristic to determine the data type and select the appropriate conversion, based on the preceding default conversion table. For example, if a variable A has been assigned a value of 5, WebLOAD assumes that the variable should be of type Integer.
 
-However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a String “5”. Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, [*Using Casting Functions for JavaScript](#_bookmark104) *[and COM Data Types* ](#_bookmark104)*(on page [113](#_bookmark103)).
+However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a String “5”. Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, [Using Casting Functions for JavaScript](#using-casting-functions-for-javascript-and-com-data-types).
 
 
 
@@ -2241,7 +2241,7 @@ WebLOAD provides the following casting functions:
 - CBool()
 - CVARIANT()
 
-These functions take a variable as a parameter and return that value cast to the specified data type. Only legal data type conversions, as listed the table in [*Automatic](#_bookmark102) *[Conversion between JavaScript and COM Data Types* ](#_bookmark102)*(on page [112](#_bookmark102)), are allowed.
+These functions take a variable as a parameter and return that value cast to the specified data type. Only legal data type conversions, as listed the table in [*Automatic Conversion between JavaScript and COM Data Types* ](#automatic-conversion-between-javascript-and-com-data-types).
 
 For example, assume you had an array that should be passed as data type Variant, but it only holds items with integer values. To prevent problems, use the CVARIANT() function to explicitly cast the array elements to the Variant data type, as follows:
 
@@ -2290,7 +2290,7 @@ However, the method is expecting an array of data type Double. To prevent proble
 ### DCOM over HTTP
 In today’s work environment, applications are often distributed over a network. In the course of your testing session, you may need to activate an ActiveX object that is located on a remote server and accessed through a network. For this reason, WebLOAD supports ActiveX object access through Remote Data Service (RDS).
 
-Remote object access is accomplished in two steps: First, declare a new **RDS object**. That RDS object is used as a bridge, pointing to the ActiveX object residing on the remote server. Then, activate an **ActiveX object** located on a remote server, use the **initial instantiation syntax** described in [*R](#_bookmark107)[emote ActiveXObject() Constructor* ](#_bookmark107)(on page [116](#_bookmark107)).
+Remote object access is accomplished in two steps: First, declare a new **RDS object**. That RDS object is used as a bridge, pointing to the ActiveX object residing on the remote server. Then, activate an **ActiveX object** located on a remote server, use the **initial instantiation syntax** described in [Remote ActiveXObject() Constructor ](#remote-activexobject-constructor).
 
 > **Note:** WebLOAD assumes a basic familiarity with RDS use, including object declaration and initialization, and system configuration. For more information about Microsoft’s Remote Data Services of ADO (RDS), go to the following websites:
 

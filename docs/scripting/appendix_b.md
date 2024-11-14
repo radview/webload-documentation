@@ -30,7 +30,7 @@ When you refer to a Java package or class, or work with a Java object or array, 
 |JavaObject|A wrapped Java object, accessed from within JavaScript code.|
 |JavaPackage|A JavaScript reference to a Java package.|
 
-> **Note:** Because Java is a strongly typed language and JavaScript is weakly typed, the JavaScript runtime engine converts argument values into the appropriate data types for the other language when you use LiveConnect. See [*Data Type Conversions* ](#_bookmark165)(on page [185](#_bookmark164)), for more information.
+> **Note:** Because Java is a strongly typed language and JavaScript is weakly typed, the JavaScript runtime engine converts argument values into the appropriate data types for the other language when you use LiveConnect.
 
 In some ways, the existence of the LiveConnect objects is transparent, because you interact with Java in a fairly intuitive way. For example, you can create a Java String object and assign it to the JavaScript variable myString by using the new operator with the Java constructor, as follows:
 
@@ -134,7 +134,7 @@ return theClass
 
 In this example, if javaClassName evaluates to a legal class name, such as "java.lang.String", the assignment succeeds. If javaClassName evaluates to an invalid class name, such as "String", the getClass function catches the exception and returns something similar to the following:
 
-The Java exception is java.lang.ClassNotFoundException: String See [*Exception Handling Statements* ](#_bookmark183)(on page [193](#_bookmark182)), for more information about JavaScript exceptions.
+The Java exception is java.lang.ClassNotFoundException: String See [*Exception Handling Statements* ](#exception-handling-statements), for more information about JavaScript exceptions.
 
 
 
@@ -147,7 +147,7 @@ If you want to use JavaScript objects in Java, you must import the netscape.java
 
 
 
-Starting with JavaScript 1.2, these classes are delivered in a .jar file; in previous versions of JavaScript, these classes are delivered in a .zip file. See [*JSException and](#_bookmark190) *[JSObject Classes* ](#_bookmark190)*(on page [196](#_bookmark188)), for more information about these classes.
+Starting with JavaScript 1.2, these classes are delivered in a .jar file; in previous versions of JavaScript, these classes are delivered in a .zip file. 
 
 To access the LiveConnect classes, place the .jar or .zip file in the CLASSPATH of the JDK compiler in either of the following ways:
 
@@ -161,13 +161,13 @@ For example, in Navigator 4.0 for Windows NT, the classes are delivered in the j
 
 1. Double-click the **System** icon in the Control Panel.
 
-1. Create a user environment variable called CLASSPATH with a value similar to the following:
+2. Create a user environment variable called CLASSPATH with a value similar to the following:
 
    `D:\Navigator\Program\Java\Classes\java40.jar`
 
    See the Sun JDK documentation for more information about CLASSPATH.
 
-> **Note:** Because Java is a strongly typed language and JavaScript is weakly typed, the JavaScript runtime engine converts argument values into the appropriate data types for the other language when you use LiveConnect. See [*Data Type Conversions* ](#_bookmark165)(on page [185](#_bookmark164)), for complete information.
+> **Note:** Because Java is a strongly typed language and JavaScript is weakly typed, the JavaScript runtime engine converts argument values into the appropriate data types for the other language when you use LiveConnect. See [*Data Type Conversions* ](#data-type-conversions), for complete information.
 
 
 
@@ -201,7 +201,7 @@ public String dogBreed; public String dogColor; public String dogSex;
 
 > **Note:** The getMember method of JSObject is used to access the properties of the JavaScript object. The previous example uses getMember to assign the value of the JavaScript property jsDog.breed to the Java data member JavaDog.dogBreed.
 
-A more realistic example would place the call to getMember inside a try...catch statement to handle errors of type JSException. See [*Handling JavaScript Exceptions in](#_bookmark163) *[Java* ](#_bookmark163)*(on page [183](#_bookmark162)), for more information.
+A more realistic example would place the call to getMember inside a try...catch statement to handle errors of type JSException. See [Handling JavaScript Exceptions in Java](#handling-javascript-exceptions-in-java), for more information.
 
 To get a better sense of how getMember works, look at the definition of the custom JavaScript object Dog:
 
@@ -309,7 +309,7 @@ If theCondition is false, the function throws an exception. The exception is cau
 
 JavaScript error occurred
 
-See [*Exception Handling Statements* ](#_bookmark183)(on page [193](#_bookmark182)), for complete information about JavaScript exceptions.
+See [*Exception Handling Statements* ](#exception-handling-statements), for complete information about JavaScript exceptions.
 
 
 
@@ -350,19 +350,18 @@ Because Java is a strongly typed language and JavaScript is weakly typed, the Ja
 ### **JavaScript to Java Conversions**
 When you call a Java method and pass it parameters from JavaScript, the data types of the parameters you pass in are converted according to the rules described in the following sections:
 
-- [*Number Values* ](#_bookmark168)(on page [186](#_bookmark167))
-- [*Boolean Values* ](#_bookmark169)(on page [187](#_bookmark170))
-- [*String Values* ](#_bookmark171)(on page [187](#_bookmark170))
-- [*Undefined Values* ](#_bookmark173)(on page [188](#_bookmark172))
-- [*Null Values* ](#_bookmark174)(on page [189](#_bookmark175))
-- [*JavaArray and JavaObject Objects* ](#_bookmark176)(on page [189](#_bookmark175))
-- [*JavaClass Objects* ](#_bookmark178)(on page [190](#_bookmark177))
-
-- [*Other JavaScript Objects* ](#_bookmark180)(on page [191](#_bookmark179))
+- [*Number Values* ](#number-values)
+- [*Boolean Values* ](#boolean-values)
+- [*String Values* ](#string-values)
+- [*Undefined Values* ](#undefined-values)
+- [*Null Values* ](#null-values)
+- [*JavaArray and JavaObject Objects* ](#javaarray-and-javaobject-objects)
+- [*JavaClass Objects* ](#javaclass-objects)
+- [*Other JavaScript Objects* ](#other-javascript-objects)
 
 The return values of methods of netscape.javascript.JSObject are always converted to instances of java.lang.Object. The rules for converting these return values are also described in these sections.
 
-For example, if JSObject.eval returns a JavaScript number, you can find the rules for converting this number to an instance of java.lang.Object in [*Number Values* ](#_bookmark168)(on  page [186](#_bookmark167)).
+For example, if JSObject.eval returns a JavaScript number, you can find the rules for converting this number to an instance of java.lang.Object in [*Number Values* ](#number-values).
 
 #### Number Values
 
@@ -508,7 +507,7 @@ Java String objects also correspond to JavaScript wrappers. If you call a JavaSc
 
 ## Exception Handling Statements
 
-You can throw and catch exceptions using the throw and try...catch statements. You also use the try...catch statement to handle Java exceptions. See [*Handling Java](#_bookmark159) *[Exceptions in JavaScript* ](#_bookmark159)*(on page [180](#_bookmark158)), and [*Handling JavaScript Exceptions in Java* ](#_bookmark163)(on page [183](#_bookmark162)), for information.
+You can throw and catch exceptions using the throw and try...catch statements. You also use the try...catch statement to handle Java exceptions. See [*Handling Java Exceptions in JavaScript* ](#handling-java-exceptions-in-javascript), and [*Handling JavaScript Exceptions in Java* ](#handling-javascript-exceptions-in-java), for information.
 
 ### The Throw Statement
 Use the throw statement to throw an exception. When you throw an exception, you specify an expression containing the value of the exception:
@@ -768,7 +767,7 @@ JavaScript objects are wrapped in an instance of the class netscape.javascript.J
 
 When a JavaScript object is sent to Java, the runtime engine creates a Java wrapper of type JSObject; when a JSObject is sent from Java to JavaScript, the runtime engine unwraps it to its original JavaScript object type. The JSObject class provides a way to invoke JavaScript methods and examine JavaScript properties.
 
-Any JavaScript data brought into Java is converted to Java data types. When the JSObject is passed back to JavaScript, the object is unwrapped and can be used by JavaScript code. See [*Data Type Conversions* ](#_bookmark165)(on page [185](#_bookmark164)), for more information about data type conversions.
+Any JavaScript data brought into Java is converted to Java data types. When the JSObject is passed back to JavaScript, the object is unwrapped and can be used by JavaScript code. See [*Data Type Conversions* ](#data-type-conversions), for more information about data type conversions.
 
 
 

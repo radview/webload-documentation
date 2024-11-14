@@ -4334,8 +4334,6 @@
 </tr>
 </tbody>
 </table>
-<p>A hit is composed of several stages, as shown in<a href="#_page86_x54.00_y212.04"> Figure 37.</a>  </p>
-<p><a href="#_page86_x54.00_y212.04">Figure 37 </a>also shows at which stages a TCP connection starts and ends, and at which stages an HTTP* Request and an HTTP Response start and end. </p>
 <table>
 <thead>
 <tr>
@@ -4551,7 +4549,7 @@
 <blockquote>
 <p><strong>Tip</strong></p>
 <p>You can customize the look of the General Session Information template by editing the settings of the following parameters: PEN_COMPANY, OPEN_REPORTER_NAME, OPEN_REPORTER_TITLE, OPEN_SUT_DIAGRAM, </p>
-<p>OPEN_SUT_NAME, OPEN_SUT_VERSION. Refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your Parameter </a><em>Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71.</a> 
+<p>OPEN_SUT_NAME, OPEN_SUT_VERSION.<br />
 </p>
 </blockquote>
 <h3 id="http-errors-over-time">HTTP Errors Over Time</h3>
@@ -4596,7 +4594,7 @@
 <p>This category of templates provides information about the errors logged for this Load Session.  </p>
 <h3 id="errors-by-severity">Errors By Severity</h3>
 <p>This template displays the total number of errors received, grouped by severity level: Info, Minor Error, Error, and Severe Error.  </p>
-<p>By default, only warnings (minor errors) and above are displayed. To change the default setting, edit the settings of the MIN_SEVERITY parameter (refer to<a href="#_page70_x54.00_y376.04"><code></code><em>Defining Your Parameter Preferences</em> </a>on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+<p>By default, only warnings (minor errors) and above are displayed. To change the default setting, edit the settings of the MIN_SEVERITY parameter. </p>
 <h3 id="errors-per-second">Errors Per Second</h3>
 <p>This template displays the number of error messages logged over time, for each level of severity. </p>
 <h3 id="errors-per-transaction">Errors Per Transaction</h3>
@@ -4611,7 +4609,7 @@
 <p>For each type of failure, the template displays a description of the failure and how many times this type of failure occurred. </p>
 <h3 id="log-messages">Log Messages</h3>
 <p>This is a detailed template of all the log messages logged during the Load Session.  Note that WebLOAD automatically stops logging after a certain number of log events. </p>
-<p>By default, only minor errors and above are displayed. To change the default setting, edit the settings of the MIN_SEVERITY parameter (refer to <a href="#_page70_x54.00_y376.04"><em>Defining Your Parameter Preferences</em> </a>on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+<p>By default, only minor errors and above are displayed. To change the default setting, edit the settings of the MIN_SEVERITY parameter. </p>
 <h3 id="log-summary">Log Summary</h3>
 <p>This template displays a summary of the Load Session’s logged messages. Similar messages are grouped, and their total count shown. </p>
 <h2 id="pages-analysis-templates">Pages Analysis Templates</h2>
@@ -4658,7 +4656,7 @@
 <li>A negative ratio denotes a decrease in average measurement value; a positive ratio denotes an increase in average measurement value. </li>
 </ul>
 <h4 id="analysis-highlights_1"><em>Analysis Highlights</em></h4>
-<p>If a disparity is found, you can explore it further by creating a detailed report on the suspected measurement using the User Defined Blank Regression Template. Refer to <a href="#_page28_x54.00_y155.04"><em>Creating a Regression Chart from the Blank Regression Template</em> </a>on page<a href="#_page28_x54.00_y155.04"> 29.</a>  </p>
+<p>If a disparity is found, you can explore it further by creating a detailed report on the suspected measurement using the User Defined Blank Regression Template.   </p>
 <h3 id="general-session-information">General Session Information</h3>
 <p>This regression template displays the following information about the main Load Session: </p>
 <ul>
@@ -4713,10 +4711,10 @@
 </ul>
 <h3 id="slowest-transactions">Slowest Transactions</h3>
 <p>For each of the specified Load Sessions, this regression template displays the session’s transactions, ordered by the average transaction time, slowest first. </p>
-<p>You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters (refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your </a><em>Parameter Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+<p>You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters. </p>
 <h3 id="transactions-with-most-failures">Transactions With Most Failures</h3>
 <p>For each of the specified Load Sessions, this regression template displays the transactions, ordered by the highest failure count. </p>
-<p>You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters (refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your </a><em>Parameter Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71)</a> </p>
+<p>You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters. </p>
 <h3 id="total-page-time_1">Total Page Time</h3>
 <p>For each of the specified Load Sessions, this regression template displays the Page Time, over time.  </p>
 <p>Page Time is the time it takes to complete a successful upper level request, in seconds. It is the sum of the Connect Time, Send Time, Response Time, and Process Time for all the hits on a page. </p>
@@ -4736,7 +4734,7 @@
 <p>Transaction Time – For successful transactions, the table displays Transaction Time statistics: Average, Percentile X%, Max, Min, Standard deviation, and Transactions Per Second  </p>
 </li>
 </ul>
-<p>The default percentile is 90%. To change the default setting, edit the settings of the PERCENTILE parameter (refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your Parameter </a><em>Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+<p>The default percentile is 90%. To change the default setting, edit the settings of the PERCENTILE parameter. </p>
 <p>You can use the Transactions Over Time and Transaction Response Time By Percent regression templates instead of this template. </p>
 <h2 id="server-side-statistics-templates">Server Side Statistics Templates</h2>
 <p>This category of templates provides statistical information related to the server. </p>
@@ -4750,13 +4748,13 @@
 <p>The selected server side measurements are shown over time. The Load Size is also shown, for reference. Note that server side statistics must be explicitly added at the template definition stage, before executing the load session  </p>
 <p>For information on the PMM and how to add server side statistics, see the <em>WebLOAD Console User Guide</em>. </p>
 <h2 id="transaction-analysis-templates">Transaction Analysis Templates</h2>
-<p>This category of templates enables you to analyze the Load Session’s transactions. Refer to<a href="#_page85_x54.00_y258.04"><code></code><em>Understanding Load Session Terminology</em> </a>on page<a href="#_page85_x54.00_y258.04"> 86 </a>for an explanation of the basic elements of a transaction. </p>
+<p>This category of templates enables you to analyze the Load Session’s transactions. Refer to<a href="#understanding-load-session-terminology"><code></code><em>Understanding Load Session Terminology</em> </a> for an explanation of the basic elements of a transaction. </p>
 <h3 id="failed-transactions_1">Failed Transactions</h3>
 <p>This template displays information about transactions that had failures during the session. </p>
 <p>The chart depicts failed transactions and failure reasons. </p>
 <h3 id="slowest-transactions_1">Slowest Transactions</h3>
 <p>This template displays the session’s transactions, ordered by the average transaction time, slowest first. </p>
-<p>You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters (refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your </a><em>Parameter Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+<p>You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters. </p>
 <h3 id="transaction-counters">Transaction Counters</h3>
 <p>This chart shows successful and failed transaction counts for each transaction in the session. </p>
 <h3 id="transaction-response-times">Transaction Response Times</h3>
@@ -4774,7 +4772,7 @@
 <h3 id="transactions-over-time_1">Transactions Over Time</h3>
 <p>This template displays changes in transaction time over session running time. It also displays the Load Size, for reference.</p>
 <h3 id="transactions-with-most-failures_1">Transactions With Most Failures</h3>
-<p>This template displays the transactions, ordered by the highest failure count. You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters (refer to<a href="#_page70_x54.00_y376.04"><code></code>*Defining Your </a><em>Parameter Preferences</em> on page<a href="#_page70_x54.00_y376.04"> 71)</a> </p>
+<p>This template displays the transactions, ordered by the highest failure count. You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters.</p>
 <h2 id="statistical-correlation"><strong>Statistical Correlation</strong></h2>
 <p>Statistical correlation templates are used to pinpoint suspect causes for unusual behavior of a certain measurement. </p>
 <p>There are four predefined templates in this category. They differ in the leading measurement (Response Time, Throughput), and in the graphical representation (over time or over the leading measurement). However, you can specify any measurement in any script to be the leading measurement, and you can view its correlation to all other measurements either over time or over the leading measurement. </p>
@@ -4787,7 +4785,7 @@
 <ul>
 <li>The Direction column indicates whether the correlation is positive (the measurement goes up when the leading measurement goes up, and down when the leading measurement goes down) or negative (the measurement goes up when the leading measurement goes down, and down when the leading measurement goes up). </li>
 </ul>
-<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to<a href="#_page38_x54.00_y272.04"><code></code><em>Filtering by Time</em> </a>on page<a href="#_page38_x54.00_y272.04"> 39.</a> </p>
+<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement.  </p>
 <h3 id="response-time-correlation-over-time">Response Time Correlation Over Time</h3>
 <p>This template displays the correlation of specified measurements with the Response Time measurement, over time. If you selected a different leading measurement to correlate to, the chart displays correlation with the leading measurement you selected. </p>
 <ul>
@@ -4799,7 +4797,7 @@
 </ul>
 <blockquote>
 <p><strong>Tip</strong></p>
-<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to<a href="#_page38_x54.00_y272.04"><em>Filtering by Time</em> </a>on page<a href="#_page38_x54.00_y272.04"> 39.</a> </p>
+<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. </p>
 </blockquote>
 <h3 id="throughput-correlation">Throughput Correlation</h3>
 <p>This template displays the correlation of specified measurements with the Throughput measurement, over Throughput. If you selected a different leading measurement to correlate to, the chart displays correlation with the leading measurement you selected. </p>
@@ -4812,7 +4810,7 @@
 </ul>
 <blockquote>
 <p><strong>Tip</strong></p>
-<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to<a href="#_page38_x54.00_y272.04"><code></code><em>Filtering by Time</em> </a>on page<a href="#_page38_x54.00_y272.04"> 39.</a></p>
+<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. </p>
 </blockquote>
 <h3 id="throughput-correlation-over-time">Throughput Correlation Over Time</h3>
 <p>This template displays the correlation of specified measurements with the Throughput measurement, over time. If you selected a different leading measurement to correlate to, the chart displays correlation with the leading measurement you selected. </p>
@@ -4825,7 +4823,7 @@
 </ul>
 <blockquote>
 <p><strong>Tip</strong></p>
-<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to<a href="#_page38_x54.00_y272.04"><code></code><em>Filtering by Time</em> </a>on page<a href="#_page38_x54.00_y272.04"> 39.</a> </p>
+<p>You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. </p>
 </blockquote>
 
 

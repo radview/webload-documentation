@@ -307,7 +307,7 @@ WebLOAD Analytics creates analysis reports based on your session data. Even afte
    WebLOAD Analytics automatically creates a new report based on the Summary Portfolio and generates the report. You can optionally perform any of the following:
 
    - **Modify the report** – Select the **Report Settings** tab and edit the parameters you wish to change.
-   - **Print the report** – Select the **Report View** tab from the Reports area. Click ![](../images/console_users_guide_005.png) to open the Print dialog and print the report.
+   - **Print the report** – Select the **Report View** tab from the Reports area. Click ![](../images/console_users_guide_0050.png) to open the Print dialog and print the report.
    - **Publish the report** – Click ![](../images/console_users_guide_0055.png) to publish your report as the default format specified in the Preferences window. Select a location and name for your report and click **Save**. The report is published in the format chosen and saved to the location specified in the Preferences window.
 
 2. Close WebLOAD Analytics.

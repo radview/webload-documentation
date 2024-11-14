@@ -278,13 +278,13 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
 1. Click **Default/Current Project Options** in the **Tools** tab of the ribbon. The Default/Current Project Options dialog box appears.
 
-1. Select the **Authentication** tab.
+2. Select the **Authentication** tab.
 
    The Authentication tab moves to the front of the dialog box.
 
-   ![Authentication Tab](../images/authen_tab.png)
+   ![Authentication Tab](../images/authen_tab.jpg)
 
-1. Fill in the fields, as described below and click **OK**.
+3. Fill in the fields, as described below and click **OK**.
 
 The following table defines all the fields and options in the Authentication tab.
 
@@ -1088,7 +1088,7 @@ Define the default file locations during a test session.
 
 1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **File Locations**. The File Locations screen is displayed.
 
-   ![Settings Dialog Box with File Validation Test](../images/41b67ea2-fd52-4e98-b077-dce936e26880.097.png)
+   ![Settings Dialog Box with File Validation Test](../images/recorder_1097.png)
 
    
 
@@ -1113,7 +1113,7 @@ Define which application is used for comparing and displaying the differences wh
 
 1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **Diff Viewer**. The Diff Viewer screen is displayed.
 
-   ![Settings Dialog Box with Diff Viewer Options](../images/41b67ea2-fd52-4e98-b077-dce936e26880.098.png) 
+   ![Settings Dialog Box with Diff Viewer Options](../images/recorder_1098.png) 
 
    By default, WinMerge is selected.
 
@@ -1152,7 +1152,7 @@ Define which application is used for resolving conflicts between user changes an
 
 1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **Merge Tool**. The Merge Tool screen is displayed. 
 
-   ![Settings Dialog Box with Merge Tool Options](../images/41b67ea2-fd52-4e98-b077-dce936e26880.099.png)
+   ![Settings Dialog Box with Merge Tool Options](../images/recorder_1099.png)
 
    By default, WinMerge is selected. WinMerge enables 2-way merging.
 
@@ -1220,7 +1220,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 - Click **Parameterization Manager** in the **Home** tab of the ribbon. The Parameterization Manager dialog box opens.
 
-![Parameterization Manager Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.100.png)
+![Parameterization Manager Dialog Box](../images/recorder_1100.png)
 
 
 
@@ -1253,7 +1253,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 1. In the **Type** field, select **Date/Time**. The fields appropriate for defining a date/time parameter appear in the dialog box.
 
-   ![Parameterization Manager – Date/Time Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.101.png)
+   ![Parameterization Manager – Date/Time Dialog Box](../images/recorder_1101.png)
 
 1. In the **Description** field, optionally enter a description for the date/time parameter.
 
@@ -1288,7 +1288,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the **Type** field, select **File**. The fields appropriate for selecting a data file and configuring its settings appear in the dialog box.
 
-   ![Parameterization Manager – File Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.102.png)
+   ![Parameterization Manager – File Dialog Box](../images/recorder_1102.png)
 
    
 
@@ -1330,7 +1330,7 @@ You can create a new data file.
 
    The Create Data File dialog box appears.
 
-   ![Create Data File Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.105.png)
+   ![Create Data File Dialog Box](../images/recorder_1105.png)
 
    
 
@@ -1358,7 +1358,7 @@ You can create a new data file.
 
 2. In the **Type** field, select **Number**. The fields appropriate for defining a number parameter appear in the dialog box. 
 
-   ![Parameterization Manager – Number Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.106.png)
+   ![Parameterization Manager – Number Dialog Box](../images/recorder_1106.png)
 
    
 
@@ -1400,7 +1400,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
 
-   ![Parameterization Manager – Random String Dialog Box](../images/41b67ea2-fd52-4e98-b077-dce936e26880.108.png)
+   ![Parameterization Manager – Random String Dialog Box](../images/recorder_1108.png)
 
    
 

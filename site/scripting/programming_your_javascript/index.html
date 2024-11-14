@@ -4702,7 +4702,7 @@
 </ul>
 <p>The initialization and termination functions are not part of the WebLOAD performance test. WebLOAD does not include the operations of these functions in the performance statistics.</p>
 <p>Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error. See <a href="#_bookmark12"><em>script Execution Sequence</em> </a>(on page <a href="#_bookmark13">11</a>), and <a href="#_bookmark38">*Non-Standard script Execution Sequence</a>* (on page <a href="#_bookmark37">39</a>), for more information.</p>
-<p>Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in <a href="#_bookmark16">*Editing the JavaScript Code in</a>* (on page <a href="#_bookmark16">15</a>).</p>
+<p>Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.</p>
 <p><strong>To bring up a list of available functions:</strong></p>
 <ul>
 <li>While working in Java Editing mode, select the node in the Script Tree to which you want to add a function, right-click the JavaScript pane, and select <strong>Insert</strong> &gt; <strong>General</strong> &gt; <strong>Init/Terminate Functions</strong> from the pop-up menu.</li>
@@ -4919,7 +4919,7 @@
 <h3 id="including-files">Including Files</h3>
 <p>WebLOAD Recorder allows you to include external files within your JavaScript program. This facilitates modular programming, where you may develop different recyclable modules of JavaScript source code to be reused by different test scripts. Rather than inserting the complete original source code text over and over again into the body of each script, use the IncludeFile() command to make all functions defined within the included file available to all including scripts.</p>
 <h4 id="adding-an-includefile-function">Adding an IncludeFile() Function</h4>
-<p>IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in <a href="#_bookmark16">*Editing the JavaScript Code in</a>* (on page <a href="#_bookmark16">15</a>).</p>
+<p>IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.</p>
 <p><strong>To insert an IncludeFile function:</strong></p>
 <ul>
 <li>While working in JavaScript Editing mode, right-click the JavaScript Pane and select <strong>Insert</strong> &gt; <strong>JavaScript</strong> &gt; <strong>Copy/Include Files</strong> from the pop-up menu that appears. Select the IncludeFile() function from the sub-menu.</li>
@@ -5367,7 +5367,7 @@ else {
 </ul>
 <p>Each of these testing contexts is described in the following sections.</p>
 <blockquote>
-<p><strong>Note:</strong> The HTTP configuration properties documented in this section may be edited through the IntelliSense Editor, as described in <a href="#_bookmark16">*Editing the JavaScript Code in</a><em> (on page <a href="#_bookmark16">15</a>). However, remember that the majority of application tests rarely require anything more than perhaps a few user-defined global variables or configuration settings, which can be created and set through the WebLOAD Recorder or Console dialog boxes. Manual intervention in individual configuration values within the JavaScript code of a script is not usually recommended</em>.*</p>
+<p><strong>Note:</strong> The HTTP configuration properties documented in this section may be edited through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code. However, remember that the majority of application tests rarely require anything more than perhaps a few user-defined global variables or configuration settings, which can be created and set through the WebLOAD Recorder or Console dialog boxes. Manual intervention in individual configuration values within the JavaScript code of a script is not usually recommended<em>.</em></p>
 </blockquote>
 <h3 id="limited-context">Limited Context</h3>
 <p>Limited variables are only visible or accessible within the bounds of a specific function or code block. Users may also define configuration properties that are only applicable to a specific browser action, managed through the wlHttp object.</p>
@@ -5398,7 +5398,7 @@ y = limitedX + 2    //Error, limitedX is undefined here
 <h3 id="local-context">Local Context</h3>
 <p>The local script thread context is local to each individual thread of a script. Local objects may not be accessed in the global context. Different threads may not access or alter the value of the same local variable, since it is local to a single thread. Different threads may only share variable values through global variables.</p>
 <p>Local configuration properties are managed through the wlLocals object. Local values for both user-defined variables and configuration properties are initialized in the InitClient() function of a script. Read or assign local values using JavaScript</p>
-<p>Object nodes added to the main script, as described in <a href="#_bookmark16">*Editing the JavaScript Code in</a>* (on page <a href="#_bookmark16">15</a>).</p>
+<p>Object nodes added to the main script, as described in Editing the Editing the JavaScript Code.</p>
 <h4 id="working-with-the-wllocals-object">Working with the wlLocals Object</h4>
 <p>Configuration properties that are local to a single script thread are managed through the wlLocals object, described in this section. You do not need to declare or create a wlLocals object before using it in your script. WebLOAD automatically creates a single wlLocals object for each thread of a script.</p>
 <p>wlLocals is a WebLOAD-supplied local object, which sets the local default configuration for HTTP commands (overriding any global defaults set in wlGlobals, but overridden in turn by any values set in wlHttp). For example, one of the properties of wlLocals is the URL to which the object connects. If you set a different value of wlLocals.Url in each thread of a script, then each thread can connect to a different URL, as the following script illustrates:</p>
@@ -5508,7 +5508,7 @@ wlHttp.DisableSleep = false
 <p><img alt="wlGlobals Insertion using General Menu" src="../../images/script_guide_040.png" /></p>
 <p>Select wlGlobals from the list and WebLOAD Recorder automatically inserts the correct code for a wlGlobals object into the script code currently being edited. The IntelliSense Editor then helps programmers write the JavaScript code for wlGlobals properties and methods by bringing up a list of appropriate choices together with pop- up boxes that describe each item on the list, as illustrated in the following figure:</p>
 <p><img alt="wlGlobals Selection from List" src="../../images/script_guide_041.png" /></p>
-<p>Working with the IntelliSense Editor is described in <a href="#_bookmark16">*Editing the JavaScript Code in</a><em> (on page <a href="#_bookmark16">15</a>). See the description of wlGlobals objects in the </em>WebLOAD JavaScript Reference Guide* for a complete syntax specification.</p>
+<p>Working with the IntelliSense Editor is described in Editing the Editing the JavaScript Code. See the description of wlGlobals objects in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag">Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag</h4>
 <p>For users who are comfortable working inside the JavaScript code of their scripts, WebLOAD provides a global object called wlGeneratorGlobal. The wlGeneratorGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, running on a single Load Generator. WebLOAD creates exactly one wlGeneratorGlobal object for each script. You can access wlGeneratorGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
 <p>wlGeneratorGlobal includes the following methods:</p>
@@ -5571,7 +5571,7 @@ wlGeneratorGlobal.Get(&quot;C&quot;, WLCurrentAgenda))
 <blockquote>
 <p><strong>Note:</strong> In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new wlGeneratorGlobal.Get call each time.</p>
 </blockquote>
-<p>See <a href="#_bookmark16">*Editing the JavaScript Code in</a><em> (on page <a href="#_bookmark16">15</a>), for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the </em>WebLOAD JavaScript Reference Guide* for a complete syntax specification.</p>
+<p>See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="variables-defined-through-the-wlsystemglobal-object-with-wlcurrentagenda-flag">Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag</h4>
 <p>The global script context includes global variables and settings that are shared by all threads of a single script, system-wide. The wlSystemGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, part of one or more spawned processes, potentially running on multiple Load Generators, and multiple machines. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
 <p>wlSystemGlobal includes essentially the same methods described in <a href="#_bookmark48">*Variables Defined</a> <em><a href="#_bookmark48">through the wlGeneratorGlobal Object with WLAllAgendas Flag* </a></em>(on page <a href="#_bookmark46">51</a>), applied here to global variables:</p>
@@ -5623,7 +5623,7 @@ InfoMessage(&quot;E—agenda3 = &quot; + wlSystemGlobal.Get(&quot;E&quot;, WLCur
 
 Sleep(1000)
 </code></pre>
-<p>See <a href="#_bookmark16">*Editing the JavaScript Code in</a><em> (on page <a href="#_bookmark16">15</a>), for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the </em>WebLOAD JavaScript Reference Guide* for a complete syntax specification.</p>
+<p>See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="example-using-a-combination-of-global-variables">Example: Using a Combination of Global Variables</h4>
 <p>The following sample script combines the different global variable options introduced in the previous sections:</p>
 <pre><code class="language-javascript">function InitAgenda() { wlGeneratorGlobal.Set(&quot;C&quot;, 4, WLCurrentAgenda)
@@ -5735,7 +5735,7 @@ wlHttp.Get(wlSystemGlobal.Get(&quot;S&quot;, WLAllAgendas)) Sleep(1000)
 <p>OnErrorTerminateClient(), RoundNum keeps its value from the final round.</p>
 <p>The WebLOAD clients do not necessarily remain in synchronization. The RoundNum may differ for different clients running the same script. If a thread stops and restarts for any reason, the RoundNum continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.</p>
 <p>If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if agenda1 has executed twice and agenda2 has executed three times on a particular thread, the RoundNum of agenda1 is 2 and the RoundNum of agenda2 is 3.</p>
-<p>Add RoundNum directly to the code in a script through the IntelliSense Editor, described in <a href="#_bookmark16">*Editing the JavaScript Code in</a><em> (on page <a href="#_bookmark16">15</a>). Select a function by right- clicking the JavaScript Editing Pane, and selecting </em><em>Insert</em><em> &gt; </em><em>General</em>* from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
+<p>Add RoundNum directly to the code in a script through the IntelliSense Editor, described in Editing the Editing the JavaScript Code. Select a function by right- clicking the JavaScript Editing Pane, and selecting <strong>Insert</strong> &gt; <strong>General</strong> from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
 <p><img alt="Adding RoundNum using the Copy/Include Files Menu" src="../../images/script_guide_045.png" /></p>
 <h3 id="example-identifying-a-client-and-round">Example: identifying a client and round</h3>
 <p>For example, suppose your script submits data to a server on an HTML form. You want to label one of the form fields so you can tell which WebLOAD client submitted the data, and in which round of the main script.</p>

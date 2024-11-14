@@ -82,7 +82,7 @@ The initialization and termination functions are not part of the WebLOAD perform
 
 Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error. See [*script Execution Sequence* ](#_bookmark12)(on page [11](#_bookmark13)), and [*Non-Standard script Execution Sequence](#_bookmark38)* (on page [39](#_bookmark37)), for more information.
 
-Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)).
+Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.
 
 **To bring up a list of available functions:**
 
@@ -347,7 +347,7 @@ WebLOAD Recorder allows you to include external files within your JavaScript pro
 
 #### Adding an IncludeFile() Function
 
-IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)).
+IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.
 
 **To insert an IncludeFile function:**
 
@@ -953,7 +953,7 @@ Each of these testing contexts is described in the following sections.
 
 
 
-> **Note:** The HTTP configuration properties documented in this section may be edited through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)). However, remember that the majority of application tests rarely require anything more than perhaps a few user-defined global variables or configuration settings, which can be created and set through the WebLOAD Recorder or Console dialog boxes. Manual intervention in individual configuration values within the JavaScript code of a script is not usually recommended*.*
+> **Note:** The HTTP configuration properties documented in this section may be edited through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code. However, remember that the majority of application tests rarely require anything more than perhaps a few user-defined global variables or configuration settings, which can be created and set through the WebLOAD Recorder or Console dialog boxes. Manual intervention in individual configuration values within the JavaScript code of a script is not usually recommended*.*
 
 ### Limited Context
 
@@ -1010,7 +1010,7 @@ Local configuration properties are managed through the wlLocals object. Local va
 
 
 
-Object nodes added to the main script, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)).
+Object nodes added to the main script, as described in Editing the Editing the JavaScript Code.
 
 #### Working with the wlLocals Object
 
@@ -1166,7 +1166,7 @@ Select wlGlobals from the list and WebLOAD Recorder automatically inserts the co
 
 
 
-Working with the IntelliSense Editor is described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)). See the description of wlGlobals objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+Working with the IntelliSense Editor is described in Editing the Editing the JavaScript Code. See the description of wlGlobals objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 #### Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag
 
@@ -1237,7 +1237,7 @@ wlGeneratorGlobal.Get("C", WLCurrentAgenda))
 
 > **Note:** In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new wlGeneratorGlobal.Get call each time.
 
-See [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)), for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 #### Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag
 
@@ -1296,7 +1296,7 @@ InfoMessage("E—agenda3 = " + wlSystemGlobal.Get("E", WLCurrentAgenda))
 Sleep(1000)
 ```
 
-See [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)), for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 
 
@@ -1443,7 +1443,7 @@ The WebLOAD clients do not necessarily remain in synchronization. The RoundNum m
 
 If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if agenda1 has executed twice and agenda2 has executed three times on a particular thread, the RoundNum of agenda1 is 2 and the RoundNum of agenda2 is 3.
 
-Add RoundNum directly to the code in a script through the IntelliSense Editor, described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [15](#_bookmark16)). Select a function by right- clicking the JavaScript Editing Pane, and selecting **Insert** > **General** from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
+Add RoundNum directly to the code in a script through the IntelliSense Editor, described in Editing the Editing the JavaScript Code. Select a function by right- clicking the JavaScript Editing Pane, and selecting **Insert** > **General** from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
 
 
 

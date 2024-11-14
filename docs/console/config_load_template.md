@@ -234,7 +234,7 @@ You can create a load schedule by:
 
    The Schedule Manually dialog box opens.
    
-   ![Schedule Manually Dialog Box](../images/console_users_guide_1057.png)
+   ![Schedule Manually Dialog Box](../images/console_users_guide_1057.jpeg)
 
 2. Click the Load Machine you want to schedule.
 
@@ -242,7 +242,7 @@ You can create a load schedule by:
 
    The Load Profiler opens.
 
-   ![Load Profiler](../images/console_users_guide_1058.png)
+   ![Load Profiler](../images/console_users_guide_1058.jpeg)
 
 
 

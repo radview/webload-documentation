@@ -16,13 +16,13 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
 **To create a Perfecto Mobile WebLOAD script:**
 
-1. Drag the **Perfecto Mobile  ![](../images/appenfix_f_004.png)**    icon from the Real Clients toolbox into the Script Tree at the desired location.
+1. Drag the **Perfecto Mobile  ![](../images/appendix_f_004.png)**    icon from the Real Clients toolbox into the Script Tree at the desired location.
 
    The Perfecto Mobile dialog box opens.
 
    
 
-   ![](../images/appenfix_f_009.png)
+   ![](../images/appendix_f_009.png)
 
    
 
@@ -37,7 +37,7 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
    Select a desired script and click **OK**.
 
-   ![Select Script Dialog Box](../images/appenfix_f_011.png)
+   ![Select Script Dialog Box](../images/appendix_f_011.png)
 
    
 
@@ -45,7 +45,7 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
    Select a desired device and click **OK**.
 
-   ![Select Device Dialog Box](../images/appenfix_f_012.png)
+   ![Select Device Dialog Box](../images/appendix_f_012.png)
 
 6. Set the **Test timeout**. This is the maximum number of seconds that the test is allowed to run.
 
@@ -57,7 +57,7 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
 10. Click **OK**. The script is created, and is ready to be run.
 
-![Script for Running a Script on a Device in the Perfecto Cloud](../images/appenfix_f_013.png)
+![Script for Running a Script on a Device in the Perfecto Cloud](../images/appendix_f_013.png)
 
 
 
@@ -72,5 +72,5 @@ To gather statistics about the Perfecto Mobile script, create in the WebLOAD Con
 
 The following figure shows an example results window. Note that the example displays also Actions and Transactions. That is, in addition to the various device statistics (such as Battery Level), statistics are also displayed for actions (such as Touch Drag) and transactions (such as Navigate in Chrome).
 
-![Results of Running a Perfecto Mobile Load Session in the WebLOAD Console](../images/appenfix_f_015.png)
+![Results of Running a Perfecto Mobile Load Session in the WebLOAD Console](../images/appendix_f_015.png)
 

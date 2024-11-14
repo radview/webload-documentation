@@ -57,7 +57,7 @@ The following table lists some of the extensions that WebLOAD has added to the s
 
 WebLOAD enables the creation of a single test script that includes multiple IP addresses, simulating the behavior of actual users.
 
-> **Note:** Before you enable support of multiple IP addresses, you must first generate additional IP addresses on your machine to use when testing. For more information, see [*Generating IP Addresses in the](#_bookmark115)* on page [124.](#_bookmark115)
+> **Note:** Before you enable support of multiple IP addresses, you must first generate additional IP addresses on your machine to use when testing.
 
 Enable the use of all available IP addresses through the property wlGlobals.MultiIPSupport. The values of MultiIPSupport are:
 
@@ -85,13 +85,11 @@ After enabling the use of all available IP addresses, you can generate additiona
 
 1. Locate the FillIP.bat file in <WebLOAD directory>\bin.
 
-1. Run the batch file by entering the file name in the command line or double-clicking the file.
+2. Run the batch file by entering the file name in the command line or double-clicking the file.
 
    The command line window appears.
 
-   ![Command Line Window](../images/script_guide_098.png)
-
-1. Enter the netsh command to generate the list of IP addresses.
+3. Enter the netsh command to generate the list of IP addresses.
 
    `FillIP IP\_prefix subnet\_mask gateway from to`
 
@@ -586,7 +584,7 @@ When the Record Custom Headers option is enabled, WebLOAD records any headers th
 
 WebLOAD offers a simple way to reset configuration properties using the Options tab of the Session Control menu. Resetting configuration properties as you run and rerun various testing scenarios allows you to fine tune your tests to match your exact needs at that moment. However, that this real-time configuration setting will be overruled by any configuration properties that are explicitly set by wlHttp.Header within your test scripts. For greatest reliability and flexibility, WebLOAD recommends that you set header properties using the more general wlGlobals, wlLocals, and wlHttp object properties, fine-tuning your test sessions using the WebLOAD Session menu.
 
-See [*Rules of Scope for Local and Global Variables* ](#_bookmark40)(on page [43](#_bookmark39)), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. To set a cookie, see [*How](#_bookmark130) *[WebLOAD Works with Cookies* ](#_bookmark130)*(on page [142](#_bookmark127)).
+See [*Rules of Scope for Local and Global Variables* ](#_bookmark40)(on page [43](#_bookmark39)), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. 
 
 ### Erase
 Clear the WebLOAD properties of a wlHttp object after each `Get(), Post(),` or `Head()` call.

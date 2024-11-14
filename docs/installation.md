@@ -149,8 +149,8 @@ This chapter provides step-by-step instructions for installing WebLOAD on a PC r
 
 You can choose either of the following installation methods: 
 
-- [*Command Line Installation* ](#_page10_x54.00_y384.04)
-- [*Using the Installation Wizard* ](#_page11_x54.00_y167.04)
+- [*Command Line Installation* ](#command-line-installation)
+- [*Using the Installation Wizard* ](#using-the-installation-wizard)
 
 #### Command Line Installation
 
@@ -196,7 +196,7 @@ Install the WebLOAD components as follows:
   - If you do not select this option, TestTalk is installed as an executable file. 
 - Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. 
 
-> **Note:** The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[` `*Registering and Updating the WebLOAD License* ](#_page20_x54.00_y155.04)(on page[ 17)](#_page20_x54.00_y155.04). 
+> **Note:** The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[` `*Registering and Updating the WebLOAD License* ](#registering_and_updating_the_webload_license). 
 
 
 
@@ -206,23 +206,23 @@ Installing WebRM
 
 1. Browse to the location of the WebRM-10.0.xxx.en.exe installation file. 
 
-1. Double-click the file. The WebRM Installation Wizard appears. 
+2. Double-click the file. The WebRM Installation Wizard appears. 
 
-1. The WebRM Installation Wizard displays the Select Destination Location dialog box. On the Select Destination Location dialog box, browse to the location where you would like WebRM installed. By default, this location is C:\Program Files\RadView\WebRM. 
+3. The WebRM Installation Wizard displays the Select Destination Location dialog box. On the Select Destination Location dialog box, browse to the location where you would like WebRM installed. By default, this location is C:\Program Files\RadView\WebRM. 
 
-1. Click **Next**. 
+4. Click **Next**. 
 
-1. The WebRM Installation Wizard displays the Select License Location dialog box. This dialog box displays your HostID and enables you to browse to the License location. 
+5. The WebRM Installation Wizard displays the Select License Location dialog box. This dialog box displays your HostID and enables you to browse to the License location. 
 
-   **Note:** If you have already received your WebRM License file, skip to step[ 9.](#_page12_x54.00_y564.04)
+   **Note:** If you have already received your WebRM License file, skip to step 9.
 
-1. If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to[ support@radview.com.](mailto:support@radview.com) 
+6. If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to[ support@radview.com.](mailto:support@radview.com) 
 
    A WebRM license file (\*.lic) will be sent to you.  
 
-1. After receiving the file, save it on the hard drive of your WebRM machine and then double-click the WebRM executable installation file to restart the installation process. 
+7. After receiving the file, save it on the hard drive of your WebRM machine and then double-click the WebRM executable installation file to restart the installation process. 
 
-1. On the Select License dialog box, browse to the location where you saved your WebRM license, select the file and click **Next.**
+8. On the Select License dialog box, browse to the location where you saved your WebRM license, select the file and click **Next.**
 
    ![WebRM Installation Wizard – Select Start Menu Folder](images/webrm_installation_select_start.png)
 
@@ -240,11 +240,11 @@ Installing WebRM
 1. Close all browser windows that are open.  
 1. Uninstall the existing WebLOAD version. 
 
-   For instructions on the uninstall procedure, see[` `*Uninstalling WebLOAD* ](#_page28_x72.00_y155.04)(on page[ 25)](#_page28_x72.00_y155.04). 
+   For instructions on the uninstall procedure, see[` `*Uninstalling WebLOAD* ](#uninstalling-webload). 
 
 4. Install the new version of WebLOAD. 
 
-   For installation instructions, see[` `*Installing WebLOAD for Windows* ](#_page10_x54.00_y259.04)(on page[ 7)](#_page10_x54.00_y259.04). 
+   For installation instructions, see[` `*Installing WebLOAD for Windows* ](#installing-webload-for-windows). 
    
    
 
@@ -252,8 +252,8 @@ Installing WebRM
 
 WebLOAD stores information from Load Sessions in a Postgre SQL database for use with WebLOAD Analytics. You can install Postgre SQL and the WebLOAD Analytics database during the WebLOAD installation or manually after WebLOAD has already been installed. You might want to perform manual installation in the following situations: 
 
-- If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to[` `*Creating the Database when Postgre SQL is Already Installed* ](#_page14_x54.00_y318.04)on page[ 11.](#_page14_x54.00_y318.04) 
-- If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to [*Installing and Configuring the Database on a Dedicated Machine* ](#_page14_x54.00_y514.04)on page[ 11.](#_page14_x54.00_y514.04) 
+- If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to[` `*Creating the Database when Postgre SQL is Already Installed* ](#creating-the-database-when-postgre-sql-is-already-installed). 
+- If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to [*Installing and Configuring the Database on a Dedicated Machine* ](#installing-and-configuring-the-database-on-a-dedicated-machine). 
 
 #### Creating the Database when Postgre SQL is Already Installed
 
@@ -279,9 +279,9 @@ You can run the Postgre SQL database using a dedicated machine with several WebL
 
 3. Run deploy–database.bat from the temporary folder to which you copied the files in the previous step. The WebLOAD Analytics database is created. 
 
-4. Configure Postgre SQL to allow remote connections. For more information, see [*Configuring Postgre SQL to Allow Remote Database Connections* ](#_page15_x54.00_y251.04)on page[ 12.](#_page15_x54.00_y251.04)  
+4. Configure Postgre SQL to allow remote connections. For more information, see [*Configuring Postgre SQL to Allow Remote Database Connections* ](#configuring-postgre-sql-to-allow-remote-database-connections).  
 
-5. Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see[*Configuring Clients to Work with the Remote Database* ](#_page16_x54.00_y248.04)on page[ 13.](#_page16_x54.00_y248.04) 
+5. Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see[*Configuring Clients to Work with the Remote Database* ](#configuring-clients-to-work-with-the-remote-database). 
 
    
 
@@ -452,15 +452,13 @@ These sections are used to register and update your WebLOAD authorization licens
 4. Select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License** to open the Update License** dialog box and install the license key. 
 4. By default, the **Use a license file** radio button is selected. This assumes that your license file is located on your local computer system. 
 
-   For information on installing a floating license, or connecting to a license server, see[` `*WebRM Server* ](#_page23_x109.00_y468.04)(on page[ 20)](#_page23_x109.00_y468.04). 
+   For information on installing a floating license, or connecting to a license server, see[` `*WebRM Server* ](#webrm-server). 
 
-   For information on installing a license for an evaluation of WebLOAD, see[ Trial License ](#_page22_x54.00_y571.04)
+   For information on installing a license for an evaluation of WebLOAD, see[ Trial License ](#trial-license). 
 
-   ` `(on page[ 19)](#_page22_x54.00_y571.04). 
-
-6. Click the browse button next to the **Use a license file** text box to browse to the location of the license (\*.lic) file sent to you by a RadView representative. 
+5. Click the browse button next to the **Use a license file** text box to browse to the location of the license (\*.lic) file sent to you by a RadView representative. 
 6. Select the correct license file and click **Open** to return to the Update License dialog box. 
-6. Click **OK** to load the new license. 
+7. Click **OK** to load the new license. 
 
    If the license registration was successful, a message box appears indicating a successful license update. 
 

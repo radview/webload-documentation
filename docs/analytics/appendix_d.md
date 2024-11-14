@@ -30,9 +30,6 @@ The following illustrates a sample round:
 
 
 
-A hit is composed of several stages, as shown in[ Figure 37.](#_page86_x54.00_y212.04)  
-
-[Figure 37 ](#_page86_x54.00_y212.04)also shows at which stages a TCP connection starts and ends, and at which stages an HTTP* Request and an HTTP Response start and end. 
 
 | **Hit  Time Breakdown** |               |                    |               |               |
 | ----------------------- | ------------- | ------------------ | ------------- | ------------- |
@@ -116,7 +113,7 @@ This template displays the following information about the Load Session:
 >
 > You can customize the look of the General Session Information template by editing the settings of the following parameters: PEN\_COMPANY, OPEN\_REPORTER\_NAME, OPEN\_REPORTER\_TITLE, OPEN\_SUT\_DIAGRAM, 
 >
-> OPEN\_SUT\_NAME, OPEN\_SUT\_VERSION. Refer to[` `*Defining Your Parameter ](#_page70_x54.00_y376.04)*Preferences* on page[ 71.](#_page70_x54.00_y376.04) 
+> OPEN\_SUT\_NAME, OPEN\_SUT\_VERSION.  
 >
 
 
@@ -195,7 +192,7 @@ This template displays the total number of errors received, grouped by severity 
 
 
 
-By default, only warnings (minor errors) and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter (refer to[` `*Defining Your Parameter Preferences* ](#_page70_x54.00_y376.04)on page[ 71)](#_page70_x54.00_y376.04). 
+By default, only warnings (minor errors) and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter. 
 
 
 
@@ -225,7 +222,7 @@ This is a detailed template of all the log messages logged during the Load Sessi
 
 
 
-By default, only minor errors and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter (refer to [*Defining Your Parameter Preferences* ](#_page70_x54.00_y376.04)on page[ 71)](#_page70_x54.00_y376.04). 
+By default, only minor errors and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter. 
 
 
 
@@ -333,7 +330,7 @@ The template compares the average values of the second session to the average va
 
 #### *Analysis Highlights* 
 
-If a disparity is found, you can explore it further by creating a detailed report on the suspected measurement using the User Defined Blank Regression Template. Refer to [*Creating a Regression Chart from the Blank Regression Template* ](#_page28_x54.00_y155.04)on page[ 29.](#_page28_x54.00_y155.04)  
+If a disparity is found, you can explore it further by creating a detailed report on the suspected measurement using the User Defined Blank Regression Template.   
 
 
 
@@ -432,7 +429,7 @@ For each of the specified Load Sessions, this regression template displays a bar
 
 For each of the specified Load Sessions, this regression template displays the session’s transactions, ordered by the average transaction time, slowest first. 
 
-You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters (refer to[` `*Defining Your ](#_page70_x54.00_y376.04)*Parameter Preferences* on page[ 71)](#_page70_x54.00_y376.04). 
+You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters. 
 
 
 
@@ -440,7 +437,7 @@ You can configure the template to show only a certain number or certain percenta
 
 For each of the specified Load Sessions, this regression template displays the transactions, ordered by the highest failure count. 
 
-You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters (refer to[` `*Defining Your ](#_page70_x54.00_y376.04)*Parameter Preferences* on page[ 71)](#_page70_x54.00_y376.04) 
+You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters. 
 
 
 
@@ -478,7 +475,7 @@ For each of the specified Load Sessions, this regression template displays summa
 
   
 
-The default percentile is 90%. To change the default setting, edit the settings of the PERCENTILE parameter (refer to[` `*Defining Your Parameter ](#_page70_x54.00_y376.04)*Preferences* on page[ 71)](#_page70_x54.00_y376.04). 
+The default percentile is 90%. To change the default setting, edit the settings of the PERCENTILE parameter. 
 
 You can use the Transactions Over Time and Transaction Response Time By Percent regression templates instead of this template. 
 
@@ -516,7 +513,7 @@ For information on the PMM and how to add server side statistics, see the *WebLO
 
 ## Transaction Analysis Templates 
 
-This category of templates enables you to analyze the Load Session’s transactions. Refer to[` `*Understanding Load Session Terminology* ](#_page85_x54.00_y258.04)on page[ 86 ](#_page85_x54.00_y258.04)for an explanation of the basic elements of a transaction. 
+This category of templates enables you to analyze the Load Session’s transactions. Refer to[` `*Understanding Load Session Terminology* ](#understanding-load-session-terminology) for an explanation of the basic elements of a transaction. 
 
 ### Failed Transactions 
 
@@ -530,7 +527,7 @@ The chart depicts failed transactions and failure reasons.
 
 This template displays the session’s transactions, ordered by the average transaction time, slowest first. 
 
-You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters (refer to[` `*Defining Your ](#_page70_x54.00_y376.04)*Parameter Preferences* on page[ 71)](#_page70_x54.00_y376.04). 
+You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters. 
 
 
 
@@ -572,7 +569,7 @@ This template displays changes in transaction time over session running time. It
 
 ### Transactions With Most Failures
 
-This template displays the transactions, ordered by the highest failure count. You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters (refer to[` `*Defining Your ](#_page70_x54.00_y376.04)*Parameter Preferences* on page[ 71)](#_page70_x54.00_y376.04) 
+This template displays the transactions, ordered by the highest failure count. You can configure the template to show only a certain number or certain percentage of the top failing transactions. To do so, edit the settings of the TRAN\_PERCENT or TRAN\_QTY parameters.
 
 
 
@@ -594,7 +591,7 @@ This template displays the correlation of specified measurements with the Respon
 
 - The Direction column indicates whether the correlation is positive (the measurement goes up when the leading measurement goes up, and down when the leading measurement goes down) or negative (the measurement goes up when the leading measurement goes down, and down when the leading measurement goes up). 
 
-You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to[` `*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39.](#_page38_x54.00_y272.04) 
+You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement.  
 
 
 
@@ -612,7 +609,7 @@ This template displays the correlation of specified measurements with the Respon
 
 > **Tip**
 >
-> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to[*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39.](#_page38_x54.00_y272.04) 
+> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. 
 
 
 
@@ -628,7 +625,7 @@ This template displays the correlation of specified measurements with the Throug
 
 > **Tip**
 >
-> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to[` `*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39.](#_page38_x54.00_y272.04)
+> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. 
 
 
 
@@ -646,4 +643,4 @@ This template displays the correlation of specified measurements with the Throug
 
 > **Tip**
 >
-> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. Refer to[` `*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39.](#_page38_x54.00_y272.04) 
+> You can apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. 

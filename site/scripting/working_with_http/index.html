@@ -3518,7 +3518,7 @@
 <h2 id="using-multiple-ip-addresses">Using Multiple IP Addresses</h2>
 <p>WebLOAD enables the creation of a single test script that includes multiple IP addresses, simulating the behavior of actual users.</p>
 <blockquote>
-<p><strong>Note:</strong> Before you enable support of multiple IP addresses, you must first generate additional IP addresses on your machine to use when testing. For more information, see <a href="#_bookmark115">*Generating IP Addresses in the</a>* on page <a href="#_bookmark115">124.</a></p>
+<p><strong>Note:</strong> Before you enable support of multiple IP addresses, you must first generate additional IP addresses on your machine to use when testing.</p>
 </blockquote>
 <p>Enable the use of all available IP addresses through the property wlGlobals.MultiIPSupport. The values of MultiIPSupport are:</p>
 <ul>
@@ -3548,7 +3548,6 @@
 </li>
 </ol>
 <p>The command line window appears.</p>
-<p><img alt="Command Line Window" src="../images/script_guide_098.png" /></p>
 <ol>
 <li>Enter the netsh command to generate the list of IP addresses.</li>
 </ol>
@@ -3955,7 +3954,7 @@ wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &q
 <p><strong>Note:</strong> Any information set using the wlHttp.Header property <em>takes priority</em> over any defaults set using the global, local, or other wlHttp properties. If there is any discrepancy between the document header information and the HTTP values, WebLOAD will work with the information found in the wlHttp.Header property while also issuing a warning to the user.</p>
 </blockquote>
 <p>WebLOAD offers a simple way to reset configuration properties using the Options tab of the Session Control menu. Resetting configuration properties as you run and rerun various testing scenarios allows you to fine tune your tests to match your exact needs at that moment. However, that this real-time configuration setting will be overruled by any configuration properties that are explicitly set by wlHttp.Header within your test scripts. For greatest reliability and flexibility, WebLOAD recommends that you set header properties using the more general wlGlobals, wlLocals, and wlHttp object properties, fine-tuning your test sessions using the WebLOAD Session menu.</p>
-<p>See <a href="#_bookmark40"><em>Rules of Scope for Local and Global Variables</em> </a>(on page <a href="#_bookmark39">43</a>), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. To set a cookie, see <a href="#_bookmark130">*How</a> <em><a href="#_bookmark130">WebLOAD Works with Cookies* </a></em>(on page <a href="#_bookmark127">142</a>).</p>
+<p>See <a href="#_bookmark40"><em>Rules of Scope for Local and Global Variables</em> </a>(on page <a href="#_bookmark39">43</a>), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. </p>
 <h3 id="erase">Erase</h3>
 <p>Clear the WebLOAD properties of a wlHttp object after each <code>Get(), Post(),</code> or <code>Head()</code> call.</p>
 <p>WlHttp.Erase is a read/write property. The default value is true. This section will describe the implications of each setting.</p>

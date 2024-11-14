@@ -291,7 +291,7 @@ The names of all the measurements tracked during the current Load Session are li
 
 Double-click **Response Time** in the left-hand column to call up a History Report. This History Report lists all of the Response Time Attribute values recorded for all scripts from the start of the current test session. This is the same Summary Report accessed from the Statistics Report main window by double-clicking the button located at the intersection of the Response Time row and Total column.
 
-![](../images/console_users_guide_2078.png)
+![](../images/console_users_guide_2078.jpeg)
 
 
 
@@ -300,12 +300,6 @@ Double-click **Response Time** in the left-hand column to call up a History Repo
 Double-click a specific measurement name in the Statistics Report main window to call up the following summary table.
 
 This table displays all attribute values for the selected measurement for the current scripts.
-
-
-
-
-![Summary Table](../images/console_users_guide_2080.png)
-
 
 
 
@@ -357,9 +351,7 @@ This table displays all Total Load Size, Current Value, Min, Max, Count, and Ave
 
 
 
-The History by Measurement and Total Report displays all the Attribute values recorded from the start of the current Load Session for the selected measurement. These values are summed for all scripts:
-
-![History by Measurement and Total Report](../images/console_users_guide_2084.png)
+The History by Measurement and Total Report displays all the Attribute values recorded from the start of the current Load Session for the selected measurement. 
 
 
 
