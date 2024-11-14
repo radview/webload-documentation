@@ -15,69 +15,115 @@ nav:
   - Installation: installation.md 
   - Quick Start: quickstart.md
   - Analytics:
-    - Introduction: analytics-user-guide/introduction.md
-    - WebLOAD Analytics System Overview: analytics-user-guide/overview.md
-    - Getting Started: analytics-user-guide/getting_started.md
-    - Generating Charts: analytics-user-guide/generating_charts.md
-    - Changing Chart Settings: analytics-user-guide/changing_chart_settings.md
-    - Generating Reports: analytics-user-guide/generating_reports.md
-    - Working with Load Sessions: analytics-user-guide/load_sessions.md
-    - Working with Templates: analytics-user-guide/templates.md
-    - Working with Portfolios: analytics-user-guide/portfolios.md
-    - Defining Your Preferences: analytics-user-guide/defining_preferences.md
-    - Appendix A. WebLOAD Analytics File System Structure: analytics-user-guide/appendix_a.md
-    - Appendix B. Understanding the Statistics: analytics-user-guide/appendix_b.md
-    - Appendix C. Running Analytics in Command Line Mode: analytics-user-guide/appendix_c.md
-    - Appendix D. Understanding the Templates: analytics-user-guide/appendix_d.md
-    - Appendix E. Glossary: analytics-user-guide/glossary.md
+    - Introduction: analytics/introduction.md
+    - WebLOAD Analytics System Overview: analytics/overview.md
+    - Getting Started: analytics/getting_started.md
+    - Generating Charts: analytics/generating_charts.md
+    - Changing Chart Settings: analytics/changing_chart_settings.md
+    - Generating Reports: analytics/generating_reports.md
+    - Working with Load Sessions: analytics/load_sessions.md
+    - Working with Templates: analytics/templates.md
+    - Working with Portfolios: analytics/portfolios.md
+    - Defining Your Preferences: analytics/defining_preferences.md
+    - Appendix A. WebLOAD Analytics File System Structure: analytics/appendix_a.md
+    - Appendix B. Understanding the Statistics: analytics/appendix_b.md
+    - Appendix C. Running Analytics in Command Line Mode: analytics/appendix_c.md
+    - Appendix D. Understanding the Templates: analytics/appendix_d.md
+    - Appendix E. Glossary: analytics/glossary.md
+  - Console:
+    - Introduction: console/introduction.md
+    - Introducing WebLOAD: console/introducing_webload.md
+    - Getting Started: console/getting_started.md 
+    - Quick Start: console/quickstart.md
+    - Console Features: console/console_features.md
+    - Creating Load Templates: console/create_load_templates.md
+    - Planning a Test Session: console/plan_test_session.md
+    - Connecting to WebRM: console/connect_webrm.md
+    - Managing Load Templates and Load Sessions: console/manage_load_templates_sessions.md
+    - Creating Load Templates with the WebLOAD Wizard: console/create_template_wizard.md
+    - Creating Load Templates with Goal-Oriented Test: console/create_load_test_goal.md
+    - Configuring a Load Template Manually: console/config_load_template.md
+    - Setting Global Options: console/set_global_opt.md
+    - Setting Script Options: console/set_script_options.md
+    - Functional Verification Testing: console/func_verifi_test.md
+    - Running Tests and Analyzing  Test Results: console/run_test_analyze_results.md
+    - Running a Load Session: console/running_a_load_session.md
+    - Working with Git: console/working_with_git.md
+    - Viewing the Log Window: console/viewing_log_window.md
+    - WebLOAD Console Performance Reports: console/console_performance_reports.md
+    - WebLOAD Statistics Reports: console/statistics_reports.md
+    - Data Drilling Reports: console/data_drilling_reports.md
+    - Exporting Performance Reports: console/export_performance_reports.md
+    - Performance Measurements Manager: console/performance_measurements_manager.md
+    - Appendix A - Integrating with AppDynamics: console/appendix_a.md
+    - Appendix B - Integrating with Dynatrace: console/appendix_b.md
+    - Appendix C - Integrating with Nagios: console/appendix_c.md
+    - Appendix D - Integrating with New Relic: console/appendix_d.md
+    - Appendix E - WebLOAD Console Error Messages: console/appendix_e.md
+    - Appendix F - Reference Materials: console/appendix_f.md
+    - Appendix G - Glossary: console/appendix_g.md
   - Dashboard:
-    - Introduction: dashboard-user-guide/introduction.md
-    - Installation: dashboard-user-guide/installation.md
-    - Getting Started: dashboard-user-guide/getting_started.md
-    - Managing Test: dashboard-user-guide/manage_tests.md
-    - Managing Sessions: dashboard-user-guide/manage_sessions.md
-    - Managing Resources: dashboard-user-guide/managing_resources.md
-    - Using Dashboards: dashboard-user-guide/using_dashboards.md
-    - Customizing a Dashboard: dashboard-user-guide/customizing_dashboard.md
-    - Managing Dashboards: dashboard-user-guide/managing_dashboards.md
-    - Sharing a Dashboard or Panel: dashboard-user-guide/sharing_dashboards.md
-    - Creating and Playing a Playlist: dashboard-user-guide/creating_playlist.md
-    - Managing Load Generators: dashboard-user-guide/managing_load_generators.md
-    - Managing Organizations, Users, and Admins: dashboard-user-guide/managing_organizations.md
-    - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard-user-guide/appendix_a.md
+    - Introduction: dashboard/introduction.md
+    - Installation: dashboard/installation.md
+    - Getting Started: dashboard/getting_started.md
+    - Managing Test: dashboard/manage_tests.md
+    - Managing Sessions: dashboard/manage_sessions.md
+    - Managing Resources: dashboard/managing_resources.md
+    - Using Dashboards: dashboard/using_dashboards.md
+    - Customizing a Dashboard: dashboard/customizing_dashboard.md
+    - Managing Dashboards: dashboard/managing_dashboards.md
+    - Sharing a Dashboard or Panel: dashboard/sharing_dashboards.md
+    - Creating and Playing a Playlist: dashboard/creating_playlist.md
+    - Managing Load Generators: dashboard/managing_load_generators.md
+    - Managing Organizations, Users, and Admins: dashboard/managing_organizations.md
+    - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard/appendix_a.md
   - Recorder:
-    - Introduction: recorder-user-guide/introduction.md
-    - Overview: recorder-user-guide/overview.md
-    - Before you Begin: recorder-user-guide/before_you_begin.md
-    - QuickStart: recorder-user-guide/quick_start.md
-    - Recording Scripts: recorder-user-guide/recording_scripts.md
-    - Editing Scripts: recorder-user-guide/editing_scripts.md
-    - Correlating Scripts: recorder-user-guide/correlating_scripts.md
-    - Running and Debugging Scripts: recorder-user-guide/running_debugging_scripts.md
-    - Working with GIT: recorder-user-guide/working_with_git.md
-    - Configuring the WebLOAD Recorder Options: recorder-user-guide/configuring_recorder_options.md
-    - Appendix A - The WebLOAD Recorder Toolbox Set: recorder-user-guide/appendix_a.md
-    - Appendix B - WebLOAD Recorder File Types: recorder-user-guide/appendix_b.md
-    - Appendix C - Launching WebLOAD Recorder: recorder-user-guide/appendix_c.md
-    - Appendix D - Converting Certificate Files: recorder-user-guide/appendix_d.md
-    - Appendix E - Recording Mobile Applications: recorder-user-guide/appendix_e.md
-    - Appendix F - Integrating with Perfecto Mobile: recorder-user-guide/appendix_f.md
-    - Appendix G - Selenium Integration: recorder-user-guide/appendix_g.md
-    - Appendix H - Glossary: recorder-user-guide/appendix_h.md
+    - Introduction: recorder/introduction.md
+    - Overview: recorder/overview.md
+    - Before you Begin: recorder/before_you_begin.md
+    - QuickStart: recorder/quick_start.md
+    - Recording Scripts: recorder/recording_scripts.md
+    - Editing Scripts: recorder/editing_scripts.md
+    - Correlating Scripts: recorder/correlating_scripts.md
+    - Running and Debugging Scripts: recorder/running_debugging_scripts.md
+    - Working with GIT: recorder/working_with_git.md
+    - Configuring the WebLOAD Recorder Options: recorder/configuring_recorder_options.md
+    - Appendix A - The WebLOAD Recorder Toolbox Set: recorder/appendix_a.md
+    - Appendix B - WebLOAD Recorder File Types: recorder/appendix_b.md
+    - Appendix C - Launching WebLOAD Recorder: recorder/appendix_c.md
+    - Appendix D - Converting Certificate Files: recorder/appendix_d.md
+    - Appendix E - Recording Mobile Applications: recorder/appendix_e.md
+    - Appendix F - Integrating with Perfecto Mobile: recorder/appendix_f.md
+    - Appendix G - Selenium Integration: recorder/appendix_g.md
+    - Appendix H - Glossary: recorder/appendix_h.md
   - Scripting:
-    - Introduction: scripting-guide/introduction.md
-    - Programming your JavaScript Script: scripting-guide/programming_your_javascript.md
-    - Advanced JavaScript Script Features: scripting-guide/advanced_javascript_features.md
-    - Working with HTTP Protocol: scripting-guide/working_with_http.md
-    - Using Asynchronous Requests: scripting-guide/using_asynchronous.md
-    - Appendix A - Scripting Samples: scripting-guide/appendix_a.md
-    - Appendix B - LiveConnect Overview: scripting-guide/appendix_b.md
+    - Introduction: scripting/introduction.md
+    - Programming your JavaScript Script: scripting/programming_your_javascript.md
+    - Advanced JavaScript Script Features: scripting/advanced_javascript_features.md
+    - Working with HTTP Protocol: scripting/working_with_http.md
+    - Using Asynchronous Requests: scripting/using_asynchronous.md
+    - Appendix A - Scripting Samples: scripting/appendix_a.md
+    - Appendix B - LiveConnect Overview: scripting/appendix_b.md
   - Automation:
-    - Introduction: automation-guide/introduction.md
-    - Overview: automation-guide/overview.md
-    - Running WebLOAD from the Command Line: automation-guide/webload_cli.md
-    - Running WebLOAD in Jenkins: automation-guide/webload_jenkins.md
-    - Running WebLOAD Using the OpenAPI: automation-guide/webload_openapi.md
+    - Introduction: automation/introduction.md
+    - Overview: automation/overview.md
+    - Running WebLOAD from the Command Line: automation/webload_cli.md
+    - Running WebLOAD in Jenkins: automation/webload_jenkins.md
+    - Running WebLOAD Using the OpenAPI: automation/webload_openapi.md
+  - JavaScript Reference:
+    - Introduction: javascript/introduction.md
+    - Introduction to JavaScript: javascript/intro_java_scripts.md
+    - Using the WebLOAD JavaScript Reference : javascript/using_javascript_ref.md
+    - WebLOAD Actions, Objects, and Functions: javascript/actions_objects_functions.md
+    - WebLOAD Internet Protocols Reference: javascript/internet_protocol.md
+    - XML Parser Object: javascript/xmlparser.md
+    - WebSocket Object: javascript/websocket_object.md
+    - Appendix A - WebLOAD-supported SSL Protocol Reference: javascript/appendix_a.md
+    - Appendix B - WebLOAD-supported XML DOM Interfaces: javascript/appendix_b.md
+    - Appendix C - HTTP Protocol Status Messages: javascript/appendix_c.md
+    - Appendix D - WebLOAD-supported Character Sets: javascript/appendix_d.md
+    - Appendix E - Glossary: javascript/appendix_e.md   
+        
     
 
 
