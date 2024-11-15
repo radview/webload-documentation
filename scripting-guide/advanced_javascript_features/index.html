@@ -1,0 +1,5776 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product documentation for RadView WebLOAD">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Advanced JavaScript script Features - WebLOAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-javascript-script-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WebLOAD Documentation" class="md-header__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced JavaScript script Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recorder/introduction/" class="md-tabs__link">
+          
+  
+  Recorder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scripting/introduction/" class="md-tabs__link">
+          
+  
+  Scripting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../console/introduction/" class="md-tabs__link">
+          
+  
+  Console
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/introduction/" class="md-tabs__link">
+          
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../automation/introduction/" class="md-tabs__link">
+          
+  
+  Automation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../javascript/introduction/" class="md-tabs__link">
+          
+  
+  JavaScript Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../analytics/introduction/" class="md-tabs__link">
+          
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WebLOAD Documentation" class="md-nav__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WebLOAD Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Recorder
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/before_you_begin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Before you Begin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/quick_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QuickStart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/recording_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recording Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/editing_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scripting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/programming_your_javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/advanced_javascript_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/working_with_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/using_asynchronous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Console
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introducing_webload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/plan_test_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/connect_webrm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/manage_load_templates_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_template_wizard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_test_goal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/config_load_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_global_opt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Global Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_script_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Script Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/func_verifi_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/run_test_analyze_results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/running_a_load_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running a Load Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/viewing_log_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/statistics_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/data_drilling_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/export_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/performance_measurements_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD Using the OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/intro_java_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/using_javascript_ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/actions_objects_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/internet_protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/xmlparser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XML Parser Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/websocket_object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebSocket Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/load_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/portfolios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/defining_preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-xml-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with the XML DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with the XML DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webload-xml-dom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebLOAD XML DOM Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-islands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Islands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Islands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-islandin-line-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Island—In-Line Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-islandreference-to-another-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Island—Reference to Another Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-islandscripted-in-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Island—Scripted In-Line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-islandscripted-reference-to-another-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Island—Scripted Reference to Another Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-using-data-islands-in-a-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using Data Islands in a script
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Using Data Islands in a script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-html-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with HTML Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with HTML Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript-script-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript script Code:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Text:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-xml-dom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with XML DOM Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-bookstore-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Bookstore Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-bookstore-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding New Bookstore Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-filling-new-xml-dom-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and Filling New XML DOM Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating and Filling New XML DOM Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLXmlDocument(xmlStr)—Creating XML DOM Object from XML String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-xml-in-native-direct-browsing-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with XML in Native (Direct) Browsing Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wlxmldocumentcreating-a-new-blank-xml-dom-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      WLXmlDocument()—Creating a New, Blank XML DOM Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-xml-files-into-xml-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading XML Files into XML Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading XML Files into XML Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-loadxmlxmldocstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using loadXML(XMLDocString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-loadurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using load("URL")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-loadxml-and-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing loadXML() and load()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-building-an-xml-database-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Building an XML Database from Scratch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-web-service-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Web Service Transactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-type-definition-dtd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Type Definition (DTD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jdkjre-15-or-higher" class="md-nav__link">
+    <span class="md-ellipsis">
+      JDK/JRE 1.5 (or Higher)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-environment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATH Environment Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classpath-environment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLASSPATH Environment Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-path-and-classpath-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting PATH and CLASSPATH Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifying-java-objects-in-javascript-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Java Objects in JavaScript scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forestalling-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forestalling Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-passing-simple-variables-between-java-and-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: passing simple variables between Java and JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passing-objects-between-java-and-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passing Objects Between Java and JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-timers-and-counters-for-java-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Timers And Counters For Java Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calling-a-webload-api-from-a-java-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calling a WebLOAD API from a Java Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calling a WebLOAD API from a Java Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-webloadwrapper-to-call-webload-api-from-a-java-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the WebLoadWrapper to call WebLOAD API from a Java Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the WebLoadWrapper to call WebLOAD API from a Java Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions-supported-by-webloadwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions supported by WebLoadWrapper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding-with-webloadwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding with WebLoadWrapper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-using-webloadwrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: using WebLoadWrapper
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-method-of-calling-webload-api-from-a-java-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy method of calling WebLOAD API from a Java Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legacy method of calling WebLOAD API from a Java Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-reading-data-from-a-jdbc-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: reading data from a JDBC database
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-java-selenium-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Java Selenium Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Java Selenium Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisite-adding-custom-java-classes-to-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisite: Adding custom Java classes to WebLOAD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisite: Adding custom Java classes to WebLOAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-include-the-selenium-jar-and-its-dependencies-in-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method #1: Include the Selenium jar and its dependencies in WebLOAD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method #2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-selenium-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Selenium Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-webloaddriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with WebLoadDriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-working-with-webloaddriver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of working with WebLoadDriver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-more-information-on-working-with-selenium" class="md-nav__link">
+    <span class="md-ellipsis">
+      For more information on working with Selenium
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-component-object-model-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with the Component Object Model (COM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with the Component Object Model (COM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is COM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activex-object-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActiveX Object Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-activex-objects-from-a-javascript-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activating ActiveX Objects from a JavaScript script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activexobject-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActiveXObject() (constructor)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigning-values-to-activex-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assigning Values to ActiveX Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timers-and-counters-for-activex-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timers and Counters for ActiveX Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-conversion-between-javascript-and-com-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Conversion between JavaScript and COM Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-casting-functions-for-javascript-and-com-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Casting Functions for JavaScript and COM Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dcom-over-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCOM over HTTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-activexobject-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote ActiveXObject() Constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-remote-activex-object-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Remote ActiveX Object Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-error-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      COM Error Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activex-object-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActiveX Object Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="advanced-javascript-script-features">Advanced JavaScript script Features</h1>
+<p>Previous chapters discussed the basic set of script tools used to test typical Internet applications. However, to evaluate and test your Internet application most effectively, it is not enough to measure the total transaction turn-around time or throughput of the website. A website is often only the front-end for applications that reside behind the scenes, for back-end components that do the actual work for an application. Testing the components that stand behind your Internet application is essential for comprehensive Internet application testing. A detailed breakdown and analysis of the results of each user activity helps pinpoint the source of any potential bottlenecks or other problems, and expedites the work required for any corrections or improvements.</p>
+<p>WebLOAD fully supports component based testing. WebLOAD Recorder scripts do not simply measure the time required for transactions to a website to be completed. WebLOAD JavaScript script objects can also directly access the back-end applications that compose your Internet application.</p>
+<p>WebLOAD provides a single, uniform environment for all your testing needs. WebLOAD JavaScript is the single scripting language that is able to work seamlessly with COM, Java, and XML DOM, accessing the applications that use these technologies through a variety of protocols, or your own proprietary protocol, in addition to standard Web-site testing, adding power to and increasing the universal applicability of your testing scripts.</p>
+<p>This chapter introduces various component-based testing features.</p>
+<p>Syntax specifications for the WebLOAD objects that appear in the examples in this chapter are provided in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
+<h2 id="working-with-the-xml-dom">Working with the XML DOM</h2>
+<p>XML is a meta-language developed by W3C to organize and transfer data in a generic, universally recognized manner. XML relies on a simple, logical structure that is both easy to learn and works quickly and reliably, focusing on transferring hard data only, with no formatting or presentation information. XML acts as a gateway between autonomous, heterogeneous, component-based systems. This allows users to connect or link to any platform. XML provides an elegant solution for Web masters who wish to reach a wide range of clients, working on any number of diverse systems.</p>
+<p>WebLOAD provides full support for work with the XML Document Object Model. Using XML DOM objects, WebLOAD scripts are able to both <em>access</em> XML site information, and <em>generate new XML data</em> to send back to the server for processing, taking advantage of all the additional benefits that XML provides.</p>
+<p>WebLOAD supports:</p>
+<ul>
+<li>Working with existing XML Data Islands. Data Islands are XML documents embedded within HTML documents. WebLOAD Recorder, like the IE Browser, produces an XML DOM object for each Data Island.</li>
+<li>Creating new XML DOM objects via the XML Object Constructor. WebLOAD supports XML Native Browsing through use of the XML Object Constructor.</li>
+<li>Parsing and manipulating any XML data, using the XML Parser Object.</li>
+</ul>
+<p>Both WebLOAD and the IE Browser use the MSXML parser to create XML DOM objects. Since WebLOAD XML DOM objects and Browser XML DOM objects are created by the same MSXML parser, the XML DOM objects that are produced for both WebLOAD and the IE Browser are identical.</p>
+<p>When working through the IE Browser, XML DOM objects are accessed through the all collection. When working through WebLOAD, XML DOM objects are accessed through the wlXmls collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.</p>
+<p>The next few sections of this guide explain basic XML concepts and usage. Look in the <em>WebLOAD JavaScript Reference Guide</em> for a description of the WebLOAD wlXmls collection syntax and for a complete list of the WebLOAD-supported XML DOM Interfaces.</p>
+<p>For more general XML support and cross platform capabilities, WebLOAD offers the XMLParserObject as another alternative for accessing XML data. The XMLParserObject is based on the open source Xerces XML parser. In addition to the multi-platform support, using this object will result in lower memory consumption and increased performance during load testing.</p>
+<p>The following sections contain examples using the XMLParserObject. For more information about the XMLParserObject please refer to the <em>WebLOAD JavaScript Reference Guide. A</em>dditional information about the XMLParserObject’s underlying Xerces component can be found at <a href="http://xml.apache.org/xerces%1ec/">http://xml.apache.org/xerces-c/.</a></p>
+<h3 id="webload-xml-dom-objects">WebLOAD XML DOM Objects</h3>
+<p>WebLOAD XML DOM objects produced from HTML documents may be used on two different levels:</p>
+<ul>
+<li>The simplest approach is to use the XML DOM object to work directly with text strings through the standard HTML properties id, src, and innerHTML. These properties refer to the text strings found within an HTML document.</li>
+<li>On a more sophisticated level, programmers may use the same XML DOM object to work with a full set of XML DOM Document Interface properties and methods, as listed in <em>Appendix B</em> of the <em>WebLOAD JavaScript Reference Guide</em>. The following figure illustrates these options:</li>
+</ul>
+<h3 id="data-islands"><strong>Data Islands</strong></h3>
+<p>Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of <xml> and </xml> tags or between a set of <script> and </script> tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.</p>
+<p>WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of <xml> tags or a set of <script> tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.</p>
+<p>Data Island XML DOM objects expose both aspects of each XML DOM object, (as described in <a href="#_bookmark65"><em>WebLOAD XML DOM Objects</em> </a>(on page <a href="#_bookmark66">65</a>)):</p>
+<ul>
+<li>The standard HTML properties id, src, and innerHTML. These properties refer to text strings found within the HTML document.</li>
+<li>The XML Document Interface. The interface provides access to the properties and methods of the XML DOM object.</li>
+</ul>
+<p>The following figure illustrates the various Data Islands options.</p>
+<blockquote>
+<p><strong>Note:</strong> Not all these Data Islands would be found in a single wlXmls collection if they have been taken from different sources. They appear here in a single figure to illustrate the various Data Island possibilities.</p>
+</blockquote>
+<p>Data Islands are accessible through WebLOAD scripts using the wlXmls collection of XML DOM objects corresponding to all the Data Islands found in an HTML document. Each Data Island produces a different XML DOM object.</p>
+<p>For example, when working with an HTML document that includes two Data Islands, use the following code to assign the XML object that references the first Data Island to another object:</p>
+<p><code>XMLDataIsland1 = document.wlXmls[0]</code></p>
+<p>To access the second Data Island use: </p>
+<p><code>XMLDataIsland2 = document.wlXmls[1]</code></p>
+<p>If a Data Island is identified by name through an ID, you could also access the Data</p>
+<p>Island through the id property. For example, if the first Data Island begins:</p>
+<p><xml id=“xmlBookstoreDatabase”></p>
+<p>Then you could access the Data Island using any of the following:</p>
+<p><code>MyBookstore = document.wlXmls.xmlBookstoreDatabase</code> </p>
+<p><code>MyBookstore = document.wlXmls[“xmlBookstoreDatabase”]</code> </p>
+<p><code>MyBookstore = document.wlXmls[0]</code></p>
+<p>The following HTML code fragments illustrate these Data Islands options.</p>
+<h4 id="data-islandin-line-code">Data Island—In-Line Code</h4>
+<p>In this code fragment, in-line XML data is embedded in the HTML page. WebLOAD uses this data to create the XML DOM object.</p>
+<pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+
+
+...
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+...
+
+&lt;!—in-line XML data&gt;
+
+&lt;xml id=&quot;xmldoc\_1&quot;&gt;
+
+&lt;?xml version=&quot;1.0&quot; standalone = true?&gt; Programmer’s Guide
+
+&lt;author&gt;Mark Twain&lt;/author&gt;
+
+&lt;title&gt;Tom Sawyer&lt;/title&gt;
+
+&lt;price&gt;$11.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;foo&gt;
+
+...
+
+&lt;/foo&gt;
+
+&lt;/xml&gt;
+
+...
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h4 id="data-islandreference-to-another-source">Data Island—Reference to Another Source</h4>
+<p>In this code fragment, a reference to XML data found at another location is found in the HTML page. WebLOAD creates an XML DOM object from the source found at that location <em>only</em>.</p>
+<blockquote>
+<p><strong>Note:</strong> If a Data Island includes an src=location statement, then any additional XML data found embedded within the Data Island on the HTML page will be ignored.</p>
+</blockquote>
+<pre><code class="language-html">&lt;html&gt;
+
+&lt;head&gt;
+
+
+
+
+...
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+...
+
+&lt;!—reference to another source&gt;
+
+&lt;xml id=“xmldoc\_2” [src=“http://demo/bookstore.xml”&gt;](http://demo/bookstore.xml)
+
+&lt;/xml&gt;
+
+...
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h4 id="data-islandscripted-in-line">Data Island—Scripted In-Line</h4>
+<p>XML DOM objects created from scripts within HTML documents may also be based on either in-line XML data or references to other sources.</p>
+<p>For example:</p>
+<pre><code class="language-xml">
+&lt;SCRIPT language=“xml” id=“xmlscript”&gt;
+
+&lt;?xml version=&quot;1.0”?&gt;
+
+&lt;!—XML data in-line within a script element.&gt;
+
+&lt;bookstore&gt;
+
+Programmer’s Guide
+
+&lt;author&gt;Mark Twain&lt;/author&gt;
+
+&lt;title&gt;Tom Sawyer&lt;/title&gt;
+
+&lt;price&gt;$11.00&lt;/price&gt;
+
+&lt;/book&gt; Programmer’s Guide
+
+&lt;author&gt;Oscar Wilde&lt;/author&gt;
+
+&lt;title&gt;The Giant And His Garden&lt;/title&gt;
+
+&lt;price&gt;$8.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;/bookstore&gt;
+
+&lt;/SCRIPT&gt;
+</code></pre>
+<h4 id="data-islandscripted-reference-to-another-source">Data Island—Scripted Reference to Another Source</h4>
+<p>The preceding code illustrates XML data embedded in a script. Scripts may also include references to other sources:</p>
+<SCRIPT language=“xml” id=“xmlscript” src=“book.xml”>
+
+</SCRIPT>
+
+<h3 id="example-using-data-islands-in-a-script">Example: Using Data Islands in a script</h3>
+<p>The following example illustrates Data Island usage. Assume you are working with a Web Bookstore site that includes the following inventory database code fragment:</p>
+<pre><code>&lt;HTML&gt;
+
+&lt;HEAD&gt;
+
+
+&lt;TITLE&gt; &lt;/TITLE&gt;
+
+&lt;/HEAD&gt;
+
+&lt;BODY&gt;
+</code></pre>
+<h3>Html file with embedded XML</h3>
+
+<P>Here begins the XML Data Island</P>
+
+<pre><code class="language-html">&lt;xml id=&quot;WebStudents&quot;&gt;
+
+&lt;wclass&gt;
+
+&lt;!-- My students who attended my web programming class -
+
+-&gt;
+
+&lt;student id=&quot;1&quot;&gt;
+
+&lt;name&gt;Linda Jones&lt;/name&gt;
+
+&lt;legacySkill&gt;Access, VB5.0&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;2&quot;&gt;
+
+&lt;name&gt;Adam Davidson&lt;/name&gt;
+
+&lt;legacySkill&gt;Cobol, MainFrame&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;3&quot;&gt;
+
+&lt;name&gt;Charles Boyer&lt;/name&gt;
+
+&lt;legacySkill&gt;HTML, Photoshop&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;4&quot;&gt;
+
+&lt;name&gt;Charles Mann&lt;/name&gt;
+
+&lt;legacySkill&gt;Cobol, MainFrame&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;/wclass&gt;
+
+&lt;/xml&gt;  &lt;P&gt;Here ends the XML Data Island&lt;/P&gt;
+
+&lt;/BODY&gt;
+
+&lt;/HTML&gt;
+</code></pre>
+<h4 id="working-with-html-properties">Working with HTML Properties</h4>
+<p>When accessing this website, your script may use the standard HTML properties id and innerHTML to print out text strings showing the information found within the XML tags, as follows:</p>
+<h5 id="javascript-script-code"><strong>JavaScript script Code:</strong></h5>
+<pre><code class="language-javascript">function InitAgenda()
+
+{
+
+wlGlobals.Parse = true wlGlobals.ParseXML = true
+
+}
+
+wlHttp.SaveSource = true
+
+[wlHttp.Get(&quot;http://www.webloadmpsto](http://www.webloadmpstore.com/xmlsamples/sample2.htm)re.com/[xmlsamples/sample2.htm](http://www.webloadmpstore.com/xmlsamples/sample2.htm) l&quot;)
+
+var XMLstudents = document.wlXmls[0] 
+
+InfoMessage(&quot;ID : &quot; +XMLstudents.id) 
+
+InfoMessage(&quot;HTML text : &quot; +XMLstudents.innerHTML)
+
+
+</code></pre>
+<h5 id="output-text"><strong>Output Text:</strong></h5>
+<p>Running this script produces the following output, essentially a text copy of the Data Island fields:</p>
+<p>ID : WebStudents HTML text :</p>
+<p><wclass></p>
+<!-- My students who attended my web programming class -->
+
+<p><student id="1"></p>
+<p><name>Linda Jones</name></p>
+<p><legacySkill>Access, VB5.0</legacySkill></p>
+<p></student></p>
+<p><student id="2"></p>
+<p><name>Adam Davidson</name></p>
+<p><legacySkill>Cobol, MainFrame</legacySkill></p>
+<p></student></p>
+<p><student id="3"></p>
+<p><name>Charles Boyer</name></p>
+<p><legacySkill>HTML, Photoshop</legacySkill></p>
+<p></student></p>
+<p><student id="4"></p>
+<p><name>Charles Mann</name></p>
+<p><legacySkill>Cobol, MainFrame</legacySkill></p>
+<p></student></p>
+<p></wclass></p>
+<h4 id="working-with-xml-dom-properties">Working with XML DOM Properties</h4>
+<p>Your script may also access the complete XML DOM Document Interface for the XML DOM object created from this Data Island. For example, to see a printout of the complete XML DOM structure for the xmlBookSite Data Island described on the preceding pages, use the following recursive function. See <em>Appendix B</em> in the <em>WebLOAD JavaScript Reference Guide</em>, for a description of the XML DOM properties used in this script fragment.</p>
+<p><strong>JavaScript script Code:</strong></p>
+<pre><code class="language-javascript">function InitAgenda()
+
+{
+
+wlGlobals.Parse = true wlGlobals.ParseXML = true
+
+}
+
+wlHttp.SaveSource = true
+
+[wlHttp.Get(&quot;http://www.webloadmpstore.com/xmlsamples](http://www.webloadmpstore.com/xmlsamples/sample2.htm)/sample2.htm l&quot;)
+
+var XMLstudents = document.wlXmls[0]
+
+var XMLstudentDoc = XMLstudents.XMLDocument
+
+var XMLstudentElement = XMLstudentDoc.documentElement
+
+InfoMessage(&quot;Printing XML under the root&quot;) InfoMessage(XMLstudentElement.xml) InfoMessage(&quot;Element structure of the DOM&quot;) printChildren(XMLstudentElement)
+
+// function that will print all the fields and their attributes function printChildren(element)
+
+{
+
+switch(element.nodeTypeString)
+
+{
+
+case &quot;element&quot;:
+
+InfoMessage(element.nodeName)
+
+for(var i=0; i&lt;element.childNodes.length; i++)
+
+{
+
+printChildren(element.childNodes.item(i))
+
+}
+
+
+
+break case &quot;text&quot;:
+
+InfoMessage(&quot;\&quot;&quot; + element.nodeValue + &quot;\&quot;&quot;) break
+
+}
+
+}
+
+InfoMessage(&quot;End of test&quot;)
+</code></pre>
+<p><strong>Output Text:</strong></p>
+<p>Running this script produces the following output:</p>
+<p>Printing XML under the root</p>
+<pre><code class="language-xml">&lt;wclass&gt;
+
+&lt;!-- My students who attended my web programming class --&gt;
+
+&lt;student id=&quot;1&quot;&gt;
+
+&lt;name&gt;Linda Jones&lt;/name&gt;
+
+&lt;legacySkill&gt;Access, VB5.0&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;2&quot;&gt;
+
+&lt;name&gt;Adam Davidson&lt;/name&gt;
+
+&lt;legacySkill&gt;Cobol, MainFrame&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;3&quot;&gt;
+
+&lt;name&gt;Charles Boyer&lt;/name&gt;
+
+&lt;legacySkill&gt;HTML, Photoshop&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;student id=&quot;4&quot;&gt;
+
+&lt;name&gt;Charles Mann&lt;/name&gt;
+
+&lt;legacySkill&gt;Cobol, MainFrame&lt;/legacySkill&gt;
+
+&lt;/student&gt;
+
+&lt;/wclass&gt;
+
+Element structure of the DOM wclass
+
+student name
+
+&quot;Linda Jones&quot;
+
+
+
+legacySkill &quot;Access, VB5.0&quot; student
+
+name
+
+&quot;Adam Davidson&quot; legacySkill &quot;Cobol, MainFrame&quot; student
+
+name
+
+&quot;Charles Boyer&quot; legacySkill &quot;HTML, Photoshop&quot; student
+
+name
+
+&quot;Charles Mann&quot; legacySkill &quot;Cobol, MainFrame&quot;
+
+End of test
+</code></pre>
+<p><strong>JavaScript script Code Using the XMLParser Object:</strong></p>
+<p>A similar script, with the same functionality, can be written using the XMLParserObject, as shown in the code snippet below:</p>
+<pre><code class="language-javascript">xmlObject = new XMLParserObject(); doc = xmlObject.
+
+[parseURI(&quot;http://www.webloadmpstore.com/](http://www.webloadmpstore.com/xmlsamples/sample2.html)xmlsamples[/sample2.html&quot;](http://www.webloadmpstore.com/xmlsamples/sample2.html)
+
+)
+
+doc1 = doc.getDocumentElement()
+
+//used to present only the xml
+
+domNode = doc1.getElementsByTagName(&quot;xml&quot;).item(0); InfoMessage(&quot;Printing XML under the root&quot;) printChildren(domNode)
+
+function printChildren(element)
+
+{
+
+switch(element.nodeTypeString)
+
+{
+
+case &quot;element&quot;:
+
+InfoMessage(element.nodeName)
+
+for(var i=0; i&lt;element.childNodes.length; i++)
+
+{
+
+printChildren(element.childNodes.item(i))
+
+}
+
+
+
+break case &quot;text&quot;:
+
+InfoMessage(&quot;\&quot;&quot; + element.nodeValue + &quot;\&quot;&quot;) break
+
+}
+
+}
+
+InfoMessage(&quot;End of test&quot;)
+</code></pre>
+<h4 id="changing-bookstore-data">Changing Bookstore Data</h4>
+<p>After you have accessed the website and created an XML DOM object from the XML data found on the site, you may wish to change some of the data and post the new version back to the website. To change the author of the first book to ‘S. B. David Lee Eddings’:</p>
+<pre><code class="language-js">function InitAgenda()
+
+{
+
+wlGlobals.Parse = true wlGlobals.ParseXML = true
+
+}
+
+wlHttp.SaveSource = true wlHttp.Get
+
+[(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1[.xml&quot;)](http://www.webloadmpstore.com/xmlsamples/sample1.xml)
+
+//Getting the XML file
+
+var xmlBookListDoc = document.wlXmls[0]
+
+var xmlBookListIsland = xmlBookListDoc.XMLDocument
+
+var xmlBookListElement = xmlBookListIsland.documentElement
+
+InfoMessage(&quot;Printing xml under the root: &quot; + xmlBookListElement.xml)
+
+//First access the node of the first book
+
+var FirstBook = xmlBookListElement.childNodes.item(0)
+
+//Next access the node of the author of the first book var AuthorFirstBook = FirstBook.childNodes.item(1)
+
+//Finally access the node of the text of the author of the first book
+
+var TextAuthorFirstBook = AuthorFirstBook.childNodes.item(0)
+
+//In other words, the node in the XML database tree
+
+
+
+//that actually stores the author name value is located at:
+
+//  document.wlXmls[0].XMLDocument.
+
+//  documentElement.childNodes.item(0).childNodes.
+
+//  item(1).childNodes.item(0)
+
+//Now assign a new value
+
+TextAuthorFirstBook.nodeValue = &quot;S. B. David Lee Eddings&quot;
+
+InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot;
+
+\+ TextAuthorFirstBook.nodeValue) InfoMessage(&quot;Print xml under the root: &quot; + xmlBookListElement.xml)
+</code></pre>
+<p>The changed bookstore database will look as follows:</p>
+<pre><code class="language-xml">&lt;bookstore name=&quot;NODE1NAME&quot;&gt;
+
+&lt;book&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt;
+
+&lt;author&gt;David Eddings&lt;/author&gt;
+
+&lt;year&gt;2005&lt;/year&gt;
+
+&lt;price&gt;30.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;CHILDREN&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Harry Potter&lt;/title&gt;
+
+&lt;author&gt;J K. Rowling&lt;/author&gt;
+
+&lt;year&gt;2005&lt;/year&gt;
+
+&lt;price&gt;29.99&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;WEB&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;XQuery Kick Start&lt;/title&gt;
+
+&lt;author&gt;James McGovern&lt;/author&gt;
+
+&lt;author&gt;Per Bothner&lt;/author&gt;
+
+&lt;author&gt;Kurt Cagle&lt;/author&gt;
+
+&lt;author&gt;James Linn&lt;/author&gt;
+
+&lt;author&gt;Vaidyanathan Nagarajan&lt;/author&gt;
+
+&lt;year&gt;2003&lt;/year&gt;
+
+&lt;price&gt;49.99&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;WEB&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Learning XML&lt;/title&gt;
+
+&lt;author&gt;Erik T. Ray&lt;/author&gt;
+
+&lt;year&gt;2003&lt;/year&gt;
+
+
+
+&lt;price&gt;39.95&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;/bookstore&gt;
+
+You can change the bookstore data in the same way by using the XMLParserObject. The script code is even shorter:
+
+xmlObject = new XMLParserObject(); doc = xmlObject.
+
+[parseURI(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml&quot;)
+
+;
+
+InfoMessage(&quot;The xml under the root : &quot; + doc.xml) doc1 = doc.getDocumentElement()
+
+FirstBook = doc1.getElementsByTagName(&quot;book&quot;).item(0); AuthorFirstBook  = FirstBook.childNodes.item(1) ; TextAuthorFirstBook    = AuthorFirstBook.childNodes.item(0) TextAuthorFirstBook.nodeValue = &quot;S. B. David Lee Eddings&quot;
+
+InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot; + TextAuthorFirstBook.nodeValue)
+
+InfoMessage(&quot;The xml under the root : &quot; + doc.xml)
+</code></pre>
+<h4 id="adding-new-bookstore-data">Adding New Bookstore Data</h4>
+<p>The following script fragment illustrates adding a new ‘book element’ to the xmlBooksite database. See Appendix B in the <em>WebLOAD JavaScript Reference Guide</em>, for a description of the XML DOM properties used here.</p>
+<pre><code class="language-javascript">var xmlBookListDoc = document.wlXmls[0]
+
+var xmlBookListIsland = xmlBookListDoc.XMLDocument
+
+//STEP 1, create the new book element
+
+//  and append it to the tree
+
+newBook = xmlBookListIsland.createElement(&quot;book&quot;) xmlBookListIsland.documentElement.appendChild(newBook)
+
+//STEP 2, create and name the new book’s title element title1 = xmlBookListIsland.createElement(&quot;title&quot;)
+
+name = xmlBookListIsland.createTextNode(&quot;River God&quot;)
+
+//append the new name node to the title node title1.appendChild(name)
+
+//append the new title node to the book node newBook.appendChild(title1)
+
+
+
+//STEP 3, create and name the new book’s author element author = xmlBookListIsland.createElement(&quot;author&quot;)
+
+name = xmlBookListIsland.createTextNode(&quot;Wilbur Smith&quot;) author.appendChild(name)
+
+newBook.appendChild(author)
+
+//STEP 4, create and name the new book’s year element year = xmlBookListIsland.createElement(&quot;year&quot;)
+
+name = xmlBookListIsland.createTextNode(&quot;1975&quot;) year.appendChild(name) newBook.appendChild(year)
+
+//STEP 4, create and name the new book’s price element price = xmlBookListIsland.createElement(&quot;price&quot;) amount = xmlBookListIsland.createTextNode(&quot;40.55&quot;) price.appendChild(amount)
+
+newBook.appendChild(price)
+
+
+</code></pre>
+<p>The newly expanded bookstore database will look as follows:</p>
+<pre><code class="language-xml">&lt;bookstore name=&quot;NODE1NAME&quot;&gt;
+
+&lt;book&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt;
+
+&lt;author&gt;S. B. David Lee Eddings&lt;/author&gt;
+
+&lt;year&gt;2005&lt;/year&gt;
+
+&lt;price&gt;30.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;CHILDREN&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Harry Potter&lt;/title&gt;
+
+&lt;author&gt;J K. Rowling&lt;/author&gt;
+
+&lt;year&gt;2005&lt;/year&gt;
+
+&lt;price&gt;29.99&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;WEB&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;XQuery Kick Start&lt;/title&gt;
+
+&lt;author&gt;James McGovern&lt;/author&gt;
+
+&lt;author&gt;Per Bothner&lt;/author&gt;
+
+&lt;author&gt;Kurt Cagle&lt;/author&gt;
+
+&lt;author&gt;James Linn&lt;/author&gt;
+
+&lt;author&gt;Vaidyanathan Nagarajan&lt;/author&gt;
+
+&lt;year&gt;2003&lt;/year&gt;
+
+
+
+&lt;price&gt;49.99&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book category=&quot;WEB&quot;&gt;
+
+&lt;title lang=&quot;en&quot;&gt;Learning XML&lt;/title&gt;
+
+&lt;author&gt;Erik T. Ray&lt;/author&gt;
+
+&lt;year&gt;2003&lt;/year&gt;
+
+&lt;price&gt;39.95&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book&gt;
+
+&lt;title&gt;River God&lt;/title&gt;
+
+&lt;author&gt;Wilbur Smith&lt;/author&gt;
+
+&lt;year&gt;1975&lt;/year&gt;
+
+&lt;price&gt;40.55&lt;/price&gt;
+
+&lt;/book&gt;&lt;/
+
+&lt;/bookstore&gt;
+</code></pre>
+<p>You can achieve the same result using XMLParserObject. The script Code is as follows:</p>
+<pre><code class="language-javascript">xmlObject = new XMLParserObject(); doc = xmlObject.
+
+[parseURI(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml&quot;)
+
+;
+
+doc1 = doc.getDocumentElement()
+
+newNode1 = doc.createElement(&quot;book&quot;); doc1.appendChild(newNode1);
+
+title1 = doc.createElement(&quot;title&quot;) ; titleText = doc.createTextNode(&quot;River God&quot;); newNode1.appendChild(title1) title1.appendChild(titleText )
+
+author = doc.createElement(&quot;author&quot;)  ; authorName =    doc.createTextNode(&quot;Wilbur Smith&quot;); newNode1.appendChild(author) author.appendChild(authorName )
+
+year = doc.createElement(&quot;year&quot;) ; yearInd =    doc.createTextNode(&quot;1975&quot;); newNode1.appendChild(year ) year.appendChild(yearInd )
+
+
+
+price = doc.createElement(&quot;price&quot;) ; priceAmount =  doc.createTextNode(&quot;40.55&quot;); newNode1.appendChild(price) price.appendChild(priceAmount )
+</code></pre>
+<h3 id="creating-and-filling-new-xml-dom-objects"><strong>Creating and Filling New XML DOM Objects</strong></h3>
+<p>WebLOAD supports the creation of new XML DOM objects through the WLXmlDocument() constructor. New XML DOM objects may either be created:</p>
+<ul>
+<li>Empty, with the user adding data as needed.</li>
+<li>Already loaded with data found in existing XML files or text strings.</li>
+</ul>
+<p>New XML DOM objects created by the WLXmlDocument() constructor are not produced from HTML documents, so they do not include the HTML property set (id, innerHTML, and src). HTML properties have no meaning for XML DOM objects created without any connection to an HTML document.</p>
+<p>XML DOM objects created with the WLXmlDocument() constructor include the complete XML DOM Document Interface described in <em>Appendix B</em> in the <em>WebLOAD JavaScript Reference Guide</em>. Users may also load and reload XML data into XML DOM objects through the load() and loadXML() methods. This section describes the different methods of creating and filling data into XML DOM objects.</p>
+<h5 id="wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string">WLXmlDocument(xmlStr)—Creating XML DOM Object from XML String</h5>
+<p>The WLXmlDocument(xmlStr) constructor accepts an optional parameter, an XML string that includes the entire XML document data. For example:</p>
+<p><code>NewXMLObj = new WLXmlDocument(xmlStr)</code></p>
+<p>Use this form of the WLXmlDocument() constructor to create new XML DOM objects from an XML string parameter rather than relying on Data Islands from an HTML page.</p>
+<h5 id="working-with-xml-in-native-direct-browsing-mode">Working with XML in Native (Direct) Browsing Mode</h5>
+<p>WebLOAD automatically processes Data Islands found on HTML documents. WebLOAD also provides access to pure XML documents. For example, assume a website uses Native Browsing rather than having XML data explicitly embedded in Data Islands. If you wish to work with this website you could issue a Get transaction to access the XML page after enabling the SaveSource property to save the page source to a file. Once the XML string has been saved in the data file produced by the Get transaction, you may then use WLXmlDocument() to create a new XML DOM object from that XML data string. You now have a fully functional XML DOM object, with a</p>
+<p>Document Interface identical to that of XML DOM objects created from Data Islands. You may use this XML DOM object to manipulate the data, assign or change data values, and post the changed data back to the server, exactly as you would when working with a Data Island.</p>
+<p>The following script fragments illustrates this sequence:</p>
+<ol>
+<li>Set SaveSource so that the downloaded XML data will be saved to a file that can later be passed to the WLXmlDocument() constructor:</li>
+</ol>
+<p><code>wlHttp.SaveSource=true</code></p>
+<ol>
+<li>Get the XML page, either as a static page from the server:</li>
+</ol>
+<p><code>[wlHttp.Get(“http://demosite/bo](http://demosite/bookstore.xml)okstore.xml”)</code></p>
+<p>Or through a database query to the bookstore:</p>
+<p><code>[wlHttp.Get(“http://demosite/bookstore.exe?](http://demosite/bookstore.exe) author=Mark Twain&amp;MaxPrice=$20.00”)</code></p>
+<ol>
+<li>Create a new XML DOM object using the saved page source, which happens to include the XML string:</li>
+</ol>
+<p><code>newXmlObj = new WLXmlDocument(document.wlSource)</code></p>
+<ol>
+<li>At this point you have an XML DOM object which may be manipulated in any way just as you would manipulate XML DOM objects produced by Data Islands. You may make any changes or additions you wish to the XML DOM object data, as described in previous examples illustrating changing or adding bookstore data.</li>
+</ol>
+<p>For example, you may post the new XML DOM data back to the server:</p>
+<p><code>wlHttp.Data.Type=“text/xml”</code></p>
+<p><code>wlHttp.Data.Value=xmlobj.xml</code></p>
+<p><code>wlHttp.Post(“Http://demosite/bookstore.exe?operation=](http://demosite/bookstore.exe?operation=upd)upd ate”)</code></p>
+<blockquote>
+<p><strong>Note:</strong> The WLXmlDocument(xmlStr) constructor must be passed complete, self- contained XML strings <em>only</em>. The DTD section must not contain any external references when using this form of the constructor. See <a href="#_bookmark72"><em>Document Type Definition (DTD)</em> </a>(on page <a href="#_bookmark73">86</a>), for more information.</p>
+</blockquote>
+<h5 id="wlxmldocumentcreating-a-new-blank-xml-dom-object">WLXmlDocument()—Creating a New, Blank XML DOM Object</h5>
+<p>The WLXmlDocument() constructor may be used without any parameters. In this case, a new, blank XML DOM object will be created. For example:</p>
+<p><code>NewBlankXMLObj = new WLXmlDocument()</code></p>
+<p>You may now use the loadXML() method to add XML data to your new blank XML DOM object.</p>
+<p><code>NewBlankXMLObj = loadXML(“&lt;?xml version='1.0’?&gt;</code></p>
+<p><code>&lt;bookstore&gt;&lt;/bookstore&gt;”)</code></p>
+<p>To add more content to the document, create elements and add them as child nodes as described in the example in the previous section.</p>
+<h5 id="loading-xml-files-into-xml-objects">Loading XML Files into XML Objects</h5>
+<p>The MSXML Document Interface provides two methods for loading XML documents into XML DOM objects:</p>
+<ul>
+<li>loadXML(“XMLdocumentstring”)</li>
+<li>load(“URL”)</li>
+</ul>
+<p>This section describes the advantages and limitations of the loadXML() and load() methods when used in WebLOAD Recorder scripts, and discusses how to select the method that will be most effective in your scripts.</p>
+<blockquote>
+<p><strong>Note:</strong> You may use loadXML() and load() repeatedly to load and reload XML data into XML DOM objects. Remember that each new ‘load’ into an XML DOM object will overwrite any earlier data stored in that object.</p>
+</blockquote>
+<h6 id="using-loadxmlxmldocstring">Using loadXML(XMLDocString</h6>
+<p>The loadXML(XMLDocString) method accepts a literal XML document in string format as its only parameter. This allows users to work with XML documents and data that did not originate in HTML Data Islands, such as with Native Browsing. In a typical scenario, a user downloads an XML document. WebLOAD saves the document contents in string form. The string is then used as the parameter for loadXML(). The information is loaded automatically into an XML object.</p>
+<p>For example:</p>
+<pre><code class="language-xml">// Create a new XML document object 
+
+NewXMLObj = new WLXmlDocument() 
+
+wlHttp.SaveSource = true
+
+[wlHttp.Get(http://www.server.com/xmls/doc.xml)](http://www.server.com/xmls/doc.xml\))
+
+ XMLDocStr = document.wlSource
+
+// Load the new object with XML data from the saved source.
+
+// We are assuming no external references, as explained below NewXMLObj.loadXML(XMLDocStr)
+
+
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Creating a new, blank XML DOM object with WLXmlDocument() and then loading it with an XML string using loadXML() is essentially equivalent to creating a new XML DOM object and loading it immediately using WLXmlDocument(xmlStr). As with the WLXmlDocument(xmlStr) constructor, only standalone, self-contained DTD strings may be used for the loadXML() parameter. External references in the DTD section are not allowed.</p>
+</blockquote>
+<h6 id="using-loadurl">Using load("URL")</h6>
+<p>The load("URL") method accepts a URL or filename where the XML document may be found as its only parameter. load() relies on the MSXML parser to handle any Get transactions needed to download the XML document. The XML data is then loaded automatically into the XML object.</p>
+<p>For example:</p>
+<pre><code>myXMLDoc = document.wlXmls[0]
+
+myXMLdoc.load(http://server/xmls/file.xml”)
+</code></pre>
+<p>When you use the load() method in your script, the MSXML module performs all the underlying HTTP transactions. External references in the DTD section are not allowed when using load(). However, the MSXML module accesses external servers and completes all necessary transactions without any control or even knowledge on the part of the WebLOAD system tester. From WebLOAD’s perspective, these transactions are never performed in the context of the test session. For this reason, any settings that the user enters through the WebLOAD Recorder or Console will not be relayed to the MSXML module and will have no effect on the document ‘load’. For the same reason, the results of any transactions completed this way will not be included in the WebLOAD statistics reports.</p>
+<h6 id="comparing-loadxml-and-load">Comparing loadXML() and load()</h6>
+<p>WebLOAD supports both the load() and the loadXML() methods to provide the user with maximum flexibility. The following table summarizes the advantages and disadvantages of each method:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"><strong>Advantages</strong></th>
+<th style="text-align: left;"><strong>Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>loadXML()</strong></td>
+<td style="text-align: left;">Parameters that the user has defined through WebLOAD for the testing session will be applied to this transaction.</td>
+<td style="text-align: left;">The method fails if the DTD section of the XML document string includes any external references.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>load()</strong></td>
+<td style="text-align: left;">The user may load XML files that include external references in the DTD section.</td>
+<td style="text-align: left;"><p>Parameters that the user has defined through WebLOAD for the testing session will not be applied to this transaction.</p><p>WebLOAD does not record the HTTP Get operation. (See note below.)</p><p>The transaction results are not included in the session statistics report.</p><p>Using this method may adversely affect the test session results.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> If you wish to measure the time it took to load the XML document using the load() method, create a timer whose results will appear in the WebLOAD Recorder statistics. For example:
+</p>
+</blockquote>
+<p><code>myXMLDoc = document.wlXmls[0] SetTimer(“GetXML”)</code></p>
+<p><code>myXMLdoc.load(“http://server/xmls/file.xml”)</code></p>
+<h3 id="example-building-an-xml-database-from-scratch"><strong>Example: Building an XML Database from Scratch</strong></h3>
+<p>The next example will put together some of the pieces from the previous sections. Here we will create a new, skeletal XML DOM object for a bookstore database, build new book elements, and add each new book to our bookstore database.</p>
+<pre><code>// 1. CREATE AN EMPTY XML OBJECT with a skeleton: xmlBookstoreDoc = new WLXmlDocument
+
+(“&lt;?xml version='1.0’?&gt;&lt;bookstore&gt;&lt;/bookstore&gt;”)
+
+// 2. ADD CONTENT TO THE DOCUMENT:
+
+//create the first book element
+
+newBook = xmlBookstoreDoc.createElement(“book”)
+
+//append the new book to the bookstore tree xmlBookstoreDoc.documentElement.appendChild(newBook)
+
+//create, name, and append the new book’s author element
+
+author = xmlBookstoreDoc.createElement(“author”) name = xmlBookstoreDoc.createTextNode(“Mark Twain”) author.appendChild(name) newBook.appendChild(author)
+
+//create, name, and append the new book’s title element
+
+title =  xmlBookstoreDoc.createElement(“title”) name = xmlBookstoreDoc.createTextNode(“Tom Sawyer”) title.appendChild(name)
+
+newBook.appendChild(title)
+
+//create, name, and append the new book’s price element
+
+price = xmlBookstoreDoc.createElement(“price”) amount = xmlBookstoreDoc.createTextNode(“$12.00”) price.appendChild(amount) newBook.appendChild(price)
+
+// 3. CONTINUE TO ADD CONTENT TO THE DOCUMENT:
+
+//create the second element and append it to the tree newBook = xmlBookstoreDoc.createElement(“book”) xmlBookstoreDoc.documentElement.appendChild(newBook)
+
+
+
+//create, name, and append author, title, and price elements
+
+author = xmlBookstoreDoc.createElement(“author”) name = xmlBookstoreDoc.createTextNode(“Leo Tolstoy”) author.appendChild(name)  newBook.appendChild(author)
+
+title = xmlBookstoreDoc.createElement(“title”)
+
+name = xmlBookstoreDoc.createTextNode(“War and Peace”)
+
+title.appendChild(name) newBook.appendChild(title)
+
+price = xmlBookstoreDoc.createElement(“price” amount = xmlBookstoreDoc.createTextNode(“$20.00”) price.appendChild(amount) newBook.appendChild(price)
+</code></pre>
+<p>A new XML DOM bookstore database object has now been created and filled with information about two books. The product of the xmlBookstoreDoc.documentElement.xml property would be:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0”?&gt;
+
+&lt;bookstore&gt;
+
+&lt;book&gt;
+
+&lt;author&gt;Mark Twain&lt;/author&gt;
+
+&lt;title&gt;Tom Sawyer&lt;/title&gt;
+
+&lt;price&gt;$12.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;book&gt;
+
+&lt;author&gt;Leo Tolstoy&lt;/author&gt;
+
+&lt;title&gt;War and Peace&lt;/title&gt;
+
+&lt;price&gt;$20.00&lt;/price&gt;
+
+&lt;/book&gt;
+
+&lt;/bookstore&gt;
+</code></pre>
+<h3 id="handling-web-service-transactions"><strong>Handling Web Service Transactions</strong></h3>
+<p>WebLOAD supports working with Web services, including manipulating the Web service’s responses.</p>
+<p>A Web service response is a soap-formatted XML message. Accessing this XML message becomes possible, after parsing the response using WebLOAD’s</p>
+<p>XMLParserObject. This enables you to locate the node containing the desired part of the web service response.</p>
+<p>The following sample script demonstrates how WebLOAD handles web service transactions by extracting the dynamic XML from the web service response and parsing it using the XMLParserObject. The desired return value is then located by searching through the parsed XML.</p>
+<pre><code class="language-javascript">xmlObject = new XMLParserObject()
+
+wlGlobals.GetFrames = false [wlHttp.Get(&quot;http://www.webloadmpstore.com/ajaxsample&quot;)](http://www.webloadmpstore.com/ajaxsample)
+
+wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/ajaxsample/&quot;](http://www.webloadmpstore.com/ajaxsample/)
+
+wlHttp.FormData[&quot;wsdl&quot;] = &quot;$WL$VOID$STRING$&quot;
+
+[wlHttp.Get(&quot;http://www.webloadmpstore.com/ajaxsample/serveradd1.](http://www.webloadmpstore.com/ajaxsample/serveradd1) php&quot;)
+
+wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/ajaxsample/&quot;](http://www.webloadmpstore.com/ajaxsample/)
+
+wlHttp.Data[&quot;Type&quot;] = &quot;text/xml; charset=utf-8&quot;
+
+wlHttp.Data[&quot;Value&quot;] = &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf- 8\&quot;?&gt;&lt;soap:Envelope xmlns:xsi=[\&quot;http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)&quot; xmlns:xsd=\[&quot;http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\&quot;
+
+xmlns:soap=\[&quot;http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\&quot;&gt;&lt;soap:B ody&gt;&lt;add xmlns=\&quot;urn:addwsdl\&quot;&gt;&lt;a&gt;20&lt;/a&gt;&lt;b&gt;30&lt;/b&gt;&lt;/add&gt;&lt;/soap:Body&gt;&lt;/soap
+
+:Envelope&gt;&quot;
+
+[wlHttp.Post(&quot;http://www.webloadmpstore.com/ajaxsample/serveradd1](http://www.webloadmpstore.com/ajaxsample/serveradd1)
+
+.php&quot;)
+
+//Extract the XML part from the response doc = document.wlXmls[0]
+
+InfoMessage (doc.xml)
+
+//Load the extracted XML into the XMLParserObject xo = xmlObject.loadXML(doc.xml)
+
+//Locate the node containing the Web Service result according to the name of the node: &quot;return&quot;
+
+node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
+</code></pre>
+<h3 id="document-type-definition-dtd"><strong>Document Type Definition (DTD)</strong></h3>
+<p>The term DTD is an acronym for Document Type Definition. The Document Type Definition is a set of rules that describes the grammar of a particular XML document. The DTD is used to validate an XML document.</p>
+<p>For example, the DTD for a bookstore database would do the following:</p>
+<ol>
+<li><em>Define the structure</em> and attributes of that database.</li>
+</ol>
+<p>Based on the rules found in the DTD, you might have a database that requires every book entry to include information on the book’s title, author, and price. Information on publishers and reprint requests may be declared optional.</p>
+<ol>
+<li>After the DTD defines the structure and attributes of the database, the XML Data Island <em>assigns values</em> to the attributes listed in the DTD.</li>
+<li>Once an XML document has been downloaded, the Browser <em>validates the document</em></li>
+</ol>
+<p>by checking that the XML data follows the rules set by the DTD.</p>
+<p>![ref8]If the price is missing from a certain book item, for example, and a price is required by the DTD, then the Browser will not be able to validate that XML document.</p>
+<blockquote>
+<p><strong>Note:</strong> For the Browser to parse and validate an XML document according to a particular DTD, the author must include a <DOCTYPE> section in the XML document. WebLOAD Recorder supports DTD verification only if the DTD is completely included in the Data Island and there are <em>no external references</em> in the DTD.</p>
+</blockquote>
+<p>The following code illustrates a self contained DTD for the bookstore example used throughout this section of the manual:</p>
+<pre><code class="language-xml-dtd">&lt;!-DOCUMENT STARTS HERE-&gt;
+
+&lt;?xml version=&quot;1.0&quot;?&gt;
+
+&lt;!-THE DTD STARTS HERE --&gt;
+
+&lt;!DOCTYPE [
+
+
+&lt;!ELEMENT books-table (book)+&gt;
+
+&lt;!ELEMENT book (title,author+,isbn,publication-date,book- type,book-family+)&gt;
+
+&lt;!ELEMENT title (#PCDATA)&gt;
+
+&lt;!ELEMENT author (#PCDATA)&gt;
+
+&lt;!ELEMENT isbn (#PCDATA)&gt;
+
+&lt;!ELEMENT publication-date (#PCDATA)&gt;
+
+&lt;!ELEMENT book-type (#PCDATA)&gt;
+
+&lt;!ELEMENT book-family (#PCDATA)&gt;
+
+&lt;!--attribute list--&gt;
+
+&lt;!ATTLIST book id ID #REQUIRED&gt;
+
+
+
+&lt;a name=&quot;_bookmark74&quot;&gt;&lt;/a&gt;&lt;!ATTLIST author rank CDATA #IMPLIED&gt;
+
+]&gt;
+
+&lt;!--THE DTD ENDS HERE--&gt;
+
+&lt;!--DATA PART OF THE DOCUMENT-&gt;
+
+&lt;books-table&gt;
+
+&lt;book id=&quot;thisbook&quot;&gt;
+
+&lt;title&gt;&lt;/title&gt;
+
+&lt;author rank=&quot;&quot;&gt;&lt;/author&gt;
+
+&lt;isbn&gt;&lt;/isbn&gt;
+
+&lt;publication-date&gt;&lt;/publication-date&gt;
+
+&lt;book-type&gt;&lt;/book-type&gt;
+
+&lt;book-family&gt;&lt;/book-family&gt;
+
+&lt;/book&gt;
+
+&lt;/books-table&gt;
+
+&lt;!-DOCUMENT ENDS HERE-&gt;
+</code></pre>
+<h2 id="working-with-java"><strong>Working with Java</strong></h2>
+<p>Java is an object-oriented, dynamic, platform-independent programming language developed by Sun Microsystems in the mid-1990s. Java provides its users with a complete run-time environment, a Virtual Machine (VM). With the Java VM sitting in your Web browser, any HTML document can include embedded Java, adding active content to your Web page. Java includes a variety of useful features, such as Remote Method Invocation (RMI), which allows local developers to seamlessly access distributed application functions and procedures, and Java Database Connectivity (JDBC), which allows Java clients to interact with any ODBC- or JDBC-compliant database, whether it resides locally or on a remote server. By utilizing Java tools and classes, user applications are able to offer far greater power and capabilities than when working with simple HTML code alone. For this reason, over the past few years, Java has become one of the most popular development mediums for large-scale Internet applications.</p>
+<p>WebLOAD supports full Java access from your JavaScript scripts. Full Java support means that your WebLOAD scripts will not only test access time to an HTML page. WebLOAD scripts can also invoke and run local Java classes used by the Java applications embedded within an HTML page. The Java components that stand behind that Web page need no longer be considered ‘black boxes’. Your JavaScript script can directly access and test the classes of each locally residing Java component, allowing you to test each aspect of your application.</p>
+<p>WebLOAD uses LiveConnect3, developed by Netscape Communications Corporation and maintained and supported by the Mozilla Foundation, to allow your JavaScript scripts to communicate with Java classes. LiveConnect is an invisible architecture that runs in the background. Your JavaScript code may work directly with Java. Your WebLOAD script can even include both JavaScript code that calls Java code and Java code that calls JavaScript code. The interface between Java and JavaScript is managed for you, allowing you to create the Java/JavaScript testing scenario that best meets your needs.</p>
+<h3 id="requirements"><strong>Requirements</strong></h3>
+<p>This section provides a brief explanation of how to work with Java components directly from your JavaScript script. Sample scripts illustrate typical usage.</p>
+<h4 id="jdkjre-15-or-higher">JDK/JRE 1.5 (or Higher)</h4>
+<p>Install the standard Sun Microsystems Java Virtual Machine (JVM), version 1.5 or higher, on your system.</p>
+<p><strong>To verify that you are working with version 1.5 or higher</strong></p>
+<ol>
+<li>Select <strong>Control Panel</strong> from the Windows <strong>Start</strong> &gt; <strong>Settings</strong> menu and double click the <strong>Add/Remove Programs</strong> icon.</li>
+<li>Check the items listed in the dialog box. Entries that reference Java should be labeled version 1.5 or higher.</li>
+<li>If you wish to update your version of Java, download the latest version from<a href="http://java.sun.com/"> http://java.sun.com </a>(<a href="http://java.sun.com/">http://java.sun.com</a>).</li>
+</ol>
+<p>Follow the standard Sun installation instructions. It makes no difference if you install the JVM before or after installing WebLOAD.</p>
+<p>If you are doing any development work that may require application compilation, you must install the complete Java Developer’s Kit (JDK). If your application is complete and you will only be running it, without making any changes or corrections that may require compilation, then the Java Runtime Environment (JRE) will be enough to simply run a test session. The decision to install only the JRE, or the complete JDK, depends on your own application’s requirements. WebLOAD Recorder provides full Java support in both cases.</p>
+<h4 id="path-environment-variable">PATH Environment Variable</h4>
+<p>Your command path must include both the Java bin and Java classic directories. The Java bin directory is where the Java programs and compiler are located. The Java classic directory is where the jvm.dll file is located.</p>
+<p>For example, after a typical installation of JDK version 1.5, your PATH should include something similar to this:</p>
+<p><code>PATH=%PATH%;C:\Program Files\jdk1.5\bin; C:\Program Files\jdk1.5\jre\bin\classic</code></p>
+<h4 id="classpath-environment-variable">CLASSPATH Environment Variable</h4>
+<p>Your CLASSPATH environment variable must point to the following:</p>
+<ul>
+<li>JVM class libraries</li>
+<li>LiveConnect class libraries</li>
+<li>Your application’s class libraries (a series of *.class and *.jar files)</li>
+</ul>
+<p>For example, assuming your Java class libraries are located in the Java\lib directory, the LiveConnect class libraries are located in LiveConnect\classes, and your application class libraries are located in the AppDev\lib directory, your CLASSPATH should include the following:</p>
+<p><code>CLASSPATH=%CLASSPATH%;C:\Java\lib\rt.jar; C:\LiveConnect\classes;C:\AppDev\lib</code></p>
+<p>In general, following a WebLOAD Recorder installation, the LiveConnect class libraries are located in:</p>
+<p><code>C:\Program Files\RadView\WebLOAD\LiveConnect\classes</code></p>
+<h4 id="setting-path-and-classpath-environment-variables">Setting PATH and CLASSPATH Environment Variables</h4>
+<p>Set the PATH and CLASSPATH environment variables to include the necessary directories. The settings can be modified through Windows or a DOS command window.</p>
+<p><strong>To verify that both your PATH and CLASSPATH environment variables include the necessary directories:</strong></p>
+<ol>
+<li>From the Windows taskbar, select <strong>Start</strong> &gt; <strong>Settings</strong> &gt; <strong>Control Panel</strong>.</li>
+<li>Double click the <strong>System</strong> icon and select the <strong>Environment</strong> tab.</li>
+<li>Check the Environment Variables to confirm that your environment variables are set correctly.</li>
+</ol>
+<p>Alternatively, you could open a DOS command window:</p>
+<ul>
+<li>Type path, and press <Enter>.</li>
+</ul>
+<p>Your current PATH setting will appear in the window.</p>
+<p>If you type set classpath and press <Enter>, your current CLASSPATH setting will appear in the window.</p>
+<p>Remember that the exact full directory path name will differ from system to system. Check with your system administrator to verify the correct Java directory path names for your system.</p>
+<p>Alternatively, you could do the following:</p>
+<ol>
+<li>Right-click the <strong>My Computer</strong> icon on your desktop.</li>
+<li>Select <strong>find…</strong>, and search for jvm.dll.</li>
+</ol>
+<p>This file is usually found in a directory path that ends with …\bin\classic. This directory, and the same directory without the \classic ending, should both appear in the PATH environment variable.</p>
+<p>If your PATH or CLASSPATH environment variables do not include the necessary directories do the following:</p>
+<ol>
+<li>Add the correct directory names for your system to the PATH or CLASSPATH environment variable definitions in the Environment tab of the System dialog box.</li>
+<li>Click <strong>Set</strong>.</li>
+<li>Click <strong>Apply</strong>, to reset the variables to the new settings.</li>
+</ol>
+<p>You do not have to reboot your system. But you do have to restart TestTalk for WebLOAD to recognize the new PATH environment variable definition.</p>
+<h4 id="public-methods">Public Methods</h4>
+<p>JavaScript scripts adhere to the same rules of object-oriented programming (OOP) as any other program. All programs must respect the OOP concepts of public and private. As in any OOP language, Java class methods may be either public or private. Public methods are functions that are externally visible and can be called by other Java classes and by JavaScript. For JavaScript to be able to control a Java class, the Java class must provide public methods.</p>
+<h3 id="identifying-java-objects-in-javascript-scripts">Identifying Java Objects in JavaScript scripts</h3>
+<p>Java uses its own specific terminology. Java objects are referred to as <em>classes</em>. These classes are organized hierarchically within <em>packages</em>. To access Java objects, specify the full path to that class, using the format:</p>
+<p><code>&lt;java package full path&gt;.&lt;java class&gt;</code></p>
+<p>For example, to reference the Java class Lassie contained in the package dogs, which is contained within the package animals, write <code>animals.dogs.Lassie</code>.</p>
+<p><strong><em>Accessing Java Objects from JavaScript scripts</em></strong></p>
+<p>Java objects found in JavaScript scripts are accessed according to the rules listed here. Detailed explanations and examples illustrating these rules are provided in the Netscape websites listed in <a href="#_bookmark75"><em>Working with Java</em> </a>(on page <a href="#_bookmark74">87</a>).</p>
+<ul>
+<li>To access a built-in Java object, use the package java. This package acts as a flag, informing the compiler that it is about to start work with a built-in Java object. You may then continue to work directly with that object, its properties, and methods.</li>
+</ul>
+<p>For example:</p>
+<p><code>var myJavaString = new java.lang.String("Hello world")</code></p>
+<p><code>…</code></p>
+<p><code>stringlen = myJavaString.length()</code></p>
+<p><code>…</code></p>
+<p>-Or-</p>
+<p><code>s = new java.net.Socket ("12.3.5.56",23)</code></p>
+<p><code>…</code></p>
+<p><code>s.getInputStream</code></p>
+<p><code>…</code></p>
+<p>In these examples, java.lang and java.net are the full package names and String and Socket are the class names.</p>
+<ul>
+<li>To access a <em>locally defined</em> or third party Java object that is not part of the Java, Sun, or Netscape packages, use the reserved Java keyword Packages. This keyword acts as a flag, informing the compiler that it is about to start work with a locally- defined Java object. You may then continue to work directly with that object, its properties, and methods.</li>
+</ul>
+<p>For example:</p>
+<p><code>var myJavaDog = new Packages.JavaDog(Lassie)</code></p>
+<p><code>…</code></p>
+<p><code>dogbreed = myJavaDog.dogBreed</code></p>
+<p><code>…</code></p>
+<p>Use the Packages keyword to access any user-defined class whose definition is included in the CLASSPATH library list, described in <a href="#_bookmark77"><em>Requirements</em> </a>(on page <a href="#_bookmark76">88</a>).</p>
+<h3 id="forestalling-errors">Forestalling Errors</h3>
+<p>Most common compilation and runtime errors can be prevented if you follow the instructions in this guide. Usually, you won’t have any problems as long as you verify that Java was installed correctly and specify Java objects with the correct full path and argument list. This section lists the most common potential pitfalls, in an effort to prevent problems before they occur.</p>
+<ul>
+<li>You must have Java version 1.2 installed on your system. Working with earlier versions of Java will cause your scripts to fail with the following WebLOAD Recorder error message:</li>
+</ul>
+<p><code>WebLOAD can’t find jvm.dll</code></p>
+<p>If you receive this error message, you may have an older version of the JVM, or you may not have Java installed at all on your system. If this is the problem, download and install the newer version of Java from <a href="http://java.sun.com/">http://java.sun.com</a>.</p>
+<ul>
+<li>
+<p>Java version 1.2 or higher must be installed and environment variables defined on each Load Generator included in your test session. Test sessions that involve multiple Load Generators require a resident JVM with the correct environment variable settings on each Load Generator.</p>
+</li>
+<li>
+<p>Whether to install only the JRE or the complete JDK depends on your application’s requirements. If you will be doing any development or compilation, install the complete JDK. Trying to compile Java class files (such as JavaClass.java) on a computer that does not have the JDK installed will trigger an error. The JDK must be installed on <em>each</em> computer on which Java files will be compiled. The JRE can not handle any compilation requests.</p>
+</li>
+<li>
+<p>Each system environment is slightly different. When setting the PATH or CLASSPATH environment variables for your system, substitute the actual path to the required Java directories and libraries on your system. Use the Environment tab in the System dialog box from the Windows Control Panel to set the environment variables.</p>
+</li>
+<li>
+<p>Environment variables must be set with the correct values before starting TestTalk or running any Load Generators. Make sure you first verify and set the environment variables through the Windows Control Panel and only then start TestTalk.</p>
+</li>
+<li>
+<p>If you do not have the correct Java class directories included in your PATH, your scripts may fail with the following WebLOAD error message:</p>
+</li>
+</ul>
+<p><code>WebLOAD</code> can’t find jvm.dll</p>
+<p>If you receive this error message and your version of the JVM is 1.2 or higher, check your system PATH (through the Windows Control Panel) to be sure it points to the jvm.dll library. Make sure the directories listed are in fact the correct directories, and verify the correct path name in your script code.</p>
+<ul>
+<li>
+<p>The class path and name in your script files must be specified absolutely correctly, with all elements spelled correctly and with the correct case. For example, the class name MyJavaClass is not the same as <strong>my</strong>JavaClass.</p>
+</li>
+<li>
+<p>The directories included in the CLASSPATH environment variable must also be specified absolutely correctly, with all elements spelled correctly, to exactly match the class path and names that appear in your JavaScript scripts.</p>
+</li>
+</ul>
+<p>For example, assume you are working with an application that includes the Java class MyJavaClass, whose constructor expects a single string argument, located in the directory I:\AppFiles\libs.</p>
+<p>Your CLASSPATH environment variable should include:</p>
+<p><code>CLASSPATH=%CLASSPATH%;I:\AppFiles\libs</code></p>
+<p>Your script should reference this class as follows:</p>
+<p><code>var myJavaObj = new Packages.MyJavaClass(“stringArg”)</code></p>
+<p>If you were not careful, you could accidentally define CLASSPATH to include the wrong directory, such as:</p>
+<p><code>CLASSPATH=%CLASSPATH%;I:\AppFiles\orig-libs</code></p>
+<p>Or you could accidentally include an incorrect package path in the script file, such as:</p>
+<p><code>var myJavaObj = new</code></p>
+<p><code>Packages.Jlib.MyJavaClass(“stringArg”)</code></p>
+<p>In either of these cases the constructor call would fail and WebLOAD would return the following error message:</p>
+<p><code>TypeError: &lt;classname&gt; is not a constructor</code></p>
+<ul>
+<li>Make sure to pass the correct number and types of arguments to Java class constructors or methods.</li>
+</ul>
+<p>Realize that working with Java from your JavaScript script is really very simple and intuitive, as illustrated in the simple examples found in the remainder of this section. You simply must take care to specify objects correctly. Careless spelling mistakes will trigger errors, as they would in most programming languages.</p>
+<h3 id="example-passing-simple-variables-between-java-and-javascript">Example: passing simple variables between Java and JavaScript</h3>
+<p>You may pass any legal JavaScript variable or object as a parameter to a Java object or method. Conversions between basic variable types, such as integer, string, or Boolean, will be completed automatically. Return values will also convert correctly. Conversions between Java and JavaScript types are based on the conversion tables listed in <a href="#_bookmark165">*Data</a> <em><a href="#_bookmark165">Type Conversions* </a></em>(on page <a href="#_bookmark164">185</a>).</p>
+<p>The following example illustrates passing basic values between Java and JavaScript objects. The Java class method expects two parameters, a string and an integer, and returns the concatenation of both parameters into a single string. Conversions between Java and JavaScript strings and integers are completed automatically.</p>
+<p><strong>Java side:</strong></p>
+<pre><code class="language-java">public class SimpleExample
+
+{
+
+public String Concat(String a, int b)
+
+{
+
+return a + &quot; : &quot; + b;
+
+}
+
+}
+
+
+</code></pre>
+<p><strong>JavaScript side:</strong></p>
+<pre><code class="language-javascript">a = new Packages.SimpleExample() InfoMessage(a.Concat(&quot;RoundNum&quot;,RoundNum))
+</code></pre>
+<h3 id="passing-objects-between-java-and-javascript">Passing Objects Between Java and JavaScript</h3>
+<p>LiveConnect uses the reserved Java class JSObject to pass a JavaScript object to Java objects. JSObject tells the Java side that it is being sent a JavaScript object. To pass a JavaScript object as a parameter to a Java method, your Java file must include the following:</p>
+<ul>
+<li>Import the netscape.javascript package.</li>
+<li>Define the corresponding formal parameter of the method to be of type JSObject.</li>
+</ul>
+<p>You may set and change a JavaScript object property value, and even add a new member to a JavaScript object, while working from the Java side.</p>
+<p>For example, the following code illustrates passing values between parallel Java and JavaScript objects.</p>
+<p><strong>Java Side:</strong></p>
+<pre><code class="language-java">import netscape.javascript.JSObject; public class JavaDog
+
+{
+
+public String dogBreed; public String dogColor; public String dogSex;
+
+public JavaDog(JSObject jsDog)
+
+{
+
+this.dogBreed = (String)jsdog.getMember(&quot;breed&quot;); this.dogColor = (String)jsdog.getMember(&quot;color&quot;); this.dogSex = (String)jsdog.getMember(&quot;sex&quot;);
+
+
+
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The getMember method of JSObject is used to access the properties of the JavaScript object. This example uses getMember to assign the value of the JavaScript property jsDog.breed to the Java data member JavaDog.dogBreed.</p>
+</blockquote>
+<p><strong>JavaScript Side:</strong></p>
+<p>To continue with this example, look at the following definition of the JavaScript object <code>Dog:</code></p>
+<pre><code class="language-javascript">function Dog(breed, color, sex)
+
+{
+
+this.breed = breed this.color = color this.sex = sex
+
+}
+</code></pre>
+<p>Create an instance of the <strong>JavaScript object Dog</strong> as follows:</p>
+<p><code>Lassie = new Dog("collie", "chocolate", "female")</code></p>
+<p>The JavaScript property Lassie.color here has been assigned the value chocolate.</p>
+<p>Now create an instance of the <strong>Java object JavaDog</strong> in the JavaScript code by passing the JavaScript Lassie object to the JavaDog constructor as follows:</p>
+<p><code>javaDog = new Packages.JavaDog(Lassie)</code></p>
+<blockquote>
+<p><strong>Note:</strong> The JavaScript code uses the Packages class to identify JavaDog as a locally defined Java object, as described in <a href="#_bookmark78"><em>Identifying Java Objects in JavaScript scripts</em> </a>(on page <a href="#_bookmark78">90</a>).
+</p>
+</blockquote>
+<p>The Java property javaDog.dogColor has the value chocolate because the getMember method in the Java constructor assigns the value of Lassie.color to dogColor.</p>
+<p>Detailed explanations of the JSObject class are provided in <a href="http://developer.netscape.com/docs/manuals/js/core/jsref/lcjsobj.htm">http://developer.netscape.com/docs/manuals/js/core/jsref/lcjsobj.htm.</a></p>
+<h3 id="automatic-timers-and-counters-for-java-objects"><strong>Automatic Timers And Counters For Java Objects</strong></h3>
+<p>WebLOAD provides automatic timers and counters that wrap around every Java class method invocation found in your script. Automatic timers and counters allow you to effortlessly measure and quantify the behavior and response time of each specific Java component individually, enabling the most comprehensive testing of your Java-based application.</p>
+<p>Every time your JavaScript script calls a Java class method, a timer and a counter are automatically created for that method. The results are included in the Statistics Report for that test session. These automatic Java timers are in addition to the standard WebLOAD Timer functions, which may be called from the Java side of your script as well as the standard JavaScript side. An example illustrating JavaScript Timer calls from Java code appears in <a href="#_bookmark83"><em>Calling a WebLOAD API from a Java Application</em> </a>(on page <a href="#_bookmark84">98</a>).</p>
+<p>For example, assume you are communicating with a server using the Java socket class:</p>
+<pre><code class="language-java">try
+
+{
+
+// Connect to a server through Java socket s = new java.net.Socket (&quot;12.3.5.56&quot;,23)
+
+// Create Java I/O streams
+
+from\_server = new java.io.DataInputStream(s.getInputStream()) to\_server = new java.io.PrintStream(s.getOutputStream())
+
+//Read line from Input stream to JavaScript string value line = from\_server.readLine()
+
+InfoMessage(&quot;&quot; + line)
+
+// Write JavaScript string value to the Output stream to\_server.println (&quot;Client &quot; + ClientNum + &quot;-&quot; + RoundNum )
+
+// Get answer from the server via the Input stream line = from\_server.readLine()
+
+InfoMessage(&quot;&quot; + line)
+
+}
+
+catch (Exception) {
+
+ErrorMessage (&quot;Server is not connected&quot;)
+
+}
+
+
+finally
+
+{
+
+try {
+
+
+}
+
+
+
+if (s != null) s.close();
+
+catch(Exception) {}
+
+}
+</code></pre>
+<p>Each time you call any of the Java class methods, a timer and counter for that method is automatically incremented. The results appear in the Statistics Report. Each timer and counter is uniquely identified with the Java class, object, and method name, as illustrated in the following figure:</p>
+<p><img alt="Timer and Counter Identification with Java Class, Object, and Method Name" src="../../images/script_guide_063.png" /></p>
+<p>The counter and timer information is collected and displayed automatically, every time you call a Java class method from your script. You do not have to add anything to your script code to take advantage of this feature.</p>
+<h3 id="calling-a-webload-api-from-a-java-application">Calling a WebLOAD API from a Java Application</h3>
+<p>This section describes two methods for calling WebLOAD JavaScript functions from the java code:</p>
+<ul>
+<li><a href="#_bookmark85"><em>Using the WebLoadWrapper to call WebLOAD API from a Java Application</em></a></li>
+<li><a href="#_bookmark87"><em>Legacy method of calling WebLOAD API from a Java Application</em></a></li>
+</ul>
+<h4 id="using-the-webloadwrapper-to-call-webload-api-from-a-java-application">Using the WebLoadWrapper to call WebLOAD API from a Java Application</h4>
+<p>The WebLoadWrapper simplifies the method of calling WebLOAD functions from the Java code.</p>
+<h5 id="functions-supported-by-webloadwrapper">Functions supported by WebLoadWrapper</h5>
+<p>It can be used to call the following WebLOAD functions from within Java:</p>
+<ul>
+<li>Void beginTransaction(String name) – Calls BeginTransaction</li>
+<li>Void debugMessage(String msg) – Prints DebugMessage only in WebLOAD Recorder</li>
+<li>Void endTransaction(String name) – Calls EndTransaction</li>
+<li>String getValue(String parameterName, String defaultValue) – Gets a parameterization manager parameter value</li>
+<li>Void infoMessage(String msg) – Prints InfoMessage in WebLOAD</li>
+<li>Void sendMeasurement(String name, Number value) – Calls</li>
+</ul>
+<p>SendMeasurement in WebLOAD</p>
+<ul>
+<li>Object getWebLoadRootObject() – Returns the JSObject. This can be used, for example, for direct calls to any WebLOAD’s JavaScript method.</li>
+</ul>
+<h5 id="coding-with-webloadwrapper">Coding with WebLoadWrapper</h5>
+<p><strong>To use the WebLoadWrapper in your code:</strong></p>
+<ol>
+<li>
+<p>In your java class, import com.radview.webload.WebLoadWrapper.</p>
+</li>
+<li>
+<p>To hook the Java class into the WebLOAD context, in the WebLOAD Recorder run the following command in the javascript code, either once at the beginning of the script or once in the InitClient()method:</p>
+</li>
+</ol>
+<p><code>Packages.com.radview.webload.WebLoadWrapper.setThreadWebLoadRootOb ject(this);</code></p>
+<p>If you would like to call any JavaScript method directly from your Java code WITHOUT using the WebLoadWrapper methods, or you need to use a method that WebLoadWrapper does not wrap (see <a href="#_bookmark86"><em>Functions supported by WebLoadWrapper</em></a>), you can use the following method which is part of WebLoadWrapper:</p>
+<p><code>Object getWebLoadRootObject()</code> – Returns the JSObject of the calling JavaScript You can then use the returned JSObject to call the method you’d like. For example</p>
+<p><code>getWebLoadRootObject().eval("InfoMessage('test')");</code></p>
+<p>Once you get the JSObject, use it as described in <a href="#_bookmark87">*Legacy method of calling WebLOAD API</a> <em><a href="#_bookmark87">from a Java Application* </a></em>on page <a href="#_bookmark87">99.</a></p>
+<h5 id="example-using-webloadwrapper">Example: using WebLoadWrapper</h5>
+<p>The following example shows how to use WebLoadWrapper in the Java code.</p>
+<pre><code class="language-java">package com.example;
+
+import com.radview.webload.WebLoadWrapper; public class MyClass {
+
+private WebLoadWrapper wlWrapper; public void myExampleFunc() {
+
+wlWrapper = new WebLoadWrapper(); wlWrapper.beginTransaction(&quot;transaction 1&quot;);
+
+&lt;do any other work&gt; …;
+
+wlWrapper.endTransaction(&quot;transaction 1&quot;);
+
+}
+
+}
+</code></pre>
+<h4 id="legacy-method-of-calling-webload-api-from-a-java-application">Legacy method of calling WebLOAD API from a Java Application</h4>
+<p>WebLOAD utilizes the locally understood, generic ‘this’ object, passing the current ‘this’ object as a parameter to a Java method. The JavaScript concept of ‘this’ object as your current working object is preserved even while working with that object’s properties and methods from the Java side.</p>
+<p>Using ‘this’ object, WebLOAD is able to call WebLOAD functions directly from within Java method code, passing to the Java functions the default ‘this’ object that is expected by the function.</p>
+<p>For example:</p>
+<ul>
+<li>Use the WebLOAD SetTimer and SendTimer functions to time Java activities.</li>
+<li>Use InfoMessage to print messages to the log window.</li>
+</ul>
+<p>The following script illustrates calling WebLOAD functions from Java code.</p>
+<p><strong>Java side:</strong></p>
+<pre><code class="language-java">import netscape.javascript.JSObject;
+
+// The JSObject class must be imported for the
+
+// code to successfully compile public class MyJClass
+
+{
+
+public void TimersFromJava(JSObject myJavaScriptObj)
+
+{
+
+String args[] = {&quot;Timer1&quot;}; myJavaScriptObj.call(&quot;SetTimer&quot;,args);
+
+…&lt;do any other work&gt; …;
+
+myJavaScriptObj.call(&quot;SendTimer&quot;,args);
+
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You can call the JavaScript SetTimer and SendTimer functions directly from the Java class using the JSObject.call() method. Pass parameters to the functions being called (in this case the timer name expected by the timer functions), using the args array.</p>
+</blockquote>
+<p><strong>JavaScript side:</strong></p>
+<pre><code class="language-javascript">// The following JavaScript code uses the Java class
+
+// defined in the preceding Java section. myJavaObject = new Packages.MyJClass()
+
+// The JavaScript code uses the Packages class to
+
+// identify MyJClass as a locally defined Java object try
+
+{
+
+myJavaObject.TimersFromJava(this)
+
+}
+
+catch (e)
+
+{
+
+SevereErrorMessage(&quot;Error : &quot; + e);
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You work with myJavaObject as you would with any JavaScript object. TimersFromJava is called as a simple object method, passing the locally understood ‘this’ object as the parameter to the Java method.</p>
+</blockquote>
+<p>The try...catch statement in the JavaScript code marks a block of statements to try. The catch block specifies the response the program should supply should an exception be thrown. If an exception is thrown, the try...catch statement catches it. WebLOAD recommends wrapping the JavaScript calls to Java functions within try...catch statements, to add robustness and error recovery to your code.</p>
+<h5 id="example-reading-data-from-a-jdbc-database">Example: reading data from a JDBC database</h5>
+<p>The following example illustrates a very common website activity—accessing a database. The Java side of the example is a straightforward Java program to access a JDBC, including methods to:</p>
+<ul>
+<li>Load a driver</li>
+<li>Open a connection</li>
+<li>Create and execute SQL queries</li>
+</ul>
+<p>The JavaScript side of the example illustrates exactly how simple it is to work with the Java program from a JavaScript script.</p>
+<p><strong>Java side:</strong></p>
+<pre><code class="language-java">import java.sql.\*; public class jdbcExample
+
+{
+
+Connection conn; Statement st1; ResultSet rs;
+
+public static void loadDriver(String js\_driver) throws ClassNotFoundException
+
+{
+
+Class.forName(js\_driver);
+
+}
+
+public void getConnection(String js\_url, String js\_login, String js\_pswd) throws SQLException
+
+{
+
+//get the connection &amp; also create a statement: conn = DriverManager.getConnection
+
+(js\_url, js\_login, js\_pswd); st1 = conn.createStatement();
+
+}
+
+public String executeQuery(String js\_query) throws SQLException
+
+{
+
+//execute sql statement:
+
+rs = st1.executeQuery(js\_query);
+
+// loop over the result set.
+
+
+
+String strOnSuccess = &quot;3. Result Set is:&quot;; while (rs.next())
+
+{
+
+strOnSuccess = strOnSuccess + &quot;\n&quot; + rs.getString(&quot;ReportName&quot;);
+
+}
+
+// return the data return strOnSuccess;
+
+}
+
+}
+</code></pre>
+<p><strong>JavaScript side:</strong></p>
+<p>![ref19]The JavaScript side of this test session script runs a JDBC load test which checks the ability of the database to handle a large number of SQL queries.</p>
+<blockquote>
+<p><strong>Note:</strong> The following is the sequence of JDBC activity in this script:</p>
+</blockquote>
+<ol>
+<li>The JDBC driver is loaded only once for the test session, in the <code>InitAgenda()</code> function.</li>
+<li>A JDBC connection is created once for each thread, in the <code>InitClient()</code> function.</li>
+<li>Queries are created in the main body of the script. Answers are sent to the Console.</li>
+</ol>
+<pre><code class="language-javascript">function InitAgenda()
+
+{
+
+try
+
+{
+
+
+
+
+}
+
+
+
+// load the JDBC driver once per session jdbcDriver = &quot;&lt;driver class name&gt;&quot; Packages.jdbcExample.loadDriver(jdbcDriver);
+
+catch (e)
+
+{
+
+SevereErrorMessage(&quot;Error : &quot; + e);
+
+}
+
+}
+
+function InitClient()
+
+{
+
+// create a separate jdbcObj object and connection
+
+// for each thread
+
+jdbcObj = new Packages.jdbcExample()
+
+// connect to the database
+
+url = &quot;&lt;jdbc:driver-name:host&gt;&quot; login = &quot;&lt;username&gt;&quot;
+
+password = &quot;&lt;password&gt;&quot;
+
+
+
+
+try
+
+{
+
+}
+
+
+
+jdbcObj.getConnection(url, login, password)
+
+catch (e)
+
+{
+
+SevereErrorMessage(&quot;Error : &quot; + e);
+
+}
+
+}
+
+//Main body of script try
+
+{
+
+// create query and send the results to the Console query = &quot;SELECT \* FROM Reports WHERE ReportId &lt; 10 &quot; query\_result = jdbcObj.executeQuery(query) InfoMessage(&quot;&quot;+ query\_result)
+
+}
+
+catch (e)
+
+{
+
+WarningMessage(&quot;Error : &quot; + e);
+
+}
+</code></pre>
+<h2 id="working-with-java-selenium-scripts">Working with Java Selenium Scripts</h2>
+<h3 id="prerequisite-adding-custom-java-classes-to-webload">Prerequisite: Adding custom Java classes to WebLOAD</h3>
+<p>As a prerequisite to working with Java Selenium scripts, you need to configure the Selenium Java classes in WebLOAD. Use one of the two following methods.</p>
+<h4 id="method-1-include-the-selenium-jar-and-its-dependencies-in-webload">Method #1: Include the Selenium jar and its dependencies in WebLOAD</h4>
+<p>In order for your code to work, you need to include it and all its dependencies (other jars it needs in order to run) in WebLOAD.</p>
+<p><strong>To include the Selenium jars in WebLOAD:</strong></p>
+<ol>
+<li>Copy the selenium-java-x.x.jar and all the jars in the libs folder to the WebLOAD Java extensions folder: <code>c:\ProgramData\RadView\WebLOAD\extensions\java</code></li>
+<li>If there are duplicate jars (having the same base name but a different number), delete the older versions.</li>
+</ol>
+<p>Note that version numbers are not given in decimal notation. Thus, 1.11 is more recent than 1.9.</p>
+<h4 id="method-2">Method #2</h4>
+<p>Specify any additional classpath needed to run external classes by setting the following in the C:\Program Files (x86)\RadView\WebLOAD\bin\webload.ini file:</p>
+<p><code>USER\_CLASSPATH="path\to\classes"</code></p>
+<blockquote>
+<p><strong>Note for Maven users:</strong> When using Maven, you can use the following command to ind the target/dependencies folder filled with all the dependencies, including transitive: mvn dependency:copy-dependencies
+</p>
+</blockquote>
+<h3 id="working-with-selenium-scripts"><strong>Working with Selenium Scripts</strong></h3>
+<blockquote>
+<p><strong>Note:</strong> Creating a Java Selenium project is outside the scope of this document. For information, refer to the Selenium website at <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/.</a></p>
+</blockquote>
+<p>A Java class that calls Selenium is still a Java class and can be called directly from a WebLOAD agenda using the Java integration capability described in <a href="#_bookmark75">*Working with Java</a>* (on page <a href="#_bookmark75">87</a>). For example, if you have the following Selenium Java code:</p>
+<pre><code class="language-java">// This is an example of a Selenium script in Java code. It does not relate to WebLOAD
+
+package com.example;
+
+import org.openqa.selenium.firefox.FirefoxDriver; public class MyClass {
+
+private WebDriver driver; public void seleniumFunc() {
+
+driver = new FireFoxDriver(); driver.[get(&quot;http://www.google.com](http://www.google.com/)&quot;);
+
+}
+
+}
+</code></pre>
+<p>You can call that code from WebLOAD, as described in <a href="#_bookmark75">*Working with Java</a>* (on page <a href="#_bookmark75">87</a><a href="#_bookmark75">98</a>), using:</p>
+<p><code>obj = new Packages.com.example.MyClass(); obj.seleniumFunc();</code></p>
+<p>However, WebLOAD will not have visibility into the activity occurring within the function call seleniumFunc; for example, if several pages are being downloaded, WebLOAD will not be able to time this activity for each page. The WebLoadDriver object enables adding timers, transactions and other WebLOAD methods directly inside the Java code.</p>
+<h3 id="working-with-webloaddriver">Working with WebLoadDriver</h3>
+<p>WebLoadDriver is a Selenium WebDriver wrapper that supports WebLOAD interaction. WebLoadDriver inherits WebLoadWrapper, which is described in <a href="#_bookmark85">*Using</a> <em><a href="#_bookmark85">the WebLoadWrapper* </a></em>(on page <a href="#_bookmark85">98</a>).</p>
+<p>WebLoadDriver provides the following:</p>
+<ul>
+<li>Supports all the WebLoadWrapper functionality described in <a href="#_bookmark85">*Using the</a><a href="#_bookmark85"> WebLoadWrapper* </a>(on page <a href="#_bookmark85">98</a>)</li>
+<li>Implements the Selenium WebDriver interface</li>
+<li>Adds ‘reportStatistics’ functionality that sends timers from the browsers to WebLOAD. Refer to the <em>Selenium Report Statistics</em> section in the <em>WebLOAD Recorder User Guide</em>.</li>
+</ul>
+<p><strong>To work with WebLoadDriver in the Java code:</strong></p>
+<ol>
+<li>Add the following jar to your Java project:</li>
+</ol>
+<p>C:\ProgramData\RadView\WebLOAD\extensions\java\rvselenium.jar</p>
+<ol>
+<li>In your Java class, import com.radview.webload.selenium.WebLoadDriver.</li>
+</ol>
+<p>Keep in mind that WebLoadDriver is a Selenium WebDriver wrapper that supports WebLOAD interaction. When not running in WebLOAD context, it ignores WebLOAD, allowing your class to be executed as usual.</p>
+<h3 id="example-of-working-with-webloaddriver"><strong>Example of working with WebLoadDriver</strong></h3>
+<p><strong>On the Java side:</strong></p>
+<pre><code class="language-java">package com.example;
+
+import com.radview.webload.selenium.WebLoadDriver; public class MyClass {
+
+private WebLoadDriver driver; public void seleniumFunc() {
+
+driver = new **WebLoadDriver**(new FireFoxDriver());
+
+// The beginTransaction method is a regular WebLOAD method, called from the Java code
+
+driver.**beginTransaction**(&quot;transaction 1&quot;);
+
+// The following method is a Selenium method driver.get(&quot;[http://www.google.com](http://www.google.com/)&quot;);
+
+
+
+// The reportStatistics method is a WebLOAD addition for sending to WebLOAD the browser navigation statistics that the browser collected from the latest navigation
+
+driver.**reportStatistics**(&quot;google&quot;);
+
+// The endTransaction method is a regular WebLOAD method, called from the Java code
+
+driver.**endTransaction**(&quot;transaction 1&quot;);
+
+}
+
+}
+</code></pre>
+<p><strong>On the Javascript side:</strong></p>
+<pre><code class="language-javascript">// Bind the JavaScript context to java
+
+Packages.com.radview.webload.WebLoadWrapper.setThreadWebLoadRoot Object(this);
+
+// Instantiate and use your Selenium java class in the script 
+
+obj = new  Packages.com.example.MyClass(); obj.seleniumFunc();
+</code></pre>
+<p>For an explanation of how to instantiate and use your Selenium Java class, see <a href="#_bookmark151"><em>LiveConnect Overview</em> </a>(on page <a href="#_bookmark151">177</a>).</p>
+<h3 id="for-more-information-on-working-with-selenium"><strong>For more information on working with Selenium</strong></h3>
+<p>For more information on working with Selenium, see:</p>
+<ul>
+<li>
+<p>Appendix G in the <em>WebLOAD Recorder User</em> Guide for more information on Selenium integration.</p>
+</li>
+<li>
+<p>The <em>Selenium Building Blocks</em> section in Chapter 10 <em>Configuring the WebLOAD Recorder Options</em> of the <em>WebLOAD Recorder User</em> Guide for more information on Selenium building blocks that can be dragged and dropped directly into the Script Tree.</p>
+</li>
+</ul>
+<h2 id="working-with-the-component-object-model-com">Working with the Component Object Model (COM)</h2>
+<h3 id="what-is-com">What is COM</h3>
+<p>Microsoft’s Component Object Model (COM) provides a way for distinct software components to communicate with each other. COM technology provides universally reusable binary components. These components can be mixed and matched over versions and years, accessed by applications written in any of a variety of languages, running on any of a variety of platforms, located either locally or over a network. COM automation simplifies application development by maximizing component reusability while increasing the application’s universality. Today, most Windows users rely on COM technology, often without even realizing it. For example, suppose you wish to work with a restricted website. Access to the application behind that website is controlled by a security database. To work with that application, you must first enter your name and password. A COM component will automatically access the database and verify your permission status.</p>
+<p>COM components are objects that consist of a combination of properties, methods, and interfaces. An object’s interface is simply a set of methods together with a defined set of standards for what those methods do and how they are accessed, their parameters and return values. WebLOAD JavaScript provides direct object access to any component that has a COM wrapping and an IDispatch interface. These are known as ActiveX objects. See <a href="#_bookmark97"><em>ActiveX Object Interfaces</em> </a>(on page <a href="#_bookmark96">107</a>), for more information.</p>
+<p>An ActiveX object is viewed and manipulated exactly as any other JavaScript object within the script. WebLOAD encapsulates COM automation functionality, providing an interface between JavaScript scripts and ActiveX objects. For example, a WebLOAD JavaScript script is able to fully test an ASP Web page or a Web page that manipulates an ADO database. In both of these technologies, ActiveX objects are widely used.</p>
+<p>This section of the guide explains how to work with ActiveX objects within your JavaScript script. For a detailed explanation of COM programming, see the Microsoft MSDN Online Library at <a href="http://msdn.microsoft.com/">http://msdn.microsoft.com </a>(<a href="http://msdn.microsoft.com/">http://msdn.microsoft.com</a>).</p>
+<blockquote>
+<p><strong>Note:</strong> If you are working with COM objects that are not thread-safe and can not handle multi-threading, you must set the multithreading to one thread per process (this is WebLOAD’s default setting).</p>
+</blockquote>
+<p><strong>To set the multithreading:</strong></p>
+<ol>
+<li>In the WebLOAD Console, open the <strong>Tools</strong> &gt; <strong>Default/Current Session/script Options</strong> dialog box.</li>
+<li>Select the <strong>Browser Parameters</strong> tab.</li>
+<li>In the Multi-thread Virtual Clients-&gt;Load Generator field, enter or scroll to 1, which sets one thread per process.</li>
+</ol>
+<h3 id="activex-object-interfaces">ActiveX Object Interfaces</h3>
+<p>ActiveX objects usually include the following interfaces:</p>
+<ul>
+<li>IUnknown—the core interface. Defines the ActiveX object. Includes the definitive ActiveX object methods QueryInterface, AddRef, and Release.</li>
+<li>
+<p>IDispatch—the access interface. Enables ActiveX object automation, allowing the WebLOAD Recorder JavaScript script to manipulate the ActiveX object’s properties and methods.</p>
+</li>
+<li>
+<p>Custom Interfaces—additional, specialized interfaces. Created by the user, specific to each ActiveX object.</p>
+</li>
+</ul>
+<p>JavaScript scripts access the methods and properties of the object interface exposed by the IDispatch interface.</p>
+<ul>
+<li>ITypeInfo—the index interface. Includes a list of all objects, properties, and methods for each interface included in the ActiveX object (optional).</li>
+</ul>
+<p>The ITypeInfo interface of an ActiveX object provides access to the TypeInfo library for that object.</p>
+<blockquote>
+<p><strong>Note:</strong> The ITypeInfo interface is optional. WebLOAD is able to work with ActiveX objects whether or not they supply a TypeInfo library file. However, access to the TypeInfo library for an object saves overhead. Programs that can take information from the TypeInfo library do not have to spend time and energy analyzing an object to identify a specific item’s characteristics. For example, access to the TypeInfo library eliminates the need to figure out a variable’s data type or insert casting functions into your scripts for greater security.</p>
+</blockquote>
+<h3 id="activating-activex-objects-from-a-javascript-script"><strong>Activating ActiveX Objects from a JavaScript script</strong></h3>
+<p>A typical website is often the front end of an application that includes many ActiveX components. WebLOAD scripts enable thorough testing of both the website and the applications that are accessed via that website by allowing you to activate an application’s ActiveX object from your script. For example, to use your WebLOAD script to directly test access time to an ADO database, you would activate the ActiveX objects for that database.</p>
+<p><strong>To use ActiveX objects in your script do the following( as you would with any JavaScript object):</strong></p>
+<ol>
+<li>
+<p>Create a reference to a new object instance.</p>
+</li>
+<li>
+<p>Assign and get values for the object’s properties.</p>
+</li>
+<li>
+<p>Execute the object’s methods.</p>
+</li>
+</ol>
+<p>This section describes how to activate ActiveX objects from your WebLOAD JavaScript script.</p>
+<p><strong>Note:</strong> The object you are accessing must already exist and be registered. When working with a remote server, through DCOM over HTTP, the object you are accessing should reside on the remote server. (This is described in <a href="#_bookmark106"><em>DCOM over HTTP</em> </a>(on page <a href="#_bookmark105">115</a>)).</p>
+<p>When working locally, the COM object you are accessing should reside on the Load Generator.</p>
+<p>The following section describes the ActiveXObject function syntax.</p>
+<h3 id="activexobject-constructor">ActiveXObject() (constructor)</h3>
+<p><strong>Method of Object</strong></p>
+<ul>
+<li>ActiveX</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>Creates a new ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
+<p><strong>Syntax</strong></p>
+<p><code>my\_ActiveXobject = new</code></p>
+<p><code>ActiveXObject(“ApplicationName.ObjectName” [, “rServer”])</code></p>
+<p><code>In VBScript terminology, the syntax appears as follows:</code></p>
+<p><code>my\_ActiveXobject = new ActiveXObject(“ServerName.TypeName”)</code></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><code>ApplicationName</code>—The name of the application providing the object.</li>
+<li><code>ObjectName</code>—The type or class of the object being created. When working with local COM objects, the object resides on the local Load Generator.</li>
+<li><code>rServer</code>—The name of the remote server being accessed. Optional, used when working through DCOM, to access objects residing on the remote server.</li>
+</ul>
+<p><strong>Return Value</strong></p>
+<p>A pointer to the new ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
+<p><strong>Example</strong></p>
+<p>To create a new Excel spreadsheet:</p>
+<p><code>ExcelSheet = new ActiveXObject (“Excel.Sheet”)</code></p>
+<h3 id="assigning-values-to-activex-objects">Assigning Values to ActiveX Objects</h3>
+<p>At this point, now that you have created a reference to an ActiveX object, the fact that it refers to an ActiveX object does not affect usage and syntax within your JavaScript script. Once the new object has been activated, my_ActiveXobject is simply a local JavaScript object that is used to communicate with a COM object. Your script works with this object exactly as it would work with any other JavaScript object. You do not have to deal with any COM overhead or syntax issues. You access the new object’s properties and methods as you would access any other JavaScript object.</p>
+<p>This section describes how to work with local ActiveX objects in your WebLOAD JavaScript script. For an example illustrating working with ActiveX objects on a remote server, see <a href="#_bookmark106"><em>DCOM over HTTP</em> </a>(on page <a href="#_bookmark105">115</a>).</p>
+<p>Work with your ActiveX objects properties and methods as you would with any JavaScript object’s properties and methods, using the following syntax:</p>
+<pre><code class="language-javascript">my\_ActiveXobject.method(method-parameters) orig\_property\_value = my\_ActiveXobject.property my\_ActiveXobject.property = new\_property\_value index\_property\_value =
+
+my\_ActiveXobject.indexproperty(indexvalue)
+</code></pre>
+<p>The following JavaScript examples illustrate this use:</p>
+<pre><code class="language-javascript">// To explicitly create two new object instances mother = new ActiveXObject (&quot;Family.MotherObject&quot;) father = new ActiveXObject (&quot;Family.FatherObject&quot;)
+
+//mother and father are local JavaScript objects
+
+// To assign values directly to my object’s 4 properties mother.Name = &quot;Jane&quot;
+
+mother.Age = 21
+
+mother.BirthDate = &quot;Jan 20, 1978&quot; mother.Smoke = false
+
+// To assign values to my object’s 4 properties through an
+
+// object passed as a parameter to my object’s SetInfo method father\_birthday = new Date(&quot;Mar 20,1975&quot;) father.SetInfo(&quot;John&quot;,25,father\_birthday,true)
+
+// To implicitly create a new child object child = mother.MakeChild(father)
+
+// To assign values to my child object’s 4 properties through
+
+// a combination of direct property assignment and
+
+// method execution child.Name = &quot;Patrick&quot;
+
+color = child.GetEyesColor() child.DemandCare(mother,father)
+</code></pre>
+<h3 id="timers-and-counters-for-activex-objects">Timers and Counters for ActiveX Objects</h3>
+<p>WebLOAD provides automatic timers and counters for ActiveX objects. Automatic timers and counters allow you to effortlessly measure and quantify the behavior and response time of each specific ActiveX component individually, enabling the most comprehensive testing of your COM-based application.</p>
+<p>Every time your script calls an ActiveX method, a timer and a counter are automatically created for that method. The results are included in the Statistics Report for that test session.</p>
+<p>For example, assume you are working on a project about animal behavior, using the following ActiveX object:</p>
+<p>animal = new <code>ActiveXObject</code> ("Animals.Dog") animal.Name = "Bingo" animal.Drink("Water") animal.Eat("Meat","Fish")</p>
+<p>Each time you call any of the animal object’s methods, a timer and counter for that method is automatically incremented. The results appear in the Statistics Report. Each timer and counter is uniquely identified with the ActiveX application, object, and method name, as illustrated in the following figure:</p>
+<p><img alt="Timer and Counter Identification with ActiveX Application, Object and Method Name" src="../../images/script_guide_064.png" /></p>
+<p>The counter and timer information is collected and displayed automatically, every time you call an ActiveX method from your script. You do not have to add anything to your script code to take advantage of this feature.</p>
+<blockquote>
+<p><strong>Note:</strong> There are no counters for calls to ActiveX object constructors.</p>
+</blockquote>
+<h3 id="automatic-conversion-between-javascript-and-com-data-types">Automatic Conversion between JavaScript and COM Data Types</h3>
+<p>The examples found in the preceding section illustrate how simple it is to refer to ActiveX objects within your JavaScript script. You do not need to know or declare anything special about an object’s definition or typing when working within your script. The fact that JavaScript and COM use slightly different data types is not an issue. WebLOAD simply supports all standard JavaScript and COM data types.</p>
+<p>WebLOAD JavaScript scripts automatically convert between JavaScript and the corresponding COM data types. The table below illustrates the data type conversions that are supported. The default choices used if no data type information is available are marked in <strong>bold</strong> in the table.</p>
+<p>Working with JavaScript and COM data types within a JavaScript script is simple. Passing values from JavaScript scripts as parameters to COM objects can be more complicated. COM does not expect, nor does COM know how to convert from, a JavaScript data type. WebLOAD is responsible for smoothing the interface between JavaScript and COM, converting between JavaScript and the corresponding COM data types when necessary.</p>
+<p>When the data type is known, WebLOAD automatically converts between JavaScript data types and the corresponding COM data type. If the data type is unknown, WebLOAD checks to see if a TypeInfo library is available for the object. (TypeInfo is usually available.) When available, WebLOAD takes the data type information from the TypeInfo library and completes the conversion as usual.</p>
+<p>If TypeInfo information is not accessible, WebLOAD uses a basic common-sense heuristic to determine the data type and select the appropriate conversion, based on the preceding default conversion table. For example, if a variable A has been assigned a value of 5, WebLOAD assumes that the variable should be of type Integer.</p>
+<p>However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a String “5”. Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, <a href="#_bookmark104">*Using Casting Functions for JavaScript</a> <em><a href="#_bookmark104">and COM Data Types* </a></em>(on page <a href="#_bookmark103">113</a>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>JavaScript Data Type ®</strong></th>
+<th style="text-align: left;"><strong>Integer</strong></th>
+<th style="text-align: left;"><strong>Double</strong></th>
+<th style="text-align: left;"><strong>Boolean</strong></th>
+<th style="text-align: left;"><strong>String</strong></th>
+<th style="text-align: left;"><strong>Date</strong></th>
+<th style="text-align: left;"><strong>ActiveX Object</strong></th>
+<th style="text-align: left;"><strong>Array</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>COM Data Type</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Short</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Long</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Double</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>VARIANT_</p><p>BOOL</p></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">BSTR</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">IUnknown</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">IDispatch</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">SAFEARRAY</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-casting-functions-for-javascript-and-com-data-types">Using Casting Functions for JavaScript and COM Data Types</h3>
+<p>WebLOAD recommends using casting functions under the following circumstances:</p>
+<ul>
+<li>When no TypeInfo library is available.</li>
+<li>When you know you are passing mismatched data types.</li>
+<li>If you receive a TypeError message from COM.</li>
+</ul>
+<p>Casting functions ensure that JavaScript variables are converted to the correct data type before being passed as parameters to an ActiveX object method. To explain why casting functions are recommended, this section focuses on how JavaScript and COM work with arrays.</p>
+<p>Arrays are collections or sets of variables. The values stored within a JavaScript array may either all be of the same data type, (i.e., all integers or all strings), or they may consist of a variety of different data types. COM includes a SafeArray option, asserting that all the items within the array are of the same type. For maximum flexibility, SafeArrays also provide the option of all items being of type Variant.</p>
+<p>While each item is officially of the ‘same type’, this actually means that each item may be of <em>any</em> Variant– compatible data type.</p>
+<p>While there are very few restrictions on the kinds of data types acceptable by ActiveX objects for array parameters, the one requirement is that whatever is passed must be of the correct (expected) data type. If an ActiveX object method expects to receive an array of type Integer, it must be passed an array of type Integer and not an array of type Variant, even if all the array elements do happen to be integers. When passing a JavaScript array object as a parameter to an ActiveX object method, the items of that array must be converted correctly to the corresponding ActiveX object data types or the method will fail.</p>
+<p>If nothing is known about the data type of an array’s elements, WebLOAD tries to choose the most logical data type for that array. For example, if all the values in the array appear to be of the same data type, WebLOAD will pass an array of that data type. If the values in the array appear to be of different data types, WebLOAD will pass an array of type Variant. While this approach will almost always work, it may occasionally fail. For example, in the rare event that an array of type Variant coincidentally contains only items that happen to all be of the same Integer data type, WebLOAD will analyze the elements of that array, conclude that it must be of type Integer, and convert it accordingly to an ActiveX array object of type Integer. This may be a logical decision, but the method will fail.</p>
+<p>To avoid this small possibility of failure during your testing session, WebLOAD provides a complete set of casting functions. While casting functions may be used at any time, explicitly setting a data type is usually recommended only when no TypeInfo library is available, when you know you are passing mismatched data types, or if you receive a TypeError message from COM. (COM errors, which appear as standard error messages on the WebLOAD Console, are usually triggered by an error in the application being tested, for example, by an error in the ActiveX object’s TypeInfo library.)</p>
+<p>WebLOAD provides the following casting functions:</p>
+<ul>
+<li>CByte()</li>
+<li>CInt()</li>
+<li>CLng()</li>
+<li>CDbl()</li>
+<li>CFlt()</li>
+<li>CBool()</li>
+<li>CVARIANT()</li>
+</ul>
+<p>These functions take a variable as a parameter and return that value cast to the specified data type. Only legal data type conversions, as listed the table in <a href="#_bookmark102">*Automatic</a> <em><a href="#_bookmark102">Conversion between JavaScript and COM Data Types* </a></em>(on page <a href="#_bookmark102">112</a>), are allowed.</p>
+<p>For example, assume you had an array that should be passed as data type Variant, but it only holds items with integer values. To prevent problems, use the CVARIANT() function to explicitly cast the array elements to the Variant data type, as follows:</p>
+<p><code>My\_variant\_arr = new Array()</code> </p>
+<p><code>My\_variant\_arr[0] = CVARIANT(1)</code> </p>
+<p><code>My\_variant\_arr[1] = CVARIANT(21)</code> </p>
+<p><code>My\_variant\_arr[2] = CVARIANT(32)</code> </p>
+<p><code>My\_variant\_arr[4] = CVARIANT(44)</code></p>
+<p><code>Result = RemoteCOMobject.Add(My\_variant\_arr)</code></p>
+<p>Remember, if your array contains elements with a variety of data types, you don’t have to explicitly cast the array elements to force the array to be converted to data type Variant. WebLOAD will understand that this is a Variant array based on the variety of data types found. However, you may always use a casting function if you wish:</p>
+<p><code>My\_variant\_arr = new Array()</code> </p>
+<p><code>My\_variant\_arr[0] = CVARIANT(1)</code> </p>
+<p><code>My\_variant\_arr[1] = CVARIANT(21.1)</code> </p>
+<p><code>My\_variant\_arr[2] = CVARIANT("John")</code></p>
+<p><code>My\_variant\_arr[4] = CVARIANT(new Date(1999,1,1))</code> </p>
+<p><code>Result = RemoteCOMobject.Concat(My\_variant\_arr)</code></p>
+<p>In another example, assume you had an array that should be passed as data type</p>
+<p><code>Double</code>. The elements were assigned a variety of Integer and Double data type values. There is no TypeInfo library available. WebLOAD, seeing a combination of integer and double values, will assume that this is an array of data type Variant.</p>
+<p>However, the method is expecting an array of data type Double. To prevent problems, use the CDbl() function to explicitly cast the integer array elements to the Double data type, as follows:</p>
+<p><code>My\_double\_arr = new Array()</code> </p>
+<p><code>My\_double\_arr[0] = 100.1</code> </p>
+<p><code>My\_double\_arr[1] = CDbl(21)</code> </p>
+<p><code>My\_double\_arr[2] = 22.2</code></p>
+<p><code>Result = RemoteCOMobject.AddDoubles(My\_double\_arr)</code></p>
+<h3 id="dcom-over-http">DCOM over HTTP</h3>
+<p>In today’s work environment, applications are often distributed over a network. In the course of your testing session, you may need to activate an ActiveX object that is located on a remote server and accessed through a network. For this reason, WebLOAD supports ActiveX object access through Remote Data Service (RDS).</p>
+<p>Remote object access is accomplished in two steps: First, declare a new <strong>RDS object</strong>. That RDS object is used as a bridge, pointing to the ActiveX object residing on the remote server. Then, activate an <strong>ActiveX object</strong> located on a remote server, use the <strong>initial instantiation syntax</strong> described in <a href="#_bookmark107">*R</a><a href="#_bookmark107">emote ActiveXObject() Constructor* </a>(on page <a href="#_bookmark107">116</a>).</p>
+<blockquote>
+<p><strong>Note:</strong> WebLOAD assumes a basic familiarity with RDS use, including object declaration and initialization, and system configuration. For more information about Microsoft’s Remote Data Services of ADO (RDS), go to the following websites:</p>
+</blockquote>
+<p>For a general overview, see the Microsoft MSDN Online Library at <a href="http://msdn.microsoft.com/">http://msdn.microsoft.com.</a></p>
+<p>For a more complete example that illustrates RDS use, see <a href="http://support.microsoft.com/kb/q184630/">http://support.microsoft.com/kb/q184630/.</a></p>
+<p>To learn how to configure RDS.DataSpace to create a Custom Business Object (ActiveX DLL) on either NT or Win2000, see <a href="http://support.microsoft.com/kb/q185169/">http://support.microsoft.com/kb/q185169/.</a></p>
+<p>To learn how to configure RDS for Windows 2003, see <a href="http://support.microsoft.com/kb/837981/en-us">http://support.microsoft.com/kb/837981/en-us.</a></p>
+<h3 id="remote-activexobject-constructor">Remote ActiveXObject() Constructor</h3>
+<p><strong>Method of Object</strong></p>
+<ul>
+<li>ActiveX</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>Creates a new remote ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
+<p><strong>Syntax</strong></p>
+<p><code>RDS\_object = new ActiveXObject (“RDS.DataSpace”)</code></p>
+<p><code>my\_RemoteActiveXobject =</code></p>
+<p><code>RDS\_object.CreateObject(“AppName.ObjName”, [“http://rServer”)</code>](http://rServer/)</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><code>RDS.DataSpace</code>—Creates an RDS object to act as a ‘bridge’ to an ActiveX object residing on the remote server.</li>
+<li><code>ApplicationName</code>—The name of the application providing the object. ObjectName—The type or class of the object being created. rServer—The name of the remote server being accessed.</li>
+</ul>
+<p><strong>Return Value</strong></p>
+<p>A pointer to the new ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
+<p><strong>Comments</strong></p>
+<p>When working with a remote server, the object you are accessing must reside on the Web server computer (in this example: http://rserver).</p>
+<p>Once your new object is instantiated, it is simply a local JavaScript object, just like any other JavaScript object. You may manipulate the object as you would any other JavaScript object. An example of remote ActiveX object instantiation and use is illustrated in the next section.</p>
+<h3 id="example-remote-activex-object-access">Example: Remote ActiveX Object Access</h3>
+<p>The following script fragment illustrates ActiveX object access from a WebLOAD JavaScript script. This example retrieves a recordset from a database, updates the recordset, and then makes the necessary changes to the database.</p>
+<pre><code class="language-javascript">// Instantiate a new ActiveX object
+
+DataSpace = new ActiveXObject(“RDS.Dataspace”)
+
+// Invoke server object. localhost is the server here svrObject = DataSpace.CreateObject
+
+(&quot;RDSServer.DataFactory&quot;, [&quot;http://localhost&quot;)](http://localhost/)
+
+// svrObject is now a local JavaScript object used to
+
+// access the remote ActiveX object. svrObject is
+
+// manipulated exactly as any other JavaScript object.
+
+// Create output file with the unique ClientNum included
+
+// as part of the name for identification purposes wlLocals.MyFileObj = new wlOutputFile
+
+(“C:\\OutputFile” + ClientNum + “.txt”)
+
+// svrObject.Query returns a recordset strRecord = svrObject.Query
+
+(&quot;DSN=AdvWorks2&quot;, &quot;Select\* from Customers&quot;)
+
+// Initialize database record counter n\_recordCounter = 0
+
+// The objField2 variable is used for debugging,
+
+// to verify the correct field and check its value. objField2 = strRecord.Fields(&quot;Threads&quot;)
+
+
+
+// Notice that it is not necessary to explicitly state:
+
+// objField2 = strRecord.Fields.item(&quot;Threads&quot;)
+
+// because WebLOAD supports default fields
+
+// The script works in a While-loop that
+
+// verifies that I am not at the last record.
+
+// If I am, then the update code does not run while(strRecord.EOF == false)
+
+{
+
+// Access the current field value strCurrentFieldValue = strRecord.Fields(0).Value
+
+// Add five to current record value and
+
+// verify that I am talking to the dataSource
+
+// so I can keep track of where I am in the field if (strCurrentFieldValue == 5)
+
+strCurrentFieldValue += 5
+
+// Update just saves the field.dot value objField2.Value = strCurrentFieldValue objField2.Value.Update
+
+// More debug coded when necessary. txtCurrent = strRecord.Fields(0).Value
+
+// Submit changes to the record source and
+
+// move to the next record svrObject.SubmitChanges(&quot;DSN=AdvWorks2&quot;, strRecord) strRecord.MoveNext()
+
+}
+
+// End of While-loop
+</code></pre>
+<h3 id="com-error-management">COM Error Management</h3>
+<p>Failure of a COM function call always triggers a WebLOAD error message, whether or not the COM call was enclosed in a try...catch block. This gives the script programmer an opportunity to handle application errors within the context of the WebLOAD test session script.</p>
+<h3 id="activex-object-limitations">ActiveX Object Limitations</h3>
+<p>Due to the nature of ActiveX object implementation, WebLOAD ActiveX support is subject to certain limitations. The following items are not supported:</p>
+<ul>
+<li>Events. The ActiveX object is not able to make a call to the client.</li>
+</ul>
+<p>For example, work with the IConnectionPoint interface is not supported.</p>
+<ul>
+<li>Setting a property value within a function parameter. For example, you cannot write:</li>
+</ul>
+<p><code>ReturnValue = FunctionCall(**(My\_Object.Property=5)**)</code></p>
+<ul>
+<li>Passing method calls that return values as parameters to another method call of the same object.</li>
+</ul>
+<p>For example, the following method call will fail:</p>
+<p><code>AU = new ActiveXObject ("Persits.AspUser")</code> </p>
+<p><code>CurrentUser = AU.GetUser(**AU.GetUserName()**)</code></p>
+<p>Instead, either call the method using a second, temporary object, such as this:</p>
+<p><code>AU = new ActiveXObject ("Persits.AspUser")</code> </p>
+<p><code>AUTemp = new ActiveXObject ("Persits.AspUser")</code> </p>
+<p><code>CurrentUser = AU.GetUser(**AUTemp.GetUserName()**)</code></p>
+<p>Or use a method and a property rather than two methods, such as this:</p>
+<p><code>AU = new ActiveXObject ("Persits.AspUser")</code> </p>
+<p><code>CurrentUser = AU.GetUser(**AU.UserNameProp**)</code></p>
+<ul>
+<li>Assigning values to indexed properties.</li>
+</ul>
+<p>For example, you cannot assign a value as follows:</p>
+<p><code>My\_object.property(1) = 5</code></p>
+<ul>
+<li>Calling an indexed property without parentheses.</li>
+</ul>
+<p>For example, the following call to the indexed property Environment will fail:</p>
+<p><code>WshShell = new ActiveXObject("WScript.Shell")</code> </p>
+<p><code>env = **WshShell.Environment**</code></p>
+<p>Instead, use the following syntax:</p>
+<p><code>WshShell = new ActiveXObject("WScript.Shell")</code> </p>
+<p><code>env = **WshShell.Environment("System")**</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

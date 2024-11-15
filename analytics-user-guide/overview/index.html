@@ -1,0 +1,3067 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product documentation for RadView WebLOAD">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>WebLOAD Analytics System Overview - WebLOAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#webload-analytics-system-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WebLOAD Documentation" class="md-header__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WebLOAD Analytics System Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recorder/introduction/" class="md-tabs__link">
+          
+  
+  Recorder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scripting/introduction/" class="md-tabs__link">
+          
+  
+  Scripting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../console/introduction/" class="md-tabs__link">
+          
+  
+  Console
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/introduction/" class="md-tabs__link">
+          
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../automation/introduction/" class="md-tabs__link">
+          
+  
+  Automation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../javascript/introduction/" class="md-tabs__link">
+          
+  
+  JavaScript Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../analytics/introduction/" class="md-tabs__link">
+          
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WebLOAD Documentation" class="md-nav__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WebLOAD Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Recorder
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/before_you_begin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Before you Begin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/quick_start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QuickStart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/recording_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recording Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/editing_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with GIT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scripting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/programming_your_javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/advanced_javascript_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/working_with_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/using_asynchronous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Console
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/introducing_webload/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/plan_test_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/connect_webrm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/manage_load_templates_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_template_wizard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/create_load_test_goal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/config_load_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_global_opt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Global Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/set_script_options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Script Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/func_verifi_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/run_test_analyze_results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/running_a_load_session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running a Load Session
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/working_with_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/viewing_log_window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/console_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/statistics_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/data_drilling_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/export_performance_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/performance_measurements_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../console/appendix_g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running WebLOAD Using the OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/intro_java_scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/using_javascript_ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/actions_objects_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/internet_protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/xmlparser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XML Parser Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/websocket_object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebSocket Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/load_sessions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/portfolios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/defining_preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-webload-analytics-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      The WebLOAD Analytics Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-analytics-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Analytics Repositories
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="webload-analytics-system-overview">WebLOAD Analytics System Overview</h1>
+<p>WebLOAD accurately simulates Internet users’ behavior and models real-life demands on your Web application to predict capacity requirements, report bottlenecks, and detect weak links in your application before deployment. An important phase of the performance testing process is the analysis and reporting of test results. WebLOAD Analytics provides you with a simple yet comprehensive method of producing and publishing reports to fulfill all your analysis and reporting requirements. </p>
+<p>Using WebLOAD Analytics, you can create clear, accurate, and meaningful reports that enable you to analyze Load Session results and identify peaks, trends, and anomalies in your data. WebLOAD Analytics provides you with a variety of predefined chart templates that enable you to produce focused reports on specific topics. You can edit these templates, and create new templates. </p>
+<h2 id="the-webload-analytics-workflow">The WebLOAD Analytics Workflow</h2>
+<p>WebLOAD Analytics provides an easy to use, task oriented interface for the production and publication of Load Session reports. In a typical workflow, you create several charts of interest. Each is created simply by double-clicking a template. You then generate a Report, which is a compilation of the open charts.  </p>
+<p>The building blocks of the charts are:</p>
+<ul>
+<li><strong>Load Sessions</strong> – WebLOAD Analytics uses Load Session data as the raw material for producing WebLOAD reports. Using WebLOAD Analytics, you can present Load Session results, compare various statistics, and highlight important results and conclusions, based on your load test results. For more information about Load Sessions, see<a href="#_page50_x54.00_y155.04"><code></code><em>Working with Load Sessions</em> </a>on page<a href="#_page50_x54.00_y155.04"> 51 </a>. </li>
+<li><strong>Templates</strong> – A template specifies the design of a chart, including the visual layout, chart elements, and the way the data is structured. WebLOAD Analytics provides a wide range of predefined templates, based on RadView’s extensive knowledge and experience in the load testing and performance analysis fields. Predefined templates enable you to produce charts that focus on specific aspects of the Load Session data.</li>
+</ul>
+<p>A basic chart consists of the following elements: </p>
+<ul>
+<li><strong>Tabular Data</strong> – Provides a tabular representation of the Load Session data. </li>
+<li><strong>Graphs</strong> – Provides a graphical representation of the Load Session data. </li>
+</ul>
+<p><img alt="Tabular Data" src="../../images/Tabular_Data.jpeg" /><img alt="Graphs" src="../../images/Graphs.jpeg" /></p>
+<p>Each chart is either static or interactive.  </p>
+<ul>
+<li>A static chart, indicated by<img alt="Static Chart icon" src="../../images/static_chart_icon.png" />, is a regular chart.  </li>
+<li>An interactive chart is indicated by <img alt="interactive chart icon" src="../../images/interactive_chart_icon.png" />. It has the additional capability of enabling you to analyze and present the chart data in various ways using tools provided in its interactive toolbar. </li>
+</ul>
+<p>Once you create all the charts necessary for your report, you can generate the report simply by clicking <img alt="Generate report icon" src="../../images/generate_report_icon.png" />. You then specify which of the open charts will be included in the report. </p>
+<p>Reports can be saved for later use, with the defined Load Session data, template, and any optional settings you choose (see<a href="#_page47_x54.00_y230.04"><code></code><em>Saving Reports</em> </a>on page<a href="#_page47_x54.00_y230.04"> 48)</a>. </p>
+<p>In addition, you can: </p>
+<ul>
+<li><strong>Apply filters to the Load Session data</strong> – You can apply time and statistics-based filters to the Load Session data before the chart is produced. Time filters focus the chart on a specific part of the Load Session. Statistics-based time filters enable you to focus on time segments which meet defined criteria. For information about filtering your chart, see<a href="#_page34_x54.00_y155.04"><code></code><em>Changing Chart Settings</em> </a>on page<a href="#_page34_x54.00_y155.04"> 35.</a> </li>
+<li><strong>Customize your graphs</strong> – You can customize the graphs of interactive charts (denoted by the <img alt="interactive chart icon" src="../../images/interactive_chart_icon.png" /> icon): change colors, line type, hide/show measurement, zoom and more. You can even add any other measurement from the session to the graphs. </li>
+<li><strong>Change the chart’s parameters</strong> – each chart has different parameters that can be changed to control its behavior. Depending on the chart, you may add threshold values, control whether to show detailed data table or not, change titles and logos. For more information, see<a href="#_page42_x54.00_y78.04"><code></code><em>Modifying Chart Parameters</em> </a>on page<a href="#_page42_x54.00_y78.04"> 43.</a>  </li>
+<li><strong>Reuse your customizations</strong> – You can change the settings of a template and then save it as a new template. </li>
+<li><strong>Create regression charts</strong> – Adding multiple Load Sessions to a chart compares one selected session to all additional sessions included in the regression chart. This option is very useful for comparing two sessions that were run on the same Load Template. The purpose is to gauge whether a small change in the System Under Test has degraded the performance. For more information, see<a href="#_page20_x54.00_y155.04"><code></code><em>Generating Charts</em> </a>on page<a href="#_page20_x54.00_y155.04"> 21.</a> </li>
+<li><strong>Create statistical correlation charts</strong> – You can use these charts to identify measurements that have a high correlation with a certain measurement that is behaving in an unusual fashion, and are therefore possibly causing the unusual behavior of that measurement. </li>
+<li><strong>Print or Publish the chart or report</strong> – Both charts and reports can be printed or published in a variety of formats, including DOC, ODT, PDF, HTML, RTF and XLSX. For information about printing charts and reports, see<a href="#_page26_x54.00_y580.04"><code></code><em>Printing a Chart</em> </a>on page<a href="#_page26_x54.00_y580.04"> 27 </a>and<a href="#_page46_x54.00_y78.04"><code></code><em>Printing a Report</em> </a>on page<a href="#_page46_x54.00_y78.04"> 47.</a> For information about publishing charts and Reports, see<a href="#_page33_x54.00_y78.04"><code></code><em>Publishing Charts</em> </a>on page<a href="#_page33_x54.00_y78.04"> 34 </a>and<a href="#_page46_x54.00_y243.04"><code></code><em>Publishing Reports</em> </a>on page<a href="#_page46_x54.00_y243.04"> 47.</a> </li>
+<li><strong>Group frequently used templates in a portfolio</strong> – You can create a portfolio of templates that you use frequently. Opening the portfolio will open all its included templates. For information about how to set up a portfolio, see<a href="#_page63_x54.00_y176.04"><code></code><em>Working with Portfolios</em> </a>on page<a href="#_page63_x54.00_y176.04"> 64.</a>  </li>
+<li>
+<p><strong>Manage your charts</strong> – You can group your templates into different categories by creating your own folders and moving the templates you wish to use into those folders. You can also rename folders to create logical categories in which to group your templates. For information about managing your templates, see<a href="#_page58_x54.00_y324.04"><code></code><em>Managing Template Categories</em> </a>on page<a href="#_page58_x54.00_y324.04"> 59.</a> </p>
+</li>
+<li>
+<p><strong>Assign and modify master templates</strong> – WebLOAD Analytics contains three master templates: <em>Raw</em>, <em>WebLOAD</em>, and <em>WebLOAD with background</em>. Any one of these can be assigned as the master template for reports, and any one of these can be assigned as the master template for charts. By default, the reports master template is the WebLOAD master template, and the default charts master template is the Raw master template. The appearance of a report is determined only by the reports master template. The appearance of each chart is determined both by the chart master template and the settings of the specific template. You can specify which master template to assign to charts and which master template to assign to reports (see<a href="#_page66_x54.00_y392.04"><code></code><em>Defining Your Analytics Preferences</em> </a>on page<a href="#_page66_x54.00_y392.04"> 67)</a>. You can also change the values of some master template parameters (see<a href="#_page70_x54.00_y376.04"><code></code><em>Defining Your Parameter Preferences</em> </a>on page<a href="#_page70_x54.00_y376.04"> 71)</a>. </p>
+</li>
+<li><strong>Create and edit static reports</strong> – Although it is possible to dynamically define an interactive report from any measurement set, you can even create and edit the static templates. You can use the freely available iReport tool to edit the supplied templates and create new ones. For more information about JasperSoft iReport, see <a href="#_page60_x54.00_y311.04"><em>Using JasperSoft iReport</em> </a>on page<a href="#_page60_x54.00_y311.04"> 61.</a> </li>
+</ul>
+<h2 id="the-analytics-repositories">The Analytics Repositories</h2>
+<p>All Load Sessions used with WebLOAD Analytics are stored in a database (PostgreSQL). These Load Sessions are the fundamental data for all reports generated by WebLOAD Analytics. Load Sessions are imported to the database through WebLOAD Analytics. A list of the Load Sessions stored in the database can be viewed from WebLOAD Analytics. For information about importing Load Sessions and selecting the Load Sessions you wish to work with, see<a href="#_page50_x54.00_y155.04"><code></code><em>Working with Load Sessions</em> </a>on page<a href="#_page50_x54.00_y155.04"> 51 </a>. </p>
+<blockquote>
+<p><strong>Note:</strong>  You need to import Load Sessions to the database (also called the Load Session Repository) before they can be used by WebLOAD Analytics. </p>
+</blockquote>
+<p>All chart templates are stored in the following directory, by default: </p>
+<p><code>&lt;WebLOAD data&gt;Documents and Settings\All Users\Application Data\RadView\WebLOAD\Gallery</code>. This directory determines the appearance of the Templates Gallery. When you launch WebLOAD Analytics, the <code>Gallery</code> directory is scanned and all the templates therein are presented in the Templates Gallery. For information about modifying the default chart template location, see <a href="#_page66_x54.00_y392.04"><em>Defining Your Analytics Preferences</em> </a>on page<a href="#_page66_x54.00_y392.04"> 67 </a>. For more information about the <code>Gallery</code> directory, see<a href="#_page77_x54.00_y176.04"><code></code><em>WebLOAD Analytics File System Structure</em> </a>on page<a href="#_page77_x54.00_y176.04"> 78 </a>. </p>
+<blockquote>
+<p><strong>Note:</strong> The <code>Gallery</code> directory is not monitored while WebLOAD Analytics is running. RadView recommends not modifying this directory while WebLOAD Analytics is </p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
