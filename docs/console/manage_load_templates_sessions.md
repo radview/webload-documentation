@@ -32,17 +32,17 @@ When you create a new Load Template, you define the events to occur in the test.
 
 **To create a new Load Template:**
 
-1\.	Click **New** from the **File** tab of the ribbon. A blank template appears.
+1.	Click **New** from the **File** tab of the ribbon. A blank template appears.
 
-For information on creating templates with the WebLOAD Wizard, see [*Creating](#_bookmark99) *[Load Templates with the WebLOAD Wizard* ](#_bookmark99)*(on page [99](#_bookmark100)). For information on creating templates with the Goal-Oriented Test Wizard, see [*Creating Load Templates with](#_bookmark146) *[Goal-Oriented* Test ](#_bookmark146)*(on page [135](#_bookmark147)).
+For information on creating templates with the WebLOAD Wizard, see [*Creating Load Templates with the WebLOAD Wizard* ](create_template_wizard.md). For information on creating templates with the Goal-Oriented Test Wizard, see [*Creating Load Templates with Goal-Oriented* Test ](create_load_test_goal.md).
 
 ### Saving a Load Template
 
 **To save a Load Template:**
 
 1. Click **Save** in the **File** tab of the ribbon and select **Save** or **Save As**.
-1. In the **File Name** box, type a name for the Load Template.
-1. Click **Save**.
+2. In the **File Name** box, type a name for the Load Template.
+3. Click **Save**.
 
    The file is saved with the extension \*.tpl to the specified location and the Save dialog box closes.
 
@@ -114,7 +114,7 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
 
 
-Continue to one of the following sections for further instructions on creating a Mix. To create a mix with the WebLOAD Wizard, see [*Creating a Mix* ](#_bookmark109)(on page [105](#_bookmark109)). To create a mix with the Goal-Oriented Test Wizard, see [*Running a Mix of Scripts* ](#_bookmark155)(on page [141](#_bookmark155)).
+Continue to one of the following sections for further instructions on creating a Mix. To create a mix with the WebLOAD Wizard, see [*Creating a Mix* ](#creating-a-mix). To create a mix with the Goal-Oriented Test Wizard, see [*Running a Mix of Scripts* ](create_load_test_goal.md#running-a-mix-of-scripts).
 
 
 

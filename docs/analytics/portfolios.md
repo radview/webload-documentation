@@ -2,7 +2,7 @@
 
 WebLOAD Analytics enables you to create a portfolio of templates that you can open in a single action. Use portfolios to group together commonly used templates to speed up your work.  
 
-> **Note:** Generating, printing, and publishing individual charts within a portfolio or entire portfolios is identical to generating, printing, and publishing charts. For more information, see[` `*Generating Charts* ](#_page20_x54.00_y155.04)on page[ 21.](#_page20_x54.00_y155.04) 
+> **Note:** Generating, printing, and publishing individual charts within a portfolio or entire portfolios is identical to generating, printing, and publishing charts. For more information, see[` `*Generating Charts* ](generating_charts.md) 
 
 
 
@@ -16,7 +16,7 @@ When you create a new portfolio, you assign the templates you wish to include by
 
 **To create a portfolio:** 
 
-1. In the Navigation area, click the **Gallery** tab. The Templates Gallery opens [(Figure 9)](#_page27_x54.00_y564.04). 
+1. In the Navigation area, click the **Gallery** tab. The Templates Gallery opens. 
 
 1. In the Templates Gallery Right-click in the Templates Gallery and select **New Portfolio**.  
 
@@ -45,15 +45,15 @@ When you create a new portfolio, you assign the templates you wish to include by
 1. In the Templates Gallery, open the Portfolios node. 
 1. Double-click the portfolio you wish to open.  
 
-   The charts created by the portfolio open in the Charts area [(Figure 32)](#_page65_x54.00_y451.04). 
+   The charts created by the portfolio open in the Charts area. 
 
 > **Note:** Any charts that were already open in the Charts area remain open. 
 
 You can now generate, print, or publish a report based on the open charts. For more information, see 
 
-- [*Creating New Reports* ](#_page44_x54.00_y329.04)on page[ 45.](#_page44_x54.00_y329.04) 
-- [*Printing a Report* ](#_page46_x54.00_y78.04)on page[ 47.](#_page46_x54.00_y78.04) 
-- [*Publishing Reports* ](#_page46_x54.00_y243.04)on page[ 47.](#_page46_x54.00_y243.04) 
+- [*Creating New Reports* ](generating_reports.md#creating-new-reports) 
+- [*Printing a Report* ](generating_reports.md#printing-a-report) 
+- [*Publishing Reports* ](generating_reports.md#publishing-reports) 
 
 ![opening a portfolio](../images/open_portfolio.jpeg)
 
@@ -61,6 +61,6 @@ You can now generate, print, or publish a report based on the open charts. For m
 
 **To rename a portfolio:**  
 
-1. In the Navigation area, click the **Gallery** tab. The Templates Gallery opens [(Figure 9)](#_page27_x54.00_y564.04). 
-1. Right-click a portfolio and select **Rename**. The Rename window appears. Enter the new portfolio name and click **OK**. The portfolio is renamed.
+1. In the Navigation area, click the **Gallery** tab. The Templates Gallery opens. 
+2. Right-click a portfolio and select **Rename**. The Rename window appears. Enter the new portfolio name and click **OK**. The portfolio is renamed.
 

@@ -99,19 +99,19 @@ This command opens the Console and automatically runs a test using the test1.tpl
 
 `WebLOAD.exe /ag c:\scripts\MyScript.wlp`
 
-This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box, see [*Selecting a](#_bookmark105)* (on page [103](#_bookmark105)).
+This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.
 
 **Example 4:**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml`
 
-This command performs all the actions described in [*Example 2* ](#_bookmark303)above, and in addition the execution return code is saved in result1.xml.
+This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.
 
 **Example 5:**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3`
 
-This command performs all the actions described in [*Example 2* ](#_bookmark303)above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.
+This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.
 
 
 
@@ -204,7 +204,7 @@ The following table describes the segments of the Console in Session Mode:
 
 |**Segment**|**Function**|
 | :- | :- |
-|Session Tree|Presents a graphic display of your test session. See [*Viewing](#_bookmark308) *[the Session Tree in Session Mode* ](#_bookmark308)*(on page [278](#_bookmark307)) for a complete discussion of the Session Tree.|
+|Session Tree|Presents a graphic display of your test session. See [*Viewing the Session Tree in Session Mode* ](#viewing-the-session-tree-in-session-mode) for a complete discussion of the Session Tree.|
 |Results Window|Displays all of the reports opened during a test session. Use the tabs located at the top and the bottom of the window to view different reports.|
 |Log Window|Displays all of the error messages recorded during a test session. You can toggle the Log Window display on/off through the **Session** tab of the Console ribbon.|
 |Status Bar|Indicates the program status, including continually updated information about the Elapsed time since the session started running, and the Remaining time till session end (if known).|
@@ -310,11 +310,9 @@ You can manually shut-down Amazon Cloud Machines still running. This is relevant
 
 ![ref7]**Note:** The data residing on an Amazon Cloud Machine is not accessible once the machine is shut down.
 
-For more information about working with Cloud Machines, refer to [*Selecting Host](#_bookmark112) *[Computers* ](#_bookmark112)*on page [107.](#_bookmark112)
+For more information about working with Cloud Machines, refer to [*Selecting Host Computers* ](config_load_template.md#selecting-hosts)
 
-For information about changing the shut-down policy of Cloud Machines, refer to
-
-[*Creating WebLOAD Cloud Accounts* ](#_bookmark117)on page [109*.*](#_bookmark117)
+For information about changing the shut-down policy of Cloud Machines, refer to [*Creating WebLOAD Cloud Accounts* ](#correcting-the-all-hosts-are-unreachable-or-stopped-error)
 
 **To shut down Cloud Machines:**
 

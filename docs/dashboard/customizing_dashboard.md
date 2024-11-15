@@ -2,7 +2,7 @@
 
 You can customize a dashboard as desired, and then save the customized dashboard if you wish. Note however that two types of changes are not considered customizations and are not saved: the selected sessions and the selected time filter. 
 
-To save your customizations, refer to[` `*Saving your Customized Dashboard* ](#_page68_x54.00_y405.04)(on page[ 63)](#_page68_x54.00_y405.04). 
+To save your customizations, refer to[` `*Saving your Customized Dashboard* ](#customizing-a-dashboard). 
 
 ## Customizing Rows
 
@@ -24,7 +24,7 @@ The available options include:
 | ---------------- | ------------------------------------------------------------ |
 | **Collapse**     | Hides the row. To show the row again, press  the ![button - undo collapse row](../images/undo_collapse.png) button. |
 | **Add  Panel**   | Adds a panel to the row,  of the type you specify: Graph, Singlestat, Table, Text, Alert List,  Dashboard List, or Plugin List. |
-| **Row  Options** | Enables  editing a row’s settings. For information, refer to [*Editing a*](#_bookmark59)  [*Row’s options* ](#_bookmark59)(on page [47](#_bookmark59)). |
+| **Row  Options** | Enables  editing a row’s settings. For information, refer to [*Editing a Row’s options* ](#editing-a-rows-options). |
 | **Move  Up**     | Moves  the row up.                                           |
 | **Move  Down**   | Moves  the row down.                                         |
 | **Remove**       | Deletes  the row, following your confirmation.               |
@@ -33,7 +33,7 @@ The available options include:
 
 ### Editing a Row’s options
 
-To edit a row’s options, click the three grey dots to the left of the row and select **Row Options** [(Figure 46)](#_page51_x54.00_y630.04). 
+To edit a row’s options, click the three grey dots to the left of the row and select **Row Options**. 
 
 A pane appears, for setting the row’s options. Edit the row as desired. 
 
@@ -43,7 +43,7 @@ A pane appears, for setting the row’s options. Edit the row as desired.
 
 #### Deleting a Row
 
-To delete a row, click the three grey dots to the left of the row and select **Remove [(Figure 46)](#_page51_x54.00_y630.04)**. Confirm the operation.  
+To delete a row, click the three grey dots to the left of the row and select **Remove**. Confirm the operation.  
 
 
 
@@ -87,7 +87,7 @@ You can specify which metrics to display for which sessions.
 
 1. Edit the new line:  
 
-   Select metrics for the new line you added (columns ①, ②, ③, ④, ⑤ in [Figure 51*)](#_page54_x54.00_y561.04)*.* 
+   Select metrics for the new line you added. 
 
 1. Optionally edit the selection of a metric in an existing line.  
 
@@ -163,7 +163,7 @@ A pane appears, displaying the time range definitions. You can change any of the
 
 ### Editing a Singlestat Panel
 
-Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to[` `*Specifying the Metrics*)](#_page53_x109.00_y497.04), but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. ![ref10]
+Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to[` `*Specifying the Metrics*)](#specifying-the-metrics), but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. ![ref10]
 
 ***Defining the Singlestat Display Options*** 
 
@@ -191,7 +191,7 @@ You can customize a table panel’s display directly in the dashboard.
 
 ### Editing a Text
 
-To edit the text in a Text panel, click the panel’s title and select **edit** [(Figure 48)](#_page52_x54.00_y671.04), and then select the **Panel** tab. 
+To edit the text in a Text panel, click the panel’s title and select **edit**, and then select the **Panel** tab. 
 
 ![Text Settings – Panel Tab](../images/text_settings.png)
 
@@ -207,7 +207,7 @@ You can:
 
 ### Adding Panels
 
-To add a panel in a row, click the three grey dots to the left of the row and select **Add Panel** [(Figure 46)](#_page51_x54.00_y630.04). Select the panel type: Graph, Singlestat, Table, Text, Alert List, Dashboard List, or Plugin List.. 
+To add a panel in a row, click the three grey dots to the left of the row and select **Add Panel**. Select the panel type: Graph, Singlestat, Table, Text, Alert List, Dashboard List, or Plugin List.. 
 
 A new empty panel of the selected type appears in the row.  
 

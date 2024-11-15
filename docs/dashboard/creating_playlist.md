@@ -68,7 +68,7 @@ You can play a playlist of specific dashboards.
 
    
 
-2. To edit the playlist, click **Edit** in the row displaying the playlist. An Edit Playlist window appears, similar to the New Playlist window [(Figure 83)](#_page79_x54.00_y347.04). You can edit the playlist name, interval, list of dashboards or the order in which they will be played.  
+2. To edit the playlist, click **Edit** in the row displaying the playlist. An Edit Playlist window appears, similar to the New Playlist window. You can edit the playlist name, interval, list of dashboards or the order in which they will be played.  
 
 3. To delete a playlist, click the **x** in the row displaying the playlist. Confirm the deletion operation.
 

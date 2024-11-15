@@ -76,7 +76,7 @@ The Transaction Reason Failure grid lists the reasons for the transaction failur
 
 
 
-In [Figure 194 ](#_bookmark435)the UpdateAccount transaction is highlighted in the Transaction Grid. The Reason for the UpdateAccount transaction failure, Transfer incomplete displays immediately below the Transaction Grid. The Transaction Failure Reason Grid displays why two of the UpdateAccount transactions failed.
+The UpdateAccount transaction is highlighted in the Transaction Grid. The Reason for the UpdateAccount transaction failure, Transfer incomplete displays immediately below the Transaction Grid. The Transaction Failure Reason Grid displays why two of the UpdateAccount transactions failed.
 
 
 
@@ -126,7 +126,7 @@ The properties for the selected Transaction Instance are displayed in a table on
 
 Child transactions are selected on the tree at the left. The fact that the transaction triggered an error is indicated by the blue flag on the icon next to the transaction and the blue color of the transaction itself in the tree. Details of the error are provided in the table at the right.
 
-In the [Figure 197 ](#_bookmark439)below, the selected child transaction triggered an HTTP ERROR of severity Minor Error. The corresponding error entry in the Log Window is highlighted.
+In the image below, the selected child transaction triggered an HTTP ERROR of severity Minor Error. The corresponding error entry in the Log Window is highlighted.
 
 ![Child Transaction Instance Tree](../images/console_users_guide_2095.jpeg)
 

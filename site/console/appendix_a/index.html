@@ -3100,12 +3100,14 @@
 <p>AppDynamics is an Application Performance Management (APM) solution that monitors, troubleshoots, and diagnoses problems in mission-critical applications.</p>
 <p>By integrating WebLOAD scripts with AppDynamics you will be able to identify slow or problematic transactions of scripts run by WebLOAD test sessions. The integration consists of two tasks:</p>
 <ol>
-<li>In WebLOAD – Specifying that a WebLOAD script should add a line in all transaction headers which will identify them as WebLOAD transactions. Refer to<a href="#_bookmark492"><code></code><em>Configuring WebLOAD Scripts for AppDynamics</em> </a>(on page <a href="#_bookmark492">409</a>).</li>
-<li>In AppDynamics – Configuring AppDynamics to enable it to read the headers. The additional line enables AppDynamics to identify the corresponding transactions as WebLOAD transactions. Refer to <a href="#_bookmark493">*Configuring AppDynamics to Recognize WebLOAD</a><a href="#_bookmark493"> Transactions* </a>(on page <a href="#_bookmark493">410</a>).</li>
+<li>In WebLOAD – Specifying that a WebLOAD script should add a line in all transaction headers which will identify them as WebLOAD transactions. Refer to<a href="#configuring-webload-scripts-for-appdynamics"><code></code><em>Configuring WebLOAD Scripts for AppDynamics</em> </a>.</li>
+<li>In AppDynamics – Configuring AppDynamics to enable it to read the headers. The additional line enables AppDynamics to identify the corresponding transactions as WebLOAD transactions. Refer to <a href="#configuring-appdynamics-to-recognize-webload-transactions">Configuring AppDynamics to Recognize WebLOAD</a>.</li>
 </ol>
 <h2 id="configuring-webload-scripts-for-appdynamics">Configuring WebLOAD Scripts for AppDynamics</h2>
 <p>To enable WebLOAD for AppDynamics:</p>
-<p>1. Add the line wlGlobals.AddWebLoadHeader=true in the JavaScript code of the script.</p>
+<ol>
+<li>Add the line wlGlobals.AddWebLoadHeader=true in the JavaScript code of the script.</li>
+</ol>
 <p>This causes WebLOAD to send extra data upon every request of the script. The extra data identifies the request as a WebLOAD request, lists the name of the currently running script, and lists the name of the corresponding transaction.</p>
 <h2 id="configuring-appdynamics-to-recognize-webload-transactions">Configuring AppDynamics to Recognize WebLOAD Transactions</h2>
 <p>This section describes how to configure AppDynamics Lite and AppDynamics Pro to read WebLOAD transaction headers.</p>
@@ -3143,7 +3145,7 @@
 </li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<p>When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in <a href="#_bookmark496">*Viewing WebLOAD Performance in</a> <em><a href="#_bookmark496">AppDynamics* </a></em>(on page <a href="#_bookmark496">417</a>).</p>
+<p>When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in <a href="#viewing-webload-performance-in-appdynamics">*Viewing WebLOAD Performance in AppDynamics</a>.</p>
 <h3 id="configuring-appdynamics-pro-to-recognize-webload-transactions">Configuring AppDynamics Pro to Recognize WebLOAD Transactions</h3>
 <p>In AppDynamics Pro, in addition to configuring AppDynamics to recognize WebLOAD transactions, you can also configure AppDynamics to add a "WebLOAD- TransactionName" prefix to each transaction name.</p>
 <p><strong>To configure AppDynamics Pro to recognize WebLOAD transactions:</strong></p>
@@ -3200,7 +3202,7 @@
 </ol>
 </li>
 </ol>
-<p>When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in <a href="#_bookmark496">*Viewing WebLOAD Performance in</a> <em><a href="#_bookmark496">AppDynamics* </a></em>(on page <a href="#_bookmark496">417</a>).</p>
+<p>When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in <a href="#viewing-webload-performance-in-appdynamics">Viewing WebLOAD Performance in AppDynamics</a>.</p>
 <h2 id="viewing-webload-performance-in-appdynamics">Viewing WebLOAD Performance in AppDynamics</h2>
 <p>After AppDynamics and WebLOAD are configured so AppDynamics can recognize WebLOAD transactions, running a load test in WebLOAD displays the corresponding business transactions in AppDynamics. You can view the WebLOAD transactions in AppDynamics to determine their health.</p>
 <p><strong>To view WebLOAD transactions in AppDynamics:</strong></p>

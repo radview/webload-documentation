@@ -7,13 +7,15 @@ Dynatrace is a suite of Application Performance Monitoring (APM) tools that enab
 By integrating WebLOAD scripts with Dynatrace you can rapidly resolve and proactively prevent application performance problems. The integration consists of two tasks:
 
 - Installing Dynatrace on your local computer.
-- In WebLOAD – Enabling Dynatrace in the **Dynatrace** tab of the **Global Options** window (refer to [*The Dynatrace Tab* ](#_bookmark216)on page [197](#_bookmark216)). When Dynatrace is enabled, WebLOAD adds an identifier in all request headers which identifies them as WebLOAD requests.
+- In WebLOAD – [Enabling Dynatrace](set_global_opt.md#the-dynatrace-tab) in the **Dynatrace** tab of the **Global Options** window. When Dynatrace is enabled, WebLOAD adds an identifier in all request headers which identifies them as WebLOAD requests.
 
 After integrating WebLOAD with Dynatrace, you can perform the following:
 
-- [*Monitoring a WebLOAD Load Session in* Dynatrace](#_bookmark499)
-- [*Viewing in Dynatrace a WebLOAD Point of Interest*](#_bookmark500)
-- [*Viewing in Dynatrace the Transactions Related to WebLOAD Errors*](#_bookmark502)
+- [Integrating with Dynatrace](#integrating-with-dynatrace)
+  - [Monitoring a WebLOAD Load Session in Dynatrace](#monitoring-a-webload-load-session-in-dynatrace)
+  - [Viewing in Dynatrace a WebLOAD Point of Interest](#viewing-in-dynatrace-a-webload-point-of-interest)
+    - [Specifying the Dynatrace System Profile](#specifying-the-dynatrace-system-profile)
+  - [Viewing in Dynatrace the Transactions Related to WebLOAD Errors](#viewing-in-dynatrace-the-transactions-related-to-webload-errors)
 
 
 
@@ -21,7 +23,7 @@ After integrating WebLOAD with Dynatrace, you can perform the following:
 
 To monitor a WebLOAD Load Session in Dynatrace:
 
-1. Enable Dynatrace in [*The Dynatrace Tab* ](#_bookmark216)(on page [197](#_bookmark216)).
+1. Enable Dynatrace in [*The Dynatrace Tab* ](set_global_opt.md#the-dynatrace-tab).
 1. In the Dynatrace **Monitoring** page, click the **Synthetic Request** node.
 
 
@@ -43,7 +45,7 @@ You can access Dynatrace directly from a WebLOAD’s report window to view in Dy
 
 **To view Dynatrace data for a WebLOAD point of interest:**
 
-1. Enable Dynatrace in [*The Dynatrace Tab* ](#_bookmark216)(on page [197](#_bookmark216)).
+1. Enable Dynatrace in [*The Dynatrace Tab* ](set_global_opt.md#the-dynatrace-tab).
 1. In a WebLOAD report, right-click a point in a graph and select **DynaTrace**.
 
 ![Selecting DynaTrace for a Point in a Graph](../images/console_users_guide_3024.png)
@@ -64,7 +66,7 @@ You can access Dynatrace directly from a WebLOAD’s report window to view in Dy
 
 ### Specifying the Dynatrace System Profile
 
-When you enable Dynatrace in WebLOAD (refer to [*The Dynatrace Tab* ](#_bookmark216)on page [197](#_bookmark216)), by default WebLOAD specifies that points of interest viewed in Dynatrace will be viewed in the **Monitoring** system profile. If you wish to change this default setting, do the following:
+When you enable Dynatrace in WebLOAD (refer to [*The Dynatrace Tab* ](set_global_opt.md#the-dynatrace-tab), by default WebLOAD specifies that points of interest viewed in Dynatrace will be viewed in the **Monitoring** system profile. If you wish to change this default setting, do the following:
 
 1. Click **Global Options** in the **Tools** tab of the ribbon,
 
@@ -89,7 +91,7 @@ If an error occurs at any time during a test session, an error message displays 
 
 **To view a transaction in Dynatrace that is associated with a WebLOAD error:**
 
-1. Enable Dynatrace in [*The Dynatrace Tab* ](#_bookmark216)(on page [197](#_bookmark216)).
+1. Enable Dynatrace in [*The Dynatrace Tab* ](set_global_opt.md#the-dynatrace-tab).
 
 1. In the Log Window, double-click the paperclip icon adjacent to the error.
 

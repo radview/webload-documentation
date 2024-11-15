@@ -20,7 +20,7 @@ The Load Tests table provides the following information and actions, for each Lo
 
 | **Item**                                                | **Description**                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------ |
-| **Name**                                                | The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to [*Editing a load test* ](#_bookmark26)(on page [26](#_bookmark26)). |
+| **Name**                                                | The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to [*Editing a load test* ](#editing-a-load-test). |
 | **Test  Type**                                          | The type of test: Either URL/API, Script,  or Template.      |
 | **Last  Update**                                        | The date and time when the  test definitions were last updated, or the test was run manually. This field  shows no indication of whether the test is being executed in recurrence mode. |
 | **Next  Execution**                                     | The date and time when the  test is next scheduled to run. Refer to [*Setting recurring test runs* ](#_bookmark24)(on page [24](#_bookmark24)) and [*Scheduling a one-time test*](#_bookmark25) [run ](#_bookmark25)(on page [25](#_bookmark25)). |

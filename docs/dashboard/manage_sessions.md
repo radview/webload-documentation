@@ -5,7 +5,7 @@
 In WebLOAD Dashboard you can manage the following types of sessions: 
 
 - The sessions of load tests created and run in the WebLOAD Dashboard 
-- Sessions that were created in the WebLOAD Console, and uploaded to the WebLOAD Dashboard. For instructions how to upload sessions to the WebLOAD Dashboard, see[` `*Uploading a session* ](#_page35_x54.00_y189.04)(on page[ 30)](#_page35_x54.00_y189.04). 
+- Sessions that were created in the WebLOAD Console, and uploaded to the WebLOAD Dashboard. For instructions how to upload sessions to the WebLOAD Dashboard, see[` `*Uploading a session* ](#uploading-a-session). 
 
 
 
@@ -31,7 +31,7 @@ The Load Sessions table provides the following information and available actions
 | **Failed  Reason**                                    | If the test failed, displays the reason for  failure.        |
 | ![button - delete test](../images/delete_load_test.png) | Instructs WebLOAD to  delete this load session.              |
 | ![download session](../images/download_sessions.png)    | Instructs WebLOAD  to download the session results to the local  computer. The results are downloaded as a zip file that contains the  following files: .ls, .mdb, .sdb, .isd, .dat.  You can then open  the session in WebLOAD Console or  WebLOAD Analytics. |
-| ![run load tests](../images/run_load_test.png)          | Enables manually running a  test created in WebLOAD Dashboard,  now or at a specified time. Refer to [*Scheduling a one-time test run*](#_bookmark25) (on page [25](#_bookmark25)). |
+| ![run load tests](../images/run_load_test.png)          | Enables manually running a  test created in WebLOAD Dashboard,  now or at a specified time. Refer to [*Scheduling a one-time test run*](manage_tests.md#scheduling-a-one-time-test-run). |
 | ![button - stop test](../images/stop_test_run.png)      | Instructs WebLOAD to stop  running the test.                 |
 | **Show  in Dashboard**                                | Enables specifying which  sessions to display in the dashboard. This is very useful for comparing the  statistics from multiple sessions. |
 

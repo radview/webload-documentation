@@ -35,7 +35,7 @@ The following diagram illustrates the workflow for manually configuring a load t
 
    Right-click the Load Session item in the Script Tree and select **Modify Script Selection**.
 
-The script/Mix Selection dialog box opens. See [*Selecting a](#_bookmark191)* (on page [166](#_bookmark191)).
+The script/Mix Selection dialog box opens. 
 
 
 
@@ -68,13 +68,13 @@ Select the scripts to run through the script / Mix Selection dialog box.
 
 3. To optionally open and view or edit a selected mix of scripts, click **View**.
 
-   The Edit Mix dialog box opens (it is essentially identical to the [*Mix Creation Dialog](#_bookmark95) *[Box*](#_bookmark95)*).
+   The Edit Mix dialog box opens (it is essentially identical to the [Mix Creation Dialog Box](create_template_wizard.md#creating-a-mix).
 
 4. To optionally configure runtime options exclusive to a selected Script, click **Options**.
 
-   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on Script options, see [*Setting Script](#_bookmark223) *[Options* ](#_bookmark223)*(on page [211](#_bookmark224)).
+   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on Script options, see [Setting Script Options](set_script_options.md).
 
-5. To optionally configure runtime options exclusive to a script in a selected mix, click **View**. In the Edit Mix dialog box that appears, select the script and click **Options**. The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting](#_bookmark223)[ Script Options* ](#_bookmark223)(on page [211](#_bookmark224)).
+5. To optionally configure runtime options exclusive to a script in a selected mix, click **View**. In the Edit Mix dialog box that appears, select the script and click **Options**. The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [Setting Script Options](set_script_options.md).
 
 6. Click **OK**.
 
@@ -246,7 +246,7 @@ You can create a load schedule by:
 
 
 
-4. Select a pattern from the Select scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](#_bookmark135)(on page [121](#_bookmark136)).
+4. Select a pattern from the Select scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](create_template_wizard.md#scheduling-models).
 
 5. Fill in the fields at the bottom of the dialog box.
 
@@ -272,5 +272,5 @@ After configuring the scripts to run, the Load Machines to generate the load, an
 
    Load Templates contain the parameters that you defined for the test, such as the scripts to run, participating hosts, and the test plan. Saving Load Templates saves you the time of reconfiguring the Load Session when repeating tests.
 
-   For more information on running tests, see [*Running a Load Session* ](#_bookmark298)(on page [271](#_bookmark299)).
+   For more information on running tests, see [*Running a Load Session* ](running_a_load_session.md).
 

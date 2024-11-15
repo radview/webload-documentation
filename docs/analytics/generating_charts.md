@@ -1,14 +1,14 @@
 # Generating Charts
 
-WebLOAD Analytics enables you to quickly and easily generate your charts in various formats. Using WebLOAD Analytics, you can create and view charts that are tailor made for your needs. You can then publish the charts in various formats, or create a report compiled of various charts, and publish the report (see[` `*Generating Reports* ](#_page44_x54.00_y155.04)on page[ 45)](#_page44_x54.00_y155.04). 
+WebLOAD Analytics enables you to quickly and easily generate your charts in various formats. Using WebLOAD Analytics, you can create and view charts that are tailor made for your needs. You can then publish the charts in various formats, or create a report compiled of various charts, and publish the report. 
 
 ## Creating New Charts
 
-To create a new chart, double-click a template in the Gallery tab [(Figure 3)](#_page17_x54.00_y478.04). The chart is displayed in the Preview tab for a static chart, or in the Chart View tab for an interactive chart [(Figure 4)](#_page21_x54.00_y404.04). 
+To create a new chart, double-click a template in the Gallery tab. The chart is displayed in the Preview tab for a static chart, or in the Chart View tab for an interactive chart. 
 
 
 
-> **Note:** If you did not open WebLOAD Analytics from WebLOAD Console, the Select sessions dialog appears and you are prompted to specify a Load Session (see[` `*Specifying a Load Session* ](#_page21_x54.00_y605.04)on page[ 22)](#_page21_x54.00_y605.04).
+> **Note:** If you did not open WebLOAD Analytics from WebLOAD Console, the Select sessions dialog appears and you are prompted to specify a Load Session (see[*Specifying a Load Session* ](#specifying-a-load-session).
 
 
 
@@ -18,11 +18,11 @@ To create a new chart, double-click a template in the Gallery tab [(Figure 3)](#
 
 You can now: 
 
-- Modify the chart by editing chart settings and then regenerating the chart (see [*Changing Chart Settings* ](#_page34_x54.00_y155.04)on page[ 35)](#_page34_x54.00_y155.04).  
-- Print the chart (see[` `*Printing a Chart* ](#_page26_x54.00_y580.04)on page[ 27)](#_page26_x54.00_y580.04). 
-- Publish the chart to various formats (see[` `*Publishing Charts* ](#_page33_x54.00_y78.04)on page[ 34)](#_page33_x54.00_y78.04). 
-- For an interactive chart, you can analyze the chart data in various ways (see [*Customizing Interactive Charts* ](#_page30_x54.00_y364.04)on page[ 31)](#_page30_x54.00_y364.04).  
-- Create a report that will include the chart, as well as other open charts of your choice (see[` `*Generating Reports* ](#_page44_x54.00_y155.04)on page[ 45)](#_page44_x54.00_y155.04). 
+- Modify the chart by editing chart settings and then regenerating the chart (see [*Changing Chart Settings* ](changing_chart_settings.md).  
+- Print the chart (see[*Printing a Chart* ](#printing-a-chart). 
+- Publish the chart to various formats (see[*Publishing Charts* ](#publishing-charts). 
+- For an interactive chart, you can analyze the chart data in various ways (see [*Customizing Interactive Charts* ](#customizing-interactive-charts).  
+- Create a report that will include the chart, as well as other open charts of your choice (see[*Generating Reports* ](generating_reports.md). 
 
 ### Specifying a Load Session
 
@@ -40,7 +40,7 @@ If you did not open WebLOAD Analytics from WebLOAD Console, the Select Session w
 
    Select the session in the From Repository area, and click **OK**.  
 
-> **Note:**  You can search for Load Sessions (see[` `*Searching for Load Sessions* ](#_page51_x54.00_y217.04)on page[ 52)](#_page51_x54.00_y217.04).
+> **Note:**  You can search for Load Sessions (see[Searching for Load Sessions](load_sessions.md#searching-for-load-sessions).
 
 
 
@@ -61,7 +61,7 @@ A regression chart compares one selected “Main” session to all additional se
 
    The Load Session file appears in the From Repository area.  
 
-4. Optionally search for Load Sessions (see[` `*Searching for Load Sessions* ](#_page51_x54.00_y217.04)on page[ 52)](#_page51_x54.00_y217.04). 
+4. Optionally search for Load Sessions (see[Searching for Load Sessions](load_sessions.md#searching-for-load-sessions). 
 
 5. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
 
@@ -130,7 +130,7 @@ Suppose you notice a time frame in which throughput suddenly decreases. Generate
 
 
 
-> **Note:**   You may wish to apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement (refer to[` `*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39)](#_page38_x54.00_y272.04). However, note that filtering a time period which is too short may harm accuracy. 
+> **Note:**   You may wish to apply a Time Filter that restricts the correlation calculation to a specific time frame, to better focus on a certain behavior of the leading measurement. However, note that filtering a time period which is too short may harm accuracy. 
 
 
 
@@ -150,7 +150,7 @@ You can print an open WebLOAD Analytics chart.
 
 ## Creating an Interactive Chart from the Blank Template
 
-You can create a new interactive chart based on the Blank Template. This template can be modified or you can use it to create additional custom interactive templates, as described in[` `*Creating an Interactive Template from the Blank Template* ](#_page55_x54.00_y78.04)on page[ 56.](#_page55_x54.00_y78.04) 
+You can create a new interactive chart based on the Blank Template. This template can be modified or you can use it to create additional custom interactive templates, as described in[*Creating an Interactive Template from the Blank Template* ](#creating-an-interactive-chart-from-the-blank-template) 
 
 Although you can modify any template to create your own custom chart, the Blank Template is unique in that its Measurement Selection area is empty. 
 
@@ -163,16 +163,16 @@ Although you can modify any template to create your own custom chart, the Blank 
 
 
 2. Select **User Defined**  **Blank Template**. The Settings tab of the Blank Template opens in the Charts area. 
-2. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](#_page34_x54.00_y155.04)on page[ 35.](#_page34_x54.00_y155.04) Note that you must specify at least one measurement (see[ Figure 14)](#_page37_x54.00_y368.04) in order to generate a chart. 
+2. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to generate a chart. 
 2. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
 
 You can now analyze, print, or publish the chart.
 
-- For information about analyzing the chart, see[` `*Customizing Interactive Charts* ](#_page30_x54.00_y364.04)on page[ 31.](#_page30_x54.00_y364.04)  
+- For information about analyzing the chart, see[*Customizing Interactive Charts* ](#customizing-interactive-charts)  
 
-- For information about printing your chart, see[` `*Printing a Chart* ](#_page26_x54.00_y580.04)on page[ 27.](#_page26_x54.00_y580.04)  
+- For information about printing your chart, see[*Printing a Chart* ](#printing-a-chart)  
 
-- For information about publishing your chart, see[` `*Publishing Charts* ](#_page33_x54.00_y78.04)on page[ 34.](#_page33_x54.00_y78.04) 
+- For information about publishing your chart, see[*Publishing Charts* ](#publishing-charts) 
 
   
 
@@ -180,7 +180,7 @@ You can now analyze, print, or publish the chart.
 
 You can create a new interactive regression chart based on the Blank Regression Template. An interactive regression chart is both interactive, which means it enables you to analyze and customize the graph; and it is also a regression chart which means that it compares one selected session to all other specified session. 
 
-The Blank Regression Template can be modified or you can use it to create additional custom interactive regression templates, as described in[` `*Creating an Interactive Regression Template from the Blank Regression Template* ](#_page56_x54.00_y276.04)on page[ 57.](#_page56_x54.00_y276.04) Although you can modify any regression template to create your own custom regression template, the Blank Regression Template is unique in that it is interactive. 
+The Blank Regression Template can be modified or you can use it to create additional custom interactive regression templates, as described in[Creating an Interactive Regression Template from the Blank Regression Template](#creating-a-regression-chart-from-the-blank-regression-template). Although you can modify any regression template to create your own custom regression template, the Blank Regression Template is unique in that it is interactive. 
 
 **To generate a regression chart based on the Blank Regression Template:** 
 
@@ -195,7 +195,7 @@ The Blank Regression Template can be modified or you can use it to create additi
 
    The Load Session file appears in the From Repository area.  
 
-4. Optionally search for Load Sessions (see[` `*Searching for Load Sessions* ](#_page51_x54.00_y217.04)on page[ 52)](#_page51_x54.00_y217.04). 
+4. Optionally search for Load Sessions (see[` `*Searching for Load Sessions* ](load_sessions.md#searching-for-load-sessions). 
 4. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
 
    The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
@@ -203,14 +203,14 @@ The Blank Regression Template can be modified or you can use it to create additi
    The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
 
 6. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click![set as main button](../images/set_as_main.png). 
-6. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](#_page34_x54.00_y155.04)on page[ 35.](#_page34_x54.00_y155.04) Note that you must specify at least one measurement in order to create a template. 
+6. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to create a template. 
 6. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
 
 You can now analyze, print, or publish the chart.  
 
-- For information about analyzing the chart, see[` `*Customizing Interactive Charts* ](#_page30_x54.00_y364.04)on page[ 31.](#_page30_x54.00_y364.04)  
-- For information about printing your chart, see[` `*Printing a Chart* ](#_page26_x54.00_y580.04)on page[ 27.](#_page26_x54.00_y580.04)  
-- For information about publishing your chart, see[` `*Publishing Charts* ](#_page33_x54.00_y78.04)on page[ 34.](#_page33_x54.00_y78.04) 
+- For information about analyzing the chart, see[*Customizing Interactive Charts* ](#customizing-interactive-charts)  
+- For information about printing your chart, see[*Printing a Chart* ](#printing-a-chart)  
+- For information about publishing your chart, see[*Publishing Charts* ](#publishing-charts) 
 
 
 
@@ -253,7 +253,7 @@ The ![interactive chart icon](../images/interactive_chart_icon.png) icon display
 
    
 
-4. Click the appropriate button in the interactive toolbar, according to the information in[ Table 4.](#_page32_x54.00_y78.04) 
+4. Click the appropriate button in the interactive toolbar. 
 
 5. To preserve the modifications you made to the chart display, click ![chart interactive icon](../images/chart_preview_icon.png). The modified chart appears in the Preview tab. 
 
@@ -284,8 +284,8 @@ WebLOAD Analytics enables you to publish a chart in the following formats:
 - Doc (Microsoft Word). 
 - PDF (Adobe Reader). 
 - XLSX (Excel). Please note the following: 
-  - The summary table (below the graph) is exported if it is displayed. To ensure that the summary table is displayed, set the SHOW\_TABLES parameter to True (as described in[` `*Defining Your Parameter Preferences* ](#_page70_x54.00_y376.04)on page[ 71)](#_page70_x54.00_y376.04). 
-  - To work with the data more conveniently, change the Chart Preview master template to *Raw* (as described in[` `*Defining Your Analytics Preferences* ](#_page66_x54.00_y392.04)on page[ 67)](#_page66_x54.00_y392.04). 
+  - The summary table (below the graph) is exported if it is displayed. To ensure that the summary table is displayed, set the SHOW\_TABLES parameter to True . 
+  - To work with the data more conveniently, change the Chart Preview master template to *Raw*. 
 - XSL (Excel 97-2003). Note that it is preferable to use XSLX format whenever possible. 
 - HTML (Browser, Internet Explorer). 
 - RTF (Rich Text Format). Note that it is preferable to use Doc format whenever possible. 

@@ -2,7 +2,7 @@
 
 The Statistics Report is both a real-time monitor that displays the results of your test while you run it and a report that you can save and export.
 
-WebLOAD Console collects approximately 30 different statistics during a test. The Statistics Report displays the values for all of them. You can also create Integrated Reports that display only the statistics that you choose. For information about Integrated Reports, see [*WebLOAD Console Performance* Reports ](#_bookmark338)(on page [295](#_bookmark339)).
+WebLOAD Console collects approximately 30 different statistics during a test. The Statistics Report displays the values for all of them. You can also create Integrated Reports that display only the statistics that you choose. For information about Integrated Reports, see [*WebLOAD Console Performance* Reports ](console_performance_reports.md).
 
 
 
@@ -63,69 +63,61 @@ WebLOAD Console calculates the current value as follows:
 
 ### Statistics Definitions
 
-The following list displays the various statistics, by context. [Table 46 ](#_bookmark373)displays the definitions of the per time unit, timer, and counter statistics, alphabetically.
+The following list displays the various statistics, by context. The displays the definitions of the per time unit, timer, and counter statistics, alphabetically.
 
-- [*Load Size*](#_bookmark393)
-- [*Throughput (bytes per second)*](#_bookmark412)
+- Load Size
+- Throughput (bytes per second)
 - Page statistics – A page is an upper level request for information made by a Virtual Client to the system under test (SUT). For example, a Get statement for a URL retrieves a page. Page statistics include:
-  - [*Pages*](#_bookmark395)
-  - [*Pages Per Second*](#_bookmark396)
-  - [*Page Time*](#_bookmark394)
+  - Pages
+  - Pages Per Second
+  - Page Time
 - Hit statistics – A hit is a request for information made by a Virtual Client to the system under test (SUT). In other words, an HTTP request. For example, a Get statement for a URL retrieves a page. The page can include any number of graphics and content files. Each request for a gif, jpeg, html file, etc., is a single hit. Hit statistics include:
-  - [*Hits*](#_bookmark388)
-  - [*Successful Hits*](#_bookmark408)
-  
-  - [*Failed Hits*](#_bookmark383)
-  
-  - [*Hits Per Second*](#_bookmark389)
-  
-  - [*Successful Hits Per Second*](#_bookmark409)
-  
-  - [*Failed Hits Per Second*](#_bookmark384)
-  
-  - [*Hit Time*](#_bookmark387)
+  - Hits
+  - Successful Hits
+  - Failed Hits
+  - Hits Per Second
+  - Successful Hits Per Second
+  - Failed Hits Per Second
+  - Hit Time
   
 
 - Rounds statistics – A Round is an entire run of a script. Rounds statistics include:
-  - [*Rounds*](#_bookmark403)
-  - [*Successful Rounds*](#_bookmark410)
-  - [*Failed Rounds*](#_bookmark385)
-  - [*Aborted Rounds*](#_bookmark374)
-  - [*Rounds Per Second*](#_bookmark404)
-  - [*Successful Rounds Per Second*](#_bookmark411)
-  - [*Failed Rounds Per Second*](#_bookmark386)
-  - [*Round Time*](#_bookmark402)
+  - Rounds
+  - Successful Rounds
+  - Failed Rounds
+  - Aborted Rounds
+  - Rounds Per Second
+  - Successful Rounds Per Second
+  - Failed Rounds Per Second
+  - Round Time
 - Connection statistics – A Connection is a new TCP/IP connection of a Virtual Client to the SUT. The Connection counter increments every time a TCP/IP connection is opened. This number is always less than or equal to hits/requests, because several hits may use the same HTTP connection if the Persistent Connection option is enabled (**Default Options  Browser Parameters**). Connection statistics include:
-  - [*Attempted Connections*](#_bookmark375)
-  - [*Successful Connections*](#_bookmark407)
-  - [*Failed Connections*](#_bookmark382)
-  - [*Connect Time*](#_bookmark377)
-  - [*Connection Speed (Bits Per Second)*](#_bookmark378)
-  - [*DNS Lookup Time*](#_bookmark381)
+  - Attempted Connections
+  - Successful Connections
+  - Failed Connections
+  - Connect Time
+  - Connection Speed (Bits Per Second)
+  - DNS Lookup Time
 - Response statistics – A Response is an HTTP message sent from the Web server as a response to an HTTP Request. Response statistics include:
-  - [*Responses*](#_bookmark401)
-  - [*Response Data Size*](#_bookmark399)
-  - [*Response Time*](#_bookmark400)
-  - [*Send Time*](#_bookmark405)
-  - [*Process Time*](#_bookmark397)
-  - [*Receive Time*](#_bookmark398)
-  - [*Time to First Byte*](#_bookmark413)
-
-
-
-- [*HTTP Response Status*](#_bookmark390)
-- [*Content Size*](#_bookmark379)
+  - Responses
+  - Response Data Size
+  - Response Time
+  - Send Time
+  - Process Time
+  - Receive Time
+  - Time to First Byte
+- HTTP Response Status
+- Content Size
 - Report statistics – The statistics collected by the reportStatistics command in a Selenium script. Refer to the *Navigation Timing Statistics* table in the *Selenium Integration* appendix of the *WebLOAD™ Recorder User’s Guide*.
 - <User-Defined> statistics:
-  - [*Automatic Data Collection*](#_bookmark376)
-  - [*Timer*](#_bookmark415)
-  - [*Counters*](#_bookmark380)
-  - [*Transaction Timers*](#_bookmark417)
-  - [*Total <transaction name> TPS*](#_bookmark414)
-  - [*Transaction Counters*](#_bookmark416)
-- [*Java andActiveX Timers*](#_bookmark392)
-- [*Java and ActiveX Counters*](#_bookmark391)
-- [*Server Performance Measurements*](#_bookmark406)
+  - Automatic Data Collection
+  - Timer
+  - Counters
+  - Transaction Timers
+  - Total <transaction name> TPS
+  - Transaction Counters
+- Java andActiveX Timers
+- Java and ActiveX Counters
+- Server Performance Measurements
 
 |**Statistic**|**Type**|**Definition**|
 | :- | :- | :- |
@@ -252,8 +244,6 @@ The names of all the measurements tracked during the current Load Session are li
 
 
 **Example:**
-
-[Figure 185 ](#_bookmark422)displays the Response Time measurement values for the script, Quickstart.
 
 > **Note:** The minimum time needed for the SUT to respond to requests from the script during the current test session is 1.246 seconds. The maximum time needed for the SUT to respond to the script run by Generator1 during the current slice is 0.461 seconds. The average Response Time to the script in the current slice is 1.398 seconds.
 

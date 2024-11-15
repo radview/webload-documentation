@@ -10,7 +10,7 @@ WebLOAD supports basic Git operations, with easy access to Git operations from w
 
 As prerequisites to working with Git, you need to:
 
-1. Specify once in WebLOAD how to access the Git Local and Remote Repositories. Refer to [*Setting up Access to Git Local and Remote Repositories* ](#_bookmark323)(on page [284](#_bookmark323)).
+1. Specify once in WebLOAD how to access the Git Local and Remote Repositories. Refer to [*Setting up Access to Git Local and Remote Repositories* ](#setting-up-access-to-git-local-and-remote-repositories).
 
 1. Make sure your WebLOAD files are saved in the directory defined as the Git local repository. This can be done in one of two ways:
 
@@ -23,9 +23,6 @@ As prerequisites to working with Git, you need to:
    - In the WebLOAD Recorder, navigate to **Settings** > **File Locations**.
 
 Note that changing the WebLOAD default directory in either the Console UI or the WebLOAD Recorder UI, changes it for both.
-
-
-
 
 
 ## Setting up Access to Git Local and Remote Repositories

@@ -19,17 +19,17 @@ After you modify a chart’s settings, click ![chart preview button](../images/c
    ![settings tab](../images/Settings_Tab.jpeg)
 
 3. In the **Name** field, optionally edit the name of the chart. 
-3. Optionally specify a different Load Session by clicking Open. The Select Sessions window appears. See[` `*Specifying a Load Session* ](#_page21_x54.00_y605.04)on page[ 22 ](#_page21_x54.00_y605.04)for instructions. 
+3. Optionally specify a different Load Session by clicking Open. The Select Sessions window appears. See[*Specifying a Load Session* ](generating_charts.md#specifying-a-load-session) for instructions. 
 3. Optionally specify scripts or measurements.  
-   - For a static chart, specify scripts in the Script Selection section. See[*Selecting scripts – Static Chart* ](#_page36_x54.00_y78.04)on page[ 37.](#_page36_x54.00_y78.04) 
-   - In an interactive chart, specify measurements in the Measurement Selection section. See[*Selecting Measurements – Interactive Chart* ](#_page36_x54.00_y518.04)on page[ 37.](#_page36_x54.00_y518.04) 
-6. Optionally set time filter settings. See[` `*Filtering by Time* ](#_page38_x54.00_y272.04)on page[ 39.](#_page38_x54.00_y272.04) 
-6. Optionally set statistics-based time filter settings. See[` `*Filtering by Statistics-based ](#_page39_x54.00_y218.04)*Time* on page[ 40.](#_page39_x54.00_y218.04) 
-6. Optionally change parameter settings. See[` `*Modifying Chart Parameters* ](#_page42_x54.00_y78.04)on page[ 43.](#_page42_x54.00_y78.04) 
+   - For a static chart, specify scripts in the Script Selection section. See[*Selecting scripts – Static Chart* ](#selecting-scripts-for-static-chart). 
+   - In an interactive chart, specify measurements in the Measurement Selection section. See[*Selecting Measurements – Interactive Chart* ](#selecting-measurements-for-interactive-chart).
+4. Optionally set time filter settings. See[*Filtering by Time* ](#filtering-by-time). 
+5. Optionally set statistics-based time filter settings. See[Filtering by Statistics-based time](#filtering-by-statistics-based-time).
+6. Optionally change parameter settings. See[*Modifying Chart Parameters* ](#modifying-chart-parameters). 
 
 
 
-## Selecting scripts – Static Chart
+## Selecting scripts for Static Chart
 
 In a static chart, you can select specific scripts to include in your chart. The generated chart will include a separate graph and table for each script. By Default, charts are generated for all the scripts of a Load Session. 
 
@@ -37,9 +37,9 @@ In a static chart, you can select specific scripts to include in your chart. The
 
 1. Select the chart in the Charts area. 
 
-1. Click the **Settings** tab of the chart [(Figure 12)](#_page35_x54.00_y421.04).  
+2. Click the **Settings** tab of the chart.  
 
-1. Click the **Script Selection** section. The Script Selection area appears. 
+3. Click the **Script Selection** section. The Script Selection area appears. 
 
    ![Script Selection area](../images/script_selection_area.png)
 
@@ -55,7 +55,7 @@ The selected scripts are added to your chart settings. To regenerate the chart w
 
 
 
-## Selecting Measurements – Interactive Chart
+## Selecting Measurements for Interactive Chart
 
 In an interactive chart, you can select specific measurements from all or specific scripts. By default, charts are generated for all the measurements of a Load Session. 
 
@@ -63,15 +63,15 @@ In an interactive chart, you can select specific measurements from all or specif
 
 1. Select the chart in the Charts area. 
 
-1. Click the **Settings** tab of the chart [(Figure 12)](#_page35_x54.00_y421.04).  
+2. Click the **Settings** tab of the chart.  
 
-1. Click the **Measurement Selection** section. The Measurement Selection area appears.![Measurement Selection Area* ](../images/measurement_selection.jpeg)
+3. Click the **Measurement Selection** section. The Measurement Selection area appears.![Measurement Selection Area* ](../images/measurement_selection.jpeg)
 
    > **Note:** If any changes are made to the measurements selection, an asterisk (\*) is  displayed besides Measurement Selection in the section’s title. 
 
 4. Select the measurements to include in your chart. **Total** is selected by default and indicates that the report will be generated for all the Load Session’s scripts.  
 4. Select a value for the X-axis of the graph: 
-- **Time** – Shows the selected measurements over time. In the Parameters section (described in[` `*Modifying Chart Parameters* ](#_page42_x54.00_y78.04)on page[ 43)](#_page42_x54.00_y78.04), you can edit the Time Format parameter and set it to one of the following values:  
+- **Time** – Shows the selected measurements over time. In the Parameters section described in[Modifying Chart Parameters](#modifying-chart-parameters), you can edit the Time Format parameter and set it to one of the following values:  
   - **Relative seconds** – Shows the selected measurements over time. The time is displayed as the number of seconds that elapsed from the beginning of the test (20, 40, 60, 80, 120, etc.). 
   - **Relative time** – Shows the selected measurements over time. The time is displayed as the time that passed from the beginning of the test (00:20, 00:40, 01:00, 01:20, etc.). 
   - **Absolute time** – Shows the real time, starting from the time at the beginning of the test (17:31:40, 17:32:00, 17:32:20, …). 
@@ -90,18 +90,18 @@ Reports are generated for the entire Load Session by default. Use the Time Filte
 
 1. Select the chart in the Charts area. 
 
-1. Click the **Settings** tab of the chart [(Figure 12)](#_page35_x54.00_y421.04).  
+2. Click the **Settings** tab of the chart.  
 
-1. Click the **Time Filter** section. The Time Filter appears. 
+3. Click the **Time Filter** section. The Time Filter appears. 
 
-1. ![Time Filter Area](../images/time_filter_area.png)
+4. ![Time Filter Area](../images/time_filter_area.png)
 
    > **Notes:** 
    >
    > - If any changes are made to this filter, an asterisk (\*) is displayed besides Time  Filter in the section’s title.
    > - You can enable or disable the Time Filter by selecting or clearing the **Filter Enabled** checkbox. When this checkbox is cleared, “(Disabled)” is displayed in the Time Filter section. 
 
-4. Use the slider to change the Load Session start and end times. The number of seconds and the actual dates and times are displayed as you move the slider. 
+5. Use the slider to change the Load Session start and end times. The number of seconds and the actual dates and times are displayed as you move the slider. 
 
 Only the Load Session data from the time specified is used to generate the report. 
 
@@ -109,11 +109,11 @@ Only the Load Session data from the time specified is used to generate the repor
 
 **To clear the Time Filter:** 
 
-- In the Time Filter area [(Figure 15)](#_page38_x54.00_y601.04), click ![restore default time filter](../images/restore_default_time_filter.png). The Time Filter defaults are restored in the From and To fields. By default, the entire duration of the Load Session is displayed. 
+- In the Time Filter area, click ![restore default time filter](../images/restore_default_time_filter.png). The Time Filter defaults are restored in the From and To fields. By default, the entire duration of the Load Session is displayed. 
 
 To regenerate the chart with the new settings, click ![Chart Preview button](../images/chart_preview_button.png). 
 
-## Filtering by Statistics-based Time
+## Filtering by Statistics based Time
 
 The statistics-based time filter enables you to specify a numeric filter for each of the statistics in the Load Session. This filter filters out segments of a chart based on their time. However, in contrast to the time filter, data is only filtered if it matches the specified condition. You can specify a numeric filter for multiple statistics and connect them using logical connectors, such as match all or any of the conditions. If the template you are using does not support this filter, the Statistics-based Time Filter section is disabled.  
 
@@ -138,7 +138,7 @@ The statistics-based time filter enables you to specify a numeric filter for eac
 
 1. Select the chart in the Charts area. 
 
-2. Click the **Settings** tab of the chart [(Figure 12)](#_page35_x54.00_y421.04). 
+2. Click the **Settings** tab of the chart. 
 
 3. Click the **Statistics-based Time Filter** section. The Statistics-based Time Filter area appears. 
 
@@ -164,7 +164,7 @@ The statistics-based time filter enables you to specify a numeric filter for eac
    **Note:** The range of values recorded during the selected Load Session for the selected  measurement is displayed in the Value range field.  
 
 8. Click **OK**. The statistic is added to the Statistics-based Time Filter area. 
-8. Repeat steps[ 5 ](#_page41_x54.00_y78.04)through[ 8 ](#_page41_x54.00_y182.04)for each statistic that you wish to add to the filter. 
+8. Repeat steps[ 5 ] through[ 8 ] for each statistic that you wish to add to the filter. 
 8. If you added multiple statistics, select a connector (**Match all conditions** or **Match any of the conditions**) in the Statistics-based Time Filter area. 
 
 > **Note:** The Match all conditions and Match any of the conditions connectors apply to all statistics. For example, defining multiple measurements connected by Match all conditions filters according to all the statistics.
@@ -173,7 +173,7 @@ The statistics-based time filter enables you to specify a numeric filter for eac
 
 **To edit the statistics listed in the Statistics-based Time Filter area:** 
 
-1. In the Statistics-based Time Filter area [(Figure 16)](#_page40_x54.00_y230.04), double-click a statistic. 
+1. In the Statistics-based Time Filter area, double-click a statistic. 
 
    -Or- 
 
@@ -187,14 +187,14 @@ The statistics-based time filter enables you to specify a numeric filter for eac
 
 **To remove a statistic from the Statistics-based Time Filter area:** 
 
-- In the Statistics-based Time Filter area [(Figure 16)](#_page40_x54.00_y230.04), select a statistic and click ![remove](../images/remove.png). The statistic is removed from the Statistics-based Time Filter area. 
+- In the Statistics-based Time Filter area, select a statistic and click ![remove](../images/remove.png). The statistic is removed from the Statistics-based Time Filter area. 
 
   
 
 **To clear the Statistics-based Time Filter area of all statistics:** 
 
-1. In the Statistics-based Time Filter area [(Figure 16)](#_page40_x54.00_y230.04), click ![clear filter](../images/clear_filter.png). A confirmation message appears. 
-1. Click **Yes** to confirm. The Statistics-based Time Filter area is cleared of all entries. To regenerate the chart with the new settings, click ![char preview](../images/chart_preview_button.png).
+1. In the Statistics-based Time Filter area, click ![clear filter](../images/clear_filter.png). A confirmation message appears. 
+2. Click **Yes** to confirm. The Statistics-based Time Filter area is cleared of all entries. To regenerate the chart with the new settings, click ![char preview](../images/chart_preview_button.png).
 
 
 
@@ -202,9 +202,9 @@ The statistics-based time filter enables you to specify a numeric filter for eac
 
 The Chart Master template is used together with the individual template to create a chart. The master templates contain global parameters that can be modified to change your chart’s appearance, such as whether to show tables and graphs, or show only graphs.  
 
-Chart templates contain local parameters. You can change the values for these parameters in the Parameters section of the chart. This will only affect the current chart. The parameters that appear in the Parameters section can also be modified in the Preferences window, setting new default values for all templates using them. For a full list of parameters, see[` `*Defining Your Parameter Preferences* ](#_page70_x54.00_y376.04)on page[ 71.](#_page70_x54.00_y376.04)  
+Chart templates contain local parameters. You can change the values for these parameters in the Parameters section of the chart. This will only affect the current chart. The parameters that appear in the Parameters section can also be modified in the Preferences window, setting new default values for all templates using them. For a full list of parameters, see[Defining Your Parameter Preferences](defining_preferences.md#defining-your-parameter-preferences).
 
-> **Note:** You can change the chart master template being used by specifying a different  chart master template in the Analytics tab of the Preferences window. See[` `*Defining* ](#_page66_x54.00_y392.04)[*Your Analytics Preferences* ](#_page66_x54.00_y392.04)on page[ 67.](#_page66_x54.00_y392.04)  
+> **Note:** You can change the chart master template being used by specifying a different  chart master template in the Analytics tab of the Preferences window. See[Defining Your Analytics Preferences](defining_preferences.md#defining-your-analytics-preferences). 
 
 
 
@@ -212,9 +212,9 @@ Chart templates contain local parameters. You can change the values for these pa
 
 1. Select the chart in the Charts area. 
 
-1. Click the **Settings** tab of the chart [(Figure 12)](#_page35_x54.00_y421.04).  
+2. Click the **Settings** tab of the chart.  
 
-1. Click the **Parameters** section. A list of available parameters appears.  
+3. Click the **Parameters** section. A list of available parameters appears.  
 
    > **Note:** The values displayed for the available parameters are the global values defined in the Parameters tab of the Preferences window
 

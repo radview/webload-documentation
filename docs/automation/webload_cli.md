@@ -92,7 +92,7 @@ The parameters are all optional. If no parameters are entered, the executable la
 
 
 ### Examples
-**Example 1:**
+**Example 1**
 
 `WebLOAD.exe test1.tpl`
 
@@ -100,7 +100,7 @@ This command opens the Console and the test1.tpl template. The Console waits for
 
 
 
-**Example 2:**
+**Example 2**
 
 WebLOAD.exe test1.tpl march9.ls /ar 30
 
@@ -108,7 +108,7 @@ This command opens the Console and automatically runs a test using the test1.tpl
 
 
 
-**Example 3:**
+**Example 3**
 
 `WebLOAD.exe /ag c:\agendas\MyAgenda.wlp`
 
@@ -116,19 +116,19 @@ This command opens the Console and the WebLOAD Wizard to the script/Mix Selectio
 
 
 
-**Example 4:**
+**Example 4**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml`
 
-This command performs all the actions described in [*Example 2* ](#_bookmark17)above, and in addition the execution return code is saved in result1.xml.
+This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.
 
 
 
-**Example 5:**
+**Example 5**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3`
 
-This command performs all the actions described in [*Example 2* ](#_bookmark17)above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.
+This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.
 
 
 
@@ -266,7 +266,7 @@ Use the following syntax to define the parameters for running a WebLOAD Recorder
 
 `webloadide.exe [<flags>][] [<session name to save to>][]`
 
-To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#_bookmark25)(on page [15](#_bookmark24)).
+To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#examples).
 
 
 

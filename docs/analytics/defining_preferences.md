@@ -2,9 +2,9 @@
 
 You can define your default preferences for the following:  
 
-- **Analytics Preferences** – General display and file location preferences (see[` `*Defining Your Analytics Preferences* ](#_page66_x54.00_y392.04)on page[ 67)](#_page66_x54.00_y392.04). 
-- **Database Preferences** – Preferences related to the WebLOAD Analytics PostgreSQL Load Session Repository (see[` `*Defining Your Database Preferences* ](#_page69_x54.00_y78.04)on page[ 70)](#_page69_x54.00_y78.04). 
-- **Parameters Preferences** – Customize your template parameters globally (see [*Defining Your Parameter Preferences* ](#_page70_x54.00_y376.04)on page[ 71)](#_page70_x54.00_y376.04). 
+- **Analytics Preferences** – General display and file location preferences (see[Defining Your Analytics Preferences](#defining-your-analytics-preferences). 
+- **Database Preferences** – Preferences related to the WebLOAD Analytics PostgreSQL Load Session Repository (see[Defining Your Database Preferences](#defining-your-database-preferences). 
+- **Parameters Preferences** – Customize your template parameters globally (see [Defining Your Parameter Preferences](#defining-your-parameter-preferences). 
 
 
 
@@ -27,7 +27,7 @@ WebLOAD enables you to define default Analytics parameters relating to saving an
    | Gallery Path                                                 | The default location in  which your templates and template categories are stored.  Edit the path, or click **Browse** to specify a different default location. |
    | Reports location                                             | The default location to which your WebLOAD  reports are saved.  Edit the path, or click **Browse**, to specify a different default location. |
    | Log zip location                                             | The default location to which zipped log  files are saved.  Edit the path, or click **Browse** to specify a different default location. |
-   | iReport path                                                 | The location of the JasperSoft  iReport.exe application file.  Use this field to enable  editing templates in JasperSoft iReport or launch JasperSoft iReport directly  from WebLOAD Analytics. This option is only applicable if you have JasperSoft  iReport installed on your machine (see [*Using JasperSoft   iReport* ](#_bookmark73)on  page [61](#_bookmark73)). |
+   | iReport path                                                 | The location of the JasperSoft  iReport.exe application file.  Use this field to enable  editing templates in JasperSoft iReport or launch JasperSoft iReport directly  from WebLOAD Analytics. This option is only applicable if you have JasperSoft  iReport installed on your machine (see [*Using JasperSoft   iReport* ](templates.md#using-jaspersoft-ireport). |
    | Published reports location                                   | The default location to which your WebLOAD  reports are published.  Edit the path, or click **Browse**, to specify a different default location. |
    | Chart Preview master  template                               | The master template that WebLOAD uses for your  charts. The following master templates are available:   **Raw** –  Displays only the actual data (table/graph). The title page, opening page,  background, footers, and so on, are not included in the report.   **WebLOAD** – In addition to displaying the actual data, displays also a title page, and footers/headers with page  numbers, logos, etc.  **WebLOAD with  background** –  In addition to the items displayed in the **WebLOAD** master template, displays also a background image. |
    | Reports master template                                      | The master template that WebLOAD uses for  your reports. The same master  templates available for Charts are available for Reports (Raw, WebLOAD,  WebLOAD with background). |
@@ -55,7 +55,7 @@ WebLOAD Analytics enables you to define default parameters relating to the WebLO
 
 **To define your database preferences:** 
 
-1. Select **Window** > **Preferences**. The Preferences window opens displaying the Analytics preferences by default [(Figure 33)](#_page67_x54.00_y406.04). 
+1. Select **Window** > **Preferences**. The Preferences window opens displaying the Analytics preferences by default. 
 
 1. Click **Database**, 
 
@@ -91,11 +91,11 @@ The Preferences window enables you to define default parameters relating to the 
 
 Parameters can be applied locally to individual charts, or globally to all charts and reports. If the same parameter is defined locally, the local parameter overrides the global parameter.  
 
-For information about applying parameter preferences locally, to individual templates, see[` `*Modifying Chart Parameters* ](#_page42_x54.00_y78.04)on page[ 43.](#_page42_x54.00_y78.04) 
+For information about applying parameter preferences locally, to individual templates, see[*Modifying Chart Parameters* ](changing_chart_settings.md#modifying-chart-parameters).
 
 **To display the global parameter preferences:** 
 
-1. Select **Window** > **Preferences**. The Preferences window opens displaying the Analytics preferences by default [(Figure 33)](#_page67_x54.00_y406.04). 
+1. Select **Window** > **Preferences**. The Preferences window opens displaying the Analytics preferences by default. 
 
 1. Click **Parameter**,  -Or- Type Parameter in the type filter text field and press **Enter**. The Parameters preferences are displayed. 
 
@@ -138,7 +138,7 @@ This table provides a description of the default parameters and their functions.
 
 **To apply a parameter to your charts or reports globally:**  
 
-1. From the parameters displayed in the Preferences window [(Figure 35)](#_page71_x54.00_y331.04), select the parameter you wish to edit and click **Edit**. The Edit Parameter window appears. 
+1. From the parameters displayed in the Preferences window, select the parameter you wish to edit and click **Edit**. The Edit Parameter window appears. 
 
 1. Edit the relevant fields and click **OK**. The parameters table is updated to reflect your changes. The parameter is applied each time you create a new chart or report. 
 
@@ -146,7 +146,7 @@ This table provides a description of the default parameters and their functions.
 
 **To add a new parameter to the parameters list:**  
 
-1. In the Parameters tab of the Preferences window [(Figure 35)](#_page71_x54.00_y331.04), click **Add**. The Add Parameter window appears. 
+1. In the Parameters tab of the Preferences window, click **Add**. The Add Parameter window appears. 
 
 1. Enter information for the new parameter, according to the following table: 
 
@@ -164,6 +164,6 @@ This table provides a description of the default parameters and their functions.
 
 **To remove a parameter from the parameters list:**  
 
-- From the list of parameters displayed in the Preferences window [(Figure 33)](#_page67_x54.00_y406.04), select the parameter you wish to remove and click **Remove**. The parameter is removed from the list. 
+- From the list of parameters displayed in the Preferences window, select the parameter you wish to remove and click **Remove**. The parameter is removed from the list. 
 
   > **Note:** RadView recommends that you do not remove any parameters. To restore the  default list of parameters, click **Restore Defaults**. When selecting Restore Defaults, all existing parameters and their associated values are restored to their default settings.

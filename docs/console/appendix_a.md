@@ -6,8 +6,8 @@ AppDynamics is an Application Performance Management (APM) solution that monitor
 
 By integrating WebLOAD scripts with AppDynamics you will be able to identify slow or problematic transactions of scripts run by WebLOAD test sessions. The integration consists of two tasks:
 
-1. In WebLOAD – Specifying that a WebLOAD script should add a line in all transaction headers which will identify them as WebLOAD transactions. Refer to[` `*Configuring WebLOAD Scripts for AppDynamics* ](#_bookmark492)(on page [409](#_bookmark492)).
-1. In AppDynamics – Configuring AppDynamics to enable it to read the headers. The additional line enables AppDynamics to identify the corresponding transactions as WebLOAD transactions. Refer to [*Configuring AppDynamics to Recognize WebLOAD](#_bookmark493)[ Transactions* ](#_bookmark493)(on page [410](#_bookmark493)).
+1. In WebLOAD – Specifying that a WebLOAD script should add a line in all transaction headers which will identify them as WebLOAD transactions. Refer to[` `*Configuring WebLOAD Scripts for AppDynamics* ](#configuring-webload-scripts-for-appdynamics).
+1. In AppDynamics – Configuring AppDynamics to enable it to read the headers. The additional line enables AppDynamics to identify the corresponding transactions as WebLOAD transactions. Refer to [Configuring AppDynamics to Recognize WebLOAD](#configuring-appdynamics-to-recognize-webload-transactions).
 
 
 
@@ -15,7 +15,7 @@ By integrating WebLOAD scripts with AppDynamics you will be able to identify slo
 
 To enable WebLOAD for AppDynamics:
 
-1\.	Add the line wlGlobals.AddWebLoadHeader=true in the JavaScript code of the script.
+1.	Add the line wlGlobals.AddWebLoadHeader=true in the JavaScript code of the script.
 
 This causes WebLOAD to send extra data upon every request of the script. The extra data identifies the request as a WebLOAD request, lists the name of the currently running script, and lists the name of the corresponding transaction.
 
@@ -29,18 +29,18 @@ This section describes how to configure AppDynamics Lite and AppDynamics Pro to 
 
 **To configure AppDynamics Lite to recognize WebLOAD transactions:**
 
-1. In AppDynamics Lite, select **Configure** > **Transaction Detection**.
+2. In AppDynamics Lite, select **Configure** > **Transaction Detection**.
 
    ![Transaction Detection Tab](../images/console_users_guide_3009.png)
 
-2. In the **Servlet** transaction type:
+3. In the **Servlet** transaction type:
 
    1. Check the option **Enabled**.
    2. Check the option **Discover Transactions automatically for all Servlet requests, and name them by their URI**.
    3. Click **Configure Naming** (adjacent to **Discover Transactions automatically for all Servlet requests, and name them by their URI**).
 
 
-3. The Servlet Transaction Naming Configuration window appears.
+4. The Servlet Transaction Naming Configuration window appears.
 
 
 
@@ -48,15 +48,15 @@ This section describes how to configure AppDynamics Lite and AppDynamics Pro to 
 
 
 
-4. In the Servlet Transaction Naming Configuration window**,** specify the WebLOAD naming convention by performing the following:
+5. In the Servlet Transaction Naming Configuration window**,** specify the WebLOAD naming convention by performing the following:
    1. Select **Use the full URI** or **Use a part of the URI**.
    1. Select **Name Transactions dynamically using part of the request**.
    1. Select **Use a header value in Transaction names**.
 
-5. In the **Header Name** field, enter WebLOAD-TransactionName.
-6. Click **Save**.
+6. In the **Header Name** field, enter WebLOAD-TransactionName.
+7. Click **Save**.
 
-When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [*Viewing WebLOAD Performance in](#_bookmark496) *[AppDynamics* ](#_bookmark496)*(on page [417](#_bookmark496)).
+When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [*Viewing WebLOAD Performance in AppDynamics](#viewing-webload-performance-in-appdynamics).
 
 
 
@@ -121,7 +121,7 @@ In AppDynamics Pro, in addition to configuring AppDynamics to recognize WebLOAD 
     2. Select the option **Use a header value in Transaction names** and enter
     3. WebLOAD-TransactionName as the **Header Name**.
 
-When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [*Viewing WebLOAD Performance in](#_bookmark496) *[AppDynamics* ](#_bookmark496)*(on page [417](#_bookmark496)).
+When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [Viewing WebLOAD Performance in AppDynamics](#viewing-webload-performance-in-appdynamics).
 
 
 

@@ -3377,20 +3377,19 @@
 <li>Report the default values for each element in all forms found in the script.</li>
 <li>Select the tests you want to run and specify the severity level of the test results, which determines how the script will continue to execute.</li>
 </ul>
-<p>For information on severity levels, see <a href="#_bookmark285"><em>Verification Function Return Values</em> </a>(on page <a href="#_bookmark284">261</a>).</p>
+<p>For information on severity levels, see <a href="#verification-function-return-values"><em>Verification Function Return Values</em> </a>.</p>
 <h3 id="selecting-the-tests-to-perform">Selecting the Tests to Perform</h3>
 <p>Once the Functional Testing tab is open, you must decide which tests you want to perform. The tests are performed on all pages in the script.</p>
 <p>WebLOAD Console enables you to select specific tests to run.</p>
 <p>In each case you can specify the severity level in case of test failure, which determines whether the script will continue to execute or not.</p>
-<p>For full details, see <a href="#_bookmark285"><em>Verification Function Return Values</em> </a>(on page <a href="#_bookmark284">261</a>).</p>
+<p>For full details, see <a href="#verification-function-return-values"><em>Verification Function Return Values</em> </a>.</p>
 <h4 id="verifying-text">Verifying Text</h4>
 <p>Use Text verifications to verify the absence or presence of selected text expressions within your Web page.</p>
 <p><strong>To insert a text verification test into your script:</strong></p>
 <ol>
-<li>Open the Functional Testing tab, as described in <a href="#_bookmark276"><em>Opening the Functional Testing Tab</em></a></li>
-</ol>
-<p>(on page <a href="#_bookmark277">256</a>).</p>
-<ol>
+<li>
+<p>Open the Functional Testing tab, as described in <a href="#opening-the-functional-testing-tab"><em>Opening the Functional Testing Tab</em></a>.</p>
+</li>
 <li>
 <p>Select the <strong>Verification</strong> checkbox.</p>
 </li>
@@ -3425,7 +3424,7 @@
 <p>For example, to ensure that the word error does not appear on the page during runtime, enter the word <em>error</em> in the Text field, and select <strong>Not to Find</strong>. If the text error is found on the page, WebLOAD Console will report the error.</p>
 <ol>
 <li>
-<p>Select the severity level from the Severity drop–down list. For further information, see <a href="#_bookmark285"><em>Verification Function Return Values</em> </a>(on page <a href="#_bookmark284">261</a>).</p>
+<p>Select the severity level from the Severity drop–down list. For further information, see <a href="#verification-function-return-values"><em>Verification Function Return Values</em> </a>.</p>
 </li>
 <li>
 <p>Click <strong>Add</strong> to add another string to the list of Text Search strings.</p>
@@ -3516,7 +3515,7 @@ return WLSuccess;
 <p><strong>Note:</strong> The transaction timer measures the time it took to execute the code between the BeginTransaction statement and the EndTransaction statement.</p>
 <h2 id="verification-function-return-values">Verification Function Return Values</h2>
 <p>You define the pass/fail criterion for user-defined transactions. For each verification test you must also specify the severity level of a failure. The severity level determines the execution path when the main script resumes control. Thus, depending on the severity level, you can program the test to ignore the failure, jump to the next navigation block, or stop the test. Extreme failures with high severity levels can be set to abort the test, whereas less severe failures can be ignored.</p>
-<p>You set the severity level in the return statement of the verification function. The assigned severity levels and their results are handled in the same manner as other test failure results in WebLOAD Console. All failures are logged and are displayed in the WebLOAD Console log window. Refer to Appendix C: <a href="#_bookmark511">*We</a><a href="#_bookmark511">bLOAD Console Error</a> <em><a href="#_bookmark511">Messages* </a></em>(on page <a href="#_bookmark511">443</a><em>)</em> for more details on severity levels.</p>
+<p>You set the severity level in the return statement of the verification function. The assigned severity levels and their results are handled in the same manner as other test failure results in WebLOAD Console. All failures are logged and are displayed in the WebLOAD Console log window. Refer to Appendix C: <a href="../appendix_c/"><em>WebLOAD Console Error Messages</em> </a> for more details on severity levels.</p>
 <p>Transactions may be assigned one of the following return values:</p>
 <table>
 <thead>
@@ -3549,7 +3548,7 @@ return WLSuccess;
 </p>
 </blockquote>
 <h2 id="reporting-events"><strong>Reporting Events</strong></h2>
-<p>WebLOAD Console enables you to record specific events and transaction instances as they occur. This information is very useful when analyzing website performance with Data Drilling, described in <a href="#_bookmark430"><em>Data Drilling</em> </a>(on page <a href="#_bookmark430"><em>343</em></a>).</p>
+<p>WebLOAD Console enables you to record specific events and transaction instances as they occur. This information is very useful when analyzing website performance with Data Drilling, described in <a href="#data-drilling"><em>Data Drilling</em> </a>.</p>
 <p>Record transaction events with the following syntax:</p>
 <p><code>ReportEvent (“&lt;event-name&gt;“, [“&lt;description&gt;“])</code></p>
 <p>Where:</p>
@@ -3563,7 +3562,7 @@ return WLSuccess;
 <p>Set the reason for a transaction failure using the following syntax:</p>
 <p><code>SetFailureReason (“&lt;failure-reason&gt;“)</code></p>
 <p>For example:</p>
-<p>Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see <a href="#_bookmark279"><em>User-Defined Transactions and Verification Syntax</em> </a>on page <a href="#_bookmark279">259</a>), the UpdateBankAccount verification function might appear as follows:</p>
+<p>Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see <a href="#user-defined-transactions-and-verification-syntax"><em>User-Defined Transactions and Verification Syntax</em> </a>, the UpdateBankAccount verification function might appear as follows:</p>
 <pre><code class="language-javascript">function UpdateBankAccount\_VerificationFunction()
 
 }
@@ -3626,13 +3625,13 @@ return(WLSevereError)
 </tr>
 </tbody>
 </table>
-<p>All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in <a href="#_bookmark289">*Viewing Verification Test Results</a>* (on page <a href="#_bookmark288">264</a>).</p>
+<p>All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in <a href="#viewing-verification-test-results">*Viewing Verification Test Results</a>.</p>
 <h2 id="viewing-verification-test-results">Viewing Verification Test Results</h2>
 <p>After running your script, WebLOAD Console provides information on all major events that occurred during runtime such as verification failures and error messages.</p>
 <p>When a verification test fails:</p>
 <ul>
-<li>The failure is logged in the Log Window, described in <a href="#_bookmark290">*Viewing Error Information in</a><a href="#_bookmark290"> the Log Window* </a>(on page <a href="#_bookmark291">265</a>).</li>
-<li>The failure is added to the Data Drilling report, described in <a href="#_bookmark295"><em>Data Drilling</em> </a>(on page <a href="#_bookmark295">267</a>).</li>
+<li>The failure is logged in the Log Window, described in <a href="#viewing-error-information-in-the-log-window">*Viewing Error Information in Log window</a>.</li>
+<li>The failure is added to the Data Drilling report, described in <a href="#data-drilling"><em>Data Drilling</em> </a>.</li>
 </ul>
 <p>All verification failures can be viewed in the Event Viewer, which displays the “actual” results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.</p>
 <h3 id="viewing-error-information-in-the-log-window">Viewing Error Information in the Log Window</h3>
@@ -3665,7 +3664,7 @@ return(WLSevereError)
 <p>When you double-click a verification failure in the Log Window, the Event viewer opens. The Event Viewer displays the Actual views of the object that triggered the failure, with the object highlighted. A description of any errors that occurred during the test run appears below.</p>
 <p><img alt="Event Viewer" src="../../images/console_users_guide_1123.png" /></p>
 <p>Double-click the description below the viewer to highlight any changes relating to the error.</p>
-<p>Note that if you integrated WebLOAD with Dynatrace, a <strong>Dynatrace</strong> button appears in the Event Viewer window. Clicking the button opens a Dynatrace window displaying the relevant transaction. Refer to <a href="#_bookmark502">*Viewing in Dynatrace the Transactions Related to</a> <em><a href="#_bookmark502">WebLOAD Errors* </a></em>(on page <a href="#_bookmark502">423</a>).</p>
+<p>Note that if you integrated WebLOAD with Dynatrace, a <strong>Dynatrace</strong> button appears in the Event Viewer window. Clicking the button opens a Dynatrace window displaying the relevant transaction. </p>
 <h3 id="printing-the-contents-of-the-log-window">Printing the Contents of the Log Window</h3>
 <p><strong>To print the contents of the log window:</strong></p>
 <ol>

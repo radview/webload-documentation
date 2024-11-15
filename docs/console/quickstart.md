@@ -8,11 +8,11 @@ This section shows you how you can get started quickly using WebLOAD by designin
 
 In this Quick Start, you perform the following steps:
 
-1. Create a script (see [*Creating a](#_bookmark29)* on page [29](#_bookmark29)).
-1. Configure a Load Template using the WebLOAD Wizard (see [*Configuring a Load](#_bookmark30)[ Template using WebLOAD Wizard* ](#_bookmark30)on page [34](#_bookmark30)).
-1. Configure Session options (see [*Setting Session Options* ](#_bookmark36)on page [38](#_bookmark36)).
-1. Run a test (see [*Running the Test* ](#_bookmark37)on page [38](#_bookmark37)).
-1. ![ref9]Analyze test results (see [*Analyzing Test Results* ](#_bookmark38)on page [39](#_bookmark38)).
+1. Create a script (see [*Creating a Script](#creating-a-script).
+2. Configure a Load Template using the WebLOAD Wizard (see [*Configuring a Load Template using WebLOAD Wizard* ](#configuring-a-load-template-using-webload-wizard).
+3. Configure Session options (see [*Setting Session Options* ](#setting-session-options).
+4. Run a test (see [*Running the Test* ](#running-the-test).
+5. ![ref9]Analyze test results (see [*Analyzing Test Results* ](#analyzing-test-results).
 
 > **Note:** We recommend that you follow the steps in the order they appear. All examples are interrelated and dependent on earlier steps.
 
@@ -84,11 +84,11 @@ Using the Quick Start, you will learn how to perform the following steps in orde
 1. Scheduling the test and selecting the number of Virtual Clients to run.
 1. Setting Session options.
 
-For more details about each of these steps, see [*Creating Load Templates with the](#_bookmark99) *[WebLOAD Wizard* ](#_bookmark99)*(on page [99](#_bookmark99)).
+For more details about each of these steps, see [*Creating Load Templates with the WebLOAD Wizard* ](#configuring-a-load-template-using-webload-wizard).
 
 
 ### **Opening WebLOAD Wizard**
-The first step in defining a Load Template with the WebLOAD Wizard is defining the type of script to run. The script is the test script that defines the actions that the Virtual Clients perform during the test. WebLOAD supports both single scripts (lone test scripts) and Mix scripts (a group of scripts simulating groups of users performing different activities on the application simultaneously). In this Quick Start, we will create a template running a single script. For information on creating templates with multiple scripts or Mix scripts, see [*Creating Load Templates with the WebLOAD Wizard](#_bookmark99)* (on page [99](#_bookmark99)).
+The first step in defining a Load Template with the WebLOAD Wizard is defining the type of script to run. The script is the test script that defines the actions that the Virtual Clients perform during the test. WebLOAD supports both single scripts (lone test scripts) and Mix scripts (a group of scripts simulating groups of users performing different activities on the application simultaneously). In this Quick Start, we will create a template running a single script. For information on creating templates with multiple scripts or Mix scripts, see [*Creating Load Templates with the WebLOAD Wizard](#creating-a-script).
 
 **To open WebLOAD Wizard:**
 

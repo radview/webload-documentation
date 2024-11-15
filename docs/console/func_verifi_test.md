@@ -51,7 +51,7 @@ You can choose to compare any or all of the following:
 - Report the default values for each element in all forms found in the script.
 - Select the tests you want to run and specify the severity level of the test results, which determines how the script will continue to execute.
 
-  For information on severity levels, see [*Verification Function Return Values* ](#_bookmark285)(on page [261](#_bookmark284)).
+  For information on severity levels, see [*Verification Function Return Values* ](#verification-function-return-values).
 
 
 
@@ -63,7 +63,7 @@ WebLOAD Console enables you to select specific tests to run.
 
 In each case you can specify the severity level in case of test failure, which determines whether the script will continue to execute or not.
 
-For full details, see [*Verification Function Return Values* ](#_bookmark285)(on page [261](#_bookmark284)).
+For full details, see [*Verification Function Return Values* ](#verification-function-return-values).
 
 #### Verifying Text
 
@@ -71,9 +71,7 @@ Use Text verifications to verify the absence or presence of selected text expres
 
 **To insert a text verification test into your script:**
 
-1. Open the Functional Testing tab, as described in [*Opening the Functional Testing Tab*](#_bookmark276)
-
-   (on page [256](#_bookmark277)).
+1. Open the Functional Testing tab, as described in [*Opening the Functional Testing Tab*](#opening-the-functional-testing-tab).
 
 1. Select the **Verification** checkbox.
 
@@ -96,7 +94,7 @@ Use Text verifications to verify the absence or presence of selected text expres
 
    For example, to ensure that the word error does not appear on the page during runtime, enter the word *error* in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
 
-1. Select the severity level from the Severity drop–down list. For further information, see [*Verification Function Return Values* ](#_bookmark285)(on page [261](#_bookmark284)).
+1. Select the severity level from the Severity drop–down list. For further information, see [*Verification Function Return Values* ](#verification-function-return-values).
 
 1. Click **Add** to add another string to the list of Text Search strings.
 
@@ -185,7 +183,7 @@ If during the test the above transaction succeeded 15 times and failed 5 times, 
 
 You define the pass/fail criterion for user-defined transactions. For each verification test you must also specify the severity level of a failure. The severity level determines the execution path when the main script resumes control. Thus, depending on the severity level, you can program the test to ignore the failure, jump to the next navigation block, or stop the test. Extreme failures with high severity levels can be set to abort the test, whereas less severe failures can be ignored.
 
-You set the severity level in the return statement of the verification function. The assigned severity levels and their results are handled in the same manner as other test failure results in WebLOAD Console. All failures are logged and are displayed in the WebLOAD Console log window. Refer to Appendix C: [*We](#_bookmark511)[bLOAD Console Error](#_bookmark511) *[Messages* ](#_bookmark511)*(on page [443](#_bookmark511)*)* for more details on severity levels.
+You set the severity level in the return statement of the verification function. The assigned severity levels and their results are handled in the same manner as other test failure results in WebLOAD Console. All failures are logged and are displayed in the WebLOAD Console log window. Refer to Appendix C: [*WebLOAD Console Error Messages* ](appendix_c.md) for more details on severity levels.
 
 Transactions may be assigned one of the following return values:
 
@@ -204,7 +202,7 @@ Transactions may be assigned one of the following return values:
 
 ## **Reporting Events**
 
-WebLOAD Console enables you to record specific events and transaction instances as they occur. This information is very useful when analyzing website performance with Data Drilling, described in [*Data Drilling* ](#_bookmark430)(on page [*343*](#_bookmark430)).
+WebLOAD Console enables you to record specific events and transaction instances as they occur. This information is very useful when analyzing website performance with Data Drilling, described in [*Data Drilling* ](#data-drilling).
 
 Record transaction events with the following syntax:
 
@@ -230,7 +228,7 @@ Set the reason for a transaction failure using the following syntax:
 
 For example:
 
-Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see [*User-Defined Transactions and Verification Syntax* ](#_bookmark279)on page [259](#_bookmark279)), the UpdateBankAccount verification function might appear as follows:
+Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see [*User-Defined Transactions and Verification Syntax* ](#user-defined-transactions-and-verification-syntax), the UpdateBankAccount verification function might appear as follows:
 
 ```javascript
 function UpdateBankAccount\_VerificationFunction()
@@ -275,7 +273,7 @@ If during the execution of a test the above transaction succeeded 15 times and f
 |UpdateBankAccount timer|1\.2 sec|
 
 
-All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in [*Viewing Verification Test Results](#_bookmark289)* (on page [264](#_bookmark288)).
+All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in [*Viewing Verification Test Results](#viewing-verification-test-results).
 
 
 
@@ -285,8 +283,8 @@ After running your script, WebLOAD Console provides information on all major eve
 
 When a verification test fails:
 
-- The failure is logged in the Log Window, described in [*Viewing Error Information in](#_bookmark290)[ the Log Window* ](#_bookmark290)(on page [265](#_bookmark291)).
-- The failure is added to the Data Drilling report, described in [*Data Drilling* ](#_bookmark295)(on page [267](#_bookmark295)).
+- The failure is logged in the Log Window, described in [*Viewing Error Information in Log window](#viewing-error-information-in-the-log-window).
+- The failure is added to the Data Drilling report, described in [*Data Drilling* ](#data-drilling).
 
 All verification failures can be viewed in the Event Viewer, which displays the “actual” results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.
 
@@ -336,8 +334,7 @@ When you double-click a verification failure in the Log Window, the Event viewer
 
 Double-click the description below the viewer to highlight any changes relating to the error.
 
-Note that if you integrated WebLOAD with Dynatrace, a **Dynatrace** button appears in the Event Viewer window. Clicking the button opens a Dynatrace window displaying the relevant transaction. Refer to [*Viewing in Dynatrace the Transactions Related to](#_bookmark502) *[WebLOAD Errors* ](#_bookmark502)*(on page [423](#_bookmark502)).
-
+Note that if you integrated WebLOAD with Dynatrace, a **Dynatrace** button appears in the Event Viewer window. Clicking the button opens a Dynatrace window displaying the relevant transaction. 
 
 
 ### Printing the Contents of the Log Window

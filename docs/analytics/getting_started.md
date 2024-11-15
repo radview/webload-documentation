@@ -44,8 +44,8 @@ The user interface consists of the following elements:
 - **Gallery Tab** – This tab displays all the templates and portfolios, organized in a hierarchical tree structure. 
 - **Current Report Tab** – This tab lists all the open charts in the Charts area. They are all grouped under a Report node.  
 - **Recent Reports Tab** – This tab lists all the previously saved Reports, each of which consists of a group of charts. 
-- **Charts Area** – This area displays all open charts. Each chart has its own tab, so you can easily switch between the different charts with which you are working. For information about creating, opening, saving, and viewing charts, see[` `*Generating ](#_page20_x54.00_y155.04)*Charts* on page[ 21.](#_page20_x54.00_y155.04) 
-- **Chart Tab** – A tab is displayed for each open chart, showing the chart title. When a chart is selected, its settings are displayed in the Settings tab [(Figure 12)](#_page35_x54.00_y421.04) and the generated chart is displayed in the Preview tab [(Figure 3)](#_page17_x54.00_y478.04) and/or Chart View tab [(Figure 4)](#_page21_x54.00_y404.04). The Preview tab shows the chart in its ready-to-print form. The Chart View tab, available only for interactive charts, enables manipulating the chart display in various ways. 
+- **Charts Area** – This area displays all open charts. Each chart has its own tab, so you can easily switch between the different charts with which you are working. For information about creating, opening, saving, and viewing charts, see[Generating Charts](generating_charts.md) 
+- **Chart Tab** – A tab is displayed for each open chart, showing the chart title. When a chart is selected, its settings are displayed in the Settings tab and the generated chart is displayed in the Preview tab and/or Chart View tab. The Preview tab shows the chart in its ready-to-print form. The Chart View tab, available only for interactive charts, enables manipulating the chart display in various ways. 
 
 You can easily resize or move the Charts area and Navigation area by dragging each component. 
 

@@ -80,7 +80,7 @@ These are JavaScript functions that WebLOAD or WebLOAD Recorder executes once, i
 
 The initialization and termination functions are not part of the WebLOAD performance test. WebLOAD does not include the operations of these functions in the performance statistics.
 
-Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error. See [*script Execution Sequence* ](#_bookmark12)(on page [11](#_bookmark13)), and [*Non-Standard script Execution Sequence](#_bookmark38)* (on page [39](#_bookmark37)), for more information.
+Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error.
 
 Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.
 
@@ -121,7 +121,7 @@ WebLOAD executes JavaScript scripts in a simple, fixed sequence. The normal sequ
 1. The optional TerminateClient() termination function runs once for each thread. Strictly speaking, most scripts do not need a TerminateClient() function, because JavaScript automatically frees objects and releases most resources when the script terminates. In a complex script, however, it is good programming practice to free local objects and resources explicitly using TerminateClient().
 1. The separate threads for each client terminate.
 1. The optional TerminateAgenda() termination function runs once for each Load Generator process. Most simple scripts do not need a TerminateAgenda() function. In a complex script, including TerminateAgenda() is recommended to free global resources.
-1. The OnScriptAbort(), OnErrorTerminateClient(), and OnErrorTerminateAgenda() functions clean up and free resources after a runtime error. For more information about handling errors during a test session, see [*Error Management* ](#_bookmark34)(on page [35](#_bookmark35)).
+1. The OnScriptAbort(), OnErrorTerminateClient(), and OnErrorTerminateAgenda() functions clean up and free resources after a runtime error. For more information about handling errors during a test session, see [*Error Management* ](#error-management).
 
 The following figure illustrates the steps in a normal script execution sequence:
 
@@ -238,7 +238,7 @@ WebLOAD Recorder provides a complete graphic user interface for creating and edi
 
 While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects. Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:
 
-- **JavaScript Object nodes**—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in [*Adding](#_bookmark21)[ JavaScript Object Nodes* ](#_bookmark21)(on page [19](#_bookmark20)). Use the IntelliSense Editor, described in [*Using](#_bookmark19)[ the IntelliSense JavaScript Editor* ](#_bookmark19)(on page [16](#_bookmark18)), to add lines of code or functions to the JavaScript Object.
+- **JavaScript Object nodes**—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in [*Adding JavaScript Object Nodes* ](#adding-javascript-object-nodes). Use the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor), to add lines of code or functions to the JavaScript Object.
 - **Imported JavaScript File**—an external JavaScript file that should be incorporated within the body of the current script.
   - While working in JavaScript Editing mode, right-click the JavaScript pane and select **Import JavaScript File** from the WebLOAD Recorder menu.
 
@@ -281,7 +281,7 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 - A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. Select **Tools**> **CheckSyntax** while standing in the JavaScript View pane of the WebLOAD Recorder desktop to check the syntax of the code in your script file.
 
 
-Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a script Tree is described in [*Accessing the JavaScript Code within the](#_bookmark17)* (on page [15](#_bookmark15)).
+Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a script Tree is described in [*Accessing the JavaScript Code within the](#accessing-the-javascript-code-within-the-script-tree).
 
 > **Notes:** If you do decide to edit the JavaScript code in a script, be careful not to damage the script structure by changing the sequence or integrity of the script navigation blocks. A test session script is constructed and based on a specific sequence of user activities at the protocol level, such as URL navigations, form submissions, and others. Changing the sequence of code blocks in effect means changing the sequence of user activities, and may destroy the functionality of the test session script. In addition, you should be careful not to change the automatically generated WebLOAD Recorder comments, since necessary information for running the script may become lost.
 
@@ -330,7 +330,7 @@ JavaScript syntax specifications for some of these activities are documented in 
 
 - Click the **JavaScript Object node** in the Script Tree.
 
-  The JavaScript object’s code appears in the JavaScript View pane. You can edit the code directly in the JavaScript view or by selecting **Edit** > **Start Java Script Editing** which opens the full JavaScript view screen. This helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are written, as described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark19)(on page [16](#_bookmark18)).
+  The JavaScript object’s code appears in the JavaScript View pane. You can edit the code directly in the JavaScript view or by selecting **Edit** > **Start Java Script Editing** which opens the full JavaScript view screen. This helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are written, as described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
 
 
 
@@ -338,9 +338,9 @@ JavaScript syntax specifications for some of these activities are documented in 
 
 JavaScript scripts work with many different types of files. Users may wish to add to their scripts programming elements that include the following file types:
 
-- [*Including Files* ](#_bookmark24)(on page [21](#_bookmark22))
-- [*Copying Files* ](#_bookmark26)(on page [25](#_bookmark25))
-- [*Output Files* ](#_bookmark28)(on page [27](#_bookmark27))
+- [*Including Files* ](#including-files)
+- [*Copying Files* ](#copying-files)
+- [*Output Files* ](#output-files)
 
 ### Including Files
 WebLOAD Recorder allows you to include external files within your JavaScript program. This facilitates modular programming, where you may develop different recyclable modules of JavaScript source code to be reused by different test scripts. Rather than inserting the complete original source code text over and over again into the body of each script, use the IncludeFile() command to make all functions defined within the included file available to all including scripts.
@@ -450,7 +450,7 @@ WebLOAD enables text and binary data file copying from the Console to a Load Gen
 
 #### Adding a CopyFile() Function
 
-CopyFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [14](#_bookmark14)).
+CopyFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in Script](#editing-the-javascript-code-in-a-script).
 
 **To insert a CopyFile function:**
 
@@ -514,7 +514,7 @@ The wlOutputFile object lets you write script output messages to an output file.
 
 ##### Adding the wlOutputFile Object
 
-The wlOutputFile object can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [14](#_bookmark14)). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlOutputFile object, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available constructor and methods for the wlOutputFile object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop-up menu, and selecting one of the available items. WebLOAD Recorder automatically inserts the correct code for the selected command into the JavaScript Object currently being edited. The user may then change the parameters without any worries about mistakes in the object syntax.
+The wlOutputFile object can be added directly to a JavaScript Object in a script through the [IntelliSense Editor](#using-the-intellisense-javascript-editor). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlOutputFile object, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available constructor and methods for the wlOutputFile object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop-up menu, and selecting one of the available items. WebLOAD Recorder automatically inserts the correct code for the selected command into the JavaScript Object currently being edited. The user may then change the parameters without any worries about mistakes in the object syntax.
 
 ![wlOutputFile() Insertion using General Menu](../images/script_guide_034.png)
 
@@ -532,7 +532,7 @@ The preceding figure highlights the standard JavaScript syntax to create and wor
 
 `delete MyFileObj`
 
-> **Note:** The wlOutputFile object saves script output messages. To save server response data, use the Outfile property described in [*Saving Server Output to a File* ](#_bookmark30)(on page [29](#_bookmark29)).
+> **Note:** The wlOutputFile object saves script output messages. To save server response data, use the Outfile property described in [*Saving Server Output to a File* ](#saving-server-output-to-a-file).
 
 
 
@@ -576,7 +576,7 @@ Security is important for most Web users, whether the access is recreational, pe
 
 Specific security settings may be reset through the WebLOAD Recorder or Console GUI dialog boxes.
 
-Security methods and properties can be edited directly within a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in](#_bookmark16)* (on page [14](#_bookmark14)). This section provides a general introduction to the internal implementation of the user authentication and SSL security features. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification of the security functions introduced here.
+Security methods and properties can be edited directly within a JavaScript Object in a script through the [IntelliSense Editor](#using-the-intellisense-javascript-editor). This section provides a general introduction to the internal implementation of the user authentication and SSL security features. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification of the security functions introduced here.
 
 ### Authentication
 Users are authenticated through a system of usernames and passwords. Most servers use either a basic user authentication protocol or the Windows NT Challenge Response protocol. WebLOAD supports both protocols, as well as proxy servers that require user authorization. WebLOAD automatically selects the authentication protocol appropriate for the current test session. By default, WebLOAD navigates authorization protocols using the user data saved during the original recording session, but these values may be reset as needed.
@@ -941,9 +941,9 @@ This section describes the scope rules for all variables, both built-in configur
 
 To understand the scope rules for user-defined variables, we need to distinguish between the following testing contexts:
 
-- [*Limited Context* ](#_bookmark41)(on page [44](#_bookmark41)), limited to a specific browser action within a script
-- [*Local Context* ](#_bookmark43)(on page [45](#_bookmark42)), local to a single thread of a single script
-- [*Global Context* ](#_bookmark45)(on page [47](#_bookmark44)), which may be global to the following extent:
+- [*Limited Context* ](#limited-context), limited to a specific browser action within a script
+- [*Local Context* ](#local-context), local to a single thread of a single script
+- [*Global Context* ](#global-context), which may be global to the following extent:
   - Shared by all threads of a single script running on a single Load Generator.
   - Shared by all threads of multiple scripts, including a mix of scripts, running on a single Load Generator.
   - Global to all threads of a single script, running on multiple Load Generators, potentially on multiple machines, system-wide.
@@ -1082,7 +1082,7 @@ You can also limit the scope to a single function by defining the variable using
 ### Global Context
 Global variables are universally accessible and shared by all script components in all threads of a script, within the initialization and termination functions as well as the main script body. Global variables and configuration properties are defined within the InitAgenda() initialization function of a script. Once a global variable has been declared you may read and assign values to that variable at any subsequent point in your script.
 
-For example, it may be convenient to define as a global variable a message text or a URL string that you expect to use and reuse frequently within your script. Or you may need a global counter that should be incremented each time any script thread reaches a certain point in the test session. You could increment the variable value using JavaScript Object nodes added to the main script, as described in [*Editing the JavaScript](#_bookmark16) *[Code in](#_bookmark16)* (on page [15](#_bookmark16)). Add an InfoMessage node to the Script Tree to check on how the global variable value changes over the course of a test session, as illustrated in the following figure:
+For example, it may be convenient to define as a global variable a message text or a URL string that you expect to use and reuse frequently within your script. Or you may need a global counter that should be incremented each time any script thread reaches a certain point in the test session. You could increment the variable value using JavaScript Object nodes added to the main script, as described in [*Editing the JavaScript](#editing-the-javascript-code-in-a-script). Add an InfoMessage node to the Script Tree to check on how the global variable value changes over the course of a test session, as illustrated in the following figure:
 
 ![InfoMessage Node Addition to Script Tree](../images/script_guide_039.jpeg)
 
@@ -1150,7 +1150,7 @@ For rounds 0-19, the main script overrides the global default and allows pausing
 
 After the first 20 rounds of execution are completed, there is no local value assigned, so the script will again, by default, no longer allow sleep pauses.
 
-wlGlobals object commands may be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, as described in [*Editing the JavaScript](#_bookmark16) *[Code in](#_bookmark16)* (on page [15](#_bookmark16)). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlGlobals object method or property, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available objects for the wlGlobals object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop- up menu, and selecting one of the available items.
+wlGlobals object commands may be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, as described in [*Editing the JavaScript](#editing-the-javascript-code-in-a-script). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlGlobals object method or property, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available objects for the wlGlobals object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop- up menu, and selecting one of the available items.
 
 
 
@@ -1243,7 +1243,7 @@ See Editing the Editing the JavaScript Code, for an introduction to editing your
 
 The global script context includes global variables and settings that are shared by all threads of a single script, system-wide. The wlSystemGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, part of one or more spawned processes, potentially running on multiple Load Generators, and multiple machines. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.
 
-wlSystemGlobal includes essentially the same methods described in [*Variables Defined](#_bookmark48) *[through the wlGeneratorGlobal Object with WLAllAgendas Flag* ](#_bookmark48)*(on page [51](#_bookmark46)), applied here to global variables:
+wlSystemGlobal includes essentially the same methods described in [*Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag), applied here to global variables:
 
 - Set(“GlobalVarName”, value, WLCurrentAgenda)—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.
 
@@ -1254,7 +1254,7 @@ wlSystemGlobal includes essentially the same methods described in [*Variables De
 
 The global multiple script context provides full, system wide global variables, shared by all elements of a test session. The wlSystemGlobal object, when used with the WLAllAgendas flag, stores variable values that you wish to share between all threads of all scripts, part of one or more spawned processes, on all Load Generators and machines, system-wide. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.
 
-wlSystemGlobal includes essentially the same methods described in [*Variables Defined](#_bookmark51) *[through the wlSystemGlobal Object with WLCurrentAgenda Flag* ](#_bookmark51)*(on page [53](#_bookmark50)), with the WLAllAgendas scope flag in stead of the WLCurrentAgenda flag:
+wlSystemGlobal includes essentially the same methods described in [*Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag), with the WLAllAgendas scope flag in stead of the WLCurrentAgenda flag:
 
 - Set(“GlobalVarName”, value, WLAllAgendas)
 - Get(“GlobalVarName”, WLAllAgendas)
@@ -1365,7 +1365,7 @@ For example:
 ### Global Sharing Considerations
 A WebLOAD test session measures an application’s performance. The testing tool, your script, must consume minimal system resources to have as small an impact as possible on the performance of the application being tested. To minimize system overhead when running your test script, WebLOAD recommends using the minimal level of global sharing required to run your test correctly.
 
-Variables that are accessible within a single script only have the smallest impact on system performance, as noted in [*wlGeneratorGlobal Example* ](#_bookmark49)(on page [52](#_bookmark47)). For maximum efficiency and simplicity, WebLOAD strongly recommends creating and managing user-defined variables through the WebLOAD Recorder GUI, as described in the *WebLOAD Recorder User Guide*.
+Variables that are accessible within a single script only have the smallest impact on system performance, as noted in [*wlGeneratorGlobal Example* ](#wlgeneratorglobal-example). For maximum efficiency and simplicity, WebLOAD strongly recommends creating and managing user-defined variables through the WebLOAD Recorder GUI, as described in the *WebLOAD Recorder User Guide*.
 
 Values shared between multiple scripts, but within a single Load Generator, are the next most efficient choice. Global values shared system wide should only be included in your script if it is truly necessary to check values or synchronize data shared across multiple Load Generators or machines.
 
@@ -1416,9 +1416,9 @@ You can view the value of a variable in the Variables window.
 ### ClientNum
 This is the serial number of the client in the WebLOAD test configuration. ClientNum is a read-only local variable. Each client in a Load Generator has a unique ClientNum. However, two clients in two different Load Generators may have the same ClientNum.
 
-> **Note:** ClientNum is not unique system wide. Use [*VCUniqueID()* ](#_bookmark62)(on page [62](#_bookmark61)), to obtain an ID number which is unique system-wide.
+> **Note:** ClientNum is not unique system wide. Use [*VCUniqueID()* ](#vcuniqueid), to obtain an ID number which is unique system-wide.
 
-Add RoundNum directly to the code in any JavaScript Object in your script. Work through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark19)(on page [16](#_bookmark18)).
+Add RoundNum directly to the code in any JavaScript Object in your script. Work through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
 
 For example, if there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the script (InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
 
@@ -1481,5 +1481,5 @@ For example:
 ### VCUniqueID()
 This returns a unique identification string for the current Virtual Client instance.
 
-VCUniqueID() provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to [*ClientNum* ](#_bookmark56)(on page [59](#_bookmark55)), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.
+VCUniqueID() provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to [*ClientNum* ](#clientnum), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.
 

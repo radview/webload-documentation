@@ -14,7 +14,7 @@ Nagios integration is carried out by adding the Nagios data source in the Perfor
 
 **To instruct PMM to collect data from Nagios:**
 
-1. Run the Performance Measurements Manager wizard, as described in [Opening the](#_bookmark459)[ Performance Measurements Manager ](#_bookmark459)(on page [364](#_bookmark459)).
+1. Run the Performance Measurements Manager wizard, as described in [Opening the Performance Measurements Manager ](performance_measurements_manager.md#opening-the-performance-measurements-manager).
 1. In the Selecting a Data Source screen, select **External** > **Nagios**.
 
 
@@ -63,7 +63,7 @@ Nagios integration is carried out by adding the Nagios data source in the Perfor
 
 After integrating WebLOAD with Nagios, you can specify, while running a session, which Nagios statistics to view in the report view.
 
-1. Open a report as described in [*Opening Reports* ](#_bookmark342)(on page [298](#_bookmark342)).
+1. Open a report as described in [*Opening Reports* ](console_performance_reports.md#opening-reports).
 1. In the **PM@<Nagios-host>** node, select the statistics you wish to display in the report.
 
 

@@ -19,10 +19,6 @@ Access the export / import options through the Reports menu in the menu bar. The
 |Export All|Exports all of the statistical data gathered by WebLOAD Console throughout the test session.|
 |Import External Statistics|Imports statistical data from an external file into your report.|
 
-For information on importing external statistics, see [*Importing External Statistics* ](#_bookmark490)on page [407.](#_bookmark490)
-
-
-
 
 
 
@@ -79,7 +75,7 @@ Features of this report:
 
 
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency and the delimiters of your exported report.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency and the delimiters of your exported report.
 
 
 
@@ -92,7 +88,7 @@ See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)
 1. Enter the name of your new Tab file. The file has a \*.tab extension.
 1. Click **Save**.
 
-   Once the file is saved, it is displayed. Configure the viewer and the view options using the Export options dialog box, see [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)).
+   Once the file is saved, it is displayed. Configure the viewer and the view options using the Export options dialog box, see [*Customizing the Export File* ](#customizing-the-export-file).
 
 This image shows an Integrated Report after it is exported to a Tab file and opened in Microsoft Word (using tab as a delimiter). You can change the presentation of this file using the Export options dialog box.
 
@@ -106,7 +102,7 @@ Features of this Report:
 - The top row contains of the name of each measurement in the following format: Script / Measurement / Attribute.
 - Integrated Reports displayed in Chart View is exported to Tab files in tabular format.
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
 
 
 
@@ -129,7 +125,7 @@ Features of this Report:
 - The top row contains of the name of each measurement in the following format: Script / Measurement / Attribute.
 - Integrated Reports displayed in Chart View is exported to HTML in tabular format.
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
 
 
 
@@ -162,7 +158,7 @@ Features of this report:
 
 
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency and the delimiters of your exported table.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency and the delimiters of your exported table.
 
 
 
@@ -183,7 +179,7 @@ Change the presentation of this file using the Export options dialog box.
 - The left column contains the times (in seconds) that the measurement values were recorded.
 - The top row contains the name of each measurement in the following format: Script / Measurement / Attribute.
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
 
 ### Exporting All Statistics to HTML
 
@@ -193,7 +189,7 @@ See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)
 - The left column contains the times (in seconds) that the measurement values were recorded.
 - The top row contains the name of each measurement in the following format: Script / Measurement / Attribute.
 
-See [*Customizing the Export File* ](#_bookmark453)(on page [360](#_bookmark454)), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
+See [*Customizing the Export File* ](#customizing-the-export-file), for information on configuring the sampling frequency, the delimiters of your exported table, the viewer, and the view options.
 
 
 

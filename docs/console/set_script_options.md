@@ -75,23 +75,23 @@ The three option modification modes are:
 
 ## Modifying Script Options
 
-The Options dialog boxes are identical for all three modes, although they are activated differently, as described in [*About Script Options* ](#_bookmark225)(on page [211](#_bookmark224)).
+The Options dialog boxes are identical for all three modes, although they are activated differently, as described in [*About Script Options* ](#about-script-options).
 
 The Options dialog boxes include the following tabs:
 
-- SSL tab (see [*Setting the SSL Options* ](#_bookmark227)on page [213](#_bookmark227))
-- Sleep Time Control tab (see [*Setting Sleep Time Playback Settings* ](#_bookmark230)on page [215](#_bookmark230))
-- Terminate Round (see [*Configuring Round Termination Settings* ](#_bookmark231)on page [217](#_bookmark231))
-- Browser Cache tab (see [*Setting the Browser Cache* ](#_bookmark232)on page [219](#_bookmark232))
-- Browser Parameters tab (see [*Configuring Browser Parameter Settings* ](#_bookmark234)on page [221](#_bookmark234))
-- HTTP Parameters tab (see [*Setting the HTTP Parameters* ](#_bookmark248)on page [229](#_bookmark248))
-- Authentication tab (see [*Setting Authentication* ](#_bookmark250)on page [232](#_bookmark250))
-- Connection tab (see [*Connection Speed Settings* ](#_bookmark251)on page [234](#_bookmark251))
-- Diagnostic tab (see [*Diagnostic Settings* ](#_bookmark257)on page [240](#_bookmark257))
-- Functional Testing tab (see [*Functional Testing Options* ](#_bookmark265)on page [245](#_bookmark265))
-- Pass / Fail Definition tab (see [*Pass / Fail Definition Settings* ](#_bookmark269)on page [249](#_bookmark269)) (only edited through the Default and Current Session Options dialog boxes)
-- Reset Mechanism tab (see [*Configuring Reset Mechanism Settings* ](#_bookmark271)on page [250](#_bookmark271)) (only edited through the Default and Current Session Options dialog boxes)
-- Java Options tab (see [*Configuring the Java Options* ](#_bookmark273)on page [252](#_bookmark273)) (only edited through the Default and Current Session Options dialog boxes)
+- SSL tab (see [*Setting the SSL Options* ](#setting-the-ssl-options)
+- Sleep Time Control tab (see [*Setting Sleep Time Playback Settings* ](#setting-sleep-time-playback-settings)
+- Terminate Round (see [*Configuring Round Termination Settings* ](#configuring-round-termination-settings)
+- Browser Cache tab (see [*Setting the Browser Cache* ](#setting-the-browser-cache)
+- Browser Parameters tab (see [*Configuring Browser Parameter Settings* ](#configuring-browser-parameter-settings)
+- HTTP Parameters tab (see [*Setting the HTTP Parameters* ](#setting-the-http-parameters)
+- Authentication tab (see [*Setting Authentication* ](#setting-authentication)
+- Connection tab (see [*Connection Speed Settings* ](#setting-the-browser-type-and-version)
+- Diagnostic tab (see [*Diagnostic Settings* ](#diagnostic-settings)
+- Functional Testing tab (see [*Functional Testing Options* ](#functional-testing-options)
+- Pass / Fail Definition tab (see [*Pass / Fail Definition Settings* ](#about-script-options) (only edited through the Default and Current Session Options dialog boxes)
+- Reset Mechanism tab (see [*Configuring Reset Mechanism Settings* ](#configuring-reset-mechanism-settings) (only edited through the Default and Current Session Options dialog boxes)
+- Java Options tab (see [*Configuring the Java Options* ](#configuring-the-java-options) (only edited through the Default and Current Session Options dialog boxes)
 
 **To modify script or session configuration options:**
 
@@ -299,7 +299,7 @@ The browser type and version settings specify the type of browser the WebLOAD Vi
 
 
 
-4. You can select an alternative version from the drop-down list, or click the Browse button ![ref23] to add a new user agent definition. See [*Adding a Browser* Version](#_bookmark239)[ Definitions ](#_bookmark239)(on page [223](#_bookmark236)).
+4. You can select an alternative version from the drop-down list, or click the Browse button to add a new user agent definition. See [Adding a Browser Version Definitions ](#adding-a-browser-version-definitions).
 
 
 
@@ -311,8 +311,8 @@ The available browser version list is appropriate for the browser type you selec
 
 **To add a browser version:**
 
-1. Select **Custom** in the **Select the browser type** drop-down list within the **Browser Type** area of the Browser Parameters tab (see [Figure 132](#_bookmark238)).
-1. Click the browse button ![ref23] adjacent to **Select the version**. The User Agent dialog box appears.
+1. Select **Custom** in the **Select the browser type** drop-down list within the **Browser Type** area of the Browser Parameters tab.
+1. Click the browse button adjacent to **Select the version**. The User Agent dialog box appears.
 
 ![User Agent Dialog Box](../images/console_users_guide_1097.jpeg)
 
@@ -582,7 +582,7 @@ WebLOAD Console enables you to simulate various systems and connection configura
 
 6. Check the **Use network emulation** option if you wish to view and control the emulation settings (download/upload bandwidth, delay, and packet loss) that are used to emulate each of the selections you make in the **Load Generator Bandwidth** and **Probing Client Bandwidth** fields.
 
-7. You can click any of the emulation settings to manually set it to a custom value, as shown in [Figure 144.](#_bookmark253)
+7. You can click any of the emulation settings to manually set it to a custom value:
 
    ![Current Session Options Connection Tab – Manual Editing](../images/console_users_guide_1109.png)
 
@@ -910,7 +910,7 @@ Setting automatic data collection instructs WebLOAD Console to handle every page
 ### Setting Page Time Verifications
 Setting page time verifications enables you to define a limit to the maximum amount of time a page should take to load. If the maximum time is exceeded, a message or error entry appears in the log window, depending on the severity level set for page time verifications.
 
-> **Note:** You cannot set page time verifications unless automatic data collection is active. See [*Setting Automatic Data Collection* ](#_bookmark266)on page [246.](#_bookmark266)
+> **Note:** You cannot set page time verifications unless automatic data collection is active. See [*Setting Automatic Data Collection* ](#setting-automatic-data-collection)
 
 **To set page time verification:**
 
@@ -968,7 +968,7 @@ Use Text verifications to verify the absence or presence of selected text expres
 
      For example, to ensure that the word “error” does not appear on the page during runtime, enter the word “error” in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
 
-8. Select the severity level from the Severity level drop-down list. For further information, see [*Verification Function Return Values](#_bookmark285)* (on page [261](#_bookmark284)).
+8. Select the severity level from the Severity level drop-down list. For further information, see [*Verification Function Return Values](#functional-testing-options).
 
 9. Click **Add** to add another string to the list of Text Search strings,
 

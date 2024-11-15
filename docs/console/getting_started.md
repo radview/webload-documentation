@@ -388,7 +388,7 @@ WebLOAD can only run a test when the hosts participating in the test session are
 
 **To test your connection:**
 
-1. Ping the host to test its physical connection to the network. This is described in [*Managing the Communication Between the Systems in your Load Session* ](#_bookmark22)(on page [24](#_bookmark22)). If the host is not connected properly to the network, connect it and rerun WebLOAD.
+1. Ping the host to test its physical connection to the network. This is described in [*Managing the Communication Between the Systems in your Load Session* ](#managing-the-communication-between-the-systems-in-your-load-session). If the host is not connected properly to the network, connect it and rerun WebLOAD.
 1. If the ping is acknowledged, verify that TestTalk is running on the host. This is done by checking the actual host to verify that the TestTalk program is functioning. If TestTalk is not running, open TestTalk by selecting **Start** > **Programs** > **RadView** **WebLOAD** > **TestTalk** and retry the program.
 
    TestTalk runs in the background. Error messages are displayed on the program window. Check this window for any error messages that may explain the problem.
@@ -441,9 +441,9 @@ On occasion, you may have trouble with a WebLOAD host. Refer to the following ta
 
 |**Problem**|**Solution**|
 | :- | :- |
-|<p>At the beginning of a test session, the host prompts:</p><p>All hosts are stopped.</p><p>This indicates that none of the hosts are accessible and the Domain Name Server (DNS) cannot recognize a host name.</p>|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#_bookmark24)(on page [26](#_bookmark24)).</p>|
-|<p>At the beginning of a test session, a host prompts:</p><p>Load Session Setup –timed out, not completed.</p><p>This indicates that at least one host is not accessible and the Domain Name Service (DNS) cannot recognize a host name.</p>|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#_bookmark24)(on page [26](#_bookmark24)).</p>|
-|Your system starts, but the test session times out during operation.|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#_bookmark24)(on page [26](#_bookmark24)).</p><p>Check the names of the computers in the TestTalk Help menu, under Net Configuration. Verify that there is complete consistency between the names of the computers and the names used in WebLOAD.</p>|
+|<p>At the beginning of a test session, the host prompts:</p><p>All hosts are stopped.</p><p>This indicates that none of the hosts are accessible and the Domain Name Server (DNS) cannot recognize a host name.</p>|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#testing-your-connection).</p>|
+|<p>At the beginning of a test session, a host prompts:</p><p>Load Session Setup –timed out, not completed.</p><p>This indicates that at least one host is not accessible and the Domain Name Service (DNS) cannot recognize a host name.</p>|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#testing-your-connection).</p>|
+|Your system starts, but the test session times out during operation.|<p>Test your connection, as described in</p><p>[*Testing Your Connection* ](#testing-your-connection).</p><p>Check the names of the computers in the TestTalk Help menu, under Net Configuration. Verify that there is complete consistency between the names of the computers and the names used in WebLOAD.</p>|
 |WebLOAD reports unexpected results from a test.|Access the System Under Test (SUT). If you have a good connection, the test results are accurate.|
 |<p>The system issues the message:</p><p>Error loading script…</p>|The Console must specify the complete path of the script that is used by the remote host. For example, if the script is on a shared disk, the name of the disk in the path specified by the Console, must be the same name used by the remote host.|
 

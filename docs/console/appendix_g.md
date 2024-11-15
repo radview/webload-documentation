@@ -10,7 +10,7 @@
 |**Send Time**|<p>The time it takes the Virtual Client to write an HTTP request to the SUT, in seconds.</p><p>The value posted in the Current Value column is the average time it took the Virtual Clients to write a request to the SUT during the last reporting interval.</p>|
 |**Server Performance Measurements**|<p>If you selected Performance Monitor statistics for the report, WebLOAD creates a row for them and reports their values in the Statistics Report.</p><p>For definitions of the statistics, see the Server Monitor Definition dialog box.</p><p>Be selective when choosing server performance measurements , otherwise the system resources required to manage the data might affect the Console.</p>|
 |**Session Tree**|A graphic representation of a Load Template and status. It illustrates the different components of a test session, including Load Machines and Probing Clients, the scripts that they execute, and their status.|
-|**Single Client**|See [*Probing Client*.](#_bookmark528)|
+|**Single Client**|See Probing Client|
 |**Standard Deviation**|The average amount the measurement varies from the average since the beginning of the test.|
 |**Successful Connections**|<p>The total number of times the Virtual Clients were able to successfully connect to the SUT during the last reporting interval.</p><p>This number is always less than or equal to the number of successful hits because several hits might use the same HTTP connection if the Persistent Connection option is enabled.</p>|
 |**Successful Hits**|The total number of times the Virtual Clients made an HTTP request and received the correct HTTP response from the SUT during the last reporting interval. Each request for each gif, jpeg, html file, etc., is a single hit.|
@@ -19,11 +19,11 @@
 |**Successful Rounds**|The total number of times the Virtual Clients completed one iteration of the script during the last reporting interval.|
 |**Successful Rounds Per Second**|<p>The number of times the Virtual Clients completed an entire iteration of the script, divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of successful iterations of the script per second during the last reporting interval.</p>|
 |<a name="_bookmark530"></a>**SUT**|The system running the Web application currently under test. The SUT (System Under Test) is accessed by clients through its URL address. The SUT can reside on any machine or on multiple machines, anywhere on the global Internet or your local intranet.|
-|**Template**|See [*Load Template*.](#_bookmark526)|
+|**Template**|See Load Template|
 |<a name="_bookmark531"></a>**Templates Gallery**|The Templates Gallery is a single entity that contains predefined templates, user-defined templates, and portfolios.|
-|**Test Program**|See [*Test Script*.](#_bookmark532)|
+|**Test Program**|See Test Script|
 |<a name="_bookmark532"></a>**Test Script**|The script. This defines the test scenario used in your Load Session. Scripts are written in JavaScript.|
-|**Test Template**|See [*Load Template*.](#_bookmark526)|
+|**Test Template**|See Load Template|
 |**TestTalk**|The network agent. This program enables communication between the Console and the host computers participating in the test.|
 |**Throttle Control**|A WebLOAD component that enables you to dynamically change the Load Size while a test session is in progress.|
 |**Throughput (Bytes Per Second)**|The average number of bytes per second transmitted from the SUT to the Virtual Clients running the script during the last reporting interval. In other words, this is the amount of the Response Data Size, divided by the number of seconds in the reporting interval.|
@@ -35,12 +35,12 @@
 |**User-defined Transactions timers**|<p>A timer for user-defined transaction functions. If there is a user-defined transaction function in the script that you are running, WebLOAD reports a timer for it in the Statistics Report.</p><p>The row heading is the name (argument) of the user- defined transaction. That is, the row heading is the string in parenthesis in the BeginTransaction() function call.</p><p>The timer represents the average time it took to complete all the actions between the BeginTransaction() call and its corresponding EndTransaction() call, in seconds, during the last reporting interval.</p>|
 |**Virtual Client**|<p>Artificial entities run by Load Generators. Each such entity is a perfect simulation of a real client accessing the System Under Test (SUT) through a Web browser.</p><p>Virtual Clients generate HTTP calls that access the SUT. The Load Generators that run Virtual Clients can reside anywhere on the Internet or on your local intranet.</p><p>Scripts are executed by all the Virtual Clients in parallel, achieving simultaneous access to the SUT. The size of the load on your SUT is determined by the number of Virtual Clients being generated. You may define as many Virtual Clients as needed, up to the maximum supported by your WebLOAD “package.”</p>|
 |**WebLOAD Analytics**|WebLOAD Analytics enables you to analyze data, and create custom, informative reports after running a WebLOAD test session.|
-|**WebLOAD Console**|See [*Console*.](#_bookmark522)|
+|**WebLOAD Console**|See Console|
 |**WebLOAD Recorder**|An easy-to-use tool for recording, creating, and authoring protocol scripts for the WebLOAD environment.|
-|**WebLOAD Load Template**|See [*Load Template*.](#_bookmark526)|
-|**WebLOAD Session**|See [*Load Session*.](#_bookmark525)|
+|**WebLOAD Load Template**|See Load Template|
+|**WebLOAD Session**|See Load Session|
 |**WebLOAD Wizard**|A WebLOAD Wizard that steps you through the configuration process. Each screen of the WebLOAD Wizard contains text explaining the configuration process. The WebLOAD Wizard enables you to create a basic Load Template. After using the demo, you can use the Console menus to add functionality not available through the WebLOAD Wizard.|
-|**WebRM**|See [*Resource Manager*.](#_bookmark529)|
+|**WebRM**|See Resource Manager|
 
 
 

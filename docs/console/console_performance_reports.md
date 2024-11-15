@@ -41,7 +41,7 @@ The WebLOAD Dashboard displays real-time statistical information about the test 
 
 ## Viewing Test Results on the WebLOAD Transactions Dashboard
 
-The WebLOAD Transactions Dashboard displays real-time statistical information about the transactions in a test session, in a line graph. Separate lines track each transaction. For additional information about graphs, see [*Viewing Integrated Reports* ](#_bookmark361)(on page [310](#_bookmark361)).
+The WebLOAD Transactions Dashboard displays real-time statistical information about the transactions in a test session, in a line graph. Separate lines track each transaction. For additional information about graphs, see [*Viewing Integrated Reports* ](#viewing-integrated-reports).
 
 ![WebLOAD Transactions Dashboard Table 43: Test Session Information Categories](../images/console_users_guide_2036.jpeg)
 
@@ -59,7 +59,7 @@ The WebLOAD Transactions Dashboard displays real-time statistical information ab
 |Total Successful Count|The number of successful transactions.|
 |Successful TPS|The number of successful transactions per second.|
 |Stdev|The average amount this statistic varies from the average number in this script.|
-|Scale|The scale of the graph’s Y-Axis. For information about changing the Scale value, see [*Changing the Scale of a Report for a Selected](#_bookmark362) *[Measurement* ](#_bookmark362)*(on page [312](#_bookmark362)).|
+|Scale|The scale of the graph’s Y-Axis. For information about changing the Scale value, see [Changing the Scale of a Report for a Selected Measurement](#changing-the-scale-of-a-report-for-a-selected-measurement).|
 
 **To open the Transactions Dashboard:**
 
@@ -93,7 +93,7 @@ Report tree branches include:
 - **ScriptName@LoadGenerator** ‒ Data collected for all instances of the named script, running under the named Load Generator. Multiple branches may appear for a single script name, each one linked to a different Load Generator.
 - **ScriptName: Total** ‒ Data collected for all instances of the named script, running under all Load Generators participating in this test session.
 - **\_Performance@LoadGenerator** – Data collected for assessing Load Generator performance during this test session.
-- **SLA** – Data collected for all SLA rules defined in the SLA Manager (see [*The SLA](#_bookmark220)[ Manager* ](#_bookmark220)on page [204](#_bookmark220)).
+- **SLA** – Data collected for all SLA rules defined in the [SLA Manager](set_global_opt.md#accessing-the-sla-manager).
 
 Using the Report dialog box you can:
 
@@ -109,12 +109,12 @@ The following table describes the buttons in the Report dialog box.
 
 |**Button**|**Functionality**|
 | :- | :- |
-|Import|<p>Imports a report configuration for the selected component in the configuration tree, from a previously saved Load Template. See [*Importing a Report Configuration for a Selected](#_bookmark356) *[Component* ](#_bookmark356)*(on page [306](#_bookmark354)).</p><p>**Note:** Select an upper level component in the configuration tree to enable this button.</p>|
-|Import All|Imports a report configuration from a previously saved Load Template, see [*Importing a Complete Report Configuration* ](#_bookmark355)(on page [306](#_bookmark354)).|
+|Import|<p>Imports a report configuration for the selected component in the configuration tree, from a previously saved Load Template. See [Importing a Report Configuration for a Selected Component](#importing-a-report-configuration-for-a-selected-component).</p><p>**Note:** Select an upper level component in the configuration tree to enable this button.</p>|
+|Import All|Imports a report configuration from a previously saved Load Template, see [Importing a Complete Report Configuration](#importing-a-complete-report-configuration).|
 |Set as Defaults|<p>Sets the current Integrated Report configuration as the default. This overrides the built-in default configuration.</p><p>**Note:** Select an upper level component in the configuration tree to enable this button.</p>|
 |Apply Defaults|<p>Apples the default configuration. The defaults are set using the **Set as Default** option. Selecting this option configures the Integrated Reports to the defaults.</p><p>**Note:** Select an upper level component in the configuration tree to enable this button.</p>|
 |*Regression Testing*||
-|Add Session|Imports performance data from a previously saved (existing) Load Session, see [*Importing Report Parameters from a Saved](#_bookmark353) *[Load Template* ](#_bookmark353)*(on page [306](#_bookmark354)).|
+|Add Session|Imports performance data from a previously saved (existing) Load Session, see [Importing Report Parameters from a Saved](#importing-report-parameters-from-a-saved-load-template).|
 |Remove Session|<p>Removes the selected Load Session from the performance data available for display in the report.</p><p>**Note:** Select an upper level component in the configuration tree to enable this button.</p>|
 |OK|Confirms the selections made in this dialog box. The selected items are included in the Integrated Report.|
 |Cancel|Closes this dialog box without accepting changes.|
@@ -189,7 +189,7 @@ You can assign a meaningful name to a report. The default name for reports is �
 
 ## **Configuring an Integrated Report**
 
-You can configure an Integrated Report while the test is running. To view data from the WebLOAD Performance Monitor in your Integrated Report, see [*Performance](#_bookmark456) *[Measurements Manager* ](#_bookmark456)*(on page [363](#_bookmark455)).
+You can configure an Integrated Report while the test is running. To view data from the WebLOAD Performance Monitor in your Integrated Report, see [*Performance Measurements Manager](performance_measurements_manager.md).
 
 **To configure an integrated report:**
 
@@ -318,7 +318,7 @@ You can configure a report that displays a summary of Load Generator performance
 - Load Generator CPU usage - CPU usage of the Load Generator process
 - Server Latency
 
-In addition, if the [*Show Performance Warnings* ](#_bookmark263)option is selected in the **Diagnostics** tab of the **Default/Current Session Options** or **Script Options**, WebLOAD automatically sends warning messages when Load Generators are getting overloaded, so you know how to better utilize the Load Generators in your current and future tests.
+In addition, if the [*Show Performance Warnings* ](set_script_options.md#enabling-show-performance-warnings)option is selected in the **Diagnostics** tab of the **Default/Current Session Options** or **Script Options**, WebLOAD automatically sends warning messages when Load Generators are getting overloaded, so you know how to better utilize the Load Generators in your current and future tests.
 
 
 
@@ -360,7 +360,7 @@ Combining performance results from several different Load Sessions into a single
 
 1. In the Reports dialog box, click **Add Session**. The Open dialog box appears.
 1. Select the Load Session ( \*.ls) file to add and click **Open**. The Load Session is added to the Report dialog box.
-1. Configure the Integrated Report to include the measurements you want to view, see [*Configuring an Integrated Report* ](#_bookmark349)(on page [303](#_bookmark347)). If a measurement is already selected in the current Load Session it is automatically selected in the Load Session selected to be included in the report.
+1. Configure the Integrated Report to include the measurements you want to view, see [*Configuring an Integrated Report* ](#configuring-an-integrated-report). If a measurement is already selected in the current Load Session it is automatically selected in the Load Session selected to be included in the report.
 1. Click **OK**.
 
    The report displays in the Console Results window.
@@ -439,7 +439,7 @@ The report above shows an Integrated Report that includes four measurements. Eac
 
 Each measurement displayed in the Integrated Reports has its own expression or value of measurement. For example, Timer results are measured in seconds. CPU is measured in terms of percentage of usage. Throughput is measured in kilobytes per second. All measurements appear as a percentage relative to the defined scale.
 
-To change the scale value of a measurement, see [*Changing the Scale of a Report for a](#_bookmark362) *[Selected Measurement* ](#_bookmark362)*(on page [312](#_bookmark363)). When you change the maximum value, WebLOAD Console displays the relative value of that measurement rather than the true value of a measurement.
+To change the scale value of a measurement, see [*Changing the Scale of a Report for a Selected Measurement](#changing-the-scale-of-a-report-for-a-selected-measurement). When you change the maximum value, WebLOAD Console displays the relative value of that measurement rather than the true value of a measurement.
 
 **To view a measurement’s value:**
 

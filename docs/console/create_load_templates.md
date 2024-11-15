@@ -17,14 +17,14 @@ WebLOAD Console provides three options for creating Load Templates:
 
 The Load Template material is divided into the following chapters:
 
-- [*Planning a Test Session* ](#_bookmark75)(on page [79](#_bookmark76)) describes the stages involved in planning and executing a test session.
-- [*Connecting to WebRM* ](#_bookmark83)(on page [87](#_bookmark83)) describes the process of connecting to WebRM and requesting testing resources.
-- [*Managing Load Templates and Load Sessions* ](#_bookmark87)(on page [91](#_bookmark88)) provides information about working with Load Templates and Load Sessions.
-- [*Creating Load Templates with the WebLOAD Wizard* ](#_bookmark99)(on page [99](#_bookmark100)) guides you through a basic template configuration using the WebLOAD Wizard.
+- [*Planning a Test Session* ](plan_test_session.md) describes the stages involved in planning and executing a test session.
+- [*Connecting to WebRM* ](connect_webrm.md) describes the process of connecting to WebRM and requesting testing resources.
+- [*Managing Load Templates and Load Sessions* ](manage_load_templates_sessions.md) provides information about working with Load Templates and Load Sessions.
+- [*Creating Load Templates with the WebLOAD Wizard* ](create_template_wizard.md) guides you through a basic template configuration using the WebLOAD Wizard.
 
 
-- [*Creating Load Templates with Goal-Oriented Test* ](#_bookmark146)(on page [135](#_bookmark147)*)* teaches you to configure a goal-seeking performance test.
-- [*Configuring a Load Template Manually* ](#_bookmark187)(on page [165](#_bookmark188)) provides instructions for configuring a test template manually.
+- [*Creating Load Templates with Goal-Oriented Test* ](create_load_test_goal.md) teaches you to configure a goal-seeking performance test.
+- [*Configuring a Load Template Manually* ](config_load_template.md) provides instructions for configuring a test template manually.
 
 After completing these chapters, you will have the basic skills necessary to create and run your own test.
 

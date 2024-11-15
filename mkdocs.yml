@@ -1,5 +1,5 @@
-site_name: WebLOAD Documentation
-site_description: Product documentation for RadView WebLOAD
+site_name: RADView Documentation
+site_description: The latest product documentation for RADView.
 
 
 theme:
@@ -12,34 +12,24 @@ theme:
 
 nav:
   - Home: index.md
+  - Installation: installation.md 
   - Quick Start: quickstart.md
-  - Recorder:
-    - Introduction: recorder/introduction.md
-    - Overview: recorder/overview.md
-    - Before you Begin: recorder/before_you_begin.md
-    - QuickStart: recorder/quick_start.md
-    - Recording Scripts: recorder/recording_scripts.md
-    - Editing Scripts: recorder/editing_scripts.md
-    - Correlating Scripts: recorder/correlating_scripts.md
-    - Running and Debugging Scripts: recorder/running_debugging_scripts.md
-    - Working with GIT: recorder/working_with_git.md
-    - Configuring the WebLOAD Recorder Options: recorder/configuring_recorder_options.md
-    - Appendix A - The WebLOAD Recorder Toolbox Set: recorder/appendix_a.md
-    - Appendix B - WebLOAD Recorder File Types: recorder/appendix_b.md
-    - Appendix C - Launching WebLOAD Recorder: recorder/appendix_c.md
-    - Appendix D - Converting Certificate Files: recorder/appendix_d.md
-    - Appendix E - Recording Mobile Applications: recorder/appendix_e.md
-    - Appendix F - Integrating with Perfecto Mobile: recorder/appendix_f.md
-    - Appendix G - Selenium Integration: recorder/appendix_g.md
-    - Appendix H - Glossary: recorder/appendix_h.md
-  - Scripting:
-    - Introduction: scripting/introduction.md
-    - Programming your JavaScript Script: scripting/programming_your_javascript.md
-    - Advanced JavaScript Script Features: scripting/advanced_javascript_features.md
-    - Working with HTTP Protocol: scripting/working_with_http.md
-    - Using Asynchronous Requests: scripting/using_asynchronous.md
-    - Appendix A - Scripting Samples: scripting/appendix_a.md
-    - Appendix B - LiveConnect Overview: scripting/appendix_b.md
+  - Analytics:
+    - Introduction: analytics/introduction.md
+    - WebLOAD Analytics System Overview: analytics/overview.md
+    - Getting Started: analytics/getting_started.md
+    - Generating Charts: analytics/generating_charts.md
+    - Changing Chart Settings: analytics/changing_chart_settings.md
+    - Generating Reports: analytics/generating_reports.md
+    - Working with Load Sessions: analytics/load_sessions.md
+    - Working with Templates: analytics/templates.md
+    - Working with Portfolios: analytics/portfolios.md
+    - Defining Your Preferences: analytics/defining_preferences.md
+    - Appendix A. WebLOAD Analytics File System Structure: analytics/appendix_a.md
+    - Appendix B. Understanding the Statistics: analytics/appendix_b.md
+    - Appendix C. Running Analytics in Command Line Mode: analytics/appendix_c.md
+    - Appendix D. Understanding the Templates: analytics/appendix_d.md
+    - Appendix E. Glossary: analytics/glossary.md
   - Console:
     - Introduction: console/introduction.md
     - Introducing WebLOAD: console/introducing_webload.md
@@ -87,6 +77,33 @@ nav:
     - Managing Load Generators: dashboard/managing_load_generators.md
     - Managing Organizations, Users, and Admins: dashboard/managing_organizations.md
     - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard/appendix_a.md
+  - Recorder:
+    - Introduction: recorder/introduction.md
+    - Overview: recorder/overview.md
+    - Before you Begin: recorder/before_you_begin.md
+    - QuickStart: recorder/quick_start.md
+    - Recording Scripts: recorder/recording_scripts.md
+    - Editing Scripts: recorder/editing_scripts.md
+    - Correlating Scripts: recorder/correlating_scripts.md
+    - Running and Debugging Scripts: recorder/running_debugging_scripts.md
+    - Working with GIT: recorder/working_with_git.md
+    - Configuring the WebLOAD Recorder Options: recorder/configuring_recorder_options.md
+    - Appendix A - The WebLOAD Recorder Toolbox Set: recorder/appendix_a.md
+    - Appendix B - WebLOAD Recorder File Types: recorder/appendix_b.md
+    - Appendix C - Launching WebLOAD Recorder: recorder/appendix_c.md
+    - Appendix D - Converting Certificate Files: recorder/appendix_d.md
+    - Appendix E - Recording Mobile Applications: recorder/appendix_e.md
+    - Appendix F - Integrating with Perfecto Mobile: recorder/appendix_f.md
+    - Appendix G - Selenium Integration: recorder/appendix_g.md
+    - Appendix H - Glossary: recorder/appendix_h.md
+  - Scripting:
+    - Introduction: scripting/introduction.md
+    - Programming your JavaScript Script: scripting/programming_your_javascript.md
+    - Advanced JavaScript Script Features: scripting/advanced_javascript_features.md
+    - Working with HTTP Protocol: scripting/working_with_http.md
+    - Using Asynchronous Requests: scripting/using_asynchronous.md
+    - Appendix A - Scripting Samples: scripting/appendix_a.md
+    - Appendix B - LiveConnect Overview: scripting/appendix_b.md
   - Automation:
     - Introduction: automation/introduction.md
     - Overview: automation/overview.md
@@ -106,23 +123,6 @@ nav:
     - Appendix C - HTTP Protocol Status Messages: javascript/appendix_c.md
     - Appendix D - WebLOAD-supported Character Sets: javascript/appendix_d.md
     - Appendix E - Glossary: javascript/appendix_e.md   
-  - Analytics:
-    - Introduction: analytics/introduction.md
-    - WebLOAD Analytics System Overview: analytics/overview.md
-    - Getting Started: analytics/getting_started.md
-    - Generating Charts: analytics/generating_charts.md
-    - Changing Chart Settings: analytics/changing_chart_settings.md
-    - Generating Reports: analytics/generating_reports.md
-    - Working with Load Sessions: analytics/load_sessions.md
-    - Working with Templates: analytics/templates.md
-    - Working with Portfolios: analytics/portfolios.md
-    - Defining Your Preferences: analytics/defining_preferences.md
-    - Appendix A. WebLOAD Analytics File System Structure: analytics/appendix_a.md
-    - Appendix B. Understanding the Statistics: analytics/appendix_b.md
-    - Appendix C. Running Analytics in Command Line Mode: analytics/appendix_c.md
-    - Appendix D. Understanding the Templates: analytics/appendix_d.md
-    - Appendix E. Glossary: analytics/glossary.md
-  - Installation: installation.md 
         
     
 

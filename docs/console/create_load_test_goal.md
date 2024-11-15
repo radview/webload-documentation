@@ -63,14 +63,14 @@ WebLOAD Console supports two types of scripts:
 1. Select **Single Script**.
 2. Click **Next**.
 
-   WebLOAD Console progresses to the Script Selection screen. See [*Running Single](#_bookmark153) *[Scripts* ](#_bookmark153)*(on page [140](#_bookmark154)).
+   WebLOAD Console progresses to the Script Selection screen. See [*Running Single Scripts* ](#running-single-scripts).
 
 **To run a Mix of Scripts:**
 
 1. Select **Mix**.
 2. Click **Next**.
 
-   WebLOAD Console progresses to the Mix Selection screen. See [*Running a Mix of](#_bookmark155) *[Scripts* ](#_bookmark155)*(on page [141](#_bookmark156)).
+   WebLOAD Console progresses to the Mix Selection screen. See [*Running a Mix of Scripts* ](#running-a-mix-of-scripts).
 
 ## Running Single Scripts
 
@@ -84,12 +84,12 @@ You must have a script to continue configuring a test with the Goal-Oriented Tes
 2. To optionally open and view or edit the selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
 3. To optionally configure runtime options exclusive to this script, click **Options**.
 
-   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting Script](#_bookmark223)[ Options* ](#_bookmark223)(on page [211](#_bookmark224)).
+   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting Script Options* ](set_script_options.md).
 4. Click **Next**.
 
    The Goal-Oriented Test Wizard progresses to the PMM Settings screen. See
 
-   [*Selecting Performance Measurements* ](#_bookmark161)(on page [145](#_bookmark161)).
+   [*Selecting Performance Measurements* ](console_performance_reports.md).
 
 ## Running a Mix of Scripts
 
@@ -113,7 +113,7 @@ Combining scripts through a Mix can simulate different groups of users performin
    - Select **Create a Mix** to configure a new Mix.
 2. Click **Next**.
 
-   WebLOAD Console progresses to the Mix Definition dialog box. See [*Defining a Mix*](#_bookmark158)(on page [142](#_bookmark157)).
+   WebLOAD Console progresses to the Mix Definition dialog box. See [*Defining a Mix*](#defining-a-mix).
 
 ### Defining a Mix
 
@@ -138,22 +138,22 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
    1. **Script name** – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.
    2. **Weight** – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.
-   3. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button ![ref9] to edit the user agent definition. See [*Adding a Browser* Version Definitions ](#_bookmark239)(on page [223](#_bookmark236)).
+   3. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button ![ref9] to edit the user agent definition. 
    4. **Bandwidth** – Specify a bandwidth. You can do this in one of two ways:
       - Select a bandwidth from the drop-down list.
       - Enter a number, to specify that number of bits per second.
    5. **Max Connections** – Specify the number of max connections for the load generator.
 6. Optionally, click **Options** to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.
 
-   The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](#_bookmark223)(on page [211](#_bookmark224)).
-7. Repeat steps [3 ](#_bookmark159)through [6 ](#_bookmark160)to add additional scripts to the Mix.
+   The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](set_script_options.md).
+7. Repeat steps [3 ] through [6 ] to add additional scripts to the Mix.
 8. In the Weight box, type or select the relative weight for the Script. Click **Make Equal** to assign equal weight to all of the Scripts in the Mix.
 9. Click **Save**.
 
    The Mix configuration is saved with the extension \*.mix.
 10. Click **Next**.
 
-    WebLOAD Console progresses to the PMM Settings screen. See [*Selecting](#_bookmark161) *[Performance Measurements* ](#_bookmark161)*(on page [145](#_bookmark161)).
+    WebLOAD Console progresses to the PMM Settings screen. See [*Selecting Performance Measurements* ](#selecting-performance-measurements).
 
 #### Deleting a script from a Mix
 
@@ -179,12 +179,12 @@ You can optionally open the Performance Measurements Manager and configure WebLO
 
 1. Click **Add Monitors** to the Performance Measurements Manager and configure the performance statistics to monitor and display in real-time during the test.
 
-   The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](#_bookmark456)(on page [363](#_bookmark455)).
+   The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](performance_measurements_manager.md).
 2. Click **Next**.
 
    The Goal-Oriented Test Wizard progresses to the Host Selection screen. See
 
-   [*Selecting Host Computers* ](#_bookmark162)(on page [146](#_bookmark163)).
+   [*Selecting Host Computers* ](#selecting-host-computers).
 
 ## Selecting Host Computers
 
@@ -194,9 +194,7 @@ After selecting the script to use for the test, WebLOAD Console displays the Hos
 
 Hosts are the computer systems participating in the test session. In this dialog box you define the hosts to participate in the Goal-Oriented test. Host computers can be dedicated, local computers, or they can be computers which are rented on a temporary basis from the Amazon™ Elastic Compute Cloud™ (EC2). Hosts can act as Load Machines or Probing Client Machines.
 
-For more information about setting up EC2 computers as host computers, refer to
-
-[*Setting Up Cloud Computers* ](#_bookmark116)(on page [108](#_bookmark116)).
+For more information about setting up EC2 computers as host computers, refer to [*Setting Up Cloud Computers* ](create_template_wizard.md#setting-up-cloud-computers).
 
 **Load Machines:**
 
@@ -206,7 +204,7 @@ By selecting a list of Load Machines, you define a pool of Hosts that WebLOAD Co
 
 WebLOAD Console reports exact measurements for single Probing Clients. By defining Probing Client Machines on different hosts, you will receive exact performance measurements for that client, rather than averages calculated for users generated on Load Generators. By defining a list of Probing Client Machines, you can receive accurate measurements at different locations (depending on the location of the host).
 
-Therefore, it is recommended that you define at least one Probing Client Machine in a Goal-Oriented Test Session, see [*Defining Performance Goals* ](#_bookmark175)(on page [151](#_bookmark176)).
+Therefore, it is recommended that you define at least one Probing Client Machine in a Goal-Oriented Test Session, see [*Defining Performance Goals* ](performance_measurements_manager.md).
 
 > **Note:** If you are running a script with Perfecto Mobile script, define a single Load Machine or a single Probing Client in order to simulate a single user.
 
@@ -214,7 +212,7 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
 **To add a host computer to the host computers list:**
 
-1. In the Host Selection dialog box ([Figure 79](#_bookmark164)), click **Add**. The Add Host Computer dialog box appears.
+1. In the Host Selection dialog box, click **Add**. The Add Host Computer dialog box appears.
 
    ![Add Host Computer Dialog Box](../images/console_users_guide_1029.png)
 2. To add a local host computer, select **Add by host name or IP address** and enter the host computer name or IP address in the **Address** field.
@@ -222,18 +220,18 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
    1. Select **Add Cloud host**.
 
-      If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears ([Figure 52](#_bookmark118)). Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud](#_bookmark117) *[Accounts* ](#_bookmark117)*(on page [109](#_bookmark117)).
+      If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears. Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud Accounts* ](create_template_wizard.md#creating-webload-cloud-accounts).
    2. Select a WebLOAD cloud account from the **Name** drop-down box.
    3. In the **Number of Machines** field, enter the number of machines you wish to add from the selected WebLOAD cloud account.
-   4. Repeat steps [b](#_bookmark167)-[c ](#_bookmark168)to specify machines from another WebLOAD cloud account.
+   4. Repeat steps [b]-[c ] to specify machines from another WebLOAD cloud account.
 
-      Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears ([Figure 52](#_bookmark118)). For information about the available actions, refer to the explanations following [Figure 52](#_bookmark118).
+      Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears. For information about the available actions, refer to the explanations following.
 4. Click **OK**.
 
-   - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box [(Figure 79](#_bookmark164)), and is listed by the host name or IP address you entered.
+   - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “<*WebLOAD Cloud Account Name*><*X*>” where X is a number that is incremented for each added cloud host machine.
 
-     For defining Host Computers as Load Machines and Probing Clients, see [*Designating a](#_bookmark125) *[Host Computer as a Load Machine* ](#_bookmark125)*(on page [148](#_bookmark166)) and [*Designating a Host Computer as a](#_bookmark127) *[Probing Client Machine* ](#_bookmark127)*(on page [149](#_bookmark170)).
+     For defining Host Computers as Load Machines and Probing Clients, see [*Designating a Host Computer as a Load Machine* ](#designating-a-host-computer-as-a-load-machine) and [*Designating a Host Computer as a Probing Client Machine* ](#designating-a-host-computer-as-a-probing-client-machine).
 
 ### Designating a Host Computer as a Load Machine
 
@@ -241,7 +239,7 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
 1. Select a host from the Host Computer window.
 
-   To add hosts not yet defined to the Host Computer window, see [*Adding Host](#_bookmark165) *[Computers to the Host Computers List* ](#_bookmark165)*(on page [147](#_bookmark165)).
+   To add hosts not yet defined to the Host Computer window, see [*Adding Host Computers to the Host Computers List* ](#adding-host-computers-to-the-host-computers-list).
 2. Click the single arrow key ![ref11] adjacent to the Load Machine or Probing Clients window.
 
    The selected host moves to the Load Machine or Probing Clients window.
@@ -250,7 +248,7 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
 After configuring the hosts participating in the Goal-Oriented test, the Goal- Oriented Test Wizard prompts you for the goals you want to achieve.
 
-The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#_bookmark175)(on page [151](#_bookmark175)).
+The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#defining-performance-goals).
 
 > **Note:** If you define a Probing Client host, the Probing Client Script Selection dialog box appears
 
@@ -258,7 +256,7 @@ The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#_bo
 
 **To designate all Host Computers as Load Machines:**
 
-- Click the double arrow key ![ref11] adjacent to the Load Machine window. All of the host computers move to the Load Machine window.
+- Click the double arrow key adjacent to the Load Machine window. All of the host computers move to the Load Machine window.
 
 > **Note:** At least one system must be configured as a Load Machine to continue working with the wizard.
 
@@ -267,7 +265,7 @@ The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#_bo
 **To designate a host computer as a Probing Client Machine:**
 
 1. Select the host from the Host Computer window.
-2. Click the single arrow key ![ref13] adjacent to the Probing Client Machines window. The selected host moves to the Probing Client Machine window.
+2. Click the single arrow key adjacent to the Probing Client Machines window. The selected host moves to the Probing Client Machine window.
 
 ### Deleting a Host Computer
 
@@ -331,7 +329,7 @@ Below the Operator radio buttons, are the following control buttons:
 | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Add Goal         | Open the Add Goal dialog box to add a new measurement to the test goals.                                                                                |
 | Delete           | Delete a test goal.                                                                                                                                     |
-| Defaults         | Open the Default Goals dialog box. For more information on using Defaults, see[*Setting and Using Defaults* ](#_bookmark181)(on page [157](#_bookmark179)). |
+| Defaults         | Open the Default Goals dialog box. For more information on using Defaults, see[*Setting and Using Defaults* ](#setting-and-using-defaults). |
 | Set As Defaults  | Set the current goals as default measurements and save them for future use.                                                                             |
 
 ### Adding Performance Goals
@@ -373,7 +371,7 @@ Goals are configured by defining boundary values for selected WebLOAD Console me
 8. Ensure that the Report field is checked to include the goal measurement in the Goal-Oriented Test default Integrated Report.
 9. Click **Next**.
 
-   WebLOAD Console displays the Acceleration dialog box. For additional information, see [*Defining the Acceleration Rate* ](#_bookmark183)(on page [158](#_bookmark182)).
+   WebLOAD Console displays the Acceleration dialog box. For additional information, see [*Defining the Acceleration Rate* ](#defining-the-acceleration-rate).
 
 #### Configuring a Goal - An Example
 

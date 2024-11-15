@@ -35,12 +35,12 @@ A Load Session is performed in stages. This chapter explains the planning stage 
 
   WebLOAD Console provides three ways for creating Load Templates:
 
-  - Using the WebLOAD Wizard to build a basic Load Template. You define the scripts to run, the Load Machines on which to generate the Virtual Clients and the test schedule. After creating a basic template with the wizard, you can change aspects of the configuration through the Console ribbon. For information on creating a template with the WebLOAD Wizard, see [*Creating](#_bookmark99)[ Load Templates with the WebLOAD Wizard* ](#_bookmark99)(on page [99](#_bookmark100)).
-  - Using the Goal-Oriented Test Wizard to create goal-seeking performance tests. Rather than running multiple tests to measure the performance at different loads, you can run the Goal-Oriented Test to measure the performance goal that you desire. You define the scripts to run and the goals to achieve, and WebLOAD Console automatically schedules a test and increases the load until your goals are achieved. For information on creating a template with the Goal- Oriented Test Wizard, see [*Creating Load Templates with Goal-Oriented Test* ](#_bookmark146)(on page [135](#_bookmark146)).
-  - Manually using the Console ribbon. See [*Configuring a Load Template Manually*](#_bookmark187) (on page [165](#_bookmark188)) for information on defining a template manually.
+  - Using the WebLOAD Wizard to build a basic Load Template. You define the scripts to run, the Load Machines on which to generate the Virtual Clients and the test schedule. After creating a basic template with the wizard, you can change aspects of the configuration through the Console ribbon. For information on creating a template with the WebLOAD Wizard, see [*Creating Load Templates with the WebLOAD Wizard* ](#creating-load-templates).
+  - Using the Goal-Oriented Test Wizard to create goal-seeking performance tests. Rather than running multiple tests to measure the performance at different loads, you can run the Goal-Oriented Test to measure the performance goal that you desire. You define the scripts to run and the goals to achieve, and WebLOAD Console automatically schedules a test and increases the load until your goals are achieved. For information on creating a template with the Goal- Oriented Test Wizard, see [*Creating Load Templates with Goal-Oriented Test* ](create_load_test_goal.md).
+  - Manually using the Console ribbon. See [*Configuring a Load Template Manually*](config_load_template.md) for information on defining a template manually.
 
 - #### **Running a Load Template**
-After you create the Load Template, you run it. As your test runs, you receive various reports and messages from the various participating hosts. The activity in your test session is displayed on the Console screen. This screen is updated continuously in real time as you work. See [*Running a Load Session* ](#_bookmark298)(on page [271](#_bookmark299)).
+After you create the Load Template, you run it. As your test runs, you receive various reports and messages from the various participating hosts. The activity in your test session is displayed on the Console screen. This screen is updated continuously in real time as you work. See [*Running a Load Session* ](#running-a-load-template).
 
 - #### **Analyzing the Test Results**
   WebLOAD Console displays the results of your Load Session in tabular format and in easy to read graphs.
@@ -105,7 +105,7 @@ WebLOAD Recorder saves your browser activity as a visual script. After recording
 
 You can tailor the recorded script, by adding commands and timers available in WebLOAD Recorder. For more information on creating a script with WebLOAD Recorder, see the *WebLOAD Recorder User’s Guide*.
 
-> **Note:** The script options you define in the Console for your current Session override the options defined in WebLOAD Recorder. For more information on script options, see [*Setting Script Options* ](#_bookmark223)(on page [211](#_bookmark224)).
+> **Note:** The script options you define in the Console for your current Session override the options defined in WebLOAD Recorder. For more information on script options, see [*Setting Script Options* ](set_script_options.md).
 
 
 
@@ -132,9 +132,9 @@ When your test plan is complete and your scripts are ready, you can open WebLOAD
 
    The easiest way to configure a basic test is through the WebLOAD Wizard. Save your work in the Wizard as a Load Template. After you have closed the WebLOAD Wizard, you can use the Console ribbon to add functionality to your Load Template (\*.tpl file).
 
-   [*Creating Load Templates with the WebLOAD Wizard* ](#_bookmark99)(on page [99](#_bookmark100)) discusses the WebLOAD Wizard. [*Setting Global Options* ](#_bookmark203)(on page [177](#_bookmark204)) provides instructions for using the Console features to add functionality to the Load Template created in the WebLOAD Wizard. [*Creating Load Templates with Goal-Oriented Test* ](#_bookmark146)(on page [135](#_bookmark146)) provides instructions for configuring a test session running the Goal-Oriented Test feature. [*Connecting to WebRM* ](#_bookmark83)(on page [87](#_bookmark83)) provides instructions for connecting the Console to WebRM using the WebRM Wizard. The Console can then request resources from WebRM so it can use the floating license, which is controlled by WebRM.
+   [*Creating Load Templates with the WebLOAD Wizard* ](create_template_wizard.md) discusses the WebLOAD Wizard. [*Setting Global Options* ](set_global_opt.md) provides instructions for using the Console features to add functionality to the Load Template created in the WebLOAD Wizard. [*Creating Load Templates with Goal-Oriented Test* ](create_load_test_goal.md) provides instructions for configuring a test session running the Goal-Oriented Test feature. [*Connecting to WebRM* ](connect_webrm.md) provides instructions for connecting the Console to WebRM using the WebRM Wizard. The Console can then request resources from WebRM so it can use the floating license, which is controlled by WebRM.
 
-1. Click the TestTalk icon ![](../images/console_users_guide_0121.png) on each host computer participating in the test. (TestTalk is automatically enabled only on the host running the Console.)
+2. Click the TestTalk icon ![](../images/console_users_guide_0121.png) on each host computer participating in the test. (TestTalk is automatically enabled only on the host running the Console.)
 
    If you are using a Solaris or Linux system as a Load Machine, verify that the TestTalk software is running on the Solaris or Linux system. If you have closed TestTalk after the installation, run TestTalk again.
 

@@ -12,9 +12,9 @@
 
    > **Note:** If Jenkins is running as a Service, make sure that you are using a logged in user, and not the Local System Account.
 
-2. Install the WebLOAD plugin in Jenkins. This is a one-time task. Refer to [*Installing](#_bookmark27)[ the WebLOAD Plugin for Jenkins* ](#_bookmark27)below.
+2. Install the WebLOAD plugin in Jenkins. This is a one-time task. Refer to [Installing the WebLOAD Plugin for Jenkins](#installing-the-webload-plugin-for-jenkins)below.
 
-3. Define a WebLOAD job in Jenkins whenever desired. Refer to [*Creating a WebLOAD](#_bookmark28)[ Job in Jenkins* ](#_bookmark28)on page [20](#_bookmark28).
+3. Define a WebLOAD job in Jenkins whenever desired. Refer to [Creating a WebLOAD Job in Jenkins](#creating-a-webload-job-in-jenkins).
 
 
 
@@ -67,9 +67,9 @@ You are returned to the Jenkins dashboard.
 
    The screen refreshes to enable defining the settings of the build step. Refer to:
 
-   0. [*Defining the Execute Load Session Build Step* ](#_bookmark29)on page [23](#_bookmark29)
+   0. [*Defining the Execute Load Session Build Step* ](#defining-the-execute-load-session-build-step)
 
-   1. [*Defining the Generate Analytics Report Build Step* ](#_bookmark31)on page [25](#_bookmark31)
+   1. [*Defining the Generate Analytics Report Build Step* ](#defining-the-generate-analytics-report-build-step)
 
       
 
@@ -94,7 +94,7 @@ If you select **Execute WebLOAD load session** as a build step, the following ap
 
    ![Execute WebLOAD load session – Advanced Definition](../images/automation_users_guide_039.jpeg)
 
-1. Enter information in the fields, as described in [Table 3](#_bookmark30).
+1. Enter information in the fields, as described in this table.
 
 |**Parameter**|**Description**|
 | :- | :- |
@@ -117,7 +117,7 @@ If you select **Generate WebLOAD Analytics Report** as a build step, the followi
 
    ![Generate WebLOAD Analytics Report – Advanced Definition](../images/automation_users_guide_041.jpeg)
 
-1. Enter information in the fields, as described in [Table 4](#_bookmark32).
+1. Enter information in the fields, as described in this table.
 
 |Parameter|**Description**|
 | :- | :- |

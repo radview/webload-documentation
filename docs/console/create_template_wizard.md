@@ -16,7 +16,7 @@ You can also specify script options including the type of browser to emulate con
 
 The WebLOAD Wizard walks you through the configuration process step-by-step. Each screen of the WebLOAD Wizard contains text explaining the configuration process.
 
-After creating a Load Template with the WebLOAD Wizard, you can add functionality, not available in the wizard, through the Console ribbon. The Console allows you access to any part of the configuration process at any time. For details about the Console ribbon, see [*The Console Ribbon Options* ](#_bookmark65)(on page [70](#_bookmark66)).
+After creating a Load Template with the WebLOAD Wizard, you can add functionality, not available in the wizard, through the Console ribbon. The Console allows you access to any part of the configuration process at any time. For details about the Console ribbon, see [*The Console Ribbon Options* ](console_features.md#the-console-ribbon-options).
 
 > **Note:** You cannot use the WebLOAD Wizard if you have not yet recorded (or otherwise created) any scripts. If you do not have any scripts to work with, you must exit the wizard and create a script using one of the authoring tools, such as WebLOAD Recorder.
 
@@ -68,18 +68,14 @@ WebLOAD Console supports two types of scripts:
 1. Select **Single Script**.
 1. Click **Next**.
 
-   WebLOAD Console progresses to the Script Selection dialog box. See [*Selecting a*](#_bookmark105)
-
-   (on page [103](#_bookmark106)).
+   WebLOAD Console progresses to the [Script Selection dialog box](#selecting-a-script). 
 
 **To run a Mix of scripts:**
 
 1. Select **Mix**.
-1. Click **Next**.
+2. Click **Next**.
 
-   WebLOAD Console progresses to the Mix Selection dialog box. See [*Selecting a Mix*](#_bookmark107)
-
-   (on page [104](#_bookmark108)).
+   WebLOAD Console progresses to the Mix Selection dialog box. See [*Selecting a Mix*](#selecting-a-mix).
 
 
 
@@ -98,11 +94,11 @@ The WebLOAD Wizard enables you to create a test using previously recorded script
 1. To optionally open and view or edit the selected Script, click **View**. WebLOAD Recorder opens, displaying the selected script.
 1. To optionally configure runtime options exclusive to this script, click **Options**.
 
-   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting Script](#_bookmark223)[ Options* ](#_bookmark223)(on page [211](#_bookmark224)).
+   The Script Options dialog box opens enabling you to define the runtime options for the selected script. 
 
-1. Click **Next**.
+2. Click **Next**.
 
-   The WebLOAD Wizard progresses to the Host Selection dialog box. See [*Selecting](#_bookmark112) *[Host Computers* ](#_bookmark112)*(on page [107](#_bookmark111)).
+   The WebLOAD Wizard progresses to the Host Selection dialog box. See [*Selecting Host Computers* ](#selecting-host-computers).
    
    
 
@@ -160,7 +156,7 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
    - **Weight** – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.
 
-   - **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button ![](../images/console_users_guide_0141.png) to edit the user agent definition. See [*Adding a Browser* Version Definitions ](#_bookmark239)(on page [223](#_bookmark236)).
+   - **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button ![](../images/console_users_guide_0141.png) to edit the user agent definition. 
 
    - **Bandwidth** – Specify a bandwidth. You can do this in one of two ways:
 
@@ -169,19 +165,19 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
    - **Max Connections** – Specify the number of max connections for the load generator.
 
-1. Optionally, click **Options** to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.
+2. Optionally, click **Options** to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.
 
-   The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](#_bookmark223)(on page [211](#_bookmark224)).
+   The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](set_script_options.md).
 
-1. Repeat steps 2 through 5 to add additional scripts to the Mix.
+3. Repeat steps 2 through 5 to add additional scripts to the Mix.
 
-1. Click **Save**.
+4. Click **Save**.
 
    The Mix configuration is saved with the extension \*.mix.
 
-1. Click **Next**.
+5. Click **Next**.
 
-   The WebLOAD Wizard progresses to the Host Selection dialog box. See [*Selecting](#_bookmark112) *[Host Computers* ](#_bookmark112)*(on page [107](#_bookmark111)).
+   The WebLOAD Wizard progresses to the Host Selection dialog box. See [*Selecting Host Computers* ](#selecting-host-computers).
 
    
 
@@ -230,7 +226,7 @@ Your local system is automatically defined as the default Load Machine.
 >
 > At least one system must be configured as a Load Machine to continue working with the wizard.
 >
-> After configuring the hosts participating in the test session, the WebLOAD Wizard progresses to the Schedule dialog box. See [*Scheduling the Load Session* ](#_bookmark130)(on page [114](#_bookmark131)).
+> After configuring the hosts participating in the test session, the WebLOAD Wizard progresses to the Schedule dialog box. See [*Scheduling the Load Session* ](#scheduling-the-load-session).
 >
 > If you are running a script with Perfecto Mobile script , define a single Load Machine or a single Probing Client in order to simulate a single user.
 >
@@ -244,7 +240,7 @@ WebLOAD supports using Amazon EC2 Cloud servers as an alternative to acquiring a
 The workflow for setting up EC2 computers for WebLOAD is as follows:
 
 1. Creating an Amazon EC2 Account. For instructions, refer to[ http://aws.amazon.com/ec2/.](http://aws.amazon.com/ec2/)
-1. [*Creating WebLOAD Cloud Accounts*.](#_bookmark117)
+1. [*Creating WebLOAD Cloud Accounts*.](#creating-webload-cloud-accounts)
 
 
 
@@ -279,7 +275,7 @@ Note that you can use the same Amazon cloud account to create multiple WebLOAD c
 
 8. Optionally, click **Get Status** to verify the details of the cloud you created.
 
-9. For every additional WebLOAD cloud account you wish to create, repeat steps [2](#_bookmark119)-[8.](#_bookmark120)
+9. For every additional WebLOAD cloud account you wish to create, repeat steps [2]-[8.].
 
 10. In the **General** section, specify the global policy for shutting-down Cloud Machines. The policy applies to all the WebLOAD cloud accounts you create.
 
@@ -302,7 +298,7 @@ Note that you can use the same Amazon cloud account to create multiple WebLOAD c
 
 **To add a host computer:**
 
-1. In the Host Selection dialog box ([Figure 51](#_bookmark113)), click **Add**. The Add Host Computer dialog box appears.
+1. In the Host Selection dialog box, click **Add**. The Add Host Computer dialog box appears.
 
    ![Add Host Computer Dialog Box](../images/console_users_guide_0146.png)
 
@@ -312,26 +308,26 @@ Note that you can use the same Amazon cloud account to create multiple WebLOAD c
 
    Select **Add Cloud host**.
 
-   1. If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears ([Figure 52](#_bookmark118)). Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud](#_bookmark117) *[Accounts* ](#_bookmark117)*(on page [109](#_bookmark117)).
+   1. If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears. Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud Accounts* ](#creating-webload-cloud-accounts).
 
-   1. Select a WebLOAD cloud account from the **Name** drop-down box.
+   2. Select a WebLOAD cloud account from the **Name** drop-down box.
 
-   1. In the **Number of Machines** field, enter the number of machines you wish to add from the selected WebLOAD cloud account.
+   3. In the **Number of Machines** field, enter the number of machines you wish to add from the selected WebLOAD cloud account.
 
-   1. Repeat steps [b](#_bookmark122)-[c ](#_bookmark123)to specify machines from another WebLOAD cloud account.
+   4. Repeat steps [b] to specify machines from another WebLOAD cloud account.
 
-      Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears ([Figure 52](#_bookmark118)). For information about the available actions, refer to the explanations following [Figure 52](#_bookmark118).
+      Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears. For information about the available actions, refer to the explanations following.
 
 4. Click **OK**.
 
-   - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box [(Figure 51](#_bookmark113)), and is listed by the host name or IP address you entered.
+   - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
 
    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “<*WebLOAD Cloud Account Name*><*X*>” where X is a number that is incremented for each added cloud host machine.
 
 
 
 
-For defining host computers as Load Machines and Probing Clients, see [*Designating a Host Computer as a Load Machine* ](#_bookmark125)(on page [112](#_bookmark124)), and [*Designating a Host](#_bookmark127) *[Computer as a Probing Client Machine* ](#_bookmark127)*(on page [112](#_bookmark124)).
+For defining host computers as Load Machines and Probing Clients, see [*Designating a Host Computer as a Load Machine* ](#designating-a-host-computer-as-a-load-machine), and [*Designating a Host Computer as a Probing Client Machine* ](#designating-a-host-computer-as-a-probing-client-machine).
 
 ### Designating a Host Computer as a Load Machine
 
@@ -347,7 +343,7 @@ For defining host computers as Load Machines and Probing Clients, see [*Designat
 
 1. To designate additional Load Machines repeat steps 1 and 2.
 
-   After assigning all Load Machines and Probing Client Machines, click **Next**. The wizard progresses to the Schedule dialog box. See [*Scheduling the Load Session* ](#_bookmark130)(on page [114](#_bookmark131)).
+   After assigning all Load Machines and Probing Client Machines, click **Next**. The wizard progresses to the Schedule dialog box. See [*Scheduling the Load Session* ](#scheduling-the-load-session).
 
 ### Designating all Host Computers as Load Machines
 
@@ -368,7 +364,7 @@ Probing Clients act as single Virtual Clients to measure the performance of targ
 
 
 
-The wizard progresses to the Schedule screen. See [*Scheduling the Load Session* ](#_bookmark130)(on page [114](#_bookmark131)).
+The wizard progresses to the Schedule screen. See [*Scheduling the Load Session* ](#scheduling-the-load-session).
 
 
 
@@ -469,7 +465,7 @@ You can create a load schedule by any combination of the following methods:
 
    WebLOAD Console displays the Finish dialog box.
 
-The WebLOAD Wizard continues the configuration process with the Finish dialog box. For further instructions, see [*Completing the WebLOAD Wizard* ](#_bookmark139)(on page [130](#_bookmark138)).
+The WebLOAD Wizard continues the configuration process with the Finish dialog box. For further instructions, see [*Completing the WebLOAD Wizard* ](#completing-the-webload-wizard).
 
 #### Limiting a Run by Number of Rounds
 
@@ -485,7 +481,7 @@ The WebLOAD Wizard continues the configuration process with the Finish dialog bo
 
 1. Click the Load Profiler button. The Load Profiler opens.
 
-1. Select a schedule pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](#_bookmark135)(on page [121](#_bookmark136)).
+1. Select a schedule pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](#scheduling-models).
 
 1. Fill in the fields at the bottom of the dialog box.
 
@@ -536,7 +532,7 @@ You can schedule the load to be generated on each Load Machine participating in 
 
 5. Click **Next**.
 
-   The WebLOAD Wizard continues the configuration process with the Finish screen. For further instructions, go to [*Completing the WebLOAD Wizard* ](#_bookmark139)(on page [130](#_bookmark138)).
+   The WebLOAD Wizard continues the configuration process with the Finish screen. For further instructions, go to [*Completing the WebLOAD Wizard* ](#completing-the-webload-wizard).
 
 
 
@@ -554,7 +550,7 @@ The Load Profiler opens.
 
 *Figure 58: Load Profiler*
 
-1. Select a pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](#_bookmark135)(on page [121](#_bookmark136)).
+1. Select a pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](#scheduling-models).
 1. Fill in the fields at the bottom of the dialog box.
 1. Click **Append** to include the load definition in the schedule,
 
@@ -732,7 +728,7 @@ The WebLOAD Wizard enables you to open the Performance Measurements Manager and 
 
 - Click **Add Monitors** to configure the performance statistics to monitor and display in real-time during the test session.
 
-  The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](#_bookmark456)(on page [363](#_bookmark455)).
+  The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](performance_measurements_manager.md).
 
 
 
@@ -763,7 +759,7 @@ WebLOAD Console saves all the values for the complete set of measurements. You c
 
 1. Click **Yes** to save the current Load Template as a \*.tpl file.
 
-   Load Templates contain the parameters that you defined for the test session, such as scripts to run, participating hosts, and the test plan. Using Load Templates saves you the time of reconfiguring the Load Session when repeating tests. For more information on Load Templates see [*Managing Load Templates* ](#_bookmark89)(on page [91](#_bookmark88)).
+   Load Templates contain the parameters that you defined for the test session, such as scripts to run, participating hosts, and the test plan. Using Load Templates saves you the time of reconfiguring the Load Session when repeating tests. For more information on Load Templates see [*Managing Load Templates* ](manage_load_templates_sessions.md).
 
 The WebLOAD Wizard closes and the load test begins.
 
@@ -793,7 +789,7 @@ The WebLOAD Wizard automatically generates a predefined report that measures:
 - Load Size (the number of Virtual Clients being generated)
 - Throughput (the number of bytes per second transmitted from the SUT)
 
-You can configure your own report through the Console Reports menu. WebLOAD Console saves all of the values for the complete set of measurements. You can display the results never before requested. For information on viewing reports, see [*Running](#_bookmark296) *[Tests and Analyzing Test Results* ](#_bookmark296)*(on page [269](#_bookmark296)).
+You can configure your own report through the Console Reports menu. WebLOAD Console saves all of the values for the complete set of measurements. You can display the results never before requested.
 
 ### Modifying the Host Selection
 After closing the WebLOAD Wizard you can edit the parameters in the Host Selection dialog box.

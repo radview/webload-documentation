@@ -1,9 +1,93 @@
 ﻿# Introduction
 
 
+
+
 Welcome to WebLOAD, the premier  performance, scalability, and reliability testing solution for internet applications.  
 
 WebLOAD is easy to use and delivers maximum testing performance and value. WebLOAD verifies the scalability and integrity of internet applications by generating a load composed of Virtual Clients that simulate real-world traffic. Probing Clients let you refine the testing process by acting as a single user that measures the performance of targeted activities, and provides individual performance statistics of the internet application under load.  
+
+This section provides a brief introduction to WebLOAD technical support, including both documentation and online support. 
+
+IMPORTANT NOTE: In previous WebLOAD versions, a WebLOAD script was called an “Agenda”. From version 12.0, it is referred to simply as a script. Wherever “Agenda” is still displayed, we are referring to the WebLOAD script. 
+
+WebLOAD Recorder was formerly referred to as WebLOAD IDE. 
+
+## WebLOAD Documentation
+
+WebLOAD is supplied with the following documentation: 
+
+**WebLOAD™ Installation Guide** 
+
+Instructions for installing WebLOAD and its add-ons. 
+
+**WebLOAD™ Recorder User’s Guide** 
+
+Instructions for recording, editing, and debugging load test scripts to be executed by WebLOAD to test your Web-based applications. 
+
+**WebLOAD™ Console User’s Guide** 
+
+A guide to using WebLOAD console, RadView’s load/scalability testing tool to easily and efficiently test your Web-based applications. This guide also includes a quick start section containing instructions for getting started quickly with WebLOAD using the RadView Software test site. 
+
+**WebLOAD™ Analytics User’s Guide** 
+
+Instructions on how to use WebLOAD Analytics to analyze data and create custom, informative reports after running a WebLOAD test session. 
+
+**WebRM™ User’s Guide** 
+
+Instructions for managing testing resources with the WebLOAD Resource Manager. 
+
+**WebLOAD™ Scripting Guide** 
+
+Complete information on scripting and editing JavaScript scripts for use in WebLOAD and WebLOAD Recorder. 
+
+**WebLOAD™ JavaScript Reference Guide** 
+
+Complete reference information on all JavaScript objects, variables, and functions used in WebLOAD and WebLOAD Recorder test scripts. 
+
+**WebLOAD™ Extensibility SDK** 
+
+Instructions on how to develop extensions to tailor WebLOAD to specific working environments. 
+
+**WebLOAD™ Automation Guide** 
+
+Instructions for automatically running WebLOAD tests and reports from the command line, or by using the WebLOAD plugin for Jenkins  
+
+**WebLOAD™ Cloud User Guide** 
+
+Instructions for using RadView’s WebLOAD Cloud to view, analyze and compare load sessions in a web browser, with full control and customization of the display. 
+
+The guides are distributed with the WebLOAD software in online help format. The guides are also supplied as Adobe Acrobat files. View and print these files using the Adobe Acrobat Reader. Install the Reader from the Adobe website [http://www.adobe.com.](http://www.adobe.com/) ![ref2]
+
+
+
+### Where to Get More Information
+
+This section contains information on how to obtain technical support from RadView worldwide, should you encounter any problems. 
+
+#### Online Help
+
+WebLOAD provides a comprehensive on-line help system with step-by-step instructions for common tasks. 
+
+You can press the **F1** key on any open dialog box for an explanation of the options or select **Help**  **Contents** to open the on-line help contents and index. 
+
+#### Technical Support Website
+
+The technical support pages on our website contain: 
+
+- The option of opening a ticket 
+- Links to WebLOAD documentation 
+
+
+
+#### Technical Support
+
+For technical support in your use of this product, contact: 
+
+| **North  American Headquarters**                             | **International  Headquarters**                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| e-mail: [support@RadView.com](mailto:support@RadView.com) Phone: 1-888-RadView  (1-888-723-8439)  (Toll Free)  908-526-7756  Fax:    908-864-8099 | e-mail: [support@RadView.com](mailto:support@RadView.com) Phone: +972-3-915-7060  Fax:    +972-3-915-7011 |
+
 
 
 ## System Requirements
@@ -22,10 +106,10 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 
 | **Requirements**     | **WebLOAD Console, WebLOAD Recorder, WebLOAD Analytics, WebLOAD  Probing Client, and WebRM** | **Load Machine**                                             |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Computer / Processor | 2 Core CPU | 2 Core CPU (4 Core CPU Recommended) |
-| Operating System     | Windows supported version: (Windows 7, 8, 10, 11, Server 2012, 2016, 2019, 2022)  | Windows supported version: (Windows 7, 8, 10, 11, Server 2012, 2016, 2019, 2022)  |
-| Memory               | 2 GB RAM (minimum); 4 GB  is recommended                     | 2 GB RAM (minimum); 16 GB is recommended                      |
-| Free Disk Space      | 20 GB                                                         | 20 GB                                                         |
+| Computer / Processor | IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor | IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor; Pentium 4 is recommended |
+| Operating System     |  Windows 2000 Professional   Windows XP Pro (SP2)   Windows Vista   Windows 7   Windows 8   Windows Server 2003   Windows Server 2008   Windows Server 2012 |  Windows 2000 Server / Advanced Server   Windows XP Pro (SP2)   Windows Vista   Windows 7   Windows Server 2003, Standard and Enterprise Editions   Windows Server 2008 |
+| Memory               | 1 GB RAM (minimum); 4 GB  is recommended                     | 1 GB RAM (minimum); 4 GB is recommended                      |
+| Free Disk Space      | 2 GB                                                         | 2 GB                                                         |
 
 
 
@@ -37,11 +121,11 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 
 | **Requirements** | **Load  Machine**                                            |
 | ---------------- | ------------------------------------------------------------ |
-| Hardware         | 2 Core CPU (4 Core CPU Recommended) |
-| Version          | Linux RHEL 7 and up or equivalent  |
-| Free Disk Space  | 20 GB                                                         |
+| Hardware         | IBM-compatible PC (x86-32)  with Pentium III 800 MHz (or higher) microprocessor; Pentium 4 is recommended |
+| Version          |  Fedora Core 3 or higher   Red Hat Enterprise Linux 3  or higher   CentOS 6   Java Runtime Environment  (JRE) 1.6 or higher |
+| Free Disk Space  | 2 GB                                                         |
 | Swap Space       | RAM*2                                                        |
-| Memory           | 2 GB RAM (minimum); 16 GB is recommended                      |
+| Memory           | 1 GB RAM (minimum); 4 GB is recommended                      |
 
 
 
@@ -112,7 +196,7 @@ Install the WebLOAD components as follows:
   - If you do not select this option, TestTalk is installed as an executable file. 
 - Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. 
 
-> **Note:** The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[` `*Registering and Updating the WebLOAD License* ](#registering_and_updating_the_webload_license). 
+> **Note:** The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[Registering and Updating the WebLOAD License](#registering-and-updating-the-webload-license). 
 
 
 

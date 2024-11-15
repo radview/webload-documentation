@@ -13,7 +13,7 @@ Prior to integrating New Relic in WebLOAD, make sure you fulfill the following p
 
 - You have installed and set up New Relic monitoring in your network.
 - You have at least a New Relic PRO license.
-- You have a New Relic API key, as described in [*Get or Generate a New Relic API Key*](#_bookmark508).
+- You have a New Relic API key, as described in [*Get or Generate a New Relic API Key*](#get-or-generate-a-new-relic-api-key).
 
 
 
@@ -58,7 +58,7 @@ New Relic integration is carried out by adding the New Relic data source in the 
 
 **To instruct PMM to collect data from New Relic:**
 
-1. Run the Performance Measurements Manager wizard, as described in [Opening the](#_bookmark459)[ Performance Measurements Manager ](#_bookmark459)(on page [364](#_bookmark459)).
+1. Run the Performance Measurements Manager wizard, as described in [Opening the Performance Measurements Manager ](performance_measurements_manager.md#opening-the-performance-measurements-manager).
 1. In the Selecting a Data Source screen, select **External** > **New Relic**.
 
 
@@ -69,7 +69,7 @@ New Relic integration is carried out by adding the New Relic data source in the 
 
 
 
-2. In the Selecting a Host screen, enter the **API Key** you had recorded in [*Get or](#_bookmark508)[ Generate a New Relic API Key* ](#_bookmark508)(on page [433](#_bookmark508)). Note that you can change the New Relic **Root URL** if required; in most cases the default value is the correct one.
+2. In the Selecting a Host screen, enter the **API Key** you had recorded in [Get or Generate a New Relic API Key](#get-or-generate-a-new-relic-api-key). Note that you can change the New Relic **Root URL** if required; in most cases the default value is the correct one.
 
 ![Specifying New Relic Server in Host Selection Screen](../images/console_users_guide_3046.jpeg)
 
@@ -105,7 +105,7 @@ New Relic integration is carried out by adding the New Relic data source in the 
 
 After integrating WebLOAD with New Relic, you can specify, while running a session, which New Relic statistics to view in the report view.
 
-1. Open a report as described in [*Opening Reports* ](#_bookmark342)(on page [298](#_bookmark342)).
+1. Open a report as described in [*Opening Reports* ](console_performance_reports.md#opening-reports).
 1. In the **PM@<New-Relic-host>** node, select the statistics you wish to display in the report.
 
 

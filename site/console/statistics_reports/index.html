@@ -3235,7 +3235,7 @@
 
 <h1 id="webload-statistics-reports">WebLOAD Statistics Reports</h1>
 <p>The Statistics Report is both a real-time monitor that displays the results of your test while you run it and a report that you can save and export.</p>
-<p>WebLOAD Console collects approximately 30 different statistics during a test. The Statistics Report displays the values for all of them. You can also create Integrated Reports that display only the statistics that you choose. For information about Integrated Reports, see <a href="#_bookmark338"><em>WebLOAD Console Performance</em> Reports </a>(on page <a href="#_bookmark339">295</a>).</p>
+<p>WebLOAD Console collects approximately 30 different statistics during a test. The Statistics Report displays the values for all of them. You can also create Integrated Reports that display only the statistics that you choose. For information about Integrated Reports, see <a href="../console_performance_reports/"><em>WebLOAD Console Performance</em> Reports </a>.</p>
 <h2 id="statistical-measurements-and-their-values">Statistical Measurements and Their Values</h2>
 <p>The Statistics Report is presented as a table.</p>
 <p>Row headings (the labels in the first column on the left) are the names of the statistical measurements.</p>
@@ -3271,77 +3271,63 @@
 <li>For counters, WebLOAD Console reports the number of times the item being counted occurred over the last reporting interval. If the reporting interval is 20 seconds, the value for Hits is the actual number of hits that occurred during the last 20 seconds.</li>
 </ul>
 <h3 id="statistics-definitions">Statistics Definitions</h3>
-<p>The following list displays the various statistics, by context. <a href="#_bookmark373">Table 46 </a>displays the definitions of the per time unit, timer, and counter statistics, alphabetically.</p>
+<p>The following list displays the various statistics, by context. The displays the definitions of the per time unit, timer, and counter statistics, alphabetically.</p>
 <ul>
-<li><a href="#_bookmark393"><em>Load Size</em></a></li>
-<li><a href="#_bookmark412"><em>Throughput (bytes per second)</em></a></li>
+<li>Load Size</li>
+<li>Throughput (bytes per second)</li>
 <li>Page statistics – A page is an upper level request for information made by a Virtual Client to the system under test (SUT). For example, a Get statement for a URL retrieves a page. Page statistics include:</li>
-<li><a href="#_bookmark395"><em>Pages</em></a></li>
-<li><a href="#_bookmark396"><em>Pages Per Second</em></a></li>
-<li><a href="#_bookmark394"><em>Page Time</em></a></li>
+<li>Pages</li>
+<li>Pages Per Second</li>
+<li>Page Time</li>
 <li>Hit statistics – A hit is a request for information made by a Virtual Client to the system under test (SUT). In other words, an HTTP request. For example, a Get statement for a URL retrieves a page. The page can include any number of graphics and content files. Each request for a gif, jpeg, html file, etc., is a single hit. Hit statistics include:</li>
-<li><a href="#_bookmark388"><em>Hits</em></a></li>
+<li>Hits</li>
+<li>Successful Hits</li>
+<li>Failed Hits</li>
+<li>Hits Per Second</li>
+<li>Successful Hits Per Second</li>
+<li>Failed Hits Per Second</li>
 <li>
-<p><a href="#_bookmark408"><em>Successful Hits</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark383"><em>Failed Hits</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark389"><em>Hits Per Second</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark409"><em>Successful Hits Per Second</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark384"><em>Failed Hits Per Second</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark387"><em>Hit Time</em></a></p>
+<p>Hit Time</p>
 </li>
 <li>
 <p>Rounds statistics – A Round is an entire run of a script. Rounds statistics include:</p>
 </li>
-<li><a href="#_bookmark403"><em>Rounds</em></a></li>
-<li><a href="#_bookmark410"><em>Successful Rounds</em></a></li>
-<li><a href="#_bookmark385"><em>Failed Rounds</em></a></li>
-<li><a href="#_bookmark374"><em>Aborted Rounds</em></a></li>
-<li><a href="#_bookmark404"><em>Rounds Per Second</em></a></li>
-<li><a href="#_bookmark411"><em>Successful Rounds Per Second</em></a></li>
-<li><a href="#_bookmark386"><em>Failed Rounds Per Second</em></a></li>
-<li><a href="#_bookmark402"><em>Round Time</em></a></li>
+<li>Rounds</li>
+<li>Successful Rounds</li>
+<li>Failed Rounds</li>
+<li>Aborted Rounds</li>
+<li>Rounds Per Second</li>
+<li>Successful Rounds Per Second</li>
+<li>Failed Rounds Per Second</li>
+<li>Round Time</li>
 <li>Connection statistics – A Connection is a new TCP/IP connection of a Virtual Client to the SUT. The Connection counter increments every time a TCP/IP connection is opened. This number is always less than or equal to hits/requests, because several hits may use the same HTTP connection if the Persistent Connection option is enabled (<strong>Default Options  Browser Parameters</strong>). Connection statistics include:</li>
-<li><a href="#_bookmark375"><em>Attempted Connections</em></a></li>
-<li><a href="#_bookmark407"><em>Successful Connections</em></a></li>
-<li><a href="#_bookmark382"><em>Failed Connections</em></a></li>
-<li><a href="#_bookmark377"><em>Connect Time</em></a></li>
-<li><a href="#_bookmark378"><em>Connection Speed (Bits Per Second)</em></a></li>
-<li><a href="#_bookmark381"><em>DNS Lookup Time</em></a></li>
+<li>Attempted Connections</li>
+<li>Successful Connections</li>
+<li>Failed Connections</li>
+<li>Connect Time</li>
+<li>Connection Speed (Bits Per Second)</li>
+<li>DNS Lookup Time</li>
 <li>Response statistics – A Response is an HTTP message sent from the Web server as a response to an HTTP Request. Response statistics include:</li>
-<li><a href="#_bookmark401"><em>Responses</em></a></li>
-<li><a href="#_bookmark399"><em>Response Data Size</em></a></li>
-<li><a href="#_bookmark400"><em>Response Time</em></a></li>
-<li><a href="#_bookmark405"><em>Send Time</em></a></li>
-<li><a href="#_bookmark397"><em>Process Time</em></a></li>
-<li><a href="#_bookmark398"><em>Receive Time</em></a></li>
-<li>
-<p><a href="#_bookmark413"><em>Time to First Byte</em></a></p>
-</li>
-<li>
-<p><a href="#_bookmark390"><em>HTTP Response Status</em></a></p>
-</li>
-<li><a href="#_bookmark379"><em>Content Size</em></a></li>
+<li>Responses</li>
+<li>Response Data Size</li>
+<li>Response Time</li>
+<li>Send Time</li>
+<li>Process Time</li>
+<li>Receive Time</li>
+<li>Time to First Byte</li>
+<li>HTTP Response Status</li>
+<li>Content Size</li>
 <li>Report statistics – The statistics collected by the reportStatistics command in a Selenium script. Refer to the <em>Navigation Timing Statistics</em> table in the <em>Selenium Integration</em> appendix of the <em>WebLOAD™ Recorder User’s Guide</em>.</li>
 <li><User-Defined> statistics:</li>
-<li><a href="#_bookmark376"><em>Automatic Data Collection</em></a></li>
-<li><a href="#_bookmark415"><em>Timer</em></a></li>
-<li><a href="#_bookmark380"><em>Counters</em></a></li>
-<li><a href="#_bookmark417"><em>Transaction Timers</em></a></li>
-<li><a href="#_bookmark414"><em>Total <transaction name> TPS</em></a></li>
-<li><a href="#_bookmark416"><em>Transaction Counters</em></a></li>
-<li><a href="#_bookmark392"><em>Java andActiveX Timers</em></a></li>
-<li><a href="#_bookmark391"><em>Java and ActiveX Counters</em></a></li>
-<li><a href="#_bookmark406"><em>Server Performance Measurements</em></a></li>
+<li>Automatic Data Collection</li>
+<li>Timer</li>
+<li>Counters</li>
+<li>Transaction Timers</li>
+<li>Total <transaction name> TPS</li>
+<li>Transaction Counters</li>
+<li>Java andActiveX Timers</li>
+<li>Java and ActiveX Counters</li>
+<li>Server Performance Measurements</li>
 </ul>
 <table>
 <thead>
@@ -3660,7 +3646,6 @@
 <p><img alt="Summary Table" src="../../images/console_users_guide_2073.jpeg" /></p>
 <p>The names of all the measurements tracked during the current Load Session are listed in the column at the far left. The names of all the Attributes totaled for the relevant measurements are displayed in the header at the top of the table.</p>
 <p><strong>Example:</strong></p>
-<p><a href="#_bookmark422">Figure 185 </a>displays the Response Time measurement values for the script, Quickstart.</p>
 <blockquote>
 <p><strong>Note:</strong> The minimum time needed for the SUT to respond to requests from the script during the current test session is 1.246 seconds. The maximum time needed for the SUT to respond to the script run by Generator1 during the current slice is 0.461 seconds. The average Response Time to the script in the current slice is 1.398 seconds.</p>
 </blockquote>
