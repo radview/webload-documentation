@@ -3083,18 +3083,22 @@
 <p>By integrating WebLOAD scripts with Dynatrace you can rapidly resolve and proactively prevent application performance problems. The integration consists of two tasks:</p>
 <ul>
 <li>Installing Dynatrace on your local computer.</li>
-<li>In WebLOAD – Enabling Dynatrace in the <strong>Dynatrace</strong> tab of the <strong>Global Options</strong> window (refer to <a href="#_bookmark216"><em>The Dynatrace Tab</em> </a>on page <a href="#_bookmark216">197</a>). When Dynatrace is enabled, WebLOAD adds an identifier in all request headers which identifies them as WebLOAD requests.</li>
+<li>In WebLOAD – <a href="../set_global_opt/#the-dynatrace-tab">Enabling Dynatrace</a> in the <strong>Dynatrace</strong> tab of the <strong>Global Options</strong> window. When Dynatrace is enabled, WebLOAD adds an identifier in all request headers which identifies them as WebLOAD requests.</li>
 </ul>
 <p>After integrating WebLOAD with Dynatrace, you can perform the following:</p>
 <ul>
-<li><a href="#_bookmark499"><em>Monitoring a WebLOAD Load Session in</em> Dynatrace</a></li>
-<li><a href="#_bookmark500"><em>Viewing in Dynatrace a WebLOAD Point of Interest</em></a></li>
-<li><a href="#_bookmark502"><em>Viewing in Dynatrace the Transactions Related to WebLOAD Errors</em></a></li>
+<li><a href="#integrating-with-dynatrace">Integrating with Dynatrace</a></li>
+<li><a href="#monitoring-a-webload-load-session-in-dynatrace">Monitoring a WebLOAD Load Session in Dynatrace</a></li>
+<li><a href="#viewing-in-dynatrace-a-webload-point-of-interest">Viewing in Dynatrace a WebLOAD Point of Interest</a><ul>
+<li><a href="#specifying-the-dynatrace-system-profile">Specifying the Dynatrace System Profile</a></li>
+</ul>
+</li>
+<li><a href="#viewing-in-dynatrace-the-transactions-related-to-webload-errors">Viewing in Dynatrace the Transactions Related to WebLOAD Errors</a></li>
 </ul>
 <h2 id="monitoring-a-webload-load-session-in-dynatrace">Monitoring a WebLOAD Load Session in Dynatrace</h2>
 <p>To monitor a WebLOAD Load Session in Dynatrace:</p>
 <ol>
-<li>Enable Dynatrace in <a href="#_bookmark216"><em>The Dynatrace Tab</em> </a>(on page <a href="#_bookmark216">197</a>).</li>
+<li>Enable Dynatrace in <a href="../set_global_opt/#the-dynatrace-tab"><em>The Dynatrace Tab</em> </a>.</li>
 <li>In the Dynatrace <strong>Monitoring</strong> page, click the <strong>Synthetic Request</strong> node.</li>
 </ol>
 <p><img alt="Selecting the Synthetic Request Node in Dynatrace" src="../../images/console_users_guide_3022.png" /></p>
@@ -3104,7 +3108,7 @@
 <p>You can access Dynatrace directly from a WebLOAD’s report window to view in Dynatrace the monitoring data of any point in a WebLOAD graph.</p>
 <p><strong>To view Dynatrace data for a WebLOAD point of interest:</strong></p>
 <ol>
-<li>Enable Dynatrace in <a href="#_bookmark216"><em>The Dynatrace Tab</em> </a>(on page <a href="#_bookmark216">197</a>).</li>
+<li>Enable Dynatrace in <a href="../set_global_opt/#the-dynatrace-tab"><em>The Dynatrace Tab</em> </a>.</li>
 <li>In a WebLOAD report, right-click a point in a graph and select <strong>DynaTrace</strong>.</li>
 </ol>
 <p><img alt="Selecting DynaTrace for a Point in a Graph" src="../../images/console_users_guide_3024.png" /></p>
@@ -3113,7 +3117,7 @@
 </ol>
 <p><img alt="Dynatrace Data for the Interval Around a Selected Point" src="../../images/console_users_guide_3026.png" /></p>
 <h3 id="specifying-the-dynatrace-system-profile">Specifying the Dynatrace System Profile</h3>
-<p>When you enable Dynatrace in WebLOAD (refer to <a href="#_bookmark216"><em>The Dynatrace Tab</em> </a>on page <a href="#_bookmark216">197</a>), by default WebLOAD specifies that points of interest viewed in Dynatrace will be viewed in the <strong>Monitoring</strong> system profile. If you wish to change this default setting, do the following:</p>
+<p>When you enable Dynatrace in WebLOAD (refer to <a href="../set_global_opt/#the-dynatrace-tab"><em>The Dynatrace Tab</em> </a>, by default WebLOAD specifies that points of interest viewed in Dynatrace will be viewed in the <strong>Monitoring</strong> system profile. If you wish to change this default setting, do the following:</p>
 <ol>
 <li>Click <strong>Global Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
 </ol>
@@ -3132,7 +3136,7 @@
 <p><strong>To view a transaction in Dynatrace that is associated with a WebLOAD error:</strong></p>
 <ol>
 <li>
-<p>Enable Dynatrace in <a href="#_bookmark216"><em>The Dynatrace Tab</em> </a>(on page <a href="#_bookmark216">197</a>).</p>
+<p>Enable Dynatrace in <a href="../set_global_opt/#the-dynatrace-tab"><em>The Dynatrace Tab</em> </a>.</p>
 </li>
 <li>
 <p>In the Log Window, double-click the paperclip icon adjacent to the error.</p>
@@ -3173,11 +3177,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

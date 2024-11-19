@@ -3255,14 +3255,14 @@
 </ul>
 <p>WebLOAD Console provides three ways for creating Load Templates:</p>
 <ul>
-<li>Using the WebLOAD Wizard to build a basic Load Template. You define the scripts to run, the Load Machines on which to generate the Virtual Clients and the test schedule. After creating a basic template with the wizard, you can change aspects of the configuration through the Console ribbon. For information on creating a template with the WebLOAD Wizard, see <a href="#_bookmark99">*Creating</a><a href="#_bookmark99"> Load Templates with the WebLOAD Wizard* </a>(on page <a href="#_bookmark100">99</a>).</li>
-<li>Using the Goal-Oriented Test Wizard to create goal-seeking performance tests. Rather than running multiple tests to measure the performance at different loads, you can run the Goal-Oriented Test to measure the performance goal that you desire. You define the scripts to run and the goals to achieve, and WebLOAD Console automatically schedules a test and increases the load until your goals are achieved. For information on creating a template with the Goal- Oriented Test Wizard, see <a href="#_bookmark146"><em>Creating Load Templates with Goal-Oriented Test</em> </a>(on page <a href="#_bookmark146">135</a>).</li>
+<li>Using the WebLOAD Wizard to build a basic Load Template. You define the scripts to run, the Load Machines on which to generate the Virtual Clients and the test schedule. After creating a basic template with the wizard, you can change aspects of the configuration through the Console ribbon. For information on creating a template with the WebLOAD Wizard, see <a href="#creating-load-templates"><em>Creating Load Templates with the WebLOAD Wizard</em> </a>.</li>
+<li>Using the Goal-Oriented Test Wizard to create goal-seeking performance tests. Rather than running multiple tests to measure the performance at different loads, you can run the Goal-Oriented Test to measure the performance goal that you desire. You define the scripts to run and the goals to achieve, and WebLOAD Console automatically schedules a test and increases the load until your goals are achieved. For information on creating a template with the Goal- Oriented Test Wizard, see <a href="../create_load_test_goal/"><em>Creating Load Templates with Goal-Oriented Test</em> </a>.</li>
 <li>
-<p>Manually using the Console ribbon. See <a href="#_bookmark187"><em>Configuring a Load Template Manually</em></a> (on page <a href="#_bookmark188">165</a>) for information on defining a template manually.</p>
+<p>Manually using the Console ribbon. See <a href="../config_load_template/"><em>Configuring a Load Template Manually</em></a> for information on defining a template manually.</p>
 </li>
 <li>
 <h4 id="running-a-load-template"><strong>Running a Load Template</strong></h4>
-<p>After you create the Load Template, you run it. As your test runs, you receive various reports and messages from the various participating hosts. The activity in your test session is displayed on the Console screen. This screen is updated continuously in real time as you work. See <a href="#_bookmark298"><em>Running a Load Session</em> </a>(on page <a href="#_bookmark299">271</a>).</p>
+<p>After you create the Load Template, you run it. As your test runs, you receive various reports and messages from the various participating hosts. The activity in your test session is displayed on the Console screen. This screen is updated continuously in real time as you work. See <a href="#running-a-load-template"><em>Running a Load Session</em> </a>.</p>
 </li>
 <li>
 <h4 id="analyzing-the-test-results"><strong>Analyzing the Test Results</strong></h4>
@@ -3318,7 +3318,7 @@
 <p><em>Figure 39: Visual Script</em></p>
 <p>You can tailor the recorded script, by adding commands and timers available in WebLOAD Recorder. For more information on creating a script with WebLOAD Recorder, see the <em>WebLOAD Recorder User’s Guide</em>.</p>
 <blockquote>
-<p><strong>Note:</strong> The script options you define in the Console for your current Session override the options defined in WebLOAD Recorder. For more information on script options, see <a href="#_bookmark223"><em>Setting Script Options</em> </a>(on page <a href="#_bookmark224">211</a>).</p>
+<p><strong>Note:</strong> The script options you define in the Console for your current Session override the options defined in WebLOAD Recorder. For more information on script options, see <a href="../set_script_options/"><em>Setting Script Options</em> </a>.</p>
 </blockquote>
 <h3 id="examining-your-test-resources">Examining Your Test Resources</h3>
 <p>After you know what you are going to test, you must examine the resources that are available to you for running your test. This helps you allocate the resources for your test load. If the computers available to you cannot support the desired load, consider distributing the load over several computers.</p>
@@ -3341,7 +3341,7 @@
 <li><strong>Goal-Oriented Test wizard</strong> – Define the scripts to run, the Load Machines on which to run the Virtual Clients, and the test goals to achieve, and WebLOAD Console automatically builds a schedule based on your goals.</li>
 </ul>
 <p>The easiest way to configure a basic test is through the WebLOAD Wizard. Save your work in the Wizard as a Load Template. After you have closed the WebLOAD Wizard, you can use the Console ribbon to add functionality to your Load Template (*.tpl file).</p>
-<p><a href="#_bookmark99"><em>Creating Load Templates with the WebLOAD Wizard</em> </a>(on page <a href="#_bookmark100">99</a>) discusses the WebLOAD Wizard. <a href="#_bookmark203"><em>Setting Global Options</em> </a>(on page <a href="#_bookmark204">177</a>) provides instructions for using the Console features to add functionality to the Load Template created in the WebLOAD Wizard. <a href="#_bookmark146"><em>Creating Load Templates with Goal-Oriented Test</em> </a>(on page <a href="#_bookmark146">135</a>) provides instructions for configuring a test session running the Goal-Oriented Test feature. <a href="#_bookmark83"><em>Connecting to WebRM</em> </a>(on page <a href="#_bookmark83">87</a>) provides instructions for connecting the Console to WebRM using the WebRM Wizard. The Console can then request resources from WebRM so it can use the floating license, which is controlled by WebRM.</p>
+<p><a href="../create_template_wizard/"><em>Creating Load Templates with the WebLOAD Wizard</em> </a> discusses the WebLOAD Wizard. <a href="../set_global_opt/"><em>Setting Global Options</em> </a> provides instructions for using the Console features to add functionality to the Load Template created in the WebLOAD Wizard. <a href="../create_load_test_goal/"><em>Creating Load Templates with Goal-Oriented Test</em> </a> provides instructions for configuring a test session running the Goal-Oriented Test feature. <a href="../connect_webrm/"><em>Connecting to WebRM</em> </a> provides instructions for connecting the Console to WebRM using the WebRM Wizard. The Console can then request resources from WebRM so it can use the floating license, which is controlled by WebRM.</p>
 <ol>
 <li>Click the TestTalk icon <img alt="" src="../../images/console_users_guide_0121.png" /> on each host computer participating in the test. (TestTalk is automatically enabled only on the host running the Console.)</li>
 </ol>
@@ -3378,11 +3378,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

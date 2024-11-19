@@ -3620,13 +3620,13 @@
 <p>This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
 <p><strong>Example 3:</strong></p>
 <p><code>WebLOAD.exe /ag c:\scripts\MyScript.wlp</code></p>
-<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box, see <a href="#_bookmark105">*Selecting a</a>* (on page <a href="#_bookmark105">103</a>).</p>
+<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.</p>
 <p><strong>Example 4:</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml</code></p>
-<p>This command performs all the actions described in <a href="#_bookmark303"><em>Example 2</em> </a>above, and in addition the execution return code is saved in result1.xml.</p>
+<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.</p>
 <p><strong>Example 5:</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3</code></p>
-<p>This command performs all the actions described in <a href="#_bookmark303"><em>Example 2</em> </a>above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
+<p>This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
 <h2 id="establishing-communication">Establishing Communication</h2>
 <p>WebLOAD Console begins executing a test by verifying the test parameters and attempting to communicate with the hosts participating in the test session.</p>
 <p>While WebLOAD Console is preparing to run the test, the following message appears:</p>
@@ -3679,7 +3679,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;">Session Tree</td>
-<td style="text-align: left;">Presents a graphic display of your test session. See <a href="#_bookmark308">*Viewing</a> <em><a href="#_bookmark308">the Session Tree in Session Mode* </a></em>(on page <a href="#_bookmark307">278</a>) for a complete discussion of the Session Tree.</td>
+<td style="text-align: left;">Presents a graphic display of your test session. See <a href="#viewing-the-session-tree-in-session-mode"><em>Viewing the Session Tree in Session Mode</em> </a> for a complete discussion of the Session Tree.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Results Window</td>
@@ -3761,9 +3761,8 @@
 <h3 id="manually-shutting-down-cloud-machines">Manually Shutting Down Cloud Machines</h3>
 <p>You can manually shut-down Amazon Cloud Machines still running. This is relevant if WebLOAD is configured to leave Cloud Machines running, or if you chose to leave them running at the end of a Load Session.</p>
 <p>![ref7]<strong>Note:</strong> The data residing on an Amazon Cloud Machine is not accessible once the machine is shut down.</p>
-<p>For more information about working with Cloud Machines, refer to <a href="#_bookmark112">*Selecting Host</a> <em><a href="#_bookmark112">Computers* </a></em>on page <a href="#_bookmark112">107.</a></p>
-<p>For information about changing the shut-down policy of Cloud Machines, refer to</p>
-<p><a href="#_bookmark117"><em>Creating WebLOAD Cloud Accounts</em> </a>on page <a href="#_bookmark117">109<em>.</em></a></p>
+<p>For more information about working with Cloud Machines, refer to <a href="../config_load_template/#selecting-hosts"><em>Selecting Host Computers</em> </a></p>
+<p>For information about changing the shut-down policy of Cloud Machines, refer to <a href="#correcting-the-all-hosts-are-unreachable-or-stopped-error"><em>Creating WebLOAD Cloud Accounts</em> </a></p>
 <p><strong>To shut down Cloud Machines:</strong></p>
 <ul>
 <li>Click <strong>Terminate Cloud Machines</strong> in the <strong>Tools</strong> tab of the ribbon. The Cloud Machines are shut down.</li>
@@ -3842,11 +3841,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

@@ -3184,21 +3184,21 @@
 <p><strong>Note:</strong> If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.</p>
 </blockquote>
 <h3 id="examples_1">Examples</h3>
-<p><strong>Example 1:</strong></p>
+<p><strong>Example 1</strong></p>
 <p><code>WebLOAD.exe test1.tpl</code></p>
 <p>This command opens the Console and the test1.tpl template. The Console waits for user input.</p>
-<p><strong>Example 2:</strong></p>
+<p><strong>Example 2</strong></p>
 <p>WebLOAD.exe test1.tpl march9.ls /ar 30</p>
 <p>This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
-<p><strong>Example 3:</strong></p>
+<p><strong>Example 3</strong></p>
 <p><code>WebLOAD.exe /ag c:\agendas\MyAgenda.wlp</code></p>
 <p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyAgenda.wlp script is automatically selected and the WebLOAD Wizard waits for user input.</p>
-<p><strong>Example 4:</strong></p>
+<p><strong>Example 4</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml</code></p>
-<p>This command performs all the actions described in <a href="#_bookmark17"><em>Example 2</em> </a>above, and in addition the execution return code is saved in result1.xml.</p>
-<p><strong>Example 5:</strong></p>
+<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.</p>
+<p><strong>Example 5</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3</code></p>
-<p>This command performs all the actions described in <a href="#_bookmark17"><em>Example 2</em> </a>above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
+<p>This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
 <h1 id="generating-an-analytics-report-through-the-cli">Generating an Analytics Report through the CLI</h1>
 <p>WebLOAD Analytics can be executed in command line mode. This enables incorporating WebLOAD Analytics in scripts. Two executables are available:</p>
 <ul>
@@ -3281,7 +3281,7 @@
 <h3 id="syntax_4">Syntax</h3>
 <p>Use the following syntax to define the parameters for running a WebLOAD Recorder test <strong>through a Command Line Interface.:</strong></p>
 <p><code>webloadide.exe [&lt;flags&gt;][] [&lt;session name to save to&gt;][]</code></p>
-<p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#_bookmark25"><em>Examples</em> </a>(on page <a href="#_bookmark24">15</a>).</p>
+<p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#examples"><em>Examples</em> </a>.</p>
 <h3 id="parameters_4">Parameters</h3>
 <p>When running a test invoked by the executable, you can specify the following parameters:</p>
 <table>
@@ -3377,11 +3377,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

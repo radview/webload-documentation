@@ -5399,7 +5399,7 @@
 <h2 id="using-pmm-configuration-files">Using PMM Configuration Files</h2>
 <p>PMM configuration files can be created and attached to WebLOAD Console templates for monitoring performance in a test session, or configured and saved for use in future WebLOAD Console sessions.</p>
 <h3 id="creating-a-new-configuration-file">Creating a New Configuration File</h3>
-<p>When PMM is first opened the main configuration window is empty, enabling you to create a new configuration file. For directions on how to define the components to monitor, see <a href="#_bookmark468"><em>Specifying the Data Sources, Hosts, and Measurements to Monitor</em> </a>(on page <a href="#_bookmark469">375</a>).</p>
+<p>When PMM is first opened the main configuration window is empty, enabling you to create a new configuration file. For directions on how to define the components to monitor, see <a href="#specifying-the-data-sources-hosts-and-measurements-to-monitor"><em>Specifying the Data Sources, Hosts, and Measurements to Monitor</em> </a>.</p>
 <p>If the PMM currently displays a configuration file, creating a new configuration file requires clearing the current configuration information from the display window.</p>
 <p><strong>To clear an existing configuration from the configuration window in order to define a new configuration file:</strong></p>
 <ol>
@@ -5436,7 +5436,7 @@
 <p><strong>To assign a PMM configuration to a template:</strong></p>
 <ol>
 <li>Ensure that the template to which you want to assign the PMM configuration is open in WebLOAD Console.</li>
-<li>Open / define the PMM configuration you want to attach to the template. For information on defining PMM configurations, see <a href="#_bookmark468">*Specifying the Data Sources, Hosts,</a><a href="#_bookmark468"> and Measurements to Monitor* </a>(on page <a href="#_bookmark469">375</a>).</li>
+<li>Open / define the PMM configuration you want to attach to the template. For information on defining PMM configurations, see <a href="#specifying-the-data-sources-hosts-and-measurements-to-monitor"><em>Specifying the Data Sources, Hosts, and Measurements to Monitor</em> </a>.</li>
 <li>Select <strong>File</strong> &gt; <strong>Close and update Template</strong>,</li>
 </ol>
 <p>-Or-</p>
@@ -5473,8 +5473,8 @@
 <li>Browse to the location you want to save your PMM file, enter a name for the file in the File Name field, and click <strong>Save</strong>.</li>
 </ol>
 <h2 id="specifying-the-data-sources-hosts-and-measurements-to-monitor">Specifying the Data Sources, Hosts, and Measurements to Monitor</h2>
-<p>PMM can be used for adding new data sources to the PMM configuration or updating an existing configuration. You select the type of data source to monitor and the measurements to monitor on each host. When you connect to a host server using Perfmon (Windows), you must have administrator privileges on that server in order to successfully monitor it. For more information about configuring administrator privileges on a host server using Perfmon (Windows), see <a href="#_bookmark476">*Configuring Administrator</a> <em><a href="#_bookmark476">Privileges for Perfmon (Windows)* </a></em>(on page <a href="#_bookmark476">385</a>).</p>
-<p>Some data sources require initial configuration to enable monitoring by the PMM. For more information, refer to <a href="#_bookmark480"><em>Enabling Data Sources Monitoring</em> </a>on page <a href="#_bookmark480">387.</a></p>
+<p>PMM can be used for adding new data sources to the PMM configuration or updating an existing configuration. You select the type of data source to monitor and the measurements to monitor on each host. When you connect to a host server using Perfmon (Windows), you must have administrator privileges on that server in order to successfully monitor it. For more information about configuring administrator privileges on a host server using Perfmon (Windows), see <a href="#configuring-administrator-privileges-for-perfmon-windows"><em>Configuring Administrator Privileges for Perfmon (Windows)</em> </a>.</p>
+<p>Some data sources require initial configuration to enable monitoring by the PMM. For more information, refer to <a href="#enabling-data-sources-monitoring"><em>Enabling Data Sources Monitoring</em> </a></p>
 <h3 id="adding-data-sources">Adding Data Sources</h3>
 <p>Data sources are the performance objects you want to monitor.</p>
 <h4 id="starting-the-performance-measurements-manager-wizard">Starting the Performance Measurements Manager Wizard</h4>
@@ -5707,9 +5707,9 @@
 <h3 id="configuring-administrator-privileges-for-perfmon-windows">Configuring Administrator Privileges for Perfmon (Windows)</h3>
 <p>In order to successfully monitor a host server using Perfmon (Windows), you must have administrator privileges on that server. There are three methods for configuring Administrator privileges:</p>
 <ul>
-<li><a href="#_bookmark477"><em>Configuring Administrator Privileges on a Server</em> </a>(on page <a href="#_bookmark477">385</a>)</li>
-<li><a href="#_bookmark478"><em>Configuring Administrator Privileges on all Servers Simultaneously</em> </a>(on page <a href="#_bookmark478">386</a>)</li>
-<li><a href="#_bookmark479"><em>Configuring Administrator Privileges on non-Server</em> PCs </a>(on page <a href="#_bookmark479">386</a>)</li>
+<li><a href="#configuring-administrator-privileges-on-a-server"><em>Configuring Administrator Privileges on a Server</em> </a></li>
+<li><a href="#configuring-administrator-privileges-on-all-servers-simultaneously"><em>Configuring Administrator Privileges on all Servers Simultaneously</em> </a></li>
+<li><a href="#configuring-administrator-privileges-on-non-server-pcs"><em>Configuring Administrator Privileges on non-Server</em> PCs </a></li>
 </ul>
 <h4 id="configuring-administrator-privileges-on-a-server">Configuring Administrator Privileges on a Server</h4>
 <p><strong>To configure Administrator privileges on a server:</strong></p>
@@ -6215,7 +6215,7 @@
 <p>General JMX can connect to any device that supports JMX (JSR-003) and JMX Remote API (JSR-160). Refer to your application server’s documentation to see how to configure JMX for your server.</p>
 <h3 id="general-performance-monitor-configuration-tasks">General Performance Monitor – Configuration Tasks</h3>
 <p>General Performance Monitor can be used to connect and collect statistics using Windows Performance Monitor protocol (Perfmon).</p>
-<p>When you connect to a host server using Perfmon (Windows), you must have administrator privileges on that server in order to successfully monitor it. For more information about configuring administrator privileges on a host server using Perfmon (Windows), see <a href="#_bookmark476"><em>Configuring Administrator Privileges for Perfmon (Windows)</em> </a>(on page <a href="#_bookmark476">385</a>).</p>
+<p>When you connect to a host server using Perfmon (Windows), you must have administrator privileges on that server in order to successfully monitor it. For more information about configuring administrator privileges on a host server using Perfmon (Windows), see <a href="#configuring-administrator-privileges-for-perfmon-windows"><em>Configuring Administrator Privileges for Perfmon (Windows)</em> </a>.</p>
 <h3 id="general-snmp-configuration-tasks">General SNMP – Configuration Tasks</h3>
 <p>General SNMP can be used to connect to all servers supporting SNMP monitoring.</p>
 <p>Refer to your server documentation for instructions on how to enable SNMP on your server.</p>
@@ -6237,7 +6237,7 @@
 <p>(<Install Dir>\bin):</p>
 <p>PROTOCOLS=“pmprobeprotocol.dll;JSCOMObject.dll” PROTOCOLS_NAMES=“Performance Monitor Probe;COM Object”</p>
 <h5 id="setting-the-probed-measurements">Setting the Probed Measurements</h5>
-<p>You can run the Remote Performance Measurement Manager utility to select the servers you want to probe and the statistics you want to collect. For instructions on how to use the Performance Measurements Manager utility to select a server and statistics, see <a href="#_bookmark468"><em>Specifying the Data Sources, Hosts, and Measurements to Monitor</em> </a>(on page <a href="#_bookmark468">375</a>).</p>
+<p>You can run the Remote Performance Measurement Manager utility to select the servers you want to probe and the statistics you want to collect. For instructions on how to use the Performance Measurements Manager utility to select a server and statistics, see <a href="#specifying-the-data-sources-hosts-and-measurements-to-monitor"><em>Specifying the Data Sources, Hosts, and Measurements to Monitor</em> </a>.</p>
 <blockquote>
 <p><strong>Note:</strong> To use the Remote PMM , you must obtain a valid license file for the remote machine. To do so, open the Update License utility after performing a full WebLOAD installation, and send the HostID to <a href="mailto:license@radview.com">license@radview.com </a>with a request for a license for setting up a Remote PMM only.</p>
 </blockquote>
@@ -6300,8 +6300,8 @@
 <p><strong>Note:</strong> You can rename the new script by right-clicking on the new script and typing in a new name.</p>
 </blockquote>
 <h2 id="importing-external-statistics">Importing External Statistics</h2>
-<p>WebLOAD Console enables you to import statistical data from an external comma- delimited values file (.csv) into your report, while running a Load Session or upon test completion. Imported counters are added to the integrated reports tree, under Import::<File name>, where <File name> is the name of the file containing the external statistics. For more information about integrated reports, see <a href="#_bookmark338">*WebLOAD</a> <em><a href="#_bookmark338">Console Performance* Reports </a></em>(on page <a href="#_bookmark338">295</a>). All imported data is integrated with the</p>
-<p>Load Session’s database and the WebLOAD Console statistics are also calculated for this information. For more information about WebLOAD Console statistics, see <a href="#_bookmark368"><em>WebLOAD Statistics Reports</em> </a>(on page <a href="#_bookmark368">317</a>).</p>
+<p>WebLOAD Console enables you to import statistical data from an external comma- delimited values file (.csv) into your report, while running a Load Session or upon test completion. Imported counters are added to the integrated reports tree, under Import::<File name>, where <File name> is the name of the file containing the external statistics. For more information about integrated reports, see <a href="../console_performance_reports/"><em>WebLOAD Console Performance</em> Reports </a>. All imported data is integrated with the</p>
+<p>Load Session’s database and the WebLOAD Console statistics are also calculated for this information. For more information about WebLOAD Console statistics, see <a href="../statistics_reports/"><em>WebLOAD Statistics Reports</em> </a>.</p>
 <blockquote>
 <p>Note: Imported data is also available for use with WebLOAD Analytics.</p>
 </blockquote>
@@ -6356,11 +6356,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
