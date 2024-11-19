@@ -84,10 +84,6 @@ WebLOAD Recorder is supplied with a recording tool to perform the following:
 
 The recording tool runs independently of the WebLOAD Recorder. It runs under Microsoft Windows 2000, XP, 2003 and 2007.
 
-
-
-For detailed instructions on using WebLOAD Recorder to record scripts, see [*Recording](#_bookmark33) *[Scripts* ]
-
 ### The Editing Modes
 
 WebLOAD Recorder provides two modes in which to write lines of code:

@@ -6,7 +6,7 @@ The *WebLOAD JavaScript Reference Guide* provides a detailed description of the 
 
  
 
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)**Note:** Most WebLOAD users do not need this level of detail to create effective testing sessions for their website. Scripts are usually recorded and edited using WebLOAD Recorder, a simple, intuitive interface that provides users with a comprehensive set of testing tools literally at their fingertips, through point-and-click or drag-and-drop convenience. The details in this guide are provided for the convenience of more sophisticated programmers, who may wish to add specific, perhaps complex tailoring to their recorded scripts.
+**Note:** Most WebLOAD users do not need this level of detail to create effective testing sessions for their website. Scripts are usually recorded and edited using WebLOAD Recorder, a simple, intuitive interface that provides users with a comprehensive set of testing tools literally at their fingertips, through point-and-click or drag-and-drop convenience. The details in this guide are provided for the convenience of more sophisticated programmers, who may wish to add specific, perhaps complex tailoring to their recorded scripts.
 
 This chapter provides a general introduction to JavaScript scripts.
 
@@ -46,23 +46,7 @@ Scripts are written in JavaScript. JavaScript is an object-oriented scripting la
 
  
 
-For detailed information on using WebLOAD, including creating scripts, running test sessions, and analyzing the results, see the *WebLOAD Recorder User’s Guide* and the
-
-*WebLOAD Console User’s Guide*.
-
- 
-
- 
-
- 
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-|      | ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif) |
-
-
-
-
+For detailed information on using WebLOAD, including creating scripts, running test sessions, and analyzing the results, see the *WebLOAD Recorder User’s Guide* and the *WebLOAD Console User’s Guide*.
 
 ## WebLOAD scripts Work with an Extended Version of the Standard DOM
 

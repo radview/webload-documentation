@@ -1,29 +1,22 @@
 # WebLOAD Internet Protocols Reference
 
- 
+This chapter provides detailed reference information on WebLOAD support for the following Internet protocols
 
-This chapter provides detailed reference information on WebLOAD support for the following Internet protocols:
+- FTP, through the wlFTP Object and wlFTPs Object(for secure SSL connections)
 
-- FTP, through the [wlFTP Object ](#_bookmark514)(on page [347](#_bookmark511)) and [wlFTPs Object ](#_bookmark519)(on page [359](#_bookmark518)) (for secure SSL connections)
+- IMAP, through the wlIMAP Object
 
-- HTML email, through the [wlHtmMailer Object ](#_bookmark523)(on page [368](#_bookmark522))
+- NNTP, through the wlNNTP Object
 
-- IMAP, through the [wlIMAP Object ](#_bookmark526)(on page [374](#_bookmark526))
+- POP, through the wlPOP Object and wlPOPs Object (for secure SSL connections)
 
-- NNTP, through the [wlNNTP Object ](#_bookmark530)(on page [385](#_bookmark530))
+- SMTP, through the wlSMTP Object and wlSMTPs Object (for secure SSL connections)
 
-- POP, through the [wlPOP Object ](#_bookmark534)(on page [395](#_bookmark534)) and [wlPOPs Object ](#_bookmark538)(on page [402](#_bookmark538)) (for secure SSL connections)
+- TCP, through the wlTCP Object
 
-- SMTP, through the [wlSMTP Object ](#_bookmark541)(on page [407](#_bookmark541)) and [wlSMTPs Object ](#_bookmark545)(on page [414](#_bookmark545)) (for secure SSL connections)
+- Telnet, through the wlTelnet Object
 
-- TCP, through the [wlTCP Object ](#_bookmark548)(on page [419](#_bookmark548))
-
-- Telnet, through the [wlTelnet Object ](#_bookmark553)(on page [424](#_bookmark552))
-
-- UDP, through the [wlUDP Object ](#_bookmark558)(on page [430](#_bookmark557))
-
-
-
+- UDP, through the wlUDP Object
 
 ## wlFTP Object
 
