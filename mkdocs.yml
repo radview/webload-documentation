@@ -9,7 +9,9 @@ theme:
     - navigation.tabs.sticky
     - navigation.instant
     - navigation.sections
-
+extra:
+  generator: false
+  
 nav:
   - Home: index.md
   - Quick Start: quickstart.md

@@ -4,7 +4,7 @@
 
 This section provides instructions for editing scripts with WebLOAD Recorder.
 
-## About Editing Scripts with WebLOAD Recorder**
+## About Editing Scripts with WebLOAD Recorder  
 
 WebLOAD Recorder is both flexible and extendable to fit all of your script editing needs, from the most basic to the most advanced. On the simplest level, you use the WebLOAD Recorder GUI to record your basic script. You can edit your script either while it is being recorded or after it has finished recording to add functionality through the options available in the GUI. In most cases, the options available through the GUI meet all testing needs. For advanced functionality where programming is required, the JavaScript Editor is available to add further functionality to your script.
 
@@ -15,8 +15,6 @@ When editing your script, you can work at whatever level you prefer. The followi
 - [*Editing a Script in the Script Tree* ](#_bookmark58)(on page [70](#_bookmark58)) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
 - [*Editing a Script in the JavaScript View Pane* ](#_bookmark62)(on page [72](#_bookmark62)) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
 - [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#_bookmark73)(on page [85](#_bookmark73)) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
-
-
 
 ### Editing a Script in the Script Tree
 
