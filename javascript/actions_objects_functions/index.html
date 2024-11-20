@@ -9731,7 +9731,7 @@ Post the form from frame1.html
 <p>The CopyFile command must be inserted in the InitAgenda() section of your JavaScript program.</p>
 <p>The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:</p>
 <ol>
-<li><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg" />If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.</li>
+<li>If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.</li>
 </ol>
 <p><strong>Note:</strong> It is not recommended to hardcode a full path name, since the Script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.</p>
 <ol>
@@ -9797,8 +9797,8 @@ Post the form from frame1.html
 <h2 id="createtable-function">CreateTable() (function)</h2>
 <p><strong>Description</strong></p>
 <p>WebLOAD provides a CreateTable function to automatically convert the tables found on an HTML page to parallel wlTables objects. This simplifies access to the exact table entry in which the user is interested. The CreateTable() function returns a window object that includes a wlTables collection. This is a collection of wlTables objects, each of which corresponds to one of the tables found on the HTML page used as the function parameter. The table data may be accessed as any standard wlTables data.</p>
-<pre><code>**Parameter Name**                  **Description**                            HTMLFileName                  A literal string or      variable containing the full literal name of the HTML file in which the      tables to be converted are found.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Parameter Name**                  **Description**                            HTMLFileName                  A literal string or      variable containing the full literal name of the HTML file in which the      tables to be converted are found.
+</code></pre></div>
 <p><strong>Syntax</strong> CreateTable(HTMLFileName) <strong>Parameters</strong></p>
 <p><strong>Return Value</strong></p>
 <p>Returns a window object that includes a wlTables collection.</p>
@@ -9902,8 +9902,8 @@ Post the form from frame1.html
 <h2 id="debugmessage-function">DebugMessage() (function)</h2>
 <p><strong>Description</strong></p>
 <p>Displays a debug message in the Log View of WebLOAD Recorder.</p>
-<pre><code>**Parameter Name**                  **Description**                            msg                  A string with an      informative message to be sent to WebLOAD Recorder, to be displayed in      the Log View.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Parameter Name**                  **Description**                            msg                  A string with an      informative message to be sent to WebLOAD Recorder, to be displayed in      the Log View.
+</code></pre></div>
 <p><strong>Syntax</strong> DebugMessage(msg) <strong>Parameters</strong></p>
 <p><strong>Comment</strong></p>
 <p>If you call DebugMessage() in the main script, WebLOAD sends a debug message to the Log View of WebLOAD Recorder. The message is not written to the Console’s Log</p>
@@ -10056,8 +10056,8 @@ Post the form from frame1.html
 </ul>
 <p><strong>Description</strong></p>
 <p>Perform an HTTP or HTTPS Delete command.</p>
-<pre><code>**Parameter Name**                  **Description**                            [URL]                  An optional parameter identifying the      document URL.      You may optionally      specify the URL as a parameter of the method. Delete() connects to the first URL that has been      specified from the following list, in the order specified:      *      A Url parameter specified in the method call.      *      The Url property of the wlHttp object.      *      The local default wlLocals.Url.      `&lt;br&gt;`The global default wlGlobals.Url.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Parameter Name**                  **Description**                            [URL]                  An optional parameter identifying the      document URL.      You may optionally      specify the URL as a parameter of the method. Delete() connects to the first URL that has been      specified from the following list, in the order specified:      *      A Url parameter specified in the method call.      *      The Url property of the wlHttp object.      *      The local default wlLocals.Url.      `&lt;br&gt;`The global default wlGlobals.Url.
+</code></pre></div>
 <p><strong>Syntax</strong> Delete([URL] <strong>Parameters</strong></p>
 <p><strong>See also</strong></p>
 <ul>
@@ -10518,8 +10518,8 @@ wlHttp.FormData[“Product Interest”] = “Modems”
 <h2 id="errormessage-function">ErrorMessage() (function)</h2>
 <p><strong>Description</strong></p>
 <p>Use this function to display an error message in the Log Window and abort the current round.</p>
-<pre><code>**Parameter Name**                  **Description**                            msg                  A string with an error      message to be sent to the WebLOAD Console.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Parameter Name**                  **Description**                            msg                  A string with an error      message to be sent to the WebLOAD Console.
+</code></pre></div>
 <p><strong>Syntax</strong> ErrorMessage(msg) <strong>Parameters</strong></p>
 <p><strong>Comment</strong></p>
 <p>If you call ErrorMessage() in the main script, WebLOAD stops the current round of execution. Execution continues with the next round, at the beginning of the main script.</p>
@@ -12318,8 +12318,8 @@ Frame0_0 = wlHtml.GetFrameByUrl(“*/MyCompany/*”,Frame0)
 <p><strong>GUI mode</strong></p>
 <p>In the WebLOAD Recorder, select one of the cache scope options in the Browser Cache tab of the <strong>Default/Current Project Options</strong> dialog box, accessed from the <strong>Tools</strong> tab of the ribbon.</p>
 <blockquote>
-<pre><code>**Note:** The default value for the cache scope is **SingleRound**.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Note:** The default value for the cache scope is **SingleRound**.
+</code></pre></div>
 </blockquote>
 <p><strong>See also</strong></p>
 <ul>
@@ -12367,8 +12367,8 @@ Frame0_0 = wlHtml.GetFrameByUrl(“*/MyCompany/*”,Frame0)
 <p><strong>Description</strong></p>
 <p>Identifies the proxy server that the script uses for HTTP SSL access when UseSameProxyforSSL is set to false. The user name and password are for SSL proxy servers that require user authorization. These properties are used when you are working with a separate SSL proxy.</p>
 <blockquote>
-<pre><code>**Note:** This property can only be inserted manually.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Note:** This property can only be inserted manually.
+</code></pre></div>
 </blockquote>
 <p><strong>Syntax</strong></p>
 <p><code>wlGlobals.*httpsProxyProperty* = “TextString”</code></p>
@@ -12733,8 +12733,8 @@ IncludeFile(“MyFunction.js”)
 <p><strong>Description</strong></p>
 <p>Specifies the address of the Key Distribution Center (KDC) server if you are using the Kerberos authentication method.</p>
 <blockquote>
-<pre><code>**Note:** The KDCServer property is only relevant for playback.
-</code></pre>
+<div class="highlight"><pre><span></span><code>**Note:** The KDCServer property is only relevant for playback.
+</code></pre></div>
 </blockquote>
 <p><strong>Syntax</strong></p>
 <p><code>KDCServer(ServerName)</code></p>

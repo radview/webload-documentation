@@ -3447,29 +3447,13 @@
 <p>Web pages have a logical structure that may be represented through a series of DOM object trees. The DOM tree for a selected Web page is essentially a hierarchically structured, more easily understood representation of the DOM objects found in the HTML code for that Web page. The DOM tree of the Web page associated with a selected node is displayed in the <em>DOM View pane</em>. The DOM View pane is one of the tabs available in the WebLOAD Recorder desktop. When</p>
 <p>working with the DOM View, the center pane is actually split in half, with the upper half displaying the DOM View and the lower half displaying the corresponding Web page, seen in the Browser View.</p>
 <p>The following figure illustrates a WebLOAD Recorder desktop displaying the Script Tree and DOM and Browser Views. The Script Tree is on the left. The Browser View pane on the lower right focuses on a piece of the selected form as it appeared on the Web page at the time this script was recorded. The DOM View pane on the upper right displays the DOM objects that represent the selected form, arranged in a tree that corresponds to the user activity in the selected form.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<p><em>Figure 1: Script Tree, DOM, and Browser Views</em></p>
-<p><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image010.gif" /></p>
 <h2 id="editing-the-javascript-code-in-a-script">Editing the JavaScript Code in a script</h2>
 <h3 id="accessing-the-javascript-code-within-the-script-tree">Accessing the JavaScript Code within the Script Tree</h3>
 <p>WebLOAD Recorder provides a complete graphic user interface for creating and editing script files. Additions or changes to a script are usually made through the WebLOAD Recorder, working with intuitive icons representing user actions in a graphic Script Tree. For greater clarity, the JavaScript code that corresponds to each user action in a script is also visible in the JavaScript View pane on the WebLOAD Recorder desktop.</p>
 <p>While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects.</p>
 <p>Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:</p>
 <p>JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the <em>WebLOAD Scripting Guide.</em> Use the IntelliSense Editor, described in <a href="#_bookmark18"><em>Using the IntelliSense</em></a><a href="#_bookmark18"> <em>JavaScript Editor</em> </a>(on page <a href="#_bookmark18">18</a>), to add lines of code or functions to the JavaScript Object.</p>
-<p><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg" />Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.</p>
+<p>Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.</p>
 <p><strong>Note:</strong> Once a branch has been converted to a single JavaScript Object, the various user activity icons that were on that branch are no longer individually accessible.</p>
 <p>Imported JavaScript File—an external JavaScript file that should be incorporated within the body of the current script. Select <strong>Edit</strong> <strong></strong> <strong>Import JavaScript File</strong> from the</p>
 <p>WebLOAD Recorder menu to import the file of your choice. Often testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.</p>
@@ -3501,42 +3485,10 @@
 <p>For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end</p>
 <p>delimiter “End WLIDE”.</p>
 <p>For more information, see the <em>WebLOAD Scripting Guide.</em></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<p><em>Figure 2: IntelliSense Editor Mode for JavaScript View Pane</em></p>
 <p>A selection of the most commonly used functions and commands, available through the <strong>Insert</strong> menu.</p>
 <p>You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the <strong>Insert</strong> menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<p><em>Figure 3: Insert Menu</em></p>
 <p>In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.</p>
-<p><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg" /></p>
-<p><em>Figure 4: Insert Variable Menu</em></p>
-<p><img alt="img" src="file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg" />A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select <strong>Tools</strong> <strong></strong> <strong>Check Syntax</strong> to check the syntax of the code in your script file.</p>
+<p>A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select <strong>Tools</strong> <strong></strong> <strong>Check Syntax</strong> to check the syntax of the code in your script file.</p>
 <p><strong>Important:</strong> WebLOAD Recorder scripts should be edited only within the confines of WebLOAD Recorder, not an external editor. If you use an external editor to modify the JavaScript code in a script file generated by WebLOAD Recorder, your visual script will be lost.</p>
 <p>Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a Script Tree is described in <a href="#_bookmark17"><em>Accessing the JavaScript Code within the Script Tree</em> </a>(on page <a href="#_bookmark17">17</a>).</p>
 
