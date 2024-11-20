@@ -132,7 +132,7 @@ The following script downloads a dynamic HTML page belonging to a retailer that 
 
 - Downloads the page including the nested frames.
 - Retrieves the second frame.
-- Searches the HTML source code of the second frame to find the <TITLE> element.
+- Searches the HTML source code of the second frame to find the `<TITLE>` element.
 - Confirms that the title is "Offer of the Hour". (If it is not, the script displays an error message and stops the current round of the thread where the error occurred. The thread continues with the next round.)
 - Randomly selects one of the first three links in the second frame.
 - Follows the link.
@@ -663,9 +663,8 @@ The home page of a company displays the following form, where a user can specify
 
 The HTML code for the form is:
 
-<FORM
-```htm
-[action="http://www.ABCDEF.com/FormProcessor.exe"](http://www.ABCDEF.com/FormProcessor.exe) method="post">
+```html
+<FORM action="http://www.ABCDEF.com/FormProcessor.exe" method="post">
 
 <P>Your name: <INPUT type="text" name="yourname">
 
@@ -749,7 +748,7 @@ i++
 
 }
 
-wlHttp.FormData[MyArray[i].name]=MyArray[i].options[0].v alue
+wlHttp.FormData[MyArray[i].name]=MyArray[i].options[0].v alue
 
 break
 

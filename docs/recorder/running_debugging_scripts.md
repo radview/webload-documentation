@@ -825,7 +825,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    | *Page Title*                                        |                                                              |
    | **Validate**                                        | Select to validate the page title.                           |
    | **Success if Page Title is**                        | The title of the Web page. During playback, if the title of the Web page matches the text entered in this field, the validation is successful. |
-   | **Recorded page title is**                          | The page title as defined in the HTML <title> tag.           |
+   | **Recorded page title is**                          | The page title as defined in the HTML `<title>` tag.           |
    | *Page Time*                                         |                                                              |
    | **Validate**                                        | Select to validate the page time.                            |
    | **Page Time limit x sec**                           | The maximum number of seconds that may elapse while waiting for the Web page to open for the validation to be successful. |

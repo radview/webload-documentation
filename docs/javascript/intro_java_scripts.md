@@ -354,30 +354,6 @@ working with the DOM View, the center pane is actually split in half, with the u
 
 The following figure illustrates a WebLOAD Recorder desktop displaying the Script Tree and DOM and Browser Views. The Script Tree is on the left. The Browser View pane on the lower right focuses on a piece of the selected form as it appeared on the Web page at the time this script was recorded. The DOM View pane on the upper right displays the DOM objects that represent the selected form, arranged in a tree that corresponds to the user activity in the selected form.
 
- 
-
- 
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-|      | ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg) |
-
-
-
-
-
- 
-
-*Figure 1: Script Tree, DOM, and Browser Views*
-
-
-
- 
-
- 
-
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image010.gif)
-
 ## Editing the JavaScript Code in a script
 
  
@@ -396,7 +372,7 @@ Editing the JavaScript code in a script does not necessarily mean editing a huge
 
 JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the *WebLOAD Scripting Guide.* Use the IntelliSense Editor, described in [*Using the IntelliSense*](#_bookmark18)[ *JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)), to add lines of code or functions to the JavaScript Object.
 
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg)Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.
+Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.
 
  
 
@@ -494,65 +470,14 @@ delimiter “End WLIDE”.
 
 For more information, see the *WebLOAD Scripting Guide.*
 
- 
-
- 
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-|      | ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg) |
-
-
-
-
-
-*Figure 2: IntelliSense Editor Mode for JavaScript View Pane*
-
- 
-
 A selection of the most commonly used functions and commands, available through the **Insert** menu.
 
-
-
- 
-
- 
-
 You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the **Insert** menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.
-
- 
-
- 
-
-|      |                                                              |
-| ---- | ------------------------------------------------------------ |
-|      | ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg) |
-
-
-
-
-
-*Figure 3: Insert Menu*
-
  
 
 In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.
 
-
-
- 
-
- 
-
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg)
-
- 
-
-*Figure 4: Insert Variable Menu*
-
- 
-
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image005.jpg)A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select **Tools** **** **Check Syntax** to check the syntax of the code in your script file.
+A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select **Tools** **** **Check Syntax** to check the syntax of the code in your script file.
 
  
 

@@ -233,7 +233,8 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | pattern          | The name of the file or directory for which  you are searching. This may be a specific file name, or it may contain  wildcards. |
-| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful.  a[].fileName     //  name of file a[].fileAttributes // attribute  string  a[].fileTime     //  date and time of last modification  a[].fileSize     // size of file in bytes  a[].isDir       // 1 if the entry represents a  directory, 0 for a file     ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg) **Note:** If the host supports only basic information, only the  fileName property of the array is defined. |
+| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful.  a[].fileName     //  name of file a[].fileAttributes // attribute  string  a[].fileTime     //  date and time of last modification  a[].fileSize     // size of file in bytes  a[].isDir       // 1 if the entry represents a  directory, 0 for a file     
+**Note:** If the host supports only basic information, only the  fileName property of the array is defined. |
 | **Comments**     | Lists files and directories that match the pattern  parameter in the current directory of the host. This method returns detailed  information if the server supports it. |
 
  

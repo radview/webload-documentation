@@ -11,7 +11,11 @@ theme:
     - navigation.sections
 extra:
   generator: false
-  
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+           
 nav:
   - Home: index.md
   - Quick Start: quickstart.md

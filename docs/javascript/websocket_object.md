@@ -217,25 +217,3 @@ Sleep(1000);
 
 Sleep(1000);
 ```
-
-
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image005.gif)
-
-**W**

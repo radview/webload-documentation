@@ -70,8 +70,8 @@ When running a test invoked by the executable, you can specify the following par
 | :- | :- | :- |
 |File name to open|The name of the \*.tpl or \*.ls file (Load Template or Load Session file) to run.|Optional parameter|
 |File name to save|The name of the \*.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.|Optional parameter|
-|Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar *<time>* – Automatically run the test for the length of time specified in *<time>/*</p><p>- /vc – The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc – The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *<results\_file\_name>* – Place the results in the specified file (an XML file).</p>|Optional parameter|
-|/ag <script name>|The name of an existing script (\*.wlp) to open.|Optional parameter|
+|Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar *time* – Automatically run the test for the length of time specified in *time/*</p><p>- /vc – The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc – The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *`<results_file_name>`* – Place the results in the specified file (an XML file).</p>|Optional parameter|
+|/ag `<script name>`|The name of an existing script (\*.wlp) to open.|Optional parameter|
 
 
 The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag </ar> flag is not set, the <file name to save> and the <time> parameters are ignored.

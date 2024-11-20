@@ -58,9 +58,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
 
-   1. ##### Select the **Use the following definitions for the application’s proxy server**
-
-      option.
+   1. Select the **Use the following definitions for the application’s proxy server**  option.
 
    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 
@@ -110,9 +108,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the Proxy Options tab.
 
-   1. ##### Select the **Use the following definitions for the application’s proxy server**
-
-      option.
+   1. Select the **Use the following definitions for the application’s proxy server**  option.
 
    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 
@@ -164,9 +160,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
 
-   1. ##### Select the **Use the following definitions for the application’s proxy server**
-
-      option.
+   1. Select the **Use the following definitions for the application’s proxy server** option.
 
    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 

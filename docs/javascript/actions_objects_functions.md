@@ -935,7 +935,7 @@ The CopyFile command must be inserted in the InitAgenda() section of your JavaSc
 
 The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
 
-1. ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg)If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
+1. If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
 
 **Note:** It is not recommended to hardcode a full path name, since the Script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
 

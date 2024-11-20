@@ -402,7 +402,7 @@ if (document.wlStatusNumber != 200) { ErrorMessage(“Aborting round “ + Round
 
 Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
 
-Messages can also be added to the script using the Toolbox Message icon ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg). Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click ![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg) to select a variable. Select the severity of the message from the Message Severity drop-down list.
+Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.
 
  
 

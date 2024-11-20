@@ -121,29 +121,3 @@ newNode1 = xmlDoc.createElement("NEW_NODE1");
 
 //Insert the new element into DOM domNode1.insertBefore(newNode1, domNode);
 ```
-
-
-
- 
-
-
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-![img](file:///C:/Users/ASURA/AppData/Local/Temp/msohtmlclip1/01/clip_image008.gif)
-
-**Web**
