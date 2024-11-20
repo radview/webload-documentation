@@ -17,7 +17,7 @@ WebLOAD contains a powerful rule based correlation engine. You can define rules 
 
 WebLOAD also provides automatic discovery of potential correlation rules. Using auto-discovery of rules eliminates the need to manually define correlation rules in some common cases.
 
-WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see [*Configuring the Correlation Rules* ](#_bookmark89)(on page [98](#_bookmark89)).
+WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see [*Configuring the Correlation Rules* ](#_bookmark89).
 
 The WebLOAD correlation engine enables you to:
 
@@ -42,13 +42,13 @@ Correlation is performed on your script, based on the correlation rules. Correla
 
 - **Auto-discovery of correlation rules** – When performing correlation with
 
-  auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see [*Approving the Correlation Engine Rules](#_bookmark85)* (on page [94](#_bookmark85)).
+  auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see [*Approving the Correlation Engine Rules](#_bookmark85)* .
 
 - **In the Correlation Rules Editor** – Before running the correlation engine, you can use the correlation rules editor to add and edit the rules.
 
 > **Note:** You can turn discovered rules into permanent rules and then edit the rules in the correlation rules editor.
 
-For more information, see [*Configuring the Correlation Rules* ](#_bookmark89)(on page [98](#_bookmark89)).
+For more information, see [*Configuring the Correlation Rules* ](#_bookmark89).
 
 > **Note:** Correlation cannot be performed on scripts that were not recorded.
 
@@ -127,7 +127,7 @@ You can control the default correlation action that WebLOAD should perform after
    - **Do not run** – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.
    - **Use existing rules** – Run the correlation engine once the script recording is complete, only using the existing rules (do not try to auto-discover new rules).
    - **Discover rules** – Run the correlation engine using existing rules and try to discover new rules.
-   - **Prompt** – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](#_bookmark36)(on page [34](#_bookmark36)).
+   - **Prompt** – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](#_bookmark36).
 
 
 
@@ -203,7 +203,7 @@ The left side of the Conflict Resolution window displays the correlated version 
 ### Editing Conflicts between Manual Changes and Correlation Changes
 When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.
 
-The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](#_bookmark187)(on page [212](#_bookmark187)).
+The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](#_bookmark187).
 
 
 
@@ -398,7 +398,7 @@ application developer to track a user’s interaction with a website is by provi
 The following sections provide information on how some of the most commonly used Web and application servers perform session management.
 
 ### IBM WebSphere Application Server
-The IBM WebSphere Application Server (WAS) supports all the session management methods listed in [*Session Management* ](#_bookmark95)(on page [107](#_bookmark95)), but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.
+The IBM WebSphere Application Server (WAS) supports all the session management methods listed in [*Session Management* ](#_bookmark95), but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.
 
 In an HTTP session, all the attributes associated with a user’s request are stored on the server. Since the only information transmitted between the server and the browser is the session ID cookie, which has a limited lifetime, an HTTP session can provide a much more secure session management method than cookies, when configured in conjunction with SSL.
 

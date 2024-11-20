@@ -78,14 +78,14 @@ when the server is required to ‘push’ data to the client, for example, chat 
 
 There are several techniques that can be used to achieve server push:
 
-- **Polling**: the client (browser) sends a request to the server at regular intervals. For more information refer to [*Using Polling Protocol in WebLOAD* ](#_bookmark143)(on page [155](#_bookmark143)).
+- **Polling**: the client (browser) sends a request to the server at regular intervals. For more information refer to [*Using Polling Protocol in WebLOAD* ](#_bookmark143).
 - **Long polling**: the client request is kept on hold until the server can deliver a valid response. When data from the server needs to be pushed, the server responds and closes the connection. The client is then expected to start a new connection and
 
   wait for the server’s next message (response).
 
-  For more information refer to [*Using Long Polling in WebLOAD* ](#_bookmark144)(on page [155](#_bookmark144)).
+  For more information refer to [*Using Long Polling in WebLOAD* ](#_bookmark144).
 
-- **Streaming**: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to [*Using HTTP Streaming in WebLOAD* ](#_bookmark145)(on page [156](#_bookmark145)).
+- **Streaming**: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to [*Using HTTP Streaming in WebLOAD* ](#_bookmark145).
 
 
 

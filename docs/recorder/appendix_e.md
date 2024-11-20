@@ -29,7 +29,7 @@ In addition, you can playback a recording as if it were a recording from a mobil
 
    2. Configure the device’s wireless proxy settings to go through the WebLOAD machine, on the noted port.
 
-      This step depends on the device OS type and version. For example, see [*Setting](#_bookmark358) *[Proxy Settings in iPhone* ](#_bookmark358)*(on page [377](#_bookmark358)) and [*Setting Proxy Settings in Android* ](#_bookmark360)(on page [380](#_bookmark360)).
+      This step depends on the device OS type and version. For example, see [*Setting](#_bookmark358) *[Proxy Settings in iPhone* ](#_bookmark358)* and [*Setting Proxy Settings in Android* ](#_bookmark360).
 
 3. Perform actions in your mobile device application or web browser; the HTTP requests will be recorded in the test script.
 
@@ -43,7 +43,7 @@ In addition, you can playback a recording as if it were a recording from a mobil
 >
 > You may need to open you firewall to accept connections to proxynator.exe, on port 9884.
 >
-> To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see [*Recording HTTPS Traffic on iPhone* ](#_bookmark359)(on page [379](#_bookmark359)) and [*Recording](#_bookmark361) *[HTTPS traffic on Android (4.0 and above)* ](#_bookmark361)*(on page [380](#_bookmark361)).
+> To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see [*Recording HTTPS Traffic on iPhone* ](#_bookmark359) and [*Recording](#_bookmark361) *[HTTPS traffic on Android (4.0 and above)* ](#_bookmark361)*.
 >
 > When not recording, the mobile device will not be able to access the network (because the proxy is not available) – to use the network normally, revert the **HTTP Proxy** setting back to **Off**.
 

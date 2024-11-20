@@ -50,7 +50,7 @@ Creates a new WebSocket for the given URL, and returns a JavaScript object refer
 
 Creates a WebSocket connection to the given URL address. When connected, an
 
-onopen() event is fired, as described in [*onopen (evt)* ](#_bookmark576)(on page [447](#_bookmark576)).
+onopen() event is fired, as described in [*onopen (evt)* ](#_bookmark576).
 
  
 

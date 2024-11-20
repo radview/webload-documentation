@@ -31,7 +31,7 @@ In WebLOAD Console, select or deselect the **GZip Support** checkbox in the Brow
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## AcceptLanguage (property)
 
@@ -172,9 +172,9 @@ wlHttp.Get(“http://something”);
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
-* [*onDocumentComplete (property)* ](#_bookmark259)(on page [179](#_bookmark259))
-* [*onDataReceived (property)* ](#_bookmark258)(on page [177](#_bookmark258))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*onDocumentComplete (property)* ](#_bookmark259)
+* [*onDataReceived (property)* ](#_bookmark258)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
 
 ## BeginTransaction() (function)
@@ -228,7 +228,7 @@ To mark the beginning of a transaction, drag the **Begin Transaction** icon from
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307)on page [218](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark354)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark414)on page [283](#_bookmark413))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark419)on page [287](#_bookmark418))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark435)[ *(function)* ](#_bookmark435)on page [297](#_bookmark434))
 
@@ -290,7 +290,7 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 **See also**
 
 * cellIndex
-* [*C*](#_bookmark23)[*ollections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*C*](#_bookmark23)[*ollections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -324,7 +324,7 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 **See also**
 
 * cell
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -437,7 +437,7 @@ To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (proper
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)on page [49](#_bookmark59))
 * DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99)on page [77](#_bookmark99))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -471,7 +471,7 @@ To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (proper
 
 **See also**
 
-* [*HTTP Components* ](#_bookmark22)(on page [24](#_bookmark21))
+* [*HTTP Components* ](#_bookmark22)
 * ClearDNSCache() (see [*ClearDNSCache() (method)* ](#_bookmark58)on page [49](#_bookmark58))
 * DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99)on page [77](#_bookmark99))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -504,7 +504,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 * GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131)on page [101](#_bookmark131))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176)on page [131](#_bookmark176))
-* [*Identification Variables and Functions* ](#_bookmark28)(on page [29](#_bookmark28))
+* [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314)on page [222](#_bookmark314))
 * ThreadNum (see [*ThreadNum() (property)* ](#_bookmark412)on page [282](#_bookmark412))
 * VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)on page [296](#_bookmark432))
@@ -564,7 +564,7 @@ When you use the Close() function to close a file, data will be flashed to the d
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
@@ -596,7 +596,7 @@ In WebLOAD Recorder, enable maintaining connections during execution by checking
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * KeepAlive (see [*KeepAlive (property)* ](#_bookmark228)on page [159](#_bookmark227))
 
 ## cols (property)
@@ -618,7 +618,7 @@ cols is often accessed through the wlTables family of table, row, and cell objec
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -650,7 +650,7 @@ ConnectTimeout is used to set the amount of time the system will wait for an HTT
 
  **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## ConnectionSpeed (property)
 
@@ -692,7 +692,7 @@ WebLOAD recommends setting the connection speed through the WebLOAD Console. You
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## content (property)
 
@@ -769,7 +769,7 @@ Specifies the content type of the HTTP request.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## ConvertHiddenFields(method)
 
@@ -925,7 +925,7 @@ function InitAgenda() {…filename = CopyFile(“file.dat”)…}…GetLine(file
 
 **GUI mode**
 
-> **Note:** CopyFile() and IncludeFile() functions can be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript*](#_bookmark18) [*Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+> **Note:** CopyFile() and IncludeFile() functions can be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript*](#_bookmark18) [*Editor* ](#_bookmark18).
 
 **Comment**
 
@@ -951,7 +951,7 @@ The load engine first looks for the file to be copied in the default User Copy F
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
@@ -998,7 +998,7 @@ The actual DOM is created automatically each time an HTTP request is accessed th
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 
 ## CreateTable() (function)
 
@@ -1033,7 +1033,7 @@ CreateTable() is a member of the wlTables family of table, row, and cell objects
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 * wlTables (see [*wlTables (object)* ](#_bookmark493)on page [333](#_bookmark492))
 
@@ -1295,7 +1295,7 @@ Use the DefineConcurrent()function to define the beginning point, after which al
 
 in WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an ExecuteConcurrent() function in the script. For more information about the ExecuteConcurrent() function, see [*ExecuteConcurrent() (function)* ](#_bookmark120)(on page [92](#_bookmark120)).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an ExecuteConcurrent() function in the script. For more information about the ExecuteConcurrent() function, see [*ExecuteConcurrent() (function)* ](#_bookmark120).
 
 All requests performed from the beginning of the DefineConcurrent() function to the ExecuteConcurrent() function are stored in an array of documents. You can access every document by index number or document name as follows:
 
@@ -1411,7 +1411,7 @@ wlCookie.Delete(“CUSTOMER”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, 
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
 * Writeln() (see [*Writeln() (method)* ](#_bookmark506)on page [344](#_bookmark506))
 
@@ -1495,7 +1495,7 @@ To clear the DNS cache, set the ClearDNSCache() (see [*ClearDNSCache() (method)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * ClearDNSCache() (see [*ClearDNSCache() (method)* ](#_bookmark58)on page [49](#_bookmark58))
 * ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)on page [49](#_bookmark59))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -1633,9 +1633,9 @@ The most frequently accessed input elements are of type Button, CheckBox, File, 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Image (see [*Image (object)* ](#_bookmark210)on page [149](#_bookmark210))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 ## EncodeBinary (property)
 
@@ -1669,7 +1669,7 @@ In WebLOAD Recorder, select or deselect the **Encode Form Data** checkbox in the
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
 * [wlLocals](#wllocals-object)
@@ -1781,7 +1781,7 @@ For additional information about the EndTransaction() function, refer to *Begin 
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306)on page [218](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 
@@ -1926,17 +1926,17 @@ commands to catch errors within your script.
 
 WebLOAD recommends adding message functions to your script files directly through the WebLOAD Recorder. Message function commands can be added to the script in Visual Editing mode using the Toolbox message item and the Insert menu command.
 
-Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18).
 
 **See also**
 
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446)on page [306](#_bookmark446))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
@@ -2008,7 +2008,7 @@ Use the ExecuteConcurrent()function to define the point after which all Post and
 
 WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-**Note:** This function can only be inserted in your script *after* a DefineConcurrent() function. For more information about the DefineConcurrent() function, see [*DefineConcurrent() (function)* ](#_bookmark91)(on page [72](#_bookmark91)).
+**Note:** This function can only be inserted in your script *after* a DefineConcurrent() function. For more information about the DefineConcurrent() function, see [*DefineConcurrent() (function)* ](#_bookmark91).
 
 When the engine encounters the ExecuteConcurrent() function, it stops collecting the HTTP requests in the script and starts their execution.
 
@@ -2127,7 +2127,7 @@ For example, if FilterURL = “ynet;cnn.com”, the engine will filter URLs from
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## form (object)
 
@@ -2183,11 +2183,11 @@ You can access this form by writing any of the following expressions:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
 * Image (see [*Image (object)* ](#_bookmark210)on page [149](#_bookmark210))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 ## FormData (property)
 
@@ -2322,7 +2322,7 @@ For example:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * GetFrames (see [*GetFrames (property)* ](#_bookmark153)on page [117](#_bookmark153))
 
 ## Function (property)
@@ -2376,7 +2376,7 @@ For example, it is convenient to add GeneratorName() to a Message Node to clarif
 
 * ClientNum (see [*ClientNum (variable)* ](#_bookmark60)on page [50](#_bookmark60))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176)on page [131](#_bookmark176))
-* [*Identification Variables and Functions* ](#_bookmark28)(on page [29](#_bookmark28))
+* [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314)on page [222](#_bookmark314))
 * VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)on page [296](#_bookmark432))
 
@@ -3196,7 +3196,7 @@ wlGlobals.GetImagesInThinClient = true
 **See also**
 
 * SetClientType (see [*SetClientType (function)* ](#_bookmark352)on page [242](#_bookmark352))
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480)on page [327](#_bookmark481))
@@ -3237,7 +3237,7 @@ The scope of MultiIPSupport depends, of course, on whether it was set through wl
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## GetLine() (function)
 
@@ -3301,7 +3301,7 @@ If the line found in the file contains no separator characters, then the entire 
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile (see [*wlOutputFile() (constructor)* ](#_bookmark477)on page [324](#_bookmark477))
 * wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark474)on page [323](#_bookmark474))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
@@ -3360,7 +3360,7 @@ If the line found in the file contains no separator characters, then the entire 
 **See also**
 
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlInputFile (see [*wlInputFile() (constructor)* ](#_bookmark468)on page [318](#_bookmark468))
 
 ## GetLinkByName() (method)
@@ -3478,10 +3478,10 @@ Text string of the error message for this object.
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115)on page [90](#_bookmark115))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446)on page [306](#_bookmark446))
 
@@ -3541,7 +3541,7 @@ If the Load Generator is working with a Windows platform, possible return values
 
 * ClientNum (see [*ClientNum (variable)* ](#_bookmark60)on page [50](#_bookmark60))
 * GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131)on page [101](#_bookmark131))
-* [*Identification Variables and Functions* ](#_bookmark28)(on page [29](#_bookmark28))
+* [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314)on page [222](#_bookmark314))
 * VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)on page [296](#_bookmark432))
 
@@ -3702,10 +3702,10 @@ Integer, representing one of the following error level values:
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115)on page [90](#_bookmark115))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
 
@@ -3910,7 +3910,7 @@ HTTPS header from the server. It does not download the body of the URL, such as 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -3965,7 +3965,7 @@ Any information set using the wlHttp.Header property *takes priority* over any d
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * Erase (see [*Erase (property)* ](#_bookmark113)on page [88](#_bookmark113))
@@ -4170,7 +4170,7 @@ Identifies the proxy server that the script uses for HTTP SSL access when UseSam
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 * Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark295))
 * ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#_bookmark297)[ *(properties)* ](#_bookmark297)on page [212](#_bookmark297))
@@ -4201,7 +4201,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [146](#_bookmark207))
 * Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark295))
@@ -4219,7 +4219,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 * link (see [*link (object)* ](#_bookmark235)on page [162](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243)on page [168](#_bookmark243))
 * script (see [*script (object)* ](#_bookmark323)on page [228](#_bookmark323))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 * wlTables (see [*wlTables (object)* ](#_bookmark493)on page [333](#_bookmark492))
 * wlXmls (see [*wlXmls (object)* ](#_bookmark502)on page [340](#_bookmark502))
 
@@ -4267,7 +4267,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4278,7 +4278,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223)) (cell property)
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246)on page [170](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291)on page [208](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310)on page [220](#_bookmark310))
@@ -4297,7 +4297,7 @@ Image objects on a Web page are accessed through the document.all collection of 
 
 **Description**
 
-Each Image object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). Image objects are accessed through Images [*Collections* ](#_bookmark23)(on page [27](#_bookmark23)). (Compare to the element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125)) object, which stores the parsed data for an entire HTML form.)
+Each Image object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). Image objects are accessed through Images [*Collections* ](#_bookmark23). (Compare to the element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125)) object, which stores the parsed data for an entire HTML form.)
 
 image objects are grouped together within collections of images, accessed directly through the document object (document.images[#]).
 
@@ -4327,9 +4327,9 @@ Access each image’s properties directly using the following syntax:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 ## IncludeFile() (function)
 
@@ -4384,7 +4384,7 @@ The load engine first looks for the file to be included in the default User Incl
 * GetLine() (see [*GetLine() (function)* ](#_bookmark166)on page [123](#_bookmark166))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
@@ -4402,7 +4402,7 @@ Sets or retrieves the index number of the parent object. For example, the ordina
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 
 ## InfoMessage() (function)
 
@@ -4422,17 +4422,17 @@ If you call InfoMessage() in the main script, WebLOAD sends an informative messa
 
 **GUI mode**
 
-WebLOAD recommends adding message functions to your script files directly through the WebLOAD Recorder. Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+WebLOAD recommends adding message functions to your script files directly through the WebLOAD Recorder. Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18).
 
 **See also**
 
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115)on page [90](#_bookmark115))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446)on page [306](#_bookmark446))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
@@ -4467,7 +4467,7 @@ The InnerHTML property for cell objects is written in uppercase.
 
 * cell
 * cellIndex (see [*cellIndex (property)* ](#_bookmark50)on page [46](#_bookmark50)) (cell  property)
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4478,7 +4478,7 @@ The InnerHTML property for cell objects is written in uppercase.
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223)) (cell property)
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246)on page [170](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291)on page [208](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310)on page [220](#_bookmark310))
@@ -4503,7 +4503,7 @@ Sets or retrieves the image found between the `<Start>` and `<End>` tags of the 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223))
@@ -4521,9 +4521,9 @@ Represents the inner link field for the parent image object.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 ## InnerText (property)
 
@@ -4544,7 +4544,7 @@ When working with a link or location object, the text that appears over the link
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4663,7 +4663,7 @@ WebLOAD recommends maintaining or closing connections through the WebLOAD Consol
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark62)on page [53](#_bookmark62))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
@@ -4800,7 +4800,7 @@ document.links[#].<*link-property*>
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 
 ## load() (method)
@@ -4839,11 +4839,11 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
@@ -4872,7 +4872,7 @@ If you wish to measure the time it took to load the XML document using the load(
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
@@ -4933,7 +4933,7 @@ WebLOAD recommends enabling or disabling multi-threaded virtual clients through 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * ProbingClientThreads (see [*ProbingClientThreads (property)* ](#_bookmark291)on page [208](#_bookmark291))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 
@@ -4971,11 +4971,11 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
@@ -5119,7 +5119,7 @@ Use the GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * MultiIPSupportType() (see [*MultiIPSupportType (property)* ](#_bookmark251)on page [172](#_bookmark251))
@@ -5159,7 +5159,7 @@ Use GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122]
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
 * MultiIPSupport() (see [*MultiIPSupport (property)* ](#_bookmark250)on page [171](#_bookmark250))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
@@ -5192,7 +5192,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
 * MultiIPSupport() (see [*MultiIPSupport (property)* ](#_bookmark250)on page [171](#_bookmark250))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
@@ -5207,7 +5207,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 * Image (see [*Image (object)* ](#_bookmark210)on page [149](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235)on page [162](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243)on page [168](#_bookmark243))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 * wlMetas (see [*w*](#_bookmark471)[*lMetas (object)* ](#_bookmark471)on page [320](#_bookmark471))
 
 **Description**
@@ -5242,7 +5242,7 @@ document.frames.namestring
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * content (see [*content (property)* ](#_bookmark68)on page [56](#_bookmark68))
 * httpEquiv (see [*httpEquiv (property)* ](#_bookmark204)on page [144](#_bookmark204))
 * Url (see [*Url (property)* ](#_bookmark422)on page [289](#_bookmark422))
@@ -5285,7 +5285,7 @@ WebLOAD automatically sends the user name and password when a wlHttp object conn
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
 
@@ -5367,13 +5367,13 @@ wlHttp.Get(“http:///.... ”)
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
-* [*wlSource (property)* ](#_bookmark485)(on page [330](#_bookmark485))
-* [*wlStatusNumber (property)* ](#_bookmark488)(on page [331](#_bookmark488))
-* [*wlStatusLine (property)* ](#_bookmark486)(on page [331](#_bookmark486))
-* [*Async (property)* ](#_bookmark47)(on page [41](#_bookmark47))
-* [*onDocumentComplete (property)* ](#_bookmark259)(on page [179](#_bookmark259))
+* [*wlSource (property)* ](#_bookmark485)
+* [*wlStatusNumber (property)* ](#_bookmark488)
+* [*wlStatusLine (property)* ](#_bookmark486)
+* [*Async (property)* ](#_bookmark47)
+* [*onDocumentComplete (property)* ](#_bookmark259)
 
 ## onDocumentComplete (property)
 
@@ -5415,11 +5415,11 @@ InfoMessage(“Response “ + document.wlSource);
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
-* [*document (object)* ](#_bookmark100)(on page [78](#_bookmark100))
-* [*Async (property)* ](#_bookmark47)(on page [41](#_bookmark47))
-* [*onDataReceived (property)* ](#_bookmark258)(on page [177](#_bookmark258))
+* [*document (object)* ](#_bookmark100)
+* [*Async (property)* ](#_bookmark47)
+* [*onDataReceived (property)* ](#_bookmark258)
 
 ## Open() (method)
 
@@ -5554,7 +5554,7 @@ For random access:
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
 * *Using the Form Data Wizard* in the *WebLOAD Scripting Guide*
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#_bookmark476)on page [324](#_bookmark476))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
 * Writeln() (see [*Writeln() (method)* ](#_bookmark506)on page [344](#_bookmark506))
@@ -5566,7 +5566,7 @@ For random access:
 Option objects are grouped into collections of options that are themselves properties of the following:
 
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
-* *Select* (on page [230](#_bookmark329))
+* *Select* 
 
 **Description**
 
@@ -5692,9 +5692,9 @@ Represents the outer link field for the parent image object.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 ## Outfile (property)
 
@@ -6302,7 +6302,7 @@ You may also set user values using the wlGlobals properties. WebLOAD automatical
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Working with the HTTP Protocol* in the *WebLOAD Scripting Guide*
 
 ## pathname (property)
@@ -6505,7 +6505,7 @@ WebLOAD recommends enabling or disabling multi-threaded virtual clients through 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark240)on page [165](#_bookmark240))
 
 ## protocol (property)
@@ -6562,7 +6562,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
@@ -6622,7 +6622,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
@@ -6723,7 +6723,7 @@ WebLOAD then tries to reestablish a connection (see [*RequestRetries (property)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * RequestRetries (see [*RequestRetries (property)* ](#_bookmark309)on page [220](#_bookmark309))
 
 ## RedirectionLimit (property)
@@ -6776,7 +6776,7 @@ To tell the system whether or not to record the referer header in the Referer pr
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 
 ## remove() (method)
@@ -6810,7 +6810,7 @@ This method deletes the wlOutputFile object and closes the output file.
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
 * Writeln() (see [*Writeln() (method)* ](#_bookmark506)on page [344](#_bookmark506))
 
@@ -6840,7 +6840,7 @@ This function enables you to record specific events as they occur. This informat
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 
 ## ReportLog() (method)
@@ -6867,9 +6867,9 @@ Sends a message to the Log Window that includes the error message and severity l
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
 
@@ -6893,7 +6893,7 @@ RequestRetries is the maximum number of times that the Virtual Client will attem
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * ReceiveTimeout (see [*ReceiveTimeout (property)* ](#_bookmark299)on page [215](#_bookmark299))
 
 ## Reset() (method)
@@ -6953,7 +6953,7 @@ The language in which WebLOAD receives the response from the SUT. This can be HT
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## RoundNum (variable)
 
@@ -6981,15 +6981,15 @@ WebLOAD recommends accessing global system variables, including the RoundNum ide
 
 For example, it is convenient to add RoundNum to a Message Node to clarify the round in which the messages that appear in the WebLOAD Console Log window originated.
 
-> **Note:** RoundNum can also be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+> **Note:** RoundNum can also be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18).
 
 **See also**
 
 * ClientNum (see [*ClientNum (variable)* ](#_bookmark60)on page [50](#_bookmark60))
 * GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131)on page [101](#_bookmark131))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176)on page [131](#_bookmark176))
-* [*Identification Variables and Functions* ](#_bookmark28)(on page [29](#_bookmark28))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Identification Variables and Functions* ](#_bookmark28)
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)on page [296](#_bookmark432))
 
 ## row (object)
@@ -7041,7 +7041,7 @@ The row object may be accessed as a member of the wlTables family of table, row,
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -7074,7 +7074,7 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -7109,7 +7109,7 @@ Instruct WebLOAD to store the HTML response headers in wlHeaders.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## SaveSource (property)
 
@@ -7130,7 +7130,7 @@ If you enable SaveSource, WebLOAD automatically stores the downloaded HTML whene
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## SaveTransaction (property)
 
@@ -7178,7 +7178,7 @@ As with all wlGlobals configuration properties, the SaveTransaction property mus
 **See also**
 
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48)on page [42](#_bookmark48))
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## script (object)
 
@@ -7218,7 +7218,7 @@ document.scripts[1].language
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 
 ## search (property)
 
@@ -7609,7 +7609,7 @@ SendCounter(EventName)
 * SetTimer() (see [*Se*](#_bookmark355)[*tTimer() (function)* ](#_bookmark355)on page [244](#_bookmark355))
 * Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363)on page [248](#_bookmark363))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)(on page [34](#_bookmark35))
+* [*Timing Functions* ](#_bookmark36)
 
 ## SendMeasurement() (function)
 
@@ -7647,7 +7647,7 @@ WebLOAD recommends setting measurement functions within script files directly th
 * SetTimer() (see [*Se*](#_bookmark355)[*tTimer() (function)* ](#_bookmark355)on page [244](#_bookmark355))
 * Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363)on page [248](#_bookmark363))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)(on page [34](#_bookmark35))
+* [*Timing Functions* ](#_bookmark36)
 
 ## SendTimer() (function)
 
@@ -7674,7 +7674,7 @@ WebLOAD recommends setting timer functions within script files directly through 
 * SetTimer() (see [*Se*](#_bookmark357)[*tTimer() (function)* ](#_bookmark357)on page [245](#_bookmark357))
 * Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363)on page [248](#_bookmark363))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)(on page [34](#_bookmark35))
+* [*Timing Functions* ](#_bookmark36)
 
 ## Set() (method)
 
@@ -7783,7 +7783,7 @@ When you call SetClientType(“Thin”), the ParseOnce flag is set to true. Each
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * ParseOnce (see [*ParseOnce (property)* ](#_bookmark280)*on* page [198](#_bookmark280))
 * GetImagesInThinClient (see [*GetImagesInThinClient (property)* ](#_bookmark164)on page [122](#_bookmark164))
 * [wlGlobals](#wlglobals-object)
@@ -7813,7 +7813,7 @@ The SetFailureReason() function accepts a literal string as the parameter. This 
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306)on page [218](#_bookmark306))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 
 ## setTimeout() (function)
@@ -7857,7 +7857,7 @@ InfoMessage(“after sleep”);
 
 **See also**
 
-* [*Sleep() (function)* ](#_bookmark364)(on page [248](#_bookmark364))
+* [*Sleep() (function)* ](#_bookmark364)
 
 ## SetTimer() (function)
 
@@ -7884,7 +7884,7 @@ Enter a timer name and click **OK**. The Set Timer item appears in the Script Tr
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348)on page [239](#_bookmark348))
 * Sleep() (see [*Sleep() (function)* ](#_bookmark363)on page [248](#_bookmark363))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)(on page [34](#_bookmark35))
+* [*Timing Functions* ](#_bookmark35)
 
 ## SevereErrorMessage() (function)
 
@@ -7910,9 +7910,9 @@ WebLOAD recommends adding message functions to your script files directly throug
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446)on page [306](#_bookmark446))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
@@ -7954,7 +7954,7 @@ To set the global severity of all verification fail errors to WLError, write:
 **Property of Object**
 
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
-* [*Select* ](#_bookmark328)(on page [230](#_bookmark328))
+* [*Select* ](#_bookmark328)
 
 **Description**
 
@@ -7982,7 +7982,7 @@ Sleep(1000)
 
 WebLOAD recommends setting sleep functions within script files directly through the WebLOAD Recorder. Drag the **Sleep ** icon from the General toolbox into the Script Tree at the desired location. The Sleep dialog box opens. Enter or select the duration of the sleep and click **OK**. The Sleep item appears in the Script Tree and the JavaScript code is added to the script.
 
-Sleep function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense*](#_bookmark18) [*JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+Sleep function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense*](#_bookmark18) [*JavaScript Editor* ](#_bookmark18).
 
 **Comment**
 
@@ -8006,8 +8006,8 @@ For more information on setting the Sleep Time Control settings, see *Configurin
 * SleepRandomMax (see [*SleepRandomMax (property)* ](#_bookmark367)on page [250](#_bookmark367))
 * SleepRandomMin (see [*SleepRandomMin (property)* ](#_bookmark369)on page [251](#_bookmark369))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)(on page [34](#_bookmark35))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Timing Functions* ](#_bookmark35)
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
 ## SleepDeviation (property)
 
@@ -8134,12 +8134,12 @@ Retrieves the complete URL of the parent object, that is the URL to an external 
 
 **Example** [“www.ABCDEF.com/images/logo.gif](http://www.ABCDEF.com/images/logo.gif)” **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
 ## SSLBitLimit (property)
@@ -8174,9 +8174,9 @@ WebLOAD recommends setting the SSL bit limit through the WebLOAD Console. Check 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8230,10 +8230,10 @@ InitClient()
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381)on page [260](#_bookmark381))
@@ -8287,10 +8287,10 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381)on page [260](#_bookmark381))
@@ -8353,10 +8353,10 @@ Defining a global, categorical value for SSLCryptoStrength is a high-level appro
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381)on page [260](#_bookmark381))
@@ -8407,10 +8407,10 @@ SSLDisableCipherID(45)
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8441,7 +8441,7 @@ SSLDisableCipherName(CipherName)
 
 | **Parameter  Name** | **Description**                                                                                                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CipherName                | Any of the SSL protocol  names. See[*WebLOAD-supported SSL*](#_bookmark578) [*Protocol Versions* ](#_bookmark578)(on page [449](#_bookmark578)) for a complete list of  protocol names. |
+| CipherName                | Any of the SSL protocol  names. See[*WebLOAD-supported SSL*](#_bookmark578) [*Protocol Versions* ](#_bookmark578) for a complete list of  protocol names. |
 
 **Example**
 
@@ -8463,10 +8463,10 @@ SSLDisableCipherName("EXP-RC4-MD5")
 
 **See also**
 
-* *Browser Configuration Components* (on page [24](#_bookmark21))
+* *Browser Configuration Components* 
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8522,8 +8522,8 @@ SSLEnableStrength(128)
 **See also**
 
 * SSLBitLimit (see "[*SSLBitLimit (property)*](#_bookmark373)" on page [253](#_bookmark373)) (wlGlobals only)
-* *SSL Cipher Command Suite* (on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* *SSL Cipher Command Suite* 
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see "[*SSLCipherSuiteCommand() (function)*](#_bookmark376)" on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see "[*SSLClientCertificateFile, SSLClientCertificatePassword (properties)*](#_bookmark377)" on page [256](#_bookmark377))
 * SSLCryptoStrength (see "[*SSLCryptoStrength (property)*](#_bookmark379)" on page [258](#_bookmark379)) (wlGlobals only)
@@ -8568,10 +8568,10 @@ SSLCipherSuiteCommand(DisableAll) MyCipherID = SSLGetCipherID("EXP-RC4-MD5") SSL
 
 **See also**
 
-* *Browser Configuration Components* (on page [24](#_bookmark21))
+* *Browser Configuration Components* 
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8620,10 +8620,10 @@ SSLEnableCipherName("EXP-RC4-MD5")
 
 **See also**
 
-* [*Browser Configuration Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*Browser Configuration Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals
@@ -8661,10 +8661,10 @@ Returns an integer representing the number of ciphers enabled for the current te
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8693,7 +8693,7 @@ SSLGetCipherID(CipherName)
 
 | **Parameter  Name** | **Description**                                                                                                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CipherName                | Any of the SSL protocol  names. See[*WebLOAD-supported SSL*](#_bookmark578) [*Protocol Versions* ](#_bookmark578)(on page [449](#_bookmark578)) for a complete list of  protocol names. |
+| CipherName                | Any of the SSL protocol  names. See[*WebLOAD-supported SSL*](#_bookmark578) [*Protocol Versions* ](#_bookmark578) for a complete list of  protocol names. |
 
 **Return Value**
 
@@ -8705,10 +8705,10 @@ Returns the ID number associated with the specified cipher.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8757,10 +8757,10 @@ You may specify an SSL protocol using either the protocol name or the ID number.
 
 **See also**
 
-* [*HTTP Components* ](#_bookmark22)(on page [24](#_bookmark21))
+* [*HTTP Components* ](#_bookmark22)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8802,10 +8802,10 @@ Returns the name of the cipher associated with the specified ID number.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8843,10 +8843,10 @@ Returns an integer representing the maximum available cipher strength for the cu
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8895,10 +8895,10 @@ To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -8948,14 +8948,14 @@ wlGlobals.SSLVersion = “SSL_Version_3_0_Only”
 
 wlGlobals.Url = [https://www.ABCDEF.com](http://www.ABCDEF.com/)
 
-See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578)(on page [449](#_bookmark578)) for a table illustrating all the Client/Server SSL version handshake combination possibilities and a complete list of SSL/TLS protocol names.
+See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578) for a table illustrating all the Client/Server SSL version handshake combination possibilities and a complete list of SSL/TLS protocol names.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
-* [*SSL Cipher Command Suite* ](#_bookmark34)(on page [33](#_bookmark34))
-* [*SSL Ciphers – Complete List* ](#_bookmark580)(on page [450](#_bookmark580))
+* [*SSL Cipher Command Suite* ](#_bookmark34)
+* [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
 * SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark377)[ *SSLClientCertificatePassword (properties)* ](#_bookmark377)on page [256](#_bookmark377))
 * SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark379)on page [258](#_bookmark379)) (wlGlobals only)
@@ -9120,7 +9120,7 @@ Only client threads running within a single spawned process, on the same Load Ge
 * SetTimer() (see [*SetTimer() (function)* ](#_bookmark355)on page [244](#_bookmark355))
 * Sleep() (see [*Sleep() (function)* ](#_bookmark363)on page [248](#_bookmark363))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404)on page [277](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)(on page [34](#_bookmark35))
+* [*Timing Functions* ](#_bookmark35)
 
 ## tagName (property)
 
@@ -9146,7 +9146,7 @@ The tagName property is a member of the wlTables family of table, row, and cell 
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -9303,7 +9303,7 @@ wlGlobals.TimeoutSeverity = WLError.
 * EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113)on page [88](#_bookmark113))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306)on page [218](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 
@@ -9351,9 +9351,9 @@ CurrentDocumentTitle = document.title.string
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 
 
 
@@ -9458,7 +9458,7 @@ wlGlobals.TransactionTime = “0.001”
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306)on page [218](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434)on page [297](#_bookmark434))
 
 ## type (property)
@@ -9559,7 +9559,7 @@ wlMetas objects is written in all-uppercase caps.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * content (see [*content (property)* ](#_bookmark68)on page [56](#_bookmark68))
 * httpEquiv (see [*httpEquiv (property)* ](#_bookmark204)on page [144](#_bookmark204))
 * Name (see [*Name (property)* ](#_bookmark253)on page [174](#_bookmark253))
@@ -9590,7 +9590,7 @@ WebLOAD recommends setting user agent values through the WebLOAD Console. Select
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## UserName (property)
 
@@ -9628,7 +9628,7 @@ For example, if you are trying to send a request to a URL with a group of users 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark255)on page [176](#_bookmark255))
 
 ## UseSameProxyForSSL (property)
@@ -9652,7 +9652,7 @@ This property is used when you are working with a separate SSL proxy.
 
 **Example** wlGlobals.UseSameProxyForSSL = false **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
@@ -9687,7 +9687,7 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348)on page [239](#_bookmark348))
 * SetTimer() (see [*SetTimer() (function)* ](#_bookmark355)on page [244](#_bookmark355))
 
@@ -9752,7 +9752,7 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
@@ -9766,7 +9766,7 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 * key (see [*key (property)* ](#_bookmark229)on page [160](#_bookmark229))
 * option (see [*option (object)* ](#_bookmark264)on page [185](#_bookmark264))
 * Post() (see [*Post() (method)* ](#_bookmark290)on page [205](#_bookmark290))
-* [*Select* ](#_bookmark329)(on page [230](#_bookmark329))
+* [*Select* ](#_bookmark329)
 * type (see [*type (property)* ](#_bookmark420)on page [288](#_bookmark420))
 * value (see [*value (property)* ](#_bookmark430)on page [294](#_bookmark430))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440)on page [301](#_bookmark440))
@@ -9812,7 +9812,7 @@ where:
 * ClientNum (see [*ClientNum (variable)* ](#_bookmark60)on page [50](#_bookmark60))
 * GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131)on page [101](#_bookmark131))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176)on page [131](#_bookmark176))
-* [*Identification Variables and Functions* ](#_bookmark28)(on page [29](#_bookmark28))
+* [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314)on page [222](#_bookmark314))
 
 ## VerificationFunction() (user-defined) (function)
@@ -9891,7 +9891,7 @@ For a more complete explanation and examples of functional testing and transacti
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353)on page [243](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413)on page [283](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418)on page [287](#_bookmark418))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* [*Transaction Verification Components* ](#_bookmark39)
 
 ## Version (property)
 
@@ -9911,7 +9911,7 @@ WebLOAD recommends selecting an HTTP version through the WebLOAD Console. Click 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## WarningMessage() (function)
 
@@ -9941,10 +9941,10 @@ into the script. The Message dialog box opens. Enter the message text, select th
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlException (see [*wlException (object)* ](#_bookmark446)on page [306](#_bookmark446))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448)on page [308](#_bookmark448))
 
@@ -10002,7 +10002,7 @@ For example:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 
 ## wlClear() (method)
 
@@ -10047,7 +10047,7 @@ wlHttp.FormData.wlClear(“FirstName”)
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -10240,9 +10240,9 @@ else {
 
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115)on page [90](#_bookmark115))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 
 
@@ -10282,10 +10282,10 @@ Returns a new wlException object.
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172)on page [129](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182)on page [134](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217)on page [153](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)(on page [30](#_bookmark29))
+* [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359)on page [246](#_bookmark359))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437)on page [299](#_bookmark437))
 
 
@@ -10300,7 +10300,7 @@ Globally shared variables are useful when tracking a value or maintaining a coun
 
 WebLOAD creates exactly one wlGeneratorGlobal object for each Load Generator participating in a test session. Use the wlGeneratorGlobal methods to create and access variable values that you wish to share between threads of a Load Generator.
 
-Edit wlGeneratorGlobal properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)). While global variables may be accessed anywhere in your script, be sure to initially declare wlGeneratorGlobal values in the InitAgenda() *function only*. Do not define new values within the main body of a Script, for they will not be shared correctly by all threads.
+Edit wlGeneratorGlobal properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18). While global variables may be accessed anywhere in your script, be sure to initially declare wlGeneratorGlobal values in the InitAgenda() *function only*. Do not define new values within the main body of a Script, for they will not be shared correctly by all threads.
 
 **Methods**
 
@@ -10368,7 +10368,7 @@ WebLOAD therefore uses wlGet() to retrieve field data whenever the name could le
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * wlHttp (see [*wlHttp (object)* ](#_bookmark465)on page [316](#_bookmark465))
 
 
@@ -10395,7 +10395,7 @@ method) and all its subframes at any level of nesting.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## wlGetAllFrames() (method)
 
@@ -10415,7 +10415,7 @@ all its subframes.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## wlGetAllLinks() (method)
 
@@ -10435,7 +10435,7 @@ method) and all its subframes at any level of nesting.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 
 ## wlGlobals (object)
 
@@ -10445,7 +10445,7 @@ The wlGlobals object stores the default global configuration properties set by t
 
 wlGlobals is a global object, whose property values are shared by all threads of a script running on a single Load Generator. The wlGlobals object enables sharing of user-defined global variables and values between threads of a single script, running on a single Load Generator. (Compare to the wlGeneratorGlobal (see [*w*](#_bookmark450)[*lGeneratorGlobal*](#_bookmark450) [*(object)* ](#_bookmark450)on page [309](#_bookmark450)) object, which enables sharing of global variables and values between all threads of a single Load Generator, and the wlSystemGlobal (see [*wlSystemGlobal (object)* ](#_bookmark491)on page [332](#_bookmark490)) object, which enables sharing of global variables and values system-wide, between all threads of all Load Generators participating in a test session.)
 
- **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder or Console. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)). If you do decide to edit the global variable values in your script, set wlGlobals properties in the InitAgenda() *function only*. Do not define new values within the main body of a script. The values will not be shared correctly by all script threads.
+ **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder or Console. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18). If you do decide to edit the global variable values in your script, set wlGlobals properties in the InitAgenda() *function only*. Do not define new values within the main body of a script. The values will not be shared correctly by all script threads.
 
 The configuration properties of the wlGlobals object are almost all duplicated in the wlLocals (see [*wlLocals (object)* ](#_bookmark469)on page [319](#_bookmark469)), which contains the local configuration settings for browser actions, and in the wlHttp (see [*wlHttp (object)* ](#_bookmark465)on page [316](#_bookmark465)), which contains configuration settings that are limited to a single specific browser action. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*.
 
@@ -10453,9 +10453,9 @@ The configuration properties of the wlGlobals object are almost all duplicated i
 
 The wlGlobals object includes the following property classes:
 
-* *Automatic State Management for HTTP Protocol Mode* (on page [24](#_bookmark21))
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* *Automatic State Management for HTTP Protocol Mode* 
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**
 
@@ -10486,7 +10486,7 @@ Headers on a Web page are accessed through wlHeaders objects that are grouped in
 
 **Description**
 
-Each wlHeaders object contains a key-value pair. wlHeaders objects provide access to the key/value pairs in the HTTP *response headers*. (Information found in *request headers* is available through the wlHttp.Header property. For key-value pairs found in *URL search strings*, see [*wlSearchPairs (object)* ](#_bookmark480)(on page [327](#_bookmark481)).)
+Each wlHeaders object contains a key-value pair. wlHeaders objects provide access to the key/value pairs in the HTTP *response headers*. (Information found in *request headers* is available through the wlHttp.Header property. For key-value pairs found in *URL search strings*, see [*wlSearchPairs (object)* ](#_bookmark480).)
 
 wlHeaders objects are local to a single thread. You cannot create new wlHeaders objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlHeaders properties are read only.
 
@@ -10527,7 +10527,7 @@ The wlHeaders object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480)on page [327](#_bookmark481))
 
@@ -10571,9 +10571,9 @@ The wlHttp object stores configuration information for immediate user activities
 
 The wlHttp object includes the following property and method classes:
 
-* *Automatic State Management for HTTP Protocol Mode* (on page [24](#_bookmark21))
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* *Automatic State Management for HTTP Protocol Mode* 
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**
 
@@ -10639,7 +10639,7 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior]
 
 **See also**
 
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76)on page [61](#_bookmark76))
 
 
@@ -10696,9 +10696,9 @@ The properties of the wlLocals object are all duplicated in the [wlGlobals](#wlg
 
 The wlLocals object includes the following property classes:
 
-* *Automatic State Management for HTTP Protocol Mode* (on page [24](#_bookmark21))
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)(on page [24](#_bookmark21))
-* [*Transaction Verification Components* ](#_bookmark39)(on page [36](#_bookmark38))
+* *Automatic State Management for HTTP Protocol Mode* 
+* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**
 
@@ -10756,7 +10756,7 @@ The wlMetas object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 
 
 
@@ -10867,7 +10867,7 @@ Generally, you should only create new wlOutputFile objects in the InitAgenda() o
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#_bookmark166)on page [123](#_bookmark166))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
 
 
@@ -10921,7 +10921,7 @@ If you declare a new wlOutputFile object in the main body of a script, and then 
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile (see [*wlOutputFile (object)* ](#_bookmark475)on page [323](#_bookmark475))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
 * Writeln() (see [*Writeln() (method)* ](#_bookmark506)on page [344](#_bookmark506))
@@ -11040,7 +11040,7 @@ The wlSearchPairs object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * link (see [*link (object)* ](#_bookmark235)on page [162](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243)on page [168](#_bookmark243))
@@ -11107,7 +11107,7 @@ wlHttp.FormData.wlSet(“length”, 7)
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -11211,7 +11211,7 @@ WebLOAD provides a global object called wlSystemGlobal. The wlSystemGlobal objec
 
 Globally shared variables are useful when tracking a value or maintaining a count across multiple threads or platforms. For example, you may include these shared values in the messages sent to the Log window during a test session.
 
-WebLOAD creates exactly one wlSystemGlobal object per a test session. Use the wlSystemGlobal object methods to create and access variable values that you wish to share system-wide. Edit wlSystemGlobal object properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+WebLOAD creates exactly one wlSystemGlobal object per a test session. Use the wlSystemGlobal object methods to create and access variable values that you wish to share system-wide. Edit wlSystemGlobal object properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18).
 
 While global variables may be accessed anywhere in your script, be sure to initially declare wlSystemGlobal values in the InitAgenda() *function only*. Do not define
 
@@ -11273,7 +11273,7 @@ Each wlTables object contains information about the data found in the whole tabl
 **See also**
 
 * cellIndex
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -11352,7 +11352,7 @@ NewParam1 = wlTimeParam("%Y-%m-%d %H:%M:%S", 1200, wlParamUpdateRound);
 
 The wlverification object stores the response validation properties set by the user through the WebLOAD Recorder, including HTML Web page title, text within a Web page, time taken to load a Web page, and size of a Web page (in bytes).
 
- **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+ **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](#_bookmark18).
 
 **Properties**
 
@@ -11446,11 +11446,11 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
 * src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
@@ -11471,7 +11471,7 @@ Both WebLOAD and the IE Browser use the MSXML parser to create XML DOM objects. 
 
 When working through the IE Browser, XML DOM objects are found in the all collection. When working through WebLOAD, XML DOM objects are found in the wlXmls collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.
 
-This section describes the wlXmls collection and the properties and methods used most often when working with WebLOAD XML DOM objects. For an explanation of the XML DOM, see the *WebLOAD Scripting Guide*. For a complete list of the XML DOM properties and methods supported by WebLOAD, see *WebLOAD-supported XML DOM Interfaces* (on page [457](#_bookmark583)).
+This section describes the wlXmls collection and the properties and methods used most often when working with WebLOAD XML DOM objects. For an explanation of the XML DOM, see the *WebLOAD Scripting Guide*. For a complete list of the XML DOM properties and methods supported by WebLOAD, see *WebLOAD-supported XML DOM Interfaces* .
 
  **Note:** WebLOAD supports a new method for parsing and manipulating XML data. For more information see [*XML Parser* Object ](#_bookmark563)on page [437.](#_bookmark563)
 
@@ -11571,7 +11571,7 @@ Running this script produces the following output:
 
 **Methods and Properties**
 
-WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* (on page [457](#_bookmark583)). These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on
+WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on
 
 page [345](#_bookmark509)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219)), and src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371)) HTML properties are exposed. Each property is described in its own section.
 
@@ -11585,8 +11585,8 @@ page [345](#_bookmark509)) property. In addition, if the object is constructed f
 
 **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
-* [*load() and loadXML() Method Comparison* ](#_bookmark238)(on page [164](#_bookmark238))
+* [*Collections* ](#_bookmark23)
+* [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * [*XML Parser* Object ](#_bookmark563)on page [437](#_bookmark563)
 
 
@@ -11677,7 +11677,7 @@ MyFileObj.Write(“Happy Birthday”)
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#_bookmark476)on page [324](#_bookmark476))
 * Writeln() (see [*Writeln() (method)* ](#_bookmark506)on page [344](#_bookmark506))
 
@@ -11723,7 +11723,7 @@ This method writes a string followed by a newline character to the output file.
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212)on page [150](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261)on page [183](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310)on page [220](#_bookmark310))
-* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+* [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#_bookmark476)on page [324](#_bookmark476))
 * Write() (see [*Write() (method)* ](#_bookmark504)on page [343](#_bookmark504))
 * 
@@ -11736,7 +11736,7 @@ This method writes a string followed by a newline character to the output file.
 
 **Description**
 
-The XMLDocument property represents the actual XML DOM object. Through XMLDocument you are able to access all the standard XML DOM properties and methods listed in *WebLOAD-Supported XML DOM Interfaces* (on page [457](#_bookmark583)).
+The XMLDocument property represents the actual XML DOM object. Through XMLDocument you are able to access all the standard XML DOM properties and methods listed in *WebLOAD-Supported XML DOM Interfaces* .
 
  **Note:** WebLOAD supports a new method for parsing and manipulating XML data. For more information see [*XML Parser* Object ](#_bookmark563)on page [437.](#_bookmark563)
 
@@ -11756,11 +11756,11 @@ However, including XMLDocument is a good programming practice, to emphasize the 
 
 **Example** document.wlXmls[0].XMLDocument.documentElement.nodeName **See also**
 
-* [*Collections* ](#_bookmark23)(on page [27](#_bookmark23))
+* [*Collections* ](#_bookmark23)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* [*load() and loadXML() Method Comparison* ](#_bookmark239)(on page [164](#_bookmark238))
+* [*load() and loadXML() Method Comparison* ](#_bookmark239)
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
 * src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
 * [*XML Parser* Object ](#_bookmark563)on page [437](#_bookmark563)

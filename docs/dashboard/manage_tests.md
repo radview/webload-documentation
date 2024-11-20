@@ -23,14 +23,14 @@ The Load Tests table provides the following information and actions, for each Lo
 | **Name**                                                | The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to [*Editing a load test* ](#editing-a-load-test). |
 | **Test  Type**                                          | The type of test: Either URL/API, Script,  or Template.      |
 | **Last  Update**                                        | The date and time when the  test definitions were last updated, or the test was run manually. This field  shows no indication of whether the test is being executed in recurrence mode. |
-| **Next  Execution**                                     | The date and time when the  test is next scheduled to run. Refer to [*Setting recurring test runs* ](#_bookmark24)(on page [24](#_bookmark24)) and [*Scheduling a one-time test*](#_bookmark25) [run ](#_bookmark25)(on page [25](#_bookmark25)). |
+| **Next  Execution**                                     | The date and time when the  test is next scheduled to run. Refer to [*Setting recurring test runs* ](#_bookmark24) and [*Scheduling a one-time test*](#_bookmark25) [run ](#_bookmark25). |
 | **Last  Execution**                                     | The date and time when the test last  started running.       |
 | **Last Session State**                                  | Whether the test passed or failed the last  test execution.  |
-| ![](../images/view_last_session.png)                       | Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to [*Using Dashboards* ](#_bookmark40)(on page [36](#_bookmark40)) |
-| ![run load tests](../images/run_load_test.png)             | Enables manually running  this test now or at a specified time. Refer to [*Scheduling a one-time test run* ](#_bookmark25)(on page [25](#_bookmark25)). |
+| ![](../images/view_last_session.png)                       | Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to [*Using Dashboards* ](#_bookmark40) |
+| ![run load tests](../images/run_load_test.png)             | Enables manually running  this test now or at a specified time. Refer to [*Scheduling a one-time test run* ](#_bookmark25). |
 | ![stop](../images/stop_test_run.png)                       | Instructs WebLOAD to stop  the running test.                 |
 | ![all test sessions](../images/view_all_test_sessions.png) | Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page ([Figure 23](#_bookmark30)) that displays  all of this test’s sessions. |
-| ![delete](../images/delete_load_test.png)                  | Instructs WebLOAD to  delete the load test. Refer to [*Deleting a   load*](#_bookmark27) [*test* ](#_bookmark27)(on page [27](#_bookmark27)). |
+| ![delete](../images/delete_load_test.png)                  | Instructs WebLOAD to  delete the load test. Refer to [*Deleting a   load*](#_bookmark27) [*test* ](#_bookmark27). |
 
 
 
@@ -105,8 +105,8 @@ After entering the load test specifications, WebLOAD automatically creates a tes
    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
    | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
    | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual User |
-   | **Load  Generators**                         | Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a   load test* ](#_bookmark23)(on page [23](#_bookmark23)). |
-   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24)(on page [24](#_bookmark24)). |
+   | **Load  Generators**                         | Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a   load test* ](#_bookmark23). |
+   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24). |
 
    
 
@@ -157,14 +157,14 @@ Use this option to create a load test based on a WebLOAD script that was created
    | **Item**                                     | **Description**                                              |
    | -------------------------------------------- | ------------------------------------------------------------ |
    | **General**                                  | The name of the Load test.                                   |
-   | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#_bookmark21)(on page [20](#_bookmark21)). |
+   | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#_bookmark21). |
    | **Load  Configuration**                      | For each of the following,  enter a number, or use the slider tool to specify the number. |
    | **Max Virtual Users**                        | The maximum number of Virtual Users to generate.             |
    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
    | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
    | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual Users |
-   | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying   Load Generators*](#_bookmark23) [*for a load test* ](#_bookmark23)(on page [23](#_bookmark23)). |
-   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24)(on page [24](#_bookmark24)). |
+   | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying   Load Generators*](#_bookmark23) [*for a load test* ](#_bookmark23). |
+   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24). |
 
    
 
@@ -244,7 +244,7 @@ Use this option to create a load test based on a WebLOAD template file that was 
    | **Name**                             | The name of the Load test.                                   |
    | **Path**                             | Click **Select Template** to  select a template from the list appearing in the **Resources** > **Templates** page  that appears. |
    | **WebRM Virtual Clients allocation** | This is relevant  for a WebRM configuration. Specify the number of virtual users to allocate  for this test from the floating WebRM license. |
-   | **Recurrence**                       | Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to [*Setting*](#_bookmark24) [*recurring   test runs* ](#_bookmark24)(on page [24](#_bookmark24)). |
+   | **Recurrence**                       | Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to [*Setting*](#_bookmark24) [*recurring   test runs* ](#_bookmark24). |
 
    
 

@@ -20,7 +20,7 @@ This chapter provides detailed reference information on WebLOAD support for the 
 
 ## wlFTP Object
 
-The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object ](#_bookmark519)(on page [359](#_bookmark518)).
+The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object ](#_bookmark519).
 
 If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Logon()` method; otherwise an exception is thrown.
 
@@ -2571,7 +2571,7 @@ delete nntp InfoMessage("done")
 
 ## wlPOP Object
 
- The wlPOP object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the [wlPOPs Object ](#_bookmark538)(on page [402](#_bookmark538)).
+ The wlPOP object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the [wlPOPs Object ](#_bookmark538).
 
  
 
@@ -3360,7 +3360,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-The wlSMTP object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs*](#_bookmark545) [*Object* ](#_bookmark545)(on page [414](#_bookmark545)).
+The wlSMTP object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs*](#_bookmark545) [*Object* ](#_bookmark545).
 
  
 

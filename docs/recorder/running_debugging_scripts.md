@@ -20,9 +20,9 @@ After running a script, you can debug it. WebLOAD Recorder enables you to check 
 
 This section provides instructions for running a script. Before running a script, you can do the following:
 
-- Set the number of iterations to run, see [*Setting Playback Options* ](#_bookmark184)(on page [209](#_bookmark184)).
-- Set the file locations for a test session, see [*Setting File Locations* ](#_bookmark185)(on page [210](#_bookmark185)).
-- Set WebLOAD Recorder to ignore the recorded sleep time, see [*Configuring Sleep](#_bookmark141)[ Time Control Options* ](#_bookmark141)(on page [159](#_bookmark141)).
+- Set the number of iterations to run, see [*Setting Playback Options* ](#_bookmark184).
+- Set the file locations for a test session, see [*Setting File Locations* ](#_bookmark185).
+- Set WebLOAD Recorder to ignore the recorded sleep time, see [*Configuring Sleep](#_bookmark141)[ Time Control Options* ](#_bookmark141).
 
 ### Starting the Execution of a Script
 
@@ -46,7 +46,7 @@ This section provides instructions for running a script. Before running a script
 >
 
 ### **Viewing the Execution Sequence in the Script Tree**
-When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see [*Viewing and](#_bookmark115) *[Analyzing the Test Results* ](#_bookmark115)*(on page [130](#_bookmark115)).
+When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see [*Viewing and](#_bookmark115) *[Analyzing the Test Results* ](#_bookmark115)*.
 
 WebLOAD Recorder enables you to do the following:
 
@@ -133,7 +133,7 @@ After running a script test, you can perform a comparison of the original script
 
    Right-click a node in the Script Tree or the Execution Tree and select **Compare html** from the pop-up menu.
 
-   The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see [*Defining the Difference Viewer](#_bookmark186) *[Application* ](#_bookmark186)*(on page [211](#_bookmark186)).
+   The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see [*Defining the Difference Viewer](#_bookmark186) *[Application* ](#_bookmark186)*.
 
 ### **Comparing a Recorded Sequence with the Execution Sequence**
 You can compare an entire original recorded sequence with the current execution sequence using the Compare All feature. This can help you to check and fix any undesirable changes you made to the original recorded session.
@@ -172,7 +172,7 @@ The **Compare** pane that appears at the bottom of the screen lists a digest of 
 
 
 
-In addition, right-clicking a line and selecting **Compare HTML**, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see [*Comparing a Script](#_bookmark107) *[Recording node to its Playback* ](#_bookmark107)*(on page [115](#_bookmark107)).
+In addition, right-clicking a line and selecting **Compare HTML**, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see [*Comparing a Script](#_bookmark107) *[Recording node to its Playback* ](#_bookmark107)*.
 
 ### Stopping the Execution of a Script
 When debugging a script using a Step Into or breakpoint, the playback session stops immediately upon completion of the current WebLOAD Recorder protocol block.
@@ -393,7 +393,7 @@ You can disable or enable all breakpoints in the script.
 
 1. Set a breakpoint just before the function call or use the **Step Into** command to advance the script execution to that point.
 
-   For information on setting breakpoints see [*Setting Breakpoints* ](#_bookmark113)(on page [121](#_bookmark113)).
+   For information on setting breakpoints see [*Setting Breakpoints* ](#_bookmark113).
 
 1. Click **Step Into** in the **Debug** tab.
 
@@ -456,7 +456,7 @@ You can abort the playback of the script at a specific point. Aborting a script 
 
 The Watch window is used for debugging your application, and is only available when you are running your script. The Watch window displays the values of selected variables or watch expressions that you specify while debugging your script. The values of the variables and expressions in the Watch window are only updated when execution is stopped at a breakpoint.
 
-Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see [*Adding a Watch Variable or Expression* ](#_bookmark114)(on page [128](#_bookmark114)).
+Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see [*Adding a Watch Variable or Expression* ](#_bookmark114).
 
 **To open the Watch window:**
 
@@ -836,7 +836,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    | **Lower than x bytes**                              | The size of the Web page content, in bytes, must be less than the specified value for the validation to be successful. |
    | **Recorded Content Length is**                      | The size of the response, in bytes.                          |
    | *Content*                                           |                                                              |
-   | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing](#_bookmark126) *[Multiple Text Validations of Web Page Content* ](#_bookmark126)*(on page [142](#_bookmark126)). |
+   | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing](#_bookmark126) *[Multiple Text Validations of Web Page Content* ](#_bookmark126)*. |
    | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
    | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "<text to find>" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
    | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
@@ -859,7 +859,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 **To validate the content of a Web page:**
 
-1. Follow the instructions in [*Validating Responses* ](#_bookmark123)(on page [139](#_bookmark123)) to access the Response Validation dialog box ([Figure 90](#_bookmark124)).
+1. Follow the instructions in [*Validating Responses* ](#_bookmark123) to access the Response Validation dialog box ([Figure 90](#_bookmark124)).
 
 1. In the **Content** section, check the **Validate** checkbox.
 

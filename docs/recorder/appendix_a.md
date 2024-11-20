@@ -153,7 +153,7 @@ JavaScript Objects enable you to insert JavaScript code directly into the script
 
    The JavaScriptObject item appears in the Script Tree and the WebLOAD Recorder protocol block is added to the script.
 
-1. Open the object in JavaScript Editing mode to insert JavaScript code, as described in [*Using the JavaScript Editor* ](#_bookmark66)(on page [75](#_bookmark66)).
+1. Open the object in JavaScript Editing mode to insert JavaScript code, as described in [*Using the JavaScript Editor* ](#_bookmark66).
 
 ### **Comment**
 WebLOAD Recorder enables you to add comments to your script to describe an activity or provide information about a specific operation.
@@ -417,7 +417,7 @@ WebLOAD Recorder enables you to collect Post and Get HTTP requests and simultane
 
 > **Note:** WebLOAD Recorder does not perform the Post and Get HTTP requests concurrently.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Execute Concurrent* ](#_bookmark220)(on page [246](#_bookmark220)).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Execute Concurrent* ](#_bookmark220).
 
 These Post and Get HTTP requests are saved in a file which you can access at any time. For more information, refer to the *WebLOAD JavaScript Reference*.
 
@@ -430,7 +430,7 @@ These Post and Get HTTP requests are saved in a file which you can access at any
 ### **Execute Concurrent**
 WebLOAD Recorder enables you to simultaneously execute all the Post and Get HTTP requests that were defined since the last Define Concurrent function by two or more threads, as defined in the MultiThread Virtual Clients number. This is configured in the Browser Parameters tab in WebLOAD Console’s Script Options dialog box.
 
-> **Note:** This function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define](#_bookmark219) *[Concurrent* ](#_bookmark219)*(on page [246](#_bookmark219)).
+> **Note:** This function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define](#_bookmark219) *[Concurrent* ](#_bookmark219)*.
 
 
 
@@ -1898,7 +1898,7 @@ To see the complete sequence of JavaScript code for all the Database Building Bl
 
 > **Notes:** The JavaScript code for each of the Database Building Blocks can be found in the DBBuildingBlocks.js library file, which is part of the Include directory under the WebLOAD installation directory. The JavaScript code that implements these Database Building Blocks is automatically inserted to the appropriate locations within the script. Code lines may be added to the initialization phase (within the InitAgenda() function), in the main body of the script, or to the termination phase (within the TerminateAgenda() function).
 
-The JavaScript code for that object can be edited, as described in [*Using the JavaScript](#_bookmark66) *[Editor* ](#_bookmark66)*(on page [75](#_bookmark66)).
+The JavaScript code for that object can be edited, as described in [*Using the JavaScript](#_bookmark66) *[Editor* ](#_bookmark66)*.
 
 The field descriptions in this section assume a basic familiarity with database terminology. To take full advantage of the Database Building Blocks, testers must understand how to work with ADO objects and have a basic knowledge of SQL command syntax. WebLOAD Recorder automatically inserts into the test session script the appropriate JavaScript code to implement the database commands that the tester specifies. However, it is the tester’s responsibility to specify valid database commands.
 
@@ -3100,7 +3100,7 @@ For example:
 The Real Clients Toolbox includes Selenium, Perfecto Mobile, and JUnit Runner building blocks.
 
 ### Selenium Building Blocks
-Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](#_bookmark366)(on page [389](#_bookmark366)), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
+Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](#_bookmark366), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
 
 **To call Selenium actions using the Selenium building blocks:**
 
@@ -3214,7 +3214,7 @@ This building block is relevant not only for JUnit but for unit tests of any kin
 The node is added to the Script Tree.
 
 ### Perfecto Mobile Building Blocks
-Use the Perfecto Mobile building block to instruct WebLOAD to create a Perfecto Mobile script. For a full description of how to create and use Perfecto Mobile scripts in WebLOAD, refer to [*Integrating with Perfecto* Mobile ](#_bookmark363)(on page [383](#_bookmark363)).
+Use the Perfecto Mobile building block to instruct WebLOAD to create a Perfecto Mobile script. For a full description of how to create and use Perfecto Mobile scripts in WebLOAD, refer to [*Integrating with Perfecto* Mobile ](#_bookmark363).
 
 
 

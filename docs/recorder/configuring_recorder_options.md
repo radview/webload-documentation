@@ -140,7 +140,7 @@ The Browser Parameters option enables you to define Virtual Client behavior.
 1. To set the Browser and Version:
 
    1. Select the browser from the **Select the browser** drop-down list. An appropriate version automatically appears in the **Select the version** field.
-   1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#_bookmark143)[* Definitions ](#_bookmark143)(on page [164](#_bookmark143))).
+   1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#_bookmark143)[* Definitions ](#_bookmark143)).
 
 1. To simulate specific cache behaviors, select the **DNS cache** checkbox and **SSL cache** checkbox.
 
@@ -272,7 +272,7 @@ The following table describes the fields in the Browser Cache tab.
 ### Configuring Authentication Settings
 WebLOAD Recorder enables you to define the global and proxy authentication settings.
 
-WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*(on page [203](#_bookmark176)).
+WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*.
 
 **To configure Authentication settings:**
 
@@ -325,9 +325,9 @@ Diagnostic options can be enabled while developing a script or for tracking prob
 
    
 
-1. Set the **Enable syntax check** option, see [*Enabling Syntax Checking* ](#_bookmark149)(on page [171](#_bookmark149)).
+1. Set the **Enable syntax check** option, see [*Enabling Syntax Checking* ](#_bookmark149).
 
-1. Set the **Enable the enhanced RadView support diagnostic** option, see [*Enabling](#_bookmark150)[ RadView Support Diagnostic* ](#_bookmark150)(on page [172](#_bookmark150)).
+1. Set the **Enable the enhanced RadView support diagnostic** option, see [*Enabling](#_bookmark150)[ RadView Support Diagnostic* ](#_bookmark150).
 
 1. Click **OK**.
 
@@ -441,7 +441,7 @@ The following table describes the tabs in the Recording and Script Generation Op
 |**Proxy Certificates**|Configure the Server Side and Client Side certificates.|
 |**Script Generation**|Define how the WebLOAD Recorder should handle various HTTP elements.|
 |**Default Encoding Type**|Select the default encoding type.|
-|**Browser Settings**|<p>Select the default browser.</p><p>If you selected either Microsoft Internet Explorer or Netscape Navigator, you can also request that the program configure the proxy value automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17)(on page [14](#_bookmark17)).</p>|
+|**Browser Settings**|<p>Select the default browser.</p><p>If you selected either Microsoft Internet Explorer or Netscape Navigator, you can also request that the program configure the proxy value automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17).</p>|
 |<p>**File Extensions**</p><p>(default)</p>|Select which file types should be recorded and which ones should not.|
 |**Content Types**|Select which objects should be recorded and which ones should not.|
 |**Post Data**|Define how the WebLOAD Recorder should handle Post Data.|
@@ -634,10 +634,10 @@ The following table defines all the fields and options in the Browser Settings t
 |*Default browser selection*||
 |**Web browser**|<p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17)on page [14](#_bookmark17)).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p>|
 |**Other browser**|Select this option and browse to define a browser other than Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.|
-|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording](#_bookmark356) [Mobile Applications ](#_bookmark356)(on page [375](#_bookmark356)).|
+|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording](#_bookmark356) [Mobile Applications ](#_bookmark356).|
 |**None**|Select this option to define that there is no default browser.|
 |*Automatic browser settings*||
-|**Set the proxy definitions automatically**|If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17)(on page [14](#_bookmark17)).|
+|**Set the proxy definitions automatically**|If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17).|
 |**Clear browser cache**|Select this option to clear the browser cache before recording. This option is selected, by default.|
 |**Clear browser cookies**|Select this option to clear the browser’s cookie history before recording. This option is selected, by default.|
 |*General browser settings*||
@@ -679,7 +679,7 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 |**Logging level**|<p>Specify the correlation logging level to determine the amount and content of the comments that the correlation engine adds to your script’s JavaScript.</p><p>Possible values:</p><p>- 0 – None. No log messages are added to the JavaScript.</p><p>- 1 – Minimal. Fatal, Error, and Warning messages are added to the JavaScript. Fatal messages indicate that an unrecoverable error occurred, Error messages indicate that a recoverable error occurred, and Warning messages indicate that there is a possible error.</p><p>- 2 – Medium. In addition to the messages added with the minimal logging level, Info messages are added to the JavaScript. Info messages provide important information, such as, when a rule finds a value or when a correlation hint is found.</p><p>- 3 – Full. In addition to the messages added with the medium logging level, Debug messages are added to the JavaScript. Debugging messages provide detailed information about the script.</p>|
 |**Logging file**|<p>Specify the location of the correlation log file. The default file is</p><p>correlation.log and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Log</p>|
 |**Correlation rules file**|<p>Specify the location of the correlation rules XML file. The default file is</p><p>correlationRules.xml and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Extensions\Correlation</p>|
-|**Edit Rules**|Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see [*Configuring the Correlation Rules* ](#_bookmark89)(on page [98](#_bookmark89)).|
+|**Edit Rules**|Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see [*Configuring the Correlation Rules* ](#_bookmark89).|
 |Flex / AMF correlation||
 |**Correlate Flex / AMF messages**|<p>Create automatic correlation rules to correlate RPC Flex messages and Messaging Flex messages.</p><p>Selecting this option enables correlation of the DSId value. This correlation is part of the AMF script generation, which means the correlation is performed during recording.</p>|
 |**Auto generate DSIds**|<p>If selected, a new DSId is generated during session initialization. The generated DSId is used for all AMF requests until the next session initialization.</p><p>If not selected, the DSId is retrieved from the session initialization request (nil request) and is used for all AMF requests until the next session initialization.</p>|
@@ -870,7 +870,7 @@ Use the Proxy Options tab in the Recording and Script Generation Options dialog 
 
 When you record scripts with the WebLOAD Recorder, your browser must be configured to use proxy port 9884 (which is the default proxy port). In other words, you must record scripts through proxy port 9884.
 
-WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*(on page [203](#_bookmark176)).
+WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*.
 
 **To set the proxy options:**
 
@@ -902,7 +902,7 @@ The following table describes the fields and options on the Proxy Options tab.
 |**Proxy port**|The port number for the WebLOAD Recorder proxy-recorder. The default value is 9884. When you record scripts, your browser must use the default value.|
 |**Use transparent proxy**|Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the **Proxy port** field is disabled. For more information, see [*Recording Desktop Web Applications* ](#_bookmark51)on page [59.](#_bookmark51)|
 |*Application proxy options*||
-|**Use the following definitions for the application’s proxy server**|Select this option if you use a proxy server to access the Internet. When selected, the **HTTP proxy/Port, SSL proxy/Port** and the **Proxy authentication** area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see [*Troubleshooting* ](#_bookmark55)(on page [62](#_bookmark55)).|
+|**Use the following definitions for the application’s proxy server**|Select this option if you use a proxy server to access the Internet. When selected, the **HTTP proxy/Port, SSL proxy/Port** and the **Proxy authentication** area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see [*Troubleshooting* ](#_bookmark55).|
 |**HTTP proxy/Port**|The address and port number of your organization’s proxy, if one exists (for example, to access the Internet beyond a company firewall). Modifying these fields automatically updates your default browser’s proxy settings and restores the original settings when the recording process is complete.|
 |**SSL proxy/Port**|The address and port number of your organization’s Secure proxy, if one exists (for example, to access the Internet beyond a company firewall). Use these fields in conjunction with the HTTP Proxy/Port fields to define a double proxy. Modifying these fields automatically updates your default browser’s proxy settings and restores the original settings when the recording process is complete.|
 |<p>**Use browser’s settings**</p><p>**when recording**</p>|Select this option to enable WebLOAD Recorder to use your default browser’s proxy settings when recording a script. When selected, WebLOAD Recorder copies your default browser’s proxy settings into the **HTTP Proxy/Port** and **SSL Proxy/Port** fields. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, this is irrelevant).|
@@ -1231,15 +1231,15 @@ You can also specify the update policy, which defines when a new value will be r
 1. In the **Name** field, enter a name for the parameter.
 1. In the **Type** field, select the parameter type:
 
-   - **Date/Time** – Defines a date/time parameter. For more information see [*Defining](#_bookmark193)[ a Date/Time Parameter* ](#_bookmark193)(on page [215](#_bookmark193)).
-   - **File** – Defines a data file parameter. For more information see [*Defining a Data](#_bookmark195)[ File* ](#_bookmark195)(on page [218](#_bookmark195)). To create a new data file, see [*Creating a Data File* ](#_bookmark198)(on
+   - **Date/Time** – Defines a date/time parameter. For more information see [*Defining](#_bookmark193)[ a Date/Time Parameter* ](#_bookmark193).
+   - **File** – Defines a data file parameter. For more information see [*Defining a Data](#_bookmark195)[ File* ](#_bookmark195). To create a new data file, see [*Creating a Data File* ](#_bookmark198)(on
 
       page [222](#_bookmark198)).
 
-   - **Number** – Defines a number parameter. For more information see [*Defining a](#_bookmark199)[ Number Parameter* ](#_bookmark199)(on page [222](#_bookmark199)).
+   - **Number** – Defines a number parameter. For more information see [*Defining a](#_bookmark199)[ Number Parameter* ](#_bookmark199).
    - **Random String** – Defines a random string parameter. For more information see
 
-      [*Defining a Random String Parameter* ](#_bookmark201)(on page [226](#_bookmark201)).
+      [*Defining a Random String Parameter* ](#_bookmark201).
    
       The parameters definitions are stored with the script. You can change the parameters’ definition at any time by using the Parameterization Manager again.
 
@@ -1305,7 +1305,7 @@ The following table describes the fields and buttons in the Parameterization Man
 |*Select Input File*||
 |**File Name**|Enables selecting the data file. Click ![](../images/change_button.jpeg) to select a data file.|
 |File Delimiter**|The character separating the fields in each row of the data file.|
-|**Create New Data File**|<p>Enables creating a new data file. For information, see [*Creating a Data File*](#_bookmark198)</p><p>(on page [222](#_bookmark198)).</p>|
+|**Create New Data File**|<p>Enables creating a new data file. For information, see [*Creating a Data File*](#_bookmark198)</p><p>.</p>|
 |*Select access method*|Defines the method for reading the next value/row from the file. The predefined methods are the most common and useful methods.|
 |**Use values from the file**|<p>Use rows from the file without any specific restrictions. This is the recommended method to use when applicable.</p><p>This method corresponds to the following Custom settings: Scope – *local*, Order – *random*, When Out of Values – *cycle*.</p><p>For the explanations of Scope, Order and When Out of Values, see the explanations of the **Custom (Advanced)** option.</p>|
 |**Use values, ensure that virtual clients do not use the same value at the same time**|<p>Use unique rows from the file so that a row cannot be used by two virtual clients at the same time. This is useful for example if the value is the login name, and the system under test does not allow the same user to be logged in twice.</p><p>This method corresponds to the following Custom settings:</p><p>Scope – *global unique*, Order – *random*, When Out of Values – *cycle*.</p><p>For the explanations of Scope, Order and When Out of Values, see the explanations of the **Custom (Advanced)** option.</p>|
@@ -1316,7 +1316,7 @@ The following table describes the fields and buttons in the Parameterization Man
 |**When out of values**|<p>Defines whether the rows can be used any number of times, or only once.</p><p>- **Cycle values** – Each row can be used any number of times.</p><p>- **Stop virtual client** – After each row was used once, stop any virtual client that requests another row. An error message is written to the monitor log window.</p><p>- **Keep last value** – After each row was used once, keep re-using the last value.</p>|
 |*Update Policy*|<p>Defines when a parameter is updated, meaning when a new row is read.</p><p>- **Update value on each Round** – A virtual client reads a new row from the file per round. Thus, if the same parameter appears again in the same round, it will get the same value.</p><p>- **Update value on each use** – A virtual client reads a parameter’s row each time it is used.</p><p>- **Update value per Virtual Client** – A virtual clients reads a new row from the file when initialized (when running the InitClient function). All usage of a parameter by that virtual client will always use the same value.</p>|
 |<p>**Show all file rows /**</p><p>**Show first 10 rows only**</p>|Determines which rows the grid displays.|
-|**Use first row as title row**|Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to [*Inserting User-Defined Parameters in a Script](#_bookmark203)* (on page [228](#_bookmark203)).|
+|**Use first row as title row**|Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to [*Inserting User-Defined Parameters in a Script](#_bookmark203)* .|
 
 
 

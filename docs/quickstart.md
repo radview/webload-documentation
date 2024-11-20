@@ -49,11 +49,11 @@ This section shows you how you can get started quickly using WebLOAD by designin
 
 In this Quick Start, you perform the following steps:
 
-1. Create a script (see Creating a script on page 6).
-2. Configure a Load Template using the WebLOAD Wizard (see Configuring a Load Template using WebLOAD Wizard on page 9).
-3. Configure session options (see Setting Session Options on page 13).
-4. Run a test (see Running the Test on page 14).
-5. Analyze test results (see Analyzing Test Results on page 15).
+1. Create a script (see Creating a script).
+2. Configure a Load Template using the WebLOAD Wizard (see Configuring a Load Template using WebLOAD Wizard).
+3. Configure session options (see Setting Session Options).
+4. Run a test (see Running the Test).
+5. Analyze test results (see Analyzing Test Results).
 
 > **Note:** We recommend that you follow the steps in the order they appear. All examples are interrelated and dependent on earlier steps.
 

@@ -18,7 +18,7 @@ Use the following syntax to define the parameters for running a WebLOAD Recorder
 
 webloadide.exe [<flags>][<project or session name to open>] [<session name to save to>][<Number of rounds to run>]
 
-To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#_bookmark354)(on page [370](#_bookmark353)).
+To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#_bookmark354).
 
 
 

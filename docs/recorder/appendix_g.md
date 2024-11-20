@@ -40,8 +40,8 @@ This section describes how to use Selenium scripts in WebLOAD.
 ### **Step 1: Create a WebLOAD Selenium Script**
 Do one of the following:
 
-- Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to [*Recording and Exporting a Selenium Script* ](#_bookmark370)(on page [390](#_bookmark370)). It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.
-- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](#_bookmark342)(on page [361](#_bookmark342)).
+- Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to [*Recording and Exporting a Selenium Script* ](#_bookmark370). It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.
+- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](#_bookmark342).
 
 #### Recording and Exporting a Selenium Script
 
@@ -83,7 +83,7 @@ Do one of the following:
 
 Note that the .js file contains a WebLOAD command, reportStatistics, which appears periodically throughout the script. The command instructs WebLOAD to collect navigation timing statistics from the browser regarding the current page.
 
-> **Note:** By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in [*Selenium Report Statistics* ](#_bookmark344)(on page [363](#_bookmark344)).
+> **Note:** By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in [*Selenium Report Statistics* ](#_bookmark344).
 
 ### Step 2: Create a WebLOAD Recorder Project File from the Selenium Script
 Perform one of the following:

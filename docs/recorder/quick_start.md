@@ -145,8 +145,8 @@ You can view the recorded script in four views:
 
 
 
-- HTML View – See [*Viewing the Recorded Script in the HTML View Pane* ](#_bookmark47)(on page [55](#_bookmark47)).
-- Page View – See [*Using the Page View to View Results* ](#_bookmark117)(on page [132](#_bookmark117)).
+- HTML View – See [*Viewing the Recorded Script in the HTML View Pane* ](#_bookmark47).
+- Page View – See [*Using the Page View to View Results* ](#_bookmark117).
 
 
 
@@ -233,7 +233,7 @@ You can also right-click any script item in the Script Tree to display a menu.
 
 ### Adding Script Items
 
-You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see [*The WebLOAD Recorder Toolbox Items* ](#_bookmark205)(on page [231](#_bookmark205)).
+You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see [*The WebLOAD Recorder Toolbox Items* ](#_bookmark205).
 
 In the following instructions, adding a Message is used as an example. While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log windows display information about session execution. You can include Message nodes in your script, defining points at which to send error and/or notification messages to the Log window.
 
@@ -306,7 +306,7 @@ WebLOAD Recorder provides an integrated debugger with a variety of tools to help
   
   Add breakpoints by clicking **Toggle Breakpoint** in the **Debug** tab of the WebLOAD Recorder ribbon, and then clicking **Run** to run the script.
 
-> **Note:** If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see [*Configuring the Settings* ](#_bookmark181)(on page [208](#_bookmark181)).
+> **Note:** If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see [*Configuring the Settings* ](#_bookmark181).
 
 
 

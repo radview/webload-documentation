@@ -29,16 +29,16 @@ The main components of the dashboard tab header include:
 
 | **Item** | **Description**                                              | **For more information, see**                                |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1        | Dashboard name and selection                                 | [*Loading a Dashboard* ](#_bookmark76)(on page [59](#_bookmark76)) |
-| 2        | Select session – Enables  selecting the session(s) to be viewed and analyzed. | [*Specifying the Sessions to view in   the*](#_bookmark48) [*Dashboard* ](#_bookmark48)(on page [41](#_bookmark48)) |
-| 3        | Star or unstar a dashboard  – Enables marking/unmarking a dashboard as a favorite for filtering purposes. | [*Loading a Dashboard* ](#_bookmark76)(on page [59](#_bookmark76)) |
-| 4        | Share dashboard – Enables  sharing the current state of the dashboard | [*Sharing a Dashboard* ](#_bookmark84)(on page [66](#_bookmark84)) |
-| 5        | Save                                                         | [*Saving your Customized Dashboard*](#_bookmark80)  (on page [63](#_bookmark80)) |
-| 6        | Settings – Enables  configuring the  dashboard’s general  settings | [*Customizing General Dashboard*](#_bookmark72) [*Settings* ](#_bookmark72)(on page [55](#_bookmark72)) |
-| 7        | Time format: <br />**Relative Time** – Show the time since session start. Useful for session  comparison  <br />**Absolute Time** –  Show the real time of the session  when it ran. Useful for currently running sessions | [*Selecting the Time Format* ](#_bookmark51)(on page [43](#_bookmark51)) |
+| 1        | Dashboard name and selection                                 | [*Loading a Dashboard* ](#_bookmark76) |
+| 2        | Select session – Enables  selecting the session(s) to be viewed and analyzed. | [*Specifying the Sessions to view in   the*](#_bookmark48) [*Dashboard* ](#_bookmark48) |
+| 3        | Star or unstar a dashboard  – Enables marking/unmarking a dashboard as a favorite for filtering purposes. | [*Loading a Dashboard* ](#_bookmark76) |
+| 4        | Share dashboard – Enables  sharing the current state of the dashboard | [*Sharing a Dashboard* ](#_bookmark84) |
+| 5        | Save                                                         | [*Saving your Customized Dashboard*](#_bookmark80)   |
+| 6        | Settings – Enables  configuring the  dashboard’s general  settings | [*Customizing General Dashboard*](#_bookmark72) [*Settings* ](#_bookmark72) |
+| 7        | Time format: <br />**Relative Time** – Show the time since session start. Useful for session  comparison  <br />**Absolute Time** –  Show the real time of the session  when it ran. Useful for currently running sessions | [*Selecting the Time Format* ](#_bookmark51) |
 | 8        | Zoom to Data – Sets the time filter to the extent of the data. This  is done automatically when selecting data or a new session. |                                                              |
 | 9        | Zoom out                                                     |                                                              |
-| 10       | Time picker                                                  | [*Setting the Time Picker*](#_bookmark52) (on page [45](#_bookmark52)) |
+| 10       | Time picker                                                  | [*Setting the Time Picker*](#_bookmark52)  |
 | 11       | Refresh data                                                 |                                                              |
 
 

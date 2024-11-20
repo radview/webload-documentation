@@ -14,7 +14,7 @@ To simplify access to the WebLOAD JavaScript toolset, this section organizes the
 
  
 
-The WebLOAD JavaScript toolset includes many additional elements. For a complete, alphabetical reference list of all toolset components, see [*WebLOAD Actions, Objects, and*](#_bookmark40) [*Functions* ](#_bookmark40)(on page [37](#_bookmark40)).
+The WebLOAD JavaScript toolset includes many additional elements. For a complete, alphabetical reference list of all toolset components, see [*WebLOAD Actions, Objects, and*](#_bookmark40) [*Functions* ](#_bookmark40).
 
 **The WebLOAD JavaScript toolset can be organized into the following categories:**
 
@@ -400,7 +400,7 @@ if (document.wlStatusNumber != 200) { ErrorMessage(“Aborting round “ + Round
 
 > **Note:** Message functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. Message function commands can be added to the script in Visual Editing mode using the Toolbox message item and the Insert menu command. The JavaScript code line that corresponds to this message function appears in the JavaScript View pane.
 
-Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18)).
+Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18).
 
 Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.
 
@@ -417,13 +417,13 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark216)on page [153](#_bookmark217))
 
-- [*Message Functions* ](#_bookmark30)(on page [30](#_bookmark29))
+- [*Message Functions* ](#_bookmark30)
 
 - ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 
 - SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark358)on page [246](#_bookmark359))
 
-- [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)(on page [18](#_bookmark18))
+- [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
 - WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438)on page [299](#_bookmark437))
 
@@ -508,7 +508,7 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 
 **See also**
 
-- [*HTTP Components* ](#_bookmark22)(on page [24](#_bookmark21))
+- [*HTTP Components* ](#_bookmark22)
 - SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)on page [253](#_bookmark373)) (wlGlobals only)
 
 - SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375)on page [255](#_bookmark376))

@@ -27,9 +27,9 @@ The Resources table provides the following information and available actions, fo
 | **Item**                                              | **Description**                                              |
 | ----------------------------------------------------- | ------------------------------------------------------------ |
 | **Name**                                              | The name of the resource or folder  containing resources.    |
-| ![button - delete test](../images/delete_load_test.png) | Instructs  WebLOAD to delete the resource or folder. Refer to  [*Deleting a Resource or Resources   folder* ](#_bookmark39)(on page [34](#_bookmark39)). |
+| ![button - delete test](../images/delete_load_test.png) | Instructs  WebLOAD to delete the resource or folder. Refer to  [*Deleting a Resource or Resources   folder* ](#_bookmark39). |
 | ![button - download](../images/download_resource.png)   | Instructs WebLOAD to  download the resource to the local computer. |
-| ![button - create test](../images/create_load_test.png) | Enables creating a load test based on the  resource. Refer to  [*Creating a Load Test Based on a   Resource* ](#_bookmark38)(on page [34](#_bookmark38)). |
+| ![button - create test](../images/create_load_test.png) | Enables creating a load test based on the  resource. Refer to  [*Creating a Load Test Based on a   Resource* ](#_bookmark38). |
 
 
 
