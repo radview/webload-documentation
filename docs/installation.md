@@ -23,7 +23,7 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 | **Requirements**     | **WebLOAD Console, WebLOAD Recorder, WebLOAD Analytics, WebLOAD  Probing Client, and WebRM** | **Load Machine**                                             |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Computer / Processor | 2 Core CPU | 2 Core CPU (4 Core CPU Recommended) |
-| Operating System     | Windows supported version: (Windows 7, 8, 10, 11, Server 2012, 2016, 2019, 2022)  | Windows supported version: (Windows 7, 8, 10, 11, Server 2012, 2016, 2019, 2022)  |
+| Operating System     | Windows supported version: (Windows 10, 11, Server 2012, 2016, 2019, 2022)  | Windows supported version: (Windows 10, 11, Server 2012, 2016, 2019, 2022)  |
 | Memory               | 2 GB RAM (minimum); 4 GB  is recommended                     | 2 GB RAM (minimum); 16 GB is recommended                      |
 | Free Disk Space      | 20 GB                                                         | 20 GB                                                         |
 
