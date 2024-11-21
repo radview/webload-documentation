@@ -1,0 +1,3517 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../introduction/" rel="prev"/>
+<link href="../advanced_javascript_features/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Programming your JavaScript Script - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#programming-your-javascript-script">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Programming your JavaScript Script
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-javascript-scripts">
+<span class="md-ellipsis">
+      Understanding JavaScript scripts
+    </span>
+</a>
+<nav aria-label="Understanding JavaScript scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-javascript-scripts">
+<span class="md-ellipsis">
+      What are JavaScript scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-tree-structure">
+<span class="md-ellipsis">
+      Script Tree Structure
+    </span>
+</a>
+<nav aria-label="Script Tree Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-tree-nodes">
+<span class="md-ellipsis">
+      Script Tree Nodes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-program-structure">
+<span class="md-ellipsis">
+      script Program Structure
+    </span>
+</a>
+<nav aria-label="script Program Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-script">
+<span class="md-ellipsis">
+      Main Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-and-termination-functions">
+<span class="md-ellipsis">
+      Initialization and Termination Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-functions">
+<span class="md-ellipsis">
+      Navigation Functions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-execution-sequence">
+<span class="md-ellipsis">
+      script Execution Sequence
+    </span>
+</a>
+<nav aria-label="script Execution Sequence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-execution-sequence">
+<span class="md-ellipsis">
+      Basic Execution Sequence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evaluatescript-function">
+<span class="md-ellipsis">
+      EvaluateScript Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-at-the-end-of-each-round">
+<span class="md-ellipsis">
+      Cleanup at the End of Each Round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-for-scheduled-clients">
+<span class="md-ellipsis">
+      Execution Sequence for Scheduled Clients
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-for-mixed-clients">
+<span class="md-ellipsis">
+      Execution Sequence for Mixed Clients
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-javascript-code-in-a-script">
+<span class="md-ellipsis">
+      Editing the JavaScript Code in a script
+    </span>
+</a>
+<nav aria-label="Editing the JavaScript Code in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-the-javascript-code-within-the-script-tree">
+<span class="md-ellipsis">
+      Accessing the JavaScript Code within the Script Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-intellisense-javascript-editor">
+<span class="md-ellipsis">
+      Using the IntelliSense JavaScript Editor
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-javascript-object-nodes">
+<span class="md-ellipsis">
+      Adding JavaScript Object Nodes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-management">
+<span class="md-ellipsis">
+      File Management
+    </span>
+</a>
+<nav aria-label="File Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#including-files">
+<span class="md-ellipsis">
+      Including Files
+    </span>
+</a>
+<nav aria-label="Including Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-an-includefile-function">
+<span class="md-ellipsis">
+      Adding an IncludeFile() Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#determining-the-included-file-location">
+<span class="md-ellipsis">
+      Determining the Included File Location
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-working-with-an-included-function">
+<span class="md-ellipsis">
+      Example: Working with an Included Function
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copying-files">
+<span class="md-ellipsis">
+      Copying Files
+    </span>
+</a>
+<nav aria-label="Copying Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-copyfile-function">
+<span class="md-ellipsis">
+      Adding a CopyFile() Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#determining-the-copied-file-location">
+<span class="md-ellipsis">
+      Determining the Copied File Location
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-files">
+<span class="md-ellipsis">
+      Output Files
+    </span>
+</a>
+<nav aria-label="Output Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-script-output-messages-to-a-file">
+<span class="md-ellipsis">
+      Writing script Output Messages to a File
+    </span>
+</a>
+<nav aria-label="Writing script Output Messages to a File" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-the-wloutputfile-object">
+<span class="md-ellipsis">
+      Adding the wlOutputFile Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wloutputfile-object-scope-limitations">
+<span class="md-ellipsis">
+      wlOutputFile Object Scope Limitations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#saving-server-output-to-a-file">
+<span class="md-ellipsis">
+      Saving Server Output to a File
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security">
+<span class="md-ellipsis">
+      Security
+    </span>
+</a>
+<nav aria-label="Security" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authentication">
+<span class="md-ellipsis">
+      Authentication
+    </span>
+</a>
+<nav aria-label="Authentication" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-authentication-tab">
+<span class="md-ellipsis">
+      Using the Authentication Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-user-authentication-values-manually">
+<span class="md-ellipsis">
+      Setting User Authentication Values Manually
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secure-data-transmission-through-ssl">
+<span class="md-ellipsis">
+      Secure Data Transmission through SSL
+    </span>
+</a>
+<nav aria-label="Secure Data Transmission through SSL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#browser-emulation">
+<span class="md-ellipsis">
+      Browser Emulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-specific-cipher-testing">
+<span class="md-ellipsis">
+      Server-Specific Cipher Testing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-management">
+<span class="md-ellipsis">
+      Error Management
+    </span>
+</a>
+<nav aria-label="Error Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-management-tools">
+<span class="md-ellipsis">
+      Error Management Tools
+    </span>
+</a>
+<nav aria-label="Error Management Tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#analyzing-possible-errors">
+<span class="md-ellipsis">
+      Analyzing Possible Errors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-message-functions">
+<span class="md-ellipsis">
+      Standard Message Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-error-constants">
+<span class="md-ellipsis">
+      Standard Error Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variable-activity-blocks">
+<span class="md-ellipsis">
+      Variable Activity Blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlexception-object">
+<span class="md-ellipsis">
+      The wlException Object
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-standard-script-execution-sequence">
+<span class="md-ellipsis">
+      Non-Standard script Execution Sequence
+    </span>
+</a>
+<nav aria-label="Non-Standard script Execution Sequence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minor-error-managementcontinue-the-test-session-as-usual">
+<span class="md-ellipsis">
+      Minor Error Management—Continue the Test Session as Usual
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-error-managementstopping-a-single-round">
+<span class="md-ellipsis">
+      Standard Error Management—Stopping a Single Round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#severe-error-managementstopping-a-test-session">
+<span class="md-ellipsis">
+      Severe Error Management—Stopping a Test Session
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-a-standard-or-severe-error">
+<span class="md-ellipsis">
+      Defining a Standard or Severe Error
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-after-stop-and-abort">
+<span class="md-ellipsis">
+      Execution Sequence after Stop and Abort
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-after-stopping-a-virtual-client">
+<span class="md-ellipsis">
+      Execution Sequence after Stopping a Virtual Client
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-of-scope-for-local-and-global-variables">
+<span class="md-ellipsis">
+      Rules of Scope for Local and Global Variables
+    </span>
+</a>
+<nav aria-label="Rules of Scope for Local and Global Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#limited-context">
+<span class="md-ellipsis">
+      Limited Context
+    </span>
+</a>
+<nav aria-label="Limited Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wlhttp-object">
+<span class="md-ellipsis">
+      Working with the wlHttp Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasing-and-preserving-the-http-configuration">
+<span class="md-ellipsis">
+      Erasing and Preserving the HTTP Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-context">
+<span class="md-ellipsis">
+      Local Context
+    </span>
+</a>
+<nav aria-label="Local Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wllocals-object">
+<span class="md-ellipsis">
+      Working with the wlLocals Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-user-defined-variables-local-context">
+<span class="md-ellipsis">
+      Working with User-Defined Variables (Local Context
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-context">
+<span class="md-ellipsis">
+      Global Context
+    </span>
+</a>
+<nav aria-label="Global Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wlglobals-object">
+<span class="md-ellipsis">
+      Working with the wlGlobals Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlgeneratorglobal-example">
+<span class="md-ellipsis">
+      wlGeneratorGlobal Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlsystemglobal-object-with-wlcurrentagenda-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlsystemglobal-object-with-wlallagendas-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlsystemglobal-example">
+<span class="md-ellipsis">
+      wlSystemGlobal Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-combination-of-global-variables">
+<span class="md-ellipsis">
+      Example: Using a Combination of Global Variables
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#search-order-precedence">
+<span class="md-ellipsis">
+      Search Order Precedence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-sharing-considerations">
+<span class="md-ellipsis">
+      Global Sharing Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identification-variables-and-functions">
+<span class="md-ellipsis">
+      Identification Variables and Functions
+    </span>
+</a>
+<nav aria-label="Identification Variables and Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-the-value-of-a-variable">
+<span class="md-ellipsis">
+      Viewing the Value of a Variable
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clientnum">
+<span class="md-ellipsis">
+      ClientNum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roundnum">
+<span class="md-ellipsis">
+      RoundNum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-identifying-a-client-and-round">
+<span class="md-ellipsis">
+      Example: identifying a client and round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generatorname">
+<span class="md-ellipsis">
+      GeneratorName()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getoperatingsystem">
+<span class="md-ellipsis">
+      GetOperatingSystem()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vcuniqueid">
+<span class="md-ellipsis">
+      VCUniqueID()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-javascript-scripts">
+<span class="md-ellipsis">
+      Understanding JavaScript scripts
+    </span>
+</a>
+<nav aria-label="Understanding JavaScript scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-javascript-scripts">
+<span class="md-ellipsis">
+      What are JavaScript scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-tree-structure">
+<span class="md-ellipsis">
+      Script Tree Structure
+    </span>
+</a>
+<nav aria-label="Script Tree Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-tree-nodes">
+<span class="md-ellipsis">
+      Script Tree Nodes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-program-structure">
+<span class="md-ellipsis">
+      script Program Structure
+    </span>
+</a>
+<nav aria-label="script Program Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-script">
+<span class="md-ellipsis">
+      Main Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization-and-termination-functions">
+<span class="md-ellipsis">
+      Initialization and Termination Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-functions">
+<span class="md-ellipsis">
+      Navigation Functions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-execution-sequence">
+<span class="md-ellipsis">
+      script Execution Sequence
+    </span>
+</a>
+<nav aria-label="script Execution Sequence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-execution-sequence">
+<span class="md-ellipsis">
+      Basic Execution Sequence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evaluatescript-function">
+<span class="md-ellipsis">
+      EvaluateScript Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-at-the-end-of-each-round">
+<span class="md-ellipsis">
+      Cleanup at the End of Each Round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-for-scheduled-clients">
+<span class="md-ellipsis">
+      Execution Sequence for Scheduled Clients
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-for-mixed-clients">
+<span class="md-ellipsis">
+      Execution Sequence for Mixed Clients
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-javascript-code-in-a-script">
+<span class="md-ellipsis">
+      Editing the JavaScript Code in a script
+    </span>
+</a>
+<nav aria-label="Editing the JavaScript Code in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-the-javascript-code-within-the-script-tree">
+<span class="md-ellipsis">
+      Accessing the JavaScript Code within the Script Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-intellisense-javascript-editor">
+<span class="md-ellipsis">
+      Using the IntelliSense JavaScript Editor
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-javascript-object-nodes">
+<span class="md-ellipsis">
+      Adding JavaScript Object Nodes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-management">
+<span class="md-ellipsis">
+      File Management
+    </span>
+</a>
+<nav aria-label="File Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#including-files">
+<span class="md-ellipsis">
+      Including Files
+    </span>
+</a>
+<nav aria-label="Including Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-an-includefile-function">
+<span class="md-ellipsis">
+      Adding an IncludeFile() Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#determining-the-included-file-location">
+<span class="md-ellipsis">
+      Determining the Included File Location
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-working-with-an-included-function">
+<span class="md-ellipsis">
+      Example: Working with an Included Function
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copying-files">
+<span class="md-ellipsis">
+      Copying Files
+    </span>
+</a>
+<nav aria-label="Copying Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-copyfile-function">
+<span class="md-ellipsis">
+      Adding a CopyFile() Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#determining-the-copied-file-location">
+<span class="md-ellipsis">
+      Determining the Copied File Location
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-files">
+<span class="md-ellipsis">
+      Output Files
+    </span>
+</a>
+<nav aria-label="Output Files" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-script-output-messages-to-a-file">
+<span class="md-ellipsis">
+      Writing script Output Messages to a File
+    </span>
+</a>
+<nav aria-label="Writing script Output Messages to a File" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-the-wloutputfile-object">
+<span class="md-ellipsis">
+      Adding the wlOutputFile Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wloutputfile-object-scope-limitations">
+<span class="md-ellipsis">
+      wlOutputFile Object Scope Limitations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#saving-server-output-to-a-file">
+<span class="md-ellipsis">
+      Saving Server Output to a File
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security">
+<span class="md-ellipsis">
+      Security
+    </span>
+</a>
+<nav aria-label="Security" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authentication">
+<span class="md-ellipsis">
+      Authentication
+    </span>
+</a>
+<nav aria-label="Authentication" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-authentication-tab">
+<span class="md-ellipsis">
+      Using the Authentication Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-user-authentication-values-manually">
+<span class="md-ellipsis">
+      Setting User Authentication Values Manually
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secure-data-transmission-through-ssl">
+<span class="md-ellipsis">
+      Secure Data Transmission through SSL
+    </span>
+</a>
+<nav aria-label="Secure Data Transmission through SSL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#browser-emulation">
+<span class="md-ellipsis">
+      Browser Emulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-specific-cipher-testing">
+<span class="md-ellipsis">
+      Server-Specific Cipher Testing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-management">
+<span class="md-ellipsis">
+      Error Management
+    </span>
+</a>
+<nav aria-label="Error Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-management-tools">
+<span class="md-ellipsis">
+      Error Management Tools
+    </span>
+</a>
+<nav aria-label="Error Management Tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#analyzing-possible-errors">
+<span class="md-ellipsis">
+      Analyzing Possible Errors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-message-functions">
+<span class="md-ellipsis">
+      Standard Message Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-error-constants">
+<span class="md-ellipsis">
+      Standard Error Constants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variable-activity-blocks">
+<span class="md-ellipsis">
+      Variable Activity Blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlexception-object">
+<span class="md-ellipsis">
+      The wlException Object
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-standard-script-execution-sequence">
+<span class="md-ellipsis">
+      Non-Standard script Execution Sequence
+    </span>
+</a>
+<nav aria-label="Non-Standard script Execution Sequence" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minor-error-managementcontinue-the-test-session-as-usual">
+<span class="md-ellipsis">
+      Minor Error Management—Continue the Test Session as Usual
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-error-managementstopping-a-single-round">
+<span class="md-ellipsis">
+      Standard Error Management—Stopping a Single Round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#severe-error-managementstopping-a-test-session">
+<span class="md-ellipsis">
+      Severe Error Management—Stopping a Test Session
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-a-standard-or-severe-error">
+<span class="md-ellipsis">
+      Defining a Standard or Severe Error
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-after-stop-and-abort">
+<span class="md-ellipsis">
+      Execution Sequence after Stop and Abort
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#execution-sequence-after-stopping-a-virtual-client">
+<span class="md-ellipsis">
+      Execution Sequence after Stopping a Virtual Client
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-of-scope-for-local-and-global-variables">
+<span class="md-ellipsis">
+      Rules of Scope for Local and Global Variables
+    </span>
+</a>
+<nav aria-label="Rules of Scope for Local and Global Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#limited-context">
+<span class="md-ellipsis">
+      Limited Context
+    </span>
+</a>
+<nav aria-label="Limited Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wlhttp-object">
+<span class="md-ellipsis">
+      Working with the wlHttp Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasing-and-preserving-the-http-configuration">
+<span class="md-ellipsis">
+      Erasing and Preserving the HTTP Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-context">
+<span class="md-ellipsis">
+      Local Context
+    </span>
+</a>
+<nav aria-label="Local Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wllocals-object">
+<span class="md-ellipsis">
+      Working with the wlLocals Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-user-defined-variables-local-context">
+<span class="md-ellipsis">
+      Working with User-Defined Variables (Local Context
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-context">
+<span class="md-ellipsis">
+      Global Context
+    </span>
+</a>
+<nav aria-label="Global Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-wlglobals-object">
+<span class="md-ellipsis">
+      Working with the wlGlobals Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlgeneratorglobal-example">
+<span class="md-ellipsis">
+      wlGeneratorGlobal Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlsystemglobal-object-with-wlcurrentagenda-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-defined-through-the-wlsystemglobal-object-with-wlallagendas-flag">
+<span class="md-ellipsis">
+      Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlsystemglobal-example">
+<span class="md-ellipsis">
+      wlSystemGlobal Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-combination-of-global-variables">
+<span class="md-ellipsis">
+      Example: Using a Combination of Global Variables
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#search-order-precedence">
+<span class="md-ellipsis">
+      Search Order Precedence
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#global-sharing-considerations">
+<span class="md-ellipsis">
+      Global Sharing Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identification-variables-and-functions">
+<span class="md-ellipsis">
+      Identification Variables and Functions
+    </span>
+</a>
+<nav aria-label="Identification Variables and Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-the-value-of-a-variable">
+<span class="md-ellipsis">
+      Viewing the Value of a Variable
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clientnum">
+<span class="md-ellipsis">
+      ClientNum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roundnum">
+<span class="md-ellipsis">
+      RoundNum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-identifying-a-client-and-round">
+<span class="md-ellipsis">
+      Example: identifying a client and round
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generatorname">
+<span class="md-ellipsis">
+      GeneratorName()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getoperatingsystem">
+<span class="md-ellipsis">
+      GetOperatingSystem()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vcuniqueid">
+<span class="md-ellipsis">
+      VCUniqueID()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="programming-your-javascript-script">Programming your JavaScript script</h1>
+<p>WebLOAD functions on many different levels. WebLOAD Recorder provides a wide range of testing tools and features, ranging from basic tools that are available through a simple graphic user interface, to features that require only a small amount of script ‘tweaking’, to complex functionality that assumes a sophisticated understanding of programming techniques. Beginning users may take advantage of the basic WebLOAD Recorder tool set without ever understanding exactly how these features are implemented. Most WebLOAD testing features and configuration settings are handled automatically by WebLOAD and never require any manual intervention. These GUI- only features are described in the <em>WebLOAD Recorder User Guide</em>.</p>
+<h2 id="understanding-javascript-scripts">Understanding JavaScript scripts</h2>
+<p>This chapter focuses on the options available to users who wish to customize their recorded scripts and are comfortable looking at, and possibly giving a small ‘tweak’ to the JavaScript code within script files. Major programming skills are not required for the tools in this chapter. A basic understanding of programming logic, an introduction to the internals of script files, and careful reading of the examples provided are enough to get started using the tools documented here.</p>
+<blockquote>
+<p><strong>Note:</strong> The topics presented in this chapter include fragments of JavaScript script code. To view the JavaScript code of a script, select JavaScript View from the toolbar or drop- down View menu. This opens a JavaScript View pane that automatically displays the JavaScript code corresponding to any item highlighted in the Script Tree.</p>
+</blockquote>
+<p>The WebLOAD Recorder tools described in the rest of this manual involve some degree of intervention within the JavaScript code of a script. Users will have an easier time working with these tools if they have a basic understanding of JavaScript scripts. This chapter therefore begins with a description of the components, structure, and grammar of JavaScript scripts.</p>
+<h3 id="what-are-javascript-scripts">What are JavaScript scripts?</h3>
+<p>WebLOAD tests applications by running JavaScript scripts that simulate the actions of real users. You don’t have to be familiar with the JavaScript language to work with</p>
+<p>WebLOAD and WebLOAD Recorder, and test applications. JavaScript scripts are recorded through WebLOAD Recorder. As you execute a typical sequence of activities, WebLOAD Recorder records the HTTP protocol level traffic that is generated by the Web browser according to your accesses. By the conclusion of your recording session, a complete JavaScript script file is created.</p>
+<p>The basic ‘Building Blocks’ of a recording session are HTTP requests, which are triggered by user actions. Each time a user navigates to a new URL or submits a form, the browser emits an HTTP method and the resulting HTTP request is recorded.</p>
+<p>Externally, user activities (at the protocol level) are represented on the WebLOAD Recorder desktop by a set of clear, intuitive icons and visual devices arranged in a visual Script Tree. Internally, WebLOAD Recorder automatically creates JavaScript scripts that act as scripts, recreating the HTTP traffic created by the actions of the original user during later test sessions.</p>
+<p>Most users begin application testing by simply recording and then running a series of basic scripts, without ever looking into a script’s internal Building Blocks to see the actual JavaScript code inside. As their understanding of the WebLOAD Recorder tool set grows, many users decide to expand or tailor their original set of scripts to meet a particular testing need, adding customized features that sometimes require some editing of the JavaScript code within the script itself. WebLOAD Recorder offers a wide range of features and options, for users who wish to add more functionality to their scripts, rather than simply replaying the same set of HTTP methods exactly as originally recorded. Many of these tools are available through the WebLOAD Recorder GUI and do not require any additional programming skills. These tools are documented in the <em>WebLOAD Recorder User Guide</em>. The more complex tools that require some familiarity with JavaScript programming are described in the remaining chapters of this guide, with detailed syntax specifications provided in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
+<p>Test session scripts are written in JavaScript. JavaScript is an object-oriented scripting language originally developed by Netscape Communications Corporation and is currently maintained by the Mozilla Foundation. JavaScript is best known for its use in conjunction with HTML to automate World Wide Web pages. However, JavaScript is actually a full-featured programming language that can be used for many purposes besides Web automation. WebLOAD and WebLOAD Recorder have chosen JavaScript as the scripting language for test session scripts. WebLOAD Recorder JavaScript scripts combine the ease and simplicity of WebLOAD’s visual, intuitive programming environment with the flexibility and power of JavaScript object-oriented programming.</p>
+<h3 id="script-tree-structure">Script Tree Structure</h3>
+<h4 id="script-tree-nodes">Script Tree Nodes</h4>
+<p>JavaScript scripts are represented on the WebLOAD Recorder desktop by a script Tree. Each item that appears in the Script Tree is a script node. As you work in your application during a recording session, WebLOAD Recorder adds nodes to the Script Tree. Each node in the Script Tree represents a single user action at the HTTP protocol level, such as submitting a form or navigating to a new URL. Script Tree nodes provide an intuitive, graphic representation of the underlying JavaScript code that actually implements the user activities to be recreated at run time.</p>
+<p>The following figure illustrates a typical Script Tree fragment:</p>
+<p><img alt="Typical Script Tree Fragment" src="../../images/script_guide_023.png"/></p>
+<p>Script Tree nodes are arranged sequentially. The sequential arrangement of icons in the Script Tree means that icons appear in the Script Tree in the order in which the user actions and HTTP methods occurred when originally recorded. URL nodes in a script Tree will appear in the order in which the browser requested each Web page over the course of a recording session. In cases where the browser emits asynchronous requests (for example, while using AJAX), the requests are recorded and appear in the Script Tree in the order that the browser emitted them.</p>
+<blockquote>
+<p><strong>Note:</strong> WebLOAD Recorder offers users a wide range of tools and features that can add very powerful functionality to a testing script. While users are certainly encouraged to incorporate these tools in their Script Tree, users must also be careful when editing URL nodes in the Script Tree. Because the order of HTTP activities within a script is so significant, changing the sequence of URLs in the Script Tree in effect means changing the sequence of activities, and may destroy the functionality of the script.
+</p>
+</blockquote>
+<h3 id="script-program-structure">script Program Structure</h3>
+<p>After a user has finished recording a typical session with the system under test, WebLOAD Recorder saves a complete record of all user activities at the protocol level and converts the user activity information to a JavaScript script. This script can be run repeatedly, with a variety of testing configurations, until the user is satisfied that the system has been thoroughly tested. The script created by the WebLOAD Recorder JavaScript interpreter has the following underlying structure.</p>
+<h4 id="main-script">Main Script</h4>
+<p>The main script contains JavaScript code representing the user activities at the protocol level to be simulated during a test session. The main script is required. Without it, WebLOAD and WebLOAD Recorder cannot run a test.</p>
+<p>The main script is constructed and based on an exact recording of the specific sequence of user activities, such as the following, which are completed during a recording session:</p>
+<ul>
+<li>Web page navigations</li>
+<li>Form submissions</li>
+<li>User think time (sleep)</li>
+</ul>
+<p>In addition to the original recording session activities, users may also add other features to the script, such as messages or pause and sleep times. These features are usually added through WebLOAD Recorder. WebLOAD executes the main script repeatedly, presenting the results in a series of analysis reports produced at the end of testing sessions.</p>
+<h4 id="initialization-and-termination-functions">Initialization and Termination Functions</h4>
+<p>These are JavaScript functions that WebLOAD or WebLOAD Recorder executes once, in a fixed sequence, before or after the main script. These functions are used to prepare for or clean up from a testing session. The following functions are automatically included in the script when needed:</p>
+<ul>
+<li>
+<p>InitAgenda()— Initialize global objects shared by all WebLOAD Recorder clients that run the script.</p>
+</li>
+<li>
+<p>InitClient()— Initialize local objects and variables for individual clients.</p>
+</li>
+<li>TerminateClient()— Free resources of individual clients.</li>
+<li>TerminateAgenda()— Free global resources shared by all clients running the script.</li>
+<li>OnScriptAbort()— Executes user-defined code to free resources whenever the script stops the execution of a round (ErrorMessage), a session (SevereErrorMessage), or in the event of an error. In addition, OnScriptAbort() is called in the Console whenever the script stops abruptly. This occurs when the end of a scheduled session is in the middle of a round, or when a user manually stops the session.</li>
+<li>OnErrorTerminateClient()— Clean up and free resources after a runtime error (per client).</li>
+<li>OnErrorTerminateAgenda()— Clean up and free resources after a runtime error (per script).</li>
+</ul>
+<p>The initialization and termination functions are not part of the WebLOAD performance test. WebLOAD does not include the operations of these functions in the performance statistics.</p>
+<p>Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error.</p>
+<p>Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.</p>
+<p><strong>To bring up a list of available functions:</strong></p>
+<ul>
+<li>While working in Java Editing mode, select the node in the Script Tree to which you want to add a function, right-click the JavaScript pane, and select <strong>Insert</strong> &gt; <strong>General</strong> &gt; <strong>Init/Terminate Functions</strong> from the pop-up menu.</li>
+</ul>
+<p>WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. You may then add any other necessary commands to the functions without any concerns about mistakes in the function syntax.</p>
+<p><img alt="Function Insertion using the Insert Menu" src="../../images/script_guide_024.png"/></p>
+<h4 id="navigation-functions">Navigation Functions</h4>
+<p>When a URL node is selected in the Script Tree, the corresponding script code that appears in the JavaScript View pane will usually include basic navigation and validation functions such as wlHTTP.Get() and wlHTTP.Post(). The wlHTTP.Get() and wlHTTP.Post() methods store the HTML from the navigated page in the document.wlSource property. The code is refreshed when the script calls wlHTTP.Get() or wlHTTP.Post() again. The stored code includes any scripts or other data embedded in the HTML, which the script can retrieve and interpret in any desired way.</p>
+<p>These functions are almost always visible at the start of the JavaScript code for every URL node in the Script Tree. While additional Tree nodes add their own additional corresponding JavaScript code to the script, these functions form the basis for all test session scripts.</p>
+<h3 id="script-execution-sequence">script Execution Sequence</h3>
+<h4 id="basic-execution-sequence">Basic Execution Sequence</h4>
+<p>WebLOAD executes JavaScript scripts in a simple, fixed sequence. The normal sequence is as follows.</p>
+<ol>
+<li>The optional InitAgenda() initialization function runs once for each Load Generator, initializing the global WebLOAD objects, or any other global data or resources, that are shared by all clients in a Load Generator process.</li>
+<li>The script splits into a separate thread for each client. Load Generator processes may include any number of Virtual Clients, all running the same script. After WebLOAD runs InitAgenda(), it runs each client in a separate thread. Each thread can have its own local variables and objects. In essence, each client runs an independent instance or copy of the script.</li>
+</ol>
+<p>For example, suppose you want each WebLOAD client to connect to a different Web page. You can use a local object within each thread to store the Web address and perform the HTTP connection. Because the object is local, there is no confusion between the addresses. Each thread connects to the appropriate address, without any effect on the other threads of the same script.</p>
+<ol>
+<li>The optional InitClient() initialization function runs once for each thread, initializing local WebLOAD objects, or any other variables or resources, which belong to an individual thread of the script. In this way, each thread of a script can work with different data and can operate independently of the other threads.</li>
+<li>The main script runs repeatedly in a separate loop for each thread. When WebLOAD reaches the end of the main script, it starts again at the beginning. The main script continues to iterate until you stop the WebLOAD test. You can stop the test by issuing a Stop command in the WebLOAD Console, or you can tell the Console to stop the test automatically after a predefined time.</li>
+</ol>
+<p>WebLOAD collects performance statistics while the main script runs. The various statistics that WebLOAD displays (round time, average round time, etc.) apply only to the main script, not to operations in the initialization and termination functions.</p>
+<ol>
+<li>The optional TerminateClient() termination function runs once for each thread. Strictly speaking, most scripts do not need a TerminateClient() function, because JavaScript automatically frees objects and releases most resources when the script terminates. In a complex script, however, it is good programming practice to free local objects and resources explicitly using TerminateClient().</li>
+<li>The separate threads for each client terminate.</li>
+<li>The optional TerminateAgenda() termination function runs once for each Load Generator process. Most simple scripts do not need a TerminateAgenda() function. In a complex script, including TerminateAgenda() is recommended to free global resources.</li>
+<li>The OnScriptAbort(), OnErrorTerminateClient(), and OnErrorTerminateAgenda() functions clean up and free resources after a runtime error. For more information about handling errors during a test session, see <a href="#error-management"><em>Error Management</em> </a>.</li>
+</ol>
+<p>The following figure illustrates the steps in a normal script execution sequence:</p>
+<p><img alt="Steps in a Typical script Execution Sequence" src="../../images/script_guide_025.png"/></p>
+<h4 id="evaluatescript-function">EvaluateScript Function</h4>
+<p>The EvaluateScript() function is used to define JavaScript code to be executed at specific points during the execution of the script. The function allows testers to include scripts from an external library and specify the point during script execution at which the script should be executed. You can specify to execute the script at any of the following points within the script:</p>
+<ul>
+<li>WLBeforeInitClient</li>
+<li>WLAfterInitAgenda</li>
+<li>WLBeforeThreadActivation</li>
+<li>WLOnThreadActivation</li>
+<li>WLAfterTerminateClient</li>
+<li>WLBeforeRound</li>
+<li>
+<p>WLAfterTerminateAgenda</p>
+</li>
+<li>
+<p>WLAfterRound</p>
+</li>
+</ul>
+<p>If the script run is successful, the value from the last executed expression statement processed in the script is saved and then parsed when the engine reaches the relevant point. The saved value includes the following information:</p>
+<ul>
+<li>The text of the script.</li>
+<li>The size of the script text, in bytes.</li>
+<li>The name of the file or URL containing the script text. If the script run is unsuccessful, the value is left undefined.</li>
+</ul>
+<p>The following example is used to call a function that is defined in an external file:</p>
+<p><code>IncludeFile(filename.js)</code></p>
+<p><code>EvaluateScript(“MyFunction()”,WLAfterRound)</code></p>
+<p>In this example, the EvaluateScript string is parsed, executed, and instructs the JavaScript engine to call the MyFunction() function right after each round is completed. At this point WebLOAD returns any syntax or runtime errors.</p>
+<p>For more information on the EvaluateScript function, see the <em>WebLOAD’s JavaScript Reference Guide</em>.</p>
+<h4 id="cleanup-at-the-end-of-each-round">Cleanup at the End of Each Round</h4>
+<p>The main script retains its variables and objects from one round (iteration) to the next. For example, you can increment a variable in each round, or you can store data in an object in one round and access the data in the next.</p>
+<p>There are three exceptions to this rule. At the end of each round:</p>
+<ul>
+<li>Any cookies that the script sets are deleted.</li>
+<li>The SSL Cache is cleared.</li>
+<li>Any open HTTP connections are closed.</li>
+</ul>
+<h4 id="execution-sequence-for-scheduled-clients">Execution Sequence for Scheduled Clients</h4>
+<p>WebLOAD lets you schedule the number of clients running a single script in a single Load Generator. WebLOAD runs the initialization and termination functions of the script according to your schedule.</p>
+<p>For example, suppose you configure a Load Generator to run a script according to the following schedule:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Number of Threads</strong></th>
+<th style="text-align: left;"><strong>Scheduled Time</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">50 threads</td>
+<td style="text-align: left;">For the first 30 minutes.</td>
+</tr>
+<tr>
+<td style="text-align: left;">20 threads</td>
+<td style="text-align: left;">From 30 to 60 minutes.</td>
+</tr>
+<tr>
+<td style="text-align: left;">100 threads</td>
+<td style="text-align: left;">For the remainder of the test.</td>
+</tr>
+</tbody>
+</table>
+<p>In this case:</p>
+<ul>
+<li>WebLOAD runs the InitAgenda() function when the Load Generator starts to run. WebLOAD then starts the first 50 threads, running InitClient() and the main script for each thread.</li>
+<li>After 30 minutes, 30 of the threads stop. WebLOAD runs TerminateClient()</li>
+</ul>
+<p>for these 30 threads. The main script of the other 20 threads continues running.</p>
+<ul>
+<li>At 60 minutes, 80 additional threads start. For each of these 80 threads, WebLOAD runs InitClient() and the main script.</li>
+<li>At the end of the test, WebLOAD runs TerminateClient() for each of the 100 threads currently running, and then runs TerminateAgenda().</li>
+</ul>
+<h4 id="execution-sequence-for-mixed-clients">Execution Sequence for Mixed Clients</h4>
+<p>You can configure a single Load Generator to run more than one script. In that case, WebLOAD splits the time on each thread between the scripts. WebLOAD runs the initialization and termination functions of each script at the beginning and end of the threads, respectively. It does not run the functions each time the threads switch between scripts.</p>
+<p>For example, suppose you configure a Load Generator to run 100 threads as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Percentage of time</strong></th>
+<th style="text-align: left;"><strong>Selected script</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">50% of the time</td>
+<td style="text-align: left;">agenda1. wlp</td>
+</tr>
+<tr>
+<td style="text-align: left;">50% of the time</td>
+<td style="text-align: left;">agenda2. wlp</td>
+</tr>
+</tbody>
+</table>
+<p>In this case, WebLOAD runs:</p>
+<ul>
+<li>
+<p>The InitAgenda() functions of both scripts when the Load Generator starts.</p>
+</li>
+<li>
+<p>The InitClient() functions of both scripts in each thread when the thread starts.</p>
+</li>
+<li>The TerminateClient() functions of both scripts, in each thread at the end of the test.</li>
+<li>The TerminateAgenda() functions of both scripts when all the threads have stopped.</li>
+</ul>
+<h3 id="editing-the-javascript-code-in-a-script">Editing the JavaScript Code in a script</h3>
+<p>WebLOAD is a fully automated testing tool. WebLOAD users are able to record scripts, add testing tools, run test sessions, and analyze the results, without any programming skills whatsoever. Nevertheless, there are users who wish to manually edit the JavaScript code of a recorded script to add functionality to test session scripts created with WebLOAD Recorder, creating more complex, sophisticated test sessions.</p>
+<p>For example, many users design test sessions around a set of basic scripts created through WebLOAD Recorder and then expand or tailor those scripts to meet a particular testing need. Some of the reasons for editing JavaScript scripts include:</p>
+<ul>
+<li>Recycling and updating a useful library of test scripts from earlier versions of WebLOAD.</li>
+<li>Testing websites that work with Java or COM components.</li>
+<li>Creating advanced, specialized verification functions.</li>
+<li>Adding global variables and messages.</li>
+<li>Debugging the system under test.</li>
+<li>Optimization capabilities, to maximize your application’s functionality at minimal cost.</li>
+</ul>
+<p>This section describes the tools provided by WebLOAD Recorder to help you access and edit the JavaScript code within your script.</p>
+<h4 id="accessing-the-javascript-code-within-the-script-tree">Accessing the JavaScript Code within the Script Tree</h4>
+<p>WebLOAD Recorder provides a complete graphic user interface for creating and editing script files. Additions or changes to a script are usually made through the WebLOAD Recorder GUI, working with intuitive icons representing user actions in a graphic Script Tree. For greater clarity, the JavaScript code that corresponds to each user action in a script is also visible in the JavaScript View pane on the WebLOAD Recorder desktop.</p>
+<p>While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects. Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:</p>
+<ul>
+<li><strong>JavaScript Object nodes</strong>—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in <a href="#adding-javascript-object-nodes"><em>Adding JavaScript Object Nodes</em> </a>. Use the IntelliSense Editor, described in <a href="#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>, to add lines of code or functions to the JavaScript Object.</li>
+<li><strong>Imported JavaScript File</strong>—an external JavaScript file that should be incorporated within the body of the current script.</li>
+<li>
+<p>While working in JavaScript Editing mode, right-click the JavaScript pane and select <strong>Import JavaScript File</strong> from the WebLOAD Recorder menu.</p>
+<p>Often, testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.</p>
+</li>
+</ul>
+<h4 id="using-the-intellisense-javascript-editor">Using the IntelliSense JavaScript Editor</h4>
+<p>For those users who wish to manually edit their scripts, WebLOAD Recorder provides three levels of programming assistance:</p>
+<ul>
+<li>An IntelliSense Editor mode for the JavaScript View pane.</li>
+</ul>
+<p>Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. For example, in the following figure the IntelliSense Editor displays a drop-down list of available properties and objects for the wlHttp object being added to the program, with a pop-up box describing the highlighted method in the list.</p>
+<p><img alt="wlHttp Drop-Down List of Available Properties and Objects in IntelliSense Editor" src="../../images/script_guide_026.jpeg"/></p>
+<ul>
+<li>A selection of the most commonly used programming constructs, can be accessed by right-clicking in the JavaScript Editing Pane, and selecting <strong>Insert &gt; Java Objects</strong> from the pop-up menu.</li>
+</ul>
+<p>Users who choose to program their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code for each command, risks making a mistake, even a trivial typo, and adding invalid code to the script file.</p>
+<p>Instead, users may bring up a list of available commands and functions for a specific item, by right-clicking in the JavaScript Editing Pane after selecting a specific node from the Script Tree, selecting <strong>Insert</strong> from the pop-up menu, and selecting an item illustrated in the following figure to display the item’s available commands. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. The user may then change specific parameter values without any worries about accidental mistakes in the function syntax.</p>
+<p><img alt="Insert Java Options Menu" src="../../images/script_guide_027.png"/></p>
+<p>In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.</p>
+<p><img alt="Insert Variable Menu" src="../../images/script_guide_028.png"/></p>
+<ul>
+<li>A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. Select <strong>Tools</strong>&gt; <strong>CheckSyntax</strong> while standing in the JavaScript View pane of the WebLOAD Recorder desktop to check the syntax of the code in your script file.</li>
+</ul>
+<p>Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a script Tree is described in <a href="#accessing-the-javascript-code-within-the-script-tree">*Accessing the JavaScript Code within the</a>.</p>
+<blockquote>
+<p><strong>Notes:</strong> If you do decide to edit the JavaScript code in a script, be careful not to damage the script structure by changing the sequence or integrity of the script navigation blocks. A test session script is constructed and based on a specific sequence of user activities at the protocol level, such as URL navigations, form submissions, and others. Changing the sequence of code blocks in effect means changing the sequence of user activities, and may destroy the functionality of the test session script. In addition, you should be careful not to change the automatically generated WebLOAD Recorder comments, since necessary information for running the script may become lost.</p>
+</blockquote>
+<p>If you use an external text editor to modify the JavaScript code in a JavaScript script that was created through WebLOAD Recorder, the changes you made through the external editor will be lost if you open the script in WebLOAD Recorder again.</p>
+<p>Therefore, be sure to do all JavaScript code editing through the IntelliSense Editor in WebLOAD Recorder only.</p>
+<p>For detailed information about the JavaScript language, please refer to the <em>WebLOAD JavaScript Reference Guide</em>. This guide is supplied in Adobe Acrobat format with the WebLOAD software. You may also learn the elements of JavaScript programming from many books on Web publishing. Keep in mind that some specific JavaScript objects relating to Web publishing do not exist in the WebLOAD test environment.</p>
+<h2 id="adding-javascript-object-nodes">Adding JavaScript Object Nodes</h2>
+<p>WebLOAD Recorder stores user activities at the protocol level as they are completed during recording sessions. These activities are later recreated during subsequent testing sessions. However, the system being tested may also involve user activities that are significant to the system testers, yet cannot be entirely recorded through WebLOAD Recorder. Or testers may wish to add additional functionality to their tests that require inserting extra JavaScript functions into the body of their script code.</p>
+<p>WebLOAD Recorder therefore provides a mechanism for including such items within a test session script.</p>
+<p>For example, some of the steps involved in access to an external database are executed outside the control of WebLOAD Recorder and therefore cannot be completely recorded through WebLOAD Recorder alone. Users may add these activities to a test script by adding empty JavaScript Object Nodes to the Script Tree and then filling in</p>
+<p>the code to complete the desired activity. The specific code needed within the JavaScript Object Node will obviously vary from Node to Node depending on the activity, but adding the generic JavaScript Object Nodes themselves is a standard WebLOAD Recorder feature.</p>
+<p><strong>To add JavaScript Object Nodes to your test script directly through the WebLOAD Recorder GUI:</strong></p>
+<ul>
+<li>Drag the <strong>JavaScript Object</strong> icon from the toolbox and drop it into the Script Tree at the preferred spot, as described in the <em>WebLOAD Recorder User Guide</em>.</li>
+</ul>
+<p>The following figure illustrates a typical JavaScript Object Node highlighted in the Script Tree.</p>
+<p><img alt="Typical JavaScript Object Node" src="../../images/script_guide_030.jpeg"/></p>
+<p>The specific code needed within the JavaScript Object Node will obviously vary from Node to Node depending on the activity. Some of the activities that may require manual programming within a JavaScript Object Node include:</p>
+<ul>
+<li>Getting data from a database.</li>
+<li>Working with COM, XML, or Java objects.</li>
+<li>Calculating expressions.</li>
+<li>Working with global variables such as a user-defined value to include in messages.</li>
+<li>Working with other protocols.</li>
+<li>Doing specific custom made verifications.</li>
+</ul>
+<p>JavaScript syntax specifications for some of these activities are documented in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
+<p><strong>To add or edit lines of code in a JavaScript Object:</strong></p>
+<ul>
+<li>Click the <strong>JavaScript Object node</strong> in the Script Tree.</li>
+</ul>
+<p>The JavaScript object’s code appears in the JavaScript View pane. You can edit the code directly in the JavaScript view or by selecting <strong>Edit</strong> &gt; <strong>Start Java Script Editing</strong> which opens the full JavaScript view screen. This helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are written, as described in <a href="#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>.</p>
+<h2 id="file-management">File Management</h2>
+<p>JavaScript scripts work with many different types of files. Users may wish to add to their scripts programming elements that include the following file types:</p>
+<ul>
+<li><a href="#including-files"><em>Including Files</em> </a></li>
+<li><a href="#copying-files"><em>Copying Files</em> </a></li>
+<li><a href="#output-files"><em>Output Files</em> </a></li>
+</ul>
+<h3 id="including-files">Including Files</h3>
+<p>WebLOAD Recorder allows you to include external files within your JavaScript program. This facilitates modular programming, where you may develop different recyclable modules of JavaScript source code to be reused by different test scripts. Rather than inserting the complete original source code text over and over again into the body of each script, use the IncludeFile() command to make all functions defined within the included file available to all including scripts.</p>
+<h4 id="adding-an-includefile-function">Adding an IncludeFile() Function</h4>
+<p>IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.</p>
+<p><strong>To insert an IncludeFile function:</strong></p>
+<ul>
+<li>While working in JavaScript Editing mode, right-click the JavaScript Pane and select <strong>Insert</strong> &gt; <strong>JavaScript</strong> &gt; <strong>Copy/Include Files</strong> from the pop-up menu that appears. Select the IncludeFile() function from the sub-menu.</li>
+</ul>
+<p>WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
+<p><img alt="IncludeFile() Function Insertion using Copy/Include Files Menu" src="../../images/script_guide_031.png"/></p>
+<p>For example, to include the external file MyFunction.js, located on the Console during WebLOAD testing, your script file should begin with the following command included in a JavaScript Object node:</p>
+<pre><code class="language-javascript">function InitAgenda() {
+
+...
+
+IncludeFile(“MyFunction.js”)
+
+}
+</code></pre>
+<p>See the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
+<h4 id="determining-the-included-file-location">Determining the Included File Location</h4>
+<p>WebLOAD assumes that the source file is located in the default directory specified in the File Locations tab in the <strong>Tools &gt; Global Options</strong> dialog box in the WebLOAD Console desktop, illustrated in the following figure:</p>
+<p><img alt="File Locations Tab" src=""/></p>
+<p>Included files by default should be in the User Include Files directory specified in the File Locations dialog box. You may reset the default directory location if necessary by selecting the User Include Files entry and clicking <strong>Modify</strong>. You can select a new file location from the pop-up Browse for Folder dialog box and click <strong>OK</strong>. In general, the system searches for the included file using the following search precedence:</p>
+<ul>
+<li>The load engine first looks for the included file in the default User Include Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:</li>
+<li>
+<p>If a full path name has been hardcoded into the IncludeFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.</p>
+<blockquote>
+<p><strong>Note:</strong> It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.</p>
+</blockquote>
+</li>
+<li>
+<p>Assuming no hardcoded full path name in the script code, the system looks for the file in the default User Include Files directory.</p>
+</li>
+<li>
+<p>If the file is not found, the system looks for the file in the current working directory, the directory from which WebLOAD or WebLOAD Recorder was originally executed.</p>
+</li>
+<li>
+<p>Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.</p>
+</li>
+</ul>
+<h4 id="example-working-with-an-included-function">Example: Working with an Included Function</h4>
+<p>Included files are files whose functions and other contents are included and accessible from the current script file without the file text actually appearing within the script.</p>
+<p>Use included files to take advantage of an external library of modular functions without adding extra lines of code to your script, improving the clarity of your script code while saving both script space and development time. For example, in the following script fragment, the external file myjs.js is included within the InitAgenda() initialization function. One of the functions within that included file, sayHello(), is later accessed within the main body of the script. The text of the sayHello() is embedded in a nearby comment for easy reference.</p>
+<pre><code class="language-javascript">function InitAgenda()
+
+{
+
+IncludeFile("C:\\Documents and Settings\\uriw\\My Documents\\myjs.js")
+
+}
+
+wlGlobals.GetFrames = false
+
+[wlHttp.Get("http://www.webloadmpstore.com/general_sample/include](http://www.webloadmpstore.com/general_sample/include)
+
+/form.php") Sleep(4765)
+
+wlHttp.Header["Referer"] = ["http://qa50/form.php"](http://qa50/form.php) wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["item"] = "Brushes" wlHttp.FormData["quantity"] = "55"
+
+var item = wlHttp.FormData["quantity"]
+
+[wlHttp.Post("http://www.webloadmpstore.com/general_sample/includ](http://www.webloadmpstore.com/general_sample/includ) e/process.php")
+
+// here the outside function is being called sayHello()
+
+
+
+
+&lt;a name="_bookmark25"&gt;&lt;/a&gt;The myjs.js file contains the following sayHello() function, which prints the checkout message to the customer:
+
+function sayHello()
+
+{
+
+InfoMessage("you ordered    " +item + " items")
+
+}
+</code></pre>
+<h3 id="copying-files">Copying Files</h3>
+<p>WebLOAD enables text and binary data file copying from the Console to a Load Generator automatically during a test session. This is an important feature if your test uses a script that references auxiliary files, such as I/O files, that are found only on the Console. The WebLOAD send option in the Console only sends the script itself and will not send auxiliary files together with a script file to a Load Generator. Use the CopyFile command instead to copy any necessary files from a source file on the Console to a destination file on the Load Generator before the main body of the script is executed.</p>
+<h4 id="adding-a-copyfile-function">Adding a CopyFile() Function</h4>
+<p>CopyFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in <a href="#editing-the-javascript-code-in-a-script">*Editing the JavaScript Code in Script</a>.</p>
+<p><strong>To insert a CopyFile function:</strong></p>
+<ul>
+<li>While working in JavaScript Editing mode, right-click the JavaScript Pane and select <strong>Insert</strong> &gt; <strong>Copy/Include Files</strong> from the pop-up menu that appears.</li>
+</ul>
+<p>Select the preferred CopyFile() function from the sub-menu (see Figure 8).</p>
+<p>WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
+<p>For example, to copy the auxiliary file src.txt, located on the Console, to the destination file dest.txt on the current Load Generator, your script file should include the following command:</p>
+<pre><code class="language-javascript">function InitAgenda() {
+
+...
+
+CopyFile(“src.txt”, “dest.txt”)
+
+...
+
+}
+</code></pre>
+<p>You may then access the file as usual in the main body of the script. For example:</p>
+<p><code>DataArr = GetLine(“dest.txt”)</code></p>
+<p>See the <em>JavaScript Reference Guide</em> for a complete syntax specification.</p>
+<h4 id="determining-the-copied-file-location">Determining the Copied File Location</h4>
+<p>WebLOAD assumes that the source file is located on the Console in the default directory identified in the <strong>File Locations</strong> tab of the <strong>Tools &gt; Global Options</strong> dialog box in the Console desktop, illustrated in the following figure:</p>
+<p><img alt="File Locations Dialog Box" src=""/></p>
+<p>Files to be copied by default should be in the User Copy Files directory specified in the File Locations dialog box. You may reset the default directory location if necessary by selecting the User Copy Files entry and clicking <strong>Modify</strong>. You can select a new file location from the pop-up Browse for Folder dialog box and click <strong>OK</strong>. Remember that WebLOAD does not create new directories, so any directories specified as source or target directories must already exist. In general, the system searches for the file using the following search precedence:</p>
+<p>The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:</p>
+<ol>
+<li>If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.</p>
+</blockquote>
+<ol>
+<li>
+<p>Assuming no hardcoded full path name in the script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.</p>
+</li>
+<li>
+<p>Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.</p>
+</li>
+</ol>
+<h3 id="output-files">Output Files</h3>
+<h4 id="writing-script-output-messages-to-a-file">Writing script Output Messages to a File</h4>
+<p>Realistic testing requires multiple testing passes using a variety of realistic scenarios. The resulting output data should be stored in output files for later access, verification, study, and analysis. WebLOAD Recorder provides the wlOutputFile object to simplify saving script output. See the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification. This section will provide a brief introduction to the wlOutputFile object.</p>
+<p>The wlOutputFile object lets you write script output messages to an output file. Declaring a new wlOutputFile object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a unique filename for the new output file if you do not want to overwrite previous script data.</p>
+<h5 id="adding-the-wloutputfile-object">Adding the wlOutputFile Object</h5>
+<p>The wlOutputFile object can be added directly to a JavaScript Object in a script through the <a href="#using-the-intellisense-javascript-editor">IntelliSense Editor</a>. Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlOutputFile object, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available constructor and methods for the wlOutputFile object, by right-clicking in the JavaScript Editing Pane, selecting <strong>Insert &gt; General</strong> from the pop-up menu, and selecting one of the available items. WebLOAD Recorder automatically inserts the correct code for the selected command into the JavaScript Object currently being edited. The user may then change the parameters without any worries about mistakes in the object syntax.</p>
+<p><img alt="wlOutputFile() Insertion using General Menu" src="../../images/script_guide_034.png"/></p>
+<p>The preceding figure highlights the standard JavaScript syntax to create and work with wlOutputFile objects. For example:</p>
+<p><code>MyFileObj = new wlOutputFile(“filename”)</code></p>
+<p><code>...</code></p>
+<p><code>MyFileObj.Write(“Happy Birthday”)</code></p>
+<p><code>...</code></p>
+<p><code>delete MyFileObj</code></p>
+<blockquote>
+<p><strong>Note:</strong> The wlOutputFile object saves script output messages. To save server response data, use the Outfile property described in <a href="#saving-server-output-to-a-file"><em>Saving Server Output to a File</em> </a>.</p>
+</blockquote>
+<h5 id="wloutputfile-object-scope-limitations">wlOutputFile Object Scope Limitations</h5>
+<p>If you declare a new wlOutputFile object in the InitAgenda() function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence—each thread will write to the output file in real time as it reaches that line in the script execution.</p>
+<p>If you declare a new wlOutputFile object in the InitClient() function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.</p>
+<p>If you declare a new wlOutputFile object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.</p>
+<p>Generally, you should only create new wlOutputFile objects in the InitAgenda() or InitClient() functions of a script, not in the main script. If a statement in the main script creates an object, <em>a new object is created each time the statement is executed</em>. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.</p>
+<h4 id="saving-server-output-to-a-file">Saving Server Output to a File</h4>
+<p>It is often important to save server response data for later study and analysis. WebLOAD and WebLOAD Recorder provide the Outfile property for this purpose. Outfile is a property of the wlGlobals, wlLocals, and wlHttp objects. See the <em>WebLOAD JavaScript Reference Guide</em>, for a complete syntax specification.</p>
+<p>The following script shows a typical entry to a server output file. The ClientNum and RoundNum global variables are used to distinguish between script instances in the server output file entries.</p>
+<pre><code class="language-javascript">// Main script actions go here
+
+...
+
+// Write the downloaded server output to a unique file
+
+// for each script instance, identified by ClientNum
+
+// and RoundNum. The output file is named
+
+// &lt;fullpath&gt;\SessionOutput.&lt;ClientNum.RoundNum&gt;.html wlHttp.Outfile = "c:\\webld\\SessionOutput." ClientNum + "." + RoundNum + ".html"
+</code></pre>
+<p>The Outfile property can be added directly to a JavaScript Object in a script through the IntelliSense Editor.</p>
+<h2 id="security">Security</h2>
+<p>Security is important for most Web users, whether the access is recreational, personal, or work related. Most Web applications work with some combination of user authentication together with SSL protocol use to ensure application security. Both these security features are handled automatically by WebLOAD. By default, test sessions use the settings that were in effect during the original recording session.</p>
+<p>Specific security settings may be reset through the WebLOAD Recorder or Console GUI dialog boxes.</p>
+<p>Security methods and properties can be edited directly within a JavaScript Object in a script through the <a href="#using-the-intellisense-javascript-editor">IntelliSense Editor</a>. This section provides a general introduction to the internal implementation of the user authentication and SSL security features. See the <em>WebLOAD JavaScript Reference Guide</em>, for a complete syntax specification of the security functions introduced here.</p>
+<h3 id="authentication">Authentication</h3>
+<p>Users are authenticated through a system of usernames and passwords. Most servers use either a basic user authentication protocol or the Windows NT Challenge Response protocol. WebLOAD supports both protocols, as well as proxy servers that require user authorization. WebLOAD automatically selects the authentication protocol appropriate for the current test session. By default, WebLOAD navigates authorization protocols using the user data saved during the original recording session, but these values may be reset as needed.</p>
+<p>For example, many Web applications involve logging in to a site. The original user name and password typed in during a recording session are saved for use during later test sessions.</p>
+<p>Testers may reset user authentication values in one of the following ways:</p>
+<ul>
+<li>Through the Authentication tab.</li>
+<li>By manually editing the authentication property set. These options are described here.</li>
+</ul>
+<h4 id="using-the-authentication-tab">Using the Authentication Tab</h4>
+<p>Access the Authentication tab by selecting the <strong>Tools &gt; Default Options</strong> menu in the WebLOAD Recorder or Console. Select the Authentication tab in the dialog box that opens. You can simply type the relevant values into the input text fields, as illustrated in the following figure.</p>
+<blockquote>
+<p><strong>Note:</strong> Passwords will not appear in readable form.</p>
+</blockquote>
+<p><img alt="Authentication Tab" src="../../images/script_guide_037.png"/></p>
+<h4 id="setting-user-authentication-values-manually">Setting User Authentication Values Manually</h4>
+<p>If you are editing the JavaScript code in your script, you may reset user authentication values manually using the wlGlobals, wlLocals, or wlHTTP property set.</p>
+<p>There are three approaches to setting these properties, corresponding to the desired authentication scope:</p>
+<ul>
+<li>Set the authentication properties that correspond to the Authentication tab at the script level using wlGlobals.</li>
+<li>Set the authentication properties for a specific HTTP request using wlHTTP.</li>
+<li>Set the authentication properties that correspond to the Authentication tab at the Virtual Client level using wlLocals.</li>
+</ul>
+<p>For example, set the user name and password using either of the following approaches:</p>
+<p>wlGlobals.UserName = "Bill" <code>wlGlobals.PassWord</code> = "TopSecret"</p>
+<p>The authentication related properties include the following:</p>
+<ul>
+<li>NTUserName, NTPassWord</li>
+<li>PassWord</li>
+<li>Proxy, ProxyUserName, ProxyPassWord</li>
+<li>SSLClientCertificateFile, SSLClientCertificatePassWord</li>
+<li>UserName</li>
+</ul>
+<p>See the <em>WebLOAD JavaScript Reference Guide</em>, for a complete syntax specification of the properties used for user authentication.</p>
+<h3 id="secure-data-transmission-through-ssl">Secure Data Transmission through SSL</h3>
+<p>Web and HTTP communications require a practical, reliable, universally recognized protocol to ensure the secrecy, integrity, and authentication of transmitted information. The Internet Engineering Task Force (IETF) has developed such a standard, commonly referred to as SSL/TLS 1.0.</p>
+<p>For a basic introduction to SSL, see:</p>
+<p><a href="http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_white_paper09186a0080136858.shtml">http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_wh</a> <a href="http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_white_paper09186a0080136858.shtml">ite_paper09186a0080136858.shtml</a></p>
+<p>For more information on the new TLS Protocol Version 1.0, see: <a href="http://www.ipa.go.jp/security/rfc/RFC2246-00EN.html">http://www.ipa.go.jp/security/rfc/RFC2246-00EN.html</a></p>
+<p>WebLOAD fully supports the SSL/TLS 1.0 standard, including backward compatibility with earlier versions and standards. See <em>Appendix A</em> in the <em>WebLOAD JavaScript Reference Guide</em>, for a complete list of the supported SSL protocols and ciphers.</p>
+<p>By default, WebLOAD enables use of all cipher versions at the maximum cryptographic strength possible, allowing participating clients and servers to determine the most appropriate connection to other clients and servers through negotiation at connect time. These setting may be changed or reset through dialog boxes on the Console.</p>
+<p>For example, reset the SSL bit limit through the SSL tab of the <strong>Tools &gt; Default Options</strong> dialog box on the WebLOAD Console, illustrated in the following figure:</p>
+<p><img alt="Resetting SSL Bit Limit" src="../../images/script_guide_038.jpeg"/></p>
+<p>By default, WebLOAD handles all SSL activities, setting the appropriate configuration settings automatically. WebLOAD also provides both Cipher Command Suite functions and a complete set of SSL wlGlobals properties that allow users to fine- tune their security settings within the script code, identifying, enabling, or disabling specific protocols or cryptography levels, depending on testing preferences.</p>
+<blockquote>
+<p><strong>Note:</strong> Changes that are made within script code override anything that has been set through the Console.</p>
+</blockquote>
+<p>These properties and functions work on two levels:</p>
+<ul>
+<li>Higher level functions used for browser emulation.</li>
+<li>Lower level functions for client- or server-specific cipher testing.</li>
+</ul>
+<p>See the <em>WebLOAD JavaScript Reference Guide</em> for complete syntax specifications for the wlGlobals SSL property set and the Cipher Command Suite.</p>
+<blockquote>
+<p><strong>Note:</strong> The SSL configuration for your test session is usually set through dialog boxes in the Console. You may change the default session settings within your script, using either the wlGlobals properties or the Cipher Command Suite functions. While the SSL property set is also defined for the wlHttp and wlLocals objects, RadView strongly recommends using these properties with the wlGlobals object <em>only</em>.</p>
+</blockquote>
+<p>Any changes to a script’s SSL property configuration must be made in the script’s initialization functions. Configuration changes made in the InitAgenda() function will affect all client threads spawned during that script’s test session. Configuration changes made in the InitClient() function will affect only individual clients. Do not make changes to the SSL property configuration in a script’s main body. The results will be undefined for all subsequent transactions.</p>
+<h4 id="browser-emulation">Browser Emulation</h4>
+<p>The browser emulation functions emphasize a high-level, categorical approach to cryptographic strength definition. For example, you may wish to test access to foreign browsers who use only earlier versions of SSL, or who are limited to export-only cryptographic strength. This ‘smarter’ approach of selecting appropriate categories is usually preferable to the low-level approach of enabling or disabling individual protocols.</p>
+<p>Browser emulation functionality includes the ability to:</p>
+<ul>
+<li>Enable, disable, and list SSL protocols.</li>
+<li>Define the cryptographic categories to be used in the current test session.</li>
+<li>Limit the strength and complexity of the cipher set in current use by limiting the number of bits used by the cipher.</li>
+<li>Define the SSL version that WebLOAD should use for the current test session.</li>
+</ul>
+<h4 id="server-specific-cipher-testing">Server-Specific Cipher Testing</h4>
+<p>The server-specific cipher testing functions emphasize a low-level, bit-specific approach to cryptographic strength definition. For example, you may wish to enable or disable specific ciphers, to check the limits of certain client site abilities or server configurations.</p>
+<p>SSL Cipher Command Suite provides the ability to:</p>
+<ul>
+<li>Enable and disable a specific cipher by name.</li>
+<li>Enable and disable a specific cipher by ID number.</li>
+<li>Obtain a specific cipher’s name or ID number.</li>
+<li>Get information about a specific cipher, identified by name or ID number.</li>
+<li>Learn the number of ciphers enabled during the current test session. The wlGlobals SSL property set provides the ability to:</li>
+<li>Support use of SSL client certificates by supplying the certificate filename and password to the SSL server.</li>
+<li>Enable caching of SSL decoding keys received from an SSL (HTTPS) server. Complete syntax specifications for the SSL Cipher Command Suite and the</li>
+</ul>
+<p>wlGlobals SSL property set are available in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
+<h2 id="error-management">Error Management</h2>
+<p>Scripts that encounter an error during runtime do not simply fail and die. This would not be helpful to testers who are trying to analyze when, where, and why an error in their application occurs. WebLOAD Recorder scripts incorporate a set of error management routines to provide a robust error logging and recovery mechanism whenever possible.</p>
+<h3 id="error-management-tools">Error Management Tools</h3>
+<h4 id="analyzing-possible-errors">Analyzing Possible Errors</h4>
+<p>Error management works on multiple levels that must be defined by the testers and tailored to the application being tested. For example, when first designing a test session, testers may wish to ask:</p>
+<ul>
+<li>What is considered an error for my application? How do I define an error? Are there different types of errors for this application that should possibly be handled in different ways?</li>
+<li>How serious a problem is this specific error, or a type of error? When is an error fatal?</li>
+<li>Depending on the source of the error, how do I want to handle this? Do I want to retry the command? Should I simply continue execution? Skip to the next command? Skip to the next navigation block? Stop execution completely?</li>
+<li>How many errors of a specific type are needed to trigger an error condition? Is even one error of this type considered intolerable and fatal to the application? Are up to 10 errors considered reasonable and will not cause damage to the application? Could too many warnings also be a reason to stop the test session?</li>
+<li>Does this application routinely experience a certain error rate that may safely be ignored? Perhaps a rate of up to 5% errors is considered reasonable? Perhaps the application takes a certain amount of time to get started and errors in the first 5 minutes of run time should be ignored?</li>
+</ul>
+<p>The answers to these questions should be a part of your test session design. Once you have categorized the various types of errors possible, you should also analyze how you wish to handle these errors, should they occur.</p>
+<p>Set the error configuration values through the Pass/Fail Definition and Error Handling tabs of the <strong>Tools &gt; Default or Global Project Options</strong> dialog boxes.</p>
+<h4 id="standard-message-functions">Standard Message Functions</h4>
+<p>On the most basic level, you may simply insert message functions into your script and have them executed wherever anything unusual or problematic occurs. Insert a message function into your script through the WebLOAD Recorder GUI.</p>
+<p>Choose from four possible message levels:</p>
+<ul>
+<li>InfoMessage()— prints a simple informative message to the Log window. Has no affect on script execution.</li>
+<li>WarningMessage()— prints a warning message to the Log window. Has no affect on script execution.</li>
+<li>ErrorMessage()— prints an error message to the Log window. Causes the current test round to abort, but the test session continues with the start of the next round.</li>
+<li>SevereErrorMessage()— prints an error message to the Log window and stops the current test session.</li>
+<li>DebugMessage()— prints a message to the WebLOAD Recorder Log window. Has no affect on script execution.</li>
+</ul>
+<h4 id="standard-error-constants">Standard Error Constants</h4>
+<p>You may also manage errors by checking function return codes, both for built-in and user-defined functions. WebLOAD Recorder provides a set of constants that define the error severity level, acting as a useful means for redirecting script behavior. Use the severity level to determine the execution path to be followed in case of error. Less severe errors may be noted and ignored. More severe failures may cause the whole test to be aborted. All failures are logged and displayed in the both the WebLOAD Recorder and Console Log Windows. Refer to Appendix A in the <em>WebLOAD Recorder User</em> Guide for more information on return codes and error levels.</p>
+<p>WebLOAD and WebLOAD Recorder include the following error levels:</p>
+<ul>
+<li>WLSuccess — the activity terminated successfully.</li>
+<li>WLMinorError — this specific activity failed, but the test session may continue as usual. The script displays a warning message in the Log window and continues execution from the next statement.</li>
+<li>WLError — this specific activity failed and the current test round was aborted. The script displays an error message in the Log window and begins a new round.</li>
+<li>WLSevereError — this specific activity failed and the test session must be stopped completely. The script displays an error message in the Log window and the Load Generator on which the error occurred is stopped.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> These built-in message functions and error levels provide a single, standard set of error management options. After an error occurs, testers may choose to continue with the current round, stop the current round, or stop the whole test session. But not every error falls into these three broad categories. Sometimes an error is serious enough to invalidate the current activity, yet the current round may still be able to continue execution. Very often the set of activities on a specific Web page is not successful, but that does not have any affect on the activities recorded on subsequent Web pages.</p>
+</blockquote>
+<h4 id="variable-activity-blocks">Variable Activity Blocks</h4>
+<p>WebLOAD Recorder offers an additional level of error management, which can be manually added to a script. This is done by the try()/catch() function pair. Users may add try()/catch() pairs around their own logical blocks of code, through the IntelliSense Editor.</p>
+<p>The try()/catch() pair of error handling functions allows users to catch errors, skip a single set of corrupted activities, and still continue with the current round. Use these functions to delimit a specific logical activity unit and define an alternate error- handling routine to be executed in case an error occurs within that block of code. The try()/catch() functions limit the scope of an error to individual logical component branches of your script tree.</p>
+<p>Limited scope for an error has two advantages:</p>
+<ul>
+<li>Pinpointing the source of the error, enabling easier debugging and recovery.</li>
+<li>Isolating the error to a specific script branch, in many cases allowing test execution to continue with the rest of the Script Tree despite the error.</li>
+</ul>
+<p>Navigation blocks and other logical activity blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if a non-fatal error is encountered during a test session, WebLOAD Recorder should throw the error, skip to the next navigation block, and continue with the test session.</p>
+<p>The <strong>Pass/Fail Definition</strong> tab of the <strong>Tools &gt; Default or Global Project Options</strong> dialog box is used to define the default WebLOAD Recorder behavior in case of error.</p>
+<blockquote>
+<p><strong>Note:</strong> At each testing level, WebLOAD Recorder provides a choice of error handling options. Depending on the context, you may choose to repeat the action, skip to the next line, skip to the next navigation block, or stop execution completely.</p>
+</blockquote>
+<h4 id="the-wlexception-object">The wlException Object</h4>
+<p>Scripts that encounter an error during runtime do not simply fail and die. This would not be helpful to testers who are trying to analyze when, where, and why an error in their application occurs. WebLOAD scripts incorporate a set of error management routines to provide a robust error logging and recovery mechanism whenever possible. The wlException object is part of the WebLOAD error management protocol.</p>
+<p>WebLOAD users have a variety of options for error recovery during a test session. The built-in error flags provide the simplest set of options; an informative message, a simple warning, stop the current round and skip to the beginning of the next round, or stop the test session completely. Users may also use try()/catch() commands to enclose logical blocks of code within a round. This provides the option of catching any minor errors that occur within the enclosed block and continuing with the next logical block of code within the current round, rather than skipping the rest of the round completely.</p>
+<p>Users may add their own try()/catch() pairs to a script, delimiting their own logical code blocks and defining their own alternate set of activities to be executed in case an error occurs within that block. If an error is caught while the script is in the middle of executing the code within a protected logical code block (by try()), WebLOAD will detour to a user-defined error function (the catch() block) and then continue execution with the next navigation block in the script.</p>
+<p>wlException objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a try()/catch() pair may utilize the wlException object. Use the wlException methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.</p>
+<p><strong>Example</strong></p>
+<p>The following code fragment illustrates a typical error-handling routine:</p>
+<pre><code class="language-javascript">try{
+
+...
+
+//do a lot of things
+
+...
+
+//error occurs here
+
+...
+
+}
+
+catch(e){
+
+myException = new wlException(e,“we have a problem”)
+
+//things to do in case of error
+
+
+
+&lt;a name="_bookmark37"&gt;&lt;/a&gt;if (myException.GetSeverity() == WLError) {
+
+// Do one set of Error activities myException.ReportLog() throw myException
+
+}
+
+else {
+
+// Do a different set of Severe Error activities throw myException
+
+}
+
+}
+</code></pre>
+<h3 id="non-standard-script-execution-sequence">Non-Standard script Execution Sequence</h3>
+<p>script Execution Sequence describes the sequence of activities during a normal, standard test session. However, many test sessions do not simply follow a normal execution sequence. Test sessions are designed to catch application errors, and these errors often interrupt the test session. This section describes what happens within your script if it is interrupted in mid-session.</p>
+<h4 id="minor-error-managementcontinue-the-test-session-as-usual">Minor Error Management—Continue the Test Session as Usual</h4>
+<p>In the event of a minor error, WebLOAD and WebLOAD Recorder record the error in a log and continues processing. This occurs when you call an InfoMessage() or WarningMessage() function or use the WLMinorError constant.</p>
+<p>For example, one of the most common runtime errors is the failure of an HTTP Get, Post, or Head command. This can occur, for example, if the HTTP server is temporarily unavailable. In most cases, an HTTP failure is a minor error and should not stop the test, although it can affect the performance statistics. You may optionally include additional error-handling functions in your script.</p>
+<h4 id="standard-error-managementstopping-a-single-round">Standard Error Management—Stopping a Single Round</h4>
+<p>In the event of a standard error, WebLOAD records the error in a log and stops the current round. This may occur under the following circumstances:</p>
+<ul>
+<li>If you call an ErrorMessage() function or use the WLError constant.</li>
+<li>If the user issues a Stop or Pause command in the WebLOAD Console that happens to catch a thread in mid-round.</li>
+<li>If a thread encounters a non-severe error such as a failed HTTP connection. In these circumstances, WebLOAD does the following:</li>
+<li>
+<p>Sends an error message to the Log window.</p>
+</li>
+<li>
+<p>Stops the main script in the current round.</p>
+</li>
+<li>Runs the OnScriptAbort() function, if it exists in your script, in the thread where the error occurred, to free objects and resources.</li>
+<li>Continues with the next round of the thread, at the beginning of the main script.</li>
+</ul>
+<p>Non-severe errors affect only the thread where the error occurred. They have no effect on other threads of the Load Generator, and they do not run the OnError... functions.</p>
+<h4 id="severe-error-managementstopping-a-test-session">Severe Error Management—Stopping a Test Session</h4>
+<p>In the event of a severe runtime error, WebLOAD sends a severe error message to the Log window and stops the whole test session. This may occur under the following circumstances:</p>
+<ul>
+<li>If you call a SevereErrorMessage() function or use the WLSevereError</li>
+</ul>
+<p>constant.</p>
+<ul>
+<li>If a thread encounters a severe error such as an overflow or an illegal operation, or any other error that the user has specified should trigger a severe error condition.</li>
+</ul>
+<p>When stopping an entire test session, WebLOAD uses the following execution sequence.</p>
+<ul>
+<li>In the thread where the error occurred, WebLOAD runs the OnScriptAbort() and OnErrorTerminateClient() functions. These functions are used for error handling that is specific to individual threads, such as freeing local objects and resources.</li>
+<li>
+<p>In the other threads of the Load Generator, WebLOAD runs the OnScriptAbort() and TerminateClient() functions.</p>
+</li>
+<li>
+<p>The separate threads terminate.</p>
+</li>
+<li>WebLOAD runs the OnErrorTerminateAgenda() function instead of TerminateAgenda(). This function is used to free global resources, or for other types of error handling at the global level.</li>
+</ul>
+<p>Like the other initialization and termination functions, the error-handling functions are optional. Omit them from your script if they are not needed.</p>
+<p>In the event of a severe runtime error, WebLOAD Recorder sends a severe error message to the Log window and stops the whole test session. This may occur under the following circumstances:</p>
+<ul>
+<li>
+<p>If you call a SevereErrorMessage() function or use the WLSevereError constant.</p>
+</li>
+<li>
+<p>If the script encounters a severe error such as an overflow or an illegal operation, or any other error that the user has specified should trigger a severe error condition. A severe error is also triggered if WebLOAD Recorder cannot find a specified object on the Web page, for example if the object was deleted or the current Web page does not match the expected Web page accessed during the recording session.</p>
+</li>
+</ul>
+<p>When stopping an entire test session, WebLOAD Recorder uses the following execution sequence.</p>
+<ul>
+<li>First WebLOAD Recorder runs the OnScriptAbort() function, used for error handling such as freeing local objects and resources.</li>
+<li>Then WebLOAD Recorder runs the OnErrorTerminateAgenda() function instead of TerminateAgenda(). This function is used to free global resources, or for other types of error handling at the global level.</li>
+</ul>
+<p>Like the other initialization and termination functions, the error-handling functions are optional. Omit them from your script if they are not needed.</p>
+<h4 id="defining-a-standard-or-severe-error">Defining a Standard or Severe Error</h4>
+<p>By default, WebLOAD and WebLOAD Recorder only stop a script if a severe error occurs, such as an overflow or an illegal operation. However, users may redefine when exactly WebLOAD should halt a test session through the WebLOAD Recorder GUI through the Pass/Fail Definition tab of the <strong>Tools &gt; Default / Current Options</strong> dialog box. Options include:</p>
+<ul>
+<li>Failing on the first severe error occurrence.</li>
+<li>Specifying an absolute error threshold of failure if more than a specified number of errors or warnings occur.</li>
+<li>Specifying a relative error threshold of failure if more than a specified percentage of errors or warnings occur.</li>
+<li>Tracking numbers of errors only after a certain amount of time has elapsed from the start of the test session. This slight delay allows the test session to establish and stabilize an initial Web connection that may have no connection to the actual application being tested, preventing premature (and meaningless) session failures.</li>
+</ul>
+<h4 id="execution-sequence-after-stop-and-abort">Execution Sequence after Stop and Abort</h4>
+<p>Stop a script by issuing a Stop command through the Console or WebLOAD Recorder GUI. Abort a script during its debugging by issuing an Abort command through the WebLOAD Recorder. An Abort command cannot be issued through the Console. Stop and Abort commands halt the Load Generator.</p>
+<p>After you issue the Stop command in the Console or WebLOAD Recorder, WebLOAD:</p>
+<ul>
+<li>
+<p>Stops the main script in each thread.</p>
+</li>
+<li>
+<p>Runs the OnScriptAbort() function in any thread that you happen to stop in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.</p>
+</li>
+<li>Runs the TerminateClient() function in each thread.</li>
+<li>Stops the separate threads.</li>
+<li>![ref10]Runs the TerminateAgenda() function of the script.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> The script doesn’t necessarily stop immediately when you issue the Stop command in the Console. The script checks for the command at the end of each round and during certain operations that may take a long time, such as HTTP Get and Post commands. For this reason, it is recommended that you do not program a very long loop in a script. Depending on the operations in the loop, the WebLOAD Console may have no way to interrupt the loop.</p>
+</blockquote>
+<p>After you issue the Abort command, WebLOAD Recorder:</p>
+<ul>
+<li>Stops the main script in each thread.</li>
+<li>Runs the OnScriptAbort() function in any thread that you happen to stop in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.</li>
+</ul>
+<p>See the <em>WebLOAD Recorder User Guide</em> for more information on using these commands.</p>
+<blockquote>
+<p><strong>Note:</strong> If you stop or abort WebLOAD Recorder during execution, a message dialog appears, telling the user that WebLOAD Recorder is collecting data in preparation for stopping the test session. While the window pops up immediately, it may stay open for a while if there is extensive clean-up work necessary before the current session may be shut down.</p>
+</blockquote>
+<p>The script doesn’t necessarily stop immediately when you issue a Stop or Abort command. The script only checks for the command at the end of each round and during certain operations that may take a long time, such as certain HTTP transactions. For this reason, it is recommended that you do not program a very long loop in a script. Depending on the operations in the loop, WebLOAD Recorder may have no way to interrupt the loop.</p>
+<h4 id="execution-sequence-after-stopping-a-virtual-client">Execution Sequence after Stopping a Virtual Client</h4>
+<p>If an error condition occurs, you can stop a Virtual Client using StopClient() in your script. This function stops the execution of the Virtual Client running the script from which StopClient() was called. After StopClient() is called, this Virtual Client cannot be resumed. This function does not affect any other Virtual Client.</p>
+<p>When using StopClient(), you can specify the error level to display and a reason why the Virtual Client was terminated. After you issue the StopClient() command, WebLOAD does the following on the current (calling) thread only:</p>
+<ul>
+<li>Stops the main script in the current thread.</li>
+<li>Runs the OnScriptAbort() function in case the current thread is stopped in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.</li>
+<li>Runs the TerminateClient() function in the current thread.</li>
+</ul>
+<p>See the <em>WebLOAD Recorder User Guide</em> for more information on using these commands.</p>
+<p>See the <em>WebLOAD JavaScript Reference Guide</em> for more information on using the StopClient() function.</p>
+<h2 id="rules-of-scope-for-local-and-global-variables">Rules of Scope for Local and Global Variables</h2>
+<p>To maximize testing options, WebLOAD offers the ability to run multiple scripts, in multiple threads, often across multiple Load Generators and machines. This may involve setting variables or flags or accessing data across multiple threads, scripts, Load Generators, or machines. Such multiple accesses must be handled carefully.</p>
+<p>This section describes the scope rules for all variables, both built-in configuration properties and user-defined shared variables, explaining how scripts can juggle multiple configuration settings and share data either locally or globally. This information supplements the usual JavaScript scope rules, which apply within a single thread.</p>
+<p>To understand the scope rules for user-defined variables, we need to distinguish between the following testing contexts:</p>
+<ul>
+<li><a href="#limited-context"><em>Limited Context</em> </a>, limited to a specific browser action within a script</li>
+<li><a href="#local-context"><em>Local Context</em> </a>, local to a single thread of a single script</li>
+<li><a href="#global-context"><em>Global Context</em> </a>, which may be global to the following extent:</li>
+<li>Shared by all threads of a single script running on a single Load Generator.</li>
+<li>Shared by all threads of multiple scripts, including a mix of scripts, running on a single Load Generator.</li>
+<li>Global to all threads of a single script, running on multiple Load Generators, potentially on multiple machines, system-wide.</li>
+<li>Global to all threads of multiple scripts, including a mix of scripts, running on multiple Load Generators, potentially on multiple machines, system-wide.</li>
+</ul>
+<p>Each of these testing contexts is described in the following sections.</p>
+<blockquote>
+<p><strong>Note:</strong> The HTTP configuration properties documented in this section may be edited through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code. However, remember that the majority of application tests rarely require anything more than perhaps a few user-defined global variables or configuration settings, which can be created and set through the WebLOAD Recorder or Console dialog boxes. Manual intervention in individual configuration values within the JavaScript code of a script is not usually recommended<em>.</em></p>
+</blockquote>
+<h3 id="limited-context">Limited Context</h3>
+<p>Limited variables are only visible or accessible within the bounds of a specific function or code block. Users may also define configuration properties that are only applicable to a specific browser action, managed through the wlHttp object.</p>
+<p>For example, to limit a variable LimitedX to a specific function only, use the IntelliSense Editor to create a function within a JavaScript Object and assign a value to a LimitedX variable within that function. The LimitedX variable will only be meaningful within the context of the function in which it appears.</p>
+<p>This is illustrated in the following code fragment:</p>
+<pre><code class="language-javascript">//Context limited to specific function only function MyFavoriteFunction() {
+
+var limitedX = 20   //Scope of limitedX is the
+
+//current function only
+
+}
+
+//Main script Body
+
+y = limitedX + 2    //Error, limitedX is undefined here
+</code></pre>
+<h4 id="working-with-the-wlhttp-object">Working with the wlHttp Object</h4>
+<p>Configuration properties that are limited to a single transaction are managed through the wlHttp object, described in this section.</p>
+<p>In WebLOAD scripts, HTTP transactions are performed using wlHttp objects. You do not need to declare or create a wlHttp object before using it in your script. WebLOAD automatically creates a single wlHttp object for each thread of a script.</p>
+<p>wlHttp objects include a complete set of HTTP configuration properties. HTTP configuration properties are also included with the more general wlGlobals and wlLocals objects. However, the configuration values assigned in a wlHttp object are the definitive configuration values for the transaction immediately following the property value assignment, overriding both the local defaults assigned in wlLocals and the global defaults assigned in wlGlobals. WebLOAD uses the wlLocals or wlGlobals defaults only if you do not assign values to the corresponding properties in the wlHttp object.</p>
+<p>For example, one of the properties of wlHttp is the FormData, which stores information that the user entered during the session. In the main body of the following script, the user defines FormData value and then completes the browser activity. For the specific command that immediately follows the wlHttp property assignment, the wlHttp FormData value will override any default local or global FormData value.</p>
+<p><code>//Main script Body wlHttp.FormData["login"] = "demo" wlHttp.FormData["password"] = "demo"</code></p>
+<h4 id="erasing-and-preserving-the-http-configuration">Erasing and Preserving the HTTP Configuration</h4>
+<p>By default, wlHttp properties are cleared automatically after every HTTP transaction. This lets you assign different values for each connection (for example, a different URL, user name, or form data), without having to explicitly delete your previous connection data. In general it is better to assign special wlHttp properties at the specific point where they are needed, in the main script and not in InitClient(), so they will be reassigned as needed in every round.</p>
+<p>The decision of whether or not to erase wlHttp values is based on the value of the wlHttp.Erase property, which by default is set to true. You may optionally set the Erase property value to false. If Erase is set to false, the wlHttp property data will not be deleted automatically. This may be convenient if you know you will always need the same information, and do not wish to reassign the same values over and over again for each transaction. However, it could also leave you with unexpected, unintended wlHttp property values. See the <em>WebLOAD JavaScript Reference Guide</em>, for a complete syntax specification.</p>
+<p>A better way to preserve the HTTP configuration is to define it using the wlGlobals and wlLocals objects, rather than wlHttp. The properties of wlGlobals and wlLocals are not erased unless you change them yourself. However, the recommended way to set configuration values is through the Default or Current Project Options dialog boxes under the Tools menu in the WebLOAD Recorder or Console desktop.</p>
+<h3 id="local-context">Local Context</h3>
+<p>The local script thread context is local to each individual thread of a script. Local objects may not be accessed in the global context. Different threads may not access or alter the value of the same local variable, since it is local to a single thread. Different threads may only share variable values through global variables.</p>
+<p>Local configuration properties are managed through the wlLocals object. Local values for both user-defined variables and configuration properties are initialized in the InitClient() function of a script. Read or assign local values using JavaScript</p>
+<p>Object nodes added to the main script, as described in Editing the Editing the JavaScript Code.</p>
+<h4 id="working-with-the-wllocals-object">Working with the wlLocals Object</h4>
+<p>Configuration properties that are local to a single script thread are managed through the wlLocals object, described in this section. You do not need to declare or create a wlLocals object before using it in your script. WebLOAD automatically creates a single wlLocals object for each thread of a script.</p>
+<p>wlLocals is a WebLOAD-supplied local object, which sets the local default configuration for HTTP commands (overriding any global defaults set in wlGlobals, but overridden in turn by any values set in wlHttp). For example, one of the properties of wlLocals is the URL to which the object connects. If you set a different value of wlLocals.Url in each thread of a script, then each thread can connect to a different URL, as the following script illustrates:</p>
+<pre><code class="language-javascript">function InitClient() {//Local context
+
+//Set the URL for each thread if (ClientNum == 0)
+
+wlLocals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)
+
+else
+
+}
+
+
+
+wlLocals.Url = ["http://www.GHIJKL.com"](http://www.GHIJKL.com/)
+
+//Thread 0 connects to [www.ABCDEF.com](http://www.ABCDEF.com/)
+
+//All other threads connect to [www.GHIJKL.com](http://www.GHIJKL.com/) wlHttp.Get()
+</code></pre>
+<h4 id="working-with-user-defined-variables-local-context">Working with User-Defined Variables (Local Context</h4>
+<p>Within the local context, you can define any variables that you wish. The variables are local to a single thread. By default, the scope of a local variable is the entire local thread context. For example, you can define a variable localX in the InitClient() function and use it in the main script to store different values depending on the script thread or round number.</p>
+<p>The corresponding JavaScript code may look similar to this:</p>
+<pre><code class="language-javascript">//Local context function InitClient() {
+
+//Assign a different value to the local copy
+
+//of localX in thread 0 only if (ClientNum == 0)
+
+{localX = 20}
+
+
+
+
+&lt;a name="_bookmark44"&gt;&lt;/a&gt;else
+
+}
+
+
+
+{localX = 10}
+
+//Main script Body
+
+//Access the local values of localX &amp; y
+
+y = localX + 2  //y = 22 in thread 0
+
+//y = 12 in all other threads
+</code></pre>
+<p>You can also limit the scope to a single function by defining the variable using a var statement.</p>
+<h3 id="global-context">Global Context</h3>
+<p>Global variables are universally accessible and shared by all script components in all threads of a script, within the initialization and termination functions as well as the main script body. Global variables and configuration properties are defined within the InitAgenda() initialization function of a script. Once a global variable has been declared you may read and assign values to that variable at any subsequent point in your script.</p>
+<p>For example, it may be convenient to define as a global variable a message text or a URL string that you expect to use and reuse frequently within your script. Or you may need a global counter that should be incremented each time any script thread reaches a certain point in the test session. You could increment the variable value using JavaScript Object nodes added to the main script, as described in <a href="#editing-the-javascript-code-in-a-script">*Editing the JavaScript</a>. Add an InfoMessage node to the Script Tree to check on how the global variable value changes over the course of a test session, as illustrated in the following figure:</p>
+<p><img alt="InfoMessage Node Addition to Script Tree" src="../../images/script_guide_039.jpeg"/></p>
+<p>In the preceding figure, the script contains nodes for a:</p>
+<ul>
+<li>
+<p>JavaScript Object</p>
+</li>
+<li>
+<p>Short sleep period</p>
+</li>
+<li>Message to the Log Window</li>
+</ul>
+<p>The JavaScript View pane displays the corresponding JavaScript code, beginning with the navigation to the new Web page and a short sleep period. The code that corresponds to the InfoMessage node in the Script Tree is circled. This node is used to increment and then print the value of a user-defined global variable.</p>
+<h4 id="working-with-the-wlglobals-object">Working with the wlGlobals Object</h4>
+<p>Configuration properties that are global to all threads of a single script are managed through the wlGlobals object, described in this section. The global script context includes global variables and settings that are shared by all threads of a single script, running on a single Load Generator.</p>
+<p>Globally shared values are managed through the following objects:</p>
+<ul>
+<li>wlGlobals</li>
+<li>wlGeneratorGlobal</li>
+<li>wlSystemGlobal</li>
+</ul>
+<p>This section describes the wlGlobals object properties used for global HTTP configuration settings, and reviews HTTP command search-order precedence. wlGlobals object properties used for user-defined global variables are described in the <em>WebLOAD Recorder User Guide</em>.</p>
+<p>WebLOAD provides a global object called wlGlobals. The wlGlobals object stores the default configuration properties for HTTP connections, such as:</p>
+<ul>
+<li>The URL</li>
+<li>user name and password</li>
+<li>proxy server</li>
+<li>HTML parsing behavior</li>
+</ul>
+<p>WebLOAD creates exactly one wlGlobals object for each script. You can access wlGlobals properties and methods anywhere in a script, in both the global and local contexts.</p>
+<p>Initialize and set the properties of wlGlobals in the InitAgenda() function of your script. The values are then set globally and shared by each script’s set of threads. For example, set a property such as wlGlobals.DisableSleep in InitAgenda() for it to automatically have the same value for all rounds. The value may be overridden by resetting the wlHttp.DisableSleep value, as illustrated in the following script:</p>
+<blockquote>
+<p><strong>Note:</strong> Remember that HTTP configuration settings and sleep configuration preferences are usually set directly through a dialog box in the WebLOAD Recorder or Console desktop, as described in the <em>WebLOAD Recorder User Guide</em> and the <em>WebLOAD Console User Guide</em>. The JavaScript coding example here is only intended to illustrate the balance between global defaults and local overrides.</p>
+</blockquote>
+<pre><code>// Initialization function—wlGlobals context function InitAgenda() {
+
+// By default, do not include ‘sleep pauses’ in this script wlGlobals.DisableSleep = true
+
+}
+
+// Main Script Body—wlHttp context if (RoundNum&lt;20)
+
+wlHttp.DisableSleep = false
+
+...
+</code></pre>
+<p>WebLOAD executes the InitAgenda() method when test execution first starts, and decides by default to disable all sleep pauses over the course of script execution:</p>
+<p><code>wlGlobals.DisableSleep = true</code></p>
+<p>For rounds 0-19, the main script overrides the global default and allows pausing during script execution:</p>
+<p><code>wlHttp.DisableSleep = false</code></p>
+<p>After the first 20 rounds of execution are completed, there is no local value assigned, so the script will again, by default, no longer allow sleep pauses.</p>
+<p>wlGlobals object commands may be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, as described in <a href="#editing-the-javascript-code-in-a-script">*Editing the JavaScript</a>. Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlGlobals object method or property, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available objects for the wlGlobals object, by right-clicking in the JavaScript Editing Pane, selecting <strong>Insert &gt; General</strong> from the pop- up menu, and selecting one of the available items.</p>
+<p><img alt="wlGlobals Insertion using General Menu" src="../../images/script_guide_040.png"/></p>
+<p>Select wlGlobals from the list and WebLOAD Recorder automatically inserts the correct code for a wlGlobals object into the script code currently being edited. The IntelliSense Editor then helps programmers write the JavaScript code for wlGlobals properties and methods by bringing up a list of appropriate choices together with pop- up boxes that describe each item on the list, as illustrated in the following figure:</p>
+<p><img alt="wlGlobals Selection from List" src="../../images/script_guide_041.png"/></p>
+<p>Working with the IntelliSense Editor is described in Editing the Editing the JavaScript Code. See the description of wlGlobals objects in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
+<h4 id="variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag">Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag</h4>
+<p>For users who are comfortable working inside the JavaScript code of their scripts, WebLOAD provides a global object called wlGeneratorGlobal. The wlGeneratorGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, running on a single Load Generator. WebLOAD creates exactly one wlGeneratorGlobal object for each script. You can access wlGeneratorGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
+<p>wlGeneratorGlobal includes the following methods:</p>
+<ul>
+<li>
+<p>Set(“SharedVarName”, value, WLCurrentAgenda)— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.</p>
+</li>
+<li>
+<p><a name="_bookmark47"></a>Get(“SharedVarName”, WLCurrentAgenda)— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
+</li>
+<li>Add(“SharedIntVarName”, number, WLCurrentAgenda)— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.</li>
+</ul>
+<h4 id="variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag">Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag</h4>
+<p>The shared multiple script context includes global variables and settings that are shared by all threads of a multiple scripts. The wlGeneratorGlobal object, when used with the WLAllAgendas scope flag, stores variable values that you wish to share between all threads of one or more scripts, including a mix of scripts, part of one or more spawned processes, running on a single Load Generator. You can access wlGeneratorGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
+<p>wlGeneratorGlobal includes the methods with the WLAllAgendas scope flag instead of the WLCurrentAgenda flag:</p>
+<ul>
+<li>Set(“SharedVarName”, value, WLAllAgendas)</li>
+<li>Get(“SharedVarName”, WLAllAgendas)</li>
+<li>Add(“SharedIntVarName”, number, WLAllAgendas)</li>
+</ul>
+<h4 id="wlgeneratorglobal-example">wlGeneratorGlobal Example</h4>
+<p>wlGeneratorGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>
+<p>For example:</p>
+<pre><code class="language-javascript">function InitAgenda() { B = new Number
+
+B = 0
+
+wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
+
+wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
+
+}
+
+function InitClient() { wlGeneratorGlobal.Add("B", 2, WLAllAgendas)
+
+wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda)
+
+
+
+&lt;a name="_bookmark50"&gt;&lt;/a&gt;InfoMessage("C—agenda1 = " + wlGeneratorGlobal.Get("C", WLCurrentAgenda))
+
+}
+
+// Main script Body
+
+B = wlGeneratorGlobal.Get("B", WLAllAgendas) if (RoundNum==1){
+
+InfoMessage("B—agenda1 = " + B)
+
+}
+
+Sleep(1000)
+
+wlGeneratorGlobal.Add("B", 10 , WLAllAgendas) InfoMessage("B2—agenda2 = " +
+
+wlGeneratorGlobal.Get("B", WLAllAgendas)) wlGeneratorGlobal.Add("C", 25, WLCurrentAgenda) InfoMessage("C—agenda1 = " +
+
+wlGeneratorGlobal.Get("C", WLCurrentAgenda))
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new wlGeneratorGlobal.Get call each time.</p>
+</blockquote>
+<p>See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
+<h4 id="variables-defined-through-the-wlsystemglobal-object-with-wlcurrentagenda-flag">Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag</h4>
+<p>The global script context includes global variables and settings that are shared by all threads of a single script, system-wide. The wlSystemGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, part of one or more spawned processes, potentially running on multiple Load Generators, and multiple machines. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
+<p>wlSystemGlobal includes essentially the same methods described in <a href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag"><em>Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag</em> </a>, applied here to global variables:</p>
+<ul>
+<li>
+<p>Set(“GlobalVarName”, value, WLCurrentAgenda)—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.</p>
+</li>
+<li>
+<p>Get(“GlobalVarName”, WLCurrentAgenda)—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
+</li>
+<li>Add(“GlobalIntVarName”, number, WLCurrentAgenda)—increments the specified global number variable by the specified amount. If the variable has not been declared or Set previously, the Add function declares and sets the variable to the specified value.</li>
+</ul>
+<h4 id="variables-defined-through-the-wlsystemglobal-object-with-wlallagendas-flag">Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag</h4>
+<p>The global multiple script context provides full, system wide global variables, shared by all elements of a test session. The wlSystemGlobal object, when used with the WLAllAgendas flag, stores variable values that you wish to share between all threads of all scripts, part of one or more spawned processes, on all Load Generators and machines, system-wide. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.</p>
+<p>wlSystemGlobal includes essentially the same methods described in <a href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag"><em>Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag</em> </a>, with the WLAllAgendas scope flag in stead of the WLCurrentAgenda flag:</p>
+<ul>
+<li>Set(“GlobalVarName”, value, WLAllAgendas)</li>
+<li>Get(“GlobalVarName”, WLAllAgendas)</li>
+<li>Add(“GlobalIntVarName”, number, WLAllAgendas)</li>
+</ul>
+<h4 id="wlsystemglobal-example">wlSystemGlobal Example</h4>
+<p>wlSystemGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>
+<p>For example:</p>
+<pre><code class="language-javascript">function InitAgenda() {
+
+&lt;snip&gt;
+
+}
+
+function InitClient() { wlSystemGlobal.Set("E", -2, WLCurrentscript)
+
+wlSystemGlobal.Set("D", 0, WLAllAgendas) wlSystemGl[obal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
+
+}
+
+// Main script Body
+
+
+
+wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
+
+InfoMessage("D—agenda4 = " + wlSystemGlobal.Get("D", WLAllAgendas))
+
+wlSystemGlobal.Add("E", 0.5, WLCurrentAgenda) if (RoundNum==1){
+
+InfoMessage("E—agenda3 = " + wlSystemGlobal.Get("E", WLCurrentAgenda))
+
+}
+
+Sleep(1000)
+</code></pre>
+<p>See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
+<h4 id="example-using-a-combination-of-global-variables">Example: Using a Combination of Global Variables</h4>
+<p>The following sample script combines the different global variable options introduced in the previous sections:</p>
+<pre><code class="language-javascript">function InitAgenda() { wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
+
+wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
+
+&lt;snip&gt;
+
+}
+
+function InitClient() { wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda) InfoMessage("C - agenda1 = " +
+
+wlGeneratorGlobal.Get("C", WLCurrentAgenda)) wlGeneratorGlobal.Add("B", -2, WLAllAgendas)
+
+wlSystemGlobal.Set("E", +1, WLCurrentAgenda)
+
+wlSystemGlobal.Set("D", 0, WLAllAgendas) [wlSystemGlobal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
+
+}
+
+// Main script Body
+
+B = wlGeneratorGlobal.Get( "B", WLAllAgendas) wlSystemGlobal.Add("E", -1, WLCurrentAgenda)
+
+wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
+
+InfoMessage("B - agenda1 = " + B) InfoMessage("E - agenda1 = " +
+
+wlSystemGlobal.Get( "E", WLCurrentAgenda)) InfoMessage("D - agenda1 = " +
+
+
+
+wlSystemGlobal.Get( "D", WLAllAgendas))
+
+}
+
+wlHttp.Get(wlSystemGlobal.Get("S", WLAllAgendas)) Sleep(1000)
+</code></pre>
+<h3 id="search-order-precedence">Search Order Precedence</h3>
+<p>Before WebLOAD begins a browser action, it searches for configuration parameters in the following order of precedence:</p>
+<ol>
+<li>wlHttp properties (configuration property values limited to a specific browser object)</li>
+<li>wlLocals properties (configuration property values that are local to a specific script thread)</li>
+<li>wlGlobals properties (configuration property values that are global defaults, set at script initialization)</li>
+</ol>
+<p>For example:</p>
+<ol>
+<li>WebLOAD decides whether or not it will use recorded sleep times based on the value of wlHttp.DisableSleep.</li>
+<li>If wlHttp.DisableSleep is not set, WebLOAD then searches for a value in the local default wlLocals.DisableSleep.</li>
+<li>Finally, if both wlHttp.DisableSleep and wlLocals.DisableSleep are both not set, WebLOAD will use the global default value found in wlGlobals.DisableSleep, set at script initialization.</li>
+</ol>
+<p>![ref10]The same order of precedence applies to all the wlGlobals, wlLocals, and wlHttp properties. You can set global and local defaults for the UserName, Url, or other configuration properties. When WebLOAD executes a transaction, it uses any configuration property values that you have specified for that specific connection. If you have not assigned a value for the connection, WebLOAD searches for the local and global defaults, in that order.</p>
+<p><strong>Note:</strong> The recommended way to set configuration values is through the Default or Current Project Options dialog boxes under the Tools menu in the WebLOAD Recorder or Console desktop. Explicitly setting these values for a specific browser action, which is possible only if you set these properties within your script code, does give you a much more focused and sophisticated power, but it is also more risky, triggering unexpected side effects or complications. Configuration property settings within a script will <em>always</em> override the configuration property values set globally through the WebLOAD GUI. Keep these points in mind when deciding how to set your system configuration to get the most out of your script test session.</p>
+<h3 id="global-sharing-considerations">Global Sharing Considerations</h3>
+<p>A WebLOAD test session measures an application’s performance. The testing tool, your script, must consume minimal system resources to have as small an impact as possible on the performance of the application being tested. To minimize system overhead when running your test script, WebLOAD recommends using the minimal level of global sharing required to run your test correctly.</p>
+<p>Variables that are accessible within a single script only have the smallest impact on system performance, as noted in <a href="#wlgeneratorglobal-example"><em>wlGeneratorGlobal Example</em> </a>. For maximum efficiency and simplicity, WebLOAD strongly recommends creating and managing user-defined variables through the WebLOAD Recorder GUI, as described in the <em>WebLOAD Recorder User Guide</em>.</p>
+<p>Values shared between multiple scripts, but within a single Load Generator, are the next most efficient choice. Global values shared system wide should only be included in your script if it is truly necessary to check values or synchronize data shared across multiple Load Generators or machines.</p>
+<p>To optimize performance times during a test, multiple access requests from multiple sources are accommodated sequentially. Script execution is not held for the Set() or Add() methods, which are queued and processed sequentially. Only the Get() method actually holds a script while waiting for the requested value to be returned.</p>
+<p>Over the course of a typical test session, multiple script threads may all be accessing, and potentially changing, the values of the same global variables. For example, two threads may each get GlobalVarX, currently set to 10. The two threads may then wish to increment GlobalVarX by 1, setting it to a new value of 11. These two Get() and two Set() commands are processed sequentially, independent of each other. Since each script got an initial value of 10, each script will independently set the value to 11. The final value will be set to 11, even though the variable was actually incremented twice, and should now equal 12. To avoid this potential inconsistency, WebLOAD recommends using the Add() command, which gets, changes, and resets a global value in a single action, ensuring /that each thread always accesses the most current value for a global variable and avoiding potential conflicts between threads.</p>
+<h2 id="identification-variables-and-functions">Identification Variables and Functions</h2>
+<p>For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:</p>
+<ul>
+<li>
+<p>Two variables, ClientNum and RoundNum, identify the client and round number of the current script instance.</p>
+</li>
+<li>
+<p>The GeneratorName() function identifies the current Load Generator.</p>
+</li>
+<li>The GetOperatingSystem() function identifies the operating system of the current Load Generator.</li>
+<li>The VCUniqueID() function identifies the current Virtual Client instance.</li>
+</ul>
+<p>An example is provided at the end of this section to illustrate common use of these variables and functions. Use these variables and function to support the WebLOAD measurement features and obtain meaningful performance statistics.</p>
+<p>These identification variables and functions are usually accessed and inserted into script files directly through the WebLOAD Recorder GUI.</p>
+<p><strong>To open the Variables Window</strong></p>
+<ol>
+<li>Start debugging. Click <strong>Run ![ref17]</strong>   or <strong>Step Into ![\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\WL-IDE-toolbarIcons\png\Step Into.png]</strong>.</li>
+<li>Check the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab of the ribbon</li>
+</ol>
+<p><img alt="Variables Window" src="../../images/script_guide_044.png"/></p>
+<p>The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.</p>
+<p>The Variables window has a <strong>Context</strong> box that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.</p>
+<h3 id="viewing-the-value-of-a-variable">Viewing the Value of a Variable</h3>
+<p>You can view the value of a variable in the Variables window.</p>
+<p><strong>To view a variable in the Variables window:</strong></p>
+<ol>
+<li>Start debugging. Click <strong>Run ![ref17]</strong>   or <strong>Step Into ![\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\WL-IDE-toolbarIcons\png\Step Into.png]</strong>.</li>
+<li>Check the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab of the ribbon</li>
+</ol>
+<h3 id="clientnum">ClientNum</h3>
+<p>This is the serial number of the client in the WebLOAD test configuration. ClientNum is a read-only local variable. Each client in a Load Generator has a unique ClientNum. However, two clients in two different Load Generators may have the same ClientNum.</p>
+<blockquote>
+<p><strong>Note:</strong> ClientNum is not unique system wide. Use <a href="#vcuniqueid"><em>VCUniqueID()</em> </a>, to obtain an ID number which is unique system-wide.</p>
+</blockquote>
+<p>Add RoundNum directly to the code in any JavaScript Object in your script. Work through the IntelliSense Editor, described in <a href="#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>.</p>
+<p>For example, if there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the script (InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).</p>
+<p>If you mix scripts within a single Load Generator, instances of two or more scripts may run simultaneously on each client. Instances on the same client have the same ClientNum value.</p>
+<p>ClientNum reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames. See WebLOAD Actions, Objects, and Functions in the <em>WebLoad JavaScript Reference Guide</em> for more information about spawning threads.</p>
+<blockquote>
+<p><strong>Note:</strong> Earlier versions of WebLOAD referred to this value as ClientNum. The variable name ClientNum will still be recognized for backward compatibility.</p>
+</blockquote>
+<h3 id="roundnum">RoundNum</h3>
+<p>The number of times that WebLOAD has executed the main script of a client during the WebLOAD test, including the current execution. RoundNum is a read-only local variable, reporting the number of rounds for the specific WebLOAD client, no matter how many other clients may be running the same script.</p>
+<p>RoundNum does not exist in the global context of a script (InitAgenda(), etc.). In the local context:</p>
+<ul>
+<li>In InitClient(), RoundNum = 0.</li>
+<li>In the main script, RoundNum = 1, 2, 3, ....</li>
+<li>In TerminateClient(), OnScriptAbort(), or</li>
+</ul>
+<p>OnErrorTerminateClient(), RoundNum keeps its value from the final round.</p>
+<p>The WebLOAD clients do not necessarily remain in synchronization. The RoundNum may differ for different clients running the same script. If a thread stops and restarts for any reason, the RoundNum continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.</p>
+<p>If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if agenda1 has executed twice and agenda2 has executed three times on a particular thread, the RoundNum of agenda1 is 2 and the RoundNum of agenda2 is 3.</p>
+<p>Add RoundNum directly to the code in a script through the IntelliSense Editor, described in Editing the Editing the JavaScript Code. Select a function by right- clicking the JavaScript Editing Pane, and selecting <strong>Insert</strong> &gt; <strong>General</strong> from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
+<p><img alt="Adding RoundNum using the Copy/Include Files Menu" src="../../images/script_guide_045.png"/></p>
+<h3 id="example-identifying-a-client-and-round">Example: identifying a client and round</h3>
+<p>For example, suppose your script submits data to a server on an HTML form. You want to label one of the form fields so you can tell which WebLOAD client submitted the data, and in which round of the main script.</p>
+<p>You can do this using a combination of the ClientNum and RoundNum variables. Together, these variables uniquely identify the WebLOAD client and round. For example, you can submit a string such as the following in a form field:</p>
+<p><code>"C" + ClientNum.toString() + "R" + RoundNum.toString()</code></p>
+<h3 id="generatorname">GeneratorName()</h3>
+<p>This returns a unique identification string for the current Load Generator. GeneratorName() provides a unique identification for the current Load Generator instance, even with multiple spawned processes running simultaneously. The identification string is composed of a combination of the current Load Generator name, computer name, and other internal markers.</p>
+<h3 id="getoperatingsystem">GetOperatingSystem()</h3>
+<p>This returns a string that identifies the operating system running on the current Load Generator. If an operating system is available in more than one version, returns the name of the operating system followed by an identifying version number.</p>
+<p>For example:</p>
+<ul>
+<li>If the Load Generator is working with a Windows platform, possible return values include:</li>
+<li>Windows 95</li>
+<li>Windows 98</li>
+<li>Windows NT/2000</li>
+<li>Windows XP</li>
+<li>Windows OtherVersionNumber</li>
+<li>If the Load Generator is working with a Solaris platform, this function would return the string ‘Solaris’ followed by the version name and release number, such as SunOS2.</li>
+<li>If the Load Generator is working with a Linux platform, this function would return the string ‘Linux’ followed by the version name and release number, such as RedHat1.</li>
+</ul>
+<h3 id="vcuniqueid">VCUniqueID()</h3>
+<p>This returns a unique identification string for the current Virtual Client instance.</p>
+<p>VCUniqueID() provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to <a href="#clientnum"><em>ClientNum</em> </a>, which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

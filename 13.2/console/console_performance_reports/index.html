@@ -1,0 +1,2019 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../viewing_log_window/" rel="prev"/>
+<link href="../statistics_reports/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>WebLOAD Console Performance Reports - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#webload-console-performance-reports">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              WebLOAD Console Performance Reports
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-test-results-on-the-webload-dashboard">
+<span class="md-ellipsis">
+      Viewing Test Results on the WebLOAD Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-test-results-on-the-webload-transactions-dashboard">
+<span class="md-ellipsis">
+      Viewing Test Results on the WebLOAD Transactions Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-reports">
+<span class="md-ellipsis">
+      Opening Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-existing-report">
+<span class="md-ellipsis">
+      Opening an Existing Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-report">
+<span class="md-ellipsis">
+      Editing a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#renaming-a-report">
+<span class="md-ellipsis">
+      Renaming a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-a-report">
+<span class="md-ellipsis">
+      Deleting a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-an-integrated-report">
+<span class="md-ellipsis">
+      Configuring an Integrated Report
+    </span>
+</a>
+<nav aria-label="Configuring an Integrated Report" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-measurements-for-the-integrated-report">
+<span class="md-ellipsis">
+      Selecting Measurements for the Integrated Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-reports-parameters">
+<span class="md-ellipsis">
+      Changing the Reports Parameters
+    </span>
+</a>
+<nav aria-label="Changing the Reports Parameters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-user-defined-timer">
+<span class="md-ellipsis">
+      Adding a User-Defined Timer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-report-parameters-from-a-saved-load-template">
+<span class="md-ellipsis">
+      Importing Report Parameters from a Saved Load Template
+    </span>
+</a>
+<nav aria-label="Importing Report Parameters from a Saved Load Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-a-complete-report-configuration">
+<span class="md-ellipsis">
+      Importing a Complete Report Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-a-report-configuration-for-a-selected-component">
+<span class="md-ellipsis">
+      Importing a Report Configuration for a Selected Component
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-generator-performance-statistics">
+<span class="md-ellipsis">
+      Load Generator Performance Statistics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regression-testing">
+<span class="md-ellipsis">
+      Regression Testing
+    </span>
+</a>
+<nav aria-label="Regression Testing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-an-integrated-report-to-include-data-from-previously-saved-load-sessions">
+<span class="md-ellipsis">
+      Configuring an Integrated Report to Include Data from Previously Saved Load Sessions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-a-previously-saved-load-session-from-the-integrated-report-configuration">
+<span class="md-ellipsis">
+      Removing a Previously Saved Load Session from the Integrated Report Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-integrated-reports">
+<span class="md-ellipsis">
+      Viewing Integrated Reports
+    </span>
+</a>
+<nav aria-label="Viewing Integrated Reports" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-scale-of-a-report-for-a-selected-measurement">
+<span class="md-ellipsis">
+      Changing the Scale of a Report for a Selected Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-the-true-value-vs-relative-value-of-a-measurement">
+<span class="md-ellipsis">
+      Viewing the True Value vs. Relative Value of a Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integrated-report-toolbar">
+<span class="md-ellipsis">
+      Integrated Report Toolbar
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-test-results-on-the-webload-dashboard">
+<span class="md-ellipsis">
+      Viewing Test Results on the WebLOAD Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-test-results-on-the-webload-transactions-dashboard">
+<span class="md-ellipsis">
+      Viewing Test Results on the WebLOAD Transactions Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-reports">
+<span class="md-ellipsis">
+      Opening Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-existing-report">
+<span class="md-ellipsis">
+      Opening an Existing Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-report">
+<span class="md-ellipsis">
+      Editing a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#renaming-a-report">
+<span class="md-ellipsis">
+      Renaming a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-a-report">
+<span class="md-ellipsis">
+      Deleting a Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-an-integrated-report">
+<span class="md-ellipsis">
+      Configuring an Integrated Report
+    </span>
+</a>
+<nav aria-label="Configuring an Integrated Report" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-measurements-for-the-integrated-report">
+<span class="md-ellipsis">
+      Selecting Measurements for the Integrated Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-reports-parameters">
+<span class="md-ellipsis">
+      Changing the Reports Parameters
+    </span>
+</a>
+<nav aria-label="Changing the Reports Parameters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-a-user-defined-timer">
+<span class="md-ellipsis">
+      Adding a User-Defined Timer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-report-parameters-from-a-saved-load-template">
+<span class="md-ellipsis">
+      Importing Report Parameters from a Saved Load Template
+    </span>
+</a>
+<nav aria-label="Importing Report Parameters from a Saved Load Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-a-complete-report-configuration">
+<span class="md-ellipsis">
+      Importing a Complete Report Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-a-report-configuration-for-a-selected-component">
+<span class="md-ellipsis">
+      Importing a Report Configuration for a Selected Component
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-generator-performance-statistics">
+<span class="md-ellipsis">
+      Load Generator Performance Statistics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regression-testing">
+<span class="md-ellipsis">
+      Regression Testing
+    </span>
+</a>
+<nav aria-label="Regression Testing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-an-integrated-report-to-include-data-from-previously-saved-load-sessions">
+<span class="md-ellipsis">
+      Configuring an Integrated Report to Include Data from Previously Saved Load Sessions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-a-previously-saved-load-session-from-the-integrated-report-configuration">
+<span class="md-ellipsis">
+      Removing a Previously Saved Load Session from the Integrated Report Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-integrated-reports">
+<span class="md-ellipsis">
+      Viewing Integrated Reports
+    </span>
+</a>
+<nav aria-label="Viewing Integrated Reports" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-scale-of-a-report-for-a-selected-measurement">
+<span class="md-ellipsis">
+      Changing the Scale of a Report for a Selected Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-the-true-value-vs-relative-value-of-a-measurement">
+<span class="md-ellipsis">
+      Viewing the True Value vs. Relative Value of a Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integrated-report-toolbar">
+<span class="md-ellipsis">
+      Integrated Report Toolbar
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="webload-console-performance-reports">WebLOAD Console Performance Reports</h1>
+<p>The WebLOAD Dashboard and WebLOAD Transactions Dashboard display a summary of performance statistics generated during the test session. Integrated Reports enable you to configure a report that combines the following:</p>
+<ul>
+<li>Performance data from the Load Machines and Probing Clients</li>
+<li>Performance data on the SUT, gathered from Performance Monitors</li>
+<li>Existing performance data from a previously saved Load Session with data from the currently running Load Session</li>
+</ul>
+<p>Combining several different measurements into a single report gives you a more complete picture of your Web application’s performance.</p>
+<h2 id="viewing-test-results-on-the-webload-dashboard">Viewing Test Results on the WebLOAD Dashboard</h2>
+<p>The WebLOAD Dashboard displays real-time statistical information about the test session for the following categories:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Category</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Time</td>
+<td style="text-align: left;">The time during the test that the values displayed on the Dashboard were sampled.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Running Virtual Clients</td>
+<td style="text-align: left;">The total number of Virtual Clients currently running.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rounds Executed</td>
+<td style="text-align: left;">The total number of times the script has been executed by all Virtual Clients.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Failed Rounds</td>
+<td style="text-align: left;">The total number of rounds with errors.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Failed Hits</td>
+<td style="text-align: left;">The total number of hits with errors.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hits Per Second</td>
+<td style="text-align: left;">The number of HTTP requests for information (pages, individual images, objects, or frames) made by Virtual Clients to the SUT per second.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculated Hits Per Day</td>
+<td style="text-align: left;">The number of HTTP request for information made by Virtual Clients to the SUT per day.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pages Per Second</td>
+<td style="text-align: left;">The number of upper level request for information made by a Virtual Client to the system under test (SUT) per second.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculated Pages Per Day</td>
+<td style="text-align: left;">The number of upper level request for information made by a Virtual Client to the system under test (SUT) per second.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Throughput Per Second</td>
+<td style="text-align: left;">The average number of bytes per second transmitted from the SUT to the Virtual Clients running this script.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculated Throughput Per Day</td>
+<td style="text-align: left;">The average number of bytes per day transmitted from the SUT to the Virtual Clients running this script.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>To open the Dashboard:</strong></p>
+<ul>
+<li>Click <strong>Dashboard Window</strong> in the <strong>Session</strong> tab of the ribbon.</li>
+</ul>
+<h2 id="viewing-test-results-on-the-webload-transactions-dashboard">Viewing Test Results on the WebLOAD Transactions Dashboard</h2>
+<p>The WebLOAD Transactions Dashboard displays real-time statistical information about the transactions in a test session, in a line graph. Separate lines track each transaction. For additional information about graphs, see <a href="#viewing-integrated-reports"><em>Viewing Integrated Reports</em> </a>.</p>
+<p><img alt="WebLOAD Transactions Dashboard Table 43: Test Session Information Categories" src="../../images/console_users_guide_2036.jpeg"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a name="_bookmark342"></a><strong>Category</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Transaction  Name</td>
+<td style="text-align: left;">The name of the transaction</td>
+</tr>
+<tr>
+<td style="text-align: left;">Value</td>
+<td style="text-align: left;">The last (current) value of the transaction  response time.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total Min</td>
+<td style="text-align: left;">The lowest value reported for this  transaction’s response time since the beginning of the test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total Max</td>
+<td style="text-align: left;">The highest value reported for this transaction’s response time since the beginning of the test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total Average</td>
+<td style="text-align: left;">The average value of the transaction response time.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total Successful Count</td>
+<td style="text-align: left;">The number of successful transactions.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Successful TPS</td>
+<td style="text-align: left;">The number of successful transactions per second.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stdev</td>
+<td style="text-align: left;">The average amount this statistic varies from the average number in this script.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Scale</td>
+<td style="text-align: left;">The scale of the graph’s Y-Axis. For information about changing the Scale value, see <a href="#changing-the-scale-of-a-report-for-a-selected-measurement">Changing the Scale of a Report for a Selected Measurement</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>To open the Transactions Dashboard:</strong></p>
+<ul>
+<li>Click <strong>Transactions Dashboard Window</strong> in the <strong>Session</strong> tab of the ribbon.</li>
+</ul>
+<h2 id="opening-reports">Opening Reports</h2>
+<p><strong>To open reports:</strong></p>
+<ol>
+<li>
+<p>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Report dialog box appears.</p>
+</li>
+<li>
+<p>Click <strong>New</strong>,</p>
+</li>
+</ol>
+<p>-Or-</p>
+<p>Select a report and click <strong>Edit</strong>. The Report dialog box appears.</p>
+<p><img alt="Report Dialog Box" src="../../images/console_users_guide_2039.jpeg"/></p>
+<p>Report data is organized in a tree structure. Report fields are organized into different “report tree branches”, illustrated in the Report Dialog Box figure.</p>
+<p>Report tree branches include:</p>
+<ul>
+<li><strong>Total</strong> ‒ Data collected for the session as a whole, including total load size, total number of rounds, and total number of pages.</li>
+<li><strong>ScriptName@LoadGenerator</strong> ‒ Data collected for all instances of the named script, running under the named Load Generator. Multiple branches may appear for a single script name, each one linked to a different Load Generator.</li>
+<li><strong>ScriptName: Total</strong> ‒ Data collected for all instances of the named script, running under all Load Generators participating in this test session.</li>
+<li><strong>_Performance@LoadGenerator</strong> – Data collected for assessing Load Generator performance during this test session.</li>
+<li><strong>SLA</strong> – Data collected for all SLA rules defined in the <a href="../set_global_opt/#accessing-the-sla-manager">SLA Manager</a>.</li>
+</ul>
+<p>Using the Report dialog box you can:</p>
+<ul>
+<li>Configure the items displayed in the test report.</li>
+<li>Rename the report.</li>
+<li>Import an existing report configuration.</li>
+<li>
+<p>Set a default report configuration.</p>
+</li>
+<li>
+<p>Apply a default report configuration.</p>
+</li>
+<li>Configure a report that compares existing performance data from a previously saved Load Session with data from the currently running Load Session.</li>
+</ul>
+<p>The following table describes the buttons in the Report dialog box.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Button</strong></th>
+<th style="text-align: left;"><strong>Functionality</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Import</td>
+<td style="text-align: left;"><p>Imports a report configuration for the selected component in the configuration tree, from a previously saved Load Template. See <a href="#importing-a-report-configuration-for-a-selected-component">Importing a Report Configuration for a Selected Component</a>.</p><p><strong>Note:</strong> Select an upper level component in the configuration tree to enable this button.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Import All</td>
+<td style="text-align: left;">Imports a report configuration from a previously saved Load Template, see <a href="#importing-a-complete-report-configuration">Importing a Complete Report Configuration</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Set as Defaults</td>
+<td style="text-align: left;"><p>Sets the current Integrated Report configuration as the default. This overrides the built-in default configuration.</p><p><strong>Note:</strong> Select an upper level component in the configuration tree to enable this button.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Apply Defaults</td>
+<td style="text-align: left;"><p>Apples the default configuration. The defaults are set using the <strong>Set as Default</strong> option. Selecting this option configures the Integrated Reports to the defaults.</p><p><strong>Note:</strong> Select an upper level component in the configuration tree to enable this button.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Regression Testing</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Add Session</td>
+<td style="text-align: left;">Imports performance data from a previously saved (existing) Load Session, see <a href="#importing-report-parameters-from-a-saved-load-template">Importing Report Parameters from a Saved</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Remove Session</td>
+<td style="text-align: left;"><p>Removes the selected Load Session from the performance data available for display in the report.</p><p><strong>Note:</strong> Select an upper level component in the configuration tree to enable this button.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">OK</td>
+<td style="text-align: left;">Confirms the selections made in this dialog box. The selected items are included in the Integrated Report.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cancel</td>
+<td style="text-align: left;">Closes this dialog box without accepting changes.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Help</td>
+<td style="text-align: left;">Opens the online-help dialog box.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="opening-an-existing-report">Opening an Existing Report</h2>
+<p><strong>To open an existing report:</strong></p>
+<ol>
+<li>
+<p>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</p>
+</li>
+<li>
+<p>Select a report.</p>
+</li>
+</ol>
+<p>The Open button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.</p>
+<ol>
+<li>Click <strong>Open</strong>.</li>
+</ol>
+<p>The Integrated Report displays in the Console Results Window. WebLOAD Console displays the results of your test in a graphical format. Click the <strong>Data Editor <img alt="" src="../../images/console_users_guide_2044.png"/></strong> toolbar button at the top of the Results Window to display your test results in a tabular format.</p>
+<h2 id="editing-a-report">Editing a Report</h2>
+<p><strong>To edit a report:</strong></p>
+<ol>
+<li>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</li>
+<li>Select a report and click <strong>Edit</strong>. The Report dialog box appears.</li>
+<li>Make the necessary changes, and click <strong>OK</strong>.</li>
+</ol>
+<h2 id="renaming-a-report">Renaming a Report</h2>
+<p>You can assign a meaningful name to a report. The default name for reports is “ReportX” where X is a number that is incremented with each generated report.</p>
+<p><strong>To rename a report:</strong></p>
+<ol>
+<li>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</li>
+<li>Select a report to rename.</li>
+</ol>
+<p>The Rename button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.</p>
+<ol>
+<li>Click <strong>Rename</strong>.</li>
+</ol>
+<p>The Rename Report dialog box appears.</p>
+<p><img alt="" src="../../images/console_users_guide_2046.png"/></p>
+<ol>
+<li>
+<p>Type a new name for the report.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p>The selected report is renamed.</p>
+<h2 id="deleting-a-report">Deleting a Report</h2>
+<p><strong>To delete a report:</strong></p>
+<ol>
+<li>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</li>
+<li>Select a report to delete.</li>
+</ol>
+<p>A description of the measurements included in the report appears at the bottom of the dialog box.</p>
+<ol>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The selected report is deleted.</p>
+<h2 id="configuring-an-integrated-report"><strong>Configuring an Integrated Report</strong></h2>
+<p>You can configure an Integrated Report while the test is running. To view data from the WebLOAD Performance Monitor in your Integrated Report, see <a href="../performance_measurements_manager/">*Performance Measurements Manager</a>.</p>
+<p><strong>To configure an integrated report:</strong></p>
+<ol>
+<li>
+<p>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</p>
+</li>
+<li>
+<p>Click <strong>New</strong>.</p>
+</li>
+</ol>
+<p>The New Report dialog box appears.</p>
+<p><img alt="New Report Dialog Box" src="../../images/console_users_guide_2047.png"/></p>
+<p>The full tree of measurements, including all of the items that can be included in the report, are displayed in the Report dialog box. In addition, items configured to be collected in the Performance Measurements Manager are also displayed. Data for all of the items is accumulated during the test run.</p>
+<p>Select the parameters to view in the Integrated Report from the tree structure displayed in the Report dialog box. Only the results for the items that are checked are display in the Integrated Report.</p>
+<h3 id="selecting-measurements-for-the-integrated-report">Selecting Measurements for the Integrated Report</h3>
+<p>The first time the Report dialog box appears, none of the items are selected. If you do not select any of the checkboxes, the Integrated Report is blank.</p>
+<p>You can configure the Integrated Report in one of several ways:</p>
+<ul>
+<li>Select the items to be included in the report manually.</li>
+<li>Select the checkbox adjacent to the measurement that you want to include in the Integrated Report. The options display in tree format. You can expand or compress the tree using the <strong>+/-</strong> buttons. If an upper level component is selected, all of the default subcomponents in that tree will be selected.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: A gray circle next to a measurement indicates that no default subcomponents are defined (the upper level component cannot be selected). Right-click a measurement to be included in the report to prompt the pop-up menu that enables you to select the item.</p>
+<ul>
+<li>Select a WebLOAD Console default configuration by clicking the <strong>Apply Defaults</strong></li>
+</ul>
+<p>button. WebLOAD Console selects the set of default measurements.</p>
+<ul>
+<li>Select <strong>Import All</strong> to apply a previously configured Integrated Reports test set, saved as a Load Template to your current test.</li>
+</ul>
+<p>The configuration is imported, even if it was designed for testing a different application.</p>
+</blockquote>
+<h3 id="changing-the-reports-parameters">Changing the Reports Parameters</h3>
+<p>You can edit the timer options listed in the configuration tree in real time. While a test is running, you can:</p>
+<ul>
+<li>Add a user-defined timer that was not previously configured.</li>
+<li>Change the scale of the report.</li>
+</ul>
+<p>Timer information from Probing Clients and Load Machines are added to the configuration tree automatically in runtime, when the Console receives the timer data.</p>
+<p>You can define user-defined timers in the script to measure specific activity. For more information on Timers, see the <em>WebLOAD Scripting Guide.</em></p>
+<h4 id="adding-a-user-defined-timer">Adding a User-Defined Timer</h4>
+<p><strong>To add a user-defined timer:</strong></p>
+<ol>
+<li>Right-click the upper level item in the configuration tree to which you would like to add a timer.</li>
+</ol>
+<p>A drop-down menu appears.</p>
+<ol>
+<li>Click <strong>Add Timer</strong>.</li>
+<li>Enter the name of the timer in the text box.</li>
+<li>Select the timer attributes you would like to include in the report.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The new timer is included in the Integrated Report.</p>
+<h3 id="importing-report-parameters-from-a-saved-load-template">Importing Report Parameters from a Saved Load Template</h3>
+<p>WebLOAD Console enables you to import a complete report configuration or to import a report configuration for a selected component in the Load Session.</p>
+<h4 id="importing-a-complete-report-configuration">Importing a Complete Report Configuration</h4>
+<p><strong>To import a complete report configuration:</strong></p>
+<ol>
+<li>In the <strong>Reports</strong> dialog box, click <strong>Import All</strong>. The Open dialog box appears.</li>
+<li>Select the Load Template to import.</li>
+<li>Click <strong>Open</strong>.</li>
+</ol>
+<p>The Import dialog box displays a list of reports contained in the selected Load Template.</p>
+<ol>
+<li>Select the report that contains the desired configuration.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The report is configured to display the same measurements.</p>
+<blockquote>
+<p><strong>Note:</strong> If the imported configuration contains a measurement not configured in the current report, WebLOAD Console ignores the measurement in the Load Template file and does not add it to the report.</p>
+</blockquote>
+<p>This function imports the Integrated Report test configuration from the selected Load Template file. None of the other information in the Load Template file is imported.</p>
+<h4 id="importing-a-report-configuration-for-a-selected-component">Importing a Report Configuration for a Selected Component</h4>
+<p><strong>To import a report configuration for a selected component:</strong></p>
+<ol>
+<li>Select the upper level component in the configuration tree for which you want to import a report configuration.</li>
+<li>Click <strong>Import</strong>.</li>
+</ol>
+<p>The Open dialog box appears.</p>
+<ol>
+<li>Select the Load Template to import and click <strong>Open</strong>.</li>
+</ol>
+<p>The Import dialog box displays a list of reports contained in the selected Load Template.</p>
+<p><img alt="Import Dialog Box" src="../../images/console_users_guide_2048.png"/></p>
+<ol>
+<li>
+<p>Select the report that contains the desired configuration. WebLOAD Console displays the list of components (Load Machines and Probing Clients) included in that report.</p>
+</li>
+<li>
+<p>Select the component that contains the desired configuration.</p>
+</li>
+</ol>
+<p>The current component is configured to display the same measurements.</p>
+<blockquote>
+<p><strong>Note:</strong> If the imported component contains a measurement that is not configured in the current report, WebLOAD Console ignores the measurement in the Load Template file. It does not add it to the report.</p>
+</blockquote>
+<p>This function imports the Integrated Report test configuration from the selected Load Template file. None of the other information in the Load Template file is imported.</p>
+<h2 id="load-generator-performance-statistics">Load Generator Performance Statistics</h2>
+<p>You can configure a report that displays a summary of Load Generator performance statistics generated during the test session. This is useful for analyzing your Load Generator capacity and gauging the load on the Load Generator itself. The Load Generator performance statistics include:</p>
+<ul>
+<li>Free memory – Free memory of the machine hosting the Load Generator</li>
+<li>Global CPU usage – The total CPU usage of the machine hosting the Load Generator</li>
+<li>Load Generator CPU usage - CPU usage of the Load Generator process</li>
+<li>Server Latency</li>
+</ul>
+<p>In addition, if the <a href="../set_script_options/#enabling-show-performance-warnings"><em>Show Performance Warnings</em> </a>option is selected in the <strong>Diagnostics</strong> tab of the <strong>Default/Current Session Options</strong> or <strong>Script Options</strong>, WebLOAD automatically sends warning messages when Load Generators are getting overloaded, so you know how to better utilize the Load Generators in your current and future tests.</p>
+<p><strong>To add Load Generator statistics to an integrated report:</strong></p>
+<ol>
+<li>Open a report, as follows:</li>
+<li>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Reports dialog box appears.</li>
+<li>Click <strong>New</strong> to open a new report, or select an existing report and click <strong>Edit</strong>. The Report dialog box appears.</li>
+<li>Alternatively, click Update ![ref16] in the Integrated Report toolbar, to update the display in the report while a test is in progress.</li>
+</ol>
+<p>The Report dialog box appears.</p>
+<ol>
+<li>Select items under <strong>_Performance@LoadGenerator</strong> to indicate the Load Generator measurements you want displayed in the Integrated Report.</li>
+</ol>
+<h2 id="regression-testing">Regression Testing</h2>
+<p>Regression testing enables you to compare Load Sessions while tests are running, or after the test session is completed. WebLOAD regression testing reports enable you to visualize, verify, and compare results over time to confirm that results only vary in ways that you expect them to.</p>
+<p>Regression testing enables you to configure a report that compares:</p>
+<ul>
+<li>Existing performance data from a previously saved or “expected” Load Session with data from the currently running test session.</li>
+<li>Existing performance data from two previously saved Load Sessions.</li>
+</ul>
+<p>Combining performance results from several different Load Sessions into a single report enables you to view, verify and compare results over time and ensure that results only vary in ways that you expect them to.</p>
+<h3 id="configuring-an-integrated-report-to-include-data-from-previously-saved-load-sessions">Configuring an Integrated Report to Include Data from Previously Saved Load Sessions</h3>
+<p><strong>To configure an Integrated Report to include data from previously saved Load Sessions:</strong></p>
+<ol>
+<li>Click <strong>Integrated Report Manager</strong> in the <strong>Session</strong> tab of the ribbon. The Integrated Report dialog box appears.</li>
+<li>Click <strong>New</strong>.</li>
+</ol>
+<p>The Reports dialog box appears.</p>
+<ol>
+<li>In the Reports dialog box, click <strong>Add Session</strong>. The Open dialog box appears.</li>
+<li>Select the Load Session ( *.ls) file to add and click <strong>Open</strong>. The Load Session is added to the Report dialog box.</li>
+<li>Configure the Integrated Report to include the measurements you want to view, see <a href="#configuring-an-integrated-report"><em>Configuring an Integrated Report</em> </a>. If a measurement is already selected in the current Load Session it is automatically selected in the Load Session selected to be included in the report.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The report displays in the Console Results window.</p>
+<h3 id="removing-a-previously-saved-load-session-from-the-integrated-report-configuration">Removing a Previously Saved Load Session from the Integrated Report Configuration</h3>
+<p><strong>To remove a previously saved Load Session from the Integrated Report configuration:</strong></p>
+<ol>
+<li>Select the Load Session you want to remove from the Integrated Report configuration in the Reports dialog box.</li>
+<li>Click <strong>Remove Session</strong>.</li>
+</ol>
+<p>The Load Session is removed from the Report dialog box, and any measurements displayed for that Load Session in the Console Results window are removed.</p>
+<h2 id="viewing-integrated-reports">Viewing Integrated Reports</h2>
+<p>In the Integrated Report, WebLOAD Console displays the results of your test in a line graph. Separate lines track each measurement selected in the report configuration.</p>
+<p><img alt="Integrated Report" src="../../images/console_users_guide_2050.png"/></p>
+<p>The report above shows an Integrated Report that includes four measurements. Each is tracked on a different line graph. The line graphs are color-coded to match the measurements on the bottom half of the report.</p>
+<p><strong>Features of this graph:</strong></p>
+<ul>
+<li>The upper part of the report displays a line graph for each measurement tracked in the report. The X-Axis represents the elapsed time (in seconds) for this test session. The Y-Axis represents the actual value for each measurement, displayed as a percentage relative to the defined maximum Scale Value.</li>
+<li>Hover over a colored line graph to view the exact value for the selected point.</li>
+<li>
+<p>The scroll bar at the center of the screen provides you with a quick and easy way to access points in the test session currently not in focus.</p>
+</li>
+<li>
+<p>The lower part of the report displays a list of the measurements being tracked for each host and each session, the current value of the measurement and, in the last column on the right, the maximum Scale Value set for each measurement.</p>
+</li>
+<li>The Time Range field in the top right-hand corner displays the time scale for the</li>
+</ul>
+<p>X-Axis. In this graph, the X-Axis displays a window of 200 seconds out of the total time span of the Load Session. Using the arrows on the Time Range field, you can change the number of seconds to achieve the report display you desire.</p>
+<ul>
+<li>If you are tracking more than one measurement, the top graph shows multiple graph lines. To bring up a history focusing on a specific measurement, double-click a single measurement line in the Integrated Report.</li>
+</ul>
+<p><img alt="Specific Measurement History" src="../../images/console_users_guide_2051.png"/></p>
+<h3 id="changing-the-scale-of-a-report-for-a-selected-measurement">Changing the Scale of a Report for a Selected Measurement</h3>
+<p><strong>To change the scale of a report for a selected measurement:</strong></p>
+<ol>
+<li>Right-click a specific measurement from the lower part of the report and select</li>
+</ol>
+<p><strong>Change Scale</strong> from the pop-up menu,</p>
+<p>-Or-</p>
+<p>Double-click a specific measurement from the lower part of the report. The Change Scale dialog box appears.</p>
+<p><img alt="Change Scale Dialog Box" src="../../images/console_users_guide_2052.jpeg"/></p>
+<ol>
+<li>Select one of the following:</li>
+<li><strong>Auto Adjusted scale</strong> – This uses an automatic scaling algorithm that determines the best way for the measurements to be displayed in the chart view. The scale adjusts itself according to changes in real time and the value adjusts itself according to the scale value. The Y scale of an integrated report for a number of measurements is 0-100. The points of each chart series (specific measurements) are calculated according to the automatic scaling algorithm: Real value * 100 / scale value.</li>
+<li>
+<p><strong>User Adjusted scale</strong> – This enables you to manually set the scale value.</p>
+</li>
+<li>
+<p>Enter the new scale value.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p>The scale of the report for that measurement changes in real time. The scale value for a measurement can also be changed after the test has run.</p>
+<h3 id="viewing-the-true-value-vs-relative-value-of-a-measurement">Viewing the True Value vs. Relative Value of a Measurement</h3>
+<p>Each measurement displayed in the Integrated Reports has its own expression or value of measurement. For example, Timer results are measured in seconds. CPU is measured in terms of percentage of usage. Throughput is measured in kilobytes per second. All measurements appear as a percentage relative to the defined scale.</p>
+<p>To change the scale value of a measurement, see <a href="#changing-the-scale-of-a-report-for-a-selected-measurement">*Changing the Scale of a Report for a Selected Measurement</a>. When you change the maximum value, WebLOAD Console displays the relative value of that measurement rather than the true value of a measurement.</p>
+<p><strong>To view a measurement’s value:</strong></p>
+<ul>
+<li>Select the Data Editor toolbar button to display the relative value of the measurements in the chart.</li>
+<li>Select the Point Label toolbar button to display the real value of the measurements in the chart.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> You can display the real value for a single line in the chart by right-clicking the desired line and selecting <strong>Point Label</strong> from the pop-up menu.</p>
+</blockquote>
+<h3 id="integrated-report-toolbar">Integrated Report Toolbar</h3>
+<p>At the top of the Integrated Report, find the Integrated Report toolbar. This toolbar offers a variety of options for customizing the Integrated Report display, tailoring the colors, perspective, and dimension as needed.</p>
+<p>The following illustration shows the Integrated Report toolbar and the function of each toolbar button.</p>
+<p><img alt="Integrated Report Toolbar" src="../../images/console_users_guide_2055.png"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Icon</strong></th>
+<th style="text-align: left;"><strong>Toolbar Button</strong></th>
+<th style="text-align: left;"><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2056.png"/></p></td>
+<td style="text-align: left;">Copy to Clipboard</td>
+<td style="text-align: left;"><p>Captures a screen shot of the currently displayed chart to the paste buffer. Select one of the following formats:</p><p>   <img alt="" src="../../images/console_users_guide_2057.png"/> As a Bitmap</p><p>- As a Metafile</p><p>   <img alt="" src="../../images/console_users_guide_2058.png"/>  As Text (data only)</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2059.jpeg"/></p></td>
+<td style="text-align: left;">Palette Selector</td>
+<td style="text-align: left;"><p>Changes the color palette of the graph.</p><p>1. Click the arrow to display a drop-down of palette bars.</p><p>2. Select one of the palette bars. The palette colors are applied to the graph.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2060.png"/></p></td>
+<td style="text-align: left;">3D/2D</td>
+<td style="text-align: left;">Toggles between 2D and 3D view.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2061.png"/></p></td>
+<td style="text-align: left;">Axes Settings</td>
+<td style="text-align: left;"><p>Modifies the X-Axes and Y-Axes settings of the graph. Perform any of the following:</p><p>- Click <img alt="" src="../../images/console_users_guide_2062.png"/> <strong>Grid</strong> to toggle the Horizontal Grid on and off.</p><p>- Click <strong>Interlaced</strong> to display the Horizontal Grid’s rows with an alternating background color.</p><p>- Click <img alt="" src="../../images/console_users_guide_2063.png"/> <strong>Grid</strong> to toggle the Vertical Grid on and off.</p><p>- Click <strong>Vertical Labels</strong> to toggle the X-Axes elapsed time labels to be displayed horizontally or vertically.</p><p>- Click <strong>Staggered</strong> to toggle the X-Axes elapsed time labels to be displayed in a staggered line or all on the same line.</p><p>- Click <strong>Show Labels</strong> to toggle the X-Axes elapsed time labeled on or off.</p><p>- Click <strong>Options…</strong> to display the Properties dialog box and configure the graph’s advanced settings.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Point Labels</td>
+<td style="text-align: left;">Toggles whether to display labels for every point in the graph. The Point Labels are the true values of the measurements.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Data Editor</td>
+<td style="text-align: left;"><p>Displays the relative values of the test results in a tabular format. The Data Editor’s features are as follows:</p><p>- The names of all of the measurements and their attributes tracked in the Integrated Report display in the first column at the far left.</p><p>- The data accumulated during the Load Session, scaled into relative values, displays in tabular format in the table fields.</p><p>- Hovering over a value in the table highlights the values location in the graph.</p><p>- Double-clicking a value in the table enables you to modify the test result value.</p><p><strong>Note:</strong> Right-click anywhere in the Data Editor to display a pop-up menu enabling you to select the Data Editor’s location on the screen and customize the displayed text.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2066.png"/></p></td>
+<td style="text-align: left;">Zoom</td>
+<td style="text-align: left;"><p>Toggles between an enlarged section of the graph and the full graph.</p><p>- Click the <strong>Zoom</strong> button and drag your mouse over an area in the graph to enlarge that area.</p><p>- Click the <strong>Zoom</strong> button again to display the full graph.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Update</td>
+<td style="text-align: left;">Updates items displayed in the Integrated Report while the test is in progress. Click the <strong>Update</strong> button to open the Report Configuration dialog box. Using this option, you can select the measurement to be displayed in the report.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><p></p><p><img alt="" src="../../images/console_users_guide_2068.png"/></p></td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Deletes items from the Integrated Report while the test is in progress. Select the item you want to delete by clicking the Series indicator in the list appearing at the bottom and then click the <strong>Delete</strong> button. The item is immediately deleted from the report.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

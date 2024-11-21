@@ -1,0 +1,1769 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../getting_started/" rel="prev"/>
+<link href="../manage_sessions/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Managing Test - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#managing-tests">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Managing Test
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-tests">
+<span class="md-ellipsis">
+      Viewing Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-new-load-test">
+<span class="md-ellipsis">
+      Creating a new load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-urlapi-load-test">
+<span class="md-ellipsis">
+      Creating a URL/API Load Test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-script-load-test">
+<span class="md-ellipsis">
+      Creating a Script Load Test
+    </span>
+</a>
+<nav aria-label="Creating a Script Load Test" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-scripts-for-a-load-test">
+<span class="md-ellipsis">
+      Specifying Scripts for a load test
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-template-load-test">
+<span class="md-ellipsis">
+      Creating a Template Load Test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-load-generators-for-a-load-test">
+<span class="md-ellipsis">
+      Specifying Load Generators for a load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-recurring-test-runs">
+<span class="md-ellipsis">
+      Setting recurring test runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scheduling-a-one-time-test-run">
+<span class="md-ellipsis">
+      Scheduling a one-time test run
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-load-test">
+<span class="md-ellipsis">
+      Editing a load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-a-load-test">
+<span class="md-ellipsis">
+      Deleting a load test
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-tests">
+<span class="md-ellipsis">
+      Viewing Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-new-load-test">
+<span class="md-ellipsis">
+      Creating a new load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-urlapi-load-test">
+<span class="md-ellipsis">
+      Creating a URL/API Load Test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-script-load-test">
+<span class="md-ellipsis">
+      Creating a Script Load Test
+    </span>
+</a>
+<nav aria-label="Creating a Script Load Test" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-scripts-for-a-load-test">
+<span class="md-ellipsis">
+      Specifying Scripts for a load test
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-template-load-test">
+<span class="md-ellipsis">
+      Creating a Template Load Test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-load-generators-for-a-load-test">
+<span class="md-ellipsis">
+      Specifying Load Generators for a load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-recurring-test-runs">
+<span class="md-ellipsis">
+      Setting recurring test runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scheduling-a-one-time-test-run">
+<span class="md-ellipsis">
+      Scheduling a one-time test run
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-load-test">
+<span class="md-ellipsis">
+      Editing a load test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deleting-a-load-test">
+<span class="md-ellipsis">
+      Deleting a load test
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="managing-tests">Managing Tests</h1>
+<h2 id="viewing-tests">Viewing Tests</h2>
+<p>You can view all the load tests you created in WebLOAD Dashboard. <strong>To view the load tests:</strong> </p>
+<ul>
+<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. </li>
+</ul>
+<p>The Load Tests page appears, listing the load tests in a table format. </p>
+<p><img alt="load tests page" src="../../images/load_tests_tables.jpeg"/></p>
+<p>The Load Tests table provides the following information and actions, for each Load Test: </p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to <a href="#editing-a-load-test"><em>Editing a load test</em> </a>.</td>
+</tr>
+<tr>
+<td><strong>Test  Type</strong></td>
+<td>The type of test: Either URL/API, Script,  or Template.</td>
+</tr>
+<tr>
+<td><strong>Last  Update</strong></td>
+<td>The date and time when the  test definitions were last updated, or the test was run manually. This field  shows no indication of whether the test is being executed in recurrence mode.</td>
+</tr>
+<tr>
+<td><strong>Next  Execution</strong></td>
+<td>The date and time when the  test is next scheduled to run. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a> and <a href="#_bookmark25"><em>Scheduling a one-time test</em></a> <a href="#_bookmark25">run </a>.</td>
+</tr>
+<tr>
+<td><strong>Last  Execution</strong></td>
+<td>The date and time when the test last  started running.</td>
+</tr>
+<tr>
+<td><strong>Last Session State</strong></td>
+<td>Whether the test passed or failed the last  test execution.</td>
+</tr>
+<tr>
+<td><img alt="" src="../../images/view_last_session.png"/></td>
+<td>Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to <a href="#_bookmark40"><em>Using Dashboards</em> </a></td>
+</tr>
+<tr>
+<td><img alt="run load tests" src="../../images/run_load_test.png"/></td>
+<td>Enables manually running  this test now or at a specified time. Refer to <a href="#_bookmark25"><em>Scheduling a one-time test run</em> </a>.</td>
+</tr>
+<tr>
+<td><img alt="stop" src="../../images/stop_test_run.png"/></td>
+<td>Instructs WebLOAD to stop  the running test.</td>
+</tr>
+<tr>
+<td><img alt="all test sessions" src="../../images/view_all_test_sessions.png"/></td>
+<td>Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page (<a href="#_bookmark30">Figure 23</a>) that displays  all of this test’s sessions.</td>
+</tr>
+<tr>
+<td><img alt="delete" src="../../images/delete_load_test.png"/></td>
+<td>Instructs WebLOAD to  delete the load test. Refer to <a href="#_bookmark27"><em>Deleting a   load</em></a> <a href="#_bookmark27"><em>test</em> </a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creating-a-new-load-test">Creating a new load test</h2>
+<p>You can create a new load test anytime. <strong>To create a new load test:</strong> </p>
+<ol>
+<li>
+<p>Perform one of the following: </p>
+</li>
+<li>
+<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
+</li>
+<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
+<li>In the homepage, see the Create a new Load Test pane. </li>
+</ol>
+<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+<ol>
+<li>
+<p>Select the type of test to create. Refer to the following for detailed explanations: </p>
+</li>
+<li>
+<p><a href="#_page19_x54.00_y325.04"><em>Creating a URL/API Load Test</em> </a>(on page<a href="#_page19_x54.00_y325.04"> 14)</a> </p>
+</li>
+<li>
+<p><a href="#_page22_x54.00_y352.04"><em>Creating a Script Load Test</em> </a>(on page <a href="#_page22_x54.00_y352.04"> 17)</a> </p>
+</li>
+<li>
+<p><a href="#_page26_x54.00_y407.04"><em>Creating a Template Load Test</em> </a>(on page <a href="#_page26_x54.00_y407.04"> 21)</a> </p>
+</li>
+</ol>
+<h2 id="creating-a-urlapi-load-test">Creating a URL/API Load Test</h2>
+<p>Use this option to instantly create a load test for testing a load on a URL and/or API. </p>
+<p>After entering the load test specifications, WebLOAD automatically creates a test according to the specifications. </p>
+<p><strong>To create a URL/API load test:</strong> </p>
+<ol>
+<li>
+<p>Perform one of the following: </p>
+</li>
+<li>
+<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
+</li>
+<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
+<li>In the homepage, see the Create a new Load Test pane. </li>
+</ol>
+<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+<ol>
+<li>Select <strong>URL/API Test</strong>.</li>
+</ol>
+<p>A Create Load Test page appears. </p>
+<p><img alt="create API load test" src="../../images/create_API_load_test.jpeg"/></p>
+<ol>
+<li>Specify the test settings. </li>
+</ol>
+<p>The following table describes the information you need to provide for defining the URL/API Load Test:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Test  Name</strong></td>
+<td>The name of the Load test.</td>
+</tr>
+<tr>
+<td><strong>Request  parameters</strong></td>
+<td>In this section, specify  the URL of the site to be tested. You can in addition create an HTTP web  service call.</td>
+</tr>
+<tr>
+<td><strong>Request  URL</strong></td>
+<td>Specify the URL of the  site to be tested.</td>
+</tr>
+<tr>
+<td><strong>*Method*</strong></td>
+<td>Optionally, specify a  method for an HTTP web service call, from the drop-down list: <strong>Get</strong>, <strong>Post</strong>, <strong>Put</strong>, or <strong>Delete</strong>.</td>
+</tr>
+<tr>
+<td><strong>Request  Body</strong></td>
+<td>Optionally, specify the  web service body for the HTTP web service call.</td>
+</tr>
+<tr>
+<td><strong>HTTP  Headers</strong></td>
+<td>Optionally, specify the web service header(s):  Click <strong>Add</strong> for  every header you wish to specify, and select the  header from the dropdown list, or enter a  custom header; then enter a value for the header.</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>Specify the sleep time between each URL/API call.</td>
+</tr>
+<tr>
+<td><strong>Load  Configuration</strong></td>
+<td>For each of the following, enter a number, or use the slider tool to  specify the number.</td>
+</tr>
+<tr>
+<td><strong>Max  Virtual Users</strong></td>
+<td>The maximum number of  Virtual Users to generate.</td>
+</tr>
+<tr>
+<td><strong>Ramp up time in minutes</strong></td>
+<td>The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users.</td>
+</tr>
+<tr>
+<td><strong>Time to run Max Virtual Users in minutes</strong></td>
+<td>The time interval during  which to run the load at the max number of Virtual Users</td>
+</tr>
+<tr>
+<td><strong>Ramp down time in minutes</strong></td>
+<td>The time interval over  which to decrease the load in order to return to 0 Virtual User</td>
+</tr>
+<tr>
+<td><strong>Load  Generators</strong></td>
+<td>Select the load generator  machines that will participate in the load test, as described in <a href="#_bookmark23"><em>Specifying Load Generators for a   load test</em> </a>.</td>
+</tr>
+<tr>
+<td><strong>Recurrence</strong></td>
+<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a>.</td>
+</tr>
+</tbody>
+</table>
+<p>The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. ![ref10]</p>
+<p>Thus, the load will start with 0 Virtual Users and increase over the time frame defined in the <strong>Ramp up time</strong> field to reach the number of Virtual Users defined in the <strong>Max Virtual Users</strong> field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the <strong>Time to run Max Virtual Users</strong> field, after which load will return to 0 Virtual Users value over the time frame set in the <strong>Ramp down time</strong> field. </p>
+<ol>
+<li>
+<p>Select one of the following: </p>
+</li>
+<li>
+<p><strong>Create Test</strong> – The test definitions are saved. </p>
+</li>
+<li>
+<p><strong>Create and Run Test</strong> – The test definitions are saved, and the test starts running immediately. </p>
+</li>
+<li>
+<p><strong>Run in Sandbox Mode</strong> – The system saves all the test definitions, but runs a limited test on the settings specified in the <strong>Request Parameters</strong> section while ignoring all the settings in the <strong>Load Configuration</strong>, <strong>Load Generators</strong>, and <strong>Recurrence</strong> sections. </p>
+<p>This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  </p>
+</li>
+</ol>
+<h2 id="creating-a-script-load-test">Creating a Script Load Test</h2>
+<p>Use this option to create a load test based on a WebLOAD script that was created in WebLOAD Recorder. </p>
+<p><strong>To create a script load test:</strong> </p>
+<ol>
+<li>
+<p>Perform one of the following: </p>
+</li>
+<li>
+<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
+</li>
+<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
+<li>In the homepage, see the Create a new Load Test pane. </li>
+</ol>
+<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+<ol>
+<li>Select <strong>Script Test</strong>. </li>
+</ol>
+<p>A Create Load Test page appears. </p>
+<p><img alt="create script load test" src="../../images/create_script_load_test.jpeg"/></p>
+<ol>
+<li>Specify the test settings. The following table describes the information you need to provide for defining the Script Load Test.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General</strong></td>
+<td>The name of the Load test.</td>
+</tr>
+<tr>
+<td><strong>Scripts</strong></td>
+<td>Specify the scripts that will participate in the test, as well as  their relative weights, as described in <a href="#_bookmark21"><em>Specifying Scripts for a load test</em> </a>.</td>
+</tr>
+<tr>
+<td><strong>Load  Configuration</strong></td>
+<td>For each of the following,  enter a number, or use the slider tool to specify the number.</td>
+</tr>
+<tr>
+<td><strong>Max Virtual Users</strong></td>
+<td>The maximum number of Virtual Users to generate.</td>
+</tr>
+<tr>
+<td><strong>Ramp up time in minutes</strong></td>
+<td>The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users.</td>
+</tr>
+<tr>
+<td><strong>Time to run Max Virtual Users in minutes</strong></td>
+<td>The time interval during  which to run the load at the max number of Virtual Users</td>
+</tr>
+<tr>
+<td><strong>Ramp down time in minutes</strong></td>
+<td>The time interval over  which to decrease the load in order to return to 0 Virtual Users</td>
+</tr>
+<tr>
+<td><strong>Load  Generators</strong></td>
+<td>Select the load generator  machines as described in <a href="#_bookmark23"><em>Specifying   Load Generators</em></a> <a href="#_bookmark23"><em>for a load test</em> </a>.</td>
+</tr>
+<tr>
+<td><strong>Recurrence</strong></td>
+<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a>.</td>
+</tr>
+</tbody>
+</table>
+<p>The Script load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. </p>
+<p>Thus, the load will start with 0 Virtual Users and increase over the time frame defined in the <strong>Ramp up time</strong> field to reach the number of Virtual Users defined in the <strong>Max Virtual Users</strong> field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the <strong>Time to run Max Virtual Users</strong> field, after which load will return to 0 Virtual Users value over the time frame set in the <strong>Ramp down time</strong> field. </p>
+<ol>
+<li>
+<p>Select one of the following: </p>
+</li>
+<li>
+<p><strong>Create Test</strong> – The test definitions are saved. </p>
+</li>
+<li>
+<p><strong>Create and Run Test</strong> – The test definitions are saved, and the test starts running immediately.</p>
+</li>
+<li>
+<p><strong>Run in Sandbox Mode</strong> – The system saves all the test definitions, but runs a limited test on the settings specified in the <strong>Scripts</strong> section while ignoring all the settings in the <strong>Load Configuration</strong>, <strong>Load Generators</strong>, and <strong>Recurrence</strong> sections. </p>
+<p>This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  </p>
+</li>
+</ol>
+<h3 id="specifying-scripts-for-a-load-test">Specifying Scripts for a load test</h3>
+<p><strong>To specify the script participating in a<a href="#_page22_x189.00_y352.04"><code></code><em>Script Load Test</em>:</a></strong> </p>
+<ol>
+<li>For every script you want to include in the Script Load test, click <strong>Add Script</strong>. </li>
+</ol>
+<p><img alt="select add script" src="../../images/select_add_script.png"/></p>
+<p>The <strong>Scripts</strong> page appears. </p>
+<p><img alt="Selecting a script in the Scripts page" src="../../images/scripts_page.jpeg"/></p>
+<p>The Scripts page lists the scripts uploaded to the WebLOAD Dashboard. For details how to upload a script, refer to<a href="#_page38_x54.00_y78.04"><em>Uploading Resources</em> </a>(on page<a href="#_page38_x54.00_y78.04"> 33)</a>. If a script was uploaded with the folder in which it is located, the folder name appears; in that case, click the folder name to navigate to the script itself. </p>
+<ol>
+<li>Select a script by clicking <strong>Select Script</strong> in the corresponding line.  </li>
+</ol>
+<p>You are returned to the Script Load Test page, with the selected script appearing in its <strong>Scripts</strong> list. </p>
+<p><img alt="list of scripts" src="../../images/listof_scripts.png"/></p>
+<ol>
+<li>In the <strong>%</strong> column, specify the relative weight of each script. Make sure that the percentages all add up to 100%. If you wish to give the scripts identical weights, click <strong>Make Equal</strong>. </li>
+</ol>
+<h2 id="creating-a-template-load-test">Creating a Template Load Test</h2>
+<p>Use this option to create a load test based on a WebLOAD template file that was created in WebLOAD Console. </p>
+<p><strong>To create a template load test:</strong> </p>
+<ol>
+<li>
+<p>Perform one of the following: </p>
+</li>
+<li>
+<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
+</li>
+<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
+<li>In the homepage, see the Create a new Load Test pane. </li>
+</ol>
+<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+<ol>
+<li>Select <strong>Template Test</strong>. </li>
+</ol>
+<p>A Create Load Test page appears. </p>
+<p><img alt="create load test" src="../../images/create_template_load.png"/></p>
+<ol>
+<li>Specify the test settings. The following table describes the information you need to provide for defining the Template Load Test: </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>The name of the Load test.</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td>Click <strong>Select Template</strong> to  select a template from the list appearing in the <strong>Resources</strong> &gt; <strong>Templates</strong> page  that appears.</td>
+</tr>
+<tr>
+<td><strong>WebRM Virtual Clients allocation</strong></td>
+<td>This is relevant  for a WebRM configuration. Specify the number of virtual users to allocate  for this test from the floating WebRM license.</td>
+</tr>
+<tr>
+<td><strong>Recurrence</strong></td>
+<td>Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to <a href="#_bookmark24"><em>Setting</em></a> <a href="#_bookmark24"><em>recurring   test runs</em> </a>.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Select one of the following: </p>
+</li>
+<li>
+<p><strong>Create Test</strong> – The test definitions are saved. </p>
+</li>
+<li><strong>Create and Run Test</strong> – The test definitions are saved, and the test starts running immediately. </li>
+</ol>
+<h2 id="specifying-load-generators-for-a-load-test">Specifying Load Generators for a load test</h2>
+<p>Load generators are machines that bombard tested site with transactions to test site scalability and integrity.  Both a<a href="#_page19_x189.00_y325.04"><code></code><em>URL/API Load Test</em> </a>and a<a href="#_page22_x189.00_y352.04"><code></code><em>Script Load Test</em> </a>require you to specify the load generators that will participate in the test.  Note that the list of available load generators is defined by a Super Admin, as described in<a href="#_page81_x54.00_y262.04"><code></code><em>Adding Load Generators</em> </a>(on page<a href="#_page81_x54.00_y262.04"> 76)</a>. </p>
+<p><strong>To specify the load generators participating in a load test:</strong> </p>
+<ol>
+<li>
+<p>Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to <a href="#_page83_x54.00_y78.04"><em>Setting Load Generators’ Location Tag</em> </a>(on page<a href="#_page83_x54.00_y78.04"> 78)</a>. </p>
+</li>
+<li>
+<p>Select a group of load generators with an identical Location, by entering a non- zero percentage in the corresponding <strong>%</strong> column. The percentage specifies the relative weight of this group of load generators. </p>
+</li>
+</ol>
+<p><img alt="List of available load generators – as appearing in a load test page" src="../../images/available_load_generators.png"/></p>
+<ol>
+<li>Make sure the sum of all the percentages is 100%. ![ref8]</li>
+</ol>
+<p><img alt="specify load generators" src="../../images/specify_load_generators.png"/></p>
+<h2 id="setting-recurring-test-runs">Setting recurring test runs</h2>
+<p>For each load test you create – see<a href="#_page18_x54.00_y481.04"><code></code><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a> – you can schedule automatic periodic execution of the test. </p>
+<p>Note that you can also, at any time, manually run or schedule a one-time test run. Refer to<a href="#_page30_x54.00_y78.04"><code></code><em>Scheduling a one-time test run</em> </a>(on page<a href="#_page30_x54.00_y78.04"> 25)</a>. </p>
+<p><strong>To set automatic periodic execution of a load test:</strong> </p>
+<ol>
+<li>
+<p>In the Create Load Test page, accessed as described in<a href="#_page18_x54.00_y481.04"><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>, select the <strong>Recurrence</strong> checkbox. </p>
+</li>
+<li>
+<p><img alt="Setting test recurrence" src="../../images/setting_test_recurrence.png"/></p>
+</li>
+<li>
+<p>Set the frequency: <strong>Every</strong> <strong>Day</strong> or <strong>Every</strong> <strong>Week</strong>. </p>
+</li>
+<li>
+<p>For a weekly recurrence, specify the day of the week on which to run the test. </p>
+</li>
+<li>
+<p>Define the exact time of day when to run the test. </p>
+</li>
+<li>
+<p>Specify the <strong>Time Zone</strong> according to which the time is determined.</p>
+</li>
+</ol>
+<h2 id="scheduling-a-one-time-test-run">Scheduling a one-time test run</h2>
+<p>You can, at any time, manually run or schedule a one-time test run, as explained in this section. </p>
+<p>Note that you can also schedule automatic periodic execution of a test, as part of test definition. Refer to<a href="#_page18_x54.00_y481.04"><code></code><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>. </p>
+<p><strong>To manually run a load test:</strong> </p>
+<ol>
+<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="#_page17_x54.00_y600.04">(Figure 6)</a>. </li>
+</ol>
+<p><img alt="Load Tests page" src="../../images/load_tests_page.png"/></p>
+<ol>
+<li>
+<p>In the line corresponding to the test you wish to run, click ![ref15]. A Run Test query is displayed. </p>
+</li>
+<li>
+<p><img alt="Run Test query" src="../../images/run_test_query.png"/></p>
+</li>
+<li>
+<p>Do one of the following: </p>
+</li>
+<li>
+<p>To run the test now, click <strong>Run Now</strong>. </p>
+</li>
+<li>To run the test at a specific later time, click <strong>Run Later</strong>, and specify the date and time for running the test. ![ref8]</li>
+</ol>
+<p><img alt="Specifying to run a load test at a later time" src="../../images/specify_load_test.png"/></p>
+<ol>
+<li>Click <strong>Run</strong>. </li>
+</ol>
+<h2 id="editing-a-load-test">Editing a load test</h2>
+<p><strong>To edit a load test:</strong> </p>
+<ol>
+<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. </li>
+</ol>
+<p>The Load Tests table appears. </p>
+<ol>
+<li>In the <strong>Name</strong> column, click the name of the test you wish to edit. </li>
+</ol>
+<p>The test definition page appears. The following figure shows an example of the page that appears when selecting to edit a template load test. </p>
+<p><img alt="Editing a template load test" src="../../images/upload_a_load_test.jpeg"/></p>
+<ol>
+<li>
+<p>Edit the test definitions as desired. For an explanation of the various fields, refer to the relevant explanation in<a href="#_page18_x54.00_y481.04"><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>. </p>
+</li>
+<li>
+<p>Click <strong>Update</strong>.  </p>
+</li>
+</ol>
+<h2 id="deleting-a-load-test">Deleting a load test</h2>
+<p><strong>To delete a load test:</strong> </p>
+<ol>
+<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="#_page17_x54.00_y600.04">(Figure 6)</a>. </li>
+<li>In the line corresponding to the test you wish to edit, click ![ref17]. A Delete Test page appears. </li>
+<li><img alt="Deleting a load session" src="../../images/delete_load_sessions.png"/></li>
+<li>In the Delete Test page that appears, you can select between: </li>
+<li>Deleting the load test and all its session. </li>
+<li>Deleting only the load test, but keeping the test sessions. </li>
+</ol>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

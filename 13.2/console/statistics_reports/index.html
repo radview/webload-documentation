@@ -1,0 +1,1787 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../console_performance_reports/" rel="prev"/>
+<link href="../data_drilling_reports/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>WebLOAD Statistics Reports - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#webload-statistics-reports">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              WebLOAD Statistics Reports
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistical-measurements-and-their-values">
+<span class="md-ellipsis">
+      Statistical Measurements and Their Values
+    </span>
+</a>
+<nav aria-label="Statistical Measurements and Their Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-length-of-the-reporting-interval">
+<span class="md-ellipsis">
+      Changing the Length of the Reporting Interval
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-value-computation">
+<span class="md-ellipsis">
+      Current Value Computation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-definitions">
+<span class="md-ellipsis">
+      Statistics Definitions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-for-virtual-clients-and-probing-clients">
+<span class="md-ellipsis">
+      Statistics for Virtual Clients and Probing Clients
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary-reports">
+<span class="md-ellipsis">
+      Summary Reports
+    </span>
+</a>
+<nav aria-label="Summary Reports" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-statistics-report">
+<span class="md-ellipsis">
+      Using the Statistics Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-script">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-total">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Total
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-measurement">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-history-by-measurement-and-script">
+<span class="md-ellipsis">
+      Statistics Report-History by Measurement and Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-history-by-measurement-and-total">
+<span class="md-ellipsis">
+      Statistics Report-History by Measurement and Total
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistical-measurements-and-their-values">
+<span class="md-ellipsis">
+      Statistical Measurements and Their Values
+    </span>
+</a>
+<nav aria-label="Statistical Measurements and Their Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-the-length-of-the-reporting-interval">
+<span class="md-ellipsis">
+      Changing the Length of the Reporting Interval
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-value-computation">
+<span class="md-ellipsis">
+      Current Value Computation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-definitions">
+<span class="md-ellipsis">
+      Statistics Definitions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-for-virtual-clients-and-probing-clients">
+<span class="md-ellipsis">
+      Statistics for Virtual Clients and Probing Clients
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary-reports">
+<span class="md-ellipsis">
+      Summary Reports
+    </span>
+</a>
+<nav aria-label="Summary Reports" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-statistics-report">
+<span class="md-ellipsis">
+      Using the Statistics Report
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-script">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-total">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Total
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-summary-by-measurement">
+<span class="md-ellipsis">
+      Statistics Report-Summary by Measurement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-history-by-measurement-and-script">
+<span class="md-ellipsis">
+      Statistics Report-History by Measurement and Script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-report-history-by-measurement-and-total">
+<span class="md-ellipsis">
+      Statistics Report-History by Measurement and Total
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="webload-statistics-reports">WebLOAD Statistics Reports</h1>
+<p>The Statistics Report is both a real-time monitor that displays the results of your test while you run it and a report that you can save and export.</p>
+<p>WebLOAD Console collects approximately 30 different statistics during a test. The Statistics Report displays the values for all of them. You can also create Integrated Reports that display only the statistics that you choose. For information about Integrated Reports, see <a href="../console_performance_reports/"><em>WebLOAD Console Performance</em> Reports </a>.</p>
+<h2 id="statistical-measurements-and-their-values">Statistical Measurements and Their Values</h2>
+<p>The Statistics Report is presented as a table.</p>
+<p>Row headings (the labels in the first column on the left) are the names of the statistical measurements.</p>
+<p>Column headings categorize the statistics as follows:</p>
+<ul>
+<li><strong>Total</strong> ‒ Sums the values for each statistic across all the scripts running during the test.</li>
+<li><strong>ScriptName::Total</strong> ‒ Sums the values for each statistic across all instances of the specified script running during the test.</li>
+<li><strong>ScriptName@LoadGenerator</strong> ‒ Sums the values for each statistic across all instances of the specified script running under the specified Load Generator during the test.</li>
+</ul>
+<p><img alt="Statistics Report Window" src="../../images/console_users_guide_2071.jpeg"/></p>
+<p>The statistics displayed in each row are grouped into the following categories:</p>
+<ul>
+<li><strong>Per time unit</strong> statistics are ratios that calculate an average value for an action or process. For example: Hits Per Second and Rounds Per Second.</li>
+<li><strong>Timers</strong> track the amount of time it took the Virtual Clients to complete an action or process and are only measured for successful transactions. For example: Connect Time and Round Time.</li>
+<li><strong>Counters</strong> track the number of times the Virtual Clients completed an action or process. For example: Hits and Rounds.</li>
+</ul>
+<p>By default, WebLOAD Console displays values for its statistics at 20-second intervals. The reported value at each reporting interval is called the <em>current value</em>.</p>
+<h3 id="changing-the-length-of-the-reporting-interval">Changing the Length of the Reporting Interval</h3>
+<p><strong>To change the length of the reporting interval:</strong></p>
+<ol>
+<li>Click <strong>Global Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
+</ol>
+<p>-Or-</p>
+<p>Select <strong>Global Options</strong> from the Console System button.</p>
+<ol>
+<li>Select the <strong>General</strong> tab.</li>
+<li>Change the value in the Statistics reporting resolution field to any number of seconds between 1 and 3,600.</li>
+</ol>
+<h3 id="current-value-computation"><strong>Current Value Computation</strong></h3>
+<p>WebLOAD Console calculates the current value as follows:</p>
+<ul>
+<li>For per time unit and timer statistics, WebLOAD Console averages the values collected during the last reporting interval (current slice). If the reporting interval is 20 seconds (the default), the value for Hits Per Second is the average number of hits per second over the last 20 seconds. The value for Hit Time is the average time it took for a successful hit to be completed during the last 20 seconds.</li>
+<li>For counters, WebLOAD Console reports the number of times the item being counted occurred over the last reporting interval. If the reporting interval is 20 seconds, the value for Hits is the actual number of hits that occurred during the last 20 seconds.</li>
+</ul>
+<h3 id="statistics-definitions">Statistics Definitions</h3>
+<p>The following list displays the various statistics, by context. The displays the definitions of the per time unit, timer, and counter statistics, alphabetically.</p>
+<ul>
+<li>Load Size</li>
+<li>Throughput (bytes per second)</li>
+<li>Page statistics – A page is an upper level request for information made by a Virtual Client to the system under test (SUT). For example, a Get statement for a URL retrieves a page. Page statistics include:</li>
+<li>Pages</li>
+<li>Pages Per Second</li>
+<li>Page Time</li>
+<li>Hit statistics – A hit is a request for information made by a Virtual Client to the system under test (SUT). In other words, an HTTP request. For example, a Get statement for a URL retrieves a page. The page can include any number of graphics and content files. Each request for a gif, jpeg, html file, etc., is a single hit. Hit statistics include:</li>
+<li>Hits</li>
+<li>Successful Hits</li>
+<li>Failed Hits</li>
+<li>Hits Per Second</li>
+<li>Successful Hits Per Second</li>
+<li>Failed Hits Per Second</li>
+<li>
+<p>Hit Time</p>
+</li>
+<li>
+<p>Rounds statistics – A Round is an entire run of a script. Rounds statistics include:</p>
+</li>
+<li>Rounds</li>
+<li>Successful Rounds</li>
+<li>Failed Rounds</li>
+<li>Aborted Rounds</li>
+<li>Rounds Per Second</li>
+<li>Successful Rounds Per Second</li>
+<li>Failed Rounds Per Second</li>
+<li>Round Time</li>
+<li>Connection statistics – A Connection is a new TCP/IP connection of a Virtual Client to the SUT. The Connection counter increments every time a TCP/IP connection is opened. This number is always less than or equal to hits/requests, because several hits may use the same HTTP connection if the Persistent Connection option is enabled (<strong>Default Options  Browser Parameters</strong>). Connection statistics include:</li>
+<li>Attempted Connections</li>
+<li>Successful Connections</li>
+<li>Failed Connections</li>
+<li>Connect Time</li>
+<li>Connection Speed (Bits Per Second)</li>
+<li>DNS Lookup Time</li>
+<li>Response statistics – A Response is an HTTP message sent from the Web server as a response to an HTTP Request. Response statistics include:</li>
+<li>Responses</li>
+<li>Response Data Size</li>
+<li>Response Time</li>
+<li>Send Time</li>
+<li>Process Time</li>
+<li>Receive Time</li>
+<li>Time to First Byte</li>
+<li>HTTP Response Status</li>
+<li>Content Size</li>
+<li>Report statistics – The statistics collected by the reportStatistics command in a Selenium script. Refer to the <em>Navigation Timing Statistics</em> table in the <em>Selenium Integration</em> appendix of the <em>WebLOAD™ Recorder User’s Guide</em>.</li>
+<li><user-defined> statistics:</user-defined></li>
+<li>Automatic Data Collection</li>
+<li>Timer</li>
+<li>Counters</li>
+<li>Transaction Timers</li>
+<li>Total <transaction name=""> TPS</transaction></li>
+<li>Transaction Counters</li>
+<li>Java andActiveX Timers</li>
+<li>Java and ActiveX Counters</li>
+<li>Server Performance Measurements</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Statistic</strong></th>
+<th style="text-align: left;"><strong>Type</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a name="_bookmark374"></a>Aborted Rounds</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients started to run a script but did not complete the script, during the last reporting interval.</p><p>This might be due to session being stopped either automatically or manually by the user.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark375"></a>Attempted Connections</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients attempted to connect to the SUT during the last reporting interval.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><user-defined><a name="_bookmark376"></a> Automatic Data Collection</user-defined></td>
+<td style="text-align: left;">Timer and counter</td>
+<td style="text-align: left;"><p>If you have Automatic Data Collection enabled (<strong>Default Options</strong></p><p>&gt; <strong>Functional Testing</strong>), WebLOAD Console creates three counters for each GET and POST statement in the script.</p><p>The counters are the total number of times the Get and Post statements occurred, the number of times the statements succeeded, and the number of times the statements failed during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark377"></a>Connect Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes for a Virtual Client to connect to the SUT, in seconds. In other words, the time it takes from the beginning of the HTTP request to the TCP/IP connection.</p><p>The value posted in the Current Value column is the average time it took a Virtual Client to connect to the SUT during the last reporting interval.</p><p>If the Persistent Connection option is enabled (<strong>Default Options</strong></p><p>&gt; <strong>Browser Parameters</strong>), there may not be a value for Connect Time because the HTTP connection remains open between successive HTTP requests.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark378"></a>Connection Speed (Bits Per Second)</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of bits transmitted back and forth between the Virtual Clients and the SUT divided by the time it took to transmit those bits, in seconds.</p><p>You can set the Virtual Clients to emulate a particular connection speed during the test either by using the Variable Connection Speed settings (<strong>Default Options</strong>  <strong>Connection</strong>) or by coding the connection speed in the script.</p><p>If a connection speed is specified for the test, WebLOAD Console reports it in the Statistics Report.</p><p>The value posted in the Current Value column is the number (sum) of bits passed per second during the last reporting interval. It should match, very closely, the connection speed you specified for the test.</p><p>For example, if:</p><p>- Reporting interval = 20 sec.</p><p>- Number of bits transmitted during last interval = 96,000 Connection Speed = 96,000 / 20 = 4,800 bits per second.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark379"></a>Content Size</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The size of the graphics and content files included in a page.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><user-defined><a name="_bookmark380"></a> Counters</user-defined></td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>You can add your own counters to scripts with the SendCounter() and the SendMeasurement() functions (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined counter in the script that you are running, WebLOAD Console reports the counter’s values in the Statistics Report.</p><p>The row heading is the name (argument) of the counter, that is, the string in parenthesis in the SendCounter() or SendMeasurement() function call.</p><p>The value reported is the number of times the counter was incremented during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark381"></a>DNS Lookup Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time it takes to resolve the host name and convert it to an IP by calling the DNS server.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark382"></a>Failed Connections</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The total number of times the Virtual Clients tried to connect to the SUT but were unsuccessful, during the last reporting interval.</p><p>This number is always less than or equal to the number of failed hits because hits can fail for reasons other than a failed connection.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark383"></a>Failed Hits</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients made HTTP requests but did not receive the correct HTTP response from the SUT during the last reporting interval. Each request for a gif, jpeg, html file, etc. is a single hit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark384"></a>Failed Hits Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients did not obtain the correct HTTP response divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of unsuccessful HTTP requests per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of hits that fail to return a response = 1,200 Successful Hits Per Second = 1,200 / 600 = 2.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark385"></a>Failed Rounds</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients started but did not complete the script during the last reporting interval.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark386"></a>Failed Rounds Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients started but did not complete an iteration of this script divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of failed iterations of the script per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of failed rounds = 20</p><p>Failed Rounds Per Second = 20 / 600 = 0.033.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark387"></a>Hit Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes to complete a successful HTTP request, in seconds. The Hit Time is the sum of the Connect Time, Send Time, Response Time, and Process Time for an individual page hit.</p><p>The value posted in the Current Value column is the average time it took to make an HTTP request and process its response during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark388"></a>Hits</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients made HTTP requests to the system under test (SUT) during the last reporting interval. Each request for a gif, jpeg, html file, etc. is a single hit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark389"></a>Hits Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>Hits Per Second is the number of times the Virtual Clients made an HTTP request divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of HTTP requests per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min.</p><p>- Number of hits = 12,600</p><p>Hits Per Second = 12,600 / 600 = 21.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark390"></a>HTTP Response Status</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>WebLOAD Console creates a row in the Statistics Report for each kind of HTTP status code it receives as an HTTP response from the SUT (redirection codes, success codes, server error codes or client error codes).</p><p>The value posted is the number of times the Virtual Clients received that status code during the last reporting interval.</p><p>For example:</p><p>The first digit of the Status-Code defines the class of response. The last two digits do not have any categorization role. There are five categories:</p><p>- <strong>1xx: Informational</strong> – Not used, but reserved for future use.</p><p>- <strong>2xx: Success</strong> – The action was successfully received, understood, and accepted.</p><p>- <strong>3xx: Redirection</strong> – Further action must be taken in order to complete the request.</p><p>- <strong>4xx: Client Error</strong> – The request contains incorrect syntax or cannot be fulfilled.</p><p>- <strong>5xx: Server Error</strong> – The server failed to fulfill an apparently valid request.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark391"></a>Java and ActiveX Counters</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>You can add function calls to your scripts that enable you to instantiate and call methods and properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function calls in the Script that you are running, WebLOAD Console reports three counters for them in the Statistics Report.</p><p>The row heading is the name of the function call. The counters are the total number of times it occurred, the number of times it succeeded, and the number of times it failed during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark392"></a>Java and ActiveX Timers</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>You can add function calls to your scripts that enable you to instantiate and call methods and properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function calls in the script you are running, WebLOAD Console reports timers for them in the Statistics Report.</p><p>The row heading is the name of the function call. The value posted is the average amount of time it took to complete the function call, in seconds, during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark393"></a>Load Size</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The number of Virtual Clients running during the last reporting interval.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark394"></a>Page Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes to complete a successful upper level request, in seconds. The Page Time is the sum of the Connection Time, Send Time, Response Time, and Process Time for all the hits on a page.</p><p>The value posted in the Current Value column is the average time it took the Virtual Clients to make an upper level request and process its response during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark395"></a>Pages</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Client made upper level requests (both successful and unsuccessful) during the last reporting interval.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark396"></a>Pages Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>Pages Per Second is the number of times the Virtual Clients made upper level requests divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of requests per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of pages = 750</p><p>Pages Per Second = 750 / 600 = 1.25.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark397"></a>Process Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes WebLOAD Console to parse an HTTP response from the SUT and then populate the DOM, in seconds.</p><p>The value posted in the Current Value column is the average time it took WebLOAD Console to parse an HTTP response during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark398"></a>Receive Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The elapsed time between receiving the first byte and the last byte.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark399"></a>Response Data Size</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The size, in bytes, of all the HTTP responses sent by the SUT during the last reporting interval.</p><p>WebLOAD Console uses this value to calculate Throughput (bytes per second).</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark400"></a>Response Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes the SUT to send the object of an HTTP request back to a Virtual Client, in seconds. In other words, the time from the end of the HTTP request until the Virtual Client has received the complete item it requested (Time to first byte + Receive Time - Process Time).</p><p>The value posted in the Current Value column is the average time it took the SUT to respond to an HTTP request during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark401"></a>Responses</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The number of times the SUT responded to an HTTP request during the last reporting interval.</p><p>This number should match the number of successful hits.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark402"></a>Round Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes one Virtual Client to complete an entire iteration of a script, in seconds.</p><p>The value posted in the Current Value column is the average time it took the Virtual Clients to complete an entire iteration of the script during the last reporting interval.</p><p>For example, if:</p><p>- Virtual Clients = 2.</p><p>- First Virtual Client completes a round in 60 sec.</p><p>- Second Virtual Client completes a round in 85 sec.</p><p>- Both Virtual Clients complete the rounds within the current reported interval.</p><p>Round Time = 72.5 sec.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark403"></a>Rounds</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The total number of times the Virtual Clients attempted to run the script during the last reporting interval.</p><p>For example:</p><p>Rounds = Failed Rounds + Successful Rounds + Aborted Rounds.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark404"></a>Rounds Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients attempted to run the script divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of attempts (both successful and unsuccessful) per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of rounds = 200</p><p>Rounds Per Second = 200 / 600 = 0.33.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark405"></a>Send Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time it takes the Virtual Clients to write an HTTP request to the SUT, in seconds.</p><p>The value posted in the Current Value column is the average time it took the Virtual Clients to write a request to the SUT during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark406"></a>Server Performance Measurements</td>
+<td style="text-align: left;">Timers</td>
+<td style="text-align: left;"><p>If you selected Performance Monitor statistics for the report, WebLOAD Console creates a row for them and reports their values in the Statistics Report.</p><p>For example:</p><p>Sessions Errored Out, % Processor Time, Current Disk Queue Length, and so on.</p><p>For definitions of the statistics, see the Performance Measurements Manager (click <strong>Edit Template</strong> in the <strong>Session</strong> tab of the ribbon so that you are in edit mode, then click <strong>Performance Measurements Manager</strong>).</p><p>Be selective when selecting server performance measurements or the system resources required to manage the data might affect the Console.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark407"></a>Successful Connections</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>The total number of times the Virtual Clients were able to successfully connect to the SUT during the last reporting interval.</p><p>This number is always less than or equal to the number of successful hits because several hits might use the same HTTP connection if the Persistent Connection option is enabled (<strong>Default Options</strong>  <strong>Browser Parameters</strong>).</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark408"></a>Successful Hits</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients made HTTP requests and received the correct HTTP response from the SUT during the last reporting interval. Each request for a gif, jpeg, html file, etc. is a single hit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark409"></a>Successful Hits Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients obtained the correct HTTP response to their HTTP requests divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of successful HTTP requests per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of hits that return a successful response = 11,400 Successful Hits Per Second = 11,400 / 600 = 19.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark410"></a>Successful Rounds</td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;">The total number of times the Virtual Clients completed one iteration of the script during the last reporting interval.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark411"></a>Successful Rounds Per Second</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Clients completed an entire iteration of the script divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of successful iterations of the script per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of successful rounds = 180 Successful Rounds Per Second = 180 / 600 = 0.3.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark412"></a>Throughput (bytes per second)</td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The average number of bytes per second transmitted from the SUT to the Virtual Clients running this script during the last reporting interval.</p><p>In other words, this is the amount of the Response Data Size (sum) divided by the number of seconds in the reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min.</p><p>- Reporting interval = 20 sec.</p><p>- Data size in bytes sent during last interval = 6,000 Throughput = 6,000 / 20 = 300.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark413"></a>Time to First Byte</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time it takes from when a request is sent until the Virtual Client receives the first byte of data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="_bookmark414"></a>Total <transaction name=""> TPS</transaction></td>
+<td style="text-align: left;">Per-time unit</td>
+<td style="text-align: left;"><p>The number of times the Virtual Client encountered the transaction divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number of times the Virtual Client encountered the transaction during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of times the VC encountered the transaction = 11,400 Total Transactions Per Second = 11,400 / 600 = 19.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><user-defined><a name="_bookmark415"></a> Timer</user-defined></td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>You can add timers to scripts to keep track of the amount of time it takes to complete specific actions (see the <em>WebLOAD Scripting Guide</em>). If there are any timers in the scripts that you are running, WebLOAD Console reports their values in the Statistics Report.</p><p>The row heading is the name (argument) of the timer, that is, the string in parenthesis in the SetTimer() function call. The timer represents the time it takes to complete all the actions between the SetTimer() call and its corresponding SendTimer() call, in seconds.</p><p>The value posted is the average time it took a Virtual Client to complete the actions between the pair of timer calls, in seconds, during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><user-defined><a name="_bookmark416"></a> Transaction Counters</user-defined></td>
+<td style="text-align: left;">Counter</td>
+<td style="text-align: left;"><p>You can add user-defined transaction functions to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction function in the script that you are running, WebLOAD Console reports three counters for it in the Statistics Report.</p><p>The row heading is the name (argument) of the user-defined transaction, that is, the string in parenthesis in the BeginTransaction() function call.</p><p>The counters are the total number of times the transaction occurred, the number of times the transaction succeeded, and the number of times the transaction failed during the last reporting interval.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><user-defined><a name="_bookmark417"></a> Transaction Timers</user-defined></td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>You can add user-defined transaction functions to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction function in the script that you are running, WebLOAD Console reports a timer for it in the Statistics Report. Transaction timers are only measured for successful transactions.</p><p>The row heading is the name (argument) of the user-defined transaction, that is, the string in parentheses in the BeginTransaction() function call.</p><p>The timer represents the average time it took to complete all the actions between the BeginTransaction() call and its corresponding EndTransaction() call, in seconds, during the last reporting interva</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="statistics-for-virtual-clients-and-probing-clients">Statistics for Virtual Clients and Probing Clients</h3>
+<p>There are differences in the statistics reported for Virtual Clients and Probing Clients:</p>
+<ul>
+<li>The values reported for Virtual Clients are average values based on the data reported by the total number of Virtual Clients running that script.</li>
+<li>The values reported for a Probing Client are the specific values for that single, representative user.</li>
+</ul>
+<p>By default, Virtual Clients are single-threaded so the Load Machines can support more Virtual Clients overall. Probing Clients run with four threads in order to emulate a single user as closely as possible.</p>
+<p>Therefore, you should use the statistics that you obtain from the different types of emulated users in different ways. For example, if you are interested in the exact experience of a typical user of your site, examine the timers like Round Time, Hit Time, Connect Time, and so on from a Probing Client. For performance or load issues, however, examine statistics (such as Successful and Failed hits, Successful and Failed Rounds, Rounds Per Second, Hits Per Second, etc.) from Virtual Clients.</p>
+<h2 id="summary-reports">Summary Reports</h2>
+<p>Each cell in the Statistics Report is an access point for another report:</p>
+<ul>
+<li>Double-click a row heading to display a Summary by Measurement Report.</li>
+<li>Double-click a column heading to display a Summary by script or Summary by Total Report.</li>
+<li>Double-click a cell to display a summary report for that statistical measurement.</li>
+</ul>
+<p>Summary reports provide the following values:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Value</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Current Slice/Current Value</td>
+<td style="text-align: left;">WebLOAD Console displays values for its statistics at 20- second intervals (you can modify this in <strong>Global Options</strong>  <strong>General</strong>, by changing the value in the Statistics reporting resolution field. The reported value at each reporting interval is called the current value.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sum</td>
+<td style="text-align: left;">The aggregate or total value for this statistic (throughout all scripts and Virtual Clients).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Min</td>
+<td style="text-align: left;">The lowest value reported for this statistic since the beginning of the test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Max</td>
+<td style="text-align: left;">The highest value reported for this statistic since the beginning of the test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Average</td>
+<td style="text-align: left;"><p>For per time unit statistics and counters, average is the total of all of the current values divided by the number of reporting intervals.</p><p>For timers, average is the total amount of time counted by the timer (not the elapsed time) divided by the Count (the total number of readings). For example, the average for Hit Time is the amount of time it took to complete all the successful hits divided by the number of successful hits (the Count).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Statistics Report displays all of the statistics that WebLOAD Console collects unless there were no readings for a statistic during a test. For example, if there were no unsuccessful rounds during a test, the table would not display a row for Failed Rounds.</p>
+<p>Additionally, if a measurement has no meaning for a specific statistic, WebLOAD Console displays a dash (-) in the cell. For example, if there were two scripts running but only one of them returned an HTTP Response Status code, the table would include a row for that Response Status and would display a dash in the cell for the script that did not return the code.</p>
+<h3 id="using-the-statistics-report">Using the Statistics Report</h3>
+<p>Open specific statistical values by double-clicking a cell. You can click any <strong>Script Name</strong> or <strong>Total</strong> in the column headers, any <strong>Measurement Name</strong> in the left-hand column, or any cell at the intersection of any measurement row and script or Total column.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Double click</strong></th>
+<th style="text-align: left;"><strong>To</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Script Name</td>
+<td style="text-align: left;">Displays a Summary Report table containing all measurement attribute values for the selected script.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">Displays a Summary Report table containing the sum of all measurement attribute values for all current scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Measurement Name</td>
+<td style="text-align: left;">Displays a Summary Report table containing the attribute values for this measurement for all current scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intersection, Measurement &amp; Script</td>
+<td style="text-align: left;">Displays a History Report containing all of the Attribute values recorded from the start of the current test session. These values are specific to the selected measurement and script. The complete History Report can also be accessed via the Summary Reports.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intersection, Measurement &amp; Total</td>
+<td style="text-align: left;">Displays a History Report containing all of the Attribute values recorded for the selected Measurement totaled for all current scripts. The complete History Report can also be accessed via the Summary Reports.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="statistics-report-summary-by-script"><strong>Statistics Report-Summary by Script</strong></h3>
+<p>Double-click a specific script name in the Statistics Report main window to call up a summary table. When you select a script, the report contains the values for all the attributes collected for that script.</p>
+<p>The following example contains all of the values collected for the script, Quickstart:</p>
+<p><img alt="Summary Table" src="../../images/console_users_guide_2073.jpeg"/></p>
+<p>The names of all the measurements tracked during the current Load Session are listed in the column at the far left. The names of all the Attributes totaled for the relevant measurements are displayed in the header at the top of the table.</p>
+<p><strong>Example:</strong></p>
+<blockquote>
+<p><strong>Note:</strong> The minimum time needed for the SUT to respond to requests from the script during the current test session is 1.246 seconds. The maximum time needed for the SUT to respond to the script run by Generator1 during the current slice is 0.461 seconds. The average Response Time to the script in the current slice is 1.398 seconds.</p>
+</blockquote>
+<p><img alt="" src="../../images/console_users_guide_2074.png"/></p>
+<p><strong>Example:</strong></p>
+<p>Double-click Response Time in the left-hand column to call up a History Report. This History Report lists all of the Response Time Attribute values recorded for the script run by Load Generator1 from the start of the current test session. This History Report can also be accessed from the Statistics Report main window by double-clicking the button located at the intersection of the Response Time row and mix1 column.</p>
+<p><img alt="History Report" src="../../images/console_users_guide_2075.jpeg"/></p>
+<h3 id="statistics-report-summary-by-total">Statistics Report-Summary by Total</h3>
+<p>Double-click the heading <strong>Total</strong> at the top of the Total column in the Statistics Report main window to call up the Summary by Total Report.</p>
+<p>This table displays the sum of all measurement values for all current scripts.</p>
+<p><img alt="Summary by Total Report" src="../../images/console_users_guide_2076.png"/></p>
+<p>The names of all the measurements tracked during the current Load Session are listed in the column at the far left. The names of all the attributes totaled for the relevant measurements for all current scripts are displayed in the header at the top of the table.</p>
+<p>Double-click <strong>Response Time</strong> in the left-hand column to call up a History Report. This History Report lists all of the Response Time Attribute values recorded for all scripts from the start of the current test session. This is the same Summary Report accessed from the Statistics Report main window by double-clicking the button located at the intersection of the Response Time row and Total column.</p>
+<p><img alt="" src="../../images/console_users_guide_2078.jpeg"/></p>
+<h3 id="statistics-report-summary-by-measurement">Statistics Report-Summary by Measurement</h3>
+<p>Double-click a specific measurement name in the Statistics Report main window to call up the following summary table.</p>
+<p>This table displays all attribute values for the selected measurement for the current scripts.</p>
+<p>This image shows the Response Time values for script, Test. The attributes displayed are for Min, Max, Count, Average and Current Slice. The third line displays the total values for these attributes for all running scripts.</p>
+<p><strong>Example:</strong></p>
+<p><a name="_bookmark426"></a>Double-click <strong>Test</strong> in the left-hand column to call up a History Report. This History Report lists all of the Response Time Attribute values recorded for all scripts from the start of the current test session. This is the same History Report accessed from the Statistics Report main window by double-clicking the button located at the intersection of the Response Time row and script column.</p>
+<p><img alt="History Report" src="../../images/console_users_guide_2082.png"/></p>
+<h3 id="statistics-report-history-by-measurement-and-script">Statistics Report-History by Measurement and Script</h3>
+<p><strong>To open the History by Measurement and Script Report:</strong></p>
+<ul>
+<li>Double-click a button located at the intersection of a specific measurement row and script column in the Statistics Report main window.</li>
+<li>Double-click a selected script name in the left hand column of a Summary by Measurement Report.</li>
+<li>Double-click a selected measurement name in the far left column of a Summary by Script Report.</li>
+</ul>
+<p>The History by Measurement and Script Report displays all the Attribute values recorded from the start of the current Load Session for the selected measurement and script.</p>
+<p>The following table displays all of the Response Time Attribute values for the script, Test.</p>
+<p><img alt="History by Measurement and Script Report" src="../../images/console_users_guide_2083.png"/></p>
+<p>The times that the attribute values were recorded since the start of the current Load Session are listed in the column at the far left. The names of all the attributes totaled for the selected measurement and script are displayed in the header at the top of the table.</p>
+<p><strong>Example:</strong></p>
+<p>This table displays all Total Load Size, Current Value, Min, Max, Count, and Average values recorded for Response Time for Test. Values were recorded starting at 20 seconds after the Load Session began.</p>
+<h3 id="statistics-report-history-by-measurement-and-total">Statistics Report-History by Measurement and Total</h3>
+<p><strong>To open the History by Measurement and Total Report:</strong></p>
+<ul>
+<li>Double-click a button located at the intersection of a specific measurement row and the Total column in the Statistics Report main window,</li>
+</ul>
+<p>-Or-</p>
+<p>Double-click the specific measurement name in the far left column of a Summary by Total Report.</p>
+<p>The History by Measurement and Total Report displays all the Attribute values recorded from the start of the current Load Session for the selected measurement. </p>
+<p>Listed in the far left-hand column are the times that attribute values were recorded since the beginning of the current Load Session. The names of all the attributes totaled for the selected measurement are displayed in the header at the top of the table.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

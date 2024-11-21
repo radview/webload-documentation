@@ -1,0 +1,2850 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../quickstart/" rel="prev"/>
+<link href="../create_load_templates/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Console Features - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#webload-console-features">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Console Features
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-webload-console">
+<span class="md-ellipsis">
+      The WebLOAD Console
+    </span>
+</a>
+<nav aria-label="The WebLOAD Console" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-the-console">
+<span class="md-ellipsis">
+      Opening the Console
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-elements">
+<span class="md-ellipsis">
+      Console Elements
+    </span>
+</a>
+<nav aria-label="Console Elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#title-bar">
+<span class="md-ellipsis">
+      Title Bar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-system-button">
+<span class="md-ellipsis">
+      Console System Button
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      Quick Access Toolbar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      Ribbon
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-menus">
+<span class="md-ellipsis">
+      Right-click Menus
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      Status Bar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree">
+<span class="md-ellipsis">
+      The Session Tree
+    </span>
+</a>
+<nav aria-label="The Session Tree" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-structure">
+<span class="md-ellipsis">
+      The Session Tree Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-tree-icons">
+<span class="md-ellipsis">
+      Session Tree Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-icons">
+<span class="md-ellipsis">
+      Status Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigating-the-session-tree">
+<span class="md-ellipsis">
+      Navigating the Session Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-in-edit-mode">
+<span class="md-ellipsis">
+      The Session Tree in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-options-in-edit-mode">
+<span class="md-ellipsis">
+      Right-Click Options in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-in-run-mode">
+<span class="md-ellipsis">
+      The Session Tree in Run Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-options-in-run-mode">
+<span class="md-ellipsis">
+      Right-Click Options in Run Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-results-window">
+<span class="md-ellipsis">
+      The Results Window
+    </span>
+</a>
+<nav aria-label="The Results Window" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integrated-reports">
+<span class="md-ellipsis">
+      Integrated Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-reports">
+<span class="md-ellipsis">
+      Statistics Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dashboard">
+<span class="md-ellipsis">
+      Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transactions-dashboard">
+<span class="md-ellipsis">
+      Transactions Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-drilling-reports">
+<span class="md-ellipsis">
+      Data Drilling Reports
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#event-viewer">
+<span class="md-ellipsis">
+      Event Viewer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-window">
+<span class="md-ellipsis">
+      Log Window
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-webload-console-startup-dialog-box">
+<span class="md-ellipsis">
+      The WebLOAD Console Startup Dialog Box
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edit-mode-and-run-modes-of-operation">
+<span class="md-ellipsis">
+      Edit Mode and Run Modes of Operation
+    </span>
+</a>
+<nav aria-label="Edit Mode and Run Modes of Operation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-in-edit-mode">
+<span class="md-ellipsis">
+      The Console in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-in-run-mode">
+<span class="md-ellipsis">
+      The Console in Run Mode
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-ribbon-options">
+<span class="md-ellipsis">
+      The Console Ribbon Options
+    </span>
+</a>
+<nav aria-label="The Console Ribbon Options" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-tab">
+<span class="md-ellipsis">
+      File Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#home-tab">
+<span class="md-ellipsis">
+      Home Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-tab">
+<span class="md-ellipsis">
+      Session Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools-tab">
+<span class="md-ellipsis">
+      Tools Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help-drop-down">
+<span class="md-ellipsis">
+      Help Drop Down
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-button">
+<span class="md-ellipsis">
+      About Button
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-webload-console">
+<span class="md-ellipsis">
+      The WebLOAD Console
+    </span>
+</a>
+<nav aria-label="The WebLOAD Console" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-the-console">
+<span class="md-ellipsis">
+      Opening the Console
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-elements">
+<span class="md-ellipsis">
+      Console Elements
+    </span>
+</a>
+<nav aria-label="Console Elements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#title-bar">
+<span class="md-ellipsis">
+      Title Bar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-system-button">
+<span class="md-ellipsis">
+      Console System Button
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      Quick Access Toolbar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      Ribbon
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-menus">
+<span class="md-ellipsis">
+      Right-click Menus
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      Status Bar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree">
+<span class="md-ellipsis">
+      The Session Tree
+    </span>
+</a>
+<nav aria-label="The Session Tree" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-structure">
+<span class="md-ellipsis">
+      The Session Tree Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-tree-icons">
+<span class="md-ellipsis">
+      Session Tree Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-icons">
+<span class="md-ellipsis">
+      Status Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigating-the-session-tree">
+<span class="md-ellipsis">
+      Navigating the Session Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-in-edit-mode">
+<span class="md-ellipsis">
+      The Session Tree in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-options-in-edit-mode">
+<span class="md-ellipsis">
+      Right-Click Options in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-session-tree-in-run-mode">
+<span class="md-ellipsis">
+      The Session Tree in Run Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-options-in-run-mode">
+<span class="md-ellipsis">
+      Right-Click Options in Run Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-results-window">
+<span class="md-ellipsis">
+      The Results Window
+    </span>
+</a>
+<nav aria-label="The Results Window" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integrated-reports">
+<span class="md-ellipsis">
+      Integrated Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics-reports">
+<span class="md-ellipsis">
+      Statistics Reports
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dashboard">
+<span class="md-ellipsis">
+      Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transactions-dashboard">
+<span class="md-ellipsis">
+      Transactions Dashboard
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-drilling-reports">
+<span class="md-ellipsis">
+      Data Drilling Reports
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#event-viewer">
+<span class="md-ellipsis">
+      Event Viewer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-window">
+<span class="md-ellipsis">
+      Log Window
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-webload-console-startup-dialog-box">
+<span class="md-ellipsis">
+      The WebLOAD Console Startup Dialog Box
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edit-mode-and-run-modes-of-operation">
+<span class="md-ellipsis">
+      Edit Mode and Run Modes of Operation
+    </span>
+</a>
+<nav aria-label="Edit Mode and Run Modes of Operation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-in-edit-mode">
+<span class="md-ellipsis">
+      The Console in Edit Mode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-in-run-mode">
+<span class="md-ellipsis">
+      The Console in Run Mode
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-console-ribbon-options">
+<span class="md-ellipsis">
+      The Console Ribbon Options
+    </span>
+</a>
+<nav aria-label="The Console Ribbon Options" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-tab">
+<span class="md-ellipsis">
+      File Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#home-tab">
+<span class="md-ellipsis">
+      Home Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#session-tab">
+<span class="md-ellipsis">
+      Session Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools-tab">
+<span class="md-ellipsis">
+      Tools Tab
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#help-drop-down">
+<span class="md-ellipsis">
+      Help Drop Down
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-button">
+<span class="md-ellipsis">
+      About Button
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="webload-console-features">WebLOAD Console Features</h1>
+<p>The WebLOAD Console is where you perform the majority of your load / performance testing activities.</p>
+<h2 id="the-webload-console">The WebLOAD Console</h2>
+<p>The Console consists of the following:</p>
+<ul>
+<li>Console System button</li>
+<li>Quick Access toolbar</li>
+<li>Ribbon</li>
+<li>Session Tree</li>
+<li>Results window</li>
+<li>Status bar</li>
+</ul>
+<p>The Console manages the Load Session. It also:</p>
+<ul>
+<li>Configures Load Session hosts and scripts.</li>
+<li>Schedules Load Session scripts.</li>
+<li>Monitors the application’s performance and integrity under the generated load.</li>
+<li>Manages the Load Session as it is running, allowing you to pause, stop and continue Load Session components as needed.</li>
+<li>Displays the current performance of the SUT and provides a final performance report for Virtual Clients and Probing Clients.</li>
+<li>Manages exporting of test reports.</li>
+</ul>
+<p>The WebLOAD Console component controls your test session. From the Console, you can:</p>
+<ul>
+<li>Specify the program (script) that the test session runs.</li>
+<li>Select the number of Virtual Clients to run.</li>
+<li>Define the hosts participating in the Load Session.</li>
+<li>Schedule tests.</li>
+<li>View performance reports.</li>
+</ul>
+<h3 id="opening-the-console">Opening the Console</h3>
+<p><strong>To open the Console:</strong></p>
+<ul>
+<li>Select <strong>Start</strong> &gt; <strong>All Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>WebLOAD Console</strong>,</li>
+</ul>
+<p>-Or-</p>
+<p>From your desktop, click the <strong>Console</strong> icon.</p>
+<p>The WebLOAD Console Startup dialog box appears, displaying a variety of shortcuts to the various WebLOAD Console components. After you select an option and start working, the WebLOAD main screen appears.</p>
+<p><img alt="WebLOAD Console Main Window" src="../../images/console_users_guide_0059.jpeg"/></p>
+<p>The Console is operated through its Console System button and ribbon at the top of the screen. Tests are configured through a series of dialog boxes.</p>
+<h2 id="console-elements">Console Elements</h2>
+<p>When you first start WebLOAD Console, you see the Console window interface in Edit mode. The Console window displays different components in the two different modes:</p>
+<ul>
+<li>Edit Mode where you create your templates.</li>
+<li>Run Mode where you run your sessions and see the results. The Console window interface consists of the following elements.</li>
+</ul>
+<h3 id="title-bar">Title Bar</h3>
+<p>The title bar displays the name and path of the current template or session.</p>
+<h3 id="console-system-button">Console System Button</h3>
+<p>The Console System button provides access to the most commonly used tasks.</p>
+<p><img alt="Console System Button" src="../../images/console_users_guide_0060.jpeg"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Option</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">New</td>
+<td style="text-align: left;">Starts a new Load Template. A new empty session Tree appears.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Open</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Enables opening any of the following:<code>&lt;/p&gt;&lt;p&gt;</code>- A saved Load Session. A Load Session is saved as a file of type *.ls. The Console displays a Session Tree window initialized to the settings saved in the file.<code>&lt;/p&gt;&lt;p&gt;</code>- A Load Template file of the type *.tpl. A Load Template file contains test configuration, the assigned scripts, the testing schedule, and the report configuration, without the test session results.<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Save</td>
+<td style="text-align: left;">Saves a Load Template or Load Session. When a Load Session is saved, it includes the Load Template and the data accumulated running the test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Save As</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Enables performing a Save or Save As operation<code>&lt;/p&gt;&lt;p&gt;</code>If the session tree is currently displaying a Load Session, the Save operation saves the current Load Session configuration and results to a file of type *.ls. The following information is saved:<code>&lt;/p&gt;&lt;p&gt;</code>- Selected hosts, both Probing Clients and Load Machines<code>&lt;/p&gt;&lt;p&gt;</code>- Assigned scripts for each host<code>&lt;/p&gt;&lt;p&gt;</code>- Test session schedule<code>&lt;/p&gt;&lt;p&gt;</code>- Report configuration<code>&lt;/p&gt;&lt;p&gt;</code>- Test session results (Performance Report data)<code>&lt;/p&gt;&lt;p&gt;</code>If the session tree is currently displaying a Load Template, the following information is saved:<code>&lt;/p&gt;&lt;p&gt;</code>- Selected hosts, both Probing Clients and Load Machines<code>&lt;/p&gt;&lt;p&gt;</code>- Assigned scripts for each host<code>&lt;/p&gt;&lt;p&gt;</code>- Test session schedule<code>&lt;/p&gt;&lt;p&gt;</code>- Report configuration<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Goal-Oriented Test Wizard</td>
+<td style="text-align: left;">Opens the Goal-Oriented Test wizard. The Goal-Oriented Test wizard enables you to run goal-seeking performance testing.</td>
+</tr>
+<tr>
+<td style="text-align: left;">WebLOAD Wizard</td>
+<td style="text-align: left;">Opens the WebLOAD Wizard. This wizard walks you through the WebLOAD Console configuration process.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Edit Template</td>
+<td style="text-align: left;">Switches from Run mode to Edit mode.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Global Options</td>
+<td style="text-align: left;">Opens the Global Options dialog box. Use the global options to customize WebLOAD Console to your specifications, see<a href="../set_global_opt/"><em>Setting the Global Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Default Options</td>
+<td style="text-align: left;">Opens the Default Options dialog box. Use the default settings to customize the script settings to your specifications. When building a new template or session, or editing an existing one, each new single script or script participating in a Mix is automatically assigned these defaults, see<a href="../set_script_options/">*Setting Script Options</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Current Session Options</td>
+<td style="text-align: left;">Opens the Current Session Options dialog box. Use the session settings to customize the current session to your specifications. This option will update the options for all scripts in the current session, see<a href="../set_script_options/"><em>Setting Script Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script Options</td>
+<td style="text-align: left;">Opens the Script Options dialog box. Use the session settings to customize the current script to your specifications, see<a href="../set_script_options/"><em>Setting Script Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Print</td>
+<td style="text-align: left;">Prints the active chart or grid displayed in the Results window, with all contents and formats.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Additional Information</td>
+<td style="text-align: left;">Displays additional information for the active template / Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Recent files</em></td>
+<td style="text-align: left;">Lists the template / Session files you have most recently opened in the WebLOAD Console. To quickly reopen one of these files, click it.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exit</td>
+<td style="text-align: left;">Closes the Console.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-access-toolbar">Quick Access Toolbar</h3>
+<p>The Quick Access toolbar provides shortcuts for your most common tasks. By default, the toolbar provides shortcuts to the Save, Open and Start Session commands. You can customize the toolbar to add any other WebLOAD Console command.</p>
+<p><img alt="Quick Access Toolbar" src="../../images/console_users_guide_0061.jpeg"/></p>
+<h3 id="ribbon">Ribbon</h3>
+<p>The ribbon displays the commands you use to work with WebLOAD Console. In addition to the standard File tab, various tabs are provided to access functions specific to template creation and session management, such as the Session tab.</p>
+<h3 id="right-click-menus">Right-click Menus</h3>
+<p>The right-click menus provide shortcuts to frequently performed actions.</p>
+<p>The specific list of shortcuts available depends on the area where you click the right mouse button.</p>
+<p>For example, the right-click menu displayed when you right-click the Load Session icon in the Session Tree in edit mode enables you to:</p>
+<ul>
+<li>Open the WebLOAD Wizard.</li>
+<li>Modify script selections.</li>
+<li>Delete the Load Template.</li>
+<li>Access the default and current session options.</li>
+<li>Access the SLA Manager.</li>
+</ul>
+<h2 id="status-bar">Status Bar</h2>
+<p>At the bottom of the Console window, the status bar displays information about operations in progress.</p>
+<p>While a session is running, the status bar displays continually updated information about the Elapsed time since the session started running, and the Remaining time till session end (if known).</p>
+<h2 id="the-session-tree">The Session Tree</h2>
+<p>The Session Tree displays in the left pane of the Console screen, and gives you a complete graphical overview of the test session including the scripts run, and the hosts running each script. The icons adjacent to the tree items enable you to view your test activity at a glance.</p>
+<p><img alt="" src="../../images/console_users_guide_0063.png"/></p>
+<p><img alt="Session Tree" src="../../images/console_users_guide_0064.png"/></p>
+<p>During the test configuration phase, the Session Tree is a convenient interface for editing the test session. Clicking the <strong>WebLOAD Wizard</strong> icon in the Home tab of the ribbon starts the WebLOAD Wizard. Double-clicking a tree node opens the dialog box for configuring that tree item. Right-clicking a tree item prompts a menu that enables you to perform a number of functions on the test session. As you change your configuration through the Console configuration dialog boxes, the changes that you make are reflected in the Session Tree.</p>
+<p>While your test session is running, the Session Tree displays its progress. The Session Tree displays the scripts configured for running, the participants in the test, and their status. For more information on the status of the test, see <a href="#status-icons"><em>Status Icons</em> </a>.</p>
+<h4 id="the-session-tree-structure">The Session Tree Structure</h4>
+<ul>
+<li>The “root” of the tree, in the upper-most line, displays the Load Session icon.</li>
+<li>The first level branches display the scripts to be run during the test session. The scripts may be single scripts or a Mix of scripts. The icons displayed next to the script name indicate its status. For more information on the status of Session components, see <a href="#status-icons"><em>Status Icons</em> </a>.</li>
+<li>The second level branches present the hosts participating in the test session. These hosts can be Load Machines or Probing Clients. A different icon represents each host type. The icons displayed adjacent to the hosts indicate their status. Several hosts can run the same script.</li>
+</ul>
+<p><img alt="Session Tree Structure" src="../../images/console_users_guide_0065.jpeg"/></p>
+<h4 id="session-tree-icons">Session Tree Icons</h4>
+<p>WebLOAD Console displays icons on each line of the Session Tree, making it easy to view your test elements and activity.</p>
+<p>The Session Tree icons are described in the following table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Icon</strong></th>
+<th style="text-align: left;"><strong>Session Component</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code>![ref16]<code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Load Session</strong> ‒ The root of the Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0067.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Script</strong> ‒ A single test script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code>![ref17]<code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Mix of scripts</strong> ‒ A combination of test scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code>![ref18]<code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Load Machine</strong> ‒ A machine used for generating Virtual Clients.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0070.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Cloud Load Machine –</strong> A cloud machine used for generating Virtual Clients.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0071.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Probing Client Machine</strong> ‒ A machine used for generating Probing Clients.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0072.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><strong>Cloud Probing Client Machine –</strong> A cloud machine used for generating Probing Clients.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="status-icons">Status Icons</h4>
+<p>During runtime, status icons appear adjacent to each Load Session item (hosts, scripts) in the Session Tree, indicating the item’s status.</p>
+<p>The status icons are described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Icons</strong></th>
+<th style="text-align: left;"><strong>Cloud Icons</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0073.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0074.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">No current activity.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0075.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0076.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">Initialization completed successfully. Ready to run.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0077.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0078.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">Currently running.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0079.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0080.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">Temporarily paused. Remainder of Load Session continues running as usual.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0081.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0082.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">Currently stopped.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0083.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;"><code>&lt;p&gt;&lt;/p&gt;``&lt;p&gt;</code><img alt="" src="../../images/console_users_guide_0084.png"/><code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">An error has occurred.</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="navigating-the-session-tree">Navigating the Session Tree</h4>
+<p>You can move through the Session Tree by expanding and collapsing nodes.</p>
+<p>The following table lists the keystrokes you can use to move in the Session Tree:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Key</strong></th>
+<th style="text-align: left;"><strong>Result</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Up arrow</td>
+<td style="text-align: left;">Moves the selection up one item in the Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Down arrow</td>
+<td style="text-align: left;">Moves the selection down one item in the Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Right arrow</td>
+<td style="text-align: left;">Expands the selected item. If the selected item does not contain hidden items, behaves like down arrow.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Left arrow</td>
+<td style="text-align: left;">Collapses the selected item. If the selected item does not contain exposed items, behaves like up arrow.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Page Up / Home</td>
+<td style="text-align: left;">Moves the selection to the first item in the Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Page Down</td>
+<td style="text-align: left;">Moves the selection to the bottom item visible in the pane.</td>
+</tr>
+<tr>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">Moves the selection to the last item in the Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Plus sign “+” on the numeric keypad</td>
+<td style="text-align: left;">Expands the selected node.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Minus sign “-” on the numeric keypad</td>
+<td style="text-align: left;">Collapses the selected node.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Asterisk “*” on the numeric keypad</td>
+<td style="text-align: left;">Expands the entire tree below the selected node.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-session-tree-in-edit-mode">The Session Tree in Edit Mode</h4>
+<p>In edit mode, the Session Tree provides a complete graphical overview of the test session.</p>
+<p><img alt="Edit Mode Session Tree" src="../../images/console_users_guide_0085.png"/></p>
+<p>The following is a line-by-line explanation of the above Session Tree:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Line Num</strong></th>
+<th style="text-align: left;"><strong>Icon</strong></th>
+<th style="text-align: left;"><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><img alt="" src="../../images/console_users_guide_0086.png"/> Load Session</td>
+<td style="text-align: left;">Indicates a Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Script1</td>
+<td style="text-align: left;">The script file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Windows7x64</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Describes the Load Machine for this test session.<code>&lt;/p&gt;&lt;p&gt;</code>The Load Machine icon is followed by the host name (Windows7x64).<code>&lt;/p&gt;&lt;p&gt;</code>A test session may include multiple Load Machines.<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Script2</td>
+<td style="text-align: left;">The script file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">localhost</td>
+<td style="text-align: left;">Describes the Probing Client Machine host for this test session. The Probing Client icon is followed by the Host name (localhost). A test session may include multiple Probing Client hosts.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><img alt="" src="../../images/console_users_guide_0088.png"/>Mix 1</td>
+<td style="text-align: left;">The Mix file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Windows7x64</td>
+<td style="text-align: left;">Describes the Load Machine for this test session. The Load Machine icon is followed by the host name (Windows7x64).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="right-click-options-in-edit-mode">Right-Click Options in Edit Mode</h4>
+<p>Using the Session Tree you can define and modify Load Templates.</p>
+<p>The following options can be accessed by right-clicking a Session Tree component in edit mode:</p>
+<p><em>Table 14: Edit Mode Session Tree Options</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Tree Item</strong></th>
+<th style="text-align: left;"><strong>Options</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load Session</td>
+<td style="text-align: left;">Open Wizard</td>
+<td style="text-align: left;">Opens the WebLOAD Wizard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Modify Scripts Selection</td>
+<td style="text-align: left;">Opens the script / Mix Selection dialog box to modify the selections.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Deletes the selected WebLOAD Console component and all sub-components.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Default Options</td>
+<td style="text-align: left;">Opens the Default Options dialog box and enables setting new default options for each script added to a Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Current Session Options</td>
+<td style="text-align: left;">Opens the Current Session Options dialog box and enables setting options for each script currently defined in the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SLA Manager</td>
+<td style="text-align: left;">Opens the SLA Manager dialog box for defining the conditions under which you want to receive log messages and optionally also an email notification.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script/Mix</td>
+<td style="text-align: left;">Open Wizard</td>
+<td style="text-align: left;">Opens the WebLOAD Wizard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Modify Load Machine  Selection</td>
+<td style="text-align: left;">Opens the Host Selection  dialog box and modify the Load Machines and Probing Client Machines defined  for the session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Modify Load Machine  Schedule</td>
+<td style="text-align: left;">Opens the Schedule Manually  dialog box and  modify the test schedule.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Open</td>
+<td style="text-align: left;">Opens the script in  WebLOAD Recorder for editing.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Deletes the script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Rename</td>
+<td style="text-align: left;">Renames the script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">View JavaScript</td>
+<td style="text-align: left;">Opens a window displaying the JavaScript  for the script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Copy Load Machine and Schedule</td>
+<td style="text-align: left;">Available for script only.  Copies the Load Machines and the load schedule defined for this script to the  clipboard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Paste Load Machine and Schedule</td>
+<td style="text-align: left;">Available for script only.  Pastes the Load Machines and the load schedule from the clipboard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Script Options</td>
+<td style="text-align: left;">Available for script only. Opens the Script  Options dialog box. For more information on these settings, see<a href="../set_script_options/"><em>Setting Script Options</em> </a><em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Mix Options</td>
+<td style="text-align: left;">Available for Mix only.  Opens the Mix Creation dialog box, enabling  you to select a script from the Mix for which to change the options.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load Machine and Probing  Client Machine</td>
+<td style="text-align: left;">Modify Schedule</td>
+<td style="text-align: left;">Opens the Schedule Manually  dialog box enabling you to modify the scheduling parameters.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Replace</td>
+<td style="text-align: left;">Replaces the host (from  the host list).</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Deletes the host.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Copy Schedule</td>
+<td style="text-align: left;">Copies the schedule  defined for the host to the clipboard.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Paste Schedule</td>
+<td style="text-align: left;">Pastes the schedule from  the clipboard.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-session-tree-in-run-mode">The Session Tree in Run Mode</h4>
+<p>The Session Tree displays the complete configuration of the current Load Session. Status icons reflect the status of your Load Session.</p>
+<p>Through the Session Tree you can see:</p>
+<ul>
+<li>The scripts running in the test session.</li>
+<li>The hosts running each script.</li>
+<li>Each script and host’s current operating status.</li>
+</ul>
+<p>Icons are displayed on each line of the tree, making it easy to view the test activity.</p>
+<p><img alt="Run Mode Session Tree" src="../../images/console_users_guide_0090.jpeg"/></p>
+<p>The following is a line-by-line explanation of the above Session Tree:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Line Num</strong></th>
+<th style="text-align: left;"><strong>Icon</strong></th>
+<th style="text-align: left;"><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Load Session</td>
+<td style="text-align: left;">Indicates a Session Tree.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Script1</td>
+<td style="text-align: left;">The script file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Windows7x64 (100, 100)</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Describes the Load Machine for this test session.<code>&lt;/p&gt;&lt;p&gt;</code>The Load Machine icon, along with its status (currently running), is followed by the host name (Windows7x64).<code>&lt;/p&gt;&lt;p&gt;</code>A test session may include multiple Load Machines.<code>&lt;/p&gt;&lt;p&gt;</code>Two numbers follow each Load Machine entry:<code>&lt;/p&gt;&lt;p&gt;</code>- The first number is the maximum load that script schedules it to generate over the course of a test session.<code>&lt;/p&gt;&lt;p&gt;</code>- The second number is the current load being generated.<code>&lt;/p&gt;&lt;p&gt;</code>In this example, Windows7x64 is running under Script1, and has a maximum scheduled load of 100 Virtual Clients and is currently generating a load of 100 Virtual Clients.<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Script2</td>
+<td style="text-align: left;">The script file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><img alt="*" src="../../images/console_users_guide_0094.png"/> localhost</td>
+<td style="text-align: left;">Describes the Probing Client Machine host for this test session. The Probing Client icon, along with its status (currently running), is followed by the Host name (localhost). A test session may include multiple Probing Client hosts.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Mix 1</td>
+<td style="text-align: left;">The Mix file to be run during the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Windows7x64 (100, 100)</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Describes the Load Machine for this test session. The Load Machine icon, along with its status (currently running), is followed by the host name (Windows7x64).<code>&lt;/p&gt;&lt;p&gt;</code>Two numbers follow each Load Machine entry:<code>&lt;/p&gt;&lt;p&gt;</code>- The first number is the maximum load that Mix schedules it to generate over the course of a test session.<code>&lt;/p&gt;&lt;p&gt;</code>- The second number is the current load being generated.<code>&lt;/p&gt;&lt;p&gt;</code>In this example, Windows7x64is running under Mix1, and has a maximum scheduled load of 100 Virtual Clients and is currently generating a load of 100 Virtual Clients.<code>&lt;/p&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>To the right of each Load Machine two numbers are displayed in parentheses, for example, sharony (25, 45). These display the load size currently being generated; followed by the maximum load size (number of Virtual Clients) the script is scheduled to generate. The current load size number will change according to the load schedule defined in the Schedule dialog box. Before a test session begins, the ‘current’ load size being generated is 0. In most modes of operation, the current load size will never exceed the maximum load size scheduled for that Script listed to the right of the current value.</p>
+<blockquote>
+<p><strong>Note:</strong> Using Throttle Control, you can increase the current load size to exceed the maximum load size - but not while running the Goal-Oriented Test Session.</p>
+</blockquote>
+<p>In run mode you can right-click an item in the Session Tree to view the test parameters defined in the session.</p>
+<p><img alt="Session Test Parameters Menu" src="../../images/console_users_guide_0095.jpeg"/></p>
+<h4 id="right-click-options-in-run-mode">Right-Click Options in Run Mode</h4>
+<p>While in run mode, the following options can be accessed through the right mouse button:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Tree Item</strong></th>
+<th style="text-align: left;"><strong>Options</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load Session</td>
+<td style="text-align: left;">View Scripts Selection</td>
+<td style="text-align: left;">Opens the script / Mix Selection dialog box.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Stop All</td>
+<td style="text-align: left;">Controls the test in progress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">View Goals</td>
+<td style="text-align: left;">Opens the View Goals message box (available only during the Goal-Oriented Test Sessions) to display the goals defined in the test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Reset all Load Generators</td>
+<td style="text-align: left;">Resets the Load Generators.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Pause</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Resume</td>
+<td style="text-align: left;">Resumes execution of tests that have been paused.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Throttle Control</td>
+<td style="text-align: left;">Opens the Throttle Control dialog box, enabling you to dynamically change the load generated on the fly. Throttle Control for the Load Session divides the new VC number evenly across all scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Default Options</td>
+<td style="text-align: left;">Opens the Default Options dialog box enabling you to view the default options for each script added to a Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Current Session Options</td>
+<td style="text-align: left;">Opens the Default Options dialog box enabling you to view the options for each script currently defined in the Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SLA Manager</td>
+<td style="text-align: left;">Opens the SLA Manager dialog box for defining the conditions under which you want to receive log messages and optionally also an email notification.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script / Mix</td>
+<td style="text-align: left;">View Load Machine Selection</td>
+<td style="text-align: left;">Opens the Load Machine Selection window.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">View Load Machine Schedule</td>
+<td style="text-align: left;">Opens the Load Machine Schedule window displaying the schedule defined for the script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Stop</td>
+<td style="text-align: left;">Controls the test in progress, enabling you to stop running the selected script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Pause</td>
+<td style="text-align: left;">Pauses the selected script while the test is in progress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Resume</td>
+<td style="text-align: left;">Resumes execution of the selected Scripts that have been paused.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Throttle Control</td>
+<td style="text-align: left;">Opens the Throttle Control dialog box, enabling you to dynamically change the load generated on the fly. Throttle Control for the script/Mix divides the new VC number evenly across all Load Generator machines.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Open</td>
+<td style="text-align: left;">Opens the script in WebLOAD Recorder.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">View Java Script</td>
+<td style="text-align: left;">Displays the JavaScript code in an external window.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Script / Mix Options</td>
+<td style="text-align: left;">Opens the View Script / Mix dialog box, enabling you to edit the script options.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load Machine</td>
+<td style="text-align: left;">View Schedule</td>
+<td style="text-align: left;">Opens the Load Machine Schedule dialog box displaying the schedule defined for the Load Machine.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Stop</td>
+<td style="text-align: left;">Controls the test in progress, enabling you to stop running the selected Load Machine.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Pause</td>
+<td style="text-align: left;">Pauses the selected Load Machine while the test is in progress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Resume</td>
+<td style="text-align: left;">Resumes execution of the selected Load Machine while the test is in progress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Throttle Control</td>
+<td style="text-align: left;">Opens the Throttle Control dialog box, enabling you to dynamically change the load generated on the fly. Throttle Control for the Load Machine only changes the number of VCs for this Load Generator machine.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> In edit mode, the items in the pop-up menus are used to edit the test session configuration. See <a href="#the-session-tree-in-edit-mode"><em>The Session Tree in Edit Mode</em> </a>.</p>
+</blockquote>
+<h3 id="the-results-window">The Results Window</h3>
+<p>The Results window displays all of the reports opened during a test session. Use the tabs located at the top and the bottom of the window to view different reports. The following reports are available in the Results window.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Report</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Integrated Reports</td>
+<td style="text-align: left;">A report that can be configured to combine Performance data from the Load Machines, Probing Clients, Performance data on the SUT gathered from Performance Manager, and existing performance data from previously saved Load Sessions and external files.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Statistic Reports</td>
+<td style="text-align: left;">A real-time monitor that displays the results of your test while you run it that can be saved and exported.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;p&gt;</code>WebLOAD<code>&lt;/p&gt;&lt;p&gt;</code>Dashboard<code>&lt;/p&gt;</code></td>
+<td style="text-align: left;">Provides a summary of the performance statistics generated during the test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transactions Dashboard</td>
+<td style="text-align: left;">A real-time monitor that displays the transactions statistics in your test.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data Drilling Reports</td>
+<td style="text-align: left;">Provides a detailed description of all user-defined and named transactions to the instance level, including all hit failures and the reasons for them.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viewer</td>
+<td style="text-align: left;">Provides a graphic presentation of event failures displaying the actual events.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="integrated-reports">Integrated Reports</h4>
+<p>WebLOAD Integrated Reports provide both a graphical and statistical view of the performance of your application as it is being tested. Integrated Reports can be viewed while the test is in progress or saved for later analysis.</p>
+<p><img alt="Integrated Report" src="../../images/console_users_guide_0096.png"/></p>
+<h4 id="statistics-reports">Statistics Reports</h4>
+<p>WebLOAD collects approximately 35 different statistics during a test. Statistics Reports display the values for all of them.</p>
+<p><img alt="Statistics Report" src="../../images/console_users_guide_0097.jpeg"/></p>
+<h4 id="dashboard">Dashboard</h4>
+<p>The Dashboard displays real-time statistical information about the test session including the number of Virtual Clients running, hits per day, pages per day and throughput.</p>
+<p><img alt="Dashboard" src="../../images/console_users_guide_0098.jpeg"/></p>
+<h4 id="transactions-dashboard">Transactions Dashboard</h4>
+<p>The Transactions Dashboard displays real-time statistical information about the transactions in your test, in graphical format.</p>
+<p><img alt="Transactions Dashboard" src="../../images/console_users_guide_0099.png"/></p>
+<h4 id="data-drilling-reports">Data Drilling Reports</h4>
+<p>Data Drilling provides both a global and detailed account of hit successes and failures allowing you to verify the functional integrity of your Web application at the per- client, per-transactions, and per-instance level. The Data Drilling reports provide an extremely detailed yet easily accessible summary of all the statistical, timing, and performance information collected over the course of the test session.</p>
+<p><img alt="Data Drilling Report" src="../../images/console_users_guide_0100.jpeg"/></p>
+<h3 id="event-viewer">Event Viewer</h3>
+<p>The Event Viewer displays an illustration of each event triggered during the test.</p>
+<p><img alt="Event Viewer" src="../../images/console_users_guide_0101.png"/></p>
+<p>For further information regarding use of the Event Viewer, see <a href="../func_verifi_test/#viewing-error-information-in-the-event-viewer"><em>Viewing Error Information in the Event Viewer</em> </a>.</p>
+<h3 id="log-window">Log Window</h3>
+<p>The Log Window displays a summary of the test including all log messages detected by WebLOAD Console in run time that are generated by the Console, the JavaScript compiler and any user messages programmed in the test script.</p>
+<p><img alt="Log Window" src="../../images/console_users_guide_0102.png"/></p>
+<p>For further information regarding use of the Log Window, see <a href="../func_verifi_test/#viewing-error-information-in-the-log-window"><em>Viewing Error Information in the Log Window</em> </a>.</p>
+<h3 id="the-webload-console-startup-dialog-box">The WebLOAD Console Startup Dialog Box</h3>
+<p>When you start WebLOAD Console, the WebLOAD Console Startup dialog box displays at the center of the screen, providing you with direct access to the WebLOAD Wizards, Load Templates and previously run Load Sessions.</p>
+<p><img alt="Console Startup Dialog Box Table 18: Console Startup Dialog Box Items" src="../../images/console_users_guide_0104.png"/></p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebLOAD  Wizard</td>
+<td>Opens the WebLOAD Wizard for creating a new  Load Template.</td>
+</tr>
+<tr>
+<td>Goal-Oriented  Test Wizard</td>
+<td>Opens the Goal-Oriented Test Wizard for  creating a new Load Template.</td>
+</tr>
+<tr>
+<td>Manual</td>
+<td>Opens a new blank Session Tree for creating a new template.</td>
+</tr>
+<tr>
+<td>Load Template</td>
+<td>Opens a saved Load Template (*.tpl). Enter the name of the saved  Load Template in the edit box.</td>
+</tr>
+<tr>
+<td>Load Session</td>
+<td>Opens a saved Load Session  (*.ls) including template data from a completed test. Enter the name of  the saved Load Session in the edit box.</td>
+</tr>
+</tbody>
+</table>
+<p>Use either the Goal-Oriented Test Wizard to develop a goal-seeking performance test or the WebLOAD Wizard to develop a basic Load Template. Both of these wizards enable you to save your test parameters as a template that you can later edit manually using the Console ribbon.</p>
+<p>After developing a test with either of the wizards, you can save the test parameters as a Load Template. After running the test you can save the test parameters and results as a Load Session. You can then edit the test parameters by editing the Load Template or view the Load Session test results. For more information on Load Sessions and Load Templates, see <a href="../manage_load_templates_sessions/"><em>Managing Load Templates and Load Sessions</em> </a>.</p>
+<h2 id="edit-mode-and-run-modes-of-operation">Edit Mode and Run Modes of Operation</h2>
+<p>When you open a new test, WebLOAD Console is in Edit mode. In edit mode, you can edit the parameters of your test.</p>
+<p>When you run your test, WebLOAD Console switches to Run mode. When in run mode, you cannot edit the parameters of the test.</p>
+<p>If you are in Run mode and you wish to edit the test parameters, click the <strong>Edit Template  ![ref25]</strong> button in the Session tab of the ribbon to switch to edit mode.</p>
+<h3 id="the-console-in-edit-mode">The Console in Edit Mode</h3>
+<p>In edit mode you can edit the Session Tree parameters. In run mode WebLOAD Console displays the configuration dialog boxes. Change from Run mode to Edit mode using the <strong>Edit Template  ![ref26]</strong> button in the Session tab of the ribbon.</p>
+<p><strong>To edit test session parameters:</strong></p>
+<ul>
+<li>Place the cursor on a node in the Session Tree and click the right mouse button,</li>
+</ul>
+<p>-Or-</p>
+<p>Double-click an item in the Session Tree.</p>
+<h3 id="the-console-in-run-mode">The Console in Run Mode</h3>
+<p>When you start running your Load Session, the Results window appears.</p>
+<p><img alt="Results Window" src="../../images/console_users_guide_0107.png"/></p>
+<p>The following table describes the segments of the Console in Run mode:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Segment</strong></th>
+<th style="text-align: left;"><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Session Run Toolbar</td>
+<td style="text-align: left;">Displays only during a test run. It contains buttons for controlling the test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Session Tree</td>
+<td style="text-align: left;">Presents a graphic display of your test session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Results Window</td>
+<td style="text-align: left;">Displays all of the reports opened during a test session. Use the tabs located at the top and the bottom of the window to view different reports.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Log Window</td>
+<td style="text-align: left;">Displays all of the error messages recorded during a test session. You can toggle the Log Window display on/off through the<strong>Session</strong> tab of the Console ribbon.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Status Bar</td>
+<td style="text-align: left;">Indicates the program status.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-console-ribbon-options">The Console Ribbon Options</h2>
+<p>The Console ribbon is located at the top of the screen. This section discusses each of the WebLOAD Console ribbon tabs and their options .</p>
+<h3 id="file-tab">File Tab</h3>
+<p>The File tab includes the following functions for WebLOAD Console file management.</p>
+<p><img alt="File Tab in Console Ribbon" src="../../images/console_users_guide_0108.jpeg"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">New</th>
+<th style="text-align: left;"><code>&lt;p&gt;</code>Starts a new test session, creating a new WebLOAD Load Template<code>&lt;/p&gt;&lt;p&gt;</code>(*.tpl) file.<code>&lt;/p&gt;&lt;p&gt;</code>When you start a new Load Template an empty Session Tree is displayed on the screen.<code>&lt;/p&gt;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Open</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Enables opening any of the following:<code>&lt;/p&gt;&lt;p&gt;</code>- A saved Load Session. A Load Session is saved as a file of type<code>&lt;/p&gt;&lt;p&gt;</code> *.ls. The Console displays a Session Tree window initialized to the settings saved in the file.<code>&lt;/p&gt;&lt;p&gt;</code>- A Load Template file of the type *.tpl. A Load Template file contains test configuration, the assigned scripts, the testing schedule, and the report configuration, without the test session results.<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Save</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>Enables performing a Save or Save As operation<code>&lt;/p&gt;&lt;p&gt;</code>If the session tree is currently displaying a Load Session, the Save operation saves the current Load Session configuration and results to a file of type *.ls. The following information is saved:<code>&lt;/p&gt;&lt;p&gt;</code>- Selected hosts, both Probing Clients and Load Machines<code>&lt;/p&gt;&lt;p&gt;</code>- Assigned scripts for each host<code>&lt;/p&gt;&lt;p&gt;</code>- Test session schedule<code>&lt;/p&gt;&lt;p&gt;</code>- Report configuration<code>&lt;/p&gt;&lt;p&gt;</code>- Test session results (Performance Report data)<code>&lt;/p&gt;&lt;p&gt;</code>If the session tree is currently displaying a Load Template, the following information is saved:<code>&lt;/p&gt;&lt;p&gt;</code>- Selected hosts, both Probing Clients and Load Machines<code>&lt;/p&gt;&lt;p&gt;</code>- Assigned scripts for each host<code>&lt;/p&gt;&lt;p&gt;</code>- Test session schedule<code>&lt;/p&gt;&lt;p&gt;</code>- Report configuration<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Print</td>
+<td style="text-align: left;">Prints the report displayed with all contents and formats.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="home-tab"><strong>Home Tab</strong></h3>
+<p>The Home tab includes functions for defining a Load Template</p>
+<p><img alt="Home Tab in Console Ribbon" src="../../images/console_users_guide_0110.png"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><code>&lt;p&gt;</code>WebLOAD<code>&lt;/p&gt;&lt;p&gt;</code>Wizard<code>&lt;/p&gt;</code></th>
+<th style="text-align: left;">Opens the WebLOAD Wizard. This wizard walks you through the WebLOAD Console configuration process.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Goal-Oriented Test Wizard</td>
+<td style="text-align: left;">Opens the Goal-Oriented Test wizard. The Goal-Oriented Test wizard enables you to run goal-seeking performance testing.</td>
+</tr>
+<tr>
+<td style="text-align: left;">SLA Manager</td>
+<td style="text-align: left;">Opens the SLA Manager dialog box for defining the conditions under which you want to receive log messages and optionally also an email notification.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Update Floating License Resources</td>
+<td style="text-align: left;">Opens the Update Resources dialog box.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Performance Monitors Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Performance Measurements Manager</td>
+<td style="text-align: left;">Opens the Performance Measurements Manager dialog box for configuring the statistics parameters to be monitored.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Add Remote PMM</td>
+<td style="text-align: left;">Open the Add PMM Probing Client dialog box for adding a Remote PMM script to the template.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Edit Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Scripts Selection</td>
+<td style="text-align: left;">Opens the script / Mix Selection dialog box to modify the selections.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Load Machine Selection</td>
+<td style="text-align: left;">This option is enabled only when a script is selected in the session tree. Opens the Host Selection dialog box to enable modifying the list of Load Machines and Probing Client Machines defined for the selected script or mix.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mix Creation</td>
+<td style="text-align: left;">Available for Mix only. Opens the Mix Creation dialog box, enabling you to select a script from the Mix for which to change the options.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schedule</td>
+<td style="text-align: left;"><code>&lt;p&gt;</code>This option is enabled only when a load machine or script are selected in the session tree.<code>&lt;/p&gt;&lt;p&gt;</code>- When a script is selected, opens the Schedule Manually dialog box, enabling you to modify the scheduling parameters for all the load machines running the script.<code>&lt;/p&gt;&lt;p&gt;</code>- When a single load machine is selected, opens the Schedule Manually dialog box, enabling you to modify the scheduling parameters for the load machine.<code>&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Deletes the currently selected component. A message box pops up, asking for confirmation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-tab">Session Tab</h3>
+<p>The Session tab is used to manage Load Sessions and view the results.</p>
+<p>The Reports group provides options for creating real-time and summary reports showing the performance data gathered by WebLOAD Console. A full description of all WebLOAD reports can be found in <a href="../running_a_load_session/"><em>Running a Load Session</em> </a>.</p>
+<p><img alt="" src="../../images/console_users_guide_0111.jpeg"/></p>
+<p>The Session tab includes the following functions for Load Session management.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Tab Option</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>Start Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Edit Template</td>
+<td style="text-align: left;">Switches from Run mode to Edit mode.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Execution Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Start Session</td>
+<td style="text-align: left;">Starts executing the current Load Session.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stop All</td>
+<td style="text-align: left;">Stops all Load Session activities. A  message box pops up, asking for confirmation.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Throttle Control</td>
+<td style="text-align: left;">Opens the Throttle Control dialog box. Use  Throttle Control to dynamically change the load while the session is in  progress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Reports Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Integrated  Report  Manager</td>
+<td style="text-align: left;">Opens an existing report from the reports list</td>
+</tr>
+<tr>
+<td style="text-align: left;">Transactions  Dashboard  Window</td>
+<td style="text-align: left;">Opens a Transactions  Dashboard tab, which displays real-time updates of transaction statistics in  a graphical display</td>
+</tr>
+<tr>
+<td style="text-align: left;">Open Statistics</td>
+<td style="text-align: left;">Opens a Statistics tab, which displays real-time updates of the  statistics measurements for Load Machines, Probing Clients, and the  performance measurements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dashboard  Window</td>
+<td style="text-align: left;">Opens a WebLOAD Dashboard  tab, which displays real-time updates of statistic measurements in a  dashboard-type display.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Open Data Drilling</td>
+<td style="text-align: left;">Opens a Transactions tab, which displays  information on all user- defined and named transactions</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Export Statistics Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Export Report</td>
+<td style="text-align: left;">Provides three options:   Export to Excel – Exports  the displayed chart or grid to Microsoft  Excel.   Export to Tab File –  Exports the displayed chart or grid to a tab  file   Export to HTML– Exports  the displayed chart or grid to HTML.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Export All</td>
+<td style="text-align: left;">Provides three options:   Export All to Excel –  Exports all statistics to Microsoft Excel.   Export All to Tab File –  Exports all statistics to a tab file   Export All to HTML–  Exports all statistics to HTML.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Import</td>
+<td style="text-align: left;">Opens the Import External Statistics dialog  box to import statistics from an external file.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Windows Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Cascade Windows</td>
+<td style="text-align: left;">Cascades the windows displayed in the WebLOAD Results window.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tile Horizontally</td>
+<td style="text-align: left;">Tiles the windows displayed in the WebLOAD Results window  horizontally.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tile Vertically</td>
+<td style="text-align: left;">Tiles the windows displayed in the WebLOAD  Results window vertically.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>View Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Log Window</td>
+<td style="text-align: left;">A toggle enabling hiding and displaying the  Log Window. The Log window is both floating and dockable, and can be placed  in any part of the screen.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tools-tab">Tools Tab</h3>
+<p>The Tools tab provides the following functions.</p>
+<p><img alt="Tools Tab" src="../../images/console_users_guide_0114.jpeg"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Tab Option</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>Options Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Global Options</td>
+<td style="text-align: left;">Opens the Global Options dialog box. Use the global options to customize WebLOAD Console to your specifications, see<a href="../set_global_opt/"><em>Setting Global Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Default Options</td>
+<td style="text-align: left;">Opens the Default Options dialog box. Use the default settings to customize the script settings to your specifications. When building a new template or session, or editing an existing one, each new single script or script participating in a Mix is automatically assigned these defaults, see<a href="../set_script_options/"><em>Setting Script Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Current Session Options</td>
+<td style="text-align: left;">Opens the Current Session Options dialog box. Use the session settings to customize the current session to your specifications. This option will update the options for all scripts in the current session, see<a href="../set_script_options/"><em>Setting Script Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script Options</td>
+<td style="text-align: left;">Opens the Script Options dialog box. Use the session settings to customize the current script to your specifications, see[<a href="../set_script_options/"><em>Setting Script Options</em> </a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Cloud Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Cloud Options</td>
+<td style="text-align: left;">Opens the Cloud Accounts dialog box, for creating a WebLOAD cloud account</td>
+</tr>
+<tr>
+<td style="text-align: left;">Terminate Cloud Machines</td>
+<td style="text-align: left;">Shuts down the cloud machines.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Git Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Repository Settings</td>
+<td style="text-align: left;">Enables specifying basic Git repository settings, as prerequisites for WebLOAD support of basic Git operations.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commit</td>
+<td style="text-align: left;">Enables saving to the Git local repository any WebLOAD objects you are currently working on.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commit dir</td>
+<td style="text-align: left;">Enables saving to the Git local repository an entire folder with all its descendants.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pull from Repository</td>
+<td style="text-align: left;">Enables pulling data from the Git remote repository to the Git local repository.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Push to Repository</td>
+<td style="text-align: left;">Enables pushing to the Git remote repository, all Commits you had made to the Git local repository.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Open Git Gui</td>
+<td style="text-align: left;">Enables launching your Git UI from within WebLOAD.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Applications Group</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WebLOAD  Recorder</td>
+<td style="text-align: left;">Opens WebLOAD Recorder. Use the WebLOAD  Recorder to record, edit, and debug load test scripts. For more information,  see the<em>WebLOAD Recorder User’s Guide</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">WebLOAD  Analytics</td>
+<td style="text-align: left;">Opens WebLOAD Analytics. Use the WebLOAD  Analytics to analyze data and create custom, informative reports after  running a WebLOAD test session. For more information, see the<em>WebLOAD Analytics User’s Guide.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="help-drop-down">Help Drop Down</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Menu Entry</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Contents</td>
+<td style="text-align: left;">Opens the WebLOAD Console Help screen, displaying the Contents tab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Search</td>
+<td style="text-align: left;">Opens the WebLOAD Console Help screen, displaying the Search tab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">JavaScript References</td>
+<td style="text-align: left;">Opens the WebLOAD JavaScript Reference Manual Help screen, displaying the Contents tab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Scripting Guide</td>
+<td style="text-align: left;">Opens the WebLOAD Scripting Guide Help screen, displaying the Contents tab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">WebRM Help</td>
+<td style="text-align: left;">Opens the WebRMUsers Help screen, displaying the Contents tab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">License Information</td>
+<td style="text-align: left;">Opens the RadView License Information dialog box which displays information about your license.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="about-button">About Button</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">About WebLOAD Console…</th>
+<th style="text-align: left;">Displays the program information, version number, and copyright.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>
