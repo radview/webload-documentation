@@ -18,6 +18,9 @@ markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
 
+plugins:
+   - swagger-ui-tag
+   
 nav:
   - Home: index.md
   - Quick Start: quickstart.md
@@ -95,12 +98,13 @@ nav:
     - Managing Load Generators: dashboard/managing_load_generators.md
     - Managing Organizations, Users, and Admins: dashboard/managing_organizations.md
     - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard/appendix_a.md
+    - Appendix B - Using the REST API: dashboard/appendix_b.md
   - Automation:
     - Introduction: automation/introduction.md
     - Overview: automation/overview.md
     - Running WebLOAD from the Command Line: automation/webload_cli.md
     - Running WebLOAD in Jenkins: automation/webload_jenkins.md
-    - Running WebLOAD Using the OpenAPI: automation/webload_openapi.md
+    - Running WebLOAD Using REST API: automation/webload_openapi.md
   - JavaScript Reference:
     - Introduction: javascript/introduction.md
     - Introduction to JavaScript: javascript/intro_java_scripts.md

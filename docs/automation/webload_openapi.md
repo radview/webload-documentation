@@ -1,4 +1,4 @@
-﻿# Running WebLOAD using the Open API
+﻿# Running WebLOAD using the Open REST API
 
 You can run WebLOAD using a new REST Open API. With this API, you can remotely activate a test, remotely create Analytics Reports, and access any statistics that WebLOAD saves during a test.
 
@@ -19,7 +19,7 @@ You can run WebLOAD using a new REST Open API. With this API, you can remotely a
 
    
 
-2. Go to http://localhost:8080/api-docs/docs.html.
+2. See [REST API Reference](../../dashboard/appendix_b/)
 
 
 ## Understanding how to use the WebLOAD REST Open API
