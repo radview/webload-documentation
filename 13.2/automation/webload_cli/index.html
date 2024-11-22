@@ -55,6 +55,36 @@
 </div>
 </div>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 </nav>
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
@@ -1220,13 +1250,13 @@
 </tr>
 <tr>
 <td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em>&lt;</em>time<em>&gt;</em> – Automatically run the test for the length of time specified in <em><time>/</time></em></p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</num></p><p>- /pc <num>– The number of Probing Client licenses to allocate when using WebRM License Server.</num></p><p>- /rc <em>&lt;</em>results_file_name<em>&gt;</em> – Place the results in the specified file (an XML file).</p><p>- /ag <script name=""> - The name of an existing script (*.wlp) to open.</p></td>
+<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em><code>&lt;*time*&gt;</code></em> – Automatically run the test for the length of time specified in <em><code>&lt;time&gt;</code>/</em></p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</num></p><p>- /pc <code>&lt;num&gt;</code>– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;*results\_file\_name*&gt;</code></em> – Place the results in the specified file (an XML file).</p><p>- /ag <code>&lt;script name&gt;</code> - The name of an existing script (*.wlp) to open.</p></td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 </tbody>
 </table>
-<p>The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag </ar> flag is not set, the</p>
-<p><file name to save> and the <time> parameters are ignored.</p>
+<p>The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag <code>&lt;/ar&gt;</code> flag is not set, the</p>
+<p><code>&lt;file name to save&gt;</code> and the <code>&lt;time&gt;</code> parameters are ignored.</p>
 <blockquote>
 <p><strong>Note:</strong> If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.</p>
 </blockquote>
@@ -1252,7 +1282,7 @@
 <li><strong>WLAnalyticsCMD.exe</strong> – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes.</li>
 <li><strong>WLAnalytics.exe</strong> – Launches the WebLOAD Analytics UI, and generates a report for a specified session.</li>
 </ul>
-<p>The executables are located in <em><Installation dir></em>\bin. For example:</p>
+<p>The executables are located in <em><code>&lt;Installation dir&gt;</code></em>\bin. For example:</p>
 <p><code>C:\Program Files\RadView\WebLOAD\bin.</code></p>
 <h2 id="running-wlanalyticscmdexe">Running WLAnalyticsCMD.exe</h2>
 <p>Use this executable to generate a report for a specified session, and publish or print it.</p>
@@ -1271,7 +1301,6 @@
 <tr><td colspan="1" valign="top"><p><b>-n</b></p><p><i>output_report_name</i></p></td><td colspan="1" valign="top">Specifies a name for the newly created report. If you do not specify a name, the application provides a default name.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 <tr><td colspan="1" valign="top"><b>-h</b></td><td colspan="1" valign="top">Displays the help.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 </table>
-
 <blockquote>
 <p><strong>Note:</strong> Note that you must specify:</p>
 <ul>
@@ -1305,7 +1334,6 @@
 <tr><td colspan="1" valign="top"><b>-h</b></td><td colspan="1" valign="top">Displays the help.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 <tr><td colspan="1" valign="top"><b>-noSplash</b></td><td colspan="1" valign="top">Launches without a Splash screen.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 </table>
-
 <blockquote>
 <p><strong>Note:</strong> Note that you must specify:</p>
 <ul>
@@ -1362,7 +1390,7 @@
 </tr>
 </tbody>
 </table>
-<p>The parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag </a> flag is not set, the <code>&lt; Session name to save to &gt;</code>, and the &lt; Number of rounds to run &gt; parameters are ignored.</p>
+<p>The parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag  flag is not set, the <code>&lt; Session name to save to &gt;</code>, and the &lt; Number of rounds to run &gt; parameters are ignored.</p>
 <h3 id="examples_4">Examples</h3>
 <p><strong>Example 1:</strong></p>
 <p><code>webloadide.exe test1.wlp</code></p>
@@ -1396,26 +1424,11 @@
 <li>Runs the project test2.wlp for two iterations.</li>
 <li>Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-</p></td></tr></tbody></table></article></div>
-</div></main>
+</div>
+</main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">

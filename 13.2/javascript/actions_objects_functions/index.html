@@ -55,6 +55,36 @@
 </div>
 </div>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 </nav>
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
@@ -5859,7 +5889,7 @@ wlHttp.Get(“http://something”);
 
 …
 
-&lt;any valid JavaScript code&gt;
+`&lt;any valid JavaScript code&gt;`
 
 …
 
@@ -6762,7 +6792,7 @@ Post the form from frame1.html
 <p><strong>Example</strong></p>
 <p>DefineConcurrent()</p>
 <p>…</p>
-<p><any and="" code,="" get="" including="" javascript="" post="" requests="" valid=""> wlHttp.DocName = "document"</any></p>
+<p><code>&lt;any valid JavaScript code, including Post and Get requests&gt;</code> wlHttp.DocName = "document"</p>
 <p>…</p>
 <p>ExecuteConcurrent()</p>
 <p>for (i=0;i&lt;wlConcurrentDocuments.length;i++) InfoMessage("index "+i+" : "+wlConcurrentDocuments[i].URL)</p>
@@ -6984,7 +7014,7 @@ Post the form from frame1.html
 <p>find out how many element objects are contained within forms[1], check the value of:</p>
 <p>document.forms[1].elements.length</p>
 <p>You can access a member of the elements collection either by its index number or by its HTML name attribute. For example, suppose that the first element of a form is coded by the HTML tag.</p>
-<p><input name="“yourname”" type="“text”"/></p>
+<p><code>&lt;INPUT type=“text” name=“yourname”&gt;</code></p>
 <p>You can access this element by writing either of the following expressions:</p>
 <p>document.forms[0].elements[0] document.forms[0].elements[“yourname”] document.forms[0].elements.yourname document.forms[0].yourname</p>
 <p><strong>Example</strong></p>
@@ -7101,7 +7131,7 @@ Post the form from frame1.html
 
 …
 
-&lt;any valid JavaScript code&gt;
+`&lt;any valid JavaScript code&gt;`
 
 …
 
@@ -7554,7 +7584,7 @@ wlHttp.Post(“http://www.ABCDEF.com/submit.cgi”)
 <p>Access the first child window using the following expression:</p>
 <p><code>frames[0]</code></p>
 <p>Access the first child window’s link objects directly using the following syntax:</p>
-<p><code>frames[0]</code>.<code>frames[0]</code>.links[#].&lt;<em>property</em>&gt;</p>
+<p><code>frames[0]</code>.<code>frames[0]</code>.links[#].<code>&lt;*property*&gt;</code></p>
 <p>For example:</p>
 <p><code>document.`frames[0]</code>.links[0].protocol`</p>
 <p><strong>Properties</strong></p>
@@ -8559,7 +8589,7 @@ Frame0_0 = wlHtml.GetFrameByUrl(“*/MyCompany/*”,Frame0)
 <p>The requested location object.</p>
 <p><strong>Example</strong></p>
 <p>Suppose the HTML on a page contains:</p>
-<p><a <a="" href="http://MyCompany/link1.html">href=“http://MyCompany/link1.html</a>”&gt;Product information <code>&lt;/A&gt;</code></p>
+<p><code>&lt;A [href=“http://MyCompany/link1.html](http://MyCompany/link1.html)”&gt;</code>Product information <code>&lt;/A&gt;</code></p>
 <p>In this example,</p>
 <p><code>wlHtml.GetLinkByUrl(“*link1.htm*”)</code></p>
 <p>returns a location object for <a href="http://MyCompany/link1.html">http://MyCompany/link1.html.</a></p>
@@ -9588,7 +9618,7 @@ IncludeFile(“MyFunction.js”)
 <p>To find out how many link objects are contained within a document, check the value of:</p>
 <p>document.links.length</p>
 <p>Access each link’s properties directly using the following syntax:</p>
-<p>document.links[#].&lt;<em>link-property</em>&gt;</p>
+<p>document.links[#].<code>&lt;*link-property*&gt;</code></p>
 <p><strong>Example</strong></p>
 <p><code>document.links[1].protocol</code></p>
 <p><strong>Properties</strong></p>
@@ -9780,7 +9810,7 @@ wlGlobals.ProbingClientThreads = “Single”
 <p>location objects are local to a single thread. You cannot create new location objects using the JavaScript new operator, but you can access HTML locations through the properties and methods of the standard DOM objects. The properties of location are read-only.</p>
 <p><strong>Syntax</strong></p>
 <p>Access the location’s properties directly using the following syntax:</p>
-<p>document.location.&lt;<em>location-property</em>&gt;</p>
+<p>document.location.<code>&lt;*location-property*&gt;</code></p>
 <p><strong>Properties</strong></p>
 <blockquote>
 <p><strong>Note:</strong> The properties of location are identical to those of link. The only exception is that location has no target property. Also, the location object is not part of any collection. The location properties are listed below for reference.</p>
@@ -11911,7 +11941,7 @@ read response
 <li><a href="#wllocals-object">wlLocals</a></li>
 </ul>
 <p><strong>Description</strong></p>
-<p>SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings\<user name="">\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = “file-name” to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.</user></p>
+<p>SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings`<user name="">`\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = “file-name” to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.</user></p>
 <p>Only statistics calculated by the Load Generator are supported. Statistics like hits/second are not sent and empty statistics, for example, RoundTime where no round was completed within a time slice, are sent as -1.</p>
 <p><strong>Example</strong></p>
 <p>wlGlobals.SendClientStatistics = true</p>
@@ -13332,7 +13362,7 @@ wlHttp.Post(url)
 <p><strong>Example</strong></p>
 <p>In the following code fragment:</p>
 <p><code>&lt;A HREF=“newpage.htm” TARGET=“_top”&gt; Go to New Page.</code></p>
-<p></p>
+<p><code>&lt;/A&gt;</code></p>
 <p>The target property would equal “_top” and the link will load the page into the top frame of the current frameset.</p>
 <p><strong>Comment</strong></p>
 <p>While link and location objects share most of their properties, the target</p>
@@ -13475,7 +13505,7 @@ wlHttp.Post(url)
 <p><strong>Description</strong></p>
 <p>This function enables you to validate a HTML Web page’s title.</p>
 <p><strong>Syntax</strong></p>
-<p>wlVerification.Title(<code>&lt;ExpectedTitle&gt;</code>, <code>&lt;Severity&gt;</code>\<functionname> [, <code>&lt;ErrorMessage&gt;</code>\<functionarguments>])</functionarguments></functionname></p>
+<p>wlVerification.Title(<code>&lt;ExpectedTitle&gt;</code>, <code>&lt;Severity&gt;</code>`<functionname><code>[,</code><errormessage><code>\</code><functionarguments>`])</functionarguments></errormessage></functionname></p>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
@@ -13579,7 +13609,7 @@ sendEmailTo(emailAddress, errorMessage)
 <p><strong>Syntax</strong></p>
 <p>element:</p>
 <p>When working with element objects, use the lowercase form:</p>
-<p><na></na></p>
+<p><code>&lt;NA&gt;</code></p>
 <p>wlHttp.Data:</p>
 <p>When working with wlHttp.Data objects, use the uppercase form:</p>
 <p>wlHttp.Data.Type = “application/x-www-form-urlencoded”</p>
@@ -13617,7 +13647,7 @@ sendEmailTo(emailAddress, errorMessage)
 <p>If the parent object is wlMetas, then if httpEquiv=“REFRESH” and the content property holds a URL, then the URL is extracted and stored in a link object (read- only).</p>
 <p><strong>Example</strong></p>
 <p><strong>Area, element, form, frame, image, link, location:</strong></p>
-<p><na></na></p>
+<p><code>&lt;NA&gt;</code></p>
 <p><strong>wlGlobals</strong>:</p>
 <p>wlGlobals.Url = <a href="http://www.ABCDEF.com/">“http://www.ABCDEF.com</a>”</p>
 <p><strong>wlMetas</strong>:</p>
@@ -13739,7 +13769,7 @@ sendEmailTo(emailAddress, errorMessage)
 <p>When working with wlHttp.Data or wlHttp.Header objects, this property holds the value of the data string being submitted through an HTTP Post command.</p>
 <p><strong>Syntax</strong></p>
 <p><strong>For elements and options:</strong></p>
-<p><na></na></p>
+<p><code>&lt;NA&gt;</code></p>
 <p><strong>For wlHeaders:</strong></p>
 <p><code>document.wlHeaders[*index#*].value = “TextString”</code></p>
 <p>For example:</p>
@@ -13919,7 +13949,7 @@ return WLMinorError
 <p>Access the properties (document, location, or frames) of the first child window with the following expressions:</p>
 <p><code>frames[0]</code>.<code>&lt;child-property&gt;</code></p>
 <p>-Or-</p>
-<p><code>document.</code>frames[0]``.&lt;<em>child-property</em>&gt;</p>
+<p><code>document.</code>frames[0]<code>`.</code>&lt;<em>child-property</em>&gt;`</p>
 <p>For example:</p>
 <p><code>frames[0]</code>.location</p>
 <p>-Or-</p>
@@ -14330,7 +14360,7 @@ else {
 <p>wlHeaders objects are local to a single thread. You cannot create new wlHeaders objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlHeaders properties are read only.</p>
 <p><strong>Syntax</strong></p>
 <p>wlHeaders objects are grouped together within collections of wlHeaders. To access an individual wlHeaders’s properties, check the length property of the wlHeaders collection and use an index number to access the individual wlHeaders object, with the following syntax:</p>
-<p>NumberofHeaderObjects = document.wlHeaders.length document.wlHeaders[<em>index</em>#].&lt;<em>wlHeaders-property</em>&gt;</p>
+<p>NumberofHeaderObjects = document.wlHeaders.length document.wlHeaders[<em>index</em>#].<code>&lt;*wlHeaders-property*&gt;</code></p>
 <p><strong>Example</strong></p>
 <p>WebLOAD stores the header pairs from the response to the most recent Get, Post, or Head command in the document.wlHeaders collection. The following statement would retrieve an HTTP header:</p>
 <p>wlHttp.Head(“<a href="http://www.ABCDEF.com/">http://www.ABCDEF.com</a>”)</p>
@@ -14513,7 +14543,7 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior]
 <p>Each wlMetas object stores the parsed data for an HTML meta object (<code>&lt;META&gt;</code> tag). wlMetas objects are local to a single thread. You cannot create new wlMetas objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlMetas properties are read only.</p>
 <p><strong>Syntax</strong></p>
 <p>wlMetas objects are grouped together within collections of wlMetas. To access an individual wlMetas’s properties, check the length property of the wlMetas collection and use an index number to access the individual wlMetas object, with the following syntax:</p>
-<p>NumberofMetaObjects = document.wlMetas.length document.wlMetas[#].&lt;<em>wlMetas-property</em>&gt;</p>
+<p>NumberofMetaObjects = document.wlMetas.length document.wlMetas[#].<code>&lt;*wlMetas-property*&gt;</code></p>
 <p><strong>Example</strong></p>
 <p>To find out how many wlMetas objects are contained within a document header, check the value of:</p>
 <p>document.wlMetas.length</p>
@@ -14934,7 +14964,7 @@ wlHttp.Get()
 <p>wlTables objects are grouped together within collections of wlTables. The tables are arranged in the order in which they appear on the HTML page.</p>
 <p><strong>Syntax</strong></p>
 <p>To access an individual wlTables’s properties, check the length property of the wlTables collection and use an index number to access the individual wlTables object, with the following syntax:</p>
-<p>NumberofTableObjects = document.wlTables.length document.wlTables[<em>index</em>#].&lt;<em>wlTables-property</em>&gt;</p>
+<p>NumberofTableObjects = document.wlTables.length document.wlTables[<em>index</em>#].<code>&lt;*wlTables-property*&gt;</code></p>
 <p><strong>Example</strong></p>
 <p>Access each wlTables’s properties directly through the index number of that item. For example:</p>
 <p>document.wlTables[0].cols</p>
@@ -15118,9 +15148,9 @@ NewParam1 = wlTimeParam("%Y-%m-%d %H:%M:%S", 1200, wlParamUpdateRound);
 <p>XML DOM objects are grouped together within wlXmls collections. The XML DOM objects are arranged in the order in which they appear on the HTML page.</p>
 <p>To access an individual XML DOM object’s data and Document Interface, check the length property of the wlXmls collection and use an index number to access the individual XML DOM object.</p>
 <p>Access the <em>HTML properties</em> for each XML DOM object directly using the following syntax:</p>
-<p>document.wlXmls[#].&lt;<em>html-DOM property</em>&gt;</p>
+<p>document.wlXmls[#].<code>&lt;*html-DOM property*&gt;</code></p>
 <p>Access the <em>XML DOM Document Interface</em> for each document element directly using the following syntax:</p>
-<p>document.wlXmls[#].XMLDocument.documentElement.&lt;<em>property</em>&gt;</p>
+<p>document.wlXmls[#].XMLDocument.documentElement.<code>&lt;*property*&gt;</code></p>
 <p><strong>Example</strong></p>
 <p>To find out how many XML DOM objects are contained within a document, check the value of:</p>
 <p><code>document.wlXmls.length</code></p>

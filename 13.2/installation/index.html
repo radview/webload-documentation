@@ -54,6 +54,36 @@
 </div>
 </div>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 </nav>
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
@@ -1090,6 +1120,17 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-webrm">
+<span class="md-ellipsis">
+      Installing WebRM
+    </span>
+</a>
+<nav aria-label="Installing WebRM" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#upgrading-webload">
 <span class="md-ellipsis">
@@ -1313,6 +1354,17 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-webrm">
+<span class="md-ellipsis">
+      Installing WebRM
+    </span>
+</a>
+<nav aria-label="Installing WebRM" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#upgrading-webload">
 <span class="md-ellipsis">
@@ -1573,7 +1625,7 @@
 <td>Silent mode</td>
 </tr>
 <tr>
-<td>/DIR="<destination directory="">”</destination></td>
+<td>/DIR="<code>&lt;destination  directory&gt;</code>”</td>
 <td>Destination directory</td>
 </tr>
 <tr>
@@ -1589,15 +1641,15 @@
 <td>Install TestTalk as a service</td>
 </tr>
 <tr>
-<td>/DOMAIN="<domain name="">"</domain></td>
+<td>/DOMAIN="<code>&lt;domain name&gt;</code>"</td>
 <td>The domain in  which to install for service installation</td>
 </tr>
 <tr>
-<td>/USERNAME="<user name="">"</user></td>
+<td>/USERNAME="<code>&lt;user  name&gt;</code>"</td>
 <td>The user name for service  installation</td>
 </tr>
 <tr>
-<td>/PASS="<user password="">"</user></td>
+<td>/PASS="<code>&lt;user password&gt;</code>"</td>
 <td>The password of the service  installation</td>
 </tr>
 <tr>
@@ -1632,7 +1684,7 @@
 <blockquote>
 <p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#registering-and-updating-the-webload-license">Registering and Updating the WebLOAD License</a>. </p>
 </blockquote>
-<p>Installing WebRM</p>
+<h3 id="installing-webrm">Installing WebRM</h3>
 <p><strong>To install WebRM:</strong> </p>
 <ol>
 <li>
@@ -1736,7 +1788,7 @@
 <li>Type = host </li>
 <li>Database = all </li>
 <li>User = all </li>
-<li>IP address = <ip mask="" subnet="">.0.1.1/24, where <ip mask="" subnet=""> is your organization’s IP subnet mask. </ip></ip></li>
+<li>IP address = <code>&lt;IP subnet mask&gt;</code>.0.1.1/24, where <code>&lt;IP subnet mask&gt;</code> is your organization’s IP subnet mask. </li>
 <li>Method = md5 </li>
 </ul>
 </li>
@@ -1774,7 +1826,7 @@
 <ol>
 <li>Change directories by typing the following: </li>
 </ol>
-<p>cd radview/webload<version number="">/linux/bin </version></p>
+<p>cd radview/webload<code>&lt;version number&gt;</code>/linux/bin </p>
 <ol>
 <li>Run setup by typing the following: </li>
 </ol>
@@ -1798,7 +1850,7 @@
 <ol>
 <li>Open the linux/bin directory within your working directory by typing the following: </li>
 </ol>
-<p>cd <working-directory>/linux/bin </working-directory></p>
+<p>cd <code>&lt;working-directory&gt;</code>/linux/bin </p>
 <ol>
 <li>Run TestTalk by typing the following: ./starttestalk </li>
 </ol>
@@ -1930,17 +1982,17 @@
 <p>The default content is as follows: </p>
 <p><code>&lt;tns\_name&gt; =</code> </p>
 <p><code>(DESCRIPTION =</code> </p>
-<p><code>(ADDRESS = (PROTOCOL = TCP)(HOST = &lt;host or ip&gt;)(PORT = 1521))    (CONNECT\_DATA =</code> </p>
+<p><code>(ADDRESS = (PROTOCOL = TCP)(HOST =</code><host ip="" or=""><code>)(PORT = 1521))    (CONNECT\_DATA =</code> </host></p>
 <p><code>(SERVER = DEDICATED)</code> </p>
-<p><code>(SERVER\_NAME = &lt;instance\_name&gt;)</code> </p>
+<p><code>(SERVER\_NAME =</code><instance\_name><code>)</code> </instance\_name></p>
 <p><code>)</code> </p>
 <p><code>)</code> </p>
 </blockquote>
 <ol>
 <li>Make the following definitions in the file: </li>
 </ol>
-<p>​       tns_name = <tns (default="" configured="" in="" listener="" name="" on="" orcl)="" server="" the=""> host = <hostname address="" ip="" of="" or="" server="" the=""> </hostname></tns></p>
-<p>​       instance name = <instance (default="" configured="" on="" orcl)="" server="" the=""> </instance></p>
+<p>​       tns_name = <code>&lt;tns name configured in the listener on the server (default orcl)&gt;</code> host = <code>&lt;hostname or IP address of the server&gt;</code> </p>
+<p>​       instance name = <code>&lt;instance configured on the server (default orcl)&gt;</code> </p>
 <p>​       Log out and log in, or restart, to activate the environmental variables. </p>
 <h2 id="uninstalling-webload">Uninstalling WebLOAD</h2>
 <p>When you uninstall WebLOAD, you are prompted to remove PostgreSQL 8.3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL 8.3 installed in order to maintain all the information stored in the database. </p>
