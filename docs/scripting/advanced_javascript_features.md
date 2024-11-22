@@ -46,9 +46,9 @@ WebLOAD XML DOM objects produced from HTML documents may be used on two differen
 
 
 ### **Data Islands**
-Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of <xml> and </xml> tags or between a set of <script> and </script> tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.
+Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of `<xml>` and `</xml>` tags or between a set of `<script>` and `</script>` tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.
 
-WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of <xml> tags or a set of <script> tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.
+WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of `<xml>` tags or a set of `<script>` tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.
 
 
 
@@ -77,7 +77,7 @@ If a Data Island is identified by name through an ID, you could also access the 
 
 Island through the id property. For example, if the first Data Island begins:
 
-<xml id=“xmlBookstoreDatabase”>
+`<xml id=“xmlBookstoreDatabase”>`
 
 Then you could access the Data Island using any of the following:
 

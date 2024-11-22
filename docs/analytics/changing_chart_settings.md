@@ -157,7 +157,7 @@ The statistics-based time filter enables you to specify a numeric filter for eac
 
 5. Select the measurement that you wish to filter from the top list. 
 
-5. In the Operator column, select an operator from the drop-down list (≤, <, =, >, or ≥). 
+5. In the Operator column, select an operator from the drop-down list (`≤, <, =, >, or ≥`). 
 
 5. Enter a value in the Value field. 
 

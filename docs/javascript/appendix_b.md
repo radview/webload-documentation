@@ -70,7 +70,7 @@ The tables in this appendix list the properties and methods of the interfaces su
 | **Property**    | **Description**                                              |
 | --------------- | ------------------------------------------------------------ |
 | attributes      | A read-only property that returns a  NamedNodeMap containing attributes for this node. |
-| BaseName        | A read-only property that  returns the right-hand side of a namespace qualified name. For example, yyy for the element <xxx:yyy>. BaseName must always return a non-empty string. |
+| BaseName        | A read-only property that  returns the right-hand side of a namespace qualified name. For example, yyy for the element `<xxx:yyy>`. BaseName must always return a non-empty string. |
 | childNode       | A read-only property that returns a NodeList  containing all children of the node. |
 | DataType        | A read-write property that indicates the node  type.         |
 | Definition      | A read-only property whose value is the  node that contains the definition for this node. |
@@ -86,10 +86,10 @@ The tables in this appendix list the properties and methods of the interfaces su
 | OwnerDocument   | A property that indicates  the document to which the node belongs or when the node is removed from a  document. |
 | parentNode      | A read-only property that provides a  pointer to the parent. |
 | parsed          | A read-only property that  indicates that this node and all of its descendants have been parsed and  instantiated. This is used in conjunction with asynchronous access to the  document. |
-| prefix          | A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, xxx for  the element  <xxx:yyy>. If there is no  prefix specified, ““ is returned. |
+| prefix          | A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, xxx for  the element  `<xxx:yyy>`. If there is no  prefix specified, ““ is returned. |
 | previousSibling | A read-only property that  returns the node immediately preceding this node in the children of this  node’s parent. Returns null if no such node exists. |
 | specified       | A read-only property  indicating the node was specified directly in the XML source and not implied  by the DTD schema. |
-| text            | A string representing the  content of the element and all descendents. For example “content of tag” in  <sometag size=34> content of  tag  </sometag>. |
+| text            | A string representing the  content of the element and all descendents. For example “content of tag” in  `<sometag size=34>` content of  tag  `</sometag>`. |
 | xml             | A read-only property that  returns the XML representation of the node and all its descendants as a  string. |
 
 

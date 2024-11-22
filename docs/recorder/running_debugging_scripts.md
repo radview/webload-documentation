@@ -838,7 +838,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    | *Content*                                           |                                                              |
    | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing](#_bookmark126) *[Multiple Text Validations of Web Page Content* ](#_bookmark126)*. |
    | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
-   | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "<text to find>" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
+   | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "`<text to find>`" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
    | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
    | **Add Parameter**                                   | Opens a list of parameters you can include in the **contains/does not contain** text. This list is identical to the list available in the Insert Variable menu ([*Figure 54*](#_bookmark68)). |
    | *In case of validation failure*                     |                                                              |
@@ -865,7 +865,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 1. Click **Add**.
 
-   The box above the Add button displays **“<text to find>”**.
+   The box above the Add button displays **“`<text to find>`”**.
 
    ![Defining Content Validation](../images/def_cont_val.png)
 
@@ -873,7 +873,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 1. Define a JavaScript expression and whether it must or must not appear in the Web page, as follows:
 
-   1. Delete the string **“<text to find>”** and instead do either or both of the following:
+   1. Delete the string **“`<text to find>`”** and instead do either or both of the following:
 
       - Enter a text string enclosed in quote marks. For example, "**Welcome**".
       - Enter a parameter without quote marks. For example, **TodaysDate()**. Alternatively, you can click **Add Parameter** and select a parameter from the list of predefined parameters.
@@ -957,7 +957,7 @@ enables you to convert the dynamic value into the correct value for the specific
 
 1. In the subsequent block of code, replace
 
-   wlHttp.FormData[“session\_id”] = <static session id>
+   wlHttp.FormData[“session\_id”] = `<static session id>`
 
    with
 

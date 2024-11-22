@@ -64,7 +64,7 @@ Nagios integration is carried out by adding the Nagios data source in the Perfor
 After integrating WebLOAD with Nagios, you can specify, while running a session, which Nagios statistics to view in the report view.
 
 1. Open a report as described in [*Opening Reports* ](console_performance_reports.md#opening-reports).
-1. In the **PM@<Nagios-host>** node, select the statistics you wish to display in the report.
+1. In the **PM@`<Nagios-host>`** node, select the statistics you wish to display in the report.
 
 
 

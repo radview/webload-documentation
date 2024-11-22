@@ -117,11 +117,11 @@ Application-level transactions and verifications are defined through the WebLOAD
 
 
 ```javascript
-BeginTransaction(“<Transaction-Name>“)
+BeginTransaction(“`<Transaction-Name>`“)
 
-<any valid JavaScript statements> EndTransaction(“<Transaction-Name>“,
+`<any valid JavaScript statements>` EndTransaction(“`<Transaction-Name>`“,
 
-<Verification-Expression>,<Save-Flag>)
+`<Verification-Expression>`,`<Save-Flag>`)
 ```
 
 Where:

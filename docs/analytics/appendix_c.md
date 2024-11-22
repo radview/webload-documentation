@@ -11,7 +11,7 @@ Two executables are available:
 - WLAnalyticsCMD.exe – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes. 
 - WLAnalytics.exe – Launches the WebLOAD Analytics UI, and generates a report for a specified session.  
 
-The executables are located in *<Installation dir>*\bin. For example: C:\Program Files\RadView\WebLOAD\bin.
+The executables are located in *`<Installation dir>`*\bin. For example: C:\Program Files\RadView\WebLOAD\bin.
 
 
 

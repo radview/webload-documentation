@@ -24,7 +24,7 @@ Creates a new WebSocket for the given URL, and returns a JavaScript object refer
 
 **Syntax**
 
-`<websocket object name>` = **new WebSocket (<\*URL\*>)**;
+`<websocket object name>` = **new WebSocket (`<\*URL\*>`)**;
 
 **Parameters**
 
@@ -74,7 +74,7 @@ Closes the WebSocket connection.
 
 **Syntax**
 
-<*websocket object name*>.**close()**
+`<*websocket object name*>`.**close()**
 
 **Example**
 
@@ -92,7 +92,7 @@ Sends data to a WebSocket connection.
 
 **Syntax**
 
-<*websocket object name*>.**send(data[ ,encoded])**
+`<*websocket object name*>`.**send(data[ ,encoded])**
 
 **Parameters**
 

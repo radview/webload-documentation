@@ -1003,7 +1003,7 @@ WebLOAD handles authentication in playback in the following way:
 
       wlGlobals.AuthType = "Kerberos".
 
-      wlGlobals.KDCServer = <server name>. If no value is specified for KDCServer, the authentication type is automatically assumed to be NTLM, even if the AuthType is Kerberos.
+      wlGlobals.KDCServer = `<server name>`. If no value is specified for KDCServer, the authentication type is automatically assumed to be NTLM, even if the AuthType is Kerberos.
 
 The following examples demonstrate the authentication processes in WebLOAD.
 

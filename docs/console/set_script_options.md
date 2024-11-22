@@ -158,13 +158,13 @@ Sleep time is a pause to simulate the intermittent activity of real users. WebLO
 
 4. In **Sleep Time in Transactions**, specify how to calculate and display transaction timers:
 
-   - **Transaction timers include sleep time (‘Transaction Time’)** – If you select this option, then if a transaction includes sleep commands, by default the sleep times will be included in the transaction time. The transaction time measurement will be called “Transaction *<transaction name>* Time”.
+   - **Transaction timers include sleep time (‘Transaction Time’)** – If you select this option, then if a transaction includes sleep commands, by default the sleep times will be included in the transaction time. The transaction time measurement will be called “Transaction *`<transaction name>`* Time”.
 
-   - **Transaction timers exclude sleep time (‘Transaction Net Time’)** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. The transaction time measurement will be called “Transaction *<transaction name>* Net Time”.
+   - **Transaction timers exclude sleep time (‘Transaction Net Time’)** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. The transaction time measurement will be called “Transaction *`<transaction name>`* Net Time”.
 
-   - **Transaction timers exclude sleep time, but named ‘Transaction Time’** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. However, the transaction time measurement will be called “Transaction *<transaction name>* Time” (without the word “Net” in the parameter name).
+   - **Transaction timers exclude sleep time, but named ‘Transaction Time’** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. However, the transaction time measurement will be called “Transaction *`<transaction name>`* Time” (without the word “Net” in the parameter name).
 
-   - **Both timers – including and excluding sleep time** – If you select this option, then if a transaction includes a sleep command, by default, two timers will be displayed. One timer, called “Transaction *<transaction name>* Time”, will show the transaction time if sleep time is included in the transaction time. The second timer, called “Transaction *<transaction name>* Net Time”, will show the transaction time if sleep time is excluded from the transaction time.
+   - **Both timers – including and excluding sleep time** – If you select this option, then if a transaction includes a sleep command, by default, two timers will be displayed. One timer, called “Transaction *`<transaction name>`* Time”, will show the transaction time if sleep time is included in the transaction time. The second timer, called “Transaction *`<transaction name>`* Net Time”, will show the transaction time if sleep time is excluded from the transaction time.
 
 5. Click **OK** to accept the modifications, or **Cancel** to reject them, and exit the Default/ Current Session Options dialog box.
 
@@ -614,7 +614,7 @@ On each Load Generator.
 
    C:\Program Files (x86)\RadView\WebLOAD\bin.
 
-   Alternatively, copy the ipfw folder to any other location, and in the C:\Program Files (x86)\RadView\WebLOAD\bin\networkemulation.ini file, set IPFW\_PATH="<path>/ipfw.exe".
+   Alternatively, copy the ipfw folder to any other location, and in the C:\Program Files (x86)\RadView\WebLOAD\bin\networkemulation.ini file, set IPFW\_PATH="`<path>`/ipfw.exe".
 
 1. Install the NDIS driver as follows:
    1. Open the configuration panel for the network card in use by right-clicking the icon on the systray, or by selecting **Control Panel** -> **Network** and then selecting the card.
@@ -1075,7 +1075,7 @@ The Java options enable you to define the Java Virtual Machine to be used by Web
 
 3. In the Select run-time JVM to be drop down, select one of the available Java Virtual Machines.
 
-   The default setting is the WebLOAD standard Java Virtual Machine. The selected value is passed to wlGlobals.JVMtype and is the key for WLJVMs.xml. This XML file (located on every WebLOAD Machine in the <WebLOAD Installation Directory>\extensions\JVMs directory) contains the following parameters for each JVM:
+   The default setting is the WebLOAD standard Java Virtual Machine. The selected value is passed to wlGlobals.JVMtype and is the key for WLJVMs.xml. This XML file (located on every WebLOAD Machine in the `<WebLOAD Installation Directory>`\extensions\JVMs directory) contains the following parameters for each JVM:
 
    - Type (the value from the flag)
 

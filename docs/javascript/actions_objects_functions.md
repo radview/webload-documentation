@@ -203,7 +203,7 @@ BeginTransaction(TransName, [SleepTime])
 
 …
 
-<any valid JavaScript code>
+`<any valid JavaScript code>`
 
 …
 
@@ -1314,7 +1314,7 @@ DefineConcurrent()
 
 …
 
-<any valid JavaScript code, including Post and Get requests> wlHttp.DocName = "document"
+`<any valid JavaScript code, including Post and Get requests>` wlHttp.DocName = "document"
 
 …
 
@@ -1589,7 +1589,7 @@ document.forms[1].elements.length
 
 You can access a member of the elements collection either by its index number or by its HTML name attribute. For example, suppose that the first element of a form is coded by the HTML tag.
 
-<INPUT type=“text” name=“yourname”>
+`<INPUT type=“text” name=“yourname”>`
 
 You can access this element by writing either of the following expressions:
 
@@ -1751,7 +1751,7 @@ BeginTransaction(TransName)
 
 …
 
-<any valid JavaScript code>
+`<any valid JavaScript code>`
 
 …
 
@@ -2306,7 +2306,7 @@ Access the first child window using the following expression:
 
 Access the first child window’s link objects directly using the following syntax:
 
-`frames[0]`.`frames[0]`.links[#].<*property*>
+`frames[0]`.`frames[0]`.links[#].`<*property*>`
 
 For example:
 
@@ -3437,7 +3437,7 @@ The requested location object.
 
 Suppose the HTML on a page contains:
 
-<A [href=“http://MyCompany/link1.html](http://MyCompany/link1.html)”>Product information `</A>`
+`<A [href=“http://MyCompany/link1.html](http://MyCompany/link1.html)”>`Product information `</A>`
 
 In this example,
 
@@ -4773,7 +4773,7 @@ document.links.length
 
 Access each link’s properties directly using the following syntax:
 
-document.links[#].<*link-property*>
+document.links[#].`<*link-property*>`
 
 **Example**
 
@@ -4995,7 +4995,7 @@ location objects are local to a single thread. You cannot create new location ob
 
 Access the location’s properties directly using the following syntax:
 
-document.location.<*location-property*>
+document.location.`<*location-property*>`
 
  **Properties**
 
@@ -7550,7 +7550,7 @@ The SendBufferSize property defines the amount of space allocated to the outgoin
 
 **Description**
 
-SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings\<user name>\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = “file-name” to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.
+SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings\`<user name>`\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = “file-name” to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.
 
 Only statistics calculated by the Load Generator are supported. Statistics like hits/second are not sent and empty statistics, for example, RoundTime where no round was completed within a time slice, are sent as -1.
 
@@ -9179,7 +9179,7 @@ In the following code fragment:
 
 `<A HREF=“newpage.htm” TARGET=“_top”> Go to New Page.`
 
-</A>
+`</A>`
 
 The target property would equal “_top” and the link will load the page into the top frame of the current frameset.
 
@@ -9369,7 +9369,7 @@ This function enables you to validate a HTML Web page’s title.
 
 **Syntax**
 
-wlVerification.Title(`<ExpectedTitle>`, `<Severity>`\<FunctionName> [, `<ErrorMessage>`\<FunctionArguments>])
+wlVerification.Title(`<ExpectedTitle>`, `<Severity>`\`<FunctionName>` [, `<ErrorMessage>`\`<FunctionArguments>`])
 
 **Parameters**
 
@@ -9487,7 +9487,7 @@ element:
 
 When working with element objects, use the lowercase form:
 
-<NA>
+`<NA>`
 
 wlHttp.Data:
 
@@ -9539,7 +9539,7 @@ If the parent object is wlMetas, then if httpEquiv=“REFRESH” and the content
 
 **Area, element, form, frame, image, link, location:**
 
-<NA>
+`<NA>`
 
 **wlGlobals**:
 
@@ -9718,7 +9718,7 @@ When working with wlHttp.Data or wlHttp.Header objects, this property holds the 
 
 **For elements and options:**
 
-<NA>
+`<NA>`
 
 **For wlHeaders:**
 
@@ -9982,7 +9982,7 @@ Access the properties (document, location, or frames) of the first child window 
 
 -Or-
 
-`document.`frames[0]``.<*child-property*>
+`document.`frames[0]``.`<*child-property*>`
 
 For example:
 
@@ -10494,7 +10494,7 @@ wlHeaders objects are local to a single thread. You cannot create new wlHeaders 
 
 wlHeaders objects are grouped together within collections of wlHeaders. To access an individual wlHeaders’s properties, check the length property of the wlHeaders collection and use an index number to access the individual wlHeaders object, with the following syntax:
 
-NumberofHeaderObjects = document.wlHeaders.length document.wlHeaders[*index*#].<*wlHeaders-property*>
+NumberofHeaderObjects = document.wlHeaders.length document.wlHeaders[*index*#].`<*wlHeaders-property*>`
 
 **Example**
 
@@ -10733,7 +10733,7 @@ Each wlMetas object stores the parsed data for an HTML meta object (`<META>` tag
 
 wlMetas objects are grouped together within collections of wlMetas. To access an individual wlMetas’s properties, check the length property of the wlMetas collection and use an index number to access the individual wlMetas object, with the following syntax:
 
-NumberofMetaObjects = document.wlMetas.length document.wlMetas[#].<*wlMetas-property*>
+NumberofMetaObjects = document.wlMetas.length document.wlMetas[#].`<*wlMetas-property*>`
 
 **Example**
 
@@ -11251,7 +11251,7 @@ wlTables objects are grouped together within collections of wlTables. The tables
 
 To access an individual wlTables’s properties, check the length property of the wlTables collection and use an index number to access the individual wlTables object, with the following syntax:
 
-NumberofTableObjects = document.wlTables.length document.wlTables[*index*#].<*wlTables-property*>
+NumberofTableObjects = document.wlTables.length document.wlTables[*index*#].`<*wlTables-property*>`
 
 **Example**
 
@@ -11483,11 +11483,11 @@ To access an individual XML DOM object’s data and Document Interface, check th
 
 Access the *HTML properties* for each XML DOM object directly using the following syntax:
 
-document.wlXmls[#].<*html-DOM property*>
+document.wlXmls[#].`<*html-DOM property*>`
 
 Access the *XML DOM Document Interface* for each document element directly using the following syntax:
 
-document.wlXmls[#].XMLDocument.documentElement.<*property*>
+document.wlXmls[#].XMLDocument.documentElement.`<*property*>`
 
 **Example**
 

@@ -180,9 +180,9 @@ syntax as programs are being written. IntelliSense supports the following shortc
 
   [Figure 52](#_bookmark67)).
 
-- <CTRL> <Space> – While typing the name of an object, you can type <CTRL>
+- `<CTRL>` `<Space>` – While typing the name of an object, you can type `<CTRL>`
 
-  <Space> to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).
+  `<Space>` to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).
 
 In addition, the IntelliSense Editor gives a structure to the code with the outline bar and line numbering.
 
@@ -304,7 +304,7 @@ page [228](#_bookmark203)).
 
    
 
-1. Replace the placeholder <Block Type> with a description. For example: Replace <Block Type> with URL.
+1. Replace the placeholder `<Block Type>` with a description. For example: Replace `<Block Type>` with URL.
 
 1. Add the JavaScript code after the WebLOAD Recorder protocol block header. The code is added to the script.
 
@@ -339,11 +339,11 @@ The command or function selected is inserted on a new line in the script, immedi
 
 Use the following guidelines to edit commands and functions you have placed in a script through the JavaScript Editor:
 
-- Placeholders between brackets < > that appear in generic examples *must* be replaced with the literal name of a variable.
+- Placeholders between brackets `< >` that appear in generic examples *must* be replaced with the literal name of a variable.
 
   For example, the generic example:
   
-  `wlHttp.PassWord = “<Password>“`
+  `wlHttp.PassWord = “`<Password>`“`
   
   must be replaced with the string:
   
@@ -369,11 +369,11 @@ Use the following guidelines to edit commands and functions you have placed in a
   
   `wlHttp.Header[“proxy-connection”]=“Keep-Alive”`
 
-- In a WebLOAD Recorder protocol block, replace the placeholder <Block Type>with a description. 
+- In a WebLOAD Recorder protocol block, replace the placeholder `<Block Type>`with a description. 
 
   For example:
 
-  <Block Type>
+  `<Block Type>`
 
   can be replaced with:
 

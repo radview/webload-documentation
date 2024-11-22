@@ -77,7 +77,7 @@ For more information, see [*Configuring the Correlation Rules* ](#_bookmark89).
 ### Performing Auto-discovery Correlation for Specific Values
 WebLOAD enables you to perform correlation with auto-discovery of rules for any value you select in a script. This provides correlation when normal auto-discovery is not sufficient. Auto-discovery correlation for specific values can be used instead of normal auto-discovery in the following cases:
 
-- **Partial values** – Since auto-discovery only searches for exact matches, if the dynamic value you wish to correlate is part of the sent value, it is not found. For example, in `wlHttp.FormData[“data”]=”session\*1234” or wlHttp.FormData[“data”]=”<xml><data sessionid= 1234/><xml>”`, if only 1234 is dynamic, normal auto-discovery does not find this value.
+- **Partial values** – Since auto-discovery only searches for exact matches, if the dynamic value you wish to correlate is part of the sent value, it is not found. For example, in `wlHttp.FormData[“data”]=”session\*1234” or wlHttp.FormData[“data”]=”`<xml>`<data sessionid= 1234/>`<xml>`”`, if only 1234 is dynamic, normal auto-discovery does not find this value.
 
   > **Note:** The only exception is in POST and GET commands, where the parameter name or values are replaced.
 

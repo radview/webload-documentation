@@ -74,7 +74,7 @@ When running a test invoked by the executable, you can specify the following par
 |/ag `<script name>`|The name of an existing script (\*.wlp) to open.|Optional parameter|
 
 
-The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag </ar> flag is not set, the <file name to save> and the <time> parameters are ignored.
+The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag `</ar>` flag is not set, the `<file name to save>` and the `<time>` parameters are ignored.
 
 > **Note:** If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.
 

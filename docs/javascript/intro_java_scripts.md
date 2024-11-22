@@ -238,7 +238,7 @@ The following table lists the DOM objects commonly used in scripts. A detailed d
 | **frame**                    | Each frame  object  represents one of the frames imbedded within a Web page. Frames and windows  are essentially comparable. The recursive aspect of the DOM is implemented at  this level. A window may contain a collection of frames. Each frame may  contain multiple child windows, each of which may contain more frames that  contain more windows, and so on. |
 | **location**                 | The location object contains  information on the current window URL. |
 | **link**                     | A link object contains  information on an external document to which the current document is linked. |
-| **form, element, and input** | A form  object  contains the set of elements and input controls (text, radio buttons,  checkboxes, etc.) that are all components of a single form. Each element  object stores the parsed data for a single HTML form element such as <INPUT>, <BUTTON>, or <SELECT>. Each input object  stores the information defining one of the input controls in the form.  Controls are organized by type, for example input type=checkbox.  Forms enable client-side  users to submit data to a server in a standardized format. A form is designed  to collect the required data using a variety of controls, such as INPUT or SELECT. Users viewing the form  fill in the data and then click the SUBMIT button to send it to the server. A script on the server then  processes the data. Notice that the object syntax corresponds to a path  through the DOM hierarchy tree, beginning at the root window and continuing  until the specified item’s properties. |
+| **form, element, and input** | A form  object  contains the set of elements and input controls (text, radio buttons,  checkboxes, etc.) that are all components of a single form. Each element  object stores the parsed data for a single HTML form element such as `<INPUT>`, `<BUTTON>`, or `<SELECT>`. Each input object  stores the information defining one of the input controls in the form.  Controls are organized by type, for example input type=checkbox.  Forms enable client-side  users to submit data to a server in a standardized format. A form is designed  to collect the required data using a variety of controls, such as INPUT or SELECT. Users viewing the form  fill in the data and then click the SUBMIT button to send it to the server. A script on the server then  processes the data. Notice that the object syntax corresponds to a path  through the DOM hierarchy tree, beginning at the root window and continuing  until the specified item’s properties. |
 | **image**                    | Each image  object  contains one of the embedded images found in a document. |
 | **script**                   | A script  object  defines a script for the current document that will be interpreted by a  script engine. |
 | **title**                    | The title  object  contains the document title, stored as a text string. |
@@ -408,9 +408,9 @@ Add new lines of code to your script or edit existing JavaScript functions throu
 
 [Figure 2](#_bookmark19)).
 
-**<CTRL> <Space>** – While typing the name of an object, you can type <CTRL>
+**`<CTRL>` `<Space>`** – While typing the name of an object, you can type `<CTRL>`
 
-<Space> to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).
+`<Space>` to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).
 
 In addition, the IntelliSense Editor gives a structure to the code with the outline bar and line numbering.
 

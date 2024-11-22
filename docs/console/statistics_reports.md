@@ -108,12 +108,12 @@ The following list displays the various statistics, by context. The displays the
 - HTTP Response Status
 - Content Size
 - Report statistics – The statistics collected by the reportStatistics command in a Selenium script. Refer to the *Navigation Timing Statistics* table in the *Selenium Integration* appendix of the *WebLOAD™ Recorder User’s Guide*.
-- <User-Defined> statistics:
+- `<User-Defined>` statistics:
   - Automatic Data Collection
   - Timer
   - Counters
   - Transaction Timers
-  - Total <transaction name> TPS
+  - Total `<transaction name>` TPS
   - Transaction Counters
 - Java andActiveX Timers
 - Java and ActiveX Counters

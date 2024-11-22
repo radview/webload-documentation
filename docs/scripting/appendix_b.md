@@ -4,7 +4,7 @@ This appendix describes using LiveConnect technology to let Java and JavaScript 
 
 [http://www.js-examples.com/page/reference	partjava.html](http://www.js-examples.com/page/reference__partjava.html)).
 
-This appendix assumes you are familiar with Java programming. For additional information on LiveConnect, see the LiveConnect information on the Mozilla Developer Center (<http://developer.mozilla.org/en/docs/LiveConnect>).
+This appendix assumes you are familiar with Java programming. For additional information on LiveConnect, see the LiveConnect information on the Mozilla Developer Center (`<http://developer.mozilla.org/en/docs/LiveConnect>`).
 
 
 

@@ -712,7 +712,7 @@ The Service Level Agreement (SLA) Manager allows you to define conditions (SLA b
 
      If you specify the message text, the log will display the specified text.
 
-     If you do not specify the message text, the log message will display the default SLA message format which begins with “SLA <SLA rule name> failed”.
+     If you do not specify the message text, the log message will display the default SLA message format which begins with “SLA `<SLA rule name>` failed”.
 
      Note that a log message will appear in the log every time the SLA rule conditions are met, even if they are met multiple times in the course of load test execution.
 

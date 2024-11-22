@@ -79,13 +79,13 @@ Where the flags (case sensitive) are:
 | Option                          | Description                                                  |
 | ------------------------------- | ------------------------------------------------------------ |
 | /SILENT                         | Silent mode                                                  |
-| /DIR="<destination  directory>” | Destination directory                                        |
+| /DIR="`<destination  directory>`” | Destination directory                                        |
 | /TYPE=Agent                     | Install a Load Generator only                                |
 | /TYPE=Dashboard                 | Install the Web Dashboard only                               |
 | /SERVICE                        | Install TestTalk as a service                                |
-| /DOMAIN="<domain name>"         | The domain in  which to install for service installation     |
-| /USERNAME="<user  name>"        | The user name for service  installation                      |
-| /PASS="<user password>"         | The password of the service  installation                    |
+| /DOMAIN="`<domain name>`"         | The domain in  which to install for service installation     |
+| /USERNAME="`<user  name>`"        | The user name for service  installation                      |
+| /PASS="`<user password>`"         | The password of the service  installation                    |
 | /MANUAL                         | How to start the  service. If not set, the service will start automatically |
 | /NOCHECK                        | Do not check for a previous installation                     |
 
@@ -116,7 +116,7 @@ Install the WebLOAD components as follows:
 
 
 
-Installing WebRM
+### Installing WebRM
 
 **To install WebRM:** 
 
@@ -221,7 +221,7 @@ For WebLOAD Analytics clients to work with the remote database, you must perform
       - Type = host 
       - Database = all 
       - User = all 
-      - IP address = <IP subnet mask>.0.1.1/24, where <IP subnet mask> is your organization’s IP subnet mask. 
+      - IP address = `<IP subnet mask>`.0.1.1/24, where `<IP subnet mask>` is your organization’s IP subnet mask. 
       - Method = md5 
    4. Enable the entry and save the file. 
 
@@ -267,7 +267,7 @@ This chapter contains the instructions for installing the WebLOAD Load Engine on
 
 4. Change directories by typing the following: 
 
-   cd radview/webload<version number>/linux/bin 
+   cd radview/webload`<version number>`/linux/bin 
 
 5. Run setup by typing the following: 
 
@@ -299,7 +299,7 @@ When running the Load Engine on Linux, Load Engine runs with TestTalk. TestTalk 
 
 1. Open the linux/bin directory within your working directory by typing the following: 
 
-   cd <working-directory>/linux/bin 
+   cd `<working-directory>`/linux/bin 
 
 2. Run TestTalk by typing the following: ./starttestalk 
 
@@ -489,11 +489,11 @@ The following procedure is confirmed to work with Oracle Database version 11*g*,
    >
    > `(DESCRIPTION =`  
    >
-   > `(ADDRESS = (PROTOCOL = TCP)(HOST = <host or ip>)(PORT = 1521))    (CONNECT\_DATA =`  
+   > `(ADDRESS = (PROTOCOL = TCP)(HOST = `<host or ip>`)(PORT = 1521))    (CONNECT\_DATA =`  
    >
    > `(SERVER = DEDICATED)` 
    >
-   > `(SERVER\_NAME = <instance\_name>)` 
+   > `(SERVER\_NAME = `<instance\_name>`)` 
    >
    > `)` 
    >
@@ -501,9 +501,9 @@ The following procedure is confirmed to work with Oracle Database version 11*g*,
 
 1. Make the following definitions in the file: 
 
-​		tns\_name = <tns name configured in the listener on the server (default orcl)> host = <hostname or IP address of the server> 
+​		tns\_name = `<tns name configured in the listener on the server (default orcl)>` host = `<hostname or IP address of the server>` 
 
-​		instance name = <instance configured on the server (default orcl)> 
+​		instance name = `<instance configured on the server (default orcl)>` 
 
 ​		Log out and log in, or restart, to activate the environmental variables. 
 

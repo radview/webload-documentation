@@ -78,14 +78,14 @@ Use the following syntax to define the parameters for running a WebLOAD test thr
 | :- | :- | :- |
 |File name to open|The name of the \*.tpl or \*.ls file (Load Template or Load Session file) to run.|Optional parameter|
 |File name to save|The name of the \*.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.|Optional parameter|
-|Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar *<*time*>* – Automatically run the test for the length of time specified in *<time>/*</p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc <num>– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *<*results\_file\_name*>* – Place the results in the specified file (an XML file).</p><p>- /ag <script name> - The name of an existing script (\*.wlp) to open.</p>|Optional parameter|
+|Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar *`<*time*>`* – Automatically run the test for the length of time specified in *`<time>`/*</p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc `<num>`– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *`<*results\_file\_name*>`* – Place the results in the specified file (an XML file).</p><p>- /ag `<script name>` - The name of an existing script (\*.wlp) to open.</p>|Optional parameter|
 
 
 
 
-The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag </ar> flag is not set, the
+The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag `</ar>` flag is not set, the
 
-<file name to save> and the <time> parameters are ignored.
+`<file name to save>` and the `<time>` parameters are ignored.
 
 > **Note:** If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.
 
@@ -139,7 +139,7 @@ WebLOAD Analytics can be executed in command line mode. This enables incorporati
 - **WLAnalyticsCMD.exe** – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes.
 - **WLAnalytics.exe** – Launches the WebLOAD Analytics UI, and generates a report for a specified session.
 
-The executables are located in *<Installation dir>*\bin. For example:
+The executables are located in *`<Installation dir>`*\bin. For example:
 
 `C:\Program Files\RadView\WebLOAD\bin.`
 
