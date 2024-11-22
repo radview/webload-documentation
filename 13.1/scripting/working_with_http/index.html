@@ -1,173 +1,96 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="Product documentation for RadView WebLOAD">
-      
-      
-      
-      
-        <link rel="prev" href="../advanced_javascript_features/">
-      
-      
-        <link rel="next" href="../using_asynchronous/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
-    
-    
-      
-        <title>Working with HTTP Protocol - WebLOAD Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#working-with-http-protocol" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../advanced_javascript_features/" rel="prev"/>
+<link href="../using_asynchronous/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Working with HTTP Protocol - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#working-with-http-protocol">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="WebLOAD Documentation" class="md-header__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             WebLOAD Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Working with HTTP Protocol
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-    
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
         
   
     
@@ -175,16 +98,9 @@
   Home
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../quickstart/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
         
   
     
@@ -192,144 +108,65 @@
   Quick Start
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../recorder/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
           
   
   Recorder
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
           
   
   Scripting
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../console/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
           
   
   Console
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../dashboard/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
           
   
   Dashboard
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../automation/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
           
   
   Automation
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../javascript/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
           
   
   JavaScript Reference
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../analytics/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
           
   
   Analytics
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
         
   
     
@@ -337,3284 +174,1392 @@
   Installation
 
       </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-    
-  
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="WebLOAD Documentation" class="md-nav__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
     WebLOAD Documentation
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
     Home
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
     Quick Start
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
     Recorder
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             Recorder
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
     Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/before_you_begin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
     Before you Begin
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/quick_start/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
     QuickStart
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/recording_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
     Recording Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/editing_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
     Editing Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
     Correlating Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
     Running and Debugging Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/working_with_git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
     Working with GIT
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
     Configuring the WebLOAD Recorder Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - The WebLOAD Recorder Toolbox Set
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - WebLOAD Recorder File Types
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - Launching WebLOAD Recorder
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - Converting Certificate Files
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - Recording Mobile Applications
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_f/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
     Appendix F - Integrating with Perfecto Mobile
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_g/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
     Appendix G - Selenium Integration
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_h/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
     Appendix H - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
     Scripting
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             Scripting
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../programming_your_javascript/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../programming_your_javascript/">
+<span class="md-ellipsis">
     Programming your JavaScript Script
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advanced_javascript_features/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../advanced_javascript_features/">
+<span class="md-ellipsis">
     Advanced JavaScript Script Features
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     Working with HTTP Protocol
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
     Working with HTTP Protocol
   </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-the-webload-dom-structure" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-webload-dom-structure">
+<span class="md-ellipsis">
       Understanding the WebLOAD DOM Structure
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-multiple-ip-addresses" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-multiple-ip-addresses">
+<span class="md-ellipsis">
       Using Multiple IP Addresses
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Multiple IP Addresses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-ip-addresses-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Using Multiple IP Addresses" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-ip-addresses-in-the-script">
+<span class="md-ellipsis">
       Generating IP Addresses in the script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parsing-web-pages" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-web-pages">
+<span class="md-ellipsis">
       Parsing Web Pages
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parsing Web Pages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Parsing Web Pages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page">
+<span class="md-ellipsis">
       Parsing and Navigating Nested Frames on a Dynamic HTML Page
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-wlhtml-to-follow-a-dynamic-link" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-wlhtml-to-follow-a-dynamic-link">
+<span class="md-ellipsis">
       Using wlHtml to Follow a Dynamic Link
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#data-submission-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-submission-properties">
+<span class="md-ellipsis">
       Data Submission Properties
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Submission Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#formdata" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Data Submission Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formdata">
+<span class="md-ellipsis">
       FormData
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="FormData">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-formdata-using-get" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="FormData" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-formdata-using-get">
+<span class="md-ellipsis">
       Getting FormData Using Get
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-formdata-using-post" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-using-post">
+<span class="md-ellipsis">
       Submitting FormData Using Post()
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-formdata-with-missing-fields" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-with-missing-fields">
+<span class="md-ellipsis">
       Submitting FormData with Missing Fields
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-formdata-with-data-files" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-formdata-with-data-files">
+<span class="md-ellipsis">
       Using FormData with Data Files
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data">
+<span class="md-ellipsis">
       Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#datafile" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datafile">
+<span class="md-ellipsis">
       DataFile
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#header">
+<span class="md-ellipsis">
       Header
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#erase" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase">
+<span class="md-ellipsis">
       Erase
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Erase">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#erasetrue-default" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Erase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasetrue-default">
+<span class="md-ellipsis">
       Erase=true (default)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#erasefalse" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasefalse">
+<span class="md-ellipsis">
       Erase=false
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#posting-form-data-using-elements" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#posting-form-data-using-elements">
+<span class="md-ellipsis">
       Posting form Data Using Elements
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-cookies-through-the-wlcookie-object" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-cookies-through-the-wlcookie-object">
+<span class="md-ellipsis">
       Managing Cookies through the wlCookie Object
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Managing Cookies through the wlCookie Object">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-wlcookie-object" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Managing Cookies through the wlCookie Object" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlcookie-object">
+<span class="md-ellipsis">
       The wlCookie Object
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#how-webload-works-with-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-webload-works-with-cookies">
+<span class="md-ellipsis">
       How WebLOAD Works with Cookies
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wlcookie-methods" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlcookie-methods">
+<span class="md-ellipsis">
       wlCookie Methods
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-a-cookie" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-cookie">
+<span class="md-ellipsis">
       Example: using a cookie
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-binary-data">
+<span class="md-ellipsis">
       Handling Binary Data
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling Binary Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recording-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Handling Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data">
+<span class="md-ellipsis">
       Recording Binary Data
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Recording Binary Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recording-binary-data-as-a-data-file" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Recording Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data-as-a-data-file">
+<span class="md-ellipsis">
       Recording Binary Data as a Data File
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#encoding-binary-data-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encoding-binary-data-in-the-script">
+<span class="md-ellipsis">
       Encoding Binary Data in the script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-authentication-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-authentication-in-the-script">
+<span class="md-ellipsis">
       Handling Authentication in the Script
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../using_asynchronous/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_asynchronous/">
+<span class="md-ellipsis">
     Using Asynchronous Requests
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Scripting Samples
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
     Appendix B - LiveConnect Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
     Console
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
             Console
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/introducing_webload/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
     Introducing WebLOAD
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/quickstart/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
     Quick Start
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/console_features/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
     Console Features
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_load_templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
     Creating Load Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/plan_test_session/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
     Planning a Test Session
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/connect_webrm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
     Connecting to WebRM
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/manage_load_templates_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
     Managing Load Templates and Load Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_template_wizard/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
     Creating Load Templates with the WebLOAD Wizard
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_load_test_goal/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
     Creating Load Templates with Goal-Oriented Test
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/config_load_template/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
     Configuring a Load Template Manually
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/set_global_opt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
     Setting Global Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/set_script_options/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
     Setting Script Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/func_verifi_test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
     Functional Verification Testing
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/run_test_analyze_results/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
     Running Tests and Analyzing  Test Results
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/running_a_load_session/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
     Running a Load Session
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/working_with_git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
     Working with Git
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/viewing_log_window/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
     Viewing the Log Window
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/console_performance_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
     WebLOAD Console Performance Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/statistics_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
     WebLOAD Statistics Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/data_drilling_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
     Data Drilling Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/export_performance_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
     Exporting Performance Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/performance_measurements_manager/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
     Performance Measurements Manager
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - Integrating with Dynatrace
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - Integrating with Nagios
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - Integrating with New Relic
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - WebLOAD Console Error Messages
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_f/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
     Appendix F - Reference Materials
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_g/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
     Appendix G - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
     Dashboard
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
             Dashboard
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
     Installation
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/manage_tests/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
     Managing Test
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
     Managing Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_resources/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
     Managing Resources
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
     Using Dashboards
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
     Customizing a Dashboard
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
     Managing Dashboards
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
     Sharing a Dashboard or Panel
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
     Creating and Playing a Playlist
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
     Managing Load Generators
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
     Managing Organizations, Users, and Admins
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Editing WebLOAD Dashboard Configuration
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
     Automation
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
             Automation
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
     Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_cli/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
     Running WebLOAD from the Command Line
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_jenkins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
     Running WebLOAD in Jenkins
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_openapi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Running WebLOAD Using the OpenAPI
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
     JavaScript Reference
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
             JavaScript Reference
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/intro_java_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
     Introduction to JavaScript
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/using_javascript_ref/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
     Using the WebLOAD JavaScript Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/actions_objects_functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
     WebLOAD Actions, Objects, and Functions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/internet_protocol/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
     WebLOAD Internet Protocols Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/xmlparser/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
     XML Parser Object
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/websocket_object/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
     WebSocket Object
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - WebLOAD-supported SSL Protocol Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - WebLOAD-supported XML DOM Interfaces
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - HTTP Protocol Status Messages
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - WebLOAD-supported Character Sets
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
     Analytics
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
             Analytics
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
     WebLOAD Analytics System Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/generating_charts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
     Generating Charts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
     Changing Chart Settings
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/generating_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
     Generating Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/load_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
     Working with Load Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
     Working with Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/portfolios/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
     Working with Portfolios
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/defining_preferences/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
     Defining Your Preferences
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
     Appendix A. WebLOAD Analytics File System Structure
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
     Appendix B. Understanding the Statistics
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
     Appendix C. Running Analytics in Command Line Mode
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
     Appendix D. Understanding the Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/glossary/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
     Appendix E. Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
     Installation
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-the-webload-dom-structure" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-webload-dom-structure">
+<span class="md-ellipsis">
       Understanding the WebLOAD DOM Structure
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-multiple-ip-addresses" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-multiple-ip-addresses">
+<span class="md-ellipsis">
       Using Multiple IP Addresses
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Multiple IP Addresses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-ip-addresses-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Using Multiple IP Addresses" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-ip-addresses-in-the-script">
+<span class="md-ellipsis">
       Generating IP Addresses in the script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parsing-web-pages" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-web-pages">
+<span class="md-ellipsis">
       Parsing Web Pages
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parsing Web Pages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Parsing Web Pages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page">
+<span class="md-ellipsis">
       Parsing and Navigating Nested Frames on a Dynamic HTML Page
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-wlhtml-to-follow-a-dynamic-link" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-wlhtml-to-follow-a-dynamic-link">
+<span class="md-ellipsis">
       Using wlHtml to Follow a Dynamic Link
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#data-submission-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-submission-properties">
+<span class="md-ellipsis">
       Data Submission Properties
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Submission Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#formdata" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Data Submission Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formdata">
+<span class="md-ellipsis">
       FormData
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="FormData">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-formdata-using-get" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="FormData" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-formdata-using-get">
+<span class="md-ellipsis">
       Getting FormData Using Get
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-formdata-using-post" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-using-post">
+<span class="md-ellipsis">
       Submitting FormData Using Post()
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#submitting-formdata-with-missing-fields" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-with-missing-fields">
+<span class="md-ellipsis">
       Submitting FormData with Missing Fields
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-formdata-with-data-files" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-formdata-with-data-files">
+<span class="md-ellipsis">
       Using FormData with Data Files
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data">
+<span class="md-ellipsis">
       Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#datafile" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datafile">
+<span class="md-ellipsis">
       DataFile
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#header">
+<span class="md-ellipsis">
       Header
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#erase" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase">
+<span class="md-ellipsis">
       Erase
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Erase">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#erasetrue-default" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Erase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasetrue-default">
+<span class="md-ellipsis">
       Erase=true (default)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#erasefalse" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasefalse">
+<span class="md-ellipsis">
       Erase=false
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#posting-form-data-using-elements" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#posting-form-data-using-elements">
+<span class="md-ellipsis">
       Posting form Data Using Elements
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-cookies-through-the-wlcookie-object" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-cookies-through-the-wlcookie-object">
+<span class="md-ellipsis">
       Managing Cookies through the wlCookie Object
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Managing Cookies through the wlCookie Object">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-wlcookie-object" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Managing Cookies through the wlCookie Object" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlcookie-object">
+<span class="md-ellipsis">
       The wlCookie Object
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#how-webload-works-with-cookies" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-webload-works-with-cookies">
+<span class="md-ellipsis">
       How WebLOAD Works with Cookies
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wlcookie-methods" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlcookie-methods">
+<span class="md-ellipsis">
       wlCookie Methods
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-a-cookie" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-cookie">
+<span class="md-ellipsis">
       Example: using a cookie
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-binary-data">
+<span class="md-ellipsis">
       Handling Binary Data
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling Binary Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recording-binary-data" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Handling Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data">
+<span class="md-ellipsis">
       Recording Binary Data
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Recording Binary Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recording-binary-data-as-a-data-file" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Recording Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data-as-a-data-file">
+<span class="md-ellipsis">
       Recording Binary Data as a Data File
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#encoding-binary-data-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encoding-binary-data-in-the-script">
+<span class="md-ellipsis">
       Encoding Binary Data in the script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-authentication-in-the-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-authentication-in-the-script">
+<span class="md-ellipsis">
       Handling Authentication in the Script
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="working-with-http-protocol">Working with HTTP Protocol</h1>
 <p>Website load testing usually means testing how typical user activities are handled by the system under test not in a single-user scenario but rather under heavy usage load. Using load testing, we can test the system’s performance, scalability and reliability, all in real-life simulated usage scenarios and patterns. A system’s performance is all about how fast it functions; its reliability is about how often it’s available (where a system might be unavailable due to a lack of a certain resource or because of a bug); and a</p>
 <p>system’s scalability is about how these two factors (performance and reliability) change as the usage of the system increases.</p>
@@ -3723,7 +1668,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">wlGetAllForms</td>
-<td style="text-align: left;">Retrieves a collection of all forms (<FORM> elements) in an HTML page and its nested frames.</td>
+<td style="text-align: left;">Retrieves a collection of all forms (<form> elements) in an HTML page and its nested frames.</form></td>
 </tr>
 <tr>
 <td style="text-align: left;">wlGetAllFrames</td>
@@ -3731,7 +1676,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">wlGetAllLinks</td>
-<td style="text-align: left;">Retrieves a collection of all links (<A> elements) in an HTML page and its nested frames.</td>
+<td style="text-align: left;">Retrieves a collection of all links (<a> elements) in an HTML page and its nested frames.</a></td>
 </tr>
 </tbody>
 </table>
@@ -3761,7 +1706,7 @@
 <p><strong>To generate IP addresses in the script:</strong></p>
 <ol>
 <li>
-<p>Locate the FillIP.bat file in <WebLOAD directory>\bin.</p>
+<p>Locate the FillIP.bat file in <webload directory="">\bin.</webload></p>
 </li>
 <li>
 <p>Run the batch file by entering the file name in the command line or double-clicking the file.</p>
@@ -3870,7 +1815,7 @@ function InitClient()
 
 //Download the dynamic HTML page
 
-[wlHttp.Get(&quot;http://www.webloadmpstore.com/general_sample/frames/](http://www.webloadmpstore.com/general_sample/frames/) frames.htm&quot;)
+[wlHttp.Get("http://www.webloadmpstore.com/general_sample/frames/](http://www.webloadmpstore.com/general_sample/frames/) frames.htm")
 
 //Retrieve the second frame MyFrame = document.frames[1] InfoMessage(MyFrame)
 
@@ -3878,7 +1823,7 @@ InfoMessage(MyFrame.document.wlSource)
 
 //Confirm that the &lt;TITLE&gt; element of the frame is
 
-//&quot;Offer of the Hour&quot;. If it is not, display an error
+//"Offer of the Hour". If it is not, display an error
 
 //message and abort the current round.
 
@@ -3886,17 +1831,17 @@ InfoMessage(MyFrame.document.wlSource)
 
 // Using extractValue to catch the title
 
-myTitle = extractValue( &quot;&lt;title&gt;&quot;, &quot;&lt;\/title&gt;&quot;, MyFrame.document.wlSource)
+myTitle = extractValue( "&lt;title&gt;", "&lt;\/title&gt;", MyFrame.document.wlSource)
 
 // will print the content of the title InfoMessage (myTitle )
 
-if (myTitle != &quot;offer of the hour&quot;)
+if (myTitle != "offer of the hour")
 
 {
 
-ErrorMessage(&quot;Thread &quot; + ClientNum.toString() + &quot;, Round &quot; +
+ErrorMessage("Thread " + ClientNum.toString() + ", Round " +
 
-RoundNum.toString() + &quot;: Title is not ‘Offer of the Hour’ but is &quot; + myTitle )
+RoundNum.toString() + ": Title is not ‘Offer of the Hour’ but is " + myTitle )
 
 
 
@@ -3930,7 +1875,7 @@ LinkUrl = MyFrame.document.links[SelectedItem].href InfoMessage(LinkUrl )
 </ul>
 <pre><code class="language-javascript">function InitAgenda()
 
-//Set the default URL to the dynamic HTML home page wlGlobals.Url = [&quot;http://www.ABCDEF.com&quot;](http://www.ABCDEF.com/)
+//Set the default URL to the dynamic HTML home page wlGlobals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)
 
 //Parse links. Forms are not needed. wlGlobals.ParseLinks = true wlGlobals.ParseForms = false
 
@@ -3948,9 +1893,9 @@ LinkUrl = MyFrame.document.links[SelectedItem].href InfoMessage(LinkUrl )
 
 // See IdentifyObject() for the dynamic ASM alternative Link3 = wlHtml.GetLinkByIndex(3)
 
-//Measure the time to connect to the link SetTimer(&quot;Link Time&quot;) wlHttp.Get(Link3.href)
+//Measure the time to connect to the link SetTimer("Link Time") wlHttp.Get(Link3.href)
 
-SendTimer(&quot;Link Time&quot;)
+SendTimer("Link Time")
 </code></pre>
 <h2 id="data-submission-properties">Data Submission Properties</h2>
 <p>You may submit many types of data to an HTTP server in a Get, Post, or Head command. For example, you can submit a search string, the results of form fields, or a file. You may assign values to variable data stored in these collections using the wlSet method.</p>
@@ -4043,9 +1988,9 @@ SendTimer(&quot;Link Time&quot;)
 
 /\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:4 \*\*\*\*\*/
 
-wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)&quot;
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://ws3/webft/index.asp&quot;](http://ws3/webft/index.asp) [wlHttp.Get(&quot;http://ws3/webft/fullform.asp&quot;)](http://ws3/webft/fullform.asp)
+wlHttp.Header["Referer"] = ["http://ws3/webft/index.asp"](http://ws3/webft/index.asp) [wlHttp.Get("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)
 
 // END WLIDE
 
@@ -4055,15 +2000,15 @@ wlHttp.Header[&quot;Referer&quot;] = [&quot;http://ws3/webft/index.asp&quot;](ht
 
 /\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:6 \*\*\*\*\*/
 
-wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)&quot;
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://ws3/webft/fullform.asp&quot;](http://ws3/webft/fullform.asp) wlHttp.FormdataEncodingType = 1
+wlHttp.Header["Referer"] = ["http://ws3/webft/fullform.asp"](http://ws3/webft/fullform.asp) wlHttp.FormdataEncodingType = 1
 
-wlHttp.ContentType = &quot;application/x-www-form-urlencoded&quot; **wlHttp.FormData[&quot;text1&quot;] = &quot;user1&quot; wlHttp.FormData[&quot;password1&quot;] = &quot;password1&quot;**
+wlHttp.ContentType = "application/x-www-form-urlencoded" **wlHttp.FormData["text1"] = "user1" wlHttp.FormData["password1"] = "password1"**
 
 
 
-####### **wlHttp.FormData[&quot;textarea1&quot;] = &quot;some text&quot; wlHttp.FormData[&quot;checkbox1&quot;] = &quot;second value&quot; wlHttp.FormData[&quot;select1&quot;] = &quot;first select value&quot; wlHttp.FormData[&quot;submit2&quot;] = &quot;Submit2&quot; [wlHttp.Post(&quot;http://ws3/webft/fullform.asp&quot;)](http://ws3/webft/fullform.asp)**
+####### **wlHttp.FormData["textarea1"] = "some text" wlHttp.FormData["checkbox1"] = "second value" wlHttp.FormData["select1"] = "first select value" wlHttp.FormData["submit2"] = "Submit2" [wlHttp.Post("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)**
 // END WLIDE
 
 ...
@@ -4072,9 +2017,9 @@ wlHttp.ContentType = &quot;application/x-www-form-urlencoded&quot; **wlHttp.Form
 
 \*\*\*\*\*/
 
-wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)&quot;
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
 
-[wlHttp.Get(&quot;http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-upload.html&quot;)
+[wlHttp.Get("http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-upload.html")
 
 // END WLIDE
 
@@ -4086,17 +2031,17 @@ wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; T
 
 ID:18 \*\*\*\*\*/
 
-wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)&quot;
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-[upload.html&quot;](http://ws3/upload/ssl-upload.html) wlHttp.EncodeFormdata = false;
+wlHttp.Header["Referer"] = ["http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-[upload.html"](http://ws3/upload/ssl-upload.html) wlHttp.EncodeFormdata = false;
 
-wlHttp.ContentType = &quot;multipart/form-data&quot; **wlHttp.FormData[&quot;text&quot;] = &quot;abcd&quot; wlHttp.FormData[&quot;uploadFile[].wlFile-Name&quot;] = &quot;a.txt&quot; wlHttp.FormData[&quot;uploadFile[].wlContent-Type&quot;] = &quot;text/plain&quot;**
-####### **wlHttp.FormData[&quot;uploadFile[].wlFile-Name&quot;] = &quot;$WL$EMPTY$STRING$&quot;**
-####### **wlHttp.FormData[&quot;uploadFile[].wlContent-Type&quot;] = &quot;application/octet-stream&quot;**
-####### **wlHttp.FormData[&quot;uploadFile[].wlFile-Name&quot;] = &quot;$WL$EMPTY$STRING$&quot;**
-####### **wlHttp.FormData[&quot;uploadFile[].wlContent-Type&quot;] = &quot;application/octet-stream&quot;**
-####### **wlHttp.FormData[&quot;submit&quot;] = &quot;Submit Query&quot;**
-[wlHttp.Post(&quot;http://ws3/upload/ssl](http://ws3/upload/ssl-upload-handler.php)-upload-[handler.php&quot;)](http://ws3/upload/ssl-upload-handler.php)
+wlHttp.ContentType = "multipart/form-data" **wlHttp.FormData["text"] = "abcd" wlHttp.FormData["uploadFile[].wlFile-Name"] = "a.txt" wlHttp.FormData["uploadFile[].wlContent-Type"] = "text/plain"**
+####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
+####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
+####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
+####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
+####### **wlHttp.FormData["submit"] = "Submit Query"**
+[wlHttp.Post("http://ws3/upload/ssl](http://ws3/upload/ssl-upload-handler.php)-upload-[handler.php")](http://ws3/upload/ssl-upload-handler.php)
 
 // END WLIDE
 </code></pre>
@@ -4112,17 +2057,17 @@ wlHttp.ContentType = &quot;multipart/form-data&quot; **wlHttp.FormData[&quot;tex
 <p>Thus the following three code samples are equivalent:</p>
 <pre><code>//Sample 1 wlHttp.Data.Type =
 
-&quot;application/x-www-form-urlencoded&quot; wlHttp.Data.Value =
+"application/x-www-form-urlencoded" wlHttp.Data.Value =
 
-&quot;SearchFor=icebergs&amp;SearchType=ExactTerm&quot; [wlHttp.Post(&quot;http://www.ABCDEF.com/query.exe&quot;)](http://www.ABCDEF.com/query.exe)
+"SearchFor=icebergs&amp;SearchType=ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
 
 //Sample 2
 
-wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &quot;ExactTerm&quot; [wlHttp.Post(&quot;http://www.ABCDEF.com/query.exe&quot;)](http://www.ABCDEF.com/query.exe)
+wlHttp.FormData.SearchFor = "icebergs" wlHttp.FormData.SearchType = "ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
 
 //Sample 3 wlHttp.Post
 
-[(&quot;http://www.ABCDEF.com/query.exe&quot; ](http://www.ABCDEF.com/query.exe)+ &quot;?SearchFor=icebergs&amp;SearchType=ExactTerm&quot;)
+[("http://www.ABCDEF.com/query.exe" ](http://www.ABCDEF.com/query.exe)+ "?SearchFor=icebergs&amp;SearchType=ExactTerm")
 
 
 </code></pre>
@@ -4145,7 +2090,7 @@ wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &q
 </li>
 </ul>
 <p><code>"c:\\MyWebloadData\\BigFile.doc"</code></p>
-<p>WebLOAD sends the contents of the file stored in <filename> in the Post command.</p>
+<p>WebLOAD sends the contents of the file stored in <filename> in the Post command.</filename></p>
 <h3 id="header"><strong>Header</strong></h3>
 <p>A collection of HTTP header fields that you want to send in a Get(), Post(), or</p>
 <p>Head() call.</p>
@@ -4153,7 +2098,7 @@ wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &q
 <p><code>Accept: \*/\*</code></p>
 <p><code>User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0) Host: &lt;host&gt;</code></p>
 <p><code>Connection:Keep-Alive</code></p>
-<p>Here, <host> is the host name to which you are connecting, for example:</p>
+<p>Here, <host> is the host name to which you are connecting, for example:</host></p>
 <p><code>www.ABCDEF.com:81.</code></p>
 <p>By default, the Referer header is also recorded and sent, where it is being used by the Web server.</p>
 <p>You may reset these properties, for example, as follows:</p>
@@ -4174,7 +2119,7 @@ wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &q
 <p><strong>Note:</strong> Any information set using the wlHttp.Header property <em>takes priority</em> over any defaults set using the global, local, or other wlHttp properties. If there is any discrepancy between the document header information and the HTTP values, WebLOAD will work with the information found in the wlHttp.Header property while also issuing a warning to the user.</p>
 </blockquote>
 <p>WebLOAD offers a simple way to reset configuration properties using the Options tab of the Session Control menu. Resetting configuration properties as you run and rerun various testing scenarios allows you to fine tune your tests to match your exact needs at that moment. However, that this real-time configuration setting will be overruled by any configuration properties that are explicitly set by wlHttp.Header within your test scripts. For greatest reliability and flexibility, WebLOAD recommends that you set header properties using the more general wlGlobals, wlLocals, and wlHttp object properties, fine-tuning your test sessions using the WebLOAD Session menu.</p>
-<p>See <a href="#_bookmark40"><em>Rules of Scope for Local and Global Variables</em> </a>(on page <a href="#_bookmark39">43</a>), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. </p>
+<p>See <a href="#_bookmark40"><em>Rules of Scope for Local and Global Variables</em> </a>, for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. </p>
 <h3 id="erase">Erase</h3>
 <p>Clear the WebLOAD properties of a wlHttp object after each <code>Get(), Post(),</code> or <code>Head()</code> call.</p>
 <p>WlHttp.Erase is a read/write property. The default value is true. This section will describe the implications of each setting.</p>
@@ -4184,7 +2129,7 @@ wlHttp.FormData.SearchFor = &quot;icebergs&quot; wlHttp.FormData.SearchType = &q
 <p>The following script displays the incorrect method of assigning the wlHttp properties:</p>
 <pre><code class="language-javascript">function InitClient() { //Wrong! wlHttp.Url =
 
-[&quot;http://www.ABCDEF.com/products.exe&quot;](http://www.ABCDEF.com/products.exe) wlHttp.FormData[&quot;Name&quot;] = &quot;John Smith&quot; wlHttp.FormData[&quot;Product Interest&quot;] = &quot;Modems&quot;
+["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"
 
 }
 
@@ -4196,15 +2141,15 @@ assignments are executed before each Get(), Post(), or Head() call:
 
 //Main script   //OK wlHttp.Url =
 
-[&quot;http://www.ABCDEF.com/products.ex](http://www.ABCDEF.com/products.exe)e&quot; wlHttp.FormData[&quot;Name&quot;] = &quot;John Smith&quot; wlHttp.FormData[&quot;Product Interest&quot;] = &quot;Modems&quot; wlHttp.Post()
+["http://www.ABCDEF.com/products.ex](http://www.ABCDEF.com/products.exe)e" wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems" wlHttp.Post()
 
 Alternatively, you could assign values to wlLocals properties, which are not erased:
 
 function InitClient() { //OK wlLocals.Url =
 
-[&quot;http://www.ABCDEF.com/products.exe&quot;](http://www.ABCDEF.com/products.exe) wlLocals.FormData[&quot;Name&quot;] = &quot;John Smith&quot; wlLocals.FormData[&quot;Product Interest&quot;] =
+["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlLocals.FormData["Name"] = "John Smith" wlLocals.FormData["Product Interest"] =
 
-&quot;Modems&quot;
+"Modems"
 
 }
 
@@ -4215,7 +2160,7 @@ function InitClient() { //OK wlLocals.Url =
 <p>Thus another way to correct the preceding example is to write:</p>
 <pre><code class="language-javascript">function InitClient() { //OK wlHttp.Erase = false
 
-wlHttp.Url = [&quot;http://www.ABCDEF.com/products.exe&quot;](http://www.ABCDEF.com/products.exe) wlHttp.FormData[&quot;Name&quot;] = &quot;John Smith&quot; wlHttp.FormData[&quot;Product Interest&quot;] = &quot;Modems&quot;
+wlHttp.Url = ["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"
 
 }
 
@@ -4226,14 +2171,14 @@ wlHttp.Url = [&quot;http://www.ABCDEF.com/products.exe&quot;](http://www.ABCDEF.
 <h3 id="posting-form-data-using-elements">Posting form Data Using Elements</h3>
 <p><strong>Note:</strong> This script includes DOM objects that are not explained in this section. For more information about a specific object or usage, (such as wlGlobals or wlHttp), see that object’s section in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
 <p>The home page of a company displays the following form, where a user can specify interest in different products.</p>
-<p><img alt="Home Page Form Example" src="../../images/script_guide_109.png" /></p>
+<p><img alt="Home Page Form Example" src="../../images/script_guide_109.png"/></p>
 <p>The HTML code for the form is:</p>
-<pre><code class="language-html">&lt;FORM action=&quot;http://www.ABCDEF.com/FormProcessor.exe&quot; method=&quot;post&quot;&gt;
+<pre><code class="language-html">&lt;FORM action="http://www.ABCDEF.com/FormProcessor.exe" method="post"&gt;
 
-&lt;P&gt;Your name: &lt;INPUT type=&quot;text&quot; name=&quot;yourname&quot;&gt;
+&lt;P&gt;Your name: &lt;INPUT type="text" name="yourname"&gt;
 
 
-&lt;SELECT name=&quot;interest&quot;&gt;
+&lt;SELECT name="interest"&gt;
 
 
 &lt;OPTION selected&gt;Modems&lt;/OPTION&gt;
@@ -4244,14 +2189,14 @@ wlHttp.Url = [&quot;http://www.ABCDEF.com/products.exe&quot;](http://www.ABCDEF.
 
 &lt;/SELECT&gt;
 
-&lt;INPUT type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+&lt;INPUT type="submit" value="Send"&gt;
 
 &lt;/FORM&gt;
 </code></pre>
 <p>A script can download the form as follows:</p>
 <pre><code class="language-javascript">function InitAgenda() {
 
-wlGlobals.Url = [&quot;http://www.ABCDEF.com&quot;](http://www.ABCDEF.com/) wlGlobals.ParseForms = true
+wlGlobals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/) wlGlobals.ParseForms = true
 
 }
 
@@ -4259,42 +2204,42 @@ wlHttp.Get()
 </code></pre>
 <p>WebLOAD parses the HTML code and creates an elements collection containing the first two form elements (the text box and the drop-down list). WebLOAD does not include the third element (the Send button) in the collection because it does not have a name attribute.</p>
 <p>This is a listing of the elements collection:</p>
-<pre><code class="language-xml">document.forms[0].elements[0].name = &quot;yourname&quot; 
+<pre><code class="language-xml">document.forms[0].elements[0].name = "yourname" 
 
-document.forms[0].elements[0].type = &quot;text&quot; 
+document.forms[0].elements[0].type = "text" 
 
-document.forms[0].elements[0].value = &quot;&quot; 
+document.forms[0].elements[0].value = "" 
 
-document.forms[0].elements[1].name = &quot;interest&quot; 
+document.forms[0].elements[1].name = "interest" 
 
-document.forms[0].elements[1].type = &quot;SELECT&quot; 
+document.forms[0].elements[1].type = "SELECT" 
 
 document.forms[0].elements[1].selectedindex = 0 
 
-document.forms[0].elements[1].options[0].text = &quot;Modems&quot; 
+document.forms[0].elements[1].options[0].text = "Modems" 
 
-document.forms[0].elements[1].options[0].value = &quot;Modems&quot; 
+document.forms[0].elements[1].options[0].value = "Modems" 
 
 document.forms[0].elements[1].options[0].selected = true 
 
-document.forms[0].elements[1].options[1].text = &quot;CD-ROMs&quot; 
+document.forms[0].elements[1].options[1].text = "CD-ROMs" 
 
-document.forms[0].elements[1].options[1].value = &quot;CD-ROMs&quot; 
+document.forms[0].elements[1].options[1].value = "CD-ROMs" 
 
 document.forms[0].elements[1].options[1].selected = false
 </code></pre>
 <p>The script can use the above data to post the form back to the server. The following code illustrates how the script might do this.</p>
 <pre><code class="language-javascript">MyArray = document.forms[0].elements i = 0
 
-while (i &lt; MyArray.length) { switch MyArray[i].type { case &quot;text&quot; :
+while (i &lt; MyArray.length) { switch MyArray[i].type { case "text" :
 
 //Retrieve the default value of a text box wlHttp.FormData[MyArray[i].name] = MyArray[i].value] break
 
-case &quot;SELECT&quot;
+case "SELECT"
 
 //Retrieve the first option in a drop-down list
 
-&lt;a name=&quot;_bookmark127&quot;&gt;&lt;/a&gt;}
+&lt;a name="_bookmark127"&gt;&lt;/a&gt;}
 
 i++
 
@@ -4304,7 +2249,7 @@ wlHttp.FormData[MyArray[i].name]=MyArray[i].options[0].v alue
 
 break
 
-//Post the data to the form server&lt;a name=&quot;managing cookies through the wlcookie ob&quot;&gt;&lt;/a&gt;&lt;a name=&quot;_bookmark128&quot;&gt;&lt;/a&gt; wlHttp.Post(document.forms[0].action)
+//Post the data to the form server&lt;a name="managing cookies through the wlcookie ob"&gt;&lt;/a&gt;&lt;a name="_bookmark128"&gt;&lt;/a&gt; wlHttp.Post(document.forms[0].action)
 </code></pre>
 <h2 id="managing-cookies-through-the-wlcookie-object">Managing Cookies through the wlCookie Object</h2>
 <h3 id="the-wlcookie-object">The wlCookie Object</h3>
@@ -4334,17 +2279,17 @@ break
 </blockquote>
 <h3 id="example-using-a-cookie">Example: using a cookie</h3>
 <p>Cookies are used by applications to store the application requests on the client side. This enables the client to perform a one-time application request and from then on the request information is retrieved from the client’s cookies.</p>
-<pre><code class="language-javascript">//Request information entered into the application wlHttp.ContentType = &quot;application/x-www-form-urlencoded&quot; wlHttp.FormData[&quot;username&quot;] = &quot;zadp10&quot; wlHttp.FormData[&quot;password&quot;] = &quot;Start100&quot; wlHttp.FormData[&quot;submit1&quot;] = &quot;Login&quot;
+<pre><code class="language-javascript">//Request information entered into the application wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["username"] = "zadp10" wlHttp.FormData["password"] = "Start100" wlHttp.FormData["submit1"] = "Login"
 
 //Setting the cookie
 
 wlCookie.Set(“UserID”, “zapd10”, “[www.abcdef.net](http://www.abcdef.net/),”, “/”, “Sun, 19- Jun-2011 17:29:00 GMT”)
 
-//WebLOAD submits the cookie [wlHttp.Post(&quot;https://www.abcdef.net/default.aspx&quot;)](http://www.abcdef.net/default.aspx)
+//WebLOAD submits the cookie [wlHttp.Post("https://www.abcdef.net/default.aspx")](http://www.abcdef.net/default.aspx)
 
 //Getting the cookie
 
-CookieValue = wlCookie.Get(&quot;UserID&quot;)
+CookieValue = wlCookie.Get("UserID")
 
 //The value returned in CookieValue is “zapd10”
 
@@ -4378,7 +2323,7 @@ In some cases it is also necessary to delete the cookie settings. You can do thi
 </li>
 </ol>
 <p>The Post Data tab appears. </p>
-<p><img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_110.png" /></p>
+<p><img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_110.png"/></p>
 <ol>
 <li>
 <p>In the Add New Type field, enter the binary content-type, such as application/x-amf, which is used for binary content generated by a Flash application.</p>
@@ -4392,7 +2337,7 @@ In some cases it is also necessary to delete the cookie settings. You can do thi
 <li>In the Recording and Script Generation Options dialog box, select the <strong>Content Types</strong> tab.</li>
 </ol>
 <p>The Content Types tab appears.</p>
-<p><img alt="Recording and Script Generation Options – Content Types Tab" src="../../images/script_guide_111.png" /></p>
+<p><img alt="Recording and Script Generation Options – Content Types Tab" src="../../images/script_guide_111.png"/></p>
 <ol>
 <li>Ensure that the appropriate binary content-type appears in the Recorded Types area. If the content does not appear, add the binary content type in the Add new content type field and click <strong>Add</strong>.</li>
 </ol>
@@ -4402,23 +2347,23 @@ In some cases it is also necessary to delete the cookie settings. You can do thi
 
 {
 
-CopyFile(&quot;wl2288601006.dat&quot;,&quot;wl2288601006.dat&quot;)
+CopyFile("wl2288601006.dat","wl2288601006.dat")
 
 }
 
-wlGlobals.GetFrames = false wlHttp.Get([&quot;http://www.webloadmpstore.com/flex/bin/Sample.html&quot;](http://www.webloadmpstore.com/flex/bin/Sample.html))
+wlGlobals.GetFrames = false wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html))
 
 Sleep(9056)
 
 
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/flex/bin/Shop.swf&quot;](http://www.webloadmpstore.com/flex/bin/Shop.swf)
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Shop.swf"](http://www.webloadmpstore.com/flex/bin/Shop.swf)
 
-wlHttp.Header[&quot;Content-type&quot;] = &quot;application/x-amf&quot; wlHttp.Header[&quot;Content-length&quot;] = &quot;58&quot; wlHttp.DataFile[&quot;Type&quot;] = &quot;application/x-amf&quot; wlHttp.DataFile[&quot;Filename&quot;] = &quot;wl2288601006.dat&quot;
+wlHttp.Header["Content-type"] = "application/x-amf" wlHttp.Header["Content-length"] = "58" wlHttp.DataFile["Type"] = "application/x-amf" wlHttp.DataFile["Filename"] = "wl2288601006.dat"
 
-wlHttp.Post([&quot;http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
+wlHttp.Post(["http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
 
-.php&quot;)
+.php")
 </code></pre>
 <h4 id="encoding-binary-data-in-the-script">Encoding Binary Data in the script</h4>
 <p>Modifying the script Options settings in the WebLOAD Recorder enables the encoding of binary data in the script during the recording. Once recorded, the script can be edited, parameterized, and load tested as a regular script.</p>
@@ -4431,7 +2376,7 @@ wlHttp.Post([&quot;http://www.webloadmpstore.com/flashservices/gateway](http://w
 <li>In the Recording and Script Generation Options dialog box select the <strong>Script Generation</strong> tab.</li>
 </ol>
 <p>The Script Generation tab appears.</p>
-<p><img alt="Recording and Script Generation Options - Script Generation Tab" src="../../images/script_guide_112.png" /></p>
+<p><img alt="Recording and Script Generation Options - Script Generation Tab" src="../../images/script_guide_112.png"/></p>
 <ol>
 <li>Select the <strong>Encode binary data</strong> checkbox.</li>
 </ol>
@@ -4440,7 +2385,7 @@ wlHttp.Post([&quot;http://www.webloadmpstore.com/flashservices/gateway](http://w
 <li>In the Recording and Script Generation Options dialog box, select the <strong>Post Data</strong> tab.</li>
 </ol>
 <p>The Post Data tab appears.</p>
-<p><img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_113.png" /></p>
+<p><img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_113.png"/></p>
 <ol>
 <li>
 <p>In the Add New Type field, enter the binary content-type, such as application/x-amf, which is used for binary text generated by a Flash application.</p>
@@ -4463,45 +2408,45 @@ wlHttp.Post([&quot;http://www.webloadmpstore.com/flashservices/gateway](http://w
 
 {
 
-IncludeFile(&quot;wlamf.js&quot;,WLExecuteScript);
+IncludeFile("wlamf.js",WLExecuteScript);
 
 }
 
 wlGlobals.GetFrames = false wlHttp.EncodeRequestBinaryData = true
 
-wlGlobals.UserAgent = &quot;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)&quot;
+wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
 
-wlHttp.Get([&quot;http://www.webloadmpstore.com/flex/bin/Sample.html&quot;](http://www.webloadmpstore.com/flex/bin/Sample.html))
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/flex/bin/Sample.html&quot;](http://www.webloadmpstore.com/flex/bin/Sample.html)
-
-wlHttp.Get([&quot;http://www.webloadmpstore.com/flex/bin/history.ht](http://www.webloadmpstore.com/flex/bin/history.htm)m&quot;)
+wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html))
 
 wlHttp.EncodeRequestBinaryData = true
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/flex/bin/history.htm&quot;](http://www.webloadmpstore.com/flex/bin/history.htm)
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html)
 
-wlHttp.Get([&quot;http://www.webloadmpstore.com/flex/bin/history.swf&quot;](http://www.webloadmpstore.com/flex/bin/history.swf))
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header[&quot;Referer&quot;] = [&quot;h](http://www.webloadmpstore.com/flex/bin/Sample.html)[ttp://www.webloadmpstore.com/flex/bin/Sample.html&quot;](http://www.webloadmpstore.com/flex/bin/Sample.html)
-
-wlHttp.Get([&quot;http://www.webloadmpstore.com/flex/bin/Shop.swf](http://www.webloadmpstore.com/flex/bin/Shop.swf)&quot;)
+wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/history.ht](http://www.webloadmpstore.com/flex/bin/history.htm)m")
 
 wlHttp.EncodeRequestBinaryData = true
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/flex/bin/Shop.swf&quot;](http://www.webloadmpstore.com/flex/bin/Shop.swf)
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/history.htm"](http://www.webloadmpstore.com/flex/bin/history.htm)
 
-wlHttp.Data[&quot;Type&quot;] = &quot;application/x-amf&quot; wlHttp.Data[&quot;Value&quot;] =
+wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/history.swf"](http://www.webloadmpstore.com/flex/bin/history.swf))
 
-&quot;%00%03%00%00%00%01%00%15talkback.returnString%00%02/1%00%00%00% 15%0a%00%00%00%02%02%00%06George%02%00%04Bush&quot;
+wlHttp.EncodeRequestBinaryData = true
 
-wlHttp.Post[(&quot;http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
+wlHttp.Header["Referer"] = ["h](http://www.webloadmpstore.com/flex/bin/Sample.html)[ttp://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html)
 
-.php&quot;)
+wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Shop.swf](http://www.webloadmpstore.com/flex/bin/Shop.swf)")
+
+wlHttp.EncodeRequestBinaryData = true
+
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Shop.swf"](http://www.webloadmpstore.com/flex/bin/Shop.swf)
+
+wlHttp.Data["Type"] = "application/x-amf" wlHttp.Data["Value"] =
+
+"%00%03%00%00%00%01%00%15talkback.returnString%00%02/1%00%00%00% 15%0a%00%00%00%02%02%00%06George%02%00%04Bush"
+
+wlHttp.Post[("http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
+
+.php")
 </code></pre>
 <h2 id="handling-authentication-in-the-script">Handling Authentication in the Script</h2>
 <p>WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user authentication methods.</p>
@@ -4522,7 +2467,7 @@ wlHttp.Post[(&quot;http://www.webloadmpstore.com/flashservices/gateway](http://w
 <li>
 <p><strong>Kerberos authentication</strong>, WebLOAD sets the following:</p>
 <p>wlGlobals.AuthType = "Kerberos".</p>
-<p>wlGlobals.KDCServer = <server name>. If no value is specified for KDCServer, the authentication type is automatically assumed to be NTLM, even if the AuthType is Kerberos.</p>
+<p>wlGlobals.KDCServer = <code>&lt;server name&gt;</code>. If no value is specified for KDCServer, the authentication type is automatically assumed to be NTLM, even if the AuthType is Kerberos.</p>
 </li>
 </ol>
 <p>The following examples demonstrate the authentication processes in WebLOAD.</p>
@@ -4545,52 +2490,88 @@ wlHttp.Post[(&quot;http://www.webloadmpstore.com/flashservices/gateway](http://w
 <p><code>wlHttp.PassWord = "Buga859"</code> </p>
 <p><code>wlHttp.UserName = "test"</code></p>
 <p><code>wlHttp.Get("&lt;http://mulier.qalab.internal/&gt;")</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
+</article>
 </div>
-      
-    </div>
-  </div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
 </html>

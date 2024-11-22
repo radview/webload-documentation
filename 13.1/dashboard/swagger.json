@@ -1,0 +1,1736 @@
+{
+    "swagger" : "2.0",
+    "info" : {
+      "description" : "WebLOAD REST API",
+      "version" : "13.3.0",
+      "title" : "WebLOAD API",
+      "contact" : {
+        "name" : "support@radview.com"
+      }
+    },
+    "host" : "localhost:8080",
+    "basePath" : "/api",
+    "tags" : [ {
+      "name" : "data"
+    }, {
+      "name" : "analytics"
+    }, {
+      "name" : "resource"
+    }, {
+      "name" : "session"
+    }, {
+      "name" : "location"
+    } ],
+    "schemes" : [ "http" ],
+    "paths" : {
+      "/analytics" : {
+        "get" : {
+          "tags" : [ "analytics" ],
+          "summary" : "Generate an Analytics Report",
+          "description" : "The generated report file is returned in the requested format. Note that you need to specify at least one session (either in sessionid or in sessionfile). If no template and no portfolio are specified, the Summary Portfolio will be used",
+          "operationId" : "produceAnalyticsReport",
+          "produces" : [ "application/octet-stream", "application/json" ],
+          "parameters" : [ {
+            "name" : "sessionid",
+            "in" : "query",
+            "description" : "Session-Id. Can be more than one",
+            "required" : false,
+            "type" : "array",
+            "items" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "sessionfile",
+            "in" : "query",
+            "description" : "Session local file path. Can be more than one",
+            "required" : false,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "template",
+            "in" : "query",
+            "description" : "Report Template to generate",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "portfolio",
+            "in" : "query",
+            "description" : "Portfolio of templates to generate",
+            "required" : false,
+            "type" : "string",
+            "default" : "Summary Portfolio"
+          }, {
+            "name" : "format",
+            "in" : "query",
+            "description" : "File format of the generated report",
+            "required" : false,
+            "type" : "string",
+            "default" : "PDF",
+            "enum" : [ "DOC", "ODT", "HTML", "XLS", "XLSX", "RTF", "PDF", "CSV", "JUNIT" ]
+          }, {
+            "name" : "param",
+            "in" : "query",
+            "description" : "Parameters to override",
+            "required" : false,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "collectionFormat" : "multi",
+            "x-example" : "TIME_FILTER_FROM_BEGINNING=180"
+          }, {
+            "name" : "name",
+            "in" : "query",
+            "description" : "File name of the generated report",
+            "required" : false,
+            "type" : "string",
+            "default" : "Report"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "File created and returned"
+            }
+          }
+        }
+      },
+      "/explainer" : {
+        "post" : {
+          "tags" : [ "data" ],
+          "summary" : "Explain statistics data",
+          "description" : "json with 'data' field with explanation on given data.",
+          "operationId" : "explainData",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "target",
+            "in" : "formData",
+            "description" : "The metrics data to retrieve. This is the 'id' from the GET /metrics/find request, for example 'Total.Performance Measurements.Load Size'",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "collectionFormat" : "multi",
+            "x-example" : "Total.Performance Measurements.Load Size"
+          }, {
+            "name" : "sessionid",
+            "in" : "formData",
+            "description" : "Session-id to retrieve. Can be more than one",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "relative",
+            "in" : "formData",
+            "description" : "Use relative time, otherwise it's absolute time",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "name" : "from",
+            "in" : "formData",
+            "description" : "Filter from time. Can be 'now', '-5min' or a number of seconds - relative or absolute",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "until",
+            "in" : "formData",
+            "description" : "Filter until time. Can be 'now', '-5min' or a number of seconds - relative or absolute",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "maxDataPoints",
+            "in" : "formData",
+            "description" : "Limit the number of data point to retrieve",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1000,
+            "format" : "int64"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/locations" : {
+        "get" : {
+          "tags" : [ "location" ],
+          "summary" : "Get saas/clooud locations",
+          "description" : "",
+          "operationId" : "getLocations",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "/locations/add" : {
+        "post" : {
+          "tags" : [ "location" ],
+          "summary" : "add a new load generator/location",
+          "description" : "add new lg/location",
+          "operationId" : "addLoadGenerator",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "name",
+            "in" : "query",
+            "description" : "load generator name",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "location",
+            "in" : "query",
+            "description" : "location",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "type",
+            "in" : "query",
+            "description" : "type",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "maxvc",
+            "in" : "query",
+            "description" : "maxvc",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/locations/delete" : {
+        "delete" : {
+          "tags" : [ "location" ],
+          "summary" : "delete a load generator/location",
+          "description" : "delete lg/location",
+          "operationId" : "deleteLoadGenerator",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "name",
+            "in" : "query",
+            "description" : "load generator name",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "location",
+            "in" : "query",
+            "description" : "location",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/logs" : {
+        "get" : {
+          "tags" : [ "data" ],
+          "summary" : "Get log messages data",
+          "description" : "",
+          "operationId" : "getLogs",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "sessionid",
+            "in" : "query",
+            "description" : "Session Id. Can be more than one",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "severityName",
+            "in" : "query",
+            "description" : "Minimum Severity to retrieve",
+            "required" : false,
+            "type" : "string",
+            "enum" : [ "All", "Info", "Warning", "Error", "Fatal" ],
+            "x-example" : "Warning"
+          }, {
+            "name" : "severityOperator",
+            "in" : "query",
+            "description" : "How to treat the minimum severity. Default - ge (greater than or equal to)",
+            "required" : false,
+            "type" : "string",
+            "default" : "ge",
+            "enum" : [ "eq", "ne", "gt", "lt", "ge", "le" ],
+            "x-example" : "ge"
+          }, {
+            "name" : "queryLimit",
+            "in" : "query",
+            "description" : "Maximum number of records to retrieve",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "relative",
+            "in" : "query",
+            "description" : "Use relative time (session starts at time 0), otherwise it's absolute time (session starts at real date-time)",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "name" : "from",
+            "in" : "query",
+            "description" : "Filter from time. Can be 'now', '-5min' or a number of seconds. Negative number means from session end, positive from start",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "until",
+            "in" : "query",
+            "description" : "Filter until time. Can be 'now', '-5min' or a number of seconds. Negative number means from session end, positive from start",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/LogData"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/metrics/find" : {
+        "get" : {
+          "tags" : [ "data" ],
+          "summary" : "Get available metrics of a session",
+          "description" : "Query which metrics are available for this session. The metrics have a hierarchy and this query retrieves the requested metrics. * is used as a wildcard. Examples: Total.Performance Measurements.* will return all regular performance measurement. My-agenda@my-LG.Transaction Response Times.Login.* will show the aggregation options for the login transaction on the requested agenda",
+          "operationId" : "getMetrics",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "query",
+            "in" : "query",
+            "description" : "query for metrics, for example Total.*",
+            "required" : true,
+            "type" : "string",
+            "x-example" : "Total.*"
+          }, {
+            "name" : "sessionid",
+            "in" : "query",
+            "description" : "Session Id of the session",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/Metric"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/render" : {
+        "post" : {
+          "tags" : [ "data" ],
+          "summary" : "Get statistics data",
+          "description" : "Returns an array of targets, with datapoints [X(time), Y(value)], for example: [{\"target\":\"Load Size\",\"datapoints\":[[20,5],[40,5],[60.5]],\"session\":{...},\"imported\":true}]",
+          "operationId" : "retrieveData",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "target",
+            "in" : "formData",
+            "description" : "The metrics data to retrieve. This is the 'id' from the GET /metrics/find request, for example 'Total.Performance Measurements.Load Size'",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "collectionFormat" : "multi",
+            "x-example" : "Total.Performance Measurements.Load Size"
+          }, {
+            "name" : "sessionid",
+            "in" : "formData",
+            "description" : "Session-id to retrieve. Can be more than one",
+            "required" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "collectionFormat" : "multi"
+          }, {
+            "name" : "relative",
+            "in" : "formData",
+            "description" : "Use relative time, otherwise it's absolute time",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "name" : "from",
+            "in" : "formData",
+            "description" : "Filter from time. Can be 'now', '-5min' or a number of seconds - relative or absolute",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "until",
+            "in" : "formData",
+            "description" : "Filter until time. Can be 'now', '-5min' or a number of seconds - relative or absolute",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "maxDataPoints",
+            "in" : "formData",
+            "description" : "Limit the number of data point to retrieve",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1000,
+            "format" : "int64"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/RenderDataSeries"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/resource" : {
+        "get" : {
+          "tags" : [ "resource" ],
+          "summary" : "Get resource list",
+          "description" : "",
+          "operationId" : "list",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "path",
+            "in" : "query",
+            "description" : "Resources path",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "templatesonly",
+            "in" : "query",
+            "description" : "Only Template Resources",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/Resource"
+                }
+              }
+            }
+          }
+        },
+        "delete" : {
+          "tags" : [ "resource" ],
+          "summary" : "delete resource file",
+          "description" : "delete file",
+          "operationId" : "deleteResource",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "path",
+            "in" : "query",
+            "description" : "path to resource file to delete",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "filename",
+            "in" : "query",
+            "description" : "resource file to delete",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/resource/createFolder" : {
+        "post" : {
+          "tags" : [ "resource" ],
+          "summary" : "create new folder",
+          "description" : "create resources folder",
+          "operationId" : "createFolder",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "path",
+            "in" : "query",
+            "description" : "path to create new folder in it",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "newfolder",
+            "in" : "query",
+            "description" : "new folder to creaete",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/resource/download" : {
+        "get" : {
+          "tags" : [ "resource" ],
+          "summary" : "download resource file",
+          "description" : "download file",
+          "operationId" : "downloadResource",
+          "produces" : [ "application/octet-stream" ],
+          "parameters" : [ {
+            "name" : "path",
+            "in" : "query",
+            "description" : "path to resource file to delete",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "filename",
+            "in" : "query",
+            "description" : "resource file to delete",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "orgid",
+            "in" : "query",
+            "description" : "org id for the session",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/resource/upload" : {
+        "post" : {
+          "tags" : [ "resource" ],
+          "summary" : "Upload resource files",
+          "description" : "Uploads files.",
+          "operationId" : "uploadResources",
+          "consumes" : [ "multipart/form-data" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "destinationpath",
+            "in" : "formData",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "file",
+            "in" : "formData",
+            "required" : false,
+            "type" : "file"
+          }, {
+            "name" : "customname",
+            "in" : "formData",
+            "description" : "Override the file name",
+            "required" : false,
+            "type" : "string",
+            "x-example" : "myfile.ls"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "Session Created. Path to new session is returned. All files received and session imported.",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "202" : {
+              "description" : "File Accepted. Waiting for other files"
+            }
+          }
+        }
+      },
+      "/session" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Find sessions based on name, date and session result. Same as GET /session/findSessions",
+          "description" : "",
+          "operationId" : "getFindSessions",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "name",
+            "in" : "query",
+            "description" : "Filter by session name",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "timeRange",
+            "in" : "query",
+            "description" : "Filter by time range. Can be: Last 6 Months,Last 3 Months,Last Month,Last Week,Last Day, or a number of recent days",
+            "required" : false,
+            "type" : "string",
+            "enum" : [ "Last 6 Months", "Last 3 Months", "Last Month", "Last Week", "Last Day" ]
+          }, {
+            "name" : "returnCode",
+            "in" : "query",
+            "description" : "Filter by session status",
+            "required" : false,
+            "type" : "string",
+            "enum" : [ "Test passed", "Test failed", "Running" ]
+          }, {
+            "name" : "description",
+            "in" : "query",
+            "description" : "Filter by session description (in dashboard - load-test name)",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "TZoffset",
+            "in" : "query",
+            "description" : "optional timezone offset",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/SessionData"
+                }
+              }
+            }
+          }
+        },
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Start running a load session in the local Console.",
+          "description" : "Execute a load session in the local Console. 'Insert statistics into the database while running' is expected to be enabled in the Console global options in WebLOAD 10.6 and older",
+          "operationId" : "startLoadSession",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "template",
+            "in" : "formData",
+            "description" : "Local path of the load template (.tpl) to run, or JSON structure to run",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "lsPath",
+            "in" : "formData",
+            "description" : "Local path to save the resultant Load Session (.ls) file",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "lsName",
+            "in" : "formData",
+            "description" : "File name of the resultant Load Session (.ls) file",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "testDesc",
+            "in" : "formData",
+            "description" : "Test Id or test description",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "createdBy",
+            "in" : "formData",
+            "description" : "Created by user name",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "versionBuild",
+            "in" : "formData",
+            "description" : "Version and build of the system under test",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "responseTimeout",
+            "in" : "formData",
+            "description" : "The time, in seconds, to wait for the session to start",
+            "required" : false,
+            "type" : "integer",
+            "default" : 180,
+            "format" : "int32"
+          }, {
+            "name" : "requestId",
+            "in" : "formData",
+            "description" : "Optional id to track session start",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "virtualClients",
+            "in" : "formData",
+            "description" : "Optional virtualClients to allocate in WebRM floating license",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "probingClient",
+            "in" : "formData",
+            "description" : "Optional probingClient to allocate in WebRM floating license",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "executionDuration",
+            "in" : "formData",
+            "description" : "Optional limit execution Duration to so many seconds",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "sandbox",
+            "in" : "formData",
+            "description" : "Optional tell system we're sandboxed",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "customer",
+            "in" : "formData",
+            "description" : "tell system who's our customer",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int64"
+          }, {
+            "name" : "spawncount",
+            "in" : "formData",
+            "description" : "tell system spawning factor - VC per process",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "maxVU",
+            "in" : "formData",
+            "description" : "tell system what's our max VU per run",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "Session Started. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "202" : {
+              "description" : "Timeout (60 seconds) waiting for session to start"
+            },
+            "500" : {
+              "description" : "Error launching session"
+            },
+            "503" : {
+              "description" : "Console not available - maybe console is open?"
+            }
+          }
+        }
+      },
+      "/session/checksessionprocess/{id}" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Check if session process is running and if not, check cloud machines were terminated",
+          "description" : "",
+          "operationId" : "verifySessionProcessState",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to check",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "shutdown",
+            "in" : "query",
+            "description" : "shutdown flag if session console is up",
+            "required" : false,
+            "type" : "boolean",
+            "default" : "0"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "process status us OK (running/not running with no machines)"
+            },
+            "202" : {
+              "description" : "Session status is up but process is down and machines are up"
+            },
+            "203" : {
+              "description" : "Session ended but machines are still up"
+            },
+            "500" : {
+              "description" : "Error getting process/cloud machine status"
+            },
+            "204" : {
+              "description" : "Session status is up but process is down"
+            },
+            "205" : {
+              "description" : "Session is going down and process is up"
+            }
+          }
+        }
+      },
+      "/session/deleteTestSessions" : {
+        "delete" : {
+          "tags" : [ "session" ],
+          "summary" : "Delete sessions of specified test",
+          "description" : "Delete sessions from the database by their test name",
+          "operationId" : "deleteTestSessions",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "testName",
+            "in" : "query",
+            "description" : "test name",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/download" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "download session zip",
+          "description" : "download file",
+          "operationId" : "downloadSession",
+          "produces" : [ "application/octet-stream" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "query",
+            "description" : "session id to download",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "orgid",
+            "in" : "query",
+            "description" : "org id for the session, only used if X-Grafana-Org-Id header is missing",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/findSessions" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Find sessions based on name, date and session result. Same as GET /session",
+          "description" : "",
+          "operationId" : "findSessions",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "name",
+            "in" : "query",
+            "description" : "Filter by session name",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "timeRange",
+            "in" : "query",
+            "description" : "Filter by time range. Can be: Last 6 Months,Last 3 Months,Last Month,Last Week,Last Day, or a number of recent days",
+            "required" : false,
+            "type" : "string",
+            "enum" : [ "Last 6 Months", "Last 3 Months", "Last Month", "Last Week", "Last Day" ]
+          }, {
+            "name" : "returnCode",
+            "in" : "query",
+            "description" : "Filter by session status",
+            "required" : false,
+            "type" : "string",
+            "enum" : [ "Test passed", "Test failed", "Running" ]
+          }, {
+            "name" : "description",
+            "in" : "query",
+            "description" : "Filter by session description (in dashboard - load-test name)",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "TZoffset",
+            "in" : "query",
+            "description" : "optional timezone offset",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "successful operation",
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/SessionData"
+                }
+              }
+            }
+          }
+        }
+      },
+      "/session/import" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Import a session file from the file system",
+          "description" : "Import a session file from a file to the database. The path needs to be readable to the server. If the server does not have access to the file, use POST /session/upload instead.",
+          "operationId" : "importSession",
+          "consumes" : [ "multipart/form-data" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "lsFile",
+            "in" : "query",
+            "description" : "Full path to .ls file or .ls file name",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "lsPath",
+            "in" : "query",
+            "description" : "Path to .ls file (optional, only used when lsFile is not full path)",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "Session Imported. Path to new session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              },
+              "headers" : { }
+            },
+            "500" : {
+              "description" : "File not found or error importing"
+            }
+          }
+        }
+      },
+      "/session/pause/{id}" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Pause a running session",
+          "description" : "Try to pause the current running execution;",
+          "operationId" : "pauseLoadSession",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to pause",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Session Asked to paused. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "500" : {
+              "description" : "Error launching session"
+            }
+          }
+        }
+      },
+      "/session/resetSessionsTest" : {
+        "put" : {
+          "tags" : [ "session" ],
+          "summary" : "reset connection between sessions and test by resetting testname",
+          "description" : "",
+          "operationId" : "resetSessionsTest",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "testName",
+            "in" : "query",
+            "description" : "test name",
+            "required" : true,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/resume/{id}" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Resume a paused session",
+          "description" : "Try to resume the current paused execution;",
+          "operationId" : "resumeLoadSession",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to resume",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Session Asked to paused. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "500" : {
+              "description" : "Error launching session"
+            }
+          }
+        }
+      },
+      "/session/starting" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Get the session that started",
+          "description" : "Get session details started by POST /session. May return timeout if it didn't yet start",
+          "operationId" : "checkSessionStatus",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "responseTimeout",
+            "in" : "query",
+            "description" : "Full path to .ls file or .ls file name",
+            "required" : true,
+            "type" : "integer",
+            "default" : 180,
+            "format" : "int32"
+          }, {
+            "name" : "requestId",
+            "in" : "query",
+            "description" : "Optional RequestId for tracking",
+            "required" : false,
+            "type" : "string"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "Session Started. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "202" : {
+              "description" : "Timeout (60 seconds) waiting for session to start"
+            },
+            "500" : {
+              "description" : "Error launching session"
+            }
+          }
+        }
+      },
+      "/session/stop/{id}" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Stop a running session",
+          "description" : "Try to abort the current running execution; mark session as Aborted",
+          "operationId" : "stopLoadSession",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to stop",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Session Started. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "500" : {
+              "description" : "Error launching session"
+            }
+          }
+        }
+      },
+      "/session/stopall" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Stop all running sessions",
+          "description" : "",
+          "operationId" : "stopAllSessions",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "orgid",
+            "in" : "query",
+            "description" : "org id for the session, only used if X-Grafana-Org-Id header is missing",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/stoptt" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "stop WebLOAD network comunicator process",
+          "description" : "Will stop WebLOAD network comunicator process if no session is running",
+          "operationId" : "stopTestTalkProcess",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/throttle" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Throttle a session",
+          "description" : "Try to throttle the current execution;",
+          "operationId" : "throttleLoadSession",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "query",
+            "description" : "Id of the Session to throttle",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "vc",
+            "in" : "query",
+            "description" : "VC count",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      },
+      "/session/unthrottle/{id}" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "unthrottle a session",
+          "description" : "Try to unthrottle the current session execution;",
+          "operationId" : "unthrottleLoadSession",
+          "consumes" : [ "application/x-www-form-urlencoded" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to unthrottle",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Session Asked to paused. Path to the running session is returned",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "500" : {
+              "description" : "Error launching session"
+            }
+          }
+        }
+      },
+      "/session/upload" : {
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "Upload session files",
+          "description" : "Uploads a file. All session files needs to be uploaded (ls,sdb,isd,dat). Once all files are uploaded, the session will be imported to the database",
+          "operationId" : "uploadSession",
+          "consumes" : [ "multipart/form-data" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "file",
+            "in" : "formData",
+            "description" : "The file to upload",
+            "required" : true,
+            "type" : "file"
+          }, {
+            "name" : "customname",
+            "in" : "formData",
+            "description" : "Override the file name with this name",
+            "required" : false,
+            "type" : "string",
+            "x-example" : "myfile.ls"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "Session Created. Path to new session is returned. All files received and session imported.",
+              "schema" : {
+                "type" : "string",
+                "format" : "uri"
+              }
+            },
+            "202" : {
+              "description" : "File Accepted. Waiting for other files"
+            }
+          }
+        }
+      },
+      "/session/{id}" : {
+        "get" : {
+          "tags" : [ "session" ],
+          "summary" : "Get a session by its Id",
+          "description" : "Get session details based on the Session Id",
+          "operationId" : "getSessionById",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the session to get",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Session found. Session details returned"
+            },
+            "404" : {
+              "description" : "Session not found"
+            }
+          }
+        },
+        "post" : {
+          "tags" : [ "session" ],
+          "summary" : "update session description",
+          "description" : "update session description in the database by id",
+          "operationId" : "updateSessionDescription",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to update",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "description",
+            "in" : "query",
+            "description" : "updated description for the session",
+            "required" : false,
+            "type" : "string"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        },
+        "delete" : {
+          "tags" : [ "session" ],
+          "summary" : "Delete a session",
+          "description" : "Delete session from the database by id",
+          "operationId" : "deleteSession",
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "name" : "id",
+            "in" : "path",
+            "description" : "Id of the Session to delete",
+            "required" : true,
+            "type" : "integer",
+            "format" : "int32"
+          }, {
+            "name" : "X-Grafana-Org-Id",
+            "in" : "header",
+            "required" : false,
+            "type" : "integer",
+            "default" : 1,
+            "format" : "int32"
+          } ],
+          "responses" : {
+            "default" : {
+              "description" : "successful operation"
+            }
+          }
+        }
+      }
+    },
+    "definitions" : {
+      "LogData" : {
+        "type" : "object",
+        "required" : [ "clientId", "message", "sessionId", "sessionName", "severity", "time" ],
+        "properties" : {
+          "sessionName" : {
+            "type" : "string",
+            "example" : "My Session",
+            "description" : "Session Name"
+          },
+          "sessionId" : {
+            "type" : "integer",
+            "format" : "int32",
+            "example" : 1,
+            "description" : "The Session Id - use in other operations to identify the session"
+          },
+          "time" : {
+            "type" : "number",
+            "format" : "double",
+            "description" : "Message time in milliseconds"
+          },
+          "severity" : {
+            "type" : "string",
+            "example" : "Warning",
+            "description" : "Message Severity",
+            "enum" : [ "All", "Info", "Warning", "Error", "Fatal" ]
+          },
+          "agendaname" : {
+            "type" : "string",
+            "example" : "My Agenda",
+            "description" : "The agenda generating the message"
+          },
+          "generatorname" : {
+            "type" : "string",
+            "example" : "LG1",
+            "description" : "The load-generator generating the message"
+          },
+          "message" : {
+            "type" : "string",
+            "example" : "Hello",
+            "description" : "Log message text"
+          },
+          "clientId" : {
+            "type" : "string",
+            "description" : "client id"
+          }
+        },
+        "description" : "Log Message record"
+      },
+      "Number" : {
+        "type" : "object"
+      },
+      "Resource" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "directory" : {
+            "type" : "boolean",
+            "default" : false
+          }
+        },
+        "description" : "Log Message record"
+      },
+      "RenderDataSeries" : {
+        "type" : "object",
+        "properties" : {
+          "target" : {
+            "type" : "string",
+            "example" : "Total.Performance Summary.Load Size",
+            "description" : "The target used to get this data"
+          },
+          "datapoints" : {
+            "type" : "array",
+            "example" : "[[0.1,20], [0.2,40], [0.3,60]]",
+            "description" : "Data values. An array of pairs - [Y,X], where Y is the measurement value and X is the time",
+            "items" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Number"
+              }
+            }
+          },
+          "session" : {
+            "$ref" : "#/definitions/SessionData"
+          },
+          "imported" : {
+            "type" : "boolean",
+            "example" : true,
+            "description" : "when false, the data is not yet imported",
+            "default" : false
+          }
+        },
+        "description" : "Data values for a target"
+      },
+      "Metric" : {
+        "type" : "object",
+        "properties" : {
+          "leaf" : {
+            "type" : "integer",
+            "format" : "int32",
+            "example" : 1,
+            "description" : "1 for leaf metrics that can be used in a Render request.",
+            "enum" : [ 0, 1 ]
+          },
+          "context" : {
+            "type" : "string",
+            "example" : "{}",
+            "description" : "Not used."
+          },
+          "text" : {
+            "type" : "string",
+            "example" : "Load Size",
+            "description" : "Display name of the metric."
+          },
+          "expandable" : {
+            "type" : "integer",
+            "format" : "int32",
+            "example" : 1,
+            "description" : "1 for metrics that contain child metrics - use another /metric/query request to find children.",
+            "enum" : [ 0, 1 ]
+          },
+          "id" : {
+            "type" : "string",
+            "example" : "Total.Performance Measurements.Load Size",
+            "description" : "id of this metric. Can be used in a 'Render' request."
+          },
+          "allowChildren" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        },
+        "description" : "Represents a statistic type"
+      },
+      "SessionData" : {
+        "type" : "object",
+        "required" : [ "sessionId" ],
+        "properties" : {
+          "sessionId" : {
+            "type" : "integer",
+            "format" : "int32",
+            "example" : 1,
+            "description" : "The session id. Used in other operations"
+          },
+          "name" : {
+            "type" : "string",
+            "example" : "My Session",
+            "xml" : {
+              "name" : "text"
+            },
+            "description" : "Session name"
+          },
+          "reportResolution" : {
+            "type" : "integer",
+            "format" : "int32",
+            "example" : 20,
+            "description" : "The duration of each time slot in seconds"
+          },
+          "startTime" : {
+            "type" : "string",
+            "format" : "date-time",
+            "example" : "1460116571000",
+            "description" : "Time session started"
+          },
+          "endTime" : {
+            "type" : "string",
+            "format" : "date-time",
+            "example" : "1460116871000",
+            "description" : "Time session ended. 0 for currently running session"
+          },
+          "path" : {
+            "type" : "string",
+            "example" : "c:\\my.ls",
+            "description" : "Local path used to import the session"
+          },
+          "returnCode" : {
+            "type" : "string",
+            "example" : "Test passed",
+            "description" : "The session return code",
+            "enum" : [ "Running", "Test Passed", "Test Failed" ]
+          },
+          "failedReason" : {
+            "type" : "string",
+            "example" : "Test passed",
+            "description" : "For failed reason, text with failure reason"
+          },
+          "testDescription" : {
+            "type" : "string",
+            "description" : "Custom field test description. For dashboard tests, this is the test name"
+          },
+          "origName" : {
+            "type" : "string",
+            "example" : "My Session",
+            "xml" : {
+              "name" : "displayText"
+            },
+            "description" : "Session orig name"
+          },
+          "sessionDescription" : {
+            "type" : "string",
+            "description" : "Custom field session description."
+          },
+          "externalId" : {
+            "type" : "string",
+            "description" : "Custom field session external execution id."
+          }
+        },
+        "description" : "Represents a load session"
+      }
+    }
+  }

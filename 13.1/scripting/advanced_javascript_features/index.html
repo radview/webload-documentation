@@ -1,173 +1,96 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="Product documentation for RadView WebLOAD">
-      
-      
-      
-      
-        <link rel="prev" href="../programming_your_javascript/">
-      
-      
-        <link rel="next" href="../working_with_http/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
-    
-    
-      
-        <title>Advanced JavaScript Script Features - WebLOAD Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#advanced-javascript-script-features" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../programming_your_javascript/" rel="prev"/>
+<link href="../working_with_http/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Advanced JavaScript Script Features - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#advanced-javascript-script-features">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="WebLOAD Documentation" class="md-header__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             WebLOAD Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Advanced JavaScript Script Features
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-    
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
         
   
     
@@ -175,16 +98,9 @@
   Home
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../quickstart/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
         
   
     
@@ -192,144 +108,65 @@
   Quick Start
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../recorder/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
           
   
   Recorder
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
           
   
   Scripting
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../console/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
           
   
   Console
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../dashboard/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
           
   
   Dashboard
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../automation/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
           
   
   Automation
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../javascript/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
           
   
   JavaScript Reference
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../analytics/introduction/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
           
   
   Analytics
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
         
   
     
@@ -337,4022 +174,1958 @@
   Installation
 
       </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-    
-  
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="WebLOAD Documentation" class="md-nav__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
     WebLOAD Documentation
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
     Home
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
     Quick Start
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
     Recorder
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             Recorder
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
     Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/before_you_begin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
     Before you Begin
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/quick_start/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
     QuickStart
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/recording_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
     Recording Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/editing_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
     Editing Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
     Correlating Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
     Running and Debugging Scripts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/working_with_git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
     Working with GIT
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
     Configuring the WebLOAD Recorder Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - The WebLOAD Recorder Toolbox Set
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - WebLOAD Recorder File Types
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - Launching WebLOAD Recorder
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - Converting Certificate Files
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - Recording Mobile Applications
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_f/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
     Appendix F - Integrating with Perfecto Mobile
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_g/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
     Appendix G - Selenium Integration
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../recorder/appendix_h/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
     Appendix H - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
     Scripting
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             Scripting
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../programming_your_javascript/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../programming_your_javascript/">
+<span class="md-ellipsis">
     Programming your JavaScript Script
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     Advanced JavaScript Script Features
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
     Advanced JavaScript Script Features
   </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-xml-dom" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-xml-dom">
+<span class="md-ellipsis">
       Working with the XML DOM
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with the XML DOM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#webload-xml-dom-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with the XML DOM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-xml-dom-objects">
+<span class="md-ellipsis">
       WebLOAD XML DOM Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islands" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islands">
+<span class="md-ellipsis">
       Data Islands
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Islands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-islandin-line-code" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Data Islands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandin-line-code">
+<span class="md-ellipsis">
       Data Island—In-Line Code
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandreference-to-another-source" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandreference-to-another-source">
+<span class="md-ellipsis">
       Data Island—Reference to Another Source
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandscripted-in-line" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandscripted-in-line">
+<span class="md-ellipsis">
       Data Island—Scripted In-Line
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandscripted-reference-to-another-source" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandscripted-reference-to-another-source">
+<span class="md-ellipsis">
       Data Island—Scripted Reference to Another Source
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-data-islands-in-a-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-data-islands-in-a-script">
+<span class="md-ellipsis">
       Example: Using Data Islands in a script
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: Using Data Islands in a script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#working-with-html-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Example: Using Data Islands in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-html-properties">
+<span class="md-ellipsis">
       Working with HTML Properties
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with HTML Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#javascript-script-code" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with HTML Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#javascript-script-code">
+<span class="md-ellipsis">
       JavaScript script Code:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#output-text" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-text">
+<span class="md-ellipsis">
       Output Text:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-xml-dom-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-xml-dom-properties">
+<span class="md-ellipsis">
       Working with XML DOM Properties
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-bookstore-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-bookstore-data">
+<span class="md-ellipsis">
       Changing Bookstore Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-new-bookstore-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-new-bookstore-data">
+<span class="md-ellipsis">
       Adding New Bookstore Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-and-filling-new-xml-dom-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-and-filling-new-xml-dom-objects">
+<span class="md-ellipsis">
       Creating and Filling New XML DOM Objects
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Filling New XML DOM Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Creating and Filling New XML DOM Objects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string">
+<span class="md-ellipsis">
       WLXmlDocument(xmlStr)—Creating XML DOM Object from XML String
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-xml-in-native-direct-browsing-mode" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-xml-in-native-direct-browsing-mode">
+<span class="md-ellipsis">
       Working with XML in Native (Direct) Browsing Mode
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wlxmldocumentcreating-a-new-blank-xml-dom-object" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlxmldocumentcreating-a-new-blank-xml-dom-object">
+<span class="md-ellipsis">
       WLXmlDocument()—Creating a New, Blank XML DOM Object
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#loading-xml-files-into-xml-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-xml-files-into-xml-objects">
+<span class="md-ellipsis">
       Loading XML Files into XML Objects
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Loading XML Files into XML Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-loadxmlxmldocstring" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Loading XML Files into XML Objects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-loadxmlxmldocstring">
+<span class="md-ellipsis">
       Using loadXML(XMLDocString
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-loadurl" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-loadurl">
+<span class="md-ellipsis">
       Using load("URL")
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#comparing-loadxml-and-load" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparing-loadxml-and-load">
+<span class="md-ellipsis">
       Comparing loadXML() and load()
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-building-an-xml-database-from-scratch" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-building-an-xml-database-from-scratch">
+<span class="md-ellipsis">
       Example: Building an XML Database from Scratch
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#handling-web-service-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-web-service-transactions">
+<span class="md-ellipsis">
       Handling Web Service Transactions
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#document-type-definition-dtd" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#document-type-definition-dtd">
+<span class="md-ellipsis">
       Document Type Definition (DTD)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-java" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-java">
+<span class="md-ellipsis">
       Working with Java
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with Java">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with Java" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+<span class="md-ellipsis">
       Requirements
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jdkjre-15-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jdkjre-15-or-higher">
+<span class="md-ellipsis">
       JDK/JRE 1.5 (or Higher)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#path-environment-variable" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#path-environment-variable">
+<span class="md-ellipsis">
       PATH Environment Variable
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#classpath-environment-variable" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classpath-environment-variable">
+<span class="md-ellipsis">
       CLASSPATH Environment Variable
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-path-and-classpath-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-path-and-classpath-environment-variables">
+<span class="md-ellipsis">
       Setting PATH and CLASSPATH Environment Variables
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#public-methods" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-methods">
+<span class="md-ellipsis">
       Public Methods
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#identifying-java-objects-in-javascript-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifying-java-objects-in-javascript-scripts">
+<span class="md-ellipsis">
       Identifying Java Objects in JavaScript scripts
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#forestalling-errors" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forestalling-errors">
+<span class="md-ellipsis">
       Forestalling Errors
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-passing-simple-variables-between-java-and-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-passing-simple-variables-between-java-and-javascript">
+<span class="md-ellipsis">
       Example: passing simple variables between Java and JavaScript
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-objects-between-java-and-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#passing-objects-between-java-and-javascript">
+<span class="md-ellipsis">
       Passing Objects Between Java and JavaScript
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-timers-and-counters-for-java-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-timers-and-counters-for-java-objects">
+<span class="md-ellipsis">
       Automatic Timers And Counters For Java Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#calling-a-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calling-a-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Calling a WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Calling a WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-the-webloadwrapper-to-call-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Calling a WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-webloadwrapper-to-call-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Using the WebLoadWrapper to call WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using the WebLoadWrapper to call WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-supported-by-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Using the WebLoadWrapper to call WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-supported-by-webloadwrapper">
+<span class="md-ellipsis">
       Functions supported by WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#coding-with-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coding-with-webloadwrapper">
+<span class="md-ellipsis">
       Coding with WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-webloadwrapper">
+<span class="md-ellipsis">
       Example: using WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#legacy-method-of-calling-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#legacy-method-of-calling-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Legacy method of calling WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Legacy method of calling WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-reading-data-from-a-jdbc-database" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Legacy method of calling WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-reading-data-from-a-jdbc-database">
+<span class="md-ellipsis">
       Example: reading data from a JDBC database
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-java-selenium-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-java-selenium-scripts">
+<span class="md-ellipsis">
       Working with Java Selenium Scripts
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with Java Selenium Scripts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisite-adding-custom-java-classes-to-webload" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with Java Selenium Scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisite-adding-custom-java-classes-to-webload">
+<span class="md-ellipsis">
       Prerequisite: Adding custom Java classes to WebLOAD
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisite: Adding custom Java classes to WebLOAD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-1-include-the-selenium-jar-and-its-dependencies-in-webload" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Prerequisite: Adding custom Java classes to WebLOAD" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-1-include-the-selenium-jar-and-its-dependencies-in-webload">
+<span class="md-ellipsis">
       Method #1: Include the Selenium jar and its dependencies in WebLOAD
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#method-2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-2">
+<span class="md-ellipsis">
       Method #2
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-selenium-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-selenium-scripts">
+<span class="md-ellipsis">
       Working with Selenium Scripts
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-webloaddriver" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-webloaddriver">
+<span class="md-ellipsis">
       Working with WebLoadDriver
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-of-working-with-webloaddriver" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-working-with-webloaddriver">
+<span class="md-ellipsis">
       Example of working with WebLoadDriver
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#for-more-information-on-working-with-selenium" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-more-information-on-working-with-selenium">
+<span class="md-ellipsis">
       For more information on working with Selenium
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-component-object-model-com" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-component-object-model-com">
+<span class="md-ellipsis">
       Working with the Component Object Model (COM)
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with the Component Object Model (COM)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-com" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with the Component Object Model (COM)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-com">
+<span class="md-ellipsis">
       What is COM
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activex-object-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activex-object-interfaces">
+<span class="md-ellipsis">
       ActiveX Object Interfaces
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activating-activex-objects-from-a-javascript-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activating-activex-objects-from-a-javascript-script">
+<span class="md-ellipsis">
       Activating ActiveX Objects from a JavaScript script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activexobject-constructor" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activexobject-constructor">
+<span class="md-ellipsis">
       ActiveXObject() (constructor)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#assigning-values-to-activex-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-activex-objects">
+<span class="md-ellipsis">
       Assigning Values to ActiveX Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#timers-and-counters-for-activex-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timers-and-counters-for-activex-objects">
+<span class="md-ellipsis">
       Timers and Counters for ActiveX Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-conversion-between-javascript-and-com-data-types" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-conversion-between-javascript-and-com-data-types">
+<span class="md-ellipsis">
       Automatic Conversion between JavaScript and COM Data Types
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-casting-functions-for-javascript-and-com-data-types" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-casting-functions-for-javascript-and-com-data-types">
+<span class="md-ellipsis">
       Using Casting Functions for JavaScript and COM Data Types
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#dcom-over-http" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dcom-over-http">
+<span class="md-ellipsis">
       DCOM over HTTP
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-activexobject-constructor" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-activexobject-constructor">
+<span class="md-ellipsis">
       Remote ActiveXObject() Constructor
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-remote-activex-object-access" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-remote-activex-object-access">
+<span class="md-ellipsis">
       Example: Remote ActiveX Object Access
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#com-error-management" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#com-error-management">
+<span class="md-ellipsis">
       COM Error Management
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activex-object-limitations" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activex-object-limitations">
+<span class="md-ellipsis">
       ActiveX Object Limitations
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../working_with_http/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_http/">
+<span class="md-ellipsis">
     Working with HTTP Protocol
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../using_asynchronous/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_asynchronous/">
+<span class="md-ellipsis">
     Using Asynchronous Requests
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Scripting Samples
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
     Appendix B - LiveConnect Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
     Console
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
             Console
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/introducing_webload/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
     Introducing WebLOAD
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/quickstart/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
     Quick Start
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/console_features/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
     Console Features
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_load_templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
     Creating Load Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/plan_test_session/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
     Planning a Test Session
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/connect_webrm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
     Connecting to WebRM
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/manage_load_templates_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
     Managing Load Templates and Load Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_template_wizard/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
     Creating Load Templates with the WebLOAD Wizard
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/create_load_test_goal/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
     Creating Load Templates with Goal-Oriented Test
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/config_load_template/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
     Configuring a Load Template Manually
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/set_global_opt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
     Setting Global Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/set_script_options/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
     Setting Script Options
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/func_verifi_test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
     Functional Verification Testing
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/run_test_analyze_results/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
     Running Tests and Analyzing  Test Results
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/running_a_load_session/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
     Running a Load Session
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/working_with_git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
     Working with Git
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/viewing_log_window/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
     Viewing the Log Window
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/console_performance_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
     WebLOAD Console Performance Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/statistics_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
     WebLOAD Statistics Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/data_drilling_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
     Data Drilling Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/export_performance_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
     Exporting Performance Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/performance_measurements_manager/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
     Performance Measurements Manager
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - Integrating with Dynatrace
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - Integrating with Nagios
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - Integrating with New Relic
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - WebLOAD Console Error Messages
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_f/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
     Appendix F - Reference Materials
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../console/appendix_g/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
     Appendix G - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
     Dashboard
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
             Dashboard
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
     Installation
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/manage_tests/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
     Managing Test
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
     Managing Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_resources/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
     Managing Resources
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
     Using Dashboards
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
     Customizing a Dashboard
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
     Managing Dashboards
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
     Sharing a Dashboard or Panel
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
     Creating and Playing a Playlist
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
     Managing Load Generators
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
     Managing Organizations, Users, and Admins
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dashboard/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - Editing WebLOAD Dashboard Configuration
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Using the REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
     Automation
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
             Automation
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
     Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_cli/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
     Running WebLOAD from the Command Line
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_jenkins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
     Running WebLOAD in Jenkins
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automation/webload_openapi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Running WebLOAD Using the OpenAPI
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
     JavaScript Reference
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
             JavaScript Reference
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/intro_java_scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
     Introduction to JavaScript
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/using_javascript_ref/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
     Using the WebLOAD JavaScript Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/actions_objects_functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
     WebLOAD Actions, Objects, and Functions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/internet_protocol/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
     WebLOAD Internet Protocols Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/xmlparser/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
     XML Parser Object
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/websocket_object/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
     WebSocket Object
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
     Appendix A - WebLOAD-supported SSL Protocol Reference
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
     Appendix B - WebLOAD-supported XML DOM Interfaces
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
     Appendix C - HTTP Protocol Status Messages
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
     Appendix D - WebLOAD-supported Character Sets
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../javascript/appendix_e/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
     Appendix E - Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
     Analytics
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
             Analytics
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
     Introduction
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
     WebLOAD Analytics System Overview
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
     Getting Started
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/generating_charts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
     Generating Charts
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
     Changing Chart Settings
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/generating_reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
     Generating Reports
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/load_sessions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
     Working with Load Sessions
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
     Working with Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/portfolios/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
     Working with Portfolios
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/defining_preferences/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
     Defining Your Preferences
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
     Appendix A. WebLOAD Analytics File System Structure
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
     Appendix B. Understanding the Statistics
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_c/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
     Appendix C. Running Analytics in Command Line Mode
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/appendix_d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
     Appendix D. Understanding the Templates
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/glossary/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
     Appendix E. Glossary
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
     Installation
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-xml-dom" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-xml-dom">
+<span class="md-ellipsis">
       Working with the XML DOM
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with the XML DOM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#webload-xml-dom-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with the XML DOM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-xml-dom-objects">
+<span class="md-ellipsis">
       WebLOAD XML DOM Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islands" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islands">
+<span class="md-ellipsis">
       Data Islands
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Islands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-islandin-line-code" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Data Islands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandin-line-code">
+<span class="md-ellipsis">
       Data Island—In-Line Code
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandreference-to-another-source" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandreference-to-another-source">
+<span class="md-ellipsis">
       Data Island—Reference to Another Source
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandscripted-in-line" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandscripted-in-line">
+<span class="md-ellipsis">
       Data Island—Scripted In-Line
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-islandscripted-reference-to-another-source" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-islandscripted-reference-to-another-source">
+<span class="md-ellipsis">
       Data Island—Scripted Reference to Another Source
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-data-islands-in-a-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-data-islands-in-a-script">
+<span class="md-ellipsis">
       Example: Using Data Islands in a script
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: Using Data Islands in a script">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#working-with-html-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Example: Using Data Islands in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-html-properties">
+<span class="md-ellipsis">
       Working with HTML Properties
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with HTML Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#javascript-script-code" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with HTML Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#javascript-script-code">
+<span class="md-ellipsis">
       JavaScript script Code:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#output-text" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-text">
+<span class="md-ellipsis">
       Output Text:
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-xml-dom-properties" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-xml-dom-properties">
+<span class="md-ellipsis">
       Working with XML DOM Properties
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-bookstore-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-bookstore-data">
+<span class="md-ellipsis">
       Changing Bookstore Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-new-bookstore-data" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-new-bookstore-data">
+<span class="md-ellipsis">
       Adding New Bookstore Data
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-and-filling-new-xml-dom-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-and-filling-new-xml-dom-objects">
+<span class="md-ellipsis">
       Creating and Filling New XML DOM Objects
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Filling New XML DOM Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Creating and Filling New XML DOM Objects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlxmldocumentxmlstrcreating-xml-dom-object-from-xml-string">
+<span class="md-ellipsis">
       WLXmlDocument(xmlStr)—Creating XML DOM Object from XML String
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-xml-in-native-direct-browsing-mode" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-xml-in-native-direct-browsing-mode">
+<span class="md-ellipsis">
       Working with XML in Native (Direct) Browsing Mode
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wlxmldocumentcreating-a-new-blank-xml-dom-object" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlxmldocumentcreating-a-new-blank-xml-dom-object">
+<span class="md-ellipsis">
       WLXmlDocument()—Creating a New, Blank XML DOM Object
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#loading-xml-files-into-xml-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-xml-files-into-xml-objects">
+<span class="md-ellipsis">
       Loading XML Files into XML Objects
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Loading XML Files into XML Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-loadxmlxmldocstring" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Loading XML Files into XML Objects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-loadxmlxmldocstring">
+<span class="md-ellipsis">
       Using loadXML(XMLDocString
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-loadurl" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-loadurl">
+<span class="md-ellipsis">
       Using load("URL")
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#comparing-loadxml-and-load" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparing-loadxml-and-load">
+<span class="md-ellipsis">
       Comparing loadXML() and load()
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-building-an-xml-database-from-scratch" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-building-an-xml-database-from-scratch">
+<span class="md-ellipsis">
       Example: Building an XML Database from Scratch
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#handling-web-service-transactions" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-web-service-transactions">
+<span class="md-ellipsis">
       Handling Web Service Transactions
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#document-type-definition-dtd" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#document-type-definition-dtd">
+<span class="md-ellipsis">
       Document Type Definition (DTD)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-java" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-java">
+<span class="md-ellipsis">
       Working with Java
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with Java">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with Java" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+<span class="md-ellipsis">
       Requirements
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jdkjre-15-or-higher" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jdkjre-15-or-higher">
+<span class="md-ellipsis">
       JDK/JRE 1.5 (or Higher)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#path-environment-variable" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#path-environment-variable">
+<span class="md-ellipsis">
       PATH Environment Variable
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#classpath-environment-variable" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classpath-environment-variable">
+<span class="md-ellipsis">
       CLASSPATH Environment Variable
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-path-and-classpath-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-path-and-classpath-environment-variables">
+<span class="md-ellipsis">
       Setting PATH and CLASSPATH Environment Variables
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#public-methods" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-methods">
+<span class="md-ellipsis">
       Public Methods
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#identifying-java-objects-in-javascript-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifying-java-objects-in-javascript-scripts">
+<span class="md-ellipsis">
       Identifying Java Objects in JavaScript scripts
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#forestalling-errors" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forestalling-errors">
+<span class="md-ellipsis">
       Forestalling Errors
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-passing-simple-variables-between-java-and-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-passing-simple-variables-between-java-and-javascript">
+<span class="md-ellipsis">
       Example: passing simple variables between Java and JavaScript
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-objects-between-java-and-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#passing-objects-between-java-and-javascript">
+<span class="md-ellipsis">
       Passing Objects Between Java and JavaScript
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-timers-and-counters-for-java-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-timers-and-counters-for-java-objects">
+<span class="md-ellipsis">
       Automatic Timers And Counters For Java Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#calling-a-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calling-a-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Calling a WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Calling a WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-the-webloadwrapper-to-call-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Calling a WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-webloadwrapper-to-call-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Using the WebLoadWrapper to call WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using the WebLoadWrapper to call WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-supported-by-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Using the WebLoadWrapper to call WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions-supported-by-webloadwrapper">
+<span class="md-ellipsis">
       Functions supported by WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#coding-with-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coding-with-webloadwrapper">
+<span class="md-ellipsis">
       Coding with WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-using-webloadwrapper" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-webloadwrapper">
+<span class="md-ellipsis">
       Example: using WebLoadWrapper
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#legacy-method-of-calling-webload-api-from-a-java-application" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#legacy-method-of-calling-webload-api-from-a-java-application">
+<span class="md-ellipsis">
       Legacy method of calling WebLOAD API from a Java Application
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Legacy method of calling WebLOAD API from a Java Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-reading-data-from-a-jdbc-database" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Legacy method of calling WebLOAD API from a Java Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-reading-data-from-a-jdbc-database">
+<span class="md-ellipsis">
       Example: reading data from a JDBC database
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-java-selenium-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-java-selenium-scripts">
+<span class="md-ellipsis">
       Working with Java Selenium Scripts
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with Java Selenium Scripts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisite-adding-custom-java-classes-to-webload" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with Java Selenium Scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisite-adding-custom-java-classes-to-webload">
+<span class="md-ellipsis">
       Prerequisite: Adding custom Java classes to WebLOAD
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisite: Adding custom Java classes to WebLOAD">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-1-include-the-selenium-jar-and-its-dependencies-in-webload" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Prerequisite: Adding custom Java classes to WebLOAD" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-1-include-the-selenium-jar-and-its-dependencies-in-webload">
+<span class="md-ellipsis">
       Method #1: Include the Selenium jar and its dependencies in WebLOAD
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#method-2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-2">
+<span class="md-ellipsis">
       Method #2
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-selenium-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-selenium-scripts">
+<span class="md-ellipsis">
       Working with Selenium Scripts
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#working-with-webloaddriver" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-webloaddriver">
+<span class="md-ellipsis">
       Working with WebLoadDriver
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-of-working-with-webloaddriver" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-working-with-webloaddriver">
+<span class="md-ellipsis">
       Example of working with WebLoadDriver
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#for-more-information-on-working-with-selenium" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-more-information-on-working-with-selenium">
+<span class="md-ellipsis">
       For more information on working with Selenium
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-the-component-object-model-com" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-the-component-object-model-com">
+<span class="md-ellipsis">
       Working with the Component Object Model (COM)
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working with the Component Object Model (COM)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-com" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Working with the Component Object Model (COM)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-com">
+<span class="md-ellipsis">
       What is COM
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activex-object-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activex-object-interfaces">
+<span class="md-ellipsis">
       ActiveX Object Interfaces
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activating-activex-objects-from-a-javascript-script" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activating-activex-objects-from-a-javascript-script">
+<span class="md-ellipsis">
       Activating ActiveX Objects from a JavaScript script
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activexobject-constructor" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activexobject-constructor">
+<span class="md-ellipsis">
       ActiveXObject() (constructor)
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#assigning-values-to-activex-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assigning-values-to-activex-objects">
+<span class="md-ellipsis">
       Assigning Values to ActiveX Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#timers-and-counters-for-activex-objects" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timers-and-counters-for-activex-objects">
+<span class="md-ellipsis">
       Timers and Counters for ActiveX Objects
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-conversion-between-javascript-and-com-data-types" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-conversion-between-javascript-and-com-data-types">
+<span class="md-ellipsis">
       Automatic Conversion between JavaScript and COM Data Types
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#using-casting-functions-for-javascript-and-com-data-types" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-casting-functions-for-javascript-and-com-data-types">
+<span class="md-ellipsis">
       Using Casting Functions for JavaScript and COM Data Types
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#dcom-over-http" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dcom-over-http">
+<span class="md-ellipsis">
       DCOM over HTTP
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-activexobject-constructor" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-activexobject-constructor">
+<span class="md-ellipsis">
       Remote ActiveXObject() Constructor
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#example-remote-activex-object-access" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-remote-activex-object-access">
+<span class="md-ellipsis">
       Example: Remote ActiveX Object Access
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#com-error-management" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#com-error-management">
+<span class="md-ellipsis">
       COM Error Management
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#activex-object-limitations" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activex-object-limitations">
+<span class="md-ellipsis">
       ActiveX Object Limitations
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="advanced-javascript-script-features">Advanced JavaScript script Features</h1>
 <p>Previous chapters discussed the basic set of script tools used to test typical Internet applications. However, to evaluate and test your Internet application most effectively, it is not enough to measure the total transaction turn-around time or throughput of the website. A website is often only the front-end for applications that reside behind the scenes, for back-end components that do the actual work for an application. Testing the components that stand behind your Internet application is essential for comprehensive Internet application testing. A detailed breakdown and analysis of the results of each user activity helps pinpoint the source of any potential bottlenecks or other problems, and expedites the work required for any corrections or improvements.</p>
 <p>WebLOAD fully supports component based testing. WebLOAD Recorder scripts do not simply measure the time required for transactions to a website to be completed. WebLOAD JavaScript script objects can also directly access the back-end applications that compose your Internet application.</p>
@@ -4380,8 +2153,8 @@
 <li>On a more sophisticated level, programmers may use the same XML DOM object to work with a full set of XML DOM Document Interface properties and methods, as listed in <em>Appendix B</em> of the <em>WebLOAD JavaScript Reference Guide</em>. The following figure illustrates these options:</li>
 </ul>
 <h3 id="data-islands"><strong>Data Islands</strong></h3>
-<p>Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of <xml> and </xml> tags or between a set of <script> and </script> tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.</p>
-<p>WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of <xml> tags or a set of <script> tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.</p>
+<p>Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of <code>&lt;xml&gt;</code> and <code>&lt;/xml&gt;</code> tags or between a set of <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.</p>
+<p>WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of <code>&lt;xml&gt;</code> tags or a set of <code>&lt;script&gt;</code> tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.</p>
 <p>Data Island XML DOM objects expose both aspects of each XML DOM object:</p>
 <ul>
 <li>The standard HTML properties id, src, and innerHTML. These properties refer to text strings found within the HTML document.</li>
@@ -4398,7 +2171,7 @@
 <p><code>XMLDataIsland2 = document.wlXmls[1]</code></p>
 <p>If a Data Island is identified by name through an ID, you could also access the Data</p>
 <p>Island through the id property. For example, if the first Data Island begins:</p>
-<p><xml id=“xmlBookstoreDatabase”></p>
+<p><code>&lt;xml id=“xmlBookstoreDatabase”&gt;</code></p>
 <p>Then you could access the Data Island using any of the following:</p>
 <p><code>MyBookstore = document.wlXmls.xmlBookstoreDatabase</code> </p>
 <p><code>MyBookstore = document.wlXmls[“xmlBookstoreDatabase”]</code> </p>
@@ -4421,9 +2194,9 @@
 
 &lt;!—in-line XML data&gt;
 
-&lt;xml id=&quot;xmldoc\_1&quot;&gt;
+&lt;xml id="xmldoc\_1"&gt;
 
-&lt;?xml version=&quot;1.0&quot; standalone = true?&gt; Programmer’s Guide
+&lt;?xml version="1.0" standalone = true?&gt; Programmer’s Guide
 
 &lt;author&gt;Mark Twain&lt;/author&gt;
 
@@ -4485,7 +2258,7 @@
 <pre><code class="language-xml">
 &lt;SCRIPT language=“xml” id=“xmlscript”&gt;
 
-&lt;?xml version=&quot;1.0”?&gt;
+&lt;?xml version="1.0”?&gt;
 
 &lt;!—XML data in-line within a script element.&gt;
 
@@ -4515,10 +2288,8 @@ Programmer’s Guide
 </code></pre>
 <h4 id="data-islandscripted-reference-to-another-source">Data Island—Scripted Reference to Another Source</h4>
 <p>The preceding code illustrates XML data embedded in a script. Scripts may also include references to other sources:</p>
-<SCRIPT language=“xml” id=“xmlscript” src=“book.xml”>
-
-</SCRIPT>
-
+<script id="“xmlscript”" language="“xml”" src="“book.xml”">
+</script>
 <h3 id="example-using-data-islands-in-a-script">Example: Using Data Islands in a script</h3>
 <p>The following example illustrates Data Island usage. Assume you are working with a Web Bookstore site that includes the following inventory database code fragment:</p>
 <pre><code>&lt;HTML&gt;
@@ -4533,10 +2304,8 @@ Programmer’s Guide
 &lt;BODY&gt;
 </code></pre>
 <h3>Html file with embedded XML</h3>
-
-<P>Here begins the XML Data Island</P>
-
-<pre><code class="language-html">&lt;xml id=&quot;WebStudents&quot;&gt;
+<p>Here begins the XML Data Island</p>
+<pre><code class="language-html">&lt;xml id="WebStudents"&gt;
 
 &lt;wclass&gt;
 
@@ -4544,7 +2313,7 @@ Programmer’s Guide
 
 -&gt;
 
-&lt;student id=&quot;1&quot;&gt;
+&lt;student id="1"&gt;
 
 &lt;name&gt;Linda Jones&lt;/name&gt;
 
@@ -4552,7 +2321,7 @@ Programmer’s Guide
 
 &lt;/student&gt;
 
-&lt;student id=&quot;2&quot;&gt;
+&lt;student id="2"&gt;
 
 &lt;name&gt;Adam Davidson&lt;/name&gt;
 
@@ -4560,7 +2329,7 @@ Programmer’s Guide
 
 &lt;/student&gt;
 
-&lt;student id=&quot;3&quot;&gt;
+&lt;student id="3"&gt;
 
 &lt;name&gt;Charles Boyer&lt;/name&gt;
 
@@ -4568,7 +2337,7 @@ Programmer’s Guide
 
 &lt;/student&gt;
 
-&lt;student id=&quot;4&quot;&gt;
+&lt;student id="4"&gt;
 
 &lt;name&gt;Charles Mann&lt;/name&gt;
 
@@ -4597,39 +2366,38 @@ wlGlobals.Parse = true wlGlobals.ParseXML = true
 
 wlHttp.SaveSource = true
 
-[wlHttp.Get(&quot;http://www.webloadmpsto](http://www.webloadmpstore.com/xmlsamples/sample2.htm)re.com/[xmlsamples/sample2.htm](http://www.webloadmpstore.com/xmlsamples/sample2.htm) l&quot;)
+[wlHttp.Get("http://www.webloadmpsto](http://www.webloadmpstore.com/xmlsamples/sample2.htm)re.com/[xmlsamples/sample2.htm](http://www.webloadmpstore.com/xmlsamples/sample2.htm) l")
 
 var XMLstudents = document.wlXmls[0] 
 
-InfoMessage(&quot;ID : &quot; +XMLstudents.id) 
+InfoMessage("ID : " +XMLstudents.id) 
 
-InfoMessage(&quot;HTML text : &quot; +XMLstudents.innerHTML)
+InfoMessage("HTML text : " +XMLstudents.innerHTML)
 
 
 </code></pre>
 <h5 id="output-text"><strong>Output Text:</strong></h5>
 <p>Running this script produces the following output, essentially a text copy of the Data Island fields:</p>
 <p>ID : WebStudents HTML text :</p>
-<p><wclass></p>
+<p><wclass></wclass></p>
 <!-- My students who attended my web programming class -->
-
-<p><student id="1"></p>
+<p><student id="1"></student></p>
 <p><name>Linda Jones</name></p>
-<p><legacySkill>Access, VB5.0</legacySkill></p>
-<p></student></p>
-<p><student id="2"></p>
+<p><legacyskill>Access, VB5.0</legacyskill></p>
+<p></p>
+<p><student id="2"></student></p>
 <p><name>Adam Davidson</name></p>
-<p><legacySkill>Cobol, MainFrame</legacySkill></p>
-<p></student></p>
-<p><student id="3"></p>
+<p><legacyskill>Cobol, MainFrame</legacyskill></p>
+<p></p>
+<p><student id="3"></student></p>
 <p><name>Charles Boyer</name></p>
-<p><legacySkill>HTML, Photoshop</legacySkill></p>
-<p></student></p>
-<p><student id="4"></p>
+<p><legacyskill>HTML, Photoshop</legacyskill></p>
+<p></p>
+<p><student id="4"></student></p>
 <p><name>Charles Mann</name></p>
-<p><legacySkill>Cobol, MainFrame</legacySkill></p>
-<p></student></p>
-<p></wclass></p>
+<p><legacyskill>Cobol, MainFrame</legacyskill></p>
+<p></p>
+<p></p>
 <h4 id="working-with-xml-dom-properties">Working with XML DOM Properties</h4>
 <p>Your script may also access the complete XML DOM Document Interface for the XML DOM object created from this Data Island. For example, to see a printout of the complete XML DOM structure for the xmlBookSite Data Island described on the preceding pages, use the following recursive function. See <em>Appendix B</em> in the <em>WebLOAD JavaScript Reference Guide</em>, for a description of the XML DOM properties used in this script fragment.</p>
 <p><strong>JavaScript script Code:</strong></p>
@@ -4643,7 +2411,7 @@ wlGlobals.Parse = true wlGlobals.ParseXML = true
 
 wlHttp.SaveSource = true
 
-[wlHttp.Get(&quot;http://www.webloadmpstore.com/xmlsamples](http://www.webloadmpstore.com/xmlsamples/sample2.htm)/sample2.htm l&quot;)
+[wlHttp.Get("http://www.webloadmpstore.com/xmlsamples](http://www.webloadmpstore.com/xmlsamples/sample2.htm)/sample2.htm l")
 
 var XMLstudents = document.wlXmls[0]
 
@@ -4651,7 +2419,7 @@ var XMLstudentDoc = XMLstudents.XMLDocument
 
 var XMLstudentElement = XMLstudentDoc.documentElement
 
-InfoMessage(&quot;Printing XML under the root&quot;) InfoMessage(XMLstudentElement.xml) InfoMessage(&quot;Element structure of the DOM&quot;) printChildren(XMLstudentElement)
+InfoMessage("Printing XML under the root") InfoMessage(XMLstudentElement.xml) InfoMessage("Element structure of the DOM") printChildren(XMLstudentElement)
 
 // function that will print all the fields and their attributes function printChildren(element)
 
@@ -4661,7 +2429,7 @@ switch(element.nodeTypeString)
 
 {
 
-case &quot;element&quot;:
+case "element":
 
 InfoMessage(element.nodeName)
 
@@ -4675,15 +2443,15 @@ printChildren(element.childNodes.item(i))
 
 
 
-break case &quot;text&quot;:
+break case "text":
 
-InfoMessage(&quot;\&quot;&quot; + element.nodeValue + &quot;\&quot;&quot;) break
-
-}
+InfoMessage("\"" + element.nodeValue + "\"") break
 
 }
 
-InfoMessage(&quot;End of test&quot;)
+}
+
+InfoMessage("End of test")
 </code></pre>
 <p><strong>Output Text:</strong></p>
 <p>Running this script produces the following output:</p>
@@ -4692,7 +2460,7 @@ InfoMessage(&quot;End of test&quot;)
 
 &lt;!-- My students who attended my web programming class --&gt;
 
-&lt;student id=&quot;1&quot;&gt;
+&lt;student id="1"&gt;
 
 &lt;name&gt;Linda Jones&lt;/name&gt;
 
@@ -4700,7 +2468,7 @@ InfoMessage(&quot;End of test&quot;)
 
 &lt;/student&gt;
 
-&lt;student id=&quot;2&quot;&gt;
+&lt;student id="2"&gt;
 
 &lt;name&gt;Adam Davidson&lt;/name&gt;
 
@@ -4708,7 +2476,7 @@ InfoMessage(&quot;End of test&quot;)
 
 &lt;/student&gt;
 
-&lt;student id=&quot;3&quot;&gt;
+&lt;student id="3"&gt;
 
 &lt;name&gt;Charles Boyer&lt;/name&gt;
 
@@ -4716,7 +2484,7 @@ InfoMessage(&quot;End of test&quot;)
 
 &lt;/student&gt;
 
-&lt;student id=&quot;4&quot;&gt;
+&lt;student id="4"&gt;
 
 &lt;name&gt;Charles Mann&lt;/name&gt;
 
@@ -4730,23 +2498,23 @@ Element structure of the DOM wclass
 
 student name
 
-&quot;Linda Jones&quot;
+"Linda Jones"
 
 
 
-legacySkill &quot;Access, VB5.0&quot; student
-
-name
-
-&quot;Adam Davidson&quot; legacySkill &quot;Cobol, MainFrame&quot; student
+legacySkill "Access, VB5.0" student
 
 name
 
-&quot;Charles Boyer&quot; legacySkill &quot;HTML, Photoshop&quot; student
+"Adam Davidson" legacySkill "Cobol, MainFrame" student
 
 name
 
-&quot;Charles Mann&quot; legacySkill &quot;Cobol, MainFrame&quot;
+"Charles Boyer" legacySkill "HTML, Photoshop" student
+
+name
+
+"Charles Mann" legacySkill "Cobol, MainFrame"
 
 End of test
 </code></pre>
@@ -4754,7 +2522,7 @@ End of test
 <p>A similar script, with the same functionality, can be written using the XMLParserObject, as shown in the code snippet below:</p>
 <pre><code class="language-javascript">xmlObject = new XMLParserObject(); doc = xmlObject.
 
-[parseURI(&quot;http://www.webloadmpstore.com/](http://www.webloadmpstore.com/xmlsamples/sample2.html)xmlsamples[/sample2.html&quot;](http://www.webloadmpstore.com/xmlsamples/sample2.html)
+[parseURI("http://www.webloadmpstore.com/](http://www.webloadmpstore.com/xmlsamples/sample2.html)xmlsamples[/sample2.html"](http://www.webloadmpstore.com/xmlsamples/sample2.html)
 
 )
 
@@ -4762,7 +2530,7 @@ doc1 = doc.getDocumentElement()
 
 //used to present only the xml
 
-domNode = doc1.getElementsByTagName(&quot;xml&quot;).item(0); InfoMessage(&quot;Printing XML under the root&quot;) printChildren(domNode)
+domNode = doc1.getElementsByTagName("xml").item(0); InfoMessage("Printing XML under the root") printChildren(domNode)
 
 function printChildren(element)
 
@@ -4772,7 +2540,7 @@ switch(element.nodeTypeString)
 
 {
 
-case &quot;element&quot;:
+case "element":
 
 InfoMessage(element.nodeName)
 
@@ -4786,15 +2554,15 @@ printChildren(element.childNodes.item(i))
 
 
 
-break case &quot;text&quot;:
+break case "text":
 
-InfoMessage(&quot;\&quot;&quot; + element.nodeValue + &quot;\&quot;&quot;) break
-
-}
+InfoMessage("\"" + element.nodeValue + "\"") break
 
 }
 
-InfoMessage(&quot;End of test&quot;)
+}
+
+InfoMessage("End of test")
 </code></pre>
 <h4 id="changing-bookstore-data">Changing Bookstore Data</h4>
 <p>After you have accessed the website and created an XML DOM object from the XML data found on the site, you may wish to change some of the data and post the new version back to the website. To change the author of the first book to ‘S. B. David Lee Eddings’:</p>
@@ -4808,7 +2576,7 @@ wlGlobals.Parse = true wlGlobals.ParseXML = true
 
 wlHttp.SaveSource = true wlHttp.Get
 
-[(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1[.xml&quot;)](http://www.webloadmpstore.com/xmlsamples/sample1.xml)
+[("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1[.xml")](http://www.webloadmpstore.com/xmlsamples/sample1.xml)
 
 //Getting the XML file
 
@@ -4818,7 +2586,7 @@ var xmlBookListIsland = xmlBookListDoc.XMLDocument
 
 var xmlBookListElement = xmlBookListIsland.documentElement
 
-InfoMessage(&quot;Printing xml under the root: &quot; + xmlBookListElement.xml)
+InfoMessage("Printing xml under the root: " + xmlBookListElement.xml)
 
 //First access the node of the first book
 
@@ -4844,18 +2612,18 @@ var TextAuthorFirstBook = AuthorFirstBook.childNodes.item(0)
 
 //Now assign a new value
 
-TextAuthorFirstBook.nodeValue = &quot;S. B. David Lee Eddings&quot;
+TextAuthorFirstBook.nodeValue = "S. B. David Lee Eddings"
 
-InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot;
+InfoMessage("The changed author value, from J.R.R. Tolkein, to: "
 
-\+ TextAuthorFirstBook.nodeValue) InfoMessage(&quot;Print xml under the root: &quot; + xmlBookListElement.xml)
+\+ TextAuthorFirstBook.nodeValue) InfoMessage("Print xml under the root: " + xmlBookListElement.xml)
 </code></pre>
 <p>The changed bookstore database will look as follows:</p>
-<pre><code class="language-xml">&lt;bookstore name=&quot;NODE1NAME&quot;&gt;
+<pre><code class="language-xml">&lt;bookstore name="NODE1NAME"&gt;
 
 &lt;book&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt;
+&lt;title lang="en"&gt;Everyday Italian&lt;/title&gt;
 
 &lt;author&gt;David Eddings&lt;/author&gt;
 
@@ -4865,9 +2633,9 @@ InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot;
 
 &lt;/book&gt;
 
-&lt;book category=&quot;CHILDREN&quot;&gt;
+&lt;book category="CHILDREN"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Harry Potter&lt;/title&gt;
+&lt;title lang="en"&gt;Harry Potter&lt;/title&gt;
 
 &lt;author&gt;J K. Rowling&lt;/author&gt;
 
@@ -4877,9 +2645,9 @@ InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot;
 
 &lt;/book&gt;
 
-&lt;book category=&quot;WEB&quot;&gt;
+&lt;book category="WEB"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;XQuery Kick Start&lt;/title&gt;
+&lt;title lang="en"&gt;XQuery Kick Start&lt;/title&gt;
 
 &lt;author&gt;James McGovern&lt;/author&gt;
 
@@ -4897,9 +2665,9 @@ InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot;
 
 &lt;/book&gt;
 
-&lt;book category=&quot;WEB&quot;&gt;
+&lt;book category="WEB"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Learning XML&lt;/title&gt;
+&lt;title lang="en"&gt;Learning XML&lt;/title&gt;
 
 &lt;author&gt;Erik T. Ray&lt;/author&gt;
 
@@ -4917,17 +2685,17 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 
 xmlObject = new XMLParserObject(); doc = xmlObject.
 
-[parseURI(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml&quot;)
+[parseURI("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml")
 
 ;
 
-InfoMessage(&quot;The xml under the root : &quot; + doc.xml) doc1 = doc.getDocumentElement()
+InfoMessage("The xml under the root : " + doc.xml) doc1 = doc.getDocumentElement()
 
-FirstBook = doc1.getElementsByTagName(&quot;book&quot;).item(0); AuthorFirstBook  = FirstBook.childNodes.item(1) ; TextAuthorFirstBook    = AuthorFirstBook.childNodes.item(0) TextAuthorFirstBook.nodeValue = &quot;S. B. David Lee Eddings&quot;
+FirstBook = doc1.getElementsByTagName("book").item(0); AuthorFirstBook  = FirstBook.childNodes.item(1) ; TextAuthorFirstBook    = AuthorFirstBook.childNodes.item(0) TextAuthorFirstBook.nodeValue = "S. B. David Lee Eddings"
 
-InfoMessage(&quot;The changed author value, from J.R.R. Tolkein, to: &quot; + TextAuthorFirstBook.nodeValue)
+InfoMessage("The changed author value, from J.R.R. Tolkein, to: " + TextAuthorFirstBook.nodeValue)
 
-InfoMessage(&quot;The xml under the root : &quot; + doc.xml)
+InfoMessage("The xml under the root : " + doc.xml)
 </code></pre>
 <h4 id="adding-new-bookstore-data">Adding New Bookstore Data</h4>
 <p>The following script fragment illustrates adding a new ‘book element’ to the xmlBooksite database. See Appendix B in the <em>WebLOAD JavaScript Reference Guide</em>, for a description of the XML DOM properties used here.</p>
@@ -4939,11 +2707,11 @@ var xmlBookListIsland = xmlBookListDoc.XMLDocument
 
 //  and append it to the tree
 
-newBook = xmlBookListIsland.createElement(&quot;book&quot;) xmlBookListIsland.documentElement.appendChild(newBook)
+newBook = xmlBookListIsland.createElement("book") xmlBookListIsland.documentElement.appendChild(newBook)
 
-//STEP 2, create and name the new book’s title element title1 = xmlBookListIsland.createElement(&quot;title&quot;)
+//STEP 2, create and name the new book’s title element title1 = xmlBookListIsland.createElement("title")
 
-name = xmlBookListIsland.createTextNode(&quot;River God&quot;)
+name = xmlBookListIsland.createTextNode("River God")
 
 //append the new name node to the title node title1.appendChild(name)
 
@@ -4951,28 +2719,28 @@ name = xmlBookListIsland.createTextNode(&quot;River God&quot;)
 
 
 
-//STEP 3, create and name the new book’s author element author = xmlBookListIsland.createElement(&quot;author&quot;)
+//STEP 3, create and name the new book’s author element author = xmlBookListIsland.createElement("author")
 
-name = xmlBookListIsland.createTextNode(&quot;Wilbur Smith&quot;) author.appendChild(name)
+name = xmlBookListIsland.createTextNode("Wilbur Smith") author.appendChild(name)
 
 newBook.appendChild(author)
 
-//STEP 4, create and name the new book’s year element year = xmlBookListIsland.createElement(&quot;year&quot;)
+//STEP 4, create and name the new book’s year element year = xmlBookListIsland.createElement("year")
 
-name = xmlBookListIsland.createTextNode(&quot;1975&quot;) year.appendChild(name) newBook.appendChild(year)
+name = xmlBookListIsland.createTextNode("1975") year.appendChild(name) newBook.appendChild(year)
 
-//STEP 4, create and name the new book’s price element price = xmlBookListIsland.createElement(&quot;price&quot;) amount = xmlBookListIsland.createTextNode(&quot;40.55&quot;) price.appendChild(amount)
+//STEP 4, create and name the new book’s price element price = xmlBookListIsland.createElement("price") amount = xmlBookListIsland.createTextNode("40.55") price.appendChild(amount)
 
 newBook.appendChild(price)
 
 
 </code></pre>
 <p>The newly expanded bookstore database will look as follows:</p>
-<pre><code class="language-xml">&lt;bookstore name=&quot;NODE1NAME&quot;&gt;
+<pre><code class="language-xml">&lt;bookstore name="NODE1NAME"&gt;
 
 &lt;book&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt;
+&lt;title lang="en"&gt;Everyday Italian&lt;/title&gt;
 
 &lt;author&gt;S. B. David Lee Eddings&lt;/author&gt;
 
@@ -4982,9 +2750,9 @@ newBook.appendChild(price)
 
 &lt;/book&gt;
 
-&lt;book category=&quot;CHILDREN&quot;&gt;
+&lt;book category="CHILDREN"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Harry Potter&lt;/title&gt;
+&lt;title lang="en"&gt;Harry Potter&lt;/title&gt;
 
 &lt;author&gt;J K. Rowling&lt;/author&gt;
 
@@ -4994,9 +2762,9 @@ newBook.appendChild(price)
 
 &lt;/book&gt;
 
-&lt;book category=&quot;WEB&quot;&gt;
+&lt;book category="WEB"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;XQuery Kick Start&lt;/title&gt;
+&lt;title lang="en"&gt;XQuery Kick Start&lt;/title&gt;
 
 &lt;author&gt;James McGovern&lt;/author&gt;
 
@@ -5016,9 +2784,9 @@ newBook.appendChild(price)
 
 &lt;/book&gt;
 
-&lt;book category=&quot;WEB&quot;&gt;
+&lt;book category="WEB"&gt;
 
-&lt;title lang=&quot;en&quot;&gt;Learning XML&lt;/title&gt;
+&lt;title lang="en"&gt;Learning XML&lt;/title&gt;
 
 &lt;author&gt;Erik T. Ray&lt;/author&gt;
 
@@ -5045,23 +2813,23 @@ newBook.appendChild(price)
 <p>You can achieve the same result using XMLParserObject. The script Code is as follows:</p>
 <pre><code class="language-javascript">xmlObject = new XMLParserObject(); doc = xmlObject.
 
-[parseURI(&quot;http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml&quot;)
+[parseURI("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml")
 
 ;
 
 doc1 = doc.getDocumentElement()
 
-newNode1 = doc.createElement(&quot;book&quot;); doc1.appendChild(newNode1);
+newNode1 = doc.createElement("book"); doc1.appendChild(newNode1);
 
-title1 = doc.createElement(&quot;title&quot;) ; titleText = doc.createTextNode(&quot;River God&quot;); newNode1.appendChild(title1) title1.appendChild(titleText )
+title1 = doc.createElement("title") ; titleText = doc.createTextNode("River God"); newNode1.appendChild(title1) title1.appendChild(titleText )
 
-author = doc.createElement(&quot;author&quot;)  ; authorName =    doc.createTextNode(&quot;Wilbur Smith&quot;); newNode1.appendChild(author) author.appendChild(authorName )
+author = doc.createElement("author")  ; authorName =    doc.createTextNode("Wilbur Smith"); newNode1.appendChild(author) author.appendChild(authorName )
 
-year = doc.createElement(&quot;year&quot;) ; yearInd =    doc.createTextNode(&quot;1975&quot;); newNode1.appendChild(year ) year.appendChild(yearInd )
+year = doc.createElement("year") ; yearInd =    doc.createTextNode("1975"); newNode1.appendChild(year ) year.appendChild(yearInd )
 
 
 
-price = doc.createElement(&quot;price&quot;) ; priceAmount =  doc.createTextNode(&quot;40.55&quot;); newNode1.appendChild(price) price.appendChild(priceAmount )
+price = doc.createElement("price") ; priceAmount =  doc.createTextNode("40.55"); newNode1.appendChild(price) price.appendChild(priceAmount )
 </code></pre>
 <h3 id="creating-and-filling-new-xml-dom-objects"><strong>Creating and Filling New XML DOM Objects</strong></h3>
 <p>WebLOAD supports the creation of new XML DOM objects through the WLXmlDocument() constructor. New XML DOM objects may either be created:</p>
@@ -5226,7 +2994,7 @@ title.appendChild(name) newBook.appendChild(title)
 price = xmlBookstoreDoc.createElement(“price” amount = xmlBookstoreDoc.createTextNode(“$20.00”) price.appendChild(amount) newBook.appendChild(price)
 </code></pre>
 <p>A new XML DOM bookstore database object has now been created and filled with information about two books. The product of the xmlBookstoreDoc.documentElement.xml property would be:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0”?&gt;
+<pre><code class="language-xml">&lt;?xml version="1.0”?&gt;
 
 &lt;bookstore&gt;
 
@@ -5259,27 +3027,27 @@ price = xmlBookstoreDoc.createElement(“price” amount = xmlBookstoreDoc.creat
 <p>The following sample script demonstrates how WebLOAD handles web service transactions by extracting the dynamic XML from the web service response and parsing it using the XMLParserObject. The desired return value is then located by searching through the parsed XML.</p>
 <pre><code class="language-javascript">xmlObject = new XMLParserObject()
 
-wlGlobals.GetFrames = false [wlHttp.Get(&quot;http://www.webloadmpstore.com/ajaxsample&quot;)](http://www.webloadmpstore.com/ajaxsample)
+wlGlobals.GetFrames = false [wlHttp.Get("http://www.webloadmpstore.com/ajaxsample")](http://www.webloadmpstore.com/ajaxsample)
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/ajaxsample/&quot;](http://www.webloadmpstore.com/ajaxsample/)
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/ajaxsample/"](http://www.webloadmpstore.com/ajaxsample/)
 
-wlHttp.FormData[&quot;wsdl&quot;] = &quot;$WL$VOID$STRING$&quot;
+wlHttp.FormData["wsdl"] = "$WL$VOID$STRING$"
 
-[wlHttp.Get(&quot;http://www.webloadmpstore.com/ajaxsample/serveradd1.](http://www.webloadmpstore.com/ajaxsample/serveradd1) php&quot;)
+[wlHttp.Get("http://www.webloadmpstore.com/ajaxsample/serveradd1.](http://www.webloadmpstore.com/ajaxsample/serveradd1) php")
 
-wlHttp.Header[&quot;Referer&quot;] = [&quot;http://www.webloadmpstore.com/ajaxsample/&quot;](http://www.webloadmpstore.com/ajaxsample/)
+wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/ajaxsample/"](http://www.webloadmpstore.com/ajaxsample/)
 
-wlHttp.Data[&quot;Type&quot;] = &quot;text/xml; charset=utf-8&quot;
+wlHttp.Data["Type"] = "text/xml; charset=utf-8"
 
-wlHttp.Data[&quot;Value&quot;] = &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf- 8\&quot;?&gt;&lt;soap:Envelope xmlns:xsi=[\&quot;http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)&quot; xmlns:xsd=\[&quot;http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\&quot;
+wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf- 8\"?&gt;&lt;soap:Envelope xmlns:xsi=[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)" xmlns:xsd=\["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\"
 
-xmlns:soap=\[&quot;http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\&quot;&gt;&lt;soap:B ody&gt;&lt;add xmlns=\&quot;urn:addwsdl\&quot;&gt;&lt;a&gt;20&lt;/a&gt;&lt;b&gt;30&lt;/b&gt;&lt;/add&gt;&lt;/soap:Body&gt;&lt;/soap
+xmlns:soap=\["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"&gt;&lt;soap:B ody&gt;&lt;add xmlns=\"urn:addwsdl\"&gt;&lt;a&gt;20&lt;/a&gt;&lt;b&gt;30&lt;/b&gt;&lt;/add&gt;&lt;/soap:Body&gt;&lt;/soap
 
-:Envelope&gt;&quot;
+:Envelope&gt;"
 
-[wlHttp.Post(&quot;http://www.webloadmpstore.com/ajaxsample/serveradd1](http://www.webloadmpstore.com/ajaxsample/serveradd1)
+[wlHttp.Post("http://www.webloadmpstore.com/ajaxsample/serveradd1](http://www.webloadmpstore.com/ajaxsample/serveradd1)
 
-.php&quot;)
+.php")
 
 //Extract the XML part from the response doc = document.wlXmls[0]
 
@@ -5287,9 +3055,9 @@ InfoMessage (doc.xml)
 
 //Load the extracted XML into the XMLParserObject xo = xmlObject.loadXML(doc.xml)
 
-//Locate the node containing the Web Service result according to the name of the node: &quot;return&quot;
+//Locate the node containing the Web Service result according to the name of the node: "return"
 
-node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
+node = xo.getElementsByTagName("return").item(0) InfoMessage(node.xml)
 </code></pre>
 <h3 id="document-type-definition-dtd"><strong>Document Type Definition (DTD)</strong></h3>
 <p>The term DTD is an acronym for Document Type Definition. The Document Type Definition is a set of rules that describes the grammar of a particular XML document. The DTD is used to validate an XML document.</p>
@@ -5305,12 +3073,12 @@ node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
 <p>by checking that the XML data follows the rules set by the DTD.</p>
 <p>![ref8]If the price is missing from a certain book item, for example, and a price is required by the DTD, then the Browser will not be able to validate that XML document.</p>
 <blockquote>
-<p><strong>Note:</strong> For the Browser to parse and validate an XML document according to a particular DTD, the author must include a <DOCTYPE> section in the XML document. WebLOAD Recorder supports DTD verification only if the DTD is completely included in the Data Island and there are <em>no external references</em> in the DTD.</p>
+<p><strong>Note:</strong> For the Browser to parse and validate an XML document according to a particular DTD, the author must include a <doctype> section in the XML document. WebLOAD Recorder supports DTD verification only if the DTD is completely included in the Data Island and there are <em>no external references</em> in the DTD.</doctype></p>
 </blockquote>
 <p>The following code illustrates a self contained DTD for the bookstore example used throughout this section of the manual:</p>
 <pre><code class="language-xml-dtd">&lt;!-DOCUMENT STARTS HERE-&gt;
 
-&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;?xml version="1.0"?&gt;
 
 &lt;!-THE DTD STARTS HERE --&gt;
 
@@ -5339,7 +3107,7 @@ node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
 
 
 
-&lt;a name=&quot;_bookmark74&quot;&gt;&lt;/a&gt;&lt;!ATTLIST author rank CDATA #IMPLIED&gt;
+&lt;a name="_bookmark74"&gt;&lt;/a&gt;&lt;!ATTLIST author rank CDATA #IMPLIED&gt;
 
 ]&gt;
 
@@ -5349,11 +3117,11 @@ node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
 
 &lt;books-table&gt;
 
-&lt;book id=&quot;thisbook&quot;&gt;
+&lt;book id="thisbook"&gt;
 
 &lt;title&gt;&lt;/title&gt;
 
-&lt;author rank=&quot;&quot;&gt;&lt;/author&gt;
+&lt;author rank=""&gt;&lt;/author&gt;
 
 &lt;isbn&gt;&lt;/isbn&gt;
 
@@ -5410,10 +3178,10 @@ node = xo.getElementsByTagName(&quot;return&quot;).item(0) InfoMessage(node.xml)
 </ol>
 <p>Alternatively, you could open a DOS command window:</p>
 <ul>
-<li>Type path, and press <Enter>.</li>
+<li>Type path, and press <enter>.</enter></li>
 </ul>
 <p>Your current PATH setting will appear in the window.</p>
-<p>If you type set classpath and press <Enter>, your current CLASSPATH setting will appear in the window.</p>
+<p>If you type set classpath and press <enter>, your current CLASSPATH setting will appear in the window.</enter></p>
 <p>Remember that the exact full directory path name will differ from system to system. Check with your system administrator to verify the correct Java directory path names for your system.</p>
 <p>Alternatively, you could do the following:</p>
 <ol>
@@ -5521,7 +3289,7 @@ public String Concat(String a, int b)
 
 {
 
-return a + &quot; : &quot; + b;
+return a + " : " + b;
 
 }
 
@@ -5530,7 +3298,7 @@ return a + &quot; : &quot; + b;
 
 </code></pre>
 <p><strong>JavaScript side:</strong></p>
-<pre><code class="language-javascript">a = new Packages.SimpleExample() InfoMessage(a.Concat(&quot;RoundNum&quot;,RoundNum))
+<pre><code class="language-javascript">a = new Packages.SimpleExample() InfoMessage(a.Concat("RoundNum",RoundNum))
 </code></pre>
 <h3 id="passing-objects-between-java-and-javascript">Passing Objects Between Java and JavaScript</h3>
 <p>LiveConnect uses the reserved Java class JSObject to pass a JavaScript object to Java objects. JSObject tells the Java side that it is being sent a JavaScript object. To pass a JavaScript object as a parameter to a Java method, your Java file must include the following:</p>
@@ -5551,7 +3319,7 @@ public JavaDog(JSObject jsDog)
 
 {
 
-this.dogBreed = (String)jsdog.getMember(&quot;breed&quot;); this.dogColor = (String)jsdog.getMember(&quot;color&quot;); this.dogSex = (String)jsdog.getMember(&quot;sex&quot;);
+this.dogBreed = (String)jsdog.getMember("breed"); this.dogColor = (String)jsdog.getMember("color"); this.dogSex = (String)jsdog.getMember("sex");
 
 
 
@@ -5589,7 +3357,7 @@ this.breed = breed this.color = color this.sex = sex
 
 {
 
-// Connect to a server through Java socket s = new java.net.Socket (&quot;12.3.5.56&quot;,23)
+// Connect to a server through Java socket s = new java.net.Socket ("12.3.5.56",23)
 
 // Create Java I/O streams
 
@@ -5597,19 +3365,19 @@ from\_server = new java.io.DataInputStream(s.getInputStream()) to\_server = new 
 
 //Read line from Input stream to JavaScript string value line = from\_server.readLine()
 
-InfoMessage(&quot;&quot; + line)
+InfoMessage("" + line)
 
-// Write JavaScript string value to the Output stream to\_server.println (&quot;Client &quot; + ClientNum + &quot;-&quot; + RoundNum )
+// Write JavaScript string value to the Output stream to\_server.println ("Client " + ClientNum + "-" + RoundNum )
 
 // Get answer from the server via the Input stream line = from\_server.readLine()
 
-InfoMessage(&quot;&quot; + line)
+InfoMessage("" + line)
 
 }
 
 catch (Exception) {
 
-ErrorMessage (&quot;Server is not connected&quot;)
+ErrorMessage ("Server is not connected")
 
 }
 
@@ -5632,7 +3400,7 @@ catch(Exception) {}
 }
 </code></pre>
 <p>Each time you call any of the Java class methods, a timer and counter for that method is automatically incremented. The results appear in the Statistics Report. Each timer and counter is uniquely identified with the Java class, object, and method name, as illustrated in the following figure:</p>
-<p><img alt="Timer and Counter Identification with Java Class, Object, and Method Name" src="../../images/script_guide_063.png" /></p>
+<p><img alt="Timer and Counter Identification with Java Class, Object, and Method Name" src="../../images/script_guide_063.png"/></p>
 <p>The counter and timer information is collected and displayed automatically, every time you call a Java class method from your script. You do not have to add anything to your script code to take advantage of this feature.</p>
 <h3 id="calling-a-webload-api-from-a-java-application">Calling a WebLOAD API from a Java Application</h3>
 <p>This section describes two methods for calling WebLOAD JavaScript functions from the java code:</p>
@@ -5679,11 +3447,11 @@ import com.radview.webload.WebLoadWrapper; public class MyClass {
 
 private WebLoadWrapper wlWrapper; public void myExampleFunc() {
 
-wlWrapper = new WebLoadWrapper(); wlWrapper.beginTransaction(&quot;transaction 1&quot;);
+wlWrapper = new WebLoadWrapper(); wlWrapper.beginTransaction("transaction 1");
 
 &lt;do any other work&gt; …;
 
-wlWrapper.endTransaction(&quot;transaction 1&quot;);
+wlWrapper.endTransaction("transaction 1");
 
 }
 
@@ -5711,11 +3479,11 @@ public void TimersFromJava(JSObject myJavaScriptObj)
 
 {
 
-String args[] = {&quot;Timer1&quot;}; myJavaScriptObj.call(&quot;SetTimer&quot;,args);
+String args[] = {"Timer1"}; myJavaScriptObj.call("SetTimer",args);
 
 …&lt;do any other work&gt; …;
 
-myJavaScriptObj.call(&quot;SendTimer&quot;,args);
+myJavaScriptObj.call("SendTimer",args);
 
 }
 </code></pre>
@@ -5741,7 +3509,7 @@ catch (e)
 
 {
 
-SevereErrorMessage(&quot;Error : &quot; + e);
+SevereErrorMessage("Error : " + e);
 </code></pre>
 <blockquote>
 <p><strong>Note:</strong> You work with myJavaObject as you would with any JavaScript object. TimersFromJava is called as a simple object method, passing the locally understood ‘this’ object as the parameter to the Java method.</p>
@@ -5792,11 +3560,11 @@ rs = st1.executeQuery(js\_query);
 
 
 
-String strOnSuccess = &quot;3. Result Set is:&quot;; while (rs.next())
+String strOnSuccess = "3. Result Set is:"; while (rs.next())
 
 {
 
-strOnSuccess = strOnSuccess + &quot;\n&quot; + rs.getString(&quot;ReportName&quot;);
+strOnSuccess = strOnSuccess + "\n" + rs.getString("ReportName");
 
 }
 
@@ -5831,13 +3599,13 @@ try
 
 
 
-// load the JDBC driver once per session jdbcDriver = &quot;&lt;driver class name&gt;&quot; Packages.jdbcExample.loadDriver(jdbcDriver);
+// load the JDBC driver once per session jdbcDriver = "&lt;driver class name&gt;" Packages.jdbcExample.loadDriver(jdbcDriver);
 
 catch (e)
 
 {
 
-SevereErrorMessage(&quot;Error : &quot; + e);
+SevereErrorMessage("Error : " + e);
 
 }
 
@@ -5855,9 +3623,9 @@ jdbcObj = new Packages.jdbcExample()
 
 // connect to the database
 
-url = &quot;&lt;jdbc:driver-name:host&gt;&quot; login = &quot;&lt;username&gt;&quot;
+url = "&lt;jdbc:driver-name:host&gt;" login = "&lt;username&gt;"
 
-password = &quot;&lt;password&gt;&quot;
+password = "&lt;password&gt;"
 
 
 
@@ -5876,7 +3644,7 @@ catch (e)
 
 {
 
-SevereErrorMessage(&quot;Error : &quot; + e);
+SevereErrorMessage("Error : " + e);
 
 }
 
@@ -5886,7 +3654,7 @@ SevereErrorMessage(&quot;Error : &quot; + e);
 
 {
 
-// create query and send the results to the Console query = &quot;SELECT \* FROM Reports WHERE ReportId &lt; 10 &quot; query\_result = jdbcObj.executeQuery(query) InfoMessage(&quot;&quot;+ query\_result)
+// create query and send the results to the Console query = "SELECT \* FROM Reports WHERE ReportId &lt; 10 " query\_result = jdbcObj.executeQuery(query) InfoMessage(""+ query\_result)
 
 }
 
@@ -5894,7 +3662,7 @@ catch (e)
 
 {
 
-WarningMessage(&quot;Error : &quot; + e);
+WarningMessage("Error : " + e);
 
 }
 </code></pre>
@@ -5929,7 +3697,7 @@ import org.openqa.selenium.firefox.FirefoxDriver; public class MyClass {
 
 private WebDriver driver; public void seleniumFunc() {
 
-driver = new FireFoxDriver(); driver.[get(&quot;http://www.google.com](http://www.google.com/)&quot;);
+driver = new FireFoxDriver(); driver.[get("http://www.google.com](http://www.google.com/)");
 
 }
 
@@ -5967,19 +3735,19 @@ driver = new **WebLoadDriver**(new FireFoxDriver());
 
 // The beginTransaction method is a regular WebLOAD method, called from the Java code
 
-driver.**beginTransaction**(&quot;transaction 1&quot;);
+driver.**beginTransaction**("transaction 1");
 
-// The following method is a Selenium method driver.get(&quot;[http://www.google.com](http://www.google.com/)&quot;);
+// The following method is a Selenium method driver.get("[http://www.google.com](http://www.google.com/)");
 
 
 
 // The reportStatistics method is a WebLOAD addition for sending to WebLOAD the browser navigation statistics that the browser collected from the latest navigation
 
-driver.**reportStatistics**(&quot;google&quot;);
+driver.**reportStatistics**("google");
 
 // The endTransaction method is a regular WebLOAD method, called from the Java code
 
-driver.**endTransaction**(&quot;transaction 1&quot;);
+driver.**endTransaction**("transaction 1");
 
 }
 
@@ -6089,19 +3857,19 @@ obj = new  Packages.com.example.MyClass(); obj.seleniumFunc();
 my\_ActiveXobject.indexproperty(indexvalue)
 </code></pre>
 <p>The following JavaScript examples illustrate this use:</p>
-<pre><code class="language-javascript">// To explicitly create two new object instances mother = new ActiveXObject (&quot;Family.MotherObject&quot;) father = new ActiveXObject (&quot;Family.FatherObject&quot;)
+<pre><code class="language-javascript">// To explicitly create two new object instances mother = new ActiveXObject ("Family.MotherObject") father = new ActiveXObject ("Family.FatherObject")
 
 //mother and father are local JavaScript objects
 
-// To assign values directly to my object’s 4 properties mother.Name = &quot;Jane&quot;
+// To assign values directly to my object’s 4 properties mother.Name = "Jane"
 
 mother.Age = 21
 
-mother.BirthDate = &quot;Jan 20, 1978&quot; mother.Smoke = false
+mother.BirthDate = "Jan 20, 1978" mother.Smoke = false
 
 // To assign values to my object’s 4 properties through an
 
-// object passed as a parameter to my object’s SetInfo method father\_birthday = new Date(&quot;Mar 20,1975&quot;) father.SetInfo(&quot;John&quot;,25,father\_birthday,true)
+// object passed as a parameter to my object’s SetInfo method father\_birthday = new Date("Mar 20,1975") father.SetInfo("John",25,father\_birthday,true)
 
 // To implicitly create a new child object child = mother.MakeChild(father)
 
@@ -6109,7 +3877,7 @@ mother.BirthDate = &quot;Jan 20, 1978&quot; mother.Smoke = false
 
 // a combination of direct property assignment and
 
-// method execution child.Name = &quot;Patrick&quot;
+// method execution child.Name = "Patrick"
 
 color = child.GetEyesColor() child.DemandCare(mother,father)
 </code></pre>
@@ -6119,7 +3887,7 @@ color = child.GetEyesColor() child.DemandCare(mother,father)
 <p>For example, assume you are working on a project about animal behavior, using the following ActiveX object:</p>
 <p>animal = new <code>ActiveXObject</code> ("Animals.Dog") animal.Name = "Bingo" animal.Drink("Water") animal.Eat("Meat","Fish")</p>
 <p>Each time you call any of the animal object’s methods, a timer and counter for that method is automatically incremented. The results appear in the Statistics Report. Each timer and counter is uniquely identified with the ActiveX application, object, and method name, as illustrated in the following figure:</p>
-<p><img alt="Timer and Counter Identification with ActiveX Application, Object and Method Name" src="../../images/script_guide_064.png" /></p>
+<p><img alt="Timer and Counter Identification with ActiveX Application, Object and Method Name" src="../../images/script_guide_064.png"/></p>
 <p>The counter and timer information is collected and displayed automatically, every time you call an ActiveX method from your script. You do not have to add anything to your script code to take advantage of this feature.</p>
 <blockquote>
 <p><strong>Note:</strong> There are no counters for calls to ActiveX object constructors.</p>
@@ -6352,7 +4120,7 @@ DataSpace = new ActiveXObject(“RDS.Dataspace”)
 
 // Invoke server object. localhost is the server here svrObject = DataSpace.CreateObject
 
-(&quot;RDSServer.DataFactory&quot;, [&quot;http://localhost&quot;)](http://localhost/)
+("RDSServer.DataFactory", ["http://localhost")](http://localhost/)
 
 // svrObject is now a local JavaScript object used to
 
@@ -6368,19 +4136,19 @@ DataSpace = new ActiveXObject(“RDS.Dataspace”)
 
 // svrObject.Query returns a recordset strRecord = svrObject.Query
 
-(&quot;DSN=AdvWorks2&quot;, &quot;Select\* from Customers&quot;)
+("DSN=AdvWorks2", "Select\* from Customers")
 
 // Initialize database record counter n\_recordCounter = 0
 
 // The objField2 variable is used for debugging,
 
-// to verify the correct field and check its value. objField2 = strRecord.Fields(&quot;Threads&quot;)
+// to verify the correct field and check its value. objField2 = strRecord.Fields("Threads")
 
 
 
 // Notice that it is not necessary to explicitly state:
 
-// objField2 = strRecord.Fields.item(&quot;Threads&quot;)
+// objField2 = strRecord.Fields.item("Threads")
 
 // because WebLOAD supports default fields
 
@@ -6408,7 +4176,7 @@ strCurrentFieldValue += 5
 
 // Submit changes to the record source and
 
-// move to the next record svrObject.SubmitChanges(&quot;DSN=AdvWorks2&quot;, strRecord) strRecord.MoveNext()
+// move to the next record svrObject.SubmitChanges("DSN=AdvWorks2", strRecord) strRecord.MoveNext()
 
 }
 
@@ -6453,52 +4221,88 @@ strCurrentFieldValue += 5
 <p>Instead, use the following syntax:</p>
 <p><code>WshShell = new ActiveXObject("WScript.Shell")</code> </p>
 <p><code>env = **WshShell.Environment("System")**</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
+</article>
 </div>
-      
-    </div>
-  </div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
 </html>
