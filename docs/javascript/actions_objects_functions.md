@@ -8925,28 +8925,35 @@ To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)*
 
 The SSL version that WebLOAD should use for the current test session. The possible values of wlGlobals.SSLVersion are:
 
-* SSL_Version_Undetermined – (Default) WebLOAD can use any SSL protocol version, allowing the broadest interoperability with other SSL installations. WebLOAD sends initial messages using SSL 2.0, then attempts to negotiate up to SSL 3.0. If the peer requests SSL 2.0 communications, SSL 2.0 is used for further communication.
+* SSL_Version_Undetermined – (Default) WebLOAD can use any SSL protocol version, allowing the broadest interoperability with other SSL installations.  
+**Note:** WebLOAD does not recommend changing the default value.
 
- **Note:** WebLOAD does not recommend changing the default value*.*
+* SSL_Version_3_0_With_2_0_Hello
+* SSL_Version_2_0
+* SSL_Version_3_0
+* SSL_Version_3_0_Only
+* TLS_Version_1.0_With_2_0_Hello
+* TLS_Version_1_0_Only
+* TLS_Version_1_0
+* TLS_Version_1_1_Only
+* TLS_Version_1_1
+* TLS_Version_1_2_Only
+* TLS_Version_1_2
+* TLS_Version_1_3_Only
+* TLS_Version_1_3
 
-* SSL_Version_3_0_With_2_0_Hello – WebLOAD sends initial messages using
+Where `VER` means use this version or lower, `VER_Only` means use this version and don't fall back to lower versions. `VER_With_LOWER_Hello` - Initial message is sent using the lower version but subsequent message though the version.
 
-SSL 2.0, but all subsequent communication must be through SSL 3.0 only. Otherwise the connection will fail with a meaningful error message.
-
-* TLS_Version_1.0_With_2_0_Hello – WebLOAD sends initial messages using SSL 2.0, but all subsequent communication must be through TLS 1.0 only. Otherwise the connection will fail with a meaningful error message.
-* SSL_Version_3_0_Only – All communication is by SSL 3.0 only. If the peer does not support SSL 3.0, the handshake fails without a meaningful indication of why it failed. Use this option for highest security when working with peers that definitely support SSL 3.0.
-* TLS_Version_1_0_Only – All communication is by TLS 1.0 only. If the peer does not support TLS 1.0, the handshake fails without a meaningful indication of why it failed. Use this option for highest security when working with peers that definitely support TLS 1.0.
-* SSL_Version_3_0 – WebLOAD sends initial messages using SSL 3.0. If the peer requests SSL 2.0 communications, SSL 2.0 is used for further communication.
-* SSL_Version_2_0 – WebLOAD sends initial messages and all further communication using SSL 2.0. This option is not recommended other than for testing, because SSL 3.0 is more functional and secure than SSL 2.0.
-* TLS_Version_1_0 – WebLOAD sends initial messages using TLS 1.0. If the peer requests SSL 3.0 communications, SSL 3.0 is used for further communication.
 
 To connect to a server using any of the SSL options, include https:// in the URL.
 
 **Example**
 
+```
 wlGlobals.SSLVersion = “SSL_Version_3_0_Only”
 
-wlGlobals.Url = [https://www.ABCDEF.com](http://www.ABCDEF.com/)
+wlHttp.Get("https://www.ABCDEF.com")
+```
 
 See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578) for a table illustrating all the Client/Server SSL version handshake combination possibilities and a complete list of SSL/TLS protocol names.
 
