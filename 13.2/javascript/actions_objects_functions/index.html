@@ -13909,7 +13909,18 @@ return WLMinorError
 <li><a href="#wllocals-object">wlLocals</a></li>
 </ul>
 <p><strong>Description</strong></p>
-<p>Stores the HTTP version number for the current test session. Current supported versions include 1.0 and 1.1.</p>
+<p>Sets the HTTP version number for the current test session. </p>
+<p>Current supported versions:</p>
+<ul>
+<li>"1.0" ("1") </li>
+<li>"1.1"</li>
+<li>"2.0" ("2", "2TLS")</li>
+<li>"3.0" ("3")</li>
+</ul>
+<p>Advanced:
+* "2HTTP" - Attempt HTTP/2 over HTTPS, but do not insist on TLS 1.2 or higher even though that is required by the specification.
+* "2PRIOR" Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with negotiated protocol version in the TLS handshake.
+* "3ONLY" - Attempt to use HTTP/3 directly to server given in the URL and does not downgrade to earlier HTTP version if the server does not support HTTP/3</p>
 <p><strong>GUI mode</strong></p>
 <p>WebLOAD recommends selecting an HTTP version through the WebLOAD Console. Click the appropriate version number radio button in the HTTP Parameters tab of the <strong>Default</strong> or <strong>Current Session Options</strong> dialog box, accessed from the <strong>Tools</strong> tab of the ribbon.</p>
 <p><strong>See also</strong></p>
