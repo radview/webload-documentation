@@ -10532,69 +10532,42 @@ InfoMessage("done")   // End of SMTP sample script
 <h3 id="tcp-sample-code">TCP Sample Code</h3>
 <pre><code class="language-javascript">// **script Initialization**
 
-function **`InitAgenda()`** { IncludeFile("wlTcp.js",WLExecuteScript)
-
+function InitAgenda() { 
+    IncludeFile("wlTcp.js",WLExecuteScript)
 }
 
-function **InitClient()** { tcp=new WLTcp();
-
+function InitClient() { 
+    tcp=new WLTcp();
 }
 
-function **TerminateClient()**
-
-{
-
-delete tcp;
-
+function TerminateClient() {
+    delete tcp;
 }
-
-//===================================================
-
-
-
-
-
-
-
 //**Body Of script**.
 
-InfoMessage("Speed: "+wlGlobals.ConnectionSpeed) wlGlobals.Debug=1;
 
-tcp.Outfile = "c:\\tcp.txt"; tcp.Timeout = 2000; tcp.NextPrompt = "\r\n\r\n";
+tcp.Outfile = "c:\\tcp.txt"; 
+tcp.Timeout = 2000; 
+tcp.NextPrompt = "\r\n\r\n";
 
 //tcp.NextSize=1900;
 
-//===================================================
-
-try
-
-{
-
-[tcp.Connect("www.sitename.com", ](http://www.sitename.com/)80);
-
+tcp.Connect("www.sitename.com", 80);
 tcp.Send("GET /products/index.htm HTTP/1.0\r\n\r\n");
 
-//Sleep(3000); tcp.`Receive()`; InfoMessage(tcp.document);
+//Sleep(3000); 
+tcp.Receive(); 
+InfoMessage(tcp.document);
+InfoMessage(tcp.ReceiveMessageText); 
 
-InfoMessage(tcp.ReceiveMessageText); tcp.NextSize=10091; tcp.NextPrompt="";
-
-tcp.Erase(); tcp.`Receive()`; InfoMessage(tcp.document);
+tcp.NextSize=10091; 
+tcp.NextPrompt="";
+tcp.Erase(); 
+tcp.Receive(); 
+InfoMessage(tcp.document);
 
 InfoMessage(tcp.ReceiveMessageText);
 
-}
-
-catch(e)
-
-{
-
-InfoMessage(e);
-
-}
-
-//==========================================================
-
-InfoMessage("done");
 </code></pre>
 <h2 id="wltelnet-object">wlTelnet Object</h2>
 <p>The wlTelnet object provides support for Telnet load and functional testing within WebLOAD. Support for standard Telnet operation is included. Telnet over secure connections (SSL) is not currently supported.</p>
