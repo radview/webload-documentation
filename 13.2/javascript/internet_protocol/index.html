@@ -10337,9 +10337,10 @@ InfoMessage("done")   // End of SMTP sample script
 </tbody>
 </table>
 <h2 id="wltcp-object">wlTCP Object</h2>
-<p>The wlTCP object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. TCP over secure connections (SSL) is not currently supported.</p>
+<p>The wlTCP object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. </p>
+<p>TCP over secure connections (SSL) is also supported. See <code>wlGlobals.tcpssl = "Yes"</code> for secure connection.</p>
 <p>If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.</p>
-<p>To access the wlTCP object, you must include the wlTcp.js file in your</p>
+<p>To access the wlTCP object, you must include the wltcpj.js file in your</p>
 <p><code>InitAgenda()</code> function.</p>
 <h3 id="wltcp-properties">wlTCP Properties</h3>
 <h4 id="document_6">document</h4>
@@ -10533,7 +10534,7 @@ InfoMessage("done")   // End of SMTP sample script
 <pre><code class="language-javascript">// **script Initialization**
 
 function InitAgenda() { 
-    IncludeFile("wlTcp.js",WLExecuteScript)
+    IncludeFile("wltcpj.js",WLExecuteScript)
 }
 
 function InitClient() { 
