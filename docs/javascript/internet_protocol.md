@@ -4103,15 +4103,13 @@ For example:
 
  
 
-The wlTCP object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. TCP over secure connections (SSL) is not currently supported.
+The wlTCP object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. 
 
- 
+TCP over secure connections (SSL) is also supported. See `wlGlobals.tcpssl = "Yes"` for secure connection.
 
 If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
 
- 
-
-To access the wlTCP object, you must include the wlTcp.js file in your
+To access the wlTCP object, you must include the wltcpj.js file in your
 
 `InitAgenda()` function.
 
@@ -4133,15 +4131,9 @@ For example:
 
 *`var recentdocument = tcp.document`*
 
-
-
 #### InBufferSize
 
- 
-
 The InBufferSize property specifies the size, in bytes, of the incoming data buffer. To remove this setting, either delete the property, or set it to a negative value. 
-
-
 
 For example:
 
@@ -4151,7 +4143,6 @@ tcp.InBufferSize = *maximuminsize*
 
 #### LocalPort
 
- 
 
 The LocalPort property specifies the TCP port to which you are connecting. If you do not specify the LocalPort property, you connect to a randomly selected port.
 
@@ -4179,15 +4170,10 @@ For example:
 
 The NextSize property specifies the size, in bytes, of the expected data. If you specify a NextSize of 100 bytes, for example, the `Receive()` method returns to the script when the document object contains 100 bytes of data. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. For example:
 
- 
-
 `tcp.NextSize = expectedsize`
-
- 
 
 #### OutBufferSize
 
- 
 
 The OutBufferSize property specifies the size, in bytes, of the outgoing data buffer. To remove this setting, either delete the property, or set it to a negative value. For example:
 
@@ -4213,11 +4199,8 @@ For example:
 
 `tcp.Outfile = filename`
 
- 
 
 #### ReceiveMessageText
-
- 
 
 The ReceiveMessageText property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
 
@@ -4233,11 +4216,9 @@ For example:
 
 `InfoMessage(TCP.ReceiveMessageText);`
 
- 
+
 
 #### Size
-
- 
 
 The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
 
@@ -4347,7 +4328,7 @@ For example:
 // **script Initialization**
 
 function InitAgenda() { 
-    IncludeFile("wlTcp.js",WLExecuteScript)
+    IncludeFile("wltcpj.js",WLExecuteScript)
 }
 
 function InitClient() { 
