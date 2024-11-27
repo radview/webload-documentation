@@ -8937,7 +8937,7 @@ The SSL version that WebLOAD should use for the current test session. The possib
 * TLS_Version_1_3_Only
 * TLS_Version_1_3
 
-Depracated versions not supported anymore:
+Deprecated versions not supported anymore:
 
 * SSL_Version_3_0_With_2_0_Hello
 * SSL_Version_2_0
