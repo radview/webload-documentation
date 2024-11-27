@@ -7,17 +7,16 @@ You can run the following WebLOAD components from the command line:
 - WebLOAD Analytics – You can launch WebLOAD Analytics and generate a report for a specified session, then publish or print it.
 - WebLOAD Recorder – You can launch a WebLOAD Recorder test that invokes the WebLOAD Recorder and runs a specified test according to the specified parameters.
 
-
 ## Registering and Updating your WebLOAD License through the CLI
+
 You can register or upload a WebLOAD license through a command line interface. You can enter the WebLOAD Update License command into a batch file or into an external script and it will run directly, without user intervention, using the parameters specified.
 
 **To register or update you WebLOAD license through the command line interface:**
 
 Enter the wlUpdateLicenseApplicationCmd command together with the optional parameters (described below) into your external script, to automatically launch a WebLOAD License action.
 
-
-
 ### Syntax
+
 Use the following syntax to define the parameters for registering or updating a WebLOAD license through a command line interface:
 
 `wlUpdateLicenseApplicationCmd {-help}|{-info}|{-free}|{-file ``*license\_file*}|{-server *server\_address*}|{-hostid}`
@@ -33,8 +32,8 @@ Use the following syntax to define the parameters for registering or updating a 
 |<p>- server</p><p>*server\_address*</p>|Connect to the WebRM server, whose address is the specified IP address. This option is relevant if you installed a WebRM server. For further explanations, refer to the *WebLOAD Installation Guide*.||
 |-hostid|Display the host ID of the computer. This information is needed if you wish to receive a WebLOAD license file from RadView. For further explanations, refer to the *WebLOAD Installation Guide*.||
 
-
 ### Examples
+
 **Example 1:**
 
 wlUpdateLicenseApplicationCmd -info
@@ -45,14 +44,9 @@ This command provides as output the license information.
 
 wlUpdateLicenseApplicationCmd -file webload.lic
 
-
-
-
 This command uploads the specified license file, and installs it. Following successful installation, you can begin working with WebLOAD.
 
-
-
-# Running a WebLOAD Console Test through the CLI
+## Running a WebLOAD Console Test through the CLI
 
 You can perform load testing through a command line interface. You can enter the WebLOAD Console launch command into a batch file or into an external script and WebLOAD Console will run directly, without user intervention, using the parameters specified.
 
@@ -62,26 +56,20 @@ Enter the WebLOAD.exe command together with a series of optional parameters (des
 
 > **Note:** Verify that the script used with the template specified, and any included files, are accessible to the Load Template or Load Session file that will be run.
 
-
-
 ### Syntax
 
 Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:
 
 `WebLOAD.exe [<file name to open>][] [<flags>]`
 
-
-
 ### Parameters
 
 |**Parameter**|**Description**|**Comments**|
 | :- | :- | :- |
-|File name to open|The name of the \*.tpl or \*.ls file (Load Template or Load Session file) to run.|Optional parameter|
+|File name to open|The name of the \*.tpl or \*.ls file (Load Template or Load Session file) to run. Or \*.json - see [JSON Based Load test](#json-based-load-test-console-cli)
+|Optional parameter|
 |File name to save|The name of the \*.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.|Optional parameter|
 |Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar *`<*time*>`* – Automatically run the test for the length of time specified in *`<time>`/*</p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc `<num>`– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *`<*results\_file\_name*>`* – Place the results in the specified file (an XML file).</p><p>- /ag `<script name>` - The name of an existing script (\*.wlp) to open.</p>|Optional parameter|
-
-
-
 
 The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag `</ar>` flag is not set, the
 
@@ -89,16 +77,13 @@ The parameters are all optional. If no parameters are entered, the executable la
 
 > **Note:** If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.
 
-
-
 ### Examples
+
 **Example 1**
 
 `WebLOAD.exe test1.tpl`
 
 This command opens the Console and the test1.tpl template. The Console waits for user input.
-
-
 
 **Example 2**
 
@@ -106,15 +91,11 @@ WebLOAD.exe test1.tpl march9.ls /ar 30
 
 This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.
 
-
-
 **Example 3**
 
 `WebLOAD.exe /ag c:\agendas\MyAgenda.wlp`
 
 This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyAgenda.wlp script is automatically selected and the WebLOAD Wizard waits for user input.
-
-
 
 **Example 4**
 
@@ -122,17 +103,279 @@ This command opens the Console and the WebLOAD Wizard to the script/Mix Selectio
 
 This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.
 
-
-
 **Example 5**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3`
 
 This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.
 
+## JSON Based Load test - Console CLI
 
+### Syntax
 
-# Generating an Analytics Report through the CLI
+Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:
+
+| Parameter             | Description                                                | Comments                                               |
+|-----------------------|------------------------------------------------------------|--------------------------------------------------------|
+| File name to open     | The name of the *.tpl or*.ls or *.json file to run.                   | Optional parameter                                     |
+| File name to save     | The name of the *.ls file containing the test data.         | Optional parameter                                     |
+
+Example:
+`WebLOAD.exe load_test.json test_results.ls /ar /rc result_code.xml`
+
+### Fields
+
+#### Test (required, one)
+
+- `name` (string, required): The name of the test.
+- `type` (string, required): The type of the test. The value is "agenda".
+
+#### Agendas (array, required at least one)
+
+- `agendaname` (string, required): The name of the agenda.
+- `agendapath` (string, required): The path to the agenda script (js or wlp).
+- `percentage` (int, required): The percentage of the agenda.
+- `execoptions` (array, optional): The execution options for the agenda. Options are added as wlGlobals settings. See WebLOAD JavaScript Reference Guide for possible values.
+  - `Name` (string): The name of the wlGlobals execution option.
+  - `Value` (string): The value of the execution option.
+
+#### SleepOptions (dict, optional)
+
+`SleepType` (string) The sleep options for the agenda. (one of the following):
+
+- 1 - Sleep time as recorded
+  - `SetMaxSleepTime` (bool): Whether to set the maximum sleep time.
+  - `MaxSleepTime` (int): The maximum sleep time.
+- 2 - Ignore recorded sleep time
+- 3 - Set random sleep time between
+  - `SleepRandMax` (int): The maximum random sleep time.
+  - `SleepRandMin` (int): The minimum random sleep time.
+- 4 - Set sleep time deviation
+  - `SleepDeviation` (int): The sleep deviation in percent, so 10 means plus minus 10% of the recorded sleep time.
+
+`TransactionSleepType` (string): The transaction sleep type. (one of the following):
+
+- "0" - Transaction timers include sleep time ('Transaction Time')
+- "1" - Transaction timers exclude sleep time ('Transaction Net Time')
+- "2" - Transaction timers exclude sleep time but named "Transaction Time"
+- "3" - Both timers - including and excluding sleep time
+
+#### Load Machines (one of the following is required)
+
+- ##### LoadGenerator (array)
+
+     A list of objects that represent the load generators to be used in the test.
+  - `name` (string, required): The name of the load generator machine. (Each name can only appear once in the list)
+  - `type` (string, required): The type of the load generator machine. "PC" for windows or linux load-generator, "Cloud" for cloud based load-generator as defined in the console.
+
+- ##### Locations (array)
+
+    A list of objects that represent the locations used in the test. Locations are defined in the Dashboard and can contain more than one load-generator
+  - `distribution` (int, required): The distribution percentage.
+  - `name` (string, required): The name of the location.
+
+#### Schedule (dict, required) all times in minutes
+
+- `RampUpTime` (int, optional): The ramp-up time.
+- `Duration` (int, optional): The duration of the test.
+- `RampDownTime` (int, optional): The ramp-down time.
+- `MaxVC` (int, required): The maximum virtual users count.
+- `LimitRounds` (bool, optional): Whether to limit the rounds.
+- `Rounds` (int): If LimitRounds is set to true, what is the maximum number of rounds to run before stopping the test. The test will still use the proviced schedule of ramp-up, duration and ramp-down but will stop once the total number of rounds reached the target.
+
+#### SlaManager (array, optional)
+
+This list contains one object that specifies the SLA manager settings.
+
+- `name` (string): The name of the SLA rule.
+- `message` (string): A message to be shown in case the SLA rules are violated.
+- `msg` (string): This is the Action Definition:
+  - 0 - Display info message
+  - 1 - Display warning
+  - 2 - Display error
+  - 3 - Display fatal error and stop test execution
+- `operator` (string): The operator to be used when evaluating the rule. The value can be "and" or "or".
+- `stats` (list of objects): A list of objects that define the statistics for the SLA rule.
+
+Each object in the `stats` list contains the following attributes:
+
+- `id` (string, optional): The ID of the statistic.
+- `name` (string, required): The name of the statistic.
+- `op` (string, required): The operator to be used when evaluating the statistic. The values can be:
+  - ">"
+  - "<"
+  - ">="
+  - "<="
+  - "="
+- `type` (string, required): The type of the statistic. The values can be "Min", "Max", "Avg", or "Last".
+- `value` (number, required): The values to be compared to the statistic.
+
+#### Optional statistics names
+
+- Aborted Rounds
+- Attempted Connections
+- Connect Time
+- Connection Speed (Bits Per Second)
+- Content Size
+- DNS Lookup Time
+- Failed Connections
+- Failed Hits
+- Failed Hits Per Second
+- Failed Rounds
+- Failed Rounds Per Second
+- Hit Time
+- Hits
+- Hits Per Second
+- Load Size
+- Page Time
+- Pages
+- Pages Per Second
+- Packets Sent
+- Packets Sent Per Second
+- Process Time
+- Receive Time
+- Response Data Size
+- Response Time
+- Return status
+- Round Time
+- Rounds
+- Rounds Per Second
+- Send Time
+- Successful Connections
+- Successful Hits
+- Successful Hits Per Second
+- Successful Rounds
+- Successful Rounds Per Second
+- Successful Transactions
+- Successful Transactions Per Second
+- Throughput (Bytes Per Second)
+- Time To First Byte
+- Transaction Time
+- Transactions
+- Transactions Per Second
+
+#### SuccessOptions (object, optional)
+
+This object specifies the success options for the test.
+combination of the following:
+
+- `FailSevereError` (boolean):  Fail the test if a severe error occurs during the test run.
+- `FailOnErrorsCount` (boolean):  Fail the test if the number of errors is higher than.
+- `FailOnErrorCountNumber` (number): The number of errors that should occur before the test fails.
+- `FailOnWarningsCount` (boolean): Fail the test if the number of warnings is higher than
+- `FailOnWarningCountNumber` (number): The number of warnings that should occur before the test fails.
+- `FailOnError` (boolean): Stop the test when a failure occours.
+
+#### Sample Json code - simple
+
+```json
+{
+    "test": {
+        "name": "simple script test",        
+        "agendas": [
+            {
+                "agendaname": "myAgenda",
+                "agendapath": "C:\\data\\myAgenda.wlp"
+            }
+        ],
+        "loadGenerator": [
+            {
+                "name": "localhost",
+                "type": "PC"
+            }
+        ],        
+        "schedule": {
+            "RampUpTime": 20,
+            "Duration": 30,
+            "RampDownTime": 20,
+            "MaxVC": 100
+        }        
+    }
+}
+```
+
+#### Sample Json code - advanced
+
+```json
+{
+    "test": {
+        "name": "Detailed script test",
+        "type": "agenda",
+        "agendas": [
+            {
+                "agendaname": "myAgenda",
+                "agendapath": "C:\\myAgenda.wlp",
+                "percentage": 50,
+                "execoptions": [
+                    {
+                        "Name": "UserAgentOption",
+                        "Value": "Mozilla/5.0"
+                    }
+                ],
+                "SleepOptions": {
+                    "SleepType": "1",
+                    "SetMaxSleepTime": true,
+                    "MaxSleepTime": 10
+                }
+            },
+            {
+                "agendaname": "jsBasedScript",
+                "agendapath": "C:\\jsBasedScript.js",
+                "percentage": 50
+            }
+        ],
+        "locations": [
+            {
+                "name": "us_east1",
+                "distribution": 50
+            },
+            {
+                "name": "us_west1",
+                "distribution": 50
+            }
+
+        ],        
+        "schedule": {
+            "RampUpTime": 60,
+            "Duration": 10,
+            "RampDownTime": 20,
+            "MaxVC": 100,
+            "LimitRounds": true,
+            "Rounds": 20
+        },
+        "slaManager": [
+            {
+                "name": "Check login time and page time",
+                "operator": "or",
+                "stats": [
+                    {
+                        "name": "Login Time",
+                        "type": "Current Value",
+                        "op": ">",
+                        "value": 10
+                    },
+                    {
+                        "name": "Page Time",
+                        "type": "Current Value",
+                        "op": ">",
+                        "value": 5
+                    }
+                ],
+                "message": "Login or page time is too high",
+                "msg": "2"
+            }
+        ],
+        "successOptions": {
+            "FailOnError": true,
+            "FailOnErrorsCount": true,
+            "FailOnErrorCountNumber": 10,            
+            "FailSevereError": true
+        }
+    }
+}
+```
+
+## Generating an Analytics Report through the CLI
 
 WebLOAD Analytics can be executed in command line mode. This enables incorporating WebLOAD Analytics in scripts. Two executables are available:
 
@@ -143,20 +386,17 @@ The executables are located in *`<Installation dir>`*\bin. For example:
 
 `C:\Program Files\RadView\WebLOAD\bin.`
 
+### Running WLAnalyticsCMD.exe
 
-
-## Running WLAnalyticsCMD.exe
 Use this executable to generate a report for a specified session, and publish or print it.
 
-### Syntax
+#### Syntax
 
 **WLAnalyticsCmd.exe –m U**|**P** {**-t** *template\_path*}|{**-p** *portfolio\_path*}
 
 {**-s** *session\_name*}|{**-ls** *session\_path*} [**-f DOC**|**ODT**|**HTML**|**XLS**|**RTF**|**PDF**] [**-l** *report\_location*] [**-n** *output\_report\_name*] [**-h**]
 
-
-
-### Parameters
+#### Parameters
 
 <table><tr><th colspan="1" valign="top"><b>Parameter</b></th><th colspan="1" valign="top"><b>Description</b></th><th colspan="1" valign="top"><b>Comments</b></th></tr>
 <tr><td colspan="1" valign="top"><b>-m</b></td><td colspan="1" valign="top"><p>Indicates the action. Specify one of the following</p><p><b>U</b> – Publish.</p><p><b>P</b> – Print.</p></td><td colspan="1" valign="top">Mandatory parameter.</td></tr>
@@ -170,16 +410,13 @@ Use this executable to generate a report for a specified session, and publish or
 <tr><td colspan="1" valign="top"><b>-h</b></td><td colspan="1" valign="top">Displays the help.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 </table>
 
-
 > **Note:** Note that you must specify:
 >
 > - Publish or print.
 > - A template or portfolio.
 > - A session, either previously loaded or to be imported.
 
-
-
-### Examples:
+#### Examples
 
 **Example 1:**
 
@@ -201,21 +438,17 @@ To use the loaded first-session and second-session Load Sessions, generate a ‘
 
 `“first-session" -s "second-session" –f PDF –l “c:\myreports”`
 
+### Running WLAnalytics.exe
 
-
-## Running WLAnalytics.exe
 Use this executable to open the WebLOAD Analytics UI, and open a report or generate a report for a specified session.
 
-### Syntax
+#### Syntax
 
 **`WLAnalytics.exe** {**-t** *template\_path*}|{**- p** *portfolio\_path*}`
 
 `{**-s** *session\_name*}|{**-ls** *session\_path*} [**-h**] [**-noSplash**]`
 
-
-
-### Parameters
-
+#### Parameters
 
 <table><tr><th colspan="1" valign="top"><b>Parameter</b></th><th colspan="1" valign="top"><b>Description</b></th><th colspan="1" valign="top"><b>Comments</b></th></tr>
 <tr><td colspan="1" valign="top"><b>-t</b> <i>template_path</i></td><td colspan="1" valign="top"><p>Generates a chart from a specified template.</p><p>You must specify the path to the template directory (either absolute or relative to the gallery).</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>You must specify one of the two options:</p><p><b>-t</b> or <b>–p</b>.</p></td></tr>
@@ -226,16 +459,13 @@ Use this executable to open the WebLOAD Analytics UI, and open a report or gener
 <tr><td colspan="1" valign="top"><b>-noSplash</b></td><td colspan="1" valign="top">Launches without a Splash screen.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
 </table>
 
-
 > **Note:** Note that you must specify:
 >
 > - A template, report, or portfolio.
 > - A session, either previously loaded or to be imported.
 >
 
-
-
-### Examples
+#### Examples
 
 **Example 1:**
 
@@ -243,17 +473,13 @@ To open the WebLOAD Analytics UI, load the mysession.ls Load Session, and genera
 
 `WLAnalytics.exe -t "General\Load Size Summary" -ls "C:\mysession.ls"`
 
-
-
 **Example 2:**
 
 To open the WebLOAD Analytics UI, use the loaded first-session Load Session, and generate a ‘Summary Portfolio’ portfolio:
 
 `WLAnalytics.exe -p "Summary Portfolio" -s “first-session"`
 
-
-
-# Running WebLOAD Recorder Testing through the CLI
+## Running WebLOAD Recorder Testing through the CLI
 
 You can initiate WebLOAD Recorder testing directly through the CLI. You can enter the WebLOAD Recorder launch command into a batch file or into an external script and WebLOAD Recorder will run directly, without user intervention, using the parameters specified.
 
@@ -261,16 +487,16 @@ You can initiate WebLOAD Recorder testing directly through the CLI. You can ente
 
 Enter the webloadIDE.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.
 
-### Syntax
+#### Syntax
+
 Use the following syntax to define the parameters for running a WebLOAD Recorder test **through a Command Line Interface.:**
 
 `webloadide.exe [<flags>][] [<session name to save to>][]`
 
-To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#examples).
+To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples*](#examples).
 
+#### Parameters
 
-
-### Parameters
 When running a test invoked by the executable, you can specify the following parameters:
 
 |**Parameter**|**Description**|**Comments**|
@@ -282,17 +508,13 @@ When running a test invoked by the executable, you can specify the following par
 
 The parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag </a> flag is not set, the `< Session name to save to >`, and the < Number of rounds to run > parameters are ignored.
 
-
-
-### Examples
+#### Examples
 
 **Example 1:**
 
 `webloadide.exe test1.wlp`
 
 This command opens WebLOAD Recorder with the test1 project file and waits for user input.
-
-
 
 **Example 2:**
 
@@ -305,8 +527,6 @@ This command:
 - Runs the project for three iterations.
 
 - Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.
-
-  
 
 **Example 3:**
 
@@ -321,5 +541,3 @@ This command:
 - Opens the WebLOAD Recorder project file test2.wlp.
 - Runs the project test2.wlp for two iterations.
 - Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.
-
-
