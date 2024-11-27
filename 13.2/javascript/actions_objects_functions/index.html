@@ -11035,7 +11035,7 @@ wlHttp.Get(url,”UpdateBankAccount”)
 // and so on
 </code></pre>
 <p>For the HTTPS protocol, include “https://” in the URL and set the required properties of the wlGlobals object:</p>
-<p><code>wlHttp.Post(“[https://www.ABCDEF.com](http://www.ABCDEF.com/)”)</code></p>
+<p><code>wlHttp.Post("https://www.ABCDEF.com")</code></p>
 <p>The URL can contain a string of attribute data.</p>
 <p>wlHttp.Post(“http://www.ABCDEF.com/query.exe”+ “?SearchFor=icebergs&amp;SearchType=ExactTerm”)</p>
 <p>Alternatively, you can specify the attributes in the FormData or Data property. The method automatically appends these in the correct syntax to the URL. Thus the following two code fragments are each equivalent to the preceding Post command.</p>
@@ -13151,13 +13151,8 @@ SSLEnableCipherName("EXP-RC4-MD5")
 <strong>Note:</strong> WebLOAD does not recommend changing the default value.</p>
 </li>
 <li>
-<p>SSL_Version_3_0_With_2_0_Hello</p>
+<p>TLS_Version_1_0_Only</p>
 </li>
-<li>SSL_Version_2_0</li>
-<li>SSL_Version_3_0</li>
-<li>SSL_Version_3_0_Only</li>
-<li>TLS_Version_1.0_With_2_0_Hello</li>
-<li>TLS_Version_1_0_Only</li>
 <li>TLS_Version_1_0</li>
 <li>TLS_Version_1_1_Only</li>
 <li>TLS_Version_1_1</li>
@@ -13166,7 +13161,14 @@ SSLEnableCipherName("EXP-RC4-MD5")
 <li>TLS_Version_1_3_Only</li>
 <li>TLS_Version_1_3</li>
 </ul>
-<p>Where <code>VER</code> means use this version or lower, <code>VER_Only</code> means use this version and don't fall back to lower versions. <code>VER_With_LOWER_Hello</code> - Initial message is sent using the lower version but subsequent message though the version.</p>
+<p>Deprecated versions not supported anymore:</p>
+<ul>
+<li>SSL_Version_3_0_With_2_0_Hello</li>
+<li>SSL_Version_2_0</li>
+<li>SSL_Version_3_0</li>
+<li>SSL_Version_3_0_Only</li>
+<li>TLS_Version_1.0_With_2_0_Hello</li>
+</ul>
 <p>To connect to a server using any of the SSL options, include https:// in the URL.</p>
 <p><strong>Example</strong></p>
 <pre><code>wlGlobals.SSLVersion = “SSL_Version_3_0_Only”
@@ -13912,15 +13914,17 @@ return WLMinorError
 <p>Sets the HTTP version number for the current test session. </p>
 <p>Current supported versions:</p>
 <ul>
-<li>"1.0" ("1") </li>
-<li>"1.1"</li>
-<li>"2.0" ("2", "2TLS")</li>
-<li>"3.0" ("3")</li>
+<li><code>1.0</code> (<code>1</code>) </li>
+<li><code>1.1</code></li>
+<li><code>2.0</code> (<code>2</code>, <code>2TLS</code>)</li>
+<li><code>3.0</code> (<code>3</code>)</li>
 </ul>
-<p>Advanced:
-* "2HTTP" - Attempt HTTP/2 over HTTPS, but do not insist on TLS 1.2 or higher even though that is required by the specification.
-* "2PRIOR" Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with negotiated protocol version in the TLS handshake.
-* "3ONLY" - Attempt to use HTTP/3 directly to server given in the URL and does not downgrade to earlier HTTP version if the server does not support HTTP/3</p>
+<p>Advanced:</p>
+<ul>
+<li><code>2HTTP</code> - Attempt HTTP/2 over HTTPS, but do not insist on TLS 1.2 or higher even though that is required by the specification.</li>
+<li><code>2PRIOR</code> Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with negotiated protocol version in the TLS handshake.</li>
+<li><code>3ONLY</code> - Attempt to use HTTP/3 directly to server given in the URL and does not downgrade to earlier HTTP version if the server does not support HTTP/3</li>
+</ul>
 <p><strong>GUI mode</strong></p>
 <p>WebLOAD recommends selecting an HTTP version through the WebLOAD Console. Click the appropriate version number radio button in the HTTP Parameters tab of the <strong>Default</strong> or <strong>Current Session Options</strong> dialog box, accessed from the <strong>Tools</strong> tab of the ribbon.</p>
 <p><strong>See also</strong></p>
