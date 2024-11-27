@@ -6408,7 +6408,7 @@ wlHttp.Get(url,”UpdateBankAccount”)
 
 For the HTTPS protocol, include “https://” in the URL and set the required properties of the wlGlobals object:
 
-`wlHttp.Post(“[https://www.ABCDEF.com](http://www.ABCDEF.com/)”)`
+`wlHttp.Post("https://www.ABCDEF.com")`
 
 The URL can contain a string of attribute data.
 
@@ -8928,11 +8928,6 @@ The SSL version that WebLOAD should use for the current test session. The possib
 * SSL_Version_Undetermined – (Default) WebLOAD can use any SSL protocol version, allowing the broadest interoperability with other SSL installations.  
 **Note:** WebLOAD does not recommend changing the default value.
 
-* SSL_Version_3_0_With_2_0_Hello
-* SSL_Version_2_0
-* SSL_Version_3_0
-* SSL_Version_3_0_Only
-* TLS_Version_1.0_With_2_0_Hello
 * TLS_Version_1_0_Only
 * TLS_Version_1_0
 * TLS_Version_1_1_Only
@@ -8942,7 +8937,13 @@ The SSL version that WebLOAD should use for the current test session. The possib
 * TLS_Version_1_3_Only
 * TLS_Version_1_3
 
-Where `VER` means use this version or lower, `VER_Only` means use this version and don't fall back to lower versions. `VER_With_LOWER_Hello` - Initial message is sent using the lower version but subsequent message though the version.
+Depracated versions not supported anymore:
+
+* SSL_Version_3_0_With_2_0_Hello
+* SSL_Version_2_0
+* SSL_Version_3_0
+* SSL_Version_3_0_Only
+* TLS_Version_1.0_With_2_0_Hello
 
 
 To connect to a server using any of the SSL options, include https:// in the URL.
@@ -9914,15 +9915,16 @@ Sets the HTTP version number for the current test session.
 
 Current supported versions:
 
-* "1.0" ("1") 
-* "1.1"
-* "2.0" ("2", "2TLS")
-* "3.0" ("3")
+* `1.0` (`1`) 
+* `1.1`
+* `2.0` (`2`, `2TLS`)
+* `3.0` (`3`)
 
 Advanced:
-* "2HTTP" - Attempt HTTP/2 over HTTPS, but do not insist on TLS 1.2 or higher even though that is required by the specification.
-* "2PRIOR" Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with negotiated protocol version in the TLS handshake.
-* "3ONLY" - Attempt to use HTTP/3 directly to server given in the URL and does not downgrade to earlier HTTP version if the server does not support HTTP/3
+
+* `2HTTP` - Attempt HTTP/2 over HTTPS, but do not insist on TLS 1.2 or higher even though that is required by the specification.
+* `2PRIOR` Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with negotiated protocol version in the TLS handshake.
+* `3ONLY` - Attempt to use HTTP/3 directly to server given in the URL and does not downgrade to earlier HTTP version if the server does not support HTTP/3
 
 **GUI mode**
 
