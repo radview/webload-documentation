@@ -6,11 +6,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Product documentation for RadView WebLOAD" name="description"/>
-<link href="../xmlparser/" rel="prev"/>
-<link href="../js_helper_funcs/" rel="next"/>
+<link href="../websocket_object/" rel="prev"/>
+<link href="../appendix_a/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
-<title>WebSocket Object - WebLOAD Documentation</title>
+<title>JavaScript Helper Functions - WebLOAD Documentation</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#websocket-object">
+<a class="md-skip" href="#javascript-helper-functions">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              WebSocket Object
+              JavaScript Helper Functions
             
           </span>
 </div>
@@ -880,17 +880,24 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    WebSocket Object
+    JavaScript Helper Functions
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    WebSocket Object
+    JavaScript Helper Functions
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -900,13 +907,6 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#constructor">
-<span class="md-ellipsis">
-      Constructor
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#methods">
 <span class="md-ellipsis">
       Methods
@@ -915,321 +915,374 @@
 <nav aria-label="Methods" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#connect-method">
+<a class="md-nav__link" href="#debugmessagestr">
 <span class="md-ellipsis">
-      connect() (method)
+      DebugMessage(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#close-method">
+<a class="md-nav__link" href="#decodestrings">
 <span class="md-ellipsis">
-      close() (method)
+      DecodeString(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#send-method">
+<a class="md-nav__link" href="#decodestringunixs">
 <span class="md-ellipsis">
-      send() (method)
+      DecodeStringUnix(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decodestringwins">
+<span class="md-ellipsis">
+      DecodeStringWin(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodestrings">
+<span class="md-ellipsis">
+      EncodeString(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodestringwins">
+<span class="md-ellipsis">
+      EncodeStringWin(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleepeverymillis">
+<span class="md-ellipsis">
+      SleepEvery(millis)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleepuntilmillisfrombeginning">
+<span class="md-ellipsis">
+      SleepUntil(millisFromBeginning)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addtransactionstomdc">
+<span class="md-ellipsis">
+      addTransactionsToMDC()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assertequalsexpected-actual-messageopt">
+<span class="md-ellipsis">
+      assertEquals(expected, actual, messageopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assertfalseexpr-messageopt">
+<span class="md-ellipsis">
+      assertFalse(expr, messageopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assertnotequalsexpected-actual-messageopt">
+<span class="md-ellipsis">
+      assertNotEquals(expected, actual, messageopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asserttrueexpr-messageopt">
+<span class="md-ellipsis">
+      assertTrue(expr, messageopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clearmdc">
+<span class="md-ellipsis">
+      clearMDC()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#closeallwebsocketsws_prefixopt-from_idxopt-to_idxopt">
+<span class="md-ellipsis">
+      closeAllWebSockets(ws_prefixopt, from_idxopt, to_idxopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decodexmlstr">
+<span class="md-ellipsis">
+      decodeXML(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decodexmlattstr">
+<span class="md-ellipsis">
+      decodeXmlAtt(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decodexmlattescstr">
+<span class="md-ellipsis">
+      decodeXmlAttEsc(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decodexmlattnumstr">
+<span class="md-ellipsis">
+      decodeXmlAttNum(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodeuricomponentlowers">
+<span class="md-ellipsis">
+      encodeURIComponentLower(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodexmlstr">
+<span class="md-ellipsis">
+      encodeXML(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodexmlbrokenstr">
+<span class="md-ellipsis">
+      encodeXMLbroken(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodexmlattstr">
+<span class="md-ellipsis">
+      encodeXmlAtt(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encodexmlattescstr">
+<span class="md-ellipsis">
+      encodeXmlAttEsc(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapeaugstr">
+<span class="md-ellipsis">
+      escapeAug(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapelowerstr">
+<span class="md-ellipsis">
+      escapeLower(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapesiebelstr">
+<span class="md-ellipsis">
+      escapeSiebel(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapev2str">
+<span class="md-ellipsis">
+      escapeV2(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapexpathpath">
+<span class="md-ellipsis">
+      escapeXPath(path)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapexmlbrokens">
+<span class="md-ellipsis">
+      escapeXmlBroken(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractallvalues">
+<span class="md-ellipsis">
+      extractAllValues()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractheadervalueprefix-suffix-header_name">
+<span class="md-ellipsis">
+      extractHeaderValue(prefix, suffix, header_name)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractjspathexpr-src">
+<span class="md-ellipsis">
+      extractJSPath(expr, src)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractjsonvaluepath-source">
+<span class="md-ellipsis">
+      extractJsonValue(path, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractregexptemplaterestr-srcopt-templateopt">
+<span class="md-ellipsis">
+      extractRegExpTemplate(reStr, srcopt, templateopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractsiebelarrayvalueidx-prefix-suffix-source-instance">
+<span class="md-ellipsis">
+      extractSiebelArrayValue(idx, prefix, suffix, source, instance)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractvalueprefix-suffix-str-orderopt-left_offsetopt-right_offsetopt">
+<span class="md-ellipsis">
+      extractValue(prefix, suffix, str, orderopt, left_offsetopt, right_offsetopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractvaluebylengthprefix-len-str-order-left_offset-right_offset">
+<span class="md-ellipsis">
+      extractValueByLength(prefix, len, str, order, left_offset, right_offset)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractxpathexpr-source">
+<span class="md-ellipsis">
+      extractXPath(expr, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractxmlvaluetagname-index-source">
+<span class="md-ellipsis">
+      extractXmlValue(tagName, index, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failmessage">
+<span class="md-ellipsis">
+      fail(message)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcorrelationvaluevarname-func-object">
+<span class="md-ellipsis">
+      getCorrelationValue(varName, func) → {object}
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getmdcnameopt">
+<span class="md-ellipsis">
+      getMDC(nameopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pollcorrelationvaluevarname-func-timeout-object">
+<span class="md-ellipsis">
+      pollCorrelationValue(varName, func, timeout) → {object}
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#printmdc">
+<span class="md-ellipsis">
+      printMDC()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#putmdcname-value">
+<span class="md-ellipsis">
+      putMDC(name, value)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removemdcname">
+<span class="md-ellipsis">
+      removeMDC(name)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setcorrelationvaluevarname-extractedvalue-originalvalueopt-errorfuncopt">
+<span class="md-ellipsis">
+      setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setcorrelationvaluesilent">
+<span class="md-ellipsis">
+      setCorrelationValueSilent()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unescapeunixs">
+<span class="md-ellipsis">
+      unescapeUnix(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unescapexmlbrokenstr">
+<span class="md-ellipsis">
+      unescapeXMLbroken(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uuidv4-string">
+<span class="md-ellipsis">
+      uuidv4() → {string}
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#events">
-<span class="md-ellipsis">
-      Events
-    </span>
-</a>
-<nav aria-label="Events" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessage-evt">
-<span class="md-ellipsis">
-      onmessage (evt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onerror-evt">
-<span class="md-ellipsis">
-      onerror (evt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onopen-evt">
-<span class="md-ellipsis">
-      onopen (evt)
-    </span>
-</a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#websocket-sample-code">
-<span class="md-ellipsis">
-      WebSocket Sample Code
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mothod-metails">
-<span class="md-ellipsis">
-      Mothod metails
-    </span>
-</a>
-<nav aria-label="Mothod metails" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#websocketurl-manualhandleeventsopt">
-<span class="md-ellipsis">
-      WebSocket(url, manualHandleEventsopt)
-    </span>
-</a>
-<nav aria-label="WebSocket(url, manualHandleEventsopt)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#new-websocketurl-manualhandleeventsopt">
-<span class="md-ellipsis">
-      new WebSocket(url, manualHandleEventsopt)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#members">
-<span class="md-ellipsis">
-      Members
-    </span>
-</a>
-<nav aria-label="Members" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#manualhandleevents-boolean">
-<span class="md-ellipsis">
-      manualHandleEvents :boolean
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onclose-websocketwebsocketeventcallback">
-<span class="md-ellipsis">
-      onclose :WebSocket#webSocketEventCallback
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onerror-websocketwebsocketeventcallback">
-<span class="md-ellipsis">
-      onerror :WebSocket#webSocketEventCallback
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessage-websocketonmessagecallback">
-<span class="md-ellipsis">
-      onmessage :WebSocket#onmessageCallback
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onopen-websocketwebsocketeventcallback">
-<span class="md-ellipsis">
-      onopen :WebSocket#webSocketEventCallback
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reporterrorfunction-function">
-<span class="md-ellipsis">
-      reportErrorFunction :function
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#storemessages-boolean">
-<span class="md-ellipsis">
-      storeMessages :boolean
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#waittime-number">
-<span class="md-ellipsis">
-      waitTime :number
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#methods_1">
-<span class="md-ellipsis">
-      Methods
-    </span>
-</a>
-<nav aria-label="Methods" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#addheadername-value">
-<span class="md-ellipsis">
-      addHeader(name, value)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#close">
-<span class="md-ellipsis">
-      close()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connect">
-<span class="md-ellipsis">
-      connect()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dynamicreplacecorrelationtocorrelationparam-searchvalueopt">
-<span class="md-ellipsis">
-      dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#expectmessageexpr-timeoutopt-keepmessagesopt">
-<span class="md-ellipsis">
-      expectMessage(expr, timeoutopt, keepMessagesopt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extractmessagevalueprefix-suffix-nameopt-timeoutopt-keepmessagesopt">
-<span class="md-ellipsis">
-      extractMessageValue(prefix, suffix, nameopt, timeoutopt, keepMessagesopt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#handlemessage">
-<span class="md-ellipsis">
-      handleMessage()
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#senddata-encoded">
-<span class="md-ellipsis">
-      send(data, encoded)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sendbinarydata">
-<span class="md-ellipsis">
-      sendBinary(data)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setconnectiontimeoutmilis">
-<span class="md-ellipsis">
-      setConnectionTimeout(milis)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setignoresslerrorsb">
-<span class="md-ellipsis">
-      setIgnoreSslErrors(b)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setpermessagedeflateb">
-<span class="md-ellipsis">
-      setPerMessageDeflate(b)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setproxyproxy">
-<span class="md-ellipsis">
-      setProxy(proxy)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#settimeoutmilis">
-<span class="md-ellipsis">
-      setTimeout(milis)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setverifyhostb">
-<span class="md-ellipsis">
-      setVerifyHost(b)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-definitions">
-<span class="md-ellipsis">
-      Type Definitions
-    </span>
-</a>
-<nav aria-label="Type Definitions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessagetype">
-<span class="md-ellipsis">
-      OnMessageType
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessagecallbackevt">
-<span class="md-ellipsis">
-      onmessageCallback(evt)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#websocketeventcallbackevt">
-<span class="md-ellipsis">
-      webSocketEventCallback(evt)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../js_helper_funcs/">
-<span class="md-ellipsis">
-    JavaScript Helper Functions
-  </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../appendix_a/">
@@ -1413,13 +1466,6 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#constructor">
-<span class="md-ellipsis">
-      Constructor
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#methods">
 <span class="md-ellipsis">
       Methods
@@ -1428,308 +1474,368 @@
 <nav aria-label="Methods" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#connect-method">
+<a class="md-nav__link" href="#debugmessagestr">
 <span class="md-ellipsis">
-      connect() (method)
+      DebugMessage(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#close-method">
+<a class="md-nav__link" href="#decodestrings">
 <span class="md-ellipsis">
-      close() (method)
+      DecodeString(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#send-method">
+<a class="md-nav__link" href="#decodestringunixs">
 <span class="md-ellipsis">
-      send() (method)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#events">
-<span class="md-ellipsis">
-      Events
-    </span>
-</a>
-<nav aria-label="Events" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessage-evt">
-<span class="md-ellipsis">
-      onmessage (evt)
+      DecodeStringUnix(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onerror-evt">
+<a class="md-nav__link" href="#decodestringwins">
 <span class="md-ellipsis">
-      onerror (evt)
+      DecodeStringWin(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onopen-evt">
+<a class="md-nav__link" href="#encodestrings">
 <span class="md-ellipsis">
-      onopen (evt)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#websocket-sample-code">
-<span class="md-ellipsis">
-      WebSocket Sample Code
+      EncodeString(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mothod-metails">
+<a class="md-nav__link" href="#encodestringwins">
 <span class="md-ellipsis">
-      Mothod metails
-    </span>
-</a>
-<nav aria-label="Mothod metails" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#websocketurl-manualhandleeventsopt">
-<span class="md-ellipsis">
-      WebSocket(url, manualHandleEventsopt)
-    </span>
-</a>
-<nav aria-label="WebSocket(url, manualHandleEventsopt)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#new-websocketurl-manualhandleeventsopt">
-<span class="md-ellipsis">
-      new WebSocket(url, manualHandleEventsopt)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#members">
-<span class="md-ellipsis">
-      Members
-    </span>
-</a>
-<nav aria-label="Members" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#manualhandleevents-boolean">
-<span class="md-ellipsis">
-      manualHandleEvents :boolean
+      EncodeStringWin(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onclose-websocketwebsocketeventcallback">
+<a class="md-nav__link" href="#sleepeverymillis">
 <span class="md-ellipsis">
-      onclose :WebSocket#webSocketEventCallback
+      SleepEvery(millis)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onerror-websocketwebsocketeventcallback">
+<a class="md-nav__link" href="#sleepuntilmillisfrombeginning">
 <span class="md-ellipsis">
-      onerror :WebSocket#webSocketEventCallback
+      SleepUntil(millisFromBeginning)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onmessage-websocketonmessagecallback">
+<a class="md-nav__link" href="#addtransactionstomdc">
 <span class="md-ellipsis">
-      onmessage :WebSocket#onmessageCallback
+      addTransactionsToMDC()
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onopen-websocketwebsocketeventcallback">
+<a class="md-nav__link" href="#assertequalsexpected-actual-messageopt">
 <span class="md-ellipsis">
-      onopen :WebSocket#webSocketEventCallback
+      assertEquals(expected, actual, messageopt)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reporterrorfunction-function">
+<a class="md-nav__link" href="#assertfalseexpr-messageopt">
 <span class="md-ellipsis">
-      reportErrorFunction :function
+      assertFalse(expr, messageopt)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#storemessages-boolean">
+<a class="md-nav__link" href="#assertnotequalsexpected-actual-messageopt">
 <span class="md-ellipsis">
-      storeMessages :boolean
+      assertNotEquals(expected, actual, messageopt)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#waittime-number">
+<a class="md-nav__link" href="#asserttrueexpr-messageopt">
 <span class="md-ellipsis">
-      waitTime :number
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#methods_1">
-<span class="md-ellipsis">
-      Methods
-    </span>
-</a>
-<nav aria-label="Methods" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#addheadername-value">
-<span class="md-ellipsis">
-      addHeader(name, value)
+      assertTrue(expr, messageopt)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#close">
+<a class="md-nav__link" href="#clearmdc">
 <span class="md-ellipsis">
-      close()
+      clearMDC()
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#connect">
+<a class="md-nav__link" href="#closeallwebsocketsws_prefixopt-from_idxopt-to_idxopt">
 <span class="md-ellipsis">
-      connect()
+      closeAllWebSockets(ws_prefixopt, from_idxopt, to_idxopt)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dynamicreplacecorrelationtocorrelationparam-searchvalueopt">
+<a class="md-nav__link" href="#decodexmlstr">
 <span class="md-ellipsis">
-      dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)
+      decodeXML(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#expectmessageexpr-timeoutopt-keepmessagesopt">
+<a class="md-nav__link" href="#decodexmlattstr">
 <span class="md-ellipsis">
-      expectMessage(expr, timeoutopt, keepMessagesopt)
+      decodeXmlAtt(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#extractmessagevalueprefix-suffix-nameopt-timeoutopt-keepmessagesopt">
+<a class="md-nav__link" href="#decodexmlattescstr">
 <span class="md-ellipsis">
-      extractMessageValue(prefix, suffix, nameopt, timeoutopt, keepMessagesopt)
+      decodeXmlAttEsc(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#handlemessage">
+<a class="md-nav__link" href="#decodexmlattnumstr">
 <span class="md-ellipsis">
-      handleMessage()
+      decodeXmlAttNum(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#senddata-encoded">
+<a class="md-nav__link" href="#encodeuricomponentlowers">
 <span class="md-ellipsis">
-      send(data, encoded)
+      encodeURIComponentLower(s)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sendbinarydata">
+<a class="md-nav__link" href="#encodexmlstr">
 <span class="md-ellipsis">
-      sendBinary(data)
+      encodeXML(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setconnectiontimeoutmilis">
+<a class="md-nav__link" href="#encodexmlbrokenstr">
 <span class="md-ellipsis">
-      setConnectionTimeout(milis)
+      encodeXMLbroken(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setignoresslerrorsb">
+<a class="md-nav__link" href="#encodexmlattstr">
 <span class="md-ellipsis">
-      setIgnoreSslErrors(b)
+      encodeXmlAtt(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setpermessagedeflateb">
+<a class="md-nav__link" href="#encodexmlattescstr">
 <span class="md-ellipsis">
-      setPerMessageDeflate(b)
+      encodeXmlAttEsc(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setproxyproxy">
+<a class="md-nav__link" href="#escapeaugstr">
 <span class="md-ellipsis">
-      setProxy(proxy)
+      escapeAug(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#settimeoutmilis">
+<a class="md-nav__link" href="#escapelowerstr">
 <span class="md-ellipsis">
-      setTimeout(milis)
+      escapeLower(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setverifyhostb">
+<a class="md-nav__link" href="#escapesiebelstr">
 <span class="md-ellipsis">
-      setVerifyHost(b)
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-definitions">
-<span class="md-ellipsis">
-      Type Definitions
-    </span>
-</a>
-<nav aria-label="Type Definitions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onmessagetype">
-<span class="md-ellipsis">
-      OnMessageType
+      escapeSiebel(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#onmessagecallbackevt">
+<a class="md-nav__link" href="#escapev2str">
 <span class="md-ellipsis">
-      onmessageCallback(evt)
+      escapeV2(str)
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#websocketeventcallbackevt">
+<a class="md-nav__link" href="#escapexpathpath">
 <span class="md-ellipsis">
-      webSocketEventCallback(evt)
+      escapeXPath(path)
     </span>
 </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escapexmlbrokens">
+<span class="md-ellipsis">
+      escapeXmlBroken(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractallvalues">
+<span class="md-ellipsis">
+      extractAllValues()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractheadervalueprefix-suffix-header_name">
+<span class="md-ellipsis">
+      extractHeaderValue(prefix, suffix, header_name)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractjspathexpr-src">
+<span class="md-ellipsis">
+      extractJSPath(expr, src)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractjsonvaluepath-source">
+<span class="md-ellipsis">
+      extractJsonValue(path, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractregexptemplaterestr-srcopt-templateopt">
+<span class="md-ellipsis">
+      extractRegExpTemplate(reStr, srcopt, templateopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractsiebelarrayvalueidx-prefix-suffix-source-instance">
+<span class="md-ellipsis">
+      extractSiebelArrayValue(idx, prefix, suffix, source, instance)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractvalueprefix-suffix-str-orderopt-left_offsetopt-right_offsetopt">
+<span class="md-ellipsis">
+      extractValue(prefix, suffix, str, orderopt, left_offsetopt, right_offsetopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractvaluebylengthprefix-len-str-order-left_offset-right_offset">
+<span class="md-ellipsis">
+      extractValueByLength(prefix, len, str, order, left_offset, right_offset)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractxpathexpr-source">
+<span class="md-ellipsis">
+      extractXPath(expr, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extractxmlvaluetagname-index-source">
+<span class="md-ellipsis">
+      extractXmlValue(tagName, index, source)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failmessage">
+<span class="md-ellipsis">
+      fail(message)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcorrelationvaluevarname-func-object">
+<span class="md-ellipsis">
+      getCorrelationValue(varName, func) → {object}
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getmdcnameopt">
+<span class="md-ellipsis">
+      getMDC(nameopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pollcorrelationvaluevarname-func-timeout-object">
+<span class="md-ellipsis">
+      pollCorrelationValue(varName, func, timeout) → {object}
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#printmdc">
+<span class="md-ellipsis">
+      printMDC()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#putmdcname-value">
+<span class="md-ellipsis">
+      putMDC(name, value)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removemdcname">
+<span class="md-ellipsis">
+      removeMDC(name)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setcorrelationvaluevarname-extractedvalue-originalvalueopt-errorfuncopt">
+<span class="md-ellipsis">
+      setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setcorrelationvaluesilent">
+<span class="md-ellipsis">
+      setCorrelationValueSilent()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unescapeunixs">
+<span class="md-ellipsis">
+      unescapeUnix(s)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unescapexmlbrokenstr">
+<span class="md-ellipsis">
+      unescapeXMLbroken(str)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uuidv4-string">
+<span class="md-ellipsis">
+      uuidv4() → {string}
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -1741,149 +1847,201 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="websocket-object">WebSocket Object</h1>
-<p>WebLOAD supports WebSocket, a protocol that provides full-duplex communication channels over a single TCP connection. Unlike HTTP which is a request-response protocol, WebSocket creates connections for sending or receiving messages that are not dependent on one another. In this way, WebSocket provides full-duplex communication. WebSocket also enables streams of messages on top of TCP.</p>
-<p>WebLOAD’s WebSocket object enables creating and managing a WebSocket connection to a server, as well as sending and receiving data on the connection. Note that you can create multiple WebSocket objects.</p>
-<h2 id="constructor">Constructor</h2>
-<p><strong>Description</strong></p>
-<p>Creates a new WebSocket for the given URL, and returns a JavaScript object reference.</p>
-<p><strong>Syntax</strong></p>
-<p><code>&lt;websocket object name&gt;</code> = <strong>new WebSocket (<code>&lt;\*URL\*&gt;</code>)</strong>;</p>
-<p><strong>Parameters</strong></p>
+<h1 id="javascript-helper-functions">JavaScript Helper Functions</h1>
+<p>The following are global JavaScript functions that are used by WebLOAD and can be used to perform specific tasks.</p>
+<h3 id="methods">Methods</h3>
+<h4 id="debugmessagestr">DebugMessage(str)</h4>
+<p>Print message to log. Like InfoMessage() but logs only when running in WebLOAD Recorder, not in Console</p>
+<p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th><strong>Parameter Name</strong></th>
-<th><strong>Description</strong></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
-<td>The URL to which to connect.</td>
+<td><code>str</code></td>
+<td>string</td>
+<td>to log</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Example</strong></p>
-<p><code>ws1 = new WebSocket("ws://echo.websocket.org");</code></p>
-<h2 id="methods">Methods</h2>
-<h3 id="connect-method">connect() (method)</h3>
-<p><strong>Description</strong></p>
-<p>Creates a WebSocket connection to the given URL address. When connected, an</p>
-<p>onopen() event is fired, as described in <a href="#_bookmark576"><em>onopen (evt)</em> </a>.</p>
-<p><strong>Syntax</strong></p>
-<p><code>&lt;websocket object name&gt;</code>.<em>connect()</em></p>
-<p><strong>Example</strong></p>
-<p><code>ws1.connect()</code></p>
-<h3 id="close-method">close() (method)</h3>
-<p><strong>Description</strong></p>
-<p>Closes the WebSocket connection.</p>
-<p><strong>Syntax</strong></p>
-<p><code>&lt;*websocket object name*&gt;</code>.<strong>close()</strong></p>
-<p><strong>Example</strong></p>
-<p><code>ws1.close()</code></p>
-<h3 id="send-method">send() (method)</h3>
-<p><strong>Description</strong></p>
-<p>Sends data to a WebSocket connection.</p>
-<p><strong>Syntax</strong></p>
-<p><code>&lt;*websocket object name*&gt;</code>.<strong>send(data[ ,encoded])</strong></p>
-<p><strong>Parameters</strong></p>
+<h4 id="decodestrings">DecodeString(s)</h4>
+<p>Decoding function - reverse of EncodeString</p>
+<p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th><strong>Parameter Name</strong></th>
-<th><strong>Description</strong></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>data</td>
-<td>The data to be sent, enclosed in quote marks.</td>
-</tr>
-<tr>
-<td>[encoded]</td>
-<td>An optional Boolean value (true or false). <br/> True indicates that the  data contains an ASCII encoded string  in the format %xx, where xx is the hexadecimal ASCII code. <br/> False indicates the data  does not contain an ASCII encoded string. This is the default value.</td>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to unescape</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Examples</strong></p>
-<p><code>ws1.send(“hi”)</code></p>
-<p><code>ws1.send(“next line %0A here”, true)</code></p>
-<h2 id="events">Events</h2>
-<p>A WebSocket emits events. An Event handler should be registered in order to react to events.</p>
-<h3 id="onmessage-evt">onmessage (evt)</h3>
-<p>An event that occurs when a new message is received.</p>
+<p>See:</p>
 <ul>
-<li>
-<p>evt.getData() – Gets the data. This can be a string or binary data.</p>
-</li>
-<li>
-<p>evt.isBinary() – Indicates whether the data is binary or not.</p>
-</li>
-<li>
-<p>evt.getEncodedData() – Gets the data in encoded format. This is useful for binary messages.</p>
-</li>
+<li><a href="global.html#EncodeString">EncodeString</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="decodestringunixs">DecodeStringUnix(s)</h4>
+<p>Decoding function - reverse of EncodeString + convert end-of-line from unix to dos format</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to unescape</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#EncodeString">EncodeString</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="decodestringwins">DecodeStringWin(s)</h4>
+<p>Decoding function - reverse of EncodeStringWin</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to unescape</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#EncodeStringWin">EncodeStringWin</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="encodestrings">EncodeString(s)</h4>
+<p>Encoding function - escape given string, replace special chars with %xx notaion. Similar to 'escape', except that it convert space to "+" (not %20), "/" to "%2F" and "+" to "%2B"</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to escape</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- escaped string</p>
+<h4 id="encodestringwins">EncodeStringWin(s)</h4>
+<p>Encoding function - escape given string, replace special chars with %xx notaion. Similar to 'EncodeString', but converts linux style \n to windows style \r\n</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to escape</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- escaped string</p>
+<h4 id="sleepeverymillis">SleepEvery(millis)</h4>
+<p>SleepEvery a certain multiple number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session for intervals.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>millis</code></td>
+<td>number</td>
+<td>time in milliseconds from session start to repeatedly wait before resuming</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="language-js">SleepUntil(5000); //wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10
+</code></pre>
+<h4 id="sleepuntilmillisfrombeginning">SleepUntil(millisFromBeginning)</h4>
+<p>SleepUntil a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>millisFromBeginning</code></td>
+<td>number</td>
+<td>time in milliseconds from session start to wait before resuming</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#SleepEvery">SleepEvery</a></li>
 </ul>
 <p><strong>Example</strong></p>
-<pre><code class="language-javascript">ws1.onmessage = function(evt) {
-
-InfoMessage(“got message “ + evt.getData() )
-
-if (evt.isBinary() ) {
-
-InfoMessage(“Message is binary”);
-
-}
-
-}
+<pre><code class="language-javascript">SleepUntil(5000); //wait until 5 seconds have passed
 </code></pre>
-<h3 id="onerror-evt">onerror (evt)</h3>
-<p>An event that occurs when an error message is received. The default behavior is to show a warning message with the error details.</p>
-<p><code>Evt.getData()</code> – gets the underlying exception details.</p>
-<h3 id="onopen-evt">onopen (evt)</h3>
-<p>An event that occurs when the socket is opened (connected).</p>
-<p><strong>Example</strong></p>
-<pre><code class="language-javascript">ws1.onopen = function(evt) 
-
-{ 
-
-DebugMessage("WebSocket is opened, say hello"); 
-
-ws1.send(“hello”);
-
-}
-</code></pre>
-<h2 id="websocket-sample-code">WebSocket Sample Code</h2>
-<pre><code class="language-javascript">// Create a WebSocket object
-
-ws1 = new WebSocket( "ws://echo.websocket.org" );
-
-// Define an event handler, to handle events (incoming messages) when they occur
-
-ws1.onmessage = function(evt) {
-
-// Display in the Log the text that was sent in the message body DebugMessage("Server said:" + evt.getData());
-
-}
-
-// Create a websocket connection ws1.connect();
-
-//Note that events are handled while in Sleep Sleep(1000);
-
-// Send a message with the text “hi”
-
-ws1.send("hi");
-
-Sleep(1000);
-
-// Close the websocket connection ws1.close();
-
-Sleep(1000);
-</code></pre>
-<h2 id="mothod-metails">Mothod metails</h2>
-<h3 id="websocketurl-manualhandleeventsopt">WebSocket(url, manualHandleEventsopt)</h3>
-<h4 id="new-websocketurl-manualhandleeventsopt">new WebSocket(url, manualHandleEventsopt)</h4>
-<p>Create new WebSocket object</p>
+<h4 id="addtransactionstomdc">addTransactionsToMDC()</h4>
+<p>When called, will cause all transactions to be automatically added to MDC</p>
+<p>See:</p>
+<ul>
+<li><a href="global.html#putMDC">putMDC</a></li>
+</ul>
+<h4 id="assertequalsexpected-actual-messageopt">assertEquals(expected, actual, messageopt)</h4>
+<p>JUnit like helper function - compare actal and expected and throw an error in they are different</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1896,160 +2054,27 @@ Sleep(1000);
 </thead>
 <tbody>
 <tr>
-<td><code>url</code></td>
-<td>string</td>
+<td><code>expected</code></td>
+<td>*</td>
 <td></td>
-<td>connection string</td>
+<td>value to be compared to</td>
 </tr>
 <tr>
-<td><code>manualHandleEvents</code></td>
-<td>boolean</td>
-<td><optional></optional></td>
-<td>if true, will only handle events when manually asked for (for example, using ws.handlePending()). Default is to automatically handle events</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre><code>ws1 = new WebSocket( "wss://echo.websocket.org/?encoding=text" );
-ws1.onmessage = function(evt ) {
-    DebugMessage("Server said:" + evt.getData());
-}
-ws1.connect();
-Sleep(1000); //Event are handled while in Sleep
-ws1.send("hi");
-ws1.close();
-</code></pre>
-<h3 id="members">Members</h3>
-<h4 id="manualhandleevents-boolean">manualHandleEvents :boolean</h4>
-<p>when true, messages are handled (callbacks called) automatically</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li>boolean</li>
-</ul>
-<p>Default Value:</p>
-<ul>
-<li>true</li>
-</ul>
-<h4 id="onclose-websocketwebsocketeventcallback">onclose :<a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></h4>
-<p>Callback called when WebSocket is closed</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li><a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></li>
-</ul>
-<h4 id="onerror-websocketwebsocketeventcallback">onerror :<a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></h4>
-<p>Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li><a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></li>
-</ul>
-<h4 id="onmessage-websocketonmessagecallback">onmessage :<a href="#onmessageCallback">WebSocket#onmessageCallback</a></h4>
-<p>Callback to be called when a new message arrives</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li><a href="#onmessageCallback">WebSocket#onmessageCallback</a></li>
-</ul>
-<h4 id="onopen-websocketwebsocketeventcallback">onopen :<a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></h4>
-<p>Callback called when WebSocket is opened</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li><a href="#webSocketEventCallback">WebSocket#webSocketEventCallback</a></li>
-</ul>
-<h4 id="reporterrorfunction-function">reportErrorFunction :function</h4>
-<p>Function used to log messages</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li>function</li>
-</ul>
-<p>Default Value:</p>
-<ul>
-<li>ErrorMessage or WebSocket.prototype.globalReportErrorFunction</li>
-</ul>
-<h4 id="storemessages-boolean">storeMessages :boolean</h4>
-<p>when true, messages are stored after being handled for future inspection.</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li>boolean</li>
-</ul>
-<p>Since:</p>
-<ul>
-<li>WebLOAD 12.6</li>
-</ul>
-<p>Default Value:</p>
-<ul>
-<li>false</li>
-</ul>
-<h4 id="waittime-number">waitTime :number</h4>
-<p>Time in milliseconds before checking new messages</p>
-<p><strong>Type:</strong></p>
-<ul>
-<li>number</li>
-</ul>
-<p>Default Value:</p>
-<ul>
-<li>500 or WebSocket.prototype.globalWaitTime</li>
-</ul>
-<h3 id="methods_1">Methods</h3>
-<h4 id="addheadername-value">addHeader(name, value)</h4>
-<p>Add custom HTTP Header</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>name</code></td>
-<td>string</td>
+<td><code>actual</code></td>
+<td>*</td>
 <td></td>
+<td>actual value</td>
 </tr>
 <tr>
-<td><code>value</code></td>
-<td>string</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="close">close()</h4>
-<p>Close the connection</p>
-<h4 id="connect">connect()</h4>
-<p>Connect to WebSocket</p>
-<h4 id="dynamicreplacecorrelationtocorrelationparam-searchvalueopt">dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)</h4>
-<p>Replace send/sendBinary data with value in correlation. Value is looked up using pollCorrelationValue, so if value does not yet exist, wait for it until timeout (30000 millis)</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Attributes</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>toCorrelationParam</code></td>
-<td>string</td>
-<td></td>
-<td>name of parameter to replace. The name is expected to be set via setCorrealtionValue("myParamName", "the value");</td>
-</tr>
-<tr>
-<td><code>searchValue</code></td>
+<td><code>message</code></td>
 <td>string</td>
 <td><optional></optional></td>
-<td>the replacement value to replace. The default is ${toCorrelationParam}, for example the string "session=${sessionId}" will be replaced with "session="+pollCorrelationValue("sessionId").</td>
+<td>custom message to show if values don't match</td>
 </tr>
 </tbody>
 </table>
-<p>Since:</p>
-<ul>
-<li>WebLOAD 12.6</li>
-</ul>
-<h4 id="expectmessageexpr-timeoutopt-keepmessagesopt">expectMessage(expr, timeoutopt, keepMessagesopt)</h4>
-<p>Wait for some message to be received.</p>
+<h4 id="assertfalseexpr-messageopt">assertFalse(expr, messageopt)</h4>
+<p>JUnit style assert that expression is false</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2057,40 +2082,92 @@ ws1.close();
 <th>Name</th>
 <th>Type</th>
 <th>Attributes</th>
-<th>Default</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>expr</code></td>
-<td>string | RegExp</td>
-<td></td>
-<td></td>
-<td>can be a "string" or /regex/ to look for in previous or future messages</td>
-</tr>
-<tr>
-<td><code>timeout</code></td>
-<td>number</td>
-<td><optional></optional></td>
-<td>30000</td>
-<td>how much time to wait, default is 30000 milis</td>
-</tr>
-<tr>
-<td><code>keepMessages</code></td>
 <td>boolean</td>
+<td></td>
+<td>expression to check</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
 <td><optional></optional></td>
-<td>false</td>
-<td>if true, will not remove messages, if false (default) will remove all messages up to the looked up message.</td>
+<td>custom message</td>
 </tr>
 </tbody>
 </table>
-<p>Since:</p>
+<h4 id="assertnotequalsexpected-actual-messageopt">assertNotEquals(expected, actual, messageopt)</h4>
+<p>JUnit like helper function - compare actal and expected and throw an error in they are the same</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expected</code></td>
+<td>*</td>
+<td></td>
+<td>value to be compared to</td>
+</tr>
+<tr>
+<td><code>actual</code></td>
+<td>*</td>
+<td></td>
+<td>actual value</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td>custom message to show if values are the same</td>
+</tr>
+</tbody>
+</table>
+<h4 id="asserttrueexpr-messageopt">assertTrue(expr, messageopt)</h4>
+<p>JUnit style assert that expression is true</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expr</code></td>
+<td>boolean</td>
+<td></td>
+<td>expression to check</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td>custom message</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clearmdc">clearMDC()</h4>
+<p>Clear content of MDC (Mapped Diagnostic Context)</p>
+<p>See:</p>
 <ul>
-<li>WebLOAD 12.6</li>
+<li><a href="global.html#putMDC">putMDC</a></li>
 </ul>
-<h4 id="extractmessagevalueprefix-suffix-nameopt-timeoutopt-keepmessagesopt">extractMessageValue(prefix, suffix, nameopt, timeoutopt, keepMessagesopt)</h4>
-<p>Wait for some message to be received.</p>
+<h4 id="closeallwebsocketsws_prefixopt-from_idxopt-to_idxopt">closeAllWebSockets(ws_prefixopt, from_idxopt, to_idxopt)</h4>
+<p>Close all WebSocket objects</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2099,6 +2176,578 @@ ws1.close();
 <th>Type</th>
 <th>Attributes</th>
 <th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ws_prefix</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td>ws</td>
+<td>prefix of var name</td>
+</tr>
+<tr>
+<td><code>from_idx</code></td>
+<td>number</td>
+<td><optional></optional></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>to_idx</code></td>
+<td>number</td>
+<td><optional></optional></td>
+<td>20</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code>//will close all WebSocket objects named "ws1" to "ws20"
+ closeAllWebSockets();
+</code></pre>
+<h4 id="decodexmlstr">decodeXML(str)</h4>
+<p>Decoding function - reverse of encodeXML</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encode</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#encodeXML">encodeXML</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>decoded string</p>
+<h4 id="decodexmlattstr">decodeXmlAtt(str)</h4>
+<p>Decoding function - reverse of encodeXmlAtt</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>encoded string to decode</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#encodeXmlAtt">encodeXmlAtt</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<p><strong>Example</strong></p>
+<pre><code>//returns "abc:/egf="
+decodeXmlAtt("abc&amp;#x3a;&amp;#x2f;egf\&amp;#x3d;")
+</code></pre>
+<h4 id="decodexmlattescstr">decodeXmlAttEsc(str)</h4>
+<p>Decoding function - converts XML attribute format (&amp;#x??;) to URL encoding format (%??)</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>encoded string to decode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="decodexmlattnumstr">decodeXmlAttNum(str)</h4>
+<p>Decoding function - decodes XML Attribute in numeric format</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>encoded string to decode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<p><strong>Example</strong></p>
+<pre><code>//returns "\"strategy\""
+decodeXmlAttNum("&amp;#34;strategy&amp;#34;")
+</code></pre>
+<h4 id="encodeuricomponentlowers">encodeURIComponentLower(s)</h4>
+<p>Encoding function - Similar to encodeURIComponent but uses lower-case letters</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to escape</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- escaped string</p>
+<h4 id="encodexmlstr">encodeXML(str)</h4>
+<p>Encoding function - encodes XML tags</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>encoded string</p>
+<h4 id="encodexmlbrokenstr">encodeXMLbroken(str)</h4>
+<p>Encoding function - like encodeXML but &gt; is not replaced, only &lt; and &amp;</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#encodeXML">encodeXML</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>encoded string</p>
+<h4 id="encodexmlattstr">encodeXmlAtt(str)</h4>
+<p>Encodeing function - encode an XML Attribute.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<p><strong>Example</strong></p>
+<pre><code>//returns "pcdshort&amp;#x3a;&amp;#x2f;M0szu5jMrfDvCVJp71LcecoFE5s\&amp;#x3d;"
+encodeXmlAtt("pcdshort:/M0szu5jMrfDvCVJp71LcecoFE5s=")
+</code></pre>
+<h4 id="encodexmlattescstr">encodeXmlAttEsc(str)</h4>
+<p>Encoding function - coverts escaped string to XML attribute escaped string</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<p><strong>Example</strong></p>
+<pre><code>//returns "a&amp;#x2b;b"
+encodeXmlAttEsc( "a%2Bb")
+</code></pre>
+<h4 id="escapeaugstr">escapeAug(str)</h4>
+<p>Encoding function - vairation of escape. Also encodes @ / and ~</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<h4 id="escapelowerstr">escapeLower(str)</h4>
+<p>Encoding function - this is similar to 'escape', but uses lower case character, i.e. equals (=) sign is '%3d' instead of '%3D'</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to escape</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<h4 id="escapesiebelstr">escapeSiebel(str)</h4>
+<p>Encoding function - vairation of escape. Only escape %, :, /, +, =. Space encoded as +. Used by Siebel</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<h4 id="escapev2str">escapeV2(str)</h4>
+<p>Encoding function - vairation of escape. Also encodes / and ~</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- encoded string</p>
+<h4 id="escapexpathpath">escapeXPath(path)</h4>
+<p>For XPath - make the given string valid for XPath expressions - escaping quotes if needed</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>to escape</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>escaped path</p>
+<h4 id="escapexmlbrokens">escapeXmlBroken(s)</h4>
+<p>Encoding function - decodes and escapes XML tags</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to encode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>encoded string</p>
+<p><strong>Example</strong></p>
+<pre><code>//returns "%3Csome%40Tag%3E"
+escapeXmlBroken("&amp;lt;some@Tag&amp;gt;")
+</code></pre>
+<h4 id="extractallvalues">extractAllValues()</h4>
+<p>extractAllValues() Returns array of all values matching the prefix/suffix.</p>
+<p><strong>Example</strong></p>
+<pre><code>// returns: ["aaa", "bbb"]
+extractAllValues("&lt;td&gt;","&lt;/td&gt;","&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&lt;td&gt;bbb&lt;/td&gt;&lt;/tr&gt;");
+</code></pre>
+<h4 id="extractheadervalueprefix-suffix-header_name">extractHeaderValue(prefix, suffix, header_name)</h4>
+<p>Extract a value from the given HTTP Header name</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prefix</code></td>
+<td>string</td>
+<td>optional, return value after this prefix. Use "" to start from beginning</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>string</td>
+<td>optional, return value before this suffix. Use "" to return until the end</td>
+</tr>
+<tr>
+<td><code>header_name</code></td>
+<td>string</td>
+<td>name of HTTP header to search</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- value of header of null if not found</p>
+<h4 id="extractjspathexpr-src">extractJSPath(expr, src)</h4>
+<p>Extract value using JSPath https://www.npmjs.com/package/jspath To test, use http://www.jsonquerytool.com/ with type: JSPath (dfilatov 0.4.0)</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expr</code></td>
+<td>string</td>
+<td>expresion to use</td>
+</tr>
+<tr>
+<td><code>src</code></td>
+<td>string | JSON</td>
+<td>string to extract from (needs to be JavaScrint object, or a JSON string that can converted to it)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>extracted value or null if not found</p>
+<h4 id="extractjsonvaluepath-source">extractJsonValue(path, source)</h4>
+<p>Get value from JSON using a simple path - path.to.item</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>dot delimited path to item</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>string</td>
+<td>String containing JSON string</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#extractJSPath">extractJSPath</a> - more full featured expressions</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>value at specified path or null of not found</p>
+<h4 id="extractregexptemplaterestr-srcopt-templateopt">extractRegExpTemplate(reStr, srcopt, templateopt)</h4>
+<p>Extract based on regular expression, from src, with possible template - number enclosed in $ for capturing group</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Attributes</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reStr</code></td>
+<td>string</td>
+<td></td>
+<td></td>
+<td>string with RegExp expression</td>
+</tr>
+<tr>
+<td><code>src</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td>document.wlSource</td>
+<td>source to search at</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td></td>
+<td>template to use the extracted values with</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>extracted value, or null if not found</p>
+<p><strong>Examples</strong></p>
+<pre><code>//returns:"54321"
+extractRegExpTemplate ( "foo=(.*?)&amp;", "foo=54321&amp;")
+</code></pre>
+<pre><code>//returns: "templated-54321-answer"
+extractRegExpTemplate ( "foo=(.*?)&amp;", "the foo=54321&amp;abcde&amp;zzzz", "templated-$1$-answer")
+</code></pre>
+<h4 id="extractsiebelarrayvalueidx-prefix-suffix-source-instance">extractSiebelArrayValue(idx, prefix, suffix, source, instance)</h4>
+<p>Extact a value from Siebel 'star' array, in format `length@value..`</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idx</code></td>
+<td>number</td>
+<td>index of item in array to return. can be negative, so -1 is last one.</td>
+</tr>
+<tr>
+<td><code>prefix</code></td>
+<td>string</td>
+<td>prefix to look in source for start of array</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>string</td>
+<td>suffix to look in source for start of array</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>string</td>
+<td>source of data to look for. To get value from HTTP response use document.wlSource</td>
+</tr>
+<tr>
+<td><code>instance</code></td>
+<td>number</td>
+<td>occurence of prefix/suffix to find the array in the source</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>value extracted or null if not found.</p>
+<p><strong>Example</strong></p>
+<pre><code>var str = "`array`10*first_item11*second_item`";
+//returns "first_item"
+extractSiebelArrayValue(0, "`array`", "`", str, 1)
+</code></pre>
+<h4 id="extractvalueprefix-suffix-str-orderopt-left_offsetopt-right_offsetopt">extractValue(prefix, suffix, str, orderopt, left_offsetopt, right_offsetopt)</h4>
+<p>Extracts a value from a string having a prefix and a suffix</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Attributes</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -2107,49 +2756,271 @@ ws1.close();
 <td><code>prefix</code></td>
 <td>string</td>
 <td></td>
-<td></td>
-<td>prefix in message to look for</td>
+<td>text before value to extract to find</td>
 </tr>
 <tr>
 <td><code>suffix</code></td>
 <td>string</td>
 <td></td>
-<td></td>
-<td>suffix in message to look for</td>
+<td>text after value to extract to find</td>
 </tr>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td></td>
+<td>string to look for. Mostly this will be document.wlSource to look in previous http response</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>number</td>
+<td><optional></optional></td>
+<td>which occurence to return. Default is first (1). Negative value means from end, so -1 is last.</td>
+</tr>
+<tr>
+<td><code>left_offset</code></td>
+<td>number</td>
+<td><optional></optional></td>
+<td>number of chars from left to remove from returned value.</td>
+</tr>
+<tr>
+<td><code>right_offset</code></td>
+<td>number</td>
+<td><optional></optional></td>
+<td>number of chars from right to remove from returned value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>value extracted, or null is not found</p>
+<p><strong>Example</strong></p>
+<pre><code>//return xx
+extractValue("a","b","axxb")
+</code></pre>
+<h4 id="extractvaluebylengthprefix-len-str-order-left_offset-right_offset">extractValueByLength(prefix, len, str, order, left_offset, right_offset)</h4>
+<p>Extracts a value from a string having a prefix with the specified length.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prefix</code></td>
+<td>string</td>
+<td>String to search</td>
+</tr>
+<tr>
+<td><code>len</code></td>
+<td>number</td>
+<td>length of value to return, after the prefix</td>
+</tr>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>string to search in. Mostly document.wlSource</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>number</td>
+<td>How many times to look for prefix</td>
+</tr>
+<tr>
+<td><code>left_offset</code></td>
+<td>number</td>
+<td>number of character before/after the left boundry to return (before: negative value)</td>
+</tr>
+<tr>
+<td><code>right_offset</code></td>
+<td>number</td>
+<td>number of character before/after the rigth boundry to return (before: negative value)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>extract value or null if not found</p>
+<p><strong>Examples</strong></p>
+<pre><code>//return "4321"
+extractValueByLength("abc$", 4, "xxabc$4321xxx")
+</code></pre>
+<pre><code>//return  "$4444$"
+extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
+</code></pre>
+<h4 id="extractxpathexpr-source">extractXPath(expr, source)</h4>
+<p>Extract from XML using XPath expression</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expr</code></td>
+<td>string</td>
+<td>XPath expresion. For example "/bookstore/book[1]/title"</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>string</td>
+<td>XML string to search for</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>extracted value or null is not found</p>
+<h4 id="extractxmlvaluetagname-index-source">extractXmlValue(tagName, index, source)</h4>
+<p>Extract tag value from XML string</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tagName</code></td>
+<td>string</td>
+<td>tag to search</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>number</td>
+<td>which occurence to return</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>string</td>
+<td>XML string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>tag value</p>
+<h4 id="failmessage">fail(message)</h4>
+<p>JUnit style fail - throw error</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>*</td>
+<td>to throw</td>
+</tr>
+</tbody>
+</table>
+<h4 id="getcorrelationvaluevarname-func-object">getCorrelationValue(varName, func) → {object}</h4>
+<p>Get value previously extracted</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>varName</code></td>
+<td>string</td>
+<td>variable name to extract</td>
+</tr>
+<tr>
+<td><code>func</code></td>
+<td>function</td>
+<td>conversion/encoding function if needed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>stored correlation value</p>
+<p>Type</p>
+<p>object</p>
+<h4 id="getmdcnameopt">getMDC(nameopt)</h4>
+<p>Return value in MDC (Mapped Diagnostic Context)</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>name</code></td>
 <td>string</td>
 <td><optional></optional></td>
-<td></td>
-<td>name of correlation value to store. If not specified, value will be returned but not stored</td>
+<td>item to return, if omiited all values are returned</td>
+</tr>
+</tbody>
+</table>
+<p>See:</p>
+<ul>
+<li><a href="global.html#putMDC">putMDC</a></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>value or all values</p>
+<h4 id="pollcorrelationvaluevarname-func-timeout-object">pollCorrelationValue(varName, func, timeout) → {object}</h4>
+<p>Get value previously extracted, wait for it if it does not exist. Useful in async situations.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>varName</code></td>
+<td>string</td>
+<td>variable name to extract</td>
+</tr>
+<tr>
+<td><code>func</code></td>
+<td>function</td>
+<td>conversion/encoding function if needed</td>
 </tr>
 <tr>
 <td><code>timeout</code></td>
 <td>number</td>
-<td><optional></optional></td>
-<td>30000</td>
-<td>how much time to wait, default is 30000 milis</td>
-</tr>
-<tr>
-<td><code>keepMessages</code></td>
-<td>boolean</td>
-<td><optional></optional></td>
-<td>false</td>
-<td>if true, will not remove messages, if false (default) will remove all messages up to the looked up message.</td>
+<td>number of milliseconds to wait before timing out. Default to 30 seconds.</td>
 </tr>
 </tbody>
 </table>
-<p>Since:</p>
-<ul>
-<li>WebLOAD 12.6</li>
-</ul>
 <p><strong>Returns:</strong></p>
-<p>value extracted, null if not found after timeout</p>
-<h4 id="handlemessage">handleMessage()</h4>
-<p>Call to manually handle messages, not normally needed</p>
-<h4 id="senddata-encoded">send(data, encoded)</h4>
-<p>Send message</p>
+<p>value expected, or null if it did not exist</p>
+<p>Type</p>
+<p>object</p>
+<h4 id="printmdc">printMDC()</h4>
+<p>Print (InfoMessage) content of MDC (Mapped Diagnostic Context)</p>
+<p>See:</p>
+<ul>
+<li><a href="global.html#putMDC">putMDC</a></li>
+</ul>
+<h4 id="putmdcname-value">putMDC(name, value)</h4>
+<p>Sets given name=value in MDC (Mapped Diagnostic Context). Contents of MDC will be displayed if error happens in the script. Useful to debug issues</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2161,117 +3032,23 @@ ws1.close();
 </thead>
 <tbody>
 <tr>
-<td><code>data</code></td>
+<td><code>name</code></td>
 <td>string</td>
-<td>to send</td>
+<td>name of parameter</td>
 </tr>
 <tr>
-<td><code>encoded</code></td>
-<td>boolean</td>
-<td>if true, value is encoded and will decoded when sent</td>
-</tr>
-</tbody>
-</table>
-<h4 id="sendbinarydata">sendBinary(data)</h4>
-<p>Sent as Binary Message</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data</code></td>
-<td>Object</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="setconnectiontimeoutmilis">setConnectionTimeout(milis)</h4>
-<p>Connection timeout</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>milis</code></td>
-<td>number</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="setignoresslerrorsb">setIgnoreSslErrors(b)</h4>
-<p>Call with true to ignore SSL Errors</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>b</code></td>
-<td>boolean</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="setpermessagedeflateb">setPerMessageDeflate(b)</h4>
-<p>Call with true for per-message-deflate extention</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>b</code></td>
-<td>boolean</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="setproxyproxy">setProxy(proxy)</h4>
-<p>Proxy host:port to use</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>proxy</code></td>
+<td><code>value</code></td>
 <td>string</td>
-<td></td>
+<td>value to set</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre><code>setProxy("myproxy:8080")
+<pre><code>//will log the user name in case of error
+putMDC("username", users_username.getValue() );
 </code></pre>
-<h4 id="settimeoutmilis">setTimeout(milis)</h4>
-<p>Max time to spend handling messages</p>
+<h4 id="removemdcname">removeMDC(name)</h4>
+<p>Remove items from MDC (Mapped Diagnostic Context)</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2283,91 +3060,63 @@ ws1.close();
 </thead>
 <tbody>
 <tr>
-<td><code>milis</code></td>
-<td>number</td>
-<td>time in milliseconds</td>
-</tr>
-</tbody>
-</table>
-<h4 id="setverifyhostb">setVerifyHost(b)</h4>
-<p>Call with false to not verify host</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>b</code></td>
-<td>boolean</td>
+<td><code>name</code></td>
+<td>string</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="type-definitions">Type Definitions</h3>
-<h4 id="onmessagetype">OnMessageType</h4>
-<p>Event type for messages</p>
-<p><strong>Type:</strong></p>
+<p>See:</p>
 <ul>
-<li>Object</li>
+<li><a href="global.html#putMDC">putMDC</a></li>
 </ul>
-<p><strong>Properties:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>getData</code></td>
-<td>Funtion</td>
-<td>Return the message raw data</td>
-</tr>
-<tr>
-<td><code>getEncodedData</code></td>
-<td>Funtion</td>
-<td>returns data, if binary encoded as text</td>
-</tr>
-<tr>
-<td><code>getTimeMillis</code></td>
-<td>Funtion</td>
-<td>get timestamp of event</td>
-</tr>
-<tr>
-<td><code>isBinary</code></td>
-<td>boolean</td>
-<td>Indicates whether message was binary or not.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="onmessagecallbackevt">onmessageCallback(evt)</h4>
-<p>Event with message details</p>
+<h4 id="setcorrelationvaluevarname-extractedvalue-originalvalueopt-errorfuncopt">setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)</h4>
+<p>Store extracted correlation value for future use. Validate it against the recorded value. Use getCorrelationValue() to retrieve the value.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
+<th>Attributes</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>evt</code></td>
-<td><a href="#OnMessageType">WebSocket#OnMessageType</a></td>
+<td><code>varName</code></td>
+<td>string</td>
 <td></td>
+<td>name of correlation value to set</td>
+</tr>
+<tr>
+<td><code>extractedValue</code></td>
+<td>string</td>
+<td></td>
+<td>the value to store</td>
+</tr>
+<tr>
+<td><code>originalValue</code></td>
+<td>string</td>
+<td><optional></optional></td>
+<td>original (recorded) value to compare (only first 200 chars are compared)</td>
+</tr>
+<tr>
+<td><code>errorFunc</code></td>
+<td>string | number</td>
+<td><optional></optional></td>
+<td>function used to log not found errors. Default is WarningMessage. Can be degined globally using 'correlationErrorFunc'. If given value is a number constant, for example 'WLMinorError' then it also triggers Full Error Details to be logged</td>
 </tr>
 </tbody>
 </table>
-<h4 id="websocketeventcallbackevt">webSocketEventCallback(evt)</h4>
-<p>On open callback</p>
+<p>See:</p>
+<ul>
+<li><a href="global.html#getCorrelationValue">getCorrelationValue</a></li>
+</ul>
+<h4 id="setcorrelationvaluesilent">setCorrelationValueSilent()</h4>
+<p>Like setCorrelationValue() but does not show a WarningMessage() when not extracted.</p>
+<h4 id="unescapeunixs">unescapeUnix(s)</h4>
+<p>Decoding function - reverse of escape + convert end-of-line from unix to dos format</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2379,12 +3128,41 @@ ws1.close();
 </thead>
 <tbody>
 <tr>
-<td><code>evt</code></td>
-<td>Object</td>
-<td>event data</td>
+<td><code>s</code></td>
+<td>string</td>
+<td>string to unescape</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="unescapexmlbrokenstr">unescapeXMLbroken(str)</h4>
+<p>Decoding function - reverse of escapeXmlBroken</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>string</td>
+<td>encoded string to decode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>- decoded string</p>
+<h4 id="uuidv4-string">uuidv4() → {string}</h4>
+<p>Generate v4 UUID Universally unique identifier</p>
+<p><strong>Returns:</strong></p>
+<p>Generated ID</p>
+<p>Type</p>
+<p>string</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
