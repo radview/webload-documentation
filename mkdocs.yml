@@ -114,6 +114,7 @@ nav:
     - WebLOAD Internet Protocols Reference: javascript/internet_protocol.md
     - XML Parser Object: javascript/xmlparser.md
     - WebSocket Object: javascript/websocket_object.md
+    - JavaScript Helper Functions: javascript/js_helper_funcs.md
     - Appendix A - WebLOAD-supported SSL Protocol Reference: javascript/appendix_a.md
     - Appendix B - WebLOAD-supported XML DOM Interfaces: javascript/appendix_b.md
     - Appendix C - HTTP Protocol Status Messages: javascript/appendix_c.md

@@ -8,19 +8,11 @@ WebLOAD supports WebSocket, a protocol that provides full-duplex communication c
 
 WebLOAD’s WebSocket object enables creating and managing a WebSocket connection to a server, as well as sending and receiving data on the connection. Note that you can create multiple WebSocket objects.
 
- 
-
- 
-
 ## Constructor
-
- 
 
 **Description**
 
 Creates a new WebSocket for the given URL, and returns a JavaScript object reference.
-
- 
 
 **Syntax**
 
@@ -217,3 +209,320 @@ Sleep(1000);
 
 Sleep(1000);
 ```
+## Mothod metails
+
+### WebSocket(url, manualHandleEventsopt)
+
+#### new WebSocket(url, manualHandleEventsopt)
+
+Create new WebSocket object
+
+**Parameters:**
+
+| Name | Type | Attributes | Description |
+| --- | --- | --- | --- |
+| `url` | string |     | connection string |
+| `manualHandleEvents` | boolean | <optional> | if true, will only handle events when manually asked for (for example, using ws.handlePending()). Default is to automatically handle events |
+
+**Example**
+
+```
+ws1 = new WebSocket( "wss://echo.websocket.org/?encoding=text" );
+ws1.onmessage = function(evt ) {
+    DebugMessage("Server said:" + evt.getData());
+}
+ws1.connect();
+Sleep(1000); //Event are handled while in Sleep
+ws1.send("hi");
+ws1.close();
+```
+
+### Members
+
+#### manualHandleEvents :boolean
+
+when true, messages are handled (callbacks called) automatically
+
+**Type:**
+
+*   boolean
+
+Default Value:
+
+*   true
+
+#### onclose :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+Callback called when WebSocket is closed
+
+**Type:**
+
+*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+#### onerror :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()
+
+**Type:**
+
+*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+#### onmessage :[WebSocket#onmessageCallback](#onmessageCallback)
+
+Callback to be called when a new message arrives
+
+**Type:**
+
+*   [WebSocket#onmessageCallback](#onmessageCallback)
+
+#### onopen :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+Callback called when WebSocket is opened
+
+**Type:**
+
+*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
+
+#### reportErrorFunction :function
+
+Function used to log messages
+
+**Type:**
+
+*   function
+
+Default Value:
+
+*   ErrorMessage or WebSocket.prototype.globalReportErrorFunction
+
+#### storeMessages :boolean
+
+when true, messages are stored after being handled for future inspection.
+
+**Type:**
+
+*   boolean
+
+Since:
+
+*   WebLOAD 12.6
+
+Default Value:
+
+*   false
+
+#### waitTime :number
+
+Time in milliseconds before checking new messages
+
+**Type:**
+
+*   number
+
+Default Value:
+
+*   500 or WebSocket.prototype.globalWaitTime
+
+### Methods
+
+#### addHeader(name, value)
+
+Add custom HTTP Header
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `name` | string |     |
+| `value` | string |     |
+
+#### close()
+
+Close the connection
+
+#### connect()
+
+Connect to WebSocket
+
+#### dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)
+
+Replace send/sendBinary data with value in correlation. Value is looked up using pollCorrelationValue, so if value does not yet exist, wait for it until timeout (30000 millis)
+
+**Parameters:**
+
+| Name | Type | Attributes | Description |
+| --- | --- | --- | --- |
+| `toCorrelationParam` | string |     | name of parameter to replace. The name is expected to be set via setCorrealtionValue("myParamName", "the value"); |
+| `searchValue` | string | <optional> | the replacement value to replace. The default is ${toCorrelationParam}, for example the string "session=${sessionId}" will be replaced with "session="+pollCorrelationValue("sessionId"). |
+
+Since:
+
+*   WebLOAD 12.6
+
+#### expectMessage(expr, timeoutopt, keepMessagesopt)
+
+Wait for some message to be received.
+
+**Parameters:**
+
+| Name | Type | Attributes | Default | Description |
+| --- | --- | --- | --- | --- |
+| `expr` | string \| RegExp |     |     | can be a "string" or /regex/ to look for in previous or future messages |
+| `timeout` | number | <optional> | 30000 | how much time to wait, default is 30000 milis |
+| `keepMessages` | boolean | <optional> | false | if true, will not remove messages, if false (default) will remove all messages up to the looked up message. |
+
+Since:
+
+*   WebLOAD 12.6
+
+#### extractMessageValue(prefix, suffix, nameopt, timeoutopt, keepMessagesopt)
+
+Wait for some message to be received.
+
+**Parameters:**
+
+| Name | Type | Attributes | Default | Description |
+| --- | --- | --- | --- | --- |
+| `prefix` | string |     |     | prefix in message to look for |
+| `suffix` | string |     |     | suffix in message to look for |
+| `name` | string | <optional> |     | name of correlation value to store. If not specified, value will be returned but not stored |
+| `timeout` | number | <optional> | 30000 | how much time to wait, default is 30000 milis |
+| `keepMessages` | boolean | <optional> | false | if true, will not remove messages, if false (default) will remove all messages up to the looked up message. |
+
+Since:
+
+*   WebLOAD 12.6
+
+**Returns:**
+
+value extracted, null if not found after timeout
+
+#### handleMessage()
+
+Call to manually handle messages, not normally needed
+
+#### send(data, encoded)
+
+Send message
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `data` | string | to send |
+| `encoded` | boolean | if true, value is encoded and will decoded when sent |
+
+#### sendBinary(data)
+
+Sent as Binary Message
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `data` | Object |     |
+
+#### setConnectionTimeout(milis)
+
+Connection timeout
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `milis` | number |     |
+
+#### setIgnoreSslErrors(b)
+
+Call with true to ignore SSL Errors
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `b` | boolean |     |
+
+#### setPerMessageDeflate(b)
+
+Call with true for per-message-deflate extention
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `b` | boolean |     |
+
+#### setProxy(proxy)
+
+Proxy host:port to use
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `proxy` | string |     |
+
+**Example**
+
+```
+setProxy("myproxy:8080")
+```
+
+#### setTimeout(milis)
+
+Max time to spend handling messages
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `milis` | number | time in milliseconds |
+
+#### setVerifyHost(b)
+
+Call with false to not verify host
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `b` | boolean |     |
+
+### Type Definitions
+
+#### OnMessageType
+
+Event type for messages
+
+**Type:**
+
+*   Object
+
+**Properties:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `getData` | Funtion | Return the message raw data |
+| `getEncodedData` | Funtion | returns data, if binary encoded as text |
+| `getTimeMillis` | Funtion | get timestamp of event |
+| `isBinary` | boolean | Indicates whether message was binary or not. |
+
+#### onmessageCallback(evt)
+
+Event with message details
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `evt` | [WebSocket#OnMessageType](#OnMessageType) |     |
+
+#### webSocketEventCallback(evt)
+
+On open callback
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `evt` | Object | event data |
