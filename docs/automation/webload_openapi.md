@@ -19,7 +19,7 @@ You can run WebLOAD using a new REST Open API. With this API, you can remotely a
 
    
 
-2. See [REST API Reference](../dashboard/appendix_b.md)
+2. See [REST API Reference](../dashboard/rest_api.md)
 
 
 ## Understanding how to use the WebLOAD REST Open API
