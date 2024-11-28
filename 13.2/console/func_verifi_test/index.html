@@ -1462,12 +1462,12 @@
 <h3 id="including-a-user-defined-transaction-in-your-script">Including a User-Defined Transaction in your script</h3>
 <p>Application-level transactions and verifications are defined through the WebLOAD Recorder script editing functions. See the <em>WebLOAD Recorder User’s Guide</em> for more information.</p>
 <h3 id="user-defined-transactions-and-verification-syntax">User-Defined Transactions and Verification Syntax</h3>
-<pre><code class="language-javascript">BeginTransaction(“`&lt;Transaction-Name&gt;`“)
-
-`&lt;any valid JavaScript statements&gt;` EndTransaction(“`&lt;Transaction-Name&gt;`“,
-
-`&lt;Verification-Expression&gt;`,`&lt;Save-Flag&gt;`)
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="err">“</span><span class="sb">`&lt;Transaction-Name&gt;`</span><span class="err">“</span><span class="p">)</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sb">`&lt;any valid JavaScript statements&gt;`</span><span class="w"> </span><span class="nx">EndTransaction</span><span class="p">(</span><span class="err">“</span><span class="sb">`&lt;Transaction-Name&gt;`</span><span class="err">“</span><span class="p">,</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sb">`&lt;Verification-Expression&gt;`</span><span class="p">,</span><span class="sb">`&lt;Save-Flag&gt;`</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Where:</p>
 <ul>
 <li>
@@ -1480,32 +1480,32 @@
 </ul>
 <h3 id="user-defined-transaction-example">User-Defined Transaction Example</h3>
 <p>The following example illustrates implementing a user-defined transaction:</p>
-<pre><code class="language-javascript">BeginTransaction(“UpdateBankAccount”)
-
-/\* The user-defined transaction “UpdateBankAccount” starts\*/ try {
-
-wlHttp.ExpectNavigation(“http://…”) wlHttp.Navigate([“www.](http://www/)    com”)
-
-wlHttp.SyncDOM(1);
-
-}
-
-/\* The body of the transaction\*/
-
-&lt;any valid JavaScript statement&gt;
-
-EndTransaction(“UpdateBankAccount”,
-
-UpdateBankAccount\_VerificationFunction()) function UpdateBankAccount\_VerificationFunction()
-
-{
-
-return WLSuccess;
-
-}
-
-/\* The user-defined transaction “UpdateBankAccount” ends\*/
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="err">“</span><span class="nx">UpdateBankAccount</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="sr">/\* The user-defined transaction “UpdateBankAccount” starts\*/</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ExpectNavigation</span><span class="p">(</span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//…”) wlHttp.Navigate([“www.](http://www/)    com”)</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">SyncDOM</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="sr">/\* The body of the transaction\*/</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="o">&lt;</span><span class="nx">any</span><span class="w"> </span><span class="nx">valid</span><span class="w"> </span><span class="nx">JavaScript</span><span class="w"> </span><span class="nx">statement</span><span class="o">&gt;</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="err">“</span><span class="nx">UpdateBankAccount</span><span class="err">”</span><span class="p">,</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nx">UpdateBankAccount</span><span class="err">\</span><span class="nx">_VerificationFunction</span><span class="p">())</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">UpdateBankAccount</span><span class="err">\</span><span class="nx">_VerificationFunction</span><span class="p">()</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="p">{</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="k">return</span><span class="w"> </span><span class="nx">WLSuccess</span><span class="p">;</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="p">}</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="sr">/\* The user-defined transaction “UpdateBankAccount” ends\*/</span>
+</span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> The user-supplied UpdateBankAccount_VerificationFunction() is called to determine whether the transaction succeeded or failed. This function can be defined either in the script or in an included file.</p>
 </blockquote>
@@ -1583,26 +1583,26 @@ return WLSuccess;
 <p><code>SetFailureReason (“&lt;failure-reason&gt;“)</code></p>
 <p>For example:</p>
 <p>Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see <a href="#user-defined-transactions-and-verification-syntax"><em>User-Defined Transactions and Verification Syntax</em> </a>, the UpdateBankAccount verification function might appear as follows:</p>
-<pre><code class="language-javascript">function UpdateBankAccount\_VerificationFunction()
-
-}
-
-VerifyUpdateBankAccount () { if &lt;Condition-success&gt; then
-
-return(WLSuccess)} else
-
-if (document. URL == “../no-login”) then { SetFailureReason(“User Not Logged”) return(WLError) }
-
-else
-
-if (document.URL == “...wrong-  password”) then { SetFailureReason(“Wrong Password”) return(WLError); }
-
-else
-
-return(WLSevereError)
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">UpdateBankAccount</span><span class="err">\</span><span class="nx">_VerificationFunction</span><span class="p">()</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">VerifyUpdateBankAccount</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Condition</span><span class="o">-</span><span class="nx">success</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">then</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">return</span><span class="p">(</span><span class="nx">WLSuccess</span><span class="p">)}</span><span class="w"> </span><span class="k">else</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">“</span><span class="p">..</span><span class="o">/</span><span class="nx">no</span><span class="o">-</span><span class="nx">login</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="err">“</span><span class="nx">User</span><span class="w"> </span><span class="nx">Not</span><span class="w"> </span><span class="nx">Logged</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">(</span><span class="nx">WLError</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">else</span>
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">“</span><span class="p">...</span><span class="nx">wrong</span><span class="o">-</span><span class="w">  </span><span class="nx">password</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="err">“</span><span class="nx">Wrong</span><span class="w"> </span><span class="nx">Password</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">(</span><span class="nx">WLError</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="k">else</span>
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">return</span><span class="p">(</span><span class="nx">WLSevereError</span><span class="p">)</span>
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>Explanation:</p>
 <ul>
 <li>Return(WLSuccess) ‒ indicates that the actual transaction succeeded and it is added to the SuccessfulUpdateBankAccount transactions counter.</li>

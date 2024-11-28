@@ -2635,14 +2635,14 @@
 <p>WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
 <p><img alt="IncludeFile() Function Insertion using Copy/Include Files Menu" src="../../images/script_guide_031.png"/></p>
 <p>For example, to include the external file MyFunction.js, located on the Console during WebLOAD testing, your script file should begin with the following command included in a JavaScript Object node:</p>
-<pre><code class="language-javascript">function InitAgenda() {
-
-...
-
-IncludeFile(“MyFunction.js”)
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">...</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="err">“</span><span class="nx">MyFunction</span><span class="p">.</span><span class="nx">js</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>See the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="determining-the-included-file-location">Determining the Included File Location</h4>
 <p>WebLOAD assumes that the source file is located in the default directory specified in the File Locations tab in the <strong>Tools &gt; Global Options</strong> dialog box in the WebLOAD Console desktop, illustrated in the following figure:</p>
@@ -2669,41 +2669,41 @@ IncludeFile(“MyFunction.js”)
 <h4 id="example-working-with-an-included-function">Example: Working with an Included Function</h4>
 <p>Included files are files whose functions and other contents are included and accessible from the current script file without the file text actually appearing within the script.</p>
 <p>Use included files to take advantage of an external library of modular functions without adding extra lines of code to your script, improving the clarity of your script code while saving both script space and development time. For example, in the following script fragment, the external file myjs.js is included within the InitAgenda() initialization function. One of the functions within that included file, sayHello(), is later accessed within the main body of the script. The text of the sayHello() is embedded in a nearby comment for easy reference.</p>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-IncludeFile("C:\\Documents and Settings\\uriw\\My Documents\\myjs.js")
-
-}
-
-wlGlobals.GetFrames = false
-
-[wlHttp.Get("http://www.webloadmpstore.com/general_sample/include](http://www.webloadmpstore.com/general_sample/include)
-
-/form.php") Sleep(4765)
-
-wlHttp.Header["Referer"] = ["http://qa50/form.php"](http://qa50/form.php) wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["item"] = "Brushes" wlHttp.FormData["quantity"] = "55"
-
-var item = wlHttp.FormData["quantity"]
-
-[wlHttp.Post("http://www.webloadmpstore.com/general_sample/includ](http://www.webloadmpstore.com/general_sample/includ) e/process.php")
-
-// here the outside function is being called sayHello()
-
-
-
-
-&lt;a name="_bookmark25"&gt;&lt;/a&gt;The myjs.js file contains the following sayHello() function, which prints the checkout message to the customer:
-
-function sayHello()
-
-{
-
-InfoMessage("you ordered    " +item + " items")
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">{</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="s2">"C:\\Documents and Settings\\uriw\\My Documents\\myjs.js"</span><span class="p">)</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">[</span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/general_sample/include](http://www.webloadmpstore.com/general_sample/include)</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="s2">/form.php"</span><span class="p">)</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">4765</span><span class="p">)</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://qa50/form.php"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//qa50/form.php) wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["item"] = "Brushes" wlHttp.FormData["quantity"] = "55"</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"quantity"</span><span class="p">]</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="p">[</span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/general_sample/includ](http://www.webloadmpstore.com/general_sample/includ) e/process.php"</span><span class="p">)</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="c1">// here the outside function is being called sayHello()</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"_bookmark25"</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;The myjs.js file contains the following sayHello() function, which prints the checkout message to the customer:</span>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="kd">function</span><span class="w"> </span><span class="nx">sayHello</span><span class="p">()</span>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="p">{</span>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"you ordered    "</span><span class="w"> </span><span class="o">+</span><span class="nx">item</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" items"</span><span class="p">)</span>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="copying-files">Copying Files</h3>
 <p>WebLOAD enables text and binary data file copying from the Console to a Load Generator automatically during a test session. This is an important feature if your test uses a script that references auxiliary files, such as I/O files, that are found only on the Console. The WebLOAD send option in the Console only sends the script itself and will not send auxiliary files together with a script file to a Load Generator. Use the CopyFile command instead to copy any necessary files from a source file on the Console to a destination file on the Load Generator before the main body of the script is executed.</p>
 <h4 id="adding-a-copyfile-function">Adding a CopyFile() Function</h4>
@@ -2715,16 +2715,16 @@ InfoMessage("you ordered    " +item + " items")
 <p>Select the preferred CopyFile() function from the sub-menu (see Figure 8).</p>
 <p>WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.</p>
 <p>For example, to copy the auxiliary file src.txt, located on the Console, to the destination file dest.txt on the current Load Generator, your script file should include the following command:</p>
-<pre><code class="language-javascript">function InitAgenda() {
-
-...
-
-CopyFile(“src.txt”, “dest.txt”)
-
-...
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">...</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">CopyFile</span><span class="p">(</span><span class="err">“</span><span class="nx">src</span><span class="p">.</span><span class="nx">txt</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">dest</span><span class="p">.</span><span class="nx">txt</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">...</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>You may then access the file as usual in the main body of the script. For example:</p>
 <p><code>DataArr = GetLine(“dest.txt”)</code></p>
 <p>See the <em>JavaScript Reference Guide</em> for a complete syntax specification.</p>
@@ -2771,18 +2771,18 @@ CopyFile(“src.txt”, “dest.txt”)
 <h4 id="saving-server-output-to-a-file">Saving Server Output to a File</h4>
 <p>It is often important to save server response data for later study and analysis. WebLOAD and WebLOAD Recorder provide the Outfile property for this purpose. Outfile is a property of the wlGlobals, wlLocals, and wlHttp objects. See the <em>WebLOAD JavaScript Reference Guide</em>, for a complete syntax specification.</p>
 <p>The following script shows a typical entry to a server output file. The ClientNum and RoundNum global variables are used to distinguish between script instances in the server output file entries.</p>
-<pre><code class="language-javascript">// Main script actions go here
-
-...
-
-// Write the downloaded server output to a unique file
-
-// for each script instance, identified by ClientNum
-
-// and RoundNum. The output file is named
-
-// &lt;fullpath&gt;\SessionOutput.&lt;ClientNum.RoundNum&gt;.html wlHttp.Outfile = "c:\\webld\\SessionOutput." ClientNum + "." + RoundNum + ".html"
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Main script actions go here</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">...</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">// Write the downloaded server output to a unique file</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">// for each script instance, identified by ClientNum</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1">// and RoundNum. The output file is named</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="c1">// &lt;fullpath&gt;\SessionOutput.&lt;ClientNum.RoundNum&gt;.html wlHttp.Outfile = "c:\\webld\\SessionOutput." ClientNum + "." + RoundNum + ".html"</span>
+</span></code></pre></div>
 <p>The Outfile property can be added directly to a JavaScript Object in a script through the IntelliSense Editor.</p>
 <h2 id="security">Security</h2>
 <p>Security is important for most Web users, whether the access is recreational, personal, or work related. Most Web applications work with some combination of user authentication together with SSL protocol use to ensure application security. Both these security features are handled automatically by WebLOAD. By default, test sessions use the settings that were in effect during the original recording session.</p>
@@ -2922,42 +2922,42 @@ CopyFile(“src.txt”, “dest.txt”)
 <p>wlException objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a try()/catch() pair may utilize the wlException object. Use the wlException methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.</p>
 <p><strong>Example</strong></p>
 <p>The following code fragment illustrates a typical error-handling routine:</p>
-<pre><code class="language-javascript">try{
-
-...
-
-//do a lot of things
-
-...
-
-//error occurs here
-
-...
-
-}
-
-catch(e){
-
-myException = new wlException(e,“we have a problem”)
-
-//things to do in case of error
-
-
-
-&lt;a name="_bookmark37"&gt;&lt;/a&gt;if (myException.GetSeverity() == WLError) {
-
-// Do one set of Error activities myException.ReportLog() throw myException
-
-}
-
-else {
-
-// Do a different set of Severe Error activities throw myException
-
-}
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">try</span><span class="p">{</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">...</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1">//do a lot of things</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">...</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1">//error occurs here</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">...</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">}</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">myException</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">wlException</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="err">“</span><span class="nx">we</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">problem</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1">//things to do in case of error</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"_bookmark37"</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;if (myException.GetSeverity() == WLError) {</span>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="c1">// Do one set of Error activities myException.ReportLog() throw myException</span>
+</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
+</span><span id="__span-4-28"><a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-30"><a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="c1">// Do a different set of Severe Error activities throw myException</span>
+</span><span id="__span-4-32"><a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>
+</span><span id="__span-4-33"><a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="p">}</span>
+</span><span id="__span-4-34"><a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="non-standard-script-execution-sequence">Non-Standard script Execution Sequence</h3>
 <p>script Execution Sequence describes the sequence of activities during a normal, standard test session. However, many test sessions do not simply follow a normal execution sequence. Test sessions are designed to catch application errors, and these errors often interrupt the test session. This section describes what happens within your script if it is interrupted in mid-session.</p>
 <h4 id="minor-error-managementcontinue-the-test-session-as-usual">Minor Error Management—Continue the Test Session as Usual</h4>
@@ -3081,18 +3081,18 @@ else {
 <p>Limited variables are only visible or accessible within the bounds of a specific function or code block. Users may also define configuration properties that are only applicable to a specific browser action, managed through the wlHttp object.</p>
 <p>For example, to limit a variable LimitedX to a specific function only, use the IntelliSense Editor to create a function within a JavaScript Object and assign a value to a LimitedX variable within that function. The LimitedX variable will only be meaningful within the context of the function in which it appears.</p>
 <p>This is illustrated in the following code fragment:</p>
-<pre><code class="language-javascript">//Context limited to specific function only function MyFavoriteFunction() {
-
-var limitedX = 20   //Scope of limitedX is the
-
-//current function only
-
-}
-
-//Main script Body
-
-y = limitedX + 2    //Error, limitedX is undefined here
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">//Context limited to specific function only function MyFavoriteFunction() {</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">limitedX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="w">   </span><span class="c1">//Scope of limitedX is the</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1">//current function only</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="c1">//Main script Body</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">limitedX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w">    </span><span class="c1">//Error, limitedX is undefined here</span>
+</span></code></pre></div>
 <h4 id="working-with-the-wlhttp-object">Working with the wlHttp Object</h4>
 <p>Configuration properties that are limited to a single transaction are managed through the wlHttp object, described in this section.</p>
 <p>In WebLOAD scripts, HTTP transactions are performed using wlHttp objects. You do not need to declare or create a wlHttp object before using it in your script. WebLOAD automatically creates a single wlHttp object for each thread of a script.</p>
@@ -3110,54 +3110,54 @@ y = limitedX + 2    //Error, limitedX is undefined here
 <h4 id="working-with-the-wllocals-object">Working with the wlLocals Object</h4>
 <p>Configuration properties that are local to a single script thread are managed through the wlLocals object, described in this section. You do not need to declare or create a wlLocals object before using it in your script. WebLOAD automatically creates a single wlLocals object for each thread of a script.</p>
 <p>wlLocals is a WebLOAD-supplied local object, which sets the local default configuration for HTTP commands (overriding any global defaults set in wlGlobals, but overridden in turn by any values set in wlHttp). For example, one of the properties of wlLocals is the URL to which the object connects. If you set a different value of wlLocals.Url in each thread of a script, then each thread can connect to a different URL, as the following script illustrates:</p>
-<pre><code class="language-javascript">function InitClient() {//Local context
-
-//Set the URL for each thread if (ClientNum == 0)
-
-wlLocals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)
-
-else
-
-}
-
-
-
-wlLocals.Url = ["http://www.GHIJKL.com"](http://www.GHIJKL.com/)
-
-//Thread 0 connects to [www.ABCDEF.com](http://www.ABCDEF.com/)
-
-//All other threads connect to [www.GHIJKL.com](http://www.GHIJKL.com/) wlHttp.Get()
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="c1">//Local context</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">//Set the URL for each thread if (ClientNum == 0)</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.ABCDEF.com"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/)</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="k">else</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="err"></span>
+</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.GHIJKL.com"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.GHIJKL.com/)</span>
+</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="c1">//Thread 0 connects to [www.ABCDEF.com](http://www.ABCDEF.com/)</span>
+</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="c1">//All other threads connect to [www.GHIJKL.com](http://www.GHIJKL.com/) wlHttp.Get()</span>
+</span></code></pre></div>
 <h4 id="working-with-user-defined-variables-local-context">Working with User-Defined Variables (Local Context</h4>
 <p>Within the local context, you can define any variables that you wish. The variables are local to a single thread. By default, the scope of a local variable is the entire local thread context. For example, you can define a variable localX in the InitClient() function and use it in the main script to store different values depending on the script thread or round number.</p>
 <p>The corresponding JavaScript code may look similar to this:</p>
-<pre><code class="language-javascript">//Local context function InitClient() {
-
-//Assign a different value to the local copy
-
-//of localX in thread 0 only if (ClientNum == 0)
-
-{localX = 20}
-
-
-
-
-&lt;a name="_bookmark44"&gt;&lt;/a&gt;else
-
-}
-
-
-
-{localX = 10}
-
-//Main script Body
-
-//Access the local values of localX &amp; y
-
-y = localX + 2  //y = 22 in thread 0
-
-//y = 12 in all other threads
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">//Local context function InitClient() {</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">//Assign a different value to the local copy</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c1">//of localX in thread 0 only if (ClientNum == 0)</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">{</span><span class="nx">localX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">}</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"_bookmark44"</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;else</span>
+</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="p">}</span>
+</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="err"></span>
+</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="p">{</span><span class="nx">localX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">}</span>
+</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a>
+</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="c1">//Main script Body</span>
+</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a>
+</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="c1">//Access the local values of localX &amp; y</span>
+</span><span id="__span-7-23"><a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a href="#__codelineno-7-24" id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w">  </span><span class="c1">//y = 22 in thread 0</span>
+</span><span id="__span-7-25"><a href="#__codelineno-7-25" id="__codelineno-7-25" name="__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="c1">//y = 12 in all other threads</span>
+</span></code></pre></div>
 <p>You can also limit the scope to a single function by defining the variable using a var statement.</p>
 <h3 id="global-context">Global Context</h3>
 <p>Global variables are universally accessible and shared by all script components in all threads of a script, within the initialization and termination functions as well as the main script body. Global variables and configuration properties are defined within the InitAgenda() initialization function of a script. Once a global variable has been declared you may read and assign values to that variable at any subsequent point in your script.</p>
@@ -3195,18 +3195,18 @@ y = localX + 2  //y = 22 in thread 0
 <blockquote>
 <p><strong>Note:</strong> Remember that HTTP configuration settings and sleep configuration preferences are usually set directly through a dialog box in the WebLOAD Recorder or Console desktop, as described in the <em>WebLOAD Recorder User Guide</em> and the <em>WebLOAD Console User Guide</em>. The JavaScript coding example here is only intended to illustrate the balance between global defaults and local overrides.</p>
 </blockquote>
-<pre><code>// Initialization function—wlGlobals context function InitAgenda() {
-
-// By default, do not include ‘sleep pauses’ in this script wlGlobals.DisableSleep = true
-
-}
-
-// Main Script Body—wlHttp context if (RoundNum&lt;20)
-
-wlHttp.DisableSleep = false
-
-...
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>// Initialization function—wlGlobals context function InitAgenda() {
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>// By default, do not include ‘sleep pauses’ in this script wlGlobals.DisableSleep = true
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>}
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>// Main Script Body—wlHttp context if (RoundNum&lt;20)
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>wlHttp.DisableSleep = false
+</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>...
+</span></code></pre></div>
 <p>WebLOAD executes the InitAgenda() method when test execution first starts, and decides by default to disable all sleep pauses over the course of script execution:</p>
 <p><code>wlGlobals.DisableSleep = true</code></p>
 <p>For rounds 0-19, the main script overrides the global default and allows pausing during script execution:</p>
@@ -3240,42 +3240,42 @@ wlHttp.DisableSleep = false
 <h4 id="wlgeneratorglobal-example">wlGeneratorGlobal Example</h4>
 <p>wlGeneratorGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>
 <p>For example:</p>
-<pre><code class="language-javascript">function InitAgenda() { B = new Number
-
-B = 0
-
-wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
-
-wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
-
-}
-
-function InitClient() { wlGeneratorGlobal.Add("B", 2, WLAllAgendas)
-
-wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda)
-
-
-
-&lt;a name="_bookmark50"&gt;&lt;/a&gt;InfoMessage("C—agenda1 = " + wlGeneratorGlobal.Get("C", WLCurrentAgenda))
-
-}
-
-// Main script Body
-
-B = wlGeneratorGlobal.Get("B", WLAllAgendas) if (RoundNum==1){
-
-InfoMessage("B—agenda1 = " + B)
-
-}
-
-Sleep(1000)
-
-wlGeneratorGlobal.Add("B", 10 , WLAllAgendas) InfoMessage("B2—agenda2 = " +
-
-wlGeneratorGlobal.Get("B", WLAllAgendas)) wlGeneratorGlobal.Add("C", 25, WLCurrentAgenda) InfoMessage("C—agenda1 = " +
-
-wlGeneratorGlobal.Get("C", WLCurrentAgenda))
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Number</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">}</span>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span>
+</span><span id="__span-9-12"><a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span>
+</span><span id="__span-9-14"><a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"_bookmark50"</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;InfoMessage("C—agenda1 = " + wlGeneratorGlobal.Get("C", WLCurrentAgenda))</span>
+</span><span id="__span-9-18"><a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a>
+</span><span id="__span-9-19"><a href="#__codelineno-9-19" id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="p">}</span>
+</span><span id="__span-9-20"><a href="#__codelineno-9-20" id="__codelineno-9-20" name="__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a href="#__codelineno-9-21" id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="c1">// Main script Body</span>
+</span><span id="__span-9-22"><a href="#__codelineno-9-22" id="__codelineno-9-22" name="__codelineno-9-22"></a>
+</span><span id="__span-9-23"><a href="#__codelineno-9-23" id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">RoundNum</span><span class="o">==</span><span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-9-24"><a href="#__codelineno-9-24" id="__codelineno-9-24" name="__codelineno-9-24"></a>
+</span><span id="__span-9-25"><a href="#__codelineno-9-25" id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"B—agenda1 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">B</span><span class="p">)</span>
+</span><span id="__span-9-26"><a href="#__codelineno-9-26" id="__codelineno-9-26" name="__codelineno-9-26"></a>
+</span><span id="__span-9-27"><a href="#__codelineno-9-27" id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="p">}</span>
+</span><span id="__span-9-28"><a href="#__codelineno-9-28" id="__codelineno-9-28" name="__codelineno-9-28"></a>
+</span><span id="__span-9-29"><a href="#__codelineno-9-29" id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">1000</span><span class="p">)</span>
+</span><span id="__span-9-30"><a href="#__codelineno-9-30" id="__codelineno-9-30" name="__codelineno-9-30"></a>
+</span><span id="__span-9-31"><a href="#__codelineno-9-31" id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"B2—agenda2 = "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-9-32"><a href="#__codelineno-9-32" id="__codelineno-9-32" name="__codelineno-9-32"></a>
+</span><span id="__span-9-33"><a href="#__codelineno-9-33" id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">))</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"C—agenda1 = "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-9-34"><a href="#__codelineno-9-34" id="__codelineno-9-34" name="__codelineno-9-34"></a>
+</span><span id="__span-9-35"><a href="#__codelineno-9-35" id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">))</span>
+</span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new wlGeneratorGlobal.Get call each time.</p>
 </blockquote>
@@ -3303,73 +3303,73 @@ wlGeneratorGlobal.Get("C", WLCurrentAgenda))
 <h4 id="wlsystemglobal-example">wlSystemGlobal Example</h4>
 <p>wlSystemGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>
 <p>For example:</p>
-<pre><code class="language-javascript">function InitAgenda() {
-
-&lt;snip&gt;
-
-}
-
-function InitClient() { wlSystemGlobal.Set("E", -2, WLCurrentscript)
-
-wlSystemGlobal.Set("D", 0, WLAllAgendas) wlSystemGl[obal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
-
-}
-
-// Main script Body
-
-
-
-wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
-
-InfoMessage("D—agenda4 = " + wlSystemGlobal.Get("D", WLAllAgendas))
-
-wlSystemGlobal.Add("E", 0.5, WLCurrentAgenda) if (RoundNum==1){
-
-InfoMessage("E—agenda3 = " + wlSystemGlobal.Get("E", WLCurrentAgenda))
-
-}
-
-Sleep(1000)
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">&lt;</span><span class="nx">snip</span><span class="o">&gt;</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">}</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentscript</span><span class="p">)</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="nx">wlSystemGl</span><span class="p">[</span><span class="nx">obal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"S"</span><span class="p">,</span><span class="s2">"http://www.yahoo.com"</span><span class="p">,</span><span class="nx">WLAllAgendas</span><span class="p">)](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.yahoo.com/)</span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">}</span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="c1">// Main script Body</span>
+</span><span id="__span-10-14"><a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">RoundNum</span><span class="o">==</span><span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-10-18"><a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a>
+</span><span id="__span-10-19"><a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"D—agenda4 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">))</span>
+</span><span id="__span-10-20"><a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a>
+</span><span id="__span-10-21"><a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">RoundNum</span><span class="o">==</span><span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-10-22"><a href="#__codelineno-10-22" id="__codelineno-10-22" name="__codelineno-10-22"></a>
+</span><span id="__span-10-23"><a href="#__codelineno-10-23" id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"E—agenda3 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">))</span>
+</span><span id="__span-10-24"><a href="#__codelineno-10-24" id="__codelineno-10-24" name="__codelineno-10-24"></a>
+</span><span id="__span-10-25"><a href="#__codelineno-10-25" id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="p">}</span>
+</span><span id="__span-10-26"><a href="#__codelineno-10-26" id="__codelineno-10-26" name="__codelineno-10-26"></a>
+</span><span id="__span-10-27"><a href="#__codelineno-10-27" id="__codelineno-10-27" name="__codelineno-10-27"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">1000</span><span class="p">)</span>
+</span></code></pre></div>
 <p>See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="example-using-a-combination-of-global-variables">Example: Using a Combination of Global Variables</h4>
 <p>The following sample script combines the different global variable options introduced in the previous sections:</p>
-<pre><code class="language-javascript">function InitAgenda() { wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
-
-wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
-
-&lt;snip&gt;
-
-}
-
-function InitClient() { wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda) InfoMessage("C - agenda1 = " +
-
-wlGeneratorGlobal.Get("C", WLCurrentAgenda)) wlGeneratorGlobal.Add("B", -2, WLAllAgendas)
-
-wlSystemGlobal.Set("E", +1, WLCurrentAgenda)
-
-wlSystemGlobal.Set("D", 0, WLAllAgendas) [wlSystemGlobal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
-
-}
-
-// Main script Body
-
-B = wlGeneratorGlobal.Get( "B", WLAllAgendas) wlSystemGlobal.Add("E", -1, WLCurrentAgenda)
-
-wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
-
-InfoMessage("B - agenda1 = " + B) InfoMessage("E - agenda1 = " +
-
-wlSystemGlobal.Get( "E", WLCurrentAgenda)) InfoMessage("D - agenda1 = " +
-
-
-
-wlSystemGlobal.Get( "D", WLAllAgendas))
-
-}
-
-wlHttp.Get(wlSystemGlobal.Get("S", WLAllAgendas)) Sleep(1000)
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="o">&lt;</span><span class="nx">snip</span><span class="o">&gt;</span>
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">}</span>
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"C - agenda1 = "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">))</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span>
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="o">+</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span>
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">"S"</span><span class="p">,</span><span class="s2">"http://www.yahoo.com"</span><span class="p">,</span><span class="nx">WLAllAgendas</span><span class="p">)](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.yahoo.com/)</span>
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="p">}</span>
+</span><span id="__span-11-18"><a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="c1">// Main script Body</span>
+</span><span id="__span-11-20"><a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>
+</span><span id="__span-11-21"><a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="w"> </span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">)</span>
+</span><span id="__span-11-22"><a href="#__codelineno-11-22" id="__codelineno-11-22" name="__codelineno-11-22"></a>
+</span><span id="__span-11-23"><a href="#__codelineno-11-23" id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">RoundNum</span><span class="o">==</span><span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-11-24"><a href="#__codelineno-11-24" id="__codelineno-11-24" name="__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a href="#__codelineno-11-25" id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"B - agenda1 = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">B</span><span class="p">)</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"E - agenda1 = "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-26"><a href="#__codelineno-11-26" id="__codelineno-11-26" name="__codelineno-11-26"></a>
+</span><span id="__span-11-27"><a href="#__codelineno-11-27" id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="w"> </span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">))</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"D - agenda1 = "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-28"><a href="#__codelineno-11-28" id="__codelineno-11-28" name="__codelineno-11-28"></a>
+</span><span id="__span-11-29"><a href="#__codelineno-11-29" id="__codelineno-11-29" name="__codelineno-11-29"></a>
+</span><span id="__span-11-30"><a href="#__codelineno-11-30" id="__codelineno-11-30" name="__codelineno-11-30"></a>
+</span><span id="__span-11-31"><a href="#__codelineno-11-31" id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="w"> </span><span class="s2">"D"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">))</span>
+</span><span id="__span-11-32"><a href="#__codelineno-11-32" id="__codelineno-11-32" name="__codelineno-11-32"></a>
+</span><span id="__span-11-33"><a href="#__codelineno-11-33" id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="p">}</span>
+</span><span id="__span-11-34"><a href="#__codelineno-11-34" id="__codelineno-11-34" name="__codelineno-11-34"></a>
+</span><span id="__span-11-35"><a href="#__codelineno-11-35" id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">wlSystemGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"S"</span><span class="p">,</span><span class="w"> </span><span class="nx">WLAllAgendas</span><span class="p">))</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">1000</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="search-order-precedence">Search Order Precedence</h3>
 <p>Before WebLOAD begins a browser action, it searches for configuration parameters in the following order of precedence:</p>
 <ol>

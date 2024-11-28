@@ -2,7 +2,6 @@
     "swagger" : "2.0",
     "info" : {
       "description" : "WebLOAD REST API",
-      "version" : "13.3.0",
       "title" : "WebLOAD API",
       "contact" : {
         "name" : "support@radview.com"

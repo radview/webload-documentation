@@ -1794,72 +1794,72 @@
 <blockquote>
 <p><strong>Note:</strong> This script includes DOM objects that are not explained in this section. For more information about a specific object or usage, (such as wlGlobals, wlRand, or wlHttp), see that object’s section in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
 </blockquote>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-//Enable parsing of all links wlGlobals.ParseLinks = true
-
-//Enable downloading nested frames wlGlobals.GetFrames =    true
-
-}
-
-function InitClient()
-
-{
-
-//Initialize the random number generator with a
-
-//different seed for each thread (ensures that each
-
-//thread follows a different sequence of links) wlRand.Seed(ClientNum)
-
-}
-
-//Main script Body
-
-//Store the most recent download in document.wlSource wlHttp.SaveSource = true
-
-//Download the dynamic HTML page
-
-[wlHttp.Get("http://www.webloadmpstore.com/general_sample/frames/](http://www.webloadmpstore.com/general_sample/frames/) frames.htm")
-
-//Retrieve the second frame MyFrame = document.frames[1] InfoMessage(MyFrame)
-
-InfoMessage(MyFrame.document.wlSource)
-
-//Confirm that the &lt;TITLE&gt; element of the frame is
-
-//"Offer of the Hour". If it is not, display an error
-
-//message and abort the current round.
-
-//Remember to escape the slash in &lt;/TITLE&gt;
-
-// Using extractValue to catch the title
-
-myTitle = extractValue( "&lt;title&gt;", "&lt;\/title&gt;", MyFrame.document.wlSource)
-
-// will print the content of the title InfoMessage (myTitle )
-
-if (myTitle != "offer of the hour")
-
-{
-
-ErrorMessage("Thread " + ClientNum.toString() + ", Round " +
-
-RoundNum.toString() + ": Title is not ‘Offer of the Hour’ but is " + myTitle )
-
-
-
-}
-
-//Retrieve the URL of a randomly selected link SelectedItem = wlRand.Select(0, 1, 2)
-
-LinkUrl = MyFrame.document.links[SelectedItem].href InfoMessage(LinkUrl )
-
-//Follow the link wlHttp.Get(LinkUrl)
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">//Enable parsing of all links wlGlobals.ParseLinks = true</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">//Enable downloading nested frames wlGlobals.GetFrames =    true</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">{</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c1">//Initialize the random number generator with a</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1">//different seed for each thread (ensures that each</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1">//thread follows a different sequence of links) wlRand.Seed(ClientNum)</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">}</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="c1">//Main script Body</span>
+</span><span id="__span-0-24"><a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="c1">//Store the most recent download in document.wlSource wlHttp.SaveSource = true</span>
+</span><span id="__span-0-26"><a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="c1">//Download the dynamic HTML page</span>
+</span><span id="__span-0-28"><a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">[</span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/general_sample/frames/](http://www.webloadmpstore.com/general_sample/frames/) frames.htm"</span><span class="p">)</span>
+</span><span id="__span-0-30"><a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="c1">//Retrieve the second frame MyFrame = document.frames[1] InfoMessage(MyFrame)</span>
+</span><span id="__span-0-32"><a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-0-34"><a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="c1">//Confirm that the &lt;TITLE&gt; element of the frame is</span>
+</span><span id="__span-0-36"><a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="c1">//"Offer of the Hour". If it is not, display an error</span>
+</span><span id="__span-0-38"><a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>
+</span><span id="__span-0-39"><a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="c1">//message and abort the current round.</span>
+</span><span id="__span-0-40"><a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="c1">//Remember to escape the slash in &lt;/TITLE&gt;</span>
+</span><span id="__span-0-42"><a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1">// Using extractValue to catch the title</span>
+</span><span id="__span-0-44"><a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="nx">myTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">extractValue</span><span class="p">(</span><span class="w"> </span><span class="s2">"&lt;title&gt;"</span><span class="p">,</span><span class="w"> </span><span class="s2">"&lt;\/title&gt;"</span><span class="p">,</span><span class="w"> </span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-0-46"><a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="c1">// will print the content of the title InfoMessage (myTitle )</span>
+</span><span id="__span-0-48"><a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>
+</span><span id="__span-0-49"><a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">myTitle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"offer of the hour"</span><span class="p">)</span>
+</span><span id="__span-0-50"><a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="p">{</span>
+</span><span id="__span-0-52"><a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="nx">ErrorMessage</span><span class="p">(</span><span class="s2">"Thread "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">", Round "</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-0-54"><a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a>
+</span><span id="__span-0-55"><a href="#__codelineno-0-55" id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="nx">RoundNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">": Title is not ‘Offer of the Hour’ but is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">myTitle</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-0-56"><a href="#__codelineno-0-56" id="__codelineno-0-56" name="__codelineno-0-56"></a>
+</span><span id="__span-0-57"><a href="#__codelineno-0-57" id="__codelineno-0-57" name="__codelineno-0-57"></a>
+</span><span id="__span-0-58"><a href="#__codelineno-0-58" id="__codelineno-0-58" name="__codelineno-0-58"></a>
+</span><span id="__span-0-59"><a href="#__codelineno-0-59" id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="p">}</span>
+</span><span id="__span-0-60"><a href="#__codelineno-0-60" id="__codelineno-0-60" name="__codelineno-0-60"></a>
+</span><span id="__span-0-61"><a href="#__codelineno-0-61" id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="c1">//Retrieve the URL of a randomly selected link SelectedItem = wlRand.Select(0, 1, 2)</span>
+</span><span id="__span-0-62"><a href="#__codelineno-0-62" id="__codelineno-0-62" name="__codelineno-0-62"></a>
+</span><span id="__span-0-63"><a href="#__codelineno-0-63" id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="nx">LinkUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">[</span><span class="nx">SelectedItem</span><span class="p">].</span><span class="nx">href</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="nx">LinkUrl</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-0-64"><a href="#__codelineno-0-64" id="__codelineno-0-64" name="__codelineno-0-64"></a>
+</span><span id="__span-0-65"><a href="#__codelineno-0-65" id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="c1">//Follow the link wlHttp.Get(LinkUrl)</span>
+</span></code></pre></div>
 <h3 id="using-wlhtml-to-follow-a-dynamic-link">Using wlHtml to Follow a Dynamic Link</h3>
 <p>The third link on a company’s home page is an advertisement that links to one of several products. On successive accesses, the advertisement switches dynamically among the products.</p>
 <p>The following WebLOAD script tests the time that a user would need to follow the link.</p>
@@ -1880,30 +1880,30 @@ LinkUrl = MyFrame.document.links[SelectedItem].href InfoMessage(LinkUrl )
 <li>The Round Time.</li>
 <li>The Link Time.</li>
 </ul>
-<pre><code class="language-javascript">function InitAgenda()
-
-//Set the default URL to the dynamic HTML home page wlGlobals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)
-
-//Parse links. Forms are not needed. wlGlobals.ParseLinks = true wlGlobals.ParseForms = false
-
-}
-
-//Main script
-
-//Connect to the home page wlHttp.Get()
-
-
-
-// Retrieve the third link on the home page using the manual
-
-// GetLinkByIndex() method.
-
-// See IdentifyObject() for the dynamic ASM alternative Link3 = wlHtml.GetLinkByIndex(3)
-
-//Measure the time to connect to the link SetTimer("Link Time") wlHttp.Get(Link3.href)
-
-SendTimer("Link Time")
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">//Set the default URL to the dynamic HTML home page wlGlobals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">//Parse links. Forms are not needed. wlGlobals.ParseLinks = true wlGlobals.ParseForms = false</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">//Main script</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">//Connect to the home page wlHttp.Get()</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1">// Retrieve the third link on the home page using the manual</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1">// GetLinkByIndex() method.</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1">// See IdentifyObject() for the dynamic ASM alternative Link3 = wlHtml.GetLinkByIndex(3)</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="c1">//Measure the time to connect to the link SetTimer("Link Time") wlHttp.Get(Link3.href)</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="nx">SendTimer</span><span class="p">(</span><span class="s2">"Link Time"</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="data-submission-properties">Data Submission Properties</h2>
 <p>You may submit many types of data to an HTTP server in a Get, Post, or Head command. For example, you can submit a search string, the results of form fields, or a file. You may assign values to variable data stored in these collections using the wlSet method.</p>
 <p>The wlHttp object provides the following collections to store the data that you want to submit:</p>
@@ -1991,67 +1991,67 @@ SendTimer("Link Time")
 <p><code>wlHttp.FormData[“InputFile.wlFile-Name”] = ”myFavoritePicture”</code> </p>
 <p><code>wlHttp.FormData[“InputFile.wlContent-Type] = ”bmp”</code></p>
 <p>The following script fragment illustrates the FormData properties documented in this section. The input file lines are marked in bold.</p>
-<pre><code>...
-
-/\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:4 \*\*\*\*\*/
-
-wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
-
-wlHttp.Header["Referer"] = ["http://ws3/webft/index.asp"](http://ws3/webft/index.asp) [wlHttp.Get("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:5 \*\*\*\*\*/ Sleep(18890)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:6 \*\*\*\*\*/
-
-wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
-
-wlHttp.Header["Referer"] = ["http://ws3/webft/fullform.asp"](http://ws3/webft/fullform.asp) wlHttp.FormdataEncodingType = 1
-
-wlHttp.ContentType = "application/x-www-form-urlencoded" **wlHttp.FormData["text1"] = "user1" wlHttp.FormData["password1"] = "password1"**
-
-
-
-####### **wlHttp.FormData["textarea1"] = "some text" wlHttp.FormData["checkbox1"] = "second value" wlHttp.FormData["select1"] = "first select value" wlHttp.FormData["submit2"] = "Submit2" [wlHttp.Post("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)**
-// END WLIDE
-
-...
-
-/\*\*\*\*\* WLIDE - URL : [http://ws3/upload/ssl-upload.html ](http://ws3/upload/ssl-upload.html)- ID:16
-
-\*\*\*\*\*/
-
-wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
-
-[wlHttp.Get("http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-upload.html")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:17 \*\*\*\*\*/ Sleep(22999)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : [http://ws3/upload/ssl-upload-handler.php ](http://ws3/upload/ssl-upload-handler.php)-
-
-ID:18 \*\*\*\*\*/
-
-wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
-
-wlHttp.Header["Referer"] = ["http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-[upload.html"](http://ws3/upload/ssl-upload.html) wlHttp.EncodeFormdata = false;
-
-wlHttp.ContentType = "multipart/form-data" **wlHttp.FormData["text"] = "abcd" wlHttp.FormData["uploadFile[].wlFile-Name"] = "a.txt" wlHttp.FormData["uploadFile[].wlContent-Type"] = "text/plain"**
-####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
-####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
-####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
-####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
-####### **wlHttp.FormData["submit"] = "Submit Query"**
-[wlHttp.Post("http://ws3/upload/ssl](http://ws3/upload/ssl-upload-handler.php)-upload-[handler.php")](http://ws3/upload/ssl-upload-handler.php)
-
-// END WLIDE
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>...
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>/\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:4 \*\*\*\*\*/
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>wlHttp.Header["Referer"] = ["http://ws3/webft/index.asp"](http://ws3/webft/index.asp) [wlHttp.Get("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>// END WLIDE
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>/\*\*\*\*\* WLIDE - Sleep - ID:5 \*\*\*\*\*/ Sleep(18890)
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>// END WLIDE
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>/\*\*\*\*\* WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:6 \*\*\*\*\*/
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>wlHttp.Header["Referer"] = ["http://ws3/webft/fullform.asp"](http://ws3/webft/fullform.asp) wlHttp.FormdataEncodingType = 1
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>wlHttp.ContentType = "application/x-www-form-urlencoded" **wlHttp.FormData["text1"] = "user1" wlHttp.FormData["password1"] = "password1"**
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>####### **wlHttp.FormData["textarea1"] = "some text" wlHttp.FormData["checkbox1"] = "second value" wlHttp.FormData["select1"] = "first select value" wlHttp.FormData["submit2"] = "Submit2" [wlHttp.Post("http://ws3/webft/fullform.asp")](http://ws3/webft/fullform.asp)**
+</span><span id="__span-2-26"><a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>// END WLIDE
+</span><span id="__span-2-27"><a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>...
+</span><span id="__span-2-29"><a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>
+</span><span id="__span-2-30"><a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>/\*\*\*\*\* WLIDE - URL : [http://ws3/upload/ssl-upload.html ](http://ws3/upload/ssl-upload.html)- ID:16
+</span><span id="__span-2-31"><a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>
+</span><span id="__span-2-32"><a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>\*\*\*\*\*/
+</span><span id="__span-2-33"><a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>
+</span><span id="__span-2-34"><a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-35"><a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>
+</span><span id="__span-2-36"><a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>[wlHttp.Get("http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-upload.html")
+</span><span id="__span-2-37"><a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>// END WLIDE
+</span><span id="__span-2-39"><a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>/\*\*\*\*\* WLIDE - Sleep - ID:17 \*\*\*\*\*/ Sleep(22999)
+</span><span id="__span-2-41"><a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>
+</span><span id="__span-2-42"><a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>// END WLIDE
+</span><span id="__span-2-43"><a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>
+</span><span id="__span-2-44"><a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>/\*\*\*\*\* WLIDE - URL : [http://ws3/upload/ssl-upload-handler.php ](http://ws3/upload/ssl-upload-handler.php)-
+</span><span id="__span-2-45"><a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>
+</span><span id="__span-2-46"><a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a>ID:18 \*\*\*\*\*/
+</span><span id="__span-2-47"><a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a>
+</span><span id="__span-2-48"><a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-49"><a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a>
+</span><span id="__span-2-50"><a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a>wlHttp.Header["Referer"] = ["http://ws3/upload/ssl](http://ws3/upload/ssl-upload.html)-[upload.html"](http://ws3/upload/ssl-upload.html) wlHttp.EncodeFormdata = false;
+</span><span id="__span-2-51"><a href="#__codelineno-2-51" id="__codelineno-2-51" name="__codelineno-2-51"></a>
+</span><span id="__span-2-52"><a href="#__codelineno-2-52" id="__codelineno-2-52" name="__codelineno-2-52"></a>wlHttp.ContentType = "multipart/form-data" **wlHttp.FormData["text"] = "abcd" wlHttp.FormData["uploadFile[].wlFile-Name"] = "a.txt" wlHttp.FormData["uploadFile[].wlContent-Type"] = "text/plain"**
+</span><span id="__span-2-53"><a href="#__codelineno-2-53" id="__codelineno-2-53" name="__codelineno-2-53"></a>####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
+</span><span id="__span-2-54"><a href="#__codelineno-2-54" id="__codelineno-2-54" name="__codelineno-2-54"></a>####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
+</span><span id="__span-2-55"><a href="#__codelineno-2-55" id="__codelineno-2-55" name="__codelineno-2-55"></a>####### **wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"**
+</span><span id="__span-2-56"><a href="#__codelineno-2-56" id="__codelineno-2-56" name="__codelineno-2-56"></a>####### **wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"**
+</span><span id="__span-2-57"><a href="#__codelineno-2-57" id="__codelineno-2-57" name="__codelineno-2-57"></a>####### **wlHttp.FormData["submit"] = "Submit Query"**
+</span><span id="__span-2-58"><a href="#__codelineno-2-58" id="__codelineno-2-58" name="__codelineno-2-58"></a>[wlHttp.Post("http://ws3/upload/ssl](http://ws3/upload/ssl-upload-handler.php)-upload-[handler.php")](http://ws3/upload/ssl-upload-handler.php)
+</span><span id="__span-2-59"><a href="#__codelineno-2-59" id="__codelineno-2-59" name="__codelineno-2-59"></a>
+</span><span id="__span-2-60"><a href="#__codelineno-2-60" id="__codelineno-2-60" name="__codelineno-2-60"></a>// END WLIDE
+</span></code></pre></div>
 <h3 id="data">Data</h3>
 <p>Data is a string to be submitted in an HTTP Post command. The Data property has two subfields:</p>
 <ul>
@@ -2062,22 +2062,20 @@ wlHttp.ContentType = "multipart/form-data" **wlHttp.FormData["text"] = "abcd" wl
 </ul>
 <p>FormData.</p>
 <p>Thus the following three code samples are equivalent:</p>
-<pre><code>//Sample 1 wlHttp.Data.Type =
-
-"application/x-www-form-urlencoded" wlHttp.Data.Value =
-
-"SearchFor=icebergs&amp;SearchType=ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
-
-//Sample 2
-
-wlHttp.FormData.SearchFor = "icebergs" wlHttp.FormData.SearchType = "ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
-
-//Sample 3 wlHttp.Post
-
-[("http://www.ABCDEF.com/query.exe" ](http://www.ABCDEF.com/query.exe)+ "?SearchFor=icebergs&amp;SearchType=ExactTerm")
-
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>//Sample 1 wlHttp.Data.Type =
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>"application/x-www-form-urlencoded" wlHttp.Data.Value =
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>"SearchFor=icebergs&amp;SearchType=ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>//Sample 2
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>wlHttp.FormData.SearchFor = "icebergs" wlHttp.FormData.SearchType = "ExactTerm" [wlHttp.Post("http://www.ABCDEF.com/query.exe")](http://www.ABCDEF.com/query.exe)
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>//Sample 3 wlHttp.Post
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>[("http://www.ABCDEF.com/query.exe" ](http://www.ABCDEF.com/query.exe)+ "?SearchFor=icebergs&amp;SearchType=ExactTerm")
+</span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> Data and DataFile are both collections that hold sets of data.</p>
 </blockquote>
@@ -2134,45 +2132,45 @@ wlHttp.FormData.SearchFor = "icebergs" wlHttp.FormData.SearchType = "ExactTerm" 
 <p>When Erase is set to true, WebLOAD automatically erases all wlHttp property values after each HTTP access. You must reassign any properties you need before the next HTTP access. For this reason, assign the properties of wlHttp only in the <em>main script</em>, not in InitClient(), so they will be reassigned in every round.</p>
 <p>Thus if Erase is set to true the following script is incorrect. In this script, the wlHttp properties are assigned values in InitClient(). The script would connect to the Url and submit the FormData only in the first round. After the first Post() call, the Url and FormData property values are erased, so WebLOAD cannot use them in subsequent rounds.</p>
 <p>The following script displays the incorrect method of assigning the wlHttp properties:</p>
-<pre><code class="language-javascript">function InitClient() { //Wrong! wlHttp.Url =
-
-["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"
-
-}
-
-//Main script wlHttp.Post()
-
-To solve the problem, assign the wlHttp property values in the main script, so that the
-
-assignments are executed before each Get(), Post(), or Head() call:
-
-//Main script   //OK wlHttp.Url =
-
-["http://www.ABCDEF.com/products.ex](http://www.ABCDEF.com/products.exe)e" wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems" wlHttp.Post()
-
-Alternatively, you could assign values to wlLocals properties, which are not erased:
-
-function InitClient() { //OK wlLocals.Url =
-
-["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlLocals.FormData["Name"] = "John Smith" wlLocals.FormData["Product Interest"] =
-
-"Modems"
-
-}
-
-//Main script wlHttp.Post()
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Wrong! wlHttp.Url =</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">[</span><span class="s2">"http://www.ABCDEF.com/products.exe"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1">//Main script wlHttp.Post()</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="nx">To</span><span class="w"> </span><span class="nx">solve</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">problem</span><span class="p">,</span><span class="w"> </span><span class="nx">assign</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">wlHttp</span><span class="w"> </span><span class="nx">property</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="nx">script</span><span class="p">,</span><span class="w"> </span><span class="nx">so</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">the</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="nx">assignments</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">executed</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="nx">Get</span><span class="p">(),</span><span class="w"> </span><span class="nx">Post</span><span class="p">(),</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">Head</span><span class="p">()</span><span class="w"> </span><span class="nx">call</span><span class="o">:</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1">//Main script   //OK wlHttp.Url =</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">[</span><span class="s2">"http://www.ABCDEF.com/products.ex](http://www.ABCDEF.com/products.exe)e"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Product Interest"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Modems"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">()</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">Alternatively</span><span class="p">,</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">could</span><span class="w"> </span><span class="nx">assign</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">wlLocals</span><span class="w"> </span><span class="nx">properties</span><span class="p">,</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">erased</span><span class="o">:</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//OK wlLocals.Url =</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="p">[</span><span class="s2">"http://www.ABCDEF.com/products.exe"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/products.exe) wlLocals.FormData["Name"] = "John Smith" wlLocals.FormData["Product Interest"] =</span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="s2">"Modems"</span>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="p">}</span>
+</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="c1">//Main script wlHttp.Post()</span>
+</span></code></pre></div>
 <h4 id="erasefalse">Erase=false</h4>
 <p>You may set Erase to false to prevent erasure. For example, if for some reason you absolutely had to assign values to the wlHttp properties in the InitClient() function of the script, change the value of the Erase property to false. If Erase is false, the properties retain their values through subsequent rounds.</p>
 <p>Thus another way to correct the preceding example is to write:</p>
-<pre><code class="language-javascript">function InitClient() { //OK wlHttp.Erase = false
-
-wlHttp.Url = ["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"
-
-}
-
-//Main script wlHttp.Post()
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//OK wlHttp.Erase = false</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.ABCDEF.com/products.exe"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/products.exe) wlHttp.FormData["Name"] = "John Smith" wlHttp.FormData["Product Interest"] = "Modems"</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="c1">//Main script wlHttp.Post()</span>
+</span></code></pre></div>
 <p>User-defined properties are not linked to the wlHttp.Erase property and will not be</p>
 <p>erased automatically by WebLOAD. The only way to reset or erase user-defined properties is for the user to set the new values explicitly.</p>
 <h3 id="posting-form-data-using-elements">Posting form Data Using Elements</h3>
@@ -2180,84 +2178,84 @@ wlHttp.Url = ["http://www.ABCDEF.com/products.exe"](http://www.ABCDEF.com/produc
 <p>The home page of a company displays the following form, where a user can specify interest in different products.</p>
 <p><img alt="Home Page Form Example" src="../../images/script_guide_109.png"/></p>
 <p>The HTML code for the form is:</p>
-<pre><code class="language-html">&lt;FORM action="http://www.ABCDEF.com/FormProcessor.exe" method="post"&gt;
-
-&lt;P&gt;Your name: &lt;INPUT type="text" name="yourname"&gt;
-
-
-&lt;SELECT name="interest"&gt;
-
-
-&lt;OPTION selected&gt;Modems&lt;/OPTION&gt;
-
-
-
-&lt;OPTION&gt;CD-ROMs&lt;/OPTION&gt;
-
-&lt;/SELECT&gt;
-
-&lt;INPUT type="submit" value="Send"&gt;
-
-&lt;/FORM&gt;
-</code></pre>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">action</span><span class="o">=</span><span class="s">"http://www.ABCDEF.com/FormProcessor.exe"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Your name: <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"yourname"</span><span class="p">&gt;</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">name</span><span class="o">=</span><span class="s">"interest"</span><span class="p">&gt;</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">selected</span><span class="p">&gt;</span>Modems<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>CD-ROMs<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Send"</span><span class="p">&gt;</span>
+</span><span id="__span-6-18"><a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a>
+</span><span id="__span-6-19"><a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</span></code></pre></div>
 <p>A script can download the form as follows:</p>
-<pre><code class="language-javascript">function InitAgenda() {
-
-wlGlobals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/) wlGlobals.ParseForms = true
-
-}
-
-wlHttp.Get()
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.ABCDEF.com"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/) wlGlobals.ParseForms = true</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">()</span>
+</span></code></pre></div>
 <p>WebLOAD parses the HTML code and creates an elements collection containing the first two form elements (the text box and the drop-down list). WebLOAD does not include the third element (the Send button) in the collection because it does not have a name attribute.</p>
 <p>This is a listing of the elements collection:</p>
-<pre><code class="language-xml">document.forms[0].elements[0].name = "yourname" 
-
-document.forms[0].elements[0].type = "text" 
-
-document.forms[0].elements[0].value = "" 
-
-document.forms[0].elements[1].name = "interest" 
-
-document.forms[0].elements[1].type = "SELECT" 
-
-document.forms[0].elements[1].selectedindex = 0 
-
-document.forms[0].elements[1].options[0].text = "Modems" 
-
-document.forms[0].elements[1].options[0].value = "Modems" 
-
-document.forms[0].elements[1].options[0].selected = true 
-
-document.forms[0].elements[1].options[1].text = "CD-ROMs" 
-
-document.forms[0].elements[1].options[1].value = "CD-ROMs" 
-
-document.forms[0].elements[1].options[1].selected = false
-</code></pre>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>document.forms[0].elements[0].name<span class="w"> </span>=<span class="w"> </span>"yourname"<span class="w"> </span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>document.forms[0].elements[0].type<span class="w"> </span>=<span class="w"> </span>"text"<span class="w"> </span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>document.forms[0].elements[0].value<span class="w"> </span>=<span class="w"> </span>""<span class="w"> </span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>document.forms[0].elements[1].name<span class="w"> </span>=<span class="w"> </span>"interest"<span class="w"> </span>
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>document.forms[0].elements[1].type<span class="w"> </span>=<span class="w"> </span>"SELECT"<span class="w"> </span>
+</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>document.forms[0].elements[1].selectedindex<span class="w"> </span>=<span class="w"> </span>0<span class="w"> </span>
+</span><span id="__span-8-12"><a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a>document.forms[0].elements[1].options[0].text<span class="w"> </span>=<span class="w"> </span>"Modems"<span class="w"> </span>
+</span><span id="__span-8-14"><a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a>
+</span><span id="__span-8-15"><a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a>document.forms[0].elements[1].options[0].value<span class="w"> </span>=<span class="w"> </span>"Modems"<span class="w"> </span>
+</span><span id="__span-8-16"><a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a>document.forms[0].elements[1].options[0].selected<span class="w"> </span>=<span class="w"> </span>true<span class="w"> </span>
+</span><span id="__span-8-18"><a href="#__codelineno-8-18" id="__codelineno-8-18" name="__codelineno-8-18"></a>
+</span><span id="__span-8-19"><a href="#__codelineno-8-19" id="__codelineno-8-19" name="__codelineno-8-19"></a>document.forms[0].elements[1].options[1].text<span class="w"> </span>=<span class="w"> </span>"CD-ROMs"<span class="w"> </span>
+</span><span id="__span-8-20"><a href="#__codelineno-8-20" id="__codelineno-8-20" name="__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a href="#__codelineno-8-21" id="__codelineno-8-21" name="__codelineno-8-21"></a>document.forms[0].elements[1].options[1].value<span class="w"> </span>=<span class="w"> </span>"CD-ROMs"<span class="w"> </span>
+</span><span id="__span-8-22"><a href="#__codelineno-8-22" id="__codelineno-8-22" name="__codelineno-8-22"></a>
+</span><span id="__span-8-23"><a href="#__codelineno-8-23" id="__codelineno-8-23" name="__codelineno-8-23"></a>document.forms[0].elements[1].options[1].selected<span class="w"> </span>=<span class="w"> </span>false
+</span></code></pre></div>
 <p>The script can use the above data to post the form back to the server. The following code illustrates how the script might do this.</p>
-<pre><code class="language-javascript">MyArray = document.forms[0].elements i = 0
-
-while (i &lt; MyArray.length) { switch MyArray[i].type { case "text" :
-
-//Retrieve the default value of a text box wlHttp.FormData[MyArray[i].name] = MyArray[i].value] break
-
-case "SELECT"
-
-//Retrieve the first option in a drop-down list
-
-&lt;a name="_bookmark127"&gt;&lt;/a&gt;}
-
-i++
-
-}
-
-wlHttp.FormData[MyArray[i].name]=MyArray[i].options[0].v alue
-
-break
-
-//Post the data to the form server&lt;a name="managing cookies through the wlcookie ob"&gt;&lt;/a&gt;&lt;a name="_bookmark128"&gt;&lt;/a&gt; wlHttp.Post(document.forms[0].action)
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">MyArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">elements</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">MyArray</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="s2">"text"</span><span class="w"> </span><span class="o">:</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1">//Retrieve the default value of a text box wlHttp.FormData[MyArray[i].name] = MyArray[i].value] break</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="k">case</span><span class="w"> </span><span class="s2">"SELECT"</span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="c1">//Retrieve the first option in a drop-down list</span>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"_bookmark127"</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;}</span>
+</span><span id="__span-9-12"><a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="nx">i</span><span class="o">++</span>
+</span><span id="__span-9-14"><a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="p">}</span>
+</span><span id="__span-9-16"><a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">]</span><span class="o">=</span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">options</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">v</span><span class="w"> </span><span class="nx">alue</span>
+</span><span id="__span-9-18"><a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a>
+</span><span id="__span-9-19"><a href="#__codelineno-9-19" id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="k">break</span>
+</span><span id="__span-9-20"><a href="#__codelineno-9-20" id="__codelineno-9-20" name="__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a href="#__codelineno-9-21" id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="c1">//Post the data to the form server&lt;a name="managing cookies through the wlcookie ob"&gt;&lt;/a&gt;&lt;a name="_bookmark128"&gt;&lt;/a&gt; wlHttp.Post(document.forms[0].action)</span>
+</span></code></pre></div>
 <h2 id="managing-cookies-through-the-wlcookie-object">Managing Cookies through the wlCookie Object</h2>
 <h3 id="the-wlcookie-object">The wlCookie Object</h3>
 <p>The wlCookie object sets and deletes cookies. These activities may be required by an HTTP server.</p>
@@ -2286,29 +2284,27 @@ break
 </blockquote>
 <h3 id="example-using-a-cookie">Example: using a cookie</h3>
 <p>Cookies are used by applications to store the application requests on the client side. This enables the client to perform a one-time application request and from then on the request information is retrieved from the client’s cookies.</p>
-<pre><code class="language-javascript">//Request information entered into the application wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["username"] = "zadp10" wlHttp.FormData["password"] = "Start100" wlHttp.FormData["submit1"] = "Login"
-
-//Setting the cookie
-
-wlCookie.Set(“UserID”, “zapd10”, “[www.abcdef.net](http://www.abcdef.net/),”, “/”, “Sun, 19- Jun-2011 17:29:00 GMT”)
-
-//WebLOAD submits the cookie [wlHttp.Post("https://www.abcdef.net/default.aspx")](http://www.abcdef.net/default.aspx)
-
-//Getting the cookie
-
-CookieValue = wlCookie.Get("UserID")
-
-//The value returned in CookieValue is “zapd10”
-
-
-In some cases it is also necessary to delete the cookie settings. You can do this by entering:
-
-
-
-//Delete the cookie wlCookie.ClearAll()
-
-
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">//Request information entered into the application wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["username"] = "zadp10" wlHttp.FormData["password"] = "Start100" wlHttp.FormData["submit1"] = "Login"</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="c1">//Setting the cookie</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="nx">wlCookie</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="err">“</span><span class="nx">UserID</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">zapd10</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="p">[</span><span class="nx">www</span><span class="p">.</span><span class="nx">abcdef</span><span class="p">.</span><span class="nx">net</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.abcdef.net/),”, “/”, “Sun, 19- Jun-2011 17:29:00 GMT”)</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="c1">//WebLOAD submits the cookie [wlHttp.Post("https://www.abcdef.net/default.aspx")](http://www.abcdef.net/default.aspx)</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="c1">//Getting the cookie</span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="nx">CookieValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlCookie</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"UserID"</span><span class="p">)</span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="c1">//The value returned in CookieValue is “zapd10”</span>
+</span><span id="__span-10-14"><a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="nx">In</span><span class="w"> </span><span class="nx">some</span><span class="w"> </span><span class="nx">cases</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">also</span><span class="w"> </span><span class="nx">necessary</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="ow">delete</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">cookie</span><span class="w"> </span><span class="nx">settings</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">entering</span><span class="o">:</span>
+</span><span id="__span-10-17"><a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a>
+</span><span id="__span-10-18"><a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a>
+</span><span id="__span-10-19"><a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="c1">//Delete the cookie wlCookie.ClearAll()</span>
+</span></code></pre></div>
 <h2 id="handling-binary-data">Handling Binary Data</h2>
 <p>WebLOAD supports the simulation of binary data sent from the browser to the server. Binary data is handled specially, since it cannot be displayed as JavaScript literals in the script, unlike other types of data that can be displayed, such as numbers or text.</p>
 <h3 id="recording-binary-data">Recording Binary Data</h3>
@@ -2350,28 +2346,28 @@ In some cases it is also necessary to delete the cookie settings. You can do thi
 </ol>
 <p>After setting the Record Option settings, binary data is stored in a local data file and the name of the file appears in the script.</p>
 <p>The following sample script demonstrates how WebLOAD records binary data as a data file:</p>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-CopyFile("wl2288601006.dat","wl2288601006.dat")
-
-}
-
-wlGlobals.GetFrames = false wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html))
-
-Sleep(9056)
-
-
-
-wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Shop.swf"](http://www.webloadmpstore.com/flex/bin/Shop.swf)
-
-wlHttp.Header["Content-type"] = "application/x-amf" wlHttp.Header["Content-length"] = "58" wlHttp.DataFile["Type"] = "application/x-amf" wlHttp.DataFile["Filename"] = "wl2288601006.dat"
-
-wlHttp.Post(["http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
-
-.php")
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">{</span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="nx">CopyFile</span><span class="p">(</span><span class="s2">"wl2288601006.dat"</span><span class="p">,</span><span class="s2">"wl2288601006.dat"</span><span class="p">)</span>
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">}</span>
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Sample.html))</span>
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">9056</span><span class="p">)</span>
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Shop.swf)</span>
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Content-type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Content-length"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"58"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">DataFile</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">DataFile</span><span class="p">[</span><span class="s2">"Filename"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wl2288601006.dat"</span>
+</span><span id="__span-11-18"><a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)</span>
+</span><span id="__span-11-20"><a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>
+</span><span id="__span-11-21"><a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="s2">.php"</span><span class="p">)</span>
+</span></code></pre></div>
 <h4 id="encoding-binary-data-in-the-script">Encoding Binary Data in the script</h4>
 <p>Modifying the script Options settings in the WebLOAD Recorder enables the encoding of binary data in the script during the recording. Once recorded, the script can be edited, parameterized, and load tested as a regular script.</p>
 <p><strong>To enable encoding binary data in the script:</strong></p>
@@ -2411,50 +2407,50 @@ wlHttp.Post(["http://www.webloadmpstore.com/flashservices/gateway](http://www.we
 <p>After setting the Record Option settings, when binary data is recorded and encoded in a script, wlHttp.EncodeRequestBinaryData = true is automatically added to the script. This encodes the binary data into the following usable format:</p>
 <p><code>wlHttp.Data["Value"] = "%00%00%00%00%00%01%00/com.oreilly.frdg.SearchProducts.getSearch Result%00%02/1%00%00%00%18%0a%00%00%00%01%03%00%06search%02%00%0 4wood%00%00%09"</code></p>
 <p>The following sample script demonstrates how WebLOAD handles binary data encoded in the script:</p>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-IncludeFile("wlamf.js",WLExecuteScript);
-
-}
-
-wlGlobals.GetFrames = false wlHttp.EncodeRequestBinaryData = true
-
-wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
-
-wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html))
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html)
-
-wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/history.ht](http://www.webloadmpstore.com/flex/bin/history.htm)m")
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/history.htm"](http://www.webloadmpstore.com/flex/bin/history.htm)
-
-wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/history.swf"](http://www.webloadmpstore.com/flex/bin/history.swf))
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header["Referer"] = ["h](http://www.webloadmpstore.com/flex/bin/Sample.html)[ttp://www.webloadmpstore.com/flex/bin/Sample.html"](http://www.webloadmpstore.com/flex/bin/Sample.html)
-
-wlHttp.Get(["http://www.webloadmpstore.com/flex/bin/Shop.swf](http://www.webloadmpstore.com/flex/bin/Shop.swf)")
-
-wlHttp.EncodeRequestBinaryData = true
-
-wlHttp.Header["Referer"] = ["http://www.webloadmpstore.com/flex/bin/Shop.swf"](http://www.webloadmpstore.com/flex/bin/Shop.swf)
-
-wlHttp.Data["Type"] = "application/x-amf" wlHttp.Data["Value"] =
-
-"%00%03%00%00%00%01%00%15talkback.returnString%00%02/1%00%00%00% 15%0a%00%00%00%02%02%00%06George%02%00%04Bush"
-
-wlHttp.Post[("http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)
-
-.php")
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">{</span>
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="s2">"wlamf.js"</span><span class="p">,</span><span class="nx">WLExecuteScript</span><span class="p">);</span>
+</span><span id="__span-12-6"><a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">}</span>
+</span><span id="__span-12-8"><a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-12-10"><a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">UserAgent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"</span>
+</span><span id="__span-12-12"><a href="#__codelineno-12-12" id="__codelineno-12-12" name="__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a href="#__codelineno-12-13" id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Sample.html))</span>
+</span><span id="__span-12-14"><a href="#__codelineno-12-14" id="__codelineno-12-14" name="__codelineno-12-14"></a>
+</span><span id="__span-12-15"><a href="#__codelineno-12-15" id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-12-16"><a href="#__codelineno-12-16" id="__codelineno-12-16" name="__codelineno-12-16"></a>
+</span><span id="__span-12-17"><a href="#__codelineno-12-17" id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Sample.html)</span>
+</span><span id="__span-12-18"><a href="#__codelineno-12-18" id="__codelineno-12-18" name="__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a href="#__codelineno-12-19" id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.ht](http://www.webloadmpstore.com/flex/bin/history.htm)m"</span><span class="p">)</span>
+</span><span id="__span-12-20"><a href="#__codelineno-12-20" id="__codelineno-12-20" name="__codelineno-12-20"></a>
+</span><span id="__span-12-21"><a href="#__codelineno-12-21" id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-12-22"><a href="#__codelineno-12-22" id="__codelineno-12-22" name="__codelineno-12-22"></a>
+</span><span id="__span-12-23"><a href="#__codelineno-12-23" id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.htm"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/history.htm)</span>
+</span><span id="__span-12-24"><a href="#__codelineno-12-24" id="__codelineno-12-24" name="__codelineno-12-24"></a>
+</span><span id="__span-12-25"><a href="#__codelineno-12-25" id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.swf"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/history.swf))</span>
+</span><span id="__span-12-26"><a href="#__codelineno-12-26" id="__codelineno-12-26" name="__codelineno-12-26"></a>
+</span><span id="__span-12-27"><a href="#__codelineno-12-27" id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-12-28"><a href="#__codelineno-12-28" id="__codelineno-12-28" name="__codelineno-12-28"></a>
+</span><span id="__span-12-29"><a href="#__codelineno-12-29" id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"h](http://www.webloadmpstore.com/flex/bin/Sample.html)[ttp://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Sample.html)</span>
+</span><span id="__span-12-30"><a href="#__codelineno-12-30" id="__codelineno-12-30" name="__codelineno-12-30"></a>
+</span><span id="__span-12-31"><a href="#__codelineno-12-31" id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf](http://www.webloadmpstore.com/flex/bin/Shop.swf)"</span><span class="p">)</span>
+</span><span id="__span-12-32"><a href="#__codelineno-12-32" id="__codelineno-12-32" name="__codelineno-12-32"></a>
+</span><span id="__span-12-33"><a href="#__codelineno-12-33" id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-12-34"><a href="#__codelineno-12-34" id="__codelineno-12-34" name="__codelineno-12-34"></a>
+</span><span id="__span-12-35"><a href="#__codelineno-12-35" id="__codelineno-12-35" name="__codelineno-12-35"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/flex/bin/Shop.swf)</span>
+</span><span id="__span-12-36"><a href="#__codelineno-12-36" id="__codelineno-12-36" name="__codelineno-12-36"></a>
+</span><span id="__span-12-37"><a href="#__codelineno-12-37" id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Value"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-12-38"><a href="#__codelineno-12-38" id="__codelineno-12-38" name="__codelineno-12-38"></a>
+</span><span id="__span-12-39"><a href="#__codelineno-12-39" id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="s2">"%00%03%00%00%00%01%00%15talkback.returnString%00%02/1%00%00%00% 15%0a%00%00%00%02%02%00%06George%02%00%04Bush"</span>
+</span><span id="__span-12-40"><a href="#__codelineno-12-40" id="__codelineno-12-40" name="__codelineno-12-40"></a>
+</span><span id="__span-12-41"><a href="#__codelineno-12-41" id="__codelineno-12-41" name="__codelineno-12-41"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">[(</span><span class="s2">"http://www.webloadmpstore.com/flashservices/gateway](http://www.webloadmpstore.com/flashservices/gateway)</span>
+</span><span id="__span-12-42"><a href="#__codelineno-12-42" id="__codelineno-12-42" name="__codelineno-12-42"></a>
+</span><span id="__span-12-43"><a href="#__codelineno-12-43" id="__codelineno-12-43" name="__codelineno-12-43"></a><span class="s2">.php"</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="handling-authentication-in-the-script">Handling Authentication in the Script</h2>
 <p>WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user authentication methods.</p>
 <p>WebLOAD handles authentication in playback in the following way:</p>

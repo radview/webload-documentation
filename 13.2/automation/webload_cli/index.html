@@ -1967,108 +1967,108 @@ combination of the following:</p>
 <li><code>FailOnError</code> (boolean): Stop the test when a failure occours.</li>
 </ul>
 <h4 id="sample-json-code-simple">Sample Json code - simple</h4>
-<pre><code class="language-json">{
-    "test": {
-        "name": "simple script test",        
-        "agendas": [
-            {
-                "agendaname": "myAgenda",
-                "agendapath": "C:\\data\\myAgenda.wlp"
-            }
-        ],
-        "loadGenerator": [
-            {
-                "name": "localhost",
-                "type": "PC"
-            }
-        ],        
-        "schedule": {
-            "RampUpTime": 20,
-            "Duration": 30,
-            "RampDownTime": 20,
-            "MaxVC": 100
-        }        
-    }
-}
-</code></pre>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"simple script test"</span><span class="p">,</span><span class="w">        </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="nt">"agendas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myAgenda"</span><span class="p">,</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\data\\myAgenda.wlp"</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nt">"loadGenerator"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PC"</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">],</span><span class="w">        </span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="nt">"RampUpTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="nt">"Duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="nt">"RampDownTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">            </span><span class="nt">"MaxVC"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="p">}</span><span class="w">        </span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span>
+</span></code></pre></div>
 <h4 id="sample-json-code-advanced">Sample Json code - advanced</h4>
-<pre><code class="language-json">{
-    "test": {
-        "name": "Detailed script test",
-        "type": "agenda",
-        "agendas": [
-            {
-                "agendaname": "myAgenda",
-                "agendapath": "C:\\myAgenda.wlp",
-                "percentage": 50,
-                "execoptions": [
-                    {
-                        "Name": "UserAgentOption",
-                        "Value": "Mozilla/5.0"
-                    }
-                ],
-                "SleepOptions": {
-                    "SleepType": "1",
-                    "SetMaxSleepTime": true,
-                    "MaxSleepTime": 10
-                }
-            },
-            {
-                "agendaname": "jsBasedScript",
-                "agendapath": "C:\\jsBasedScript.js",
-                "percentage": 50
-            }
-        ],
-        "locations": [
-            {
-                "name": "us_east1",
-                "distribution": 50
-            },
-            {
-                "name": "us_west1",
-                "distribution": 50
-            }
-
-        ],        
-        "schedule": {
-            "RampUpTime": 60,
-            "Duration": 10,
-            "RampDownTime": 20,
-            "MaxVC": 100,
-            "LimitRounds": true,
-            "Rounds": 20
-        },
-        "slaManager": [
-            {
-                "name": "Check login time and page time",
-                "operator": "or",
-                "stats": [
-                    {
-                        "name": "Login Time",
-                        "type": "Current Value",
-                        "op": "&gt;",
-                        "value": 10
-                    },
-                    {
-                        "name": "Page Time",
-                        "type": "Current Value",
-                        "op": "&gt;",
-                        "value": 5
-                    }
-                ],
-                "message": "Login or page time is too high",
-                "msg": "2"
-            }
-        ],
-        "successOptions": {
-            "FailOnError": true,
-            "FailOnErrorsCount": true,
-            "FailOnErrorCountNumber": 10,            
-            "FailSevereError": true
-        }
-    }
-}
-</code></pre>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Detailed script test"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agenda"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nt">"agendas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myAgenda"</span><span class="p">,</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\myAgenda.wlp"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">                </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="nt">"execoptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                        </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserAgentOption"</span><span class="p">,</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                        </span><span class="nt">"Value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mozilla/5.0"</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                </span><span class="p">],</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">                </span><span class="nt">"SleepOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">                    </span><span class="nt">"SleepType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">                    </span><span class="nt">"SetMaxSleepTime"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">                    </span><span class="nt">"MaxSleepTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsBasedScript"</span><span class="p">,</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\jsBasedScript.js"</span><span class="p">,</span>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">                </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="nt">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us_east1"</span><span class="p">,</span>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                </span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us_west1"</span><span class="p">,</span>
+</span><span id="__span-1-35"><a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">                </span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-36"><a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-37"><a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>
+</span><span id="__span-1-38"><a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">        </span><span class="p">],</span><span class="w">        </span>
+</span><span id="__span-1-39"><a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">        </span><span class="nt">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-40"><a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">            </span><span class="nt">"RampUpTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+</span><span id="__span-1-41"><a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">            </span><span class="nt">"Duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-1-42"><a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">            </span><span class="nt">"RampDownTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-1-43"><a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">            </span><span class="nt">"MaxVC"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-1-44"><a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">            </span><span class="nt">"LimitRounds"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-45"><a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">            </span><span class="nt">"Rounds"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+</span><span id="__span-1-46"><a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-47"><a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">        </span><span class="nt">"slaManager"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-48"><a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-49"><a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check login time and page time"</span><span class="p">,</span>
+</span><span id="__span-1-50"><a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">                </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"or"</span><span class="p">,</span>
+</span><span id="__span-1-51"><a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="w">                </span><span class="nt">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-52"><a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-53"><a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login Time"</span><span class="p">,</span>
+</span><span id="__span-1-54"><a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Current Value"</span><span class="p">,</span>
+</span><span id="__span-1-55"><a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w">                        </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;"</span><span class="p">,</span>
+</span><span id="__span-1-56"><a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-1-57"><a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-1-58"><a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-59"><a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Page Time"</span><span class="p">,</span>
+</span><span id="__span-1-60"><a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Current Value"</span><span class="p">,</span>
+</span><span id="__span-1-61"><a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">                        </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;"</span><span class="p">,</span>
+</span><span id="__span-1-62"><a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</span><span id="__span-1-63"><a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-1-64"><a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="w">                </span><span class="p">],</span>
+</span><span id="__span-1-65"><a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login or page time is too high"</span><span class="p">,</span>
+</span><span id="__span-1-66"><a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="w">                </span><span class="nt">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span>
+</span><span id="__span-1-67"><a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-68"><a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-1-69"><a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">        </span><span class="nt">"successOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-70"><a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="w">            </span><span class="nt">"FailOnError"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-71"><a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="w">            </span><span class="nt">"FailOnErrorsCount"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-72"><a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="w">            </span><span class="nt">"FailOnErrorCountNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">            </span>
+</span><span id="__span-1-73"><a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="w">            </span><span class="nt">"FailSevereError"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-74"><a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-75"><a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-76"><a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="generating-an-analytics-report-through-the-cli">Generating an Analytics Report through the CLI</h2>
 <p>WebLOAD Analytics can be executed in command line mode. This enables incorporating WebLOAD Analytics in scripts. Two executables are available:</p>
 <ul>

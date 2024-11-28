@@ -1503,12 +1503,12 @@
 <li><img alt="" src="../../images/script_guide_119.png"/>Click to start recording.</li>
 <li>Browse to <a href="http://www.webloadmpstore.com/">www.webloadmpstore.com </a>in the browser that opens. The following script describing your action appears in the script.</li>
 </ol>
-<pre><code>wlGlobals.GetFrames = false
-
-wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
-
-wlHttp.Header["DNT"] = "1" wlHttp[.Get("http://www.webloadmpstore.com/")](http://www.webloadmpstore.com/) Sleep(9094)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wlGlobals.GetFrames = false
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>wlGlobals.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>wlHttp.Header["DNT"] = "1" wlHttp[.Get("http://www.webloadmpstore.com/")](http://www.webloadmpstore.com/) Sleep(9094)
+</span></code></pre></div>
 <h4 id="step-2-logging-in-to-the-site">Step 2 – Logging in to the Site</h4>
 <ol>
 <li>Click <strong>Login</strong> in the webloadmpstore website and the Login page appears. The script for this action is as follows:</li>
@@ -1552,72 +1552,72 @@ wlHttp.Header["DNT"] = "1" wlHttp[.Get("http://www.webloadmpstore.com/")](http:/
 <blockquote>
 <p><strong>Note:</strong> The WLIDE – URL comments throughout the script are modified to give the Agenda nodes meaningful names.</p>
 </blockquote>
-<pre><code class="language-javascript">/\*\*\*\*\* WLIDE - URL : Open webloadmpstore home page - ID:2 \*\*\*\*\*/ wlGlobals.GetFrames = false wlHttp.Get("&lt;http://www.webloadmpstore.com/&gt;")
-
-// END WLIDE
-
-
-
-/\*\*\*\*\* WLIDE - Sleep - ID:3 \*\*\*\*\*/ Sleep(9094)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Open login page - ID:4 \*\*\*\*\*/ wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/&gt;" wlHttp.Get("&lt;http://www.webloadmpstore.com/login.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:5 \*\*\*\*\*/ Sleep(7704)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL :Insert login and password - ID:6 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/login.php&gt;"
-
-wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["login"] = "demo" wlHttp.FormData["password"] = "demo"
-
-wlHttp.FormData["sessionID"] = "webloadmpstore.62.90.23.122.ae97bc7877d7bd4ebcb64c4c0e21ba1c"
-
-wlHttp.FormData["event"] = "login" wlHttp.FormData["Submit"] = "Login" wlHttp.Post("&lt;http://www.webloadmpstore.com/login.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:7 \*\*\*\*\*/ Sleep(3015)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : [http://www.webloadmpstore.com/index.php ](http://www.webloadmpstore.com/index.php)- ID:8 \*\*\*\*\*/
-
-wlHttp.Get("&lt;http://www.webloadmpstore.com/index.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:9 \*\*\*\*\*/ Sleep(5282)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Select show product details - ID:10 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/index.php&gt;"
-
-
-
-wlHttp.FormData["id"] = "1" wlHttp.Get("&lt;http://www.webloadmpstore.com/product.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:11 \*\*\*\*\*/ Sleep(4984)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Add to cart - ID:12 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/product.php?id=1&gt;"
-
-wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = "1" wlHttp.Get("&lt;http://www.webloadmpstore.com/cart.php&gt;")
-
-// END WLIDE
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Open webloadmpstore home page - ID:2 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:3 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">9094</span><span class="p">)</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Open login page - ID:4 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/&gt;"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/login.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:5 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">7704</span><span class="p">)</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="sr">/\*\*\*\*\* WLIDE - URL :Insert login and password - ID:6 \*\*\*\*\*/</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/login.php&gt;"</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ContentType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"login"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"demo"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"password"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"demo"</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"sessionID"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"webloadmpstore.62.90.23.122.ae97bc7877d7bd4ebcb64c4c0e21ba1c"</span>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"login"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Submit"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Login"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/login.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:7 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">3015</span><span class="p">)</span>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : [http://www.webloadmpstore.com/index.php ](http:/</span><span class="o">/</span><span class="nx">www</span><span class="p">.</span><span class="nx">webloadmpstore</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">php</span><span class="p">)</span><span class="o">-</span><span class="w"> </span><span class="nx">ID</span><span class="o">:</span><span class="mf">8</span><span class="w"> </span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">/</span>
+</span><span id="__span-1-36"><a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a>
+</span><span id="__span-1-37"><a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/index.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-38"><a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>
+</span><span id="__span-1-39"><a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-40"><a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a>
+</span><span id="__span-1-41"><a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:9 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">5282</span><span class="p">)</span>
+</span><span id="__span-1-42"><a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-44"><a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a>
+</span><span id="__span-1-45"><a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Select show product details - ID:10 \*\*\*\*\*/</span>
+</span><span id="__span-1-46"><a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>
+</span><span id="__span-1-47"><a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/index.php&gt;"</span>
+</span><span id="__span-1-48"><a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>
+</span><span id="__span-1-49"><a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>
+</span><span id="__span-1-50"><a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a>
+</span><span id="__span-1-51"><a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/product.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-52"><a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>
+</span><span id="__span-1-53"><a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-54"><a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>
+</span><span id="__span-1-55"><a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:11 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">4984</span><span class="p">)</span>
+</span><span id="__span-1-56"><a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a>
+</span><span id="__span-1-57"><a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-1-58"><a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>
+</span><span id="__span-1-59"><a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Add to cart - ID:12 \*\*\*\*\*/</span>
+</span><span id="__span-1-60"><a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>
+</span><span id="__span-1-61"><a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/product.php?id=1&gt;"</span>
+</span><span id="__span-1-62"><a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>
+</span><span id="__span-1-63"><a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"addproduct"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/cart.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-1-64"><a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>
+</span><span id="__span-1-65"><a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="c1">// END WLIDE</span>
+</span></code></pre></div>
 <h2 id="scripting-sample-using-ajax-and-web-services">Scripting Sample Using AJAX and Web Services</h2>
 <p>WebLOAD supports automatic recording of AJAX calls into the test script, enabling debugging and full access to all request data (headers and body), both in the script and during runtime. WebLOAD supports various formats for the AJAX payload: XML, JSON, other text-based formats, and binary data.</p>
 <p>Besides demonstrating the use of AJAX calls, this script demonstrates the use of functions and external files in the script.</p>
@@ -1665,19 +1665,28 @@ wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = "1" wlHttp.Get("
 <ol>
 <li>In the credit card information page, enter your credit card information and click <strong>Done</strong>. The script is recorded as follows:</li>
 </ol>
-<p>```
-   wlGlobals.GetFrames = false</p>
-<p>wlHttp.Header["Referer"] = "<a href="http://www.webloadmpstore.com/checkout.php">https://www.webloadmpstore.com/checkout.php</a>"</p>
-<p>wlHttp.FormData["wsdl"] = "$WL$VOID$STRING$"</p>
-<p>wlHttp.Get("<a href="http://www.webloadmpstore.com/soap/server.p">https://www.webloadmpstore.com/soap/server.p</a> hp")</p>
-<p>wlHttp.Header["Referer"] = "<a href="http://www.webloadmpstore.com/checkout.php">https://www.webloadmpstore.com/checkout.php</a>"</p>
-<p>wlHttp.Data["Type"] = "text/xml; charset=utf-8"</p>
-<p>wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;&lt;soap:Envelope xmlns:xsi=<a href='http://www.w3.org/2001/XMLSchema-instance)-[instance](http://www.w3.org/2001/XMLSchema-instance)" xmlns:xsd=["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema)\" xmlns:soap=["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/)'>\"http://www.w3.org/2001/XMLSchema</a>"</p>
-<p>&gt;<soap:body><checkvalidity xmlns='[\"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"'><strcardn umber="">ABCD<strholderid>AB1234</strholderid></strcardn></checkvalidity></soap:body>"</p>
-<p>wlHttp.Post("<a href="http://www.webloadmpstore.com/soap/server">https://www.webloadmpstore.com/soap/server.</a> php")</p>
-<p>wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["name"] = "Radview" wlHttp.FormData["address"] = "Hamelacha 14" wlHttp.FormData["shippingAddress"] = "Park Afek" wlHttp.FormData["cardNumber"] = "ABCD" wlHttp.FormData["idNumber"] = "AB1234" wlHttp.FormData["event"] = "process"</p>
-<p>wlHttp.Post("<a href="http://www.webloadmpstore.com/checkout.php">https://www.webloadmpstore.com/checkout.php</a> ")</p>
-<p>```</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>wlGlobals.GetFrames = false
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>wlHttp.Header["Referer"] = "[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>wlHttp.FormData["wsdl"] = "$WL$VOID$STRING$"
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>wlHttp.Get("[https://www.webloadmpstore.com/soap/server.p](http://www.webloadmpstore.com/soap/server.p) hp")
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>wlHttp.Header["Referer"] = "[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>wlHttp.Data["Type"] = "text/xml; charset=utf-8"
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;&lt;soap:Envelope xmlns:xsi=[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)" xmlns:xsd=\["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\" xmlns:soap=\["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>\&gt;&lt;soap:Body&gt;&lt;checkValidity xmlns=[\"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"&gt;&lt;strCardN umber&gt;ABCD&lt;/strCardNumber&gt;&lt;strHolderID&gt;AB1234&lt;/strHolder ID&gt;&lt;/checkValidity&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;"
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>wlHttp.Post("[https://www.webloadmpstore.com/soap/server.](http://www.webloadmpstore.com/soap/server) php")
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["name"] = "Radview" wlHttp.FormData["address"] = "Hamelacha 14" wlHttp.FormData["shippingAddress"] = "Park Afek" wlHttp.FormData["cardNumber"] = "ABCD" wlHttp.FormData["idNumber"] = "AB1234" wlHttp.FormData["event"] = "process"
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>wlHttp.Post("[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php) ")
+</span></code></pre></div>
 <ol>
 <li>In WebLOAD Recorder, click   to stop recording the script.</li>
 </ol>
@@ -1687,50 +1696,83 @@ wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = "1" wlHttp.Get("
 </ol>
 <p>The results parameter stores a value received from the resultParser function, which checks whether your credit card information is valid. The HTTP response containing the result of the credit card validation Web Service (document.wlXmls[0]) that is extracted from the script, is sent to the resultParser function.</p>
 <p>The results parameter appears in the Validate Cred – Pass Node of the script as follows:</p>
-<p>```xml
-   wlHttp.Header["Referer"] = "<a href="http://www.webloadmpstore.com/checkout.php">https://www.webloadmpstore.com/checkout.php</a>"</p>
-<p>wlHttp.Data["Type"] = "text/xml; charset=utf-8"</p>
-<p>wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;&lt;soap:Envelope xmlns:xsi=<a href='http://www.w3.org/2001/XMLSchema-instance)-[instance](http://www.w3.org/2001/XMLSchema-instance)" xmlns:xsd=["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema)\" xmlns:soap=["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/)'>\"http://www.w3.org/2001/XMLSchema</a>"</p>
-<p>&gt;<soap:body><checkvalidity xmlns='[\"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"'><strcardn umber="">ABCD<strholderid>AB1234</strholderid></strcardn></checkvalidity></soap:body>"</p>
-<p>wlHttp.Post("<a href="http://www.webloadmpstore.com/soap/server">https://www.webloadmpstore.com/soap/server.</a> php")</p>
-<p>results = resultParser( document.wlXmls[0] ) </p>
-<p>```</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>wlHttp.Header["Referer"]<span class="w"> </span>=<span class="w"> </span>"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>wlHttp.Data["Type"]<span class="w"> </span>=<span class="w"> </span>"text/xml;<span class="w"> </span>charset=utf-8"
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>wlHttp.Data["Value"]<span class="w"> </span>=<span class="w"> </span>"<span class="cp">&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;</span><span class="nt">&lt;soap:Envelope</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)"</span><span class="w"> </span><span class="na">xmlns:xsd=</span><span class="s">\["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\"</span><span class="w"> </span><span class="na">xmlns:soap=</span><span class="s">\["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="err">\</span><span class="nt">&gt;&lt;soap:Body&gt;&lt;checkValidity</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">[\"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"</span><span class="nt">&gt;&lt;strCardN</span><span class="w"> </span><span class="err">umber</span><span class="nt">&gt;</span>ABCD<span class="nt">&lt;/strCardNumber&gt;&lt;strHolderID&gt;</span>AB1234<span class="err">&lt;</span>/strHolder<span class="w"> </span>ID&gt;<span class="nt">&lt;/checkValidity&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</span>"
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>wlHttp.Post("[https://www.webloadmpstore.com/soap/server.](http://www.webloadmpstore.com/soap/server)<span class="w"> </span>php")
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>results<span class="w"> </span>=<span class="w"> </span>resultParser(<span class="w"> </span>document.wlXmls[0]<span class="w"> </span>)<span class="w"> </span>
+</span></code></pre></div>
 <ol>
 <li>Create an infoMessage to notify you whether your credit card has been validated or not according to the result parameter value.</li>
 </ol>
-<p>```javascript
-   wlHttp.Header["Referer"] = "<a href="http://www.webloadmpstore.com/checkout.php">https://www.webloadmpstore.com/checkout.php</a>"</p>
-<p>wlHttp.Data["Type"] = "text/xml; charset=utf-8"</p>
-<p>wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;&lt;soap:Envelope xmlns:xsi=<a href='http://www.w3.org/2001/XMLSchema-instance)-[instance](http://www.w3.org/2001/XMLSchema-instance)" xmlns:xsd=["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema)\" xmlns:soap=["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/)'>\"http://www.w3.org/2001/XMLSchema</a>"</p>
-<p>&gt;<soap:body><checkvalidity xmlns='[\"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"'><strcardn umber="">ABCD<strholderid>AB1234</strholderid></strcardn></checkvalidity></soap:body>"</p>
-<p>wlHttp.Post("htt<a href="http://www.webloadmpstore.com/soap/server">ps://www.webloadmpstore.com/soap/server.</a> php")</p>
-<p>results = resultParser( document.wlXmls[0] ) if (results == "1")</p>
-<p>InfoMessage("Validation check return ‘Check OK’ like it should")</p>
-<p>else</p>
-<p>InfoMessage("Validation check is not working correctly")
-   ```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"text/xml; charset=utf-8"</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Value"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;&lt;soap:Envelope xmlns:xsi=[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)"</span><span class="w"> </span><span class="nx">xmlns</span><span class="o">:</span><span class="nx">xsd</span><span class="o">=</span><span class="err">\</span><span class="p">[</span><span class="s2">"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\" xmlns:soap=\["</span><span class="nx">http</span><span class="o">:</span><span class="c1">//schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="err">\</span><span class="o">&gt;&lt;</span><span class="nx">soap</span><span class="o">:</span><span class="nx">Body</span><span class="o">&gt;&lt;</span><span class="nx">checkValidity</span><span class="w"> </span><span class="nx">xmlns</span><span class="o">=</span><span class="p">[</span><span class="err">\</span><span class="s2">"http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"&gt;&lt;strCardN umber&gt;ABCD&lt;/strCardNumber&gt;&lt;strHolderID&gt;AB1234&lt;/strHolder ID&gt;&lt;/checkValidity&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;"</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"htt[ps://www.webloadmpstore.com/soap/server.](http://www.webloadmpstore.com/soap/server) php"</span><span class="p">)</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="nx">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultParser</span><span class="p">(</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">wlXmls</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">results</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"1"</span><span class="p">)</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"Validation check return ‘Check OK’ like it should"</span><span class="p">)</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">else</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"Validation check is not working correctly"</span><span class="p">)</span>
+</span></code></pre></div>
 <ol>
 <li>Add the resultParser function to the script, which checks whether your credit card information is valid. The function retrieves the information from document.wlXmls[0] in the results parameter and uses the built-in WebLOAD XML DOM to parse and return XML data to the parameter.</li>
 </ol>
-<p>```javascript
-   function resultParser (doc)</p>
-<p>{</p>
-<p>//get ‘Result’ tags, we expect exactly one result:</p>
-<p>ResultsElements = doc.getElementsByTagName("Result")</p>
-<p>if ( ResultsElements.length != 1 )</p>
-<p>// Verify only one element with that name exists</p>
-<p>throw "Expecting a single Result tag. received " + ResultsElements.length + "elements"</p>
-<p>ResultElm = ResultsElements.item(0)</p>
-<p>if ( ResultElm.childNodes.length == 0 ) return null</p>
-<p>else</p>
-<p>{</p>
-<p>}</p>
-<p>}</p>
-<p>Result = ResultElm.firstChild </p>
-<p>return Result.nodeValue</p>
-<p>}</p>
-<p>}
-   ```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">resultParser</span><span class="w"> </span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">{</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1">//get ‘Result’ tags, we expect exactly one result:</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nx">ResultsElements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"Result"</span><span class="p">)</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="c1">// Verify only one element with that name exists</span>
+</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="k">throw</span><span class="w"> </span><span class="s2">"Expecting a single Result tag. received "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"elements"</span>
+</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nx">ResultElm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+</span><span id="__span-5-16"><a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">ResultElm</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-5-18"><a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a>
+</span><span id="__span-5-19"><a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="k">else</span>
+</span><span id="__span-5-20"><a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="p">{</span>
+</span><span id="__span-5-22"><a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a>
+</span><span id="__span-5-24"><a href="#__codelineno-5-24" id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="p">}</span>
+</span><span id="__span-5-25"><a href="#__codelineno-5-25" id="__codelineno-5-25" name="__codelineno-5-25"></a>
+</span><span id="__span-5-26"><a href="#__codelineno-5-26" id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="p">}</span>
+</span><span id="__span-5-27"><a href="#__codelineno-5-27" id="__codelineno-5-27" name="__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a href="#__codelineno-5-28" id="__codelineno-5-28" name="__codelineno-5-28"></a>
+</span><span id="__span-5-29"><a href="#__codelineno-5-29" id="__codelineno-5-29" name="__codelineno-5-29"></a>
+</span><span id="__span-5-30"><a href="#__codelineno-5-30" id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="nx">Result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ResultElm</span><span class="p">.</span><span class="nx">firstChild</span><span class="w"> </span>
+</span><span id="__span-5-31"><a href="#__codelineno-5-31" id="__codelineno-5-31" name="__codelineno-5-31"></a>
+</span><span id="__span-5-32"><a href="#__codelineno-5-32" id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="k">return</span><span class="w"> </span><span class="nx">Result</span><span class="p">.</span><span class="nx">nodeValue</span>
+</span><span id="__span-5-33"><a href="#__codelineno-5-33" id="__codelineno-5-33" name="__codelineno-5-33"></a>
+</span><span id="__span-5-34"><a href="#__codelineno-5-34" id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="p">}</span>
+</span><span id="__span-5-35"><a href="#__codelineno-5-35" id="__codelineno-5-35" name="__codelineno-5-35"></a>
+</span><span id="__span-5-36"><a href="#__codelineno-5-36" id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="p">}</span>
+</span></code></pre></div>
 <h4 id="step-3-creating-the-external-login-javascript-file">Step 3 – Creating the External Login JavaScript File</h4>
 <ol>
 <li>
@@ -1740,18 +1782,26 @@ wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = "1" wlHttp.Get("
 <p>Copy the script to a separate JavaScript file and save the file as login_js.js. The script in the login_js.js file is as follows:</p>
 </li>
 </ol>
-<p>```javascript
-   function Login() {</p>
-<p>strGlobalInputFileLine = GetLine(InFile1,",") user_name = strGlobalInputFileLine[1] password = strGlobalInputFileLine[2]</p>
-<p>wlGlobals.GetFrames = false wlHttp.Get(<a href="http://www.webloadmpstore.com/">"http://www.webloadmpstore.com/"</a>)</p>
-<p>Sleep(9094)</p>
-<p>wlHttp.Header["Referer"] = <a href="http://www.webloadmpstore.com/">"http://www.webloadmpstore.com/"</a></p>
-<p>wlHttp.Get(<a href="http://www.webloadmpstore.com/login.php">"http://www.webloadmpstore.com/login.php"</a>) Sleep(7704)</p>
-<p>session_id = document.forms[1].elements[2].value</p>
-<p>wlHttp.Header["Referer"] = <a href="http://www.webloadmpstore.com/login.php">"http://www.webloadmpstore.com/login.php"</a></p>
-<p>wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["login"] = user_name wlHttp.FormData["password"] = password wlHttp.FormData["sessionID"] = session_id wlHttp.FormData["event"] = "login" wlHttp.FormData["Submit"] = "Login" wlHttp.Post(<a href="http://www.webloadmpstore.com/login.php">"http://www.webloadmpstore.com/login.php"</a>)</p>
-<p>}
-   ```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Login</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nx">strGlobalInputFileLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GetLine</span><span class="p">(</span><span class="nx">InFile1</span><span class="p">,</span><span class="s2">","</span><span class="p">)</span><span class="w"> </span><span class="nx">user</span><span class="err">\</span><span class="nx">_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strGlobalInputFileLine</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strGlobalInputFileLine</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/))</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">9094</span><span class="p">)</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/)</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/login.php"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/login.php)) Sleep(7704)</span>
+</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="nx">session</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">elements</span><span class="p">[</span><span class="mf">2</span><span class="p">].</span><span class="nx">value</span>
+</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://www.webloadmpstore.com/login.php"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/login.php)</span>
+</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ContentType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"login"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="err">\</span><span class="nx">_name</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"password"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"sessionID"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">session</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"login"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Submit"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Login"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">([</span><span class="s2">"http://www.webloadmpstore.com/login.php"</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/login.php))</span>
+</span><span id="__span-6-18"><a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a>
+</span><span id="__span-6-19"><a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="p">}</span>
+</span></code></pre></div>
 <h4 id="step-4-including-and-using-the-external-file-in-the-script">Step 4 – Including and Using the External File in the script</h4>
 <ol>
 <li>Include the external JavaScript file in the script by copying the following into the InitAgenda() function of the script:</li>
@@ -1771,155 +1821,153 @@ wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = "1" wlHttp.Get("
 <li>Save the script as script 4–Ajax and Web services.</li>
 </ol>
 <h3 id="the-full-script-script-4-ajax-and-web-services">The Full script: script 4-AJAX and Web Services</h3>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-InFile1 = CopyFile("P:\\Supporting Tools\\Sample Scripts\\New\\InFile1.txt")
-
-Open(InFile1) IncludeFile("login\_js.js")
-
-}
-
-/\*\*\*\*\* WLIDE -function resultParser - ID:33 \*\*\*\*\*/ function resultParser (doc)
-
-{
-
-//get ‘Result’ tags, we expect exactly one result: ResultsElements = doc.getElementsByTagName("Result")
-
-if ( ResultsElements.length != 1 )
-
-// Verify only one element with that name exist
-
-throw "Expecting a single Result tag. received " + ResultsElements.length + "elements"
-
-ResultElm = ResultsElements.item(0)
-
-if ( ResultElm.childNodes.length == 0 ) return null
-
-else
-
-{
-
-
-}
-
-}
-
-
-
-Result = ResultElm.firstChild return Result.nodeValue
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Login Function - ID:19 \*\*\*\*\*/ rs = Login()
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:7 \*\*\*\*\*/ Sleep(3015)
-
-// END WLIDE
-
-
-
-/\*\*\*\*\* WLIDE - URL : [http://www.webloadmpstore.com/index.php ](http://www.webloadmpstore.com/index.php)- ID:8 \*\*\*\*\*/
-
-wlHttp.[Get("http://www.webloadmpstore.com/index.php")](http://www.webloadmpstore.com/index.php)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:9 \*\*\*\*\*/ Sleep(5282)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Parameterizing product ID and category number   -
-
-ID:28 \*\*\*\*\*/
-
-product\_id = wlRand.Range(1,9) quantity = wlRand.Range(1,12)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Select show product details - ID:10 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/index.php&gt;"
-
-wlHttp.FormData["id"] = product\_id wlHttp.Get("&lt;http://www.webloadmpstore.com/product.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:11 \*\*\*\*\*/ Sleep(4984)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Add to cart - ID:12 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/product.php?id=product_id&gt;"
-
-wlHttp.FormData["event"] = "addproduct" wlHttp.FormData["id"] = product\_id wlHttp.Get("&lt;http://www.webloadmpstore.com/cart.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Product quantity - ID:17 \*\*\*\*\*/ wlGlobals.GetFrames = false
-
-wlHttp.FormData["event"] = "update" wlHttp.FormData["id"] = product\_id wlHttp.FormData["quantity"] = quantity wlHttp.Get("&lt;http://www.webloadmpstore.com/cart.php&gt;")
-
-// END WLIDE
-
-
-
-/\*\*\*\*\* WLIDE - URL : HTTPS - ID:22 \*\*\*\*\*/ wlGlobals.GetFrames = false wlHttp.Header["Referer"] =
-
-"[http:](http://www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti)[//www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti](http://www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti) ty=3"
-
-wlHttp.Get("[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : [https://www.webloadmpstore.com/soap/server.php?wsdl ](http://www.webloadmpstore.com/soap/server.php?wsdl)- ID:23
-
-\*\*\*\*\*/
-
-wlGlobals.GetFrames = false
-
-wlHttp.Header["Referer"] = "[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"
-
-wlHttp.FormData["wsdl"] = "$WL$VOID$STRING$" wlHttp.Get("[https://www.webloadmpstore.com/soap/server.php](http://www.webloadmpstore.com/soap/server.php)")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Validate Cred - Pass - ID:26 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"
-
-wlHttp.Data["Type"] = "text/xml; charset=utf-8"
-
-wlHttp.Data["Value"] = "&lt;?xml version=\"1.0\" encoding=\"utf- 8\"?&gt;&lt;soap:Envelope xmlns:xsi=[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)" xmlns:xsd=\["http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\"
-
-xmlns:soap=\["http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"&gt;&lt;soap:B ody&gt;&lt;checkValidity xmlns=\["http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"&gt;&lt;strCardNumber&gt;AB CD&lt;/strCardNumber&gt;&lt;strHolderID&gt;AB1234&lt;/strHolderID&gt;&lt;/checkValidi ty&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;"
-
-wlHttp.Post("[https://www.webloadmpstore.com/soap/server.php](http://www.webloadmpstore.com/soap/server.php)")
-
-results = resultParser( document.wlXmls[0] ) if (results == "1")
-
-InfoMessage("Validation check return ‘Check OK’ like it should")
-
-else
-
-InfoMessage("Validation check is not working correctly")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Confirm Order - ID:27 \*\*\*\*\*/ wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["name"] = "Radview"
-
-
-
-wlHttp.FormData["address"] = "Hamelacha 14" wlHttp.FormData["shippingAddress"] = "Park Afek" wlHttp.FormData["cardNumber"] = "ABCD" wlHttp.FormData["idNumber"] = "AB1234" wlHttp.FormData["event"] = "process" wlHttp.Post("[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)")
-
-// END WLIDE
-
-
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">{</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">InFile1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CopyFile</span><span class="p">(</span><span class="s2">"P:\\Supporting Tools\\Sample Scripts\\New\\InFile1.txt"</span><span class="p">)</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nx">Open</span><span class="p">(</span><span class="nx">InFile1</span><span class="p">)</span><span class="w"> </span><span class="nx">IncludeFile</span><span class="p">(</span><span class="s2">"login\_js.js"</span><span class="p">)</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">}</span>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="sr">/\*\*\*\*\* WLIDE -function resultParser - ID:33 \*\*\*\*\*/</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">resultParser</span><span class="w"> </span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="p">{</span>
+</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="c1">//get ‘Result’ tags, we expect exactly one result: ResultsElements = doc.getElementsByTagName("Result")</span>
+</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a>
+</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a>
+</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="c1">// Verify only one element with that name exist</span>
+</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="k">throw</span><span class="w"> </span><span class="s2">"Expecting a single Result tag. received "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"elements"</span>
+</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a>
+</span><span id="__span-7-23"><a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="nx">ResultElm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ResultsElements</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+</span><span id="__span-7-24"><a href="#__codelineno-7-24" id="__codelineno-7-24" name="__codelineno-7-24"></a>
+</span><span id="__span-7-25"><a href="#__codelineno-7-25" id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">ResultElm</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-7-26"><a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a href="#__codelineno-7-27" id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="k">else</span>
+</span><span id="__span-7-28"><a href="#__codelineno-7-28" id="__codelineno-7-28" name="__codelineno-7-28"></a>
+</span><span id="__span-7-29"><a href="#__codelineno-7-29" id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="p">{</span>
+</span><span id="__span-7-30"><a href="#__codelineno-7-30" id="__codelineno-7-30" name="__codelineno-7-30"></a>
+</span><span id="__span-7-31"><a href="#__codelineno-7-31" id="__codelineno-7-31" name="__codelineno-7-31"></a>
+</span><span id="__span-7-32"><a href="#__codelineno-7-32" id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="p">}</span>
+</span><span id="__span-7-33"><a href="#__codelineno-7-33" id="__codelineno-7-33" name="__codelineno-7-33"></a>
+</span><span id="__span-7-34"><a href="#__codelineno-7-34" id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="p">}</span>
+</span><span id="__span-7-35"><a href="#__codelineno-7-35" id="__codelineno-7-35" name="__codelineno-7-35"></a>
+</span><span id="__span-7-36"><a href="#__codelineno-7-36" id="__codelineno-7-36" name="__codelineno-7-36"></a>
+</span><span id="__span-7-37"><a href="#__codelineno-7-37" id="__codelineno-7-37" name="__codelineno-7-37"></a>
+</span><span id="__span-7-38"><a href="#__codelineno-7-38" id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="nx">Result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ResultElm</span><span class="p">.</span><span class="nx">firstChild</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">Result</span><span class="p">.</span><span class="nx">nodeValue</span>
+</span><span id="__span-7-39"><a href="#__codelineno-7-39" id="__codelineno-7-39" name="__codelineno-7-39"></a>
+</span><span id="__span-7-40"><a href="#__codelineno-7-40" id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-41"><a href="#__codelineno-7-41" id="__codelineno-7-41" name="__codelineno-7-41"></a>
+</span><span id="__span-7-42"><a href="#__codelineno-7-42" id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="sr">/\*\*\*\*\* WLIDE - Login Function - ID:19 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Login</span><span class="p">()</span>
+</span><span id="__span-7-43"><a href="#__codelineno-7-43" id="__codelineno-7-43" name="__codelineno-7-43"></a>
+</span><span id="__span-7-44"><a href="#__codelineno-7-44" id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-45"><a href="#__codelineno-7-45" id="__codelineno-7-45" name="__codelineno-7-45"></a>
+</span><span id="__span-7-46"><a href="#__codelineno-7-46" id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:7 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">3015</span><span class="p">)</span>
+</span><span id="__span-7-47"><a href="#__codelineno-7-47" id="__codelineno-7-47" name="__codelineno-7-47"></a>
+</span><span id="__span-7-48"><a href="#__codelineno-7-48" id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-49"><a href="#__codelineno-7-49" id="__codelineno-7-49" name="__codelineno-7-49"></a>
+</span><span id="__span-7-50"><a href="#__codelineno-7-50" id="__codelineno-7-50" name="__codelineno-7-50"></a>
+</span><span id="__span-7-51"><a href="#__codelineno-7-51" id="__codelineno-7-51" name="__codelineno-7-51"></a>
+</span><span id="__span-7-52"><a href="#__codelineno-7-52" id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : [http://www.webloadmpstore.com/index.php ](http:/</span><span class="o">/</span><span class="nx">www</span><span class="p">.</span><span class="nx">webloadmpstore</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">php</span><span class="p">)</span><span class="o">-</span><span class="w"> </span><span class="nx">ID</span><span class="o">:</span><span class="mf">8</span><span class="w"> </span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">/</span>
+</span><span id="__span-7-53"><a href="#__codelineno-7-53" id="__codelineno-7-53" name="__codelineno-7-53"></a>
+</span><span id="__span-7-54"><a href="#__codelineno-7-54" id="__codelineno-7-54" name="__codelineno-7-54"></a><span class="nx">wlHttp</span><span class="p">.[</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/index.php"</span><span class="p">)](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.webloadmpstore.com/index.php)</span>
+</span><span id="__span-7-55"><a href="#__codelineno-7-55" id="__codelineno-7-55" name="__codelineno-7-55"></a>
+</span><span id="__span-7-56"><a href="#__codelineno-7-56" id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-57"><a href="#__codelineno-7-57" id="__codelineno-7-57" name="__codelineno-7-57"></a>
+</span><span id="__span-7-58"><a href="#__codelineno-7-58" id="__codelineno-7-58" name="__codelineno-7-58"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:9 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">5282</span><span class="p">)</span>
+</span><span id="__span-7-59"><a href="#__codelineno-7-59" id="__codelineno-7-59" name="__codelineno-7-59"></a>
+</span><span id="__span-7-60"><a href="#__codelineno-7-60" id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-61"><a href="#__codelineno-7-61" id="__codelineno-7-61" name="__codelineno-7-61"></a>
+</span><span id="__span-7-62"><a href="#__codelineno-7-62" id="__codelineno-7-62" name="__codelineno-7-62"></a><span class="err">/\*\*\*\*\* WLIDE - Parameterizing product ID and category number   -</span>
+</span><span id="__span-7-63"><a href="#__codelineno-7-63" id="__codelineno-7-63" name="__codelineno-7-63"></a>
+</span><span id="__span-7-64"><a href="#__codelineno-7-64" id="__codelineno-7-64" name="__codelineno-7-64"></a><span class="nx">ID</span><span class="o">:</span><span class="mf">28</span><span class="w"> </span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">/</span>
+</span><span id="__span-7-65"><a href="#__codelineno-7-65" id="__codelineno-7-65" name="__codelineno-7-65"></a>
+</span><span id="__span-7-66"><a href="#__codelineno-7-66" id="__codelineno-7-66" name="__codelineno-7-66"></a><span class="nx">product</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlRand</span><span class="p">.</span><span class="nx">Range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">9</span><span class="p">)</span><span class="w"> </span><span class="nx">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlRand</span><span class="p">.</span><span class="nx">Range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">12</span><span class="p">)</span>
+</span><span id="__span-7-67"><a href="#__codelineno-7-67" id="__codelineno-7-67" name="__codelineno-7-67"></a>
+</span><span id="__span-7-68"><a href="#__codelineno-7-68" id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-69"><a href="#__codelineno-7-69" id="__codelineno-7-69" name="__codelineno-7-69"></a>
+</span><span id="__span-7-70"><a href="#__codelineno-7-70" id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Select show product details - ID:10 \*\*\*\*\*/</span>
+</span><span id="__span-7-71"><a href="#__codelineno-7-71" id="__codelineno-7-71" name="__codelineno-7-71"></a>
+</span><span id="__span-7-72"><a href="#__codelineno-7-72" id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/index.php&gt;"</span>
+</span><span id="__span-7-73"><a href="#__codelineno-7-73" id="__codelineno-7-73" name="__codelineno-7-73"></a>
+</span><span id="__span-7-74"><a href="#__codelineno-7-74" id="__codelineno-7-74" name="__codelineno-7-74"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">product</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/product.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-7-75"><a href="#__codelineno-7-75" id="__codelineno-7-75" name="__codelineno-7-75"></a>
+</span><span id="__span-7-76"><a href="#__codelineno-7-76" id="__codelineno-7-76" name="__codelineno-7-76"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-77"><a href="#__codelineno-7-77" id="__codelineno-7-77" name="__codelineno-7-77"></a>
+</span><span id="__span-7-78"><a href="#__codelineno-7-78" id="__codelineno-7-78" name="__codelineno-7-78"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:11 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">4984</span><span class="p">)</span>
+</span><span id="__span-7-79"><a href="#__codelineno-7-79" id="__codelineno-7-79" name="__codelineno-7-79"></a>
+</span><span id="__span-7-80"><a href="#__codelineno-7-80" id="__codelineno-7-80" name="__codelineno-7-80"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-81"><a href="#__codelineno-7-81" id="__codelineno-7-81" name="__codelineno-7-81"></a>
+</span><span id="__span-7-82"><a href="#__codelineno-7-82" id="__codelineno-7-82" name="__codelineno-7-82"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Add to cart - ID:12 \*\*\*\*\*/</span>
+</span><span id="__span-7-83"><a href="#__codelineno-7-83" id="__codelineno-7-83" name="__codelineno-7-83"></a>
+</span><span id="__span-7-84"><a href="#__codelineno-7-84" id="__codelineno-7-84" name="__codelineno-7-84"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/product.php?id=product_id&gt;"</span>
+</span><span id="__span-7-85"><a href="#__codelineno-7-85" id="__codelineno-7-85" name="__codelineno-7-85"></a>
+</span><span id="__span-7-86"><a href="#__codelineno-7-86" id="__codelineno-7-86" name="__codelineno-7-86"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"addproduct"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">product</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/cart.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-7-87"><a href="#__codelineno-7-87" id="__codelineno-7-87" name="__codelineno-7-87"></a>
+</span><span id="__span-7-88"><a href="#__codelineno-7-88" id="__codelineno-7-88" name="__codelineno-7-88"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-89"><a href="#__codelineno-7-89" id="__codelineno-7-89" name="__codelineno-7-89"></a>
+</span><span id="__span-7-90"><a href="#__codelineno-7-90" id="__codelineno-7-90" name="__codelineno-7-90"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Product quantity - ID:17 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-7-91"><a href="#__codelineno-7-91" id="__codelineno-7-91" name="__codelineno-7-91"></a>
+</span><span id="__span-7-92"><a href="#__codelineno-7-92" id="__codelineno-7-92" name="__codelineno-7-92"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"update"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">product</span><span class="err">\</span><span class="nx">_id</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"quantity"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">quantity</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/cart.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-7-93"><a href="#__codelineno-7-93" id="__codelineno-7-93" name="__codelineno-7-93"></a>
+</span><span id="__span-7-94"><a href="#__codelineno-7-94" id="__codelineno-7-94" name="__codelineno-7-94"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-95"><a href="#__codelineno-7-95" id="__codelineno-7-95" name="__codelineno-7-95"></a>
+</span><span id="__span-7-96"><a href="#__codelineno-7-96" id="__codelineno-7-96" name="__codelineno-7-96"></a>
+</span><span id="__span-7-97"><a href="#__codelineno-7-97" id="__codelineno-7-97" name="__codelineno-7-97"></a>
+</span><span id="__span-7-98"><a href="#__codelineno-7-98" id="__codelineno-7-98" name="__codelineno-7-98"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : HTTPS - ID:22 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-7-99"><a href="#__codelineno-7-99" id="__codelineno-7-99" name="__codelineno-7-99"></a>
+</span><span id="__span-7-100"><a href="#__codelineno-7-100" id="__codelineno-7-100" name="__codelineno-7-100"></a><span class="s2">"[http:](http://www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti)[//www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti](http://www.webloadmpstore.com/cart.php?event=update&amp;id=2&amp;quanti) ty=3"</span>
+</span><span id="__span-7-101"><a href="#__codelineno-7-101" id="__codelineno-7-101" name="__codelineno-7-101"></a>
+</span><span id="__span-7-102"><a href="#__codelineno-7-102" id="__codelineno-7-102" name="__codelineno-7-102"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"</span><span class="p">)</span>
+</span><span id="__span-7-103"><a href="#__codelineno-7-103" id="__codelineno-7-103" name="__codelineno-7-103"></a>
+</span><span id="__span-7-104"><a href="#__codelineno-7-104" id="__codelineno-7-104" name="__codelineno-7-104"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-105"><a href="#__codelineno-7-105" id="__codelineno-7-105" name="__codelineno-7-105"></a>
+</span><span id="__span-7-106"><a href="#__codelineno-7-106" id="__codelineno-7-106" name="__codelineno-7-106"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : [https://www.webloadmpstore.com/soap/server.php?wsdl ](http:/</span><span class="o">/</span><span class="nx">www</span><span class="p">.</span><span class="nx">webloadmpstore</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">soap</span><span class="o">/</span><span class="nx">server</span><span class="p">.</span><span class="nx">php</span><span class="o">?</span><span class="nx">wsdl</span><span class="p">)</span><span class="o">-</span><span class="w"> </span><span class="nx">ID</span><span class="o">:</span><span class="mf">23</span>
+</span><span id="__span-7-107"><a href="#__codelineno-7-107" id="__codelineno-7-107" name="__codelineno-7-107"></a>
+</span><span id="__span-7-108"><a href="#__codelineno-7-108" id="__codelineno-7-108" name="__codelineno-7-108"></a><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">\</span><span class="o">*</span><span class="err">/</span>
+</span><span id="__span-7-109"><a href="#__codelineno-7-109" id="__codelineno-7-109" name="__codelineno-7-109"></a>
+</span><span id="__span-7-110"><a href="#__codelineno-7-110" id="__codelineno-7-110" name="__codelineno-7-110"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-7-111"><a href="#__codelineno-7-111" id="__codelineno-7-111" name="__codelineno-7-111"></a>
+</span><span id="__span-7-112"><a href="#__codelineno-7-112" id="__codelineno-7-112" name="__codelineno-7-112"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"</span>
+</span><span id="__span-7-113"><a href="#__codelineno-7-113" id="__codelineno-7-113" name="__codelineno-7-113"></a>
+</span><span id="__span-7-114"><a href="#__codelineno-7-114" id="__codelineno-7-114" name="__codelineno-7-114"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"wsdl"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"$WL$VOID$STRING$"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"[https://www.webloadmpstore.com/soap/server.php](http://www.webloadmpstore.com/soap/server.php)"</span><span class="p">)</span>
+</span><span id="__span-7-115"><a href="#__codelineno-7-115" id="__codelineno-7-115" name="__codelineno-7-115"></a>
+</span><span id="__span-7-116"><a href="#__codelineno-7-116" id="__codelineno-7-116" name="__codelineno-7-116"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-117"><a href="#__codelineno-7-117" id="__codelineno-7-117" name="__codelineno-7-117"></a>
+</span><span id="__span-7-118"><a href="#__codelineno-7-118" id="__codelineno-7-118" name="__codelineno-7-118"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Validate Cred - Pass - ID:26 \*\*\*\*\*/</span>
+</span><span id="__span-7-119"><a href="#__codelineno-7-119" id="__codelineno-7-119" name="__codelineno-7-119"></a>
+</span><span id="__span-7-120"><a href="#__codelineno-7-120" id="__codelineno-7-120" name="__codelineno-7-120"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"</span>
+</span><span id="__span-7-121"><a href="#__codelineno-7-121" id="__codelineno-7-121" name="__codelineno-7-121"></a>
+</span><span id="__span-7-122"><a href="#__codelineno-7-122" id="__codelineno-7-122" name="__codelineno-7-122"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"text/xml; charset=utf-8"</span>
+</span><span id="__span-7-123"><a href="#__codelineno-7-123" id="__codelineno-7-123" name="__codelineno-7-123"></a>
+</span><span id="__span-7-124"><a href="#__codelineno-7-124" id="__codelineno-7-124" name="__codelineno-7-124"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Value"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;?xml version=\"1.0\" encoding=\"utf- 8\"?&gt;&lt;soap:Envelope xmlns:xsi=[\"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema-instance\)-[instance\](http://www.w3.org/2001/XMLSchema-instance\)"</span><span class="w"> </span><span class="nx">xmlns</span><span class="o">:</span><span class="nx">xsd</span><span class="o">=</span><span class="err">\</span><span class="p">[</span><span class="s2">"http://www.w3.org/2001/XMLSchema](http://www.w3.org/2001/XMLSchema\)\"</span>
+</span><span id="__span-7-125"><a href="#__codelineno-7-125" id="__codelineno-7-125" name="__codelineno-7-125"></a>
+</span><span id="__span-7-126"><a href="#__codelineno-7-126" id="__codelineno-7-126" name="__codelineno-7-126"></a><span class="s2">xmlns:soap=\["</span><span class="nx">http</span><span class="o">:</span><span class="c1">//schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/\)\"&gt;&lt;soap:B ody&gt;&lt;checkValidity xmlns=\["http://example.org/CreditCardProcess](http://example.org/CreditCardProcess\)\"&gt;&lt;strCardNumber&gt;AB CD&lt;/strCardNumber&gt;&lt;strHolderID&gt;AB1234&lt;/strHolderID&gt;&lt;/checkValidi ty&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;"</span>
+</span><span id="__span-7-127"><a href="#__codelineno-7-127" id="__codelineno-7-127" name="__codelineno-7-127"></a>
+</span><span id="__span-7-128"><a href="#__codelineno-7-128" id="__codelineno-7-128" name="__codelineno-7-128"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"[https://www.webloadmpstore.com/soap/server.php](http://www.webloadmpstore.com/soap/server.php)"</span><span class="p">)</span>
+</span><span id="__span-7-129"><a href="#__codelineno-7-129" id="__codelineno-7-129" name="__codelineno-7-129"></a>
+</span><span id="__span-7-130"><a href="#__codelineno-7-130" id="__codelineno-7-130" name="__codelineno-7-130"></a><span class="nx">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultParser</span><span class="p">(</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">wlXmls</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">results</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"1"</span><span class="p">)</span>
+</span><span id="__span-7-131"><a href="#__codelineno-7-131" id="__codelineno-7-131" name="__codelineno-7-131"></a>
+</span><span id="__span-7-132"><a href="#__codelineno-7-132" id="__codelineno-7-132" name="__codelineno-7-132"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"Validation check return ‘Check OK’ like it should"</span><span class="p">)</span>
+</span><span id="__span-7-133"><a href="#__codelineno-7-133" id="__codelineno-7-133" name="__codelineno-7-133"></a>
+</span><span id="__span-7-134"><a href="#__codelineno-7-134" id="__codelineno-7-134" name="__codelineno-7-134"></a><span class="k">else</span>
+</span><span id="__span-7-135"><a href="#__codelineno-7-135" id="__codelineno-7-135" name="__codelineno-7-135"></a>
+</span><span id="__span-7-136"><a href="#__codelineno-7-136" id="__codelineno-7-136" name="__codelineno-7-136"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"Validation check is not working correctly"</span><span class="p">)</span>
+</span><span id="__span-7-137"><a href="#__codelineno-7-137" id="__codelineno-7-137" name="__codelineno-7-137"></a>
+</span><span id="__span-7-138"><a href="#__codelineno-7-138" id="__codelineno-7-138" name="__codelineno-7-138"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-7-139"><a href="#__codelineno-7-139" id="__codelineno-7-139" name="__codelineno-7-139"></a>
+</span><span id="__span-7-140"><a href="#__codelineno-7-140" id="__codelineno-7-140" name="__codelineno-7-140"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Confirm Order - ID:27 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ContentType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Radview"</span>
+</span><span id="__span-7-141"><a href="#__codelineno-7-141" id="__codelineno-7-141" name="__codelineno-7-141"></a>
+</span><span id="__span-7-142"><a href="#__codelineno-7-142" id="__codelineno-7-142" name="__codelineno-7-142"></a>
+</span><span id="__span-7-143"><a href="#__codelineno-7-143" id="__codelineno-7-143" name="__codelineno-7-143"></a>
+</span><span id="__span-7-144"><a href="#__codelineno-7-144" id="__codelineno-7-144" name="__codelineno-7-144"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"address"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hamelacha 14"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"shippingAddress"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Park Afek"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"cardNumber"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ABCD"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"idNumber"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AB1234"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"process"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"[https://www.webloadmpstore.com/checkout.php](http://www.webloadmpstore.com/checkout.php)"</span><span class="p">)</span>
+</span><span id="__span-7-145"><a href="#__codelineno-7-145" id="__codelineno-7-145" name="__codelineno-7-145"></a>
+</span><span id="__span-7-146"><a href="#__codelineno-7-146" id="__codelineno-7-146" name="__codelineno-7-146"></a><span class="c1">// END WLIDE</span>
+</span></code></pre></div>
 <h2 id="scripting-sample-using-ajax-and-json-to-validate-a-web-server-response">Scripting Sample Using AJAX and JSON to Validate a Web Server Response</h2>
 <p>WebLOAD supports automatic recording of AJAX calls into the test script using JSON, enabling debugging and full access to all request data (headers and body), both in the script and during runtime.</p>
 <h3 id="what-the-script-does_2">What the Script Does</h3>
@@ -1959,32 +2007,39 @@ wlHttp.FormData["address"] = "Hamelacha 14" wlHttp.FormData["shippingAddress"] =
 <ol>
 <li>In the InitAgenda() function in the script, define the global variable values of the SaveSource property as follows:</li>
 </ol>
-<p>```javascript
-   function InitAgenda()</p>
-<p>{</p>
-<p>wlGlobals.SaveSource = true</p>
-<p>}
-   ```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">{</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">SaveSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>This instructs WebLOAD to store the complete HTML source code downloaded in the document.wlSource object.</p>
 <ol>
 <li>Drag the JavaScript object Building Block from the Toolbox to the Script Tree. In the Building Block, add a function that receives the document.wlSource object and manipulates it to retrieve the statistics. The script is as follows:</li>
 </ol>
-<p>```javascript
-   function evalResponse (source) </p>
-<p>{</p>
-<p>json_response = eval("(" + source + ")")</p>
-<p>}</p>
-<p>```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">evalResponse</span><span class="w"> </span><span class="p">(</span><span class="nx">source</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">{</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">source</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">")"</span><span class="p">)</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+</span></code></pre></div>
 <ol>
 <li>Create an InfoMessage to notify you of the statistic values during runtime. The edited script is as follows:</li>
 </ol>
-<p>```javascript
-   function evalResponse (source) </p>
-<p>{ json_response = eval("(" + source + ")")</p>
-<p>InfoMessage ( "The number of online users is: " + json_response.usersOnline + " and The current time is: "</p>
-<p>+ json_response.time)</p>
-<p>}
-   ```</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">evalResponse</span><span class="w"> </span><span class="p">(</span><span class="nx">source</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">source</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">")"</span><span class="p">)</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="nx">InfoMessage</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s2">"The number of online users is: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="p">.</span><span class="nx">usersOnline</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" and The current time is: "</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="err">\</span><span class="o">+</span><span class="w"> </span><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">}</span>
+</span></code></pre></div>
 <ol>
 <li>In each of the AJAX calls recorded in the script, add a call to the newly created function:</li>
 </ol>
@@ -1998,106 +2053,106 @@ wlHttp.FormData["address"] = "Hamelacha 14" wlHttp.FormData["shippingAddress"] =
 <p>Run the script. Each time the browser refreshes itself, a message in the log view is displayed. The message contains the statistics recorded in the browser, including the time and number of users online:</p>
 <p><code>The number of online users is: 1 and The current time is: 11:23:11am</code></p>
 <h3 id="the-full-script-script-5-ajax-and-json">The Full script: script 5-AJAX and JSON</h3>
-<pre><code class="language-javascript">function InitAgenda()
-
-{
-
-wlGlobals.SaveSource = true
-
-// END WLIDE
-
-}
-
-/\*\*\*\*\* WLIDE - URL : Home Page - ID:20 \*\*\*\*\*/ wlGlobals.GetFrames = false wlHttp.Get("&lt;http://www.webloadmpstore.com/index.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:22 \*\*\*\*\*/ Sleep(8371)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE -Search page - ID:23 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/index.php&gt;"
-
-wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["event"] = "search"
-
-
-
-wlHttp.FormData["searchTerm"] = "webload" wlHttp.Post("&lt;http://www.webloadmpstore.com/search.php&gt;")
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:24 \*\*\*\*\*/ Sleep(8542)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - JavaScriptObject - ID:27 \*\*\*\*\*/ function evalResponse (source) {
-
-json\_response = eval("(" + source + ")")
-
-InfoMessage ( "The number of online users is: " + json\_response.usersOnline + " and The current time is: " + json\_response.time)
-
-}
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:7 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/search.php&gt;"
-
-wlHttp.Get("&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; ")
-
-evalResponse(document.wlSource)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:8 \*\*\*\*\*/ Sleep(10811)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:9 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/search.php&gt;"
-
-wlHttp.Get("&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; ")
-
-evalResponse(document.wlSource)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:10 \*\*\*\*\*/ Sleep(10640)
-
-// END WLIDE
-
-
-
-
-
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:11 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/search.php&gt;"
-
-wlHttp.Get("&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; ")
-
-evalResponse(document.wlSource)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:12 \*\*\*\*\*/ Sleep(10655)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:13 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "&lt;http://www.webloadmpstore.com/search.php&gt;"
-
-wlHttp.Get("&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; ")
-
-evalResponse(document.wlSource)
-
-// END WLIDE
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">{</span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">SaveSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">}</span>
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Home Page - ID:20 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/index.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:22 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">8371</span><span class="p">)</span>
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-18"><a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="sr">/\*\*\*\*\* WLIDE -Search page - ID:23 \*\*\*\*\*/</span>
+</span><span id="__span-11-20"><a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>
+</span><span id="__span-11-21"><a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/index.php&gt;"</span>
+</span><span id="__span-11-22"><a href="#__codelineno-11-22" id="__codelineno-11-22" name="__codelineno-11-22"></a>
+</span><span id="__span-11-23"><a href="#__codelineno-11-23" id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ContentType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"event"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"search"</span>
+</span><span id="__span-11-24"><a href="#__codelineno-11-24" id="__codelineno-11-24" name="__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a href="#__codelineno-11-25" id="__codelineno-11-25" name="__codelineno-11-25"></a>
+</span><span id="__span-11-26"><a href="#__codelineno-11-26" id="__codelineno-11-26" name="__codelineno-11-26"></a>
+</span><span id="__span-11-27"><a href="#__codelineno-11-27" id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"searchTerm"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"webload"</span><span class="w"> </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/search.php&gt;"</span><span class="p">)</span>
+</span><span id="__span-11-28"><a href="#__codelineno-11-28" id="__codelineno-11-28" name="__codelineno-11-28"></a>
+</span><span id="__span-11-29"><a href="#__codelineno-11-29" id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-30"><a href="#__codelineno-11-30" id="__codelineno-11-30" name="__codelineno-11-30"></a>
+</span><span id="__span-11-31"><a href="#__codelineno-11-31" id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:24 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">8542</span><span class="p">)</span>
+</span><span id="__span-11-32"><a href="#__codelineno-11-32" id="__codelineno-11-32" name="__codelineno-11-32"></a>
+</span><span id="__span-11-33"><a href="#__codelineno-11-33" id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-34"><a href="#__codelineno-11-34" id="__codelineno-11-34" name="__codelineno-11-34"></a>
+</span><span id="__span-11-35"><a href="#__codelineno-11-35" id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="sr">/\*\*\*\*\* WLIDE - JavaScriptObject - ID:27 \*\*\*\*\*/</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">evalResponse</span><span class="w"> </span><span class="p">(</span><span class="nx">source</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-36"><a href="#__codelineno-11-36" id="__codelineno-11-36" name="__codelineno-11-36"></a>
+</span><span id="__span-11-37"><a href="#__codelineno-11-37" id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">source</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">")"</span><span class="p">)</span>
+</span><span id="__span-11-38"><a href="#__codelineno-11-38" id="__codelineno-11-38" name="__codelineno-11-38"></a>
+</span><span id="__span-11-39"><a href="#__codelineno-11-39" id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="nx">InfoMessage</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s2">"The number of online users is: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="p">.</span><span class="nx">usersOnline</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" and The current time is: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">json</span><span class="err">\</span><span class="nx">_response</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span>
+</span><span id="__span-11-40"><a href="#__codelineno-11-40" id="__codelineno-11-40" name="__codelineno-11-40"></a>
+</span><span id="__span-11-41"><a href="#__codelineno-11-41" id="__codelineno-11-41" name="__codelineno-11-41"></a><span class="p">}</span>
+</span><span id="__span-11-42"><a href="#__codelineno-11-42" id="__codelineno-11-42" name="__codelineno-11-42"></a>
+</span><span id="__span-11-43"><a href="#__codelineno-11-43" id="__codelineno-11-43" name="__codelineno-11-43"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-44"><a href="#__codelineno-11-44" id="__codelineno-11-44" name="__codelineno-11-44"></a>
+</span><span id="__span-11-45"><a href="#__codelineno-11-45" id="__codelineno-11-45" name="__codelineno-11-45"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Ajax - ID:7 \*\*\*\*\*/</span>
+</span><span id="__span-11-46"><a href="#__codelineno-11-46" id="__codelineno-11-46" name="__codelineno-11-46"></a>
+</span><span id="__span-11-47"><a href="#__codelineno-11-47" id="__codelineno-11-47" name="__codelineno-11-47"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/search.php&gt;"</span>
+</span><span id="__span-11-48"><a href="#__codelineno-11-48" id="__codelineno-11-48" name="__codelineno-11-48"></a>
+</span><span id="__span-11-49"><a href="#__codelineno-11-49" id="__codelineno-11-49" name="__codelineno-11-49"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; "</span><span class="p">)</span>
+</span><span id="__span-11-50"><a href="#__codelineno-11-50" id="__codelineno-11-50" name="__codelineno-11-50"></a>
+</span><span id="__span-11-51"><a href="#__codelineno-11-51" id="__codelineno-11-51" name="__codelineno-11-51"></a><span class="nx">evalResponse</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-11-52"><a href="#__codelineno-11-52" id="__codelineno-11-52" name="__codelineno-11-52"></a>
+</span><span id="__span-11-53"><a href="#__codelineno-11-53" id="__codelineno-11-53" name="__codelineno-11-53"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-54"><a href="#__codelineno-11-54" id="__codelineno-11-54" name="__codelineno-11-54"></a>
+</span><span id="__span-11-55"><a href="#__codelineno-11-55" id="__codelineno-11-55" name="__codelineno-11-55"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:8 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">10811</span><span class="p">)</span>
+</span><span id="__span-11-56"><a href="#__codelineno-11-56" id="__codelineno-11-56" name="__codelineno-11-56"></a>
+</span><span id="__span-11-57"><a href="#__codelineno-11-57" id="__codelineno-11-57" name="__codelineno-11-57"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-58"><a href="#__codelineno-11-58" id="__codelineno-11-58" name="__codelineno-11-58"></a>
+</span><span id="__span-11-59"><a href="#__codelineno-11-59" id="__codelineno-11-59" name="__codelineno-11-59"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Ajax - ID:9 \*\*\*\*\*/</span>
+</span><span id="__span-11-60"><a href="#__codelineno-11-60" id="__codelineno-11-60" name="__codelineno-11-60"></a>
+</span><span id="__span-11-61"><a href="#__codelineno-11-61" id="__codelineno-11-61" name="__codelineno-11-61"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/search.php&gt;"</span>
+</span><span id="__span-11-62"><a href="#__codelineno-11-62" id="__codelineno-11-62" name="__codelineno-11-62"></a>
+</span><span id="__span-11-63"><a href="#__codelineno-11-63" id="__codelineno-11-63" name="__codelineno-11-63"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; "</span><span class="p">)</span>
+</span><span id="__span-11-64"><a href="#__codelineno-11-64" id="__codelineno-11-64" name="__codelineno-11-64"></a>
+</span><span id="__span-11-65"><a href="#__codelineno-11-65" id="__codelineno-11-65" name="__codelineno-11-65"></a><span class="nx">evalResponse</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-11-66"><a href="#__codelineno-11-66" id="__codelineno-11-66" name="__codelineno-11-66"></a>
+</span><span id="__span-11-67"><a href="#__codelineno-11-67" id="__codelineno-11-67" name="__codelineno-11-67"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-68"><a href="#__codelineno-11-68" id="__codelineno-11-68" name="__codelineno-11-68"></a>
+</span><span id="__span-11-69"><a href="#__codelineno-11-69" id="__codelineno-11-69" name="__codelineno-11-69"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:10 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">10640</span><span class="p">)</span>
+</span><span id="__span-11-70"><a href="#__codelineno-11-70" id="__codelineno-11-70" name="__codelineno-11-70"></a>
+</span><span id="__span-11-71"><a href="#__codelineno-11-71" id="__codelineno-11-71" name="__codelineno-11-71"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-72"><a href="#__codelineno-11-72" id="__codelineno-11-72" name="__codelineno-11-72"></a>
+</span><span id="__span-11-73"><a href="#__codelineno-11-73" id="__codelineno-11-73" name="__codelineno-11-73"></a>
+</span><span id="__span-11-74"><a href="#__codelineno-11-74" id="__codelineno-11-74" name="__codelineno-11-74"></a>
+</span><span id="__span-11-75"><a href="#__codelineno-11-75" id="__codelineno-11-75" name="__codelineno-11-75"></a>
+</span><span id="__span-11-76"><a href="#__codelineno-11-76" id="__codelineno-11-76" name="__codelineno-11-76"></a>
+</span><span id="__span-11-77"><a href="#__codelineno-11-77" id="__codelineno-11-77" name="__codelineno-11-77"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Ajax - ID:11 \*\*\*\*\*/</span>
+</span><span id="__span-11-78"><a href="#__codelineno-11-78" id="__codelineno-11-78" name="__codelineno-11-78"></a>
+</span><span id="__span-11-79"><a href="#__codelineno-11-79" id="__codelineno-11-79" name="__codelineno-11-79"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/search.php&gt;"</span>
+</span><span id="__span-11-80"><a href="#__codelineno-11-80" id="__codelineno-11-80" name="__codelineno-11-80"></a>
+</span><span id="__span-11-81"><a href="#__codelineno-11-81" id="__codelineno-11-81" name="__codelineno-11-81"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; "</span><span class="p">)</span>
+</span><span id="__span-11-82"><a href="#__codelineno-11-82" id="__codelineno-11-82" name="__codelineno-11-82"></a>
+</span><span id="__span-11-83"><a href="#__codelineno-11-83" id="__codelineno-11-83" name="__codelineno-11-83"></a><span class="nx">evalResponse</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-11-84"><a href="#__codelineno-11-84" id="__codelineno-11-84" name="__codelineno-11-84"></a>
+</span><span id="__span-11-85"><a href="#__codelineno-11-85" id="__codelineno-11-85" name="__codelineno-11-85"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-86"><a href="#__codelineno-11-86" id="__codelineno-11-86" name="__codelineno-11-86"></a>
+</span><span id="__span-11-87"><a href="#__codelineno-11-87" id="__codelineno-11-87" name="__codelineno-11-87"></a><span class="sr">/\*\*\*\*\* WLIDE - Sleep - ID:12 \*\*\*\*\*/</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">10655</span><span class="p">)</span>
+</span><span id="__span-11-88"><a href="#__codelineno-11-88" id="__codelineno-11-88" name="__codelineno-11-88"></a>
+</span><span id="__span-11-89"><a href="#__codelineno-11-89" id="__codelineno-11-89" name="__codelineno-11-89"></a><span class="c1">// END WLIDE</span>
+</span><span id="__span-11-90"><a href="#__codelineno-11-90" id="__codelineno-11-90" name="__codelineno-11-90"></a>
+</span><span id="__span-11-91"><a href="#__codelineno-11-91" id="__codelineno-11-91" name="__codelineno-11-91"></a><span class="sr">/\*\*\*\*\* WLIDE - URL : Ajax - ID:13 \*\*\*\*\*/</span>
+</span><span id="__span-11-92"><a href="#__codelineno-11-92" id="__codelineno-11-92" name="__codelineno-11-92"></a>
+</span><span id="__span-11-93"><a href="#__codelineno-11-93" id="__codelineno-11-93" name="__codelineno-11-93"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;http://www.webloadmpstore.com/search.php&gt;"</span>
+</span><span id="__span-11-94"><a href="#__codelineno-11-94" id="__codelineno-11-94" name="__codelineno-11-94"></a>
+</span><span id="__span-11-95"><a href="#__codelineno-11-95" id="__codelineno-11-95" name="__codelineno-11-95"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"&lt;http://www.webloadmpstore.com/usersonlinecounter.php&gt; "</span><span class="p">)</span>
+</span><span id="__span-11-96"><a href="#__codelineno-11-96" id="__codelineno-11-96" name="__codelineno-11-96"></a>
+</span><span id="__span-11-97"><a href="#__codelineno-11-97" id="__codelineno-11-97" name="__codelineno-11-97"></a><span class="nx">evalResponse</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-11-98"><a href="#__codelineno-11-98" id="__codelineno-11-98" name="__codelineno-11-98"></a>
+</span><span id="__span-11-99"><a href="#__codelineno-11-99" id="__codelineno-11-99" name="__codelineno-11-99"></a><span class="c1">// END WLIDE</span>
+</span></code></pre></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

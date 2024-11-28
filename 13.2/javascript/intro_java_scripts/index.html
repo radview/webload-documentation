@@ -1290,30 +1290,30 @@
 <p>The Document Object Model (DOM) is an application programming interface (API) for valid HTML and well-formed XML documents. The DOM defines the logical structure of documents and the way a document is accessed and manipulated. With the Document Object Model, programmers can build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the Document Object Model, with a few exceptions—in particular, the DOM interfaces for the XML internal and external subsets have not yet been specified.</p>
 <p>As a W3C specification, one important objective for the Document Object Model is to provide a standard programming interface that can be used in a wide variety of environments and applications. The DOM is designed to be used with any programming language.</p>
 <p>Essentially, the DOM is a programming API for documents based on an object structure that closely resembles the structure of the documents it models. For instance, consider this table, taken from an HTML document:</p>
-<pre><code class="language-html">&lt;TABLE&gt;
-
-&lt;TBODY&gt;
-
-&lt;TR&gt;
-
-&lt;TD&gt;Shady Grove&lt;/TD&gt;
-
-&lt;TD&gt;Aeolian&lt;/TD&gt;
-
-&lt;/TR&gt;
-
-&lt;TR&gt;
-
-&lt;TD&gt;Over the River, Charlie&lt;/TD&gt;
-
-&lt;TD&gt;Dorian&lt;/TD&gt;
-
-&lt;/TR&gt;
-
-&lt;/TBODY&gt;
-
-&lt;/TABLE&gt;
-</code></pre>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">TBODY</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Shady Grove<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Aeolian<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Over the River, Charlie<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Dorian<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">&lt;/</span><span class="nt">TBODY</span><span class="p">&gt;</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+</span></code></pre></div>
 <h3 id="understanding-the-dom-structure">Understanding the DOM Structure</h3>
 <p>In the DOM, documents have a logical structure that is very much like a tree; to be more precise, that is like a “forest” or “grove”, which can contain more than one tree. Each document contains zero or one doctype nodes, one root element node, and zero or more comments or processing instructions; the root element serves as the root of the element tree for the document. However, the DOM does not specify that documents must be implemented as a tree or a grove, nor does it specify how the relationships among objects be implemented. The DOM is a logical model that may be implemented in any convenient manner. In this specification, we use the term <em>structure model</em> to describe the tree-like representation of a document. We also use the term “tree” when referring to the arrangement of those information items which can be reached by using “tree-walking” methods; (this does not include attributes). One important property of DOM structure models is <em>structural isomorphism</em>: if any two Document Object Model implementations are used to create a representation of the same document, they will create the same structure model, in accordance with the XML Information Set [Infoset].</p>
 <blockquote>

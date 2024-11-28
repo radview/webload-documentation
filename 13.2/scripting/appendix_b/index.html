@@ -1943,25 +1943,24 @@
 <h3 id="handling-java-exceptions-in-javascript">Handling Java Exceptions in JavaScript</h3>
 <p>When Java code fails at run time, it throws an exception. If your JavaScript code accesses a Java data member or method and fails, the Java exception is passed on to JavaScript for you to handle. Beginning with JavaScript 1.4, you can catch this exception in a try...catch statement.</p>
 <p>For example, suppose you are using the Java forName method to assign the name of a Java class to a variable called theClass. The forName method throws an exception if the value you pass it does not evaluate to the name of a Java class. Place the forName assignment statement in a try block to handle the exception, as follows:</p>
-<pre><code class="language-javascript">function getClass(javaClassName) 
-
-{ try 
-
-{
-
-var theClass = java.lang.Class.forName(javaClassName);
-
-} catch (e) {
-
-return ("The Java exception is " + e);
-
-}
-
-return theClass
-
-}
-
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">getClass</span><span class="p">(</span><span class="nx">javaClassName</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span><span class="w"> </span><span class="k">try</span><span class="w"> </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">{</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">theClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">lang</span><span class="p">.</span><span class="nx">Class</span><span class="p">.</span><span class="nx">forName</span><span class="p">(</span><span class="nx">javaClassName</span><span class="p">);</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="s2">"The Java exception is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">return</span><span class="w"> </span><span class="nx">theClass</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>In this example, if javaClassName evaluates to a legal class name, such as "java.lang.String", the assignment succeeds. If javaClassName evaluates to an invalid class name, such as "String", the getClass function catches the exception and returns something similar to the following:</p>
 <p>The Java exception is java.lang.ClassNotFoundException: String See <a href="#exception-handling-statements"><em>Exception Handling Statements</em> </a>, for more information about JavaScript exceptions.</p>
 <h2 id="java-to-javascript-communication">Java to JavaScript Communication</h2>
@@ -2000,35 +1999,35 @@ return theClass
 <p>Also, any time you use JavaScript objects in your Java code, you should put the call to the JavaScript object inside a try...catch statement that handles exceptions of type netscape.javascript.JSException. This allows your Java code to handle errors in JavaScript code execution that appear in Java as exceptions of type JSException.</p>
 <h4 id="accessing-javascript-with-jsobject">Accessing JavaScript with JSObject</h4>
 <p>For example, suppose you are working with the Java class called JavaDog. As shown in the following code, the JavaDog constructor takes the JavaScript object jsDog, which is defined as type JSObject, as an argument:</p>
-<pre><code class="language-javascript">import netscape.javascript.\*; public class JavaDog
-
-{
-
-public String dogBreed; public String dogColor; public String dogSex;
-
-// define the class constructor public JavaDog(JSObject jsDog)
-
-{
-
-// use try...catch to handle JSExceptions here this.dogBreed = (String)jsDog.getMember("breed"); this.dogColor = (String)jsDog.getMember("color"); this.dogSex = (String)jsDog.getMember("sex");
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">netscape</span><span class="p">.</span><span class="nx">javascript</span><span class="p">.</span><span class="err">\</span><span class="o">*</span><span class="p">;</span><span class="w"> </span><span class="kr">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">JavaDog</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">{</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kr">public</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">dogBreed</span><span class="p">;</span><span class="w"> </span><span class="kr">public</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">dogColor</span><span class="p">;</span><span class="w"> </span><span class="kr">public</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">dogSex</span><span class="p">;</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// define the class constructor public JavaDog(JSObject jsDog)</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">{</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">// use try...catch to handle JSExceptions here this.dogBreed = (String)jsDog.getMember("breed"); this.dogColor = (String)jsDog.getMember("color"); this.dogSex = (String)jsDog.getMember("sex");</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">}</span>
+</span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> The getMember method of JSObject is used to access the properties of the JavaScript object. The previous example uses getMember to assign the value of the JavaScript property jsDog.breed to the Java data member JavaDog.dogBreed.</p>
 </blockquote>
 <p>A more realistic example would place the call to getMember inside a try...catch statement to handle errors of type JSException. See <a href="#handling-javascript-exceptions-in-java">Handling JavaScript Exceptions in Java</a>, for more information.</p>
 <p>To get a better sense of how getMember works, look at the definition of the custom JavaScript object Dog:</p>
-<pre><code class="language-javascript">function Dog(breed,color,sex) 
-
-{ 
-
-this.breed = breed this.color = color
-
-this.sex = sex
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Dog</span><span class="p">(</span><span class="nx">breed</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="nx">sex</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">this</span><span class="p">.</span><span class="nx">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">breed</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">this</span><span class="p">.</span><span class="nx">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sex</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>You can create a JavaScript instance of Dog called gabby as follows:</p>
 <p><code>gabby = new Dog("lab","chocolate","female")</code></p>
 <p>If you evaluate gabby.color, you can see that it has the value "chocolate". Now suppose you create an instance of JavaDog in your JavaScript code by passing the gabby object to the constructor as follows:</p>
@@ -2047,80 +2046,80 @@ this.sex = sex
 </ul>
 <p>JavaScript throws an exception that is wrapped as an instance of JSException. Use the getWrappedException method of JSException to unwrap this exception in Java.</p>
 <p>For example, suppose the Java object eTest evaluates the string jsCode that you pass to it. You can respond to either type of run-time error the evaluation causes by implementing an exception handler such as the following:</p>
-<pre><code class="language-javascript">import netscape.javascript.JSObject; import netscape.javascript.JSException;
-
-public class eTest {
-
-public static Object doit(JSObject obj, String jsCode) {
-
-
-
-try {
-
-obj.eval(jsCode);
-
-} catch (JSException e) {
-
-if (e.getWrappedException()==null) return e;
-
-return e.getWrappedException();
-
-}
-
-return null;
-
-}
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">netscape</span><span class="p">.</span><span class="nx">javascript</span><span class="p">.</span><span class="nx">JSObject</span><span class="p">;</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="nx">netscape</span><span class="p">.</span><span class="nx">javascript</span><span class="p">.</span><span class="nx">JSException</span><span class="p">;</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kr">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">eTest</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kr">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="nb">Object</span><span class="w"> </span><span class="nx">doit</span><span class="p">(</span><span class="nx">JSObject</span><span class="w"> </span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">jsCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="nx">obj</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="nx">jsCode</span><span class="p">);</span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">JSException</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">getWrappedException</span><span class="p">()</span><span class="o">==</span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">e</span><span class="p">;</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="k">return</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">getWrappedException</span><span class="p">();</span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="p">}</span>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">}</span>
+</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>In this example, the code in the try block attempts to evaluate the string jsCode that you pass to it. Let’s say you pass the string "myFunction()" as the value of jsCode. If myFunction is not defined as a JavaScript function, the JavaScript interpreter cannot evaluate jsCode. The interpreter generates an error message, the Java handler catches the message, and the doit method returns an instance of netscape.javascript.JSException.</p>
 <p>However, suppose myFunction is defined in JavaScript as follows:</p>
-<pre><code class="language-javascript">function myFunction() { try {
-
-if (theCondition == true) { return "Everything’s ok";
-
-} else {
-
-throw "JavaScript error occurred" ;
-
-}
-
-} catch (e) {
-
-if (canHandle == true) { handleIt();
-
-} else {
-
-throw e;
-
-}
-
-}
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">theCondition</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s2">"Everything’s ok"</span><span class="p">;</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">throw</span><span class="w"> </span><span class="s2">"JavaScript error occurred"</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">canHandle</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">handleIt</span><span class="p">();</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="k">throw</span><span class="w"> </span><span class="nx">e</span><span class="p">;</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="p">}</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="p">}</span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>If theCondition is false, the function throws an exception. The exception is caught in the JavaScript code, and if canHandle is true, JavaScript handles it. If canHandle is false, the exception is rethrown, the Java handler catches it, and the doit method returns a Java string:</p>
 <p>JavaScript error occurred</p>
 <p>See <a href="#exception-handling-statements"><em>Exception Handling Statements</em> </a>, for complete information about JavaScript exceptions.</p>
 <h4 id="backward-compatibility">Backward Compatibility</h4>
 <p>In JavaScript 1.3 and earlier versions, the JSException class had three public constructors that optionally took a string argument, specifying the detail message or other information for the exception. The getWrappedException method was not available.</p>
 <p>Use a try...catch statement such as the following to handle LiveConnect exceptions in JavaScript 1.3 and earlier versions:</p>
-<pre><code class="language-javascript">try {
-
-global.eval("foo.bar = 999;");
-
-} catch (Exception e) {
-
-if (e instanceof JSException) { jsCodeFailed()";
-
-} else {
-
-otherCodeFailed();
-
-}
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">global</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s2">"foo.bar = 999;"</span><span class="p">);</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">Exception</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">JSException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">jsCodeFailed</span><span class="p">()</span><span class="err">"</span><span class="p">;</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nx">otherCodeFailed</span><span class="p">();</span>
+</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
+</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>In this example, the eval statement fails if foo is not defined. The catch block executes the jsCodeFailed method if the eval statement in the try block throws a JSException; the otherCodeFailed method executes if the try block throws any other error.</p>
 <h2 id="data-type-conversions">Data Type Conversions</h2>
 <p>Because Java is a strongly typed language and JavaScript is weakly typed, the JavaScript runtime engine converts argument values into the appropriate data types for the other language when you use LiveConnect.</p>
@@ -2401,14 +2400,14 @@ otherCodeFailed();
 <p>You can specify an object when you throw an exception. You can then reference the</p>
 <p>object’s properties in the catch block. The following example creates an object</p>
 <p>myUserException of type UserException and uses it in a throw statement.</p>
-<pre><code class="language-javascript">// Create an object type UserException function UserException (message) {
-
-this.message=message this.name="UserException"
-
-}
-
-// Create an instance of the object type and throw it myUserException=new UserException("Value too high") throw myUserException
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// Create an object type UserException function UserException (message) {</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="o">=</span><span class="nx">message</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="o">=</span><span class="s2">"UserException"</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1">// Create an instance of the object type and throw it myUserException=new UserException("Value too high") throw myUserException</span>
+</span></code></pre></div>
 <h3 id="the-trycatch-statement">The Try...Catch Statement</h3>
 <p>![ref8]The try...catch statement marks a block of statements to try, and specifies a response should an exception be thrown. If an exception is thrown, the try...catch statement catches it.</p>
 <p><strong>Note:</strong> There are some exceptions that are not caught with the try...catch statement. This includes the HTTP errors, which are thrown by the HTTP server.</p>
@@ -2423,107 +2422,105 @@ this.message=message this.name="UserException"
 <li>The finally block executes after the try and catch blocks execute but before the statements following the try...catch statement.</li>
 </ul>
 <p>The following example uses a try...catch statement. The example calls a function that retrieves a month name from an array based on the value passed to the function. If the value does not correspond to a month number (1-12), an exception is thrown with the value "InvalidMonthNo" and the statements in the catch block set the monthName variable to "unknown".</p>
-<pre><code class="language-javascript">function getMonthName (mo) {
-
-// Adjust month number for array index (1=Jan, 12=Dec) mo=mo-1
-
-var months=new Array ("Jan","Feb","Mar","Apr","May",
-
-"Jun","Jul","Aug","Sep","Oct","Nov","Dec") if (months[mo] != null) {
-
-return months[mo]
-
-} else {
-
-throw "InvalidMonthNo"
-
-}
-
-}
-
-try {
-
-// statements to try monthName=getMonthName(myMonth)
-
-// function could throw exception
-
-
-
-}
-
-catch (e) { monthName="unknown" logMyErrors(e)
-
-// pass exception object to error handler
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">getMonthName</span><span class="w"> </span><span class="p">(</span><span class="nx">mo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">// Adjust month number for array index (1=Jan, 12=Dec) mo=mo-1</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">var</span><span class="w"> </span><span class="nx">months</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="w"> </span><span class="p">(</span><span class="s2">"Jan"</span><span class="p">,</span><span class="s2">"Feb"</span><span class="p">,</span><span class="s2">"Mar"</span><span class="p">,</span><span class="s2">"Apr"</span><span class="p">,</span><span class="s2">"May"</span><span class="p">,</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="s2">"Jun"</span><span class="p">,</span><span class="s2">"Jul"</span><span class="p">,</span><span class="s2">"Aug"</span><span class="p">,</span><span class="s2">"Sep"</span><span class="p">,</span><span class="s2">"Oct"</span><span class="p">,</span><span class="s2">"Nov"</span><span class="p">,</span><span class="s2">"Dec"</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">months</span><span class="p">[</span><span class="nx">mo</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="k">return</span><span class="w"> </span><span class="nx">months</span><span class="p">[</span><span class="nx">mo</span><span class="p">]</span>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="k">throw</span><span class="w"> </span><span class="s2">"InvalidMonthNo"</span>
+</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">}</span>
+</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a>
+</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">}</span>
+</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a>
+</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="c1">// statements to try monthName=getMonthName(myMonth)</span>
+</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a>
+</span><span id="__span-7-23"><a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="c1">// function could throw exception</span>
+</span><span id="__span-7-24"><a href="#__codelineno-7-24" id="__codelineno-7-24" name="__codelineno-7-24"></a>
+</span><span id="__span-7-25"><a href="#__codelineno-7-25" id="__codelineno-7-25" name="__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a href="#__codelineno-7-27" id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="p">}</span>
+</span><span id="__span-7-28"><a href="#__codelineno-7-28" id="__codelineno-7-28" name="__codelineno-7-28"></a>
+</span><span id="__span-7-29"><a href="#__codelineno-7-29" id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">monthName</span><span class="o">=</span><span class="s2">"unknown"</span><span class="w"> </span><span class="nx">logMyErrors</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+</span><span id="__span-7-30"><a href="#__codelineno-7-30" id="__codelineno-7-30" name="__codelineno-7-30"></a>
+</span><span id="__span-7-31"><a href="#__codelineno-7-31" id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="c1">// pass exception object to error handler</span>
+</span><span id="__span-7-32"><a href="#__codelineno-7-32" id="__codelineno-7-32" name="__codelineno-7-32"></a>
+</span><span id="__span-7-33"><a href="#__codelineno-7-33" id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="the-catch-block">The Catch Block</h3>
 <p>Use the try...catch statement’s catch block (<em>recovery</em> block) to execute error- handling code. A catch block looks as follows:</p>
-<pre><code class="language-javascript">catch (catchID) 
-
-{ statements
-
-}
-
-
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">catchID</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">statements</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>Every catch block specifies an identifier (catchID in the preceding syntax) that holds the value specified by the throw statement; you can use this identifier to get information about the exception that was thrown. JavaScript creates this identifier when the catch block is entered; the identifier lasts only for the duration of the catch block; after the catch block finishes executing, the identifier is no longer available.</p>
 <p>For example, the following code throws an exception. When the exception occurs, control transfers to the catch block.</p>
-<pre><code class="language-javascript">try 
-
-{
-
-throw "myException" // generates an exception
-
-}
-
-catch (e) {
-
-// statements to handle any exceptions
-
-logMyErrors(e) // pass exception object to error handler
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">try</span><span class="w"> </span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">{</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="k">throw</span><span class="w"> </span><span class="s2">"myException"</span><span class="w"> </span><span class="c1">// generates an exception</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="c1">// statements to handle any exceptions</span>
+</span><span id="__span-9-12"><a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="nx">logMyErrors</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="c1">// pass exception object to error handler</span>
+</span><span id="__span-9-14"><a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="the-finally-block">The Finally Block</h3>
 <p>The finally block contains statements to execute after the try and catch blocks execute but before the statements following the try...catch statement. The finally block executes whether or not an exception is thrown. If an exception is thrown, the statements in the finally block execute even if no catch block handles the exception.</p>
 <p>You can use the finally block to make your script fail gracefully when an exception occurs; for example, you may need to release a resource that your script has tied up. The following example opens a file and then executes statements that use the file (server-side JavaScript allows you to access files). If an exception is thrown while the file is open, the finally block closes the file before the script fails.</p>
-<pre><code class="language-javascript">try {
-
-openMyFile()    // tie up a resource writeMyFile(theData)
-
-}
-
-finally {
-
-closeMyFile() // always close the resource
-
-}
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="nx">openMyFile</span><span class="p">()</span><span class="w">    </span><span class="c1">// tie up a resource writeMyFile(theData)</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">}</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nx">closeMyFile</span><span class="p">()</span><span class="w"> </span><span class="c1">// always close the resource</span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="nesting-trycatch-statements">Nesting Try...Catch Statements</h3>
 <p>You can nest one or more try...catch statements. If an inner try...catch statement does not have a catch block, the enclosing try...catch statement’s catch block is checked for a match.</p>
 <h2 id="jsexception-and-jsobject-classes">JSException and JSObject Classes</h2>
 <p>This section describes the JSException and JSObject Classes.</p>
 <h3 id="jsexception-class"><strong>JSException Class</strong></h3>
 <p>The public class JSException extends RuntimeException.</p>
-<pre><code>java.lang.Object
-
-|
-
-    +---java.lang.Throwable
-
-        |
-
-        +---java.lang.Exception
-
-            |
-
-            +---java.lang.RuntimeException
-
-                |
-
-                +   netscape.javascript.JSException
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>java.lang.Object
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>|
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>    +---java.lang.Throwable
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>        |
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>        +---java.lang.Exception
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>            |
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>            +---java.lang.RuntimeException
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a>                |
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a>                +   netscape.javascript.JSException
+</span></code></pre></div>
 <h4 id="description">Description</h4>
 <p>JSException is an exception that is thrown when JavaScript code returns an error.</p>
 <h4 id="constructor-summary">Constructor Summary</h4>
@@ -2608,12 +2605,12 @@ closeMyFile() // always close the resource
 <p>public Object getWrappedException()</p>
 <h3 id="jsobject-class">JSObject Class</h3>
 <p>The public final class netscape.javascript.JSObject extends Object.</p>
-<pre><code>java.lang.Object
-
-    |
-
-    +   netscape.javascript.JSObject
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>java.lang.Object
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>    |
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>    +   netscape.javascript.JSObject
+</span></code></pre></div>
 <h4 id="description_1">Description</h4>
 <p>JavaScript objects are wrapped in an instance of the class netscape.javascript.JSObject and passed to Java. JSObject allows Java to manipulate JavaScript objects.</p>
 <p>When a JavaScript object is sent to Java, the runtime engine creates a Java wrapper of type JSObject; when a JSObject is sent from Java to JavaScript, the runtime engine unwraps it to its original JavaScript object type. The JSObject class provides a way to invoke JavaScript methods and examine JavaScript properties.</p>

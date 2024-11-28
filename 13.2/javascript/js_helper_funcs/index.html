@@ -1890,7 +1890,7 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#EncodeString">EncodeString</a></li>
+<li><a href="#EncodeString">EncodeString</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
@@ -1915,7 +1915,7 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#EncodeString">EncodeString</a></li>
+<li><a href="#EncodeString">EncodeString</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
@@ -1940,7 +1940,7 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#EncodeStringWin">EncodeStringWin</a></li>
+<li><a href="#EncodeStringWin">EncodeStringWin</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
@@ -2006,8 +2006,8 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre><code class="language-js">SleepUntil(5000); //wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10
-</code></pre>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">SleepUntil</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10</span>
+</span></code></pre></div>
 <h4 id="sleepuntilmillisfrombeginning">SleepUntil(millisFromBeginning)</h4>
 <p>SleepUntil a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.</p>
 <p><strong>Parameters:</strong></p>
@@ -2029,16 +2029,16 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#SleepEvery">SleepEvery</a></li>
+<li><a href="#SleepEvery">SleepEvery</a></li>
 </ul>
 <p><strong>Example</strong></p>
-<pre><code class="language-javascript">SleepUntil(5000); //wait until 5 seconds have passed
-</code></pre>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">SleepUntil</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//wait until 5 seconds have passed</span>
+</span></code></pre></div>
 <h4 id="addtransactionstomdc">addTransactionsToMDC()</h4>
 <p>When called, will cause all transactions to be automatically added to MDC</p>
 <p>See:</p>
 <ul>
-<li><a href="global.html#putMDC">putMDC</a></li>
+<li><a href="#putMDC">putMDC</a></li>
 </ul>
 <h4 id="assertequalsexpected-actual-messageopt">assertEquals(expected, actual, messageopt)</h4>
 <p>JUnit like helper function - compare actal and expected and throw an error in they are different</p>
@@ -2164,7 +2164,7 @@
 <p>Clear content of MDC (Mapped Diagnostic Context)</p>
 <p>See:</p>
 <ul>
-<li><a href="global.html#putMDC">putMDC</a></li>
+<li><a href="#putMDC">putMDC</a></li>
 </ul>
 <h4 id="closeallwebsocketsws_prefixopt-from_idxopt-to_idxopt">closeAllWebSockets(ws_prefixopt, from_idxopt, to_idxopt)</h4>
 <p>Close all WebSocket objects</p>
@@ -2204,9 +2204,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre><code>//will close all WebSocket objects named "ws1" to "ws20"
- closeAllWebSockets();
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>//will close all WebSocket objects named "ws1" to "ws20"
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a> closeAllWebSockets();
+</span></code></pre></div>
 <h4 id="decodexmlstr">decodeXML(str)</h4>
 <p>Decoding function - reverse of encodeXML</p>
 <p><strong>Parameters:</strong></p>
@@ -2228,7 +2228,7 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#encodeXML">encodeXML</a></li>
+<li><a href="#encodeXML">encodeXML</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>decoded string</p>
@@ -2253,14 +2253,14 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#encodeXmlAtt">encodeXmlAtt</a></li>
+<li><a href="#encodeXmlAtt">encodeXmlAtt</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
 <p><strong>Example</strong></p>
-<pre><code>//returns "abc:/egf="
-decodeXmlAtt("abc&amp;#x3a;&amp;#x2f;egf\&amp;#x3d;")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>//returns "abc:/egf="
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>decodeXmlAtt("abc&amp;#x3a;&amp;#x2f;egf\&amp;#x3d;")
+</span></code></pre></div>
 <h4 id="decodexmlattescstr">decodeXmlAttEsc(str)</h4>
 <p>Decoding function - converts XML attribute format (&amp;#x??;) to URL encoding format (%??)</p>
 <p><strong>Parameters:</strong></p>
@@ -2304,9 +2304,9 @@ decodeXmlAtt("abc&amp;#x3a;&amp;#x2f;egf\&amp;#x3d;")
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
 <p><strong>Example</strong></p>
-<pre><code>//returns "\"strategy\""
-decodeXmlAttNum("&amp;#34;strategy&amp;#34;")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>//returns "\"strategy\""
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>decodeXmlAttNum("&amp;#34;strategy&amp;#34;")
+</span></code></pre></div>
 <h4 id="encodeuricomponentlowers">encodeURIComponentLower(s)</h4>
 <p>Encoding function - Similar to encodeURIComponent but uses lower-case letters</p>
 <p><strong>Parameters:</strong></p>
@@ -2370,7 +2370,7 @@ decodeXmlAttNum("&amp;#34;strategy&amp;#34;")
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#encodeXML">encodeXML</a></li>
+<li><a href="#encodeXML">encodeXML</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>encoded string</p>
@@ -2396,9 +2396,9 @@ decodeXmlAttNum("&amp;#34;strategy&amp;#34;")
 <p><strong>Returns:</strong></p>
 <p>- encoded string</p>
 <p><strong>Example</strong></p>
-<pre><code>//returns "pcdshort&amp;#x3a;&amp;#x2f;M0szu5jMrfDvCVJp71LcecoFE5s\&amp;#x3d;"
-encodeXmlAtt("pcdshort:/M0szu5jMrfDvCVJp71LcecoFE5s=")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>//returns "pcdshort&amp;#x3a;&amp;#x2f;M0szu5jMrfDvCVJp71LcecoFE5s\&amp;#x3d;"
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>encodeXmlAtt("pcdshort:/M0szu5jMrfDvCVJp71LcecoFE5s=")
+</span></code></pre></div>
 <h4 id="encodexmlattescstr">encodeXmlAttEsc(str)</h4>
 <p>Encoding function - coverts escaped string to XML attribute escaped string</p>
 <p><strong>Parameters:</strong></p>
@@ -2421,9 +2421,9 @@ encodeXmlAtt("pcdshort:/M0szu5jMrfDvCVJp71LcecoFE5s=")
 <p><strong>Returns:</strong></p>
 <p>- encoded string</p>
 <p><strong>Example</strong></p>
-<pre><code>//returns "a&amp;#x2b;b"
-encodeXmlAttEsc( "a%2Bb")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>//returns "a&amp;#x2b;b"
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>encodeXmlAttEsc( "a%2Bb")
+</span></code></pre></div>
 <h4 id="escapeaugstr">escapeAug(str)</h4>
 <p>Encoding function - vairation of escape. Also encodes @ / and ~</p>
 <p><strong>Parameters:</strong></p>
@@ -2551,15 +2551,15 @@ encodeXmlAttEsc( "a%2Bb")
 <p><strong>Returns:</strong></p>
 <p>encoded string</p>
 <p><strong>Example</strong></p>
-<pre><code>//returns "%3Csome%40Tag%3E"
-escapeXmlBroken("&amp;lt;some@Tag&amp;gt;")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>//returns "%3Csome%40Tag%3E"
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>escapeXmlBroken("&amp;lt;some@Tag&amp;gt;")
+</span></code></pre></div>
 <h4 id="extractallvalues">extractAllValues()</h4>
 <p>extractAllValues() Returns array of all values matching the prefix/suffix.</p>
 <p><strong>Example</strong></p>
-<pre><code>// returns: ["aaa", "bbb"]
-extractAllValues("&lt;td&gt;","&lt;/td&gt;","&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&lt;td&gt;bbb&lt;/td&gt;&lt;/tr&gt;");
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>// returns: ["aaa", "bbb"]
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>extractAllValues("&lt;td&gt;","&lt;/td&gt;","&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&lt;td&gt;bbb&lt;/td&gt;&lt;/tr&gt;");
+</span></code></pre></div>
 <h4 id="extractheadervalueprefix-suffix-header_name">extractHeaderValue(prefix, suffix, header_name)</h4>
 <p>Extract a value from the given HTTP Header name</p>
 <p><strong>Parameters:</strong></p>
@@ -2643,7 +2643,7 @@ extractAllValues("&lt;td&gt;","&lt;/td&gt;","&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#extractJSPath">extractJSPath</a> - more full featured expressions</li>
+<li><a href="#extractJSPath">extractJSPath</a> - more full featured expressions</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>value at specified path or null of not found</p>
@@ -2687,12 +2687,12 @@ extractAllValues("&lt;td&gt;","&lt;/td&gt;","&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&
 <p><strong>Returns:</strong></p>
 <p>extracted value, or null if not found</p>
 <p><strong>Examples</strong></p>
-<pre><code>//returns:"54321"
-extractRegExpTemplate ( "foo=(.*?)&amp;", "foo=54321&amp;")
-</code></pre>
-<pre><code>//returns: "templated-54321-answer"
-extractRegExpTemplate ( "foo=(.*?)&amp;", "the foo=54321&amp;abcde&amp;zzzz", "templated-$1$-answer")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>//returns:"54321"
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>extractRegExpTemplate ( "foo=(.*?)&amp;", "foo=54321&amp;")
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>//returns: "templated-54321-answer"
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>extractRegExpTemplate ( "foo=(.*?)&amp;", "the foo=54321&amp;abcde&amp;zzzz", "templated-$1$-answer")
+</span></code></pre></div>
 <h4 id="extractsiebelarrayvalueidx-prefix-suffix-source-instance">extractSiebelArrayValue(idx, prefix, suffix, source, instance)</h4>
 <p>Extact a value from Siebel 'star' array, in format `length@value..`</p>
 <p><strong>Parameters:</strong></p>
@@ -2735,10 +2735,10 @@ extractRegExpTemplate ( "foo=(.*?)&amp;", "the foo=54321&amp;abcde&amp;zzzz", "t
 <p><strong>Returns:</strong></p>
 <p>value extracted or null if not found.</p>
 <p><strong>Example</strong></p>
-<pre><code>var str = "`array`10*first_item11*second_item`";
-//returns "first_item"
-extractSiebelArrayValue(0, "`array`", "`", str, 1)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>var str = "`array`10*first_item11*second_item`";
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>//returns "first_item"
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>extractSiebelArrayValue(0, "`array`", "`", str, 1)
+</span></code></pre></div>
 <h4 id="extractvalueprefix-suffix-str-orderopt-left_offsetopt-right_offsetopt">extractValue(prefix, suffix, str, orderopt, left_offsetopt, right_offsetopt)</h4>
 <p>Extracts a value from a string having a prefix and a suffix</p>
 <p><strong>Parameters:</strong></p>
@@ -2793,9 +2793,9 @@ extractSiebelArrayValue(0, "`array`", "`", str, 1)
 <p><strong>Returns:</strong></p>
 <p>value extracted, or null is not found</p>
 <p><strong>Example</strong></p>
-<pre><code>//return xx
-extractValue("a","b","axxb")
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>//return xx
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>extractValue("a","b","axxb")
+</span></code></pre></div>
 <h4 id="extractvaluebylengthprefix-len-str-order-left_offset-right_offset">extractValueByLength(prefix, len, str, order, left_offset, right_offset)</h4>
 <p>Extracts a value from a string having a prefix with the specified length.</p>
 <p><strong>Parameters:</strong></p>
@@ -2843,12 +2843,12 @@ extractValue("a","b","axxb")
 <p><strong>Returns:</strong></p>
 <p>extract value or null if not found</p>
 <p><strong>Examples</strong></p>
-<pre><code>//return "4321"
-extractValueByLength("abc$", 4, "xxabc$4321xxx")
-</code></pre>
-<pre><code>//return  "$4444$"
-extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>//return "4321"
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>extractValueByLength("abc$", 4, "xxabc$4321xxx")
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>//return  "$4444$"
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
+</span></code></pre></div>
 <h4 id="extractxpathexpr-source">extractXPath(expr, source)</h4>
 <p>Extract from XML using XPath expression</p>
 <p><strong>Parameters:</strong></p>
@@ -2976,7 +2976,7 @@ extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#putMDC">putMDC</a></li>
+<li><a href="#putMDC">putMDC</a></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p>value or all values</p>
@@ -3017,7 +3017,7 @@ extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
 <p>Print (InfoMessage) content of MDC (Mapped Diagnostic Context)</p>
 <p>See:</p>
 <ul>
-<li><a href="global.html#putMDC">putMDC</a></li>
+<li><a href="#putMDC">putMDC</a></li>
 </ul>
 <h4 id="putmdcname-value">putMDC(name, value)</h4>
 <p>Sets given name=value in MDC (Mapped Diagnostic Context). Contents of MDC will be displayed if error happens in the script. Useful to debug issues</p>
@@ -3044,9 +3044,9 @@ extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre><code>//will log the user name in case of error
-putMDC("username", users_username.getValue() );
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>//will log the user name in case of error
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>putMDC("username", users_username.getValue() );
+</span></code></pre></div>
 <h4 id="removemdcname">removeMDC(name)</h4>
 <p>Remove items from MDC (Mapped Diagnostic Context)</p>
 <p><strong>Parameters:</strong></p>
@@ -3068,7 +3068,7 @@ putMDC("username", users_username.getValue() );
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#putMDC">putMDC</a></li>
+<li><a href="#putMDC">putMDC</a></li>
 </ul>
 <h4 id="setcorrelationvaluevarname-extractedvalue-originalvalueopt-errorfuncopt">setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)</h4>
 <p>Store extracted correlation value for future use. Validate it against the recorded value. Use getCorrelationValue() to retrieve the value.</p>
@@ -3111,7 +3111,7 @@ putMDC("username", users_username.getValue() );
 </table>
 <p>See:</p>
 <ul>
-<li><a href="global.html#getCorrelationValue">getCorrelationValue</a></li>
+<li><a href="#getCorrelationValue">getCorrelationValue</a></li>
 </ul>
 <h4 id="setcorrelationvaluesilent">setCorrelationValueSilent()</h4>
 <p>Like setCorrelationValue() but does not show a WarningMessage() when not extracted.</p>
