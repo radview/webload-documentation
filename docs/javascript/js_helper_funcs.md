@@ -26,7 +26,7 @@ Decoding function - reverse of EncodeString
 
 See:
 
-*   [EncodeString](global.html#EncodeString)
+*   [EncodeString](#EncodeString)
 
 **Returns:**
 
@@ -44,7 +44,7 @@ Decoding function - reverse of EncodeString + convert end-of-line from unix to d
 
 See:
 
-*   [EncodeString](global.html#EncodeString)
+*   [EncodeString](#EncodeString)
 
 **Returns:**
 
@@ -62,7 +62,7 @@ Decoding function - reverse of EncodeStringWin
 
 See:
 
-*   [EncodeStringWin](global.html#EncodeStringWin)
+*   [EncodeStringWin](#EncodeStringWin)
 
 **Returns:**
 
@@ -124,7 +124,7 @@ SleepUntil a certain number of milliseconds has passed since the beginning of th
 
 See:
 
-*   [SleepEvery](global.html#SleepEvery)
+*   [SleepEvery](#SleepEvery)
 
 **Example**
 
@@ -138,7 +138,7 @@ When called, will cause all transactions to be automatically added to MDC
 
 See:
 
-*   [putMDC](global.html#putMDC)
+*   [putMDC](#putMDC)
 
 #### assertEquals(expected, actual, messageopt)
 
@@ -192,7 +192,7 @@ Clear content of MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](global.html#putMDC)
+*   [putMDC](#putMDC)
 
 #### closeAllWebSockets(ws\_prefixopt, from\_idxopt, to\_idxopt)
 
@@ -225,7 +225,7 @@ Decoding function - reverse of encodeXML
 
 See:
 
-*   [encodeXML](global.html#encodeXML)
+*   [encodeXML](#encodeXML)
 
 **Returns:**
 
@@ -243,7 +243,7 @@ Decoding function - reverse of encodeXmlAtt
 
 See:
 
-*   [encodeXmlAtt](global.html#encodeXmlAtt)
+*   [encodeXmlAtt](#encodeXmlAtt)
 
 **Returns:**
 
@@ -331,7 +331,7 @@ Encoding function - like encodeXML but > is not replaced, only < and &
 
 See:
 
-*   [encodeXML](global.html#encodeXML)
+*   [encodeXML](#encodeXML)
 
 **Returns:**
 
@@ -525,7 +525,7 @@ Get value from JSON using a simple path - path.to.item
 
 See:
 
-*   [extractJSPath](global.html#extractJSPath) - more full featured expressions
+*   [extractJSPath](#extractJSPath) - more full featured expressions
 
 **Returns:**
 
@@ -714,7 +714,7 @@ Return value in MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](global.html#putMDC)
+*   [putMDC](#putMDC)
 
 **Returns:**
 
@@ -746,7 +746,7 @@ Print (InfoMessage) content of MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](global.html#putMDC)
+*   [putMDC](#putMDC)
 
 #### putMDC(name, value)
 
@@ -778,7 +778,7 @@ Remove items from MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](global.html#putMDC)
+*   [putMDC](#putMDC)
 
 #### setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)
 
@@ -795,7 +795,7 @@ Store extracted correlation value for future use. Validate it against the record
 
 See:
 
-*   [getCorrelationValue](global.html#getCorrelationValue)
+*   [getCorrelationValue](#getCorrelationValue)
 
 #### setCorrelationValueSilent()
 

@@ -1,215 +1,85 @@
 # WebSocket Object
 
- 
-
 WebLOAD supports WebSocket, a protocol that provides full-duplex communication channels over a single TCP connection. Unlike HTTP which is a request-response protocol, WebSocket creates connections for sending or receiving messages that are not dependent on one another. In this way, WebSocket provides full-duplex communication. WebSocket also enables streams of messages on top of TCP.
-
- 
 
 WebLOAD’s WebSocket object enables creating and managing a WebSocket connection to a server, as well as sending and receiving data on the connection. Note that you can create multiple WebSocket objects.
 
-## Constructor
+## WebSocket Sample Code using messages handler
 
-**Description**
+With message handler, you write a function that handles that message as they are received, in the onmessage() function.
 
-Creates a new WebSocket for the given URL, and returns a JavaScript object reference.
-
-**Syntax**
-
-`<websocket object name>` = **new WebSocket (`<\*URL\*>`)**;
-
-**Parameters**
-
-| **Parameter Name** | **Description**              |
-| ------------------ | ---------------------------- |
-| URL                | The URL to which to connect. |
-
-**Example**
-
-`ws1 = new WebSocket("ws://echo.websocket.org");`
-
-
-
-## Methods
-
-
-
-### connect() (method)
-
- 
-
-**Description**
-
-Creates a WebSocket connection to the given URL address. When connected, an
-
-onopen() event is fired, as described in [*onopen (evt)* ](#_bookmark576).
-
- 
-
-**Syntax**
-
-`<websocket object name>`.*connect()*
-
-**Example**
-
-`ws1.connect()`
-
- 
-
-### close() (method)
-
-**Description**
-
-Closes the WebSocket connection.
-
- 
-
-**Syntax**
-
-`<*websocket object name*>`.**close()**
-
-**Example**
-
-`ws1.close()`
-
- 
-
-### send() (method)
-
-**Description**
-
-Sends data to a WebSocket connection.
-
- 
-
-**Syntax**
-
-`<*websocket object name*>`.**send(data[ ,encoded])**
-
-**Parameters**
-
- 
-
-| **Parameter Name** | **Description**                                              |
-| ------------------ | ------------------------------------------------------------ |
-| data               | The data to be sent, enclosed in quote marks.                |
-| [encoded]          | An optional Boolean value (true or false). <br> True indicates that the  data contains an ASCII encoded string  in the format %xx, where xx is the hexadecimal ASCII code. <br> False indicates the data  does not contain an ASCII encoded string. This is the default value. |
-
- 
-
-**Examples**
-
-`ws1.send(“hi”)`
-
-`ws1.send(“next line %0A here”, true)`
-
- 
-
-## Events
-
- 
-
-A WebSocket emits events. An Event handler should be registered in order to react to events.
-
- 
-
-### onmessage (evt)
-
-An event that occurs when a new message is received.
-
- 
-
-- evt.getData() – Gets the data. This can be a string or binary data.
-
-- evt.isBinary() – Indicates whether the data is binary or not.
-
-- evt.getEncodedData() – Gets the data in encoded format. This is useful for binary messages.
-
-
- 
-
-**Example**
-
-```javascript
-ws1.onmessage = function(evt) {
-
-InfoMessage(“got message “ + evt.getData() )
-
-if (evt.isBinary() ) {
-
-InfoMessage(“Message is binary”);
-
-}
-
-}
-```
-
- 
-
-### onerror (evt)
-
-An event that occurs when an error message is received. The default behavior is to show a warning message with the error details.
-
- 
-
-`Evt.getData()` – gets the underlying exception details.
-
- 
-
-### onopen (evt)
-
-An event that occurs when the socket is opened (connected).
-
- 
-
-**Example**
-
-```javascript
-ws1.onopen = function(evt) 
-
-{ 
-
-DebugMessage("WebSocket is opened, say hello"); 
-
-ws1.send(“hello”);
-
-}
-```
-
-
-
-## WebSocket Sample Code
-
- 
+This mode is useful in general purpose WebSocket, where it is not know when and what messages are expected to be received.
 
 ```javascript
 // Create a WebSocket object
-
 ws1 = new WebSocket( "ws://echo.websocket.org" );
 
 // Define an event handler, to handle events (incoming messages) when they occur
-
 ws1.onmessage = function(evt) {
-
-// Display in the Log the text that was sent in the message body DebugMessage("Server said:" + evt.getData());
-
+  // Display in the Log the text that was sent in the message body 
+  DebugMessage("Server said:" + evt.getData());
 }
 
-// Create a websocket connection ws1.connect();
+// Create a websocket connection 
+ws1.connect();
 
-//Note that events are handled while in Sleep Sleep(1000);
+//Note that events are handled while in Sleep 
+Sleep(1000);
 
 // Send a message with the text “hi”
-
 ws1.send("hi");
 
 Sleep(1000);
 
-// Close the websocket connection ws1.close();
+// Close the websocket connection 
+ws1.close();
 
 Sleep(1000);
 ```
-## Mothod metails
+
+## WebSocket Stored Messages Sample Code
+
+Stored messages mode is a mode that allows handling messages closer to where they are actually needed.
+
+This mode is useful when the protocol behaeves in some expected way, for example, after sending a "connect" message it will repond with a "connected" reply you can expect.
+
+This mode makes it easier to correlate values - from WebSocket reply to another WebSocket or HTTP Request, and from HTTP Response to a WebSocket message.
+
+Since: WebLOAD 12.6
+
+```javascript
+// Create a WebSocket object
+ws1 = new WebSocket( "ws://echo.websocket.org" );
+ws1.storeMessages=true; //messages will be kept in ws1.messages array.
+ws1.connect()
+
+//Received  string ws1
+//"WebSocket Connected!"
+
+//wait here for a message with this string in it
+ws1.expectMessage("Connected!");        
+
+//Received  string ws1
+//"connection details: sessionid='5333455693' "
+
+//extract or wait for a message with prefix, suffix
+ws1.extractMessageValue("sessionid='", "'", "mySessionId");  
+
+//can use the value in HTTP/WebSocket request:
+wlHttp.Get("http://someurl?" + getCorrelationValue("mySessionId"))
+
+//replace the value ${mySessionId} with the correlation "mySessionId"
+ws1.dynamicReplaceCorrelation("mySessionId");
+
+//this send will replace ${mySessionId} with session id value if it existed
+ws1.send("sessionid=${mySessionId");                         
+ 
+// Close the websocket connection 
+ws1.close();
+
+```
+
+## Object details
 
 ### WebSocket(url, manualHandleEventsopt)
 
@@ -237,6 +107,51 @@ ws1.send("hi");
 ws1.close();
 ```
 
+### Events
+
+#### onclose
+
+Callback called when WebSocket is closed
+
+**Type:**
+
+*   close-event
+
+#### onerror
+
+Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()
+
+**Type:**
+
+*   error-event
+
+#### onmessage
+
+Callback to be called when a new message arrives
+
+**Type:**
+
+*   Event type for messages
+
+**Properties:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `getData` | Funtion | Return the message raw data |
+| `getEncodedData` | Funtion | returns data, if binary encoded as text |
+| `getTimeMillis` | Funtion | get timestamp of event |
+| `isBinary` | boolean | Indicates whether message was binary or not. |
+
+
+#### onopen 
+
+Callback called when WebSocket is opened
+
+**Type:**
+
+*   open-event
+
+
 ### Members
 
 #### manualHandleEvents :boolean
@@ -251,37 +166,6 @@ Default Value:
 
 *   true
 
-#### onclose :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
-
-Callback called when WebSocket is closed
-
-**Type:**
-
-*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
-
-#### onerror :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
-
-Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()
-
-**Type:**
-
-*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
-
-#### onmessage :[WebSocket#onmessageCallback](#onmessageCallback)
-
-Callback to be called when a new message arrives
-
-**Type:**
-
-*   [WebSocket#onmessageCallback](#onmessageCallback)
-
-#### onopen :[WebSocket#webSocketEventCallback](#webSocketEventCallback)
-
-Callback called when WebSocket is opened
-
-**Type:**
-
-*   [WebSocket#webSocketEventCallback](#webSocketEventCallback)
 
 #### reportErrorFunction :function
 
@@ -488,41 +372,3 @@ Call with false to not verify host
 | --- | --- | --- |
 | `b` | boolean |     |
 
-### Type Definitions
-
-#### OnMessageType
-
-Event type for messages
-
-**Type:**
-
-*   Object
-
-**Properties:**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `getData` | Funtion | Return the message raw data |
-| `getEncodedData` | Funtion | returns data, if binary encoded as text |
-| `getTimeMillis` | Funtion | get timestamp of event |
-| `isBinary` | boolean | Indicates whether message was binary or not. |
-
-#### onmessageCallback(evt)
-
-Event with message details
-
-**Parameters:**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `evt` | [WebSocket#OnMessageType](#OnMessageType) |     |
-
-#### webSocketEventCallback(evt)
-
-On open callback
-
-**Parameters:**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `evt` | Object | event data |
