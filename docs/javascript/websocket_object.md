@@ -72,7 +72,7 @@ wlHttp.Get("http://someurl?" + getCorrelationValue("mySessionId"))
 ws1.dynamicReplaceCorrelation("mySessionId");
 
 //this send will replace ${mySessionId} with session id value if it existed
-ws1.send("sessionid=${mySessionId");                         
+ws1.send("sessionid=${mySessionId}");                         
  
 // Close the websocket connection 
 ws1.close();
