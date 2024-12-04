@@ -622,13 +622,9 @@ SFTP is SSH FTP, or Secure Shell File Transfer Protocol, not to be confused with
 
 4. Click **OK**.
 
-   The FTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda()and InitClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+   The SFTP Building Block is added to the Script Tree. The JavaScript is added to the script. The script contains commented out examples for basic functionality like get() or put() to receive or send files.
 
-   In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
-
-The fields in the FTP-Connect Building Block parameters dialog box are described in the following table:
-
-<a name="sftp_parameters"></a>
+<a name="sftp_parameters"></a>The fields in the SFTP Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
 | :- | :- |
