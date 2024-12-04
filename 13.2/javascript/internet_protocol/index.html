@@ -5838,9 +5838,11 @@
 </li>
 </ul>
 <h2 id="wlftp-object">wlFTP Object</h2>
-<p>The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the <a href="#_bookmark519">wlFTPs Object </a>.</p>
+<p>The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the <a href="#wlftps">wlFTPs Object</a>.</p>
 <p>If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate <code>Logon()</code> method; otherwise an exception is thrown.</p>
 <p>To access the wlFTP object, you must include the wlFtp.js file in your <code>InitAgenda()</code> function.</p>
+<p>FTP/FTPS code can be generated using <a href="../../recorder/appendix_a/#ftp">FTP Buildng block</a></p>
+<p>SFTP code can be generated using <a href="../../recorder/appendix_a/#sftp">SFTP Buildng block</a></p>
 <h3 id="wlftp-properties">wlFTP Properties</h3>
 <h4 id="data">Data</h4>
 <p>The Data property lets you specify the local data stream to upload to the host. You use this property to upload data. For example:</p>
