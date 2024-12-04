@@ -20,13 +20,15 @@ This chapter provides detailed reference information on WebLOAD support for the 
 
 ## wlFTP Object
 
-The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object ](#_bookmark519).
+The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object](#wlftps).
 
 If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Logon()` method; otherwise an exception is thrown.
 
 To access the wlFTP object, you must include the wlFtp.js file in your ``InitAgenda()`` function.
 
- 
+FTP/FTPS code can be generated using [FTP Buildng block](../recorder/appendix_a.md/#ftp)
+
+SFTP code can be generated using [SFTP Buildng block](../recorder/appendix_a.md/#sftp)
 
 ### wlFTP Properties
 

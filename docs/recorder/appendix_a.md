@@ -473,6 +473,10 @@ To see the complete sequence of JavaScript code for all the Internet Protocols B
 ### FTP
 Dragging an FTP icon into your Script Tree opens an FTP Building Block parameters dialog box.
 
+#### FTPS
+
+The FTP building block can be used to access FTPS servers. FTPS - 'FTP over SSL', not to be confued with [SFTP](#sftp) - 'SSH FTP'. To use FTPS, use the FTP building block and specify Secure FTP 'Yes' in the connection setttings.
+
 FTP toolbox items include:
 
 - **FTP-Connect**: Open an FTP connection.
@@ -483,8 +487,6 @@ FTP toolbox items include:
 #### FTP-Connect
 
 Use the FTP-Connect Building Block to open an FTP connection.
-
-
 
 **To enter a value:**
 
@@ -601,6 +603,71 @@ Use the **FTP-Disconnect** Building Block to disconnect from a remote host.
 
   The FTP-Disconnect Building Block is added to the Script Tree. The JavaScript code, including the TerminateClient() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+### SFTP
+
+Dragging an SFTP icon into your Script Tree opens an SFTP Building Block parameters dialog box. 
+
+SFTP is SSH FTP, or Secure Shell File Transfer Protocol, not to be confused with FTP over SSL, [FTPS](#ftps) - 'File Transfer Protocl Secure'
+
+
+**To enter a value:**
+
+1. Drag the **SFTP** icon from the Internet Protocols toolbox into the Script Tree at the desired location. The SFTP Building Block parameters dialog box opens.
+
+   ![SFTP Building Block Parameters Dialog Box](../images/appendix_a_sftp.png)
+
+2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+
+3. Enter the appropriate field value into the Value column next to the field name, as described in [SFTP Parameters](#sftp_parameters).
+
+4. Click **OK**.
+
+   The FTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda()and InitClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+
+   In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
+
+The fields in the FTP-Connect Building Block parameters dialog box are described in the following table:
+
+<a name="sftp_parameters"></a>
+
+|**Field Name**|**Description**|
+| :- | :- |
+|FTP Host|<p>Specify the name of the FTP host connection.</p><p>Type the FTP Host name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The FTP host is identified either through a DNS number or a full name string. A host name string must be enclosed within quotation marks.</p>|
+FTP Port | Port to connect, default is SSH Port 22
+Username | Username to connect. Some SFTP Server requests file authentication instead of or on top of username, can be added later in code
+Password | Password to use
+
+This will generate the SFTP code, for example:
+
+**Note** The code include comments for the usual commands, for example addIndentity for private key authentication. get/put command to get or put a file.
+
+SFTP is based on [JSch](http://www.jcraft.com/jsch/) library. See [examples](http://www.jcraft.com/jsch/examples/Sftp.java.html) and [javadoc](https://epaul.github.io/jsch-documentation/javadoc/) for more options.
+
+``` js
+jsch = new Packages.com.jcraft.jsch.JSch();
+//jsch.addIdentity("c:\\path\\to\\id_rsa"); //authenticate using private key:
+jschSession = jsch.getSession("user", "host", 22);
+config = new java.util.Properties();
+config.put("StrictHostKeyChecking", "no"); //to solve UnknownHostKey:
+config.put("PreferredAuthentications", "password");
+jschSession.setConfig(config);  
+
+jschSession.setPassword("pass");
+
+jschSession.connect(10000);
+
+sftp = jschSession.openChannel("sftp");
+sftp.connect(10000);
+
+// transfer file from local to remote server
+//sftp.put(localFile, remoteFile)
+
+// download file from remote server to local
+//sftp.get(remoteFile, localFile);
+
+sftp.exit();
+```
+
 ### SMTP-Send Message
 Use the SMTP-Send Message Building Block to define an email to be sent.
 
@@ -630,7 +697,7 @@ The fields in the SMTP-Send Message Building Block parameters dialog box are des
 
 |**Field Name**|**Description**|
 | :- | :- |
-|Server Name Host|<p>Specify the name of the host to which the email should be sent.</p><p>Type the host name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The file name must be enclosed within quotation marks.</p><p></p><p>![ref10]  **Note:** The host can be designated either with a full text name or DNS number.</p>|
+|Server Name Host|<p>Specify the name of the host to which the email should be sent.</p><p>Type the host name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The file name must be enclosed within quotation marks.</p><p></p><p> **Note:** The host can be designated either with a full text name or DNS number.</p>|
 |User name|<p>Specify a user name with which to login to the mail server.</p><p>Type the user ID into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The user name must be enclosed within quotation marks.</p>|
 |Password|<p>Specify a password with which to login to the mail server.</p><p>Type the password into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The password must be enclosed within quotation marks.</p>|
 |Type|<p>Select which type to use:</p><p>- SMTP</p><p>- ESMTP (SMTP extensions – supports graphics and other attachments.)</p>|
