@@ -58,7 +58,7 @@ Super admins can add users of any type, to any organization. ***User Creation by
 
 1. The new user’s settings can now be defined/edited. 
 
-   - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#_page88_x54.00_y207.04). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#_page89_x109.00_y78.04) 
+   - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#_page88_x54.00_y207.04). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
    - An organizational admin can set the new user’s role in the organization. For instructions, refer to[*User Editing by an Organizational Admin – Editing User’s ](#_page92_x109.00_y290.04)*Role*. ![ref28]
 
 

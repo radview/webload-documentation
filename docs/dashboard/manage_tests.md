@@ -23,14 +23,14 @@ The Load Tests table provides the following information and actions, for each Lo
 | **Name**                                                | The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to [*Editing a load test* ](#editing-a-load-test). |
 | **Test  Type**                                          | The type of test: Either URL/API, Script,  or Template.      |
 | **Last  Update**                                        | The date and time when the  test definitions were last updated, or the test was run manually. This field  shows no indication of whether the test is being executed in recurrence mode. |
-| **Next  Execution**                                     | The date and time when the  test is next scheduled to run. Refer to [*Setting recurring test runs* ](#setting-recurring-test-runs) and [*Scheduling a one-time test*](#_bookmark25) [run ](#_bookmark25). |
+| **Next  Execution**                                     | The date and time when the  test is next scheduled to run. Refer to [*Setting recurring test runs* ](#setting-recurring-test-runs) and [*Scheduling a one-time test run*](#scheduling-a-one-time-test-run). |
 | **Last  Execution**                                     | The date and time when the test last  started running.       |
 | **Last Session State**                                  | Whether the test passed or failed the last  test execution.  |
-| ![](../images/view_last_session.png)                       | Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to [*Using Dashboards* ](#_bookmark40) |
-| ![run load tests](../images/run_load_test.png)             | Enables manually running  this test now or at a specified time. Refer to [*Scheduling a one-time test run* ](#_bookmark25). |
+| ![](../images/view_last_session.png)                       | Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to [*Using Dashboards* ](./using_dashboards.md) |
+| ![run load tests](../images/run_load_test.png)             | Enables manually running  this test now or at a specified time. Refer to [*Scheduling a one-time test run* ](#scheduling-a-one-time-test-run). |
 | ![stop](../images/stop_test_run.png)                       | Instructs WebLOAD to stop  the running test.                 |
-| ![all test sessions](../images/view_all_test_sessions.png) | Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page ([Figure 23](#_bookmark30)) that displays  all of this test’s sessions. |
-| ![delete](../images/delete_load_test.png)                  | Instructs WebLOAD to  delete the load test. Refer to [*Deleting a   load*](#_bookmark27) [*test* ](#_bookmark27). |
+| ![all test sessions](../images/view_all_test_sessions.png) | Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page [Figure 23](./manage_sessions.md#load_sessions_page) that displays  all of this test’s sessions. |
+| ![delete](../images/delete_load_test.png)                  | Instructs WebLOAD to  delete the load test. Refer to [*Deleting a load*](#deleting-a-load-test). |
 
 
 
@@ -50,12 +50,11 @@ You can create a new load test anytime. **To create a new load test:**
 
 2. Select the type of test to create. Refer to the following for detailed explanations: 
 
-   - [*Creating a URL/API Load Test* ](#_page19_x54.00_y325.04)(on page[ 14)](#_page19_x54.00_y325.04) 
+   - [*Creating a URL/API Load Test* ](#create_new_load_test)
+ 
+   - [*Creating a Script Load Test* ](#creating_a_script_load_test) 
 
-   - [*Creating a Script Load Test* ](#_page22_x54.00_y352.04)(on page [ 17)](#_page22_x54.00_y352.04) 
-
-   - [*Creating a Template Load Test* ](#_page26_x54.00_y407.04)(on page [ 21)](#_page26_x54.00_y407.04) 
-
+   - [*Creating a Template Load Test* ](#creating_a_template_load_test)
      
 
 ## Creating a URL/API Load Test
@@ -71,7 +70,9 @@ After entering the load test specifications, WebLOAD automatically creates a tes
    - Select **Tests** > **New** and click **Add Load Test**. The Create a new Load Test page appears. 
    - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
    - In the homepage, see the Create a new Load Test pane. 
-
+   
+   <a name="create_new_load_test"></a>
+   
    ![create new load test](../images/create_new_load_test.png)
 
    
@@ -105,8 +106,8 @@ After entering the load test specifications, WebLOAD automatically creates a tes
    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
    | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
    | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual User |
-   | **Load  Generators**                         | Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a   load test* ](#_bookmark23). |
-   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24). |
+   | **Load  Generators**                         | Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a load test* ](#specifying-load-generators-for-a-load-test). |
+   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#setting-recurring-test-runs). |
 
    
 
@@ -140,6 +141,7 @@ Use this option to create a load test based on a WebLOAD script that was created
    - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
    - In the homepage, see the Create a new Load Test pane. 
 
+   <a name="creating_a_script_load_test"></a>
    ![create new load test](../images/create_new_load_test.png)
 
    
@@ -163,8 +165,8 @@ Use this option to create a load test based on a WebLOAD script that was created
    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
    | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
    | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual Users |
-   | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying   Load Generators*](#_bookmark23) [*for a load test* ](#_bookmark23). |
-   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#_bookmark24). |
+   | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying Load Generators*](#specifying-load-generators-for-a-load-test) [*for a load test* ](#specifying-load-generators-for-a-load-test). |
+   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#). |
 
    
 
@@ -224,6 +226,7 @@ Use this option to create a load test based on a WebLOAD template file that was 
    - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
    - In the homepage, see the Create a new Load Test pane. 
 
+   <a name="creating_a_template_load_test"></a>
    ![create new load test](../images/create_new_load_test.png)
 
    
@@ -244,7 +247,7 @@ Use this option to create a load test based on a WebLOAD template file that was 
    | **Name**                             | The name of the Load test.                                   |
    | **Path**                             | Click **Select Template** to  select a template from the list appearing in the **Resources** > **Templates** page  that appears. |
    | **WebRM Virtual Clients allocation** | This is relevant  for a WebRM configuration. Specify the number of virtual users to allocate  for this test from the floating WebRM license. |
-   | **Recurrence**                       | Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to [*Setting*](#_bookmark24) [*recurring   test runs* ](#_bookmark24). |
+   | **Recurrence**                       | Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to [*Setting recurring test runs*](#setting-recurring-test-runs). |
 
    
 

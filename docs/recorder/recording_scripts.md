@@ -38,7 +38,7 @@ The script can then be used with WebLOAD for load and scalability testing of you
    3. **Open a saved session** – Browse to the session.
 
 
-The WebLOAD Recorder main window opens in Editing Mode ([*Figure 5*](#_bookmark24)), enabling you to begin creating or editing your script.
+The WebLOAD [*Recorder main window*](./quick_start.md#recorder_edit_mode) opens in Editing Mode, enabling you to begin creating or editing your script.
 
 
 

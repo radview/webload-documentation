@@ -14,6 +14,7 @@ In WebLOAD Dashboard you can manage the following types of sessions:
 **To view the load sessions:** 
 
 - In the menu bar, select **Sessions** > **Search**. The Load Sessions table appears. 
+<a name="load_sessions_page"></a>
 
 ![Load Sessions page ](../images/load_sessions_page.jpeg)
 

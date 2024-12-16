@@ -290,7 +290,7 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 **See also**
 
 * cellIndex
-* [*C*](#_bookmark23)[*ollections* ](#_bookmark23)
+*[*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -324,7 +324,7 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 **See also**
 
 * cell
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -618,7 +618,7 @@ cols is often accessed through the wlTables family of table, row, and cell objec
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -1633,7 +1633,7 @@ The most frequently accessed input elements are of type Button, CheckBox, File, 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * Image (see [*Image (object)* ](#_bookmark210)on page [149](#_bookmark210))
 * [*Select* ](#_bookmark329)
 
@@ -2143,7 +2143,7 @@ Specifies that the contained controls are all elements of a form. Each form obje
 
 form objects are local to a single thread. You cannot create new form objects using the JavaScript new operator, but you can access HTML forms through the properties and methods of the standard DOM objects. form properties are read-only.
 
-form objects are grouped together within collections of forms, as described in Collections (see [*Collections* ](#_bookmark23)on page [27](#_bookmark23)). A forms collection contains all form links (HTML `<FORM>` elements) within the document.
+form objects are grouped together within collections of forms, as described in Collections (see [*Collections* ](#using_javascript_ref.md#collections)). A forms collection contains all form links (HTML `<FORM>` elements) within the document.
 
 **Syntax**
 
@@ -2183,7 +2183,7 @@ You can access this form by writing any of the following expressions:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
 * Image (see [*Image (object)* ](#_bookmark210)on page [149](#_bookmark210))
@@ -2322,7 +2322,7 @@ For example:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * GetFrames (see [*GetFrames (property)* ](#_bookmark153)on page [117](#_bookmark153))
 
 ## Function (property)
@@ -3196,7 +3196,7 @@ wlGlobals.GetImagesInThinClient = true
 **See also**
 
 * SetClientType (see [*SetClientType (function)* ](#_bookmark352)on page [242](#_bookmark352))
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480)on page [327](#_bookmark481))
@@ -4267,7 +4267,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4297,7 +4297,7 @@ Image objects on a Web page are accessed through the document.all collection of 
 
 **Description**
 
-Each Image object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). Image objects are accessed through Images [*Collections* ](#_bookmark23). (Compare to the element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125)) object, which stores the parsed data for an entire HTML form.)
+Each Image object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). Image objects are accessed through Images [*Collections* ](#using_javascript_ref.md#collections). (Compare to the element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125)) object, which stores the parsed data for an entire HTML form.)
 
 image objects are grouped together within collections of images, accessed directly through the document object (document.images[#]).
 
@@ -4327,7 +4327,7 @@ Access each image’s properties directly using the following syntax:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
 * [*Select* ](#_bookmark329)
 
@@ -4402,7 +4402,7 @@ Sets or retrieves the index number of the parent object. For example, the ordina
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 
 ## InfoMessage() (function)
 
@@ -4467,7 +4467,7 @@ The InnerHTML property for cell objects is written in uppercase.
 
 * cell
 * cellIndex (see [*cellIndex (property)* ](#_bookmark50)on page [46](#_bookmark50)) (cell  property)
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4503,7 +4503,7 @@ Sets or retrieves the image found between the `<Start>` and `<End>` tags of the 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223))
@@ -4521,7 +4521,7 @@ Represents the inner link field for the parent image object.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
 * [*Select* ](#_bookmark329)
 
@@ -4544,7 +4544,7 @@ When working with a link or location object, the text that appears over the link
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -4763,7 +4763,7 @@ A link object contains information on an external document to which the current 
 
 link objects are local to a single thread. You cannot create new link objects using the JavaScript new operator, but you can access HTML links through the properties and methods of the standard DOM objects. link properties are read-only.
 
-link objects are organized into Collections (see [*Collections* ](#_bookmark23)on page [27](#_bookmark23)) of links or anchors. To access an individual link’s properties, check the length property of the links collection and use an index number to access the individual links.
+link objects are organized into Collections (see [*Collections* ](using_javascript_ref.md#collections)) of links or anchors. To access an individual link’s properties, check the length property of the links collection and use an index number to access the individual links.
 
 **Syntax**
 
@@ -4800,7 +4800,7 @@ document.links[#].`<*link-property*>`
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * document (see [*document (object)* ](#_bookmark100)on page [78](#_bookmark100))
 
 ## load() (method)
@@ -4839,7 +4839,7 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
@@ -4872,7 +4872,7 @@ If you wish to measure the time it took to load the XML document using the load(
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
@@ -4971,7 +4971,7 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
@@ -5242,7 +5242,7 @@ document.frames.namestring
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * content (see [*content (property)* ](#_bookmark68)on page [56](#_bookmark68))
 * httpEquiv (see [*httpEquiv (property)* ](#_bookmark204)on page [144](#_bookmark204))
 * Url (see [*Url (property)* ](#_bookmark422)on page [289](#_bookmark422))
@@ -5293,7 +5293,7 @@ WebLOAD automatically sends the user name and password when a wlHttp object conn
 
 **Method of Object**
 
-* wlRand (see [*wlRand (object)* ](#_bookmark478)on page [326](#_bookmark478))
+* wlRand (see [*wlRand (object)* ](#wlrand-object) 
 
 **Description**
 
@@ -5692,7 +5692,7 @@ Represents the outer link field for the parent image object.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
 * [*Select* ](#_bookmark329)
 
@@ -7041,7 +7041,7 @@ The row object may be accessed as a member of the wlTables family of table, row,
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -7074,7 +7074,7 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -7218,7 +7218,7 @@ document.scripts[1].language
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 
 ## search (property)
 
@@ -8134,7 +8134,7 @@ Retrieves the complete URL of the parent object, that is the URL to an external 
 
 **Example** [“www.ABCDEF.com/images/logo.gif](http://www.ABCDEF.com/images/logo.gif)” **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
@@ -8186,8 +8186,8 @@ WebLOAD recommends setting the SSL bit limit through the WebLOAD Console. Check 
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
-* SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)
+* SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLEnableStrength() (see [*SSLEnableStrength() (function)* ](#_bookmark383)on page [262](#_bookmark383))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8242,7 +8242,7 @@ InitClient()
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8299,7 +8299,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8365,7 +8365,7 @@ Defining a global, categorical value for SSLCryptoStrength is a high-level appro
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8419,7 +8419,7 @@ SSLDisableCipherID(45)
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8475,7 +8475,7 @@ SSLDisableCipherName("EXP-RC4-MD5")
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8532,7 +8532,7 @@ SSLEnableStrength(128)
 * SSLEnableCipherName() (see "[*SSLEnableCipherName() (function)*](#_bookmark386)" on page [265](#_bookmark386))
 * SSLGetCipherCount() (see "[*SSLGetCipherCount() (function)*](#_bookmark388)" on page [266](#_bookmark388))
 * SSLGetCipherID() (see "[*SSLGetCipherID() (function)*](#_bookmark389)" on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see "[*SSLGetCipherInfo() (function)*](#_bookmark392)" on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see "[*SSLGetCipherInfo() (function)*](#sslgetcipherinfo-function)" on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see "[*SSLGetCipherName() (function)*](#_bookmark393)" on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see "[*SSLGetCipherStrength() (function)*](#_bookmark395)" on page [271](#_bookmark395))
 * SSLUseCache (see "[*SSLUseCache (property)*](#_bookmark397)" on page [272](#_bookmark397))
@@ -8580,7 +8580,7 @@ SSLCipherSuiteCommand(DisableAll) MyCipherID = SSLGetCipherID("EXP-RC4-MD5") SSL
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8635,7 +8635,7 @@ only)
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385)on page [264](#_bookmark385))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8673,7 +8673,7 @@ Returns an integer representing the number of ciphers enabled for the current te
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385)on page [264](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8717,7 +8717,7 @@ Returns the ID number associated with the specified cipher.
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385)on page [264](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -8815,7 +8815,7 @@ Returns the name of the cipher associated with the specified ID number.
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400)on page [274](#_bookmark400))
@@ -8856,7 +8856,7 @@ Returns an integer representing the maximum available cipher strength for the cu
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400)on page [274](#_bookmark400))
@@ -8908,7 +8908,7 @@ To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)*
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400)on page [274](#_bookmark400))
@@ -8973,7 +8973,7 @@ See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578) for a table illu
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
 * SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark389)on page [267](#_bookmark389))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -9154,7 +9154,7 @@ The tagName property is a member of the wlTables family of table, row, and cell 
 
 * cell
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#_bookmark64)on page [54](#_bookmark64)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -9359,7 +9359,7 @@ CurrentDocumentTitle = document.title.string
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * form (see [*form (object)* ](#_bookmark125)on page [95](#_bookmark125))
 * [*Select* ](#_bookmark329)
 
@@ -9760,7 +9760,7 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * element (see [*element (object)* ](#_bookmark102)on page [80](#_bookmark102))
@@ -10023,7 +10023,7 @@ For example:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 
 ## wlClear() (method)
 
@@ -10068,7 +10068,7 @@ wlHttp.FormData.wlClear(“FirstName”)
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -10389,7 +10389,7 @@ WebLOAD therefore uses wlGet() to retrieve field data whenever the name could le
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * wlHttp (see [*wlHttp (object)* ](#_bookmark465)on page [316](#_bookmark465))
 
 
@@ -10548,7 +10548,7 @@ The wlHeaders object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480)on page [327](#_bookmark481))
 
@@ -10777,7 +10777,7 @@ The wlMetas object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 
 
 
@@ -11039,7 +11039,7 @@ You can download the page and parse the links using the following script:
 ```javascript
 function InitAgenda() {
 
-wlGlobals.Url = [“http://www.ABCDEF.com](http://www.ABCDEF.com/)”
+wlGlobals.Url = "http://www.ABCDEF.com"
 
 //Enable link parsing wlGlobals.ParseLinks = true
 
@@ -11047,6 +11047,7 @@ wlGlobals.Url = [“http://www.ABCDEF.com](http://www.ABCDEF.com/)”
 
 wlHttp.Get()
 ```
+
 
 For the link in question, WebLOAD stores the attribute pairs in the document.links[2].wlSearchPairs property. This property is actually a collection containing two wlSearchPairs objects. The following is a complete listing of the collection.
 
@@ -11061,7 +11062,7 @@ The wlSearchPairs object includes the following properties:
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Header (see [*Header (property)* ](#_bookmark195)on page [140](#_bookmark195))
 * link (see [*link (object)* ](#_bookmark235)on page [162](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243)on page [168](#_bookmark243))
@@ -11128,7 +11129,7 @@ wlHttp.FormData.wlSet(“length”, 7)
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -11294,7 +11295,7 @@ Each wlTables object contains information about the data found in the whole tabl
 **See also**
 
 * cellIndex
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * Compare() (see [*Compare() (method)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65)on page [55](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65)on page [55](#_bookmark65))
@@ -11467,7 +11468,7 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
@@ -11606,7 +11607,7 @@ page [345](#_bookmark509)) property. In addition, if the object is constructed f
 
 **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](using_javascript_ref.md#collections)
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * [*XML Parser* Object ](#_bookmark563)on page [437](#_bookmark563)
 
@@ -11777,11 +11778,11 @@ However, including XMLDocument is a good programming practice, to emphasize the 
 
 **Example** document.wlXmls[0].XMLDocument.documentElement.nodeName **See also**
 
-* [*Collections* ](#_bookmark23)
+* [*Collections* ](#using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* [*load() and loadXML() Method Comparison* ](#_bookmark239)
+* [*load() and loadXML() Method Comparison* ](#using_javascript_ref.md#collections9)
 * loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
 * src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
 * [*XML Parser* Object ](#_bookmark563)on page [437](#_bookmark563)

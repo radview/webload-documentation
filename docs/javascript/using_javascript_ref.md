@@ -102,7 +102,8 @@ The following methods are for wlHttp objects only:
 
 - wlSet() (see [*wlSet() (method)* ](#_bookmark483)on page [328](#_bookmark482))
 
-  
+<a name = "figure5"></a>
+![Figure 5](../images/figure5.png)
 
 
 **Properties**
@@ -417,7 +418,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark216)on page [153](#_bookmark217))
 
-- [*Message Functions* ](#_bookmark30)
+- [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 
 - ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
 

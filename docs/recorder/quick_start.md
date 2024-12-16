@@ -15,7 +15,7 @@ This section shows you how you can get started quickly, using the RadView Softwa
 
 You will be working with a test script. The basic steps are:
 
-1. Recording your script – describes the steps in recording a basic script (see [*Creating](#_bookmark23)[ a](#_bookmark23)* on page [20](#_bookmark23)).
+1. Recording your script – describes the steps in recording a basic script (see [*Creating](#creating-a-script)
 
 1. Editing your script – explains how to edit and modify your script, insert new items into your script, and parameterize form data to create data driven tests (see [*Editing](#_bookmark26)[ Your Script* ](#_bookmark26)on page [26](#_bookmark26)).
 
@@ -52,6 +52,7 @@ The first step in creating a script is to record your actions as you interact wi
 
    To the right of the View panes is the Assistant pane, which contains simple instructions to help you create your load test script. Click a link in the Assistant to go to the relevant item.
 
+   <a name = "recorder_edit_mode"></a>
    ![WebLOAD Recorder Main Window in Editing Mode](../images/recorder_edit_mode.jpeg)
 
    
