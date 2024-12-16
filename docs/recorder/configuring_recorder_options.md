@@ -1239,7 +1239,7 @@ You can also specify the update policy, which defines when a new value will be r
    - **Number** – Defines a number parameter. For more information see [*Defining a](#_bookmark199)[ Number Parameter* ](#_bookmark199).
    - **Random String** – Defines a random string parameter. For more information see
 
-      [*Defining a Random String Parameter* ](#_bookmark201).
+      [*Defining a Random String Parameter* ](#defining-a-random-string-parameter).
    
       The parameters definitions are stored with the script. You can change the parameters’ definition at any time by using the Parameterization Manager again.
 
@@ -1398,19 +1398,22 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**. The Parameterization Manager dialog box opens.
 
-1. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
+2. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
 
    ![Parameterization Manager – Random String Dialog Box](../images/recorder_1108.png)
 
    
 
-1. In the **Description** field, optionally enter a description of the random string parameter.
+3. In the **Description** field, optionally enter a description of the random string parameter.
 
-1. Fill in the fields as described in [Table 36](#_bookmark202).
+4. Fill in the fields as described in [Parameterization Manager – Random String dialog box](#parameterization_manager_random_string_dialog_box).
 
-1. Click **OK**.
+5. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – Random String dialog box.
+
+
+<a name = "parameterization_manager_random_string_dialog_box"></a>
 
 |**Setting**|**Description**|
 | :- | :- |

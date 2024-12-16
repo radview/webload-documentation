@@ -391,7 +391,7 @@ The WebLOAD Recorder provides a set of objects, such as Sleep, that you can drag
 
 Use the WebLOAD Recorder toolboxes to add the following items to your script:
 
-- General objects, such as Message or Sleep timers. These objects are used in all test scripts, run in both WebLOAD Recorder and WebLOAD. General toolbox tools are described in [*The WebLOAD Recorder General Toolbox* ](#_bookmark206).
+- General objects, such as Message or Sleep timers. These objects are used in all test scripts, run in both WebLOAD Recorder and WebLOAD. General toolbox tools are described in [*The WebLOAD Recorder General Toolbox* ](./appendix_a.md#the-webload-recorder-general-toolbox).
 - Load objects, such as transactions and synchronization points used in WebLOAD tests. Load toolbox tools are described in [*The WebLOAD Recorder Load Toolbox* ](#_bookmark212).
 - Internet Protocols functionality, such as downloading data from an FTP site for a WebLOAD Recorder test. Internet Protocols Building Blocks are described in [*The](#_bookmark221)[ WebLOAD Recorder Internet Protocols Toolbox* ](#_bookmark221).
 - JMS functionality, such as sending and receiving JMS message. JMS Building Blocks are described in [*The JMS Toolbox* ](#_bookmark336).

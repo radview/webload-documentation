@@ -4124,11 +4124,11 @@ In WebLOAD Console, in the **Browser Cache** tab of the **Default** or **Current
 
 **See also**
 
-* HttpCacheScope (see [*HttpCacheScope (property)* ](#_bookmark202)on page [143](#_bookmark202))
+* HttpCacheScope (see [*HttpCacheScope (property)* ](#httpcachescope-property))
 
 ## httpEquiv (property)
 
-**Property of Object**
+**Property of Object
 
 * wlMetas (see [*w*](#_bookmark471)[*lMetas (object)* ](#_bookmark471)on page [320](#_bookmark471))
 
@@ -4172,9 +4172,9 @@ Identifies the proxy server that the script uses for HTTP SSL access when UseSam
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
-* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark295))
-* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#_bookmark297)[ *(properties)* ](#_bookmark297)on page [212](#_bookmark297))
-* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
+* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#proxyntusername-proxyntpassword-properties)
+* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#proxyntusername-proxyntpassword-properties)
+* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxyntusername-proxyntpassword-properties))
 * UseSameProxyForSSL (see [*UseSameProxyForSSL (property)* ](#_bookmark427)on page [292](#_bookmark427))
 
 ## HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)
@@ -4203,9 +4203,9 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
-* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [146](#_bookmark207))
-* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark295))
-* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#_bookmark297)[ *(properties)* ](#_bookmark297)on page [212](#_bookmark297))
+* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
+* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#proxy-proxyusername-proxypassword-properties))
+* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#proxyntusername-proxyntpassword-properties))
 * UseSameProxyForSSL (see [*UseSameProxyForSSL (property)* ](#_bookmark427)on page [292](#_bookmark427))
 
 ## id (property)
@@ -4276,15 +4276,15 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208)) (wlTables property)
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223)) (cell property)
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
+* load() (see [*load() (method)* ](#load-method))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246)on page [170](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291)on page [208](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310)on page [220](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)on page [223](#_bookmark315)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#_bookmark317)on page [224](#_bookmark317)) (row property)
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)on page [279](#_bookmark407)) (cell property)
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
@@ -4322,7 +4322,7 @@ Access each image’s properties directly using the following syntax:
 * Name (see [*Name (property)* ](#_bookmark253)on page [174](#_bookmark253))
 * OuterLink (see [*OuterLink (property)* ](#_bookmark265)on page [186](#_bookmark265))
 * protocol (see [*protocol (property)* ](#_bookmark294)on page [210](#_bookmark294))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property))
 * Url (see [*Url (property)* ](#_bookmark422)on page [289](#_bookmark422))
 
 **See also**
@@ -4476,15 +4476,15 @@ The InnerHTML property for cell objects is written in uppercase.
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208)) (wlTables property)
 * InnerImage (see [*InnerImage (property)* ](#_bookmark220)on page [155](#_bookmark220))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223)) (cell property)
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246)on page [170](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291)on page [208](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310)on page [220](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)on page [223](#_bookmark315)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#_bookmark317)on page [224](#_bookmark317)) (row property)
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)on page [279](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493)on page [333](#_bookmark492))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
@@ -4507,7 +4507,7 @@ Sets or retrieves the image found between the `<Start>` and `<End>` tags of the 
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 
 ## InnerLink (property)
 
@@ -4561,7 +4561,7 @@ When working with a link or location object, the text that appears over the link
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310)on page [220](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)on page [223](#_bookmark315)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#_bookmark317)on page [224](#_bookmark317)) (row property)
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)on page [279](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493)on page [333](#_bookmark492))
 
@@ -4784,7 +4784,7 @@ document.links[#].`<*link-property*>`
 * hash (see [*hash (property)* ](#_bookmark192)on page [139](#_bookmark192))
 * host (see [*host (property)* ](#_bookmark197)on page [142](#_bookmark197))
 * hostname (see [*hostname (property)* ](#_bookmark197)on page [142](#_bookmark197))
-* href (see [*href (property)* ](#_bookmark201)on page [143](#_bookmark201))
+* href see [*href (property)* ](#href-property)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerImage (see [*InnerImage (property)* ](#_bookmark220)on page [155](#_bookmark220))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223))
@@ -4842,9 +4842,9 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
 ## load() and loadXML() Method Comparison
@@ -4875,9 +4875,9 @@ If you wish to measure the time it took to load the XML document using the load(
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * wlXmls (see [*wlXmls (object)* ](#_bookmark502)on page [340](#_bookmark502))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
@@ -4974,9 +4974,9 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
 ## location (object)
@@ -5004,7 +5004,7 @@ document.location.`<*location-property*>`
 * hash (see [*hash (property)* ](#_bookmark192)on page [139](#_bookmark192))
 * host (see [*host (property)* ](#_bookmark197)on page [142](#_bookmark197))
 * hostname (see [*hostname (property)* ](#_bookmark197)on page [142](#_bookmark197))
-* href (see [*href (property)* ](#_bookmark201)on page [143](#_bookmark201))
+* href (see [*href (property)* ](#href-property)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)on page [156](#_bookmark223))
 * Name (see [*Name (property)* ](#_bookmark253)on page [174](#_bookmark253))
@@ -5160,8 +5160,8 @@ Use GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122]
 **See also**
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
-* GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
-* MultiIPSupport() (see [*MultiIPSupport (property)* ](#_bookmark250)on page [171](#_bookmark250))
+* GetIPAddress() see [*GetIPAddress() (method)* ](#_bookmark163)
+* MultiIPSupport() see [*MultiIPSupport (property)* ](#multiipsupport-property)
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 
 ## MultiIPSupportProtocol (property)
@@ -5194,7 +5194,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
-* MultiIPSupport() (see [*MultiIPSupport (property)* ](#_bookmark250)on page [171](#_bookmark250))
+* MultiIPSupport() (see [*MultiIPSupport (property)* ](#multiipsupport-property))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 
 ## Name (property)
@@ -6564,9 +6564,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
-* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
-* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
-* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#_bookmark297)[ *(properties)* ](#_bookmark297)on page [212](#_bookmark297))
+* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
+* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxyntusername-proxyntpassword-properties))
+* ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#proxyntusername-proxyntpassword-properties))
 
 ## ProxyExceptions (property)
 
@@ -6624,9 +6624,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
-* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
-* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
-* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark295))
+* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
+* HttpsProxyNTUserName, HttpsProxyNTPassWord see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxy-proxyusername-proxypassword-properties)
+* Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#proxy-proxyusername-proxypassword-properties))
 
 ## Put() (method)
 
@@ -7214,7 +7214,7 @@ document.scripts[1].language
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
 * language (see [*language (property)* ](#_bookmark232)on page [161](#_bookmark232))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 
 **See also**
 
@@ -8137,8 +8137,8 @@ Retrieves the complete URL of the parent object, that is the URL to an external 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
@@ -9662,8 +9662,8 @@ This property is used when you are working with a separate SSL proxy.
 
 * [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
 * *Security* in the *WebLOAD Scripting Guide*
-* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#_bookmark206)[ *HttpsProxyUserName, HttpsProxyPassWord (properties)* ](#_bookmark206)on page [145](#_bookmark206))
-* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName,*](#_bookmark207)[ *HttpsProxyNTPassWord (properties)* ](#_bookmark207)on page [146](#_bookmark207))
+* HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
+* HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxy-proxyusername-proxypassword-properties))
 
 
 
@@ -11471,10 +11471,10 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
 
@@ -11595,13 +11595,13 @@ Running this script produces the following output:
 
 WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on
 
-page [345](#_bookmark509)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219)), and src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371)) HTML properties are exposed. Each property is described in its own section.
+page [345](#_bookmark509)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219)), and src (see [*src (property)* ](#src-property)on page [252](#src-property)) HTML properties are exposed. Each property is described in its own section.
 
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * WLXmlDocument() (see [*WLXmlDocument() (constructor)* ](#_bookmark500)on page [339](#_bookmark500))
 * XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on page [345](#_bookmark509))
 
@@ -11781,10 +11781,10 @@ However, including XMLDocument is a good programming practice, to emphasize the 
 * [*Collections* ](#using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208)on page [146](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)on page [154](#_bookmark219))
-* load() (see [*load() (method)* ](#_bookmark236)on page [163](#_bookmark236))
+* load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#using_javascript_ref.md#collections9)
-* loadXML() (see [*loadXML() (method)* ](#_bookmark242)on page [167](#_bookmark242))
-* src (see [*src (property)* ](#_bookmark371)on page [252](#_bookmark371))
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
+* src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * [*XML Parser* Object ](#_bookmark563)on page [437](#_bookmark563)
 
 ## XMLParserObject (object)

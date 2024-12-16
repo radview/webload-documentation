@@ -148,9 +148,9 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - KeepAlive (see [*KeepAlive (property)* ](#_bookmark228)on page [159](#_bookmark227))
 
-- LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark241)on page [165](#_bookmark240))
+- LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark241))
 
-- MultiIPSupport (see [*MultiIPSupport (property)* ](#_bookmark250)on page [171](#_bookmark248))
+- MultiIPSupport see [*MultiIPSupport (property)* ](./actions_objects_functions.md#multiipsupport-property)
 
 - NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark254)on page [176](#_bookmark255))
 
