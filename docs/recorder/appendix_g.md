@@ -148,7 +148,7 @@ View the load session test results in the WebLOAD Console, WebLOAD Analytics, or
 
 The following table describes the navigation timing measurements. These measurements are gathered by WebLOAD’s reportStatistics command. By default, these measurements report navigation timing statistics as an average across all pages for which the reportStatistics command was invoked.
 
-If you added an optional Page Name parameter to a reportStatistics command (refer to [*Selenium Report Statistics* ](#_bookmark344)on page [363](#_bookmark344)), the resultant measurement names will be displayed as <Measurement Name>-<Page Name>. Thus for example, the measurement Selenium Redirect – Home Page displays the redirect time for the home page.
+If you added an optional Page Name parameter to a reportStatistics command (refer to [*Selenium Report Statistics* ](#_bookmark344)), the resultant measurement names will be displayed as <Measurement Name>-<Page Name>. Thus for example, the measurement Selenium Redirect – Home Page displays the redirect time for the home page.
 
 Note that in all navigation timing measurements, time is reported in units of seconds.
 

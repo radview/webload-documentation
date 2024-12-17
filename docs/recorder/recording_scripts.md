@@ -57,7 +57,7 @@ If you start and stop recording more than once during a single recording session
 
 **To record a script:**
 
-1. Start **WebLOAD Recorder** (see [*Starting WebLOAD Recorder* ](#_bookmark35)on page [34](#_bookmark35)).
+1. Start **WebLOAD Recorder** (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
    -Or-
 
@@ -181,7 +181,7 @@ If you start and stop recording more than once during a single recording session
 
 1. Select one of the following:
 
-   - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation](#_bookmark84) *[Rules* ](#_bookmark84)*(on page [94](#_bookmark84).)
+   - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation](#_bookmark84) *[Rules* ](#_bookmark84)*(.)
    - **Correlate script using only the existing rules** to run the correlation engine using the existing defined rules. For more information, see [*Configuring the](#_bookmark89)[ Correlation Rules* ](#_bookmark89).
    - **Don’t correlate now** to view the recorded script without correlating the script. You can manually correlate the script later.
 
@@ -440,9 +440,9 @@ When you define concurrent while recording, WebLOAD Recorder inserts an ExecuteC
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](#_bookmark58) on page [70](#_bookmark58)).
+After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](#_bookmark58) ).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the](#_bookmark103) *[Script Tree* ](#_bookmark103)*on page [112](#_bookmark103)).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the](#_bookmark103) *[Script Tree* ](#_bookmark103)*).
 
 
 
@@ -468,9 +468,9 @@ Each block of code starts with a header that contains “WLIDE”, description, 
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*on page [72](#_bookmark62)).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*on page [113](#_bookmark104)).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*).
 
 ### Viewing the Recorded Script in the HTTP Headers View Pane
 
@@ -511,9 +511,9 @@ The Post command involves sending data to the HTTP server, as opposed to the Get
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*on page [72](#_bookmark62)).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*on page [113](#_bookmark104)).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*).
 
 
 

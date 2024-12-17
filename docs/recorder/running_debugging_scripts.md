@@ -42,7 +42,7 @@ This section provides instructions for running a script. Before running a script
    - The execution sequence in the JavaScript View pane and the Script Tree.
    - If the Page View tab is open, the pages returned from the Web site.
 
-> **Note:** If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see [*Setting Playback](#_bookmark184) *[Options* ](#_bookmark184)*on page [209](#_bookmark184)).
+> **Note:** If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see [*Setting Playback](#_bookmark184) *[Options* ](#_bookmark184)*).
 >
 
 ### **Viewing the Execution Sequence in the Script Tree**
@@ -50,16 +50,16 @@ When you run your script, WebLOAD Recorder interacts with your Web application j
 
 WebLOAD Recorder enables you to do the following:
 
-- Run through the entire script line by line, and add breakpoints (see [*Debugging a](#_bookmark112)[ Script* ](#_bookmark112)on page [120](#_bookmark112)).
+- Run through the entire script line by line, and add breakpoints (see [*Debugging a](#_bookmark112)[ Script* ](#_bookmark112)).
 - Display the Current Project Options by right-clicking the Agenda root node and clicking **Current Project Options** from the pop-up menu,
 
   -Or-
   
-  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*on page [155](#_bookmark138)).
+  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*).
   
   -Or-
   
-  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](#_bookmark138)on page [155](#_bookmark138)).
+  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](#_bookmark138)).
 
 **To view the Script Tree:**
 
@@ -77,7 +77,7 @@ JavaScript View displays the complete JavaScript of your script with an executio
 
 WebLOAD Recorder enables you to do the following:
 
-- Run through the entire script line by line, add breakpoints, and add Watch variables (see [*Debugging a Script* ](#_bookmark112)on page [120](#_bookmark112)).
+- Run through the entire script line by line, add breakpoints, and add Watch variables (see [*Debugging a Script* ](#_bookmark112)).
 - Check the syntax by right-clicking in the script and clicking **Check Syntax** from the pop-up menu.
 
 
@@ -240,8 +240,8 @@ When debugging a script, you can set the script to run in the following ways:
 1. Click **Run** or **Step Into** in the **Debug** tab of the ribbon.
 1. When you reach the end of the script you can:
    1. Click **Step Into** in the **Debug** tab to return to the beginning of the script.
-   1. View results (see [*Viewing and Analyzing the Test Results* ](#_bookmark115)on page [130](#_bookmark115)).
-   1. Add breakpoints (see [*Setting Breakpoints* ](#_bookmark113)on page [121](#_bookmark113)).
+   1. View results (see [*Viewing and Analyzing the Test Results* ](#_bookmark115)).
+   1. Add breakpoints (see [*Setting Breakpoints* ](#_bookmark113)).
 1. Return to Edit mode and revise your script.
 
 #### Starting the Debugger
@@ -332,7 +332,7 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 
 **To run until a breakpoint is reached:**
 
-1. Set a breakpoint (see [*Setting Breakpoints* ](#_bookmark113)on page [121](#_bookmark113)).
+1. Set a breakpoint (see [*Setting Breakpoints* ](#_bookmark113)).
 1. Click **Run** in the **Debug** tab
 
    Click **Step Into** in the **Debug** tab to run the script step-by-step.
@@ -541,7 +541,7 @@ The Variables window provides quick access to variables that are important in th
 
 The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.
 
-The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or](#_bookmark114) *[Expression* ](#_bookmark114)*on page [128](#_bookmark114)), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
+The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or](#_bookmark114) *[Expression* ](#_bookmark114)*), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
 
 The Variables window also has a Context dropdown list that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.
 

@@ -43,11 +43,11 @@ The WebLOAD JavaScript toolset includes many additional elements. For a complete
 
 **Properties and Methods of Objects**
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459)on page [313](#_bookmark460))
+- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466)on page [316](#_bookmark465))
+- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470)on page [319](#_bookmark469))
+- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
 
 
 **Description**
@@ -76,31 +76,31 @@ Each individual property and method includes examples of the syntax for that pro
 
 **Methods**
 
-- ClearDNSCache() (see [*ClearDNSCache() (method)* ](#_bookmark57)on page [49](#_bookmark58))
+- ClearDNSCache() (see [*ClearDNSCache() (method)* ](#cleardnscache-method))
 
-- ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)on page [49](#_bookmark59))
+- ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59))
 
 
 
 The following methods are for wlHttp objects only:
 
-- CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark63)on page [53](#_bookmark62))
+- CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark63))
 
-- Get() (see [*Get() (transaction method)* ](#_bookmark136)on page [104](#_bookmark136))
+- Get() (see [*Get() (transaction method)* ](#_bookmark136))
 
-- Post() (see [*Post() (method)* ](#_bookmark289)on page [205](#_bookmark290))
+- Post() (see [*Post() (method)* ](#_bookmark289))
 
-- Head() (see [*Head() (method)* ](#_bookmark194)on page [139](#_bookmark192))
+- Head() (see [*Head() (method)* ](#_bookmark194))
 
 
 
 **Data Methods**
 
-- wlClear() (see [*wlClear() (method)* ](#_bookmark441)on page [301](#_bookmark440))
+- wlClear() (see [*wlClear() (method)* ](#_bookmark441))
 
-- wlGet() (see [*wlGet() (method)* ](#_bookmark453)on page [310](#_bookmark452))
+- wlGet() (see [*wlGet() (method)* ](#_bookmark453))
 
-- wlSet() (see [*wlSet() (method)* ](#_bookmark483)on page [328](#_bookmark482))
+- wlSet() (see [*wlSet() (method)* ](#_bookmark483))
 
 <a name = "figure5"></a>
 ![Figure 5](../images/figure5.png)
@@ -114,22 +114,22 @@ The following properties are for wlHttp objects only
 
 **Data Properties**
 
-- Data (see [*Data (property)* ](#_bookmark81)on page [66](#_bookmark80))
+- Data (see [*Data (property)* ](#_bookmark81))
 
-- DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
+- DataFile (see [*DataFile (property)* ](#_bookmark82))
 
-- Erase (see [*Erase (property)* ](#_bookmark112)on page [88](#_bookmark113))
+- Erase (see [*Erase (property)* ](#_bookmark112))
 
-- FileName (see [*FileName (property)* ](#_bookmark123)on page [93](#_bookmark122))
+- FileName (see [*FileName (property)* ](#_bookmark123))
 
-- FormData (see [*FormData (property)* ](#_bookmark128)on page [97](#_bookmark127))
+- FormData (see [*FormData (property)* ](#_bookmark128))
 
-- Header (see [*Header (property)* ](#_bookmark196)on page [140](#_bookmark195))
+- Header (see [*Header (property)* ](#_bookmark196))
 
 
-- DataCollection.type (see [*type (property)* ](#_bookmark421)on page [288](#_bookmark420))
+- DataCollection.type (see [*type (property)* ](#_bookmark421))
 
-- DataCollection.value (see [*value (property)* ](#_bookmark431)on page [294](#_bookmark430))
+- DataCollection.value (see [*value (property)* ](#_bookmark431))
 
 
 
@@ -140,69 +140,69 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 **Configuration Properties**
 
-- ConnectionSpeed (see [*ConnectionSpeed (property)* ](#_bookmark67)on page [55](#_bookmark66)) (wlGlobals only)
+- ConnectionSpeed (see [*ConnectionSpeed (property)* ](#_bookmark67)) (wlGlobals only)
 
-- DisableSleep (see [*DisableSleep (property)* ](#_bookmark98)on page [76](#_bookmark96))
+- DisableSleep (see [*DisableSleep (property)* ](#_bookmark98))
 
-- DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99)on page [77](#_bookmark99))
+- DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99))
 
-- KeepAlive (see [*KeepAlive (property)* ](#_bookmark228)on page [159](#_bookmark227))
+- KeepAlive (see [*KeepAlive (property)* ](#_bookmark228))
 
 - LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark241))
 
 - MultiIPSupport see [*MultiIPSupport (property)* ](./actions_objects_functions.md#multiipsupport-property)
 
-- NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark254)on page [176](#_bookmark255))
+- NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark254))
 
-- Outfile (see [*Outfile (property)* ](#_bookmark269)on page [188](#_bookmark268))
+- Outfile (see [*Outfile (property)* ](#_bookmark269))
 
-- PassWord (see [*PassWord (property)* ](#_bookmark285)on page [203](#_bookmark285))
+- PassWord (see [*PassWord (property)* ](#_bookmark285))
 
-- ProbingClientThreads (see [*ProbingClientThreads (property)* ](#_bookmark291)on page [208](#_bookmark291))
+- ProbingClientThreads (see [*ProbingClientThreads (property)* ](#_bookmark291))
 
-- Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295)on page [210](#_bookmark294))
+- Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295))
 
-- RedirectionLimit (see [*RedirectionLimit (property)* ](#_bookmark303)on page [216](#_bookmark302))
+- RedirectionLimit (see [*RedirectionLimit (property)* ](#_bookmark303))
 
-- SaveSource (see [*SaveSource (property)* ](#_bookmark321)on page [226](#_bookmark320))
+- SaveSource (see [*SaveSource (property)* ](#_bookmark321))
 
-- SaveTransaction (see [*SaveTransaction (property)* ](#_bookmark322)on page [226](#_bookmark322)) (wlGlobals only)
+- SaveTransaction (see [*SaveTransaction (property)* ](#_bookmark322)) (wlGlobals only)
 
-- SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)on page [253](#_bookmark373)) (wlGlobals only)
+- SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)) (wlGlobals only)
 
-- SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark380)on page [258](#_bookmark379)) (wlGlobals
+- SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark380)) (wlGlobals
 
 - only)
 
-- SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark378)[ *SSLClientCertificatePassword (properties)* ](#_bookmark378)on page [256](#_bookmark377))
+- SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark378)[ *SSLClientCertificatePassword (properties)* ](#_bookmark378))
 
-- SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark398)on page [272](#_bookmark397))
+- SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark398))
 
-- SSLVersion (see [*SSLVersion (property)* ](#_bookmark399)on page [274](#_bookmark400))
+- SSLVersion (see [*SSLVersion (property)* ](#_bookmark399))
 
-- type (see [*type (property)* ](#_bookmark421)on page [288](#_bookmark420))
+- type (see [*type (property)* ](#_bookmark421))
 
-- Url (see [*Url (property)* ](#_bookmark423)on page [289](#_bookmark422))
+- Url (see [*Url (property)* ](#_bookmark423))
 
-- UserAgent (see [*UserAgent (property)* ](#_bookmark424)on page [291](#_bookmark424))
+- UserAgent (see [*UserAgent (property)* ](#_bookmark424))
 
-- UserName (see [*UserName (property)* ](#_bookmark426)on page [291](#_bookmark425))
+- UserName (see [*UserName (property)* ](#_bookmark426))
 
-- UsingTimer (see [*UsingTimer (property)* ](#_bookmark429)on page [292](#_bookmark428))
+- UsingTimer (see [*UsingTimer (property)* ](#_bookmark429))
 
-- Version (see [*Version (property)* ](#_bookmark436)on page [299](#_bookmark437))
+- Version (see [*Version (property)* ](#_bookmark436))
 
-- wlTarget (see [*wlTarget (property)* ](#_bookmark495)on page [334](#_bookmark494))
+- wlTarget (see [*wlTarget (property)* ](#_bookmark495))
 
 
 
 **See also**
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459)on page [313](#_bookmark460))
+- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466)on page [316](#_bookmark465))
+- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470)on page [319](#_bookmark469))
+- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
 
 
  
@@ -258,39 +258,39 @@ In this *Guide*, the description of each individual object includes information 
 
 These functions manage access to a script’s function and input files, including opening and closing files, copying files, specifying include files, and reading lines from ASCII input files.
 
-> **Note:** Input file management is also provided by wlInputFile (see [*wlInputFile (object)* ](#_bookmark467)on page [317](#_bookmark467)). Output file management is also provided by wlOutputFile (see [*wlOutputFile*](#_bookmark474) [*(object)* ](#_bookmark474)on page [323](#_bookmark475)).
+> **Note:** Input file management is also provided by wlInputFile (see [*wlInputFile (object)* ](#_bookmark467)). Output file management is also provided by wlOutputFile (see [*wlOutputFile*](#_bookmark474) [*(object)* ](#_bookmark474)).
 
  
 
 **See also**
 
-- Close() (see [*Close() (function)* ](#_bookmark61)on page [52](#_bookmark61))
+- Close() (see [*Close() (function)* ](#close-function))
 
-- CopyFile() (see [*CopyFile() (function)* ](#_bookmark76)on page [61](#_bookmark76))
+- CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 
-- Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93)on page [75](#_bookmark95))
+- Delete() (see [*Delete() (cookie method)* ](#_bookmark93))
 
-- GetLine() (wlOutputFile) (see [*GetLine() (function)* ](#_bookmark166)on page [123](#_bookmark166))
+- GetLine() (wlOutputFile) (see [*GetLine() (function)* ](#_bookmark166))
 
-- GetLine() (wlInputFile) (see [*GetLine() (method)* ](#_bookmark167)on page [125](#_bookmark167))
+- GetLine() (wlInputFile) (see [*GetLine() (method)* ](#_bookmark167))
 
-- IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark213)on page [150](#_bookmark212))
+- IncludeFile() (see [*IncludeFile() (function)* ](./actions_objects_functions.md#includefile-function))
 
-- Open() (wlOutputFile) (see [*Open() (function)* ](#_bookmark262)on page [183](#_bookmark261))
+- Open() (wlOutputFile) (see [*Open() (function)* ](#_bookmark262))
 
-- Open() (wlInputFile) (see [*Open() (method)* ](#_bookmark260)on page [180](#_bookmark260))
+- Open() (wlInputFile) (see [*Open() (method)* ](#_bookmark260))
 
-- Reset() (see [*Reset() (method)* ](#_bookmark311)on page [220](#_bookmark310))
+- Reset() (see [*Reset() (method)* ](#_bookmark311))
 
 - Using the IntelliSense JavaScript Editor 
 
-- wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark474)on page [323](#_bookmark475))
+- wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark474))
 
-- wlInputFile() (see [*wlInputFile (object)* ](#_bookmark467)on page [317](#_bookmark467))
+- wlInputFile() (see [*wlInputFile (object)* ](#_bookmark467))
 
-- Write() (see [*Write() (method)* ](#_bookmark505)on page [343](#_bookmark504))
+- Write() (see [*Write() (method)* ](#_bookmark505))
 
-- Writeln() (see [*Writeln() (method)* ](#_bookmark507)on page [344](#_bookmark506))
+- Writeln() (see [*Writeln() (method)* ](#_bookmark507))
 
 
 
@@ -305,13 +305,13 @@ These functions manage access to a script’s function and input files, includin
 
 For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:
 
-- Two variables, ClientNum (see [*ClientNum (property)* ](#_bookmark60)on page [50](#_bookmark60)) and RoundNum, (see [*RoundNum (variable)* ](#_bookmark313)on page [222](#_bookmark314)) identify the client and round number of the current script instance.
+- Two variables, ClientNum (see [*ClientNum (property)* ](#_bookmark60)) and RoundNum, (see [*RoundNum (variable)* ](#_bookmark313)) identify the client and round number of the current script instance.
 
-- The GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark132)on page [101](#_bookmark131)) function identifies the current Load Generator.
+- The GeneratorName() (see [*GeneratorName() (function)* ](./actions_objects_functions.md#generatorname-function)) function identifies the current Load Generator.
 
-- The GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark175)on page [131](#_bookmark176)) function identifies the operating system of the current Load Generator.
+- The GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](./actions_objects_functions.md#getoperatingsystem-function)) function identifies the operating system of the current Load Generator.
 
-- The VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark433)on page [296](#_bookmark432)) function identifies the current Virtual Client instance.
+- The VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark433)) function identifies the current Virtual Client instance.
 
 
  
@@ -340,15 +340,15 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 **See also**
 
-- ClientNum (see [*ClientNum (property)* ](#_bookmark60)on page [50](#_bookmark60))
+- ClientNum (see [*ClientNum (property)* ](#_bookmark60))
 
-- GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark132)on page [101](#_bookmark131))
+- GeneratorName() (see [*GeneratorName() (function)* ](./actions_objects_functions.md#generatorname-function))
 
-- GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark175)on page [131](#_bookmark176))
+- GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](./actions_objects_functions.md#getoperatingsystem-function))
 
-- RoundNum (see [*RoundNum (variable)* ](#_bookmark313)on page [222](#_bookmark314))
+- RoundNum (see [*RoundNum (variable)* ](#_bookmark313))
 
-- VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark433)on page [296](#_bookmark432))
+- VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark433))
 
 
 
@@ -410,27 +410,27 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 **See also**
 
 - *Error Management* in the *WebLOAD Scripting Guide*
-- ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark114)on page [90](#_bookmark115))
+- ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark114))
 
-- GetMessage() (see [*GetMessage() (method)* ](#_bookmark173)on page [129](#_bookmark172))
+- GetMessage() (see [*GetMessage() (method)* ](#_bookmark173))
 
-- GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark184)on page [134](#_bookmark182))
+- GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark184))
 
-- InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark216)on page [153](#_bookmark217))
+- InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark216))
 
 - [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 
-- ReportLog() (see [*ReportLog() (method)* ](#_bookmark308)on page [219](#_bookmark308))
+- ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
 
-- SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark358)on page [246](#_bookmark359))
+- SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark358))
 
 - [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
-- WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438)on page [299](#_bookmark437))
+- WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438))
 
-- wlException (see [*wlException (object)* ](#_bookmark447)on page [306](#_bookmark446))
+- wlException (see [*wlException (object)* ](#_bookmark447))
 
-- wlException() (see [*wlException() (constructor)* ](#_bookmark449)on page [308](#_bookmark448))
+- wlException() (see [*wlException() (constructor)* ](#_bookmark449))
 
 
 
@@ -477,27 +477,27 @@ WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through a set of SSL 
 
 The Cipher Command Suite includes the following functions:
 
-- SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375)on page [255](#_bookmark376))
+- SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375))
 
-- SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381)on page [260](#_bookmark381))
+- SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 
-- SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382)on page [*261*](#_bookmark382))
+- SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382))
 
-- SSLEnableCipherID() (see [*SS*](#_bookmark385)[*LEnableCipherID() (function)* ](#_bookmark385)on page [264](#_bookmark385))
+- SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 
-- SSLEnableCipherName() (see [*SS*](#_bookmark386)[*LEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
+- SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#sslenableciphername-function))
 
-- SSLGetCipherCount() (see [*SS*](#_bookmark388)[*LGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
+- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
 
-- SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390)on page [267](#_bookmark389))
+- SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390))
 
-- SSLGetCipherInfo() (see [*SS*](#_bookmark392)[*LGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+- SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392))
 
-- SSLGetCipherName() (see [*SS*](#_bookmark393)[*LGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
+- SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 
-- SSLGetCipherStrength() (see [*SS*](#_bookmark395)[*LGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
+- SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395))
 
-- SSLEnableStrength() (see [*SS*](#_bookmark383)[*LEnableStrength() (function)* ](#_bookmark383)on page[262](#_bookmark383))
+- SSLEnableStrength() (see [*SSLEnableStrength() (function)* ](#_bookmark383)on page[262](#_bookmark383))
 
 
 
@@ -510,43 +510,43 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 **See also**
 
 - [*HTTP Components* ](./using_javascript_ref.md#http-components)
-- SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)on page [253](#_bookmark373)) (wlGlobals only)
+- SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)) (wlGlobals only)
 
-- SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375)on page [255](#_bookmark376))
+- SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375))
 
-- SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark378)[ *SSLClientCertificatePassword (properties)* ](#_bookmark378)on page [256](#_bookmark377))
+- SSLClientCertificateFile, SSLClientCertificatePassword (see [*SSLClientCertificateFile,*](#_bookmark378)[ *SSLClientCertificatePassword (properties)* ](#_bookmark378))
 
-- SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark380)on page [258](#_bookmark379)) (wlGlobals only)
+- SSLCryptoStrength (see [*SSLCryptoStrength (property)* ](#_bookmark380)) (wlGlobals only)
 
-- SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381)on page [260](#_bookmark381))
+- SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 
 - SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382)on page [*261*](#_bookmark382))
 
-- SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385)on page [264](#_bookmark385))
+- SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 
-- SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386)on page [265](#_bookmark386))
+- SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
 
-- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388)on page [266](#_bookmark388))
+- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
 
-- SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390)on page [267](#_bookmark389))
+- SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390))
 
-- SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392)on page [269](#_bookmark392))
+- SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#_bookmark392))
 
-- SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#_bookmark393)on page [270](#_bookmark393))
+- SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 
-- SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395)on page [271](#_bookmark395))
+- SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#_bookmark395))
 
-- SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark398)on page [272](#_bookmark397))
+- SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark398))
 
-- SSLEnableStrength() (see [*SSLEnableStrength() (function)* ](#_bookmark383)on page [262](#_bookmark383))
+- SSLEnableStrength() (see [*SSLEnableStrength() (function)* ](#_bookmark383))
 
-- SSLVersion (see [*SSLVersion (property)* ](#_bookmark399)on page [274](#_bookmark400))
+- SSLVersion (see [*SSLVersion (property)* ](#_bookmark399))
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459)on page [313](#_bookmark460))
+- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466)on page [316](#_bookmark465))
+- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470)on page [319](#_bookmark469))
+- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
 
 
  
@@ -603,17 +603,17 @@ SendTimer(“Page 2 Time”)
 
 The set of timer functions includes the following:
 
-- SendCounter() (see [*SendCounter() (function)* ](#_bookmark344)on page [237](#_bookmark343))
+- SendCounter() (see [*SendCounter() (function)* ](#_bookmark344))
 
-- SendMeasurement() (see [*SendMeasurement() (function)* ](#_bookmark346)on page [238](#_bookmark345))
+- SendMeasurement() (see [*SendMeasurement() (function)* ](#_bookmark346))
 
-- SendTimer() (see [*SendTimer() (function)* ](#_bookmark347)on page [239](#_bookmark348))
+- SendTimer() (see [*SendTimer() (function)* ](#_bookmark347))
 
-- SetTimer() (see [*SetTimer() (function)* ](#_bookmark357)on page [244](#_bookmark355))
+- SetTimer() (see [*SetTimer() (function)* ](#_bookmark357))
 
-- Sleep() (see [*Sleep() (function)* ](#_bookmark364)on page [248](#_bookmark363))
+- Sleep() (see [*Sleep() (function)* ](#_bookmark364))
 
-- SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark406)on page [277](#_bookmark404))
+- SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark406))
 
 
 
@@ -643,13 +643,13 @@ In addition to defining a data file, you can also use parameterization to define
 
 The set of parameterization functions includes the following:
 
-- wlTimeParam() (see [*wlTimeParam() (parameterization)* ](#_bookmark496)on page [335](#_bookmark496))
+- wlTimeParam() (see [*wlTimeParam() (parameterization)* ](#_bookmark496))
 
-- wlDataFileParam() (see [*wlDataFileParam() (parameterization)* ](#_bookmark445)on page [304](#_bookmark445))
+- wlDataFileParam() (see [*wlDataFileParam() (parameterization)* ](#_bookmark445))
 
-- wlNumberParam() (see [*wlNumberParam() (parameterization)* ](#_bookmark473)on page [321](#_bookmark473))
+- wlNumberParam() (see [*wlNumberParam() (parameterization)* ](#_bookmark473))
 
-- wlStringParam() (see [*wlStringParam() (parameterization)* ](#_bookmark489)on page [331](#_bookmark489))
+- wlStringParam() (see [*wlStringParam() (parameterization)* ](#_bookmark489))
 
 
 
@@ -662,28 +662,28 @@ The set of parameterization functions includes the following:
 
 Customized transaction verification functions are created out of the following components:
 
-- BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48)on page [42](#_bookmark48))
+- BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 
-- CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark78)on page [63](#_bookmark77))
+- CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark78))
 
-- CreateTable() (see [*CreateTable() (function)* ](#_bookmark79)on page [65](#_bookmark79))
+- CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 
-- EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark110)on page [88](#_bookmark113))
+- EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark110))
 
-- ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307)on page [218](#_bookmark306))
+- ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307))
 
-- SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark354)on page [243](#_bookmark354))
+- SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark354))
 
-- VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark435)[ *(function)* ](#_bookmark435)on page [297](#_bookmark434))
+- VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark435)[ *(function)* ](#_bookmark435))
 
   
 
 
 **See also**
 
-- TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark414)on page [283](#_bookmark413))
+- TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark414))
 
-- TransactionTime (see [*TransactionTime (property)* ](#_bookmark419)on page [287](#_bookmark418))
+- TransactionTime (see [*TransactionTime (property)* ](#_bookmark419))
 
 
 

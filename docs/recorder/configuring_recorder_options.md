@@ -325,7 +325,7 @@ Diagnostic options can be enabled while developing a script or for tracking prob
 
    
 
-1. Set the **Enable syntax check** option, see [*Enabling Syntax Checking* ](#_bookmark149).
+1. Set the **Enable syntax check** option, see [*Enabling Syntax Checking* ](#enabling-syntax-checking).
 
 1. Set the **Enable the enhanced RadView support diagnostic** option, see [*Enabling](#_bookmark150)[ RadView Support Diagnostic* ](#_bookmark150).
 
@@ -632,7 +632,7 @@ The following table defines all the fields and options in the Browser Settings t
 |**Field**|**Description**|
 | :- | :- |
 |*Default browser selection*||
-|**Web browser**|<p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17)on page [14](#_bookmark17)).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p>|
+|**Web browser**|<p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see [*Configuring the Proxy Value for Your Browser* ](#_bookmark17)).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p>|
 |**Other browser**|Select this option and browse to define a browser other than Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.|
 |**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording](#_bookmark356) [Mobile Applications ](#_bookmark356).|
 |**None**|Select this option to define that there is no default browser.|
@@ -768,7 +768,7 @@ The following table describes the fields in the URL Filtering tab.
 ### Configuring the File Extensions
 Use the File Extension tab in the Recording and Script Generation Options dialog box to configure which types of files the WebLOAD Recorder records.
 
-Both the File Extensions and the Content Types tabs (see [*Configuring the Content Types](#_bookmark171) *[to Record* ](#_bookmark171)*on page [198](#_bookmark171)), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.
+Both the File Extensions and the Content Types tabs (see [*Configuring the Content Types](#_bookmark171) *[to Record* ](#_bookmark171)*), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.
 
 In a case where the file extension and content types contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the File Extensions and Content Types tabs are configured with the following settings:
 
@@ -816,7 +816,7 @@ The following table describes the fields in the File Extensions tab.
 ### Configuring the Content Types to Record
 Use the Content Types tab in the Recording and Script Generation Options dialog box to set up which types of Web content the WebLOAD Recorder records.
 
-Both the Content Types and the File Extensions tabs (see [*Configuring the File Extensions](#_bookmark169)* on page [196](#_bookmark169)), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you
+Both the Content Types and the File Extensions tabs (see [*Configuring the File Extensions](#_bookmark169)* ), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you
 
 define which objects should be recorded by type, such as “image/gif”, “image/jpeg”, or “text/html”.
 
@@ -888,13 +888,13 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
    ![Proxy Options Tab](../images/prodxy_topns.png)
 
-3. Fill in the fields, as described in [Table 29](#_bookmark175).
+3. Fill in the fields, as described in the [Table](#proxy_option_tab).
 
 4. Click **OK**.
 
 The following table describes the fields and options on the Proxy Options tab.
 
-
+<a name= "proxy_option_tab"></a>
 
 |**HTTP Object**|**Description**|
 | :- | :- |
@@ -1424,14 +1424,14 @@ The following table describes the fields and buttons in the Parameterization Man
 
 
 
-> **Note:** Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see [*Defining a Data File* ](#_bookmark195)on page [218](#_bookmark195)).
+> **Note:** Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see [*Defining a Data File* ](#_bookmark195)).
 
 
 
 ### Inserting User-Defined Parameters in a Script
 WebLOAD Recorder enables you to edit parameters having static values and replace the static values with a call to a set of specified values. During runtime, the script runs the parameter using values from the set.
 
-The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#_bookmark189)on page [213](#_bookmark189)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
+The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#_bookmark189)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
 
 **To insert a user-defined parameter in a script:**
 

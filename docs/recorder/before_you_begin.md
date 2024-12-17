@@ -20,7 +20,7 @@ If your browser is set to use a cache file, steps such as loading a page that yo
 
 If your browser loads a page from the cache file, that action is not recorded because retrieving a file from the cache is not an HTTP protocol call. Typically, this behavior is appropriate because you want to emulate the behavior of an actual browser during a test. However, if you want each visit to a page during a test to connect through an actual GET statement, you must work without a cache file when you record a script.
 
-When you start recording, WebLOAD automatically changes the browser’s proxy settings to clear the cache and cookies, according to the definitions in the Recording and Script Generation dialog box (see [*Configuring the Recording and Script Generation](#_bookmark152) *[Options* ](#_bookmark152)*on page [174](#_bookmark152)). This enables WebLOAD Recorder to record all HTTP traffic. If you do not want to clear the cache and cookies automatically, you can manually clear the cache and cookies in your browser by following the instructions provided by your browser.
+When you start recording, WebLOAD automatically changes the browser’s proxy settings to clear the cache and cookies, according to the definitions in the Recording and Script Generation dialog box (see [*Configuring the Recording and Script Generation](#_bookmark152) *[Options* ](#_bookmark152)*). This enables WebLOAD Recorder to record all HTTP traffic. If you do not want to clear the cache and cookies automatically, you can manually clear the cache and cookies in your browser by following the instructions provided by your browser.
 
 ## Configuring the Proxy Value for Your Browser
 
@@ -30,7 +30,7 @@ Before you begin recording scripts using WebLOAD Recorder, your browser must be 
 
 The procedures described here describe how to configure the proxy server for Internet Explorer, Netscape Navigator, and Mozilla Firefox. If you are using a different browser, read through the proxy setting procedures and modify them as necessary for configuring your browser.
 
-> ]**Note:** If your system is already using the WebLOAD Recorder default port (9884) for another application, you may designate an alternate port number (see [*Setting the Proxy](#_bookmark173) *[Options* ](#_bookmark173)*on page [200](#_bookmark173)).
+> ]**Note:** If your system is already using the WebLOAD Recorder default port (9884) for another application, you may designate an alternate port number (see [*Setting the Proxy](#_bookmark173) *[Options* ](#_bookmark173)*).
 >
 
 When recording is finished, reset the browser proxy to its original setting.
@@ -39,9 +39,9 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Internet Explorer:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)on page [34](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)on page [200](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 
@@ -88,9 +88,9 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Netscape Navigator:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)on page [34](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)on page [200](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 
@@ -140,9 +140,9 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Mozilla Firefox:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)on page [34](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)on page [200](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 

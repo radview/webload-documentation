@@ -18,6 +18,8 @@ The Load Tests page appears, listing the load tests in a table format.
 
 The Load Tests table provides the following information and actions, for each Load Test: 
 
+<a name = "load_test_table"> </a> 
+
 | **Item**                                                | **Description**                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------ |
 | **Name**                                                | The name of the Load test.  Clicking the name opens the test’s  definitions page, enabling you  to edit them. Refer to [*Editing a load test* ](#editing-a-load-test). |
@@ -279,13 +281,13 @@ Load generators are machines that bombard tested site with transactions to test 
 
 ## Setting recurring test runs
 
-For each load test you create – see[` `*Creating a new load test* ](#_page18_x54.00_y481.04)(on page[ 13)](#_page18_x54.00_y481.04) – you can schedule automatic periodic execution of the test. 
+For each load test you create – see[` `*Creating a new load test* ](#creating-a-new-load-test) – you can schedule automatic periodic execution of the test. 
 
-Note that you can also, at any time, manually run or schedule a one-time test run. Refer to[` `*Scheduling a one-time test run* ](#_page30_x54.00_y78.04)(on page[ 25)](#_page30_x54.00_y78.04). 
+Note that you can also, at any time, manually run or schedule a one-time test run. Refer to[` `*Scheduling a one-time test run* ](#scheduling-a-one-time-test-run). 
 
 **To set automatic periodic execution of a load test:** 
 
-1. In the Create Load Test page, accessed as described in[*Creating a new load test* ](#_page18_x54.00_y481.04)(on page[ 13)](#_page18_x54.00_y481.04), select the **Recurrence** checkbox. 
+1. In the Create Load Test page, accessed as described in[*Creating a new load test* ](#creating-a-new-load-test), select the **Recurrence** checkbox. 
 
 2. ![Setting test recurrence](../images/setting_test_recurrence.png)
 
@@ -305,11 +307,11 @@ Note that you can also, at any time, manually run or schedule a one-time test ru
 
 You can, at any time, manually run or schedule a one-time test run, as explained in this section. 
 
-Note that you can also schedule automatic periodic execution of a test, as part of test definition. Refer to[` `*Creating a new load test* ](#_page18_x54.00_y481.04)(on page[ 13)](#_page18_x54.00_y481.04). 
+Note that you can also schedule automatic periodic execution of a test, as part of test definition. Refer to[` `*Creating a new load test* ](#creating-a-new-load-test) 
 
 **To manually run a load test:** 
 
-1. In the menu bar, select **Tests** > **Search**. The Load Tests table appears [(Figure 6)](#_page17_x54.00_y600.04). 
+1. In the menu bar, select **Tests** > **Search**. The Load Tests table appears [(Load Test Table)](./manage_tests.md#load_test_table). 
 
    ![Load Tests page](../images/load_tests_page.png)
 
@@ -346,8 +348,7 @@ Note that you can also schedule automatic periodic execution of a test, as part 
 
    ![Editing a template load test](../images/upload_a_load_test.jpeg)
 
-3. Edit the test definitions as desired. For an explanation of the various fields, refer to the relevant explanation in[*Creating a new load test* ](#_page18_x54.00_y481.04)(on page[ 13)](#_page18_x54.00_y481.04). 
-
+3. Edit the test definitions as desired. For an explanation of the various fields, refer to the relevant explanation in[*Creating a new load test* ](#creating-a-new-load-test)
 4. Click **Update**.  
 
 
@@ -356,7 +357,7 @@ Note that you can also schedule automatic periodic execution of a test, as part 
 
 **To delete a load test:** 
 
-1. In the menu bar, select **Tests** > **Search**. The Load Tests table appears [(Figure 6)](#_page17_x54.00_y600.04). 
+1. In the menu bar, select **Tests** > **Search**. The Load Tests table appears [(Load Test Table)](./manage_tests.md#load_test_table)
 1. In the line corresponding to the test you wish to edit, click ![ref17]. A Delete Test page appears. 
 1. ![Deleting a load session](../images/delete_load_sessions.png)
 1. In the Delete Test page that appears, you can select between: 

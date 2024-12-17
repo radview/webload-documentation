@@ -2,7 +2,7 @@
 
 This section provides instructions for correlating scripts with WebLOAD Recorder. The WebLOAD correlation engine helps you overcome one of the main challenges of recording or replaying Web application load tests: dynamic data.
 
-Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see [*Session Management* ](#_bookmark95)on page [107](#_bookmark95).) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.
+Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see [*Session Management* ](#_bookmark95).) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.
 
 WebLOAD enables you to correlate the most common methods used to pass dynamic data between a server and a client. The methods are:
 
@@ -184,7 +184,7 @@ When performing Auto-discovery correlation, the correlation engine compiles a li
 
 
 ## Resolving Conflicts between Manual Changes and Correlation Changes
-Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see [*Configuring the Correlation Options* ](#_bookmark162)on page [189](#_bookmark162)). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.
+Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see [*Configuring the Correlation Options* ](#_bookmark162)). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.
 
 [Figure 63 ](#_bookmark87)shows a sample Conflict Resolution window.
 

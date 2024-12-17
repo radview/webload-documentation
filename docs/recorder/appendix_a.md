@@ -2394,13 +2394,14 @@ Use the MySQL DB Load Building Block to generate a load test for the specified M
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 85](#_bookmark320).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#MySQL_DB_Load_Building_Block_Parameters_Dialog_Box_Field).
 
 4. Click **OK**.
 
    The MySQL DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 The fields in the MySQL DB Load Building Block parameters dialog box are described in the following table:
+<a name = "MySQL_DB_Load_Building_Block_Parameters_Dialog_Box_Field"></a>
 
 |**Field Name**|**Description**|
 | :- | :- |

@@ -109,7 +109,7 @@ WebLOAD Dashboard dashboards are useful both for analyzing the results of a spec
 
   The session appears in the currently selected dashboard. 
 
-- In Load Tests table [(*Figure 6*)](#_page17_x54.00_y600.04), click the Show Last Session button ![view last session](../images/view_last_session.png). That last session appears in the currently selected dashboard. 
+- In Load Tests table [(*Load Test Table*)](./manage_tests.md#load_test_table), click the Show Last Session button ![view last session](../images/view_last_session.png). That last session appears in the currently selected dashboard. 
 
   
 

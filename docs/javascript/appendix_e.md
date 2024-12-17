@@ -7,7 +7,7 @@
 | **AAT**                                              | An older, obsolete WebLOAD  utility that was used for recording web session activities as a JavaScript  file. It is replaced by WebLOAD Recorder. |
 | **Aborted  Rounds**                                  | The number of times the  Virtual Clients started to run a script but did not complete the script,  during the last reporting interval. This might be due to a session being  stopped either automatically or manually by the user. |
 | **script**                                           | Specification of the sequence of HTTP  protocol calls sent by Virtual Clients to the SUT (System Under Test).  Scripts are written in JavaScript. You can either  write scripts as a text file or generate them automatically using the WebLOAD  Recorder. |
-| **Application Being Tested  (ABT)**                  | See [*SUT*.](#_bookmark610)                                  |
+| **Application Being Tested  (ABT)**                  | See [*SUT*.](#sut)                                  |
 | **Attempted  Connections**                           | The total number of times  the Virtual Clients attempted to connect to the SUT during the last reporting  interval. |
 | **Automatic Transaction  counters**                  | If you have Automatic  Transactions enabled, WebLOAD creates three counters for each GET and POST  statement in the script:  <br>  The total number of times  it occurred  <br> The number of times it succeeded  <br> The number of times it  failed during the last reporting interval. |
 | **Average**                                          | For timers, average is the  total amount of time counted by the timer (not the elapsed time) divided by  the Count (that is, the total number of readings). For example, the average  for Transaction Time is the amount of time it took to complete all the  successful transactions, divided by the number of successful transactions  (the Count). |
@@ -77,6 +77,7 @@
 | **Successful  Pages Per Second**                     | The value posted in the  Current Value column is the number (sum) of successful requests per second  during the last reporting interval. |
 | **Successful  Rounds**                               | The total number of times  the Virtual Clients completed one iteration of the script during the last  reporting interval. |
 | **Successful  Rounds Per Second**                    | The number of times the  Virtual Clients completed an entire iteration of the script, divided by the  elapsed time, in seconds.  The value posted in the  Current Value column is the number (sum) of successful iterations of the  script per second during the last reporting interval. |
+<a name = "sut"></a>
 | **SUT**                                              | The system running the Web  application currently under test. The SUT (System Under Test) is accessed by  clients through its URL address. The SUT can reside on any machine or on  multiple machines, anywhere on the global Internet or your local intranet. |
 | **Template**                                         | See [*Load   Template*.](#_bookmark606)                      |
 | **Templates Gallery**                                | The Templates Gallery is a single entity  that contains predefined templates, user-defined templates, and portfolios. |
