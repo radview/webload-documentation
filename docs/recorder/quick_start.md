@@ -234,7 +234,7 @@ You can also right-click any script item in the Script Tree to display a menu.
 
 ### Adding Script Items
 
-You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see [*The WebLOAD Recorder Toolbox Items* ](#_bookmark205).
+You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see [*The WebLOAD Recorder Toolbox Items* ](./appendix_a.md#the-webload-recorder-toolbox-items).
 
 In the following instructions, adding a Message is used as an example. While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log windows display information about session execution. You can include Message nodes in your script, defining points at which to send error and/or notification messages to the Log window.
 

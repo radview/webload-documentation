@@ -50,11 +50,11 @@ You can create a new load test anytime. **To create a new load test:**
 
 2. Select the type of test to create. Refer to the following for detailed explanations: 
 
-   - [*Creating a URL/API Load Test* ](#create_new_load_test)
+   - [*Creating a URL/API Load Test* ](#creating-a-urlapi-load-test)
  
-   - [*Creating a Script Load Test* ](#creating_a_script_load_test) 
+   - [*Creating a Script Load Test* ](#creating-a-script-load-test) 
 
-   - [*Creating a Template Load Test* ](#creating_a_template_load_test)
+   - [*Creating a Template Load Test* ](#creating-a-template-load-test)
      
 
 ## Creating a URL/API Load Test
@@ -159,7 +159,7 @@ Use this option to create a load test based on a WebLOAD script that was created
    | **Item**                                     | **Description**                                              |
    | -------------------------------------------- | ------------------------------------------------------------ |
    | **General**                                  | The name of the Load test.                                   |
-   | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#_bookmark21). |
+   | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#specifying-scripts-for-a-load-test). |
    | **Load  Configuration**                      | For each of the following,  enter a number, or use the slider tool to specify the number. |
    | **Max Virtual Users**                        | The maximum number of Virtual Users to generate.             |
    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
@@ -188,7 +188,7 @@ Use this option to create a load test based on a WebLOAD script that was created
 
 ### Specifying Scripts for a load test
 
-**To specify the script participating in a[` `*Script Load Test*:](#_page22_x189.00_y352.04)** 
+**To specify the script participating in a[*Script Load Test*:](#creating-a-script-load-test)** 
 
 1. For every script you want to include in the Script Load test, click **Add Script**. 
 
@@ -200,7 +200,7 @@ Use this option to create a load test based on a WebLOAD script that was created
 
    
 
-   The Scripts page lists the scripts uploaded to the WebLOAD Dashboard. For details how to upload a script, refer to[*Uploading Resources* ](#_page38_x54.00_y78.04)(on page[ 33)](#_page38_x54.00_y78.04). If a script was uploaded with the folder in which it is located, the folder name appears; in that case, click the folder name to navigate to the script itself. 
+   The Scripts page lists the scripts uploaded to the WebLOAD Dashboard. For details how to upload a script, refer to[*Uploading Resources* ](./managing_resources.md#uploading-resources). If a script was uploaded with the folder in which it is located, the folder name appears; in that case, click the folder name to navigate to the script itself. 
 
 2. Select a script by clicking **Select Script** in the corresponding line.  
 
@@ -260,12 +260,11 @@ Use this option to create a load test based on a WebLOAD template file that was 
 
 ## Specifying Load Generators for a load test 
 
-Load generators are machines that bombard tested site with transactions to test site scalability and integrity.  Both a[` `*URL/API Load Test* ](#_page19_x189.00_y325.04)and a[` `*Script Load Test* ](#_page22_x189.00_y352.04)require you to specify the load generators that will participate in the test.  Note that the list of available load generators is defined by a Super Admin, as described in[` `*Adding Load Generators* ](#_page81_x54.00_y262.04)(on page[ 76)](#_page81_x54.00_y262.04). 
+Load generators are machines that bombard tested site with transactions to test site scalability and integrity.  Both a[` `*URL/API Load Test* ](#creating-a-urlapi-load-test)and a[` `*Script Load Test* ](#creating-a-script-load-test)require you to specify the load generators that will participate in the test.  Note that the list of available load generators is defined by a Super Admin, as described in[` `*Adding Load Generators* ](./managing_load_generators.md#adding-load-generators)
 
 **To specify the load generators participating in a load test:** 
 
-1. Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to [*Setting Load Generators’ Location Tag* ](#_page83_x54.00_y78.04)(on page[ 78)](#_page83_x54.00_y78.04). 
-
+1. Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to [*Setting Load Generators’ Location Tag* ](./managing_load_generators.md#setting-load-generators-location-tag)
 1. Select a group of load generators with an identical Location, by entering a non- zero percentage in the corresponding **%** column. The percentage specifies the relative weight of this group of load generators. 
 
    ![List of available load generators – as appearing in a load test page](../images/available_load_generators.png)

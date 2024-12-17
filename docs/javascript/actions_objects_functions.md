@@ -31,7 +31,7 @@ In WebLOAD Console, select or deselect the **GZip Support** checkbox in the Brow
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components*](./using_javascript_ref.md#http_components)
 
 ## AcceptLanguage (property)
 
@@ -172,7 +172,7 @@ wlHttp.Get(“http://something”);
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * [*onDocumentComplete (property)* ](#_bookmark259)
 * [*onDataReceived (property)* ](#_bookmark258)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
@@ -437,7 +437,7 @@ To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (proper
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)on page [49](#_bookmark59))
 * DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99)on page [77](#_bookmark99))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -471,7 +471,7 @@ To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (proper
 
 **See also**
 
-* [*HTTP Components* ](#_bookmark22)
+* [*HTTP Components* ](#./using_javascript_ref.md#http_components)
 * ClearDNSCache() (see [*ClearDNSCache() (method)* ](#_bookmark58)on page [49](#_bookmark58))
 * DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99)on page [77](#_bookmark99))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -596,7 +596,7 @@ In WebLOAD Recorder, enable maintaining connections during execution by checking
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * KeepAlive (see [*KeepAlive (property)* ](#_bookmark228)on page [159](#_bookmark227))
 
 ## cols (property)
@@ -650,7 +650,7 @@ ConnectTimeout is used to set the amount of time the system will wait for an HTT
 
  **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## ConnectionSpeed (property)
 
@@ -692,7 +692,7 @@ WebLOAD recommends setting the connection speed through the WebLOAD Console. You
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## content (property)
 
@@ -769,7 +769,7 @@ Specifies the content type of the HTTP request.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## ConvertHiddenFields(method)
 
@@ -1495,7 +1495,7 @@ To clear the DNS cache, set the ClearDNSCache() (see [*ClearDNSCache() (method)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * ClearDNSCache() (see [*ClearDNSCache() (method)* ](#_bookmark58)on page [49](#_bookmark58))
 * ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)on page [49](#_bookmark59))
 * SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)on page [272](#_bookmark397))
@@ -1669,7 +1669,7 @@ In WebLOAD Recorder, select or deselect the **Encode Form Data** checkbox in the
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_refmd#http-components)
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
 * [wlLocals](#wllocals-object)
@@ -2127,7 +2127,7 @@ For example, if FilterURL = “ynet;cnn.com”, the engine will filter URLs from
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## form (object)
 
@@ -3237,7 +3237,7 @@ The scope of MultiIPSupport depends, of course, on whether it was set through wl
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## GetLine() (function)
 
@@ -3910,7 +3910,7 @@ HTTPS header from the server. It does not download the body of the URL, such as 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * FormData (see [*FormData (property)* ](#_bookmark127)on page [97](#_bookmark127))
@@ -3965,7 +3965,7 @@ Any information set using the wlHttp.Header property *takes priority* over any d
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * Data (see [*Data (property)* ](#_bookmark80)on page [66](#_bookmark80))
 * DataFile (see [*DataFile (property)* ](#_bookmark82)on page [67](#_bookmark82))
 * Erase (see [*Erase (property)* ](#_bookmark113)on page [88](#_bookmark113))
@@ -4170,7 +4170,7 @@ Identifies the proxy server that the script uses for HTTP SSL access when UseSam
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 * Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#proxyntusername-proxyntpassword-properties)
 * ProxyNTUserName, ProxyNTPassWord (see [*ProxyNTUserName, ProxyNTPassWord*](#proxyntusername-proxyntpassword-properties)
@@ -4201,7 +4201,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
 * Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#proxy-proxyusername-proxypassword-properties))
@@ -4663,7 +4663,7 @@ WebLOAD recommends maintaining or closing connections through the WebLOAD Consol
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark62)on page [53](#_bookmark62))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
@@ -4933,7 +4933,7 @@ WebLOAD recommends enabling or disabling multi-threaded virtual clients through 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * ProbingClientThreads (see [*ProbingClientThreads (property)* ](#_bookmark291)on page [208](#_bookmark291))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 
@@ -5119,7 +5119,7 @@ Use the GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * MultiIPSupportType() (see [*MultiIPSupportType (property)* ](#_bookmark251)on page [172](#_bookmark251))
@@ -5159,7 +5159,7 @@ Use GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122]
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*H*TTP Components* ](./using_javascript_ref.md#http_components)
 * GetIPAddress() see [*GetIPAddress() (method)* ](#_bookmark163)
 * MultiIPSupport() see [*MultiIPSupport (property)* ](#multiipsupport-property)
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
@@ -5192,7 +5192,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * GetIPAddress() (see [*GetIPAddress() (method)* ](#_bookmark163)on page [122](#_bookmark163))
 * MultiIPSupport() (see [*MultiIPSupport (property)* ](#multiipsupport-property))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
@@ -5285,7 +5285,7 @@ WebLOAD automatically sends the user name and password when a wlHttp object conn
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
 
@@ -5367,7 +5367,7 @@ wlHttp.Get(“http:///.... ”)
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
 * [*wlSource (property)* ](#_bookmark485)
 * [*wlStatusNumber (property)* ](#_bookmark488)
@@ -5415,7 +5415,7 @@ InfoMessage(“Response “ + document.wlSource);
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * The *Using Asynchronous Requests* chapter in the *WebLOAD Scripting Guide*
 * [*document (object)* ](#_bookmark100)
 * [*Async (property)* ](#_bookmark47)
@@ -6302,7 +6302,7 @@ You may also set user values using the wlGlobals properties. WebLOAD automatical
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Working with the HTTP Protocol* in the *WebLOAD Scripting Guide*
 
 ## pathname (property)
@@ -6505,7 +6505,7 @@ WebLOAD recommends enabling or disabling multi-threaded virtual clients through 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark240)on page [165](#_bookmark240))
 
 ## protocol (property)
@@ -6562,7 +6562,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxyntusername-proxyntpassword-properties))
@@ -6622,7 +6622,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxy-proxyusername-proxypassword-properties)
@@ -6723,7 +6723,7 @@ WebLOAD then tries to reestablish a connection (see [*RequestRetries (property)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * RequestRetries (see [*RequestRetries (property)* ](#_bookmark309)on page [220](#_bookmark309))
 
 ## RedirectionLimit (property)
@@ -6776,7 +6776,7 @@ To tell the system whether or not to record the referer header in the Referer pr
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 
 ## remove() (method)
@@ -6893,7 +6893,7 @@ RequestRetries is the maximum number of times that the Virtual Client will attem
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * ReceiveTimeout (see [*ReceiveTimeout (property)* ](#_bookmark299)on page [215](#_bookmark299))
 
 ## Reset() (method)
@@ -6953,7 +6953,7 @@ The language in which WebLOAD receives the response from the SUT. This can be HT
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## RoundNum (variable)
 
@@ -7109,7 +7109,7 @@ Instruct WebLOAD to store the HTML response headers in wlHeaders.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## SaveSource (property)
 
@@ -7130,7 +7130,7 @@ If you enable SaveSource, WebLOAD automatically stores the downloaded HTML whene
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## SaveTransaction (property)
 
@@ -7178,7 +7178,7 @@ As with all wlGlobals configuration properties, the SaveTransaction property mus
 **See also**
 
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48)on page [42](#_bookmark48))
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## script (object)
 
@@ -7783,7 +7783,7 @@ When you call SetClientType(“Thin”), the ParseOnce flag is set to true. Each
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * ParseOnce (see [*ParseOnce (property)* ](#_bookmark280)*on* page [198](#_bookmark280))
 * GetImagesInThinClient (see [*GetImagesInThinClient (property)* ](#_bookmark164)on page [122](#_bookmark164))
 * [wlGlobals](#wlglobals-object)
@@ -8174,7 +8174,7 @@ WebLOAD recommends setting the SSL bit limit through the WebLOAD Console. Check 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
 * SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark376)on page [255](#_bookmark376))
@@ -8230,7 +8230,7 @@ InitClient()
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8287,7 +8287,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8353,7 +8353,7 @@ Defining a global, categorical value for SSLCryptoStrength is a high-level appro
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8407,7 +8407,7 @@ SSLDisableCipherID(45)
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8620,7 +8620,7 @@ SSLEnableCipherName("EXP-RC4-MD5")
 
 **See also**
 
-* [*Browser Configuration Components* ](#_bookmark21)
+* [*Browser Configuration Components* ](./using_javascript_ref.md#browser-configuration-components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8661,7 +8661,7 @@ Returns an integer representing the number of ciphers enabled for the current te
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8705,7 +8705,7 @@ Returns the ID number associated with the specified cipher.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8757,7 +8757,7 @@ You may specify an SSL protocol using either the protocol name or the ID number.
 
 **See also**
 
-* [*HTTP Components* ](#_bookmark22)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8802,7 +8802,7 @@ Returns the name of the cipher associated with the specified ID number.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8843,7 +8843,7 @@ Returns an integer representing the maximum available cipher strength for the cu
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8895,7 +8895,7 @@ To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)*
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -8960,7 +8960,7 @@ See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578) for a table illu
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark373)on page [253](#_bookmark373)) (wlGlobals only)
 * [*SSL Cipher Command Suite* ](#_bookmark34)
 * [*SSL Ciphers – Complete List* ](#_bookmark580)
@@ -9567,7 +9567,7 @@ wlMetas objects is written in all-uppercase caps.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * content (see [*content (property)* ](#_bookmark68)on page [56](#_bookmark68))
 * httpEquiv (see [*httpEquiv (property)* ](#_bookmark204)on page [144](#_bookmark204))
 * Name (see [*Name (property)* ](#_bookmark253)on page [174](#_bookmark253))
@@ -9598,7 +9598,7 @@ WebLOAD recommends setting user agent values through the WebLOAD Console. Select
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## UserName (property)
 
@@ -9636,7 +9636,7 @@ For example, if you are trying to send a request to a URL with a group of users 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark255)on page [176](#_bookmark255))
 
 ## UseSameProxyForSSL (property)
@@ -9660,7 +9660,7 @@ This property is used when you are working with a separate SSL proxy.
 
 **Example** wlGlobals.UseSameProxyForSSL = false **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * *Security* in the *WebLOAD Scripting Guide*
 * HttpsProxy, HttpsProxyUserName, HttpsProxyPassWord (see [*HttpsProxy,*](#httpsproxy-httpsproxyusername-httpsproxypassword-properties))
 * HttpsProxyNTUserName, HttpsProxyNTPassWord (see [*HttpsProxyNTUserName, HttpsProxyNTPassWord (properties)*](#proxy-proxyusername-proxypassword-properties))
@@ -9695,7 +9695,7 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348)on page [239](#_bookmark348))
 * SetTimer() (see [*SetTimer() (function)* ](#_bookmark355)on page [244](#_bookmark355))
 
@@ -9932,7 +9932,7 @@ WebLOAD recommends selecting an HTTP version through the WebLOAD Console. Click 
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## WarningMessage() (function)
 
@@ -10416,7 +10416,7 @@ method) and all its subframes at any level of nesting.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## wlGetAllFrames() (method)
 
@@ -10436,7 +10436,7 @@ all its subframes.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## wlGetAllLinks() (method)
 
@@ -10456,7 +10456,7 @@ method) and all its subframes at any level of nesting.
 
 **See also**
 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 
 ## wlGlobals (object)
 
@@ -10475,7 +10475,7 @@ The configuration properties of the wlGlobals object are almost all duplicated i
 The wlGlobals object includes the following property classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**
@@ -10593,7 +10593,7 @@ The wlHttp object stores configuration information for immediate user activities
 The wlHttp object includes the following property and method classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**
@@ -10718,7 +10718,7 @@ The properties of the wlLocals object are all duplicated in the [wlGlobals](#wlg
 The wlLocals object includes the following property classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
-* [*H*](#_bookmark21)[*TTP Components* ](#_bookmark21)
+* [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * [*Transaction Verification Components* ](#_bookmark39)
 
 **Syntax**

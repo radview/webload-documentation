@@ -509,7 +509,7 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 
 **See also**
 
-- [*HTTP Components* ](#_bookmark22)
+- [*HTTP Components* ](./using_javascript_ref.md#http-components)
 - SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)on page [253](#_bookmark373)) (wlGlobals only)
 
 - SSLCipherSuiteCommand() (see [*SSLCipherSuiteCommand() (function)* ](#_bookmark375)on page [255](#_bookmark376))

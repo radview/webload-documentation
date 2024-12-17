@@ -1,6 +1,6 @@
 # Managing Load Generators
 
-Both a[` `*URL/API Load Test* ](#_page19_x189.00_y325.04)and[` `*Script Load Test* ](#_page22_x189.00_y352.04)require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  ![ref27]
+Both a[` `*URL/API Load Test* ](#creating-a-urlapi-load-test)and[` `*Script Load Test* ](#creating-a-script-load-test)require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  ![ref27]
 
 ## Adding Load Generators 
 
@@ -24,9 +24,9 @@ Both a[` `*URL/API Load Test* ](#_page19_x189.00_y325.04)and[` `*Script Load Tes
 
 4. In **Generator Type**, select whether the generator is a **Local Machine** or a **Cloud Machine**.  
 
-5. If you want to specify a Cloud Machine, first make sure it was specified as a Cloud Host in the WebLOAD Console. Refer to[*Specifying a Cloud Host as a Load ](#_page84_x54.00_y78.04)*Generator* (on page[ 79)](#_page84_x54.00_y78.04).  
+5. If you want to specify a Cloud Machine, first make sure it was specified as a Cloud Host in the WebLOAD Console. Refer to[*Specifying a Cloud Host as a Load Generator* ](#specifying-a-cloud-host-as-a-load-generator)
 
-6. In **Location**, enter a human-readable field. This value does not have to be unique per load generator machine, and has an important role, as described in[*Setting Load Generators’ Location Tag* ](#_page83_x54.00_y78.04)(on page[ 78)](#_page83_x54.00_y78.04). 
+6. In **Location**, enter a human-readable field. This value does not have to be unique per load generator machine, and has an important role, as described in[*Setting Load Generators’ Location Tag* ](./managing_load_generators.md#setting-load-generators-location-tag)
 
 7. Note that if you leave the **Location** field empty, the system will automatically give this field the value entered in the **Name** field. 
 

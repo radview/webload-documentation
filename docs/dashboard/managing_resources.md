@@ -89,7 +89,7 @@ You can create a load test based on either of the following types of resources:
 
 1. In the menu bar, select **Resources** > **Search**. 
 1. In the Resources table, click ![new resource](../images/create_load_test.png) adjacent to a resource of type .wlp or .tpl. 
-1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](#_page22_x54.00_y352.04)(on page [ 17)](#_page22_x54.00_y352.04). Set or edit any of the fields, and click **Create Test**. 
+1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
 1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[` `*Creating a Template Load Test* ](#_page26_x54.00_y407.04)(on page [ 21)](#_page26_x54.00_y407.04). Set or edit any of the fields, and click **Create Test**. 
 
 
