@@ -34,11 +34,11 @@ Commercial browsers and servers generally act as if they are set for **SSL_Versi
 
  
 
-WebLOAD’s SSL support is based on the OpenSSL open source project (http://www.openssl.org/). [Table 9 ](#_bookmark581)contains a complete list of ciphers supported by WebLOAD using OpenSSL. Abbreviations used in this list are explained in [Table 10.](#_bookmark582)
+WebLOAD’s SSL support is based on the OpenSSL open source project (http://www.openssl.org/).The [Table ](#cipher_abbreviations)contains a complete list of ciphers supported by WebLOAD using OpenSSL. Abbreviations used in this list are explained in the [Table.](#cipher_abbreviations)
 
  
 
-For information on how WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through the Cipher Command Suite, see [*SSL Cipher Command Suite* ](#_bookmark33)on page [33.](#_bookmark33)
+For information on how WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through the Cipher Command Suite, see [*SSL Cipher Command Suite* ](./using_javascript_ref.md#ssl-cipher-command-suite)
 
  
 
@@ -164,7 +164,7 @@ The following table lists all ciphers supported by WebLOAD.
 | EXP-KRB5-RC2-CBC-MD5                     | SSLv3    | KRB5         | KRB5      | RC2(40)                            | MD5                          | þ          |
 | EXP-KRB5-RC4-MD5                         | SSLv3    | KRB5         | KRB5      | RC4(40)                            | MD5                          |            |
 
- 
+<a name ="cipher_abbreviations" > </a>
 
 The following table contains cipher abbreviations.
 

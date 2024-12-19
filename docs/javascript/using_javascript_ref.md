@@ -14,7 +14,7 @@ To simplify access to the WebLOAD JavaScript toolset, this section organizes the
 
  
 
-The WebLOAD JavaScript toolset includes many additional elements. For a complete, alphabetical reference list of all toolset components, see [*WebLOAD Actions, Objects, and*](#_bookmark40) [*Functions* ](#_bookmark40).
+The WebLOAD JavaScript toolset includes many additional elements. For a complete, alphabetical reference list of all toolset components, see [*WebLOAD Actions, Objects, and Functions* ](./actions_objects_functions.md#webload-actions-objects-and-functions).
 
 **The WebLOAD JavaScript toolset can be organized into the following categories:**
 
@@ -43,11 +43,11 @@ The WebLOAD JavaScript toolset includes many additional elements. For a complete
 
 **Properties and Methods of Objects**
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
+- wlGlobals (see [*wlGlobals (object)* ](./actions_objects_functions.md#wlglobals-object))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
+- wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
+- wlLocals (see [*wlLocals (object)* ](./actions_objects_functions.md#wllocals-object))
 
 
 **Description**
@@ -148,7 +148,7 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - KeepAlive (see [*KeepAlive (property)* ](#_bookmark228))
 
-- LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#_bookmark241))
+- LoadGeneratorThreads (see [*LoadGeneratorThreads (property)* ](#loadgeneratorthreads-property))
 
 - MultiIPSupport see [*MultiIPSupport (property)* ](./actions_objects_functions.md#multiipsupport-property)
 
@@ -198,11 +198,11 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 **See also**
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
+- wlGlobals (see [*wlGlobals (object)* ](./actions_objects_functions.md#wlglobals-object))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
+- wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
+- wlLocals (see [*wlLocals (object)* ](./actions_objects_functions.md#wllocals-object))
 
 
  
@@ -542,11 +542,11 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 
 - SSLVersion (see [*SSLVersion (property)* ](#_bookmark399))
 
-- wlGlobals (see [*wlGlobals (object)* ](#_bookmark459))
+- wlGlobals (see [*wlGlobals (object)* ](./actions_objects_functions.md#wlglobals-object))
 
-- wlHttp (see [*wlHttp (object)* ](#_bookmark466))
+- wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
-- wlLocals (see [*wlLocals (object)* ](#_bookmark470))
+- wlLocals (see [*wlLocals (object)* ](./actions_objects_functions.md#wllocals-object))
 
 
  

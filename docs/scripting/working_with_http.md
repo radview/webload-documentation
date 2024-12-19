@@ -584,7 +584,7 @@ When the Record Custom Headers option is enabled, WebLOAD records any headers th
 
 WebLOAD offers a simple way to reset configuration properties using the Options tab of the Session Control menu. Resetting configuration properties as you run and rerun various testing scenarios allows you to fine tune your tests to match your exact needs at that moment. However, that this real-time configuration setting will be overruled by any configuration properties that are explicitly set by wlHttp.Header within your test scripts. For greatest reliability and flexibility, WebLOAD recommends that you set header properties using the more general wlGlobals, wlLocals, and wlHttp object properties, fine-tuning your test sessions using the WebLOAD Session menu.
 
-See [*Rules of Scope for Local and Global Variables* ](#_bookmark40), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. 
+See [*Rules of Scope for Local and Global Variables* ](./programming_your_javascript.md#rules-of-scope-for-local-and-global-variables), for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the Header property. 
 
 ### Erase
 Clear the WebLOAD properties of a wlHttp object after each `Get(), Post(),` or `Head()` call.

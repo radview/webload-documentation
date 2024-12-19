@@ -1128,7 +1128,7 @@ Use the IMAP-Search Building Block to search for a specific email item within an
 
    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be searched.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 55](#_bookmark256).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#table_55).
 
 4. Click **OK**.
 
@@ -1136,6 +1136,8 @@ Use the IMAP-Search Building Block to search for a specific email item within an
 
 In the script, the mailbox specified by the user is searched for all mail items containing the string “timesheet”.
 
+
+<a name = "table_55"> </a>
 The fields in the IMAP-Search Building Block parameters dialog box are described in the following table:
 
 | **Field  Name** | **Description**                                              |

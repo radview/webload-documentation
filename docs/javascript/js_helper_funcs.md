@@ -26,7 +26,7 @@ Decoding function - reverse of EncodeString
 
 See:
 
-*   [EncodeString](#EncodeString)
+*   [EncodeString](#encodestrings)
 
 **Returns:**
 
@@ -44,7 +44,7 @@ Decoding function - reverse of EncodeString + convert end-of-line from unix to d
 
 See:
 
-*   [EncodeString](#EncodeString)
+*   [EncodeString](#encodestrings)
 
 **Returns:**
 
@@ -62,7 +62,7 @@ Decoding function - reverse of EncodeStringWin
 
 See:
 
-*   [EncodeStringWin](#EncodeStringWin)
+*   [EncodeStringWin](#encodestringwins)
 
 **Returns:**
 
@@ -124,7 +124,7 @@ SleepUntil a certain number of milliseconds has passed since the beginning of th
 
 See:
 
-*   [SleepEvery](#SleepEvery)
+*   [SleepEvery](#sleepeverymillis)
 
 **Example**
 
@@ -138,7 +138,7 @@ When called, will cause all transactions to be automatically added to MDC
 
 See:
 
-*   [putMDC](#putMDC)
+*   [putMDC](#putmdcname-valuename-value)
 
 #### assertEquals(expected, actual, messageopt)
 
@@ -192,7 +192,7 @@ Clear content of MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](#putMDC)
+*   [putMDC](#putmdcname-value)
 
 #### closeAllWebSockets(ws\_prefixopt, from\_idxopt, to\_idxopt)
 
@@ -225,7 +225,7 @@ Decoding function - reverse of encodeXML
 
 See:
 
-*   [encodeXML](#encodeXML)
+*   [encodeXML](#encodexmlstrstr)
 
 **Returns:**
 
@@ -243,7 +243,7 @@ Decoding function - reverse of encodeXmlAtt
 
 See:
 
-*   [encodeXmlAtt](#encodeXmlAtt)
+*   [encodeXmlAtt](#encodexmlattstr)
 
 **Returns:**
 
@@ -331,7 +331,7 @@ Encoding function - like encodeXML but > is not replaced, only < and &
 
 See:
 
-*   [encodeXML](#encodeXML)
+*   [encodeXML](#encodexmlstr)
 
 **Returns:**
 
@@ -525,7 +525,7 @@ Get value from JSON using a simple path - path.to.item
 
 See:
 
-*   [extractJSPath](#extractJSPath) - more full featured expressions
+*   [extractJSPath](#extractjspathexpr-src) - more full featured expressions
 
 **Returns:**
 
@@ -714,7 +714,7 @@ Return value in MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](#putMDC)
+*   [putMDC](#putmdcname-value)
 
 **Returns:**
 
@@ -746,7 +746,7 @@ Print (InfoMessage) content of MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](#putMDC)
+*   [putMDC](#putmdcname-value)
 
 #### putMDC(name, value)
 
@@ -778,7 +778,7 @@ Remove items from MDC (Mapped Diagnostic Context)
 
 See:
 
-*   [putMDC](#putMDC)
+*   [putMDC](#putmdcname-value)
 
 #### setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)
 
