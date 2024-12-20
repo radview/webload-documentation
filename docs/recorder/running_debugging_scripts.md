@@ -46,7 +46,7 @@ This section provides instructions for running a script. Before running a script
 >
 
 ### **Viewing the Execution Sequence in the Script Tree**
-When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see [*Viewing and](#_bookmark115) *[Analyzing the Test Results* ](#_bookmark115)*.
+When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see [*Viewing and Analyzing the Test Results* ](#viewing-and-analyzing-the-test-results)*.
 
 WebLOAD Recorder enables you to do the following:
 
@@ -240,7 +240,7 @@ When debugging a script, you can set the script to run in the following ways:
 1. Click **Run** or **Step Into** in the **Debug** tab of the ribbon.
 1. When you reach the end of the script you can:
    1. Click **Step Into** in the **Debug** tab to return to the beginning of the script.
-   1. View results (see [*Viewing and Analyzing the Test Results* ](#_bookmark115)).
+   1. View results (see [*Viewing and Analyzing the Test Results* ](#viewing-and-analyzing-the-test-results)).
    1. Add breakpoints (see [*Setting Breakpoints* ](#_bookmark113)).
 1. Return to Edit mode and revise your script.
 
@@ -814,7 +814,9 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
 
    
 
-1. Configure the responses you wish to validate during playback, according to the information displayed in [Table 13, ](#_bookmark125)and click **OK**.
+1. Configure the responses you wish to validate during playback, according to the information displayed in the [Table](#response-validation) and click **OK**.
+
+<a name = "response-validation"> </a>
 
 1. The Response Validation function is added to your script.
 

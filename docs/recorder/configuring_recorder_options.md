@@ -467,8 +467,8 @@ Use the Script Generation tab in the Recording and Script Generation Options dia
 
    The Script Generation tab moves to the front of the dialog box. 
 
-   ![Script Generation Tab](../images/script_gen_tab.png)
-
+   <a name ="setting_dialog_box"></a>
+   ![Settings Dialog Box](../images/set_dia_box.png)
    
 
 1. Select or clear the options to specify what the WebLOAD Recorder should record in your script.
@@ -1053,7 +1053,7 @@ WebLOAD Recorder enables you to specify settings for WebLOAD Recorder.
 
 
 
-![Settings Dialog Box](../images/set_dia_box.png)
+
 
 
 
@@ -1074,7 +1074,7 @@ Set the number of iterations to be run during a test session and whether to prom
 
 **To set Playback iterations:**
 
-1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **Playback**. The Playback Options screen is displayed (see [Figure 128](#_bookmark183)).
+1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **Playback**. The Playback Options screen is displayed (see [Settings Dialog Box](#setting_dialog_box)).
 1. Specify the number of iterations to run during script playback. The default value is 1.
 1. Select **Prompt to save the debugging session file** if you wish to be prompted to save the session file before switching to edit mode. When this is not selected, you are prompted to save the session file only when closing a script or exiting WebLOAD Recorder.
 1. Click **OK**.
@@ -1086,7 +1086,7 @@ Define the default file locations during a test session.
 
 **To set the file locations:**
 
-1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **File Locations**. The File Locations screen is displayed.
+1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **File Locations**. The File Locations screen is displayed.
 
    ![Settings Dialog Box with File Validation Test](../images/recorder_1097.png)
 
@@ -1111,7 +1111,7 @@ Define which application is used for comparing and displaying the differences wh
 
 **To define the difference viewer application:**
 
-1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **Diff Viewer**. The Diff Viewer screen is displayed.
+1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **Diff Viewer**. The Diff Viewer screen is displayed.
 
    ![Settings Dialog Box with Diff Viewer Options](../images/recorder_1098.png) 
 
@@ -1150,7 +1150,7 @@ Define which application is used for resolving conflicts between user changes an
 
 **To define the merge tool application:**
 
-1. In the Settings dialog box ([Figure 128](#_bookmark183)), click **Merge Tool**. The Merge Tool screen is displayed. 
+1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **Merge Tool**. The Merge Tool screen is displayed. 
 
    ![Settings Dialog Box with Merge Tool Options](../images/recorder_1099.png)
 

@@ -63,7 +63,7 @@ Some Asian sites check the AcceptLanguage property, and, if they think the clien
 
 **Property of Object**
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 
 **Description**
 
@@ -291,7 +291,7 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 
 * cellIndex
 *[*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object))
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -325,7 +325,7 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 
 * cell
 * [*Collections* ](#using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ] (wltables-property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -560,7 +560,7 @@ When you use the Close() function to close a file, data will be flashed to the d
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -947,7 +947,7 @@ The load engine first looks for the file to be copied in the default User Copy F
 * Close() (see [*Close() (function)* ](#close-function))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -993,7 +993,7 @@ The actual DOM is created automatically each time an HTTP request is accessed th
 
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
@@ -1028,7 +1028,7 @@ CreateTable() is a member of the wlTables family of table, row, and cell objects
 
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
@@ -1078,8 +1078,8 @@ wlHttp.FormData.SearchFor = “icebergs” wlHttp.FormData.SearchType = “Exact
 
 **Properties**
 
-* type (see [*type (property)* ](#_bookmark420))
-* value (see [*value (property)* ](#_bookmark430))
+* type (see [*type (property)* ](#type-property))
+* value (see [*value (property)* ](#value-property))
 
 **Comment**
 
@@ -1089,13 +1089,13 @@ Your Script should work with either Data or DataFile collections. Do not use bot
 
 **See also**
 
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
-* Post() (see [*Post() (method)* ](#_bookmark290))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
+* Header (see [*Header (property)* ](#header-property))
+* Post() (see [*Post() (method)* ](#post-method))
 
 ## DataFile (property)
 
@@ -1122,7 +1122,7 @@ WebLOAD sends the file when you call the wlHttp.Post() method.
 
 **Properties**
 
-* FileName (see [*FileName (property)* ](#_bookmark122))
+* FileName (see [*FileName (property)* ](#filename-property))
 
 **Comment**
 
@@ -1130,13 +1130,13 @@ DataFile is used for sending files and parallels the posting of mulipart data in
 
 **See also**
 
-* Data (see [*Data (property)* ](#_bookmark80))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark290))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 ## DebugMessage() (function)
 
@@ -1246,8 +1246,8 @@ For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the 
 **See also**
 
 * checked (see [*checked (property)* ](#_bookmark54))
-* cols (see [*cols (property)* ](#_bookmark64))
-* defaultvalue (see [*defaultvalue (property)* ](#_bookmark88))
+* cols (see [*cols (property)* ](#wltables-object))
+* defaultvalue (see [*defaultvalue (property)* ](#defaultvalue-property))
 * id (see [*id (property)* ](#_bookmark208))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * MaxLength (see [*MaxLength (property)* ](#_bookmark246))
@@ -1257,9 +1257,9 @@ For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the 
 * selectedindex (see [*selectedindex (property)* ](#_bookmark337))
 * Size (see [*Size (property)* ](#_bookmark361))
 * title (see [*title (property)* ](#_bookmark415))
-* type (see [*type (property)* ](#_bookmark420))
+* type (see [*type (property)* ](#type-property))
 * Url (see [*Url (property)* ](#_bookmark422))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 ## defaultselected (property)
 
@@ -1273,9 +1273,9 @@ Returns a Boolean value specifying whether this option was the one originally �
 
 **See also**
 
-* defaultchecked (see [*defaultchecked (property)* ](#_bookmark87))
+* defaultchecked (see [*defaultchecked (property)* ](#defaultchecked-property))
 * selected (see [*selected (property)* ](#_bookmark337))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 ## defaultvalue (property)
 
@@ -1361,14 +1361,14 @@ Perform an HTTP or HTTPS Delete command.
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Head() (see [*Head() (method)* ](#_bookmark194))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Options() (see [*Options() (method)* ](#_bookmark266))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298))
@@ -1407,7 +1407,7 @@ wlCookie.Delete(“CUSTOMER”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -1569,13 +1569,13 @@ function InitAgenda(){wlGlobals.ElapsedRoundTime = 1056}
 
 element objects are grouped into collections of elements. The elements collection is also a property of the following objects:
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 
 **Description**
 
 Each element object stores the parsed data for a single HTML form element such as
 
-`<INPUT>`, `<BUTTON>`, `<TEXTAREA>`, or `<SELECT>`. The full elements collection stores all the controls found in a given form except for objects of input type=image. (Compare to the form (see [*form (object)* ](#_bookmark125)) object, which stores the parsed data for an entire HTML form.)
+`<INPUT>`, `<BUTTON>`, `<TEXTAREA>`, or `<SELECT>`. The full elements collection stores all the controls found in a given form except for objects of input type=image. (Compare to the form (see [*form (object)* ](##form-object)) object, which stores the parsed data for an entire HTML form.)
 
 element objects are local to a single thread. You cannot create new element objects using the JavaScript new operator, but you can access HTML elements through the properties and methods of the standard DOM objects. element properties are read- only.
 
@@ -1608,9 +1608,9 @@ document.forms[0].yourname.type
 **Properties**
 
 * checked (see [*checked (property)* ](#_bookmark54))
-* cols (see [*cols (property)* ](#_bookmark64))
-* defaultchecked (see [*defaultchecked (property)* ](#_bookmark87))
-* defaultvalue (see [*defaultvalue (property)* ](#_bookmark88))
+* cols (see [*cols (property)* ](#wltables-object))
+* defaultchecked (see [*defaultchecked (property)* ](#defaultchecked-property))
+* defaultvalue (see [*defaultvalue (property)* ](#defaultvalue-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * Name (see [*Name (property)* ](#_bookmark253))
 * id (see [*id (property)* ](#_bookmark208))
@@ -1623,9 +1623,9 @@ document.forms[0].yourname.type
 * selectedindex (see [*selectedindex (property)* ](#_bookmark337))
 * Size (see [*Size (property)* ](#_bookmark361))
 * title (see [*title (property)* ](#_bookmark415))
-* type (see [*type (property)* ](#_bookmark420))
+* type (see [*type (property)* ](#type-property))
 * Url (see [*Url (property)* ](#_bookmark422))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 **Comment**
 
@@ -1700,8 +1700,8 @@ In WebLOAD Recorder, check **Encode Binary Data** in the Script Generation tab o
 **See also**
 
 * EncodeResponseBinaryData (see [*EncodeResponseBinaryData (property)* ](#_bookmark108))
-* EncodeBinary (see [*EncodeBinary (property)* ](#_bookmark104))
-* SaveSource (see [*SaveSource (property)* ](#_bookmark321))
+* EncodeBinary (see [*EncodeBinary (property)* ](#encodebinary-property))
+* SaveSource (see [*SaveSource (property)* ](#savesource-property))
 
 ## EncodeResponseBinaryData (property)
 
@@ -1728,7 +1728,7 @@ wlGlobals.EncodeResponseBinaryData = true
 
 **Property of Object**
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 
 **Description**
 
@@ -1736,7 +1736,7 @@ A read-only string that specifies the MIME encoding for the form.
 
 **See also**
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 
 ## EndTransaction() (function)
 
@@ -1893,14 +1893,14 @@ erased automatically by WebLOAD. The only way to reset or erase user-defined pro
 
 **See also**
 
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* DataCollection.type (see [*type (property)* ](#_bookmark420))
-* DataCollection.value (see [*value (property)* ](#_bookmark430))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* DataCollection.type (see [*type (property)* ](#type-property))
+* DataCollection.value (see [*value (property)* ](#value-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark290))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 
@@ -2085,7 +2085,7 @@ retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,2)
 
 **Property of Object**
 
-* wlHttp.DataFile (see [*DataFile (property)* ](#_bookmark82))
+* wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
 
 **Description**
 
@@ -2097,15 +2097,15 @@ wlHttp.DataFile.FileName = “DataFileName”
 
 **See also**
 
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark290))
-* type (see [*type (property)* ](#_bookmark420))
-* value (see [*value (property)* ](#_bookmark430))
+* type (see [*type (property)* ](#type-property))
+* value (see [*value (property)* ](#))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
@@ -2251,15 +2251,15 @@ You may also submit FormData with missing fields or with data files.
 
 **See also**
 
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark290))
-* type (see [*type (property)* ](#_bookmark420))
-* value (see [*value (property)* ](#_bookmark430))
+* type (see [*type (property)* ](#type-property))
+* value (see [*value (property)* ](#value-property))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 
 ## frames (object)
@@ -2530,14 +2530,14 @@ You may not use the TransName parameter by itself. Get() expects to receive eith
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Head() (see [*Head() (method)* ](#_bookmark194))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Options() (see [*Options() (method)* ](#_bookmark266))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298)onpage [213](#_bookmark298))
@@ -2570,7 +2570,7 @@ Enables the retrieval of Java Applets in an HTML page. The default value of GetA
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetCss (property)
@@ -2598,7 +2598,7 @@ wlGlobals.GetCss = true
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153)*on* page [117](#_bookmark153))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetElementById() (function)
@@ -2806,7 +2806,7 @@ wlGlobals.GetEmbeds = true
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetFieldValue() (method)
@@ -3001,7 +3001,7 @@ When GetMetas is true, GetFrames should also be true as the redirection is retri
 * GetEmbeds() (see [*GetEmbeds (property)* ](#_bookmark145))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetFrameUrl() (method)
@@ -3172,7 +3172,7 @@ When GetImages is false, the load engine does not retrieve the images from an HT
 * GetEmbeds() (see [*GetEmbeds (property)* ](#_bookmark145))
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetImagesInThinClient (property)
@@ -3198,7 +3198,7 @@ wlGlobals.GetImagesInThinClient = true
 * SetClientType (see [*SetClientType (function)* ](#_bookmark352))
 * [*Collections* ](#using_javascript_ref.md#collections)
 * document (see [*document (object)* ](#_bookmark100))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480))
 
 ## GetIPAddress() (method)
@@ -3317,13 +3317,13 @@ If the line found in the file contains no separator characters, then the entire 
 
 The GetLine() function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
 
-* If you opened the file using the default WLFileSequential access method (see [*Open() (method)* ](#_bookmark260)), then:
+* If you opened the file using the default WLFileSequential access method (see [*Open() (method)* ](#open-method)), then:
 * The first GetLine() call in any thread of a Load Generator reads the first line of the file.
 * Each successive call in any thread of any process of any Load Generator reads the next line of the file.
 * When the last line of the file has been read, the next access loops back to the first line of the file.
-* If you opened the file using the WLFileSequentialUnique access method (see[ *Open() (method)* ](#_bookmark260)), then the procedure is basically as when using the WLFileSequential access mode, except that the if the value/row is being used by another VC, it is not retrieved, but skipped.
-* If you opened the file using the WLFileRandom access method (see [*Open() (method)*](#_bookmark260) ), GetLine() reads a random value/row from the file, where there might be multiple access to the same line by different Load Generator machines.
-* If you opened the file using the WLFileRandomUnique access method (see [*Open()*](#_bookmark260)[ *(method)* ](#_bookmark260)), GetLine() reads a unique, unused value/row randomly from the file.
+* If you opened the file using the WLFileSequentialUnique access method (see[ *Open() (method)* ](#open-method)), then the procedure is basically as when using the WLFileSequential access mode, except that the if the value/row is being used by another VC, it is not retrieved, but skipped.
+* If you opened the file using the WLFileRandom access method (see [*Open() (method)*](#open-method) ), GetLine() reads a random value/row from the file, where there might be multiple access to the same line by different Load Generator machines.
+* If you opened the file using the WLFileRandomUnique access method (see [*Open()*](#open-method)[ *(method)* ](#open-method)), GetLine() reads a unique, unused value/row randomly from the file.
 
 > **Note:** The last line of the file should not include a carriage return.
 
@@ -3361,7 +3361,7 @@ If the line found in the file contains no separator characters, then the entire 
 
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
-* wlInputFile (see [*wlInputFile() (constructor)* ](#_bookmark468))
+* wlInputFile (see [*wlInputFile() (constructor)* ](#wlinputfile-constructor))
 
 ## GetLinkByName() (method)
 
@@ -3455,7 +3455,7 @@ If you are specifying a frame, comment out `GetFrames=false`.
 
 **Method of Object**
 
-* wlException (see [*wlException (object)* ](#_bookmark447))
+* wlException (see [*wlException (object)* ](#wlexception-object))
 
 **Description**
 
@@ -3475,7 +3475,7 @@ Text string of the error message for this object.
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
 * [*Message Functions* ](#_bookmark29)
@@ -3570,7 +3570,7 @@ wlGlobals.GetOthers = true
 * GetEmbeds() (see [*GetEmbeds (property)* ](#_bookmark145))
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 * GetXml() (see [*GetXml() (property)* ](#_bookmark191))
 
 ## GetPortNum() (method)
@@ -3699,7 +3699,7 @@ Integer, representing one of the following error level values:
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
 * [*Message Functions* ](#_bookmark29)
@@ -3863,7 +3863,7 @@ wlGlobals.GetXML = true
 * GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
 * GetImages() (see [*GetImages (property)* ](#_bookmark162))
 * GetOthers() (see [*GetOthers (property)* ](#_bookmark177))
-* GetScripts() (see [*GetScripts (property)* ](#_bookmark183))
+* GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
 
 ## hash (property)
 
@@ -3911,9 +3911,9 @@ HTTPS header from the server. It does not download the body of the URL, such as 
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * [wlGlobals](#wlglobals-object)
@@ -3966,16 +3966,16 @@ Any information set using the wlHttp.Header property *takes priority* over any d
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Post() (see [*Post() (method)* ](#_bookmark290))
-* type (see [*type (property)* ](#_bookmark420))
-* UserAgent (see [*UserAgent (property)* ](#_bookmark425))
-* value (see [*value (property)* ](#_bookmark430))
+* type (see [*type (property)* ](#type-property))
+* UserAgent (see [*UserAgent (property)* ](#useragent-property))
+* value (see [*value (property)* ](#value-property))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 * [wlGlobals](#wlglobals-object)
 * [wlLocals](#wllocals-object)
@@ -4213,7 +4213,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 **Property of Objects**
 
 * element (see [*element (object)* ](#_bookmark102))
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * frames (see [*frames (object)* ](#_bookmark129))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
@@ -4268,7 +4268,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -4287,7 +4287,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)))
 
 ## Image (object)
 
@@ -4328,7 +4328,7 @@ Access each image’s properties directly using the following syntax:
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * [*Select* ](#_bookmark329)
 
 ## IncludeFile() (function)
@@ -4381,7 +4381,7 @@ The load engine first looks for the file to be included in the default User Incl
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
@@ -4428,7 +4428,7 @@ WebLOAD recommends adding message functions to your script files directly throug
 
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * [*Message Functions* ](#_bookmark29)
 * ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
@@ -4468,7 +4468,7 @@ The InnerHTML property for cell objects is written in uppercase.
 * cell
 * cellIndex (see [*cellIndex (property)* ](#_bookmark50)) (cell  property)
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -4487,7 +4487,7 @@ The InnerHTML property for cell objects is written in uppercase.
 * src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 ## InnerImage (property)
 
@@ -4522,7 +4522,7 @@ Represents the inner link field for the parent image object.
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * [*Select* ](#_bookmark329)
 
 ## InnerText (property)
@@ -4545,7 +4545,7 @@ When working with a link or location object, the text that appears over the link
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -4664,7 +4664,7 @@ WebLOAD recommends maintaining or closing connections through the WebLOAD Consol
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
-* CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark62))
+* CloseConnection() (see [*CloseConnection() (method)* ](#closeconnection-method))
 * *Rules of Scope for Local and Global Variables* in the *WebLOAD Scripting Guide*
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
 
@@ -4697,7 +4697,7 @@ redirection, in the middle of one of the URLs, there is a parameter in the Locat
 
 **Property of Objects**
 
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * wlHeaders (see [*wlHeaders (object)* ](#_bookmark462))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480))
 
@@ -4735,7 +4735,7 @@ wlHttp.Header[“key”] = “Server”
 
 **See also**
 
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 ## language (property)
 
@@ -4845,7 +4845,7 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 ## load() and loadXML() Method Comparison
 
@@ -4879,7 +4879,7 @@ If you wish to measure the time it took to load the XML document using the load(
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * wlXmls (see [*wlXmls (object)* ](#_bookmark502))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 ## LoadGeneratorThreads (property)
 
@@ -4977,7 +4977,7 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 ## location (object)
 
@@ -5076,7 +5076,7 @@ wlVerification.MaxPageTime(timeLimit, severity)
 
 **Property of Object**
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 
 **Description**
 
@@ -5202,7 +5202,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 **Property of Objects**
 
 * element (see [*element (object)* ](#_bookmark102))
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * frames (see [*frames (object)* ](#_bookmark129))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
@@ -5503,9 +5503,9 @@ strLine = myFileObj.getLine(“,”)
 **See also**
 
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
-* wlInputFile() (see [*wlInputFile() (constructor)* ](#_bookmark468))
+* [*File Management Functions* ](#_bookmark25)
+* GetLine() (see [*GetLine() (function)* ](#getline-function)))
+* wlInputFile() (see [*wlInputFile() (constructor)* ](#wlinputfile-constructor)))
 
 ## Open() (function)
 
@@ -5517,7 +5517,7 @@ strLine = myFileObj.getLine(“,”)
 
 Opens the output file, specified in the wlOutputFile object. By default, the file is opened for sequential access, enabling the parameters in the file to be read sequentially. This is unique across the master and slave processes of a single Load Generator/script combination. The master assigns the next line of the file that will be
 
-read sequentially for each slave. When all the information in the file is read (see[*GetLine() (function)* ](#_bookmark166)), it is returned to the beginning of the file.
+read sequentially for each slave. When all the information in the file is read (see[*GetLine() (function)* ](#getline-function)), it is returned to the beginning of the file.
 
 Alternatively, to open the input file and read its contents in random order, you must include Open(filename, wlRandom) in the script’s InitAgenda() function.
 
@@ -5550,7 +5550,7 @@ For random access:
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
 * *Using the Form Data Wizard* in the *WebLOAD Scripting Guide*
@@ -5634,9 +5634,9 @@ CheckElementType([“http://www.TestSite1.com/domain/pulldown.htm](http://www.Te
 
 **Properties**
 
-* defaultselected (see [*defaultselected (property)* ](#_bookmark88))
+* defaultselected (see [*defaultselected (property)* ](#defaultvalue-property))
 * selected (see [*selected (property)* ](#_bookmark337))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 ## Options() (method)
 
@@ -5665,15 +5665,15 @@ Perform an HTTP or HTTPS Options command.
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Head() (see [*Head() (method)* ](#_bookmark194))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298)onpage [213](#_bookmark298))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
@@ -5693,7 +5693,7 @@ Represents the outer link field for the parent image object.
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](#form-object))
 * [*Select* ](#_bookmark329)
 
 ## Outfile (property)
@@ -6439,10 +6439,10 @@ You may not use the TransName parameter by itself. Post() expects to receive eit
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Head() (see [*Head() (method)* ](#_bookmark194))
 * Options() (see [*Options() (method)* ](#_bookmark266))
@@ -6658,10 +6658,10 @@ You may not use the TransName parameter by itself. Put() expects to receive eith
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
 * Head() (see [*Head() (method)* ](#_bookmark194))
 * Options() (see [*Options() (method)* ](#_bookmark266))
@@ -6806,7 +6806,7 @@ This method deletes the wlOutputFile object and closes the output file.
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -6836,7 +6836,7 @@ This function enables you to record specific events as they occur. This informat
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
@@ -6863,7 +6863,7 @@ Sends a message to the Log Window that includes the error message and severity l
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
@@ -6924,7 +6924,7 @@ Return to the beginning of the output file.
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#_bookmark476))
@@ -7042,7 +7042,7 @@ The row object may be accessed as a member of the wlTables family of table, row,
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -7075,7 +7075,7 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -7809,7 +7809,7 @@ The SetFailureReason() function accepts a literal string as the parameter. This 
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
@@ -7906,7 +7906,7 @@ WebLOAD recommends adding message functions to your script files directly throug
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
@@ -8140,7 +8140,7 @@ Retrieves the complete URL of the parent object, that is the URL to an external 
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 ## SSLBitLimit (property)
 
@@ -9155,7 +9155,7 @@ The tagName property is a member of the wlTables family of table, row, and cell 
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * Compare() (see [*Compare() (method)* ](#_bookmark65))
 * CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
 * CompareRows (see [*CompareRows (property)* ](#_bookmark65))
@@ -9174,7 +9174,7 @@ The tagName property is a member of the wlTables family of table, row, and cell 
 
 **Property of Object**
 
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * link (see [*link (object)* ](#_bookmark235))
 
 **Description**
@@ -9308,7 +9308,7 @@ wlGlobals.TimeoutSeverity = WLError.
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * [*Transaction Verification Components* ](#_bookmark39)
@@ -9360,7 +9360,7 @@ CurrentDocumentTitle = document.title.string
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * [*Select* ](#_bookmark329)
 
 
@@ -9462,7 +9462,7 @@ wlGlobals.TransactionTime = “0.001”
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
@@ -9474,10 +9474,10 @@ wlGlobals.TransactionTime = “0.001”
 **Property of Objects**
 
 * element (see [*element (object)* ](#_bookmark102))
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * [wlHttp](#wlhttp-object)
-* wlHttp.Data (see [*Data (property)* ](#_bookmark80))
-* wlHttp.DataFile (see [*DataFile (property)* ](#_bookmark82))
+* wlHttp.Data (see [*Data (property)* ](#data-property))
+* wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
 
 **Description**
 
@@ -9509,15 +9509,15 @@ The Type property for wlHttp.Data and wlHttp.DataFile objects is written in uppe
 
 **See also**
 
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark290))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 * [wlHttp](#wlhttp-object)
 
@@ -9526,7 +9526,7 @@ The Type property for wlHttp.Data and wlHttp.DataFile objects is written in uppe
 **Property of Objects**
 
 * element (see [*element (object)* ](#_bookmark102))
-* form (see [*form (object)* ](#_bookmark125))
+* form (see [*form (object)* ](##form-object))
 * frames (see [*frames (object)* ](#_bookmark129))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
@@ -9708,8 +9708,8 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 * element (see [*element (object)* ](#_bookmark102))
 * option (see [*option (object)* ](#_bookmark264))
 * wlHeaders (see [*wlHeaders (object)* ](#_bookmark462))
-* wlHttp.Data (see [*Data (property)* ](#_bookmark80))
-* wlHttp.Header (see [*Header (property)* ](#_bookmark195))
+* wlHttp.Data (see [*Data (property)* ](#data-property))
+* wlHttp.Header (see [*Header (property)* ](#header-property))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480))
 
 **Description**
@@ -9761,22 +9761,22 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
 * element (see [*element (object)* ](#_bookmark102))
-* Erase (see [*Erase (property)* ](#_bookmark113))
-* FileName (see [*FileName (property)* ](#_bookmark122))
-* form (see [*form (object)* ](#_bookmark125))
-* FormData (see [*FormData (property)* ](#_bookmark127))
+* Erase (see [*Erase (property)* ](#erase-property))
+* FileName (see [*FileName (property)* ](#filename-property))
+* form (see [*form (object)* ](##form-object))
+* FormData (see [*FormData (property)* ](#formdata-property))
 * Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * Image (see [*Image (object)* ](#_bookmark210))
 * key (see [*key (property)* ](#_bookmark229))
 * option (see [*option (object)* ](#_bookmark264))
 * Post() (see [*Post() (method)* ](#_bookmark290))
 * [*Select* ](#_bookmark329)
-* type (see [*type (property)* ](#_bookmark420))
-* value (see [*value (property)* ](#_bookmark430))
+* type (see [*type (property)* ](#type-property))
+* value (see [*value (property)* ](#value-property))
 * wlClear() (see [*wlClear() (method)* ](#_bookmark440))
 * wlHeaders (see [*wlHeaders (object)* ](#_bookmark462))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
@@ -9894,7 +9894,7 @@ For a more complete explanation and examples of functional testing and transacti
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
-* EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark113))
+* EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
@@ -9958,7 +9958,7 @@ into the script. The Message dialog box opens. Enter the message text, select th
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
@@ -10031,10 +10031,10 @@ For example:
 
 The wlHttp object includes the following collections for storing data. These data storage collections each include the method wlClear().
 
-* wlHttp.Data (see [*Data (property)* ](#_bookmark80))
-* wlHttp.DataFile (see [*DataFile (property)* ](#_bookmark82))
-* wlHttp.FormData (see [*FormData (property)* ](#_bookmark127))
-* wlHttp.Header (see [*Header (property)* ](#_bookmark195))
+* wlHttp.Data (see [*Data (property)* ](#data-property))
+* wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
+* wlHttp.FormData (see [*FormData (property)* ](#formdata-property))
+* wlHttp.Header (see [*Header (property)* ](#header-property))
 
 **Description**
 
@@ -10069,10 +10069,10 @@ wlHttp.FormData.wlClear(“FirstName”)
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* FormData (see [*FormData (property)* ](#_bookmark127))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
+* Header (see [*Header (property)* ](#header-property))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
 ## wlCookie (object)
@@ -10259,7 +10259,7 @@ else {
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
 * [*Message Functions* ](#_bookmark29)
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
@@ -10299,7 +10299,7 @@ Returns a new wlException object.
 
 **See also**
 
-* ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark115))
+* ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
@@ -10544,12 +10544,12 @@ document.wlHeaders[0].key = “Server” document.wlHeaders[0].value = “Netsca
 The wlHeaders object includes the following properties:
 
 * key (see [*key (property)* ](#_bookmark229))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#_bookmark480))
 
 
@@ -10655,8 +10655,8 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior]
 
 **Methods**
 
-* Open() (see [*Open() (method)* ](#_bookmark260))
-* GetLine() (see [*G*](#_bookmark166)[*etLine() (function)* ](#_bookmark166))
+* Open() (see [*Open() (method)* ](#open-method))
+* GetLine() (see [*G*](#getline-function)[*etLine() (function)* ](#getline-function))
 
 **See also**
 
@@ -10886,7 +10886,7 @@ Generally, you should only create new wlOutputFile objects in the InitAgenda() o
 
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
@@ -10938,7 +10938,7 @@ If you declare a new wlOutputFile object in the main body of a script, and then 
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -11004,7 +11004,7 @@ OneOfThreeNumbers = wlRand.Select(0, 1, 1.5)
 
 **Description**
 
-Each wlSearchPairs object contains a parsed version of the search attribute string, storing the key/value pairs found in a document’s *URL search strings*. (For key-value pairs found in HTTP *response headers*, see wlHeaders (see [*wlHeaders (object)* ](#_bookmark462)). Information found in *request headers* is available through the wlHttp.Header (see [*Header (property)* ](#_bookmark195)) property.)
+Each wlSearchPairs object contains a parsed version of the search attribute string, storing the key/value pairs found in a document’s *URL search strings*. (For key-value pairs found in HTTP *response headers*, see wlHeaders (see [*wlHeaders (object)* ](#_bookmark462)). Information found in *request headers* is available through the wlHttp.Header (see [*Header (property)* ](#header-property)) property.)
 
 wlSearchPairs objects are grouped into wlSearchPairs collections, where the collections are themselves properties of the link and location objects.
 
@@ -11058,12 +11058,12 @@ document.links[2].wlSearchPairs[0].key = “Product” document.links[2].wlSearc
 The wlSearchPairs object includes the following properties:
 
 * key (see [*key (property)* ](#_bookmark229))
-* value (see [*value (property)* ](#_bookmark430))
+* value (see [*value (property)* ](#value-property))
 
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* Header (see [*Header (property)* ](#_bookmark195))
+* Header (see [*Header (property)* ](#header-property))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
 * wlHeaders (see [*wlHeaders (object)* ](#wlheaders-object))
@@ -11077,10 +11077,10 @@ The wlSearchPairs object includes the following properties:
 
 The wlHttp object includes the following collections for storing data. These data storage collections each include the method wlSet().
 
-* wlHttp.Data (see [*Data (property)* ](#_bookmark80))
-* wlHttp.DataFile (see [*DataFile (property)* ](#_bookmark82))
-* wlHttp.FormData (see [*FormData (property)* ](#_bookmark127))
-* wlHttp.Header (see [*Header (property)* ](#_bookmark195))
+* wlHttp.Data (see [*Data (property)* ](#data-property))
+* wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
+* wlHttp.FormData (see [*FormData (property)* ](#formdata-property))
+* wlHttp.Header (see [*Header (property)* ](#header-property))
 
 **Description**
 
@@ -11130,10 +11130,10 @@ wlHttp.FormData.wlSet(“length”, 7)
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
-* Data (see [*Data (property)* ](#_bookmark80))
-* DataFile (see [*DataFile (property)* ](#_bookmark82))
-* FormData (see [*FormData (property)* ](#_bookmark127))
-* Header (see [*Header (property)* ](#_bookmark195))
+* Data (see [*Data (property)* ](#data-property))
+* DataFile (see [*DataFile (property)* ](#datafile-property))
+* FormData (see [*FormData (property)* ](#formdata-property))
+* Header (see [*Header (property)* ](#header-property))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
 
@@ -11156,7 +11156,7 @@ To use the HTML source, you must enable the SaveSource (see [*SaveSource (proper
 
 **See also**
 
-* Outfile (see [*Outfile (property)* ](#_bookmark268))
+* Outfile (see [*Outfile (property)* ](#outfile-property))
 * SaveSource (see [*SaveSource (property)* ](#savesource-property))
 
 ## wlStatusLine (property)
@@ -11261,7 +11261,7 @@ wlSystemGlobal incorporates a dynamic property set that consists of whatever glo
 
 TABLE objects on a Web page are accessed through wlTables objects that are grouped into collections of wlTables. The wlTables collection is a property of the following object:
 
-* document (see [*document (object)* ](#_bookmark100))
+* document (see [*document (object)* ](#document-object))
 
 **Description**
 
@@ -11288,7 +11288,7 @@ wlTables objects may also be accessed directly using the table ID. This is illus
 Each wlTables object contains information about the data found in the whole table, organized by rows, columns, and cells. The wlTables object includes the following properties:
 
 * cell
-* cols (see [*cols (property)* ](#_bookmark64)) (wlTables property)
+* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
 * id (see [*id (property)* ](#_bookmark208)) (wlTables property)
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
 
@@ -11475,7 +11475,7 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 
 
@@ -11593,9 +11593,7 @@ Running this script produces the following output:
 
 **Methods and Properties**
 
-WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#_bookmark509)on
-
-page [345](#_bookmark509)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)), and src (see [*src (property)* ](#src-property)on page [252](#src-property)) HTML properties are exposed. Each property is described in its own section.
+WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)), and src (see [*src (property)* ](#src-property)on page [252](#src-property)) HTML properties are exposed. Each property is described in its own section.
 
 * id (see [*id (property)* ](#_bookmark208))
 * InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
@@ -11603,7 +11601,7 @@ page [345](#_bookmark509)) property. In addition, if the object is constructed f
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * WLXmlDocument() (see [*WLXmlDocument() (constructor)* ](#_bookmark500))
-* XMLDocument (see [*XMLDocument (property)* ](#_bookmark509))
+* XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 **See also**
 
@@ -11695,7 +11693,7 @@ MyFileObj.Write(“Happy Birthday”)
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
@@ -11741,7 +11739,7 @@ This method writes a string followed by a newline character to the output file.
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 * Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
-* GetLine() (see [*GetLine() (function)* ](#_bookmark166))
+* GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))

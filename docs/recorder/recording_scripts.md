@@ -468,9 +468,9 @@ Each block of code starts with a header that contains “WLIDE”, description, 
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane)*).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution Sequence in the JavaScript View Pane* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-javascript-view-pane))
 
 ### Viewing the Recorded Script in the HTTP Headers View Pane
 
@@ -511,9 +511,9 @@ The Post command involves sending data to the HTTP server, as opposed to the Get
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#_bookmark62) *[View Pane* ](#_bookmark62)*).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#editing-a-script-in-the-javascript-view-pane) *[View Pane* ](#editing-a-script-in-the-javascript-view-pane)*).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution](#_bookmark104) *[Sequence in the JavaScript View Pane* ](#_bookmark104)*).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution Sequence in the JavaScript View Pane* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-javascript-view-pane)).
 
 
 

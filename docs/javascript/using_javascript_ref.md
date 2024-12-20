@@ -114,20 +114,20 @@ The following properties are for wlHttp objects only
 
 **Data Properties**
 
-- Data (see [*Data (property)* ](#_bookmark81))
+- Data (see [*Data (property)* ](#data-property))
 
 - DataFile (see [*DataFile (property)* ](#_bookmark82))
 
-- Erase (see [*Erase (property)* ](#_bookmark112))
+- Erase (see [*Erase (property)* ](#erase-property))
 
-- FileName (see [*FileName (property)* ](#_bookmark123))
+- FileName (see [*FileName (property)* ](#filename-property))
 
-- FormData (see [*FormData (property)* ](#_bookmark128))
+- FormData (see [*FormData (property)* ](#formdata-property))
 
-- Header (see [*Header (property)* ](#_bookmark196))
+- Header (see [*Header (property)* ](./actions_objects_functions.md#header-property))
 
 
-- DataCollection.type (see [*type (property)* ](#_bookmark421))
+- DataCollection.type (see [*type (property)* ](./actions_objects_functions.md#type-property))
 
 - DataCollection.value (see [*value (property)* ](#_bookmark431))
 
@@ -164,7 +164,7 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - RedirectionLimit (see [*RedirectionLimit (property)* ](#_bookmark303))
 
-- SaveSource (see [*SaveSource (property)* ](#_bookmark321))
+- SaveSource (see [*SaveSource (property)* ](#savesource-property))
 
 - SaveTransaction (see [*SaveTransaction (property)* ](#_bookmark322)) (wlGlobals only)
 
@@ -180,11 +180,11 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - SSLVersion (see [*SSLVersion (property)* ](#_bookmark399))
 
-- type (see [*type (property)* ](#_bookmark421))
+- type (see [*type (property)* ](./actions_objects_functions.md#type-property))
 
 - Url (see [*Url (property)* ](#_bookmark423))
 
-- UserAgent (see [*UserAgent (property)* ](#_bookmark424))
+- UserAgent (see [*UserAgent (property)* ](#useragent-property))
 
 - UserName (see [*UserName (property)* ](#_bookmark426))
 
@@ -270,7 +270,7 @@ These functions manage access to a script’s function and input files, includin
 
 - Delete() (see [*Delete() (cookie method)* ](#_bookmark93))
 
-- GetLine() (wlOutputFile) (see [*GetLine() (function)* ](#_bookmark166))
+- GetLine() (wlOutputFile) (see [*GetLine() (function)* ](./actions_objects_functions.md#getline-function))
 
 - GetLine() (wlInputFile) (see [*GetLine() (method)* ](#_bookmark167))
 
@@ -278,7 +278,7 @@ These functions manage access to a script’s function and input files, includin
 
 - Open() (wlOutputFile) (see [*Open() (function)* ](#_bookmark262))
 
-- Open() (wlInputFile) (see [*Open() (method)* ](#_bookmark260))
+- Open() (wlInputFile) (see [*Open() (method)* ](./actions_objects_functions.md#open-method))
 
 - Reset() (see [*Reset() (method)* ](#_bookmark311))
 
@@ -428,7 +428,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438))
 
-- wlException (see [*wlException (object)* ](#_bookmark447))
+- wlException (see [*wlException (object)* ](./actions_objects_functions.md#wlexception-object))
 
 - wlException() (see [*wlException() (constructor)* ](#_bookmark449))
 

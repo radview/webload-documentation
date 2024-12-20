@@ -13,7 +13,7 @@ In the script, each request and event is based on previous input, tying the enti
 When editing your script, you can work at whatever level you prefer. The following script editing tools are discussed:
 
 - [*Editing a Script in the Script Tree* ](#_bookmark58) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
-- [*Editing a Script in the JavaScript View Pane* ](#_bookmark62) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
+- [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
 - [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#_bookmark73) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
 
 ### Editing a Script in the Script Tree
