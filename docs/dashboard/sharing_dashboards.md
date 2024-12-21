@@ -50,7 +50,7 @@ You can easily share an entire dashboard, by providing the appropriate URL. **To
 
 ## Exporting a Dashboard as a JSON File
 
-You can export a dashboard as a JSON file, and import dashboards that were saved in JSON file format. For instructions how to import a dashboard that was saved as a JSON file, refer to[` `*Importing a Dashboard*.](#_page65_x109.00_y661.04) 
+You can export a dashboard as a JSON file, and import dashboards that were saved in JSON file format. For instructions how to import a dashboard that was saved as a JSON file, refer to [*Importing a Dashboard*.](./managing_dashboards.md#importing-a-dashboard) 
 
 **To export a dashboard as a JSON file:** 
 

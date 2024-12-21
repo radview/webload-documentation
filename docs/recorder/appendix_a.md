@@ -2192,15 +2192,15 @@ The DB GetLine Building Block reads complete records, one by one, from a specifi
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 80](#_bookmark310).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#dg_getline).
 
 4. Click **OK**.
 
 5. The DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
-
-The fields in the DB GetLine Building Block parameters dialog box are described in the following table:
+<a name ="dg_getline"></a>
+The f>ields in the DB GetLine Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
 | :- | :- |
@@ -2237,12 +2237,13 @@ The Oracle DB GetLine Building Block reads complete records, one by one, from a 
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 81](#_bookmark312).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle-db-getline).
 
 4. Click **OK**.
 
 The Oracle DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+<a name = "oracle-db-getline"></a>
 The fields in the **Oracle DB GetLine** Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -2279,12 +2280,13 @@ The MySQL DB GetLine Building Block reads complete records, one by one, from a s
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 82](#_bookmark314).
+3. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#mysql_db_getline).
 
 4. Click **OK**.
 
 5. The MySQL DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+<a name = "mysql_db_getline"></a>
 The fields in the MySQL DB GetLine Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -2316,13 +2318,13 @@ Use the DB Load Building Block to generate a load test for the specified databas
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 83](#_bookmark316).
+3. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#db-load).
 
 4. Click **OK**.
 
 5. The DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-   
+<a name = "db-load"> </a>  
 
 The fields in the DB Load Building Block parameters dialog box are described in the following table:
 
@@ -2357,14 +2359,14 @@ Use the Oracle DB Load Building Block to generate a load test for the specified 
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described in [Table 84](#_bookmark318).
+3. Enter the appropriate field value into the Value column next to the field name, as described in the following[Table](#oracle-db-load).
 
 4. Click **OK**.
 
    The Oracle DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
    
-
+<a name = "oracle-db-load"></a>
 The fields in the Oracle DB Load Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|

@@ -11,9 +11,9 @@ Use WebLOAD Recorder to create test scripts as a baseline for testing your Web a
 
 As your actions are recorded, WebLOAD Recorder displays them in the Script Tree, which is a tree hierarchy with visual indications of the information recorded.
 
-WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](#_bookmark73)* .
+WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set)* .
 
-This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running and debugging your script, see [*Running and Debugging Scripts* ](#_bookmark99).
+This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 The script can then be used with WebLOAD for load and scalability testing of your application.
 
@@ -84,7 +84,7 @@ If you start and stop recording more than once during a single recording session
 
    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure 114](#_bookmark154)). For more information, see [*Configuring the Default Browser* ](#_bookmark159).
+   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure 114](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](#_bookmark159).
 
 5. Optionally change the browser settings:
 
@@ -98,7 +98,7 @@ If you start and stop recording more than once during a single recording session
    | **Clear cookies**                     | Select this option to clear the browser’s cookie history before recording. This option is selected, by default. |
    | **Identify as**                       | Select this option to simulate a mobile web application.     |
    | **Browser**                           | Select the browser type you wish to simulate.                |
-   | **Version**                           | Select the browser version you wish to simulate. Alternatively, click the Change button ![button](../images/change_button.jpeg) to edit the browser version definition. See [*Editing](#_bookmark143) *[Browser Version Definitions* ](#_bookmark143)*. |
+   | **Version**                           | Select the browser version you wish to simulate. Alternatively, click the Change button ![button](../images/change_button.jpeg) to edit the browser version definition. See [*Editing Browser Version Definitions* ](./configuring_recorder_options.md#editing-browser-version-definitions)*. |
    | <p>**Don’t show**</p><p>**again**</p> | Select this checkbox if you do not wish to see this dialog box every time you select **Start Recording**. |
 
    
@@ -181,14 +181,14 @@ If you start and stop recording more than once during a single recording session
 
 1. Select one of the following:
 
-   - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation](#_bookmark84) *[Rules* ](#_bookmark84)*(.)
-   - **Correlate script using only the existing rules** to run the correlation engine using the existing defined rules. For more information, see [*Configuring the](#_bookmark89)[ Correlation Rules* ](#_bookmark89).
+   - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation Rules* ](./correlating_scripts.md#automatic-discovery-of-correlation-rules)*(.)
+   - **Correlate script using only the existing rules** to run the correlation engine using the existing defined rules. For more information, see [*Configuring the Correlation Rules* ](./correlating_scripts.md#configuring-the-correlation-rules).
    - **Don’t correlate now** to view the recorded script without correlating the script. You can manually correlate the script later.
 
 
-> **Notes:** Although by default the Recording Complete dialog box appears, this depends on your settings in the Correlation Options tab of the Recording and Script Generations options dialog box. For more information, see [*Setting the Default Correlation Action* ](#_bookmark83).
+> **Notes:** Although by default the Recording Complete dialog box appears, this depends on your settings in the Correlation Options tab of the Recording and Script Generations options dialog box. For more information, see [*Setting the Default Correlation Action* ](./correlating_scripts.md#setting-the-default-correlation-action).
 
-You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running your script, see [*Running and Debugging Scripts* ](#_bookmark99).
+You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 > **Notes:** If actions that you are interested in were not recorded, check the cache settings in your browser. WebLOAD Recorder may be skipping steps that you want to record because your browser is using a system cache file. For more information, see [Clearing](#_bookmark16) [the Cache and Cookies in Your Browser ](#_bookmark16).
 >
@@ -536,7 +536,7 @@ When a script is recorded, all of the HTTP traffic is saved even if not all of i
 
 
 
-For example, by default when a script is recorded, the HTTP headers settings for the HTTP requests are not displayed in the script even though they are recorded. After selecting the **Generate All Headers** checkbox in the Script Generation tab and regenerating the script, the script includes the wlHttp headers property. For more information on the script content that can be regenerated, see [*Specifying the Script](#_bookmark155) *[Content to be Generated* ](#_bookmark155)*on page [176.](#_bookmark155)
+For example, by default when a script is recorded, the HTTP headers settings for the HTTP requests are not displayed in the script even though they are recorded. After selecting the **Generate All Headers** checkbox in the Script Generation tab and regenerating the script, the script includes the wlHttp headers property. For more information on the script content that can be regenerated, see [*Specifying the Script](#_bookmark155) *[Content to be Generated* ](#_bookmark155)
 
 In addition, script regeneration is affected by changes in the settings defined in the Post Data tab in the Record and Script Generation Options dialog box. You can record a script with content type x in the DATA list, DATAFile list, or not in any list, (which means it will be recorded as FORMDATA) and then change the settings and regenerate the script and it will play back according to the new settings.
 
@@ -639,7 +639,7 @@ Desktop web applications, such as Rich Internet Applications (RIAs), are web bas
 
 Recording desktop web applications in scripts using WebLOAD Recorder, involves configuring the web applications to use a specific proxy setting. This proxy setting is usually configured automatically when opening WebLOAD Recorder for browser- based applications in Internet Explorer or Mozilla Firefox. To record any other web application that does not run within the browser, configure the web application to pass the traffic to the server through the WebLOAD Recorder proxy server, using one of the following methods:
 
-- [*Recording WebLOAD Scripts Using the Client’s Proxy Setting* ](#_bookmark52).
+- [*Recording WebLOAD Scripts Using the Client’s Proxy Setting* ](#recording-webload-scripts-using-the-clients-proxy-setting).
 - [*Recording WebLOAD Scripts Using the LAN Settings* ](#_bookmark53).
 - [*Recording WebLOAD Scripts Using Proxy Tunneling* ](#_bookmark54).
 
@@ -707,7 +707,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
 1. Configure WebLOAD Recorder’s recording options as follows:
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure 114](#_bookmark154)).
+   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](../images/#rec_script_gen_options)).
 
    1. Select the Browser Settings tab.
 
@@ -768,7 +768,7 @@ Refer to the following table if you are having recording related problems. Befor
 | Local sites are not recorded in the Script                   | Proxy settings are set to bypass local addresses             | <p>1. From your browser’s menu, select **Tools** > **Internet Options** and select the **Connections Options** tab.</p><p>2. Click **Lan Settings**.</p><p>3. Check **Bypass proxy server for local addresses** to ensure that the proxy settings are not set to bypass local addresses or any other server that you want to record.</p> |      |
 |                                                              | WebLOAD does not record from [http://localhost](http://localhost/) | <p>**For Internet Explorer:**</p><p>Use any of the following instead of [http://localhost:](http://localhost/)</p><p>- http://<your machine name></p><p>- http://<your IP address></p><p>- <http://localhost./></p><p>**For Mozilla Firefox:**</p><p>1. From your browser’s menu, select **Tools** > **Options**.</p><p>2. Select the **Advanced** > **Network** tab and click **Settings**.</p><p>3. Clear the **No proxy for property** checkbox.</p> |      |
 | Secured sites are not recorded in the script                 | Proxy settings do not point to the recorder.                 | <p>**For Internet Explorer:**</p><p>1. From your browser’s menu, select **Tools** > **Internet Options** and select the **Connections Options** tab.</p><p>2. Click **Lan Settings**.</p><p>3. Ensure that **Use a proxy server for your LAN** is checked and modify the port setting to 9884.</p><p></p><p>**For Mozilla Firefox:**</p><p>1. From your browser’s menu, select **Tools** > **Options**.</p><p>2. At the top of the Options dialog box, select the</p><p>&emsp;**Advanced** icon and select the **Network** tab.</p><p>3. In the Connection area, click **Settings**.</p><p>4. Ensure that **Manual proxy configuration** is selected and modify the port setting to 9884.</p> |      |
-|                                                              | A different proxy is needed for SSL                          | <p>You must configure an SSL proxy. For instructions, see</p><p>[*Setting the Proxy Options* ](#_bookmark173)on page [200.](#_bookmark173)</p> |      |
+|                                                              | A different proxy is needed for SSL                          | <p>You must configure an SSL proxy. For instructions, see</p><p>[*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)</p> |      |
 | Certificate Error is displayed in the browser during recording |                                                              | <p>The browser correctly detects the recorder and warns the user. You can safely ignore the warning and continue.</p><p>**Note:** You can prevent the warning if you configure WebLOAD to use the server’s certificate. Set the proxy certificate options in the Recording and Script Generation Options dialog box. For more information see [*Setting the Proxy Certificates* ](#_bookmark177).</p> |      |
 | A partial script is created while recording                  | Browser cache needs to be cleared.                           | <p>**For Internet Explorer or Mozilla Firefox:**</p><p>1. In WebLOAD Recorder, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon.</p><p>2. Select the **Browser Settings** tab.</p><p>3. In the Automatic Browser Settings area, check **Clear the browser cache** and click **OK.**</p><p></p><p>**For any other browser:**</p><p>- From your browser’s menu, select the command that clears the browser’s cache.</p> |      |
 |                                                              | Proxy settings need to be modified                           | <p>Modify the proxy setting’s file extensions and content types to record specific extensions, since WebLOAD by default only records top-level URLs, such as HTML, XML, and text.</p><p>1. Click **Recording and Script Generation Options** in the</p><p>&emsp;**Tools** tab of the ribbon.</p><p>2. In the Recording and Script Generation Options dialog box select the **Content Types** and **File Locations** tabs.</p><p>3. Add the specific extension and content types that are not being recorded.</p><p></p><p>For more information see [*Configuring the Content Types to](#_bookmark171) *[Record* ](#_bookmark171)* and [*Setting File Locations* ](#_bookmark185).</p> |      |

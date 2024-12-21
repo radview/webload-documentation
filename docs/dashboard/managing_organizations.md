@@ -4,7 +4,7 @@
 
 ### Organizations and Admins
 
-Organizations are a method of compartmentalizing dashboards, data source and users. You do not need to create multiple organizations if you want all your users to have access to the same set of dashboards and data. If however you do not want all users to access the same dashboards and data sources, define organizations as described in [*Adding an Organization*.](#_page93_x109.00_y356.04)  
+Organizations are a method of compartmentalizing dashboards, data source and users. You do not need to create multiple organizations if you want all your users to have access to the same set of dashboards and data. If however you do not want all users to access the same dashboards and data sources, define organizations as described in [*Adding an Organization*.](#adding-an-organization)  
 
 If you will be defining organizations, you can have two levels of administrators: 
 
@@ -54,12 +54,12 @@ Super admins can add users of any type, to any organization. ***User Creation by
 
    ![Add New User window](../images/add_new_user.png)
 
-1. The new user is created, and appears in the table in the Users window [(Figure 90)](#_page88_x54.00_y207.04). 
+1. The new user is created, and appears in the table in the Users window [(Figure 90)](#uperadmin_user_list). 
 
 1. The new user’s settings can now be defined/edited. 
 
-   - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#_page88_x54.00_y207.04). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
-   - An organizational admin can set the new user’s role in the organization. For instructions, refer to[*User Editing by an Organizational Admin – Editing User’s ](#_page92_x109.00_y290.04)*Role*. ![ref28]
+   - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#uperadmin_user_list). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
+      - An organizational admin can set the new user’s role in the organization. For instructions, refer to[*User Editing by an Organizational Admin – Editing User’s Role*](#user-editing-by-an-organizational-admin-editing user-s-role) 
 
 
 #### User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details
@@ -70,6 +70,7 @@ A super admin can set a user’s permissions, organizational roles, and other se
 
 1. In the Users window that appears, click **Edit** in the row of the user you wish to edit. 
 
+<a name = "uperadmin_user_list"></a>
    ![Users window](../images/superadmin_user_list.png)
 
 1. The Edit User window appears, enabling you to edit various user settings. 
@@ -78,7 +79,7 @@ A super admin can set a user’s permissions, organizational roles, and other se
 
 1. You can make the user a super administrator by selecting the **Admin** checkbox in the **Permissions** section. 
 
-1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in[**Organizational user** ](#_page87_x131.00_y398.04)(on page[ 82)](#_page87_x131.00_y398.04). 
+1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in[**Organizational user** ](#user-editing-by-a-super-admin–editing-user-s-permissions-organizations-roles-and-details). 
 
 1. You can edit the user’s name, email, username, and change his password.  ![ref28]
 

@@ -27,9 +27,9 @@ The Resources table provides the following information and available actions, fo
 | **Item**                                              | **Description**                                              |
 | ----------------------------------------------------- | ------------------------------------------------------------ |
 | **Name**                                              | The name of the resource or folder  containing resources.    |
-| ![button - delete test](../images/delete_load_test.png) | Instructs  WebLOAD to delete the resource or folder. Refer to  [*Deleting a Resource or Resources   folder* ](#_bookmark39). |
+| ![button - delete test](../images/delete_load_test.png) | Instructs  WebLOAD to delete the resource or folder. Refer to  [*Deleting a Resource or Resources folder* ](#deleting-a-resource-or-resources-folder). |
 | ![button - download](../images/download_resource.png)   | Instructs WebLOAD to  download the resource to the local computer. |
-| ![button - create test](../images/create_load_test.png) | Enables creating a load test based on the  resource. Refer to  [*Creating a Load Test Based on a   Resource* ](#_bookmark38). |
+| ![button - create test](../images/create_load_test.png) | Enables creating a load test based on the  resource. Refer to  [*Creating a Load Test Based on a Resource* ](#creating-a-load-test-based-on-a-resource). |
 
 
 
@@ -90,7 +90,7 @@ You can create a load test based on either of the following types of resources:
 1. In the menu bar, select **Resources** > **Search**. 
 1. In the Resources table, click ![new resource](../images/create_load_test.png) adjacent to a resource of type .wlp or .tpl. 
 1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
-1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[` `*Creating a Template Load Test* ](#_page26_x54.00_y407.04)(on page [ 21)](#_page26_x54.00_y407.04). Set or edit any of the fields, and click **Create Test**. 
+1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[` `*Creating a Template Load Test* ](#_page26_x54.00_y407.04). Set or edit any of the fields, and click **Create Test**. 
 
 
 

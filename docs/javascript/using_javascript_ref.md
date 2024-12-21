@@ -166,7 +166,7 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - SaveSource (see [*SaveSource (property)* ](#savesource-property))
 
-- SaveTransaction (see [*SaveTransaction (property)* ](#_bookmark322)) (wlGlobals only)
+- SaveTransaction (see [*SaveTransaction (property)* ](./actions_objects_functions.md#savetransaction-property)) (wlGlobals only)
 
 - SSLBitLimit (see [*SSLBitLimit (property)* ](#_bookmark374)) (wlGlobals only)
 
@@ -266,7 +266,7 @@ These functions manage access to a script’s function and input files, includin
 
 - Close() (see [*Close() (function)* ](#close-function))
 
-- CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
+- CopyFile() (see [*CopyFile() (function)* ](./actions_objects_functions.md#copyfile-function))
 
 - Delete() (see [*Delete() (cookie method)* ](./actions_objects_functions.md#delete-cookie-method))
 
@@ -280,7 +280,7 @@ These functions manage access to a script’s function and input files, includin
 
 - Open() (wlInputFile) (see [*Open() (method)* ](./actions_objects_functions.md#open-method))
 
-- Reset() (see [*Reset() (method)* ](#_bookmark311))
+- Reset() (see [*Reset() (method)* ](./actions_objects_functions.md#reset-method))
 
 - Using the IntelliSense JavaScript Editor 
 
@@ -305,7 +305,7 @@ These functions manage access to a script’s function and input files, includin
 
 For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:
 
-- Two variables, ClientNum (see [*ClientNum (property)* ](./actions_objects_functions.md#clientnum-property)) and RoundNum, (see [*RoundNum (variable)* ](#_bookmark313)) identify the client and round number of the current script instance.
+- Two variables, ClientNum (see [*ClientNum (property)* ](./actions_objects_functions.md#clientnum-property)) and RoundNum, (see [*RoundNum (variable)* ](./actions_objects_functions.md#roundnum-variable)) identify the client and round number of the current script instance.
 
 - The GeneratorName() (see [*GeneratorName() (function)* ](./actions_objects_functions.md#generatorname-function)) function identifies the current Load Generator.
 
@@ -346,7 +346,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 - GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](./actions_objects_functions.md#getoperatingsystem-function))
 
-- RoundNum (see [*RoundNum (variable)* ](#_bookmark313))
+- RoundNum (see [*RoundNum (variable)* ](./actions_objects_functions.md#roundnum-variable))
 
 - VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark433))
 
@@ -412,7 +412,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 - *Error Management* in the *WebLOAD Scripting Guide*
 - ErrorMessage() (see [*ErrorMessage() (function)* ](#_bookmark114))
 
-- GetMessage() (see [*GetMessage() (method)* ](#_bookmark173))
+- GetMessage() (see [*GetMessage() (method)* ](./actions_objects_functions.md#getmessage-method))
 
 - GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark184))
 
@@ -469,7 +469,7 @@ Sometimes a tester may prefer to use a low-level, “nuts-and-bolts” approach 
 
 **Description**
 
-WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through a set of SSL properties for the wlGlobals object combined with a set of functions called the Cipher Command Suite. These SSL functions allow you to identify, enable, and disable selected SSL protocols or security levels. For a complete list of the supported SSL protocols, see [*SSL Ciphers – Complete List* ](#_bookmark580)on page [450.](#_bookmark580)
+WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through a set of SSL properties for the wlGlobals object combined with a set of functions called the Cipher Command Suite. These SSL functions allow you to identify, enable, and disable selected SSL protocols or security levels. For a complete list of the supported SSL protocols, see [*SSL Ciphers – Complete List* ](#_bookmark580)
 
  
 
@@ -520,7 +520,7 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 
 - SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 
-- SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382)on page [*261*](#_bookmark382))
+- SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382)
 
 - SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 
@@ -664,9 +664,9 @@ Customized transaction verification functions are created out of the following c
 
 - BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 
-- CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark78))
+- CreateDOM() (see [*CreateDOM() (function)* ](./actions_objects_functions.md#createdom-function))
 
-- CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
+- CreateTable() (see [*CreateTable() (function)* ](./actions_objects_functions.md#createtable-function))
 
 - EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark110))
 

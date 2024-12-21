@@ -119,10 +119,10 @@ You can control the default correlation action that WebLOAD should perform after
 
 **To control which correlation action is performed after recording:**
 
-1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears ([Figure 114](#_bookmark154)).
+1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears in the ([Figure](#rec_script_gen_options)).
 1. Select the **Correlation Options** tab.
 
-   The Correlation Options tab moves to the front of the dialog box ([Figure 120](#_bookmark163)).
+   The Correlation Options tab moves to the front of the dialog box ([Figure](../images/corr_options.png))).
 
 1. In the Correlation level drop-down, select one of the following:
 
@@ -186,7 +186,7 @@ When performing Auto-discovery correlation, the correlation engine compiles a li
 
 
 ## Resolving Conflicts between Manual Changes and Correlation Changes
-Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see [*Configuring the Correlation Options* ](#_bookmark162)). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.
+Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see [*Configuring the Correlation Options* ](./configuring_recorder_options.md#configuring-the-correlation-options)). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.
 
 The following [Figure](#conflict_resolution_window) shows a sample Conflict Resolution window.
 

@@ -21,8 +21,8 @@ continues. Asynchronous requests are executed by calling the ‘wlHttp.Async’ 
 ### Using wlHttp.Async to Execute Requests Asynchronously
 ‘wlHttp.Async’ makes HTTP requests asynchronous. When using asynchronous requests, the script does not wait for the request to complete before moving on to the next statement. In order to work with the response, you can use the asynchronous callback functions:
 
-- [*onDocumentComplete ](#_bookmark140)*–* Defines a callback function to be called after the asynchronous request has been completed. For example, it validates the response and makes a further request.
-- [*onDataReceived ](#_bookmark141)*–* Defines a callback function to be called every time more data is received for the request. This is useful for working with asynchronous requests that need to be inspected before they are completed, for example in an HTTP streaming push scenario.
+- [*onDocumentComplete ](../javascript/actions_objects_functions.md#ondocumentcomplete-property)*–* Defines a callback function to be called after the asynchronous request has been completed. For example, it validates the response and makes a further request.
+- [*onDataReceived ](../javascript/actions_objects_functions.md#ondatareceived-property)*–* Defines a callback function to be called every time more data is received for the request. This is useful for working with asynchronous requests that need to be inspected before they are completed, for example in an HTTP streaming push scenario.
 
 #### Using onDocumentComplete in Asynchronous Execution
 
@@ -78,14 +78,14 @@ when the server is required to ‘push’ data to the client, for example, chat 
 
 There are several techniques that can be used to achieve server push:
 
-- **Polling**: the client (browser) sends a request to the server at regular intervals. For more information refer to [*Using Polling Protocol in WebLOAD* ](#_bookmark143).
+- **Polling**: the client (browser) sends a request to the server at regular intervals. For more information refer to [*Using Polling Protocol in WebLOAD* ](#using-polling-protocol-in-webload).
 - **Long polling**: the client request is kept on hold until the server can deliver a valid response. When data from the server needs to be pushed, the server responds and closes the connection. The client is then expected to start a new connection and
 
   wait for the server’s next message (response).
 
-  For more information refer to [*Using Long Polling in WebLOAD* ](#_bookmark144).
+  For more information refer to [*Using Long Polling in WebLOAD* ](#using-long-polling-in-webload).
 
-- **Streaming**: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to [*Using HTTP Streaming in WebLOAD* ](#_bookmark145).
+- **Streaming**: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to [*Using HTTP Streaming in WebLOAD* ](#using-http-streaming-in-webload).
 
 
 
@@ -163,7 +163,7 @@ getUpdates();
 ### Using HTTP Streaming in WebLOAD
 In HTTP streaming, the server response is never ending (or very long), and each new response data is considered a new ‘message’ (or it can be delimited with some delimiter).
 
-To handle the server partial responses, the ‘[*onDataReceived*’ ](#_bookmark141)callback function should be used.
+To handle the server partial responses, the ‘[*onDataReceived*’ ](../javascript/actions_objects_functions.md#ondatareceived-property)callback function should be used.
 
 For example:
 

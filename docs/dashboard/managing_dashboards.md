@@ -6,7 +6,7 @@ In WebLOAD Dashboard you can manage any dashboard saved in the database, as well
 
 When you access WebLOAD Dashboard, the default Home dashboard is displayed. You can however select to display any other dashboard from the database, as described in this section.  
 
-Note that you can also import a dashboard that was saved as a JSON file, as described in[` `*Importing a Dashboard* ](#_page65_x109.00_y661.04)(on page[ 60)](#_page65_x109.00_y661.04). 
+Note that you can also import a dashboard that was saved as a JSON file, as described in[*Importing a Dashboard* ](#importing-a-dashboard).
 
 **To load a dashboard:** 
 
@@ -30,7 +30,7 @@ Note that you can also import a dashboard that was saved as a JSON file, as desc
 
 You can export a dashboard as a JSON file, and import dashboards that were saved in JSON file format. 
 
-For instructions how to import a dashboard that was saved as a JSON file, refer to [*Exporting a Dashboard as a JSON File*.](#_page73_x109.00_y78.04) 
+For instructions how to import a dashboard that was saved as a JSON file, refer to [*Exporting a Dashboard as a JSON File*.](./sharing_dashboards.md#exporting-a-dashboard-as-a-json-file) 
 
 ### Importing a Dashboard
 

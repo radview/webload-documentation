@@ -8,13 +8,13 @@ This section provides instructions for editing scripts with WebLOAD Recorder.
 
 WebLOAD Recorder is both flexible and extendable to fit all of your script editing needs, from the most basic to the most advanced. On the simplest level, you use the WebLOAD Recorder GUI to record your basic script. You can edit your script either while it is being recorded or after it has finished recording to add functionality through the options available in the GUI. In most cases, the options available through the GUI meet all testing needs. For advanced functionality where programming is required, the JavaScript Editor is available to add further functionality to your script.
 
-In the script, each request and event is based on previous input, tying the entire script into a whole, making many actions interdependent. Items such as JavaScript Objects, Comments, Messages, and Sleeps can be added to the script, but changing the sequence of items in effect means changing the sequence of activities, and may destroy the functionality of the script. For more information on recording scripts, see [*Recording](#_bookmark33) *[Scripts* ](#_bookmark33)*.
+In the script, each request and event is based on previous input, tying the entire script into a whole, making many actions interdependent. Items such as JavaScript Objects, Comments, Messages, and Sleeps can be added to the script, but changing the sequence of items in effect means changing the sequence of activities, and may destroy the functionality of the script. For more information on recording scripts, see [*Recording Scripts* ](./recording_scripts.md#recording-scripts).
 
 When editing your script, you can work at whatever level you prefer. The following script editing tools are discussed:
 
 - [*Editing a Script in the Script Tree* ](#_bookmark58) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
 - [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
-- [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#_bookmark73) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
+- [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
 
 ### Editing a Script in the Script Tree
 
@@ -23,7 +23,7 @@ This section describes how to edit a script in the Script Tree. If you are editi
 > **Note:** You must be in Visual Editing mode.
 
 ### **Adding Script Items and JavaScript Objects to a Script**
-WebLOAD Recorder contains shortcuts to frequently performed actions. This section describes how to place script items and JavaScript Objects from the **Insert** menu into a script. For guidelines for replacing the placeholder variables with your own, see [*Guidelines for Editing JavaScript Code* ](#_bookmark72).
+WebLOAD Recorder contains shortcuts to frequently performed actions. This section describes how to place script items and JavaScript Objects from the **Insert** menu into a script. For guidelines for replacing the placeholder variables with your own, see [*Guidelines for Editing JavaScript Code* ](#guidelines-for-editing-javascript-code).
 
 **To add items and JavaScript Objects to a script:**
 
@@ -45,7 +45,7 @@ WebLOAD Recorder contains shortcuts to frequently performed actions. This sectio
 
 
 
-The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, see [*Editing your Script Using the](#_bookmark73) *[WebLOAD Recorder Toolbox Set* ](#_bookmark73)*.
+The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set).
 
 ### **Editing a Script by Right-Clicking in the Script Tree**
 You can edit directly in the Script Tree using the right mouse button. When you right- click a script item, a menu gives you options that vary according to the script item selected and the mode.
@@ -65,7 +65,7 @@ The following table describes the menu options:
 |**Right-Click Menu Option**|**Purpose**|
 | :- | :- |
 |<p>Synchronize</p><p>(Agenda root menu only)</p>|<p>Synchronize the Script Tree, with the edits made to the JavaScript code in Visual Editing mode In most cases, synchronization is performed automatically.</p><p>Only available at the Agenda root level.</p>|
-|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#_bookmark59)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder](#_bookmark73) *[Toolbox Set* ](#_bookmark73)*.</p>|
+|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#_bookmark59)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set)*.</p>|
 |Paste|<p>Paste the script item you cut or copied, after the current script item.</p><p>**Note:** If you copied a script item, you can paste it more than once. Each time you paste, the node ID automatically changes.</p><p></p><p>If you cut a script item, you can paste it only once, and the node ID does not change.</p>|
 |<p>Cut</p><p>(script item menu only)</p>|Cut the script item from the tree to paste elsewhere.|
 |<p>Copy</p><p>(script item menu only)</p>|Copy the script item from the tree to paste elsewhere.|
@@ -228,9 +228,8 @@ For more information, see the *WebLOAD Scripting Guide.*
 
 
 
-In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding. For more information about adding user-defined parameters to the script, see [*Inserting User-Defined Parameters in a Script* ](#_bookmark203)(on
+In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding. For more information about adding user-defined parameters to the script, see [*Inserting User-Defined Parameters in a Script* ](./configuring_recorder_options.md#inserting-user-defined-parameters-in-a-script)
 
-page [228](#_bookmark203)).
 
 
 
@@ -262,14 +261,14 @@ page [228](#_bookmark203)).
 
 4. Type the JavaScript code that you want this item to contain.
 
-5. Add functions and commands from the **Insert** menu (see [*Adding Commands and](#_bookmark71)[ Functions to a Script* ](#_bookmark71)).
+5. Add functions and commands from the **Insert** menu (see [*Adding Commands and Functions to a Script* ](#adding-commands-and-functions-to-a-script)).
 
 6. Import a JavaScript file:
 
    1. Right-click in the script.
    2. Click **Import JavaScript File** from the pop-up menu. The JavaScript code is added to the script.
 
-7. Add a WebLOAD Recorder protocol block from the pop-up menu (see [*Adding](#_bookmark70)[ WebLOAD Recorder Protocol Blocks* ](#_bookmark70)).
+7. Add a WebLOAD Recorder protocol block from the pop-up menu (see [*Adding WebLOAD Recorder Protocol Blocks* ](#adding-webload-recorder-protocol-blocks)).
 
 8. Perform a syntax check:
 
@@ -315,7 +314,7 @@ page [228](#_bookmark203)).
 
 #### **Adding Commands and Functions to a Script**
 
-WebLOAD Recorder contains shortcuts to frequently performed actions. This section describes how to place Commands, and functions from the **Insert** menu in a script. For guidelines for replacing the placeholder variables with your own, see [*Guidelines for](#_bookmark72) *[Editing JavaScript Code* ](#_bookmark72)*.
+WebLOAD Recorder contains shortcuts to frequently performed actions. This section describes how to place Commands, and functions from the **Insert** menu in a script. For guidelines for replacing the placeholder variables with your own, see [*Guidelines for](#guidelines-for-editing-javascript-code) *[Editing JavaScript Code* ](#guidelines-for-editing-javascript-code)*.
 
 **To add commands and functions to a script:**
 
@@ -394,14 +393,14 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 - General objects, such as Message or Sleep timers. These objects are used in all test scripts, run in both WebLOAD Recorder and WebLOAD. General toolbox tools are described in [*The WebLOAD Recorder General Toolbox* ](./appendix_a.md#the-webload-recorder-general-toolbox).
 - Load objects, such as transactions and synchronization points used in WebLOAD tests. Load toolbox tools are described in [*The WebLOAD Recorder Load Toolbox* ](#_bookmark212).
 - Internet Protocols functionality, such as downloading data from an FTP site for a WebLOAD Recorder test. Internet Protocols Building Blocks are described in [*The](#_bookmark221)[ WebLOAD Recorder Internet Protocols Toolbox* ](#_bookmark221).
-- JMS functionality, such as sending and receiving JMS message. JMS Building Blocks are described in [*The JMS Toolbox* ](#_bookmark336).
+- JMS functionality, such as sending and receiving JMS message. JMS Building Blocks are described in [*The JMS Toolbox* ](./appendix_a.md#the-jms-toolbox).
 - IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](#_bookmark290).
 - Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](./appendix_a.md#the-real-clients-toolbox).
 
-- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The](#_bookmark333)[ WebLOAD Recorder Web Services Toolbox* ](#_bookmark333).
-- Database actions, such as opening and getting data from a database for a WebLOAD Recorder test. Database Building Blocks are described in [*The WebLOAD](#_bookmark298)[ Recorder Database Toolbox* ](#_bookmark298).
-- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The](#_bookmark321)[ WebLOAD Recorder Verifications Toolbox* ](#_bookmark321).
-- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder](#_bookmark326)[ WebSocket Toolbox* ](#_bookmark326).
+- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-service-toolbox).
+- Database actions, such as opening and getting data from a database for a WebLOAD Recorder test. Database Building Blocks are described in [*The WebLOAD Recorder Database Toolbox* ](./appendix_a.md#the-webload-recorder-database-toolbox).
+- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The WebLOAD Recorder Verifications Toolbox* ](./appendix_a.md#the-webload-recorder verifications-toolbox).
+- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder WebSocket Toolbox* ](./appendix_a.md#the-webload-recorder-websocket-toolbox*).
 
 ### Adding Script Items from a WebLOAD Recorder Toolbox
 

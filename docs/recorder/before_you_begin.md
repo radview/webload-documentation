@@ -30,7 +30,7 @@ Before you begin recording scripts using WebLOAD Recorder, your browser must be 
 
 The procedures described here describe how to configure the proxy server for Internet Explorer, Netscape Navigator, and Mozilla Firefox. If you are using a different browser, read through the proxy setting procedures and modify them as necessary for configuring your browser.
 
-> ]**Note:** If your system is already using the WebLOAD Recorder default port (9884) for another application, you may designate an alternate port number (see [*Setting the Proxy](#_bookmark173) *[Options* ](#_bookmark173)*).
+> ]**Note:** If your system is already using the WebLOAD Recorder default port (9884) for another application, you may designate an alternate port number (see [*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)).
 >
 
 When recording is finished, reset the browser proxy to its original setting.
@@ -41,7 +41,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 
@@ -90,7 +90,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 
@@ -142,7 +142,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
 
-1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#_bookmark173)).
+1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#./configuring_recorder_options.md#setting-the-proxy-options)).
 
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 

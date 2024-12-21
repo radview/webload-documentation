@@ -140,7 +140,7 @@ The Browser Parameters option enables you to define Virtual Client behavior.
 1. To set the Browser and Version:
 
    1. Select the browser from the **Select the browser** drop-down list. An appropriate version automatically appears in the **Select the version** field.
-   1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#_bookmark143)[* Definitions ](#_bookmark143)).
+   1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#editing-browser-version-definitions)).
 
 1. To simulate specific cache behaviors, select the **DNS cache** checkbox and **SSL cache** checkbox.
 
@@ -427,7 +427,7 @@ The Recording and Script Generation Options enable you to define the behavior of
 The Recording and Script Generation Options dialog box opens with the File Extensions tab displayed.
 
 
-<a name = "recording_and_script_generation"></a>
+<a name = "rec_script_gen_options"></a>
 ![Recording and Script Generation Options Dialog Box – File Extensions Tab](../images/rec_script_gen_options.png)
 
 
@@ -461,7 +461,7 @@ Use the Script Generation tab in the Recording and Script Generation Options dia
 
    **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#rec_script_gen_options)).
 
 1. Select the **Script Generation** tab. 
 
@@ -662,7 +662,7 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 2. Select the **Correlation Options** tab.
 
    The Correlation Options tab moves to the front of the dialog box.
-
+   
    ![Correlation Options Tab](../images/corr_options.png)
 
    
@@ -816,7 +816,7 @@ The following table describes the fields in the File Extensions tab.
 ### Configuring the Content Types to Record
 Use the Content Types tab in the Recording and Script Generation Options dialog box to set up which types of Web content the WebLOAD Recorder records.
 
-Both the Content Types and the File Extensions tabs (see [*Configuring the File Extensions](#_bookmark169)* ), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you
+Both the Content Types and the File Extensions tabs (see [*Configuring the File Extensions](#configuring-the-file-extensions) ), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you
 
 define which objects should be recorded by type, such as “image/gif”, “image/jpeg”, or “text/html”.
 
@@ -900,7 +900,7 @@ The following table describes the fields and options on the Proxy Options tab.
 | :- | :- |
 |*Recording proxy options*||
 |**Proxy port**|The port number for the WebLOAD Recorder proxy-recorder. The default value is 9884. When you record scripts, your browser must use the default value.|
-|**Use transparent proxy**|Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the **Proxy port** field is disabled. For more information, see [*Recording Desktop Web Applications* ](#_bookmark51)on page [59.](#_bookmark51)|
+|**Use transparent proxy**|Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the **Proxy port** field is disabled. For more information, see [*Recording Desktop Web Applications* ](./recording_scripts.md#recording-desktop-web-applications)|
 |*Application proxy options*||
 |**Use the following definitions for the application’s proxy server**|Select this option if you use a proxy server to access the Internet. When selected, the **HTTP proxy/Port, SSL proxy/Port** and the **Proxy authentication** area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see [*Troubleshooting* ](#_bookmark55).|
 |**HTTP proxy/Port**|The address and port number of your organization’s proxy, if one exists (for example, to access the Internet beyond a company firewall). Modifying these fields automatically updates your default browser’s proxy settings and restores the original settings when the recording process is complete.|
@@ -1316,7 +1316,7 @@ The following table describes the fields and buttons in the Parameterization Man
 |**When out of values**|<p>Defines whether the rows can be used any number of times, or only once.</p><p>- **Cycle values** – Each row can be used any number of times.</p><p>- **Stop virtual client** – After each row was used once, stop any virtual client that requests another row. An error message is written to the monitor log window.</p><p>- **Keep last value** – After each row was used once, keep re-using the last value.</p>|
 |*Update Policy*|<p>Defines when a parameter is updated, meaning when a new row is read.</p><p>- **Update value on each Round** – A virtual client reads a new row from the file per round. Thus, if the same parameter appears again in the same round, it will get the same value.</p><p>- **Update value on each use** – A virtual client reads a parameter’s row each time it is used.</p><p>- **Update value per Virtual Client** – A virtual clients reads a new row from the file when initialized (when running the InitClient function). All usage of a parameter by that virtual client will always use the same value.</p>|
 |<p>**Show all file rows /**</p><p>**Show first 10 rows only**</p>|Determines which rows the grid displays.|
-|**Use first row as title row**|Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to [*Inserting User-Defined Parameters in a Script](#_bookmark203)* .|
+|**Use first row as title row**|Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to [*Inserting User-Defined Parameters in a Script*](#inserting-user-defined-parameters-in-a-script) .|
 
 
 

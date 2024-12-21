@@ -29,7 +29,7 @@ In addition, you can playback a recording as if it were a recording from a mobil
 
    2. Configure the device’s wireless proxy settings to go through the WebLOAD machine, on the noted port.
 
-      This step depends on the device OS type and version. For example, see [*Setting](#_bookmark358) *[Proxy Settings in iPhone* ](#_bookmark358)* and [*Setting Proxy Settings in Android* ](#_bookmark360).
+      This step depends on the device OS type and version. For example, see [*Setting Proxy Settings in iPhone* ](#setting-proxy-settings-in-iphone)* and [*Setting Proxy Settings in Android* ](#setting-proxy-settings-in-android).
 
 3. Perform actions in your mobile device application or web browser; the HTTP requests will be recorded in the test script.
 

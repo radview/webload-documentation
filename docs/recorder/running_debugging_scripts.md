@@ -22,7 +22,7 @@ This section provides instructions for running a script. Before running a script
 
 - Set the number of iterations to run, see [*Setting Playback Options* ](#_bookmark184).
 - Set the file locations for a test session, see [*Setting File Locations* ](#_bookmark185).
-- Set WebLOAD Recorder to ignore the recorded sleep time, see [*Configuring Sleep](#_bookmark141)[ Time Control Options* ](#_bookmark141).
+- Set WebLOAD Recorder to ignore the recorded sleep time, see [*Configuring Sleep Time Control Options* ](./configuring_recorder_options.md#configuring-sleep-time-control-options).
 
 ### Starting the Execution of a Script
 
@@ -50,7 +50,7 @@ When you run your script, WebLOAD Recorder interacts with your Web application j
 
 WebLOAD Recorder enables you to do the following:
 
-- Run through the entire script line by line, and add breakpoints (see [*Debugging a](#_bookmark112)[ Script* ](#_bookmark112)).
+- Run through the entire script line by line, and add breakpoints (see [*Debugging a Script* ](#debugging-a-script)).
 - Display the Current Project Options by right-clicking the Agenda root node and clicking **Current Project Options** from the pop-up menu,
 
   -Or-
@@ -77,7 +77,7 @@ JavaScript View displays the complete JavaScript of your script with an executio
 
 WebLOAD Recorder enables you to do the following:
 
-- Run through the entire script line by line, add breakpoints, and add Watch variables (see [*Debugging a Script* ](#_bookmark112)).
+- Run through the entire script line by line, add breakpoints, and add Watch variables (see [*Debugging a Script* ](#debugging-a-script)).
 - Check the syntax by right-clicking in the script and clicking **Check Syntax** from the pop-up menu.
 
 
