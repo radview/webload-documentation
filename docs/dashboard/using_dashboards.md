@@ -32,8 +32,8 @@ The main components of the dashboard tab header include:
 | 1        | Dashboard name and selection                                 | [*Loading a Dashboard* ](#_bookmark76) |
 | 2        | Select session – Enables  selecting the session(s) to be viewed and analyzed. | [*Specifying the Sessions to view in   the*](#_bookmark48) [*Dashboard* ](#_bookmark48) |
 | 3        | Star or unstar a dashboard  – Enables marking/unmarking a dashboard as a favorite for filtering purposes. | [*Loading a Dashboard* ](#_bookmark76) |
-| 4        | Share dashboard – Enables  sharing the current state of the dashboard | [*Sharing a Dashboard* ](#_bookmark84) |
-| 5        | Save                                                         | [*Saving your Customized Dashboard*](#_bookmark80)   |
+| 4        | Share dashboard – Enables  sharing the current state of the dashboard | [*Sharing a Dashboard* ](./sharing_dashboards.md#sharing-a-dashboard) |
+| 5        | Save                                                         | [*Saving your Customized Dashboard*](./managing_dashboards.md#saving-your-customized-dashboard)   |
 | 6        | Settings – Enables  configuring the  dashboard’s general  settings | [*Customizing General Dashboard*](#_bookmark72) [*Settings* ](#_bookmark72) |
 | 7        | Time format: <br />**Relative Time** – Show the time since session start. Useful for session  comparison  <br />**Absolute Time** –  Show the real time of the session  when it ran. Useful for currently running sessions | [*Selecting the Time Format* ](#_bookmark51) |
 | 8        | Zoom to Data – Sets the time filter to the extent of the data. This  is done automatically when selecting data or a new session. |                                                              |

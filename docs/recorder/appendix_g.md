@@ -41,7 +41,7 @@ This section describes how to use Selenium scripts in WebLOAD.
 Do one of the following:
 
 - Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to [*Recording and Exporting a Selenium Script* ](#_bookmark370). It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.
-- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](#_bookmark342).
+- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](./appendix_a.md#selenium-building-blocks).
 
 #### Recording and Exporting a Selenium Script
 

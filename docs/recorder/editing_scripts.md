@@ -396,7 +396,7 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 - Internet Protocols functionality, such as downloading data from an FTP site for a WebLOAD Recorder test. Internet Protocols Building Blocks are described in [*The](#_bookmark221)[ WebLOAD Recorder Internet Protocols Toolbox* ](#_bookmark221).
 - JMS functionality, such as sending and receiving JMS message. JMS Building Blocks are described in [*The JMS Toolbox* ](#_bookmark336).
 - IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](#_bookmark290).
-- Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](#_bookmark341).
+- Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](./appendix_a.md#the-real-clients-toolbox).
 
 - Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The](#_bookmark333)[ WebLOAD Recorder Web Services Toolbox* ](#_bookmark333).
 - Database actions, such as opening and getting data from a database for a WebLOAD Recorder test. Database Building Blocks are described in [*The WebLOAD](#_bookmark298)[ Recorder Database Toolbox* ](#_bookmark298).

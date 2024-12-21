@@ -2,7 +2,7 @@
 
 You can customize a dashboard as desired, and then save the customized dashboard if you wish. Note however that two types of changes are not considered customizations and are not saved: the selected sessions and the selected time filter. 
 
-To save your customizations, refer to[` `*Saving your Customized Dashboard* ](#customizing-a-dashboard). 
+To save your customizations, refer to[` `*Saving your Customized Dashboard* ](./managing_dashboards.md#saving-your-customized-dashboard). 
 
 ## Customizing Rows
 

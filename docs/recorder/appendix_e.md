@@ -43,7 +43,7 @@ In addition, you can playback a recording as if it were a recording from a mobil
 >
 > You may need to open you firewall to accept connections to proxynator.exe, on port 9884.
 >
-> To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see [*Recording HTTPS Traffic on iPhone* ](#_bookmark359) and [*Recording](#_bookmark361) *[HTTPS traffic on Android (4.0 and above)* ](#_bookmark361)*.
+> To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see [*Recording HTTPS Traffic on iPhone](#recording-https-traffic-on-iphone) *[HTTPS traffic on Android (4.0 and above)* ](#recording-https-traffic-on-android-40-and-above)
 >
 > When not recording, the mobile device will not be able to access the network (because the proxy is not available) – to use the network normally, revert the **HTTP Proxy** setting back to **Off**.
 

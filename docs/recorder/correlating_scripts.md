@@ -2,7 +2,7 @@
 
 This section provides instructions for correlating scripts with WebLOAD Recorder. The WebLOAD correlation engine helps you overcome one of the main challenges of recording or replaying Web application load tests: dynamic data.
 
-Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see [*Session Management* ](#_bookmark95).) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.
+Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see [*Session Management* ](#session-management).) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.
 
 WebLOAD enables you to correlate the most common methods used to pass dynamic data between a server and a client. The methods are:
 
@@ -17,7 +17,7 @@ WebLOAD contains a powerful rule based correlation engine. You can define rules 
 
 WebLOAD also provides automatic discovery of potential correlation rules. Using auto-discovery of rules eliminates the need to manually define correlation rules in some common cases.
 
-WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see [*Configuring the Correlation Rules* ](#_bookmark89).
+WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see [*Configuring the Correlation Rules* ](#configuring-the-correlation-rules).
 
 The WebLOAD correlation engine enables you to:
 
@@ -42,13 +42,13 @@ Correlation is performed on your script, based on the correlation rules. Correla
 
 - **Auto-discovery of correlation rules** – When performing correlation with
 
-  auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see [*Approving the Correlation Engine Rules](#_bookmark85)* .
+  auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see [*Approving the Correlation Engine Rules](#approving-the-correlation-engine-rules)* .
 
 - **In the Correlation Rules Editor** – Before running the correlation engine, you can use the correlation rules editor to add and edit the rules.
 
 > **Note:** You can turn discovered rules into permanent rules and then edit the rules in the correlation rules editor.
 
-For more information, see [*Configuring the Correlation Rules* ](#_bookmark89).
+For more information, see [*Configuring the Correlation Rules* ](#configuring-the-correlation-rules).
 
 > **Note:** Correlation cannot be performed on scripts that were not recorded.
 
@@ -61,6 +61,8 @@ For more information, see [*Configuring the Correlation Rules* ](#_bookmark89).
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlate Script and Discover Rules** from the drop-down list.
 
    The Perform Script Correlation dialog box appears.
+
+   <a name = "perform_script_correlation"></a>
 
    ![Perform Script Correlation Dialog Box](../images/perform_script_coo_dialog.png)
 
@@ -100,7 +102,7 @@ WebLOAD enables you to perform correlation with auto-discovery of rules for any 
 
 1. Click **OK**.
 
-1. WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears ([Figure 61](#_bookmark81)).
+1. WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears ([Figure 61](#perform_script_correlation)).
 
 1. Click **Save and Continue** to save the changes in your script and perform correlation.
 
@@ -148,7 +150,7 @@ The discovery process is based on reverse scanning of the script. The auto-disco
 
 When running correlation with auto-discovery, the correlation engine uses the existing defined rules and does not discover them again. Inactive rules are also not rediscovered or used. Making a rule inactive can be used to prevent discovering rules that you already know are unneeded.
 
-When the correlation process is complete, a review form is displayed for the user to choose which rules to use. For more information see [*Approving the Correlation Engine](#_bookmark85) *[Rules* ](#_bookmark85)*on page [94.](#_bookmark85)
+When the correlation process is complete, a review form is displayed for the user to choose which rules to use. For more information see [*Approving the Correlation Engine Rules* ](#approving-the-correlation-engine-rules)
 
 
 
@@ -177,7 +179,7 @@ When performing Auto-discovery correlation, the correlation engine compiles a li
 |**Rule Name**|The name of the correlation rule.|
 |**Add as permanent**|<p>Specify how to use this rule:</p><p>- Never use – Do not use this rule in any script</p><p>- Add as rule – Add the rule to the permanent rules (always use)</p><p>- Temporary – Use the rule only in this run</p>|
 |*Rule details*||
-|**Rule Type**|<p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see [*Defining Correlation](#_bookmark93) *[Rules* ](#_bookmark93)*on page [101.](#_bookmark93)</p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p>|
+|**Rule Type**|<p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see [*Defining Correlation Rules* ](#defining-correlation-rules)</p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p>|
 |**…**|Additional rule type fields. These fields change according to the rule type.|
 |**Description**|A summary of the selected rule’s details.|
 
@@ -186,10 +188,10 @@ When performing Auto-discovery correlation, the correlation engine compiles a li
 ## Resolving Conflicts between Manual Changes and Correlation Changes
 Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see [*Configuring the Correlation Options* ](#_bookmark162)). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.
 
-[Figure 63 ](#_bookmark87)shows a sample Conflict Resolution window.
+The following [Figure](#conflict_resolution_window) shows a sample Conflict Resolution window.
 
 
-
+<a name ="conflict_resolution_window"></a>
 ![Conflict Resolution Window](../images/corr_resooution.png)
 
 
@@ -198,7 +200,7 @@ The left side of the Conflict Resolution window displays the correlated version 
 
 - Click **Use correlated version** – This keeps all correlation changes and discards all user changes.
 - Click **Use user version** – This keeps all user changes and discards all correlation changes.
-- Click **Edit conflict** – This enables editing the JavaScript to your satisfaction. When you select this option, a WinMerge window appears by default. For information, refer to [*Editing Conflicts between Manual Changes and Correlation Changes* ](#_bookmark88)below. When you finish editing, click **Resolved** in the Conflict Resolution window.
+- Click **Edit conflict** – This enables editing the JavaScript to your satisfaction. When you select this option, a WinMerge window appears by default. For information, refer to [*Editing Conflicts between Manual Changes and Correlation Changes* ](#editing-conflicts-between-manual-changes-and-correlation-changes)below. When you finish editing, click **Resolved** in the Conflict Resolution window.
 
 ### Editing Conflicts between Manual Changes and Correlation Changes
 When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.
@@ -230,7 +232,7 @@ Open the Correlation Rules Editor to view, create or edit correlation rules.
   The Correlation Rules Editor opens, displaying application- and development framework-specific correlation rules by groups.
 
 
-
+<a name="correlation_rules_editor"></a>
 ![Correlation Rules Editor*](../images/corr_rule_editro.png)
 
 
@@ -260,7 +262,7 @@ You can create correlation rules and groups to better suit your correlation requ
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see [Figure 65](#_bookmark91)).
+   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, select the correlation rule under which you wish to create your correlation rule and click **New Rule**,
 
@@ -270,7 +272,7 @@ You can create correlation rules and groups to better suit your correlation requ
 
    A new rule is created in the tree, at the specified location.
 
-1. Modify the correlation rule parameters, as described in [*Defining Correlation Rules*](#_bookmark93)
+1. Modify the correlation rule parameters, as described in [*Defining Correlation Rules*](#defining-correlation-rules)
 
 1. Click **OK**. The new correlation rule is added to the Default rule set.
 
@@ -280,7 +282,7 @@ You can create correlation rules and groups to better suit your correlation requ
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see [Figure 65](#_bookmark91)).
+   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, select the correlation group under which you wish to create your group and click **New Group**,
 
@@ -299,7 +301,7 @@ You can modify the existing correlation rules and groups to better define your c
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see [Figure 65](#_bookmark91)).
+   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, expand a correlation rule group. The correlation rules belonging to the group are displayed.
 
@@ -356,7 +358,7 @@ You can rename correlation rules and groups to better organize the correlation r
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see [Figure 65](#_bookmark91)).
+   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. Expand the correlation group to which your correlation rule is associated.
 
@@ -374,7 +376,7 @@ You can rename correlation rules and groups to better organize the correlation r
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see [Figure 65](#_bookmark91)).
+   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. Slow double-click a correlation group.
 
@@ -398,7 +400,7 @@ application developer to track a user’s interaction with a website is by provi
 The following sections provide information on how some of the most commonly used Web and application servers perform session management.
 
 ### IBM WebSphere Application Server
-The IBM WebSphere Application Server (WAS) supports all the session management methods listed in [*Session Management* ](#_bookmark95), but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.
+The IBM WebSphere Application Server (WAS) supports all the session management methods listed in [*Session Management* ](#session-management), but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.
 
 In an HTTP session, all the attributes associated with a user’s request are stored on the server. Since the only information transmitted between the server and the browser is the session ID cookie, which has a limited lifetime, an HTTP session can provide a much more secure session management method than cookies, when configured in conjunction with SSL.
 

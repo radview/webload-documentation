@@ -105,7 +105,7 @@ Adds the specified number value to the specified shared integer variable.
 **See also**
 
 * Get() (see [*Get() (addition method)* ](#_bookmark134))
-* Set() (see [*Set() (addition method)* ](#_bookmark350))
+* Set() (see [*Set() (addition method)* ](#set-addition-method))
 
 ## AuthType (property)
 
@@ -226,7 +226,7 @@ To mark the beginning of a transaction, drag the **Begin Transaction** icon from
 * EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark110))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark354))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark414))
 * [*Transaction Verification Components* ](#_bookmark39)
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark419))
@@ -279,7 +279,7 @@ To access a property of the 4th cell in the 3rd row in myTable, counting across 
 Each cell object contains information about the data found in one cell of a table. The cell object includes the following properties:
 
 * cellIndex (see [*cellIndex (property)* ](#_bookmark50))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * tagName (see [*tagName (property)* ](#_bookmark407))
 
@@ -291,19 +291,11 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 
 * cellIndex
 *[*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#wltables-object))
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
-* MatchBy (see [*MatchBy (property)* ](#_bookmark246))
-* Prepare() (see [*Prepare() (method)* ](#_bookmark291))
-* ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
 
@@ -326,18 +318,13 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 * cell
 * [*Collections* ](#using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ] (wltables-property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+* InnerHTML (see [*InnerHTML (property)* ](#)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
 
@@ -383,7 +370,7 @@ For an `<INPUT type="checkbox">` or `<INPUT type="radio">` element, the checked 
 
 **Method of Object**
 
-* wlCookie (see [*wlCookie (object)* ](#_bookmark442))
+* wlCookie (see [*wlCookie (object)* ](#wlcookie-object)))
 
 **Description**
 
@@ -433,14 +420,14 @@ In WebLOAD Recorder, disable caching during execution by clearing the appropriat
 
 **Comment**
 
-To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (property)*](#_bookmark99) ) property.
+To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (property)*](#dnsusecache-property)) property.
 
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_-omponents)
 * ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59))
-* DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* DNSUseCache (see [*DNSUseCache (property)* ](#dnsusecache-property))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 
 ## ClearSSLCache() (method)
 
@@ -467,14 +454,14 @@ In WebLOAD Recorder, disable the SSL cache during execution by clearing the appr
 
 **Comment**
 
-To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397)) property.
+To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property)) property.
 
 **See also**
 
 * [*HTTP Components* ](#./using_javascript_ref.md#http_components)
 * ClearDNSCache() (see [*ClearDNSCache() (method)* ](#cleardnscache-method))
-* DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* DNSUseCache (see [*DNSUseCache (property)* ](#dnsusecache-property))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 
 ## ClientNum (property)
 
@@ -502,7 +489,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 **See also**
 
-* GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131))
+* GeneratorName() (see [*GeneratorName() (function)* ](#generatorname-function))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314))
@@ -558,7 +545,7 @@ When you use the Close() function to close a file, data will be flashed to the d
 **See also**
 
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -619,18 +606,16 @@ cols is often accessed through the wlTables family of table, row, and cell objec
 * cell
 * cellIndex
 * [*Collections* ](#using_javascript_ref.md#collections)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+*
+
+
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 
 ## ConnectTimeout (property)
@@ -945,7 +930,7 @@ The load engine first looks for the file to be copied in the default User Copy F
 **See also**
 
 * Close() (see [*Close() (function)* ](#close-function))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -995,7 +980,7 @@ The actual DOM is created automatically each time an HTTP request is accessed th
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * [*Transaction Verification Components* ](#_bookmark39)
@@ -1030,7 +1015,7 @@ CreateTable() is a member of the wlTables family of table, row, and cell objects
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * [*Transaction Verification Components* ](#_bookmark39)
@@ -1180,8 +1165,8 @@ The value of DecodeBinaryEnd starts from 0 and designates an offset from the beg
 
 **Example** wlGlobals.DecodeBinaryEnd=4 **See also**
 
-* DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#_bookmark85))
-* DecodeBinaryStart (see [*DecodeBinaryStart (property)* ](#_bookmark86))
+* DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#decodebinarynullas-property)))
+* DecodeBinaryStart (see [*DecodeBinaryStart (property)* ](#decodebinarystart-property))
 
 ## DecodeBinaryNullAs (property)
 
@@ -1207,8 +1192,8 @@ WLGlobals.DecodeBinaryNullAs = “Classified”
 
 **See also**
 
-* DecodeBinaryEnd (see [*DecodeBinaryEnd (property)* ](#_bookmark84))
-* DecodeBinaryStart (see [*DecodeBinaryStart (property)* ](#_bookmark86))
+* DecodeBinaryEnd (see [*DecodeBinaryEnd (property)* ](#decodebinaryend-property))
+* DecodeBinaryStart (see [*DecodeBinaryStart (property)* ](#decodebinarystart-property))
 
 ## DecodeBinaryStart (property)
 
@@ -1230,8 +1215,8 @@ The value of DecodeBinaryEnd starts from 0 and designates an offset from the beg
 
 **Example** wlGlobals.DecodeBinaryStart=1 **See also**
 
-* DecodeBinaryEnd (see [*DecodeBinaryEnd (property)* ](#_bookmark84))
-* DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#_bookmark85))
+* DecodeBinaryEnd (see [*DecodeBinaryEnd (property)* ](#decodebinaryend-property))
+* DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#decodebinarynullas-property))
 
 ## defaultchecked (property)
 
@@ -1373,7 +1358,7 @@ Perform an HTTP or HTTPS Delete command.
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
 
 ### Delete() (cookie method)
@@ -1463,10 +1448,10 @@ WebLOAD recommends setting the sleep mode through the WebLOAD Console. Select a 
 
 **See also**
 
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
-* SleepDeviation (see [*SleepDeviation (property)* ](#_bookmark365))
-* SleepRandomMax (see [*SleepRandomMax (property)* ](#_bookmark367))
-* SleepRandomMin (see [*SleepRandomMin (property)* ](#_bookmark369))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function)))
+* SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
+* SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
+* SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
 
 ## DNSUseCache (property)
 
@@ -1523,7 +1508,7 @@ document.links[0]
 **Properties**
 
 * form (see [*form (object)* ](#form-object))
-* frames (see [*frames (object)* ](#frame-object))
+* frames (see [*frames (object)* ](#frames-object))
 * Image (see [*Image (object)* ](#image-object))
 * link (see [*link (object)* ](#link-object))
 * location (see [*location (object)* ](#location-object))
@@ -1535,7 +1520,7 @@ document.links[0]
 * wlStatusLine (see [*wlStatusLine (property)* ](#wlstatusline-property))
 * wlStatusNumber (see [*wlStatusNumber (property)* ](#wlstatusnumber-property))
 * wlTables (see [*wlTables (object)* ](#wltables-object))
-* wlVersion (see [*wlVersion (property)* ](#wlverstion-property))
+* wlVersion (see [*wlVersion (property)* ](#wlversion-property))
 * wlXmls (see [*wlXmls (object)* ](#wlxmls-object))
 
 ## ElapsedRoundTime (property)
@@ -1614,11 +1599,11 @@ document.forms[0].yourname.type
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * Name (see [*Name (property)* ](#_bookmark253))
 * id (see [*id (property)* ](#_bookmark208))
-* InnerImage (see [*InnerImage (property)* ](#_bookmark220))
+* InnerImage (see [*InnerImage (property)* ](#innerimage-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * MaxLength (see [*MaxLength (property)* ](#_bookmark246))
 * option (see [*option (object)* ](#_bookmark264))
-* OuterLink (see [*OuterLink (property)* ](#_bookmark265))
+* OuterLink (see [*OuterLink (property)* ](#outerlink-property))
 * row (see [*row (object)* ](#_bookmark315))
 * selectedindex (see [*selectedindex (property)* ](#_bookmark337))
 * Size (see [*Size (property)* ](#_bookmark361))
@@ -1779,7 +1764,7 @@ For additional information about the EndTransaction() function, refer to *Begin 
 * CreateDOM() (see [*CreateDOM() (function)* ](#_bookmark77))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * [*Transaction Verification Components* ](#_bookmark39)
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
@@ -1933,9 +1918,9 @@ Message function command lines may also be added directly to the code in a JavaS
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446))
@@ -2008,7 +1993,7 @@ Use the ExecuteConcurrent()function to define the point after which all Post and
 
 WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-**Note:** This function can only be inserted in your script *after* a DefineConcurrent() function. For more information about the DefineConcurrent() function, see [*DefineConcurrent() (function)* ](#_bookmark91).
+**Note:** This function can only be inserted in your script *after* a DefineConcurrent() function. For more information about the DefineConcurrent() function, see [*DefineConcurrent() (function)* ](#defineconcurrent-function).
 
 When the engine encounters the ExecuteConcurrent() function, it stops collecting the HTTP requests in the script and starts their execution.
 
@@ -2314,8 +2299,7 @@ For example:
 
 **Properties**
 
-* id (see [*id (property)* ](#_bookmark208))
-* Index (see [*Index (property)* ](#_bookmark214))
+* Index (see [*Index (property)* ](#index-property))
 * Name (see [*Name (property)* ](#_bookmark253))
 * title (see [*title (property)* ](#_bookmark415))
 * Url (see [*Url (property)* ](#_bookmark422))
@@ -2374,7 +2358,6 @@ For example, it is convenient to add GeneratorName() to a Message Node to clarif
 
 **See also**
 
-* ClientNum (see [*ClientNum (variable)* ](#_bookmark60))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314))
@@ -2416,15 +2399,15 @@ CurrentCount = wlSystemGlobal.Get(“MyGlobalCounter”, WLCurrentAgenda)
 
 **See also**
 
-* Add() (see [*A*](#_bookmark43)[*dd() (method)* ](#_bookmark43))
-* Set() (see [*Set() (addition method)* ](#_bookmark350))
+* Add() (see [*Add() (method)* ](#add-method))
+* Set() (see [*Set() (addition method)* ](#set-addition-method))
 
 ### Get() (cookie method)
 
 **Method of Objects**
 
 * location (see [*location (object)* ](#_bookmark243))
-* wlCookie (see [*w*](#_bookmark442)[*lCookie (object)* ](#_bookmark442))
+* wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
 **Description**
 
@@ -2542,7 +2525,7 @@ You may not use the TransName parameter by itself. Get() expects to receive eith
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298)onpage [213](#_bookmark298))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
 
 ## GetApplets (property)
@@ -3028,7 +3011,7 @@ The requested location object.
 
 **Comment**
 
-This method is equivalent to the location property of a frame object (see [*frames (object)](#_bookmark129)
+This method is equivalent to the location property of a frame object (see [*frames (object)](#frames-object)
 
 ).
 
@@ -3478,9 +3461,9 @@ Text string of the error message for this object.
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446))
@@ -3539,8 +3522,7 @@ If the Load Generator is working with a Windows platform, possible return values
 
 **See also**
 
-* ClientNum (see [*ClientNum (variable)* ](#_bookmark60))
-* GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131))
+* GeneratorName() (see [*GeneratorName() (function)* ](#generatorname-function))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314))
 * VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432))
@@ -3702,9 +3684,9 @@ Integer, representing one of the following error level values:
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448))
@@ -3957,7 +3939,7 @@ WebLOAD offers a simple way to reset configuration properties using the various 
 
 Use the wlClear() (see [*wlClear() (method)* ](#_bookmark440)) method to delete specific Header fields or clear all the Header fields at once.
 
-You cannot override the host header or set a cookie header using the Header property. To set a cookie, see wlCookie (see [*wlCookie (object)* ](#_bookmark442))
+You cannot override the host header or set a cookie header using the Header property. To set a cookie, see wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
 Use the wlHttp.Header property to change or reset specific individual values immediately before executing the next wlHttp GET/POST request.
 
@@ -4214,7 +4196,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 * element (see [*element (object)* ](#_bookmark102))
 * form (see [*form (object)* ](##form-object))
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
@@ -4268,13 +4250,9 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+* cols (see [*cols (property)* ](#cols-property)
+*
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * load() (see [*load() (method)* ](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
@@ -4283,7 +4261,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
@@ -4379,7 +4357,7 @@ The load engine first looks for the file to be included in the default User Incl
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * Open() (see [*Open() (function)* ](#_bookmark261))
@@ -4394,7 +4372,7 @@ The load engine first looks for the file to be included in the default User Incl
 
 **Property of Objects**
 
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 
 **Description**
 
@@ -4429,9 +4407,9 @@ WebLOAD recommends adding message functions to your script files directly throug
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446))
@@ -4469,12 +4447,12 @@ The InnerHTML property for cell objects is written in uppercase.
 * cellIndex (see [*cellIndex (property)* ](#_bookmark50)) (cell  property)
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerImage (see [*InnerImage (property)* ](#_bookmark220))
+*
+
+
+* 
+
+* InnerImage (see [*InnerImage (property)* ](#innerimage-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method))
@@ -4483,7 +4461,7 @@ The InnerHTML property for cell objects is written in uppercase.
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
@@ -4505,7 +4483,7 @@ Sets or retrieves the image found between the `<Start>` and `<End>` tags of the 
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
 
@@ -4546,21 +4524,21 @@ When working with a link or location object, the text that appears over the link
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
+*
+
+
+* 
 * element (see [*element (object)* ](#_bookmark102))
 * id (see [*id (property)* ](#_bookmark208)) (wlTables and wlXmls property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell and wlXmls property)
-* InnerImage (see [*InnerImage (property)* ](#_bookmark220))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell and wlXmls property)
+* InnerImage (see [*InnerImage (property)* ](#innerimage-property))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
@@ -4786,7 +4764,7 @@ document.links[#].`<*link-property*>`
 * hostname (see [*hostname (property)* ](#_bookmark197))
 * href see [*href (property)* ](#href-property)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerImage (see [*InnerImage (property)* ](#_bookmark220))
+* InnerImage (see [*InnerImage (property)* ](#innerimage-property))
 * InnerText (see [*InnerText (property)* ](#_bookmark223))
 * Name (see [*Name (property)* ](#_bookmark253))
 * pathname (see [*pathname (property)* ](#_bookmark286))
@@ -4841,7 +4819,7 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
@@ -4874,7 +4852,7 @@ If you wish to measure the time it took to load the XML document using the load(
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
@@ -4973,7 +4951,7 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
@@ -5203,7 +5181,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 * element (see [*element (object)* ](#_bookmark102))
 * form (see [*form (object)* ](##form-object))
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
@@ -5548,7 +5526,7 @@ For random access:
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -5667,7 +5645,7 @@ Perform an HTTP or HTTPS Options command.
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * Data (see [*Data (property)* ](#data-property))
 * DataFile (see [*DataFile (property)* ](#datafile-property))
-* Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
+* Delete() (see [*Delete() (HTTP method)*](#delete-http-method)) 
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
@@ -5677,7 +5655,7 @@ Perform an HTTP or HTTPS Options command.
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#_bookmark298)onpage [213](#_bookmark298))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
 
 ## OuterLink (property)
@@ -6448,7 +6426,7 @@ You may not use the TransName parameter by itself. Post() expects to receive eit
 * Options() (see [*Options() (method)* ](#_bookmark266))
 * Put() (see [*Put() (method)* ](#_bookmark298)onpage [213](#_bookmark298))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
 
 ## ProbingClientThreads (property)
@@ -6667,7 +6645,7 @@ You may not use the TransName parameter by itself. Put() expects to receive eith
 * Options() (see [*Options() (method)* ](#_bookmark266))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
 
 ## Range() (method)
@@ -6837,7 +6815,7 @@ This function enables you to record specific events as they occur. This informat
 * BeginTransaction() (see [*BeginTransaction() (function)* ](#_bookmark48))
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function)))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * [*Transaction Verification Components* ](#_bookmark39)
@@ -6867,8 +6845,8 @@ Sends a message to the Log Window that includes the error message and severity l
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448))
@@ -6922,8 +6900,8 @@ Return to the beginning of the output file.
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
-* [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
+* [*File Management Functions* ](#_bookmark25)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
 * Open() (see [*Open() (function)* ](#_bookmark261))
@@ -6985,8 +6963,7 @@ For example, it is convenient to add RoundNum to a Message Node to clarify the r
 
 **See also**
 
-* ClientNum (see [*ClientNum (variable)* ](#_bookmark60))
-* GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131))
+* GeneratorName() (see [*GeneratorName() (function)* ](#generatorname-function))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
@@ -7031,7 +7008,7 @@ To access a property of the 4th cell in the 3rd row in myTable, counting across 
 Each row object contains information about the data found in the cells of a single table row. The row object includes the following properties:
 
 * cell (see [*cell (object)* ](#_bookmark49)) (row property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 
 **Comment**
 
@@ -7043,17 +7020,17 @@ The row object may be accessed as a member of the wlTables family of table, row,
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+*
+
+
+* 
+
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowindex-property))
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 
 ## rowIndex (property)
@@ -7076,12 +7053,12 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+*
+
+
+* 
+
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
@@ -7212,7 +7189,7 @@ document.scripts[1].language
 
 * event (see [*event (property)* ](#_bookmark118))
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * language (see [*language (property)* ](#_bookmark232))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
 
@@ -7560,7 +7537,7 @@ wlGlobals.SendClientStatistics = true
 
 **See also**
 
-* SendClientStatisticsFilter (see [*SendClientStatisticsFilter (property)* ](#_bookmark342)*on* page [236](#_bookmark342)
+* SendClientStatisticsFilter (see [*SendClientStatisticsFilter (property)* ](#sendclientstatisticsfilter-property))
 
 ## SendClientStatisticsFilter (property)
 
@@ -7590,7 +7567,7 @@ wlGlobals.SendClientStatisticsFilter = “`<client number>`;`<client number>`;�
 
 **See also**
 
-* SendClientStatistics (see [*SendClientStatistics (property)* ](#_bookmark341))
+* SendClientStatistics (see [*SendClientStatistics (property)* ](#sendclientstatistics-property)))
 
 ## SendCounter() (function)
 
@@ -7604,10 +7581,10 @@ SendCounter(EventName)
 
 **See also**
 
-* SendMeasurement() (see [*SendMe*](#_bookmark345)[*asurement() (function)* ](#_bookmark345))
+* SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
 * SendTimer() (see [*SendT*](#_bookmark348)[*imer() (function)* ](#_bookmark348))
-* SetTimer() (see [*Se*](#_bookmark355)[*tTimer() (function)* ](#_bookmark355))
-* Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363))
+* SetTimer() (see [*Se*](#sendtimer-function)[*tTimer() (function)* ](#sendtimer-function))
+* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark36)
 
@@ -7644,8 +7621,8 @@ WebLOAD recommends setting measurement functions within script files directly th
 
 * SendCounter() (see [*Send*](#_bookmark343)[*Counter() (function)* ](#_bookmark343))
 * SendTimer() (see [*SendT*](#_bookmark348)[*imer() (function)* ](#_bookmark348))
-* SetTimer() (see [*Se*](#_bookmark355)[*tTimer() (function)* ](#_bookmark355))
-* Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363))
+* SetTimer() (see [*Se*](#sendtimer-function)[*tTimer() (function)* ](#sendtimer-function))
+* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function)))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark36)
 
@@ -7670,9 +7647,9 @@ WebLOAD recommends setting timer functions within script files directly through 
 **See also**
 
 * SendCounter() (see [*Send*](#_bookmark343)[*Counter() (function)* ](#_bookmark343))
-* SendMeasurement() (see [*SendMe*](#_bookmark345)[*asurement() (function)* ](#_bookmark345))
+* SendMeasurement() (see [*SendMe*](#sendmeasurement-function)[*asurement() (function)* ](#sendmeasurement-function))
 * SetTimer() (see [*Se*](#_bookmark357)[*tTimer() (function)* ](#_bookmark357))
-* Sleep() (see [*S*](#_bookmark363)[*leep() (function)* ](#_bookmark363))
+* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function))
 * SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark36)
 
@@ -7717,7 +7694,7 @@ Assigns a number, Boolean, or string value to the specified shared variable. If 
 **Method of Object**
 
 * location (see [*location (object)* ](#_bookmark243))
-* wlCookie (see [*wlCookie (object)* ](#_bookmark442))
+* wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
 **Description**
 
@@ -7880,9 +7857,9 @@ Enter a timer name and click **OK**. The Set Timer item appears in the Script Tr
 **See also**
 
 * SendCounter() (see [*SendCounter() (function)* ](#_bookmark343))
-* SendMeasurement() (see [*SendMeasurement() (function)* ](#_bookmark345))
+* SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark35)
 
@@ -7910,8 +7887,8 @@ WebLOAD recommends adding message functions to your script files directly throug
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 * wlException (see [*wlException (object)* ](#_bookmark446))
@@ -7997,14 +7974,14 @@ For more information on setting the Sleep Time Control settings, see *Configurin
 
 **See also**
 
-* DisableSleep (see [*DisableSleep (property)* ](#_bookmark96))
+* DisableSleep (see [*DisableSleep (property)* ](#disablesleep-property))
 * SendCounter() (see [*SendCounter() (function)* ](#_bookmark343))
-* SendMeasurement() (see [*SendMeasurement() (function)* ](#_bookmark345))
-* SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
-* SetTimer() (see [*SetTimer() (function)* ](#_bookmark355))
-* SleepDeviation (see [*SleepDeviation (property)* ](#_bookmark365))
-* SleepRandomMax (see [*SleepRandomMax (property)* ](#_bookmark367))
-* SleepRandomMin (see [*SleepRandomMin (property)* ](#_bookmark369))
+* SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
+* SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
+* SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
+* SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark35)
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
@@ -8041,10 +8018,10 @@ In WebLOAD Console, select the sleep mode in the Sleep Time Control tab of the *
 
 **See also**
 
-* DisableSleep (see [*DisableSleep (property)* ](#_bookmark96))
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
-* SleepRandomMax (see [*SleepRandomMax (property)* ](#_bookmark367))
-* SleepRandomMin (see [*SleepRandomMin (property)* ](#_bookmark369))
+* DisableSleep (see [*DisableSleep (property)* ](#disablesleep-property))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
+* SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
 
 ## SleepRandomMax (property)
 
@@ -8078,10 +8055,10 @@ In WebLOAD Console, select the sleep mode in the Sleep Time Control tab of the *
 
 **See also**
 
-* DisableSleep (see [*DisableSleep (property)* ](#_bookmark96))
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
-* SleepDeviation (see [*SleepDeviation (property)* ](#_bookmark365))
-* SleepRandomMin (see [*SleepRandomMin (property)* ](#_bookmark369))
+* DisableSleep (see [*DisableSleep (property)* ](#disablesleep-property))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
+* SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
 
 ## SleepRandomMin (property)
 
@@ -8115,10 +8092,10 @@ In WebLOAD Console, select the sleep mode in the Sleep Time Control tab of the *
 
 **See also**
 
-* DisableSleep (see [*DisableSleep (property)* ](#_bookmark96))
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
-* SleepDeviation (see [*SleepDeviation (property)* ](#_bookmark365))
-* SleepRandomMax (see [*SleepRandomMax (property)* ](#_bookmark367))
+* DisableSleep (see [*DisableSleep (property)* ](#disablesleep-property))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
+* SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
 
 ## src (property)
 
@@ -8136,7 +8113,7 @@ Retrieves the complete URL of the parent object, that is the URL to an external 
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
@@ -8184,13 +8161,13 @@ WebLOAD recommends setting the SSL bit limit through the WebLOAD Console. Check 
 * SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382))
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function)
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
 * SSLEnableStrength() (see [*SSLEnableStrength() (function)* ](#_bookmark383))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlHttp](#wlhttp-object)
 
@@ -8240,12 +8217,12 @@ InitClient()
 * SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382))
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
-* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
+* SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8297,12 +8274,12 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 * SSLDisableCipherName() (see [*SSLDisableCipherName() (function)* ](#_bookmark382))
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 
 ## SSLCryptoStrength (property)
@@ -8363,12 +8340,12 @@ Defining a global, categorical value for SSLCryptoStrength is a high-level appro
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 
 ## SSLDisableCipherID() (function)
@@ -8417,12 +8394,12 @@ SSLDisableCipherID(45)
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8473,12 +8450,12 @@ SSLDisableCipherName("EXP-RC4-MD5")
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8530,12 +8507,12 @@ SSLEnableStrength(128)
 * SSLDisableCipherID() (see "[*SSLDisableCipherID() (function)*](#_bookmark381)" )
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherName() (see "[*SSLEnableCipherName() (function)*](#_bookmark386)" )
-* SSLGetCipherCount() (see "[*SSLGetCipherCount() (function)*](#_bookmark388)" )
+* SSLGetCipherCount() (see "[*SSLGetCipherCount() (function)*](#sslgetciphercount-function)" )
 * SSLGetCipherID() (see "[*SSLGetCipherID() (function)*](#sslgetcipherid-function)" )
 * SSLGetCipherInfo() (see "[*SSLGetCipherInfo() (function)*](#sslgetcipherinfo-function)" on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see "[*SSLGetCipherName() (function)*](#sslgetciphername-function)" )
 * SSLGetCipherStrength() (see "[*SSLGetCipherStrength() (function)*](#sslgetcipherstrength-function)" )
-* SSLUseCache (see "[*SSLUseCache (property)*](#_bookmark397)" )
+* SSLUseCache (see "[*SSLUseCache (property)*](#sslusecache-property)" )
 * SSLVersion (see "[*SSLVersion (property)*](#_bookmark400)" )
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8578,12 +8555,12 @@ SSLCipherSuiteCommand(DisableAll) MyCipherID = SSLGetCipherID("EXP-RC4-MD5") SSL
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)* ](#_bookmark382))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8633,12 +8610,12 @@ only)
 * SSLDisableCipherID() (see [*SSLDisableCipherID() (function)* ](#_bookmark381))
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)* ](#_bookmark382))
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 
 ## SSLGetCipherCount() (function)
@@ -8676,7 +8653,7 @@ Returns an integer representing the number of ciphers enabled for the current te
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * [wlHttp](#wlhttp-object)
 
 ## SSLGetCipherID() (function)
@@ -8716,11 +8693,11 @@ Returns the ID number associated with the specified cipher.
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8768,11 +8745,11 @@ You may specify an SSL protocol using either the protocol name or the ID number.
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8813,11 +8790,11 @@ Returns the name of the cipher associated with the specified ID number.
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8854,11 +8831,11 @@ Returns an integer representing the maximum available cipher strength for the cu
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 * SSLVersion (see [*SSLVersion (property)* ](#_bookmark400))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
@@ -8906,7 +8883,7 @@ To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)*
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
@@ -8971,12 +8948,12 @@ See [*WebLOAD-supported SSL Protocol Versions* ](#_bookmark578) for a table illu
 * SSLDisableCipherName() (see [*S*](#_bookmark382)[*SLDisableCipherName() (function)*](#_bookmark382) )
 * SSLEnableCipherID() (see [*SSLEnableCipherID() (function)* ](#_bookmark385))
 * SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
-* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+* SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#sslgetciphercount-function))
 * SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#sslgetcipherid-function))
 * SSLGetCipherInfo() (see [*SSLGetCipherInfo() (function)* ](#sslgetcipherinfo-function)on page [269](#sslgetcipherinfo-function))
 * SSLGetCipherName() (see [*SSLGetCipherName() (function)* ](#sslgetciphername-function))
 * SSLGetCipherStrength() (see [*SSLGetCipherStrength() (function)* ](#sslgetcipherstrength-function))
-* SSLUseCache (see [*SSLUseCache (property)* ](#_bookmark397))
+* SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 
 ## StopClient () (function)
 
@@ -9123,10 +9100,10 @@ Only client threads running within a single spawned process, on the same Load Ge
 **See also**
 
 * SendCounter() (see [*SendCounter() (function)* ](#_bookmark343))
-* SendMeasurement() (see [*SendMeasurement() (function)* ](#_bookmark345))
+* SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
-* SetTimer() (see [*SetTimer() (function)* ](#_bookmark355))
-* Sleep() (see [*Sleep() (function)* ](#_bookmark363))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
 * SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
 * [*Timing Functions* ](#_bookmark35)
 
@@ -9156,18 +9133,18 @@ The tagName property is a member of the wlTables family of table, row, and cell 
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+*
+
+
+* 
+
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * wlTables (see [*wlTables (object)* ](#_bookmark493))
 
 ## target (property)
@@ -9266,7 +9243,6 @@ InfoMessage(“ThreadNum: “ + ThreadNum())
 
 **See also**
 
-* ClientNum() (see [*ClientNum (property)* ](#_bookmark60))
 * VCUniqueID (see [*VCUniqueID() (function)* ](#_bookmark433))
 
 
@@ -9310,7 +9286,7 @@ wlGlobals.TimeoutSeverity = WLError.
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * [*Transaction Verification Components* ](#_bookmark39)
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
@@ -9323,7 +9299,7 @@ wlGlobals.TimeoutSeverity = WLError.
 
 * document (see [*document (object)* ](#_bookmark100))
 * element (see [*element (object)* ](#_bookmark102))
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
@@ -9464,7 +9440,7 @@ wlGlobals.TransactionTime = “0.001”
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * [*Transaction Verification Components* ](#_bookmark39)
 * VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark434)[ *(function)* ](#_bookmark434))
@@ -9527,7 +9503,7 @@ The Type property for wlHttp.Data and wlHttp.DataFile objects is written in uppe
 
 * element (see [*element (object)* ](#_bookmark102))
 * form (see [*form (object)* ](##form-object))
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 * Image (see [*Image (object)* ](#_bookmark210))
 * link (see [*link (object)* ](#_bookmark235))
 * location (see [*location (object)* ](#_bookmark243))
@@ -9697,7 +9673,7 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
 * SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
-* SetTimer() (see [*SetTimer() (function)* ](#_bookmark355))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
 
 
 
@@ -9788,7 +9764,7 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 
 **Description**
 
-VCUniqueID() provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to ClientNum (see [*ClientNum (variable)* ](#_bookmark60)), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
+VCUniqueID() provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to ClientNum. which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
 
 **Syntax** 
 
@@ -9817,8 +9793,7 @@ where:
 
 **See also**
 
-* ClientNum (see [*ClientNum (variable)* ](#_bookmark60))
-* GeneratorName() (see [*GeneratorName() (function)* ](#_bookmark131))
+* GeneratorName() (see [*GeneratorName() (function)* ](#generatorname-function))
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#_bookmark176))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#_bookmark314))
@@ -9896,7 +9871,7 @@ For a more complete explanation and examples of functional testing and transacti
 * CreateTable() (see [*CreateTable() (function)* ](#_bookmark79))
 * EndTransaction() (see [*EndTransaction() (function)* ](#erase-property))
 * ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark306))
-* SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark353))
+* SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
 * TimeoutSeverity (see [*TimeoutSeverity (property)* ](#_bookmark413))
 * TransactionTime (see [*TransactionTime (property)* ](#_bookmark418))
 * [*Transaction Verification Components* ](#_bookmark39)
@@ -9962,9 +9937,9 @@ into the script. The Message dialog box opens. Enter the message text, select th
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * wlException (see [*wlException (object)* ](#_bookmark446))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448))
@@ -9975,7 +9950,7 @@ into the script. The Message dialog box opens. Enter the message text, select th
 
 **Property of Object**
 
-* frames (see [*frames (object)* ](#_bookmark129))
+* frames (see [*frames (object)* ](#frames-object))
 
 **Description**
 
@@ -10112,7 +10087,7 @@ retValue = wlCookie.Get(“CUSTOMER”, “[www.ABCDEF.com](http://www.abcdef.co
 **Methods**
 
 * ClearAll() (see [*ClearAll() (method)* ](#_bookmark54))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * Set() (see [*Set() (cookie method)* ](#_bookmark351))
 * Get() (see [*Get() (cookie method)* ](#_bookmark135))
 
@@ -10254,15 +10229,15 @@ else {
 
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * wlException() (see [*wlException() (constructor)* ](#_bookmark448))
 
 **See also**
 
 * ErrorMessage() (see [*ErrorMessage() (function)* ](#errormessage-function))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 
@@ -10303,9 +10278,9 @@ Returns a new wlException object.
 * GetMessage() (see [*GetMessage() (method)* ](#_bookmark172))
 * GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark182))
 * InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark217))
-* [*Message Functions* ](#_bookmark29)
-* ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
-* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark359))
+* [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+* ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
+* SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 * WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
 
@@ -10329,7 +10304,7 @@ The wlGeneratorGlobal object includes the following methods:
 
 * Add() (see [*Add() (method)* ](#_bookmark45))
 * Get() (see [*Get() (addition method)* ](#_bookmark134))
-* Set() (see [*Set() (addition method)* ](#_bookmark350))
+* Set() (see [*Set() (addition method)* ](#set-addition-method)))
 
 **Properties**
 
@@ -10849,7 +10824,7 @@ Each individual property includes examples of the syntax for that property.
 **Methods**
 
 * Close() (see [*Close() (function)* ](#close-function))
-* remove() (see [*remove() (method)* ](#_bookmark93))
+* remove() (see [*remove() (method)* ](#delete-cookie-method))
 * Open() (see [*Open() (function)* ](#_bookmark261))
 * Reset() (see [*Reset() (method)* ](#_bookmark310))
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#_bookmark476))
@@ -10936,7 +10911,7 @@ If you declare a new wlOutputFile object in the main body of a script, and then 
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -11152,7 +11127,7 @@ You can use the HTML source to search for any desired information in an HTML pag
 
 **Syntax** document.wlSource **Comment**
 
-To use the HTML source, you must enable the SaveSource (see [*SaveSource (property)* ](#savesource-property)) property of the wlGlobals, wlLocals, or wlHttp object. To save the source in a file, use the Outfile property (see [*Outfile (property)* ](#_bookmark268)).
+To use the HTML source, you must enable the SaveSource (see [*SaveSource (property)* ](#savesource-property)) property of the wlGlobals, wlLocals, or wlHttp object. To save the source in a file, use the Outfile property (see [*Outfile (property)* ](#outfile-property)).
 
 **See also**
 
@@ -11243,7 +11218,7 @@ new values within the main body of a script, for they will not be shared correct
 
 * Add() (see [*Add() (method)* ](#_bookmark45))
 * Get() (see [*Get() (addition method)* ](#_bookmark134))
-* Set() (see [*Set() (addition method)* ](#_bookmark350))
+* Set() (see [*Set() (addition method)* ](#set-addition-method))
 
 **Properties**
 
@@ -11289,23 +11264,23 @@ Each wlTables object contains information about the data found in the whole tabl
 
 * cell
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-* id (see [*id (property)* ](#_bookmark208)) (wlTables property)
+
 * row (see [*row (object)* ](#_bookmark315)) (wlTables property)
 
 **See also**
 
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-* Compare() (see [*Compare() (method)* ](#_bookmark65))
-* CompareColumns (see [*CompareColumns (property)* ](#_bookmark65))
-* CompareRows (see [*CompareRows (property)* ](#_bookmark65))
-* Details (see [*Details (property)* ](#_bookmark96))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)) (cell property)
+*
+
+
+* 
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#_bookmark223)) (cell property)
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * Prepare() (see [*Prepare() (method)* ](#_bookmark291))
 * ReportUnexpectedRows (see [*ReportUnexpectedRows (property)* ](#_bookmark310))
-* rowIndex (see [*rowIndex (property)* ](#_bookmark317)) (row property)
+* rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
 
 
@@ -11470,7 +11445,7 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](#_bookmark238)
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
@@ -11593,10 +11568,10 @@ Running this script produces the following output:
 
 **Methods and Properties**
 
-WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#_bookmark219)), and src (see [*src (property)* ](#src-property)on page [252](#src-property)) HTML properties are exposed. Each property is described in its own section.
+WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#_bookmark208)), InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)), and src (see [*src (property)* ](#src-property)on page [252](#src-property)) HTML properties are exposed. Each property is described in its own section.
 
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))
 * src (see [*src (property)* ](#src-property)on page [252](#src-property))
@@ -11691,7 +11666,7 @@ MyFileObj.Write(“Happy Birthday”)
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -11737,7 +11712,7 @@ This method writes a string followed by a newline character to the output file.
 
 * Close() (see [*Close() (function)* ](#close-function))
 * CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
-* Delete() (see [*D*](#_bookmark93)[*elete() (cookie method)* ](#_bookmark93))
+* Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](#_bookmark25)(on page [*28*](#_bookmark25))
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#_bookmark212))
@@ -11778,7 +11753,7 @@ However, including XMLDocument is a good programming practice, to emphasize the 
 
 * [*Collections* ](#using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#_bookmark208))
-* InnerHTML (see [*InnerHTML (property)* ](#_bookmark219))
+* InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
 * load() (see [*load() (method)* ](#load-method)on page [163](#load-method))
 * [*load() and loadXML() Method Comparison* ](./using_javascript_ref.md#collections)
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)on page [167](#loadxml-method))

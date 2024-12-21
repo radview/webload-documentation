@@ -417,7 +417,7 @@ WebLOAD Recorder enables you to collect Post and Get HTTP requests and simultane
 
 > **Note:** WebLOAD Recorder does not perform the Post and Get HTTP requests concurrently.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Execute Concurrent* ](#_bookmark220).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Execute Concurrent* ](#execute-concurrent).
 
 These Post and Get HTTP requests are saved in a file which you can access at any time. For more information, refer to the *WebLOAD JavaScript Reference*.
 
@@ -1320,12 +1320,14 @@ Use the NNTP-PostArticle Building Block to post articles to the specified news g
 
    For example, in the preceding figure, the comment area explains that the From field contains the name of the person sending the news article to be posted on the news group.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 59](#_bookmark265).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_postarticle).
 
 4. Click **OK**.
 
    The NNTP-PostArticle Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+
+<a name = "nntp_postarticle"></a>
 In the script, the article text is posted to the specified news group. The fields in the NNTP-PostArticle Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1367,7 +1369,7 @@ Use the TCP-Connect Building Block to open a TCP connection.
 
    For example, in the preceding figure, the comment area explains that the Connection Timeout field is used to set the amount of time the system will wait for a TCP connection to be established before timing out. Time is defined in milliseconds.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 60](#_bookmark268).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#tcp_connect).
 
 4. Click **OK**.
 
@@ -1375,7 +1377,7 @@ The TCP-Connect Building Block is added to the Script Tree. The JavaScript code,
 
 In the script, a TCP connection is opened using the host names specified by the user.
 
-
+<a name = "tcp_connect"></a>
 
 The fields in the TCP-Connect Building Block parameters dialog box are described in the following table:
 
@@ -2124,7 +2126,7 @@ The Execute Command Building Block is added to the Script Tree and the JavaScrip
 
 > **Note:** The database connection is identified with the variable defined in the OpenDB and Oracle OpenDB Building Block parameters dialog boxes.
 
-
+<a name ="execute_command_building_block"> </a>
 
 The fields in the Execute Command Building Block parameters dialog box are described in the following table:
 
@@ -2152,7 +2154,7 @@ Use the Fetch Data Building Block to add database commands that return data valu
 
 3. For example, in the preceding figure, the comment area explains that the Cursor Type field is used to define the level of access and visibility requested for this database Building Block.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 79](#_bookmark308).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#execute_command_building_block).
 
 5. For example, to select a value from a pre-defined list, select the Cursor Type choice from the list of options displayed in the drop-down list box that appears when you click the small arrow to the right of the Value input area for this field.
 
@@ -3232,9 +3234,10 @@ For a full list and description of the navigation timing statistics, see [Table 
 
 3. For example, in the preceding figure, the comment area explains that the Selenium Driver field is used to specify the Selenium Driver object.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in [Table 100](#_bookmark345).
+4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_report).
 
-   
+
+<a name = "selenium_report"> </a>   
 
    | **Field Name**  | **Description**                                              |
    | :-------------- | :----------------------------------------------------------- |
@@ -3280,7 +3283,7 @@ This building block is relevant not only for JUnit but for unit tests of any kin
 The node is added to the Script Tree.
 
 ### Perfecto Mobile Building Blocks
-Use the Perfecto Mobile building block to instruct WebLOAD to create a Perfecto Mobile script. For a full description of how to create and use Perfecto Mobile scripts in WebLOAD, refer to [*Integrating with Perfecto* Mobile ](#_bookmark363).
+Use the Perfecto Mobile building block to instruct WebLOAD to create a Perfecto Mobile script. For a full description of how to create and use Perfecto Mobile scripts in WebLOAD, refer to [*Integrating with Perfecto Mobile* ](./appendix_f.md#appendix-f-integrating-with-perfecto-mobile).
 
 
 

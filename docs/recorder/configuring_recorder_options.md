@@ -427,7 +427,7 @@ The Recording and Script Generation Options enable you to define the behavior of
 The Recording and Script Generation Options dialog box opens with the File Extensions tab displayed.
 
 
-
+<a name = "recording_and_script_generation"></a>
 ![Recording and Script Generation Options Dialog Box – File Extensions Tab](../images/rec_script_gen_options.png)
 
 
@@ -461,7 +461,7 @@ Use the Script Generation tab in the Recording and Script Generation Options dia
 
    **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 1. Select the **Script Generation** tab. 
 
@@ -523,7 +523,7 @@ While recording a script, WebLOAD automatically identifies if there are no name-
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Post Data** tab. The Post Data tab moves to the front of the dialog box.
 
@@ -586,7 +586,7 @@ Use the Default Encoding Type tab in the Recording and Script Generation Options
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Default Encoding Type** tab.
 
@@ -607,7 +607,7 @@ Use the Browser Settings tab in the Recording and Script Generation Options dial
 
    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Browser Settings** tab.
 
@@ -657,7 +657,7 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Correlation Options** tab.
 
@@ -674,12 +674,12 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 |**Field**|**Description**|
 | :- | :- |
 |**Add correlation comments to script**|<p>Select this option to instruct WebLOAD to add comments to your script in the places where correlation was performed and create a log of all the changes that were made to your script’s JavaScript.</p><p>When selected, the following comment is added to your script before a command that extracts the dynamic value from a response or that uses a parameter instead of a dynamic value in a request:</p><p>//WLCORR – Extracting the dynamic value from the response according to Correlation Rule <ID>s</p><p>-Or-</p><p>//WLCORR – Using the Correlation Parameter instead of the dynamic value according to Correlation Rule <ID>s</p><p>where `<ID>` is the correlation rule ID.</p>|
-|**Preserve user changes**|<p>Specify whether to preserve or discard user changes before running correlation.</p><p>- When this option is unselected, all manual (user) changes to the script are discarded before running correlation. This is equivalent to performing Script Regeneration prior to running correlation.</p><p>- When this option is selected (default), user changes are preserved when correlation is run. If the changes introduced by correlation conflict with the changes made by the user, the user is requested to resolve the conflict, as described in [*Resolving Conflicts between Manual](#_bookmark86)[ Changes and Correlation Changes* ](#_bookmark86)on page [96.](#_bookmark86)</p>|
+|**Preserve user changes**|<p>Specify whether to preserve or discard user changes before running correlation.</p><p>- When this option is unselected, all manual (user) changes to the script are discarded before running correlation. This is equivalent to performing Script Regeneration prior to running correlation.</p><p>- When this option is selected (default), user changes are preserved when correlation is run. If the changes introduced by correlation conflict with the changes made by the user, the user is requested to resolve the conflict, as described in [*Resolving Conflicts between Manual Changes and Correlation Changes* ](./correlating_scripts.md#resolving-conflicts-between-manual-changes-and-correlation-changes)</p>|
 |**Correlation level**|<p>Specify the correlation level to determine the type of correlation to run automatically after recording the script:</p><p>Possible values:</p><p>- Do not run – Do not run correlation after recording the script.</p><p>- Use existing rules – Perform manual correlation after recording the script, using the existing rules.</p><p>- Discover rules – Perform automatic correlation after recording the script, to discover and suggest new rules.</p><p>- Prompt – After recording the script, a dialog box is displayed enabling you to select the type of correlation you wish to perform (Do not run, Use existing rules, or Discover rules).</p>|
 |**Logging level**|<p>Specify the correlation logging level to determine the amount and content of the comments that the correlation engine adds to your script’s JavaScript.</p><p>Possible values:</p><p>- 0 – None. No log messages are added to the JavaScript.</p><p>- 1 – Minimal. Fatal, Error, and Warning messages are added to the JavaScript. Fatal messages indicate that an unrecoverable error occurred, Error messages indicate that a recoverable error occurred, and Warning messages indicate that there is a possible error.</p><p>- 2 – Medium. In addition to the messages added with the minimal logging level, Info messages are added to the JavaScript. Info messages provide important information, such as, when a rule finds a value or when a correlation hint is found.</p><p>- 3 – Full. In addition to the messages added with the medium logging level, Debug messages are added to the JavaScript. Debugging messages provide detailed information about the script.</p>|
 |**Logging file**|<p>Specify the location of the correlation log file. The default file is</p><p>correlation.log and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Log</p>|
 |**Correlation rules file**|<p>Specify the location of the correlation rules XML file. The default file is</p><p>correlationRules.xml and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Extensions\Correlation</p>|
-|**Edit Rules**|Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see [*Configuring the Correlation Rules* ](#_bookmark89).|
+|**Edit Rules**|Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see [*Configuring the Correlation Rules* ](./correlating_scripts.md#configuring-the-correlation-rules).|
 |Flex / AMF correlation||
 |**Correlate Flex / AMF messages**|<p>Create automatic correlation rules to correlate RPC Flex messages and Messaging Flex messages.</p><p>Selecting this option enables correlation of the DSId value. This correlation is part of the AMF script generation, which means the correlation is performed during recording.</p>|
 |**Auto generate DSIds**|<p>If selected, a new DSId is generated during session initialization. The generated DSId is used for all AMF requests until the next session initialization.</p><p>If not selected, the DSId is retrieved from the session initialization request (nil request) and is used for all AMF requests until the next session initialization.</p>|
@@ -701,7 +701,7 @@ Use the Auto Correlation Options tab in the Recording and Script Generation Opti
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Auto Correlation Options** tab.
 
@@ -738,7 +738,7 @@ Use the URL Filtering tab in the Recording and Script Generation Options dialog 
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **URL Filtering** tab.
 
@@ -785,7 +785,7 @@ A resource with the gif file extension that contains image/gif content is record
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **File Extensions** tab.
 
@@ -835,7 +835,7 @@ A resource with the gif file extension that contains image/gif content is record
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Content Types** tab.
 
@@ -880,7 +880,7 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Proxy Options** tab.
 
@@ -951,7 +951,7 @@ Use the Proxy Certificates tab in the Recording and Script Generation Options di
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Proxy Certificates** tab.
 
@@ -1010,7 +1010,7 @@ Note that the purpose of the masking operation is to make sure passwords are not
 
    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure 114](#_bookmark154)).
+   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
 2. Select the **Security** tab.
 

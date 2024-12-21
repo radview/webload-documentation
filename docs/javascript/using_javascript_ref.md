@@ -116,7 +116,7 @@ The following properties are for wlHttp objects only
 
 - Data (see [*Data (property)* ](#data-property))
 
-- DataFile (see [*DataFile (property)* ](#_bookmark82))
+- DataFile (see [*DataFile (property)* ](#datafile-property))
 
 - Erase (see [*Erase (property)* ](#erase-property))
 
@@ -142,9 +142,9 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - ConnectionSpeed (see [*ConnectionSpeed (property)* ](#_bookmark67)) (wlGlobals only)
 
-- DisableSleep (see [*DisableSleep (property)* ](#_bookmark98))
+- DisableSleep (see [*DisableSleep (property)* ](./actions_objects_functions.md#disablesleep-property))
 
-- DNSUseCache (see [*DNSUseCache (property)* ](#_bookmark99))
+- DNSUseCache (see [*DNSUseCache (property)* ](./actions_objects_functions.md#dnsusecache-property))
 
 - KeepAlive (see [*KeepAlive (property)* ](#_bookmark228))
 
@@ -154,7 +154,7 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark254))
 
-- Outfile (see [*Outfile (property)* ](#_bookmark269))
+- Outfile (see [*Outfile (property)* ](./actions_objects_functions.md#outfile-property))
 
 - PassWord (see [*PassWord (property)* ](#_bookmark285))
 
@@ -268,7 +268,7 @@ These functions manage access to a script’s function and input files, includin
 
 - CopyFile() (see [*CopyFile() (function)* ](#_bookmark76))
 
-- Delete() (see [*Delete() (cookie method)* ](#_bookmark93))
+- Delete() (see [*Delete() (cookie method)* ](./actions_objects_functions.md#delete-cookie-method))
 
 - GetLine() (wlOutputFile) (see [*GetLine() (function)* ](./actions_objects_functions.md#getline-function))
 
@@ -305,7 +305,7 @@ These functions manage access to a script’s function and input files, includin
 
 For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:
 
-- Two variables, ClientNum (see [*ClientNum (property)* ](#_bookmark60)) and RoundNum, (see [*RoundNum (variable)* ](#_bookmark313)) identify the client and round number of the current script instance.
+- Two variables, ClientNum (see [*ClientNum (property)* ](./actions_objects_functions.md#clientnum-property)) and RoundNum, (see [*RoundNum (variable)* ](#_bookmark313)) identify the client and round number of the current script instance.
 
 - The GeneratorName() (see [*GeneratorName() (function)* ](./actions_objects_functions.md#generatorname-function)) function identifies the current Load Generator.
 
@@ -340,7 +340,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 **See also**
 
-- ClientNum (see [*ClientNum (property)* ](#_bookmark60))
+- ClientNum (see [*ClientNum (property)* ](./actions_objects_functions.md#clientnum-property))
 
 - GeneratorName() (see [*GeneratorName() (function)* ](./actions_objects_functions.md#generatorname-function))
 
@@ -420,9 +420,9 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 
-- ReportLog() (see [*ReportLog() (method)* ](#_bookmark308))
+- ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 
-- SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#_bookmark358))
+- SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](./actions_objects_functions.md#severeerrormessage-function))
 
 - [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
 
@@ -441,7 +441,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 **Description**
 
-[*WebLOAD scripts Work with an Extended Version of the Standard DOM* ](#_bookmark9)on page [6 ](#_bookmark9)presents an overview of the Document Object Model (DOM), describing some of the basic objects used by standard Web browsers when working with HTML Web pages. The classic browser DOM includes a wide range of objects, properties, and methods for maximum utility and versatility. For more information about the standard DOM structure and components, go to the following websites:
+[*WebLOAD scripts Work with an Extended Version of the Standard DOM* ](./intro_java_scripts.md#webload-scripts-work-with-an-extended-version-of-the-standard-dom)presents an overview of the Document Object Model (DOM), describing some of the basic objects used by standard Web browsers when working with HTML Web pages. The classic browser DOM includes a wide range of objects, properties, and methods for maximum utility and versatility. For more information about the standard DOM structure and components, go to the following websites:
 
 - http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html
 
@@ -487,7 +487,7 @@ The Cipher Command Suite includes the following functions:
 
 - SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#sslenableciphername-function))
 
-- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](./actions_objects_functions.md#sslgetciphercount-function))
 
 - SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390))
 
@@ -526,7 +526,7 @@ Use the Cipher Command Suite to check or verify SSL configuration information at
 
 - SSLEnableCipherName() (see [*SSLEnableCipherName() (function)* ](#_bookmark386))
 
-- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](#_bookmark388))
+- SSLGetCipherCount() (see [*SSLGetCipherCount() (function)* ](./actions_objects_functions.md#sslgetciphercount-function))
 
 - SSLGetCipherID() (see [*SSLGetCipherID() (function)* ](#_bookmark390))
 
@@ -672,7 +672,7 @@ Customized transaction verification functions are created out of the following c
 
 - ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307))
 
-- SetFailureReason() (see [*SetFailureReason() (function)* ](#_bookmark354))
+- SetFailureReason() (see [*SetFailureReason() (function)* ](./actions_objects_functions.md#setfailurereason-function))
 
 - VerificationFunction() (user-defined) (see [*VerificationFunction() (user-defined)*](#_bookmark435)[ *(function)* ](#_bookmark435))
 
