@@ -40,8 +40,8 @@ This section describes how to use Selenium scripts in WebLOAD.
 ### **Step 1: Create a WebLOAD Selenium Script**
 Do one of the following:
 
-- Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to [*Recording and Exporting a Selenium Script* ](#_bookmark370). It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.
-- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](./appendix_a.md#selenium-building-blocks).
+- Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to [*Recording and Exporting a Selenium Script* ](#recording-and-exporting-a-selenium-script). It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.
+- Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to [*Selenium Building Blocks* ](./appendix_a.md#selenium-building-blocks). 
 
 #### Recording and Exporting a Selenium Script
 
@@ -83,13 +83,13 @@ Do one of the following:
 
 Note that the .js file contains a WebLOAD command, reportStatistics, which appears periodically throughout the script. The command instructs WebLOAD to collect navigation timing statistics from the browser regarding the current page.
 
-> **Note:** By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in [*Selenium Report Statistics* ](#_bookmark344).
+> **Note:** By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in [*Selenium Report Statistics* ](./appendix_a.md#selenium-report-statistics).
 
 ### Step 2: Create a WebLOAD Recorder Project File from the Selenium Script
 Perform one of the following:
 
-- [*Automatic Conversion to a Project File*](#_bookmark372)
-- [Manual Conversion to a Project File](#_bookmark373)
+- [*Automatic Conversion to a Project File*](#automatic-conversion-to-a-project-file)
+- [Manual Conversion to a Project File](#manual-conversion-to-a-project-file)
 
 
 
@@ -148,9 +148,11 @@ View the load session test results in the WebLOAD Console, WebLOAD Analytics, or
 
 The following table describes the navigation timing measurements. These measurements are gathered by WebLOAD’s reportStatistics command. By default, these measurements report navigation timing statistics as an average across all pages for which the reportStatistics command was invoked.
 
-If you added an optional Page Name parameter to a reportStatistics command (refer to [*Selenium Report Statistics* ](#_bookmark344)), the resultant measurement names will be displayed as <Measurement Name>-<Page Name>. Thus for example, the measurement Selenium Redirect – Home Page displays the redirect time for the home page.
+If you added an optional Page Name parameter to a reportStatistics command (refer to [*Selenium Report Statistics* ](./appendix_a.md#selenium-report-statistics)), the resultant measurement names will be displayed as <Measurement Name>-<Page Name>. Thus for example, the measurement Selenium Redirect – Home Page displays the redirect time for the home page.
 
 Note that in all navigation timing measurements, time is reported in units of seconds.
+
+<a name = "navigation_timing_statistics"> </a>
 
 |**Measurement Name**|**Type**|**Definition**|
 | :- | :- | :- |
@@ -169,7 +171,7 @@ Note that in all navigation timing measurements, time is reported in units of se
 
 
 
-The following figure explains the various timing attributes listed in [Table 104.](#_bookmark377)
+The following figure explains the various timing attributes listed in the [Table](#navigation_timing_statistics)
 
 ![Timing Attributes used in Navigation Timing Measurements](../images/appendix_g_024.png)
 

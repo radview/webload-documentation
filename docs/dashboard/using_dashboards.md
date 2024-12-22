@@ -30,7 +30,7 @@ The main components of the dashboard tab header include:
 | **Item** | **Description**                                              | **For more information, see**                                |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1        | Dashboard name and selection                                 | [*Loading a Dashboard* ](./managing_dashboards.md#loading-a-dashboard) |
-| 2        | Select session – Enables  selecting the session(s) to be viewed and analyzed. | [*Specifying the Sessions to view in   the*](#_bookmark48) [*Dashboard* ](#_bookmark48) |
+| 2        | Select session – Enables  selecting the session(s) to be viewed and analyzed. | [*Specifying the Sessions to view in   the Dashboard* ](#specifying-the-sessions-to-view-in-the-dashboard) |
 | 3        | Star or unstar a dashboard  – Enables marking/unmarking a dashboard as a favorite for filtering purposes. | [*Loading a Dashboard* ](./managing_dashboards.md#loading-a-dashboard) |
 | 4        | Share dashboard – Enables  sharing the current state of the dashboard | [*Sharing a Dashboard* ](./sharing_dashboards.md#sharing-a-dashboard) |
 | 5        | Save                                                         | [*Saving your Customized Dashboard*](./managing_dashboards.md#saving-your-customized-dashboard)   |

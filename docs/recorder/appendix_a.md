@@ -153,7 +153,7 @@ JavaScript Objects enable you to insert JavaScript code directly into the script
 
    The JavaScriptObject item appears in the Script Tree and the WebLOAD Recorder protocol block is added to the script.
 
-1. Open the object in JavaScript Editing mode to insert JavaScript code, as described in [*Using the JavaScript Editor* ](#_bookmark66).
+1. Open the object in JavaScript Editing mode to insert JavaScript code, as described in [*Using the JavaScript Editor* ](./editing_scripts.md#using-the-javascript-editor).
 
 ### **Comment**
 WebLOAD Recorder enables you to add comments to your script to describe an activity or provide information about a specific operation.
@@ -430,7 +430,7 @@ These Post and Get HTTP requests are saved in a file which you can access at any
 ### **Execute Concurrent**
 WebLOAD Recorder enables you to simultaneously execute all the Post and Get HTTP requests that were defined since the last Define Concurrent function by two or more threads, as defined in the MultiThread Virtual Clients number. This is configured in the Browser Parameters tab in WebLOAD Console’s Script Options dialog box.
 
-> **Note:** This function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define](#_bookmark219) *[Concurrent* ](#_bookmark219)*.
+> **Note:** This function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define Concurrent* ](#define-concurrent).
 
 
 
@@ -533,7 +533,7 @@ Use the FTP-Upload Building Block to designate a file to be uploaded to a remote
 
 3. For example, in the preceding figure, the comment area explains that the Uploaded File field is used to define the name and location for the file to be saved on the specified FTP host.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 42](#_bookmark226). 
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_upload). 
 
    > **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
    >
@@ -546,6 +546,7 @@ Use the FTP-Upload Building Block to designate a file to be uploaded to a remote
    > **Note:** The WebLOAD Recorder global variables ThreadNum and RoundNum are used to differentiate between the files uploaded by different clients during different test iterations.
 
 
+<a name ="ftp_upload"></a>
 
 The fields in the FTP-Upload Building Block parameters dialog box are described in the following table:
 
@@ -1965,7 +1966,7 @@ To see the complete sequence of JavaScript code for all the Database Building Bl
 
 > **Notes:** The JavaScript code for each of the Database Building Blocks can be found in the DBBuildingBlocks.js library file, which is part of the Include directory under the WebLOAD installation directory. The JavaScript code that implements these Database Building Blocks is automatically inserted to the appropriate locations within the script. Code lines may be added to the initialization phase (within the InitAgenda() function), in the main body of the script, or to the termination phase (within the TerminateAgenda() function).
 
-The JavaScript code for that object can be edited, as described in [*Using the JavaScript](#_bookmark66) *[Editor* ](#_bookmark66)*.
+The JavaScript code for that object can be edited, as described in [*Using the JavaScript Editor* ](./editing_scripts.md#using-the-javascript-editor)*.
 
 The field descriptions in this section assume a basic familiarity with database terminology. To take full advantage of the Database Building Blocks, testers must understand how to work with ADO objects and have a basic knowledge of SQL command syntax. WebLOAD Recorder automatically inserts into the test session script the appropriate JavaScript code to implement the database commands that the tester specifies. However, it is the tester’s responsibility to specify valid database commands.
 
@@ -3218,7 +3219,7 @@ The node is added to the Script Tree.
 
 Use the Selenium Report Statistics Block to instruct WebLOAD to collect and report navigation timing statistics for the current page.
 
-For a full list and description of the navigation timing statistics, see [Table 104.](#_bookmark377)
+For a full list and description of the navigation timing statistics, see the [Table](./appendix_g.md#navigation_timing_statistics)
 
 ##### **To insert a Selenium Report Statistics Building Block:**
 

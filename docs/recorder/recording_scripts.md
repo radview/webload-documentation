@@ -345,7 +345,7 @@ page [46](#_bookmark42)).
 
 WebLOAD Recorder enables you to define the Execute Concurrent function. Then in WebLOAD Console, you can simultaneously execute all the Post and Get HTTP requests that were defined since the last Define Concurrent function by two or more threads, as defined by the MultiThread Virtual Clients number. This is configured in the Browser Parameters tab in WebLOAD Console’s Script Options dialog box.
 
-> **Note:** The Execute Concurrent function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define Concurrent* ](#_bookmark219).
+> **Note:** The Execute Concurrent function can only be inserted in your script *after* a Define Concurrent function. For more information about the Define Concurrent function, see [*Define Concurrent* ](./appendix_a.md#define-concurrent).
 
 When the engine encounters the Execute Concurrent function, it stops collecting the HTTP requests in the script and starts their execution.
 
@@ -440,7 +440,7 @@ When you define concurrent while recording, WebLOAD Recorder inserts an ExecuteC
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](#_bookmark58) ).
+After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](./editing_scripts.md#editing-a-script in-the-script-tree) ).
 
 After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the](#_bookmark103) *[Script Tree* ](#_bookmark103)*).
 
@@ -468,7 +468,7 @@ Each block of code starts with a header that contains “WLIDE”, description, 
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane)*).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript View Pane* ](./editing_scripts.md#editing-a-script-in-the-javascript-view-pane)*).
 
 After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution Sequence in the JavaScript View Pane* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-javascript-view-pane))
 
@@ -511,7 +511,7 @@ The Post command involves sending data to the HTTP server, as opposed to the Get
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript](#editing-a-script-in-the-javascript-view-pane) *[View Pane* ](#editing-a-script-in-the-javascript-view-pane)*).
+After the script is recorded, you can edit the script (see [*Editing a Script in the JavaScript View Pane* ](./editing_scripts.md#editing-a-script-in-the-javascript-view-pane)*).
 
 After your script has been developed, you can run and debug it. While the script is running, you can view it in the JavaScript View pane (see [*Viewing the Execution Sequence in the JavaScript View Pane* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-javascript-view-pane)).
 
@@ -769,7 +769,7 @@ Refer to the following table if you are having recording related problems. Befor
 |                                                              | WebLOAD does not record from [http://localhost](http://localhost/) | <p>**For Internet Explorer:**</p><p>Use any of the following instead of [http://localhost:](http://localhost/)</p><p>- http://<your machine name></p><p>- http://<your IP address></p><p>- <http://localhost./></p><p>**For Mozilla Firefox:**</p><p>1. From your browser’s menu, select **Tools** > **Options**.</p><p>2. Select the **Advanced** > **Network** tab and click **Settings**.</p><p>3. Clear the **No proxy for property** checkbox.</p> |      |
 | Secured sites are not recorded in the script                 | Proxy settings do not point to the recorder.                 | <p>**For Internet Explorer:**</p><p>1. From your browser’s menu, select **Tools** > **Internet Options** and select the **Connections Options** tab.</p><p>2. Click **Lan Settings**.</p><p>3. Ensure that **Use a proxy server for your LAN** is checked and modify the port setting to 9884.</p><p></p><p>**For Mozilla Firefox:**</p><p>1. From your browser’s menu, select **Tools** > **Options**.</p><p>2. At the top of the Options dialog box, select the</p><p>&emsp;**Advanced** icon and select the **Network** tab.</p><p>3. In the Connection area, click **Settings**.</p><p>4. Ensure that **Manual proxy configuration** is selected and modify the port setting to 9884.</p> |      |
 |                                                              | A different proxy is needed for SSL                          | <p>You must configure an SSL proxy. For instructions, see</p><p>[*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)</p> |      |
-| Certificate Error is displayed in the browser during recording |                                                              | <p>The browser correctly detects the recorder and warns the user. You can safely ignore the warning and continue.</p><p>**Note:** You can prevent the warning if you configure WebLOAD to use the server’s certificate. Set the proxy certificate options in the Recording and Script Generation Options dialog box. For more information see [*Setting the Proxy Certificates* ](#_bookmark177).</p> |      |
+| Certificate Error is displayed in the browser during recording |                                                              | <p>The browser correctly detects the recorder and warns the user. You can safely ignore the warning and continue.</p><p>**Note:** You can prevent the warning if you configure WebLOAD to use the server’s certificate. Set the proxy certificate options in the Recording and Script Generation Options dialog box. For more information see [*Setting the Proxy Certificates* ](./configuring_recorder_options.md#setting-the-proxy-certificates).</p> |      |
 | A partial script is created while recording                  | Browser cache needs to be cleared.                           | <p>**For Internet Explorer or Mozilla Firefox:**</p><p>1. In WebLOAD Recorder, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon.</p><p>2. Select the **Browser Settings** tab.</p><p>3. In the Automatic Browser Settings area, check **Clear the browser cache** and click **OK.**</p><p></p><p>**For any other browser:**</p><p>- From your browser’s menu, select the command that clears the browser’s cache.</p> |      |
 |                                                              | Proxy settings need to be modified                           | <p>Modify the proxy setting’s file extensions and content types to record specific extensions, since WebLOAD by default only records top-level URLs, such as HTML, XML, and text.</p><p>1. Click **Recording and Script Generation Options** in the</p><p>&emsp;**Tools** tab of the ribbon.</p><p>2. In the Recording and Script Generation Options dialog box select the **Content Types** and **File Locations** tabs.</p><p>3. Add the specific extension and content types that are not being recorded.</p><p></p><p>For more information see [*Configuring the Content Types to](#_bookmark171) *[Record* ](#_bookmark171)* and [*Setting File Locations* ](#_bookmark185).</p> |      |
 | The Internet Explorer proxy settings are locked              |                                                              | <p>1. Click **Start** > **Run**.</p><p>2. Type Regedit and click **OK**.</p><p>3. Select **HKEY\_CURRENT\_USER** > **Software** > **Policies**</p><p>&emsp;> **Microsoft** > **Internet Explorer** > **Control Panel**.</p><p>4. Set the data value for each key in this directory to 0.</p> |      |
