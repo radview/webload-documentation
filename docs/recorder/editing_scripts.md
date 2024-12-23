@@ -70,7 +70,7 @@ The following table describes the menu options:
 |<p>Cut</p><p>(script item menu only)</p>|Cut the script item from the tree to paste elsewhere.|
 |<p>Copy</p><p>(script item menu only)</p>|Copy the script item from the tree to paste elsewhere.|
 |<p>Delete</p><p>(script item menu only)</p>|Delete the script item from the tree.|
-|Toggle Breakpoint|Add or remove a breakpoint at the selected script item in the Script Tree. For more information, see [*Setting Breakpoints* ](#_bookmark113).|
+|Toggle Breakpoint|Add or remove a breakpoint at the selected script item in the Script Tree. For more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints).|
 |Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*.|
 |Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration*).|
 |Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](#_bookmark123)|
@@ -277,7 +277,7 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
    WebLOAD Recorder performs a syntax check and displays the errors.
 
-9. Toggle a breakpoint (for more information, see [*Setting Breakpoints* ](#_bookmark113)).
+9. Toggle a breakpoint (for more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints)).
 
 > **Note:** To clear the JavaScript View pane, click **Clear JavaScript Editor** in the **Edit** tab of the ribbon.
 
@@ -391,10 +391,10 @@ The WebLOAD Recorder provides a set of objects, such as Sleep, that you can drag
 Use the WebLOAD Recorder toolboxes to add the following items to your script:
 
 - General objects, such as Message or Sleep timers. These objects are used in all test scripts, run in both WebLOAD Recorder and WebLOAD. General toolbox tools are described in [*The WebLOAD Recorder General Toolbox* ](./appendix_a.md#the-webload-recorder-general-toolbox).
-- Load objects, such as transactions and synchronization points used in WebLOAD tests. Load toolbox tools are described in [*The WebLOAD Recorder Load Toolbox* ](#_bookmark212).
+- Load objects, such as transactions and synchronization points used in WebLOAD tests. Load toolbox tools are described in [*The WebLOAD Recorder Load Toolbox* ](./appendix_a.md#the-webload-recorder-load-toolbox).
 - Internet Protocols functionality, such as downloading data from an FTP site for a WebLOAD Recorder test. Internet Protocols Building Blocks are described in [*The WebLOAD Recorder Internet Protocols Toolbox* ](./appendix_a.md#the-webload-recorder-internet-protocols-toolbox).
 - JMS functionality, such as sending and receiving JMS message. JMS Building Blocks are described in [*The JMS Toolbox* ](./appendix_a.md#the-jms-toolbox).
-- IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](#_bookmark290).
+- IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](./appendix_a.md#the-webload-recorder-iot-protocols-toolbox).
 - Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](./appendix_a.md#the-real-clients-toolbox).
 
 - Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-service-toolbox).

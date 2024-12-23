@@ -432,7 +432,8 @@ var item = wlHttp.FormData["quantity"]
 
 
 
-<a name="_bookmark25"></a>The myjs.js file contains the following sayHello() function, which prints the checkout message to the customer:
+<a name ="" ></a>
+The myjs.js file contains the following sayHello() function, which prints the checkout message to the customer:
 
 function sayHello()
 

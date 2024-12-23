@@ -1011,7 +1011,7 @@ Use the IMAP-RenameMailbox Building Block to rename an IMAP mailbox.
 
 3. For example, in the preceding figure, the comment area contains the name of the old mail box.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in [Table 52](#_bookmark250).
+4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_renamemailbox).
 
 5. Click **OK**.
 
@@ -1019,6 +1019,7 @@ Use the IMAP-RenameMailbox Building Block to rename an IMAP mailbox.
 
 The fields in the IMAP-RenameMailbox Building Block parameters dialog box are described in the following table:
 
+<a name = "imap_renamemailbox">
 |**Field Name**|**Description**|
 | :- | :- |
 |Old MailBox name|<p>Specify the name of the mailbox to be renamed.</p><p>Type the old mailbox name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field. The mailbox name must be enclosed within quotation marks.</p>|
@@ -1046,7 +1047,7 @@ Use the IMAP-SubscribeMailbox Building Block to subscribe to an IMAP mailbox.
 
    For example, in the preceding figure, the comment area contains the name of the mail box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 53](#_bookmark252).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_subscribemailbox).
 
 4. Click **OK**.
 
@@ -1055,6 +1056,8 @@ The IMAP-SubscribeMailbox Building Block is added to the Script Tree and the Jav
 In the script, the mailbox is renamed using the name specified by the user.
 
 The field in the IMAP-SubscribeMailbox Building Block parameters dialog box is described in the following table:
+
+<a name ="imap_subscribemailbox"></a>
 
 |**Field Name**|**Description**|
 | :- | :- |
@@ -1082,7 +1085,7 @@ Use the IMAP-UnsubscribeMailbox Building Block to unsubscribe from an IMAP mailb
 
 3. For example, in the preceding figure, the comment area contains the name of the mail box.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 53](#_bookmark252).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_unsubscribemailbox).
 
 5. Click **OK**.
 
@@ -1092,6 +1095,7 @@ In the script, the mailbox is renamed using the name specified by the user.
 
 The field in the IMAP-UnsubscribeMailbox Building Block parameters dialog box is described in the following table:
 
+<a name ="imap_unsubscribemailbox"></a>
 |**Field Name**|**Description**|
 | :- | :- |
 |MailBox name|<p>Specify the name of the mailbox from which to unsubscribe.</p><p>Type the mailbox name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field. The mailbox name must be enclosed within quotation marks.</p>|
@@ -1216,7 +1220,7 @@ Use the NNTP-Connect Building Block to start an NNTP session. When you connect, 
 
    For example, in the preceding figure, the comment area explains that the Server Host Name field is used to define the NNTP Server Name or IP to be used when logging in to the specified NNTP server. WebLOAD Recorder automatically sends the user-specified name and password to the NNTP server when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 56](#_bookmark259).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_connect).
 
 4. Click **OK**.
 
@@ -1225,7 +1229,7 @@ Use the NNTP-Connect Building Block to start an NNTP session. When you connect, 
 In the script, an NNTP connection is opened using the server name, user name, and password specified by the user.
 
 
-
+<a name ="nntp_connect"></a>
 The fields in the NNTP-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|

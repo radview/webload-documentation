@@ -152,15 +152,15 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - MultiIPSupport see [*MultiIPSupport (property)* ](./actions_objects_functions.md#multiipsupport-property)
 
-- NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](#_bookmark254))
+- NTUserName, NTPassWord (see [*NTUserName, NTPassWord (properties)* ](./actions_objects_functions.md#ntusername-ntpassword-properties))
 
 - Outfile (see [*Outfile (property)* ](./actions_objects_functions.md#outfile-property))
 
 - PassWord (see [*PassWord (property)* ](#_bookmark285))
 
-- ProbingClientThreads (see [*ProbingClientThreads (property)* ](#_bookmark291))
+- ProbingClientThreads (see [*ProbingClientThreads (property)* ](./actions_objects_functions.md#probingclientthreads-property))
 
-- Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName,*](#_bookmark295)[ *ProxyPassWord (properties)* ](#_bookmark295))
+- Proxy, ProxyUserName, ProxyPassWord (see [*Proxy, ProxyUserName, ProxyPassWord (properties)* ](./actions_objects_functions.md#proxy-proxyusername-proxypassword-properties)
 
 - RedirectionLimit (see [*RedirectionLimit (property)* ](#_bookmark303))
 
@@ -258,7 +258,7 @@ In this *Guide*, the description of each individual object includes information 
 
 These functions manage access to a script’s function and input files, including opening and closing files, copying files, specifying include files, and reading lines from ASCII input files.
 
-> **Note:** Input file management is also provided by wlInputFile (see [*wlInputFile (object)* ](#_bookmark467)). Output file management is also provided by wlOutputFile (see [*wlOutputFile*](#_bookmark474) [*(object)* ](#_bookmark474)).
+> **Note:** Input file management is also provided by wlInputFile (see [*wlInputFile (object)* ](#_bookmark467)). Output file management is also provided by wlOutputFile (see [*wlOutputFile (object)* ](./actions_objects_functions.md#wloutputfile-object)).
 
  
 
@@ -284,13 +284,13 @@ These functions manage access to a script’s function and input files, includin
 
 - Using the IntelliSense JavaScript Editor 
 
-- wlOutputFile() (see [*wlOutputFile (object)* ](#_bookmark474))
+- wlOutputFile() (see [*wlOutputFile (object)* ](./actions_objects_functions.md#wloutputfile-object))
 
 - wlInputFile() (see [*wlInputFile (object)* ](#_bookmark467))
 
 - Write() (see [*Write() (method)* ](#_bookmark505))
 
-- Writeln() (see [*Writeln() (method)* ](#_bookmark507))
+- Writeln() (see [*Writeln() (method)* ](./actions_objects_functions.md#write-method))
 
 
 
@@ -401,7 +401,7 @@ if (document.wlStatusNumber != 200) { ErrorMessage(“Aborting round “ + Round
 
 > **Note:** Message functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. Message function commands can be added to the script in Visual Editing mode using the Toolbox message item and the Insert menu command. The JavaScript code line that corresponds to this message function appears in the JavaScript View pane.
 
-Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the*](#_bookmark18) [*IntelliSense JavaScript Editor* ](#_bookmark18).
+Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
 
 Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.
 
@@ -414,9 +414,9 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - GetMessage() (see [*GetMessage() (method)* ](./actions_objects_functions.md#getmessage-method))
 
-- GetSeverity() (see [*GetSeverity() (method)* ](#_bookmark184))
+- GetSeverity() (see [*GetSeverity() (method)* ](./actions_objects_functions.md#getseverity-method))
 
-- InfoMessage() (see [*InfoMessage() (function)* ](#_bookmark216))
+- InfoMessage() (see [*InfoMessage() (function)* ](./actions_objects_functions.md#infomessage-function))
 
 - [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 
@@ -424,7 +424,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](./actions_objects_functions.md#severeerrormessage-function))
 
-- [*Using the IntelliSense JavaScript Editor* ](#_bookmark18)
+- [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 
 - WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438))
 
@@ -668,7 +668,7 @@ Customized transaction verification functions are created out of the following c
 
 - CreateTable() (see [*CreateTable() (function)* ](./actions_objects_functions.md#createtable-function))
 
-- EndTransaction() (see [*EndTransaction() (function)* ](#_bookmark110))
+- EndTransaction() (see [*EndTransaction() (function)* ](./actions_objects_functions.md#endtransaction-function))
 
 - ReportEvent() (see [*ReportEvent() (function)* ](#_bookmark307))
 

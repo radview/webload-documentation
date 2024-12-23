@@ -45,7 +45,7 @@ The WebLOAD [*Recorder main window*](./quick_start.md#recorder_edit_mode) opens 
 
 ## Recording a script
 
-You can either start working with WebLOAD Recorder immediately, or you can configure the recording options first. For more information about configuring the recording options, see [*Configuring the Recording and Script Generation Options* ](#_bookmark152).
+You can either start working with WebLOAD Recorder immediately, or you can configure the recording options first. For more information about configuring the recording options, see [*Configuring the Recording and Script Generation Options* ](./configuring_recorder_options.md#configuring-the-recording-and-script-generation-options).
 
 
 
@@ -84,7 +84,7 @@ If you start and stop recording more than once during a single recording session
 
    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure 114](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](#_bookmark159).
+   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](#_bookmark159).
 
 5. Optionally change the browser settings:
 
@@ -641,7 +641,7 @@ Recording desktop web applications in scripts using WebLOAD Recorder, involves c
 
 - [*Recording WebLOAD Scripts Using the Client’s Proxy Setting* ](#recording-webload-scripts-using-the-clients-proxy-setting).
 - [*Recording WebLOAD Scripts Using the LAN Settings* ](#_bookmark53).
-- [*Recording WebLOAD Scripts Using Proxy Tunneling* ](#_bookmark54).
+- [*Recording WebLOAD Scripts Using Proxy Tunneling* ](#recording-webload-scripts-using-proxy-tunneling).
 
 
 
@@ -707,7 +707,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
 1. Configure WebLOAD Recorder’s recording options as follows:
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](../images/#rec_script_gen_options)).
+   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](./correlating_scripts.md#rec_script_gen_options)).
 
    1. Select the Browser Settings tab.
 
@@ -771,7 +771,7 @@ Refer to the following table if you are having recording related problems. Befor
 |                                                              | A different proxy is needed for SSL                          | <p>You must configure an SSL proxy. For instructions, see</p><p>[*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)</p> |      |
 | Certificate Error is displayed in the browser during recording |                                                              | <p>The browser correctly detects the recorder and warns the user. You can safely ignore the warning and continue.</p><p>**Note:** You can prevent the warning if you configure WebLOAD to use the server’s certificate. Set the proxy certificate options in the Recording and Script Generation Options dialog box. For more information see [*Setting the Proxy Certificates* ](./configuring_recorder_options.md#setting-the-proxy-certificates).</p> |      |
 | A partial script is created while recording                  | Browser cache needs to be cleared.                           | <p>**For Internet Explorer or Mozilla Firefox:**</p><p>1. In WebLOAD Recorder, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon.</p><p>2. Select the **Browser Settings** tab.</p><p>3. In the Automatic Browser Settings area, check **Clear the browser cache** and click **OK.**</p><p></p><p>**For any other browser:**</p><p>- From your browser’s menu, select the command that clears the browser’s cache.</p> |      |
-|                                                              | Proxy settings need to be modified                           | <p>Modify the proxy setting’s file extensions and content types to record specific extensions, since WebLOAD by default only records top-level URLs, such as HTML, XML, and text.</p><p>1. Click **Recording and Script Generation Options** in the</p><p>&emsp;**Tools** tab of the ribbon.</p><p>2. In the Recording and Script Generation Options dialog box select the **Content Types** and **File Locations** tabs.</p><p>3. Add the specific extension and content types that are not being recorded.</p><p></p><p>For more information see [*Configuring the Content Types to](#_bookmark171) *[Record* ](#_bookmark171)* and [*Setting File Locations* ](#_bookmark185).</p> |      |
+|                                                              | Proxy settings need to be modified                           | <p>Modify the proxy setting’s file extensions and content types to record specific extensions, since WebLOAD by default only records top-level URLs, such as HTML, XML, and text.</p><p>1. Click **Recording and Script Generation Options** in the</p><p>&emsp;**Tools** tab of the ribbon.</p><p>2. In the Recording and Script Generation Options dialog box select the **Content Types** and **File Locations** tabs.</p><p>3. Add the specific extension and content types that are not being recorded.</p><p></p><p>For more information see [*Configuring the Content Types to Record*](./configuring_recorder_options.md#configuring-the-content-types-to-record)[ Setting File Locations](./configuring_recorder_options.md#setting-file-locations).</p> |      |
 | The Internet Explorer proxy settings are locked              |                                                              | <p>1. Click **Start** > **Run**.</p><p>2. Type Regedit and click **OK**.</p><p>3. Select **HKEY\_CURRENT\_USER** > **Software** > **Policies**</p><p>&emsp;> **Microsoft** > **Internet Explorer** > **Control Panel**.</p><p>4. Set the data value for each key in this directory to 0.</p> |      |
 
 

@@ -10,7 +10,7 @@ Before you begin recording scripts using WebLOAD Recorder, there are configurati
 
 If you plan to record a script that includes retrieving a page that you accessed previously during that script, you should clear the cache and cookies in the browser. See [Clearing the Cache and Cookies in Your Browser ](#_bookmark16).
 
-When you have completed these startup steps, you can either start working with WebLOAD Recorder immediately, or you can configure the recording options first. For more information about configuring the recording options, see [*Configuring the](#_bookmark152) *[Recording and Script Generation Options* ](#_bookmark152)*.
+When you have completed these startup steps, you can either start working with WebLOAD Recorder immediately, or you can configure the recording options first. For more information about configuring the recording options, see [*Configuring the Recording and Script Generation Options* ](./configuring_recorder_options.md#configuring-the-recording-and-script-generation-options)*.
 
 
 
@@ -20,7 +20,7 @@ If your browser is set to use a cache file, steps such as loading a page that yo
 
 If your browser loads a page from the cache file, that action is not recorded because retrieving a file from the cache is not an HTTP protocol call. Typically, this behavior is appropriate because you want to emulate the behavior of an actual browser during a test. However, if you want each visit to a page during a test to connect through an actual GET statement, you must work without a cache file when you record a script.
 
-When you start recording, WebLOAD automatically changes the browser’s proxy settings to clear the cache and cookies, according to the definitions in the Recording and Script Generation dialog box (see [*Configuring the Recording and Script Generation](#_bookmark152) *[Options* ](#_bookmark152)*). This enables WebLOAD Recorder to record all HTTP traffic. If you do not want to clear the cache and cookies automatically, you can manually clear the cache and cookies in your browser by following the instructions provided by your browser.
+When you start recording, WebLOAD automatically changes the browser’s proxy settings to clear the cache and cookies, according to the definitions in the Recording and Script Generation dialog box (see [*Configuring the Recording and Script Generation Options* ](./configuring_recorder_options.md#configuring-the-recording-and-script-generation)). This enables WebLOAD Recorder to record all HTTP traffic. If you do not want to clear the cache and cookies automatically, you can manually clear the cache and cookies in your browser by following the instructions provided by your browser.
 
 ## Configuring the Proxy Value for Your Browser
 

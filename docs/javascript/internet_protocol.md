@@ -3362,7 +3362,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-The wlSMTP object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs*](#_bookmark545) [*Object* ](#_bookmark545).
+The wlSMTP object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs Object* ](#wlsmtps-object).
 
  
 

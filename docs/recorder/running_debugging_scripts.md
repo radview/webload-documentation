@@ -20,8 +20,8 @@ After running a script, you can debug it. WebLOAD Recorder enables you to check 
 
 This section provides instructions for running a script. Before running a script, you can do the following:
 
-- Set the number of iterations to run, see [*Setting Playback Options* ](#_bookmark184).
-- Set the file locations for a test session, see [*Setting File Locations* ](#_bookmark185).
+- Set the number of iterations to run, see [*Setting Playback Options* ](./configuring_recorder_options.md#setting-playback-options).
+- Set the file locations for a test session, see [*Setting File Locations* ](./configuring_recorder_options.md#setting-file-locations).
 - Set WebLOAD Recorder to ignore the recorded sleep time, see [*Configuring Sleep Time Control Options* ](./configuring_recorder_options.md#configuring-sleep-time-control-options).
 
 ### Starting the Execution of a Script
@@ -42,7 +42,7 @@ This section provides instructions for running a script. Before running a script
    - The execution sequence in the JavaScript View pane and the Script Tree.
    - If the Page View tab is open, the pages returned from the Web site.
 
-> **Note:** If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see [*Setting Playback](#_bookmark184) *[Options* ](#_bookmark184)*).
+> **Note:** If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see [*Setting Playback Options* ](./configuring_recorder_options.md#setting-playback-options)*).
 >
 
 ### **Viewing the Execution Sequence in the Script Tree**
@@ -133,7 +133,7 @@ After running a script test, you can perform a comparison of the original script
 
    Right-click a node in the Script Tree or the Execution Tree and select **Compare html** from the pop-up menu.
 
-   The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see [*Defining the Difference Viewer](#_bookmark186) *[Application* ](#_bookmark186)*.
+   The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see [*Defining the Difference Viewer Application* ](./configuring_recorder_options.md#defining-the-difference-viewer-application)*.
 
 ### **Comparing a Recorded Sequence with the Execution Sequence**
 You can compare an entire original recorded sequence with the current execution sequence using the Compare All feature. This can help you to check and fix any undesirable changes you made to the original recorded session.
@@ -241,7 +241,7 @@ When debugging a script, you can set the script to run in the following ways:
 1. When you reach the end of the script you can:
    1. Click **Step Into** in the **Debug** tab to return to the beginning of the script.
    1. View results (see [*Viewing and Analyzing the Test Results* ](#viewing-and-analyzing-the-test-results)).
-   1. Add breakpoints (see [*Setting Breakpoints* ](#_bookmark113)).
+   1. Add breakpoints (see [*Setting Breakpoints* ](#setting-breakpoints)).
 1. Return to Edit mode and revise your script.
 
 #### Starting the Debugger
@@ -332,7 +332,7 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 
 **To run until a breakpoint is reached:**
 
-1. Set a breakpoint (see [*Setting Breakpoints* ](#_bookmark113)).
+1. Set a breakpoint (see [*Setting Breakpoints* ](#setting-breakpoints)).
 1. Click **Run** in the **Debug** tab
 
    Click **Step Into** in the **Debug** tab to run the script step-by-step.
@@ -393,7 +393,7 @@ You can disable or enable all breakpoints in the script.
 
 1. Set a breakpoint just before the function call or use the **Step Into** command to advance the script execution to that point.
 
-   For information on setting breakpoints see [*Setting Breakpoints* ](#_bookmark113).
+   For information on setting breakpoints see [*Setting Breakpoints* ](#setting-breakpoints).
 
 1. Click **Step Into** in the **Debug** tab.
 
