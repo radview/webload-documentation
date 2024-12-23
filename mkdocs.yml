@@ -82,6 +82,7 @@ nav:
     - Data Drilling Reports: console/data_drilling_reports.md
     - Exporting Performance Reports: console/export_performance_reports.md
     - Performance Measurements Manager: console/performance_measurements_manager.md
+    - Working with Cloud accounts: console/cloud.md
     - Appendix A - Integrating with AppDynamics: console/appendix_a.md
     - Appendix B - Integrating with Dynatrace: console/appendix_b.md
     - Appendix C - Integrating with Nagios: console/appendix_c.md
