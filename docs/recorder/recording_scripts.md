@@ -13,7 +13,7 @@ As your actions are recorded, WebLOAD Recorder displays them in the Script Tree,
 
 WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set)* .
 
-This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./running_debugging_scripts.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 The script can then be used with WebLOAD for load and scalability testing of your application.
 
@@ -188,9 +188,9 @@ If you start and stop recording more than once during a single recording session
 
 > **Notes:** Although by default the Recording Complete dialog box appears, this depends on your settings in the Correlation Options tab of the Recording and Script Generations options dialog box. For more information, see [*Setting the Default Correlation Action* ](./correlating_scripts.md#setting-the-default-correlation-action).
 
-You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](#_bookmark56). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](./running_debugging_scripts.md#editing-scripts). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
-> **Notes:** If actions that you are interested in were not recorded, check the cache settings in your browser. WebLOAD Recorder may be skipping steps that you want to record because your browser is using a system cache file. For more information, see [Clearing](#_bookmark16) [the Cache and Cookies in Your Browser ](#_bookmark16).
+> **Notes:** If actions that you are interested in were not recorded, check the cache settings in your browser. WebLOAD Recorder may be skipping steps that you want to record because your browser is using a system cache file. For more information, see [Clearing the Cache and Cookies in Your Browser ](./before_you_begin.md#clearing-the-cache-and-cookies-in-your-browser).
 >
 > When you stop the recording, if no actions were recorded (that is, the script is blank), WebLOAD Recorder automatically displays the recording troubleshooting information.
 >
@@ -329,9 +329,7 @@ WebLOAD Recorder enables you to collect Post and Get HTTP requests and simultane
 
 ![ref13]**Note:** WebLOAD Recorder does not perform the Post and Get HTTP requests concurrently.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Executing Concurrent Definition in a* Recording ](#_bookmark42)(on
-
-page [46](#_bookmark42)).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Executing Concurrent Definition in a Recording *](#executing-concurrent-definition-in-a-recording).
 
 **To define when to start collecting HTTP requests in a script:**
 
@@ -442,7 +440,7 @@ When you define concurrent while recording, WebLOAD Recorder inserts an ExecuteC
 
 After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](./editing_scripts.md#editing-a-script in-the-script-tree) ).
 
-After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the](#_bookmark103) *[Script Tree* ](#_bookmark103)*).
+After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the Script Tree* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-script-tree)).
 
 
 
@@ -717,7 +715,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
    1. Select the Proxy Options tab.
 
-      The Proxy Options tab appears (see [Figure 125](#_bookmark174)).
+      The Proxy Options tab appears (see the [Figure](./configuring_recorder_options.md#prodxy_topns)).
 
    1. In the Recording Proxy Options area, check **Use Transparent Proxy**. This enables WebLOAD Recorder to record from any Web client that does not support proxy configurations.
 

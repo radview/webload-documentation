@@ -573,7 +573,7 @@ Use the FTP-Download Building Block to designate a file to be downloaded from a 
 
 3. For example, in the preceding figure, the comment area explains that the File for Download field is used to define the name of the file to be downloaded from the specified FTP host.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 43](#_bookmark228).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_download).
 
    **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
 
@@ -585,6 +585,7 @@ Use the FTP-Download Building Block to designate a file to be downloaded from a 
 
    In the script, the name of the file to be downloaded is passed as a parameter to the ftp.Download() function. The file name to which the downloaded file should be saved is assigned as a value to the ftp.Outfile variable.
 
+<a name = "ftp_download"></a>
 The fields in the FTP-Download Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|

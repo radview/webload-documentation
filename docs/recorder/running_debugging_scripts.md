@@ -172,7 +172,7 @@ The **Compare** pane that appears at the bottom of the screen lists a digest of 
 
 
 
-In addition, right-clicking a line and selecting **Compare HTML**, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see [*Comparing a Script](#_bookmark107) *[Recording node to its Playback* ](#_bookmark107)*.
+In addition, right-clicking a line and selecting **Compare HTML**, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see [*Comparing a Script Recording node to its Playback* ](#comparing-a-script-recording-node-to-its-playback).
 
 ### Stopping the Execution of a Script
 When debugging a script using a Step Into or breakpoint, the playback session stops immediately upon completion of the current WebLOAD Recorder protocol block.
@@ -456,7 +456,7 @@ You can abort the playback of the script at a specific point. Aborting a script 
 
 The Watch window is used for debugging your application, and is only available when you are running your script. The Watch window displays the values of selected variables or watch expressions that you specify while debugging your script. The values of the variables and expressions in the Watch window are only updated when execution is stopped at a breakpoint.
 
-Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see [*Adding a Watch Variable or Expression* ](#_bookmark114).
+Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see [*Adding a Watch Variable or Expression* ](#adding-a-watch-variable-or-expression).
 
 **To open the Watch window:**
 
@@ -541,7 +541,7 @@ The Variables window provides quick access to variables that are important in th
 
 The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.
 
-The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or](#_bookmark114) *[Expression* ](#_bookmark114)*), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
+The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or Expression* ](#adding-a-watch-variable-or-expression)), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
 
 The Variables window also has a Context dropdown list that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.
 

@@ -8,7 +8,7 @@ This section provides information before you begin using WebLOAD Recorder.
 
 Before you begin recording scripts using WebLOAD Recorder, there are configuration steps that you may have to complete, depending on the Web application you want to test.
 
-If you plan to record a script that includes retrieving a page that you accessed previously during that script, you should clear the cache and cookies in the browser. See [Clearing the Cache and Cookies in Your Browser ](#_bookmark16).
+If you plan to record a script that includes retrieving a page that you accessed previously during that script, you should clear the cache and cookies in the browser. See [Clearing the Cache and Cookies in Your Browser ](#clearing-the-cache-and-cookies-in-your-browser).
 
 When you have completed these startup steps, you can either start working with WebLOAD Recorder immediately, or you can configure the recording options first. For more information about configuring the recording options, see [*Configuring the Recording and Script Generation Options* ](./configuring_recorder_options.md#configuring-the-recording-and-script-generation-options)*.
 

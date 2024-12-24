@@ -272,7 +272,7 @@ The following table describes the fields in the Browser Cache tab.
 ### Configuring Authentication Settings
 WebLOAD Recorder enables you to define the global and proxy authentication settings.
 
-WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*.
+WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see [*Configuring a Double Proxy* ](#configuring-a-double-proxy)*.
 
 **To configure Authentication settings:**
 
@@ -768,7 +768,7 @@ The following table describes the fields in the URL Filtering tab.
 ### Configuring the File Extensions
 Use the File Extension tab in the Recording and Script Generation Options dialog box to configure which types of files the WebLOAD Recorder records.
 
-Both the File Extensions and the Content Types tabs (see [*Configuring the Content Types](#_bookmark171) *[to Record* ](#_bookmark171)*), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.
+Both the File Extensions and the Content Types tabs (see [*Configuring the Content Types to Record* ](#configuring-the-content-types-to-record)), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.
 
 In a case where the file extension and content types contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the File Extensions and Content Types tabs are configured with the following settings:
 
@@ -793,12 +793,12 @@ A resource with the gif file extension that contains image/gif content is record
 
    ![File Extensions Tab](../images/file_exten.png)
 
-3. Fill in the fields, as described [Table 27](#_bookmark170).
+3. Fill in the fields, as described the [Table](#file_extensions_tab).
 
 4. Click **OK**.
 
    
-
+<a name ="file_extensions_tab"></a>
 The following table describes the fields in the File Extensions tab.
 
 |**Field**|**Description**|
@@ -870,7 +870,7 @@ Use the Proxy Options tab in the Recording and Script Generation Options dialog 
 
 When you record scripts with the WebLOAD Recorder, your browser must be configured to use proxy port 9884 (which is the default proxy port). In other words, you must record scripts through proxy port 9884.
 
-WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see [*Configuring a Double](#_bookmark176) *[Proxy* ](#_bookmark176)*.
+WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see [*Configuring a Double Proxy* ](#configuring-a-double-proxy)*.
 
 **To set the proxy options:**
 
@@ -886,6 +886,7 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
    The Proxy Options tab moves to the front of the dialog box.
 
+   <a name = "prodxy_topns"></a>
    ![Proxy Options Tab](../images/prodxy_topns.png)
 
 3. Fill in the fields, as described in the [Table](#proxy_option_tab).
@@ -902,7 +903,7 @@ The following table describes the fields and options on the Proxy Options tab.
 |**Proxy port**|The port number for the WebLOAD Recorder proxy-recorder. The default value is 9884. When you record scripts, your browser must use the default value.|
 |**Use transparent proxy**|Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the **Proxy port** field is disabled. For more information, see [*Recording Desktop Web Applications* ](./recording_scripts.md#recording-desktop-web-applications)|
 |*Application proxy options*||
-|**Use the following definitions for the application’s proxy server**|Select this option if you use a proxy server to access the Internet. When selected, the **HTTP proxy/Port, SSL proxy/Port** and the **Proxy authentication** area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see [*Troubleshooting* ](#_bookmark55).|
+|**Use the following definitions for the application’s proxy server**|Select this option if you use a proxy server to access the Internet. When selected, the **HTTP proxy/Port, SSL proxy/Port** and the **Proxy authentication** area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see [*Troubleshooting* ](./recording_scripts.md#troubleshooting).|
 |**HTTP proxy/Port**|The address and port number of your organization’s proxy, if one exists (for example, to access the Internet beyond a company firewall). Modifying these fields automatically updates your default browser’s proxy settings and restores the original settings when the recording process is complete.|
 |**SSL proxy/Port**|The address and port number of your organization’s Secure proxy, if one exists (for example, to access the Internet beyond a company firewall). Use these fields in conjunction with the HTTP Proxy/Port fields to define a double proxy. Modifying these fields automatically updates your default browser’s proxy settings and restores the original settings when the recording process is complete.|
 |<p>**Use browser’s settings**</p><p>**when recording**</p>|Select this option to enable WebLOAD Recorder to use your default browser’s proxy settings when recording a script. When selected, WebLOAD Recorder copies your default browser’s proxy settings into the **HTTP Proxy/Port** and **SSL Proxy/Port** fields. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, this is irrelevant).|
