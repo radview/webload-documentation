@@ -92,6 +92,7 @@ Initialization and termination functions may be added directly to the code in a 
 
 WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. You may then add any other necessary commands to the functions without any concerns about mistakes in the function syntax.
 
+<a name = "function_insertion"></a>
 ![Function Insertion using the Insert Menu](../images/script_guide_024.png)
 
 #### Navigation Functions
