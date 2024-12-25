@@ -280,8 +280,8 @@ Each cell object contains information about the data found in one cell of a tabl
 
 * cellIndex (see [*cellIndex (property)* ](#cellindex-property))
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
-* InnerText (see [*InnerText (property)* ]())
-* tagName (see [*tagName (property)* ](#_bookmark407))
+* InnerText (see [*InnerText (property)* ](#innertext-property))
+* tagName (see [*tagName (property)* ](#tagname-property))
 
 **Comment**
 
@@ -296,7 +296,7 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 ## cellIndex (property)
@@ -323,7 +323,7 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 ## CharEncoding (property)
@@ -336,7 +336,7 @@ cellIndex is a member of the wlTables family of table, row, and cell objects.
 
 **Description**
 
-Contains the value corresponding to the character set being used. The default value is **Default** (0), the regional settings of the computer. For a complete list of the supported character sets, see [*WebLOAD–supported Character Sets* ](#_bookmark599)
+Contains the value corresponding to the character set being used. The default value is **Default** (0), the regional settings of the computer. For a complete list of the supported character sets, see [*WebLOAD–supported Character Sets* ](./appendix_d.md#webload–supported-character-sets)
 
 **Example**
 
@@ -423,7 +423,7 @@ To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (proper
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_-omponents)
-* ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59))
+* ClearSSLCache() (see [*ClearSSLCache() (method)* ](#clearsslcache-method))
 * DNSUseCache (see [*DNSUseCache (property)* ](#dnsusecache-property))
 * SSLUseCache (see [*SSLUseCache (property)* ](#sslusecache-property))
 
@@ -467,7 +467,7 @@ To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (proper
 
 ClientNum is set to the serial number of the client in the WebLOAD test configuration. ClientNum is a read-only local property. Each client in a Load Generator has a unique ClientNum. However, two clients in two different Load Generators may have the same ClientNum.
 
-> **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)) to obtain an ID number which is unique system-wide.
+> **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
 
 If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the Script (InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
 
@@ -492,7 +492,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#roundnum-variable))
 * ThreadNum (see [*ThreadNum() (property)* ](#_bookmark412))
-* VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432))
+* VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function))
 
 ## Close() (function)
 
@@ -547,7 +547,7 @@ When you use the Close() function to close a file, data will be flashed to the d
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile (see [*wlOutputFile (object)* ](#wloutputfile-object))
@@ -612,7 +612,7 @@ cols is often accessed through the wlTables family of table, row, and cell objec
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 
 ## ConnectTimeout (property)
 
@@ -728,7 +728,7 @@ The following code verifies that the page content length is equal to 120 bytes. 
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object))
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -930,7 +930,7 @@ The load engine first looks for the file to be copied in the default User Copy F
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile (see [*wlOutputFile (object)* ](#wloutputfile-object))
@@ -1055,7 +1055,7 @@ wlHttp.FormData.SearchFor = “icebergs” wlHttp.FormData.SearchType = “Exact
 
 **Methods**
 
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 
 **Properties**
 
@@ -1099,7 +1099,7 @@ WebLOAD sends the file when you call the wlHttp.Post() method.
 
 **Methods**
 
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 
 **Properties**
 
@@ -1114,7 +1114,7 @@ DataFile is used for sending files and parallels the posting of mulipart data in
 * Data (see [*Data (property)* ](#data-property))
 * Erase (see [*Erase (property)* ](#erase-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#post-method))
 * value (see [*value (property)* ](#value-property))
@@ -1233,10 +1233,10 @@ For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the 
 * InnerText (see [*InnerText (property)* ](#innertext-property))
 * MaxLength (see [*MaxLength (property)* ](#_bookmark246))
 * Name (see [*Name (property)* ](#name-property))
-* option (see [*option (object)* ](#_bookmark264))
+* option (see [*option (object)* ](#option-object)))
 * row (see [*row (object)* ](#row-object))
 * selectedindex (see [*selectedindex (property)* ](#selected-property))
-* Size (see [*Size (property)* ](#_bookmark361))
+* Size (see [*Size (property)* ](#size-property))
 * title (see [*title (property)* ](#title-property))
 * type (see [*type (property)* ](#type-property))
 * Url (see [*Url (property)* ](#url-property))
@@ -1246,7 +1246,7 @@ For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the 
 
 **Property of Object**
 
-* option (see [*option (object)* ](#_bookmark264))
+* option (see [*option (object)* ](#option-object)))
 
 **Description**
 
@@ -1276,7 +1276,7 @@ Use the DefineConcurrent()function to define the beginning point, after which al
 
 in WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an ExecuteConcurrent() function in the script. For more information about the ExecuteConcurrent() function, see [*ExecuteConcurrent() (function)* ](#_bookmark120).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an ExecuteConcurrent() function in the script. For more information about the ExecuteConcurrent() function, see [*ExecuteConcurrent() (function)* ](#executeconcurrent-function).
 
 All requests performed from the beginning of the DefineConcurrent() function to the ExecuteConcurrent() function are stored in an array of documents. You can access every document by index number or document name as follows:
 
@@ -1347,10 +1347,10 @@ Perform an HTTP or HTTPS Delete command.
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Head() (see [*Head() (method)* ](#_bookmark194))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
+* Head() (see [*Head() (method)* ](#head-method))
 * Header (see [*Header (property)* ](#header-property))
-* Options() (see [*Options() (method)* ](#_bookmark266))
+* Options() (see [*Options() (method)* ](#options-method))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#put-method))
 * ReportEvent() (see [*ReportEvent() (function)* ](#reportevent-function))
@@ -1361,7 +1361,7 @@ Perform an HTTP or HTTPS Delete command.
 
 **Method of Objects**
 
-* wlCookie (see [*wlCookie (object)* ](#_bookmark443))
+* wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
 **Description**
 
@@ -1390,7 +1390,7 @@ wlCookie.Delete(“CUSTOMER”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, 
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * Write() (see [*Write() (method)* ](#write-method))
@@ -1598,11 +1598,11 @@ document.forms[0].yourname.type
 * InnerImage (see [*InnerImage (property)* ](#innerimage-property))
 * InnerText (see [*InnerText (property)* ](#innertext-property))
 * MaxLength (see [*MaxLength (property)* ](#_bookmark246))
-* option (see [*option (object)* ](#_bookmark264))
+* option (see [*option (object)* ](#option-object)))
 * OuterLink (see [*OuterLink (property)* ](#outerlink-property))
 * row (see [*row (object)* ](#row-object))
 * selectedindex (see [*selectedindex (property)* ](#selectedindex-property))
-* Size (see [*Size (property)* ](#_bookmark361))
+* Size (see [*Size (property)* ](#size-property))
 * title (see [*title (property)* ](#title-property))
 * type (see [*type (property)* ](#type-property))
 * Url (see [*Url (property)* ](#url-property))
@@ -1880,10 +1880,10 @@ erased automatically by WebLOAD. The only way to reset or erase user-defined pro
 * DataCollection.value (see [*value (property)* ](#value-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#post-method))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 
 ## ErrorMessage() (function)
 
@@ -1918,9 +1918,9 @@ Message function command lines may also be added directly to the code in a JavaS
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException (see [*wlException (object)* ](#_bookmark446))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException (see [*wlException (object)* ](#wlexception-object))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 ## ErrorMessage (property)
 
@@ -1944,7 +1944,7 @@ wlVerification.ErrorMessage = “my personalized error message”
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * PageTime (see [*PageTime (property)* ](#_bookmark271))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * Title (see [*Title (function)* ](#title-function))
 
 ## EvaluateScript() (function)
@@ -2082,12 +2082,12 @@ wlHttp.DataFile.FileName = “DataFileName”
 * DataFile (see [*DataFile (property)* ](#datafile-property))
 * Erase (see [*Erase (property)* ](#erase-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#post-method))
 * type (see [*type (property)* ](#type-property))
 * value (see [*value (property)* ](#))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 
 ## FilterURL (property)
@@ -2159,7 +2159,7 @@ You can access this form by writing any of the following expressions:
 * id (see [*id (property)* ](#_bookmark208))
 * method (see [*method (property)* ](#_bookmark248))
 * Name (see [*Name (property)* ](#name-property))
-* target (see [*target (property)* ](#_bookmark409))
+* target (see [*target (property)* ](#target-property)
 * Url (see [*Url (property)* ](#url-property))
 
 **See also**
@@ -2184,7 +2184,7 @@ The collection indices are the field names (HTML name attributes). Before you ca
 
 **Method**
 
-Use the wlClear() (see [*wlClear() (method)* ](#_bookmark440)) method to delete specific FormData fields or clear all the FormData fields at once.
+Use the wlClear() (see [*wlClear() (method)* ](#wlclear-method)) method to delete specific FormData fields or clear all the FormData fields at once.
 
 JavaScript supports two equivalent notations for named collection elements: FormData.FirstName or FormData[“FirstName”]. The latter notation also supports spaces in the name, for example, FormData[“First Name”].
 
@@ -2236,12 +2236,12 @@ You may also submit FormData with missing fields or with data files.
 * DataFile (see [*DataFile (property)* ](#datafile-property))
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#post-method))
 * type (see [*type (property)* ](#type-property))
 * value (see [*value (property)* ](#value-property))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 
 ## frames (object)
 
@@ -2303,7 +2303,7 @@ For example:
 **See also**
 
 * [*Collections* ](#using_javascript_ref.md#collections)
-* GetFrames (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames (see [*GetFrames (property)* ](#getframes-property))
 
 ## Function (property)
 
@@ -2357,7 +2357,7 @@ For example, it is convenient to add GeneratorName() to a Message Node to clarif
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#getoperatingsystem-function))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#roundnum-variable)))
-* VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432))
+* VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function))
 
 ## Get() (method)
 
@@ -2515,9 +2515,9 @@ You may not use the TransName parameter by itself. Get() expects to receive eith
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Head() (see [*Head() (method)* ](#_bookmark194))
+* Head() (see [*Head() (method)* ](#head-method))
 * Header (see [*Header (property)* ](#header-property))
-* Options() (see [*Options() (method)* ](#_bookmark266))
+* Options() (see [*Options() (method)* ](#options-method))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#put-method)
 * ReportEvent() (see [*ReportEvent() (function)* ](#reportevent-function))
@@ -2544,13 +2544,13 @@ Enables the retrieval of Java Applets in an HTML page. The default value of GetA
 
  **See also**
 
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property)))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetCss (property)
 
@@ -2572,13 +2572,13 @@ wlGlobals.GetCss = true
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137)
-* GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property)
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153)
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetElementById() (function)
 
@@ -2780,13 +2780,13 @@ wlGlobals.GetEmbeds = true
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetFieldValue() (method)
 
@@ -2975,13 +2975,13 @@ When GetMetas is true, GetFrames should also be true as the redirection is retri
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetFrameUrl() (method)
 
@@ -3146,13 +3146,13 @@ When GetImages is false, the load engine does not retrieve the images from an HT
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetImagesInThinClient (property)
 
@@ -3174,7 +3174,7 @@ wlGlobals.GetImagesInThinClient = true
 
 **See also**
 
-* SetClientType (see [*SetClientType (function)* ](#_bookmark352))
+* SetClientType (see [*SetClientType (function)* ](#setclienttype-function))
 * [*Collections* ](#using_javascript_ref.md#collections)
 * document (see [*document (object)* ](#document-object))
 * Header (see [*Header (property)* ](#header-property))
@@ -3224,11 +3224,11 @@ The scope of MultiIPSupport depends, of course, on whether it was set through wl
 
 The GetLine() function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
 
-* If you opened the file using the default sequential mode (see [*Open() (function)* ](#_bookmark262)), then:
+* If you opened the file using the default sequential mode (see [*Open() (function)* ](#open-function)), then:
 * The first GetLine() call in any thread of a Load Generator reads the first line of the file.
 * Each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads the next line of the file.
 * When the last line of the file has been read, the next access loops back to the first line of the file.
-* If you opened the file for random access (see [*Open() (function)* ](#_bookmark262)), each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads some randomly selected line of the file. To read the input file lines in random order, you must include Open(filename, WLRandom) in the script’s InitAgenda() function.
+* If you opened the file for random access (see [*Open() (function)* ](#open-function)), each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads some randomly selected line of the file. To read the input file lines in random order, you must include Open(filename, WLRandom) in the script’s InitAgenda() function.
 
 In this way, a relatively small file can supply an unending stream of test data, and different clients are supplied with different sequences of data.
 
@@ -3278,7 +3278,7 @@ If the line found in the file contains no separator characters, then the entire 
 * CopyFile() (see [*CopyFile() (function)* ](#copyfile-function))
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile (see [*wlOutputFile() (constructor)* ](#wloutputfile-constructor))
@@ -3461,8 +3461,8 @@ Text string of the error message for this object.
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException (see [*wlException (object)* ](#_bookmark446))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException (see [*wlException (object)* ](#wlexception-object))
 
 ## GetMetas (property)
 
@@ -3483,7 +3483,7 @@ The GetMetas property, when set to true, enables the support of redirection for 
 
 **Comments**
 
-* Because the redirection is retrieved as a frame, the GetFrames property must be set to true (see [*GetFrames (property)* ](#_bookmark153)).
+* Because the redirection is retrieved as a frame, the GetFrames property must be set to true (see [*GetFrames (property)* ](#getframes-property)).
 * The additional wlHttp.GET will not be part of the script (it will be like frame 0).
 * The desired page will be requested only on playback.
 * The page will not be visible in WebLOAD Recorder’s Browser View. This is because redirection will not be performed (the document will not be replaced). WebLOAD implements the redirected URL by adding a frame to the parent HTML. That is, the first page will be added with an extra frame containing the redirection URL (fully parsed and all the objects in it will be get).
@@ -3521,7 +3521,7 @@ If the Load Generator is working with a Windows platform, possible return values
 * GeneratorName() (see [*GeneratorName() (function)* ](#generatorname-function))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * RoundNum (see [*RoundNum (variable)* ](#roundnum-variable)))
-* VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432))
+* VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function))
 
 ## GetOthers (property)
 
@@ -3543,13 +3543,13 @@ wlGlobals.GetOthers = true
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetPortNum() (method)
 
@@ -3642,19 +3642,19 @@ Enables the retrieval of external JavaScript scripts in an HTML page. The defaul
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
-* GetXml() (see [*GetXml() (property)* ](#_bookmark191))
+* GetXml() (see [*GetXml() (property)* ](#getxml-property))
 
 ## GetSeverity() (method)
 
 **Method of Object**
 
-* wlException (see [*wlException (object)* ](#_bookmark446))
+* wlException (see [*wlException (object)* ](#wlexception-object))
 
 **Description**
 
@@ -3684,8 +3684,8 @@ Integer, representing one of the following error level values:
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 ## GetStatusLine() (method)
 
@@ -3835,10 +3835,10 @@ wlGlobals.GetXML = true
 
 **See also**
 
-* GetApplets() (see [*GetApplets (property)* ](#_bookmark137))
-* GetCss() (see [*GetCss (property)* ](#_bookmark138))
+* GetApplets() (see [*GetApplets (property)* ](#getapplets-property))
+* GetCss() (see [*GetCss (property)* ](#getcss-property))
 * GetEmbeds() (see [*GetEmbeds (property)* ](#getembeds-property))
-* GetFrames() (see [*GetFrames (property)* ](#_bookmark153))
+* GetFrames() (see [*GetFrames (property)* ](#getframes-property))
 * GetImages() (see [*GetImages (property)* ](#getimages-property))
 * GetOthers() (see [*GetOthers (property)* ](#getothers-property))
 * GetScripts() (see [*GetScripts (property)* ](#getscripts-property))
@@ -3892,7 +3892,7 @@ HTTPS header from the server. It does not download the body of the URL, such as 
 * Data (see [*Data (property)* ](#data-property))
 * DataFile (see [*DataFile (property)* ](#datafile-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * [wlGlobals](#wlglobals-object)
 * [wlLocals](#wllocals-object)
@@ -3933,7 +3933,7 @@ WebLOAD offers a simple way to reset configuration properties using the various 
 
 **Comment**
 
-Use the wlClear() (see [*wlClear() (method)* ](#_bookmark440)) method to delete specific Header fields or clear all the Header fields at once.
+Use the wlClear() (see [*wlClear() (method)* ](#wlclear-method)) method to delete specific Header fields or clear all the Header fields at once.
 
 You cannot override the host header or set a cookie header using the Header property. To set a cookie, see wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
@@ -3949,12 +3949,12 @@ Any information set using the wlHttp.Header property *takes priority* over any d
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Post() (see [*Post() (method)* ](#post-method))
 * type (see [*type (property)* ](#type-property))
 * UserAgent (see [*UserAgent (property)* ](#useragent-property))
 * value (see [*value (property)* ](#value-property))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 * [wlGlobals](#wlglobals-object)
 * [wlLocals](#wllocals-object)
 
@@ -4257,7 +4257,7 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property))
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * *Working with HTTP Protocol* in the *WebLOAD Scripting Guide*
 * XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)))
 
@@ -4354,7 +4354,7 @@ The load engine first looks for the file to be included in the default User Incl
 * Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile (see [*wlOutputFile (object)* ](#wloutputfile-object))
@@ -4405,9 +4405,9 @@ WebLOAD recommends adding message functions to your script files directly throug
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException (see [*wlException (object)* ](#_bookmark446))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException (see [*wlException (object)* ](#wlexception-object))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 ## InnerHTML (property)
 
@@ -4451,7 +4451,7 @@ The InnerHTML property for cell objects is written in uppercase.
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property))
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 * XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
@@ -4527,7 +4527,7 @@ When working with a link or location object, the text that appears over the link
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
 * src (see [*src (property)* ](#src-property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 ## JVMType (property)
@@ -4746,9 +4746,9 @@ document.links[#].`<*link-property*>`
 
 **Properties**
 
-* hash (see [*hash (property)* ](#_bookmark192))
-* host (see [*host (property)* ](#_bookmark197))
-* hostname (see [*hostname (property)* ](#_bookmark197))
+* hash (see [*hash (property)* ](#hash-property))
+* host (see [*host (property)* ](#host-property))
+* hostname (see [*hostname (property)* ](#hostname-property))
 * href see [*href (property)* ](#href-property)
 * id (see [*id (property)* ](#_bookmark208))
 * InnerImage (see [*InnerImage (property)* ](#innerimage-property))
@@ -4758,7 +4758,7 @@ document.links[#].`<*link-property*>`
 * port (see [*port (property)* ](#_bookmark286))
 * protocol (see [*protocol (property)* ](#protocol-property)))
 * search (see [*search (property)* ](#seed-method))
-* target (see [*target (property)* ](#_bookmark409))
+* target (see [*target (property)* ](#target-property))
 * title (see [*title (property)* ](#title-property))
 * Url (see [*Url (property)* ](#url-property))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#begintransaction-function0))
@@ -4966,9 +4966,9 @@ document.location.`<*location-property*>`
 
 > **Note:** The properties of location are identical to those of link. The only exception is that location has no target property. Also, the location object is not part of any collection. The location properties are listed below for reference.
 
-* hash (see [*hash (property)* ](#_bookmark192))
-* host (see [*host (property)* ](#_bookmark197))
-* hostname (see [*hostname (property)* ](#_bookmark197))
+* hash (see [*hash (property)* ](#hash-property))
+* host (see [*host (property)* ](#host-property))
+* hostname (see [*hostname (property)* ](#hostname-property))
 * href (see [*href (property)* ](#href-property)
 * id (see [*id (property)* ](#_bookmark208))
 * InnerText (see [*InnerText (property)* ](#innertext-property))
@@ -5033,7 +5033,7 @@ wlVerification.MaxPageTime(timeLimit, severity)
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object))
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -5636,8 +5636,8 @@ Perform an HTTP or HTTPS Options command.
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Head() (see [*Head() (method)* ](#_bookmark194))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
+* Head() (see [*Head() (method)* ](#head-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * Put() (see [*Put() (method)* ](#put-method)
@@ -5729,7 +5729,7 @@ PageContentLength is used to retrieve the size in bytes of the content object in
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object)))
 * PageTime (see [*PageTime (property)* ](#_bookmark271))
 * Severity (see [*Severity (property)* ](#severity-property)))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -5758,7 +5758,7 @@ wlVerification.PageTime
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object))
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -6087,7 +6087,7 @@ wlGlobals.ParseOnce = true
 * ParseScripts (see [*ParseScripts (property)* ](#_bookmark282))
 * ParseTables (see [*ParseTables (property)* ](#parseonce-property))
 * ParseXML (see [*ParseXML (property)* ](#_bookmark284))
-* SetClientType (see [*SetClientType (function)* ](#_bookmark352))
+* SetClientType (see [*SetClientType (function)* ](#setclienttype-function))
 
 ## ParseOthers (property)
 
@@ -6408,9 +6408,9 @@ You may not use the TransName parameter by itself. Post() expects to receive eit
 * DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Head() (see [*Head() (method)* ](#_bookmark194))
-* Options() (see [*Options() (method)* ](#_bookmark266))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
+* Head() (see [*Head() (method)* ](#head-method))
+* Options() (see [*Options() (method)* ](#options-method))
 * Put() (see [*Put() (method)* ](#put-method)
 * ReportEvent() (see [*ReportEvent() (function)* ](#reportevent-function))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
@@ -6627,9 +6627,9 @@ You may not use the TransName parameter by itself. Put() expects to receive eith
 * DataFile (see [*DataFile (property)* ](#datafile-property))
 * Delete() (see [*Delete() (HTTP method)*](#_bookmark94)) 
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
-* Head() (see [*Head() (method)* ](#_bookmark194))
-* Options() (see [*Options() (method)* ](#_bookmark266))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
+* Head() (see [*Head() (method)* ](#head-method))
+* Options() (see [*Options() (method)* ](#options-method))
 * Post() (see [*Post() (method)* ](#_bookmark289))
 * ReportEvent() (see [*ReportEvent() (function)* ](#reportevent-function))
 * SetFailureReason() (see [*SetFailureReason() (function)* ](#setfailurereason-function))
@@ -6773,7 +6773,7 @@ This method deletes the wlOutputFile object and closes the output file.
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * Write() (see [*Write() (method)* ](#write-method))
@@ -6812,7 +6812,7 @@ This function enables you to record specific events as they occur. This informat
 
 **Method of Object**
 
-* wlException (see [wlException (object) ](#_bookmark446))
+* wlException (see [wlException (object) ](#wlexception-object))
 
 **Description**
 
@@ -6835,8 +6835,8 @@ Sends a message to the Log Window that includes the error message and severity l
 * [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 ## RequestRetries (property)
 
@@ -6891,7 +6891,7 @@ Return to the beginning of the output file.
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#wloutputfile-constructor))
 * Write() (see [*Write() (method)* ](#write-method))
 * Writeln() (see [*Writeln() (method)* ](#writeln-method))
@@ -6954,7 +6954,7 @@ For example, it is convenient to add RoundNum to a Message Node to clarify the r
 * GetOperatingSystem() (see [*GetOperatingSystem() (function)* ](#getoperatingsystem-function))
 * [*Identification Variables and Functions* ](#_bookmark28)
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432))
+* VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function))
 
 ## row (object)
 
@@ -7017,7 +7017,7 @@ The row object may be accessed as a member of the wlTables family of table, row,
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property))
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 
 ## rowIndex (property)
 
@@ -7049,7 +7049,7 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 * MatchBy (see [*MatchBy (property)* ](#_bookmark246))
 
 * row (see [*row (object)* ](#row-object)) (wlTables property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 ## SaveHeaders (property)
@@ -7455,7 +7455,7 @@ wlGlobals.SelectWriteTimeout = number
 
 **Property of Objects**
 
-* option (see [*op*](#_bookmark264)[*tion (object)* ](#_bookmark264))
+* option (see [*option (object)* ](#option-object)))
 
 **Description**
 
@@ -7567,11 +7567,11 @@ SendCounter(EventName)
 **See also**
 
 * SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
-* SendTimer() (see [*SendT*](#_bookmark348)[*imer() (function)* ](#_bookmark348))
-* SetTimer() (see [*Se*](#sendtimer-function)[*tTimer() (function)* ](#sendtimer-function))
-* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function))
-* SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 
 ## SendMeasurement() (function)
 
@@ -7604,12 +7604,12 @@ WebLOAD recommends setting measurement functions within script files directly th
 
 **See also**
 
-* SendCounter() (see [*Send*](#_bookmark343)[*Counter() (function)* ](#_bookmark343))
-* SendTimer() (see [*SendT*](#_bookmark348)[*imer() (function)* ](#_bookmark348))
-* SetTimer() (see [*Se*](#sendtimer-function)[*tTimer() (function)* ](#sendtimer-function))
-* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function)))
-* SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)
+* SendCounter() (see [*Send Counter() (function)* ](#sendcounter-function))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 
 ## SendTimer() (function)
 
@@ -7631,12 +7631,12 @@ WebLOAD recommends setting timer functions within script files directly through 
 
 **See also**
 
-* SendCounter() (see [*Send*](#_bookmark343)[*Counter() (function)* ](#_bookmark343))
-* SendMeasurement() (see [*SendMe*](#sendmeasurement-function)[*asurement() (function)* ](#sendmeasurement-function))
-* SetTimer() (see [*Se*](#_bookmark357)[*tTimer() (function)* ](#_bookmark357))
-* Sleep() (see [*S*](#sleep-function)[*leep() (function)* ](#sleep-function))
-* SynchronizationPoint() (see [*S*](#_bookmark404)[*ynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark36)
+* SendCounter() (see [*Send Counter() (function)* ](#sendcounter-function))
+* SendMeasurement() (see [*SendMe asurement() (function)* ](#sendmeasurement-function))
+* SetTimer() (see [*SetTimer() (function)* ](#settimer-function))
+* Sleep() (see [*Sleep() (function)* ](#sleep-function))
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 
 ## Set() (method)
 
@@ -7671,7 +7671,7 @@ Assigns a number, Boolean, or string value to the specified shared variable. If 
 
 **See also**
 
-* Add() (see [*Add() (method)* ](#_bookmark45))
+* Add() (see [*Add() (method)* ](#add-method))
 * Get() (see [*Get() (addition method)* ](#get-addition-method))
 
 ### Set() (cookie method)
@@ -7746,8 +7746,8 @@ When you call SetClientType(“Thin”), the ParseOnce flag is set to true. Each
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
-* ParseOnce (see [*ParseOnce (property)* ](#_bookmark280)*on* page [198](#_bookmark280))
-* GetImagesInThinClient (see [*GetImagesInThinClient (property)* ](#_bookmark164))
+* ParseOnce (see [*ParseOnce (property)* ](#_bookmark280))
+* GetImagesInThinClient (see [*GetImagesInThinClient (property)* ](#getimagesinthinclient-property))
 * [wlGlobals](#wlglobals-object)
 * [wlHttp](#wlhttp-object)
 * [wlLocals](#wllocals-object)
@@ -7784,7 +7784,7 @@ The SetFailureReason() function accepts a literal string as the parameter. This 
 
 Execute the specified callback after a specified number of milliseconds.
 
-The script execution will continue immediately, not waiting for the specified time or the function to execute (unlike the [*Sleep() (function)*, ](#_bookmark364)which instructs the script to pause for a specified time).
+The script execution will continue immediately, not waiting for the specified time or the function to execute (unlike the [*Sleep() (function)*, ](#sleep-function)which instructs the script to pause for a specified time).
 
 **Syntax**
 
@@ -7819,7 +7819,7 @@ InfoMessage(“after sleep”);
 
 **See also**
 
-* [*Sleep() (function)* ](#_bookmark364)
+* [*Sleep() (function)* ](#sleep-function)
 
 ## SetTimer() (function)
 
@@ -7843,10 +7843,10 @@ Enter a timer name and click **OK**. The Set Timer item appears in the Script Tr
 
 * SendCounter() (see [*SendCounter() (function)* ](#sendcounter-function))
 * SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
-* SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
 * Sleep() (see [*Sleep() (function)* ](#sleep-function))
-* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 
 ## SevereErrorMessage() (function)
 
@@ -7860,7 +7860,7 @@ SevereErrorMessage(msg)
 
 **Comment**
 
-If you call SevereErrorMessage() in the main script, WebLOAD stops all activity in the Load Generator and runs the error handling functions (OnScriptAbort(), etc.), if they exist in the script. You may also use the wlException (see [*wlException*](#_bookmark446) [*(object)* ](#_bookmark446)) object with the built-in try()/catch() commands to catch errors within your script. For more information about error management and execution sequence options, see *Error Management* in the *WebLOAD Scripting Guide*.
+If you call SevereErrorMessage() in the main script, WebLOAD stops all activity in the Load Generator and runs the error handling functions (OnScriptAbort(), etc.), if they exist in the script. You may also use the wlException (see [*wlException (object)* ](#wlexception-object)) object with the built-in try()/catch() commands to catch errors within your script. For more information about error management and execution sequence options, see *Error Management* in the *WebLOAD Scripting Guide*.
 
 **GUI mode**
 
@@ -7875,9 +7875,9 @@ WebLOAD recommends adding message functions to your script files directly throug
 * [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
-* wlException (see [*wlException (object)* ](#_bookmark446))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
+* wlException (see [*wlException (object)* ](#wlexception-object))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 ## Severity (property)
 
@@ -7907,7 +7907,7 @@ To set the global severity of all verification fail errors to WLError, write:
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object))
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * PageTime (see [*PageTime (property)* ](#_bookmark271))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -7967,8 +7967,8 @@ For more information on setting the Sleep Time Control settings, see *Configurin
 * SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
 * SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
 * SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
-* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 
 ## SleepDeviation (property)
@@ -8853,7 +8853,7 @@ WebLOAD recommends enabling or disabling the SSL cache through the WebLOAD Conso
 
 **Comment**
 
-To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59)) property.
+To clear the SSL cache, set the ClearSSLCache() (see [*ClearSSLCache() (method)* ](#clearsslcache-method)) property.
 
 **See also**
 
@@ -8955,8 +8955,8 @@ StopClient ([SeverityLevel], [Reason])
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SeverityLevel            | Optionally, specify the  severity level of the error that occurred. The possible values are:`<br>`WLMinorError. The message is displayed  as a warning message.  `<br>`WLError. The  message is displayed as an error message. If no severity level is specified, WLMinorError is assumed.  **Note:** Error levels are used for display  in the log window and do not define any logical behavior. |
-| Reason                   | An optional string containing the reason  for stopping the virtual client running the script.  If no reason is specified, a default message is  displayed. See[*Default   Message* ](#_bookmark402)below.                                                                                                                                                                                                     |
-
+| Reason                   | An optional string containing the reason  for stopping the virtual client running the script.  If no reason is specified, a default message is  displayed. See[*Default   Message* ](#default_message)below.                                                                                                                                                                                                     |
+<a name = "default_message"></a>
 **Default Message**
 
 The following default message is displayed when no reason is specified:
@@ -9086,11 +9086,11 @@ Only client threads running within a single spawned process, on the same Load Ge
 
 * SendCounter() (see [*SendCounter() (function)* ](#sendcounter-function))
 * SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
-* SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
 * SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
 * Sleep() (see [*Sleep() (function)* ](#sleep-function))
-* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark404))
-* [*Timing Functions* ](#_bookmark35)
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
 
 ## tagName (property)
 
@@ -9193,7 +9193,7 @@ The following code verifies that the server response does not contain the word "
 * wlVerification (see [*wlVerification (object)* ](#wlverification-object))
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 * Title (see [*Title (function)* ](#title-function))
 
@@ -9205,7 +9205,7 @@ The following code verifies that the server response does not contain the word "
 
 Assigns a unique number to a process based on the client/Load Generator/script. This number is unique across the script’s slave processes and is saved in the ClientNum property. Each client in a Load Generator is assigned a unique number. However, two clients in two different Load Generators may have the same number.
 
- **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#_bookmark432)) to obtain an ID number which is unique system-wide.
+ **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
 
 If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the script
 
@@ -9381,7 +9381,7 @@ wlVerification.Title("compare title", sendEmailOnError, [VP@rrrr.com,](mailto:VP
 * PageContentLength (see [*PageContentLength (property)* ](#_bookmark270))
 * PageTime (see [*PageTime (property)* ](#_bookmark271))
 * Severity (see [*Severity (property)* ](#severity-property))
-* Function (see [*Function (property)* ](#_bookmark130))
+* Function (see [*Function (property)* ](#function-property))
 * ErrorMessage (see [*ErrorMessage (property)* ](#errormessage-property))
 
 
@@ -9474,11 +9474,11 @@ The Type property for wlHttp.Data and wlHttp.DataFile objects is written in uppe
 * Erase (see [*Erase (property)* ](#erase-property))
 * FileName (see [*FileName (property)* ](#filename-property))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Post() (see [*Post() (method)* ](#post-method)))
 * value (see [*value (property)* ](#value-property))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 * [wlHttp](#wlhttp-object)
 
 ## Url (property)
@@ -9656,7 +9656,7 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http_components)
-* SendTimer() (see [*SendTimer() (function)* ](#_bookmark348))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
 * SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
 
 
@@ -9666,7 +9666,7 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 **Property of Objects**
 
 * element (see [*element (object)* ](#element-object))
-* option (see [*option (object)* ](#_bookmark264))
+* option (see [*option (object)* ](#option-object)))
 * wlHeaders (see [*wlHeaders (object)* ](#wlheaders-object))
 * wlHttp.Data (see [*Data (property)* ](#data-property))
 * wlHttp.Header (see [*Header (property)* ](#header-property))
@@ -9728,16 +9728,16 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 * FileName (see [*FileName (property)* ](#filename-property))
 * form (see [*form (object)* ](#form-object))
 * FormData (see [*FormData (property)* ](#formdata-property))
-* Get() (see [*Get() (transaction method)* ](#_bookmark136))
+* Get() (see [*Get() (transaction method)* ](#get-transaction-method))
 * Header (see [*Header (property)* ](#header-property))
 * Image (see [*Image (object)* ](#_bookmark210))
-* key (see [*key (property)* ](#_bookmark229))
-* option (see [*option (object)* ](#_bookmark264))
+* key (see [*key (property)* ](#key-property)))
+* option (see [*option (object)* ](#option-object))
 * Post() (see [*Post() (method)* ](#post-method))
 * [*Select* ](#select-method)
 * type (see [*type (property)* ](#type-property))
 * value (see [*value (property)* ](#value-property))
-* wlClear() (see [*wlClear() (method)* ](#_bookmark440))
+* wlClear() (see [*wlClear() (method)* ](#wlclear-method))
 * wlHeaders (see [*wlHeaders (object)* ](#wlheaders-object))
 * wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object))
 * wlSearchPairs (see [*wlSearchPairs (object)* ](#begintransaction-function0))
@@ -9925,8 +9925,8 @@ into the script. The Message dialog box opens. Enter the message text, select th
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* wlException (see [*wlException (object)* ](#_bookmark446))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* wlException (see [*wlException (object)* ](#wlexception-object))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 
 
@@ -10072,8 +10072,8 @@ retValue = wlCookie.Get(“CUSTOMER”, “[www.ABCDEF.com](http://www.abcdef.co
 
 * ClearAll() (see [*ClearAll() (method)* ](#clearall-method)))
 * Delete() (see [*Delete() (cookie method)* ](#delete-cookie-method))
-* Set() (see [*Set() (cookie method)* ](#_bookmark351))
-* Get() (see [*Get() (cookie method)* ](#_bookmark135))
+* Set() (see [*Set() (cookie method)* ](#set-cookie-method))
+* Get() (see [*Get() (cookie method)* ](#get-cookie-method))
 
 ## wlDataFileField (method)
 
@@ -10214,7 +10214,7 @@ else {
 * GetMessage() (see [*GetMessage() (method)* ](#getmessage-method))
 * GetSeverity() (see [*GetSeverity() (method)* ](#getseverity-method))
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
-* wlException() (see [*wlException() (constructor)* ](#_bookmark448))
+* wlException() (see [*wlException() (constructor)* ](#wlexception-constructor))
 
 **See also**
 
@@ -10223,7 +10223,7 @@ else {
 * [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
 
 
 
@@ -10231,7 +10231,7 @@ else {
 
 **Method of Object**
 
-* wlException (see [*wlException (object)* ](#_bookmark446))
+* wlException (see [*wlException (object)* ](#wlexception-object))
 
 **Description**
 
@@ -10266,7 +10266,7 @@ Returns a new wlException object.
 * ReportLog() (see [*ReportLog() (method)* ](#reportlog-method))
 * SevereErrorMessage() (see [*SevereErrorMessage() (function)* ](#severeerrormessage-function))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
-* WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark437))
+* WarningMessage() (see [*WarningMessage() (function)* ](#warningmessage-function))
 
 
 
@@ -10286,7 +10286,7 @@ Edit wlGeneratorGlobal properties and methods through the IntelliSense editor, d
 
 The wlGeneratorGlobal object includes the following methods:
 
-* Add() (see [*Add() (method)* ](#_bookmark45))
+* Add() (see [*Add() (method)* ](#add-method))
 * Get() (see [*Get() (addition method)* ](#get-addition-method))
 * Set() (see [*Set() (addition method)* ](#set-addition-method)))
 
@@ -10502,7 +10502,7 @@ document.wlHeaders[0].key = “Server” document.wlHeaders[0].value = “Netsca
 
 The wlHeaders object includes the following properties:
 
-* key (see [*key (property)* ](#_bookmark229))
+* key (see [*key (property)* ](#key-property))
 * value (see [*value (property)* ](#value-property))
 
 **See also**
@@ -10809,7 +10809,7 @@ Each individual property includes examples of the syntax for that property.
 
 * Close() (see [*Close() (function)* ](#close-function))
 * remove() (see [*remove() (method)* ](#delete-cookie-method))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method)))
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#wloutputfile-constructor))
 * Write() (see [*Write() (method)* ](#write-method))
@@ -10899,7 +10899,7 @@ If you declare a new wlOutputFile object in the main body of a script, and then 
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile (see [*wlOutputFile (object)* ](#wloutputfile-object))
@@ -11016,7 +11016,7 @@ document.links[2].wlSearchPairs[0].key = “Product” document.links[2].wlSearc
 
 The wlSearchPairs object includes the following properties:
 
-* key (see [*key (property)* ](#_bookmark229))
+* key (see [*key (property)* ](#key-property))
 * value (see [*value (property)* ](#value-property))
 
 **See also**
@@ -11200,7 +11200,7 @@ new values within the main body of a script, for they will not be shared correct
 
 **Methods**
 
-* Add() (see [*Add() (method)* ](#_bookmark45))
+* Add() (see [*Add() (method)* ](#add-method))
 * Get() (see [*Get() (addition method)* ](#get-addition-method))
 * Set() (see [*Set() (addition method)* ](#set-addition-method))
 
@@ -11265,7 +11265,7 @@ Each wlTables object contains information about the data found in the whole tabl
 
 
 * rowIndex (see [*rowIndex (property)* ](#rowIndex (property))) (row property)
-* tagName (see [*tagName (property)* ](#_bookmark407)) (cell property)
+* tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 
 
 
@@ -11653,7 +11653,7 @@ MyFileObj.Write(“Happy Birthday”)
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#wloutputfile-constructor))
@@ -11699,7 +11699,7 @@ This method writes a string followed by a newline character to the output file.
 * [*File Management Functions* ](./using_javascript_ref.md#file-management-functions)
 * GetLine() (see [*GetLine() (function)* ](#getline-function))
 * IncludeFile() (see [*IncludeFile() (function)* ](#includefile-function))
-* Open() (see [*Open() (function)* ](#_bookmark261))
+* Open() (see [*Open() (function)* ](#open-function))
 * Reset() (see [*Reset() (method)* ](#reset-method))
 * [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 * wlOutputFile() (see [*wlOutputFile() (constructor)* ](#wloutputfile-constructor))

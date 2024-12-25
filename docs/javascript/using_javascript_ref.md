@@ -78,7 +78,7 @@ Each individual property and method includes examples of the syntax for that pro
 
 - ClearDNSCache() (see [*ClearDNSCache() (method)* ](#cleardnscache-method))
 
-- ClearSSLCache() (see [*ClearSSLCache() (method)* ](#_bookmark59))
+- ClearSSLCache() (see [*ClearSSLCache() (method)* ](./actions_objects_functions.md#clearsslcache-method))
 
 
 
@@ -86,11 +86,11 @@ The following methods are for wlHttp objects only:
 
 - CloseConnection() (see [*CloseConnection() (method)* ](#_bookmark63))
 
-- Get() (see [*Get() (transaction method)* ](#_bookmark136))
+- Get() (see [*Get() (transaction method)* ](./actions_objects_functions.md#get-transaction-method))
 
 - Post() (see [*Post() (method)* ](#_bookmark289))
 
-- Head() (see [*Head() (method)* ](#_bookmark194))
+- Head() (see [*Head() (method)* ](./actions_objects_functions.md#head-method))
 
 
 
@@ -129,7 +129,7 @@ The following properties are for wlHttp objects only
 
 - DataCollection.type (see [*type (property)* ](./actions_objects_functions.md#type-property))
 
-- DataCollection.value (see [*value (property)* ](#_bookmark431))
+- DataCollection.value (see [*value (property)* ](./actions_objects_functions.md#value-property))
 
 
 
@@ -190,7 +190,7 @@ The following properties are used by wlHttp, wlLocals, and wlGlobals objects unl
 
 - UsingTimer (see [*UsingTimer (property)* ](./actions_objects_functions.md#usingtimer-property))
 
-- Version (see [*Version (property)* ](#_bookmark436))
+- Version (see [*Version (property)* ](./actions_objects_functions.md#version-property))
 
 - wlTarget (see [*wlTarget (property)* ](./actions_objects_functions.md#wltarget-property))
 
@@ -272,11 +272,11 @@ These functions manage access to a script’s function and input files, includin
 
 - GetLine() (wlOutputFile) (see [*GetLine() (function)* ](./actions_objects_functions.md#getline-function))
 
-- GetLine() (wlInputFile) (see [*GetLine() (method)* ](#_bookmark167))
+- GetLine() (wlInputFile) (see [*GetLine() (method)* ](./actions_objects_functions.md#getline-method))
 
 - IncludeFile() (see [*IncludeFile() (function)* ](./actions_objects_functions.md#includefile-function))
 
-- Open() (wlOutputFile) (see [*Open() (function)* ](#_bookmark262))
+- Open() (wlOutputFile) (see [*Open() (function)* ](./actions_objects_functions.md#open-function))
 
 - Open() (wlInputFile) (see [*Open() (method)* ](./actions_objects_functions.md#open-method))
 
@@ -426,11 +426,11 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
 
-- WarningMessage() (see [*WarningMessage() (function)* ](#_bookmark438))
+- WarningMessage() (see [*WarningMessage() (function)* ](./actions_objects_functions.md#warningmessage-function))
 
 - wlException (see [*wlException (object)* ](./actions_objects_functions.md#wlexception-object))
 
-- wlException() (see [*wlException() (constructor)* ](#_bookmark449))
+- wlException() (see [*wlException() (constructor)* ](./actions_objects_functions.md#wlexception-constructor))
 
 
 
@@ -609,11 +609,11 @@ The set of timer functions includes the following:
 
 - SendTimer() (see [*SendTimer() (function)* ](#_bookmark347))
 
-- SetTimer() (see [*SetTimer() (function)* ](#_bookmark357))
+- SetTimer() (see [*SetTimer() (function)* ](./actions_objects_functions.md#settimer-function))
 
-- Sleep() (see [*Sleep() (function)* ](#_bookmark364))
+- Sleep() (see [*Sleep() (function)* ](./actions_objects_functions.md#sleep-function))
 
-- SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#_bookmark406))
+- SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](./actions_objects_functions.md#synchronizationpoint-function))
 
 
 

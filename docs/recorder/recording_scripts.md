@@ -57,7 +57,7 @@ If you start and stop recording more than once during a single recording session
 
 **To record a script:**
 
-1. Start **WebLOAD Recorder** (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
+1. Start **WebLOAD Recorder** (see [*Starting WebLOAD Recorder* ](#starting-webload-recorder)).
 
    -Or-
 
@@ -84,7 +84,7 @@ If you start and stop recording more than once during a single recording session
 
    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](#_bookmark159).
+   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](./correlating_scripts.md#configuring-the-default-browser).
 
 5. Optionally change the browser settings:
 
@@ -103,7 +103,7 @@ If you start and stop recording more than once during a single recording session
 
    
 
-   In addition, you can optionally click **More Options** to open the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure 119](#_bookmark160)) and define the default browser settings in full detail.
+   In addition, you can optionally click **More Options** to open the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./configuring_recorder_options.md#browser_settings_tab)) and define the default browser settings in full detail.
 
 6. Click **OK**. The Recording dialog box closes.
 
@@ -534,7 +534,7 @@ When a script is recorded, all of the HTTP traffic is saved even if not all of i
 
 
 
-For example, by default when a script is recorded, the HTTP headers settings for the HTTP requests are not displayed in the script even though they are recorded. After selecting the **Generate All Headers** checkbox in the Script Generation tab and regenerating the script, the script includes the wlHttp headers property. For more information on the script content that can be regenerated, see [*Specifying the Script](#_bookmark155) *[Content to be Generated* ](#_bookmark155)
+For example, by default when a script is recorded, the HTTP headers settings for the HTTP requests are not displayed in the script even though they are recorded. After selecting the **Generate All Headers** checkbox in the Script Generation tab and regenerating the script, the script includes the wlHttp headers property. For more information on the script content that can be regenerated, see [*Specifying the Script Content to be Generated* ](./configuring_recorder_options.md#specifying-the-script-content-to-be-generated)
 
 In addition, script regeneration is affected by changes in the settings defined in the Post Data tab in the Record and Script Generation Options dialog box. You can record a script with content type x in the DATA list, DATAFile list, or not in any list, (which means it will be recorded as FORMDATA) and then change the settings and regenerate the script and it will play back according to the new settings.
 
@@ -709,7 +709,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
    1. Select the Browser Settings tab.
 
-   1. The Browser Settings tab appears (see [Figure 119](#_bookmark160)).
+   1. The Browser Settings tab appears (see [Figure 119](./configuring_recorder_options.md#browser_settings_tab)).
 
    1. In the Automatic Browser Settings area, uncheck **Set the Proxy definitions automatically**.
 
@@ -757,7 +757,7 @@ Refer to the following table if you are having recording related problems. Befor
 
 | **Problem**                                                  | **Possible Options**                                         | **Solution**                                                 |      |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--- |
-| Script is not created while recording                        | Make sure browser opens while recording.                     | Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Ensure that the settings are correct for your browser. See [*Configuring the Default Browser* ](#_bookmark159) for more information. |      |
+| Script is not created while recording                        | Make sure browser opens while recording.                     | Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Ensure that the settings are correct for your browser. See [*Configuring the Default Browser* ](#./correlating_scripts.md#configuring-the-default-browser) for more information. |      |
 |                                                              | Check browser proxy settings.                                | **For Internet Explorer:**<br /><p>1. `	`From your browser’s menu, select **Tools  Internet Options** and select the **Connections Options** tab.</p><p>2. Click **Lan Settings**.</p><p>3. If none of the checkboxes are selected, you have a direct connection to the internet and the browser proxy settings are not the problem.</p><p>&emsp;If **Automatically detect settings** and/or **Use automatic configuration script** are checked, you must disable the automatic settings. Before disabling the automatic settings, contact your system administrator for your proxy server information.</p><p>&emsp;If **Use a proxy server for your LAN** is checked, copy the Address and Port field’s current proxy settings. In WebLOAD, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Proxy Options** tab. Check **Use the following definitions for the application’s proxy server** and enter the current proxy information into the HTTP Proxy/Port and SSL Proxy/Port fields.</p> |      |
 |                                                              |                                                              | **For Mozilla Firefox:**<br /><p>1. From your browser’s menu, select</p><p>&emsp;**Tools** > **Options**.</p><p>2. At the top of the Options dialog box, select the **Advanced** icon and select the **Network** tab.</p><p>3. In the Connection area, click **Settings**.</p><p>4. If **Direct connection to the internet** is selected, the browser proxy settings are not the problem.</p><p></p><p>If **Auto-detect proxy settings for this network** or **Automatic proxy configuration URL** are selected, you must disable the automatic settings. Before disabling the automatic settings, contact your system administrator for your proxy server information.</p><p>If **Manual proxy configuration** is selected, copy the **HTTP Proxy** and **Port** field’s current proxy settings. In WebLOAD, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Proxy Options** tab. Check **Use the following definitions for the application’s proxy server** and enter the current proxy information into the HTTP Proxy/Port and SSL Proxy/Port fields.</p> |      |
 |                                                              | Recording with a browser other than Internet Explorer or Mozilla Firefox. | <p>1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Select **Other browser** or **None** as the default browser setting.</p><p>2. While recording, you must manually change the client’s proxy setting. In your browser, manually configure the proxy settings to use WebLOAD’s default port: 9884.</p><p>&emsp;This points the browser’s proxy settings to the WebLOAD recorder enabling WebLOAD to record the browser’s HTTP clients.</p> |      |

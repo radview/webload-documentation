@@ -498,7 +498,7 @@ Use the FTP-Connect Building Block to open an FTP connection.
 
    For example, in the preceding figure, the comment area explains that the UserName field is used to define the user ID to be used when logging in to the specified FTP host. WebLOAD Recorder automatically sends the user-specified name and password to the FTP host when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 41](#_bookmark224).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_connect).
 
 4. Click **OK**.
 
@@ -507,7 +507,7 @@ Use the FTP-Connect Building Block to open an FTP connection.
    In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
 
 
-
+<a name = "ftp_connect"></a>
 The fields in the FTP-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1259,7 +1259,7 @@ Use the NNTP-GetArticle Building Block to retrieve articles from the specified n
 
 3. For example, in the preceding figure, the comment area explains that the Article ID field contains the ID number of the news article to be retrieved.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 57](#_bookmark261).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_getarticle).
 
 5. Click **OK**.
 
@@ -1267,6 +1267,8 @@ Use the NNTP-GetArticle Building Block to retrieve articles from the specified n
 
    In the script, the specified article is retrieved from the specified news group.
 
+
+<a name ="nntp_getarticle"></a>
 The fields in the NNTP-GetArticle Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1294,14 +1296,14 @@ Use the NNTP-GetArticleCount Building Block to retrieve the number of articles i
 
    For example, in the preceding figure, the comment area explains that the Group Name field contains the name of the news group whose articles are to be counted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 58](#_bookmark263).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount").
 
 4. Click **OK**.
 
 The NNTP-GetArticleCount Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the number of articles appearing in the specified news group is returned.
 
 
-
+<a name ="nttp_getarticlecount"></a>
 The field in the NNTP-GetArticleCount Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -3176,7 +3178,7 @@ For example:
 The Real Clients Toolbox includes Selenium, Perfecto Mobile, and JUnit Runner building blocks.
 
 ### Selenium Building Blocks
-Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](#_bookmark366), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
+Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](./appendix_g.md#selenium-integration), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
 
 **To call Selenium actions using the Selenium building blocks:**
 
@@ -3204,7 +3206,10 @@ Use the Selenium Driver Building Block to instruct WebLOAD to create a Selenium 
 
 3. For example, in the preceding figure, the comment area explains that the Driver Type field is used to specify which Selenium driver type to use.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in [Table 99](#_bookmark343).
+4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_driver).
+
+
+<a name = "selenium_driver"></a>
 
    
 

@@ -55,11 +55,11 @@ WebLOAD Recorder enables you to do the following:
 
   -Or-
   
-  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*).
+  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)).
   
   -Or-
   
-  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](#_bookmark138)).
+  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)).
 
 **To view the Script Tree:**
 
@@ -810,6 +810,8 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
 
    > **Note:** When accessing the Response Validation dialog box from **HTML View**, the dialog box appears automatically configured with the selected content.
 
+
+   <a name ="[response_validation_dialog_box"></a>
    ![Response Validation Dialog Box](../images/rsp_vald_diag.png)
 
    
@@ -838,7 +840,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    | **Lower than x bytes**                              | The size of the Web page content, in bytes, must be less than the specified value for the validation to be successful. |
    | **Recorded Content Length is**                      | The size of the response, in bytes.                          |
    | *Content*                                           |                                                              |
-   | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing](#_bookmark126) *[Multiple Text Validations of Web Page Content* ](#_bookmark126)*. |
+   | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing Multiple Text Validations of Web Page Content* ](#performing-multiple-text-validations-of-web-page-content). |
    | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
    | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "`<text to find>`" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
    | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
@@ -861,7 +863,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 **To validate the content of a Web page:**
 
-1. Follow the instructions in [*Validating Responses* ](#_bookmark123) to access the Response Validation dialog box ([Figure 90](#_bookmark124)).
+1. Follow the instructions in [*Validating Responses* ](#validating-responses) to access the Response Validation dialog box: ([Figure](#response_validation_dialog_box)).
 
 1. In the **Content** section, check the **Validate** checkbox.
 

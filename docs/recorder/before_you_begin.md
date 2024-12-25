@@ -39,7 +39,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Internet Explorer:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](./recording_scripts.md#starting-webload-recorder)).
 
 1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)).
 
@@ -88,7 +88,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Netscape Navigator:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#./recording_scripts.md#starting-webload-recorder)).
 
 1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](./configuring_recorder_options.md#setting-the-proxy-options)).
 
@@ -140,7 +140,7 @@ When recording is finished, reset the browser proxy to its original setting.
 
 **To configure the proxy value in Mozilla Firefox:**
 
-1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#_bookmark35)).
+1. Open WebLOAD Recorder (see [*Starting WebLOAD Recorder* ](#./recording_scripts.md#starting-webload-recorder)).
 
 1. Locate the Proxy Port number in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame. Usually this port number is 9884 (see [*Setting the Proxy Options* ](#./configuring_recorder_options.md#setting-the-proxy-options)).
 

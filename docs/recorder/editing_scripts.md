@@ -65,15 +65,15 @@ The following table describes the menu options:
 |**Right-Click Menu Option**|**Purpose**|
 | :- | :- |
 |<p>Synchronize</p><p>(Agenda root menu only)</p>|<p>Synchronize the Script Tree, with the edits made to the JavaScript code in Visual Editing mode In most cases, synchronization is performed automatically.</p><p>Only available at the Agenda root level.</p>|
-|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#_bookmark59)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set)*.</p>|
+|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#adding-script-items-and-javascript-objects-to-a-script)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set)*.</p>|
 |Paste|<p>Paste the script item you cut or copied, after the current script item.</p><p>**Note:** If you copied a script item, you can paste it more than once. Each time you paste, the node ID automatically changes.</p><p></p><p>If you cut a script item, you can paste it only once, and the node ID does not change.</p>|
 |<p>Cut</p><p>(script item menu only)</p>|Cut the script item from the tree to paste elsewhere.|
 |<p>Copy</p><p>(script item menu only)</p>|Copy the script item from the tree to paste elsewhere.|
 |<p>Delete</p><p>(script item menu only)</p>|Delete the script item from the tree.|
 |Toggle Breakpoint|Add or remove a breakpoint at the selected script item in the Script Tree. For more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints).|
-|Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*.|
+|Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)*.|
 |Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration*).|
-|Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](#_bookmark123)|
+|Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](./running_debugging_scripts.md#validating-responses)|
 
 
 

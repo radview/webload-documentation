@@ -17,9 +17,9 @@ You will be working with a test script. The basic steps are:
 
 1. Recording your script – describes the steps in recording a basic script (see [*Creating](#creating-a-script)
 
-1. Editing your script – explains how to edit and modify your script, insert new items into your script, and parameterize form data to create data driven tests (see [*Editing](#_bookmark26)[ Your Script* ](#_bookmark26)).
+1. Editing your script – explains how to edit and modify your script, insert new items into your script, and parameterize form data to create data driven tests (see [*Editing Your Script* ](#editing-your-script)).
 
-1. Running and debugging your script – explains run and debug your script (see
+1. Running and debugging your script – explains run and debug your script 
 
    
 

@@ -1,4 +1,4 @@
-# Appendix D: WebLOAD–supported Character Sets
+# WebLOAD–supported Character Sets
 
  
 

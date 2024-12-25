@@ -129,7 +129,7 @@ You can control the default correlation action that WebLOAD should perform after
    - **Do not run** – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.
    - **Use existing rules** – Run the correlation engine once the script recording is complete, only using the existing rules (do not try to auto-discover new rules).
    - **Discover rules** – Run the correlation engine using existing rules and try to discover new rules.
-   - **Prompt** – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](#_bookmark36).
+   - **Prompt** – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](./recording_scripts.md#recording-a-script).
 
 
 
