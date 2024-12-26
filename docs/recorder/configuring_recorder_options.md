@@ -635,7 +635,7 @@ The following table defines all the fields and options in the Browser Settings t
 |*Default browser selection*||
 |**Web browser**|<p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see [*Configuring the Proxy Value for Your Browser* ](./before_you_begin.md#configuring-the-proxy-value-for-your-browser)).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p>|
 |**Other browser**|Select this option and browse to define a browser other than Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.|
-|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording](#_bookmark356) [Mobile Applications ](#_bookmark356).|
+|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording Mobile Applications ](./appendix_e.md#appendix-e-recording-mobile-applications).|
 |**None**|Select this option to define that there is no default browser.|
 |*Automatic browser settings*||
 |**Set the proxy definitions automatically**|If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](./before_you_begin.md#configuring-the-proxy-value-for-your-browser).|
@@ -1370,10 +1370,11 @@ You can create a new data file.
 
 3. In the **Description** field, optionally enter a description of the number parameter.
 
-4. Fill in the fields as described in [Table 35](#_bookmark200).
+4. Fill in the fields as described in the [Table](#parameterization_manager).
 
 5. Click **OK**.
 
+<a name = "parameterization_manager"></a>
 The following table describes the fields and buttons in the Parameterization Manager – Number dialog box.
 
 |**Setting**|**Description**|
@@ -1451,7 +1452,7 @@ The first step is to use the Parameterization Manager to define the set of value
 
 1. Right-click and select **Insert Variable**.
 
-   The Insert Variable menu appears ([Figure 54](#_bookmark68)).
+   The Insert Variable menu appears, see ([Figure](../scripting/programming_your_javascript.md#insert_variable_menu)).
 
 1. Select the parameter you defined in the Parameterization Manager.
 
