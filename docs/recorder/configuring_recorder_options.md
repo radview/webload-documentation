@@ -495,7 +495,7 @@ The following table describes the options in the Script Generation tab.
 |**Save all redirection headers**|Records the headers for all  URL redirections.||
 |Generate Client side Cookies|When unchecked, the web  page sets  cookies from the  JavaScript  and you must  implement  the cookies  manually in  the script.  If selected, the cookies from  the headers  are compared  to cookies  that the server  sends. If  there is a  difference,  the correct  SetCookie  command is  added to  the script. This is  performed  during  recording.  The cookie value  is obtained  from the  recorded  traffic. WebLOAD  automatically  inserts a  comment  before the  SetCookie command in  the script  to let the user  know that  the cookie was  added  automatically.||
 |**Parse JSON**|Used to specify how to  present  JSON values in the  script appearing in the  JavaScript View pane –  whether as  a long string, or  parsed.|An example of a long script display:  <br />`wlHttp.FormData["data"]="{\"id\":\  "001\", \"type\":\"donut\",  \"name\":\"Cake\"  }"  An example  of parsed JSON display:  var  json = {  "id":  "0001",  "type":  "donut",  "name": "Cake"  }`|
-|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the [*InitAgenda*](#initagenda)*()* function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
+|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the InitAgenda() function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
 |||wlHttp.Get("https://" +|
 |||domain_www_amazon_com + "/")|
 |||You can then, using the same script, run one test in which you edit the InitAgenda()function so that:|
@@ -663,12 +663,12 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 2. Select the **Correlation Options** tab.
 
    The Correlation Options tab moves to the front of the dialog box.
-   
+   <a name = "recording_and_script_generation"></a>
    ![Correlation Options Tab](../images/corr_options.png)
 
    
 
-3. Fill in the fields, as described in the [Table](#correlation_options_tab_fields_and_option").
+3. Fill in the fields, as described in the [Table](#correlation_options_tab_fields_and_option).
 
 4. Click **OK**.
 
@@ -1224,7 +1224,8 @@ You can also specify the update policy, which defines when a new value will be r
 **To open the Parameterization Manager dialog box:**
 
 - Click **Parameterization Manager** in the **Home** tab of the ribbon. The Parameterization Manager dialog box opens.
-<a name = "parameterization_manager_dialog_box"></a>
+
+<a name = "parameterization_manager_dialog_box_a"></a>
 
 ![Parameterization Manager Dialog Box](../images/recorder_1100.png)
 
@@ -1233,7 +1234,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 
 ### Setting Parameters in the Parameterization Manager
-1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box)), click **Add**.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**.
 1. In the **Name** field, enter a name for the parameter.
 1. In the **Type** field, select the parameter type:
 
@@ -1253,7 +1254,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 **To define a date/time parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 1. In the **Type** field, select **Date/Time**. The fields appropriate for defining a date/time parameter appear in the dialog box.
 
@@ -1261,13 +1262,11 @@ You can also specify the update policy, which defines when a new value will be r
 
 1. In the **Description** field, optionally enter a description for the date/time parameter.
 
-1. Fill in the fields as described in the [Table](#parameterization_manager").
+1. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – Date/Time dialog box.
-
-<a name = "parameterization_manager"></a>
 |**Setting**|**Description**|
 | :- | :- |
 |*Date/Time Format*||
@@ -1289,24 +1288,21 @@ The following table describes the fields and buttons in the Parameterization Man
 
 **To select a data file:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box)), click **Add**.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**.
 
 1. In the **Type** field, select **File**. The fields appropriate for selecting a data file and configuring its settings appear in the dialog box.
 
-
-   <a name = "parameterization_manager "></a>
    ![Parameterization Manager – File Dialog Box](../images/recorder_1102.png)
 
    
 
 1. In the **Description** field, optionally enter a description of the file.
 
-1. Fill in the fields as described in the [Table](#parameterization_manager).
+1. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – File dialog box.
-<a name = "parameterization_manager"></a>
 |**Setting**|**Description**|
 | :- | :- |
 |*Select Input File*||
@@ -1333,7 +1329,7 @@ You can create a new data file.
 
 **To create a data file:**
 
-1. From the Parameterization Manager – File dialog box: ([Figure](#parameterization_manager)), click **Create New Data File**. 
+1. From the Parameterization Manager – File dialog box: ([Figure](#parameterization_manager_dialog_box_a)), click **Create New Data File**. 
 
    The Create Data File dialog box appears.
 
@@ -1361,7 +1357,7 @@ You can create a new data file.
 
 **To define a number parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 2. In the **Type** field, select **Number**. The fields appropriate for defining a number parameter appear in the dialog box. 
 
@@ -1371,11 +1367,10 @@ You can create a new data file.
 
 3. In the **Description** field, optionally enter a description of the number parameter.
 
-4. Fill in the fields as described in the [Table](#parameterization_manager).
+4. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 5. Click **OK**.
 
-<a name = "parameterization_manager"></a>
 The following table describes the fields and buttons in the Parameterization Manager – Number dialog box.
 
 |**Setting**|**Description**|
@@ -1404,7 +1399,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 **To define a random string parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 2. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
 

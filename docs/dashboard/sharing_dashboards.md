@@ -15,6 +15,7 @@ There are several options for sharing a dashboard:
 
 1. Select the **Share Dashboard** icon ![share dashboard icon](../images/share_dash_icon.png) in the dashboard header. A Share window appears, displaying a link to the dashboard. 
 
+   <a name = "share_dashboard"></a>
    ![Share Dashboard – Options](../images/share_dash_options.png)
 
 
@@ -29,9 +30,9 @@ There are several options for sharing a dashboard:
 
 You can easily share an entire dashboard, by providing the appropriate URL. **To share a link to a dashboard:** 
 
-1. Access the Share Dashboard window [(Figure 77)](#_page72_x54.00_y286.04), as described in[` `*Accessing the Share Dashboard Options*.](#_page71_x54.00_y360.04) 
+1. Access the Share Dashboard window [(Figure)](#share_dashboard), as described in[*Accessing the Share Dashboard Options*.](#accessing-the-share-dashboard-options) 
 
-1. Select the **Link** tab [(Figure 77)](#_page72_x54.00_y286.04). 
+1. Select the **Link** tab [(Figure)](#share_dashboard). 
 
 1. Using the options in the Share Link window, you can produce a link to various variants of the dashboard, as described in the following table.
 
@@ -54,7 +55,7 @@ You can export a dashboard as a JSON file, and import dashboards that were saved
 
 **To export a dashboard as a JSON file:** 
 
-1. Access the Share Dashboard window [(Figure 77)](#_page72_x54.00_y286.04), as described in[` `*Accessing the Share Dashboard Options*.](#_page71_x54.00_y360.04) 
+1. Access the Share Dashboard window [(Figure 77)](#share_dashboard), as described in[*Accessing the Share Dashboard Options*.](#accessing-the-share-dashboard-options) 
 
 1. Select the **Export** tab.
 
@@ -83,7 +84,8 @@ When you share a specific panel, you are actually sharing the dashboard, with th
 
 **To access the panel sharing options:** 
 
-1. Optionally select a specific time range in the panel. Refer to[` `*Specifying the Zoom* ](#_page47_x54.00_y311.04)(on page[ 42)](#_page47_x54.00_y311.04). 
+1. Optionally select a specific time range in the panel. Refer to[*Specifying the Zoom* ](./using_dashboards.md#specifying-the-zoom)
+
 1. Click the panel’s title and select **share**. 
 
 A Share Panel window appears, with the **Link** tab selected. 
@@ -98,7 +100,7 @@ The Link option produces a link that will take you to exactly this panel with th
 
 **To share a link to a panel:** 
 
-1. Access the Share Panel window as described in[*Accessing the Share Panel Options*.](#_page74_x54.00_y78.04) 
+1. Access the Share Panel window as described in[*Accessing the Share Panel Options*.](#accessing-the-share-panel-options) 
 
 1. Select the **Link** tab. 
 
@@ -122,9 +124,10 @@ You can embed a panel using an iframe on another web site. The Embed option prod
 **To share a panel by embedding its HTML code:** 
 
 1. Optionally select a specific time range in the panel.
-2. Access the Share Panel window [(Figure 79)](#_page74_x54.00_y462.04), as described in[*Accessing the Share Panel Options*.](#_page74_x54.00_y78.04) 
+2. Access the Share Panel window [(Figure 79)](#share_panel), as described in[*Accessing the Share Panel Options*.](#accessing-the-share-panel-options) 
 3. Select the **Embed** tab. 
 
+<a name ="share_panel"></a>
 ![Share Panel – Embed tab](../images/share_panel_embed.jpeg)
 
 

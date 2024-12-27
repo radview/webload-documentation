@@ -418,7 +418,7 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 - InfoMessage() (see [*InfoMessage() (function)* ](./actions_objects_functions.md#infomessage-function))
 
-- [*Message Functions* ](../scripting/programming_your_javascript.md#standard_message_functions)
+- [*Message Functions* ](#message-functions)
 
 - ReportLog() (see [*ReportLog() (method)* ](./actions_objects_functions.md#reportlog-method))
 

@@ -13,7 +13,7 @@ As your actions are recorded, WebLOAD Recorder displays them in the Script Tree,
 
 WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set)* .
 
-This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./overview.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./editing_scripts.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 The script can then be used with WebLOAD for load and scalability testing of your application.
 
@@ -78,14 +78,14 @@ If you start and stop recording more than once during a single recording session
 
    By default, the Recording dialog box appears.
 
-<a name ="recording_dialog_box"></a>
+   <a name ="recording_dialog_box"></a>
    ![Recording Dialog Box](../images/recording_dialog.png)
 
    
 
    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](recording_dialog_box)). For more information, see [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser).
+   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](#recording_dialog_box)). For more information, see [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser).
 
 5. Optionally change the browser settings:
 
@@ -189,7 +189,7 @@ If you start and stop recording more than once during a single recording session
 
 > **Notes:** Although by default the Recording Complete dialog box appears, this depends on your settings in the Correlation Options tab of the Recording and Script Generations options dialog box. For more information, see [*Setting the Default Correlation Action* ](./correlating_scripts.md#setting-the-default-correlation-action).
 
-You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](./overview.md#editing-scripts). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](./editing_scripts.md#editing-scripts). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 > **Notes:** If actions that you are interested in were not recorded, check the cache settings in your browser. WebLOAD Recorder may be skipping steps that you want to record because your browser is using a system cache file. For more information, see [Clearing the Cache and Cookies in Your Browser ](./before_you_begin.md#clearing-the-cache-and-cookies-in-your-browser).
 >

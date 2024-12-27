@@ -151,7 +151,7 @@ The dashboard refreshes to show the graph for the selected time range only.
 
 **To zoom out:** 
 
-Use the **Zoom to Data** or **Zoom Out** options in the dashboard[` `*Header*.](#_page42_x192.00_y413.04) 
+Use the **Zoom to Data** or **Zoom Out** options in the [*Dashboard Header*.](#dashboard-header) 
 
 
 

@@ -76,7 +76,7 @@ The main components of the WebLOAD Dashboard menu bar include:
 | **Preferences**          | Change preferences at the Organizational level               | [*Managing Organizations* ](managing_organizations.md) |
 | **Users**                | Manage the organization’s users,  including their roles (permissions) | [*Managing Users* ](managing_organizations.md) |
 | **API Keys**             | Manage  API access                                           |                                                              |
-| **Switch to**            | Switch  between organizations in which you are a member. Note that when you switch to  an organization, your permissions are the ones dictated by your role in that  particular organization. | [*User Editing by a Super Admin*](managing_organizations.md#user-editing-by-a-super-admin-editing-user-s-permissions-organizations-roles-and-details) |
+| **Switch to**            | Switch  between organizations in which you are a member. Note that when you switch to  an organization, your permissions are the ones dictated by your role in that  particular organization. | [*User Editing by a Super Admin*](managing_organizations.md#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) |
 | **+ New Organization**   | Add  an organization                                         | [*Adding an Organization* ](managing_organizations.md#adding-an-organization) |
 
 

@@ -225,7 +225,7 @@ Decoding function - reverse of encodeXML
 
 See:
 
-*   [encodeXML](#encodexmlstrstr)
+*   [encodeXML](#encodexmlstr)
 
 **Returns:**
 
@@ -795,7 +795,7 @@ Store extracted correlation value for future use. Validate it against the record
 
 See:
 
-*   [getCorrelationValue](#getCorrelationValue)
+*   [getCorrelationValue](#getcorrelationvaluevarname-func-object)
 
 #### setCorrelationValueSilent()
 

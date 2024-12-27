@@ -81,7 +81,7 @@
 | **Template**                                         | See [*Load   Template*.](#load_template)                      |
 | **Templates Gallery**                                | The Templates Gallery is a single entity  that contains predefined templates, user-defined templates, and portfolios. |
 | **Test Program**                                     | See [*Test Script*.](#test_script)                          |
-| <a name = test_script"></a>   **Test Script**                                      | The script. This defines  the test scenario used in your Load Session. Scripts are written in  JavaScript. |
+| <a name = "test_script"></a>   **Test Script**                                      | The script. This defines  the test scenario used in your Load Session. Scripts are written in  JavaScript. |
 | **Test  Template**                                   | See [*Load   Template*.](#load_template)                      |
 | **TestTalk**                                         | The network agent. This  program enables communication between the Console and the host computers  participating in the test. |
 | **Throttle  Control**                                | A WebLOAD component that  enables you to dynamically change the Load Size while a test session is in  progress. |

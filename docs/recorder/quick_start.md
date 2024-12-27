@@ -146,7 +146,7 @@ You can view the recorded script in four views:
 
 
 
-- HTML View – See [*Viewing the Recorded Script in the HTML View Pane* ](./running_debugging_scripts.md#viewing-the-recorded-script-in-the-html-view-pane).
+- HTML View – See [*Viewing the Recorded Script in the HTML View Pane* ](./recording_scripts.md#viewing-the-recorded-script-in-the-html-view-pane).
 - Page View – See [*Using the Page View to View Results* ](./running_debugging_scripts.md#using-the-page-view-to-view-results).
 
 

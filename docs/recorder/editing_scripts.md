@@ -12,7 +12,7 @@ In the script, each request and event is based on previous input, tying the enti
 
 When editing your script, you can work at whatever level you prefer. The following script editing tools are discussed:
 
-- [*Editing a Script in the Script Tree* ](#editing-a-script in-the-script-tree) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
+- [*Editing a Script in the Script Tree* ](#editing-a-script-in-the-script-tree) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
 - [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
 - [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
 
@@ -72,7 +72,7 @@ The following table describes the menu options:
 |<p>Delete</p><p>(script item menu only)</p>|Delete the script item from the tree.|
 |Toggle Breakpoint|Add or remove a breakpoint at the selected script item in the Script Tree. For more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints).|
 |Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)*.|
-|Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration*).|
+|Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration).|
 |Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](./running_debugging_scripts.md#validating-responses)|
 
 
@@ -397,10 +397,10 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 - IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](./appendix_a.md#the-webload-recorder-iot-protocols-toolbox).
 - Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](./appendix_a.md#the-real-clients-toolbox).
 
-- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-service-toolbox).
+- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-services-toolbox).
 - Database actions, such as opening and getting data from a database for a WebLOAD Recorder test. Database Building Blocks are described in [*The WebLOAD Recorder Database Toolbox* ](./appendix_a.md#the-webload-recorder-database-toolbox).
-- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The WebLOAD Recorder Verifications Toolbox* ](./appendix_a.md#the-webload-recorder verifications-toolbox).
-- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder WebSocket Toolbox* ](./appendix_a.md#the-webload-recorder-websocket-toolbox*).
+- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The WebLOAD Recorder Verifications Toolbox* ](./appendix_a.md#the-webload-recorder-verifications-toolbox).
+- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder WebSocket Toolbox* ](./appendix_a.md#the-webload-recorder-websocket-toolbox).
 
 ### Adding Script Items from a WebLOAD Recorder Toolbox
 

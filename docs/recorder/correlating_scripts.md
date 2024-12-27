@@ -205,7 +205,7 @@ The left side of the Conflict Resolution window displays the correlated version 
 ### Editing Conflicts between Manual Changes and Correlation Changes
 When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.
 
-The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](./configuring_recorder_options.md#defining-the-merg-tool-application).
+The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](./configuring_recorder_options.md#defining-the-merge-tool-application).
 
 
 
