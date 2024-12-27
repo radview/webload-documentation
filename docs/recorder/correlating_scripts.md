@@ -119,7 +119,7 @@ You can control the default correlation action that WebLOAD should perform after
 
 **To control which correlation action is performed after recording:**
 
-1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears in the ([Figure](#rec_script_gen_options)).
+1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears in the ([Figure](./configuring_recorder_options.md#rec_script_gen_options)).
 1. Select the **Correlation Options** tab.
 
    The Correlation Options tab moves to the front of the dialog box ([Figure](../images/corr_options.png))).
@@ -205,7 +205,7 @@ The left side of the Conflict Resolution window displays the correlated version 
 ### Editing Conflicts between Manual Changes and Correlation Changes
 When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.
 
-The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](#_bookmark187).
+The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](./configuring_recorder_options.md#defining-the-merg-tool-application).
 
 
 

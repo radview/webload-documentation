@@ -32,8 +32,8 @@
 |**Failed Rounds**|The total number of times the Virtual Clients started but did not complete the script during the last reporting interval.|
 |**Failed Rounds Per Second**|The number of times the Virtual Clients started but did not complete an iteration of the script, divided by the elapsed time, in seconds. The value posted in the Current Value column is the number (sum) of failed iterations of the script per second during the last reporting interval.|
 |**First Byte**|The time it takes a Virtual Client to receive the first byte of data.|
-|**Gallery**|See [*Templates Gallery*.](./appendix_g.md#_bookmark531)|
-|<a name="_bookmark380"></a>**Goal–Oriented Test**|<p>A WebLOAD component enabling you to define the performance goals required, and view the status of your application when it is operating under this performance goal. WebLOAD provides a Goal–Oriented Test Wizard for configuring these performance goals. WebLOAD automatically accelerates the number of Virtual Clients accessing your website until you meet your performance goal.</p><p>**Note:** The Goal-Oriented Test Wizard was previously called the Cruise Control Wizard.</p>|
+|**Gallery**|See [*Templates Gallery*.](#templates_gallery)|
+|<a name="goal_oriented_test"></a>**Goal–Oriented Test**|<p>A WebLOAD component enabling you to define the performance goals required, and view the status of your application when it is operating under this performance goal. WebLOAD provides a Goal–Oriented Test Wizard for configuring these performance goals. WebLOAD automatically accelerates the number of Virtual Clients accessing your website until you meet your performance goal.</p><p>**Note:** The Goal-Oriented Test Wizard was previously called the Cruise Control Wizard.</p>|
 |**Goal–Oriented Test Wizard**|See [*Goal–Oriented Test*.](#goal_oriented_test)|
 |**Hit Time**|<p>The time it takes to complete a successful HTTP request, in seconds. Each request for each gif, jpeg, html file, etc., is a single hit. The time of a hit is the sum of the Connect Time, Send Time, Response Time, and Process Time.</p><p>The value posted in the Current Value column is the average time it took to make an HTTP request and process its response during the last reporting interval.</p>|
 |**Hits**|<p>The total number of times the Virtual Clients made HTTP requests to the System Under Test (SUT) during the last reporting interval.</p><p>For example, a Get statement for a URL retrieves a page. The page can include any number of graphics and contents files. Each request for each gif, jpeg, html file, etc., is a single hit.</p>|
@@ -84,7 +84,7 @@
 |**Successful Rounds Per Second**|<p>The number of times the Virtual Clients completed an entire iteration of the script, divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of successful iterations of the script per second during the last reporting interval.</p>|
 |<a name="_bookmark387"></a>**SUT**|The system running the Web application currently under test. The SUT (System Under Test) is accessed by clients through its URL address. The SUT can reside on any machine or on multiple machines, anywhere on the global Internet or your local intranet.|
 |**Template**|See [*Load Template*.](#load_template)|
-|<a name="_bookmark388"></a>**Templates Gallery**|The Templates Gallery is a single entity that contains predefined templates, user-defined templates, and portfolios.|
+|<a name="templates_gallery"></a>**Templates Gallery**|The Templates Gallery is a single entity that contains predefined templates, user-defined templates, and portfolios.|
 |**Test Program**|See [*Test Script*.](#_bookmark389)|
 |<a name="_bookmark389"></a>**Test Script**|The script. This defines the test scenario used in your Load Session. Scripts are written in JavaScript.|
 |**Test Template**|See [*Load Template*.](#load_template)|
@@ -104,7 +104,7 @@
 |**WebLOAD Load Template**|See [*Load Template*.](#load_template)|
 |**WebLoad Session**|See [*Load Session*.](#load_sessions)|
 |**WebLOAD Wizard**|A WebLOAD Wizard that steps you through the configuration process. Each screen of the WebLOAD Wizard contains text explaining the configuration process. The WebLOAD Wizard enables you to create a basic Load Template. After using the demo, you can use the Console ribbon to add functionality not available through the WebLOAD Wizard.|
-|**WebRM**|See [*Resource Manager*.](./appendix_g.md#resource-manager)|
+|**WebRM**|See [*Resource Manager*.](#_bookmark386)|
 
 
 

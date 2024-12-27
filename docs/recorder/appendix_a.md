@@ -1300,7 +1300,7 @@ Use the NNTP-GetArticleCount Building Block to retrieve the number of articles i
 
    For example, in the preceding figure, the comment area explains that the Group Name field contains the name of the news group whose articles are to be counted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount").
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount).
 
 4. Click **OK**.
 
@@ -1427,7 +1427,7 @@ Use the TCP-Send Building Block to send a TCP request.
 
 The TCP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-<a name =" tcp_send"></a>
+<a name = "tcp_send"></a>
 The fields in the TCP-Send Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -2048,7 +2048,7 @@ Use the Oracle OpenDB Building Block to open and close an Oracle database.
 
 3. For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 76](#_bookmark302).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle_opendb).
 
    > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
 
@@ -2058,7 +2058,7 @@ The Oracle OpenDB Building Block is added to the Script Tree. The JavaScript cod
 
 > **Note:** The Oracle OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No “CloseDB” Building Block is necessary.
 
-
+<a name ="oracle_opendb"></a>
 
 The fields in the Oracle OpenDB Building Block parameters dialog box are described in the following table:
 
@@ -2089,14 +2089,14 @@ Use the MySQL OpenDB Building Block to open and close a MySQL database.
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 77](#_bookmark304).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#mysql_opendb).
 
 4. Click **OK**.
 
    The MySQL Open DB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
-
+<a name ="mysql_opendb"></a>
 
 The fields in the MySQL OpenDB Building Block parameters dialog box are described in the following table:
 

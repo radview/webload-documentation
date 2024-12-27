@@ -13,7 +13,7 @@ As your actions are recorded, WebLOAD Recorder displays them in the Script Tree,
 
 WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set)* .
 
-This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./running_debugging_scripts.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./overview.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 The script can then be used with WebLOAD for load and scalability testing of your application.
 
@@ -78,13 +78,14 @@ If you start and stop recording more than once during a single recording session
 
    By default, the Recording dialog box appears.
 
+<a name ="recording_dialog_box"></a>
    ![Recording Dialog Box](../images/recording_dialog.png)
 
    
 
    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./correlating_scripts.md#rec_script_gen_options)). For more information, see [*Configuring the Default Browser* ](./correlating_scripts.md#configuring-the-default-browser).
+   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](recording_dialog_box)). For more information, see [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser).
 
 5. Optionally change the browser settings:
 
@@ -188,7 +189,7 @@ If you start and stop recording more than once during a single recording session
 
 > **Notes:** Although by default the Recording Complete dialog box appears, this depends on your settings in the Correlation Options tab of the Recording and Script Generations options dialog box. For more information, see [*Setting the Default Correlation Action* ](./correlating_scripts.md#setting-the-default-correlation-action).
 
-You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](./running_debugging_scripts.md#editing-scripts). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
+You can customize the script in a variety of ways or you can run your script as recorded. For information on editing your script, see [*Editing Scripts* ](./overview.md#editing-scripts). For information on running your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
 > **Notes:** If actions that you are interested in were not recorded, check the cache settings in your browser. WebLOAD Recorder may be skipping steps that you want to record because your browser is using a system cache file. For more information, see [Clearing the Cache and Cookies in Your Browser ](./before_you_begin.md#clearing-the-cache-and-cookies-in-your-browser).
 >
@@ -438,7 +439,7 @@ When you define concurrent while recording, WebLOAD Recorder inserts an ExecuteC
 
 
 
-After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](./editing_scripts.md#editing-a-script in-the-script-tree) ).
+After the script is recorded, you can edit the script (see [*Editing a Script in the Script Tree*](./editing_scripts.md#editing-a-script-in-the-script-tree) ).
 
 After your script has been developed, you can run and debug it. While the script is running, you can view it in the Script Tree (see [*Viewing the Execution Sequence in the Script Tree* ](./running_debugging_scripts.md#viewing-the-execution-sequence-in-the-script-tree)).
 
@@ -523,7 +524,7 @@ Each node in the Script Tree is actually a visual representation of HTML code. Y
 
 
 
-In the HTML view pane, you can display the code for each node individually. After your script has been developed, you can run and debug it. For more information on debugging with the HTML View, see [*Using the HTML View to View Results* ](#_bookmark119).
+In the HTML view pane, you can display the code for each node individually. After your script has been developed, you can run and debug it. For more information on debugging with the HTML View, see [*Using the HTML View to View Results* ](./running_debugging_scripts.md#using-the-html-view-to-view-results).
 
 
 
@@ -638,7 +639,7 @@ Desktop web applications, such as Rich Internet Applications (RIAs), are web bas
 Recording desktop web applications in scripts using WebLOAD Recorder, involves configuring the web applications to use a specific proxy setting. This proxy setting is usually configured automatically when opening WebLOAD Recorder for browser- based applications in Internet Explorer or Mozilla Firefox. To record any other web application that does not run within the browser, configure the web application to pass the traffic to the server through the WebLOAD Recorder proxy server, using one of the following methods:
 
 - [*Recording WebLOAD Scripts Using the Client’s Proxy Setting* ](#recording-webload-scripts-using-the-clients-proxy-setting).
-- [*Recording WebLOAD Scripts Using the LAN Settings* ](#_bookmark53).
+- [*Recording WebLOAD Scripts Using the LAN Settings* ](#recording-webload-scripts-using-the-lan-settings).
 - [*Recording WebLOAD Scripts Using Proxy Tunneling* ](#recording-webload-scripts-using-proxy-tunneling).
 
 
@@ -705,7 +706,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
 1. Configure WebLOAD Recorder’s recording options as follows:
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](./correlating_scripts.md#rec_script_gen_options)).
+   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](./configuring_recorder_options.md#rec_script_gen_options)).
 
    1. Select the Browser Settings tab.
 
@@ -757,7 +758,7 @@ Refer to the following table if you are having recording related problems. Befor
 
 | **Problem**                                                  | **Possible Options**                                         | **Solution**                                                 |      |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--- |
-| Script is not created while recording                        | Make sure browser opens while recording.                     | Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Ensure that the settings are correct for your browser. See [*Configuring the Default Browser* ](#./correlating_scripts.md#configuring-the-default-browser) for more information. |      |
+| Script is not created while recording                        | Make sure browser opens while recording.                     | Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Ensure that the settings are correct for your browser. See [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser) for more information. |      |
 |                                                              | Check browser proxy settings.                                | **For Internet Explorer:**<br /><p>1. `	`From your browser’s menu, select **Tools  Internet Options** and select the **Connections Options** tab.</p><p>2. Click **Lan Settings**.</p><p>3. If none of the checkboxes are selected, you have a direct connection to the internet and the browser proxy settings are not the problem.</p><p>&emsp;If **Automatically detect settings** and/or **Use automatic configuration script** are checked, you must disable the automatic settings. Before disabling the automatic settings, contact your system administrator for your proxy server information.</p><p>&emsp;If **Use a proxy server for your LAN** is checked, copy the Address and Port field’s current proxy settings. In WebLOAD, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Proxy Options** tab. Check **Use the following definitions for the application’s proxy server** and enter the current proxy information into the HTTP Proxy/Port and SSL Proxy/Port fields.</p> |      |
 |                                                              |                                                              | **For Mozilla Firefox:**<br /><p>1. From your browser’s menu, select</p><p>&emsp;**Tools** > **Options**.</p><p>2. At the top of the Options dialog box, select the **Advanced** icon and select the **Network** tab.</p><p>3. In the Connection area, click **Settings**.</p><p>4. If **Direct connection to the internet** is selected, the browser proxy settings are not the problem.</p><p></p><p>If **Auto-detect proxy settings for this network** or **Automatic proxy configuration URL** are selected, you must disable the automatic settings. Before disabling the automatic settings, contact your system administrator for your proxy server information.</p><p>If **Manual proxy configuration** is selected, copy the **HTTP Proxy** and **Port** field’s current proxy settings. In WebLOAD, click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Proxy Options** tab. Check **Use the following definitions for the application’s proxy server** and enter the current proxy information into the HTTP Proxy/Port and SSL Proxy/Port fields.</p> |      |
 |                                                              | Recording with a browser other than Internet Explorer or Mozilla Firefox. | <p>1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and select the **Browser Settings** tab. Select **Other browser** or **None** as the default browser setting.</p><p>2. While recording, you must manually change the client’s proxy setting. In your browser, manually configure the proxy settings to use WebLOAD’s default port: 9884.</p><p>&emsp;This points the browser’s proxy settings to the WebLOAD recorder enabling WebLOAD to record the browser’s HTTP clients.</p> |      |

@@ -811,7 +811,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    > **Note:** When accessing the Response Validation dialog box from **HTML View**, the dialog box appears automatically configured with the selected content.
 
 
-   <a name ="[response_validation_dialog_box"></a>
+   <a name ="response_validation_dialog_box"></a>
    ![Response Validation Dialog Box](../images/rsp_vald_diag.png)
 
    
@@ -844,7 +844,7 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
    | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
    | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "`<text to find>`" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
    | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
-   | **Add Parameter**                                   | Opens a list of parameters you can include in the **contains/does not contain** text. This list is identical to the list available in the Insert Variable menu ([*Figure 54*](#../scripting/programming_your_javascript.md#insert_variable_menu)). |
+   | **Add Parameter**                                   | Opens a list of parameters you can include in the **contains/does not contain** text. This list is identical to the list available in the Insert Variable menu ([*Figure 54*](../scripting/programming_your_javascript.md#insert_variable_menu)). |
    | *In case of validation failure*                     |                                                              |
    | **Display warning and continue running**            | Select to display a warning during playback and continue running the script, if the verification fails. |
    | **Display error and stop the round**                | Select to display an error during playback and stop the round, if the verification fails. |

@@ -495,7 +495,7 @@ The following table describes the options in the Script Generation tab.
 |**Save all redirection headers**|Records the headers for all  URL redirections.||
 |Generate Client side Cookies|When unchecked, the web  page sets  cookies from the  JavaScript  and you must  implement  the cookies  manually in  the script.  If selected, the cookies from  the headers  are compared  to cookies  that the server  sends. If  there is a  difference,  the correct  SetCookie  command is  added to  the script. This is  performed  during  recording.  The cookie value  is obtained  from the  recorded  traffic. WebLOAD  automatically  inserts a  comment  before the  SetCookie command in  the script  to let the user  know that  the cookie was  added  automatically.||
 |**Parse JSON**|Used to specify how to  present  JSON values in the  script appearing in the  JavaScript View pane –  whether as  a long string, or  parsed.|An example of a long script display:  <br />`wlHttp.FormData["data"]="{\"id\":\  "001\", \"type\":\"donut\",  \"name\":\"Cake\"  }"  An example  of parsed JSON display:  var  json = {  "id":  "0001",  "type":  "donut",  "name": "Cake"  }`|
-|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the [*InitAgenda*](#_bookmark65)*()* function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
+|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the [*InitAgenda*](#initagenda)*()* function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
 |||wlHttp.Get("https://" +|
 |||domain_www_amazon_com + "/")|
 |||You can then, using the same script, run one test in which you edit the InitAgenda()function so that:|
@@ -1022,10 +1022,11 @@ Note that the purpose of the masking operation is to make sure passwords are not
 
    ![Security Tab](../images/sec_tab.png)
 
-4. Fill in the fields, as described in [Table 31](#_bookmark180).
+4. Fill in the fields, as described in the [Table](#security_tab_options).
 
 5. Click **OK**.
 
+<a name ="security_tab_options"></a>
 The following table describes the fields and options on the Security tab.
 
 |**Field**|**Description**|
@@ -1438,7 +1439,7 @@ The following table describes the fields and buttons in the Parameterization Man
 ### Inserting User-Defined Parameters in a Script
 WebLOAD Recorder enables you to edit parameters having static values and replace the static values with a call to a set of specified values. During runtime, the script runs the parameter using values from the set.
 
-The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#_bookmark189)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
+The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#configuring-the-parameterization-manager)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
 
 **To insert a user-defined parameter in a script:**
 

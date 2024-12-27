@@ -1,6 +1,6 @@
 # Managing Load Generators
 
-Both a[` `*URL/API Load Test* ](#creating-a-urlapi-load-test)and[` `*Script Load Test* ](#creating-a-script-load-test)require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  ![ref27]
+Both a[` `*URL/API Load Test* ](./manage_tests.md#creating-a-urlapi-load-test)and[` `*Script Load Test* ](./manage_tests.md#creating-a-script-load-test)require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  ![ref27]
 
 ## Adding Load Generators 
 

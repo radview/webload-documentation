@@ -138,7 +138,7 @@ When called, will cause all transactions to be automatically added to MDC
 
 See:
 
-*   [putMDC](#putmdcname-valuename-value)
+*   [putMDC](#putmdcname-value)
 
 #### assertEquals(expected, actual, messageopt)
 

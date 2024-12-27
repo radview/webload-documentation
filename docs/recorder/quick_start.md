@@ -307,7 +307,7 @@ WebLOAD Recorder provides an integrated debugger with a variety of tools to help
   
   Add breakpoints by clicking **Toggle Breakpoint** in the **Debug** tab of the WebLOAD Recorder ribbon, and then clicking **Run** to run the script.
 
-> **Note:** If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see [*Configuring the Settings* ](#_bookmark181).
+> **Note:** If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see [*Configuring the Settings* ](./configuring_recorder_options.md#configuring-the-settings).
 
 
 
