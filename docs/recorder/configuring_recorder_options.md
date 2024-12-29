@@ -62,7 +62,7 @@ The Project Options are settings for WebLOAD Recorder that will be in effect for
 
 The following table describes the tabs in the Default and Current Project Options dialog box.
 
-*Table 14: Default and Current Project Options Dialog Box Tabs*
+*Table: Default and Current Project Options Dialog Box Tabs*
 
 |**Tab**|**Description**|
 | :- | :- |

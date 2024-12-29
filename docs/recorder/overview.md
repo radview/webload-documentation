@@ -33,7 +33,7 @@ As you develop a Web application, you and your organization will usually do the 
 
 1. Test the application in WebLOAD using the script created in WebLOAD Recorder.
 
-   You do not need to modify the test script as it can run from WebLOAD Recorder to WebLOAD seamlessly.
+    You do not need to modify the test script as it can run from WebLOAD Recorder to WebLOAD seamlessly.
 
 WebLOAD emulates multiple users on a network or server, testing to be sure the application *scales* as needed. These tests ensure that your application operates “normally” under load and stress, and your application appears as per your
 
@@ -124,7 +124,7 @@ WebLOAD Recorder provides the following programming assistance to manually edit 
 - IntelliSense Editor mode for the JavaScript View pane.
 - Insert menu with commonly used functions and commands.
 - Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session.
-- ![ref9]Import JavaScript files.
+- Import JavaScript files.
 
 **Note:** For detailed information about the JavaScript language, see *The Core JavaScript Language* in the *Netscape JavaScript Guide.* This guide is supplied in Adobe Acrobat format with the WebLOAD software. You may also learn the elements of JavaScript programming from many books on Web publishing. Keep in mind that some specific JavaScript objects relating to Web publishing do not exist in the WebLOAD test environment.
 

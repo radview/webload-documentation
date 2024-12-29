@@ -11,7 +11,7 @@ Use WebLOAD Recorder to create test scripts as a baseline for testing your Web a
 
 As your actions are recorded, WebLOAD Recorder displays them in the Script Tree, which is a tree hierarchy with visual indications of the information recorded.
 
-WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set)* .
+WebLOAD Recorder records only HTTP protocol calls that place a load on the System Under Test (SUT). Activities that are not relevant to the script, such as moving windows for a more comfortable display or opening another application, are not recorded. While your script is being recorded, you can edit it with the WebLOAD Recorder Toolbox set. For information on editing your script using the WebLOAD Recorder Toolbox set, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set*](./editing_scripts.md#editing-your-script-using-the-webload-recorder-toolbox-set) .
 
 This process creates the basic script. You can then view the recorded script as JavaScript code in the JavaScript view pane, revise the script to test more objects in more detail, and run and debug the script. For information on editing your script, see [*Editing Scripts* ](./editing_scripts.md#editing-scripts). For information on running and debugging your script, see [*Running and Debugging Scripts* ](./running_debugging_scripts.md#running-and-debugging-scripts).
 
@@ -25,7 +25,7 @@ The script can then be used with WebLOAD for load and scalability testing of you
 
 1. Select **Start** > **Programs** > **RadView** > **WebLOAD** > **WebLOAD Recorder**. WebLOAD Recorder opens.
 
-   ![WebLOAD Recorder Startup Dialog Box](../images/recorder_startup.png)
+    ![WebLOAD Recorder Startup Dialog Box](../images/recorder_startup.png)
 
    
 
@@ -33,12 +33,12 @@ The script can then be used with WebLOAD for load and scalability testing of you
 
 3. Click one of the following options:
 
-   1. **Create a new project** – Opens a new project. WebLOAD supports several types of projects, the default project being Internet Protocol Project. The new project type is set according to the type of project which was last open. To create a different type of project, select **New Project** in the **File** tab of the WebLOAD Recorder ribbon and select the desired project type.
-   2. **Open an existing project** – Browse to the project.
-   3. **Open a saved session** – Browse to the session.
+    1. **Create a new project** – Opens a new project. WebLOAD supports several types of projects, the default project being Internet Protocol Project. The new project type is set according to the type of project which was last open. To create a different type of project, select **New Project** in the **File** tab of the WebLOAD Recorder ribbon and select the desired project type.
+    1. **Open an existing project** – Browse to the project.
+    1. **Open a saved session** – Browse to the session.
 
 
-The WebLOAD [*Recorder main window*](./quick_start.md#recorder_edit_mode) opens in Editing Mode, enabling you to begin creating or editing your script.
+    The WebLOAD [*Recorder main window*](./quick_start.md#recorder_edit_mode) opens in Editing Mode, enabling you to begin creating or editing your script.
 
 
 
@@ -59,131 +59,129 @@ If you start and stop recording more than once during a single recording session
 
 1. Start **WebLOAD Recorder** (see [*Starting WebLOAD Recorder* ](#starting-webload-recorder)).
 
-   -Or-
+    -Or-
 
-   Start **WebLOAD Recorder** from your Explorer by double-clicking the WebLOAD Recorder project file (.wlp) or session WebLOAD Recorder session file (.wls).
+    Start **WebLOAD Recorder** from your Explorer by double-clicking the WebLOAD Recorder project file (.wlp) or session WebLOAD Recorder session file (.wls).
 
-   The WebLOAD Recorder main window opens in Editing Mode, enabling you to begin recording your script.
+    The WebLOAD Recorder main window opens in Editing Mode, enabling you to begin recording your script.
 
-2. To create a new script, click **New Project** in the **File** tab of the ribbon.
+1. To create a new script, click **New Project** in the **File** tab of the ribbon.
 
-3. To open an existing script:
+1. To open an existing script:
 
-   1. Click **Open** in the **File** tab of the ribbon.
-   2. Select a file.
+    1. Click **Open** in the **File** tab of the ribbon.
+    1. Select a file.
 
-4. Click **Start** in the **Home** tab of the ribbon.
+1. Click **Start** in the **Home** tab of the ribbon.
 
-   
+    By default, the Recording dialog box appears.
 
-   By default, the Recording dialog box appears.
-
-   <a name ="recording_dialog_box"></a>
-   ![Recording Dialog Box](../images/recording_dialog.png)
+    <a name ="recording_dialog_box"></a>
+    ![Recording Dialog Box](../images/recording_dialog.png)
 
    
 
-   The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
+    The Recording dialog box enables you to quickly define the basic settings for the default Web browser which you will be using during the recording.
 
-   > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](#recording_dialog_box)). For more information, see [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser).
+    > **Note:** Any changes to the settings in the Recording dialog box affect the settings of the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](#recording_dialog_box)). For more information, see [*Configuring the Default Browser* ](./configuring_recorder_options.md#configuring-the-default-browser).
 
-5. Optionally change the browser settings:
-
-   
-
-   | **Field**                             | **Description**                                              |
-   | :------------------------------------ | :----------------------------------------------------------- |
-   | **Open**                              | <p>Select one of the following options as your default browser:</p><p>- Microsoft Internet Explorer.</p><p>- Mozilla Firefox.</p><p>- Google Chrome.</p><p>- Native Mobile Recording. For further explanations, refer to [*Recording Mobile Applications* ](./appendix_e.md#appendix-e-recording-mobile-applications).</p><p>- None – No default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically. If you accept, the extension is installed.</p> |
-   | **URL address**                       | <p>Enter an address of a web page if you wish to open that specific page in the browser you selected.</p><p>This option is useful if you wish to open the same page multiple times.</p> |
-   | **Clear browser cache**               | Select this option to clear the browser cache before recording. This option is selected, by default. |
-   | **Clear cookies**                     | Select this option to clear the browser’s cookie history before recording. This option is selected, by default. |
-   | **Identify as**                       | Select this option to simulate a mobile web application.     |
-   | **Browser**                           | Select the browser type you wish to simulate.                |
-   | **Version**                           | Select the browser version you wish to simulate. Alternatively, click the Change button ![button](../images/change_button.jpeg) to edit the browser version definition. See [*Editing Browser Version Definitions* ](./configuring_recorder_options.md#editing-browser-version-definitions)*. |
-   | <p>**Don’t show**</p><p>**again**</p> | Select this checkbox if you do not wish to see this dialog box every time you select **Start Recording**. |
+1. Optionally change the browser settings:
 
    
 
-   In addition, you can optionally click **More Options** to open the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./configuring_recorder_options.md#browser_settings_tab)) and define the default browser settings in full detail.
-
-6. Click **OK**. The Recording dialog box closes.
-
-   A floating WebLOAD Recording toolbar appears. Throughout any recording session, the WebLOAD Recording toolbar always appears on top of the active window.
-
-   ![WebLOAD Recording Toolbar](../images/recording_toolbar.jpeg)
-
-   
-
-   The following table describes the function of each button in the WebLOAD Recording toolbar:
-
-   *Table 4: WebLOAD Recording Toolbar Buttons*
-
-   | **Button**                                  | **Purpose**                                                  |
-   | :------------------------------------------ | :----------------------------------------------------------- |
-   | <p></p><p>![](../images/start_record.png)</p> | Start recording.                                             |
-   | <p></p><p>![](../images/end_recording.png)</p> | End recording.                                               |
-   | ![](../images/pause_record.png)               | Pause or resume recording.                                   |
-   | ![](../images/insert_message.png)             | Insert message.                                              |
-   | ![](../images/insert_comment.png)             | Insert comment.                                              |
-   | ![](../images/begin_trans.png)                | <p>Begin transaction.</p><p>Adds named transactions to the script to measure the performance of logical actions in your script, such as a Login process. By inserting named transactions into your script, you can take a series of simple actions, define them as a single transaction, and set success or failure criteria for the complete transaction.</p> |
-   | ![](../images/end_trans.png)                  | End transaction.                                             |
-   | ![](../images/define_concu.png)               | <p>Define concurrent.</p><p>Defines a starting point after which the WebLOAD engine collects all Post and Get HTTP requests, but does not execute them until an Execute Concurrent function is run.</p> |
-   | ![](../images/execute_concu.png)              | <p>Execute concurrent.</p><p>Defines a starting point after which the WebLOAD engine stops collecting and begins executing all the Post and Get HTTP requests that were defined since the last Define Concurrent function, concurrently (using multithreading).</p> |
+    | **Field**                             | **Description**                                              |
+    | :------------------------------------ | :----------------------------------------------------------- |
+    | **Open**                              | <p>Select one of the following options as your default browser:</p><p>- Microsoft Internet Explorer.</p><p>- Mozilla Firefox.</p><p>- Google Chrome.</p><p>- Native Mobile Recording. For further explanations, refer to [*Recording Mobile Applications* ](./appendix_e.md#appendix-e-recording-mobile-applications).</p><p>- None – No default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically. If you accept, the extension is installed.</p> |
+    | **URL address**                       | <p>Enter an address of a web page if you wish to open that specific page in the browser you selected.</p><p>This option is useful if you wish to open the same page multiple times.</p> |
+    | **Clear browser cache**               | Select this option to clear the browser cache before recording. This option is selected, by default. |
+    | **Clear cookies**                     | Select this option to clear the browser’s cookie history before recording. This option is selected, by default. |
+    | **Identify as**                       | Select this option to simulate a mobile web application.     |
+    | **Browser**                           | Select the browser type you wish to simulate.                |
+    | **Version**                           | Select the browser version you wish to simulate. Alternatively, click the Change button ![button](../images/change_button.jpeg) to edit the browser version definition. See [*Editing Browser Version Definitions* ](./configuring_recorder_options.md#editing-browser-version-definitions)*. |
+    | <p>**Don’t show**</p><p>**again**</p> | Select this checkbox if you do not wish to see this dialog box every time you select **Start Recording**. |
 
    
 
-   WebLOAD Recorder begins recording all actions you perform in the browser, as indicated by the recording notification in the WebLOAD Recorder status bar.
+    In addition, you can optionally click **More Options** to open the Browser Settings tab of the Recording and Script Generation Options dialog box ([Figure](./configuring_recorder_options.md#browser_settings_tab)) and define the default browser settings in full detail.
 
-   ![Status Bar](../images/recorder_edit_status.png)
+1. Click **OK**. The Recording dialog box closes.
 
-   
+    A floating WebLOAD Recording toolbar appears. Throughout any recording session, the WebLOAD Recording toolbar always appears on top of the active window.
 
-   If this is the first time that you are recording after WebLOAD Recorder was launched, the default browser opens automatically with its predefined home page. This enables you to start recording and then access a page.
-
-   
-
-   ![Default Web Browser](../images/default_web_brow.jpeg)
+    ![WebLOAD Recording Toolbar](../images/recording_toolbar.jpeg)
 
    
 
-7. In the Web browser window, access the System Under Test (SUT).
+    The following table describes the function of each button in the WebLOAD Recording toolbar:
 
-8. Perform the steps that you want to test, retrieving and submitting information found on different site pages and locations. Try to emphasize the actions whose performance you need to measure in your test sessions.
+    *Table 4: WebLOAD Recording Toolbar Buttons*
 
-   Watch how WebLOAD Recorder adds nodes to the script as you work. Your actions are recorded and appear in the Script Tree as you navigate the site. (If you see more nodes in the Script Tree with different URLs, this may be traffic generated by browser plug-ins or extensions, for example, third-party toolbars.)
+    | **Button**                                  | **Purpose**                                                  |
+    | :------------------------------------------ | :----------------------------------------------------------- |
+    | <p></p><p>![](../images/start_record.png)</p> | Start recording.                                             |
+    | <p></p><p>![](../images/end_recording.png)</p> | End recording.                                               |
+    | ![](../images/pause_record.png)               | Pause or resume recording.                                   |
+    | ![](../images/insert_message.png)             | Insert message.                                              |
+    | ![](../images/insert_comment.png)             | Insert comment.                                              |
+    | ![](../images/begin_trans.png)                | <p>Begin transaction.</p><p>Adds named transactions to the script to measure the performance of logical actions in your script, such as a Login process. By inserting named transactions into your script, you can take a series of simple actions, define them as a single transaction, and set success or failure criteria for the complete transaction.</p> |
+    | ![](../images/end_trans.png)                  | End transaction.                                             |
+    | ![](../images/define_concu.png)               | <p>Define concurrent.</p><p>Defines a starting point after which the WebLOAD engine collects all Post and Get HTTP requests, but does not execute them until an Execute Concurrent function is run.</p> |
+    | ![](../images/execute_concu.png)              | <p>Execute concurrent.</p><p>Defines a starting point after which the WebLOAD engine stops collecting and begins executing all the Post and Get HTTP requests that were defined since the last Define Concurrent function, concurrently (using multithreading).</p> |
 
-   ![Script Tree Node](../images/scrip_node_tree.png)
+   
 
-   1. Click the **JavaScript View** tab to watch the JavaScript of the pages as they are being recorded.
+    WebLOAD Recorder begins recording all actions you perform in the browser, as indicated by the recording notification in the WebLOAD Recorder status bar.
 
-      > **Note:** During recording, the InitAgenda and TerminateAgenda sections of the script are not generated and therefore are not visible.
+    ![Status Bar](../images/recorder_edit_status.png)
 
-   2. Click the **HTTP Headers View** tab to watch the response headers of the pages as they are being recorded.
+   
 
-   3. Click the **HTML View** tab to watch the HTTP data as it is being recorded.
+    If this is the first time that you are recording after WebLOAD Recorder was launched, the default browser opens automatically with its predefined home page. This enables you to start recording and then access a page.
 
-   > **Note:** When switching between the JavaScript, HTTP Headers, Browser, and HTML Views, the new view displays the node that is selected in the Script Tree (during edit mode) or Execution Tree (during debug mode). These views are available during recording, after the recording is finished, and after opening a saved script.
+   
 
-9. When you are finished, select **WebLOAD Recorder**.
+    ![Default Web Browser](../images/default_web_brow.jpeg)
+
+   
+
+1. In the Web browser window, access the System Under Test (SUT).
+
+1. Perform the steps that you want to test, retrieving and submitting information found on different site pages and locations. Try to emphasize the actions whose performance you need to measure in your test sessions.
+
+    Watch how WebLOAD Recorder adds nodes to the script as you work. Your actions are recorded and appear in the Script Tree as you navigate the site. (If you see more nodes in the Script Tree with different URLs, this may be traffic generated by browser plug-ins or extensions, for example, third-party toolbars.)
+
+    ![Script Tree Node](../images/scrip_node_tree.png)
+
+       a. Click the **JavaScript View** tab to watch the JavaScript of the pages as they are being recorded.
+
+       > **Note:** During recording, the InitAgenda and TerminateAgenda sections of the script are not generated and therefore are not visible.
+
+       b. Click the **HTTP Headers View** tab to watch the response headers of the pages as they are being recorded.
+
+       c. Click the **HTML View** tab to watch the HTTP data as it is being recorded.
+
+    > **Note:** When switching between the JavaScript, HTTP Headers, Browser, and HTML Views, the new view displays the node that is selected in the Script Tree (during edit mode) or Execution Tree (during debug mode). These views are available during recording, after the recording is finished, and after opening a saved script.
+
+1. When you are finished, select **WebLOAD Recorder**.
 
 1. Click **Stop Recording** in the WebLOAD Recorder recording floating toolbar or in the **Home** tab of the WebLOAD Recorder ribbon.
 
-   WebLOAD Recorder stops recording.
+    WebLOAD Recorder stops recording.
 
 1. Click **Save** in the **File** tab of the WebLOAD Recorder ribbon.
 
 1. In the **File name** field in the Save As dialog box, type a descriptive name for the script, and then click **Save**.
 
-   Your script is saved with the file extension \*.wlp.
+    Your script is saved with the file extension \*.wlp.
 
 1. Close the Browser window to work in WebLOAD Recorder. The Recording Complete dialog box opens.
 
-   ![Recording Complete Dialog Box](../images/recording_complete.png)
+    ![Recording Complete Dialog Box](../images/recording_complete.png)
 
 1. Select one of the following:
 
-   - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation Rules* ](./correlating_scripts.md#automatic-discovery-of-correlation-rules)*(.)
-   - **Correlate script using only the existing rules** to run the correlation engine using the existing defined rules. For more information, see [*Configuring the Correlation Rules* ](./correlating_scripts.md#configuring-the-correlation-rules).
+    - **Automatically discover rules and correlate script** to run the correlation engine using the existing rules, and apply auto-discovery correlation to find potential correlation rules. For more information, see [*Automatic Discovery of Correlation Rules* ](./correlating_scripts.md#automatic-discovery-of-correlation-rules)*(.)
+    - **Correlate script using only the existing rules** to run the correlation engine using the existing defined rules. For more information, see [*Configuring the Correlation Rules* ](./correlating_scripts.md#configuring-the-correlation-rules).
    - **Don’t correlate now** to view the recorded script without correlating the script. You can manually correlate the script later.
 
 
@@ -204,17 +202,17 @@ WebLOAD Recorder enables you to pause a recording so that you can edit the scrip
 
 1. Click ![pause](../images/pause_record.png) from the WebLOAD Recording toolbar
 
-   -Or-
+    -Or-
 
-   Click **Pause** in the **Home** tab of the ribbon. The recording pauses.
+    Click **Pause** in the **Home** tab of the ribbon. The recording pauses.
 
 2. To restart the recording, click ![pause](../images/pause_record.png) from the WebLOAD Recording toolbar,
 
-   -Or-
+    -Or-
 
-   Click **Start** in the **Home** tab of the ribbon. 
+    Click **Start** in the **Home** tab of the ribbon. 
 
-   The recording restarts.
+    The recording restarts.
 
 
 
@@ -226,25 +224,25 @@ WebLOAD Recorder enables you to insert messages while recording, defining points
 
 1. Click ![](../images/insert_message.png) from the WebLOAD Recording toolbar at the desired location in the recording.
 
-   The Message dialog box opens.
+    The Message dialog box opens.
 
-   ![Message Dialog Box](../images/message_box.png)
+    ![Message Dialog Box](../images/message_box.png)
 
    
 
 2. Create a text message by typing the text you want to appear in the message in the input text box.
 
-   > **Note:** When you enter a string value in the message, you must enclose it in quotation marks; for example, “Sample Message”.
+    > **Note:** When you enter a string value in the message, you must enclose it in quotation marks; for example, “Sample Message”.
 
 3. To add a global variable to the message text, click the globe icon to the right of the input text box, and select a global variable from the drop-down list.
 
 4. Select a severity level for the message from the drop-down list. The following severity levels are available:
 
-   1. Information message (WLInfoMessage)
-   2. Minor error message (WLMinorError)
-   3. Error message (WLError)
-   4. Severe error message (WLSevereError)
-   5. Debug message (WLDebugMessage)
+    - Information message (WLInfoMessage)
+    - Minor error message (WLMinorError)
+    - Error message (WLError)
+    - Severe error message (WLSevereError)
+    - Debug message (WLDebugMessage)
 
    
 
@@ -262,15 +260,15 @@ WebLOAD Recorder enables you to insert comments while recording to describe an a
 
 1. Click ![](../images/insert_comment.png) from the WebLOAD Recording toolbar at the desired location in the recording.
 
-   The Comment dialog box opens.
+    The Comment dialog box opens.
 
-   ![Comment Dialog Box](../images/comment_dialog.png)
+    ![Comment Dialog Box](../images/comment_dialog.png)
 
 2. Enter the text you want to appear in the comment.
 
 3. Click **OK**.
 
-   The Comment item appears in the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Comment item appears in the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### Inserting Begin and End Transactions in a Recording
 
@@ -284,25 +282,25 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 1. Click ![ref24] from the WebLOAD Recording toolbar just before the first action you want to include in the transaction.
 
-   The Begin Transaction dialog box opens.
+    The Begin Transaction dialog box opens.
 
-   ![begin transaction](../images/begin_transaction.png)
+    ![begin transaction](../images/begin_transaction.png)
 
 2. Enter a logical name for the transaction; for example, “Login”.
 
 3. Click **OK**.
 
-   The Begin Transaction item appears in the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Begin Transaction item appears in the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 **To mark the end of a transaction:**
 
 1. Click ![end transaction](../images/end_trans.png) from the WebLOAD Recording toolbar directly after the last action you want included in the script.
 
-   The End Transaction dialog box opens.
+    The End Transaction dialog box opens.
 
    
 
-   ![End Transaction Dialog Box](../images/end_trans_dialog.png)
+    ![End Transaction Dialog Box](../images/end_trans_dialog.png)
 
    
 
@@ -310,9 +308,9 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 3. Select a return value for the transaction from the Select Return Value drop-down list.
 
-   You can select from the return values provided, or select **Custom Function** to create your own verification function to call when the transaction is complete.
+    You can select from the return values provided, or select **Custom Function** to create your own verification function to call when the transaction is complete.
 
-   For information on creating custom functions, see the *WebLOAD Scripting Guide*.
+    For information on creating custom functions, see the *WebLOAD Scripting Guide*.
 
 4. To set WebLOAD to save the results of all transaction instances, successes, and failures for later analysis with Data Drilling, select **true** in the **Save transaction information for Data Drilling** field. Select **false** (default) to save only results of failed transaction instances that triggered some sort of error flag.
 
@@ -320,7 +318,7 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 6. Click **OK**.
 
-   The End Transaction item appears in the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The End Transaction item appears in  the Script Tree, and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -543,29 +541,29 @@ In addition, script regeneration is affected by changes in the settings defined 
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Regenerate Script** from the drop-down list.
 
-   -Or-
+    -Or-
 
-   Right-click a node in the Script Tree and select **Regenerate Script** from the pop-up menu. This regenerates only the selected node.
+    Right-click a node in the Script Tree and select **Regenerate Script** from the pop-up menu. This regenerates only the selected node.
 
-   > **Note:** If your script was created manually, and not recorded, WebLOAD informs you that your script does not contain any recorded nodes and cannot regenerate the script. When performing script regeneration, any modifications to the script’s originally recorded nodes are lost. Any nodes that were added after the recording will remain in the script after the script is regenerated.
+    > **Note:** If your script was created manually, and not recorded, WebLOAD informs you that your script does not contain any recorded nodes and cannot regenerate the script. When performing script regeneration, any modifications to the script’s originally recorded nodes are lost. Any nodes that were added after the recording will remain in the script after the script is regenerated.
 
-   The Perform Script Regeneration dialog box appears.
+    The Perform Script Regeneration dialog box appears.
 
-   ![Perform Script Regeneration Dialog Box](../images/perform_script_regen.png)
+    ![Perform Script Regeneration Dialog Box](../images/perform_script_regen.png)
 
    
 
 2. Click **Save and Continue** to save the changes in your script and regenerate the script.
 
-   -Or-
+    -Or-
 
-   Click **Don’t Save and Continue** to regenerate the script without saving the changes in your script.
+    Click **Don’t Save and Continue** to regenerate the script without saving the changes in your script.
 
-   -Or-
+    -Or-
 
-   Click **Cancel** to close the Perform Script Regeneration dialog box without regenerating the script.
+    Click **Cancel** to close the Perform Script Regeneration dialog box without regenerating the script.
 
-> **Note:** Click **Edit** > **Undo** to discard the newly regenerated script and revert back to the previous script.
+    > **Note:** Click **Edit** > **Undo** to discard the newly regenerated script and revert back to the previous script.
 
 
 
@@ -581,7 +579,7 @@ You must save your scripts so that you can use them in test sessions.
 
 1. Click **Save**.
 
-   Your script is saved with the file extension \*.wlp. You may now run a test using the script.
+    Your script is saved with the file extension \*.wlp. You may now run a test using the script.
 
 
 
@@ -602,11 +600,11 @@ Use the Additional Information dialog box to save information about the project.
 
 1. Select **Additional Information** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Project Additional Information dialog box opens.
+    The Project Additional Information dialog box opens.
 
    
 
-   ![Project Additional Information Dialog Box](../images/proj_addi_info.png)
+    ![Project Additional Information Dialog Box](../images/proj_addi_info.png)
 
    
 
@@ -614,7 +612,7 @@ Use the Additional Information dialog box to save information about the project.
 
 3. Click **OK**.
 
-The following table describes the fields of the Project Additional Information dialog box.
+    The following table describes the fields of the Project Additional Information dialog box.
 
 *Table 5: Project Additional Information Dialog Box Fields*
 
@@ -668,25 +666,25 @@ connection. The following example demonstrates configuring the Internet applicat
 
 1. Select **Internet Properties** and then select the **Connections** tab.
 
-   The Internet Properties – Connections tab appears.
+     The Internet Properties – Connections tab appears.
 
-   ![Internet Properties – Connections Tab](../images/inter_conn.png)
+    ![Internet Properties – Connections Tab](../images/inter_conn.png)
 
    
 
 1. In the Local Area Network (LAN) settings, click **LAN settings**. The Local Area Network (LAN) Settings dialog appears.
 
-   ![Local Area Network (LAN) Settings](../images/lan_settings.png)
+    ![Local Area Network (LAN) Settings](../images/lan_settings.png)
 
 1. In the Proxy server area check **Use a proxy server for your LAN**.
 
 1. In the Address and Port fields enter WebLOAD Recorder’s proxy server setting. By default, this is localhost:9884.
 
-   > **Note:** This setting is necessary for the recording process only and should be removed before the load test execution.
+    > **Note:** This setting is necessary for the recording process only and should be removed before the load test execution.
 
 1. Click **OK**.
 
-The proxy setting of the LAN connection in Windows XP is configured.
+    The proxy setting of the LAN connection in Windows XP is configured.
 
 
 
@@ -700,25 +698,23 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
 1. Enable a port interception service on the client machine. Configure the service to redirect the outgoing traffic from the application to pass through WebLOAD’s proxy. The following are possible methods for intercepting web application traffic:
 
-   - Use an external utility that is capable of controlling and rerouting HTTP traffic. For example, the Proxifier application, which is available at:[ http://www.proxifier.com.](http://www.proxifier.com/)
-   - Configure your firewall. Some firewalls provide advanced services of traffic manipulation.
-   - Configure your hardware. Four to seven layer switches may be used for controlling and routing web based traffic.
+    - Use an external utility that is capable of controlling and rerouting HTTP traffic. For example, the Proxifier application, which is available at:[ http://www.proxifier.com.](http://www.proxifier.com/)
+    - Configure your firewall. Some firewalls provide advanced services of traffic manipulation.
+    - Configure your hardware. Four to seven layer switches may be used for controlling and routing web based traffic.
 
 1. Configure WebLOAD Recorder’s recording options as follows:
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](./configuring_recorder_options.md#rec_script_gen_options)).
+    a. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog appears (see [Figure](./configuring_recorder_options.md#rec_script_gen_options)).
 
-   1. Select the Browser Settings tab.
+    b. Select the Browser Settings tab.
+      The Browser Settings tab appears (see [Figure](./configuring_recorder_options.md#browser_settings_tab)).
 
-   1. The Browser Settings tab appears (see [Figure 119](./configuring_recorder_options.md#browser_settings_tab)).
-
-   1. In the Automatic Browser Settings area, uncheck **Set the Proxy definitions automatically**.
-
-   1. Select the Proxy Options tab.
+    d. In the Automatic Browser Settings area, uncheck **Set the Proxy definitions automatically**.
+      Select the Proxy Options tab.
 
       The Proxy Options tab appears (see the [Figure](./configuring_recorder_options.md#prodxy_topns)).
 
-   1. In the Recording Proxy Options area, check **Use Transparent Proxy**. This enables WebLOAD Recorder to record from any Web client that does not support proxy configurations.
+    e. In the Recording Proxy Options area, check **Use Transparent Proxy**. This enables WebLOAD Recorder to record from any Web client that does not support proxy configurations.
 
       
 
@@ -730,7 +726,7 @@ Proxy tunneling is a general method to handle desktop web applications that do n
 
 1. Disable the interception service.
 
-> **Note:** Before starting the test and running the generated script, the interception service must be stopped. Otherwise, the load traffic generated by the Console will be directed back to the recorder.
+    > **Note:** Before starting the test and running the generated script, the interception service must be stopped. Otherwise, the load traffic generated by the Console will be directed back to the recorder.
 
 The script is recorded successfully. You can now run the test in WebLOAD Console.
 
@@ -742,7 +738,7 @@ In certain cases, the WebLOAD Proxy Recorder may timeout during recording. This 
 
 1. Add the following line to the file:
 
-   `ProxyObject.RProxyCOptConnectionTimeOut = 300`
+    `ProxyObject.RProxyCOptConnectionTimeOut = 300`
 
 1. Save the file.
 

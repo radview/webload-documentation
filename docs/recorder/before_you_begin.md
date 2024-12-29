@@ -46,23 +46,24 @@ When recording is finished, reset the browser proxy to its original setting.
 1. Determine if your organization has a Proxy Server that must be used to access the Internet when you record scripts.
 
 1. If your organization *has a Proxy Server*:
-   1. Determine the proxy name and port number.
-   1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
-   1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 7.
+    1. Determine the proxy name and port number.
+    1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
+    1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step
+   7.
 
 1. If your organization *does not use a Proxy Server*, go to step 7.
 
 1. Configure your organization’s proxy as the application proxy in WebLOAD Recorder:
 
-   1. Open WebLOAD Recorder.
+    1. Open WebLOAD Recorder.
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
+    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
 
-   1. Select the **Use the following definitions for the application’s proxy server**  option.
+    1. Select the **Use the following definitions for the application’s proxy server**  option.
 
-   1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
+    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 
-   1. Click **OK.**
+    1. Click **OK.**
 
 1. Open Internet Explorer.
 
@@ -96,33 +97,33 @@ When recording is finished, reset the browser proxy to its original setting.
 
 1. If your organization *has a Proxy Server*:
 
-   1. Determine the proxy name and port number.
-   1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
-   1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 7.
+    1. Determine the proxy name and port number.
+    1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
+    1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 7.
 
 1. If your organization *does not use a Proxy Server*, go to step 7.
 
 1. Configure your organization’s proxy as the application proxy in the WebLOAD Recorder:
 
-   1. Open WebLOAD Recorder.
+    1. Open WebLOAD Recorder.
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the Proxy Options tab.
+    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the Proxy Options tab.
 
-   1. Select the **Use the following definitions for the application’s proxy server**  option.
+    1. Select the **Use the following definitions for the application’s proxy server**  option.
 
-   1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
+    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 
-   1. Click **OK.**
+    1. Click **OK.**
 
 1. Open Netscape Navigator and do one of the following:
 
-   - If you are using Navigator 3.x, select **Options** > **Network Preferences**.
-   - If you are using Navigator 4.x, select **Edit** > **Preferences**.
+    - If you are using Navigator 3.x, select **Options** > **Network Preferences**.
+    - If you are using Navigator 4.x, select **Edit** > **Preferences**.
 
 1. Within Netscape Navigator, do one of the following:
 
-   - If you are using Navigator 3.x, in the Preferences dialog box, select the Proxies tab.
-   - If you are using Navigator 4.x, in the Preferences dialog box, under Category, expand Advanced and then select Proxies.
+    - If you are using Navigator 3.x, in the Preferences dialog box, select the Proxies tab.
+    - If you are using Navigator 4.x, in the Preferences dialog box, under Category, expand Advanced and then select Proxies.
 
 1. Select the **Manual Proxy Configuration** option.
 
@@ -148,23 +149,23 @@ When recording is finished, reset the browser proxy to its original setting.
 
 1. If your organization *has a Proxy Server*:
 
-   1. Determine the proxy name and port number.
-   1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
-   1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 7.
+    1. Determine the proxy name and port number.
+    1. If the proxy port that it uses *is not* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 6.
+    1. If the proxy port number *is* the proxy port number found in the Recording and Script Generation Options dialog box – Proxy Options tab – Recording Proxy Options frame, go to step 7.
 
 1. If your organization *does not use a Proxy Server*, go to step 7.
 
 1. Configure your organization’s proxy as the application proxy in the WebLOAD Recorder:
 
-   1. Open WebLOAD Recorder.
+    1. Open WebLOAD Recorder.
 
-   1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
+    1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon and then select the **Proxy Options** tab.
 
-   1. Select the **Use the following definitions for the application’s proxy server** option.
+    1. Select the **Use the following definitions for the application’s proxy server** option.
 
-   1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
+    1. In the **HTTP Proxy**/**Port** fields, type the name and port number of your organization’s proxy.
 
-   1. Click **OK.**
+    1. Click **OK.**
 
 1. Open Mozilla Firefox.
 
