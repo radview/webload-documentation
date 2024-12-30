@@ -55,11 +55,11 @@ WebLOAD Recorder enables you to do the following:
 
   -Or-
   
-  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*).
+  Click **Current Project Options** in the **Tools** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)).
   
   -Or-
   
-  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](#_bookmark138)).
+  Select **Current Project Options** from the WebLOAD Recorder **Home** tab of the ribbon (see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)).
 
 **To view the Script Tree:**
 
@@ -239,9 +239,9 @@ When debugging a script, you can set the script to run in the following ways:
 
 1. Click **Run** or **Step Into** in the **Debug** tab of the ribbon.
 1. When you reach the end of the script you can:
-   1. Click **Step Into** in the **Debug** tab to return to the beginning of the script.
-   1. View results (see [*Viewing and Analyzing the Test Results* ](#viewing-and-analyzing-the-test-results)).
-   1. Add breakpoints (see [*Setting Breakpoints* ](#setting-breakpoints)).
+    1. Click **Step Into** in the **Debug** tab to return to the beginning of the script.
+    1. View results (see [*Viewing and Analyzing the Test Results* ](#viewing-and-analyzing-the-test-results)).
+    1. Add breakpoints (see [*Setting Breakpoints* ](#setting-breakpoints)).
 1. Return to Edit mode and revise your script.
 
 #### Starting the Debugger
@@ -266,23 +266,23 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 
 1. Click **Edit Breakpoints** in the **Debug** tab. The Breakpoints dialog box opens.
 
-   ![Breakpoints Dialog Box](../images/bp_dialog.jpeg)
+    ![Breakpoints Dialog Box](../images/bp_dialog.jpeg)
 
    
 
 1. Click the arrow next to the **Break at** field. The Breakpoint options appear.
 
-   ![Breakpoint Dialog Box Options](../images/bp_dialog_ops.png)
+    ![Breakpoint Dialog Box Options](../images/bp_dialog_ops.png)
 
 1. Click the Line number.
 
-   The Line number is added to the list of breakpoints.
+    The Line number is added to the list of breakpoints.
 
 1. To add context to the breakpoint, click the arrow again, and click **Advanced**. 
 
-   The Advanced Breakpoint dialog box opens.
+    The Advanced Breakpoint dialog box opens.
 
-   ![Advanced Breakpoint Dialog Box](../images/adv_bp_dial.png)
+    ![Advanced Breakpoint Dialog Box](../images/adv_bp_dial.png)
 
    
 
@@ -294,8 +294,7 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 
 1. Right-click an item in the Script Tree.
 1. From the pop-up menu, click **Toggle Breakpoint**.
-
-   A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.
+    A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.
    
    
 
@@ -306,11 +305,11 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 1. In the JavaScript View pane, select the line of code where you want the script to wait.
 1. Right-click and select **Toggle Breakpoint** from the pop-up menu,
 
-   -Or-
+    -Or-
+    
+    Click **Toggle Breakpoint** in the **Debug** tab.
    
-   Click **Toggle Breakpoint** in the **Debug** tab.
-   
-   A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.
+    A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.
    
    
 
@@ -335,7 +334,7 @@ Use breakpoints to define places in the script to suspend execution. Breakpoints
 1. Set a breakpoint (see [*Setting Breakpoints* ](#setting-breakpoints)).
 1. Click **Run** in the **Debug** tab
 
-   Click **Step Into** in the **Debug** tab to run the script step-by-step.
+    Click **Step Into** in the **Debug** tab to run the script step-by-step.
 
 #### Removing Breakpoints
 
@@ -373,9 +372,9 @@ You can disable or enable all breakpoints in the script.
 
 1. Click **Disable/Enable Breakpoints** in the **Debug** tab.
 
-   - When all of the breakpoints are disabled, the red dots in the left margin turn white.
+    - When all of the breakpoints are disabled, the red dots in the left margin turn white.
    
-   - When all of the breakpoints are enabled, the white dots in the left margin turn red.
+    - When all of the breakpoints are enabled, the white dots in the left margin turn red.
    
      
 
@@ -385,15 +384,15 @@ You can disable or enable all breakpoints in the script.
 
 1. Click **Run** or **Step Into** in the **Debug** tab.
 
-   The debugger executes the next statement and then it pauses execution. If you step into a nested function call, the debugger steps into the most deeply nested function.
+    The debugger executes the next statement and then it pauses execution. If you step into a nested function call, the debugger steps into the most deeply nested function.
 
 1. Repeat step **1** to continue executing the script one statement at a time.
 
 **To step into a specific function:**
 
 1. Set a breakpoint just before the function call or use the **Step Into** command to advance the script execution to that point.
-
-   For information on setting breakpoints see [*Setting Breakpoints* ](#setting-breakpoints).
+ 
+    For information on setting breakpoints see [*Setting Breakpoints* ](#setting-breakpoints).
 
 1. Click **Step Into** in the **Debug** tab.
 
@@ -409,7 +408,7 @@ You can disable or enable all breakpoints in the script.
 
 1. Click **Step Over** in the **Debug** tab.
 
-   The debugger executes the next function, but pauses after the function returns.
+    The debugger executes the next function, but pauses after the function returns.
 
 1. Continue executing the program.
 
@@ -421,7 +420,7 @@ You can disable or enable all breakpoints in the script.
 
 1. Click **Step Out** in the **Debug** tab.
 
-   The debugger continues until it has completed execution of the return from the function, then pauses.
+    The debugger continues until it has completed  execution of the return from the function, then pauses.
    
    
 
@@ -434,11 +433,11 @@ You can stop the playback of the script at a specific point. Stopping a script e
 1. Start debugging. Click **Run** or **Step Into** in the **Debug** tab.
 1. Click **Break Execution** in the **Debug** tab.
 
-   The script stops running. You can continue the playback from this point, at a later time.
+    The script stops running. You can continue the playback from this point, at a later time.
 
 1. Click **Stop** in the **Debug** tab.
 
-   The script stops running. Continuing the playback from this point is not possible.
+    The script stops running. Continuing the playback from this point is not possible.
    
    
 
@@ -488,7 +487,7 @@ You can view the value of a variable in the Watch window.
 
 
 
-In the Name column, plus sign (+) or minus sign (-) boxes may appear. These appear if you added an array or object variable to the Watch window. Use these boxes to expand or collapse your view of the variable.
+    In the Name column, plus sign (+) or minus sign (-) boxes may appear. These appear if you added an array or object variable to the Watch window. Use these boxes to expand or collapse your view of the variable.
 
 ##### Adding a Watch Variable or Expression
 
@@ -510,9 +509,9 @@ For example, if your script contains the variable a, when you type a=10 in the W
 
 1. Right-click the variable in the JavaScript View pane, and click **Add Watch** from the pop-up menu.
 
-   The Add Watch dialog box opens.
+    The Add Watch dialog box opens.
 
-   ![Add Watch Dialog Box](../images/add_watch.png)
+    ![Add Watch Dialog Box](../images/add_watch.png)
 
 1. In the Expression field, type a variable or expression.
 
@@ -520,9 +519,9 @@ For example, if your script contains the variable a, when you type a=10 in the W
 
 
 
-The variable or expression is added to the Watch window. The Watch window evaluates the variable or expression immediately and displays the value or an error message.
+    The variable or expression is added to the Watch window. The Watch window evaluates the variable or expression immediately and displays the value or an error message.
 
-If you added an array or object variable to the Watch window, plus sign (+) or minus sign (-) boxes appear in the Name column. Use these boxes to expand or collapse your view of the variable.
+    If you added an array or object variable to the Watch window, plus sign (+) or minus sign (-) boxes appear in the Name column. Use these boxes to expand or collapse your view of the variable.
 
 1. You can optionally edit the name or value of the variable or expression by double- clicking the name or value that you want to edit.
 
@@ -535,15 +534,15 @@ The Variables window provides quick access to variables that are important in th
 1. Start debugging. Click **Run** or **Step Into** in the **Debug** tab.
 1. Select the **Variables Window** checkbox in the **Debug** tab.
 
-![Variables Window](../images/wat_variab.jpeg)
+    ![Variables Window](../images/wat_variab.jpeg)
 
 
 
-The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.
+    The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.
 
-The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or Expression* ](#adding-a-watch-variable-or-expression)), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
+    The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see [*Adding a Watch Variable or Expression* ](#adding-a-watch-variable-or-expression)), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.
 
-The Variables window also has a Context dropdown list that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.
+    The Variables window also has a Context dropdown list that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.
 
 
 
@@ -565,7 +564,7 @@ The Call Stack window lists the function calls that led to the current statement
 1. Start debugging. Click **Run** or **Step Into** in the **Debug** tab.
 1. Select the **Call Stack** checkbox in the **Debug** tab.
 
-![Call Stack Window](../images/call_stac.jpeg)
+    ![Call Stack Window](../images/call_stac.jpeg)
 
 
 
@@ -576,11 +575,11 @@ The Call Stack window lists the function calls that led to the current statement
 While recording, editing, and running your script, WebLOAD Recorder provides information on all major events that occurred during runtime such as failures and error messages. You can navigate through the Execution Tree to view the results of your test at increasing levels of detail. This technique lets you view detailed information on any errors.
 
 ### Using the Execution Tree to View Results
-As you execute a script, WebLOAD Recorder displays the Web pages accessed in the Web application in the Execution Tree.
+   As you execute a script, WebLOAD Recorder displays the Web pages accessed in the Web application in the Execution Tree.
 
-When working with a file JavaScript file that has not been converted to a WebLOAD Recorder project file, WebLOAD Recorder displays a playback node for each HTTP request of the JavaScript.
+   When working with a file JavaScript file that has not been converted to a WebLOAD Recorder project file, WebLOAD Recorder displays a playback node for each HTTP request of the JavaScript.
 
-![Execution Tree View](../images/exe_tree_view.png)
+   ![Execution Tree View](../images/exe_tree_view.png)
 
 
 
@@ -588,22 +587,22 @@ When working with a file JavaScript file that has not been converted to a WebLOA
 
 ### Using the Page View to View Results
 
-The Page View displays a visual representation of the baseline set of Web pages in your script. This view is available while recording, editing, or running your script.
+   The Page View displays a visual representation of the baseline set of Web pages in your script. This view is available while recording, editing, or running your script.
 
 **To open the Page View:**
 
 1. Select the **Page View** checkbox in the **View** tab of the ribbon.
 1. Select the **Page View** tab.
 
-![Page View](../images/exe_page_view.jpeg)
+    ![Page View](../images/exe_page_view.jpeg)
 
 
 
 
 ### Using the DOM View to View Results
-DOM View displays all of the objects and the structure of the Web page displayed in Page View, giving you access to objects not visible in the pages presentation layer.
+ DOM View displays all of the objects and the structure of the Web page displayed in Page View, giving you access to objects not visible in the pages presentation layer.
 
-DOM View is available when Page View is open, while recording, editing, or running your script. When an element is selected in the DOM View, the object is highlighted in the Page View.
+ DOM View is available when Page View is open, while recording, editing, or running your script. When an element is selected in the DOM View, the object is highlighted in the Page View.
 
 
 
@@ -612,7 +611,7 @@ DOM View is available when Page View is open, while recording, editing, or runni
 1. Select the **DOM View** checkbox in the **View** tab of the ribbon.
 1. Select the **DOM View** tab.
 
-![DOM View](../images/exe_dom_view.jpeg)
+    ![DOM View](../images/exe_dom_view.jpeg)
 
 
 
@@ -628,17 +627,17 @@ HTML view displays an HTML preview of each page and frame requested in the scrip
 
 1. Select the **HTML View** tab.
 
-   ![HTML View](../images/exe_html_view.png)
+    ![HTML View](../images/exe_html_view.png)
 
 1. To search for text:
 
-   1. Right-click and click **Find** from-the pop-up menu.
-   1. Type the text you want to find, and click **Find Next**.
+    1. Right-click and click **Find** from-the pop-up menu.
+    1. Type the text you want to find, and click **Find Next**.
 
 1. To copy text:
 
-   1. Select the text you want to copy.
-   1. Right-click and click **Copy** from-the pop-up menu.
+    1. Select the text you want to copy.
+    1. Right-click and click **Copy** from-the pop-up menu.
 
 
 
@@ -656,11 +655,11 @@ These views are available while recording, after the recording is finished, duri
 
 1. Select the **HTTP Headers View** tab.
 
-   ![HTTP Headers View](../images/http_headers_view.jpeg)
+    ![HTTP Headers View](../images/http_headers_view.jpeg)
 
-   The headers are divided into groups of headers per playback request. For each request, only the relevant headers are displayed. You can expand the headers to show the form data and all other content.
+    The headers are divided into groups of headers per playback request. For each request, only the relevant headers are displayed. You can expand the headers to show the form data and all other content.
 
-   ![HTTP Headers](../images/http_headers.jpeg)
+    ![HTTP Headers](../images/http_headers.jpeg)
 
    
 
@@ -670,18 +669,18 @@ These views are available while recording, after the recording is finished, duri
 
 1. To search for text:
 
-   1. Right-click and click **Find...** from-the pop-up menu.
+    1. Right-click and click **Find...** from-the pop-up menu.
 
-   1. In the **Find what** field, type the text you want to find. 
+    1. In the **Find what** field, type the text you want to find. 
 
       The **Find what** field is case sensitive.
 
-   1. Click **Find Next**. The entire text of the selected node is selected.
+    1. Click **Find Next**. The entire text of the selected node is selected.
 
 1. To copy text:
 
-   1. Select the text you want to copy.
-   1. Right-click and click **Copy** from-the pop-up menu. The entire text of the selected node is copied.
+    1. Select the text you want to copy.
+    1. Right-click and click **Copy** from-the pop-up menu. The entire text of the selected node is copied.
 
    
 
@@ -720,21 +719,21 @@ You can search for a specific string in all views at once.
 
 1. Select **Find All** in the **Edit** tab of the ribbon.
 
-   ![Find All Dialog Box](../images/find_all_dia.png)
+    ![Find All Dialog Box](../images/find_all_dia.png)
 
-2. In the **Find what** field, type the text you want to find.
+1. In the **Find what** field, type the text you want to find.
 
-3. Under **Look at**, specify in which view you wish to search. You can select any combination of the following:
-
-   1. JavaScript
-   2. HTTP Headers
-   3. HTML
+1. Under **Look at**, specify in which view you wish to search. You can select any combination of the following:
+ 
+    - JavaScript
+    - HTTP Headers
+    - HTML
 
 4. Optionally check the **Match case** checkbox.
 
 5. Click **Find**.
 
-   A results pane appears in the bottom half of the screen, displaying all the search results.
+    A results pane appears in the bottom half of the screen, displaying all the search results.
 
 
 
@@ -742,9 +741,9 @@ You can search for a specific string in all views at once.
 
 
 
-- The icon to the left of each search result indicates in which page view the result appears.
+    - The icon to the left of each search result indicates in which page view the result appears.
 
-- Double clicking a search result highlights the result both in the Script Tree and in the corresponding page view.
+    - Double clicking a search result highlights the result both in the Script Tree and in the corresponding page view.
 
   
 
@@ -767,9 +766,9 @@ You can search for a specific string in all views at once.
 1. In the **File Name** field, type in the name for the file.
 1. Click **Save**.
 
-   The file is saved with the extension \*.log.
+    The file is saved with the extension \*.log.
 
-You can view the saved log file with any text editor.
+    You can view the saved log file with any text editor.
 
 
 
@@ -780,7 +779,7 @@ You can view the saved log file with any text editor.
 1. Right-click an entry in the Log View window.
 1. Select **Display Message** from the right-click menu.
 
-   The Log Message window with detailed information on the selected entry appears.
+    The Log Message window with detailed information on the selected entry appears.
 
 
 
@@ -796,59 +795,61 @@ determine WebLOAD’s behavior if validation fails. During playback, the results
 
 1. Click **Response Validation** in the **Home** tab of the ribbon.
 
-   -Or-
+    -Or-
 
-   Right-click the node and select **Response Validation**.
+    Right-click the node and select **Response Validation**.
 
-   -Or-
+    -Or-
 
-   Perform the following:
+    Perform the following:
 
-   1. Click the **HTML View** tab to view the node in HTML View.
-   1. Select HTML text within the node.
-   1. Right-click the selection and click **Response Validation**. The Response Validation dialog box appears.
+    1. Click the **HTML View** tab to view the node in HTML View.
+    1. Select HTML text within the node.
+    1. Right-click the selection and click **Response Validation**. The Response Validation dialog box appears.
 
-   > **Note:** When accessing the Response Validation dialog box from **HTML View**, the dialog box appears automatically configured with the selected content.
+    > **Note:** When accessing the Response Validation dialog box from **HTML View**, the dialog box appears automatically configured with the selected content.
 
-   ![Response Validation Dialog Box](../images/rsp_vald_diag.png)
+
+    <a name ="response_validation_dialog_box"></a>
+    ![Response Validation Dialog Box](../images/rsp_vald_diag.png)
 
    
 
 1. Configure the responses you wish to validate during playback, according to the information displayed in the [Table](#response-validation) and click **OK**.
 
-<a name = "response-validation"> </a>
+    <a name = "response-validation"> </a>
 
 1. The Response Validation function is added to your script.
 
    
-
-   | **Field**                                           | **Description**                                              |
-   | :-------------------------------------------------- | :----------------------------------------------------------- |
-   | *Page Title*                                        |                                                              |
-   | **Validate**                                        | Select to validate the page title.                           |
-   | **Success if Page Title is**                        | The title of the Web page. During playback, if the title of the Web page matches the text entered in this field, the validation is successful. |
-   | **Recorded page title is**                          | The page title as defined in the HTML `<title>` tag.           |
-   | *Page Time*                                         |                                                              |
-   | **Validate**                                        | Select to validate the page time.                            |
-   | **Page Time limit x sec**                           | The maximum number of seconds that may elapse while waiting for the Web page to open for the validation to be successful. |
-   | *Content length*                                    |                                                              |
-   | **Validate**                                        | Select to validate the content length.                       |
-   | **Equal to x bytes**                                | The size of the Web page content, in bytes, must equal the specified value for the validation to be successful. |
-   | **Greater than x bytes**                            | The size of the Web page content, in bytes, must be greater than the specified value for the validation to be successful. |
-   | **Lower than x bytes**                              | The size of the Web page content, in bytes, must be less than the specified value for the validation to be successful. |
-   | **Recorded Content Length is**                      | The size of the response, in bytes.                          |
-   | *Content*                                           |                                                              |
-   | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing](#_bookmark126) *[Multiple Text Validations of Web Page Content* ](#_bookmark126)*. |
-   | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
-   | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "`<text to find>`" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
-   | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
-   | **Add Parameter**                                   | Opens a list of parameters you can include in the **contains/does not contain** text. This list is identical to the list available in the Insert Variable menu ([*Figure 54*](#_bookmark68)). |
-   | *In case of validation failure*                     |                                                              |
-   | **Display warning and continue running**            | Select to display a warning during playback and continue running the script, if the verification fails. |
-   | **Display error and stop the round**                | Select to display an error during playback and stop the round, if the verification fails. |
-   | **Display fatal error and stop test execution**     | Select to display a fatal error and stop running the script, if the verification fails. |
-   | **Call to JS function**                             | Select to run a specified JavaScript function, if the verification fails. |
-   | **Error message (Optional)**                        | Enter an error message to be displayed if the verification fails (optional). |
+ 
+    | **Field**                                           | **Description**                                              |
+    | :-------------------------------------------------- | :----------------------------------------------------------- |
+    | *Page Title*                                        |                                                              |
+    | **Validate**                                        | Select to validate the page title.                           |
+    | **Success if Page Title is**                        | The title of the Web page. During playback, if the title of the Web page matches the text entered in this field, the validation is successful. |
+    | **Recorded page title is**                          | The page title as defined in the HTML `<title>` tag.           |
+    | *Page Time*                                         |                                                              |
+    | **Validate**                                        | Select to validate the page time.                            |
+    | **Page Time limit x sec**                           | The maximum number of seconds that may elapse while waiting for the Web page to open for the validation to be successful. |
+    | *Content length*                                    |                                                              |
+    | **Validate**                                        | Select to validate the content length.                       |
+    | **Equal to x bytes**                                | The size of the Web page content, in bytes, must equal the  specified value for the validation to be successful. |
+    | **Greater than x bytes**                            | The size of the Web page content, in bytes, must be greater than the specified value for the validation to be successful. |
+    | **Lower than x bytes**                              | The size of the Web page content, in bytes, must be less than the specified value for the validation to be successful. |
+    | **Recorded Content Length is**                      | The size of the response, in bytes.                          |
+    | *Content*                                           |                                                              |
+    | **Validate**                                        | Select to validate the content. For a full explanation, refer to [*Performing Multiple Text Validations of Web Page Content* ](#performing-multiple-text-validations-of-web-page-content). |
+    | **Success if response contains/does not contain x** | For each JavaScript expression you include in your validation check, specify whether it must or must not appear in the Web page for the validation to be successful. |
+    | **Add**                                             | <p>Click this button to add a new JavaScript expression to the list of validations that must or must not appear in the Web page.</p><p>The string "`<text to find>`" appears in the box above the button. Delete this string and instead do either or both of the following:</p><p>- Enter a text string in quote marks. For example, "**Welcome**".</p><p>- Enter a parameter without quote marks. For example, **TodaysDate()**. You can click **Add Parameter** and select a parameter from the list.</p><p>Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.</p> |
+    | **Remove**                                          | Click this button to delete a selected JavaScript expression from the list of validations that must or must not appear in the Web page. |
+    | **Add Parameter**                                   | Opens a list of parameters you can include in the **contains/does not contain** text. This list is identical to the list available in the Insert Variable menu ([*Figure 54*](../scripting/programming_your_javascript.md#insert_variable_menu)). |
+    | *In case of validation failure*                     |                                                              |
+    | **Display warning and continue running**            | Select to display a warning during playback and continue running the script, if the verification fails. |
+    | **Display error and stop the round**                | Select to display an error during playback and stop the round, if the verification fails. |
+    | **Display fatal error and stop test execution**     | Select to display a fatal error and stop running the script, if the verification fails. |
+    | **Call to JS function**                             | Select to run a specified JavaScript function, if the verification fails. |
+    | **Error message (Optional)**                        | Enter an error message to be displayed if the verification fails (optional). |
 
    
 
@@ -861,34 +862,34 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 **To validate the content of a Web page:**
 
-1. Follow the instructions in [*Validating Responses* ](#_bookmark123) to access the Response Validation dialog box ([Figure 90](#_bookmark124)).
+1. Follow the instructions in [*Validating Responses* ](#validating-responses) to access the Response Validation dialog box: ([Figure](#response_validation_dialog_box)).
 
 1. In the **Content** section, check the **Validate** checkbox.
 
 1. Click **Add**.
 
-   The box above the Add button displays **“`<text to find>`”**.
+    The box above the Add button displays **“`<text to find>`”**.
 
-   ![Defining Content Validation](../images/def_cont_val.png)
+    ![Defining Content Validation](../images/def_cont_val.png)
 
    
 
 1. Define a JavaScript expression and whether it must or must not appear in the Web page, as follows:
 
-   1. Delete the string **“`<text to find>`”** and instead do either or both of the following:
+    1. Delete the string **“`<text to find>`”** and instead do either or both of the following:
 
-      - Enter a text string enclosed in quote marks. For example, "**Welcome**".
-      - Enter a parameter without quote marks. For example, **TodaysDate()**. Alternatively, you can click **Add Parameter** and select a parameter from the list of predefined parameters.
+          - Enter a text string enclosed in quote marks. For example, "**Welcome**".
+          - Enter a parameter without quote marks. For example, **TodaysDate()**. Alternatively, you can click **Add Parameter** and select a parameter from the list of predefined parameters.
 
-      Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.
+          Note that you can concatenate strings and/or parameters to create a JavaScript expression. For example: **"Welcome" + params\_user.getValue()**.
 
-   1. Select **contains** if the expression must appear in the Web page; select **does not contain** if it should not appear in the Web page.
+     1. Select **contains** if the expression must appear in the Web page; select **does not contain** if it should not appear in the Web page.
 
 1. Repeat the previous step for every additional expression you wish to define.
 
-The below image shows a content validation example. In this example, the page content will be validated only if it contains the string Welcome followed by a user name, and does not contain the string Error.
+    The below image shows a content validation example. In this example, the page content will be validated only if it contains the string Welcome followed by a user name, and does not contain the string Error.
 
-![Content Validation Example](../images/cant_val_exam.jpeg)
+    ![Content Validation Example](../images/cant_val_exam.jpeg)
 
 
 
@@ -911,37 +912,37 @@ enables you to convert the dynamic value into the correct value for the specific
 
 1. After recording and running your script, open the Page View with the DOM View. Select the **DOM View** checkbox in the **View** tab of the ribbon.
 
-   The Page and DOM View appear.
+    The Page and DOM View appear.
 
 1. In the Execution Tree, select the first node.
 
 1. In the Page View, search for an error message. If there is no message, select the next node in the Execution Tree and search for a message there.
 
-   ![Page View Displaying Error Message](../images/page_view_error.jpeg)
+     ![Page View Displaying Error Message](../images/page_view_error.jpeg)
 
 1. Once you locate the message, open the JavaScript View. Select the **JavaScript View** checkbox in the **View** tab of the ribbon.
 
-   The JavaScript View appears with the requested block of code selected.
+    The JavaScript View appears with the requested block of code selected.
 
 1. Within the selected block of code, locate the dynamic value (for example, the session-id field). This field must be retrieved from the previous block of code.
 
-   ![Dynamic Value in the JavaScript View](../images/dyn_value_js.png)
+    ![Dynamic Value in the JavaScript View](../images/dyn_value_js.png)
 
 1. Click the previous node in the Execution Tree to search for the element that contains the dynamic value. Make sure the Browser and DOM Views are open. Select the **Page View** and **DOM View** checkboxes in the **View** tab of the ribbon.
 
 1. In the DOM View, locate the element that contains the dynamic value. This is usually a hidden input field.
 
-   ![Dynamic Value in DOM View](../images/dun_val_dom_view.png)
+    ![Dynamic Value in DOM View](../images/dun_val_dom_view.png)
 
-   **Note:** You cannot use the value recorded in the script, since the value that was recorded was dynamic, and will not match the new value that is given when you run the script.
+    **Note:** You cannot use the value recorded in the script, since the value that was recorded was dynamic, and will not match the new value that is given when you run the script.
 
 1. Right-click the element and select **Smart Copy** from the pop-up menu.
 
-   ![Smart Copy Pop-up Menu](../images/smart_copy_pop.png)
+    ![Smart Copy Pop-up Menu](../images/smart_copy_pop.png)
 
-   The Smart Copy dialog box appears.
+    The Smart Copy dialog box appears.
 
-   ![Smart Copy Dialog Box](../images/smart_copy_dia.png)
+    ![Smart Copy Dialog Box](../images/smart_copy_dia.png)
 
 1. Click **Copy to clipboard** and click **OK**.
 
@@ -949,22 +950,22 @@ enables you to convert the dynamic value into the correct value for the specific
 
 1. Create a variable for the dynamic field by typing the following at the end of the selected block of code:
 
-   `Session\_id =`
+    `Session_id =`
 
 1. Paste the clipboard text (using **Paste** in the **Edit** tab of the ribbon) after the equal sign.
 
-   For example:
+    For example:
 
-   `Session\_id = document.forms[1].elements[2].value`
+    `Session_id = document.forms[1].elements[2].value`
 
 1. In the subsequent block of code, replace
 
-   wlHttp.FormData[“session\_id”] = `<static session id>`
+    wlHttp.FormData[“session_id”] = `<static session id>`
 
-   with
+    with
 
-   `wlHttp.FormData[“session\_id”] = session\_id`
+    `wlHttp.FormData[“session_id”] = session_id`
 
-   The script is edited. You can now run the script successfully without receiving error messages.
+    The script is edited. You can now run the script successfully without receiving error messages.
 
 

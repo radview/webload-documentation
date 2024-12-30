@@ -498,7 +498,7 @@ Use the FTP-Connect Building Block to open an FTP connection.
 
    For example, in the preceding figure, the comment area explains that the UserName field is used to define the user ID to be used when logging in to the specified FTP host. WebLOAD Recorder automatically sends the user-specified name and password to the FTP host when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 41](#_bookmark224).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_connect).
 
 4. Click **OK**.
 
@@ -507,7 +507,7 @@ Use the FTP-Connect Building Block to open an FTP connection.
    In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
 
 
-
+<a name = "ftp_connect"></a>
 The fields in the FTP-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -681,7 +681,7 @@ Use the SMTP-Send Message Building Block to define an email to be sent.
 
 3. For example, in the preceding figure, the comment area explains that the Server Name Host designates the name of the host to which the email should be sent.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 44](#_bookmark231).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#smtp_send_message).
 
 5. Click **OK**.
 
@@ -689,7 +689,7 @@ Use the SMTP-Send Message Building Block to define an email to be sent.
 
    In the script, the specified SMTP connection is opened, an email message constructed from the user input is sent out, and the SMTP connection is closed.
 
-   
+<a name ="smtp_send_message"></a>
 
 The fields in the SMTP-Send Message Building Block parameters dialog box are described in the following table:
 
@@ -734,7 +734,7 @@ Use the POP-Retrieve Building Block to retrieve all waiting messages, optionally
 
 3. For example, in the preceding figure, the comment area explains that the Message Properties field is a toggle that defines whether or not all the message properties should be retrieved.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 45](#_bookmark234).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#pop_retrieve).
 
 5. Click **OK**.
 
@@ -743,7 +743,7 @@ Use the POP-Retrieve Building Block to retrieve all waiting messages, optionally
    In the script, the POP connection is opened using the connection name, user name, and password specified by the user. The waiting messages are retrieved and the message property values are saved to a local structure.
 
 
-
+<a name = "pop_retrieve"></a>
 The fields in the POP-Retrieve Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -772,7 +772,7 @@ Use the POP-Delete Building Block to delete all messages from a POP mailbox.
 
    For example, in the preceding figure, the comment area explains that the Server Name Host field is used to define the name of the mail server. WebLOAD Recorder automatically sends the user-specified name and password to the server when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described in [Table 46](#_bookmark236).
+3. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#pop_delete).
 
 4. Click **OK**.
 
@@ -781,7 +781,7 @@ Use the POP-Delete Building Block to delete all messages from a POP mailbox.
    In the script, a POP connection is opened using the host name, user name, and password specified by the user. The code then loops through all messages on the server, deleting each message and printing a note to the user identifying the message that was just deleted. When all messages are deleted, the connection is closed.
 
 
-
+<a name = "pop_delete"></a>
 The fields in the POP-Delete Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -828,7 +828,7 @@ Use the IMAP-Connect Building Block to start an IMAP session. When you connect, 
 
    For example, in the preceding figure, the comment area explains that the IMAP Server field is used to define the IMAP Server Name or IP to be used when logging in to the specified IMAP server. WebLOAD Recorder automatically sends the user- specified name and password to the IMAP server when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 47](#_bookmark239).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_connect).
 
 4. Click **OK**.
 
@@ -837,7 +837,7 @@ Use the IMAP-Connect Building Block to start an IMAP session. When you connect, 
 In the script, an IMAP connection is opened using the connection name, local host name, user name, and password specified by the user.
 
 
-
+<a name ="imap_connect"></a>
 The fields in the IMAP-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -865,7 +865,7 @@ Use the IMAP-Retrieve Building Block to retrieve all waiting messages, optionall
 
    For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be retrieved.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 48](#_bookmark241).
+3. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_retrieve).
 
 4. Click **OK**.
 
@@ -873,7 +873,7 @@ Use the IMAP-Retrieve Building Block to retrieve all waiting messages, optionall
 
 In the script, the specified message is retrieved from the specified mailbox and the message property values are saved to a local structure. A comment embedded in the code describes the message attributes stored in the imap JavaScript object.
 
-
+<a name ="imap_retrieve"></a>
 
 The fields in the IMAP-Retrieve Building Block parameters dialog box are described in the following table:
 
@@ -902,7 +902,7 @@ Use the IMAP-Delete Building Block to delete messages from an IMAP mailbox.
 
    For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be deleted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 49](#_bookmark243).
+3. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_delete).
 
 4. Click **OK**.
 
@@ -911,6 +911,8 @@ Use the IMAP-Delete Building Block to delete messages from an IMAP mailbox.
 In the script, the messages specified by the user are deleted from the mail box specified by the user.
 
 The fields in the IMAP-Delete Building Block parameters dialog box are described in the following table:
+
+<a name ="imap_delete"></a>
 
 |**Field Name**|**Description**|
 | :- | :- |
@@ -935,7 +937,7 @@ Use the IMAP-CreateMailbox Building Block to create a new IMAP mailbox.
 
    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be created.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 50](#_bookmark245).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_createmailbox).
 
 4. Click **OK**.
 
@@ -943,6 +945,7 @@ Use the IMAP-CreateMailbox Building Block to create a new IMAP mailbox.
 
 In the script, a new mailbox is created using the name specified by the user.
 
+<a name ="imap_createmailbox"></a>
 The field in the IMAP-CreateMailbox Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -978,7 +981,7 @@ Use the IMAP-DeleteMailbox Building Block to delete an IMAP mailbox.
 
    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be deleted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 51](#_bookmark248).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_deletemailbox).
 
 4. Click **OK**.
 
@@ -986,6 +989,7 @@ Use the IMAP-DeleteMailbox Building Block to delete an IMAP mailbox.
 
 In the script, the mailbox specified by the user is deleted.
 
+<a name = "imap_deletemailbox"></a>
 The field in the IMAP-DeleteMailbox Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -1259,7 +1263,7 @@ Use the NNTP-GetArticle Building Block to retrieve articles from the specified n
 
 3. For example, in the preceding figure, the comment area explains that the Article ID field contains the ID number of the news article to be retrieved.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 57](#_bookmark261).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_getarticle).
 
 5. Click **OK**.
 
@@ -1267,6 +1271,8 @@ Use the NNTP-GetArticle Building Block to retrieve articles from the specified n
 
    In the script, the specified article is retrieved from the specified news group.
 
+
+<a name ="nntp_getarticle"></a>
 The fields in the NNTP-GetArticle Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1294,14 +1300,14 @@ Use the NNTP-GetArticleCount Building Block to retrieve the number of articles i
 
    For example, in the preceding figure, the comment area explains that the Group Name field contains the name of the news group whose articles are to be counted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 58](#_bookmark263).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount).
 
 4. Click **OK**.
 
 The NNTP-GetArticleCount Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the number of articles appearing in the specified news group is returned.
 
 
-
+<a name ="nttp_getarticlecount"></a>
 The field in the NNTP-GetArticleCount Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -1413,7 +1419,7 @@ Use the TCP-Send Building Block to send a TCP request.
 
 3. For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 61](#_bookmark270).
+4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#tcp_send).
 
 5. Click **OK**.
 
@@ -1421,6 +1427,7 @@ Use the TCP-Send Building Block to send a TCP request.
 
 The TCP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+<a name = "tcp_send"></a>
 The fields in the TCP-Send Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1479,7 +1486,7 @@ Use the TELNET-Connect Building Block to open a TELNET connection.
 
 3. For example, in the preceding figure, the comment area explains that the Local Host field is used to define the name of the local host for this TELNET session.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 62](#_bookmark275).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_connect).
 
 5. Click **OK**.
 
@@ -1488,7 +1495,7 @@ The TELNET-Connect Building Block is added to the Script Tree. The JavaScript co
 In the script, a TELNET connection is opened using the host names specified by the user.
 
 
-
+<a name ="telnet_connect"></a>
 The fields in the TELNET-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1516,12 +1523,13 @@ Use the TELNET-Receive Building Block to receive a TELNET communication.
 
 3. For example, in the preceding figure, the comment area explains that the NextPrompt String designates the text string that must be found and identified in the next communication received via TELNET.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 63](#_bookmark277).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_receive).
 
 5. Click **OK**.
 
    The TELNET-Receive Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
+<a name = "telnet_receive"></a>
 The fields in the TELNET-Receive Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1548,14 +1556,14 @@ Use the TELNET-Send Building Block to send a TELNET communication.
 
    For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 64](#_bookmark279).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_send).
 
 4. Click **OK**.
 
 The TELNET-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
-
+<a name ="telnet_send"></a>
 The field in the TELNET-Send Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -1603,7 +1611,7 @@ Use the UDP-Bind Building Block to create a connection to a UDP port.
 
 3. For example, in the preceding figure, the comment area explains that the InBuffer Size field is used to define the amount of space allocated to the incoming data buffer for this UDP session.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 65](#_bookmark283).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_bind).
 
 5. Click **OK**.
 
@@ -1611,6 +1619,7 @@ Use the UDP-Bind Building Block to create a connection to a UDP port.
 
 In the script, the InitAgenda() function includes commands to include the WebLOAD Recorder JIPP and UDP library files. The InitClient() function includes a command to define a separate UDP object for each client. Within the main body of the script, a UDP connection is opened using the connection parameters specified by the user. The TerminateClient() function automatically closes the connection and deletes all objects created for clients during test sessions.
 
+<a name ="udp_bind"></a>
 The fields in the UDP-Bind Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1643,7 +1652,7 @@ Use the UDP-Broadcast Building Block to broadcast data to the local net.
 
    For example, in the preceding figure, the comment area explains that the Broadcast String field is used to define the string to be broadcast.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 66](#_bookmark285).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_broadcast).
 
 4. Click **OK**.
 
@@ -1652,7 +1661,7 @@ Use the UDP-Broadcast Building Block to broadcast data to the local net.
 In the script, the string defined by the user is broadcast via the specified port.
 
 
-
+<a name ="udp_broadcast"></a>
 The fields in the UDP-Broadcast Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1683,13 +1692,13 @@ Use the UDP-Send Building Block to send a UDP communication.
 
    For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
-1. Enter the appropriate field value into the Value column next to the field name, as described [Table 67](#_bookmark288).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_send).
 1. Click **OK**.
 
    The UDP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
-
+<a name ="udp_send"></a>
 The fields in the UDP-Send Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -1994,7 +2003,7 @@ Use the OpenDB Building Block to open and close a specified database.
 
 3. For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 75](#_bookmark300).
+4. Enter the appropriate field value into the Value column next to the field name, as described [Table 75](#opendb).
 
    > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
 
@@ -2004,7 +2013,7 @@ The OpenDB Building Block is added to the Script Tree. The JavaScript code, incl
 
 > **Note:** The OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No “CloseDB” Building Block is necessary.
 
-
+<a name ="opendb"></a>
 
 The fields in the OpenDB Building Block parameters dialog box are described in the following table:
 
@@ -2039,7 +2048,7 @@ Use the Oracle OpenDB Building Block to open and close an Oracle database.
 
 3. For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 76](#_bookmark302).
+4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle_opendb).
 
    > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
 
@@ -2049,7 +2058,7 @@ The Oracle OpenDB Building Block is added to the Script Tree. The JavaScript cod
 
 > **Note:** The Oracle OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No “CloseDB” Building Block is necessary.
 
-
+<a name ="oracle_opendb"></a>
 
 The fields in the Oracle OpenDB Building Block parameters dialog box are described in the following table:
 
@@ -2080,14 +2089,14 @@ Use the MySQL OpenDB Building Block to open and close a MySQL database.
 
 2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described [Table 77](#_bookmark304).
+3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#mysql_opendb).
 
 4. Click **OK**.
 
    The MySQL Open DB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
-
+<a name ="mysql_opendb"></a>
 
 The fields in the MySQL OpenDB Building Block parameters dialog box are described in the following table:
 
@@ -3176,7 +3185,7 @@ For example:
 The Real Clients Toolbox includes Selenium, Perfecto Mobile, and JUnit Runner building blocks.
 
 ### Selenium Building Blocks
-Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](#_bookmark366), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
+Use the WebLOAD Selenium Building Blocks to simply and easily create Selenium actions. For a full description of how to use Selenium scripts in WebLOAD, refer to [*Selenium Integration* ](./appendix_g.md#selenium-integration), and to the *Working with Java Selenium Scripts* section in *Chapter 3 Advanced JavaScript Script Features* of the *WebLOAD Scripting Guide*.
 
 **To call Selenium actions using the Selenium building blocks:**
 
@@ -3204,7 +3213,10 @@ Use the Selenium Driver Building Block to instruct WebLOAD to create a Selenium 
 
 3. For example, in the preceding figure, the comment area explains that the Driver Type field is used to specify which Selenium driver type to use.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in [Table 99](#_bookmark343).
+4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_driver).
+
+
+<a name = "selenium_driver"></a>
 
    
 

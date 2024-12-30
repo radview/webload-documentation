@@ -11,9 +11,9 @@ The **Dashboards** tab enables viewing, analyzing and comparing load sessions, w
 
 The high level UI components of the **Dashboards** tab include: 
 
-- [***Header*** ](#_page42_x192.00_y413.04)– Provides global settings, filters and controls 
-- [***Rows*** ](#_page43_x109.00_y382.04)– Each row contains panels for data display 
-- [***Panels*** ](#_page44_x109.00_y78.04)– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format ![ref10]
+- [***Header*** ](#dashboard-header)– Provides global settings, filters and controls 
+- [***Rows*** ](#rows)– Each row contains panels for data display 
+- [***Panels*** ](#panels)– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format ![ref10]
 
 ![Dashboard Components](../images/dashboard_comoponents.jpeg)
 
@@ -48,7 +48,7 @@ The main components of the dashboard tab header include:
 A row is a horizontal container for panels. A row can be hidden (collapsed) and its height controls its panels’ height. 
 
 - To add a new row, click **+ ADD ROW** at the bottom of a dashboard page. 
-- To edit a row, click the three grey dots and select the desired option. For more information, refer to[` `*Customizing Rows* ](#_page51_x54.00_y289.04)(on page[ 46)](#_page51_x54.00_y289.04). 
+- To edit a row, click the three grey dots and select the desired option. For more information, refer to[*Customizing Rows* ](./customizing_dashboard.md#customizing-rows). 
 
 ![Row Editing Options](../images/row_editing_options.png)
 
@@ -58,13 +58,15 @@ A row is a horizontal container for panels. A row can be hidden (collapsed) and 
 
 A panel is a data display unit. There are various types of panels – such as graph, text, table, singlestat, Alert list, Dashboard list, and Plugin list. 
 
-- To add a new panel, click the three grey dots of the desired row and select **Add Panel** [(Figure 34)](#_page43_x54.00_y695.04). 
-- To edit a panel, click the panel title and click **edit** in the box that appears. For more information, refer to[` `*Customizing Panels* ](#_page52_x54.00_y463.04)(on page[ 47)](#_page52_x54.00_y463.04). 
+- To add a new panel, click the three grey dots of the desired row and select **Add Panel** [(Figure)](#graph_panel). 
+- To edit a panel, click the panel title and click **edit** in the box that appears. For more information, refer to[*Customizing Panels* ](./customizing_dashboard.md#customizing-panels)
 
 #### Graph Panel
 
 A graph panel presents session measurement data in graphic format. In each graph panel you can display multiple measurements from multiple sessions. You can also set various display options, such as colors, graph style (lines, bars, points), Y-axis formats (bytes, milliseconds, etc.) and more. 
 
+
+<a name = "graph_panel"></a>
 ![Graph Panel](../images/graph_panel.png)
 
 
@@ -105,7 +107,7 @@ WebLOAD Dashboard dashboards are useful both for analyzing the results of a spec
 
 **To select a session for viewing in the dashboard tab:** Do any of the following: 
 
-- In the Load Sessions table [(*Figure 23*)](#_page33_x54.00_y697.04), click the session name.  
+- In the Load Sessions table [(*Figure 23*)](#selecting_sessions), click the session name.  
 
   The session appears in the currently selected dashboard. 
 
@@ -117,12 +119,14 @@ WebLOAD Dashboard dashboards are useful both for analyzing the results of a spec
 
 Do any of the following: 
 
-- In the Load Sessions table [(*Figure 23*)](#_page33_x54.00_y697.04), click **Show in Dashboard** for each session you wish to view in the Dashboard. As soon as you select a dashboard, the dashboard refreshes to show the selected sessions’ data in the panels. 
+- In the Load Sessions table [(*Figure*)](#selecting_sessions), click **Show in Dashboard** for each session you wish to view in the Dashboard. As soon as you select a dashboard, the dashboard refreshes to show the selected sessions’ data in the panels. 
 
-- In the **dashboard** page, select the session from the **Sessions** drop-down list [(*Figure 39*)](#_page47_x54.00_y285.04). You can select as many sessions as you wish. You can use the search box to aid you in finding the sessions you wish to view.  
+- In the **dashboard** page, select the session from the **Sessions** drop-down list [(*Figure*)](#selecting_sessions). You can select as many sessions as you wish. You can use the search box to aid you in finding the sessions you wish to view.  
 
   As soon as you select a session or sessions, the dashboard refreshes to show the sessions’ data in the panels. 
 
+
+<a name ="selecting_sessions"></a>
 ![Selecting Sessions - from the Header](../images/select_sessions.png)
 
 
@@ -147,17 +151,18 @@ The dashboard refreshes to show the graph for the selected time range only.
 
 **To zoom out:** 
 
-Use the **Zoom to Data** or **Zoom Out** options in the dashboard[` `*Header*.](#_page42_x192.00_y413.04) 
+Use the **Zoom to Data** or **Zoom Out** options in the [*Dashboard Header*.](#dashboard-header) 
 
 
 
 ## Selecting the Time Format
 
-You can view dashboard data in either Relative time or Absolute time (see item  in [Figure 33)](#_page42_x54.00_y540.04). This affects the graphs’ display as follows: 
+You can view dashboard data in either Relative time or Absolute time (see item  in [Figure)](#absolute_time)). This affects the graphs’ display as follows: 
 
 *If you are viewing data for a single session:* 
 
-- ![relative time](../images/relative_time.png)**Relative time** – The start time is shifted over to zero.  
+- ![relative time](../images/relative_time.png)**Relative time** – The start time is shifted over to zero. 
+<a name = "absolute_time"> </a>
 - ![absolute time](../images/absolute_time.png)**Absolute time** – Shows the real time. This format is useful for viewing currently running sessions. ![ref8]
 
 *If you are comparing sessions:* 

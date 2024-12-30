@@ -406,7 +406,7 @@ Add new lines of code to your script or edit existing JavaScript functions throu
 
 **Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see
 
-[Figure 2](#_bookmark19)).
+[Figure 2](../scripting/programming_your_javascript.md#function_insertion)).
 
 **`<CTRL>` `<Space>`** – While typing the name of an object, you can type `<CTRL>`
 

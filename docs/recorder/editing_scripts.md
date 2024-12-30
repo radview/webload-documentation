@@ -12,7 +12,7 @@ In the script, each request and event is based on previous input, tying the enti
 
 When editing your script, you can work at whatever level you prefer. The following script editing tools are discussed:
 
-- [*Editing a Script in the Script Tree* ](#editing-a-script in-the-script-tree) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
+- [*Editing a Script in the Script Tree* ](#editing-a-script-in-the-script-tree) describes how to add script items and JavaScript Objects, and edit a script by right-clicking in the Script Tree.
 - [*Editing a Script in the JavaScript View Pane* ](#editing-a-script-in-the-javascript-view-pane) describes how to use JavaScript objects to create scripts with the full functionality of JavaScript code programs. The WebLOAD Recorder JavaScript Editor includes a set of context- sensitive prompts that help you code your script more effectively.
 - [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set) describes how to use the WebLOAD Recorder toolbox that contains drag-and-drop items to create a script with minimal coding.
 
@@ -33,19 +33,19 @@ WebLOAD Recorder contains shortcuts to frequently performed actions. This sectio
 
 1. Right-click the Agenda root node or the script item where you want to place the new script item.
 
-   A pop-up menu appears.
+     A pop-up menu appears.
 
 1. From the pop-up menu, click **Insert**. The following list of shortcuts appears.
 
-   ![Insert Menu](../images/insert_menu.jpeg)
+    ![Insert Menu](../images/insert_menu.jpeg)
 
 1. Select a script item or JavaScript Object.
 
-   The script item or JavaScript is inserted on a new line in the script, immediately after the selected node.
+    The script item or JavaScript is inserted on a new line in the script, immediately after the selected node.
 
 
 
-The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set).
+    The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, see [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set).
 
 ### **Editing a Script by Right-Clicking in the Script Tree**
 You can edit directly in the Script Tree using the right mouse button. When you right- click a script item, a menu gives you options that vary according to the script item selected and the mode.
@@ -56,24 +56,24 @@ You can edit directly in the Script Tree using the right mouse button. When you 
 1. Make sure that you are in Visual Editing mode.
 1. In the Script Tree, right-click the Agenda root node or right-click a script item in the tree.
 
-   A pop-up menu appears. The menu for the Agenda root differs slightly from the menu for a script item, as described in [*Table 7*](#_bookmark61).
+    A pop-up menu appears. The menu for the Agenda root differs slightly from the menu for a script item, as described in the [*Table*](#menu_options).
 
-The following table describes the menu options:
+    The following table describes the menu options:
 
-*Table 7: Menu Options*
+<a name = "menu_options"></a>
 
 |**Right-Click Menu Option**|**Purpose**|
 | :- | :- |
 |<p>Synchronize</p><p>(Agenda root menu only)</p>|<p>Synchronize the Script Tree, with the edits made to the JavaScript code in Visual Editing mode In most cases, synchronization is performed automatically.</p><p>Only available at the Agenda root level.</p>|
-|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#_bookmark59)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set)*.</p>|
+|Insert|<p>Insert a script item or JavaScript Object into the script (see</p><p>[*Adding Script Items and JavaScript Objects to a Script* ](#adding-script-items-and-javascript-objects-to-a-script)).</p><p>The script items and JavaScript Objects that you can insert are also available through the WebLOAD Recorder toolbox, described in [*Editing your Script Using the WebLOAD Recorder Toolbox Set* ](#editing-your-script-using-the-webload-recorder-toolbox-set)*.</p>|
 |Paste|<p>Paste the script item you cut or copied, after the current script item.</p><p>**Note:** If you copied a script item, you can paste it more than once. Each time you paste, the node ID automatically changes.</p><p></p><p>If you cut a script item, you can paste it only once, and the node ID does not change.</p>|
 |<p>Cut</p><p>(script item menu only)</p>|Cut the script item from the tree to paste elsewhere.|
 |<p>Copy</p><p>(script item menu only)</p>|Copy the script item from the tree to paste elsewhere.|
 |<p>Delete</p><p>(script item menu only)</p>|Delete the script item from the tree.|
 |Toggle Breakpoint|Add or remove a breakpoint at the selected script item in the Script Tree. For more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints).|
-|Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the](#_bookmark138) *[Default and Current Project Options* ](#_bookmark138)*.|
-|Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration*).|
-|Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](#_bookmark123)|
+|Current Project Options|Display the Current Project Options dialog box. Only available at the script level. For more information, see [*Configuring the Default and Current Project Options* ](./configuring_recorder_options.md#configuring-the-default-and-current-project-options)*.|
+|Regenerate Script|Regenerate the script. For more information, see [*Performing Script Regeneration* ](./recording_scripts.md#performing-script-regeneration).|
+|Response Validation|Add response validation to the script. For more information, see [*Validating Responses* ](./running_debugging_scripts.md#validating-responses)|
 
 
 
@@ -98,15 +98,15 @@ You can edit the JavaScript code generated by WebLOAD Recorder for any item in t
 
 1. Select the item in the Script Tree.
 
-   The JavaScript script code for that item appears in the JavaScript View pane.
+    The JavaScript script code for that item appears in the JavaScript View pane.
 
-   ![JavaScript View Pane](../images/js_view_pane.jpeg)
+    ![JavaScript View Pane](../images/js_view_pane.jpeg)
 
-1. Edit the script (see [*Editing the JavaScript Code* ](#_bookmark69)).
+1. Edit the script (see [*Editing the JavaScript Code* ](#editing-the-javascript-code)).
 
    
 
-> **Important:** The ID number is automatically generated by WebLOAD Recorder and is the connection between the script node and the specific header. It is recommended that you do not change the contents of this comment. If you do, important data might be lost.
+    > **Important:** The ID number is automatically generated by WebLOAD Recorder and is the connection between the script node and the specific header. It is recommended that you do not change the contents of this comment. If you do, important data might be lost.
 
 ### Editing the JavaScript Code Functions
 A script includes a few sections of code, including functions. At the Agenda root node only, you can select these sections from the **Function Name** drop-down list.
@@ -117,7 +117,7 @@ When you select a section other than NodeScript for the Agenda root node, the co
 
 
 
-*Table 8: WebLOAD Functions*
+*Table: WebLOAD Functions*
 
 |**Function**|**Description**|
 | :- | :- |
@@ -139,21 +139,21 @@ The function properties do not need to be edited unless you want to make special
 
 1. Select the script item in the Script Tree.
 
-   The JavaScript script code for the script item appears in the JavaScript View pane. The JavaScript for the Agenda root node will include the whole script.
+    The JavaScript script code for the script item appears in the JavaScript View pane. The JavaScript for the Agenda root node will include the whole script.
 
 1. From the **Function Name** drop-down list, located at the top of the JavaScript View pane, select the name of the function.
 
-   The JavaScript code for the function appears in the JavaScript View pane. 
+    The JavaScript code for the function appears in the JavaScript View pane. 
 
-   ![JavaScript View Pane](../images/initagenda_view_pane.jpeg)
+    ![JavaScript View Pane](../images/initagenda_view_pane.jpeg)
 
    
 
-1. Type the JavaScript code to include in the InitClient, InitAgenda, TerminateClient, or TerminateAgenda (see [*Editing the JavaScript Code* ](#_bookmark69)).
+1. Type the JavaScript code to include in the InitClient, InitAgenda, TerminateClient, or TerminateAgenda (see [*Editing the JavaScript Code* ](#editing-the-javascript-code)).
 
 
 
-> **Note:** You cannot add a WebLOAD Recorder protocol block in the middle of a function. When in Visual Editing mode, this option is disabled.
+    > **Note:** You cannot add a WebLOAD Recorder protocol block in the middle of a function. When in Visual Editing mode, this option is disabled.
 
 ### Using the JavaScript Editor
 Although represented visually, all scripts are written in JavaScript. The JavaScript code within a script is created from the actions you record and the verification tests you place in the script. You can add JavaScript Objects to your recorded script, allowing you to add additional written code directly to your script. The JavaScript Editor is both a viewer and an editor for adding and editing JavaScript code in the script.
@@ -162,23 +162,23 @@ WebLOAD Recorder provides the following features for manually editing a script:
 
 - Import JavaScript Files
 
-  WebLOAD Recorder enables you to import JavaScript files into your script.
+    WebLOAD Recorder enables you to import JavaScript files into your script.
 
 - WebLOAD Recorder Protocol Block
 
-  WebLOAD Recorder enables you to add code to your script which is then represented visually in the Script Tree.
+    WebLOAD Recorder enables you to add code to your script which is then represented visually in the Script Tree.
 
 - An IntelliSense Editor mode for the JavaScript View pane
 
-  Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and
+    Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and
 
 
 
-syntax as programs are being written. IntelliSense supports the following shortcut keys:
+    syntax as programs are being written. IntelliSense supports the following shortcut keys:
 
 - **Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see
 
-  [Figure 52](#_bookmark67)).
+    [Figure](#intellisense_editor_mode_for_javascript_view_pane)).
 
 - `<CTRL>` `<Space>` – While typing the name of an object, you can type `<CTRL>`
 
@@ -201,7 +201,7 @@ You can enable or disable both the outline bar and line numbering features by:
 
 - Right-clicking within the IntelliSense Editor and selecting **Enable Outlining** or
 
-  **Line Numbers** from the pop-up menu.
+    **Line Numbers** from the pop-up menu.
 
 When these features are enabled, a checkmark appears next to the name in the pop-up menus. By default, these features are enabled, but WebLOAD opens with the settings that were saved during the previous WebLOAD session. During playback and debug modes, all outlines are expanded.
 
@@ -210,17 +210,17 @@ Use WebLOAD Recorder’s predefined delimiters to keep your code structured and 
 - For JavaScript functions, use “{“ as the start delimiter and “}” as the end delimiter.
 - For Script Tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end
 
-  delimiter “End WLIDE”.
+    delimiter “End WLIDE”.
 
 For more information, see the *WebLOAD Scripting Guide.*
 
 
-
+<a name ="intellisense_editor_mode_for_javascript_view_pane"></a>
 ![IntelliSense Editor Mode for JavaScript View Pane](../images/intelli_editor_mode.jpeg)
 
 - A selection of the most commonly used functions and commands, available through the **Insert** menu.
 
-  You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder GUI to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the **Insert** menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.
+    You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder GUI to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the **Insert** menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.
 
 
 
@@ -237,7 +237,7 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
 
 
-- ![ref7]A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, click **Syntax Checker** in the **Edit** tab of the ribbon, or right-click and select **Check Syntax** from the pop-up menu to check the syntax of the code in your script file.
+- A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, click **Syntax Checker** in the **Edit** tab of the ribbon, or right-click and select **Check Syntax** from the pop-up menu to check the syntax of the code in your script file.
 
 > **Important:** WebLOAD Recorder scripts should be edited only within the confines of WebLOAD Recorder, not within an external editor. If you use an external editor to modify the JavaScript code in a script file generated by WebLOAD Recorder, your visual script will be lost.
 
@@ -251,11 +251,11 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
 2. Select **Full Script** in the **Home** tab of the ribbon to open the script in JavaScript Editing mode.
 
-   The entire script appears.
+    The entire script appears.
 
 3. Position the cursor where you want to edit the JavaScript code.
 
-   **Note:** To add a new JavaScript node, place the cursor after the END WLIDE comment of the previous node before you start writing your JavaScript code. When you switch back to Visual Editing mode a JavaScript node is automatically created, containing your code.
+    **Note:** To add a new JavaScript node, place the cursor after the END WLIDE comment of the previous node before you start writing your JavaScript code. When you switch back to Visual Editing mode a JavaScript node is automatically created, containing your code.
 
    
 
@@ -265,21 +265,20 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
 6. Import a JavaScript file:
 
-   1. Right-click in the script.
-   2. Click **Import JavaScript File** from the pop-up menu. The JavaScript code is added to the script.
+     1. Right-click in the script.
+     1. Click **Import JavaScript File** from the pop-up menu. The JavaScript code is added to the script.
 
 7. Add a WebLOAD Recorder protocol block from the pop-up menu (see [*Adding WebLOAD Recorder Protocol Blocks* ](#adding-webload-recorder-protocol-blocks)).
 
 8. Perform a syntax check:
 
-   1. Right-click in the script.
-   2. Select **Check Syntax** from the pop-up menu.
-
-   WebLOAD Recorder performs a syntax check and displays the errors.
+    1. Right-click in the script.
+    1. Select **Check Syntax** from the pop-up menu.
+       WebLOAD Recorder performs a syntax check and displays the errors.
 
 9. Toggle a breakpoint (for more information, see [*Setting Breakpoints* ](./running_debugging_scripts.md#setting-breakpoints)).
 
-> **Note:** To clear the JavaScript View pane, click **Clear JavaScript Editor** in the **Edit** tab of the ribbon.
+    > **Note:** To clear the JavaScript View pane, click **Clear JavaScript Editor** in the **Edit** tab of the ribbon.
 
 
 
@@ -297,9 +296,9 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
    
 
-   A WebLOAD Recorder protocol block header is inserted on a new line in the script, immediately after the line where the cursor is located, and a script item is added to the Script Tree.
+    A WebLOAD Recorder protocol block header is inserted on a new line in the script, immediately after the line where the cursor is located, and a script item is added to the Script Tree.
 
-   ![WebLOAD Recorder Protocol Block Header](../images/record_protocol.jpeg)
+    ![WebLOAD Recorder Protocol Block Header](../images/record_protocol.jpeg)
 
    
 
@@ -307,7 +306,7 @@ In addition to the Insert menu, you may select an item from the Insert Variable 
 
 1. Add the JavaScript code after the WebLOAD Recorder protocol block header. The code is added to the script.
 
-   ![JavaScript Code added to WebLOAD Recorder Protocol Block Header](../images/js_added_protocol.jpeg)
+    ![JavaScript Code added to WebLOAD Recorder Protocol Block Header](../images/js_added_protocol.jpeg)
 
 
 
@@ -326,13 +325,13 @@ WebLOAD Recorder contains shortcuts to frequently performed actions. This sectio
 
    
 
-   ![Shortcuts List](../images/shortcuts_list.png)
+    ![Shortcuts List](../images/shortcuts_list.png)
 
    
 
 1. Select a command or function.
 
-The command or function selected is inserted on a new line in the script, immediately after the line where the cursor is located.
+    The command or function selected is inserted on a new line in the script, immediately after the line where the cursor is located.
 
 #### **Guidelines for Editing JavaScript Code**
 
@@ -397,10 +396,10 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 - IoT Protocols functionality, such as connecting to a broker. IoT Protocols Building Blocks are described in [*The WebLOAD Recorder IoT Protocols Toolbox* ](./appendix_a.md#the-webload-recorder-iot-protocols-toolbox).
 - Real Clients functionality, such as Selenium actions and a Perfecto Mobile script. Real Clients building blocks are described in [*The Real Clients Toolbox* ](./appendix_a.md#the-real-clients-toolbox).
 
-- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-service-toolbox).
+- Web Service functionality, such as adding web service calls or HTTP requests to your test session script. Web Services Building Blocks are described in [*The WebLOAD Recorder Web Services Toolbox* ](./appendix_a.md#the-webload-recorder-web-services-toolbox).
 - Database actions, such as opening and getting data from a database for a WebLOAD Recorder test. Database Building Blocks are described in [*The WebLOAD Recorder Database Toolbox* ](./appendix_a.md#the-webload-recorder-database-toolbox).
-- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The WebLOAD Recorder Verifications Toolbox* ](./appendix_a.md#the-webload-recorder verifications-toolbox).
-- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder WebSocket Toolbox* ](./appendix_a.md#the-webload-recorder-websocket-toolbox*).
+- Verification functionality, such as verifying specific elements within HTTP responses in your script. Verifications Building Blocks are described in [*The WebLOAD Recorder Verifications Toolbox* ](./appendix_a.md#the-webload-recorder-verifications-toolbox).
+- WebSocket functionality, such as creating a WebSocket connection to a specific URL address. WebSocket building blocks are described in [*The WebLOAD Recorder WebSocket Toolbox* ](./appendix_a.md#the-webload-recorder-websocket-toolbox).
 
 ### Adding Script Items from a WebLOAD Recorder Toolbox
 
@@ -412,7 +411,7 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 1. Release the script item you have inserted.
 1. For many of the items, such as Message, Comments, and Sleep objects, additional dialog boxes are used to prompt you for the information necessary to add messages, comments, and pause times. Enter the necessary information, and click **OK**.
 
-   The item with its toolbox icon appears in the Script Tree at the point where you placed the item.
+    The item with its toolbox icon appears in the Script Tree at the point where you placed the item.
 
 1. For JavaScript Objects, add JavaScript code to the script (see [*Using the JavaScript Editor* ](#using-the-javascript-editor)).
 
@@ -438,25 +437,25 @@ We recommend that you convert the JavaScript file to a WebLOAD Recorder project 
 
 1. Select a JavaScript file.
 
-   The Open message appears.
+    The Open message appears.
 
-   ![Open Message Box](../images/open_message.png)
+    ![Open Message Box](../images/open_message.png)
 
 1. Click **Yes** to convert the JavaScript file to a WebLOAD Recorder project file,
 
-   -Or-
+    -Or-
 
-   Click **No** to continue working with the file as a JavaScript file.
+    Click **No** to continue working with the file as a JavaScript file.
 
-   If you continue working with the file as a JavaScript file, the file appears in the JavaScript View pane as a JavaScript file, and the WebLOAD Recorder block shows that it is a JavaScript file.
-
-
-
-![JavaScript File in JavaScript View Pane](../images/js_in_jsview_pane.jpeg)
+    If you continue working with the file as a JavaScript file, the file appears in the JavaScript View pane as a JavaScript file, and the WebLOAD Recorder block shows that it is a JavaScript file.
 
 
 
-> **Important:** If you save the file as a JavaScript file, the next time you open the file, the **Open** message will *not* appear.
+    ![JavaScript File in JavaScript View Pane](../images/js_in_jsview_pane.jpeg)
+
+
+
+    > **Important:** If you save the file as a JavaScript file, the next time you open the file, the **Open** message will *not* appear.
 
 
 

@@ -59,10 +59,10 @@ Super admins can add users of any type, to any organization. ***User Creation by
 1. The new user’s settings can now be defined/edited. 
 
    - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#uperadmin_user_list). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
-      - An organizational admin can set the new user’s role in the organization. For instructions, refer to[*User Editing by an Organizational Admin – Editing User’s Role*](#user-editing-by-an-organizational-admin-editing user-s-role) 
+     - An organizational admin can set the new user’s role in the organization, described below.
 
 
-#### User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details
+#### User Editing by a Super Admin - Editing User's Permissions, Organizations, Roles and Details
 
 A super admin can set a user’s permissions, organizational roles, and other settings. **To edit a user:** 
 
@@ -79,7 +79,7 @@ A super admin can set a user’s permissions, organizational roles, and other se
 
 1. You can make the user a super administrator by selecting the **Admin** checkbox in the **Permissions** section. 
 
-1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in[**Organizational user** ](#user-editing-by-a-super-admin–editing-user-s-permissions-organizations-roles-and-details). 
+1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in[**Organizational user** ](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details). 
 
 1. You can edit the user’s name, email, username, and change his password.  ![ref28]
 
@@ -119,7 +119,7 @@ An organizational admin can set a user’s role in the organization.
 
 ### Managing Organizations
 
-Super admin users can add organizations (for an explanation of Organizations, refer to [*Organizations and Admins*)](#_page86_x109.00_y265.04).  
+Super admin users can add organizations (for an explanation of Organizations, refer to [*Organizations and Admins*)](#organizations-and-admins)).  
 
 #### Adding an Organization
 
@@ -137,7 +137,7 @@ Super admin users can add organizations (for an explanation of Organizations, re
 
    ![Org Preferences window ](../images/org_prefer.png)
 
-To set the new organization’s settings, refer to the instructions in[` `*Editing an Organization’s Settings*.](#_page96_x109.00_y78.04) ![ref10]
+To set the new organization’s settings, refer to the instructions in[*Editing an Organization’s Settings*.](#editing-an-organizations-settings) ![ref10]
 
 #### Editing an Organization’s Settings
 

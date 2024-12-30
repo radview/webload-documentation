@@ -138,7 +138,7 @@ When called, will cause all transactions to be automatically added to MDC
 
 See:
 
-*   [putMDC](#putmdcname-valuename-value)
+*   [putMDC](#putmdcname-value)
 
 #### assertEquals(expected, actual, messageopt)
 
@@ -225,7 +225,7 @@ Decoding function - reverse of encodeXML
 
 See:
 
-*   [encodeXML](#encodexmlstrstr)
+*   [encodeXML](#encodexmlstr)
 
 **Returns:**
 
@@ -795,7 +795,7 @@ Store extracted correlation value for future use. Validate it against the record
 
 See:
 
-*   [getCorrelationValue](#getCorrelationValue)
+*   [getCorrelationValue](#getcorrelationvaluevarname-func-object)
 
 #### setCorrelationValueSilent()
 

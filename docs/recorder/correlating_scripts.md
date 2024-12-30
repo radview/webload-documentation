@@ -60,28 +60,28 @@ For more information, see [*Configuring the Correlation Rules* ](#configuring-th
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlate Script and Discover Rules** from the drop-down list.
 
-   The Perform Script Correlation dialog box appears.
+     The Perform Script Correlation dialog box appears.
 
-   <a name = "perform_script_correlation"></a>
+     <a name = "perform_script_correlation"></a>
 
-   ![Perform Script Correlation Dialog Box](../images/perform_script_coo_dialog.png)
+     ![Perform Script Correlation Dialog Box](../images/perform_script_coo_dialog.png)
 
 2. Click **Save and Continue** to save the changes in your script and perform correlation.
 
-   -Or-
+    -Or-
 
-   Click **Don’t Save and Continue** to perform correlation without saving the changes in your script.
+    Click **Don’t Save and Continue** to perform correlation without saving the changes in your script.
 
-   -Or-
+    -Or-
 
-   Click **Cancel** to close the Perform Script Correlation dialog box without performing correlation in your script.
+    Click **Cancel** to close the Perform Script Correlation dialog box without performing correlation in your script.
 
 ### Performing Auto-discovery Correlation for Specific Values
 WebLOAD enables you to perform correlation with auto-discovery of rules for any value you select in a script. This provides correlation when normal auto-discovery is not sufficient. Auto-discovery correlation for specific values can be used instead of normal auto-discovery in the following cases:
 
 - **Partial values** – Since auto-discovery only searches for exact matches, if the dynamic value you wish to correlate is part of the sent value, it is not found. For example, in `wlHttp.FormData[“data”]=”session\*1234” or wlHttp.FormData[“data”]=”`<xml>`<data sessionid= 1234/>`<xml>`”`, if only 1234 is dynamic, normal auto-discovery does not find this value.
 
-  > **Note:** The only exception is in POST and GET commands, where the parameter name or values are replaced.
+> **Note:** The only exception is in POST and GET commands, where the parameter name or values are replaced.
 
 - **Dynamic URLs** – Similar to partial values, if a URL contains a dynamic value, it is not found. For example, in [http://www.mydomain.com/2131231/something.asp, ](http://www.mydomain.com/2131231/something.asp)if only 2131231 is dynamic, normal auto-discovery does not find this value..
 - **Non-standard query strings** – Similar to partial values and dynamic URLs, if a value appears to be a URL but uses a different encoding method, it is not found. For example, in http://www.domain.com;strange=4342?normal=44&other=222, normal auto-discovery finds normal=44 and other=222, but does not find strange=4342.
@@ -94,42 +94,41 @@ WebLOAD enables you to perform correlation with auto-discovery of rules for any 
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Script for Specific Value** from the drop-down list.
 
-   -Or-
+    -Or-
 
-   Right-click and select **Correlate Specific Value**.
+    Right-click and select **Correlate Specific Value**.
 
-   The Correlation Specific Value dialog box appears, displaying the selected value.
+    The Correlation Specific Value dialog box appears, displaying the selected value.
 
 1. Click **OK**.
-
-1. WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears ([Figure 61](#perform_script_correlation)).
+    WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears ([Figure](#perform_script_correlation)).
 
 1. Click **Save and Continue** to save the changes in your script and perform correlation.
 
-   -Or-
+    -Or-
 
-   Click **Don’t Save and Continue** to perform correlation without saving the changes in your script.
+    Click **Don’t Save and Continue** to perform correlation without saving the changes in your script.
 
-   -Or-
+    -Or-
 
-   Click **Cancel** to close the Perform Script Correlation dialog box without performing correlation in your script.
+    Click **Cancel** to close the Perform Script Correlation dialog box without performing correlation in your script.
 
 ### Setting the Default Correlation Action
 You can control the default correlation action that WebLOAD should perform after recording.
 
 **To control which correlation action is performed after recording:**
 
-1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears in the ([Figure](#rec_script_gen_options)).
+1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. The Recording and Script Generation Options dialog box appears in the ([Figure](./configuring_recorder_options.md#rec_script_gen_options)).
 1. Select the **Correlation Options** tab.
 
-   The Correlation Options tab moves to the front of the dialog box ([Figure](../images/corr_options.png))).
+    The Correlation Options tab moves to the front of the dialog box ([Figure](../images/corr_options.png))).
 
 1. In the Correlation level drop-down, select one of the following:
 
-   - **Do not run** – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.
-   - **Use existing rules** – Run the correlation engine once the script recording is complete, only using the existing rules (do not try to auto-discover new rules).
-   - **Discover rules** – Run the correlation engine using existing rules and try to discover new rules.
-   - **Prompt** – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](#_bookmark36).
+    - **Do not run** – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.
+    - **Use existing rules** – Run the correlation engine once the script recording is complete, only using the existing rules (do not try to auto-discover new rules).
+    - **Discover rules** – Run the correlation engine using existing rules and try to discover new rules.
+    - **Prompt** – A dialog that provides you with all of  the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see [*Recording a script* ](./recording_scripts.md#recording-a-script).
 
 
 
@@ -162,26 +161,26 @@ When performing Auto-discovery correlation, the correlation engine compiles a li
 
 1. After running correlation with auto-discovery of rules, the Correlation engine results dialog box appears.
 
-   ![Correlation Engine Results Dialog Box](../images/corr_engine_results.png)
+    ![Correlation Engine Results Dialog Box](../images/corr_engine_results.png)
 
 2. Edit the rules in the Correlation Engine Results dialog box according to the following table and click **OK**.
 
 
 
 |**Column / Field**|**Description**|
-| :- | :- |
-|**Use**|<p>Select the rules to use in this script. You can click **Use All** to select all of the rules in the **Use** and **Add as permanent** columns, or **Use None** to deselect all of the rules in both columns.</p><p></p><p>**Note:** You can use the rule in the current script, without adding it as a permanent rule.</p>|
-|**Field Name**|<p>The field name that was used to send the value in the request.</p><p>This field may be empty if it is defined in the rule.</p>|
-|**Value**|The value extracted or replaced.|
-|**Node ID**|<p>The node ID in the script. Each script node is marked with a comment indicating the node ID, for example:</p><p>/\*\*\*\*\* WLIDE - URL : [http://ww.mydomain.com/ ](http://ww.mydomain.com/)- **ID:42**</p><p>\*\*\*\*\*/</p>|
-|**Node URL**|The GET or POST request of the value extracted or replaced.|
-|**Rule Group**|The name of the group to which the correlation rule belongs.|
-|**Rule Name**|The name of the correlation rule.|
-|**Add as permanent**|<p>Specify how to use this rule:</p><p>- Never use – Do not use this rule in any script</p><p>- Add as rule – Add the rule to the permanent rules (always use)</p><p>- Temporary – Use the rule only in this run</p>|
-|*Rule details*||
-|**Rule Type**|<p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see [*Defining Correlation Rules* ](#defining-correlation-rules)</p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p>|
-|**…**|Additional rule type fields. These fields change according to the rule type.|
-|**Description**|A summary of the selected rule’s details.|
+    | :- | :- |
+    |**Use**|<p>Select the rules to use in this script. You can click **Use All** to select all of the rules in the **Use** and **Add as permanent** columns, or **Use None** to deselect all of the rules in both columns.</p><p></p><p>**Note:** You can use the rule in the current script, without adding it as a permanent rule.</p>|
+    |**Field Name**|<p>The field name that was used to send the value in the request.</p><p>This field may be empty if it is defined in the rule.</p>|
+    |**Value**|The value extracted or replaced.|
+    |**Node ID**|<p>The node ID in the script. Each script node is marked with a comment indicating the node ID, for example:</p><p>/\*\*\*\*\* WLIDE - URL : [http://ww.mydomain.com/ ](http://ww.mydomain.com/)- **ID:42**</p><p>\*\*\*\*\*/</p>|
+    |**Node URL**|The GET or POST request of the value extracted or replaced.|
+    |**Rule Group**|The name of the group to which the correlation rule belongs.|
+    |**Rule Name**|The name of the correlation rule.|
+    |**Add as permanent**|<p>Specify how to use this rule:</p><p>- Never use – Do not use this rule in any script</p><p>- Add as rule – Add the rule to the permanent rules (always use)</p><p>- Temporary – Use the rule only in this run</p>|
+    |*Rule details*||
+    |**Rule Type**|<p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see [*Defining Correlation Rules* ](#defining-correlation-rules)</p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p>|
+    |**…**|Additional rule type fields. These fields change according to the rule type.|
+    |**Description**|A summary of the selected rule’s details.|
 
 
 
@@ -205,7 +204,7 @@ The left side of the Conflict Resolution window displays the correlated version 
 ### Editing Conflicts between Manual Changes and Correlation Changes
 When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.
 
-The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](#_bookmark187).
+The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in [*Defining the Merge Tool Application* ](./configuring_recorder_options.md#defining-the-merge-tool-application).
 
 
 
@@ -262,15 +261,15 @@ You can create correlation rules and groups to better suit your correlation requ
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
+    The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, select the correlation rule under which you wish to create your correlation rule and click **New Rule**,
 
-   -Or-
+    -Or-
 
-   Right-click the correlation rule under which you wish to create your correlation rule and select **New Rule** from the pop-up menu.
+    Right-click the correlation rule under which you wish to create your correlation rule and select **New Rule** from the pop-up menu.
 
-   A new rule is created in the tree, at the specified location.
+    A new rule is created in the tree, at the specified location.
 
 1. Modify the correlation rule parameters, as described in [*Defining Correlation Rules*](#defining-correlation-rules)
 
@@ -282,15 +281,15 @@ You can create correlation rules and groups to better suit your correlation requ
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
+    The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, select the correlation group under which you wish to create your group and click **New Group**,
 
-   -Or-
+    -Or-
 
-   Right-click the correlation group under which you wish to create your group and select **New Group** from the pop-up menu.
+    Right-click the correlation group under which you wish to create your group and select **New Group** from the pop-up menu.
 
-   A new group is created in the tree, at the specified location.
+    A new group is created in the tree, at the specified location.
 
 1. Click **OK**.
 
@@ -301,53 +300,53 @@ You can modify the existing correlation rules and groups to better define your c
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
+    The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. In the Default rule set area, expand a correlation rule group. The correlation rules belonging to the group are displayed.
 
-   ![Correlation Rule Group – Expanded](../images/corr_rule_grp_expan.jpeg)
+    ![Correlation Rule Group – Expanded](../images/corr_rule_grp_expan.jpeg)
 
 1. Click a correlation rule. The Correlation Rules Properties appear.
 
    
 
-   ![Correlation Rule Properties](../images/corr_rule_prop.jpeg)
+    ![Correlation Rule Properties](../images/corr_rule_prop.jpeg)
 
-   > **Note:** The **Match by** fields vary according to the value selected in the **Rule type** field.
+    > **Note:** The **Match by** fields vary according to the value selected in the **Rule type** field.
 
 1. Modify the correlation rule properties according to the information in the following table:
 
    
 
-   | **Field**                        | **Search Scope Value**      | **Match by Field**        | **Description**                                              |
-   | :------------------------------- | :-------------------------- | :------------------------ | :----------------------------------------------------------- |
-   | **Description**                  |                             |                           | A free text description of the selected rule.                |
-   | **Rule type**                    |                             |                           | <p>Determines the method used to find the dynamic data to be correlated. Possible rule type values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p> |
-   |                                  |                             | **All body text**         |                                                              |
-   |                                  |                             | **Prefix**                | A text string that is used together with the Suffix parameter to uniquely identify the dynamic data string. The dynamic string should start immediately after the Prefix parameter. |
-   |                                  |                             | **Suffix**                | A text string that is used together with the Prefix parameter to uniquely identify the dynamic data string. The dynamic string should end immediately before the Suffix parameter. |
-   |                                  |                             | **Prefix Instance**       | The occurrence instance of the Prefix in the search scope. That is, if the Prefix parameter appears multiple times in the body text and you want to correlate only the second instance, select 2 |
-   |                                  |                             | **Reverse**               | <p>Search for dynamic data from the end of the search scope.</p><p>Note that if Reverse is selected, then Prefix Instance is also reversed. Thus, a value of 2 in Prefix Instance indicates the second from last occurrence instance.</p> |
-   |                                  |                             | **All instances**         | <p>Search for all occurrences of the dynamic data.</p><p>When All Instances is selected, both Prefix Instance and Reverse are not meaningful and are disabled.</p> |
-   |                                  | **Form Field values**       |                           | Search for dynamic data in specific form fields, regardless of if they are hidden. You can specify either a form field name or ID. For example, if you specify a form field ID, then the correlation engine will only search for form field IDs and not for form field names. |
-   |                                  |                             | **By ID**                 | Specify a form field ID to be searched.                      |
-   |                                  |                             | **By Name**               | Specify a form field name to be searched.                    |
-   |                                  | **User defined**            |                           | Search for dynamic data according to your own search criteria. |
-   |                                  |                             | **JavaScript expression** | <p>Specify a JavaScript expression to be used as an extraction logic. This can be a valid regular expression, DOM access function, or any other function call. For example:</p><p>extractValue (“prefix”, “suffix”,</p><p>document.wlSource )</p><p>To call a custom JavaScript function, the function must be accessible for both the execution engine and the correlation engine, so it should be included as an auto-discovered JavaScript code.</p><p>For more information on the auto-discovery of JavaScript files, see *JavaScript Language Extension*, in the *WebLOAD Extensibility SDK*.</p> |
-   |                                  |                             | **Save Source**           | Select this option if your JavaScript expression refers to the response body (document.wlSource). |
-   |                                  | **Replace with expression** | **Expression**            | <p>Replace data according to the Field name, regardless of the value. Replace the value with the value in Expression.</p><p>For example:</p><p>Rule type = Replace with expression</p><p>Expression = new Date().getTime() Field name = timestamp</p><p>During correlation, the timestamp value is replaced with “newDate().getTime()” instead of the date on which the script was recorded.</p> |
-   |                                  | **Search in cookies**       | **Cookie name**           | <p>Search for dynamic data among the received cookies, according to the Cookie name.</p><p>Replace the dynamic data in the query string or post data request.</p><p>**Note:** In most cases, cookies sent by the server (in a Set-Cookie header) are echoed back by the client (in a Cookie header). WebLOAD’s engine automatically handles these cases and they do not require correlation.</p><p>Select this rule type when the value received in the cookie is used elsewhere in the request (using JavaScript) and correlation is necessary.</p> |
-   | *Correlation settings*           |                             |                           |                                                              |
-   | **Minimum Length**               |                             |                           | Define the minimum length of the value to be considered for correlation. Shorter values, even if matched by a rule, are ignored. |
-   | **Maximum Length**               |                             |                           | Define the maximum length of the value to be considered for correlation. Longer values, even if matched by a rule, are ignored. |
-   | **Correlate exact matches only** |                             |                           | <p>Select this option to replace the identified dynamic value with a variable only when the values are a complete match. If the value found is only a part of the sent value, the rule will be ignored.</p><p>For example, if the dynamic value found is “1234”and the variable replacing the dynamic value contains “123”:</p><p>- When **Correlate exact matches only** is unchecked, the value “1234” will be replaced by the variable and then a “4”.</p><p>- When **Correlate exact matches only** is checked, the value will not be replaced since it is not an exact match.</p><p>&emsp;**Note:** The values within a query string are also considered a complete match. For example, if the dynamic value is found in the following string, wl[Http.Get(http://domain?field=123), ](http://domain/?field=123\))the dynamic value “123” will be replaced by the variable regardless of whether the Correlate exact matches only is checked.</p><p>By default this is selected.</p> |
-   | **Field name**                   |                             |                           | <p>Replace the dynamic value only when the value is sent with this field name.</p><p>**Note:** The **Field name** limits where the value can be replaced and is applicable to all rule types. Do not confuse this with the Search in: Form field values: by name field, which controls how the value is extracted</p><p>This field is optional, unless **Replace with Expression** is selected, in which case, this field is mandatory.</p> |
+    | **Field**                        | **Search Scope Value**      | **Match by Field**        | **Description**                                              |
+    | :------------------------------- | :-------------------------- | :------------------------ | :----------------------------------------------------------- |
+    | **Description**                  |                             |                           | A free text description of the selected rule.                |
+    | **Rule type**                    |                             |                           | <p>Determines the method used to find the dynamic data to be correlated. Possible rule type values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p> |
+    |                                  |                             | **All body text**         |                                                              |
+    |                                  |                             | **Prefix**                | A text string that is used together with the Suffix parameter to uniquely identify the dynamic data string. The dynamic string should start immediately after the Prefix parameter. |
+    |                                  |                             | **Suffix**                | A text string that is used together with the Prefix parameter to uniquely identify the dynamic data string. The dynamic string should end immediately before the Suffix parameter. |
+    |                                  |                             | **Prefix Instance**       | The occurrence instance of the Prefix in the search scope. That is, if the Prefix parameter appears multiple times in the body text and you want to correlate only the second instance, select 2 |
+    |                                  |                             | **Reverse**               | <p>Search for dynamic data from the end of the search scope.</p><p>Note that if Reverse is selected, then Prefix Instance is also reversed. Thus, a value of 2 in Prefix Instance indicates the second from last occurrence instance.</p> |
+    |                                  |                             | **All instances**         | <p>Search for all occurrences of the dynamic data.</p><p>When All Instances is selected, both Prefix Instance and Reverse are not meaningful and are disabled.</p> |
+    |                                  | **Form Field values**       |                           | Search for dynamic data in specific form fields, regardless of if they are hidden. You can specify either a form field name or ID. For example, if you specify a form field ID, then the correlation engine will only search for form field IDs and not for form field names. |
+    |                                  |                             | **By ID**                 | Specify a form field ID to be searched.                      |
+    |                                  |                             | **By Name**               | Specify a form field name to be searched.                    |
+    |                                  | **User defined**            |                           | Search for dynamic data according to your own search criteria. |
+    |                                  |                             | **JavaScript expression** | <p>Specify a JavaScript expression to be used as an extraction logic. This can be a valid regular expression, DOM access function, or any other function call. For example:</p><p>extractValue (“prefix”, “suffix”,</p><p>document.wlSource )</p><p>To call a custom JavaScript function, the function must be accessible for both the execution engine and the correlation engine, so it should be included as an auto-discovered JavaScript code.</p><p>For more information on the auto-discovery of JavaScript files, see *JavaScript Language Extension*, in the *WebLOAD Extensibility SDK*.</p> |
+    |                                  |                             | **Save Source**           | Select this option if your JavaScript expression refers to the response body (document.wlSource). |
+    |                                  | **Replace with  expression** | **Expression**            | <p>Replace data according to the Field name, regardless of the value. Replace the value with the value in Expression.</p><p>For example:</p><p>Rule type = Replace with expression</p><p>Expression = new Date().getTime() Field name = timestamp</p><p>During correlation, the timestamp value is replaced with “newDate().getTime()” instead of the date on which the script was recorded.</p> |
+    |                                  | **Search in cookies**       | **Cookie name**           | <p>Search for dynamic data among the received cookies, according to the Cookie name.</p><p>Replace the dynamic data in the query string or post data request.</p><p>**Note:** In most cases, cookies sent by the server (in a Set-Cookie header) are echoed back by the client (in a Cookie header). WebLOAD’s engine automatically handles these cases and they do not require correlation.</p><p>Select this rule type when the value received in the cookie is used elsewhere in the request (using JavaScript) and correlation is necessary.</p> |
+    | *Correlation settings*           |                             |                           |                                                              |
+    | **Minimum Length**               |                             |                           | Define the minimum length of the value to be considered for correlation. Shorter values, even if matched by a rule, are ignored. |
+    | **Maximum Length**               |                             |                           | Define the maximum length of the value to be considered for correlation. Longer values, even if matched by a rule, are ignored. |
+    | **Correlate exact matches only** |                             |                           | <p>Select this option to replace the identified dynamic value with a variable only when the values are a complete match. If the value found is only a part of the sent value, the rule will be ignored.</p><p>For example, if the dynamic value found is “1234”and the variable replacing the dynamic value contains “123”:</p><p>- When **Correlate exact matches only** is unchecked, the value “1234” will be replaced by the variable and then a “4”.</p><p>- When **Correlate exact matches only** is checked, the value will not be replaced since it is not an exact match.</p><p>&emsp;**Note:** The values within a query string are also considered a complete match. For example, if the dynamic value is found in the following string, wl[Http.Get(http://domain?field=123), ](http://domain/?field=123\))the dynamic value “123” will be replaced by the variable regardless of whether the Correlate exact matches only is checked.</p><p>By default this is selected.</p> |
+    | **Field name**                   |                             |                           | <p>Replace the dynamic value only when the value is sent with this field name.</p><p>**Note:** The **Field name** limits where the value can be replaced and is applicable to all rule types. Do not confuse this with the Search in: Form field values: by name field, which controls how the value is extracted</p><p>This field is optional, unless **Replace with Expression** is selected, in which case, this field is mandatory.</p> |
 
    
 
 1. Click **OK**.
 
-The correlation rule is modified.
+    The correlation rule is modified.
 
 ### Renaming Correlation Rules
 You can rename correlation rules and groups to better organize the correlation rules according to your specific correlation requirements.
@@ -358,15 +357,15 @@ You can rename correlation rules and groups to better organize the correlation r
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
+    The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. Expand the correlation group to which your correlation rule is associated.
 
 1. Slow double-click the correlation rule,
 
-   -Or-
+    -Or-
 
-   Right-click the correlation rule and select **Rename** from the pop-up menu. The correlation rule’s name becomes editable.
+    Right-click the correlation rule and select **Rename** from the pop-up menu. The correlation rule’s name becomes editable.
 
 1. Rename the correlation rule and click anywhere in the Default rule set area. The correlation rule is renamed.
 
@@ -376,13 +375,13 @@ You can rename correlation rules and groups to better organize the correlation r
 
 1. Click **Correlation** in the **Home** tab of the ribbon and select **Correlation Rules Editor** from the drop-down list.
 
-   The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
+    The Correlation Rules Editor dialog box opens (see the [Figure](#correlation_rules_editor)).
 
 1. Slow double-click a correlation group.
 
-   -Or-
+    -Or-
 
-   Right-click a correlation group and select **Rename** from the pop-up menu. The correlation group’s name becomes editable.
+    Right-click a correlation group and select **Rename** from the pop-up menu. The correlation group’s name becomes editable.
 
 1. Rename the correlation group and click anywhere in the Default rule set area. The correlation group is renamed.
 

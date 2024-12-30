@@ -2573,7 +2573,7 @@ delete nntp InfoMessage("done")
 
 ## wlPOP Object
 
- The wlPOP object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the [wlPOPs Object ](#_bookmark538).
+ The wlPOP object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the wlPOPs Object
 
  
 

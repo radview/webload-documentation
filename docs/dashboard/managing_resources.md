@@ -14,6 +14,8 @@ The Resources tab also offers the option of creating sub-folders. If you want th
 
 1\.  In the menu bar, select **Resources** > **Search**. ![ref8]
 
+
+<a name ="resources_page"></a>
 ![Resources page* ](../images/resources_page.jpeg)
 
 
@@ -37,13 +39,14 @@ The Resources table provides the following information and available actions, fo
 
 **To upload a resource into WebLOAD Dashboard:** 
 
-1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure 26)](#_page37_x54.00_y429.04). 
+1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure 26)](#resources_page). 
 
 1. If you wish to add a resource into the root folder of the WebLOAD Console Resources folder, click **Upload Resources** in the Resources page. 
 
 1. If you wish to add a resource into a subfolder of the WebLOAD Console Resources folder: 
 
-   1. Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in[*Creating a Resources subfolder* ](#_page38_x54.00_y556.04)(on page[ 33)](#_page38_x54.00_y556.04) 
+   1. Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in[*Creating a Resources subfolder* ](#creating-a-resources-subfolder)
+    
    1. Click **Upload Resource**.  
 
    The Upload Resources page appears. 
@@ -64,7 +67,7 @@ The Resources table provides the following information and available actions, fo
 
 **To create a subfolder in the Resources folder:** 
 
-1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure 26)](#_page37_x54.00_y429.04). 
+1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure 26)](#resources_page). 
 
 1. If you wish to add a subfolder under the root folder of the WebLOAD Console Resources folder, click **Create Folder** in the Resources page. 
 
@@ -89,8 +92,8 @@ You can create a load test based on either of the following types of resources:
 
 1. In the menu bar, select **Resources** > **Search**. 
 1. In the Resources table, click ![new resource](../images/create_load_test.png) adjacent to a resource of type .wlp or .tpl. 
-1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
-1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[` `*Creating a Template Load Test* ](#_page26_x54.00_y407.04). Set or edit any of the fields, and click **Create Test**. 
+1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](./manage_tests.md#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
+1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[*Creating a Template Load Test* ](./manage_tests.md#creating-a-template-load-test). Set or edit any of the fields, and click **Create Test**. 
 
 
 

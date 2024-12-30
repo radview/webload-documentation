@@ -62,7 +62,7 @@ The Project Options are settings for WebLOAD Recorder that will be in effect for
 
 The following table describes the tabs in the Default and Current Project Options dialog box.
 
-*Table 14: Default and Current Project Options Dialog Box Tabs*
+*Table: Default and Current Project Options Dialog Box Tabs*
 
 |**Tab**|**Description**|
 | :- | :- |
@@ -327,7 +327,7 @@ Diagnostic options can be enabled while developing a script or for tracking prob
 
 1. Set the **Enable syntax check** option, see [*Enabling Syntax Checking* ](#enabling-syntax-checking).
 
-1. Set the **Enable the enhanced RadView support diagnostic** option, see [*Enabling](#_bookmark150)[ RadView Support Diagnostic* ](#_bookmark150).
+1. Set the **Enable the enhanced RadView support diagnostic** option, see [*Enabling RadView Support Diagnostic* ](#enabling-radview-support-diagnostic).
 
 1. Click **OK**.
 
@@ -495,7 +495,7 @@ The following table describes the options in the Script Generation tab.
 |**Save all redirection headers**|Records the headers for all  URL redirections.||
 |Generate Client side Cookies|When unchecked, the web  page sets  cookies from the  JavaScript  and you must  implement  the cookies  manually in  the script.  If selected, the cookies from  the headers  are compared  to cookies  that the server  sends. If  there is a  difference,  the correct  SetCookie  command is  added to  the script. This is  performed  during  recording.  The cookie value  is obtained  from the  recorded  traffic. WebLOAD  automatically  inserts a  comment  before the  SetCookie command in  the script  to let the user  know that  the cookie was  added  automatically.||
 |**Parse JSON**|Used to specify how to  present  JSON values in the  script appearing in the  JavaScript View pane –  whether as  a long string, or  parsed.|An example of a long script display:  <br />`wlHttp.FormData["data"]="{\"id\":\  "001\", \"type\":\"donut\",  \"name\":\"Cake\"  }"  An example  of parsed JSON display:  var  json = {  "id":  "0001",  "type":  "donut",  "name": "Cake"  }`|
-|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the [*InitAgenda*](#_bookmark65)*()* function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
+|**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the InitAgenda() function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
 |||wlHttp.Get("https://" +|
 |||domain_www_amazon_com + "/")|
 |||You can then, using the same script, run one test in which you edit the InitAgenda()function so that:|
@@ -613,9 +613,10 @@ Use the Browser Settings tab in the Recording and Script Generation Options dial
 
    The Browser Settings tab moves to the front of the dialog box.
 
+<a name ="browser_settings_tab"></a>
    ![Browser Settings Tab](../images/brow_sett.png)
 
-3. Fill in the fields, as described in [Table 23](#_bookmark161).
+3. Fill in the fields, as described in the [Table](#browser_settings_tab_fields_and_options).
 
 4. Click **OK**. 
 
@@ -628,13 +629,13 @@ Use the Browser Settings tab in the Recording and Script Generation Options dial
 The following table defines all the fields and options in the Browser Settings tab.
 
 
-
+<a name ="browser_settings_tab_fields_and_options"></a>
 |**Field**|**Description**|
 | :- | :- |
 |*Default browser selection*||
 |**Web browser**|<p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine *after* WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see [*Configuring the Proxy Value for Your Browser* ](./before_you_begin.md#configuring-the-proxy-value-for-your-browser)).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p>|
 |**Other browser**|Select this option and browse to define a browser other than Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.|
-|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording](#_bookmark356) [Mobile Applications ](#_bookmark356).|
+|**Mobile native application**|Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in [Recording Mobile Applications ](./appendix_e.md#appendix-e-recording-mobile-applications).|
 |**None**|Select this option to define that there is no default browser.|
 |*Automatic browser settings*||
 |**Set the proxy definitions automatically**|If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see [*Configuring the Proxy Value for Your Browser* ](./before_you_begin.md#configuring-the-proxy-value-for-your-browser).|
@@ -662,15 +663,16 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 2. Select the **Correlation Options** tab.
 
    The Correlation Options tab moves to the front of the dialog box.
-   
+   <a name = "recording_and_script_generation"></a>
    ![Correlation Options Tab](../images/corr_options.png)
 
    
 
-3. Fill in the fields, as described in [Table 24](#_bookmark164).
+3. Fill in the fields, as described in the [Table](#correlation_options_tab_fields_and_option).
 
 4. Click **OK**.
 
+<a name = "correlation_options_tab_fields_and_option"></a>
 |**Field**|**Description**|
 | :- | :- |
 |**Add correlation comments to script**|<p>Select this option to instruct WebLOAD to add comments to your script in the places where correlation was performed and create a log of all the changes that were made to your script’s JavaScript.</p><p>When selected, the following comment is added to your script before a command that extracts the dynamic value from a response or that uses a parameter instead of a dynamic value in a request:</p><p>//WLCORR – Extracting the dynamic value from the response according to Correlation Rule <ID>s</p><p>-Or-</p><p>//WLCORR – Using the Correlation Parameter instead of the dynamic value according to Correlation Rule <ID>s</p><p>where `<ID>` is the correlation rule ID.</p>|
@@ -711,11 +713,11 @@ Use the Auto Correlation Options tab in the Recording and Script Generation Opti
 
    
 
-4. Fill in the fields, as described in [Table 25](#_bookmark166).
+4. Fill in the fields, as described in the [Table](#auto_correlation_options_tab_fields_and_option).
 
 5. Click **OK**.
 
-
+<a name = "auto_correlation_options_tab_fields_and_option"></a>
 
 |**Field**|**Description**|
 | :- | :- |
@@ -748,10 +750,11 @@ Use the URL Filtering tab in the Recording and Script Generation Options dialog 
 
    
 
-4. Fill in the fields, as described in [Table 26](#_bookmark168).
+4. Fill in the fields, as described in the [Table](#url_filtering_tab_fields_and_options).
 
 5. Click **OK**.
 
+<a name = "url_filtering_tab_fields_and_options"></a>
 The following table describes the fields in the URL Filtering tab.
 
 |**Field**|**Description**|
@@ -1019,10 +1022,11 @@ Note that the purpose of the masking operation is to make sure passwords are not
 
    ![Security Tab](../images/sec_tab.png)
 
-4. Fill in the fields, as described in [Table 31](#_bookmark180).
+4. Fill in the fields, as described in the [Table](#security_tab_options).
 
 5. Click **OK**.
 
+<a name ="security_tab_options"></a>
 The following table describes the fields and options on the Security tab.
 
 |**Field**|**Description**|
@@ -1221,6 +1225,8 @@ You can also specify the update policy, which defines when a new value will be r
 
 - Click **Parameterization Manager** in the **Home** tab of the ribbon. The Parameterization Manager dialog box opens.
 
+<a name = "parameterization_manager_dialog_box_a"></a>
+
 ![Parameterization Manager Dialog Box](../images/recorder_1100.png)
 
 
@@ -1228,16 +1234,14 @@ You can also specify the update policy, which defines when a new value will be r
 
 
 ### Setting Parameters in the Parameterization Manager
-1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**.
 1. In the **Name** field, enter a name for the parameter.
 1. In the **Type** field, select the parameter type:
 
-   - **Date/Time** – Defines a date/time parameter. For more information see [*Defining](#_bookmark193)[ a Date/Time Parameter* ](#_bookmark193).
-   - **File** – Defines a data file parameter. For more information see [*Defining a Data](#_bookmark195)[ File* ](#_bookmark195). To create a new data file, see [*Creating a Data File* ](#_bookmark198)(on
+   - **Date/Time** – Defines a date/time parameter. For more information see [*Defining a Date/Time Parameter* ](#defining-a-datetime-parameter).
+   - **File** – Defines a data file parameter. For more information see [*Defining a Data File* ](#defining-a-data-file). To create a new data file, see [*Creating a Data File* ](#creating-a-data-file)
 
-      page [222](#_bookmark198)).
-
-   - **Number** – Defines a number parameter. For more information see [*Defining a](#_bookmark199)[ Number Parameter* ](#_bookmark199).
+   - **Number** – Defines a number parameter. For more information see [*Defining a Number Parameter* ](#defining-a-number-parameter).
    - **Random String** – Defines a random string parameter. For more information see
 
       [*Defining a Random String Parameter* ](#defining-a-random-string-parameter).
@@ -1250,7 +1254,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 **To define a date/time parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 1. In the **Type** field, select **Date/Time**. The fields appropriate for defining a date/time parameter appear in the dialog box.
 
@@ -1258,12 +1262,11 @@ You can also specify the update policy, which defines when a new value will be r
 
 1. In the **Description** field, optionally enter a description for the date/time parameter.
 
-1. Fill in the fields as described in [Table 33](#_bookmark194).
+1. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – Date/Time dialog box.
-
 |**Setting**|**Description**|
 | :- | :- |
 |*Date/Time Format*||
@@ -1285,7 +1288,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 **To select a data file:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**.
 
 1. In the **Type** field, select **File**. The fields appropriate for selecting a data file and configuring its settings appear in the dialog box.
 
@@ -1295,18 +1298,17 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the **Description** field, optionally enter a description of the file.
 
-1. Fill in the fields as described in [Table 34](#_bookmark197).
+1. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – File dialog box.
-
 |**Setting**|**Description**|
 | :- | :- |
 |*Select Input File*||
 |**File Name**|Enables selecting the data file. Click ![](../images/change_button.jpeg) to select a data file.|
 |File Delimiter**|The character separating the fields in each row of the data file.|
-|**Create New Data File**|<p>Enables creating a new data file. For information, see [*Creating a Data File*](#_bookmark198)</p><p>.</p>|
+|**Create New Data File**|<p>Enables creating a new data file. For information, see [*Creating a Data File*](#creating-a-data-file)</p><p>.</p>|
 |*Select access method*|Defines the method for reading the next value/row from the file. The predefined methods are the most common and useful methods.|
 |**Use values from the file**|<p>Use rows from the file without any specific restrictions. This is the recommended method to use when applicable.</p><p>This method corresponds to the following Custom settings: Scope – *local*, Order – *random*, When Out of Values – *cycle*.</p><p>For the explanations of Scope, Order and When Out of Values, see the explanations of the **Custom (Advanced)** option.</p>|
 |**Use values, ensure that virtual clients do not use the same value at the same time**|<p>Use unique rows from the file so that a row cannot be used by two virtual clients at the same time. This is useful for example if the value is the login name, and the system under test does not allow the same user to be logged in twice.</p><p>This method corresponds to the following Custom settings:</p><p>Scope – *global unique*, Order – *random*, When Out of Values – *cycle*.</p><p>For the explanations of Scope, Order and When Out of Values, see the explanations of the **Custom (Advanced)** option.</p>|
@@ -1327,7 +1329,7 @@ You can create a new data file.
 
 **To create a data file:**
 
-1. From the Parameterization Manager – File dialog box ([Figure 134](#_bookmark196)), click **Create New Data File**. 
+1. From the Parameterization Manager – File dialog box: ([Figure](#parameterization_manager_dialog_box_a)), click **Create New Data File**. 
 
    The Create Data File dialog box appears.
 
@@ -1355,7 +1357,7 @@ You can create a new data file.
 
 **To define a number parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 2. In the **Type** field, select **Number**. The fields appropriate for defining a number parameter appear in the dialog box. 
 
@@ -1365,7 +1367,7 @@ You can create a new data file.
 
 3. In the **Description** field, optionally enter a description of the number parameter.
 
-4. Fill in the fields as described in [Table 35](#_bookmark200).
+4. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
 5. Click **OK**.
 
@@ -1397,7 +1399,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 **To define a random string parameter:**
 
-1. In the Parameterization Manager Dialog Box ([*Figure 132*](#_bookmark191)), click **Add**. The Parameterization Manager dialog box opens.
+1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
 2. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
 
@@ -1425,14 +1427,14 @@ The following table describes the fields and buttons in the Parameterization Man
 
 
 
-> **Note:** Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see [*Defining a Data File* ](#_bookmark195)).
+> **Note:** Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see [*Defining a Data File* ](#defining-a-data-file)).
 
 
 
 ### Inserting User-Defined Parameters in a Script
 WebLOAD Recorder enables you to edit parameters having static values and replace the static values with a call to a set of specified values. During runtime, the script runs the parameter using values from the set.
 
-The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#_bookmark189)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
+The first step is to use the Parameterization Manager to define the set of values (see [*Configuring the Parameterization Manager* ](#configuring-the-parameterization-manager)*)*. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.
 
 **To insert a user-defined parameter in a script:**
 
@@ -1446,7 +1448,7 @@ The first step is to use the Parameterization Manager to define the set of value
 
 1. Right-click and select **Insert Variable**.
 
-   The Insert Variable menu appears ([Figure 54](#_bookmark68)).
+   The Insert Variable menu appears, see ([Figure](../scripting/programming_your_javascript.md#insert_variable_menu)).
 
 1. Select the parameter you defined in the Parameterization Manager.
 
