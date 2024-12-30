@@ -139,10 +139,10 @@ The Session Tree icons are described in the following table:
 
 | **Icon**                                                      | **Session Component**                                                                    |
 | :------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
-| `<p></p>``<p>`![ref16]`</p>`                                  | **Load Session** ‒ The root of the Session Tree.                                        |
+| `<p></p>``<p>``</p>`                                  | **Load Session** ‒ The root of the Session Tree.                                        |
 | `<p></p>``<p>`![](../images/console_users_guide_0067.png)`</p>` | **Script** ‒ A single test script.                                                      |
-| `<p></p>``<p>`![ref17]`</p>`                                  | **Mix of scripts** ‒ A combination of test scripts.                                     |
-| `<p></p>``<p>`![ref18]`</p>`                                  | **Load Machine** ‒ A machine used for generating Virtual Clients.                       |
+| `<p></p>``<p>``</p>`                                  | **Mix of scripts** ‒ A combination of test scripts.                                     |
+| `<p></p>``<p>``</p>`                                  | **Load Machine** ‒ A machine used for generating Virtual Clients.                       |
 | `<p></p>``<p>`![](../images/console_users_guide_0070.png)`</p>` | **Cloud Load Machine –** A cloud machine used for generating Virtual Clients.           |
 | `<p></p>``<p>`![](../images/console_users_guide_0071.png)`</p>` | **Probing Client Machine** ‒ A machine used for generating Probing Clients.             |
 | `<p></p>``<p>`![](../images/console_users_guide_0072.png)`</p>` | **Cloud Probing Client Machine –** A cloud machine used for generating Probing Clients. |

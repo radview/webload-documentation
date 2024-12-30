@@ -80,7 +80,7 @@ You must have a script to continue configuring a test with the Goal-Oriented Tes
 
 **To run a script:**
 
-1. Select the source of the script to be used for this test. Click the ![ref6] button and select an existing script from your system.
+1. Select the source of the script to be used for this test. Click the button and select an existing script from your system.
 2. To optionally open and view or edit the selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
 3. To optionally configure runtime options exclusive to this script, click **Options**.
 

@@ -280,7 +280,7 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 **To mark the beginning of a transaction:**
 
-1. Click ![ref24] from the WebLOAD Recording toolbar just before the first action you want to include in the transaction.
+1. Click from the WebLOAD Recording toolbar just before the first action you want to include in the transaction.
 
     The Begin Transaction dialog box opens.
 
@@ -326,7 +326,7 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 WebLOAD Recorder enables you to collect Post and Get HTTP requests and simultaneously execute them by two or more threads, as defined in the MultiThread Virtual Clients number. This is configured in the Browser Parameters tab in WebLOAD Console’s Script Options dialog box.
 
-![ref13]**Note:** WebLOAD Recorder does not perform the Post and Get HTTP requests concurrently.
+**Note:** WebLOAD Recorder does not perform the Post and Get HTTP requests concurrently.
 
 To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an Execute Concurrent function in the script. For more information about the Execute Concurrent Building Block, see [*Executing Concurrent Definition in a Recording *](#executing-concurrent-definition-in-a-recording).
 

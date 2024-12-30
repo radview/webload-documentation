@@ -90,7 +90,7 @@ The WebLOAD Wizard enables you to create a test using previously recorded script
 
 **To select a script:**
 
-1. Click the ![ref28] button to select the source of the script to be used for the test.
+1. Click the button to select the source of the script to be used for the test.
 1. To optionally open and view or edit the selected Script, click **View**. WebLOAD Recorder opens, displaying the selected script.
 1. To optionally configure runtime options exclusive to this script, click **Options**.
 
@@ -381,8 +381,7 @@ The wizard progresses to the Schedule screen. See [*Scheduling the Load Session*
    The host computer is moved from the Load Machines or Probing Client Machine window to the Host Computers window.
 
 1. From the Host Computers window, select a host computer.
-1. Click the right arrow button ![ref30].
-
+1. Click the right arrow button.
    The host computer is moved from the Host Computers window to the Load Machines or Probing Client Machine window.
 
 ### Deleting a Host Computer

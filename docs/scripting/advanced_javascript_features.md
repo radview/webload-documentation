@@ -1154,7 +1154,7 @@ For example, the DTD for a bookstore database would do the following:
 
    by checking that the XML data follows the rules set by the DTD.
 
-   ![ref8]If the price is missing from a certain book item, for example, and a price is required by the DTD, then the Browser will not be able to validate that XML document.
+   If the price is missing from a certain book item, for example, and a price is required by the DTD, then the Browser will not be able to validate that XML document.
 
 > **Note:** For the Browser to parse and validate an XML document according to a particular DTD, the author must include a <DOCTYPE> section in the XML document. WebLOAD Recorder supports DTD verification only if the DTD is completely included in the Data Island and there are *no external references* in the DTD.
 

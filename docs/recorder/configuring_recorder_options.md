@@ -15,7 +15,7 @@ You can set the following WebLOAD Recorder configuration options:
 The Project Options are settings for WebLOAD Recorder that will be in effect for each script you create.
 
 - **Default Project Options** are settings that will be in effect for each script you create. Each script created or edited in WebLOAD Recorder is automatically assigned these defaults. You can modify these settings to your specifications.
-- ![ref13]**Current Project Options** are settings that will override the Default Project Options settings and affect only the currently open script. You can modify these settings to your specifications.
+-**Current Project Options** are settings that will override the Default Project Options settings and affect only the currently open script. You can modify these settings to your specifications.
 
 > ##### **Notes:**
 > The Current Project Options dialog boxes are the same as the Default Project Options dialog boxes *except* for the title.
@@ -86,9 +86,9 @@ Use the Pass/Fail Definition options to define test failure criteria in WebLOAD 
 
 1. Select the **Pass/Fail Definition** tab.
 
-   The Pass/Fail Definition tab moves to the front of the dialog box. 
+    The Pass/Fail Definition tab moves to the front of the dialog box. 
 
-   ![Pass/Fail Definition Tab](../images/pass_fail_def.png)
+    ![Pass/Fail Definition Tab](../images/pass_fail_def.png)
 
 1. Set test failure criteria. By default, WebLOAD Recorder will fail a test if a severe error occurs during the test run. You can also set WebLOAD Recorder to fail the test if a set numbers of errors or warnings are encountered.
 
@@ -106,17 +106,17 @@ Sleep time is a pause to simulate the intermittent activity of real users. WebLO
 
 1. Select the **Sleep Time Control** (default) tab. The Sleep Time Control tab moves to the front of the dialog box.
 
-   ![Sleep Time Control Tab](../images/sleep_time_control.png)
+    ![Sleep Time Control Tab](../images/sleep_time_control.png)
 
 1. Specify the type of sleep to use when playing the script. There are four options:
 
-   - Select **Sleep time as recorded** to run the script with the delays corresponding to the natural pauses that occurred when recording the script.
+    - Select **Sleep time as recorded** to run the script with the delays corresponding to the natural pauses that occurred when recording the script.
 
-   - Select **Ignore recorded sleep time** (default) to eliminate any pauses when running the script and run a worst-case stress test.
+    - Select **Ignore recorded sleep time** (default) to eliminate any pauses when running the script and run a worst-case stress test.
 
-   - Select **Set random sleep time** and set the range of delays to represent a range of users.
+    - Select **Set random sleep time** and set the range of delays to represent a range of users.
 
-   - Select **Set sleep time deviation** and set the percentage of deviate from the recorded value to represent a range of users.
+    - Select **Set sleep time deviation** and set the percentage of deviate from the recorded value to represent a range of users.
 
      
 
@@ -133,21 +133,21 @@ The Browser Parameters option enables you to define Virtual Client behavior.
 
 1. Select the **Browser Parameters** tab.
 
-   The Browser Parameters tab moves to the front of the dialog box.
+    The Browser Parameters tab moves to the front of the dialog box.
 
-   ![Browser Parameters Tab of Default/Current Project Options Dialog Box](../images/brow_parameter.png)
+    ![Browser Parameters Tab of Default/Current Project Options Dialog Box](../images/brow_parameter.png)
 
 1. To set the Browser and Version:
 
-   1. Select the browser from the **Select the browser** drop-down list. An appropriate version automatically appears in the **Select the version** field.
-   1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#editing-browser-version-definitions)).
+    1. Select the browser from the **Select the browser** drop-down list. An appropriate version automatically appears in the **Select the version** field.
+    1. You can select an alternative version from the drop-down list, or click the Change ![](../images/change_button.jpeg) button to edit the version definition (see [*Editing Browser Version*](#editing-browser-version-definitions)).
 
 1. To simulate specific cache behaviors, select the **DNS cache** checkbox and **SSL cache** checkbox.
 
 1. To set Redirection limits:
 
-   1. Select the **Enable redirection** checkbox.
-   1. In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.
+    1. Select the **Enable redirection** checkbox.
+    1. In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.
 
 1. To enable a persistent connection to the server, select the **Persistent connection** checkbox.
 
@@ -155,8 +155,8 @@ The Browser Parameters option enables you to define Virtual Client behavior.
 
 1. To set character encoding:
 
-   1. Select a character encoding type from the drop-down list.
-   1. To enforce character encoding, select the **Enforce character encoding** checkbox.
+    1. Select a character encoding type from the drop-down list.
+    1. To enforce character encoding, select the **Enforce character encoding** checkbox.
 
 1. Click **OK**.
 
@@ -193,11 +193,11 @@ The available browser version list is appropriate for the browser type you selec
 
 1. Click the browse button in the **Browser Type** area on the Browser Parameters tab. The User Agent dialog box opens.
 
-   ![User Agent Dialog Box](../images/user_agent_dia.png)
+    ![User Agent Dialog Box](../images/user_agent_dia.png)
 
-2. Manually edit the version definition.
+1. Manually edit the version definition.
 
-3. Click **OK**.
+1. Click **OK**.
 
 
 
@@ -210,7 +210,7 @@ The HTTP Parameters option enables you to define HTTP client behavior on the HTT
 
 1. Select the **HTTP Parameters** tab. The HTTP Parameters tab appears at the front of the dialog box. 
 
-   ![HTTP Parameters Dialog Box](../images/http_para.png)
+    ![HTTP Parameters Dialog Box](../images/http_para.png)
 
    
 
@@ -246,9 +246,9 @@ WebLOAD Recorder enables you to define the behavior of the cache that WebLOAD Co
 1. Click **Default/Current Project Options** in the **Tools** tab of the ribbon. The Default/Current Project Options dialog box opens.
 1. Select the **Browser Cache** tab.
 
-   The Browser Cache tab moves to the front of the dialog box.
+    The Browser Cache tab moves to the front of the dialog box.
 
-![Browser Cache Tab](../images/brow_cache.png)
+    ![Browser Cache Tab](../images/brow_cache.png)
 
 
 
@@ -278,13 +278,14 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
 1. Click **Default/Current Project Options** in the **Tools** tab of the ribbon. The Default/Current Project Options dialog box appears.
 
-2. Select the **Authentication** tab.
+1. Select the **Authentication** tab.
 
-   The Authentication tab moves to the front of the dialog box.
+    The Authentication tab moves to the front of the dialog box.
 
-   ![Authentication Tab](../images/authen_tab.jpg)
+    ![Authentication Tab](../images/authen_tab.jpg)
 
-3. Fill in the fields, as described below and click **OK**.
+1. Fill in the fields, as described below and click **OK**.
+
 
 The following table defines all the fields and options in the Authentication tab.
 
@@ -292,11 +293,8 @@ The following table defines all the fields and options in the Authentication tab
 
 |**Field**|**Description**|
 | :- | :- |
-
 *Global Authentication Settings*
-
-|**User name** and **Password**|The user name and password that the script should use to log onto restricted HTTP sites.|
-| :- | :- |
+|**User name** and **Password**|The user name and password that the script should use to log onto restricted HTTP sites.| :- | :- |
 |<p>**NT user name** and</p><p>**NT password**</p>|The user name the script should use for Windows NT Challenge response authentication.|
 |<p>**SSL client certificate file** and</p><p>**SSL client certificate password**</p>|The file name (optionally including a directory path) of the certificate WebLOAD makes available to SSL servers and type the password. Click **Browse** to search for the file.|
 |**Authentication method**|<p>The authentication method supported by the server:</p><p>- NTLM (default).</p><p>- Kerberos.</p>|
@@ -319,9 +317,9 @@ Diagnostic options can be enabled while developing a script or for tracking prob
 
 1. Select the **Diagnostic** tab.
 
-   The Diagnostic tab moves to the front of the dialog box.
+    The Diagnostic tab moves to the front of the dialog box.
 
-   ![Diagnostic Ta](../images/diag_tab.png)
+    ![Diagnostic Ta](../images/diag_tab.png)
 
    
 
@@ -380,31 +378,31 @@ The Java options enable you to define the Java Virtual Machine to be used by Web
 
 1. Select the **Java Options** tab.
 
-   The Java Options tab moves to the front of the dialog box.
+    The Java Options tab moves to the front of the dialog box.
 
-   ![Java Options Tab](../images/java_opt.png)
-
+    ![Java Options Tab](../images/java_opt.png)
+ 
    
 
 1. In the Select run-time JVM to be used drop down, select one of the available Java Virtual Machines. The default setting is the WebLOAD standard Java Virtual Machine.
 
    
 
-   The selected value is passed to wlGlobals.JVMtype and is the key for
+    The selected value is passed to wlGlobals.JVMtype and is the key for
 
-   WLJVMs.xml. This XML file (located on every WebLOAD Machine in the
+    WLJVMs.xml. This XML file (located on every WebLOAD Machine in the
 
-   ...\extensions\JVMs directory) contains the following parameters for each JVM:
+    ...\extensions\JVMs directory) contains the following parameters for each JVM:
 
-   - Type (the value from the flag)
-   - Path (should be machine-agnostic)
-   - Options
+      - Type (the value from the flag)
+      - Path (should be machine-agnostic)
+      - Options
 
-   When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.
+    When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.
 
 1. Click **OK**.
 
-The Java Options are saved.
+    The Java Options are saved.
 
 
 
@@ -418,7 +416,7 @@ The Recording and Script Generation Options enable you to define the behavior of
 
 - Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-  Or-
+   Or-
 
   Select **Recording and Script Generation Options** from the WebLOAD Recorder
   
@@ -429,6 +427,11 @@ The Recording and Script Generation Options dialog box opens with the File Exten
 
 <a name = "rec_script_gen_options"></a>
 ![Recording and Script Generation Options Dialog Box – File Extensions Tab](../images/rec_script_gen_options.png)
+
+
+
+
+
 
 
 
@@ -459,16 +462,20 @@ Use the Script Generation tab in the Recording and Script Generation Options dia
 
 1. Select **Recording and Script Generation Options** from the WebLOAD Recorder
 
-   **Home** tab of the ribbon.
+    **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#rec_script_gen_options)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#rec_script_gen_options)).
+
+
+
+
 
 1. Select the **Script Generation** tab. 
 
-   The Script Generation tab moves to the front of the dialog box. 
+    The Script Generation tab moves to the front of the dialog box. 
 
-   <a name ="setting_dialog_box"></a>
-   ![Settings Dialog Box](../images/set_dia_box.png)
+    <a name ="setting_dialog_box"></a>
+    ![Settings Dialog Box](../images/rec_script_gen_options_script_gen.png)
    
 
 1. Select or clear the options to specify what the WebLOAD Recorder should record in your script.
@@ -496,10 +503,7 @@ The following table describes the options in the Script Generation tab.
 |Generate Client side Cookies|When unchecked, the web  page sets  cookies from the  JavaScript  and you must  implement  the cookies  manually in  the script.  If selected, the cookies from  the headers  are compared  to cookies  that the server  sends. If  there is a  difference,  the correct  SetCookie  command is  added to  the script. This is  performed  during  recording.  The cookie value  is obtained  from the  recorded  traffic. WebLOAD  automatically  inserts a  comment  before the  SetCookie command in  the script  to let the user  know that  the cookie was  added  automatically.||
 |**Parse JSON**|Used to specify how to  present  JSON values in the  script appearing in the  JavaScript View pane –  whether as  a long string, or  parsed.|An example of a long script display:  <br />`wlHttp.FormData["data"]="{\"id\":\  "001\", \"type\":\"donut\",  \"name\":\"Cake\"  }"  An example  of parsed JSON display:  var  json = {  "id":  "0001",  "type":  "donut",  "name": "Cake"  }`|
 |**Generate Host List**|Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the InitAgenda() function|Instead of the script including, for example: [wlHttp.Get("https://www.amazon.com/")](http://www.amazon.com/) <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
-|||wlHttp.Get("https://" +|
-|||domain_www_amazon_com + "/")|
-|||You can then, using the same script, run one test in which you edit the InitAgenda()function so that:|
-|||domain_www_amazon_com=”[www.amazon.com](http://www.amazon.com/)” and another test in which: domain_www_amazon_com=”[www.qalab.com](http://www.qalab.com/)”|
+
 
 
 
@@ -519,27 +523,27 @@ While recording a script, WebLOAD automatically identifies if there are no name-
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Post Data** tab. The Post Data tab moves to the front of the dialog box.
+1. Select the **Post Data** tab. The Post Data tab moves to the front of the dialog box.
 
-   ![Post Data Tab](../images/post_data.png)
+    ![Post Data Tab](../images/post_data.png)
 
-3. Fill in the fields as described in table below.
+1. Fill in the fields as described in table below.
 
-4. Optionally, you can double-click an item from the DATA block or DATAFILE block lists to display the item’s full text.
+1. Optionally, you can double-click an item from the DATA block or DATAFILE block lists to display the item’s full text.
 
-   ![Post Data Full Text Message Box](../images/post_data_mess.png)
+    ![Post Data Full Text Message Box](../images/post_data_mess.png)
 
    
 
-5. Click **OK** to return to the Post Data tab.
+1. Click **OK** to return to the Post Data tab.
 
-6. Click **OK** to save the record options settings.
+1. Click **OK** to save the record options settings.
 
 
 
@@ -558,11 +562,11 @@ The following table defines all the fields and options in the Post Data tab.
 
 By default, the following content types are recorded as DATA blocks:
 
-- application/json; charset=utf-8
-- application/json-rpc
-- application/xml; charset=utf-8
-- text/xml
-- ![ref13]text/xml; charset=utf-8
+ - application/json; charset=utf-8
+ - application/json-rpc
+ - application/xml; charset=utf-8
+ - text/xml
+ - text/xml; charset=utf-8
 
 > **Note:** The recorder searches for exact content types from this list. Therefore, text/xml and text/xml; charset=utf-8 are different content types even though the former is a subset of the latter.
 
@@ -582,21 +586,21 @@ Use the Default Encoding Type tab in the Recording and Script Generation Options
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Default Encoding Type** tab.
+1. Select the **Default Encoding Type** tab.
 
-3. The Default Encoding Type tab moves to the front of the dialog box.
+    The Default Encoding Type tab moves to the front of the dialog box.
 
-   ![Default Encoding Type Tab](../images/def_encod.png) 
+    ![Default Encoding Type Tab](../images/def_encod.png) 
 
-4. Select an option as the default encoding type.
+1. Select an option as the default encoding type.
 
-5. Click **OK**.
+1. Click **OK**.
 
 ### Configuring the Default Browser
 Use the Browser Settings tab in the Recording and Script Generation Options dialog box to set up the default browser.
@@ -605,24 +609,24 @@ Use the Browser Settings tab in the Recording and Script Generation Options dial
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Browser Settings** tab.
+1. Select the **Browser Settings** tab.
 
-   The Browser Settings tab moves to the front of the dialog box.
+    The Browser Settings tab moves to the front of the dialog box.
 
-<a name ="browser_settings_tab"></a>
-   ![Browser Settings Tab](../images/brow_sett.png)
+    <a name ="browser_settings_tab"></a>
+    ![Browser Settings Tab](../images/brow_sett.png)
 
-3. Fill in the fields, as described in the [Table](#browser_settings_tab_fields_and_options).
+1. Fill in the fields, as described in the [Table](#browser_settings_tab_fields_and_options).
 
-4. Click **OK**. 
+1. Click **OK**. 
 
-   A message appears stating that in order for WebLOAD Recorder to change your proxy definition automatically, you must close all instances of the browser before recording.
+    A message appears stating that in order for WebLOAD Recorder to change your proxy definition automatically, you must close all instances of the browser before recording.
 
-   After you close all instances of the browser, the WebLOAD Recorder screen appears.
+    After you close all instances of the browser, the WebLOAD Recorder screen appears.
 
 
 
@@ -630,6 +634,7 @@ The following table defines all the fields and options in the Browser Settings t
 
 
 <a name ="browser_settings_tab_fields_and_options"></a>
+
 |**Field**|**Description**|
 | :- | :- |
 |*Default browser selection*||
@@ -654,25 +659,25 @@ Use the Correlation Options tab in the Recording and Script Generation Options d
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Correlation Options** tab.
+1. Select the **Correlation Options** tab.
 
-   The Correlation Options tab moves to the front of the dialog box.
-   <a name = "recording_and_script_generation"></a>
-   ![Correlation Options Tab](../images/corr_options.png)
+    The Correlation Options tab moves to the front of the dialog box.
+    <a name = "recording_and_script_generation"></a>
+    ![Correlation Options Tab](../images/corr_options.png)
 
    
+1. Fill in the fields, as described in the [Table](#correlation_options_tab_fields_and_option).
 
-3. Fill in the fields, as described in the [Table](#correlation_options_tab_fields_and_option).
+1. Click **OK**.
 
-4. Click **OK**.
 
-<a name = "correlation_options_tab_fields_and_option"></a>
+ <a name = "correlation_options_tab_fields_and_option"></a>
 |**Field**|**Description**|
 | :- | :- |
 |**Add correlation comments to script**|<p>Select this option to instruct WebLOAD to add comments to your script in the places where correlation was performed and create a log of all the changes that were made to your script’s JavaScript.</p><p>When selected, the following comment is added to your script before a command that extracts the dynamic value from a response or that uses a parameter instead of a dynamic value in a request:</p><p>//WLCORR – Extracting the dynamic value from the response according to Correlation Rule <ID>s</p><p>-Or-</p><p>//WLCORR – Using the Correlation Parameter instead of the dynamic value according to Correlation Rule <ID>s</p><p>where `<ID>` is the correlation rule ID.</p>|
@@ -699,23 +704,23 @@ Use the Auto Correlation Options tab in the Recording and Script Generation Opti
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Auto Correlation Options** tab.
+1. Select the **Auto Correlation Options** tab.
 
-3. The Auto Correlation Options tab moves to the front of the dialog box.
+1. The Auto Correlation Options tab moves to the front of the dialog box.
 
-   ![Auto Correlation Options Tab](../images/auto_corre.png)
+    ![Auto Correlation Options Tab](../images/auto_corre.png)
 
    
 
-4. Fill in the fields, as described in the [Table](#auto_correlation_options_tab_fields_and_option).
+1. Fill in the fields, as described in the [Table](#auto_correlation_options_tab_fields_and_option).
 
-5. Click **OK**.
+1. Click **OK**.
 
 <a name = "auto_correlation_options_tab_fields_and_option"></a>
 
@@ -736,23 +741,22 @@ Use the URL Filtering tab in the Recording and Script Generation Options dialog 
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **URL Filtering** tab.
+1. Select the **URL Filtering** tab.
 
-3. The URL Filtering tab moves to the front of the dialog box.
+1. The URL Filtering tab moves to the front of the dialog box.
 
-   ![URL Filtering Tab](../images/url_filt_tab.png)
-
+    ![URL Filtering Tab](../images/url_filt_tab.png)
+ 
    
+1. Fill in the fields, as described in the [Table](#url_filtering_tab_fields_and_options).
 
-4. Fill in the fields, as described in the [Table](#url_filtering_tab_fields_and_options).
-
-5. Click **OK**.
+1. Click **OK**.
 
 <a name = "url_filtering_tab_fields_and_options"></a>
 The following table describes the fields in the URL Filtering tab.
@@ -784,21 +788,20 @@ A resource with the gif file extension that contains image/gif content is record
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or-
+    Or-
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **File Extensions** tab.
+1. Select the **File Extensions** tab.
+    The File Extensions tab moves to the front of the dialog box.
 
-   The File Extensions tab moves to the front of the dialog box.
+     ![File Extensions Tab](../images/file_exten.png)
 
-   ![File Extensions Tab](../images/file_exten.png)
+1. Fill in the fields, as described the [Table](#file_extensions_tab).
 
-3. Fill in the fields, as described the [Table](#file_extensions_tab).
-
-4. Click **OK**.
+1. Click **OK**.
 
    
 <a name ="file_extensions_tab"></a>
@@ -834,23 +837,22 @@ A resource with the gif file extension that contains image/gif content is record
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or-
+    Or-
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Content Types** tab.
+1. Select the **Content Types** tab.
+    The Content Types tab moves to the front of the dialog box.
 
-   The Content Types tab moves to the front of the dialog box.
-
-   ![Content Types Tab](../images/cont_type_tab.png)
+    ![Content Types Tab](../images/cont_type_tab.png)
 
    
 
-3. Fill in the fields.
+1. Fill in the fields.
 
-4. Click **OK**.
+1. Click **OK**.
 
 The following table describes the fields in the Content Types tab.
 
@@ -879,22 +881,22 @@ WebLOAD Recorder enables you to configure a double proxy configuration, which in
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon.
 
-   Or- 
+    Or- 
+ 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon.
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+1. Select the **Proxy Options** tab.
 
-2. Select the **Proxy Options** tab.
+    The Proxy Options tab moves to the front of the dialog box.
 
-   The Proxy Options tab moves to the front of the dialog box.
+    <a name = "prodxy_topns"></a>
+    ![Proxy Options Tab](../images/prodxy_topns.png)
 
-   <a name = "prodxy_topns"></a>
-   ![Proxy Options Tab](../images/prodxy_topns.png)
+1. Fill in the fields, as described in the [Table](#proxy_option_tab).
 
-3. Fill in the fields, as described in the [Table](#proxy_option_tab).
-
-4. Click **OK**.
+1. Click **OK**.
 
 The following table describes the fields and options on the Proxy Options tab.
 
@@ -951,23 +953,22 @@ Use the Proxy Certificates tab in the Recording and Script Generation Options di
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Proxy Certificates** tab.
-
-3. The Proxy Certificates tab moves to the front of the dialog box. 
-
-   ![Proxy Certificates Tab](../images/prod_cert_tab.png)
-
+1. Select the **Proxy Certificates** tab.
    
+    The Proxy Certificates tab moves to the front of the dialog box. 
 
-4. Fill in the fields.
+    ![Proxy Certificates Tab](../images/prod_cert_tab.png)
 
-5. Click **OK**.
+
+1. Fill in the fields.
+
+1. Click **OK**.
 
 The following table describes the fields and options on the Proxy Certificates tab.
 
@@ -991,12 +992,12 @@ Use the Security tab in the Recording and Script Generation Options dialog box t
 There are two kinds of passwords you can mask:
 
 - Protocol passwords – WebLOAD protocol password fields. These are the various possible password fields of the wlHttp object. They include the five following fields:
-  - ProxyNTPassWord
-  - ProxyPassWord
-  - HttpsProxyPassWord
-  - PassWord
-  - NTPassWord
-- Form passwords – Password fields in form data. These can vary, depending on the form. You can list the names of the passwords fields whose contents you wish to encrypt.
+    - ProxyNTPassWord
+    - ProxyPassWord
+    - HttpsProxyPassWord
+    - PassWord
+    - NTPassWord
+    - Form passwords – Password fields in form data. These can vary, depending on the form. You can list the names of the passwords fields whose contents you wish to encrypt.
 
 In the JavaScript code, the encrypted password is replaced with a ‘decrypt’ statement for the encrypted value, as shown in the following example:
 
@@ -1010,21 +1011,21 @@ Note that the purpose of the masking operation is to make sure passwords are not
 
 1. Click **Recording and Script Generation Options** in the **Tools** tab of the ribbon. 
 
-   Or- 
+    Or- 
 
-   Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
+    Select **Recording and Script Generation Options** from the WebLOAD Recorder **Home** tab of the ribbon. 
 
-   The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
+    The Recording and Script Generation Options dialog box appears (see [Figure](#recording_and_script_generation)).
 
-2. Select the **Security** tab.
+1. Select the **Security** tab.
+    
+    The Security tab moves to the front of the dialog box.
 
-3. The Security tab moves to the front of the dialog box.
+    ![Security Tab](../images/sec_tab.png)
 
-   ![Security Tab](../images/sec_tab.png)
+1. Fill in the fields, as described in the [Table](#security_tab_options).
 
-4. Fill in the fields, as described in the [Table](#security_tab_options).
-
-5. Click **OK**.
+1. Click **OK**.
 
 <a name ="security_tab_options"></a>
 The following table describes the fields and options on the Security tab.
@@ -1056,11 +1057,7 @@ WebLOAD Recorder enables you to specify settings for WebLOAD Recorder.
 
 - Select **Settings** from the WebLOAD Recorder **Home** tab of the ribbon. The Settings dialog box opens.
 
-
-
-
-
-
+![Set Dia Box](../images/set_dia_box.png)
 
 The following table describes the options in the Settings dialog box.
 
@@ -1093,23 +1090,23 @@ Define the default file locations during a test session.
 
 1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **File Locations**. The File Locations screen is displayed.
 
-   ![Settings Dialog Box with File Validation Test](../images/recorder_1097.png)
+     ![Settings Dialog Box with File Validation Test](../images/recorder_1097.png)
 
    
 
-   The Description area at the bottom of the dialog provides a short explanation of each file location item.
+    The Description area at the bottom of the dialog provides a short explanation of each file location item.
 
-   The following file locations can be defined:
+    The following file locations can be defined:
 
-   - Sessions, scripts, and Templates: Default storage location for WebLOAD Recorder session, project, and script files.
-   - User Include Files: Default path for user Include files.
-   - User Copy Files: Default path for user Copy files.
-   - User PostData Files: Default path for user PostData files.
-   - User Certificate Files: Default path for user Certificate files.
+       - Sessions, scripts, and Templates: Default storage location for WebLOAD Recorder session, project, and script files.
+       - User Include Files: Default path for user Include files.
+       - User Copy Files: Default path for user Copy files.
+       - User PostData Files: Default path for user PostData files.
+       - User Certificate Files: Default path for user Certificate files.
 
-2. Double-click the file location option that you wish to reset, and select a new file location.
+1. Double-click the file location option that you wish to reset, and select a new file location.
 
-3. Click **OK**.
+1. Click **OK**.
 
 ### Defining the Difference Viewer Application
 Define which application is used for comparing and displaying the differences which may exist between a recording and its playback.
@@ -1118,37 +1115,34 @@ Define which application is used for comparing and displaying the differences wh
 
 1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **Diff Viewer**. The Diff Viewer screen is displayed.
 
-   ![Settings Dialog Box with Diff Viewer Options](../images/recorder_1098.png) 
+    ![Settings Dialog Box with Diff Viewer Options](../images/recorder_1098.png) 
 
-   By default, WinMerge is selected.
+    By default, WinMerge is selected.
 
-2. Optionally, select **External** and enter the relevant information into the corresponding field to specify a different application. Enter the following information:
+1. Optionally, select **External** and enter the relevant information into the corresponding field to specify a different application. Enter the following information:
 
-   1. The path to the application’s executable file. (Mandatory.)
-   2. % rname – Represents the name for the dialog box which displays the recording file. (Optional.)
-   3. % pname – Represents the name for the dialog box which displays the playback file. (Optional.)
-   4. % record – Represents the path of the recording file. (Optional.)
-   5. % playback – Represents the path of the playback file. (Optional.)
+    1. The path to the application’s executable file. (Mandatory.)
+    2. % rname – Represents the name for the dialog box which displays the recording file. (Optional.)
+    3. % pname – Represents the name for the dialog box which displays the playback file. (Optional.)
+    4. % record – Represents the path of the recording file. (Optional.)
+    5. % playback – Represents the path of the playback file. (Optional.)
 
+    **Examples:**
+
+    - ExamDiff Pro:
+
+        C:\Program Files\ExamDiff Pro\ExamDiff.exe % record % playback -- left\_display\_name:% rname --right\_display\_name:% pname
+
+    - KDiff:
+
+        C:\Program Files\KDiff\kdiff3.exe % record % playback --L1 % rname --L2 % pname
+
+    - Araxis
+
+       C:\Program Files\Araxis\compare.exe /max /wait /title1:% rname /title2:% pname % record % playback
    
 
-   **Examples:**
-
-   - ExamDiff Pro:
-
-     C:\Program Files\ExamDiff Pro\ExamDiff.exe % record % playback -- left\_display\_name:% rname --right\_display\_name:% pname
-
-   - KDiff:
-
-     C:\Program Files\KDiff\kdiff3.exe % record % playback --L1 % rname --L2 % pname
-
-   - Araxis
-
-     C:\Program Files\Araxis\compare.exe /max /wait /title1:% rname /title2:% pname % record % playback
-
-   
-
-3. Click **OK**.
+1. Click **OK**.
 
 ### Defining the Merge Tool Application
 Define which application is used for resolving conflicts between user changes and correlation changes made to the JavaScript code.
@@ -1157,41 +1151,43 @@ Define which application is used for resolving conflicts between user changes an
 
 1. In the Settings dialog box ([Settings Dialog Box](#setting_dialog_box)), click **Merge Tool**. The Merge Tool screen is displayed. 
 
-   ![Settings Dialog Box with Merge Tool Options](../images/recorder_1099.png)
+    ![Settings Dialog Box with Merge Tool Options](../images/recorder_1099.png)
 
-   By default, WinMerge is selected. WinMerge enables 2-way merging.
+    By default, WinMerge is selected. WinMerge enables 2-way merging.
 
-2. Optionally, select **External** and enter the relevant information into the corresponding field to specify a different application such as Araxis or TortoiseSVN which enable 3-way merging. Enter the following information:
+1. Optionally, select **External** and enter the relevant information into the corresponding field to specify a different application such as Araxis or TortoiseSVN which enable 3-way merging. Enter the following information:
 
-   1. %basefile – Represents the path of the base file, before user and correlation changes.
-   1. %corrfile – Represents the path of the file with the correlation changes.
-   1. %userfile – Represents the path of the file with the user changes.
-   1. %outfile – Represents the outcome of the merge file.
+    1. %basefile – Represents the path of the base file, before user and correlation changes.
+    1. %corrfile – Represents the path of the file with the correlation changes.
+    1. %userfile – Represents the path of the file with the user changes.
+    1. %outfile – Represents the outcome of the merge file.
 
-   ##### **Examples:**
+    **Examples:**
 
-   - Perforce Merge:
+    - Perforce Merge:
 
-     `C:\Path-To\P4Merge.exe %basefile %corrfile %userfile %outfile`
+       `C:\Path-To\P4Merge.exe %basefile %corrfile %userfile %outfile`
 
-   - KDiff3:
+    - KDiff3:
+ 
+       `C:\Path-To\kdiff3.exe %basefile %userfile %corrfile -o %outfile --L1 Base --L2 User --L3 Correlation`
 
-     `C:\Path-To\kdiff3.exe %basefile %userfile %corrfile -o %outfile --L1 Base --L2 User --L3 Correlation`
+    - Araxis:
 
-   - Araxis:
+       `C:\Path-To\compare.exe /max /wait /3 /title1:Correlation /title2:Base /title3:User %corrfile %basefile %userfile %outfile /a2`
 
-     `C:\Path-To\compare.exe /max /wait /3 /title1:Correlation /title2:Base /title3:User %corrfile %basefile %userfile %outfile /a2`
+    - WinMerge (2.8 or later):
 
-   - WinMerge (2.8 or later):
+       `C:\Path-To\WinMerge.exe %outfile DiffMerge:`
+   
+    - DiffMerge:
 
-     `C:\Path-To\WinMerge.exe %outfile DiffMerge:`
-
-     `C:\Path-To\DiffMerge.exe -caption=%mname -result=%outfile –merge -nosplash -t1=%yname -t2=%bname -t3=%tname %userfile %basefile %corrfile`
+       `C:\Path-To\DiffMerge.exe -caption=%mname -result=%outfile –merge -nosplash -t1=%yname -t2=%bname -t3=%tname %userfile %basefile %corrfile`
 
 
    
 
-3. Click **OK**.
+1. Click **OK**.
 
 
 ## Customizing the Quick Access Toolbar
@@ -1238,11 +1234,11 @@ You can also specify the update policy, which defines when a new value will be r
 1. In the **Name** field, enter a name for the parameter.
 1. In the **Type** field, select the parameter type:
 
-   - **Date/Time** – Defines a date/time parameter. For more information see [*Defining a Date/Time Parameter* ](#defining-a-datetime-parameter).
-   - **File** – Defines a data file parameter. For more information see [*Defining a Data File* ](#defining-a-data-file). To create a new data file, see [*Creating a Data File* ](#creating-a-data-file)
+    - **Date/Time** – Defines a date/time parameter. For more information see [*Defining a Date/Time Parameter* ](#defining-a-datetime-parameter).
+    - **File** – Defines a data file parameter. For more information see [*Defining a Data File* ](#defining-a-data-file). To create a new data file, see [*Creating a Data File* ](#creating-a-data-file)
 
-   - **Number** – Defines a number parameter. For more information see [*Defining a Number Parameter* ](#defining-a-number-parameter).
-   - **Random String** – Defines a random string parameter. For more information see
+    - **Number** – Defines a number parameter. For more information see [*Defining a Number Parameter* ](#defining-a-number-parameter).
+    - **Random String** – Defines a random string parameter. For more information see
 
       [*Defining a Random String Parameter* ](#defining-a-random-string-parameter).
    
@@ -1258,7 +1254,7 @@ You can also specify the update policy, which defines when a new value will be r
 
 1. In the **Type** field, select **Date/Time**. The fields appropriate for defining a date/time parameter appear in the dialog box.
 
-   ![Parameterization Manager – Date/Time Dialog Box](../images/recorder_1101.png)
+    ![Parameterization Manager – Date/Time Dialog Box](../images/recorder_1101.png)
 
 1. In the **Description** field, optionally enter a description for the date/time parameter.
 
@@ -1267,6 +1263,8 @@ You can also specify the update policy, which defines when a new value will be r
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – Date/Time dialog box.
+
+
 |**Setting**|**Description**|
 | :- | :- |
 |*Date/Time Format*||
@@ -1292,9 +1290,7 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the **Type** field, select **File**. The fields appropriate for selecting a data file and configuring its settings appear in the dialog box.
 
-   ![Parameterization Manager – File Dialog Box](../images/recorder_1102.png)
-
-   
+    ![Parameterization Manager – File Dialog Box](../images/recorder_1102.png)
 
 1. In the **Description** field, optionally enter a description of the file.
 
@@ -1303,6 +1299,8 @@ The following table describes the fields and buttons in the Parameterization Man
 1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – File dialog box.
+
+
 |**Setting**|**Description**|
 | :- | :- |
 |*Select Input File*||
@@ -1331,25 +1329,24 @@ You can create a new data file.
 
 1. From the Parameterization Manager – File dialog box: ([Figure](#parameterization_manager_dialog_box_a)), click **Create New Data File**. 
 
-   The Create Data File dialog box appears.
+    The Create Data File dialog box appears.
 
-   ![Create Data File Dialog Box](../images/recorder_1105.png)
+    ![Create Data File Dialog Box](../images/recorder_1105.png)
 
    
 
-2. Select a file delimiter from the drop-down list.
+1. Select a file delimiter from the drop-down list.
 
-3. Type the number of rows in the Rows field. The default is 10 rows.
+1. Type the number of rows in the Rows field. The default is 10 rows.
 
-4. Type the number of columns in the Columns field. The default is 10 columns.
+1. Type the number of columns in the Columns field. The default is 10 columns.
 
-5. If you did not use the default values, click **OK**.
+1. If you did not use the default values, click **OK**.
 
-6. In the table, type a value in each cell.
+1. In the table, type a value in each cell.
 
-7. Click **OK**.
-
-8. A Save As dialog box appears. Save the new data file.
+1. Click **OK**.
+    A Save As dialog box appears. Save the new data file.
 
 
 
@@ -1359,17 +1356,15 @@ You can create a new data file.
 
 1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
-2. In the **Type** field, select **Number**. The fields appropriate for defining a number parameter appear in the dialog box. 
+1. In the **Type** field, select **Number**. The fields appropriate for defining a number parameter appear in the dialog box. 
 
-   ![Parameterization Manager – Number Dialog Box](../images/recorder_1106.png)
+    ![Parameterization Manager – Number Dialog Box](../images/recorder_1106.png)
 
-   
+1. In the **Description** field, optionally enter a description of the number parameter.
 
-3. In the **Description** field, optionally enter a description of the number parameter.
+1. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
 
-4. Fill in the fields as described in the [Table](#parameterization_manager_dialog_box_a).
-
-5. Click **OK**.
+1. Click **OK**.
 
 The following table describes the fields and buttons in the Parameterization Manager – Number dialog box.
 
@@ -1401,22 +1396,23 @@ The following table describes the fields and buttons in the Parameterization Man
 
 1. In the Parameterization Manager Dialog Box ([*Figure *](#parameterization_manager_dialog_box_a)), click **Add**. The Parameterization Manager dialog box opens.
 
-2. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
+1. In the **Type** field, select **Random String**. The fields appropriate for defining a random string parameter appear in the dialog box.
 
-   ![Parameterization Manager – Random String Dialog Box](../images/recorder_1108.png)
+    ![Parameterization Manager – Random String Dialog Box](../images/recorder_1108.png)
 
    
 
-3. In the **Description** field, optionally enter a description of the random string parameter.
+1. In the **Description** field, optionally enter a description of the random string parameter.
 
-4. Fill in the fields as described in [Parameterization Manager – Random String dialog box](#parameterization_manager_random_string_dialog_box).
+1. Fill in the fields as described in [Parameterization Manager – Random String dialog box](#parameterization_manager_random_string_dialog_box).
 
-5. Click **OK**.
+1. Click **OK**.
+
 
 The following table describes the fields and buttons in the Parameterization Manager – Random String dialog box.
 
-
 <a name = "parameterization_manager_random_string_dialog_box"></a>
+
 
 |**Setting**|**Description**|
 | :- | :- |
@@ -1442,31 +1438,29 @@ The first step is to use the Parameterization Manager to define the set of value
 
 1. In the JavaScript View pane, select the static value you want to replace. For example, in the line : 
 
-   `wlHttp.FormData["name"] = "john"` 
+    `wlHttp.FormData["name"] = "john"` 
 
-   `select "John".`
+    `select "John".`
 
 1. Right-click and select **Insert Variable**.
-
-   The Insert Variable menu appears, see ([Figure](../scripting/programming_your_javascript.md#insert_variable_menu)).
+ 
+    The Insert Variable menu appears, see ([Figure](../scripting/programming_your_javascript.md#insert_variable_menu)).
 
 1. Select the parameter you defined in the Parameterization Manager.
 
-   The selected parameter replaces the static value in the script. In our example, if you selected Users\_firstname.getValue()from the Insert Variable menu, the line now shows:
+    The selected parameter replaces the static value in the script. In our example, if you selected Users\_firstname.getValue()from the Insert Variable menu, the line now shows:
 
-   `wlHttp.FormData["name"] = Users\_firstname.getValue();`
+    `wlHttp.FormData["name"] = Users\_firstname.getValue();`
 
-   Note that if you are using a parameter from a data file, the parameter name reflects whether the data file includes a title row.
+    Note that if you are using a parameter from a data file, the parameter name reflects whether the data file includes a title row.
 
-   - If the data file includes a title row, the parameter name is of type:
+       - If the data file includes a title row, the parameter name is of type:
+          `{Parameter name}\_{column title}.getValue().`
 
-     `{Parameter name}\_{column title}.getValue().`
+       - If the data file does not include a title row, the column number is used, and the parameter name is of type:
+          `{Parameter name}\_Col{column number}.getValue()`
 
-   - If the data file does not include a title row, the column number is used, and the parameter name is of type:
-
-     `{Parameter name}\_Col{column number}.getValue()`
-
-> **Note:** To replace multiple occurrences of a static value, you can use the **Edit > Replace**tool.
+> **Note:** To replace multiple occurrences of a static value, you can use the **Edit > Replace** tool.
 
 
 
@@ -1475,6 +1469,7 @@ The first step is to use the Parameterization Manager to define the set of value
 If the original recorded script includes:
 
 `wlHttp.FormData["first\_name"] = "John"`
+
 `wlHttp.FormData["last\_name"] = "Smith"`
 
 `wlHttp.FormData["age"] = "47"`

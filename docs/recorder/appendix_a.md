@@ -29,7 +29,7 @@ The following are the WebLOAD Recorder Toolbox items:
 |- IMAP-CreateMailbox|- IMAP-ListMailboxes|
 |- IMAP-DeleteMailbox|- IMAP-RenameMailbox|
 |- IMAP-SubscribeMailbox|- IMAP-UnsubscribeMailbox|
-|Toolbox Items||
+|**Toolbox Items**||
 |- IMAP-ListSubscribedMailbox|- IMAP-Search|
 |- NNTP-Connect|- NNTP-GetArticle|
 |- NNTP-GetArticleCount|- NNTP-PostArticle|
@@ -103,11 +103,11 @@ When you record a script, WebLOAD Recorder automatically records the actual slee
 
 1. Drag the **Sleep ![](../images/appendix_a_010.png)** icon from the General toolbox into the Script Tree at the desired location.
 
-   The Sleep dialog box opens.
+    The Sleep dialog box opens.
 
-2. In the **Enter or select pause time** field, enter or select the duration of the sleep. The default value is 1000 milliseconds.
+1. In the **Enter or select pause time** field, enter or select the duration of the sleep. The default value is 1000 milliseconds.
 
-3. The Sleep item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Sleep item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### **Message**
 While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log windows display information about session execution. You can include Message nodes in your script, defining points at which to send error and/or notification messages to the Log window.
@@ -116,30 +116,29 @@ While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log wind
 
 1. Drag the **Message ![](../images/appendix_a_012.png)** icon from the General toolbox into the Script Tree at the desired location.
 
-   1. The Message dialog box opens.
+     The Message dialog box opens.
 
-   
+    ![Message Dialog Box](../images/appendix_a_015.png)
 
 
-   ![Message Dialog Box](../images/appendix_a_015.png)
 
-2. Create a text message by typing the text you want to appear in the message into the input text box.
+1. Create a text message by typing the text you want to appear in the message into the input text box.
+ 
+    > **Note:** When entering a string value to the message, the string must be enclosed in quotation marks; for example, “Sample Message”.
 
-   > **Note:** When entering a string value to the message, the string must be enclosed in quotation marks; for example, “Sample Message”.
+1. To add a global variable to the message text, click the **globe** icon to the right of the input text box and select a global variable from the drop-down list.
 
-3. To add a global variable to the message text, click the **globe** icon to the right of the input text box and select a global variable from the drop-down list.
+1. Select a severity level for the message from the drop-down list. The following severity levels are available:
 
-4. Select a severity level for the message from the drop-down list. The following severity levels are available:
+    - Information message (WLInfoMessage)
+    - Minor error message (WLMinorError)
+    - Error message (WLError)
+    - Severe error message (WLSevereError)
+    - Debug message (WLDebugMessage)
 
-   1. Information message (WLInfoMessage)
-   2. Minor error message (WLMinorError)
-   3. Error message (WLError)
-   4. Severe error message (WLSevereError)
-   5. Debug message (WLDebugMessage)
+1. Click **OK**.
 
-5. Click **OK**.
-
-6. The Message item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Message item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -151,7 +150,7 @@ JavaScript Objects enable you to insert JavaScript code directly into the script
 
 1. Drag the **JavaScriptObject ![](../images/appendix_a_017.jpeg)** icon from the General toolbox into the Script Tree at the desired location.
 
-   The JavaScriptObject item appears in the Script Tree and the WebLOAD Recorder protocol block is added to the script.
+    The JavaScriptObject item appears in the Script Tree and the WebLOAD Recorder protocol block is added to the script.
 
 1. Open the object in JavaScript Editing mode to insert JavaScript code, as described in [*Using the JavaScript Editor* ](./editing_scripts.md#using-the-javascript-editor).
 
@@ -162,17 +161,15 @@ WebLOAD Recorder enables you to add comments to your script to describe an activ
 
 1. Drag the **Comment ![](../images/appendix_a_018.png)** icon from the General toolbox into the Script Tree at the desired location.
 
-   The Comment dialog box opens.
+    The Comment dialog box opens.
 
-   ![Comment Dialog Box](../images/appendix_a_019.png)
-
-   
+    ![Comment Dialog Box](../images/appendix_a_019.png)
 
    
 
-2. Enter the text you want to appear in the comment.
+1. Enter the text you want to appear in the comment.
 
-3. Click **OK**.
+1. Click **OK**.
 
 
 
@@ -186,8 +183,8 @@ You can use the Try…Catch statements for structured exception handling. This e
 
 1. Drag the **Try ![](../images/appendix_a_021.png)** icon from the General toolbox into the Script Tree directly before the first action you want to include in the Try...Catch block.
 1. Drag the **Catch ![](../images/appendix_a_022.png)** icon from the General toolbox into the Script Tree directly after the last action you want to include in the Try...Catch block.
-
-   The Try and Catch items appear in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    
+    The Try and Catch items appear in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -195,7 +192,7 @@ You can use the Try…Catch statements for structured exception handling. This e
 
 The following table describes the purpose of each of the WebLOAD Recorder Load Toolbox items:
 
-*Table 39: Load Toolbox Items*
+*Table: Load Toolbox Items*
 
 |**Script Item**|**Purpose**|
 | :- | :- |
@@ -221,43 +218,41 @@ To measure transactions, you must mark the beginning and end of the transaction 
 
 1. Drag the **Begin Transaction ![](../images/appendix_a_023.png)** icon from the Load toolbox into the Script Tree, directly above the first action you want to include in the transaction.
 
-   The Begin Transaction dialog box opens.
+    The Begin Transaction dialog box opens.
 
-   
+    ![Begin Transaction Dialog Box](../images/appendix_a_024.png)
 
-   ![Begin Transaction Dialog Box](../images/appendix_a_024.png)
+1. Enter a logical name for the transaction; for example, Login.
 
-2. Enter a logical name for the transaction; for example, Login.
+1. Click **OK**.
 
-3. Click **OK**.
-
-4. The Begin Transaction item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Begin Transaction item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
    
 
 **To mark the end of a transaction:**
 
 1. Drag the **End Transaction ![](../images/appendix_a_025.png)** icon from the Load toolbox into the Script Tree, directly after the last action you want included in the script.
+ 
+    The End Transaction dialog box opens.
 
-   The End Transaction dialog box opens.
+    ![End Transaction Dialog Box](../images/appendix_a_026.png)
 
-   ![End Transaction Dialog Box](../images/appendix_a_026.png)
+1. Select the transaction to end from the Select Opened Transaction drop-down list.
 
-2. Select the transaction to end from the Select Opened Transaction drop-down list.
+1. Select a return value for the transaction from Select Return Value drop-down list.
 
-3. Select a return value for the transaction from Select Return Value drop-down list.
+    You can select from the return values provided, or select Custom Function to create your own verification function to call when the transaction is complete.
 
-
-
-You can select from the return values provided, or select Custom Function to create your own verification function to call when the transaction is complete.
-
-For information on creating custom functions, see the *WebLOAD Scripting Guide*.
+    For information on creating custom functions, see the *WebLOAD Scripting Guide*.
 
 1. To set WebLOAD to save the results of all transaction instances, successes and failures, for later analysis with Data Drilling, select **true** in the Save transaction information for Data Drilling field. Select **false** (default) to save only results of failed transaction instances that triggered some sort of error flag.
+
 1. Optionally, enter a text string to specify a possible reason for a transaction failure within your transaction verification function in the Failure Reason field. This reason will also appear in the Statistics Report.
+
 1. Click **OK**.
 
-   The End Transaction item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The End Transaction item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### Set and Send Timer
 Timers let you time any operation or group of operations in a script and send the time statistics to the WebLOAD Console. For example, you can add a timer to measure the amount of time needed to complete a series of user activities on a single Web page.
@@ -270,17 +265,16 @@ You can add timers to a script directly through the WebLOAD Recorder.
 
 1. Drag the **Set Timer ![](../images/appendix_a_028.png)** icon from the Load toolbox into the Script Tree directly before the first action you want to include in the timed task.
 
-   The Set Timer dialog box opens.
+    The Set Timer dialog box opens.
 
-   ![Set Timer Dialog Box](../images/appendix_a_029.png)
+    ![Set Timer Dialog Box](../images/appendix_a_029.png)
 
-   
 
-2. Type a name for the timer in the Enter a timer name field.
+1. Type a name for the timer in the Enter a timer name field.
 
-3. Click **OK**.
+1. Click **OK**.
 
-4. The Set Timer item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Set Timer item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
    
 
@@ -288,16 +282,15 @@ You can add timers to a script directly through the WebLOAD Recorder.
 
 1. Drag the **Send Time**r ![](../images/appendix_a_030.png) icon from the Load toolbox into the Script Tree directly after the last action you want included in the timed task.
 
-   The Send Timer dialog box opens.
+    The Send Timer dialog box opens.
 
-![](../images/appendix_a_031.png)
+    ![](../images/appendix_a_031.png)
 
-*Figure 144: Send Timer Dialog Box*
+    *Figure: Send Timer Dialog Box*
 
 1. From the Select Timer drop-down list, to select the timer to end.
 1. Click **OK**.
-
-   The Send Timer item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Send Timer item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### Synchronization Point
 During a test session, WebLOAD simulates the random nature of the real world, where even with hundreds or thousands of Web site hits, users do not all necessarily execute the same commands at precisely the same instant. However, for testing purposes, you may wish to create peak server loads that stress your system to the limit by deliberately forcing multiple Virtual Clients to perform key tasks and execute a given command at precisely the same moment in real time.
@@ -314,13 +307,11 @@ value is important to ensure that the test session will not ‘hang’ indefinit
 
 1. Drag the **Synchronization Point ![](../images/appendix_a_032.png)** icon from the Load toolbox into the Script Tree directly before the action you want all Virtual Clients to perform simultaneously. The Synchronization Point dialog box opens.
 
-   ![Synchronization Point Dialog Box](../images/appendix_a_033.png)
+    ![Synchronization Point Dialog Box](../images/appendix_a_033.png)
 
-   
+1. In the Timeout Value field, enter or select a timeout value for the Synchronization Point. The default value is 1000 milliseconds.
 
-2. In the Timeout Value field, enter or select a timeout value for the Synchronization Point. The default value is 1000 milliseconds.
-
-3. The Synchronization Point item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Synchronization Point item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 During a test session, the SynchronizationPoint() function returns a value to WebLOAD. This value indicates whether the function was successful or not. All failures are logged and displayed in the WebLOAD and Console Log windows, similar to any other WebLOAD test failure.
 
@@ -342,23 +333,18 @@ WebLOAD Recorder enables you to insert Send Measurement actions into your script
 
 1. Drag the **Send Measurement ![](../images/appendix_a_034.png)** icon from the Load toolbox into the Script Tree at the desired location.
 
-   The Send Measurement dialog box opens.
+    The Send Measurement dialog box opens.
 
-   ![Send Measurement Dialog Box](../images/appendix_a_035.png)
+    ![Send Measurement Dialog Box](../images/appendix_a_035.png)
+ 
 
-   
+1. Type or select a name for the measurement in the Select measurement name field.
 
-   
+1. Type or select a value for the measurement in the Set measurement value field.
 
-2. Type or select a name for the measurement in the Select measurement name field.
+1. Click **OK**.
 
-3. Type or select a value for the measurement in the Set measurement value field.
-
-4. Click **OK**.
-
-
-
-The Send Measurement item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Send Measurement item appears in the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### URL Screening
 WebLOAD Recorder enables you to add URL screening to a script to define the URLs that the WebLOAD protocol engine should ignore during runtime. The ability to ignore links on the page being tested is a useful feature. For example, many Web sites include links to external sites. If these sites are not relevant to the testing requirements, they should be ignored. Other links may be to advertisement sites that charge a fee every time the link is accessed. Hitting these links during a typical load test that may run hundreds or thousands of iterations would be a tremendous waste, so these links should also be ignored.
@@ -367,19 +353,17 @@ WebLOAD Recorder enables you to add URL screening to a script to define the URLs
 
 1. Drag the **URL Screening ![](../images/appendix_a_036.png)** icon, from the Load toolbox, into the Script Tree at the desired location. 
 
-   The URL Screening Building Block parameters dialog box opens.
+    The URL Screening Building Block parameters dialog box opens.
 
-   ![URL Screening Building Block Parameters Dialog Box](../images/appendix_a_037.png)
+    ![URL Screening Building Block Parameters Dialog Box](../images/appendix_a_037.png)
 
    
 
-2. Enter the URLs to ignore, separated by commas, in the Value field.
+1. Enter the URLs to ignore, separated by commas, in the Value field.
 
-3. Click **OK**.
+1. Click **OK**.
 
-
-
-The URL Screening Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The URL Screening Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 > **Note:** Fields that were not assigned a value in the dialog box are left as empty fields in the script code.
 
@@ -390,25 +374,21 @@ WebLOAD Recorder enables you to add value extraction to a script to define the p
 
 1. Drag the **Value Extraction ![](../images/appendix_a_038.png)** icon, from the Load toolbox, into the Script Tree at the desired location. 
 
-   The Value Extraction Building Block parameters dialog box opens.
+    The Value Extraction Building Block parameters dialog box opens.
 
-   ![Value Extraction Building Block Parameters Dialog Box](../images/appendix_a_039.png)
+    ![Value Extraction Building Block Parameters Dialog Box](../images/ appendix_a_039.png)
 
-   
+1. In the Prefix field, enter a prefix.
 
-2. In the Prefix field, enter a prefix.
+1. In the Suffix field, enter a suffix.
 
-3. In the Suffix field, enter a suffix.
+1. In the Str field, enter the string that will be searched.
 
-4. In the Str field, enter the string that will be searched.
+1. In the retVarName, enter the variable name that will be generated to the script.
 
-5. In the retVarName, enter the variable name that will be generated to the script.
+1. Click **OK**.
 
-6. Click **OK**.
-
-
-
-The Value Extraction Building Block is added to the Script Tree. The JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Value Extraction Building Block is added to the Script Tree. The JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 > **Note:** Fields that were not assigned a value in the dialog box are left as empty fields in the script code.
 
@@ -423,7 +403,7 @@ These Post and Get HTTP requests are saved in a file which you can access at any
 
 **To start collecting HTTP requests in a script:**
 
-- ![](../images/appendix_a_040.png)Drag the **Define Concurrent**	icon from the Load toolbox into the Script Tree at the desired location.
+- Drag the **Define Concurrent** ![](../images/appendix_a_040.png) icon from the Load toolbox into the Script Tree at the desired location.
 
   The Define Concurrent Building Block is added to the Script Tree. The JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
@@ -438,7 +418,7 @@ When the engine encounters the Execute Concurrent function, it stops collecting 
 
 **To start concurrently executing HTTP requests in a script:**
 
-- ![](../images/appendix_a_041.png)Drag the **Execute Concurrent**	icon from the Load toolbox into the Script Tree at the desired location.
+- Drag the **Execute Concurrent** ![](../images/appendix_a_041.png) icon from the Load toolbox into the Script Tree at the desired location.
 
 The Execute Concurrent Building Block is added to the Script Tree. The JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
@@ -455,8 +435,6 @@ Use the WebLOAD Recorder Internet Protocols Building Blocks to simply and easily
 WebLOAD Recorder provides full support for secure sites that utilize the SSL security protocol. The same FTP, POP, and SMTP functionality that is available for standard- security sites is also provided for sites that utilize the SSL security protocol. WebLOAD Recorder SSL protocol support is virtually transparent for the web site tester. Simply choose the appropriate Building Block, such as FTP-Connect, for example. Activate the SSL Protocol feature by setting the Boolean SSLFlag property to true. Complete the rest of the Building Block properties as described for standard Building Block use.
 
 > **Note:** The Internet Protocols Building Blocks displayed in the Internet Protocols toolbox correspond to only a small part of the WebLOAD Recorder Internet Protocols function set. These Building Blocks are provided for the most commonly used Internet Protocols activities. For a description of the complete set of Internet Protocols functions supported by WebLOAD Recorder, see the *WebLOAD Internet Protocols Reference* in the *WebLOAD JavaScript Reference Guide*.
-
-
 
 
 Each Internet Protocols icon opens a different dialog box. Enter the required values in the Value field. Explanations are provided at the bottom of the dialog box for each parameter as it is selected in the dialog box.
@@ -492,19 +470,19 @@ Use the FTP-Connect Building Block to open an FTP connection.
 
 1. Drag the **FTP-Connect** icon from the Internet Protocols toolbox into the Script Tree at the desired location. The FTP-Connect Building Block parameters dialog box opens.
 
-   ![FTP-Connect Building Block Parameters Dialog Box](../images/appendix_a_081.jpeg)
+    ![FTP-Connect Building Block Parameters Dialog Box](../images/appendix_a_081.jpeg)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the UserName field is used to define the user ID to be used when logging in to the specified FTP host. WebLOAD Recorder automatically sends the user-specified name and password to the FTP host when connecting.
+    For example, in the preceding figure, the comment area explains that the UserName field is used to define the user ID to be used when logging in to the specified FTP host. WebLOAD Recorder automatically sends the user-specified name and password to the FTP host when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_connect).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_connect).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The FTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda()and InitClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The FTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda()and InitClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-   In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
+    In the script, the InitAgenda()function notes that the connection will be utilizing SSL security, and therefore includes the WebLOAD Recorder FTP/SSL library file. The InitClient() function includes a command to define a separate FTP/SSL object for each client. Within the main body of the script, an FTP connection is opened using the connection name, user name, and password specified by the user.
 
 
 <a name = "ftp_connect"></a>
@@ -525,21 +503,21 @@ Use the FTP-Upload Building Block to designate a file to be uploaded to a remote
 
 1. Drag the **FTP-Upload** icon from the Internet Protocols toolbox into the Script Tree at the desired location. 
 
-   The FTP-Upload Building Block parameters dialog box opens.
+    The FTP-Upload Building Block parameters dialog box opens.
 
-   ![FTP-Upload Building Block Parameters Dialog Box](../images/appendix_a_082.jpeg)
+    ![FTP-Upload Building Block Parameters Dialog Box](../images/appendix_a_082.jpeg)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Uploaded File field is used to define the name and location for the file to be saved on the specified FTP host.
+    For example, in the preceding figure, the comment area explains that the Uploaded File field is used to define the name and location for the file to be saved on the specified FTP host.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_upload). 
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_upload). 
 
-   > **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
-   >
-   > `“k:\Ftp\files\inputFiles\text\_upload\_”+ ThreadNum + RoundNum + “.txt”`
-
-5. Click **OK**.
+    > **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
+    >
+    > `“k:\Ftp\files\inputFiles\text\_upload\_”+ ThreadNum + RoundNum + “.txt”`
+ 
+1. Click **OK**.
 
    The FTP-Upload **B**uilding Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
@@ -565,25 +543,25 @@ Use the FTP-Download Building Block to designate a file to be downloaded from a 
 
 1. Drag the **FTP-Download** icon from the Internet Protocols toolbox into the Script Tree at the desired location. 
 
-   The FTP-Download Building Block parameters dialog box opens.
+    The FTP-Download Building Block parameters dialog box opens.
 
-   ![FTP-Download Building Block Parameters Dialog Box](../images/appendix_a_086.jpeg)
+    ![FTP-Download Building Block Parameters Dialog Box](../images/appendix_a_086.jpeg)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the File for Download field is used to define the name of the file to be downloaded from the specified FTP host.
+    For example, in the preceding figure, the comment area explains that the File for Download field is used to define the name of the file to be downloaded from the specified FTP host.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_download).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#ftp_download).
 
-   **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
+    **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
 
-   `“k:\Ftp\files\inputFiles\text\_upload\_” + ThreadNum + RoundNum + “.txt”`
+    `“k:\Ftp\files\inputFiles\text\_upload\_” + ThreadNum + RoundNum + “.txt”`
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The FTP-Download Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The FTP-Download Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-   In the script, the name of the file to be downloaded is passed as a parameter to the ftp.Download() function. The file name to which the downloaded file should be saved is assigned as a value to the ftp.Outfile variable.
+    In the script, the name of the file to be downloaded is passed as a parameter to the ftp.Download() function. The file name to which the downloaded file should be saved is assigned as a value to the ftp.Outfile variable.
 
 <a name = "ftp_download"></a>
 The fields in the FTP-Download Building Block parameters dialog box are described in the following table:
@@ -603,7 +581,7 @@ Use the **FTP-Disconnect** Building Block to disconnect from a remote host.
 
 - Drag the **FTP-Disconnect** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The FTP-Disconnect Building Block is added to the Script Tree. The JavaScript code, including the TerminateClient() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The FTP-Disconnect Building Block is added to the Script Tree. The JavaScript code, including the TerminateClient() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### SFTP
 
@@ -673,21 +651,21 @@ Use the SMTP-Send Message Building Block to define an email to be sent.
 
 1. Drag the **SMTP-Send Message** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The SMTP-Send Message Building Block parameters dialog box opens.
+    The SMTP-Send Message Building Block parameters dialog box opens.
 
-   ![SMTP-Send Message Building Block Parameters Dialog Box](../images/appendix_a_088.png)
+    ![SMTP-Send Message Building Block Parameters Dialog Box](../images/appendix_a_088.png)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Server Name Host designates the name of the host to which the email should be sent.
+    For example, in the preceding figure, the comment area explains that the Server Name Host designates the name of the host to which the email should be sent.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#smtp_send_message).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#smtp_send_message).
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The SMTP-Send Message Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The SMTP-Send Message Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-   In the script, the specified SMTP connection is opened, an email message constructed from the user input is sent out, and the SMTP connection is closed.
+    In the script, the specified SMTP connection is opened, an email message constructed from the user input is sent out, and the SMTP connection is closed.
 
 <a name ="smtp_send_message"></a>
 
@@ -703,7 +681,7 @@ The fields in the SMTP-Send Message Building Block parameters dialog box are des
 |To|<p>Specify the name of the person to whom the email should be sent.</p><p>Type the receiver’s name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The name must be enclosed within quotation marks.</p>|
 |Subject|<p>Enter a short text line that appears as the subject line for the email being sent.</p><p>Type the subject line into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The subject text must be enclosed within quotation marks.</p>|
 |Message|<p>Enter the message text of the email being sent.</p><p>Type the message text into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p><p>The message text must be enclosed within quotation marks.</p>|
-|Add attachment|<p>Specify the name of a file to be attached to this email.</p><p>Select the appropriate file from the Browser window that appears when you click the ![ref9] button to the right of the Value input area for this field.</p>|
+|Add attachment|<p>Specify the name of a file to be attached to this email.</p><p>Select the appropriate file from the Browser window that appears when you click the button to the right of the Value input area for this field.</p>|
 |Secure SMTP (SMTPS)|Select the appropriate Boolean value to indicate whether the site being accessed utilizes the SSL security protocol.|
 
 

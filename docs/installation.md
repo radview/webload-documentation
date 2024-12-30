@@ -340,7 +340,7 @@ You can register and update your WebLOAD license either through an Update Licens
 The License dialog box includes the following sections: 
 
 - License Details 
-- Update License ![ref2]
+- Update License 
 
 
 
@@ -481,7 +481,7 @@ The following procedure is confirmed to work with Oracle Database version 11*g*,
 
 1. Open tnsnames.ora for editing. 
 
-   > **Note:** If tnsnames.ora does not exist, create it. ![ref8]
+   > **Note:** If tnsnames.ora does not exist, create it. 
    >
    > The default content is as follows: 
    >
