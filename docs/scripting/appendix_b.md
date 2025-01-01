@@ -441,7 +441,7 @@ When you pass null JavaScript values as parameters to Java methods, Java convert
 
 In most situations, when you pass a JavaScript JavaArray or JavaObject as a parameter to a Java method, Java simply unwraps the object; in a few situations, the object is coerced into another data type according to the rules described in the following table:
 
-*Table 15: JavaArray and JavaObject type conversion rules*
+*Table: JavaArray and JavaObject type conversion rules*
 
 |**Java parameter type**|**Conversion rules**|
 | :- | :- |
@@ -694,7 +694,7 @@ JSException is an exception that is thrown when JavaScript code returns an error
 
 The netscape.javascript.JSException class has the following constructors:
 
-*Table 18: JSException constructors*
+*Table: JSException constructors*
 
 |**Constructor**|**Description**|
 | :- | :- |

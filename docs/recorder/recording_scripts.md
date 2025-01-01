@@ -114,7 +114,7 @@ If you start and stop recording more than once during a single recording session
 
     The following table describes the function of each button in the WebLOAD Recording toolbar:
 
-    *Table 4: WebLOAD Recording Toolbar Buttons*
+    *Table: WebLOAD Recording Toolbar Buttons*
 
     | **Button**                                  | **Purpose**                                                  |
     | :------------------------------------------ | :----------------------------------------------------------- |
@@ -614,7 +614,7 @@ Use the Additional Information dialog box to save information about the project.
 
     The following table describes the fields of the Project Additional Information dialog box.
 
-*Table 5: Project Additional Information Dialog Box Fields*
+*Table: Project Additional Information Dialog Box Fields*
 
 | **Field**                                  | **Description**                                              |
 | :----------------------------------------- | :----------------------------------------------------------- |
@@ -750,7 +750,7 @@ Refer to the following table if you are having recording related problems. Befor
 
 
 
-*Table 6: Troubleshooting*
+*Table: Troubleshooting*
 
 | **Problem**                                                  | **Possible Options**                                         | **Solution**                                                 |      |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :--- |

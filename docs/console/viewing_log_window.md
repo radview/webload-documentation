@@ -24,7 +24,7 @@ Before the Load Session begins, you can set the options that affect the way the 
 
 The following table describes the log window options:
 
-*Table 40: Log Window Options*
+*Table: Log Window Options*
 
 |**Field Name**|**Description**|
 | :- | :- |

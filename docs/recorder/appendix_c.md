@@ -16,7 +16,11 @@ Enter the webloadIDE.exe command together with a series of optional parameters (
 
 Use the following syntax to define the parameters for running a WebLOAD Recorder test through a Command Line Interface:
 
-webloadide.exe [<flags>][<project or session name to open>] [<session name to save to>][<Number of rounds to run>]
+```
+webloadide.exe [<flags>][<project or session name to open>] 
+
+[<session name to save to>][<Number of rounds to run>]
+```
 
 To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples* ](#examples).
 

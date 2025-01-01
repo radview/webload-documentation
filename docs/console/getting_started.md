@@ -118,7 +118,7 @@ The following table summarizes the features of the HTTP Client mode:
 
 Using WebLOAD, you have access to all the features described in this section, including multiple functionality, protocols, and supported environments.
 
-*Table 4: WebLOAD Features*
+*Table: WebLOAD Features*
 
 |**Feature**|**Benefit(s)**|
 | :- | :- |

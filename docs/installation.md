@@ -33,7 +33,7 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 
 ### Linux Platforms (for WebLOAD Load Machines)
 
-*Table 4: WebLOAD Load Machine System Requirements* 
+*Table: WebLOAD Load Machine System Requirements* 
 
 | **Requirements** | **Load  Machine**                                            |
 | ---------------- | ------------------------------------------------------------ |

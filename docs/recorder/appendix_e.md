@@ -15,28 +15,28 @@ In addition, you can playback a recording as if it were a recording from a mobil
 
 1. Start native mobile recording, as follows:
 
-   1. In WebLOAD Recorder, click **Start** in the **Home** tab of the ribbon. The Recording dialog appears.
+    1. In WebLOAD Recorder, click **Start** in the **Home** tab of the ribbon. The Recording dialog appears.
 
-      ![Selecting Native Mobile Recording](../images/select_native_recording.png)
+          ![Selecting Native Mobile Recording](../images/select_native_recording.png)
 
-   2. In the **Open** drop-down list, select **Native Mobile Recording**.
+    1. In the **Open** drop-down list, select **Native Mobile Recording**.
 
-   3. Click **OK**.
+    1. Click **OK**.
 
-2. Set up the mobile device proxy, as follows:
+1. Set up the mobile device proxy, as follows:
 
-   1. Connect the mobile device to a Wireless network that can access your WebLOAD machine.
+    1. Connect the mobile device to a Wireless network that can access your WebLOAD machine.
 
-   2. Configure the device’s wireless proxy settings to go through the WebLOAD machine, on the noted port.
+    1. Configure the device’s wireless proxy settings to go through the WebLOAD machine, on the noted port.
 
-      This step depends on the device OS type and version. For example, see [*Setting Proxy Settings in iPhone* ](#setting-proxy-settings-in-iphone)* and [*Setting Proxy Settings in Android* ](#setting-proxy-settings-in-android).
+       This step depends on the device OS type and version. For example, see [*Setting Proxy Settings in iPhone* ](#setting-proxy-settings-in-iphone)* and [*Setting Proxy Settings in Android* ](#setting-proxy-settings-in-android).
 
-3. Perform actions in your mobile device application or web browser; the HTTP requests will be recorded in the test script.
+1. Perform actions in your mobile device application or web browser; the HTTP requests will be recorded in the test script.
 
-4. Stop recording, as follows:
+1. Stop recording, as follows:
 
-   1. In WebLOAD Recorder, click **Stop Recording**.
-   2. In the mobile device, change the Proxy settings back to off.
+    1. In WebLOAD Recorder, click **Stop Recording**.
+    1. In the mobile device, change the Proxy settings back to off.
 
 
 > **Note:** 
@@ -53,17 +53,17 @@ In addition, you can playback a recording as if it were a recording from a mobil
 
 1. Open **Settings**, and access the **Wi-Fi** network settings:
 
-   ![Accessing Wi-Fi iPhone Settings](../images/access_wifi_settings.jpeg)
+    ![Accessing Wi-Fi iPhone Settings](../images/access_wifi_settings.jpeg)
 
-2. Select edit current Wi-Fi Network settings:
+1. Select edit current Wi-Fi Network settings:
 
-   ![Edit Current Wi-Fi iPhone Settings](../images/edit_wifi_settings.jpeg)
+    ![Edit Current Wi-Fi iPhone Settings](../images/edit_wifi_settings.jpeg)
 
-3. Scroll down the **HTTP Proxy** section. Change proxy to **Manual** and set the **Server** and **Port** to point to the WebLOAD machines.
+1. Scroll down the **HTTP Proxy** section. Change proxy to **Manual** and set the **Server** and **Port** to point to the WebLOAD machines.
 
-   The default port for the proxy-recorder is 9884. You may need to use the machine’s IP-address instead of name.
+    The default port for the proxy-recorder is 9884. You may need to use the machine’s IP-address instead of name.
 
-   ![Setting Wi-Fi iPhone Settings](../images/setting_iphone_wifi.jpeg)
+    ![Setting Wi-Fi iPhone Settings](../images/setting_iphone_wifi.jpeg)
 
 
 
@@ -75,17 +75,17 @@ In order to record HTTPS traffic, the WebLOAD root certificate needs to be trust
 
 1. Locate the root certificate, in:
 
-   `c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem`
+    `c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem`
 
 1. Open the root.pem file on the phone. This can be done by sending the file via e-mail, or accessing the file from a web-server.
 
 1. Click **Install**.
 
-   ![Installing the Root CA](../images/install_root_ca.jpeg)
+    ![Installing the Root CA](../images/install_root_ca.jpeg)
 
 1. A warning will appear; click **Install**. The certificate should now be trusted
 
-   ![](../images/root_ca.jpeg)
+    ![](../images/root_ca.jpeg)
 
 1. After recording is completed, the certificate may be removed. To remove the certificate, select the following: **Settings** > **General** > **Profile ‘RadView Root CA’** > **Remove**.
 
@@ -107,7 +107,7 @@ In order to record HTTPS traffic, the WebLOAD root certificate needs to be trust
 
 1. Set **Proxy** to the WebLOAD machine IP-address, and **Port** to 9884.
 
-![Proxy Settings in Android – Two Examples](../images/proxy_settings_adroid.png)
+    ![Proxy Settings in Android – Two Examples](../images/proxy_settings_adroid.png)
 
 
 
@@ -118,7 +118,7 @@ In order to record HTTPS traffic, the WebLOAD root certificate needs to be trust
 
 1. Locate the root certificate, in:
 
-   c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem
+    c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem
 
 1. Copy locally, as root.crt.
 
@@ -137,13 +137,13 @@ In Simulate mode, the recording is done using the desktop browser, identified to
 
 1. In WebLOAD Recorder, click **Start Recording**.
 
-   ![Simulating a Mobile](../images/simulating_mobile.png)
+    ![Simulating a Mobile](../images/simulating_mobile.png)
 
-2. Check the **Identify As** checkbox.
+1. Check the **Identify As** checkbox.
 
-3. Select the **Browser** family and **Version**.
+1. Select the **Browser** family and **Version**.
 
-4. Click **OK**.
+1. Click **OK**.
 
 > **Notes:** 
 >

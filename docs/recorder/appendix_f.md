@@ -18,46 +18,46 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
 1. Drag the **Perfecto Mobile  ![](../images/appendix_f_004.png)**    icon from the Real Clients toolbox into the Script Tree at the desired location.
 
-   The Perfecto Mobile dialog box opens.
+    The Perfecto Mobile dialog box opens.
 
    
 
-   ![](../images/appendix_f_009.png)
+    ![](../images/appendix_f_009.png)
 
    
 
-2. In the **Cloud Name** field, enter the URL for Perfecto Mobile.
+1. In the **Cloud Name** field, enter the URL for Perfecto Mobile.
 
-3. Enter the Perfecto Mobile credentials:
+1. Enter the Perfecto Mobile credentials:
 
-   - In **Perfecto User**, enter your user name.
-   - In **Perfecto Password**, enter your password.
+    - In **Perfecto User**, enter your user name.
+    - In **Perfecto Password**, enter your password.
 
-4. Click **Select Script**. WebLOAD accesses the Perfecto Mobile scripts and displays them in the Select Script dialog box.
+1. Click **Select Script**. WebLOAD accesses the Perfecto Mobile scripts and displays them in the Select Script dialog box.
 
-   Select a desired script and click **OK**.
+    Select a desired script and click **OK**.
 
-   ![Select Script Dialog Box](../images/appendix_f_011.png)
+    ![Select Script Dialog Box](../images/appendix_f_011.png)
 
    
 
-5. Click **Select Device**. WebLOAD accesses Perfecto Mobile and displays the list of available devices in the Select Device dialog box.
+1. Click **Select Device**. WebLOAD accesses Perfecto Mobile and displays the list of available devices in the Select Device dialog box.
 
-   Select a desired device and click **OK**.
+    Select a desired device and click **OK**.
 
-   ![Select Device Dialog Box](../images/appendix_f_012.png)
+    ![Select Device Dialog Box](../images/appendix_f_012.png)
 
-6. Set the **Test timeout**. This is the maximum number of seconds that the test is allowed to run.
+1. Set the **Test timeout**. This is the maximum number of seconds that the test is allowed to run.
 
-7. Set the **Ping Time**. This is the frequency in seconds with which WebLOAD will check test status during test running.
+1. Set the **Ping Time**. This is the frequency in seconds with which WebLOAD will check test status during test running.
 
-8. Specify whether to **Send Transactions** to WebLOAD. That is, whether to send a list of all the transactions (Groups) that are written in the Perfecto Mobile script (such as: ”Open Chrome”, “Navigate to my application”).
+1. Specify whether to **Send Transactions** to WebLOAD. That is, whether to send a list of all the transactions (Groups) that are written in the Perfecto Mobile script (such as: ”Open Chrome”, “Navigate to my application”).
 
-9. Specify whether to **Send All Actions** to WebLOAD. That is, whether to send a list of all the actions that the script performs (such as: ”Press Key”, “Touch Drag”).
+1. Specify whether to **Send All Actions** to WebLOAD. That is, whether to send a list of all the actions that the script performs (such as: ”Press Key”, “Touch Drag”).
 
-10. Click **OK**. The script is created, and is ready to be run.
+1. Click **OK**. The script is created, and is ready to be run.
 
-![Script for Running a Script on a Device in the Perfecto Cloud](../images/appendix_f_013.png)
+    ![Script for Running a Script on a Device in the Perfecto Cloud](../images/appendix_f_013.png)
 
 
 

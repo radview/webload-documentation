@@ -760,6 +760,8 @@ Use the POP-Delete Building Block to delete all messages from a POP mailbox.
 
 
 <a name = "pop_delete"></a>
+
+
 The fields in the POP-Delete Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -798,24 +800,26 @@ Use the IMAP-Connect Building Block to start an IMAP session. When you connect, 
 
 1. Drag the **IMAP-Connect** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-Connect Building Block parameters dialog box opens.
+    The IMAP-Connect Building Block parameters dialog box opens.
 
-   ![IMAP-Connect Building Block Parameters Dialog Box](../images/appendix_a_092.jpeg)
+    ![IMAP-Connect Building Block Parameters Dialog Box](../images/appendix_a_092.jpeg)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the IMAP Server field is used to define the IMAP Server Name or IP to be used when logging in to the specified IMAP server. WebLOAD Recorder automatically sends the user- specified name and password to the IMAP server when connecting.
+    For example, in the preceding figure, the comment area explains that the IMAP Server field is used to define the IMAP Server Name or IP to be used when logging in to the specified IMAP server. WebLOAD Recorder automatically sends the user- specified name and password to the IMAP server when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_connect).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_connect).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, an IMAP connection is opened using the connection name, local host name, user name, and password specified by the user.
+    In the script, an IMAP connection is opened using the connection name, local host name, user name, and password specified by the user.
 
 
 <a name ="imap_connect"></a>
+
+
 The fields in the IMAP-Connect Building Block parameters dialog box are described in the following table:
 
 |**Field Name**|**Description**|
@@ -835,21 +839,21 @@ Use the IMAP-Retrieve Building Block to retrieve all waiting messages, optionall
 
 1. Drag the **IMAP-Retrieve** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-Retrieve Building Block parameters dialog box opens.
+    The IMAP-Retrieve Building Block parameters dialog box opens.
 
-   ![IMAP-Retrieve Building Block Parameters Dialog Box](../images/appendix_a_093.jpeg)
+    ![IMAP-Retrieve Building Block Parameters Dialog Box](../images/appendix_a_093.jpeg)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be retrieved.
+    For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be retrieved.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_retrieve).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_retrieve).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-Retrieve Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-Retrieve Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the specified message is retrieved from the specified mailbox and the message property values are saved to a local structure. A comment embedded in the code describes the message attributes stored in the imap JavaScript object.
+    In the script, the specified message is retrieved from the specified mailbox and the message property values are saved to a local structure. A comment embedded in the code describes the message attributes stored in the imap JavaScript object.
 
 <a name ="imap_retrieve"></a>
 
@@ -870,23 +874,23 @@ Use the IMAP-Delete Building Block to delete messages from an IMAP mailbox.
 
 1. Drag the **IMAP-Delete** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-Delete Building Block parameters dialog box opens.
+    The IMAP-Delete Building Block parameters dialog box opens.
 
-   ![IMAP-Delete Building Block Parameters Dialog Box](../images/appendix_a_094.png)
+    ![IMAP-Delete Building Block Parameters Dialog Box](../images/appendix_a_094.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be deleted.
+    For example, in the preceding figure, the comment area explains that the Items List field contains a list of mailbox items to be deleted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_delete).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_delete).
 
-4. Click **OK**.
+1. Click **OK**.
 
-5. The IMAP-Delete Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-Delete Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the messages specified by the user are deleted from the mail box specified by the user.
+    In the script, the messages specified by the user are deleted from the mail box specified by the user.
 
 The fields in the IMAP-Delete Building Block parameters dialog box are described in the following table:
 
@@ -907,23 +911,25 @@ Use the IMAP-CreateMailbox Building Block to create a new IMAP mailbox.
 
 1. Drag the **IMAP-CreateMailbox** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-CreateMailbox Building Block parameters dialog box opens.
+    The IMAP-CreateMailbox Building Block parameters dialog box opens.
 
-   ![IMAP-CreateMailbox Building Block Parameters Dialog Box](../images/appendix_a_095.png)
+    ![IMAP-CreateMailbox Building Block Parameters Dialog Box](../images/appendix_a_095.png)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be created.
+    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be created.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_createmailbox).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_createmailbox).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-CreateMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-CreateMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, a new mailbox is created using the name specified by the user.
+    In the script, a new mailbox is created using the name specified by the user.
 
 <a name ="imap_createmailbox"></a>
+
+
 The field in the IMAP-CreateMailbox Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -938,7 +944,7 @@ Use the IMAP-ListMailboxes Building Block to generate a complete list of all IMA
 
 - Drag the **IMAP-ListMailboxes** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The IMAP-ListMailboxes Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-ListMailboxes Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 #### IMAP-DeleteMailbox
@@ -949,25 +955,26 @@ Use the IMAP-DeleteMailbox Building Block to delete an IMAP mailbox.
 
 1. Drag the **IMAP-DeleteMailbox** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-DeleteMailbox Building Block parameters dialog box opens.
+    The IMAP-DeleteMailbox Building Block parameters dialog box opens.
 
-   ![IMAP-DeleteMailbox Building Block Parameters Dialog Box](../images/appendix_a_096.jpeg)
+    ![IMAP-DeleteMailbox Building Block Parameters Dialog Box](../images/appendix_a_096.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be deleted.
+    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be deleted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_deletemailbox).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_deletemailbox).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-DeleteMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-DeleteMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the mailbox specified by the user is deleted.
+    In the script, the mailbox specified by the user is deleted.
 
 <a name = "imap_deletemailbox"></a>
+
 The field in the IMAP-DeleteMailbox Building Block parameters dialog box is described in the following table:
 
 |**Field Name**|**Description**|
@@ -984,25 +991,28 @@ Use the IMAP-RenameMailbox Building Block to rename an IMAP mailbox.
 
 1. Drag the **IMAP-RenameMailbox** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-RenameMailbox Building Block parameters dialog box opens.
+    The IMAP-RenameMailbox Building Block parameters dialog box opens.
 
-   ![IMAP-RenameMailbox Building Block Parameters Dialog Box](../images/appendix_a_097.png)
+    ![IMAP-RenameMailbox Building Block Parameters Dialog Box](../images/appendix_a_097.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area contains the name of the old mail box.
+    For example, in the preceding figure, the comment area contains the name of the old mail box.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_renamemailbox).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#imap_renamemailbox).
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-RenameMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the mailbox is renamed using the name specified by the user.
+    The IMAP-RenameMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the mailbox is renamed using the name specified by the user.
 
 The fields in the IMAP-RenameMailbox Building Block parameters dialog box are described in the following table:
 
 <a name = "imap_renamemailbox">
+
+
+
 |**Field Name**|**Description**|
 | :- | :- |
 |Old MailBox name|<p>Specify the name of the mailbox to be renamed.</p><p>Type the old mailbox name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field. The mailbox name must be enclosed within quotation marks.</p>|
@@ -1018,29 +1028,31 @@ Use the IMAP-SubscribeMailbox Building Block to subscribe to an IMAP mailbox.
 
 1. Drag the **IMAP-SubscribeMailbox** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-SubscribeMailbox Building Block parameters dialog box opens.
+    The IMAP-SubscribeMailbox Building Block parameters dialog box opens.
 
-   ![IMA-SubscribeMailbox Building Block Parameters Dialog Box](../images/appendix_a_098.png)
-
-   
+    ![IMA-SubscribeMailbox Building Block Parameters Dialog Box](../images/appendix_a_098.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+   
 
-   For example, in the preceding figure, the comment area contains the name of the mail box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_subscribemailbox).
+    For example, in the preceding figure, the comment area contains the name of the mail box.
 
-4. Click **OK**.
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_subscribemailbox).
 
-The IMAP-SubscribeMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+1. Click **OK**.
 
-In the script, the mailbox is renamed using the name specified by the user.
+    The IMAP-SubscribeMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+
+    In the script, the mailbox is renamed using the name specified by the user.
 
 The field in the IMAP-SubscribeMailbox Building Block parameters dialog box is described in the following table:
 
 <a name ="imap_subscribemailbox"></a>
+
+
 
 |**Field Name**|**Description**|
 | :- | :- |
@@ -1056,29 +1068,32 @@ Use the IMAP-UnsubscribeMailbox Building Block to unsubscribe from an IMAP mailb
 
 1. Drag the **IMAP-UnsubscribeMailbox** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-UnsubscribeMailbox Building Block parameters dialog box opens.
+    The IMAP-UnsubscribeMailbox Building Block parameters dialog box opens.
 
    
 
-   ![IMA-UnsubscribeMailbox Building Block Parameters Dialog Box](../images/appendix_a_099.png)
+    ![IMA-UnsubscribeMailbox Building Block Parameters Dialog Box](../images/appendix_a_099.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area contains the name of the mail box.
+    For example, in the preceding figure, the comment area contains the name of the mail box.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_unsubscribemailbox).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#imap_unsubscribemailbox).
 
-5. Click **OK**.
+1. Click **OK**.
 
-6. The IMAP-UnsubscribeMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-UnsubscribeMailbox Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the mailbox is renamed using the name specified by the user.
+    In the script, the mailbox is renamed using the name specified by the user.
 
 The field in the IMAP-UnsubscribeMailbox Building Block parameters dialog box is described in the following table:
 
 <a name ="imap_unsubscribemailbox"></a>
+
+
+
 |**Field Name**|**Description**|
 | :- | :- |
 |MailBox name|<p>Specify the name of the mailbox from which to unsubscribe.</p><p>Type the mailbox name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field. The mailbox name must be enclosed within quotation marks.</p>|
@@ -1093,7 +1108,7 @@ Use the IMAP-ListSubscribedMailboxes Building Block to generate a complete list 
 
 - Drag the **IMAP-ListSubscribedMailboxes** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The IMAP-ListSubscribedMailboxes Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-ListSubscribedMailboxes Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -1106,23 +1121,23 @@ Use the IMAP-Search Building Block to search for a specific email item within an
 
 1. Drag the **IMAP-Search** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The IMAP-Search Building Block parameters dialog box opens.
+    The IMAP-Search Building Block parameters dialog box opens.
 
-   ![IMAP-Search Building Block Parameters Dialog Box](../images/appendix_a_100.png)
+    ![IMAP-Search Building Block Parameters Dialog Box](../images/appendix_a_100.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box. 
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box. 
 
-   For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be searched.
+    For example, in the preceding figure, the comment area explains that the MailBox field contains the name of the mail box to be searched.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#table_55).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#table_55).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The IMAP-Search Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The IMAP-Search Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the mailbox specified by the user is searched for all mail items containing the string “timesheet”.
+    In the script, the mailbox specified by the user is searched for all mail items containing the string “timesheet”.
 
 
 <a name = "table_55"> </a>
@@ -1193,23 +1208,23 @@ Use the NNTP-Connect Building Block to start an NNTP session. When you connect, 
 
 1. Drag the **NNTP-Connect** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The NNTP-Connect Building Block parameters dialog box opens.
+    The NNTP-Connect Building Block parameters dialog box opens.
 
    
 
-   ![NNTP-Connect Building Block Parameters Dialog Box](../images/appendix_a_101.png)
+    ![NNTP-Connect Building Block Parameters Dialog Box](../images/appendix_a_101.png)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Server Host Name field is used to define the NNTP Server Name or IP to be used when logging in to the specified NNTP server. WebLOAD Recorder automatically sends the user-specified name and password to the NNTP server when connecting.
+    For example, in the preceding figure, the comment area explains that the Server Host Name field is used to define the NNTP Server Name or IP to be used when logging in to the specified NNTP server. WebLOAD Recorder automatically sends the user-specified name and password to the NNTP server when connecting.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_connect).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_connect).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The NNTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The NNTP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, an NNTP connection is opened using the server name, user name, and password specified by the user.
+    In the script, an NNTP connection is opened using the server name, user name, and password specified by the user.
 
 
 <a name ="nntp_connect"></a>
@@ -1229,25 +1244,23 @@ Use the NNTP-GetArticle Building Block to retrieve articles from the specified n
 
 1. Drag the **NNTP-GetArticle** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The NNTP-GetArticle Building Block parameters dialog box opens.
+    The NNTP-GetArticle Building Block parameters dialog box opens.
+
+    ![NNTP-GetArticle Building Block Parameters Dialog Box](../images/appendix_a_102.png)
 
    
 
-   ![NNTP-GetArticle Building Block Parameters Dialog Box](../images/appendix_a_102.png)
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   
+    For example, in the preceding figure, the comment area explains that the Article ID field contains the ID number of the news article to be retrieved.
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_getarticle).
 
-3. For example, in the preceding figure, the comment area explains that the Article ID field contains the ID number of the news article to be retrieved.
+1. Click **OK**.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_getarticle).
+    The NNTP-GetArticle Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-5. Click **OK**.
-
-   The NNTP-GetArticle Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
-
-   In the script, the specified article is retrieved from the specified news group.
+    In the script, the specified article is retrieved from the specified news group.
 
 
 <a name ="nntp_getarticle"></a>
@@ -1268,21 +1281,21 @@ Use the NNTP-GetArticleCount Building Block to retrieve the number of articles i
 
 1. Drag the **NNTP-GetArticleCount** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The NNTP-GetArticleCount Building Block parameters dialog box opens.
+    The NNTP-GetArticleCount Building Block parameters dialog box opens.
 
-   ![NNTP-GetArticleCount Building Block Parameters Dialog Box](../images/appendix_a_103.png)
+    ![NNTP-GetArticleCount Building Block Parameters Dialog Box](../images/appendix_a_103.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Group Name field contains the name of the news group whose articles are to be counted.
+    For example, in the preceding figure, the comment area explains that the Group Name field contains the name of the news group whose articles are to be counted.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nttp_getarticlecount).
 
-4. Click **OK**.
+1. Click **OK**.
 
-The NNTP-GetArticleCount Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the number of articles appearing in the specified news group is returned.
+    The NNTP-GetArticleCount Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode. In the script, the number of articles appearing in the specified news group is returned.
 
 
 <a name ="nttp_getarticlecount"></a>
@@ -1300,21 +1313,21 @@ Use the NNTP-PostArticle Building Block to post articles to the specified news g
 
 1. Drag the **NNTP-PostArticle** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The NNTP-PostArticle Building Block parameters dialog box opens.
+    The NNTP-PostArticle Building Block parameters dialog box opens.
 
-   ![NNTP-PostArticle Building Block Parameters Dialog Box](../images/appendix_a_104.png)
+    ![NNTP-PostArticle Building Block Parameters Dialog Box](../images/appendix_a_104.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the From field contains the name of the person sending the news article to be posted on the news group.
+    For example, in the preceding figure, the comment area explains that the From field contains the name of the person sending the news article to be posted on the news group.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_postarticle).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#nntp_postarticle).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The NNTP-PostArticle Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The NNTP-PostArticle Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 <a name = "nntp_postarticle"></a>
@@ -1349,23 +1362,23 @@ Use the TCP-Connect Building Block to open a TCP connection.
 
 1. Drag the **TCP-Connect** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The TCP-Connect Building Block parameters dialog box opens.
+    The TCP-Connect Building Block parameters dialog box opens.
 
-   ![TCP-Connect Building Block Parameters Dialog Box](../images/appendix_a_105.png)
+    ![TCP-Connect Building Block Parameters Dialog Box](../images/appendix_a_105.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Connection Timeout field is used to set the amount of time the system will wait for a TCP connection to be established before timing out. Time is defined in milliseconds.
+    For example, in the preceding figure, the comment area explains that the Connection Timeout field is used to set the amount of time the system will wait for a TCP connection to be established before timing out. Time is defined in milliseconds.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#tcp_connect).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#tcp_connect).
 
-4. Click **OK**.
+1. Click **OK**.
 
-The TCP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TCP-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, a TCP connection is opened using the host names specified by the user.
+    In the script, a TCP connection is opened using the host names specified by the user.
 
 <a name = "tcp_connect"></a>
 
@@ -1389,21 +1402,20 @@ Use the TCP-Send Building Block to send a TCP request.
 
 1. Drag the **TCP-Send** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The TCP-Send Building Block parameters dialog box opens.
+    The TCP-Send Building Block parameters dialog box opens.
+ 
+    ![TCP-Send Building Block Parameters Dialog Box](../images/appendix_a_106.png)
 
-   ![TCP-Send Building Block Parameters Dialog Box](../images/appendix_a_106.png)
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+    For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
-3. For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#tcp_send).
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#tcp_send).
+1. Click **OK**.
 
-5. Click **OK**.
-
-
-
-The TCP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+ 
+    The TCP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 <a name = "tcp_send"></a>
 The fields in the TCP-Send Building Block parameters dialog box are described in the following table:
@@ -1422,7 +1434,7 @@ Use the TCP-Receive Building Block to return all responses from the TCP host sin
 
 - Drag the **TCP-Receive** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The TCP-Receive Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TCP-Receive Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -1434,7 +1446,7 @@ Use the TCP-Erase Building Block to clear the contents of the TCP document objec
 
 - Drag the **TCP-Erase** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The TCP-Erase Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TCP-Erase Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### TELNET
 Dragging a TELNET icon into your Script Tree opens a TELNET Building Block parameters dialog box.
@@ -1454,23 +1466,23 @@ Use the TELNET-Connect Building Block to open a TELNET connection.
 
 1. Drag the **TELNET-Connect** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The TELNET-Connect Building Block parameters dialog box opens.
+    The TELNET-Connect Building Block parameters dialog box opens.
 
    
 
-   ![TELNET-Connect Building Block Parameters Dialog Box](../images/appendix_a_107.png)
+    ![TELNET-Connect Building Block Parameters Dialog Box](../images/appendix_a_107.png)
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Local Host field is used to define the name of the local host for this TELNET session.
+    For example, in the preceding figure, the comment area explains that the Local Host field is used to define the name of the local host for this TELNET session.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_connect).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_connect).
 
-5. Click **OK**.
+1. Click **OK**.
 
-The TELNET-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TELNET-Connect Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, a TELNET connection is opened using the host names specified by the user.
+    In the script, a TELNET connection is opened using the host names specified by the user.
 
 
 <a name ="telnet_connect"></a>
@@ -1491,21 +1503,21 @@ Use the TELNET-Receive Building Block to receive a TELNET communication.
 
 1. Drag the **TELNET-Receive** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The TELNET-Receive Building Block parameters dialog box opens.
+    The TELNET-Receive Building Block parameters dialog box opens.
 
-   ![TELNET-Receive Building Block Parameters Dialog Box](../images/appendix_a_108.png)
+    ![TELNET-Receive Building Block Parameters Dialog Box](../images/appendix_a_108.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the NextPrompt String designates the text string that must be found and identified in the next communication received via TELNET.
+    For example, in the preceding figure, the comment area explains that the NextPrompt String designates the text string that must be found and identified in the next communication received via TELNET.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_receive).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_receive).
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The TELNET-Receive Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TELNET-Receive Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 <a name = "telnet_receive"></a>
 The fields in the TELNET-Receive Building Block parameters dialog box are described in the following table:
@@ -1524,21 +1536,21 @@ Use the TELNET-Send Building Block to send a TELNET communication.
 
 1. Drag the **TELNET-Send** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The TELNET-Send Building Block parameters dialog box opens.
+    The TELNET-Send Building Block parameters dialog box opens.
 
-   ![TELNET-Send Building Block Parameters Dialog Box](../images/appendix_a_109.png)
+    ![TELNET-Send Building Block Parameters Dialog Box](../images/appendix_a_109.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
+    For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_send).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#telnet_send).
 
-4. Click **OK**.
+1. Click **OK**.
 
-The TELNET-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TELNET-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 <a name ="telnet_send"></a>
@@ -1556,7 +1568,7 @@ Use the TELNET-Erase Building Block to clear the contents of the TELNET document
 
 - Drag the **TELNET-Erase** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The TELNET-Erase Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The TELNET-Erase Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 ### UDP
 Dragging a UDP icon into your Script Tree opens a UDP Building Block parameters dialog box.
@@ -1579,23 +1591,23 @@ Use the UDP-Bind Building Block to create a connection to a UDP port.
 
 1. Drag the **UDP-Bind** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The UDP-Bind Building Block parameters dialog box opens.
+    The UDP-Bind Building Block parameters dialog box opens.
 
-   ![UDP-Bind Building Block Parameters Dialog Box](../images/appendix_a_110.png)
+    ![UDP-Bind Building Block Parameters Dialog Box](../images/appendix_a_110.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the InBuffer Size field is used to define the amount of space allocated to the incoming data buffer for this UDP session.
+    For example, in the preceding figure, the comment area explains that the InBuffer Size field is used to define the amount of space allocated to the incoming data buffer for this UDP session.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_bind).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_bind).
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The UDP-Bind Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The UDP-Bind Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the InitAgenda() function includes commands to include the WebLOAD Recorder JIPP and UDP library files. The InitClient() function includes a command to define a separate UDP object for each client. Within the main body of the script, a UDP connection is opened using the connection parameters specified by the user. The TerminateClient() function automatically closes the connection and deletes all objects created for clients during test sessions.
+    In the script, the InitAgenda() function includes commands to include the WebLOAD Recorder JIPP and UDP library files. The InitClient() function includes a command to define a separate UDP object for each client. Within the main body of the script, a UDP connection is opened using the connection parameters specified by the user. The TerminateClient() function automatically closes the connection and deletes all objects created for clients during test sessions.
 
 <a name ="udp_bind"></a>
 The fields in the UDP-Bind Building Block parameters dialog box are described in the following table:
@@ -1620,23 +1632,23 @@ Use the UDP-Broadcast Building Block to broadcast data to the local net.
 
 1. Drag the **UDP-Broadcast** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The UDP-Broadcast Building Block parameters dialog box opens.
+    The UDP-Broadcast Building Block parameters dialog box opens.
 
-   ![UDP-Broadcast Building Block Parameters Dialog Box](../images/appendix_a_111.png)
+    ![UDP-Broadcast Building Block Parameters Dialog Box](../images/appendix_a_111.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   For example, in the preceding figure, the comment area explains that the Broadcast String field is used to define the string to be broadcast.
+    For example, in the preceding figure, the comment area explains that the Broadcast String field is used to define the string to be broadcast.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_broadcast).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_broadcast).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The **UDP-Broadcast** Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The **UDP-Broadcast** Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-In the script, the string defined by the user is broadcast via the specified port.
+    In the script, the string defined by the user is broadcast via the specified port.
 
 
 <a name ="udp_broadcast"></a>
@@ -1652,7 +1664,7 @@ The fields in the UDP-Broadcast Building Block parameters dialog box are describ
 
 #### UDP-Receive
 
-Use the UDP-Receive Building Block to return all responses from the host since the last UDP-Send action. A UDP-Receive action is completed when either the RequestedPackets or Timeout conditions set when the UDP connection was first established is met. Subsequent uses of UDP-Receive find the next instance of the limiting property, returning additional information from the buffer
+Use the UDP-Receive Building Block to return all responses from the host since the last UDP-Send action. A UDP-Receive action is completed when either the RequestedPackets or Timeout conditions set when the UDP connection was first established is met. Subsequent uses of UDP-Receive find the next instance of the limiting property, returning additional information from the buffer.
 
 Use the UDP-Send Building Block to send a UDP communication.
 
@@ -1660,20 +1672,21 @@ Use the UDP-Send Building Block to send a UDP communication.
 
 1. Drag the **UDP-Send** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-   The UDP-Send Building Block parameters dialog box opens.
+     The UDP-Send Building Block parameters dialog box opens.
 
-![UDP-Send Building Block Parameters Dialog Box](../images/appendix_a_112.png)
+    ![UDP-Send Building Block Parameters Dialog Box](../images/appendix_a_112.png)
 
 
 
 1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
-
-   For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
+ 
+    For example, in the preceding figure, the comment area explains that the Send String designates the text string to be sent.
 
 1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#udp_send).
+
 1. Click **OK**.
 
-   The UDP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The UDP-Send Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 <a name ="udp_send"></a>
@@ -1693,7 +1706,7 @@ Use the UDP-Erase Building Block to clear the contents of the UDP document objec
 
 - Drag the **UDP-Erase** icon from the Internet Protocols toolbox into the Script Tree at the desired location.
 
-  The UDP-Erase Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The UDP-Erase Building Block is added to the Script  Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -1707,7 +1720,7 @@ Use the WebLOAD Recorder IoT Protocols Building Blocks to simply and easily add 
 
 - Drag the selected IoT Protocols icon from the IoT Protocols toolbox and drop it into the Script Tree at the appropriate point.
 
-  WebLOAD Recorder automatically adds the appropriate JavaScript code to your test session script.
+    WebLOAD Recorder automatically adds the appropriate JavaScript code to your test session script.
 
 The following are the available IoT Protocols building blocks:
 
@@ -1725,27 +1738,27 @@ The MQTT-Connect Building Block enables you to connect to the broker (i.e., the 
 
 1. Drag the MQTT-Connect icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The MQTT-Connect Node Building Block parameters dialog box opens.
+    The MQTT-Connect Node Building Block parameters dialog box opens.
 
-   ![MQTT-Connect Node Building Block Parameters Dialog Box](../images/appendix_a_114.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![MQTT-Connect Node Building Block Parameters Dialog Box](../images/appendix_a_114.png)
 
    
 
-   | **Field Name** | **Description**                                              |
-   | :------------- | :----------------------------------------------------------- |
-   | Broker Address | The address of the MQTT broker. For example: “mqtt.example.com” |
-   | Broker Port    | The MQTT Broker port number. For example: 1883.              |
-   | Client ID      | The MQTT client ID. In some cases this can be random text, such as “random123”. |
-   | User Name      | The MQTT user name.                                          |
-   | Password       | The MQTT Client password.                                    |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+       | **Field Name** | **Description**                                              |
+       | :------------- | :----------------------------------------------------------- |
+       | Broker Address | The address of the MQTT broker. For example: “mqtt.example.com” |
+       | Broker Port    | The MQTT Broker port number. For  example: 1883.              |
+       | Client ID      | The MQTT client ID. In some cases this can be random text, such as “random123”. |
+       | User Name      | The MQTT user name.                                          |
+       | Password       | The MQTT Client password.                                    |
+
+   
+
+1. Click **OK**.
 
 The MQTT-Connect node is added to the Script Tree.
 
@@ -1758,23 +1771,23 @@ The MQTT-Subscribe Building Block enables you to subscribe to a topic.
 
 1. Drag the MQTT-Subscribe icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The MQTT-Subscribe Node Building Block parameters dialog box opens.
+    The MQTT-Subscribe Node Building Block parameters dialog box opens.
 
-   ![MQTT-Subscribe Node Building Block Parameters Dialog Box](../images/appendix_a_115.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![MQTT-Subscribe Node Building Block Parameters Dialog Box](../images/appendix_a_115.png)
 
    
 
-   | **Field Name** | **Description**                                         |
-   | :------------- | :------------------------------------------------------ |
-   | Topic Name     | The MQTT topic name. For example: “any topic\my topic”. |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name** | **Description**                                         |
+    | :------------- | :------------------------------------------------------ |
+    | Topic Name     | The MQTT topic name. For example: “any topic\my topic”. |
+
+   
+
+1. Click **OK**.
 
 The MQTT-Subscribe node is added to the Script Tree.
 
@@ -1787,24 +1800,24 @@ The MQTT-Send Building Block enables you to send MQTT messages.
 
 1. Drag the MQTT-Send icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The MQTT-Send Node Building Block parameters dialog box opens.
+    The MQTT-Send Node Building Block parameters dialog box opens.
 
-   ![MQTT-Send Node Building Block Parameters Dialog Box](../images/appendix_a_116.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![MQTT-Send Node Building Block Parameters Dialog Box](../images/appendix_a_116.png)
 
    
 
-   | **Field Name** | **Description**              |
-   | :------------- | :--------------------------- |
-   | Topic Name     | The MQTT topic name.         |
-   | Message        | The MQTT message to publish. |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name** | **Description**              |
+    | :------------- | :--------------------------- |
+    | Topic Name     | The MQTT topic name.         |
+    | Message        | The MQTT message to publish. |
+
+   
+
+1. Click **OK**.
 
 The MQTT-Send node is added to the Script Tree.
 
@@ -1817,25 +1830,24 @@ The MQTT-GetMessages Building Block enables you to get MQTT messages.
 
 1. Drag the MQTT-GetMessages icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The MQTT-GetMessages Node Building Block parameters dialog box opens.
+    The MQTT-GetMessages Node Building Block parameters dialog box opens.
 
-   ![MQTT-GetMessages Node Building Block Parameters Dialog Box](../images/appendix_a_117.png)
-
-   
+    ![MQTT-GetMessages Node Building Block Parameters Dialog Box](../images/appendix_a_117.png)
 
    
 
-2. Edit the dialog box fields according to the following table.
+   
+
+1. Edit the dialog box fields according to the following table.
 
    
 
-   | **Field Name** | **Description**         |
-   | :------------- | :---------------------- |
-   | Sleep Time     | The default sleep time. |
+    | **Field Name** | **Description**         |
+    | :------------- | :---------------------- |
+    | Sleep Time     | The default sleep time. |
+ 
 
-   
-
-3. Click **OK**.
+1. Click **OK**.
 
 The MQTT-GetMessages node is added to the Script Tree.
 
@@ -1848,26 +1860,26 @@ The AMQP-Connect Building Block enables you to connect to the broker.
 
 1. Drag the AMQP-Connect icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The AMQP-Connect Node Building Block parameters dialog box opens.
+    The AMQP-Connect Node Building Block parameters dialog box opens.
 
-   ![AMQP-Connect Node Building Block Parameters Dialog Box](../images/appendix_a_118.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
-
-   1. 
-
-   | **Field Name**       | **Description**                 |
-   | :------------------- | :------------------------------ |
-   | Broker Address       | The address of the AMQP broker. |
-   | Broker Port          | The AMQP port number.           |
-   | UserName/VirtualHost | The AMQP Client ID.             |
-   | Password             | The AMQP Client password.       |
+    ![AMQP-Connect Node Building Block Parameters Dialog Box](../images/appendix_a_118.png)
 
    
 
-3. Click **OK**.
+1. Edit the dialog box fields according to the following table.
+
+    
+
+    | **Field Name**       | **Description**                 |
+    | :------------------- | :------------------------------ |
+    | Broker Address       | The address of the AMQP broker. |
+    | Broker Port          | The AMQP port number.           |
+    | UserName/VirtualHost | The AMQP Client ID.             |
+    | Password             | The AMQP Client password.       |
+
+   
+
+1. Click **OK**.
 
 The AMQP-Connect node is added to the Script Tree.
 
@@ -1880,24 +1892,24 @@ The AMQP-Send Building Block enables you to send AMQP messages.
 
 1. Drag the AMQP-Send icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The AMQP-Send Node Building Block parameters dialog box opens.
+    The AMQP-Send Node Building Block parameters dialog box opens.
 
-   ![AMQP-Send Node Building Block Parameters Dialog Box](../images/appendix_a_119.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![AMQP-Send Node Building Block Parameters Dialog Box](../images/appendix_a_119.png)
 
    
 
-   | **Field Name** | **Description**              |
-   | :------------- | :--------------------------- |
-   | Topic Name     | The AMQP topic name.         |
-   | Message        | The AMQP message to publish. |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name** | **Description**              |
+    | :------------- | :--------------------------- |
+    | Topic Name     | The AMQP topic name.         |
+    | Message        | The AMQP message to publish. |
+ 
+   
+
+1. Click **OK**.
 
 The AMQP-Send node is added to the Script Tree.
 
@@ -1908,26 +1920,25 @@ The AMQP-GetMessages Building Block enables you to get AMQP messages.
 
 1. Drag the AMQP-GetMessages icon from the IoT toolbox into the Script Tree at the desired location.
 
-   The AMQP-GetMessages Node Building Block parameters dialog box opens.
+    The AMQP-GetMessages Node Building Block parameters dialog box opens.
 
-   ![AMQP-GetMessages Node Building Block Parameters Dialog Box](../images/appendix_a_120.png)
-
-   
+    ![AMQP-GetMessages Node Building Block Parameters Dialog Box](../images/appendix_a_120.png)
 
    
 
-2. Edit the dialog box fields according to the following table.
+   
+
+1. Edit the dialog box fields according to the following table.
+
+   
+    | **Field Name** | **Description**      |
+    | :------------- | :------------------- |
+    | Topic Name     | The AMQP Topic name. |
+    | Sleep Time     | The sleep time.      |
 
    
 
-   | **Field Name** | **Description**      |
-   | :------------- | :------------------- |
-   | Topic Name     | The AMQP Topic name. |
-   | Sleep Time     | The sleep time.      |
-
-   
-
-3. Click **OK**.
+1. Click **OK**.
 
 The AMQP-GetMessages node is added to the Script Tree.
 
@@ -1969,23 +1980,21 @@ Use the OpenDB Building Block to open and close a specified database.
 
 1. Drag the **OpenDB** icon from the Database toolbox into the Script Tree at the desired location. 
 
-   The OpenDB Building Block parameters dialog box opens.
+    The OpenDB Building Block parameters dialog box opens.
+
+    ![OpenDB Building Block Parameters Dialog Box](../images/appendix_a_122.jpeg)
 
    
 
-   ![OpenDB Building Block Parameters Dialog Box](../images/appendix_a_122.jpeg)
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   
+    For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Enter the appropriate field value into the Value column next to the field name, as described [Table](#opendb).
 
-3. For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
+    > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described [Table 75](#opendb).
-
-   > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
-
-5. Click **OK**.
+1. Click **OK**.
 
 The OpenDB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
@@ -2016,21 +2025,21 @@ Use the Oracle OpenDB Building Block to open and close an Oracle database.
 
 1. Drag the **Oracle OpenDB** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The OpenDB Building Block parameters dialog box opens.
+    The OpenDB Building Block parameters dialog box opens.
 
-   ![Oracle OpenDB Building Block Parameters Dialog Box](../images/appendix_a_124.png)
+    ![Oracle OpenDB Building Block Parameters Dialog Box](../images/appendix_a_124.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
+    For example, in the preceding figure, the comment area explains that the Database Type field is used to specify the type of database to be opened.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle_opendb).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle_opendb).
 
-   > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
+    > **Note:** The Database toolbox is currently available only for database activities through ADO under a Windows operating system.
 
-5. Click **OK**.
+1. Click **OK**.
 
 The Oracle OpenDB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
@@ -2059,19 +2068,19 @@ Use the MySQL OpenDB Building Block to open and close a MySQL database.
 
 1. Drag the **MySQL OpenDB** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The MySQLOpenDB Building Block parameters dialog box opens.
+    The MySQLOpenDB Building Block parameters dialog box opens.
 
-   ![MySQL OpenDB Building Block Parameters Dialog Box](../images/appendix_a_125.jpeg)
+    ![MySQL OpenDB Building Block Parameters Dialog Box](../images/appendix_a_125.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#mysql_opendb).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#mysql_opendb).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The MySQL Open DB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The MySQL Open DB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 <a name ="mysql_opendb"></a>
@@ -2093,29 +2102,28 @@ Use the Execute Command Building Block to add simple database commands to your t
 
 1. Drag the **Execute Command** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The Execute Command Building Block parameters dialog box opens.
+    The Execute Command Building Block parameters dialog box opens.
 
-   ![Execute Command Building Block Parameters Dialog Box](../images/appendix_a_127.jpeg)
-
-   
-
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
-
-3. For example, the comment area in the preceding figure explains that the SQL/Command Expression field is used to enter the command to be executed.
-
-4. Enter the appropriate field value into the Value column next to the field name.
-
-   For example, to enter a text string, type the complete text into the input-text window that appears when you click the small arrow to the right of the Value input area for the field, as illustrated in the preceding figure.
-
-   ![](../images/appendix_a_128.png)
+    ![Execute Command Building Block Parameters Dialog Box](../images/appendix_a_127.jpeg)
 
    
 
-5. Click **OK**.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+
+    For example, the comment area in the preceding figure explains that the SQL/Command Expression field is used to enter the command to be executed.
+
+1. Enter the appropriate field value into the Value column next to the field name.
+
+    For example, to enter a text string, type the complete text into the input-text window that appears when you click the small arrow to the right of the Value input area for the field, as illustrated in the preceding figure.
+
+    ![](../images/appendix_a_128.png)
+
+   
+
+1. Click **OK**.
 
 
-
-The Execute Command Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Execute Command Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 > **Note:** The database connection is identified with the variable defined in the OpenDB and Oracle OpenDB Building Block parameters dialog boxes.
 
@@ -2135,25 +2143,24 @@ Use the Fetch Data Building Block to add database commands that return data valu
 
 1. Drag the **Fetch Data** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The Fetch Data Building Block parameters dialog box opens.
+    The Fetch Data Building Block parameters dialog box opens.
+
+
+    ![Fetch Data Building Block Parameters Dialog Box](../images/appendix_a_129.jpeg)
 
    
 
-   ![Fetch Data Building Block Parameters Dialog Box](../images/appendix_a_129.jpeg)
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-   
+    For example, in the preceding figure, the comment area explains that the Cursor Type field is used to define the level of access and visibility requested for this database Building Block.
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#execute_command_building_block).
 
-3. For example, in the preceding figure, the comment area explains that the Cursor Type field is used to define the level of access and visibility requested for this database Building Block.
+    For example, to select a value from a pre-defined list, select the Cursor Type choice from the list of options displayed in the drop-down list box that appears when you click the small arrow to the right of the Value input area for this field.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#execute_command_building_block).
+1. Click **OK**.
 
-5. For example, to select a value from a pre-defined list, select the Cursor Type choice from the list of options displayed in the drop-down list box that appears when you click the small arrow to the right of the Value input area for this field.
-
-6. Click **OK**.
-
-   The Fetch Data Building Block is added to the Script Tree. The JavaScript code, including the TerminateClient() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Fetch Data Building Block is added to the Script Tree. The JavaScript code, including the TerminateClient() function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -2177,19 +2184,19 @@ The DB GetLine Building Block reads complete records, one by one, from a specifi
 
 1. Drag the **DB GetLine** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The DB GetLine Building Block parameters dialog box opens.
+    The DB GetLine Building Block parameters dialog box opens.
 
-   ![DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_130.jpeg)
+    ![DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_130.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#dg_getline).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#dg_getline).
 
-4. Click **OK**.
+1. Click **OK**.
 
-5. The DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 <a name ="dg_getline"></a>
@@ -2222,19 +2229,19 @@ The Oracle DB GetLine Building Block reads complete records, one by one, from a 
 
 1. Drag the **Oracle DB GetLine** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The Oracle DB GetLine Building Block parameters dialog box opens.
+    The Oracle DB GetLine Building Block parameters dialog box opens.
 
-   ![Oracle DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_131.jpeg)
+    ![Oracle DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_131.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle-db-getline).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#oracle-db-getline).
 
-4. Click **OK**.
+1. Click **OK**.
 
-The Oracle DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Oracle DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda() and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 <a name = "oracle-db-getline"></a>
 The fields in the **Oracle DB GetLine** Building Block parameters dialog box are described in the following table:
@@ -2262,22 +2269,22 @@ The MySQL DB GetLine Building Block reads complete records, one by one, from a s
 **To enter a value:**
 
 1. Drag the **MySQL DB GetLine** icon from the Database toolbox into the Script Tree at the desired location.
-
-   The MySQL DB GetLine Building Block parameters dialog box opens.
-
-   
-
-   ![MySQL DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_133.jpeg)
+ 
+    The MySQL DB GetLine Building Block parameters dialog box opens.
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+    ![MySQL DB GetLine Building Block Parameters Dialog Box](../images/appendix_a_133.jpeg)
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#mysql_db_getline).
+   
 
-4. Click **OK**.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-5. The MySQL DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+1. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#mysql_db_getline).
+
+1. Click **OK**.
+
+    The MySQL DB GetLine Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 <a name = "mysql_db_getline"></a>
 The fields in the MySQL DB GetLine Building Block parameters dialog box are described in the following table:
@@ -2303,19 +2310,19 @@ Use the DB Load Building Block to generate a load test for the specified databas
 
 1. Drag the **DB Load** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The DB Load Building Block parameters dialog box opens.
+    The DB Load Building Block parameters dialog box opens.
 
-   ![DB Load Building Block Parameters Dialog Box](../images/appendix_a_135.png)
+    ![DB Load Building Block Parameters Dialog Box](../images/appendix_a_135.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#db-load).
+1. Enter the appropriate field value into the Value column next to the field name, as described the following [Table](#db-load).
 
-4. Click **OK**.
+1. Click **OK**.
 
-5. The DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 <a name = "db-load"> </a>  
 
@@ -2344,19 +2351,19 @@ Use the Oracle DB Load Building Block to generate a load test for the specified 
 
 1. Drag the **Oracle DB Load** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The Oracle DB Load Building Block parameters dialog box opens.
+    The Oracle DB Load Building Block parameters dialog box opens.
 
-   ![Oracle DB Load Building Block Parameters Dialog Box](../images/appendix_a_138.jpeg)
+    ![Oracle DB Load Building Block Parameters Dialog Box](../images/appendix_a_138.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described in the following[Table](#oracle-db-load).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the following[Table](#oracle-db-load).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The Oracle DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Oracle DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
    
 <a name = "oracle-db-load"></a>
@@ -2367,8 +2374,8 @@ The fields in the Oracle DB Load Building Block parameters dialog box are descri
 |Database name|<p>Specify the name of the database on the Oracle Database server.</p><p>Type the appropriate database name into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 |User name|<p>Specify a user ID for authentication against the database.</p><p>Type the user ID into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 |Password|<p>Specify a password for authentication against the database.</p><p>Type the password into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
-|Input File Name|<p>Name of the input file that contains a set of SQL commands and transactions to be completed during this load test. Select the appropriate file from the Browser window that appears when you click the ![ref11] button to the right of the Value input area for this field. Relevant for MDB databases only.</p><p>A typical SQL command input file may look like the following:</p><p>Select1#select \* from john\_emp</p><p>Select2#select \* from john\_emp where name=‘john’</p><p>Select3#select \* from john\_emp where name=‘john’ or</p><p>age > 10</p><p>Update#update john\_emp set age = 20 where</p><p>name=‘john’</p><p>Insert#insert into john\_emp values (99, ‘zzz’, 2)</p><p>Delete#delete from john\_emp where id=99</p><p>The input file consists of rows of SQL commands. As with all load testing, the commands in the input file are executed in sequence, with WebLOAD looping through the file repeatedly until the test is completed. Each SQL command line in the input file is preceded by a name identifying the transaction in which the command will be located. A pound sign (#) separates the transaction name field from the SQL command field in each row.</p>|
-|nput File Name (continued)|Each SQL command is defined as a distinct HTTP transaction, enclosed in the script body within a BeginTransaction()/EndTransaction() set and identified by the transaction name. These transactions, like all transactions, are tracked automatically by the built-in WebLOAD timers and counters. Statistics on the performance of each transaction appear in the WebLOAD output reports, with each transaction identified in the report by name.|
+|Input File Name|<p>Name of the input file that contains a set of SQL commands and transactions to be completed during this load test. Select the appropriate file from the Browser window that appears when you click the button to the right of the Value input area for this field. Relevant for MDB databases only.</p><p>A typical SQL command input file may look like the following:</p><p>Select1#select \* from john\_emp</p><p>Select2#select \* from john\_emp where name=‘john’</p><p>Select3#select \* from john\_emp where name=‘john’ or</p><p>age > 10</p><p>Update#update john\_emp set age = 20 where</p><p>name=‘john’</p><p>Insert#insert into john\_emp values (99, ‘zzz’, 2)</p><p>Delete#delete from john\_emp where id=99</p><p>The input file consists of rows of SQL commands. As with all load testing, the commands in the input file are executed in sequence, with WebLOAD looping through the file repeatedly until the test is completed. Each SQL command line in the input file is preceded by a name identifying the transaction in which the command will be located. A pound sign (#) separates the transaction name field from the SQL command field in each row.</p>|
+|Input File Name (continued)|Each SQL command is defined as a distinct HTTP transaction, enclosed in the script body within a BeginTransaction()/EndTransaction() set and identified by the transaction name. These transactions, like all transactions, are tracked automatically by the built-in WebLOAD timers and counters. Statistics on the performance of each transaction appear in the WebLOAD output reports, with each transaction identified in the report by name.|
 |Delimiter character between fields|<p>Delimiter character that separates between the fields in each record.</p><p>This delimiter character must not appear as valid character within any of the data fields. The default delimiter character is a pound sign (#).</p><p>Type in a different character as needed.</p>|
 |SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any “cleanup” commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 
@@ -2383,21 +2390,21 @@ Use the MySQL DB Load Building Block to generate a load test for the specified M
 
 1. Drag the **MySQL DB Load** icon from the Database toolbox into the Script Tree at the desired location.
 
-   The MySQL DB Load Building Block parameters dialog box opens.
+    The MySQL DB Load Building Block parameters dialog box opens.
 
    
 
-   ![MySQL DB Load Building Block Parameters Dialog Box](../images/appendix_a_139.jpeg)
+    ![MySQL DB Load Building Block Parameters Dialog Box](../images/appendix_a_139.jpeg)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#MySQL_DB_Load_Building_Block_Parameters_Dialog_Box_Field).
+1. Enter the appropriate field value into the Value column next to the field name, as described the [Table](#MySQL_DB_Load_Building_Block_Parameters_Dialog_Box_Field).
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The MySQL DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The MySQL DB Load Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 The fields in the MySQL DB Load Building Block parameters dialog box are described in the following table:
 <a name = "MySQL_DB_Load_Building_Block_Parameters_Dialog_Box_Field"></a>
@@ -2447,46 +2454,41 @@ If the verification succeeds, a Debug message is written to the Log View (with t
 
 1. Drag the **WS-Single** icon from the Verifications toolbox into the Script Tree immediately after the node that represents the response you wish to verify.
 
-   The WS-Single Node Building Block parameters dialog box opens.
+    The WS-Single Node Building Block parameters dialog box opens.
 
-   ![WS-Single Node Building Block Parameters Dialog Box](../images/appendix_a_143.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![WS-Single Node Building Block Parameters Dialog Box](../images/appendix_a_143.png)
 
    
 
-   | **Field Name** | **Description**                                      |
-   | :------------- | :--------------------------------------------------- |
-   | XML Node Path  | The XPath query string of the object to be verified. |
-   | XML Node Value | The desired response of the verification.            |
-   | Return Value   | The return value in case of failure.                 |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name** | **Description**                                      |
+    | :------------- | :--------------------------------------------------- |
+    | XML Node Path  | The XPath query string of the object to be verified. |
+    | XML Node Value | The desired response of the verification.            |
+    | Return Value   | The return value in case of failure.                 |
 
-The WS-Single node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+   
+1. Click **OK**.
 
-For example:
+    The WS-Single node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+
+    For example:
 
 ```javascript
 function InitAgenda()
-
 {
-
 //Start generation for Building Block WS - Single Node
 
 IncludeFile("wlXmlVerification.js", WLExecuteScript); wlGlobals.SaveSource = true;
-
 xmlDom	= InitXML();
 
 //End generation for Building Block WS - Single Node
-
 }
 
-/\*\*\*\*\* WLIDE - WS - Single Node - ID:2 \*\*\*\*\*/
+/***** WLIDE - WS - Single Node - ID:2 *****/
 
 VerifyXMLNode(document.wlSource, “//Result”, “2”)
 
@@ -2511,28 +2513,28 @@ If the verification succeeds, a Debug message is written to the Log View (with t
 
 1. Drag the **WS-Multiple** icon from the Verifications toolbox into the Script Tree immediately after the node that represents the response you wish to verify.
 
-   The WS-Multiple Nodes Building Block parameters dialog box opens.
+    The WS-Multiple Nodes Building Block parameters dialog box opens.
 
-   ![WS-Multiple Nodes Building Block Parameters Dialog Box](../images/appendix_a_145.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![WS-Multiple Nodes Building Block Parameters Dialog Box](../images/appendix_a_145.png)
 
    
 
-   | **Field Name** | **Description**                                      |
-   | :------------- | :--------------------------------------------------- |
-   | XML Node Path  | The XPath query string of the object to be verified. |
-   | XML Node Value | The desired response of the verification.            |
-   | Return Value   | Select the return value in case of failure.          |
+1. Edit the dialog box fields according to the following table.
+
+   
+
+    | **Field Name** | **Description**                                      |
+    | :------------- | :--------------------------------------------------- |
+    | XML Node Path  | The XPath query string of the object to be verified. |
+    | XML Node Value | The desired response of the verification.            |
+    | Return Value   | Select the return value in case of failure.          |
 
 
    
 
-3. Click **OK**.
+1. Click **OK**.
 
-   The WS-Multiple node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The WS-Multiple node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 **For example:**
 
@@ -2549,7 +2551,7 @@ xmlDom	= InitXML();
 
 }
 
-/\*\*\*\*\* WLIDE - WS - Multiple Nodes - ID:3 \*\*\*\*\*/
+/***** WLIDE - WS - Multiple Nodes - ID:3 *****/
 
 VerifyXMLNodes(document.wlSource, ”//Result”, “5”)
 
@@ -2569,44 +2571,42 @@ If the verification succeeds, a Debug message is written to the Log View (with t
 
 1. Drag the **Flex:Verify-Ext** icon from the Verifications toolbox into the Script Tree immediately after the node that represents the AMF data response you wish to verify.
 
-   The Flex:Verify-Ext Building Block parameters dialog box opens.
+    The Flex:Verify-Ext Building Block parameters dialog box opens.
 
-   ![Flex:Verify-Ext Building Block Parameters Dialog Box](../images/appendix_a_147.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![Flex:Verify-Ext Building Block Parameters Dialog Box](../images/appendix_a_147.png)
 
    
 
-   | **Field Name**               | **Description**                                |
-   | :--------------------------- | :--------------------------------------------- |
-   | AMF Response Parameter Name  | The path to the relevant AMF response element. |
-   | AMF Response Parameter Value | The value of the AMF response's parameter.     |
-   | Severity                     | Select the return value in case of failure.    |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name**               | **Description**                                |
+    | :--------------------------- | :--------------------------------------------- |
+    | AMF Response Parameter Name  | The path to the relevant AMF response element. |
+    | AMF Response Parameter Value | The value of the AMF response's parameter.     |
+    | Severity                     | Select the return value in case of failure.    |
 
-   The Flex:Verify-Ext node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+   
 
-**For example:**
+1. Click **OK**.
+
+    The Flex:Verify-Ext node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+
+    **For example:**
 
 ```javascript
 function InitAgenda()
-
 {
 
-//Start generation for Building Block Flex:Verify-Ext IncludeFile("amfVerification.js");
-
-
+//Start generation for Building Block Flex:Verify-Ext 
+      
+IncludeFile("amfVerification.js");
 
 //End generation for Building Block Flex:Verify-Ext
-
 }
 
-/\*\*\*\*\* WLIDE - Flex:Verify-Ext - ID:11 \*\*\*\*\*/
+/***** WLIDE - Flex:Verify-Ext - ID:11 *****/
 
 AMFResponse = new Packages.com.radview.amf.WLAmfMessage(getAmfDataAsJsStri ng());
 
@@ -2628,26 +2628,26 @@ If the extraction succeeds, a Debug message is written to the Log View (with the
 
 1. Drag the **Flex: Extract-Ext** icon from the Verifications toolbox into the Script Tree immediately after the node that represents the AMF data response from which you wish to extract data.
 
-   The Flex:Extract-Ext Building Block parameters dialog box opens.
+    The Flex:Extract-Ext Building Block parameters dialog box opens.
 
-   ![Flex:Extract-Ext Building Block Parameters Dialog Box](../images/appendix_a_148.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+    ![Flex:Extract-Ext Building Block Parameters Dialog Box](../images/appendix_a_148.png)
 
    
 
-   | **Field Name**              | **Description**                                |
-   | :-------------------------- | :--------------------------------------------- |
-   | AMF Response Parameter Name | The path to the relevant AMF response element. |
-   | Parameter Name              | The name of the parameter to assign.           |
+1. Edit the dialog box fields according to the following table.
+
+   
+ 
+    | **Field Name**              | **Description**                                |
+    | :-------------------------- | :--------------------------------------------- |
+    | AMF Response Parameter Name | The path to the relevant AMF response element. |
+    | Parameter Name              | The name of the parameter to assign.           |
 
    
 
-3. Click OK.
+1. Click OK.
 
-   The Flex:Extract-Ext node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The Flex:Extract-Ext node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 **For example:**
 
@@ -2676,22 +2676,22 @@ Use the WebSocket Connect Building Block to create a WebSocket connection to a s
 
 1. Drag the **WebSocket Connect** icon from the WebSocket toolbox into the Script Tree at the desired location.
 
-   The WebSocket Connect Building Block parameters dialog box opens.
+    The WebSocket Connect Building Block parameters dialog box opens.
 
-   ![WebSocket Connect Building Block Parameters Dialog Box](../images/appendix_a_150.png)
+    ![WebSocket Connect Building Block Parameters Dialog Box](../images/appendix_a_150.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Socket Address field is used to define the URL to which to connect.
+    For example, in the preceding figure, the comment area explains that the Socket Address field is used to define the URL to which to connect.
 
-4. Enter the appropriate field value into the Value column next to the field name.
+1. Enter the appropriate field value into the Value column next to the field name.
 
-|**Field Name**|**Description**|
-| :- | :- |
-|Socket Address|Specify the URL to which to connect.|
-|Socket variable name|Specify a name for this WebSocket object.|
+    |**Field Name**|**Description**|
+    | :- | :- |
+    |Socket Address|Specify the URL to which to connect.|
+    |Socket variable name|Specify a name for this WebSocket object.|
 
 
 
@@ -2703,19 +2703,18 @@ Use the WebSocket Send Building Block to send data to a WebSocket connection.
 
 1. Drag the **WebSocket Send** icon from the WebSocket toolbox into the Script Tree at the desired location.
 
-   The WebSocket Send Building Block parameters dialog box opens.
+    The WebSocket Send Building Block parameters dialog box opens.
 
-   ![WebSocket Send Building Block Parameters Dialog Box](../images/appendix_a_151.png)
-
-   
+    ![WebSocket Send Building Block Parameters Dialog Box](../images/appendix_a_151.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+   
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Data to Send field is used to define the data to be sent.
+1. For example, in the preceding figure, the comment area explains that the Data to Send field is used to define the data to be sent.
 
-4. Enter the appropriate field value into the Value column next to the field name.
+1. Enter the appropriate field value into the Value column next to the field name.
 
 
 
@@ -2734,17 +2733,17 @@ Use the WebSocket Close Building Block to close a WebSocket connection.
 
 1. Drag the **WebSocket Close** icon from the WebSocket toolbox into the Script Tree at the desired location.
 
-   The WebSocket Close Building Block parameters dialog box opens.
+    The WebSocket Close Building Block parameters dialog  box opens.
 
-   ![WebSocket Close Building Block Parameters Dialog Box](../images/appendix_a_152.png)
-
-   
+    ![WebSocket Close Building Block Parameters Dialog Box](../images/appendix_a_152.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+   
 
-3. Enter the appropriate field value into the Value column next to the field name.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+
+1. Enter the appropriate field value into the Value column next to the field name.
 
 |**Field Name**|**Description**|
 | :- | :- |
@@ -2763,48 +2762,47 @@ Use the HTTP Building Block to create an HTTP web service call. This building bl
 
 1. Drag the **HTTP** icon from the Web Services toolbox into the Script Tree at the desired location.
 
-   The HTTP Web Service dialog box opens.
+    The HTTP Web Service dialog box opens.
 
-   ![HTTP Web Service Dialog Box](../images/appendix_a_153.jpeg)
-
-   
-
-2. Select a method from the **Method** drop-down list: **Get**, **Post**, **Put**, **Delete**, **Copy**, **Head** or **Options**.
-
-3. Enter a URL in the **URL** field.
-
-4. Optionally, use the **Headers** tab to define the web service headers, as follows:
-
-   1. In the **Key** field, select a key from the drop-down list, or enter any key.
-   2. In the **Value** field, enter a value for the specified key.
-   3. To add additional headers, click **Add**, and repeat steps (a) to (b). To remove a header, select the relevant line and click **Remove**.
-
-   ![Defining Web Service Headers](../images/appendix_a_154.png)
+    ![HTTP Web Service Dialog Box](../images/appendix_a_153.jpeg)
 
    
 
-5. Optionally, use the **Body** tab to define the web service body, using either of the following methods:
+1. Select a method from the **Method** drop-down list: **Get**, **Post**, **Put**, **Delete**, **Copy**, **Head** or **Options**.
 
-   - Select **Form-data**, and define a desired list of Keys and their Values.
+1. Enter a URL in the **URL** field.
+
+1. Optionally, use the **Headers** tab to define the web service headers, as follows:
+
      1. In the **Key** field, select a key from the drop-down list, or enter any key.
      1. In the **Value** field, enter a value for the specified key.
-     1. To add an additional form data element, click **Add**, and repeat steps (a) to (b). To remove a form data element, select the relevant line and click **Remove**.
+     1. To add additional headers, click **Add**, and repeat steps (a) to (b). To remove a header, select the relevant line and click **Remove**.
+
+    ![Defining Web Service Headers](../images/appendix_a_154.png)
 
    
 
-   ![Defining Web Service Body using Form-data](../images/appendix_a_155.png)
+1. Optionally, use the **Body** tab to define the web service body, using either of the following methods:
+
+     - Select **Form-data**, and define a desired list of Keys and their Values.
+          1. In the **Key** field, select a key from the drop-down list, or enter any key.
+          1. In the **Value** field, enter a value for the specified key.
+          1. To add an additional form data element, click **Add**, and repeat steps (a) to (b). To remove a form data element, select the relevant line and click **Remove**.
+
+   
+    ![Defining Web Service Body using Form-data](../images/appendix_a_155.png)
 
    
 
-   - Select **Raw** and enter content into the empty box.
+    - Select **Raw** and enter content into the empty box.
 
-   ![Defining Web Service Body by Entering Raw Data](../images/appendix_a_156.jpeg)
-
-   
+    ![Defining Web Service Body by Entering Raw Data](../images/appendix_a_156.jpeg)
 
    
 
-6. Click **OK**. The matching code appears in the JavaScript View.
+   
+
+1. Click **OK**. The matching code appears in the JavaScript View.
 
    
 
@@ -2815,51 +2813,48 @@ Use the WSDL Building Block to create a web service call based on data from a We
 
 1. Drag the **WSDL** icon from the Web Services toolbox into the Script Tree at the desired location.
 
-   The WSDL Web Service dialog box opens.
+    The WSDL Web Service dialog box opens.
 
-   
+    ![WSDL Web Service Dialog Box](../images/appendix_a_157.jpeg)
+  
 
-   ![WSDL Web Service Dialog Box](../images/appendix_a_157.jpeg)
+1. In the **WSDL Address** field, enter a WSDL URL, or browse to a WSDL file.
 
-   
+1. Click **Parse WSDL**. The left pane in the **Body** tab is populated with the interfaces, and their methods, of the WSDL file.
 
-2. In the **WSDL Address** field, enter a WSDL URL, or browse to a WSDL file.
+1. Define the web service body, as follows:
 
-3. Click **Parse WSDL**. The left pane in the **Body** tab is populated with the interfaces, and their methods, of the WSDL file.
-
-4. Define the web service body, as follows:
-
-   1. Select a desired method and click the arrow between the left and right panes.The right pane displays the body of the selected method. In addition, WebLOAD automatically creates a default SOAPAction header based on the selected method.
+     1. Select a desired method and click the arrow between the left and right panes.The right pane displays the body of the selected method. In addition, WebLOAD automatically creates a default SOAPAction header based on the selected method.
 
       
 
-      ![HTTP Web Service Dialog Box](../images/appendix_a_158.jpeg)
+        ![HTTP Web Service Dialog Box](../images/appendix_a_158.jpeg)
 
       
 
-   2. Enter values as desired to replace the “?” in the method body.
+     1. Enter values as desired to replace the “?” in the method body.
 
    
 
-5. View and edit the SOAPAction headers as follows:
+1. View and edit the SOAPAction headers as follows:
 
-   1. Click the **Headers** tab to view the SOAPAction header that WebLOAD had automatically created when you selected the method.
+    1. Click the **Headers** tab to view the SOAPAction header that WebLOAD had automatically created when you selected the method.
 
-      ![HTTP Web Service Dialog Box](../images/appendix_a_159.jpeg)
+        ![HTTP Web Service Dialog Box](../images/appendix_a_159.jpeg)
 
       
 
-   2. Optionally edit the header.
+    1. Optionally edit the header.
 
-   3. Optionally add additional headers, as follows:
+    1. Optionally add additional headers, as follows:
 
-      - Click **Add**. A new empty line is added to the table.
-      - In the **Key** field, select a key from the drop-down list, or enter any key.
-      - In the **Value** field, enter a value for the specified key.
+          - Click **Add**. A new empty line is added to the table.
+          - In the **Key** field, select a key from the drop-down list, or enter any key.
+          - In the **Value** field, enter a value for the specified key.
 
-   4. To remove a header, select the relevant line and click **Remove**.
+    1. To remove a header, select the relevant line and click **Remove**.
 
-6. Click **OK**. The matching code appears in the JavaScript View.
+1. Click **OK**. The matching code appears in the JavaScript View.
 
 
 
@@ -2880,7 +2875,7 @@ The following table describes the purpose of each of the WebLOAD Recorder JMS To
 1. Create JMS consumer and producer objects, either through JNDI or using the HornetQ implementation.
 1. Use send and/or receive to put or get messages from a queue.
 
-> **Note:** The implementation relies on the WebLOAD Java connection, which enables making changes to the generated code easily. Refer to the “Working with Java” section of the *WebLOAD Scripting Guide* for more details.
+    > **Note:** The implementation relies on the WebLOAD Java connection, which enables making changes to the generated code easily. Refer to the “Working with Java” section of the *WebLOAD Scripting Guide* for more details.
 
 
 
@@ -2911,35 +2906,30 @@ jndiContext = new Packages.javax.naming.InitialContext(env);
 
 1. Drag the **JMS-Connect-JNDI** icon from the JMS toolbox into the Script Tree. The JMS-Connect-JNDI Building Block parameters dialog box opens.
 
-   ![JMS-Connect-JNDI Building Block Parameters Dialog Box](../images/appendix_a_160.png)
+    ![JMS-Connect-JNDI Building Block Parameters Dialog Box](../images/appendix_a_160.png)
 
    
 
-2. Edit the dialog box fields according to the following table.
+1. Edit the dialog box fields according to the following table.
 
    
 
-   | **Field Name**     | **Description**                                              |
-   | :----------------- | :----------------------------------------------------------- |
-   | Connection Factory | The JNDI Name of the Connection Factory, for example: "java:comp/env/jms/MyConnectionFactory" |
-   | Destination        | The JNDI name of the destination, , for example: "java:comp/env/jms/QueueName" |
+    | **Field Name**     | **Description**                                              |
+    | :----------------- | :----------------------------------------------------------- |
+    | Connection Factory | The JNDI Name of the Connection Factory, for example: "java:comp/env/jms/MyConnectionFactory" |
+    | Destination        | The JNDI name of the destination, , for example: "java:comp/env/jms/QueueName" |
+ 
 
-   
+1. Click **OK**.
 
-3. Click **OK**.
+    The node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-The node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
-
-For example:
+    For example:
 
 ```javascript
 function InitAgenda()
 
 {
-
-
-
-
 
 //Start generation for Building Block JMS-Connect-JNDI IncludeFile("wljms.js",WLExecuteScript);
 
@@ -2969,7 +2959,7 @@ producer = session.createProducer(dest); consumer = session.createConsumer(dest)
 
 }
 
-/\*\*\*\*\* WLIDE - JMS-Connect-JNDI - ID:2 \*\*\*\*\*/
+/***** WLIDE - JMS-Connect-JNDI - ID:2 *****/
 
 //JMS 'producer' and 'consumer' objects created at InitClient()
 
@@ -3006,23 +2996,23 @@ The objects are created in InitClient to be used once per virtual client. If req
 
 1. Drag the **JMS-Connect-HornetQ** icon from the JMS toolbox into the Script Tree. The JMS-Connect- HornetQ Building Block parameters dialog box opens.
 
-   ![JMS-Connect-HornetQ Building Block Parameters Dialog Box](../images/appendix_a_161.png)
+    ![JMS-Connect-HornetQ Building Block Parameters Dialog Box](../images/appendix_a_161.png)
 
    
 
-2. Edit the dialog box fields according to the following table.
+1. Edit the dialog box fields according to the following table.
 
    
 
-   | **Field Name** | **Description**                                         |
-   | :------------- | :------------------------------------------------------ |
-   | JMS Queue name | The name of the JMS Queue, used in createQueue() calls. |
+    | **Field Name** | **Description**                                         |
+    | :------------- | :------------------------------------------------------ |
+    | JMS Queue name | The name of the JMS Queue, used in createQueue() calls. |
 
    
 
-3. Click **OK**.
+1. Click **OK**.
 
-   The node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
+    The node is added to the Script Tree. The JavaScript code, including the InitAgenda()function, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
 
 
@@ -3069,7 +3059,7 @@ producer = session.createProducer(queue); consumer = session.createConsumer(queu
 
 }
 
-/\*\*\*\*\* WLIDE - JMS-Connect-HonrnetQ - ID:2 \*\*\*\*\*/
+/***** WLIDE - JMS-Connect-HonrnetQ - ID:2 *****/
 
 //JMS 'producer' and 'consumer' objects created at InitClient()
 
@@ -3101,25 +3091,24 @@ The ‘producer’ and ‘session’ objects are expected to already have been c
 
 1. Drag the **JMS-Send** icon from the JMS toolbox into the Script Tree. The JMS-Send Building Block parameters dialog box opens.
 
-   ![JMS-Send Building Block Parameters Dialog Box](../images/appendix_a_162.png)
+    ![JMS-Send Building Block Parameters Dialog Box](../images/appendix_a_162.png)
 
    
 
-2. Edit the dialog box fields according to the following table.
+1. Edit the dialog box fields according to the following table.
+
+
+    | **Field Name**  | **Description**                                              |
+    | :-------------- | :----------------------------------------------------------- |
+    | Session object  | <p>The JMS Session object, created by</p><p>connection.createSession()</p> |
+    | Producer object | <p>The JMS Producer object, created by</p><p>session.createProducer()</p> |
+    | Message Text    | The text to send                                             |
 
    
 
-   | **Field Name**  | **Description**                                              |
-   | :-------------- | :----------------------------------------------------------- |
-   | Session object  | <p>The JMS Session object, created by</p><p>connection.createSession()</p> |
-   | Producer object | <p>The JMS Producer object, created by</p><p>session.createProducer()</p> |
-   | Message Text    | The text to send                                             |
+1. Click **OK**.
 
-   
-
-3. Click **OK**.
-
-   The node is added to the Script Tree.
+    The node is added to the Script Tree.
 
 For example:
 
@@ -3133,29 +3122,31 @@ The ‘consumer’ object is expected to already have been created, for example 
 ##### **To insert a JMS-Receive Building Block:**
 
 1. Drag the **JMS-Receive** icon from the JMS toolbox into the Script Tree. The JMS-Receive Building Block parameters dialog box opens.
-
-   ![JMS-Receive Building Block Parameters Dialog Box](../images/appendix_a_163.png)
-
-   
-
-2. Edit the dialog box fields according to the following table.
+ 
+    ![JMS-Receive Building Block Parameters Dialog Box](../images/appendix_a_163.png)
 
    
 
-   | **Field Name**             | **Description**                                              |
-   | :------------------------- | :----------------------------------------------------------- |
-   | Consumer object            | The JMS Consumer object, create by session.createConsumer(). |
-   | Return Message Text object | The return value name.                                       |
+1. Edit the dialog box fields according to the following table.
 
    
 
-3. Click **OK**.
+    | **Field Name**             | **Description**                                              |
+    | :------------------------- | :----------------------------------------------------------- |
+    | Consumer object            | The JMS Consumer object, create by session.createConsumer(). |
+    | Return Message Text object | The return value name.                                       |
+
+   
+
+1. Click **OK**.
 
 The node is added to the Script Tree.
 
 For example:
 
-`var message = receiveJmsMessage(consumer); InfoMessage("Got message: " + message);`
+`var message = receiveJmsMessage(consumer);
+
+ InfoMessage("Got message: " + message);`
 
 
 ## The Real Clients Toolbox
@@ -3181,34 +3172,36 @@ Use the Selenium Driver Building Block to instruct WebLOAD to create a Selenium 
 
 1. Drag the **Selenium Driver** icon from the Real Clients toolbox into the Script Tree at the desired location.
 
-   The Selenium Driver Building Block parameters dialog box opens.
+    The Selenium Driver Building Block parameters dialog box opens.
 
-   ![Selenium Driver Building Block Parameters Dialog Box](../images/appendix_a_164.png)
+    ![Selenium Driver Building Block Parameters Dialog Box](../images/appendix_a_164.png)
 
-   
+ 
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Driver Type field is used to specify which Selenium driver type to use.
+    For example, in the preceding figure, the comment area explains that the Driver Type field is used to specify which Selenium driver type to use.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_driver).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_driver).
 
 
-<a name = "selenium_driver"></a>
-
-   
-
-   | **Field Name**                | **Description**                                              |
-   | :---------------------------- | :----------------------------------------------------------- |
-   | Driver Type                   | <p>Specify what type of Selenium driver to create. The possible values are:</p><p>- Firefox</p><p>- Chrome</p><p>- Internet Explorer</p> |
-   | Base URL                      | Specify the first URL to which the driver will connect.      |
-   | Selenium Driver variable name | Specify a name for this WebLOAD object.                      |
+    <a name = "selenium_driver"></a>
 
    
 
-5. Click **OK**.
+   
 
-The node is added to the Script Tree.
+    | **Field Name**                | **Description**                                              |
+    | :---------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+    | Driver Type                   | <p>Specify what type of Selenium driver to create. The possible values are:</p><p>- Firefox</p><p>- Chrome</p><p>- Internet Explorer</p> |
+    | Base URL                      | Specify the first URL to which the driver will connect.      |
+    | Selenium Driver variable name | Specify a name for this WebLOAD object.                      |
+
+   
+
+1. Click **OK**.
+
+     The node is added to the Script Tree.
 
 #### Selenium Report Statistics
 
@@ -3220,37 +3213,35 @@ For a full list and description of the navigation timing statistics, see the [Ta
 
 1. Drag the **Selenium Report Statistics** icon from the Real Clients toolbox into the Script Tree at the desired location.
 
-   The Selenium Report Statistics Building Block parameters dialog box opens.
+    The Selenium Report Statistics Building Block parameters dialog box opens.
 
    
 
-   ![Selenium Report Statistics Building Block Parameters Dialog Box](../images/appendix_a_165.png)
+    ![Selenium Report Statistics Building Block Parameters Dialog Box](../images/appendix_a_165.png)
 
    
 
-2. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
+1. Click the name of an input field in the left-hand column to see an explanation of that field in the comment area at the bottom of the dialog box.
 
-3. For example, in the preceding figure, the comment area explains that the Selenium Driver field is used to specify the Selenium Driver object.
+    For example, in the preceding figure, the comment area explains that the Selenium Driver field is used to specify the Selenium Driver object.
 
-4. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_report).
+1. Enter the appropriate field value into the Value column next to the field name, as described in the [Table](#selenium_report).
 
 
-<a name = "selenium_report"> </a>   
+    <a name = "selenium_report"> </a>   
 
-   | **Field Name**  | **Description**                                              |
-   | :-------------- | :----------------------------------------------------------- |
-   | Selenium Driver | Specify the name of the Selenium Driver object. Navigation timing statistics will be collected for actions executed by this Selenium Driver. |
-   | Page Name       | <p>By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display separately the statistics for a particular page, enter the page name in this parameter. The resultant measurements will be called <Measurement Name>-<Page Name>.</p><p>This parameter is optional.</p> |
+    | **Field Name**  | **Description**                                              |
+    | :-------------- | :----------------------------------------------------------- |
+    | Selenium Driver | Specify the name of the Selenium Driver object. Navigation timing statistics will be collected for actions executed by this Selenium Driver. |
+    | Page Name       | <p>By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display separately the statistics for a particular page, enter the page name in this parameter. The resultant measurements will be called <Measurement Name>-<Page Name>.</p><p>This parameter is optional.</p> |
 
    
 
-5. Click **OK**.
+1. Click **OK**.
 
-The node is added to the Script Tree.
+    The node is added to the Script Tree.
 
-
-
-For example, if you enter **driver** as the name of the Selenium driver, and **my Page name** as the name of a desired page, the following is added to the Script Tree:
+    For example, if you enter **driver** as the name of the Selenium driver, and **my Page name** as the name of a desired page, the following is added to the Script Tree:
 
 `reportStatistics(driver, "my Page name");`
 
@@ -3263,22 +3254,22 @@ This building block is relevant not only for JUnit but for unit tests of any kin
 
 1. Drag the **JUnit Runner** icon from the JMS toolbox into the Script Tree. The JUnit Runner Building Block parameters dialog box opens.
 
-   ![JUnit Runner Building Block Parameters Dialog Box](../images/appendix_a_166.jpeg)
+    ![JUnit Runner Building Block Parameters Dialog Box](../images/appendix_a_166.jpeg)
 
    
 
-2. Edit the dialog box fields according to the following table.
+1. Edit the dialog box fields according to the following table.
 
-   | **Field Name**          | **Description**                                              |
-   | :---------------------- | :----------------------------------------------------------- |
-   | Class with tests to run | A comma-separated list of the classes on which to run the unit tests. |
-   | Print execution output  | Whether to display in the WebLOAD Recorder and WebLOAD Console log window, the unit testing execution results. |
+    | **Field Name**          | **Description**                                              |
+    | :---------------------- | :----------------------------------------------------------- |
+    | Class with tests to run | A comma-separated list of the classes on which to run the unit tests. |
+    | Print execution output  | Whether to display in the WebLOAD Recorder and WebLOAD Console log window, the unit testing execution results. |
 
    
 
-3. Click **OK**.
+1. Click **OK**.
 
-The node is added to the Script Tree.
+    The node is added to the Script Tree.
 
 ### Perfecto Mobile Building Blocks
 Use the Perfecto Mobile building block to instruct WebLOAD to create a Perfecto Mobile script. For a full description of how to create and use Perfecto Mobile scripts in WebLOAD, refer to [*Integrating with Perfecto Mobile* ](./appendix_f.md#appendix-f-integrating-with-perfecto-mobile).

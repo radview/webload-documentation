@@ -205,7 +205,7 @@ Using the Session Tree you can define and modify Load Templates.
 
 The following options can be accessed by right-clicking a Session Tree component in edit mode:
 
-*Table 14: Edit Mode Session Tree Options*
+*Table: Edit Mode Session Tree Options*
 
 | **Tree Item**                      | **Options**                                                      | **Description**                                                                                                                                                                 |
 | :--------------------------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
