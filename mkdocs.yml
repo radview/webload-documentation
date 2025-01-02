@@ -144,7 +144,8 @@ nav:
     - Appendix E. Glossary: analytics/glossary.md
   - Installation: installation.md 
         
-    
+not_in_nav: |
+  dashboard/grafana/    
 
 
 
