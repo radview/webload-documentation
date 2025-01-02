@@ -8,8 +8,9 @@ Organizations are a method of compartmentalizing dashboards, data source and use
 
 If you will be defining organizations, you can have two levels of administrators: 
 
-- Organizational administrators: These admins can manage users within specific organizations in a particular WebLOAD Dashboard installation. 
-- Super administrators: These super admins can manage users across all organizations in a WebLOAD Dashboard installation. They can also change and access system-wide settings. 
+ - Organizational administrators: These admins can manage users within specific organizations in a particular WebLOAD Dashboard installation. 
+
+ - Super administrators: These super admins can manage users across all organizations in a WebLOAD Dashboard installation. They can also change and access system-wide settings. 
 
 ### Organizational Administrators
 
@@ -33,10 +34,10 @@ There are two main types of users:
 
 - **Super admin user** – has full permissions to all of the WebLOAD Dashboard’s options and settings. 
 - **Organizational user**. Within the organization, a user can have any of the following roles: 
-  - **Viewer** – Can only view the Dashboard 
-  - **Read-Only Editor** – Can edit dashboards, but cannot save the changes 
-  - **Editor** – Can manage, create and execute tests and sessions, create and update dashboards, upload resources, and save the changes. This is the typical WebLOAD Dashboard user. 
-  - **Organizational** **Admin** – has full permissions to all of the organization’s options and settings: can edit, save, and make changes at the organizational level, including creating organizational users and editing organizational users. 
+     - **Viewer** – Can only view the Dashboard 
+     - **Read-Only Editor** – Can edit dashboards, but cannot save the changes 
+     - **Editor** – Can manage, create and execute tests and sessions, create and update dashboards, upload resources, and save the changes. This is the typical WebLOAD Dashboard user. 
+     - **Organizational** **Admin** – has full permissions to all of the organization’s options and settings: can edit, save, and make changes at the organizational level, including creating organizational users and editing organizational users. 
 
 ### User Management by a Super Admin
 
@@ -48,17 +49,17 @@ Super admins can add users of any type, to any organization. ***User Creation by
 
 1. In the User window that appears, click **+ Add new user**. 
 
-   ![Users window](../images/users_window.png)
+     ![Users window](../images/users_window.png)
 
 1. In the Add New User window that appears, enter the new user  name, email, username and password. Then click **Create**. 
 
-   ![Add New User window](../images/add_new_user.png)
+     ![Add New User window](../images/add_new_user.png)
 
-1. The new user is created, and appears in the table in the Users window [(Figure 90)](#uperadmin_user_list). 
+1. The new user is created, and appears in the table in the Users window [(Figure)](#uperadmin_user_list). 
 
 1. The new user’s settings can now be defined/edited. 
 
-   - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure 90)](#uperadmin_user_list). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
+     - A super admin can set the new user’s permissions and other settings, by clicking **Edit** in the respective row in the Users window [(Figure)](#uperadmin_user_list). For instructions, refer to[*User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details*.](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details) 
      - An organizational admin can set the new user’s role in the organization, described below.
 
 
@@ -70,18 +71,18 @@ A super admin can set a user’s permissions, organizational roles, and other se
 
 1. In the Users window that appears, click **Edit** in the row of the user you wish to edit. 
 
-<a name = "uperadmin_user_list"></a>
-   ![Users window](../images/superadmin_user_list.png)
+    <a name = "uperadmin_user_list"></a>
+    ![Users window](../images/superadmin_user_list.png)
 
-1. The Edit User window appears, enabling you to edit various user settings. 
+    The Edit User window appears, enabling you to edit various user settings. 
 
-   ![Edit User window](../images/superadmin_edit_user.png)
+    ![Edit User window](../images/superadmin_edit_user.png)
 
 1. You can make the user a super administrator by selecting the **Admin** checkbox in the **Permissions** section. 
 
-1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in[**Organizational user** ](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details). 
+1. In the **Organizations** section you can specify in which **Organizations** the user is a member, and specify the user’s **Role** in each. The available organizational roles and their permissions are described in [**Organizational user** ](#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details). 
 
-1. You can edit the user’s name, email, username, and change his password.  ![ref28]
+1. You can edit the user’s name, email, username, and change his password.  
 
 ### User Management by an Organizational Admin
 
@@ -93,13 +94,13 @@ An organizational admin can add existing users to the organization, and edit the
 
 1. In the Menu bar, select your user name and then select **Users**.  
 
-   ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
+    ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
 
-2. In the Organization Users window that appears, click **+ Add or Invite**. 
+1. In the Organization Users window that appears, click **+ Add or Invite**. 
 
-   ![add or invite](../images/org_add_invite.png)
+    ![add or invite](../images/org_add_invite.png)
 
-3. Enter the **Email or Username**, and optionally the **Name**, of the user you wish to invite. For each additional user you wish to add, click **Invite another** and enter that user’s details. Then click **Invite Users**. 
+1. Enter the **Email or Username**, and optionally the **Name**, of the user you wish to invite. For each additional user you wish to add, click **Invite another** and enter that user’s details. Then click **Invite Users**. 
 
    ![Invite Users window](../images/org_invite_users.png)
 
@@ -111,11 +112,11 @@ An organizational admin can set a user’s role in the organization.
 
 1. In the Menu bar, select your user name and then select **Users**.  
 
-   ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
+    ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
 
-2. In the Organization Users window that appears, you can set the **Role** of each organizational user. 
+1. In the Organization Users window that appears, you can set the **Role** of each organizational user. 
 
-   ![Setting an Organizational User’s Role](../images/setting_org_user_role.png)
+    ![Setting an Organizational User’s Role](../images/setting_org_user_role.png)
 
 ### Managing Organizations
 
@@ -126,18 +127,18 @@ Super admin users can add organizations (for an explanation of Organizations, re
 **To add an organization:** 
 
 1. In the Menu bar, select your user name, and then select **New Organization**.  
+ 
+    ![Selecting to Add an Organization](../images/org_user_def.png)
 
-   ![Selecting to Add an Organization](../images/org_user_def.png)
+1. In the New Organization window that appears, enter an **Org. name**, and click **Create**.
 
-2. In the New Organization window that appears, enter an **Org. name**, and click **Create**.
+    ![New Organization window](../images/new_org.png)
 
-   ![New Organization window](../images/new_org.png)
+    The Org Preferences window appears, populated with the new organization’s name, enabling you to edit various organization’s settings.
 
-   The Org Preferences window appears, populated with the new organization’s name, enabling you to edit various organization’s settings.
+    ![Org Preferences window ](../images/org_prefer.png)
 
-   ![Org Preferences window ](../images/org_prefer.png)
-
-To set the new organization’s settings, refer to the instructions in[*Editing an Organization’s Settings*.](#editing-an-organizations-settings) ![ref10]
+To set the new organization’s settings, refer to the instructions in[*Editing an Organization’s Settings*.](#editing-an-organizations-settings) 
 
 #### Editing an Organization’s Settings
 
@@ -145,27 +146,27 @@ To set the new organization’s settings, refer to the instructions in[*Editing 
 
 1. In the Menu bar, select your user name and make sure the organization name appearing below the user name, is the name of the organizations whose settings you wish to edit. If it is not, select **Switch to** in order to switch to that organization. 
 
-   ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
+    ![Selecting to Access Organizational User Definitions](../images/org_user_def.png)
 
    
 
-2. In the Menu bar, select your user name and then select **Preferences**.  
+1. In the Menu bar, select your user name and then select **Preferences**.  
 
-   The Org Preferences window appears, enabling you to edit various organization’s settings 
+    The Org Preferences window appears, enabling you to edit various organization’s settings 
 
-   ![Editing Organization’s Settings](../images/setting_org_user_role.png)
+    ![Editing Organization’s Settings](../images/setting_org_user_role.png)
 
-3. You can edit the organization’s name and address. 
+1. You can edit the organization’s name and address. 
 
-4. You can edit the organization’s preferences: **UI theme**, **Home dashboard**, and **Timezone**.  
+1. You can edit the organization’s preferences: **UI theme**, **Home dashboard**, and **Timezone**.  
 
 5. You can change mange the organization’s users by clicking **Users & Roles** under **Admin Pages**. In the Organization Users window that appears, you can: 
 
-   - Add users 
+    - Add users 
 
-   - Delete users 
+    - Delete users 
 
-   - Set the **Role** of each organizational user.         
+    - Set the **Role** of each organizational user.         
 
      ![Organization Users window](../images/org_users_window.png)
 

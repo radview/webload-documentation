@@ -48,9 +48,9 @@ The main components of the dashboard tab header include:
 A row is a horizontal container for panels. A row can be hidden (collapsed) and its height controls its panels’ height. 
 
 - To add a new row, click **+ ADD ROW** at the bottom of a dashboard page. 
-- To edit a row, click the three grey dots and select the desired option. For more information, refer to[*Customizing Rows* ](./customizing_dashboard.md#customizing-rows). 
+- To edit a row, click the three grey dots and select the desired option. For more information, refer to [*Customizing Rows* ](./customizing_dashboard.md#customizing-rows). 
 
-![Row Editing Options](../images/row_editing_options.png)
+   ![Row Editing Options](../images/row_editing_options.png)
 
 
 
@@ -58,8 +58,8 @@ A row is a horizontal container for panels. A row can be hidden (collapsed) and 
 
 A panel is a data display unit. There are various types of panels – such as graph, text, table, singlestat, Alert list, Dashboard list, and Plugin list. 
 
-- To add a new panel, click the three grey dots of the desired row and select **Add Panel** [(Figure)](#graph_panel). 
-- To edit a panel, click the panel title and click **edit** in the box that appears. For more information, refer to[*Customizing Panels* ](./customizing_dashboard.md#customizing-panels)
+   - To add a new panel, click the three grey dots of the desired row and select **Add Panel** [(Figure)](#graph_panel). 
+   - To edit a panel, click the panel title and click **edit** in the box that appears. For more information, refer to [*Customizing Panels* ](./customizing_dashboard.md#customizing-panels)
 
 #### Graph Panel
 
@@ -107,9 +107,9 @@ WebLOAD Dashboard dashboards are useful both for analyzing the results of a spec
 
 **To select a session for viewing in the dashboard tab:** Do any of the following: 
 
-- In the Load Sessions table [(*Figure 23*)](#selecting_sessions), click the session name.  
+- In the Load Sessions table [(*Figure*)](#selecting_sessions), click the session name.  
 
-  The session appears in the currently selected dashboard. 
+   The session appears in the currently selected dashboard. 
 
 - In Load Tests table [(*Load Test Table*)](./manage_tests.md#load_test_table), click the Show Last Session button ![view last session](../images/view_last_session.png). That last session appears in the currently selected dashboard. 
 
@@ -123,11 +123,11 @@ Do any of the following:
 
 - In the **dashboard** page, select the session from the **Sessions** drop-down list [(*Figure*)](#selecting_sessions). You can select as many sessions as you wish. You can use the search box to aid you in finding the sessions you wish to view.  
 
-  As soon as you select a session or sessions, the dashboard refreshes to show the sessions’ data in the panels. 
+   As soon as you select a session or sessions, the dashboard refreshes to show the sessions’ data in the panels. 
 
 
-<a name ="selecting_sessions"></a>
-![Selecting Sessions - from the Header](../images/select_sessions.png)
+   <a name ="selecting_sessions"></a>
+   ![Selecting Sessions - from the Header](../images/select_sessions.png)
 
 
 
@@ -139,13 +139,13 @@ Using a graph panel’s zoom option, you can set the time period for which all p
 
 - Use the mouse to select a specific time range in the panel. 
 
-  ![Selecting a Time Range](../images/select_time_range.png)
+   ![Selecting a Time Range](../images/select_time_range.png)
 
 
 
 The dashboard refreshes to show the graph for the selected time range only. 
 
-![Display of a Selected Time Range](../images/display_time_range.png)
+   ![Display of a Selected Time Range](../images/display_time_range.png)
 
 
 
@@ -157,13 +157,15 @@ Use the **Zoom to Data** or **Zoom Out** options in the [*Dashboard Header*.](#d
 
 ## Selecting the Time Format
 
-You can view dashboard data in either Relative time or Absolute time (see item  in [Figure)](#absolute_time)). This affects the graphs’ display as follows: 
+You can view dashboard data in either Relative time or Absolute time (see item 7 in [Figure)](#absolute_time)). This affects the graphs’ display as follows: 
 
 *If you are viewing data for a single session:* 
 
 - ![relative time](../images/relative_time.png)**Relative time** – The start time is shifted over to zero. 
+
 <a name = "absolute_time"> </a>
-- ![absolute time](../images/absolute_time.png)**Absolute time** – Shows the real time. This format is useful for viewing currently running sessions. ![ref8]
+
+- ![absolute time](../images/absolute_time.png)**Absolute time** – Shows the real time. This format is useful for viewing currently running sessions. 
 
 *If you are comparing sessions:* 
 

@@ -14,9 +14,10 @@ The WebLOAD Dashboard includes the following main components:
 
 ### Changing Back-end configuration
 
-You can change the back-end configuration by creating a file called custom.ini in `C:\Program Files (x86)\RadView\WebLOAD\dashboard\grafana\conf`. 
+You can change the back-end configuration by creating a file called `custom.ini` in 
+`C:\Program Files (x86)\RadView\WebLOAD\dashboard\grafana\conf`. 
 
-Use the default.ini, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the Grafana documentation at[ http://docs.grafana.org/installation/configuration/
+Use the `default.ini`, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the Grafana documentation at [http://docs.grafana.org/installation/configuration/](http://docs.grafana.org/installation/configuration/)
 
 
 
@@ -66,15 +67,15 @@ You can change the port that the back-end server listens on, which is 8080 by de
 
 1. Change the listening port value in the datasource configuration file, located in: `C:\Program Files (x86)\RadView\WebLOAD\dashboard\webdashboard\dashboard.settings.bat.` 
 
-2. If you change the listening port in the datasource configuration file, you must reflect that change in the datasource configuration, as follows: 
-   1. Select **Admin** > **Data Sources** in the WebLOAD Dashboard menu bar. 
+1. If you change the listening port in the datasource configuration file, you must reflect that change in the datasource configuration, as follows: 
+    1. Select **Admin** > **Data Sources** in the WebLOAD Dashboard menu bar. 
 
-   2. Click the **WebLOAD** data source, 
+    1. Click the **WebLOAD** data source, 
 
-   3. In the Edit Data Source window that appears, change the **URL** to reflect the new address. 
+    1. In the Edit Data Source window that appears, change the **URL** to reflect the new address. 
 
 
-![Edit Data Source window* ](../images/edit_data_source.jpeg)
+![Edit Data Source window ](../images/edit_data_source.jpeg)
 
 
 
@@ -91,6 +92,9 @@ Note that also the remote database itself must be configured for remote connecti
 In addition, if you wish to import remote database sessions from the WebLOAD Console to the WebLOAD Dashboard while the sessions are running, do the following in the WebLOAD Console:  
 
 1. Select **Tools** > **Global Options** > **Database**.
+
+    ![Database Tab](../images/database_tab.png)
+
 1. In the **Database configuration** section, enter the details of the remote database.
 
 `                             `

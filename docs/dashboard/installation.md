@@ -8,9 +8,9 @@ The WebLOAD Dashboard is part of the regular WebLOAD installation.  **To install
 
 1. In the Select Components window of the WebLOAD installation wizard, select either of the following options: 
 
-   - Select **Full Installation** and check the **WebLOAD Dashboard** checkbox to have the WebLOAD Dashboard installed locally as part of a full installation. You can also optionally check the **WebLOAD Dashboard as Service** checkbox to register the installed WebLOAD Dashboard as a Windows service.  
+    - Select **Full Installation** and check the **WebLOAD Dashboard** checkbox to have the WebLOAD Dashboard installed locally as part of a full installation. You can also optionally check the **WebLOAD Dashboard as Service** checkbox to register the installed WebLOAD Dashboard as a Windows service.  
 
-   - Select **Cloud Server** to only install the **WebLOAD Dashboard**. ![ref10]
+    - Select **Cloud Server** to only install the  **WebLOAD Dashboard**. ![ref10]
 
      ![installation](../images/installation.png)
 
@@ -22,7 +22,7 @@ As a prerequisite to using WebLOAD Dashboard, you must first, in the WebLOAD Con
 
 1. Select **Tools** > **Global Options** > **Database**. 
 
-   ![Console Global options](../images/console_global_options.jpeg)
+    ![Console Global options](../images/console_global_options.jpeg)
 
    
 

@@ -12,13 +12,11 @@ The Resources tab also offers the option of creating sub-folders. If you want th
 
 **To view the resources uploaded to WebLOAD Dashboard:** 
 
-1\.  In the menu bar, select **Resources** > **Search**. ![ref8]
+1.  In the menu bar, select **Resources** > **Search**. 
 
 
 <a name ="resources_page"></a>
 ![Resources page* ](../images/resources_page.jpeg)
-
-
 
 
 
@@ -45,13 +43,13 @@ The Resources table provides the following information and available actions, fo
 
 1. If you wish to add a resource into a subfolder of the WebLOAD Console Resources folder: 
 
-   1. Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in[*Creating a Resources subfolder* ](#creating-a-resources-subfolder)
+    1. Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in [*Creating a Resources subfolder* ](#creating-a-resources-subfolder)
     
-   1. Click **Upload Resource**.  
+    1. Click **Upload Resource**.  
 
-   The Upload Resources page appears. 
+    The Upload Resources page appears. 
 
-   ![Upload Resources page](../images/upload_resources_page.png)
+    ![Upload Resources page](../images/upload_resources_page.png)
 
    
 
@@ -67,15 +65,15 @@ The Resources table provides the following information and available actions, fo
 
 **To create a subfolder in the Resources folder:** 
 
-1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure 26)](#resources_page). 
+1. In the menu bar, select **Resources** > **Search**. The Resources page appears [(Figure)](#resources_page). 
 
 1. If you wish to add a subfolder under the root folder of the WebLOAD Console Resources folder, click **Create Folder** in the Resources page. 
 
-1. If you wish to add a subfolder under a specific subfolder of the WebLOAD Console Resources folder, navigate to the specific subfolder in the folders tree displayed in the Resources page. Then click **Create Folder**. ![ref8]
+1. If you wish to add a subfolder under a specific subfolder of the WebLOAD Console Resources folder, navigate to the specific subfolder in the folders tree displayed in the Resources page. Then click **Create Folder**. 
 
-   The New Resource Folder page appears. 
+    The New Resource Folder page appears. 
 
-   ![New Resource Folder page](../images/new_resource_folder.png)
+    ![New Resource Folder page](../images/new_resource_folder.png)
 
 1. Specify the subfolder’s name, and click **Create**.  
 
@@ -85,15 +83,18 @@ The Resources table provides the following information and available actions, fo
 
 You can create a load test based on either of the following types of resources: 
 
-- .wlp – a script as well as resources related to the script 
-- .tpl – a template file 
+    - .wlp – a script as well as resources related to the script 
+    - .tpl – a template file 
 
 **To create a load test based on a resource:** 
 
 1. In the menu bar, select **Resources** > **Search**. 
+
 1. In the Resources table, click ![new resource](../images/create_load_test.png) adjacent to a resource of type .wlp or .tpl. 
-1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See[` `*Creating a Script Load Test* ](./manage_tests.md#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
-1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See[*Creating a Template Load Test* ](./manage_tests.md#creating-a-template-load-test). Set or edit any of the fields, and click **Create Test**. 
+
+1. If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the **Script** field. See [*Creating a Script Load Test* ](./manage_tests.md#creating-a-script-load-test). Set or edit any of the fields, and click **Create Test**. 
+
+1. If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the **Template** field. See [*Creating a Template Load Test* ](./manage_tests.md#creating-a-template-load-test). Set or edit any of the fields, and click **Create Test**. 
 
 
 
@@ -107,17 +108,19 @@ You can create a load test based on either of the following types of resources:
 
 1. You are requested to confirm the delete operation. 
 
-   ![Requesting confirmation to delete a resource](../images/confirm_delete_resource.png)
+    ![Requesting confirmation to delete a resource](../images/confirm_delete_resource.png)
 
 1. If the resource is a template, you can select between: 
 
-1. Deleting the template as well as its associated test and sessions 
+    - Deleting the template as well as its associated test and sessions 
 
-1. Deleting only the template, but keeping the associated test and sessions. 
+    - Deleting only the template, but keeping the associated test and sessions. 
 
-   ![Specifying to delete a template resource](../images/specify_delete_resource.png)
+    ![Specifying to delete a template resource](../images/specify_delete_resource.png)
 
-1. If you specified to delete a resources folder, keep in mind that although the templates located in this folder will be deleted, the tests and sessions from those folders will be kept for review and will be displayed in the Load Tests page and Load Sessions page (but without the ability to run them).  ![Specifying to delete a resource subfolder](../images/delete_folder.png)
+1. If you specified to delete a resources folder, keep in mind that although the templates located in this folder will be deleted, the tests and sessions from those folders will be kept for review and will be displayed in the Load Tests page and Load Sessions page (but without the ability to run them). 
+
+    ![Specifying to delete a resource subfolder](../images/delete_folder.png)
 
    
 

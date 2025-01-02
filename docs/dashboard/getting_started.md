@@ -6,15 +6,15 @@
 
 1. Select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities**-> **Start WebLOAD Dashboard**. 
 
-   This launches the WebLOAD Dashboard server. 
+    This launches the WebLOAD Dashboard server. 
 
-2. Navigate to **http://localhost:3000/** 
+1. Navigate to **http://localhost:3000/** 
 
-   The WebLOAD Dashboard login window appears. The default user is ‘**admin’** with password ‘**admin’**. 
+    The WebLOAD Dashboard login window appears. The default user is ‘**admin’** with password ‘**admin’**. 
 
-   Note that the default user is a Super Admin, as explained in[` `*Super Administrators* ](managing_organizations.md#organizational-administrators). 
+    Note that the default user is a Super Admin, as explained in[` `*Super Administrators* ](managing_organizations.md#organizational-administrators). 
 
-   ![dashboard login page](../images/dashboard_login.jpeg)
+    ![dashboard login page](../images/dashboard_login.jpeg)
 
 
 

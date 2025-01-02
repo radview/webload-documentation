@@ -15,14 +15,14 @@ There are several options for sharing a dashboard:
 
 1. Select the **Share Dashboard** icon ![share dashboard icon](../images/share_dash_icon.png) in the dashboard header. A Share window appears, displaying a link to the dashboard. 
 
-   <a name = "share_dashboard"></a>
-   ![Share Dashboard – Options](../images/share_dash_options.png)
+    <a name = "share_dashboard"></a>
+    ![Share Dashboard – Options](../images/share_dash_options.png)
+ 
 
+2. Click any of the options: **Link to Dashboard**, or **Export** 
+   A Share Dashboard window appears. 
 
-
-2. Click any of the options: **Link to Dashboard**, or **Export** A Share Dashboard window appears. 
-
-   ![Share Dashboard– Link tab](../images/share_dash_link_tab.png)
+    ![Share Dashboard– Link tab](../images/share_dash_link_tab.png)
 
 
 
@@ -36,15 +36,14 @@ You can easily share an entire dashboard, by providing the appropriate URL. **To
 
 1. Using the options in the Share Link window, you can produce a link to various variants of the dashboard, as described in the following table.
 
-   | **Item**           | **Description**                                              |
-   | ------------------ | ------------------------------------------------------------ |
-   | Current time range | Determines whether the linked page will display data for the selected  time range or for the entire session time range. |
-   | Selected Sessions  | Determines whether the  linked page will displays the data for the currently selected session(s), or  for the sessions appearing when the dashboard was last saved. |
-   | Template variables | Determines whether the  linked page will include template variables. |
-   | Theme              | Determines whether the linked page will display the current theme,  the default light theme, or the default dark theme. |
+    | **Item**           | **Description**                                              |
+    | ------------------ | ------------------------------------------------------------ |
+    | Current time range | Determines whether the linked page will display data for the selected  time range or for the entire session time range. |
+    | Selected Sessions  | Determines whether the  linked page will displays the data for the currently selected session(s), or  for the sessions appearing when the dashboard was last saved. |
+    | Template variables | Determines whether the  linked page will include template variables. |
+    | Theme              | Determines whether the linked page will display the current theme,  the default light theme, or the default dark theme. |
 
    
-
 1. Click **Copy** to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard.  
 
 
@@ -59,15 +58,15 @@ You can export a dashboard as a JSON file, and import dashboards that were saved
 
 1. Select the **Export** tab.
 
-   An Export dashboard window appears. 
+    An Export dashboard window appears. 
 
-   ![Export Dashboard window](../images/export_dash_window.png)
+    ![Export Dashboard window](../images/export_dash_window.png)
 
 1. Optionally click **View JSON** to view the file. 
 
-3. Click **Save to file** to save in a desired location. 
+1. Click **Save to file** to save in a desired location. 
 
-   A JSON file of the dashboard is created in your Downloads directory. Its name is the dashboard name followed by the current timestamp. 
+    A JSON file of the dashboard is created in your Downloads directory. Its name is the dashboard name followed by the current timestamp. 
 
 Note that you can view the contents of the JSON file in the dashboard. To do so, click the Manage Dashboard Settings icon ![ref26] in the middle of the dashboard header, and select **View JSON**. 
 
@@ -104,14 +103,14 @@ The Link option produces a link that will take you to exactly this panel with th
 
 1. Select the **Link** tab. 
 
-   Using the options in the Share Link window, you can produce a link to various variants of the panel, as described in the following table. 
+    Using the options in the Share Link window, you can produce a link to various variants of the panel, as described in the following table. 
 
-   | **Item**           | **Description**                                              |
-   | ------------------ | ------------------------------------------------------------ |
-   | Current time range | Determines whether the  linked page will display data for the selected time range or for the entire  session time range. |
-   | Selected  Sessions | Determines whether the  linked page will displays the data for the currently selected session(s), or  for the sessions appearing when the dashboard was last saved. |
-   | Template variables | Determines whether the  linked page will include template variables. |
-   | Theme              | Determines whether the  linked page will display the current theme, the default light theme, or the  default dark them. |
+    | **Item**           | **Description**                                              |
+    | ------------------ | ------------------------------------------------------------ |
+    | Current time range | Determines whether the  linked page will display data for the selected time range or for the entire  session time range. |
+    | Selected  Sessions | Determines whether the  linked page will displays the data for the currently selected session(s), or  for the sessions appearing when the dashboard was last saved. |
+    | Template variables | Determines whether the  linked page will include template variables. |
+    | Theme              | Determines whether the  linked page will display the current theme, the default light theme, or the  default dark them. |
 
 1. Click **Copy** to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard. 
 
@@ -124,8 +123,10 @@ You can embed a panel using an iframe on another web site. The Embed option prod
 **To share a panel by embedding its HTML code:** 
 
 1. Optionally select a specific time range in the panel.
-2. Access the Share Panel window [(Figure 79)](#share_panel), as described in[*Accessing the Share Panel Options*.](#accessing-the-share-panel-options) 
-3. Select the **Embed** tab. 
+
+1. Access the Share Panel window [(Figure 79)](#share_panel), as described in[*Accessing the Share Panel Options*.](#accessing-the-share-panel-options) 
+
+1. Select the **Embed** tab. 
 
 <a name ="share_panel"></a>
 ![Share Panel – Embed tab](../images/share_panel_embed.jpeg)

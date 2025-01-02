@@ -20,7 +20,7 @@ In WebLOAD Dashboard you can manage the following types of sessions:
 
 
 
-The Load Sessions table provides the following information and available actions, for each Load Session: ![ref10]
+The Load Sessions table provides the following information and available actions, for each Load Session: 
 
 | **Item**                                              | **Description**                                              |
 | ----------------------------------------------------- | ------------------------------------------------------------ |
@@ -48,10 +48,10 @@ The Filter bar, above the Load Sessions table, provides various options for filt
 
 You can filter the Load Sessions table display by: 
 
-- Session name, using the **Find by Session Name** box. 
-- Test name, using the **Find by Test Name** box. 
-- Test status, using the **All Statuses** drop-down box 
-- Test date, using the **All Dates** drop down box 
+   - Session name, using the **Find by Session Name** box. 
+   - Test name, using the **Find by Test Name** box. 
+   - Test status, using the **All Statuses** drop-down box 
+   - Test date, using the **All Dates** drop down box 
 
 
 
@@ -59,10 +59,10 @@ You can filter the Load Sessions table display by:
 
 You can upload to WebLOAD Dashboard, sessions that were created in the WebLOAD Console. Each session created in the WebLOAD Console consists of the following four types of files; to upload the session, you need to upload all four files: 
 
-- .ls - Load Session files 
-- .dat - Load Session data files 
-- .sdb - Statistics database files 
-- .isd - Index statistics database files 
+- ```.ls``` - Load Session files 
+- ```.dat``` - Load Session data files 
+- ```.sdb``` - Statistics database files 
+- ```.isd``` - Index statistics database files 
 
 
 
@@ -70,16 +70,16 @@ You can upload to WebLOAD Dashboard, sessions that were created in the WebLOAD C
 
 1. Do one of the following: 
 
-   - In the menu bar, select **Session** > **Upload** 
+     - In the menu bar, select **Session** > **Upload** 
 
      Or 
 
-   - In the Load Sessions table, click **Upload Session** 
+     - In the Load Sessions table, click **Upload Session** 
 
-   The Session Upload page is displayed. 
+     The Session Upload page is displayed. 
 
-   ![session upload page](../images/session_upload.png)
+     ![session upload page](../images/session_upload.png)
 
-2. Click **Select session files**. 
+1. Click **Select session files**. 
 
-3. In the file explorer dialog that appears, navigate to the load session’s files, select them, and click **Open**.
+1. In the file explorer dialog that appears, navigate to the load session’s files, select them, and click **Open**.

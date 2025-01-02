@@ -2,7 +2,7 @@
 
 You can customize a dashboard as desired, and then save the customized dashboard if you wish. Note however that two types of changes are not considered customizations and are not saved: the selected sessions and the selected time filter. 
 
-To save your customizations, refer to[` `*Saving your Customized Dashboard* ](./managing_dashboards.md#saving-your-customized-dashboard). 
+To save your customizations, refer to [*Saving your Customized Dashboard* ](./managing_dashboards.md#saving-your-customized-dashboard). 
 
 ## Customizing Rows
 
@@ -55,7 +55,7 @@ To edit a panel, click the panel title and click **edit** in the box that appear
 
 
 
-An editing pane appears, with various editing options that depend on the panel type (text, graph, table or singlestat), as described below. ![ref8]
+An editing pane appears, with various editing options that depend on the panel type (text, graph, table or singlestat), as described below. 
 
 ### Editing a Panel’s General Options
 
@@ -79,21 +79,21 @@ You can specify which metrics to display for which sessions.
 
 1. Select the **Metrics** tab. The metrics currently displayed in the graph are displayed in the table. 
 
-   ![Graph Settings – Metrics](../images/graph_settings.jpeg)
+    ![Graph Settings – Metrics](../images/graph_settings.jpeg)
 
 1. To add a measurement, click **Add Measurement**. A new line appears in the table. 
 
-   ![Graph Settings – Adding a New Measurement Line](../images/graph_settings_add_measurement.png)
+    ![Graph Settings – Adding a New Measurement Line](../images/add_measurment_new.png)
 
 1. Edit the new line:  
 
-   Select metrics for the new line you added. 
+    - Select metrics for the new line you added. 
 
 1. Optionally edit the selection of a metric in an existing line.  
 
 
 
-The following table describes some of the operations available in the **Metrics** tab. ![ref8]
+The following table describes some of the operations available in the **Metrics** tab. 
 
 | **Item** | **Description**                                              |
 | -------- | ------------------------------------------------------------ |
@@ -116,9 +116,9 @@ The following table describes some of the operations available in the **Metrics*
 1. Click the panel’s title and select **edit**. 
 1. Select the **Axes** tab. 
 
-A pane appears, displaying the current axes definitions. You can change any of the definitions, and the graph display changes accordingly.  ![ref10]
+A pane appears, displaying the current axes definitions. You can change any of the definitions, and the graph display changes accordingly.  
 
-![Graph Settings – Axes](../images/graph_axes.png)
+![Graph Settings – Axes](../images/defining_axes.png)
 
 
 
@@ -163,7 +163,7 @@ A pane appears, displaying the time range definitions. You can change any of the
 
 ### Editing a Singlestat Panel
 
-Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to[` `*Specifying the Metrics*)](#specifying-the-metrics), but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. ![ref10]
+Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to [*Specifying the Metrics*](#specifying-the-metrics)), but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. 
 
 ***Defining the Singlestat Display Options*** 
 
@@ -184,10 +184,11 @@ You can customize a table panel’s display directly in the dashboard.
 
 ![Table Panel Header](../images/table_panel_header.png)
 
- The header of the table panel provides the following options: 
+The header of the table panel provides the following options: 
 
-- Sorting the table display – Clicking any column head sorts the table by that column in ascending or descending order. 
-- Filtering by severity – By clicking the down arrow in the **Severity** column head, you can select whether to view messages of all severity types, or of a certain type.
+   - Sorting the table display – Clicking any column head sorts the table by that column in ascending or descending order. 
+
+   - Filtering by severity – By clicking the down arrow in the **Severity** column head, you can select whether to view messages of all severity types, or of a certain type.
 
 ### Editing a Text
 
@@ -199,11 +200,11 @@ To edit the text in a Text panel, click the panel’s title and select **edit**,
 
 You can: 
 
-- Select the mode: 
-  - **Text** – Plain text 
-  - **Html** – HTML 
-  - **Markdown** - Markdown markup syntax  
-- Edit the text as desired.  
+   - Select the mode: 
+      - **Text** – Plain text 
+      - **Html** – HTML 
+      - **Markdown** - Markdown markup syntax  
+   - Edit the text as desired.  
 
 ### Adding Panels
 
@@ -219,7 +220,7 @@ The duplication feature is useful if you wish to create a panel that is very sim
 
 **To duplicate a panel:** 
 
-1\.  Click the panel’s title and select **Duplicate**. 
+1.  Click the panel’s title and select **Duplicate**. 
 
 A new panel – a duplicate of the original – is created in the dashboard. You can now edit it as desired. 
 
@@ -231,9 +232,9 @@ A new panel – a duplicate of the original – is created in the dashboard. You
 
 1. Click the panel’s title and select the **Delete** icon the top right corner.
 
-   ![Delete Panel button](../images/delete_panel.png)
+    ![Delete Panel button](../images/delete_panel.png)
 
-2. Confirm the deletion. 
+1. Confirm the deletion. 
 
    
 
@@ -245,35 +246,35 @@ You can customize various general dashboard settings.
 
 1. Click the Manage Dashboard Settings icon in the middle of the dashboard header, and select **Settings**. 
 
-   ![Selecting to Configure Dashboard Settings](../images/dashboard_settings.png)
+    ![Selecting to Configure Dashboard Settings](../images/dashboard_settings.png)
 
-   A Dashboard **Settings** pane appears, with multiple tabs. 
+    A Dashboard **Settings** pane appears, with multiple tabs. 
 
-2. Set the **General** settings as desired.  
+1. Set the **General** settings as desired.  
 
-   ![Dashboard Settings – General](../images/general_settings.png)
+    ![Dashboard Settings – General](../images/general_settings.png)
 
    
 
-   For example, if you select **Shared Crosshair**, then hovering over one the graphs causes a corresponding crosshairs to appear in all the graphs. 
+    For example, if you select **Shared Crosshair**, then hovering over one the graphs causes a corresponding crosshairs to appear in all the graphs. 
 
-   ![Shared Crosshair](../images/shared_crosshair.png)
+    ![Shared Crosshair](../images/shared_crosshair.png)
 
-3. Set the **Rows** settings as desired. For example, use the up and down arrows to switch between the locations of rows in the dashboard.  
+1. Set the **Rows** settings as desired. For example, use the up and down arrows to switch between the locations of rows in the dashboard.  
 
-   ![Dashboard Settings – Rows](../images/dashboard_settings_rows.png)
+    ![Dashboard Settings – Rows](../images/dashboard_settings_rows.png)
 
-4. Set the **Links** settings as desired. This enables adding links that appear under the Dashboard header. You can add a link to any site, or to a dashboard.  
+1. Set the **Links** settings as desired. This enables adding links that appear under the Dashboard header. You can add a link to any site, or to a dashboard.  
 
-   ![Dashboard Settings – Links](../images/settings_links.png)
+    ![Dashboard Settings – Links](../images/settings_links.png)
 
-5. Set the **Time picker** settings as desired. For example, you can set the **Auto- refresh** options that appear in the **Refreshing every** dropdown. 
+1. Set the **Time picker** settings as desired. For example, you can set the **Auto- refresh** options that appear in the **Refreshing every** dropdown. 
 
-   ![Dashboard Settings – Time picker](../images/settings_time.png)
+    ![Dashboard Settings – Time picker](../images/settings_time.png)
 
-6. Click **Metadata** to view the dashboard’s metadata. This includes information about dashboard creation and updating. 
+1. Click **Metadata** to view the dashboard’s metadata. This includes information about dashboard creation and updating. 
 
-   ![Dashboard Settings – Metadata](../images/dashboard_metadata.png)
+    ![Dashboard Settings – Metadata](../images/dashboard_metadata.png)
 
 
 

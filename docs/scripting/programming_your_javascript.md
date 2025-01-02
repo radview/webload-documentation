@@ -69,20 +69,19 @@ In addition to the original recording session activities, users may also add oth
 
 These are JavaScript functions that WebLOAD or WebLOAD Recorder executes once, in a fixed sequence, before or after the main script. These functions are used to prepare for or clean up from a testing session. The following functions are automatically included in the script when needed:
 
-- InitAgenda()— Initialize global objects shared by all WebLOAD Recorder clients that run the script.
-
-- InitClient()— Initialize local objects and variables for individual clients.
-- TerminateClient()— Free resources of individual clients.
-- TerminateAgenda()— Free global resources shared by all clients running the script.
-- OnScriptAbort()— Executes user-defined code to free resources whenever the script stops the execution of a round (ErrorMessage), a session (SevereErrorMessage), or in the event of an error. In addition, OnScriptAbort() is called in the Console whenever the script stops abruptly. This occurs when the end of a scheduled session is in the middle of a round, or when a user manually stops the session.
-- OnErrorTerminateClient()— Clean up and free resources after a runtime error (per client).
-- OnErrorTerminateAgenda()— Clean up and free resources after a runtime error (per script).
+- `InitAgenda()`— Initialize global objects shared by all WebLOAD Recorder clients that run the script.
+- `InitClient()`— Initialize local objects and variables for individual clients.
+- `TerminateClient()`— Free resources of individual clients.
+- `TerminateAgenda()`— Free global resources shared by all clients running the script.
+- `OnScriptAbort()`— Executes user-defined code to free resources whenever the script stops the execution of a round (ErrorMessage), a session (SevereErrorMessage), or in the event of an error. In addition, OnScriptAbort() is called in the Console whenever the script stops abruptly. This occurs when the end of a scheduled session is in the middle of a round, or when a user manually stops the session.
+- `OnErrorTerminateClient()`— Clean up and free resources after a runtime error (per client).
+- `OnErrorTerminateAgenda()`— Clean up and free resources after a runtime error (per script).
 
 The initialization and termination functions are not part of the WebLOAD performance test. WebLOAD does not include the operations of these functions in the performance statistics.
 
 Use the initialization and termination functions to create or free objects or to set global variables. Besides these tasks, the functions may contain other JavaScript statements and may call other functions in your script. The termination functions are used both when a test session finishes successfully, and when it is terminated early by an error.
 
-Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.
+Initialization and termination functions may be added directly to the code in a script through the IntelliSense Editor, as described [*Editing the JavaScript Code*](#editing-the-javascript-code-in-a-script).
 
 **To bring up a list of available functions:**
 
@@ -97,7 +96,7 @@ WebLOAD Recorder automatically inserts the correct code for the selected functio
 
 #### Navigation Functions
 
-When a URL node is selected in the Script Tree, the corresponding script code that appears in the JavaScript View pane will usually include basic navigation and validation functions such as wlHTTP.Get() and wlHTTP.Post(). The wlHTTP.Get() and wlHTTP.Post() methods store the HTML from the navigated page in the document.wlSource property. The code is refreshed when the script calls wlHTTP.Get() or wlHTTP.Post() again. The stored code includes any scripts or other data embedded in the HTML, which the script can retrieve and interpret in any desired way.
+When a URL node is selected in the Script Tree, the corresponding script code that appears in the JavaScript View pane will usually include basic navigation and validation functions such as `wlHTTP.Get()` and `wlHTTP.Post()`. The `wlHTTP.Get()` and `wlHTTP.Post()` methods store the HTML from the navigated page in the document.wlSource property. The code is refreshed when the script calls `wlHTTP.Get()` or `wlHTTP.Post()` again. The stored code includes any scripts or other data embedded in the HTML, which the script can retrieve and interpret in any desired way.
 
 These functions are almost always visible at the start of the JavaScript code for every URL node in the Script Tree. While additional Tree nodes add their own additional corresponding JavaScript code to the script, these functions form the basis for all test session scripts.
 
@@ -110,19 +109,24 @@ These functions are almost always visible at the start of the JavaScript code fo
 WebLOAD executes JavaScript scripts in a simple, fixed sequence. The normal sequence is as follows.
 
 1. The optional InitAgenda() initialization function runs once for each Load Generator, initializing the global WebLOAD objects, or any other global data or resources, that are shared by all clients in a Load Generator process.
-1. The script splits into a separate thread for each client. Load Generator processes may include any number of Virtual Clients, all running the same script. After WebLOAD runs InitAgenda(), it runs each client in a separate thread. Each thread can have its own local variables and objects. In essence, each client runs an independent instance or copy of the script.
 
-   For example, suppose you want each WebLOAD client to connect to a different Web page. You can use a local object within each thread to store the Web address and perform the HTTP connection. Because the object is local, there is no confusion between the addresses. Each thread connects to the appropriate address, without any effect on the other threads of the same script.
+1. The script splits into a separate thread for each client. Load Generator processes may include any number of Virtual Clients, all running the same script. After WebLOAD runs `InitAgenda()`, it runs each client in a separate thread. Each thread can have its own local variables and objects. In essence, each client runs an independent instance or copy of the script.
 
-1. The optional InitClient() initialization function runs once for each thread, initializing local WebLOAD objects, or any other variables or resources, which belong to an individual thread of the script. In this way, each thread of a script can work with different data and can operate independently of the other threads.
+    For example, suppose you want each WebLOAD client to connect to a different Web page. You can use a local object within each thread to store the Web address and perform the HTTP connection. Because the object is local, there is no confusion between the addresses. Each thread connects to the appropriate address, without any effect on the other threads of the same script.
+
+1. The optional `InitClient()` initialization function runs once for each thread, initializing local WebLOAD objects, or any other variables or resources, which belong to an individual thread of the script. In this way, each thread of a script can work with different data and can operate independently of the other threads.
+
 1. The main script runs repeatedly in a separate loop for each thread. When WebLOAD reaches the end of the main script, it starts again at the beginning. The main script continues to iterate until you stop the WebLOAD test. You can stop the test by issuing a Stop command in the WebLOAD Console, or you can tell the Console to stop the test automatically after a predefined time.
 
-   WebLOAD collects performance statistics while the main script runs. The various statistics that WebLOAD displays (round time, average round time, etc.) apply only to the main script, not to operations in the initialization and termination functions.
+    WebLOAD collects performance statistics while the main script runs. The various statistics that WebLOAD displays (round time, average round time, etc.) apply only to the main script, not to operations in the initialization and termination functions.
 
-1. The optional TerminateClient() termination function runs once for each thread. Strictly speaking, most scripts do not need a TerminateClient() function, because JavaScript automatically frees objects and releases most resources when the script terminates. In a complex script, however, it is good programming practice to free local objects and resources explicitly using TerminateClient().
+1. The optional `TerminateClient()` termination function runs once for each thread. Strictly speaking, most scripts do not need a `TerminateClient()` function, because JavaScript automatically frees objects and releases most resources when the script terminates. In a complex script, however, it is good programming practice to free local objects and resources explicitly using `TerminateClient().`
+
 1. The separate threads for each client terminate.
-1. The optional TerminateAgenda() termination function runs once for each Load Generator process. Most simple scripts do not need a TerminateAgenda() function. In a complex script, including TerminateAgenda() is recommended to free global resources.
-1. The OnScriptAbort(), OnErrorTerminateClient(), and OnErrorTerminateAgenda() functions clean up and free resources after a runtime error. For more information about handling errors during a test session, see [*Error Management* ](#error-management).
+
+1. The optional `TerminateAgenda()` termination function runs once for each Load Generator process. Most simple scripts do not need a `TerminateAgenda()` function. In a complex script, including `TerminateAgenda()` is recommended to free global resources.
+
+1. The `OnScriptAbort()`, `OnErrorTerminateClient()`, and `OnErrorTerminateAgenda()` functions clean up and free resources after a runtime error. For more information about handling errors during a test session, see [*Error Management* ](#error-management).
 
 The following figure illustrates the steps in a normal script execution sequence:
 
@@ -141,24 +145,25 @@ The EvaluateScript() function is used to define JavaScript code to be executed a
 - WLAfterTerminateClient
 - WLBeforeRound
 - WLAfterTerminateAgenda
-
 - WLAfterRound
 
 If the script run is successful, the value from the last executed expression statement processed in the script is saved and then parsed when the engine reaches the relevant point. The saved value includes the following information:
 
 - The text of the script.
 - The size of the script text, in bytes.
-- The name of the file or URL containing the script text. If the script run is unsuccessful, the value is left undefined.
+- The name of the file or URL containing the script text. 
 
-  The following example is used to call a function that is defined in an external file:
+If the script run is unsuccessful, the value is left undefined.
+
+The following example is used to call a function that is defined in an external file:
 
 `IncludeFile(filename.js)`
 
 `EvaluateScript(“MyFunction()”,WLAfterRound)`
 
-In this example, the EvaluateScript string is parsed, executed, and instructs the JavaScript engine to call the MyFunction() function right after each round is completed. At this point WebLOAD returns any syntax or runtime errors.
+In this example, the `EvaluateScript` string is parsed, executed, and instructs the JavaScript engine to call the `MyFunction()` function right after each round is completed. At this point WebLOAD returns any syntax or runtime errors.
 
-For more information on the EvaluateScript function, see the *WebLOAD’s JavaScript Reference Guide*.
+For more information on the EvaluateScript function, see the [*WebLOAD’s JavaScript Reference Guide*](../javascript/using_javascript_ref.md).
 
 #### Cleanup at the End of Each Round
 
@@ -174,8 +179,6 @@ There are three exceptions to this rule. At the end of each round:
 
 WebLOAD lets you schedule the number of clients running a single script in a single Load Generator. WebLOAD runs the initialization and termination functions of the script according to your schedule.
 
-
-
 For example, suppose you configure a Load Generator to run a script according to the following schedule:
 
 |**Number of Threads**|**Scheduled Time**|
@@ -187,13 +190,13 @@ For example, suppose you configure a Load Generator to run a script according to
 
 In this case:
 
-- WebLOAD runs the InitAgenda() function when the Load Generator starts to run. WebLOAD then starts the first 50 threads, running InitClient() and the main script for each thread.
-- After 30 minutes, 30 of the threads stop. WebLOAD runs TerminateClient()
+- WebLOAD runs the `InitAgenda()` function when the Load Generator starts to run. WebLOAD then starts the first 50 threads, running `InitClient()` and the main script for each thread.
 
-  for these 30 threads. The main script of the other 20 threads continues running.
+- After 30 minutes, 30 of the threads stop. WebLOAD runs `TerminateClient()` for these 30 threads. The main script of the other 20 threads continues running.
 
-- At 60 minutes, 80 additional threads start. For each of these 80 threads, WebLOAD runs InitClient() and the main script.
-- At the end of the test, WebLOAD runs TerminateClient() for each of the 100 threads currently running, and then runs TerminateAgenda().
+- At 60 minutes, 80 additional threads start. For each of these 80 threads, WebLOAD runs `InitClient()` and the main script.
+
+- At the end of the test, WebLOAD runs `TerminateClient()` for each of the 100 threads currently running, and then runs `TerminateAgenda()`.
 
 #### Execution Sequence for Mixed Clients
 
@@ -209,11 +212,11 @@ For example, suppose you configure a Load Generator to run 100 threads as follow
 
 In this case, WebLOAD runs:
 
-- The InitAgenda() functions of both scripts when the Load Generator starts.
+- The `InitAgenda()` functions of both scripts when the Load Generator starts.
 
-- The InitClient() functions of both scripts in each thread when the thread starts.
-- The TerminateClient() functions of both scripts, in each thread at the end of the test.
-- The TerminateAgenda() functions of both scripts when all the threads have stopped.
+- The `InitClient()` functions of both scripts in each thread when the thread starts.
+- The `TerminateClient()` functions of both scripts, in each thread at the end of the test.
+- The `TerminateAgenda()` functions of both scripts when all the threads have stopped.
 
 
 
@@ -241,7 +244,7 @@ While most people never really work with the JavaScript code within their script
 
 - **JavaScript Object nodes**—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in [*Adding JavaScript Object Nodes* ](#adding-javascript-object-nodes). Use the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor), to add lines of code or functions to the JavaScript Object.
 - **Imported JavaScript File**—an external JavaScript file that should be incorporated within the body of the current script.
-  - While working in JavaScript Editing mode, right-click the JavaScript pane and select **Import JavaScript File** from the WebLOAD Recorder menu.
+   - While working in JavaScript Editing mode, right-click the JavaScript pane and select **Import JavaScript File** from the WebLOAD Recorder menu.
 
     Often, testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.
 
@@ -251,31 +254,29 @@ For those users who wish to manually edit their scripts, WebLOAD Recorder provid
 
 - An IntelliSense Editor mode for the JavaScript View pane.
 
-  Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. For example, in the following figure the IntelliSense Editor displays a drop-down list of available properties and objects for the wlHttp object being added to the program, with a pop-up box describing the highlighted method in the list.
-
+    Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. For example, in the following figure the IntelliSense Editor displays a drop-down list of available properties and objects for the wlHttp object being added to the program, with a pop-up box describing the highlighted method in the list.
 
 
 ![wlHttp Drop-Down List of Available Properties and Objects in IntelliSense Editor](../images/script_guide_026.jpeg)
 
 
-
 - A selection of the most commonly used programming constructs, can be accessed by right-clicking in the JavaScript Editing Pane, and selecting **Insert > Java Objects** from the pop-up menu.
 
-  Users who choose to program their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code for each command, risks making a mistake, even a trivial typo, and adding invalid code to the script file.
+    Users who choose to program their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code for each command, risks making a mistake, even a trivial typo, and adding invalid code to the script file.
 
-  Instead, users may bring up a list of available commands and functions for a specific item, by right-clicking in the JavaScript Editing Pane after selecting a specific node from the Script Tree, selecting **Insert** from the pop-up menu, and selecting an item illustrated in the following figure to display the item’s available commands. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. The user may then change specific parameter values without any worries about accidental mistakes in the function syntax.
-
-
-
-![Insert Java Options Menu](../images/script_guide_027.png)
+    Instead, users may bring up a list of available commands and functions for a specific item, by right-clicking in the JavaScript Editing Pane after selecting a specific node from the Script Tree, selecting **Insert** from the pop-up menu, and selecting an item illustrated in the following figure to display the item’s available commands. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. The user may then change specific parameter values without any worries about accidental mistakes in the function syntax.
 
 
 
-In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.
+   ![Insert Java Options Menu](../images/script_guide_027.png)
 
-<a name ="insert_variable_menu"></a>
+
+
+ In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.
+
+ <a name ="insert_variable_menu"></a>
+
 ![Insert Variable Menu](../images/script_guide_028.png)
-
 
 
 
@@ -299,11 +300,8 @@ WebLOAD Recorder stores user activities at the protocol level as they are comple
 
 WebLOAD Recorder therefore provides a mechanism for including such items within a test session script.
 
-For example, some of the steps involved in access to an external database are executed outside the control of WebLOAD Recorder and therefore cannot be completely recorded through WebLOAD Recorder alone. Users may add these activities to a test script by adding empty JavaScript Object Nodes to the Script Tree and then filling in
+For example, some of the steps involved in access to an external database are executed outside the control of WebLOAD Recorder and therefore cannot be completely recorded through WebLOAD Recorder alone. Users may add these activities to a test script by adding empty JavaScript Object Nodes to the Script Tree and then filling in the code to complete the desired activity. The specific code needed within the JavaScript Object Node will obviously vary from Node to Node depending on the activity, but adding the generic JavaScript Object Nodes themselves is a standard WebLOAD Recorder feature.
 
-
-
-the code to complete the desired activity. The specific code needed within the JavaScript Object Node will obviously vary from Node to Node depending on the activity, but adding the generic JavaScript Object Nodes themselves is a standard WebLOAD Recorder feature.
 
 **To add JavaScript Object Nodes to your test script directly through the WebLOAD Recorder GUI:**
 
@@ -332,7 +330,7 @@ JavaScript syntax specifications for some of these activities are documented in 
 
 - Click the **JavaScript Object node** in the Script Tree.
 
-  The JavaScript object’s code appears in the JavaScript View pane. You can edit the code directly in the JavaScript view or by selecting **Edit** > **Start Java Script Editing** which opens the full JavaScript view screen. This helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are written, as described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
+   The JavaScript object’s code appears in the JavaScript View pane. You can edit the code directly in the JavaScript view or by selecting **Edit** > **Start Java Script Editing** which opens the full JavaScript view screen. This helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are written, as described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
 
 
 
@@ -345,20 +343,21 @@ JavaScript scripts work with many different types of files. Users may wish to ad
 - [*Output Files* ](#output-files)
 
 ### Including Files
-WebLOAD Recorder allows you to include external files within your JavaScript program. This facilitates modular programming, where you may develop different recyclable modules of JavaScript source code to be reused by different test scripts. Rather than inserting the complete original source code text over and over again into the body of each script, use the IncludeFile() command to make all functions defined within the included file available to all including scripts.
+WebLOAD Recorder allows you to include external files within your JavaScript program. This facilitates modular programming, where you may develop different recyclable modules of JavaScript source code to be reused by different test scripts. Rather than inserting the complete original source code text over and over again into the body of each script, use the `IncludeFile()` command to make all functions defined within the included file available to all including scripts.
 
 #### Adding an IncludeFile() Function
 
-IncludeFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in Editing the Editing the JavaScript Code.
+`IncludeFile()` functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [Editing the JavaScript Code](#editing-the-javascript-code-in-a-script).
 
 **To insert an IncludeFile function:**
 
-- While working in JavaScript Editing mode, right-click the JavaScript Pane and select **Insert** > **JavaScript** > **Copy/Include Files** from the pop-up menu that appears. Select the IncludeFile() function from the sub-menu.
+- While working in JavaScript Editing mode, right-click the JavaScript Pane and select **Insert** > **JavaScript** > **Copy/Include Files** from the pop-up menu that appears. Select the `IncludeFile()` function from the sub-menu.
 
 
 
 WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
 
+<a name = "includefile_function_insertion"></a>
 ![IncludeFile() Function Insertion using Copy/Include Files Menu](../images/script_guide_031.png)
 
 
@@ -383,22 +382,22 @@ See the *WebLOAD JavaScript Reference Guide* for a complete syntax specification
 
 WebLOAD assumes that the source file is located in the default directory specified in the File Locations tab in the **Tools > Global Options** dialog box in the WebLOAD Console desktop, illustrated in the following figure:
 
-![File Locations Tab]()
+![File Locations Tab](../images/file_location_tab.png)
 
 
 
 Included files by default should be in the User Include Files directory specified in the File Locations dialog box. You may reset the default directory location if necessary by selecting the User Include Files entry and clicking **Modify**. You can select a new file location from the pop-up Browse for Folder dialog box and click **OK**. In general, the system searches for the included file using the following search precedence:
 
 - The load engine first looks for the included file in the default User Include Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
-  1. If a full path name has been hardcoded into the IncludeFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
+    1. If a full path name has been hardcoded into the IncludeFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
   
-     > **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
+       > **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
   
-  2. Assuming no hardcoded full path name in the script code, the system looks for the file in the default User Include Files directory.
+    1. Assuming no hardcoded full path name in the script code, the system looks for the file in the default User Include Files directory.
   
-  3. If the file is not found, the system looks for the file in the current working directory, the directory from which WebLOAD or WebLOAD Recorder was originally executed.
+    1. If the file is not found, the system looks for the file in the current working directory, the directory from which WebLOAD or WebLOAD Recorder was originally executed.
   
-  4. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
+    1. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
 
 
 
@@ -406,7 +405,7 @@ Included files by default should be in the User Include Files directory specifie
 
 Included files are files whose functions and other contents are included and accessible from the current script file without the file text actually appearing within the script.
 
-Use included files to take advantage of an external library of modular functions without adding extra lines of code to your script, improving the clarity of your script code while saving both script space and development time. For example, in the following script fragment, the external file myjs.js is included within the InitAgenda() initialization function. One of the functions within that included file, sayHello(), is later accessed within the main body of the script. The text of the sayHello() is embedded in a nearby comment for easy reference.
+Use included files to take advantage of an external library of modular functions without adding extra lines of code to your script, improving the clarity of your script code while saving both script space and development time. For example, in the following script fragment, the external file `myjs.js` is included within the `InitAgenda()` initialization function. One of the functions within that included file, `sayHello()`, is later accessed within the main body of the script. The text of the `sayHello()` is embedded in a nearby comment for easy reference.
 
 ```javascript
 function InitAgenda()
@@ -453,17 +452,17 @@ WebLOAD enables text and binary data file copying from the Console to a Load Gen
 
 #### Adding a CopyFile() Function
 
-CopyFile() functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in Script](#editing-the-javascript-code-in-a-script).
+`CopyFile()` functions can be added directly to a JavaScript Object in a script through the IntelliSense Editor, as described in [*Editing the JavaScript Code in Script*](#editing-the-javascript-code-in-a-script).
 
 **To insert a CopyFile function:**
 
 - While working in JavaScript Editing mode, right-click the JavaScript Pane and select **Insert** > **Copy/Include Files** from the pop-up menu that appears.
 
-  Select the preferred CopyFile() function from the sub-menu (see Figure 8).
+   Select the preferred CopyFile() function from the sub-menu (see [Figure](#includefile_function_insertion)).
 
 WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
 
-For example, to copy the auxiliary file src.txt, located on the Console, to the destination file dest.txt on the current Load Generator, your script file should include the following command:
+For example, to copy the auxiliary file `src.txt`, located on the Console, to the destination file `dest.txt` on the current Load Generator, your script file should include the following command:
 
 ```javascript
 function InitAgenda() {
@@ -479,8 +478,6 @@ CopyFile(“src.txt”, “dest.txt”)
 
 You may then access the file as usual in the main body of the script. For example:
 
-
-
 `DataArr = GetLine(“dest.txt”)`
 
 See the *JavaScript Reference Guide* for a complete syntax specification.
@@ -489,41 +486,43 @@ See the *JavaScript Reference Guide* for a complete syntax specification.
 
 WebLOAD assumes that the source file is located on the Console in the default directory identified in the **File Locations** tab of the **Tools > Global Options** dialog box in the Console desktop, illustrated in the following figure:
 
-![File Locations Dialog Box]()
+![File Locations Dialog Box](../images/file_locations_dialog_box.png)
 
 
 
 Files to be copied by default should be in the User Copy Files directory specified in the File Locations dialog box. You may reset the default directory location if necessary by selecting the User Copy Files entry and clicking **Modify**. You can select a new file location from the pop-up Browse for Folder dialog box and click **OK**. Remember that WebLOAD does not create new directories, so any directories specified as source or target directories must already exist. In general, the system searches for the file using the following search precedence:
 
-The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
+- The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
 
-1. If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
+    1. If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
 
-   > **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
+        > **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
 
    
 
-2. Assuming no hardcoded full path name in the script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
+    1. Assuming no hardcoded full path name in the script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
 
-1. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
+    1. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
 
 ### Output Files
 
 #### Writing script Output Messages to a File
 
-Realistic testing requires multiple testing passes using a variety of realistic scenarios. The resulting output data should be stored in output files for later access, verification, study, and analysis. WebLOAD Recorder provides the wlOutputFile object to simplify saving script output. See the *WebLOAD JavaScript Reference Guide* for a complete syntax specification. This section will provide a brief introduction to the wlOutputFile object.
+Realistic testing requires multiple testing passes using a variety of realistic scenarios. The resulting output data should be stored in output files for later access, verification, study, and analysis. WebLOAD Recorder provides the `wlOutputFile` object to simplify saving script output. See the *WebLOAD JavaScript Reference Guide* for a complete syntax specification. This section will provide a brief introduction to the `wlOutputFile` object.
 
-The wlOutputFile object lets you write script output messages to an output file. Declaring a new wlOutputFile object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a unique filename for the new output file if you do not want to overwrite previous script data.
+The `wlOutputFile` object lets you write script output messages to an output file. Declaring a new `wlOutputFile` object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a unique filename for the new output file if you do not want to overwrite previous script data.
 
 ##### Adding the wlOutputFile Object
 
-The wlOutputFile object can be added directly to a JavaScript Object in a script through the [IntelliSense Editor](#using-the-intellisense-javascript-editor). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlOutputFile object, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available constructor and methods for the wlOutputFile object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop-up menu, and selecting one of the available items. WebLOAD Recorder automatically inserts the correct code for the selected command into the JavaScript Object currently being edited. The user may then change the parameters without any worries about mistakes in the object syntax.
+The `wlOutputFile` object can be added directly to a JavaScript Object in a script through the [IntelliSense Editor](#using-the-intellisense-javascript-editor). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a `wlOutputFile` object, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available constructor and methods for the `wlOutputFile` object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop-up menu, and selecting one of the available items. WebLOAD Recorder automatically inserts the correct code for the selected command into the JavaScript Object currently being edited. The user may then change the parameters without any worries about mistakes in the object syntax.
 
 ![wlOutputFile() Insertion using General Menu](../images/script_guide_034.png)
 
 
 
-The preceding figure highlights the standard JavaScript syntax to create and work with wlOutputFile objects. For example:
+The preceding figure highlights the standard JavaScript syntax to create and work with `wlOutputFile` objects.
+
+ For example:
 
 `MyFileObj = new wlOutputFile(“filename”)`
 
@@ -535,25 +534,25 @@ The preceding figure highlights the standard JavaScript syntax to create and wor
 
 `delete MyFileObj`
 
-> **Note:** The wlOutputFile object saves script output messages. To save server response data, use the Outfile property described in [*Saving Server Output to a File* ](#saving-server-output-to-a-file).
+> **Note:** The `wlOutputFile` object saves script output messages. To save server response data, use the Outfile property described in [*Saving Server Output to a File* ](#saving-server-output-to-a-file).
 
 
 
 ##### wlOutputFile Object Scope Limitations
 
-If you declare a new wlOutputFile object in the InitAgenda() function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence—each thread will write to the output file in real time as it reaches that line in the script execution.
+If you declare a new `wlOutputFile` object in the `InitAgenda()` function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence—each thread will write to the output file in real time as it reaches that line in the script execution.
 
-If you declare a new wlOutputFile object in the InitClient() function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
+If you declare a new `wlOutputFile` object in the `InitClient()` function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
 
-If you declare a new wlOutputFile object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.
+If you declare a new `wlOutputFile` object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.
 
-Generally, you should only create new wlOutputFile objects in the InitAgenda() or InitClient() functions of a script, not in the main script. If a statement in the main script creates an object, *a new object is created each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
+Generally, you should only create new `wlOutputFile` objects in the `InitAgenda() `or `InitClient()` functions of a script, not in the main script. If a statement in the main script creates an object, *a new object is created each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
 
 #### Saving Server Output to a File
 
-It is often important to save server response data for later study and analysis. WebLOAD and WebLOAD Recorder provide the Outfile property for this purpose. Outfile is a property of the wlGlobals, wlLocals, and wlHttp objects. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification.
+It is often important to save server response data for later study and analysis. WebLOAD and WebLOAD Recorder provide the `Outfile` property for this purpose. Outfile is a property of the `wlGlobals`, `wlLocals`, and `wlHttp` objects. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification.
 
-The following script shows a typical entry to a server output file. The ClientNum and RoundNum global variables are used to distinguish between script instances in the server output file entries.
+The following script shows a typical entry to a server output file. The `ClientNum` and `RoundNum` global variables are used to distinguish between script instances in the server output file entries.
 
 ```javascript
 // Main script actions go here
@@ -569,7 +568,7 @@ The following script shows a typical entry to a server output file. The ClientNu
 // <fullpath>\SessionOutput.<ClientNum.RoundNum>.html wlHttp.Outfile = "c:\\webld\\SessionOutput." ClientNum + "." + RoundNum + ".html"
 ```
 
-The Outfile property can be added directly to a JavaScript Object in a script through the IntelliSense Editor.
+The `Outfile` property can be added directly to a JavaScript Object in a script through the IntelliSense Editor.
 
 
 
@@ -615,7 +614,10 @@ There are three approaches to setting these properties, corresponding to the des
 
 For example, set the user name and password using either of the following approaches:
 
-wlGlobals.UserName = "Bill" `wlGlobals.PassWord` = "TopSecret"
+```
+wlGlobals.UserName = "Bill" 
+wlGlobals.PassWord` = "TopSecret"
+```
 
 
 
@@ -661,9 +663,9 @@ These properties and functions work on two levels:
 
 See the *WebLOAD JavaScript Reference Guide* for complete syntax specifications for the wlGlobals SSL property set and the Cipher Command Suite.
 
-> **Note:** The SSL configuration for your test session is usually set through dialog boxes in the Console. You may change the default session settings within your script, using either the wlGlobals properties or the Cipher Command Suite functions. While the SSL property set is also defined for the wlHttp and wlLocals objects, RadView strongly recommends using these properties with the wlGlobals object *only*.
+> **Note:** The SSL configuration for your test session is usually set through dialog boxes in the Console. You may change the default session settings within your script, using either the `wlGlobals` properties or the Cipher Command Suite functions. While the SSL property set is also defined for the wlHttp and `wlLocals` objects, RadView strongly recommends using these properties with the `wlGlobals` object *only*.
 
-Any changes to a script’s SSL property configuration must be made in the script’s initialization functions. Configuration changes made in the InitAgenda() function will affect all client threads spawned during that script’s test session. Configuration changes made in the InitClient() function will affect only individual clients. Do not make changes to the SSL property configuration in a script’s main body. The results will be undefined for all subsequent transactions.
+Any changes to a script’s SSL property configuration must be made in the script’s initialization functions. Configuration changes made in the `InitAgenda()` function will affect all client threads spawned during that script’s test session. Configuration changes made in the `InitClient()` function will affect only individual clients. Do not make changes to the SSL property configuration in a script’s main body. The results will be undefined for all subsequent transactions.
 
 
 
@@ -692,9 +694,7 @@ SSL Cipher Command Suite provides the ability to:
 - Get information about a specific cipher, identified by name or ID number.
 - Learn the number of ciphers enabled during the current test session. The wlGlobals SSL property set provides the ability to:
 - Support use of SSL client certificates by supplying the certificate filename and password to the SSL server.
-- Enable caching of SSL decoding keys received from an SSL (HTTPS) server. Complete syntax specifications for the SSL Cipher Command Suite and the
-
-  wlGlobals SSL property set are available in the *WebLOAD JavaScript Reference Guide*.
+- Enable caching of SSL decoding keys received from an SSL (HTTPS) server. Complete syntax specifications for the SSL Cipher Command Suite and the `wlGlobals` SSL property set are available in the *WebLOAD JavaScript Reference Guide*.
 
 
 
@@ -726,11 +726,11 @@ On the most basic level, you may simply insert message functions into your scrip
 
 Choose from four possible message levels:
 
-- InfoMessage()— prints a simple informative message to the Log window. Has no affect on script execution.
-- WarningMessage()— prints a warning message to the Log window. Has no affect on script execution.
-- ErrorMessage()— prints an error message to the Log window. Causes the current test round to abort, but the test session continues with the start of the next round.
-- SevereErrorMessage()— prints an error message to the Log window and stops the current test session.
-- DebugMessage()— prints a message to the WebLOAD Recorder Log window. Has no affect on script execution.
+- `InfoMessage()`— prints a simple informative message to the Log window. Has no affect on script execution.
+- `WarningMessage()`— prints a warning message to the Log window. Has no affect on script execution.
+- `ErrorMessage()`— prints an error message to the Log window. Causes the current test round to abort, but the test session continues with the start of the next round.
+- `SevereErrorMessage()`— prints an error message to the Log window and stops the current test session.
+- `DebugMessage()`— prints a message to the WebLOAD Recorder Log window. Has no affect on script execution.
 
 
 
@@ -740,10 +740,10 @@ You may also manage errors by checking function return codes, both for built-in 
 
 WebLOAD and WebLOAD Recorder include the following error levels:
 
-- WLSuccess — the activity terminated successfully.
-- WLMinorError — this specific activity failed, but the test session may continue as usual. The script displays a warning message in the Log window and continues execution from the next statement.
-- WLError — this specific activity failed and the current test round was aborted. The script displays an error message in the Log window and begins a new round.
-- WLSevereError — this specific activity failed and the test session must be stopped completely. The script displays an error message in the Log window and the Load Generator on which the error occurred is stopped.
+- `WLSuccess` — the activity terminated successfully.
+- `WLMinorError` — this specific activity failed, but the test session may continue as usual. The script displays a warning message in the Log window and continues execution from the next statement.
+- `WLError` — this specific activity failed and the current test round was aborted. The script displays an error message in the Log window and begins a new round.
+- `WLSevereError` — this specific activity failed and the test session must be stopped completely. The script displays an error message in the Log window and the Load Generator on which the error occurred is stopped.
 
 
 
@@ -753,9 +753,9 @@ WebLOAD and WebLOAD Recorder include the following error levels:
 
 #### Variable Activity Blocks
 
-WebLOAD Recorder offers an additional level of error management, which can be manually added to a script. This is done by the try()/catch() function pair. Users may add try()/catch() pairs around their own logical blocks of code, through the IntelliSense Editor.
+WebLOAD Recorder offers an additional level of error management, which can be manually added to a script. This is done by the `try()/catch()` function pair. Users may add `try()/catch()` pairs around their own logical blocks of code, through the IntelliSense Editor.
 
-The try()/catch() pair of error handling functions allows users to catch errors, skip a single set of corrupted activities, and still continue with the current round. Use these functions to delimit a specific logical activity unit and define an alternate error- handling routine to be executed in case an error occurs within that block of code. The try()/catch() functions limit the scope of an error to individual logical component branches of your script tree.
+The `try()/catch()` pair of error handling functions allows users to catch errors, skip a single set of corrupted activities, and still continue with the current round. Use these functions to delimit a specific logical activity unit and define an alternate error- handling routine to be executed in case an error occurs within that block of code. The `try()/catch()` functions limit the scope of an error to individual logical component branches of your script tree.
 
 Limited scope for an error has two advantages:
 
@@ -774,11 +774,11 @@ The **Pass/Fail Definition** tab of the **Tools > Default or Global Project Opti
 
 Scripts that encounter an error during runtime do not simply fail and die. This would not be helpful to testers who are trying to analyze when, where, and why an error in their application occurs. WebLOAD scripts incorporate a set of error management routines to provide a robust error logging and recovery mechanism whenever possible. The wlException object is part of the WebLOAD error management protocol.
 
-WebLOAD users have a variety of options for error recovery during a test session. The built-in error flags provide the simplest set of options; an informative message, a simple warning, stop the current round and skip to the beginning of the next round, or stop the test session completely. Users may also use try()/catch() commands to enclose logical blocks of code within a round. This provides the option of catching any minor errors that occur within the enclosed block and continuing with the next logical block of code within the current round, rather than skipping the rest of the round completely.
+WebLOAD users have a variety of options for error recovery during a test session. The built-in error flags provide the simplest set of options; an informative message, a simple warning, stop the current round and skip to the beginning of the next round, or stop the test session completely. Users may also use `try()/catch()` commands to enclose logical blocks of code within a round. This provides the option of catching any minor errors that occur within the enclosed block and continuing with the next logical block of code within the current round, rather than skipping the rest of the round completely.
 
-Users may add their own try()/catch() pairs to a script, delimiting their own logical code blocks and defining their own alternate set of activities to be executed in case an error occurs within that block. If an error is caught while the script is in the middle of executing the code within a protected logical code block (by try()), WebLOAD will detour to a user-defined error function (the catch() block) and then continue execution with the next navigation block in the script.
+Users may add their own `try()/catch()` pairs to a script, delimiting their own logical code blocks and defining their own alternate set of activities to be executed in case an error occurs within that block. If an error is caught while the script is in the middle of executing the code within a protected logical code block (by `try()`), WebLOAD will detour to a user-defined error function (the `catch()` block) and then continue execution with the next navigation block in the script.
 
-wlException objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a try()/catch() pair may utilize the wlException object. Use the wlException methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.
+wlException objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a `try()/catch()` pair may utilize the wlException object. Use the wlException methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.
 
 **Example**
 
