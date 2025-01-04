@@ -282,7 +282,7 @@ You can customize various general dashboard settings.
 
 Templating enables the creation of highly interactive and dynamic dashboards. Instead of hard-coding things like server, application and sensor name in you metric queries you can use variables in their place. Variables are shown as dropdown select boxes at the top of the dashboard. These dropdowns make it easy to change the data being displayed in your dashboard. 
 
-For more information, refer to[ http://docs.grafana.org/reference/templating/.](http://docs.grafana.org/reference/templating/) 
+For more information, refer to [Grafana Templating](./grafana/reference/templating.md)
 
 
 
@@ -290,6 +290,4 @@ For more information, refer to[ http://docs.grafana.org/reference/templating/.](
 
 Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get title, tags, and text information for the event. 
 
-For more information, refer to[ http://docs.grafana.org/reference/annotations/.](http://docs.grafana.org/reference/annotations/)
-
-`                             `
+For more information, refer to[Grafana Annotations](./grafana/reference/annotations.md)

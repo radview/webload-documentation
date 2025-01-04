@@ -17,7 +17,7 @@ The WebLOAD Dashboard includes the following main components:
 You can change the back-end configuration by creating a file called `custom.ini` in 
 `C:\Program Files (x86)\RadView\WebLOAD\dashboard\grafana\conf`. 
 
-Use the `default.ini`, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the Grafana documentation at [http://docs.grafana.org/installation/configuration/](http://docs.grafana.org/installation/configuration/)
+Use the `default.ini`, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the [Grafana documentation](./grafana/installation/configuration.md)
 
 
 
@@ -96,5 +96,3 @@ In addition, if you wish to import remote database sessions from the WebLOAD Con
     ![Database Tab](../images/database_tab.png)
 
 1. In the **Database configuration** section, enter the details of the remote database.
-
-`                             `
