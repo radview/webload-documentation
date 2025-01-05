@@ -67,8 +67,7 @@ This is helpful when defining a load test, because of the relationship between N
 
    Finally: 
 
- - You need only to select “Windows”, “Linux”, “New York” or “London” in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included. ![ref10]
-
+ - You need only to select “Windows”, “Linux”, “New York” or “London” in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included.
 
 
 ## Specifying a Cloud Host as a Load Generator

@@ -112,7 +112,7 @@ Install the WebLOAD components as follows:
   - If you do not select this option, TestTalk is installed as an executable file. 
 - Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. 
 
-> **Note:** The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[Registering and Updating the WebLOAD License](#registering-and-updating-the-webload-license). 
+> **Note:** The installation process is the same for Load Machines and Probing Clients. When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[Registering and Updating the WebLOAD License](#registering-and-updating-the-webload-license). 
 
 
 
@@ -293,7 +293,7 @@ This chapter contains the instructions for installing the WebLOAD Load Engine on
 
 When running the Load Engine on Linux, Load Engine runs with TestTalk. TestTalk enables communication between the different components of the WebLOAD module. When running the Load Generator through Linux you generally need to connect with other WebLOAD modules running on a remote Windows machine (for example WebLOAD Console). To connect with these remote modules, you must run TestTalk. Once TestTalk is running, you can access the remote WebLOAD modules. The remote module then initiates the communication with TestTalk and then TestTalk loads the Load Generator. 
 
-> **Note:** If the Load Generator is running and TestTalk is not running, the remote ![ref8] WebLOAD application will not be able to access the Load Generator. 
+> **Note:** If the Load Generator is running and TestTalk is not running, the remote  WebLOAD application will not be able to access the Load Generator. 
 
 **To run TestTalk on your system:** 
 
@@ -329,7 +329,7 @@ You can register and update your WebLOAD license either through an Update Licens
 
 **To open the Update License dialog box:** 
 
-- At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the** License** dialog box opens automatically, ![ref10]
+- At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the** License** dialog box opens automatically, 
 
   **Note:** After a WebLOAD installation, you may be prompted to restart your computer before the Update License dialog box appears. In this case, the License dialog box will appear automatically after the computer restarts. 
 
@@ -400,7 +400,7 @@ You can install a trial version of WebLOAD, which provides 50 virtual clients, a
 
    To open the Update License dialog box manually, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License.** 
 
-   The Update License dialog box appears. ![ref2]
+   The Update License dialog box appears.
 
 ![Update License Dialog Box](images/30day_update_licesne.png)
 
@@ -422,8 +422,7 @@ During installation of the WebRM server, you are prompted for the WebRM file tha
 - The number of concurrent applications for the WebLOAD Console. 
 - The number of concurrent Virtual and Probing Clients. 
 
-Installation also creates a FlexLM Service that controls the operation. ![ref2]
-
+Installation also creates a FlexLM Service that controls the operation. 
 
 
 
@@ -471,7 +470,7 @@ You can register or upload a WebLOAD license through a command line interface. Y
 
 Connecting to the Oracle Database using WebLOAD requires that you install the Oracle Data Access Components (ODAC) on your computer. For information on ODAC, refer to the appropriate Oracle documentation. 
 
-> **Note:** You need to be assigned a valid username and user privileges for Oracle so that ![ref8] you can connect to the Oracle database. 
+> **Note:** You need to be assigned a valid username and user privileges for Oracle so that you can connect to the Oracle database. 
 
 The following procedure is confirmed to work with Oracle Database version 11*g*, and is also expected to work with Oracle Database version 10*g*. 
 

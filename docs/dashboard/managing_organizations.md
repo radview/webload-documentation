@@ -18,7 +18,7 @@ As an Organizational administrator, you can add Data Sources, add Users to your 
 
 Super Administrators
 
-As a Super Administrator, you have complete access to any Organization or User in a specific WebLOAD Dashboard installation. When logged in as super admin, the menu bar contains an additional **Admin** option to enable you to perform global administration actions. ![ref28]
+As a Super Administrator, you have complete access to any Organization or User in a specific WebLOAD Dashboard installation. When logged in as super admin, the menu bar contains an additional **Admin** option to enable you to perform global administration actions. 
 
 ![Admin Options for Super Admin Users](../images/admin_options_super_admin.png)
 

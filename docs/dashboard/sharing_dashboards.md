@@ -68,14 +68,14 @@ You can export a dashboard as a JSON file, and import dashboards that were saved
 
     A JSON file of the dashboard is created in your Downloads directory. Its name is the dashboard name followed by the current timestamp. 
 
-Note that you can view the contents of the JSON file in the dashboard. To do so, click the Manage Dashboard Settings icon ![ref26] in the middle of the dashboard header, and select **View JSON**. 
+Note that you can view the contents of the JSON file in the dashboard. To do so, click the Manage Dashboard Settings icon in the middle of the dashboard header, and select **View JSON**. 
 
 ## Sharing a Panel
 
 Sharing a panel is similar to sharing a dashboard. Panel sharing is often useful when you want to share a specific segment (time range) of a panel. The following panel sharing options are available: 
 
 - **Link** - Produces a link for sharing, with other WebLOAD Dashboard users, this panel with the current time range and selected template variables. 
-- **Embed** - Produces the HTML code that you need to use if you wish to embed a panel using an iframe on another web site. ![ref10]
+- **Embed** - Produces the HTML code that you need to use if you wish to embed a panel using an iframe on another web site.
 
 ### Accessing the Share Panel Options
 

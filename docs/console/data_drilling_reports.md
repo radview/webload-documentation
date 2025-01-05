@@ -15,7 +15,7 @@ Data Drilling provides both a global and detailed account of hit successes and f
 
   Click a specific entry to zoom in on the detailed information available for that action. For each HTTP action tested and verified by your test script, WebLOAD Console provides a complete breakdown of all relevant information, including:
 
-  - ![ref7]A hierarchical tree of all the ‘sub-steps’ needed to complete the specified action. For example, a single Get of a simple Web page may include multiple ‘sub-Gets’ or hits of the various frames found on that page, each with its own pictures and tables, each of which is also listed with its own ‘sub-sub-Get’.
+  - A hierarchical tree of all the ‘sub-steps’ needed to complete the specified action. For example, a single Get of a simple Web page may include multiple ‘sub-Gets’ or hits of the various frames found on that page, each with its own pictures and tables, each of which is also listed with its own ‘sub-sub-Get’.
   
     > **Note:** WebLOAD Console works with the ‘visual set’ of Web page elements associated with each action. Only the targeted frames that were actually accessed during a specific action will be saved as part of the DOM for that action, and not necessarily every single peripheral frame associated with the parent Web page.
 

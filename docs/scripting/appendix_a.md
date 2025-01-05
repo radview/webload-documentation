@@ -102,7 +102,7 @@ The site approves your login information and the WebLOAD MP Store home page appe
 
 #### Step 4 – Saving the script
 
-1. In WebLOAD Recorder, click ![ref24] to stop recording the script.
+1. In WebLOAD Recorder, click to stop recording the script.
 1. Select **File > Save As** to save the script. The Save As dialog box appears.
 1. In the Save As dialog box browse to the following location: D:\\Radview\\<Sample scripts folder>\\ script 1-Basic Recording script.wlp
 1. Click **Save**.

@@ -97,7 +97,7 @@ Using the Goal-Oriented Test Wizard you can run your test using a saved Mix or c
 
 ![](../images/console_users_guide_1015.png)![](../images/console_users_guide_1016.png)
 
-![](../images/console_users_guide_1017.png)![ref7]![](../images/console_users_guide_1018.png)![](../images/console_users_guide_1019.png)![](../images/console_users_guide_1020.png)
+![](../images/console_users_guide_1017.png)![](../images/console_users_guide_1018.png)![](../images/console_users_guide_1019.png)![](../images/console_users_guide_1020.png)
 
 Using Mix you can prepare a combination of scripts, each performing a specific activity. Then you can tune your testing by changing the combination of scripts, and changing the weight of each script in the Mix.
 
@@ -109,7 +109,7 @@ Combining scripts through a Mix can simulate different groups of users performin
 
 1. Select the source for the Script Mix to be used for this test from the **Mix Selection** dialog box. You can either:
 
-   - Select **Use an Existing Mix** and click the  ![ref6] button to select a \*.mix file from your system.
+   - Select **Use an Existing Mix** and click the  button to select a \*.mix file from your system.
    - Select **Create a Mix** to configure a new Mix.
 2. Click **Next**.
 
@@ -138,7 +138,7 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
    1. **Script name** – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.
    2. **Weight** – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.
-   3. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button ![ref9] to edit the user agent definition. 
+   3. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button to edit the user agent definition. 
    4. **Bandwidth** – Specify a bandwidth. You can do this in one of two ways:
       - Select a bandwidth from the drop-down list.
       - Enter a number, to specify that number of bits per second.
@@ -240,7 +240,7 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 1. Select a host from the Host Computer window.
 
    To add hosts not yet defined to the Host Computer window, see [*Adding Host Computers to the Host Computers List* ](#adding-host-computers-to-the-host-computers-list).
-2. Click the single arrow key ![ref11] adjacent to the Load Machine or Probing Clients window.
+2. Click the single arrow key adjacent to the Load Machine or Probing Clients window.
 
    The selected host moves to the Load Machine or Probing Clients window.
 3. Repeat steps 1 and 2 to define all of the hosts participating in the test.

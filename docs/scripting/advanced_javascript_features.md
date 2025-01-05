@@ -26,9 +26,9 @@ WebLOAD supports:
 
 Both WebLOAD and the IE Browser use the MSXML parser to create XML DOM objects. Since WebLOAD XML DOM objects and Browser XML DOM objects are created by the same MSXML parser, the XML DOM objects that are produced for both WebLOAD and the IE Browser are identical.
 
-When working through the IE Browser, XML DOM objects are accessed through the all collection. When working through WebLOAD, XML DOM objects are accessed through the wlXmls collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.
+When working through the IE Browser, XML DOM objects are accessed through the `all` collection. When working through WebLOAD, XML DOM objects are accessed through the `wlXmls` collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.
 
-The next few sections of this guide explain basic XML concepts and usage. Look in the *WebLOAD JavaScript Reference Guide* for a description of the WebLOAD wlXmls collection syntax and for a complete list of the WebLOAD-supported XML DOM Interfaces.
+The next few sections of this guide explain basic XML concepts and usage. Look in the *WebLOAD JavaScript Reference Guide* for a description of the WebLOAD `wlXmls` collection syntax and for a complete list of the WebLOAD-supported XML DOM Interfaces.
 
 For more general XML support and cross platform capabilities, WebLOAD offers the XMLParserObject as another alternative for accessing XML data. The XMLParserObject is based on the open source Xerces XML parser. In addition to the multi-platform support, using this object will result in lower memory consumption and increased performance during load testing.
 
@@ -44,15 +44,18 @@ WebLOAD XML DOM objects produced from HTML documents may be used on two differen
 - On a more sophisticated level, programmers may use the same XML DOM object to work with a full set of XML DOM Document Interface properties and methods, as listed in *Appendix B* of the *WebLOAD JavaScript Reference Guide*. The following figure illustrates these options:
 
 
+<a name = "xml_dom_acess_options"></a>
+
+![XML DOM Object Options](../images/xml_dom_acess_options.png)
+
+
 
 ### **Data Islands**
-Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of `<xml>` and `</xml>` tags or between a set of `<script>` and `</script>` tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a src=location statement.
+Data Islands are XML documents embedded within HTML documents. Data Islands found on HTML documents are located either between a set of `<xml>` and `</xml>` tags or between a set of `<script>` and `</script>` tags. Data Islands consist of either a complete body of in-line XML code or a reference to XML code found in another location, with the location specified in a `src=location` statement.
 
-WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of `<xml>` tags or a set of `<script>` tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the wlXmls collection.
+WebLOAD, like the Internet Explorer browser, produces an XML DOM object for each Data Island. No matter how a Data Island is specified, either within a set of `<xml>` tags or a set of `<script>` tags, either as in-line XML code or through a reference to another location, WebLOAD produces a full XML DOM object for each Data Island. These XML DOM objects are accessible through the `wlXmls` collection.
 
-
-
-Data Island XML DOM objects expose both aspects of each XML DOM object:
+Data Island XML DOM objects expose both aspects of each [XML DOM object](#xml_dom_acess_options):
 
 - The standard HTML properties id, src, and innerHTML. These properties refer to text strings found within the HTML document.
 - The XML Document Interface. The interface provides access to the properties and methods of the XML DOM object.
@@ -62,6 +65,7 @@ The following figure illustrates the various Data Islands options.
 > **Note:** Not all these Data Islands would be found in a single wlXmls collection if they have been taken from different sources. They appear here in a single figure to illustrate the various Data Island possibilities.
 
 
+![Data Island Possibilities](../images/data_island_possibilities.png)
 
 Data Islands are accessible through WebLOAD scripts using the wlXmls collection of XML DOM objects corresponding to all the Data Islands found in an HTML document. Each Data Island produces a different XML DOM object.
 
@@ -99,44 +103,25 @@ In this code fragment, in-line XML data is embedded in the HTML page. WebLOAD us
 
 ```html
 <html>
-
-<head>
-
-
-...
-
-</head>
-
-<body>
-
-...
-
-<!—in-line XML data>
-
-<xml id="xmldoc\_1">
-
-<?xml version="1.0" standalone = true?> Programmer’s Guide
-
-<author>Mark Twain</author>
-
-<title>Tom Sawyer</title>
-
-<price>$11.00</price>
-
-</book>
-
-<foo>
-
-...
-
-</foo>
-
-</xml>
-
-...
-
-</body>
-
+   <head>
+       ...
+   </head>
+   <body>
+       ...
+       <!—in-line XML data>
+       <xml id="xmldoc\_1">
+       <?xml version="1.0" standalone = true?> 
+       Programmer’s Guide
+             <author>Mark Twain</author>
+             <title>Tom Sawyer</title>
+             <price>$11.00</price>
+        </book>
+        <foo>
+             ...
+        </foo>
+     </xml>
+     ...
+   </body>
 </html>
 ```
 
@@ -146,34 +131,20 @@ In this code fragment, in-line XML data is embedded in the HTML page. WebLOAD us
 
 In this code fragment, a reference to XML data found at another location is found in the HTML page. WebLOAD creates an XML DOM object from the source found at that location *only*.
 
-> **Note:** If a Data Island includes an src=location statement, then any additional XML data found embedded within the Data Island on the HTML page will be ignored.
+> **Note:** If a Data Island includes an `src=location` statement, then any additional XML data found embedded within the Data Island on the HTML page will be ignored.
 
 ```html
 <html>
-
-<head>
-
-
-
-
-...
-
-</head>
-
-<body>
-
-...
-
-<!—reference to another source>
-
-<xml id=“xmldoc\_2” [src=“http://demo/bookstore.xml”>](http://demo/bookstore.xml)
-
-</xml>
-
-...
-
-</body>
-
+   <head>
+      ...
+   </head>
+   <body>
+      ...
+      <!—reference to another source>
+      <xml id=“xmldoc\_2” src=“http://demo/bookstore.xml”>
+      </xml>
+      ...
+   </body>
 </html>
 ```
 
@@ -188,33 +159,20 @@ For example:
 ```xml
 
 <SCRIPT language=“xml” id=“xmlscript”>
-
-<?xml version="1.0”?>
-
-<!—XML data in-line within a script element.>
-
-<bookstore>
-
-Programmer’s Guide
-
-<author>Mark Twain</author>
-
-<title>Tom Sawyer</title>
-
-<price>$11.00</price>
-
-</book> Programmer’s Guide
-
-<author>Oscar Wilde</author>
-
-<title>The Giant And His Garden</title>
-
-<price>$8.00</price>
-
-</book>
-
-</bookstore>
-
+   <?xml version="1.0”?>
+   <!—XML data in-line within a script element.>
+   <bookstore>
+      Programmer’s Guide
+          <author>Mark Twain</author>
+          <title>Tom Sawyer</title>
+          <price>$11.00</price>
+    </book> 
+      Programmer’s Guide
+          <author>Oscar Wilde</author>
+          <title>The Giant And His Garden</title>
+          <price>$8.00</price>
+    </book> 
+  </bookstore>
 </SCRIPT>
 ```
 
@@ -223,83 +181,47 @@ Programmer’s Guide
 #### Data Island—Scripted Reference to Another Source
 
 The preceding code illustrates XML data embedded in a script. Scripts may also include references to other sources:
-
+```xml
 <SCRIPT language=“xml” id=“xmlscript” src=“book.xml”>
 
 </SCRIPT>
-
+```
 
 
 ### Example: Using Data Islands in a script
 
 The following example illustrates Data Island usage. Assume you are working with a Web Bookstore site that includes the following inventory database code fragment:
 
-```
-<HTML>
-
-<HEAD>
-
-
-<TITLE> </TITLE>
-
-</HEAD>
-
-<BODY>
-```
-
-
-
-<h3>Html file with embedded XML</h3>
-
-<P>Here begins the XML Data Island</P>
-
 ```html
-<xml id="WebStudents">
-
-<wclass>
-
-<!-- My students who attended my web programming class -
-
-->
-
-<student id="1">
-
-<name>Linda Jones</name>
-
-<legacySkill>Access, VB5.0</legacySkill>
-
-</student>
-
-<student id="2">
-
-<name>Adam Davidson</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
-<student id="3">
-
-<name>Charles Boyer</name>
-
-<legacySkill>HTML, Photoshop</legacySkill>
-
-</student>
-
-<student id="4">
-
-<name>Charles Mann</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
-</wclass>
-
-</xml>	<P>Here ends the XML Data Island</P>
-
-</BODY>
-
+<HTML>
+   <HEAD>
+     <TITLE> </TITLE>
+   </HEAD>
+   <BODY>
+     <h3>Html file with embedded XML</h3>
+     <P>Here begins the XML Data Island</P>
+          <xml id="WebStudents">
+     <wclass>
+      <!-- My students who attended my web programming class -->
+      <student id="1">
+           <name>Linda Jones</name>
+           <legacySkill>Access, VB5.0</legacySkill>
+      </student>
+      <student id="2">
+           <name>Adam Davidson</name>
+           <legacySkill>Cobol, MainFrame</legacySkill>
+      </student>
+      <student id="3">
+           <name>Charles Boyer</name>
+           <legacySkill>HTML, Photoshop</legacySkill>
+      </student>
+      <student id="4">
+           <name>Charles Mann</name>
+           <legacySkill>Cobol, MainFrame</legacySkill>
+      </student>
+      </wclass>
+      </xml>	<P>Here ends the XML Data Island</P>
+   </BODY>
 </HTML>
 ```
 
@@ -324,7 +246,7 @@ wlGlobals.Parse = true wlGlobals.ParseXML = true
 
 wlHttp.SaveSource = true
 
-[wlHttp.Get("http://www.webloadmpsto](http://www.webloadmpstore.com/xmlsamples/sample2.htm)re.com/[xmlsamples/sample2.htm](http://www.webloadmpstore.com/xmlsamples/sample2.htm) l")
+wlHttp.Get(http://www.webloadmpstore.com/xmlsamples/sample2.html")
 
 var XMLstudents = document.wlXmls[0] 
 
@@ -338,47 +260,29 @@ InfoMessage("HTML text : " +XMLstudents.innerHTML)
 ##### **Output Text:**
 
 Running this script produces the following output, essentially a text copy of the Data Island fields:
-
-ID : WebStudents HTML text :
-
-<wclass>
-
-<!-- My students who attended my web programming class -->
-
-<student id="1">
-
-<name>Linda Jones</name>
-
-<legacySkill>Access, VB5.0</legacySkill>
-
-</student>
-
-<student id="2">
-
-<name>Adam Davidson</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
-<student id="3">
-
-<name>Charles Boyer</name>
-
-<legacySkill>HTML, Photoshop</legacySkill>
-
-</student>
-
-<student id="4">
-
-<name>Charles Mann</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
-</wclass>
-
+```javascript
+ID : WebStudents 
+HTML text :
+   <wclass>
+   <!-- My students who attended my web programming class-->
+      <student id="1">
+          <name>Linda Jones</name>
+          <legacySkill>Access, VB5.0</legacySkill>
+      </student>
+      <student id="2">
+          <name>Adam Davidson</name>
+          <legacySkill>Cobol, MainFrame</legacySkill>
+      </student>
+      <student id="3">
+          <name>Charles Boyer</name>
+          <legacySkill>HTML, Photoshop</legacySkill>
+      </student>
+      <student id="4">
+          <name>Charles Mann</name>
+          <legacySkill>Cobol, MainFrame</legacySkill>
+      </student>
+   </wclass>
+```
 
 
 
@@ -395,21 +299,23 @@ function InitAgenda()
 
 {
 
-wlGlobals.Parse = true wlGlobals.ParseXML = true
+    wlGlobals.Parse = true
+    wlGlobals.ParseXML = true
 
 }
 
 wlHttp.SaveSource = true
 
-[wlHttp.Get("http://www.webloadmpstore.com/xmlsamples](http://www.webloadmpstore.com/xmlsamples/sample2.htm)/sample2.htm l")
+wlHttp.Get("http://www.webloadmpstore.com/xmlsamples/sample2.html")
 
 var XMLstudents = document.wlXmls[0]
-
 var XMLstudentDoc =	XMLstudents.XMLDocument
-
 var XMLstudentElement = XMLstudentDoc.documentElement
 
-InfoMessage("Printing XML under the root") InfoMessage(XMLstudentElement.xml) InfoMessage("Element structure of the DOM") printChildren(XMLstudentElement)
+InfoMessage("Printing XML under the root") 
+InfoMessage(XMLstudentElement.xml) 
+InfoMessage("Element structure of the DOM")
+printChildren(XMLstudentElement)
 
 // function that will print all the fields and their attributes function printChildren(element)
 
@@ -419,26 +325,17 @@ switch(element.nodeTypeString)
 
 {
 
-case "element":
-
-InfoMessage(element.nodeName)
-
-for(var i=0; i<element.childNodes.length; i++)
-
-{
-
-printChildren(element.childNodes.item(i))
-
-}
-
-
-
-break case "text":
-
-InfoMessage("\"" + element.nodeValue + "\"") break
-
-}
-
+    case "element":
+          InfoMessage(element.nodeName)
+          for(var i=0; i<element.childNodes.length; i++)
+          {
+             printChildren(element.childNodes.item(i))
+          }
+          break
+       case "text":
+          InfoMessage("\"" + element.nodeValue + "\"") 
+          break
+   }
 }
 
 InfoMessage("End of test")
@@ -455,64 +352,50 @@ Printing XML under the root
 ```xml
 <wclass>
 
-<!-- My students who attended my web programming class -->
+  <!-- My students who attended my web programming class -->
 
-<student id="1">
+  <student id="1">
+     <name>Linda Jones</name>
+     <legacySkill>Access, VB5.0</legacySkill>
+  </student>
 
-<name>Linda Jones</name>
+  <student id="2">
+     <name>Adam Davidson</name>
+     <legacySkill>Cobol, MainFrame</legacySkill>
+  </student>
 
-<legacySkill>Access, VB5.0</legacySkill>
+  <student id="3">
+     <name>Charles Boyer</name>
+     <legacySkill>HTML, Photoshop</legacySkill>
+  </student>
 
-</student>
-
-<student id="2">
-
-<name>Adam Davidson</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
-<student id="3">
-
-<name>Charles Boyer</name>
-
-<legacySkill>HTML, Photoshop</legacySkill>
-
-</student>
-
-<student id="4">
-
-<name>Charles Mann</name>
-
-<legacySkill>Cobol, MainFrame</legacySkill>
-
-</student>
-
+  <student id="4">
+     <name>Charles Mann</name>
+     <legacySkill>Cobol, MainFrame</legacySkill>
+   </student>
 </wclass>
 
-Element structure of the DOM wclass
-
-student name
-
-"Linda Jones"
-
-
-
-legacySkill "Access, VB5.0" student
-
-name
-
-"Adam Davidson" legacySkill "Cobol, MainFrame" student
-
-name
-
-"Charles Boyer" legacySkill "HTML, Photoshop" student
-
-name
-
-"Charles Mann" legacySkill "Cobol, MainFrame"
-
+Element structure of the DOM
+   wclass
+   student 
+   name
+   "Linda Jones"
+   legacySkill 
+   "Access, VB5.0" 
+   student
+   name
+   "Adam Davidson"
+   legacySkill 
+   "Cobol, MainFrame" 
+   student
+   name
+   "Charles Boyer" 
+   legacySkill 
+   "HTML, Photoshop" 
+   student
+   name
+   "Charles Mann" 
+   legacySkill "Cobol, MainFrame"
 End of test
 ```
 
@@ -523,46 +406,27 @@ End of test
 A similar script, with the same functionality, can be written using the XMLParserObject, as shown in the code snippet below:
 
 ```javascript
-xmlObject = new XMLParserObject(); doc = xmlObject.
-
-[parseURI("http://www.webloadmpstore.com/](http://www.webloadmpstore.com/xmlsamples/sample2.html)xmlsamples[/sample2.html"](http://www.webloadmpstore.com/xmlsamples/sample2.html)
-
-)
-
+xmlObject = new XMLParserObject(); 
+doc = xmlObject.
+parseURI("http://www.webloadmpstore.com/xmlsamples/sample2.html")
 doc1 = doc.getDocumentElement()
-
 //used to present only the xml
-
-domNode = doc1.getElementsByTagName("xml").item(0); InfoMessage("Printing XML under the root") printChildren(domNode)
-
+domNode = doc1.getElementsByTagName("xml").item(0); InfoMessage("Printing XML under the root") 
+printChildren(domNode)
 function printChildren(element)
-
 {
-
-switch(element.nodeTypeString)
-
-{
-
-case "element":
-
-InfoMessage(element.nodeName)
-
-for(var i=0; i<element.childNodes.length; i++)
-
-{
-
-printChildren(element.childNodes.item(i))
-
-}
-
-
-
-break case "text":
-
-InfoMessage("\"" + element.nodeValue + "\"") break
-
-}
-
+   switch(element.nodeTypeString)
+   {
+      case "element":
+         InfoMessage(element.nodeName)
+         for(var i=0; i<element.childNodes.length; i++)
+         {
+              printChildren(element.childNodes.item(i))
+         }
+         break 
+     case "text":
+         InfoMessage("\"" + element.nodeValue + "\"") break
+    }
 }
 
 InfoMessage("End of test")
@@ -578,54 +442,42 @@ After you have accessed the website and created an XML DOM object from the XML d
 function InitAgenda()
 
 {
-
-wlGlobals.Parse = true wlGlobals.ParseXML = true
-
+   wlGlobals.Parse = true 
+   wlGlobals.ParseXML = true
 }
 
-wlHttp.SaveSource = true wlHttp.Get
-
-[("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1[.xml")](http://www.webloadmpstore.com/xmlsamples/sample1.xml)
-
+wlHttp.SaveSource = true 
+wlHttp.Get
+("http://www.webloadmpstore.com/xmlsamples/sample1.xml")
 //Getting the XML file
-
 var xmlBookListDoc = document.wlXmls[0]
-
 var xmlBookListIsland = xmlBookListDoc.XMLDocument
-
 var xmlBookListElement = xmlBookListIsland.documentElement
-
 InfoMessage("Printing xml under the root: " + xmlBookListElement.xml)
 
 //First access the node of the first book
-
 var FirstBook = xmlBookListElement.childNodes.item(0)
 
-//Next access the node of the author of the first book var AuthorFirstBook = FirstBook.childNodes.item(1)
+//Next access the node of the author of the first book 
+var AuthorFirstBook = FirstBook.childNodes.item(1)
 
 //Finally access the node of the text of the author of the first book
-
 var TextAuthorFirstBook = AuthorFirstBook.childNodes.item(0)
 
 //In other words, the node in the XML database tree
-
-
-
 //that actually stores the author name value is located at:
-
-//	document.wlXmls[0].XMLDocument.
-
-//	documentElement.childNodes.item(0).childNodes.
-
-//	item(1).childNodes.item(0)
-
+//	   document.wlXmls[0].XMLDocument.
+//	   documentElement.childNodes.item(0).childNodes.
+//	   item(1).childNodes.item(0)
 //Now assign a new value
-
 TextAuthorFirstBook.nodeValue = "S. B. David Lee Eddings"
 
 InfoMessage("The changed author value, from J.R.R. Tolkein, to: "
 
-\+ TextAuthorFirstBook.nodeValue) InfoMessage("Print xml under the root: " + xmlBookListElement.xml)
+\+ TextAuthorFirstBook.nodeValue)
+ InfoMessage("Print xml under the root: " +
+ xmlBookListElement.xml)
+
 ```
 
 
@@ -634,80 +486,57 @@ The changed bookstore database will look as follows:
 
 ```xml
 <bookstore name="NODE1NAME">
-
-<book>
-
-<title lang="en">Everyday Italian</title>
-
-<author>David Eddings</author>
-
-<year>2005</year>
-
-<price>30.00</price>
-
-</book>
-
-<book category="CHILDREN">
-
-<title lang="en">Harry Potter</title>
-
-<author>J K. Rowling</author>
-
-<year>2005</year>
-
-<price>29.99</price>
-
-</book>
-
-<book category="WEB">
-
-<title lang="en">XQuery Kick Start</title>
-
-<author>James McGovern</author>
-
-<author>Per Bothner</author>
-
-<author>Kurt Cagle</author>
-
-<author>James Linn</author>
-
-<author>Vaidyanathan Nagarajan</author>
-
-<year>2003</year>
-
-<price>49.99</price>
-
-</book>
-
-<book category="WEB">
-
-<title lang="en">Learning XML</title>
-
-<author>Erik T. Ray</author>
-
-<year>2003</year>
-
-
-
-<price>39.95</price>
-
-</book>
-
+   <book>
+       <title lang="en">Everyday Italian</title>
+       <author>David Eddings</author>
+       <year>2005</year>
+       <price>30.00</price>
+   </book>
+   <book category="CHILDREN">
+       <title lang="en">Harry Potter</title>
+       <author>J K. Rowling</author>
+       <year>2005</year>
+       <price>29.99</price>
+   </book>
+   <book category="WEB">
+       <title lang="en">XQuery Kick Start</title>
+       <author>James McGovern</author>
+       <author>Per Bothner</author>
+       <author>Kurt Cagle</author>
+       <author>James Linn</author>
+       <author>Vaidyanathan Nagarajan</author>
+       <year>2003</year>
+       <price>49.99</price>
+   </book>
+   <book category="WEB">
+        <title lang="en">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+   </book>
 </bookstore>
-
+```
 You can change the bookstore data in the same way by using the XMLParserObject. The script code is even shorter:
 
-xmlObject = new XMLParserObject(); doc = xmlObject.
-
-[parseURI("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml")
-
+```
+xmlObject = new XMLParserObject();
+doc = xmlObject.
+parseURI("http://www.webloadmpstore.com/xmlsamples/sample1.xml)
 ;
+InfoMessage("The xml under the root : " + doc.xml) 
+doc1 = doc.getDocumentElement()
 
-InfoMessage("The xml under the root : " + doc.xml) doc1 = doc.getDocumentElement()
+FirstBook =	doc1.getElementsByTagName("book").item(0); 
 
-FirstBook =	doc1.getElementsByTagName("book").item(0); AuthorFirstBook	= FirstBook.childNodes.item(1) ; TextAuthorFirstBook	= AuthorFirstBook.childNodes.item(0) TextAuthorFirstBook.nodeValue = "S. B. David Lee Eddings"
+AuthorFirstBook	= FirstBook.childNodes.item(1) ; 
 
-InfoMessage("The changed author value, from J.R.R. Tolkein, to: " + TextAuthorFirstBook.nodeValue)
+TextAuthorFirstBook	= AuthorFirstBook.childNodes.item(0)
+
+TextAuthorFirstBook.nodeValue = "S. B. David Lee Eddings"
+
+InfoMessage("The changed author value, from J.R.R. Tolkein, 
+
+to: " + TextAuthorFirstBook.nodeValue)
 
 InfoMessage("The xml under the root : " + doc.xml)
 ```
@@ -720,37 +549,37 @@ The following script fragment illustrates adding a new ‘book element’ to the
 
 ```javascript
 var xmlBookListDoc = document.wlXmls[0]
-
 var xmlBookListIsland = xmlBookListDoc.XMLDocument
 
 //STEP 1, create the new book element
+//	     and append it to the tree
+newBook = xmlBookListIsland.createElement("book") 
+xmlBookListIsland.documentElement.appendChild(newBook)
 
-//	and append it to the tree
-
-newBook = xmlBookListIsland.createElement("book") xmlBookListIsland.documentElement.appendChild(newBook)
-
-//STEP 2, create and name the new book’s title element title1 = xmlBookListIsland.createElement("title")
-
+//STEP 2, create and name the new book’s title element
+title1 = xmlBookListIsland.createElement("title")
 name = xmlBookListIsland.createTextNode("River God")
+//append the new name node to the title node 
+title1.appendChild(name)
+//append the new title node to the book node 
+newBook.appendChild(title1)
 
-//append the new name node to the title node title1.appendChild(name)
-
-//append the new title node to the book node newBook.appendChild(title1)
-
-
-
-//STEP 3, create and name the new book’s author element author = xmlBookListIsland.createElement("author")
-
-name = xmlBookListIsland.createTextNode("Wilbur Smith") author.appendChild(name)
-
+//STEP 3, create and name the new book’s author element
+author = xmlBookListIsland.createElement("author")
+name = xmlBookListIsland.createTextNode("Wilbur Smith") 
+author.appendChild(name)
 newBook.appendChild(author)
 
-//STEP 4, create and name the new book’s year element year = xmlBookListIsland.createElement("year")
+//STEP 4, create and name the new book’s year element 
+year = xmlBookListIsland.createElement("year")
+name = xmlBookListIsland.createTextNode("1975") 
+year.appendChild(name) 
+newBook.appendChild(year)
 
-name = xmlBookListIsland.createTextNode("1975") year.appendChild(name) newBook.appendChild(year)
-
-//STEP 4, create and name the new book’s price element price = xmlBookListIsland.createElement("price") amount = xmlBookListIsland.createTextNode("40.55") price.appendChild(amount)
-
+//STEP 5, create and name the new book’s price element
+price = xmlBookListIsland.createElement("price") 
+amount = xmlBookListIsland.createTextNode("40.55") 
+price.appendChild(amount)
 newBook.appendChild(price)
 
 
@@ -760,78 +589,41 @@ The newly expanded bookstore database will look as follows:
 
 ```xml
 <bookstore name="NODE1NAME">
-
-<book>
-
-<title lang="en">Everyday Italian</title>
-
-<author>S. B. David Lee Eddings</author>
-
-<year>2005</year>
-
-<price>30.00</price>
-
-</book>
-
-<book category="CHILDREN">
-
-<title lang="en">Harry Potter</title>
-
-<author>J K. Rowling</author>
-
-<year>2005</year>
-
-<price>29.99</price>
-
-</book>
-
-<book category="WEB">
-
-<title lang="en">XQuery Kick Start</title>
-
-<author>James McGovern</author>
-
-<author>Per Bothner</author>
-
-<author>Kurt Cagle</author>
-
-<author>James Linn</author>
-
-<author>Vaidyanathan Nagarajan</author>
-
-<year>2003</year>
-
-
-
-<price>49.99</price>
-
-</book>
-
-<book category="WEB">
-
-<title lang="en">Learning XML</title>
-
-<author>Erik T. Ray</author>
-
-<year>2003</year>
-
-<price>39.95</price>
-
-</book>
-
-<book>
-
-<title>River God</title>
-
-<author>Wilbur Smith</author>
-
-<year>1975</year>
-
-<price>40.55</price>
-
-</book></
-
-</bookstore>
+    <book>
+       <title lang="en">Everyday Italian</title>
+       <author>S. B. David Lee Eddings</author>
+       <year>2005</year>
+       <price>30.00</price>
+    </book>
+    <book category="CHILDREN">
+       <title lang="en">Harry Potter</title>
+       <author>J K. Rowling</author>
+       <year>2005</year>
+       <price>29.99</price>
+    </book>
+    <book category="WEB">
+       <title lang="en">XQuery Kick Start</title>
+       <author>James McGovern</author>
+       <author>Per Bothner</author>
+       <author>Kurt Cagle</author>
+       <author>James Linn</author>
+       <author>Vaidyanathan Nagarajan</author>
+       <year>2003</year>
+       <price>49.99</price>
+    </book>
+    <book category="WEB">
+       <title lang="en">Learning XML</title>
+       <author>Erik T. Ray</author>
+       <year>2003</year>
+       <price>39.95</price>
+    </book>
+    <book>
+       <title>River God</title>
+       <author>Wilbur Smith</author>
+       <year>1975</year>
+       <price>40.55</price>
+   </book></
+   </bookstore>
 ```
 
 
@@ -839,41 +631,50 @@ The newly expanded bookstore database will look as follows:
 You can achieve the same result using XMLParserObject. The script Code is as follows:
 
 ```javascript
-xmlObject = new XMLParserObject(); doc = xmlObject.
-
-[parseURI("http://www.webloadmpstore.com/xmlsamples/sample](http://www.webloadmpstore.com/xmlsamples/sample1.xml)1.xml")
-
+xmlObject = new XMLParserObject(); 
+doc = xmlObject.
+parseURI("http://www.webloadmpstore.com/xmlsamples/sample1.xml")
 ;
-
 doc1 = doc.getDocumentElement()
 
-newNode1 = doc.createElement("book"); doc1.appendChild(newNode1);
+newNode1 = doc.createElement("book"); 
+doc1.appendChild(newNode1);
 
-title1 = doc.createElement("title") ; titleText = doc.createTextNode("River God"); newNode1.appendChild(title1) title1.appendChild(titleText )
+title1 = doc.createElement("title") ;
+titleText = doc.createTextNode("River God"); 
+newNode1.appendChild(title1) 
+title1.appendChild(titleText)
 
-author = doc.createElement("author")  ; authorName =	doc.createTextNode("Wilbur Smith"); newNode1.appendChild(author) author.appendChild(authorName )
+author = doc.createElement("author")  ; 
+authorName =	doc.createTextNode("Wilbur Smith"); 
+newNode1.appendChild(author) 
+author.appendChild(authorName )
 
-year = doc.createElement("year") ; yearInd =	doc.createTextNode("1975"); newNode1.appendChild(year ) year.appendChild(yearInd )
+year = doc.createElement("year") ; 
+yearInd =	doc.createTextNode("1975"); 
+newNode1.appendChild(year) 
+year.appendChild(yearInd)
 
-
-
-price = doc.createElement("price") ; priceAmount =	doc.createTextNode("40.55"); newNode1.appendChild(price) price.appendChild(priceAmount )
+price = doc.createElement("price") ; 
+priceAmount =	doc.createTextNode("40.55"); 
+newNode1.appendChild(price) 
+price.appendChild(priceAmount)
 ```
 
 
 ### **Creating and Filling New XML DOM Objects**
-WebLOAD supports the creation of new XML DOM objects through the WLXmlDocument() constructor. New XML DOM objects may either be created:
+WebLOAD supports the creation of new XML DOM objects through the `WLXmlDocument()` constructor. New XML DOM objects may either be created:
 
 - Empty, with the user adding data as needed.
 - Already loaded with data found in existing XML files or text strings.
 
-New XML DOM objects created by the WLXmlDocument() constructor are not produced from HTML documents, so they do not include the HTML property set (id, innerHTML, and src). HTML properties have no meaning for XML DOM objects created without any connection to an HTML document.
+New XML DOM objects created by the `WLXmlDocument()` constructor are not produced from HTML documents, so they do not include the HTML property set (`id`, `innerHTML`, and `src`). HTML properties have no meaning for XML DOM objects created without any connection to an HTML document.
 
-XML DOM objects created with the WLXmlDocument() constructor include the complete XML DOM Document Interface described in *Appendix B* in the *WebLOAD JavaScript Reference Guide*. Users may also load and reload XML data into XML DOM objects through the load() and loadXML() methods. This section describes the different methods of creating and filling data into XML DOM objects.
+XML DOM objects created with the `WLXmlDocument()` constructor include the complete XML DOM Document Interface described in *Appendix B* in the *WebLOAD JavaScript Reference Guide*. Users may also load and reload XML data into XML DOM objects through the `load()` and `loadXML()` methods. This section describes the different methods of creating and filling data into XML DOM objects.
 
 ##### WLXmlDocument(xmlStr)—Creating XML DOM Object from XML String
 
-The WLXmlDocument(xmlStr) constructor accepts an optional parameter, an XML string that includes the entire XML document data. For example:
+The `WLXmlDocument(xmlStr)` constructor accepts an optional parameter, an XML string that includes the entire XML document data. For example:
 
 `NewXMLObj = new WLXmlDocument(xmlStr)`
 
@@ -1798,7 +1599,7 @@ strOnSuccess = strOnSuccess + "\n" + rs.getString("ReportName");
 
 **JavaScript side:**
 
-![ref19]The JavaScript side of this test session script runs a JDBC load test which checks the ability of the database to handle a large number of SQL queries.
+The JavaScript side of this test session script runs a JDBC load test which checks the ability of the database to handle a large number of SQL queries.
 
 > **Note:** The following is the sequence of JDBC activity in this script:
 

@@ -327,7 +327,7 @@ In addition, if the [*Show Performance Warnings* ](set_script_options.md#enablin
 1. Open a report, as follows:
    1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
    1. Click **New** to open a new report, or select an existing report and click **Edit**. The Report dialog box appears.
-1. Alternatively, click Update ![ref16] in the Integrated Report toolbar, to update the display in the report while a test is in progress.
+1. Alternatively, click Update in the Integrated Report toolbar, to update the display in the report while a test is in progress.
 
    The Report dialog box appears.
 

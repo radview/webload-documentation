@@ -13,7 +13,7 @@ The high level UI components of the **Dashboards** tab include:
 
 - [***Header*** ](#dashboard-header)– Provides global settings, filters and controls 
 - [***Rows*** ](#rows)– Each row contains panels for data display 
-- [***Panels*** ](#panels)– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format ![ref10]
+- [***Panels*** ](#panels)– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format 
 
 ![Dashboard Components](../images/dashboard_comoponents.jpeg)
 

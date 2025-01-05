@@ -112,7 +112,7 @@ After entering the load test specifications, WebLOAD automatically creates a tes
 
    
 
-    The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. ![ref10]
+    The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. 
 
     Thus, the load will start with 0 Virtual Users and  increase over the time frame defined in the **Ramp up time** field to reach the number of Virtual Users defined in the **Max Virtual Users** field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the **Time to run Max Virtual Users** field, after which load will return to 0 Virtual Users value over the time frame set in the **Ramp down time** field. 
 

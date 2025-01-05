@@ -382,11 +382,11 @@ When you open a new test, WebLOAD Console is in Edit mode. In edit mode, you can
 
 When you run your test, WebLOAD Console switches to Run mode. When in run mode, you cannot edit the parameters of the test.
 
-If you are in Run mode and you wish to edit the test parameters, click the **Edit Template  ![ref25]** button in the Session tab of the ribbon to switch to edit mode.
+If you are in Run mode and you wish to edit the test parameters, click the **Edit Template** button in the Session tab of the ribbon to switch to edit mode.
 
 ### The Console in Edit Mode
 
-In edit mode you can edit the Session Tree parameters. In run mode WebLOAD Console displays the configuration dialog boxes. Change from Run mode to Edit mode using the **Edit Template  ![ref26]** button in the Session tab of the ribbon.
+In edit mode you can edit the Session Tree parameters. In run mode WebLOAD Console displays the configuration dialog boxes. Change from Run mode to Edit mode using the **Edit Template** button in the Session tab of the ribbon.
 
 **To edit test session parameters:**
 

@@ -308,7 +308,7 @@ Stopping a complete Load Session affects system performance because the system l
 ### Manually Shutting Down Cloud Machines
 You can manually shut-down Amazon Cloud Machines still running. This is relevant if WebLOAD is configured to leave Cloud Machines running, or if you chose to leave them running at the end of a Load Session.
 
-![ref7]**Note:** The data residing on an Amazon Cloud Machine is not accessible once the machine is shut down.
+**Note:** The data residing on an Amazon Cloud Machine is not accessible once the machine is shut down.
 
 For more information about working with Cloud Machines, refer to [*Selecting Host Computers* ](config_load_template.md#selecting-hosts)
 

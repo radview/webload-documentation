@@ -10,7 +10,7 @@ The WebLOAD Dashboard is part of the regular WebLOAD installation.  **To install
 
     - Select **Full Installation** and check the **WebLOAD Dashboard** checkbox to have the WebLOAD Dashboard installed locally as part of a full installation. You can also optionally check the **WebLOAD Dashboard as Service** checkbox to register the installed WebLOAD Dashboard as a Windows service.  
 
-    - Select **Cloud Server** to only install the  **WebLOAD Dashboard**. ![ref10]
+    - Select **Cloud Server** to only install the  **WebLOAD Dashboard**.
 
      ![installation](../images/installation.png)
 

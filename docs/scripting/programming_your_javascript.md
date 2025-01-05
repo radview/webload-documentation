@@ -254,7 +254,7 @@ For those users who wish to manually edit their scripts, WebLOAD Recorder provid
 
 - An IntelliSense Editor mode for the JavaScript View pane.
 
-    Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. For example, in the following figure the IntelliSense Editor displays a drop-down list of available properties and objects for the wlHttp object being added to the program, with a pop-up box describing the highlighted method in the list.
+    Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps programmers write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. For example, in the following figure the IntelliSense Editor displays a drop-down list of available properties and objects for the`wlHttp`object being added to the program, with a pop-up box describing the highlighted method in the list.
 
 
 ![wlHttp Drop-Down List of Available Properties and Objects in IntelliSense Editor](../images/script_guide_026.jpeg)
@@ -604,7 +604,7 @@ Access the Authentication tab by selecting the **Tools > Default Options** menu 
 
 #### Setting User Authentication Values Manually
 
-If you are editing the JavaScript code in your script, you may reset user authentication values manually using the wlGlobals, wlLocals, or wlHTTP property set.
+If you are editing the JavaScript code in your script, you may reset user authentication values manually using the wlGlobals, wlLocals, or`wlHttp`property set.
 
 There are three approaches to setting these properties, corresponding to the desired authentication scope:
 
@@ -638,7 +638,9 @@ For a basic introduction to SSL, see:
 
 [http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_wh](http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_white_paper09186a0080136858.shtml) [ite_paper09186a0080136858.shtml](http://www.cisco.com/en/US/netsol/ns340/ns394/ns50/ns140/networking_solutions_white_paper09186a0080136858.shtml)
 
-For more information on the new TLS Protocol Version 1.0, see: <http://www.ipa.go.jp/security/rfc/RFC2246-00EN.html>
+For more information on the new TLS Protocol Version 1.0, see:
+
+ <http://www.ipa.go.jp/security/rfc/RFC2246-00EN.html>
 
 WebLOAD fully supports the SSL/TLS 1.0 standard, including backward compatibility with earlier versions and standards. See *Appendix A* in the *WebLOAD JavaScript Reference Guide*, for a complete list of the supported SSL protocols and ciphers.
 
@@ -661,9 +663,9 @@ These properties and functions work on two levels:
 - Higher level functions used for browser emulation.
 - Lower level functions for client- or server-specific cipher testing.
 
-See the *WebLOAD JavaScript Reference Guide* for complete syntax specifications for the wlGlobals SSL property set and the Cipher Command Suite.
+See the *WebLOAD JavaScript Reference Guide* for complete syntax specifications for the `wlGlobals` SSL property set and the Cipher Command Suite.
 
-> **Note:** The SSL configuration for your test session is usually set through dialog boxes in the Console. You may change the default session settings within your script, using either the `wlGlobals` properties or the Cipher Command Suite functions. While the SSL property set is also defined for the wlHttp and `wlLocals` objects, RadView strongly recommends using these properties with the `wlGlobals` object *only*.
+> **Note:** The SSL configuration for your test session is usually set through dialog boxes in the Console. You may change the default session settings within your script, using either the `wlGlobals` properties or the Cipher Command Suite functions. While the SSL property set is also defined for the`wlHttp`and `wlLocals` objects, RadView strongly recommends using these properties with the `wlGlobals` object *only*.
 
 Any changes to a script’s SSL property configuration must be made in the script’s initialization functions. Configuration changes made in the `InitAgenda()` function will affect all client threads spawned during that script’s test session. Configuration changes made in the `InitClient()` function will affect only individual clients. Do not make changes to the SSL property configuration in a script’s main body. The results will be undefined for all subsequent transactions.
 
@@ -692,7 +694,7 @@ SSL Cipher Command Suite provides the ability to:
 - Enable and disable a specific cipher by ID number.
 - Obtain a specific cipher’s name or ID number.
 - Get information about a specific cipher, identified by name or ID number.
-- Learn the number of ciphers enabled during the current test session. The wlGlobals SSL property set provides the ability to:
+- Learn the number of ciphers enabled during the current test session. The `wlGlobals` SSL property set provides the ability to:
 - Support use of SSL client certificates by supplying the certificate filename and password to the SSL server.
 - Enable caching of SSL decoding keys received from an SSL (HTTPS) server. Complete syntax specifications for the SSL Cipher Command Suite and the `wlGlobals` SSL property set are available in the *WebLOAD JavaScript Reference Guide*.
 
@@ -807,7 +809,7 @@ myException = new wlException(e,“we have a problem”)
 
 
 
-<a name="_bookmark37"></a>if (myException.GetSeverity() == WLError) {
+if (myException.GetSeverity() == WLError) {
 
 // Do one set of Error activities myException.ReportLog() throw myException
 
@@ -825,11 +827,11 @@ else {
 
 
 ### Non-Standard script Execution Sequence
-script Execution Sequence describes the sequence of activities during a normal, standard test session. However, many test sessions do not simply follow a normal execution sequence. Test sessions are designed to catch application errors, and these errors often interrupt the test session. This section describes what happens within your script if it is interrupted in mid-session.
+[script Execution Sequence](#script-execution-sequence) describes the sequence of activities during a normal, standard test session. However, many test sessions do not simply follow a normal execution sequence. Test sessions are designed to catch application errors, and these errors often interrupt the test session. This section describes what happens within your script if it is interrupted in mid-session.
 
 #### Minor Error Management—Continue the Test Session as Usual
 
-In the event of a minor error, WebLOAD and WebLOAD Recorder record the error in a log and continues processing. This occurs when you call an InfoMessage() or WarningMessage() function or use the WLMinorError constant.
+In the event of a minor error, WebLOAD and WebLOAD Recorder record the error in a log and continues processing. This occurs when you call an `InfoMessage()` or `WarningMessage()` function or use the `WLMinorError` constant.
 
 For example, one of the most common runtime errors is the failure of an HTTP Get, Post, or Head command. This can occur, for example, if the HTTP server is temporarily unavailable. In most cases, an HTTP failure is a minor error and should not stop the test, although it can affect the performance statistics. You may optionally include additional error-handling functions in your script.
 
@@ -839,14 +841,14 @@ For example, one of the most common runtime errors is the failure of an HTTP Get
 
 In the event of a standard error, WebLOAD records the error in a log and stops the current round. This may occur under the following circumstances:
 
-- If you call an ErrorMessage() function or use the WLError constant.
+- If you call an `ErrorMessage()` function or use the `WLError` constant.
 - If the user issues a Stop or Pause command in the WebLOAD Console that happens to catch a thread in mid-round.
 - If a thread encounters a non-severe error such as a failed HTTP connection. In these circumstances, WebLOAD does the following:
-- Sends an error message to the Log window.
 
-- Stops the main script in the current round.
-- Runs the OnScriptAbort() function, if it exists in your script, in the thread where the error occurred, to free objects and resources.
-- Continues with the next round of the thread, at the beginning of the main script.
+  - Sends an error message to the Log window.
+  - Stops the main script in the current round.
+  - Runs the `OnScriptAbort()` function, if it exists in your script, in the thread where the error occurred, to free objects and resources.
+  - Continues with the next round of the thread, at the beginning of the main script.
 
 Non-severe errors affect only the thread where the error occurred. They have no effect on other threads of the Load Generator, and they do not run the OnError... functions.
 
@@ -856,7 +858,7 @@ Non-severe errors affect only the thread where the error occurred. They have no 
 
 In the event of a severe runtime error, WebLOAD sends a severe error message to the Log window and stops the whole test session. This may occur under the following circumstances:
 
-- If you call a SevereErrorMessage() function or use the WLSevereError
+- If you call a `SevereErrorMessage()` function or use the WLSevereError
 
   constant.
 
@@ -864,24 +866,24 @@ In the event of a severe runtime error, WebLOAD sends a severe error message to 
 
 When stopping an entire test session, WebLOAD uses the following execution sequence.
 
-- In the thread where the error occurred, WebLOAD runs the OnScriptAbort() and OnErrorTerminateClient() functions. These functions are used for error handling that is specific to individual threads, such as freeing local objects and resources.
-- In the other threads of the Load Generator, WebLOAD runs the OnScriptAbort() and TerminateClient() functions.
+- In the thread where the error occurred, WebLOAD runs the `OnScriptAbort()` and `OnErrorTerminateClient() `functions. These functions are used for error handling that is specific to individual threads, such as freeing local objects and resources.
+- In the other threads of the Load Generator, WebLOAD runs the `OnScriptAbort()` and `TerminateClient()` functions.
 
 - The separate threads terminate.
-- WebLOAD runs the OnErrorTerminateAgenda() function instead of TerminateAgenda(). This function is used to free global resources, or for other types of error handling at the global level.
+- WebLOAD runs the `OnErrorTerminateAgenda()` function instead of `TerminateAgenda()`. This function is used to free global resources, or for other types of error handling at the global level.
 
 Like the other initialization and termination functions, the error-handling functions are optional. Omit them from your script if they are not needed.
 
 In the event of a severe runtime error, WebLOAD Recorder sends a severe error message to the Log window and stops the whole test session. This may occur under the following circumstances:
 
-- If you call a SevereErrorMessage() function or use the WLSevereError constant.
+- If you call a `SevereErrorMessage()` function or use the `WLSevereError` constant.
 
 - If the script encounters a severe error such as an overflow or an illegal operation, or any other error that the user has specified should trigger a severe error condition. A severe error is also triggered if WebLOAD Recorder cannot find a specified object on the Web page, for example if the object was deleted or the current Web page does not match the expected Web page accessed during the recording session.
 
 When stopping an entire test session, WebLOAD Recorder uses the following execution sequence.
 
-- First WebLOAD Recorder runs the OnScriptAbort() function, used for error handling such as freeing local objects and resources.
-- Then WebLOAD Recorder runs the OnErrorTerminateAgenda() function instead of TerminateAgenda(). This function is used to free global resources, or for other types of error handling at the global level.
+- First WebLOAD Recorder runs the `OnScriptAbort()` function, used for error handling such as freeing local objects and resources.
+- Then WebLOAD Recorder runs the `OnErrorTerminateAgenda()` function instead of `TerminateAgenda()`. This function is used to free global resources, or for other types of error handling at the global level.
 
 Like the other initialization and termination functions, the error-handling functions are optional. Omit them from your script if they are not needed.
 
@@ -901,18 +903,17 @@ Stop a script by issuing a Stop command through the Console or WebLOAD Recorder 
 After you issue the Stop command in the Console or WebLOAD Recorder, WebLOAD:
 
 - Stops the main script in each thread.
-
-- Runs the OnScriptAbort() function in any thread that you happen to stop in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.
-- Runs the TerminateClient() function in each thread.
+- Runs the `OnScriptAbort()` function in any thread that you happen to stop in mid-round. `OnScriptAbort()` does not run in a thread that you happen to stop at the end of a round.
+- Runs the `TerminateClient()` function in each thread.
 - Stops the separate threads.
-- ![ref10]Runs the TerminateAgenda() function of the script.
+- Runs the `TerminateAgenda()` function of the script.
 
 > **Note:** The script doesn’t necessarily stop immediately when you issue the Stop command in the Console. The script checks for the command at the end of each round and during certain operations that may take a long time, such as HTTP Get and Post commands. For this reason, it is recommended that you do not program a very long loop in a script. Depending on the operations in the loop, the WebLOAD Console may have no way to interrupt the loop.
 
 After you issue the Abort command, WebLOAD Recorder:
 
 - Stops the main script in each thread.
-- Runs the OnScriptAbort() function in any thread that you happen to stop in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.
+- Runs the `OnScriptAbort()` function in any thread that you happen to stop in mid-round. `OnScriptAbort()` does not run in a thread that you happen to stop at the end of a round.
 
 See the *WebLOAD Recorder User Guide* for more information on using these commands.
 
@@ -922,17 +923,17 @@ The script doesn’t necessarily stop immediately when you issue a Stop or Abort
 
 #### Execution Sequence after Stopping a Virtual Client
 
-If an error condition occurs, you can stop a Virtual Client using StopClient() in your script. This function stops the execution of the Virtual Client running the script from which StopClient() was called. After StopClient() is called, this Virtual Client cannot be resumed. This function does not affect any other Virtual Client.
+If an error condition occurs, you can stop a Virtual Client using `StopClient()` in your script. This function stops the execution of the Virtual Client running the script from which `StopClient()` was called. After `StopClient()` is called, this Virtual Client cannot be resumed. This function does not affect any other Virtual Client.
 
-When using StopClient(), you can specify the error level to display and a reason why the Virtual Client was terminated. After you issue the StopClient() command, WebLOAD does the following on the current (calling) thread only:
+When using `StopClient()`, you can specify the error level to display and a reason why the Virtual Client was terminated. After you issue the `StopClient()` command, WebLOAD does the following on the current (calling) thread only:
 
 - Stops the main script in the current thread.
-- Runs the OnScriptAbort() function in case the current thread is stopped in mid-round. OnScriptAbort() does not run in a thread that you happen to stop at the end of a round.
-- Runs the TerminateClient() function in the current thread.
+- Runs the `OnScriptAbort()` function in case the current thread is stopped in mid-round. `OnScriptAbort()` does not run in a thread that you happen to stop at the end of a round.
+- Runs the `TerminateClient()` function in the current thread.
 
 See the *WebLOAD Recorder User Guide* for more information on using these commands.
 
-See the *WebLOAD JavaScript Reference Guide* for more information on using the StopClient() function.
+See the *WebLOAD JavaScript Reference Guide* for more information on using the `StopClient()` function.
 
 
 
@@ -947,10 +948,10 @@ To understand the scope rules for user-defined variables, we need to distinguish
 - [*Limited Context* ](#limited-context), limited to a specific browser action within a script
 - [*Local Context* ](#local-context), local to a single thread of a single script
 - [*Global Context* ](#global-context), which may be global to the following extent:
-  - Shared by all threads of a single script running on a single Load Generator.
-  - Shared by all threads of multiple scripts, including a mix of scripts, running on a single Load Generator.
-  - Global to all threads of a single script, running on multiple Load Generators, potentially on multiple machines, system-wide.
-  - Global to all threads of multiple scripts, including a mix of scripts, running on multiple Load Generators, potentially on multiple machines, system-wide.
+     - Shared by all threads of a single script running on a single Load Generator.
+     - Shared by all threads of multiple scripts, including a mix of scripts, running on a single Load Generator.
+     - Global to all threads of a single script, running on multiple Load Generators, potentially on multiple machines, system-wide.
+     - Global to all threads of multiple scripts, including a mix of scripts, running on multiple Load Generators, potentially on multiple machines, system-wide.
 
 Each of these testing contexts is described in the following sections.
 
@@ -960,9 +961,9 @@ Each of these testing contexts is described in the following sections.
 
 ### Limited Context
 
-Limited variables are only visible or accessible within the bounds of a specific function or code block. Users may also define configuration properties that are only applicable to a specific browser action, managed through the wlHttp object.
+Limited variables are only visible or accessible within the bounds of a specific function or code block. Users may also define configuration properties that are only applicable to a specific browser action, managed through the `wlHttp` object.
 
-For example, to limit a variable LimitedX to a specific function only, use the IntelliSense Editor to create a function within a JavaScript Object and assign a value to a LimitedX variable within that function. The LimitedX variable will only be meaningful within the context of the function in which it appears.
+For example, to limit a variable `LimitedX` to a specific function only, use the IntelliSense Editor to create a function within a JavaScript Object and assign a value to a `LimitedX` variable within that function. The `LimitedX` variable will only be meaningful within the context of the function in which it appears.
 
 This is illustrated in the following code fragment:
 
@@ -982,67 +983,59 @@ y = limitedX + 2	//Error, limitedX is undefined here
 
 
 
-#### Working with the wlHttp Object
+#### Working with the`wlHttp`Object
 
-Configuration properties that are limited to a single transaction are managed through the wlHttp object, described in this section.
+Configuration properties that are limited to a single transaction are managed through the `wlHttp` object, described in this section.
 
-In WebLOAD scripts, HTTP transactions are performed using wlHttp objects. You do not need to declare or create a wlHttp object before using it in your script. WebLOAD automatically creates a single wlHttp object for each thread of a script.
+In WebLOAD scripts, HTTP transactions are performed using `wlHttp` objects. You do not need to declare or create a `wlHttp` object before using it in your script. WebLOAD automatically creates a single `wlHttp` object for each thread of a script.
 
-wlHttp objects include a complete set of HTTP configuration properties. HTTP configuration properties are also included with the more general wlGlobals and wlLocals objects. However, the configuration values assigned in a wlHttp object are the definitive configuration values for the transaction immediately following the property value assignment, overriding both the local defaults assigned in wlLocals and the global defaults assigned in wlGlobals. WebLOAD uses the wlLocals or wlGlobals defaults only if you do not assign values to the corresponding properties in the wlHttp object.
-
-
-
-For example, one of the properties of wlHttp is the FormData, which stores information that the user entered during the session. In the main body of the following script, the user defines FormData value and then completes the browser activity. For the specific command that immediately follows the wlHttp property assignment, the wlHttp FormData value will override any default local or global FormData value.
-
-`//Main script Body wlHttp.FormData["login"] = "demo" wlHttp.FormData["password"] = "demo"`
+`wlHttp` objects include a complete set of HTTP configuration properties. HTTP configuration properties are also included with the more general `wlGlobals` and `wlLocals` objects. However, the configuration values assigned in a`wlHttp`object are the definitive configuration values for the transaction immediately following the property value assignment, overriding both the local defaults assigned in `wlLocals` and the global defaults assigned in `wlGlobals`. WebLOAD uses the `wlLocals` or `wlGlobals` defaults only if you do not assign values to the corresponding properties in the`wlHttp`object.
 
 
+
+For example, one of the properties of `wlHttp` is the FormData, which stores information that the user entered during the session. In the main body of the following script, the user defines `FormData` value and then completes the browser activity. For the specific command that immediately follows the`wlHttp`property assignment, the `wlHttp` `FormData` value will override any default local or global `FormData` value.
+
+```javascript
+//Main script Body 
+wlHttp.FormData["login"] = "demo" 
+wlHttp.FormData["password"] = "demo"`
+
+```
 
 #### Erasing and Preserving the HTTP Configuration
 
-By default, wlHttp properties are cleared automatically after every HTTP transaction. This lets you assign different values for each connection (for example, a different URL, user name, or form data), without having to explicitly delete your previous connection data. In general it is better to assign special wlHttp properties at the specific point where they are needed, in the main script and not in InitClient(), so they will be reassigned as needed in every round.
+By default, `wlHttp` properties are cleared automatically after every HTTP transaction. This lets you assign different values for each connection (for example, a different URL, user name, or form data), without having to explicitly delete your previous connection data. In general it is better to assign special `wlHttp` properties at the specific point where they are needed, in the main script and not in `InitClient()`, so they will be reassigned as needed in every round.
 
-The decision of whether or not to erase wlHttp values is based on the value of the wlHttp.Erase property, which by default is set to true. You may optionally set the Erase property value to false. If Erase is set to false, the wlHttp property data will not be deleted automatically. This may be convenient if you know you will always need the same information, and do not wish to reassign the same values over and over again for each transaction. However, it could also leave you with unexpected, unintended wlHttp property values. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification.
+The decision of whether or not to erase `wlHttp` values is based on the value of the `wlHttp.Erase` property, which by default is set to true. You may optionally set the `Erase` property value to false. If Erase is set to false, the `wlHttp` property data will not be deleted automatically. This may be convenient if you know you will always need the same information, and do not wish to reassign the same values over and over again for each transaction. However, it could also leave you with unexpected, unintended`wlHttp`property values. See the *WebLOAD JavaScript Reference Guide*, for a complete syntax specification.
 
-A better way to preserve the HTTP configuration is to define it using the wlGlobals and wlLocals objects, rather than wlHttp. The properties of wlGlobals and wlLocals are not erased unless you change them yourself. However, the recommended way to set configuration values is through the Default or Current Project Options dialog boxes under the Tools menu in the WebLOAD Recorder or Console desktop.
+A better way to preserve the HTTP configuration is to define it using the `wlGlobals` and `wlLocals` objects, rather than wlHttp. The properties of `wlGlobals` and `wlLocal`s are not erased unless you change them yourself. However, the recommended way to set configuration values is through the Default or Current Project Options dialog boxes under the Tools menu in the WebLOAD Recorder or Console desktop.
 
 ### Local Context
 The local script thread context is local to each individual thread of a script. Local objects may not be accessed in the global context. Different threads may not access or alter the value of the same local variable, since it is local to a single thread. Different threads may only share variable values through global variables.
 
-Local configuration properties are managed through the wlLocals object. Local values for both user-defined variables and configuration properties are initialized in the InitClient() function of a script. Read or assign local values using JavaScript
+Local configuration properties are managed through the `wlLocals` object. Local values for both user-defined variables and configuration properties are initialized in the `InitClient()` function of a script. Read or assign local values using JavaScript
 
-
-
-Object nodes added to the main script, as described in Editing the Editing the JavaScript Code.
+Object nodes added to the main script, as described in *Editing the JavaScript Code.*
 
 #### Working with the wlLocals Object
 
-Configuration properties that are local to a single script thread are managed through the wlLocals object, described in this section. You do not need to declare or create a wlLocals object before using it in your script. WebLOAD automatically creates a single wlLocals object for each thread of a script.
+Configuration properties that are local to a single script thread are managed through the `wlLocals` object, described in this section. You do not need to declare or create a `wlLocals` object before using it in your script. WebLOAD automatically creates a single `wlLocals` object for each thread of a script.
 
-wlLocals is a WebLOAD-supplied local object, which sets the local default configuration for HTTP commands (overriding any global defaults set in wlGlobals, but overridden in turn by any values set in wlHttp). For example, one of the properties of wlLocals is the URL to which the object connects. If you set a different value of wlLocals.Url in each thread of a script, then each thread can connect to a different URL, as the following script illustrates:
+`wlLocals` is a WebLOAD-supplied local object, which sets the local default configuration for HTTP commands (overriding any global defaults set in `wlGlobals`, but overridden in turn by any values set in `wlHttp`). For example, one of the properties of `wlLocals` is the URL to which the object connects. If you set a different value of `wlLocals.Url` in each thread of a script, then each thread can connect to a different URL, as the following script illustrates:
 
 ```javascript
 function InitClient() {//Local context
-
-//Set the URL for each thread if (ClientNum == 0)
-
-wlLocals.Url = ["http://www.ABCDEF.com"](http://www.ABCDEF.com/)
-
+//Set the URL for each thread 
+if (ClientNum == 0)
+   wlLocals.Url = "http://www.ABCDEF.com"
 else
-
+   wlLocals.Url = "http://www.GHIJKL.com"
 }
 
-
-
-wlLocals.Url = ["http://www.GHIJKL.com"](http://www.GHIJKL.com/)
-
-//Thread 0 connects to [www.ABCDEF.com](http://www.ABCDEF.com/)
-
-//All other threads connect to [www.GHIJKL.com](http://www.GHIJKL.com/) wlHttp.Get()
+//Thread 0 connects to www.ABCDEF.com
+//All other threads connect to www.GHIJKL.com 
+wlHttp.Get()
 ```
-
-
-
 #### Working with User-Defined Variables (Local Context
 
 Within the local context, you can define any variables that you wish. The variables are local to a single thread. By default, the scope of a local variable is the entire local thread context. For example, you can define a variable localX in the InitClient() function and use it in the main script to store different values depending on the script thread or round number.
@@ -1050,29 +1043,19 @@ Within the local context, you can define any variables that you wish. The variab
 The corresponding JavaScript code may look similar to this:
 
 ```javascript
-//Local context function InitClient() {
-
+//Local context function 
+InitClient() {
 //Assign a different value to the local copy
-
-//of localX in thread 0 only if (ClientNum == 0)
-
-{localX = 20}
-
-
-
-
-<a name="_bookmark44"></a>else
-
+//of localX in thread 0 only 
+if (ClientNum == 0) {
+  localX = 20
+} else {
+  localX = 10
 }
-
-
-
-{localX = 10}
 
 //Main script Body
 
 //Access the local values of localX & y
-
 y = localX + 2	//y = 22 in thread 0
 
 //y = 12 in all other threads
@@ -1080,10 +1063,9 @@ y = localX + 2	//y = 22 in thread 0
 
 You can also limit the scope to a single function by defining the variable using a var statement.
 
-
-
 ### Global Context
-Global variables are universally accessible and shared by all script components in all threads of a script, within the initialization and termination functions as well as the main script body. Global variables and configuration properties are defined within the InitAgenda() initialization function of a script. Once a global variable has been declared you may read and assign values to that variable at any subsequent point in your script.
+
+Global variables are universally accessible and shared by all script components in all threads of a script, within the initialization and termination functions as well as the main script body. Global variables and configuration properties are defined within the `InitAgenda()` initialization function of a script. Once a global variable has been declared you may read and assign values to that variable at any subsequent point in your script.
 
 For example, it may be convenient to define as a global variable a message text or a URL string that you expect to use and reuse frequently within your script. Or you may need a global counter that should be incremented each time any script thread reaches a certain point in the test session. You could increment the variable value using JavaScript Object nodes added to the main script, as described in [*Editing the JavaScript](#editing-the-javascript-code-in-a-script). Add an InfoMessage node to the Script Tree to check on how the global variable value changes over the course of a test session, as illustrated in the following figure:
 
@@ -1094,7 +1076,6 @@ For example, it may be convenient to define as a global variable a message text 
 In the preceding figure, the script contains nodes for a:
 
 - JavaScript Object
-
 - Short sleep period
 - Message to the Log Window
 
@@ -1104,46 +1085,44 @@ The JavaScript View pane displays the corresponding JavaScript code, beginning w
 
 #### Working with the wlGlobals Object
 
-Configuration properties that are global to all threads of a single script are managed through the wlGlobals object, described in this section. The global script context includes global variables and settings that are shared by all threads of a single script, running on a single Load Generator.
+Configuration properties that are global to all threads of a single script are managed through the `wlGlobals object`, described in this section. The global script context includes global variables and settings that are shared by all threads of a single script, running on a single Load Generator.
 
 Globally shared values are managed through the following objects:
 
-- wlGlobals
-- wlGeneratorGlobal
-- wlSystemGlobal
+- `wlGlobals`
+- `wlGeneratorGlobal`
+- `wlSystemGlobal`
 
-This section describes the wlGlobals object properties used for global HTTP configuration settings, and reviews HTTP command search-order precedence. wlGlobals object properties used for user-defined global variables are described in the *WebLOAD Recorder User Guide*.
+This section describes the `wlGlobals` object properties used for global HTTP configuration settings, and reviews HTTP command search-order precedence.` wlGlobals` object properties used for user-defined global variables are described in the *WebLOAD Recorder User Guide*.
 
-WebLOAD provides a global object called wlGlobals. The wlGlobals object stores the default configuration properties for HTTP connections, such as:
+WebLOAD provides a global object called `wlGlobals`. The `wlGlobals` object stores the default configuration properties for HTTP connections, such as:
 
 - The URL
 - user name and password
 - proxy server
 - HTML parsing behavior
 
-WebLOAD creates exactly one wlGlobals object for each script. You can access wlGlobals properties and methods anywhere in a script, in both the global and local contexts.
+WebLOAD creates exactly one `wlGlobals` object for each script. You can access `wlGlobals` properties and methods anywhere in a script, in both the global and local contexts.
 
-Initialize and set the properties of wlGlobals in the InitAgenda() function of your script. The values are then set globally and shared by each script’s set of threads. For example, set a property such as wlGlobals.DisableSleep in InitAgenda() for it to automatically have the same value for all rounds. The value may be overridden by resetting the wlHttp.DisableSleep value, as illustrated in the following script:
+Initialize and set the properties of `wlGlobals` in the `InitAgenda()` function of your script. The values are then set globally and shared by each script’s set of threads. For example, set a property such as `wlGlobals.DisableSleep` in `InitAgenda(`) for it to automatically have the same value for all rounds. The value may be overridden by resetting the `wlHttp.DisableSleep` value, as illustrated in the following script:
 
 
 
 > **Note:** Remember that HTTP configuration settings and sleep configuration preferences are usually set directly through a dialog box in the WebLOAD Recorder or Console desktop, as described in the *WebLOAD Recorder User Guide* and the *WebLOAD Console User Guide*. The JavaScript coding example here is only intended to illustrate the balance between global defaults and local overrides.
 
-```
+```javascript
 // Initialization function—wlGlobals context function InitAgenda() {
-
-// By default, do not include ‘sleep pauses’ in this script wlGlobals.DisableSleep = true
-
+// By default, do not include ‘sleep pauses’ in this script 
+wlGlobals.DisableSleep = true
 }
 
-// Main Script Body—wlHttp context if (RoundNum<20)
-
+// Main Script Body—wlHttp context 
+if (RoundNum<20)
 wlHttp.DisableSleep = false
-
 ...
 ```
 
-WebLOAD executes the InitAgenda() method when test execution first starts, and decides by default to disable all sleep pauses over the course of script execution:
+WebLOAD executes the `InitAgenda()` method when test execution first starts, and decides by default to disable all sleep pauses over the course of script execution:
 
 `wlGlobals.DisableSleep = true`
 
@@ -1153,7 +1132,7 @@ For rounds 0-19, the main script overrides the global default and allows pausing
 
 After the first 20 rounds of execution are completed, there is no local value assigned, so the script will again, by default, no longer allow sleep pauses.
 
-wlGlobals object commands may be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, as described in [*Editing the JavaScript](#editing-the-javascript-code-in-a-script). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a wlGlobals object method or property, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available objects for the wlGlobals object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop- up menu, and selecting one of the available items.
+`wlGlobals` object commands may be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, as described in [*Editing the JavaScript*](#editing-the-javascript-code-in-a-script). Users who are programming their own JavaScript Object code within their script may take advantage of the WebLOAD Recorder GUI to simplify their programming efforts. Manually typing out the code to create a `wlGlobals` object method or property, risks making a mistake, and adding invalid code to the script file. Instead, users may bring up a list of available objects for the `wlGlobals` object, by right-clicking in the JavaScript Editing Pane, selecting **Insert > General** from the pop- up menu, and selecting one of the available items.
 
 
 
@@ -1161,7 +1140,7 @@ wlGlobals object commands may be added directly to the code in a JavaScript Obje
 
 
 
-Select wlGlobals from the list and WebLOAD Recorder automatically inserts the correct code for a wlGlobals object into the script code currently being edited. The IntelliSense Editor then helps programmers write the JavaScript code for wlGlobals properties and methods by bringing up a list of appropriate choices together with pop- up boxes that describe each item on the list, as illustrated in the following figure:
+Select `wlGlobals` from the list and WebLOAD Recorder automatically inserts the correct code for a `wlGlobals` object into the script code currently being edited. The IntelliSense Editor then helps programmers write the JavaScript code for `wlGlobals` properties and methods by bringing up a list of appropriate choices together with pop- up boxes that describe each item on the list, as illustrated in the following figure:
 
 
 
@@ -1169,53 +1148,55 @@ Select wlGlobals from the list and WebLOAD Recorder automatically inserts the co
 
 
 
-Working with the IntelliSense Editor is described in Editing the Editing the JavaScript Code. See the description of wlGlobals objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+Working with the IntelliSense Editor is described in Editing the Editing the JavaScript Code. See the description of `wlGlobals` objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 #### Variables Defined through the wlGeneratorGlobal Object with WLCurrentAgenda Flag
 
-For users who are comfortable working inside the JavaScript code of their scripts, WebLOAD provides a global object called wlGeneratorGlobal. The wlGeneratorGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, running on a single Load Generator. WebLOAD creates exactly one wlGeneratorGlobal object for each script. You can access wlGeneratorGlobal properties and methods anywhere in the script, in both the global and local contexts.
+For users who are comfortable working inside the JavaScript code of their scripts, WebLOAD provides a global object called `wlGeneratorGlobal`. The `wlGeneratorGlobal` object, when used with the `WLCurrentAgenda` scope flag, stores variable values that you wish to share between all threads of a single script, running on a single Load Generator. WebLOAD creates exactly one `wlGeneratorGlobal`object for each script. You can access `wlGeneratorGlobal`properties and methods anywhere in the script, in both the global and local contexts.
 
-wlGeneratorGlobal includes the following methods:
+`wlGeneratorGlobal` includes the following methods:
 
-- Set(“SharedVarName”, value, WLCurrentAgenda)— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.
+- `Set(“SharedVarName”, value, WLCurrentAgenda)`— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.
 
-- <a name="_bookmark47"></a>Get(“SharedVarName”, WLCurrentAgenda)— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.
-- Add(“SharedIntVarName”, number, WLCurrentAgenda)— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.
+- `Get(“SharedVarName”, WLCurrentAgenda)`— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.
+- `Add(“SharedIntVarName”, number, WLCurrentAgenda)`— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.
 
 #### Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag
 
-The shared multiple script context includes global variables and settings that are shared by all threads of a multiple scripts. The wlGeneratorGlobal object, when used with the WLAllAgendas scope flag, stores variable values that you wish to share between all threads of one or more scripts, including a mix of scripts, part of one or more spawned processes, running on a single Load Generator. You can access wlGeneratorGlobal properties and methods anywhere in the script, in both the global and local contexts.
+The shared multiple script context includes global variables and settings that are shared by all threads of a multiple scripts. The `wlGeneratorGlobal` object, when used with the `WLAllAgendas` scope flag, stores variable values that you wish to share between all threads of one or more scripts, including a mix of scripts, part of one or more spawned processes, running on a single Load Generator. You can access `wlGeneratorGlobal` properties and methods anywhere in the script, in both the global and local contexts.
 
-wlGeneratorGlobal includes the methods with the WLAllAgendas scope flag instead of the WLCurrentAgenda flag:
+`wlGeneratorGlobal` includes the methods with the `WLAllAgendas` scope flag instead of the `WLCurrentAgenda` flag:
 
-- Set(“SharedVarName”, value, WLAllAgendas)
-- Get(“SharedVarName”, WLAllAgendas)
-- Add(“SharedIntVarName”, number, WLAllAgendas)
+- `Set(“SharedVarName”, value, WLAllAgendas`)
+- `Get(“SharedVarName”, WLAllAgendas)`
+- `Add(“SharedIntVarName”, number, WLAllAgendas)`
 
 #### wlGeneratorGlobal Example
 
-wlGeneratorGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.
+`wlGeneratorGlobal` properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.
 
 For example:
 
 ```javascript
-function InitAgenda() { B = new Number
+function InitAgenda() { 
 
-B = 0
+    B = new Number
 
-wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
+    B = 0
 
-wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
+    wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
+
+    wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
 
 }
 
-function InitClient() { wlGeneratorGlobal.Add("B", 2, WLAllAgendas)
+function InitClient() { 
+    wlGeneratorGlobal.Add("B", 2, WLAllAgendas)
+    wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda)
 
-wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda)
 
 
-
-<a name="_bookmark50"></a>InfoMessage("C—agenda1 = " + wlGeneratorGlobal.Get("C", WLCurrentAgenda))
+InfoMessage("C—agenda1 = " + wlGeneratorGlobal.Get("C", WLCurrentAgenda))
 
 }
 
@@ -1229,43 +1210,44 @@ InfoMessage("B—agenda1 = " + B)
 
 Sleep(1000)
 
-wlGeneratorGlobal.Add("B", 10 , WLAllAgendas) InfoMessage("B2—agenda2 = " +
-
-wlGeneratorGlobal.Get("B", WLAllAgendas)) wlGeneratorGlobal.Add("C", 25, WLCurrentAgenda) InfoMessage("C—agenda1 = " +
-
-wlGeneratorGlobal.Get("C", WLCurrentAgenda))
+  wlGeneratorGlobal.Add("B", 10 , WLAllAgendas) 
+  InfoMessage("B2—agenda2 = " +
+     wlGeneratorGlobal.Get("B", WLAllAgendas)) 
+  wlGeneratorGlobal.Add("C", 25, WLCurrentAgenda) 
+  InfoMessage("C—agenda1 = " +
+     wlGeneratorGlobal.Get("C", WLCurrentAgenda))
 ```
 
 
 
-> **Note:** In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new wlGeneratorGlobal.Get call each time.
+> **Note:** In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new `wlGeneratorGlobal.Get` call each time.
 
-See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the wlGeneratorGlobal object in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+See Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the `wlGeneratorGlobal`object in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 #### Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag
 
-The global script context includes global variables and settings that are shared by all threads of a single script, system-wide. The wlSystemGlobal object, when used with the WLCurrentAgenda scope flag, stores variable values that you wish to share between all threads of a single script, part of one or more spawned processes, potentially running on multiple Load Generators, and multiple machines. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.
+The global script context includes global variables and settings that are shared by all threads of a single script, system-wide. The `wlSystemGlobal` object, when used with the `WLCurrentAgenda` scope flag, stores variable values that you wish to share between all threads of a single script, part of one or more spawned processes, potentially running on multiple Load Generators, and multiple machines. You can access `wlSystemGlobal` properties and methods anywhere in the script, in both the global and local contexts.
 
-wlSystemGlobal includes essentially the same methods described in [*Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag), applied here to global variables:
+`wlSystemGlobal` includes essentially the same methods described in [*Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag), applied here to global variables:
 
-- Set(“GlobalVarName”, value, WLCurrentAgenda)—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.
+- `Set(“GlobalVarName”, value, WLCurrentAgenda)`—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.
 
-- Get(“GlobalVarName”, WLCurrentAgenda)—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.
-- Add(“GlobalIntVarName”, number, WLCurrentAgenda)—increments the specified global number variable by the specified amount. If the variable has not been declared or Set previously, the Add function declares and sets the variable to the specified value.
+- `Get(“GlobalVarName”, WLCurrentAgenda)`—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.
+- `Add(“GlobalIntVarName”, number, WLCurrentAgenda)`—increments the specified global number variable by the specified amount. If the variable has not been declared or `Set` previously, the `Add` function declares and sets the variable to the specified value.
 
 #### Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag
 
-The global multiple script context provides full, system wide global variables, shared by all elements of a test session. The wlSystemGlobal object, when used with the WLAllAgendas flag, stores variable values that you wish to share between all threads of all scripts, part of one or more spawned processes, on all Load Generators and machines, system-wide. You can access wlSystemGlobal properties and methods anywhere in the script, in both the global and local contexts.
+The global multiple script context provides full, system wide global variables, shared by all elements of a test session. The `wlSystemGlobal` object, when used with the `WLAllAgendas` flag, stores variable values that you wish to share between all threads of all scripts, part of one or more spawned processes, on all Load Generators and machines, system-wide. You can access `wlSystemGlobal` properties and methods anywhere in the script, in both the global and local contexts.
 
-wlSystemGlobal includes essentially the same methods described in [*Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag), with the WLAllAgendas scope flag in stead of the WLCurrentAgenda flag:
+`wlSystemGlobal` includes essentially the same methods described in [*Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag), with the `WLAllAgendas` scope flag in stead of the `WLCurrentAgenda` flag:
 
-- Set(“GlobalVarName”, value, WLAllAgendas)
-- Get(“GlobalVarName”, WLAllAgendas)
-- Add(“GlobalIntVarName”, number, WLAllAgendas)
+- `Set(“GlobalVarName”, value, WLAllAgendas)`
+- `Get(“GlobalVarName”, WLAllAgendas)`
+- `Add(“GlobalIntVarName”, number, WLAllAgendas)`
 
 #### wlSystemGlobal Example
 
-wlSystemGlobal properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.
+`wlSystemGlobal` properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.
 
 For example:
 
@@ -1276,30 +1258,30 @@ function InitAgenda() {
 
 }
 
-function InitClient() { wlSystemGlobal.Set("E", -2, WLCurrentscript)
-
-wlSystemGlobal.Set("D", 0, WLAllAgendas) wlSystemGl[obal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
+function InitClient() {
+    wlSystemGlobal.Set("E", -2, WLCurrentscript)
+    wlSystemGlobal.Set("D", 0, WLAllAgendas) 
+    wlSystemGlobal.Set("S","http://www.yahoo.com",WLAllAgendas)
 
 }
 
 // Main script Body
 
-
-
-wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
-
-InfoMessage("D—agenda4 = " + wlSystemGlobal.Get("D", WLAllAgendas))
-
-wlSystemGlobal.Add("E", 0.5, WLCurrentAgenda) if (RoundNum==1){
-
-InfoMessage("E—agenda3 = " + wlSystemGlobal.Get("E", WLCurrentAgenda))
+wlSystemGlobal.Add("D", 100, WLAllAgendas) 
+if (RoundNum==1){
+    InfoMessage("D—agenda4 = " + 
+        wlSystemGlobal.Get("D", WLAllAgendas))
+wlSystemGlobal.Add("E", 0.5, WLCurrentAgenda) 
+if (RoundNum==1){
+    InfoMessage("E—agenda3 = " +
+        wlSystemGlobal.Get("E", WLCurrentAgenda))
 
 }
 
 Sleep(1000)
 ```
 
-See Editing the Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of wlSystemGlobal objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
+See Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of `wlSystemGlobal` objects in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
 
 
@@ -1308,58 +1290,55 @@ See Editing the Editing the JavaScript Code, for an introduction to editing your
 The following sample script combines the different global variable options introduced in the previous sections:
 
 ```javascript
-function InitAgenda() { wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
-
-wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
-
-<snip>
+function InitAgenda() {
+   wlGeneratorGlobal.Set("C", 4, WLCurrentAgenda)
+   wlGeneratorGlobal.Set("B", 1, WLAllAgendas)
+   <snip>
 
 }
-
-function InitClient() { wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda) InfoMessage("C - agenda1 = " +
-
-wlGeneratorGlobal.Get("C", WLCurrentAgenda)) wlGeneratorGlobal.Add("B", -2, WLAllAgendas)
-
-wlSystemGlobal.Set("E", +1, WLCurrentAgenda)
-
-wlSystemGlobal.Set("D", 0, WLAllAgendas) [wlSystemGlobal.Set("S","http://www.yahoo.com",WLAllAgendas)](http://www.yahoo.com/)
+function InitClient() { 
+   wlGeneratorGlobal.Add("C", 5, WLCurrentAgenda)
+   InfoMessage("C - agenda1 = " +
+       wlGeneratorGlobal.Get("C", WLCurrentAgenda))
+     wlGeneratorGlobal.Add("B", -2, WLAllAgendas)
+     wlSystemGlobal.Set("E", +1, WLCurrentAgenda)
+     wlSystemGlobal.Set("D", 0, WLAllAgendas)
+     wlSystemGlobal.Set("S","http://www.yahoo.com",WLAllAgendas)
 
 }
 
 // Main script Body
 
-B = wlGeneratorGlobal.Get( "B", WLAllAgendas) wlSystemGlobal.Add("E", -1, WLCurrentAgenda)
-
-wlSystemGlobal.Add("D", 100, WLAllAgendas) if (RoundNum==1){
-
-InfoMessage("B - agenda1 = " + B) InfoMessage("E - agenda1 = " +
-
-wlSystemGlobal.Get( "E", WLCurrentAgenda)) InfoMessage("D - agenda1 = " +
-
-
-
-wlSystemGlobal.Get( "D", WLAllAgendas))
+B = wlGeneratorGlobal.Get( "B", WLAllAgendas) 
+wlSystemGlobal.Add("E", -1, WLCurrentAgenda)
+wlSystemGlobal.Add("D", 100, WLAllAgendas) 
+if (RoundNum==1){
+   InfoMessage("B - agenda1 = " + B) 
+   InfoMessage("E - agenda1 = " +
+       wlSystemGlobal.Get( "E", WLCurrentAgenda)) 
+       InfoMessage("D - agenda1 = " +
+       wlSystemGlobal.Get( "D", WLAllAgendas))
 
 }
-
-wlHttp.Get(wlSystemGlobal.Get("S", WLAllAgendas)) Sleep(1000)
+wlHttp.Get(wlSystemGlobal.Get("S", WLAllAgendas))
+Sleep(1000)
 ```
 
 
 ### Search Order Precedence
 Before WebLOAD begins a browser action, it searches for configuration parameters in the following order of precedence:
 
-1. wlHttp properties (configuration property values limited to a specific browser object)
-1. wlLocals properties (configuration property values that are local to a specific script thread)
-1. wlGlobals properties (configuration property values that are global defaults, set at script initialization)
+1. `wlHttp`properties (configuration property values limited to a specific browser object)
+1. ` wlLocals` properties (configuration property values that are local to a specific script thread)
+1. `wlGlobals` properties (configuration property values that are global defaults, set at script initialization)
 
 For example:
 
-1. WebLOAD decides whether or not it will use recorded sleep times based on the value of wlHttp.DisableSleep.
-1. If wlHttp.DisableSleep is not set, WebLOAD then searches for a value in the local default wlLocals.DisableSleep.
-1. Finally, if both wlHttp.DisableSleep and wlLocals.DisableSleep are both not set, WebLOAD will use the global default value found in wlGlobals.DisableSleep, set at script initialization.
+1. WebLOAD decides whether or not it will use recorded sleep times based on the value of `wlHttp.DisableSleep`.
+1. If `wlHttp.DisableSleep` is not set, WebLOAD then searches for a value in the local default `wlLocals.DisableSleep`.
+1. Finally, if both `wlHttp.DisableSleep` and `wlLocals.DisableSleep` are both not set, WebLOAD will use the global default value found in `wlGlobals.DisableSleep`, set at script initialization.
 
-![ref10]The same order of precedence applies to all the wlGlobals, wlLocals, and wlHttp properties. You can set global and local defaults for the UserName, Url, or other configuration properties. When WebLOAD executes a transaction, it uses any configuration property values that you have specified for that specific connection. If you have not assigned a value for the connection, WebLOAD searches for the local and global defaults, in that order.
+The same order of precedence applies to all the wlGlobals, wlLocals, and`wlHttp`properties. You can set global and local defaults for the UserName, Url, or other configuration properties. When WebLOAD executes a transaction, it uses any configuration property values that you have specified for that specific connection. If you have not assigned a value for the connection, WebLOAD searches for the local and global defaults, in that order.
 
 **Note:** The recommended way to set configuration values is through the Default or Current Project Options dialog boxes under the Tools menu in the WebLOAD Recorder or Console desktop. Explicitly setting these values for a specific browser action, which is possible only if you set these properties within your script code, does give you a much more focused and sophisticated power, but it is also more risky, triggering unexpected side effects or complications. Configuration property settings within a script will *always* override the configuration property values set globally through the WebLOAD GUI. Keep these points in mind when deciding how to set your system configuration to get the most out of your script test session.
 
@@ -1372,9 +1351,9 @@ Variables that are accessible within a single script only have the smallest impa
 
 Values shared between multiple scripts, but within a single Load Generator, are the next most efficient choice. Global values shared system wide should only be included in your script if it is truly necessary to check values or synchronize data shared across multiple Load Generators or machines.
 
-To optimize performance times during a test, multiple access requests from multiple sources are accommodated sequentially. Script execution is not held for the Set() or Add() methods, which are queued and processed sequentially. Only the Get() method actually holds a script while waiting for the requested value to be returned.
+To optimize performance times during a test, multiple access requests from multiple sources are accommodated sequentially. Script execution is not held for the `Set()` or `Add()` methods, which are queued and processed sequentially. Only the `Get()` method actually holds a script while waiting for the requested value to be returned.
 
-Over the course of a typical test session, multiple script threads may all be accessing, and potentially changing, the values of the same global variables. For example, two threads may each get GlobalVarX, currently set to 10. The two threads may then wish to increment GlobalVarX by 1, setting it to a new value of 11. These two Get() and two Set() commands are processed sequentially, independent of each other. Since each script got an initial value of 10, each script will independently set the value to 11. The final value will be set to 11, even though the variable was actually incremented twice, and should now equal 12. To avoid this potential inconsistency, WebLOAD recommends using the Add() command, which gets, changes, and resets a global value in a single action, ensuring /that each thread always accesses the most current value for a global variable and avoiding potential conflicts between threads.
+Over the course of a typical test session, multiple script threads may all be accessing, and potentially changing, the values of the same global variables. For example, two threads may each get `GlobalVarX`, currently set to 10. The two threads may then wish to increment `GlobalVarX` by 1, setting it to a new value of 11. These two `Get()` and two `Set()` commands are processed sequentially, independent of each other. Since each script got an initial value of 10, each script will independently set the value to 11. The final value will be set to 11, even though the variable was actually incremented twice, and should now equal 12. To avoid this potential inconsistency, WebLOAD recommends using the `Add()` command, which gets, changes, and resets a global value in a single action, ensuring /that each thread always accesses the most current value for a global variable and avoiding potential conflicts between threads.
 
 
 
@@ -1382,11 +1361,11 @@ Over the course of a typical test session, multiple script threads may all be ac
 
 For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:
 
-- Two variables, ClientNum and RoundNum, identify the client and round number of the current script instance.
+- Two variables, `ClientNum` and `RoundNum`, identify the client and round number of the current script instance.
 
-- The GeneratorName() function identifies the current Load Generator.
-- The GetOperatingSystem() function identifies the operating system of the current Load Generator.
-- The VCUniqueID() function identifies the current Virtual Client instance.
+- The `GeneratorName()` function identifies the current Load Generator.
+- The `GetOperatingSystem()` function identifies the operating system of the current Load Generator.
+- The `VCUniqueID()` function identifies the current Virtual Client instance.
 
 An example is provided at the end of this section to illustrate common use of these variables and functions. Use these variables and function to support the WebLOAD measurement features and obtain meaningful performance statistics.
 
@@ -1394,7 +1373,7 @@ These identification variables and functions are usually accessed and inserted i
 
 **To open the Variables Window**
 
-1. Start debugging. Click **Run ![ref17]**   or **Step Into ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\WL-IDE-toolbarIcons\png\Step Into.png]**.
+1. Start debugging. Click **Run** ![](../images/run_load_test.png)  or **Step Into** ![](../images/script_guide_043.png).
 1. Check the **Variables Window** checkbox in the **Debug** tab of the ribbon
 
 ![Variables Window](../images/script_guide_044.png)
@@ -1413,40 +1392,38 @@ You can view the value of a variable in the Variables window.
 
 **To view a variable in the Variables window:**
 
-1. Start debugging. Click **Run ![ref17]**   or **Step Into ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\WL-IDE-toolbarIcons\png\Step Into.png]**.
+1. Start debugging. Click **Run**   or **Step Into**.
 1. Check the **Variables Window** checkbox in the **Debug** tab of the ribbon
 
 ### ClientNum
-This is the serial number of the client in the WebLOAD test configuration. ClientNum is a read-only local variable. Each client in a Load Generator has a unique ClientNum. However, two clients in two different Load Generators may have the same ClientNum.
+This is the serial number of the client in the WebLOAD test configuration. `ClientNum` is a read-only local variable. Each client in a Load Generator has a unique `ClientNum`. However, two clients in two different Load Generators may have the same `ClientNum`.
 
-> **Note:** ClientNum is not unique system wide. Use [*VCUniqueID()* ](#vcuniqueid), to obtain an ID number which is unique system-wide.
+> **Note:** `ClientNum` is not unique system wide. Use [*VCUniqueID()* ](#vcuniqueid), to obtain an ID number which is unique system-wide.
 
-Add RoundNum directly to the code in any JavaScript Object in your script. Work through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
+Add `RoundNum` directly to the code in any JavaScript Object in your script. Work through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor).
 
-For example, if there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the script (InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
+For example, if there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access `ClientNum` anywhere in the local context of the script (`InitClient()`, main script, `TerminateClient()`, etc.). `ClientNum` does not exist in the global context (`InitAgenda()`, `TerminateAgenda()`, etc.).
 
-If you mix scripts within a single Load Generator, instances of two or more scripts may run simultaneously on each client. Instances on the same client have the same ClientNum value.
+If you mix scripts within a single Load Generator, instances of two or more scripts may run simultaneously on each client. Instances on the same client have the same `ClientNum `value.
 
-ClientNum reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames. See WebLOAD Actions, Objects, and Functions in the *WebLoad JavaScript Reference Guide* for more information about spawning threads.
+`ClientNum` reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames. See WebLOAD Actions, Objects, and Functions in the *WebLoad JavaScript Reference Guide* for more information about spawning threads.
 
-> **Note:** Earlier versions of WebLOAD referred to this value as ClientNum. The variable name ClientNum will still be recognized for backward compatibility.
+> **Note:** Earlier versions of WebLOAD referred to this value as `ClientNum`. The variable name `ClientNum` will still be recognized for backward compatibility.
 
 ### RoundNum
-The number of times that WebLOAD has executed the main script of a client during the WebLOAD test, including the current execution. RoundNum is a read-only local variable, reporting the number of rounds for the specific WebLOAD client, no matter how many other clients may be running the same script.
+The number of times that WebLOAD has executed the main script of a client during the WebLOAD test, including the current execution. `RoundNum` is a read-only local variable, reporting the number of rounds for the specific WebLOAD client, no matter how many other clients may be running the same script.
 
-RoundNum does not exist in the global context of a script (InitAgenda(), etc.). In the local context:
+`RoundNum` does not exist in the global context of a script (`InitAgenda()`, etc.). In the local context:
 
-- In InitClient(), RoundNum = 0.
-- In the main script, RoundNum = 1, 2, 3, ....
-- In TerminateClient(), OnScriptAbort(), or
+- In `InitClient()`, RoundNum = 0.
+- In the main script, `RoundNum` = 1, 2, 3, ....
+- In `TerminateClient()`, `OnScriptAbort()`, or `OnErrorTerminateClient()`, `RoundNum` keeps its value from the final round.
 
-  OnErrorTerminateClient(), RoundNum keeps its value from the final round.
+The WebLOAD clients do not necessarily remain in synchronization. The `RoundNum` may differ for different clients running the same script. If a thread stops and restarts for any reason, the RoundNum continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.
 
-The WebLOAD clients do not necessarily remain in synchronization. The RoundNum may differ for different clients running the same script. If a thread stops and restarts for any reason, the RoundNum continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.
+If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if `agenda1` has executed twice and `agenda2` has executed three times on a particular thread, the `RoundNum` of `agenda1` is 2 and the `RoundNum` of `agenda2 `is 3.
 
-If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if agenda1 has executed twice and agenda2 has executed three times on a particular thread, the RoundNum of agenda1 is 2 and the RoundNum of agenda2 is 3.
-
-Add RoundNum directly to the code in a script through the IntelliSense Editor, described in Editing the Editing the JavaScript Code. Select a function by right- clicking the JavaScript Editing Pane, and selecting **Insert** > **General** from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
+Add `RoundNum` directly to the code in a script through the IntelliSense Editor, described in Editing the Editing the JavaScript Code. Select a function by right- clicking the JavaScript Editing Pane, and selecting **Insert** > **General** from the pop-up menu. WebLOAD Recorder automatically inserts the correct code for the selected function into the script file. The user may then edit parameter values without any worries about mistakes in the function syntax.
 
 
 
@@ -1463,7 +1440,7 @@ You can do this using a combination of the ClientNum and RoundNum variables. Tog
 `"C" + ClientNum.toString() + "R" + RoundNum.toString()`
 
 ### GeneratorName()
-This returns a unique identification string for the current Load Generator. GeneratorName() provides a unique identification for the current Load Generator instance, even with multiple spawned processes running simultaneously. The identification string is composed of a combination of the current Load Generator name, computer name, and other internal markers.
+This returns a unique identification string for the current Load Generator. `GeneratorName()` provides a unique identification for the current Load Generator instance, even with multiple spawned processes running simultaneously. The identification string is composed of a combination of the current Load Generator name, computer name, and other internal markers.
 
 
 
@@ -1473,16 +1450,18 @@ This returns a string that identifies the operating system running on the curren
 For example:
 
 - If the Load Generator is working with a Windows platform, possible return values include:
-- Windows 95
-- Windows 98
-- Windows NT/2000
-- Windows XP
-- Windows OtherVersionNumber
-- If the Load Generator is working with a Solaris platform, this function would return the string ‘Solaris’ followed by the version name and release number, such as SunOS2.
-- If the Load Generator is working with a Linux platform, this function would return the string ‘Linux’ followed by the version name and release number, such as RedHat1.
+
+       - Windows 95
+       - Windows 98
+       - Windows NT/2000
+       - Windows XP
+       - Windows OtherVersionNumber
+
+- If the Load Generator is working with a Solaris platform, this function would return the string `‘Solaris’` followed by the version name and release number, such as `SunOS2`.
+- If the Load Generator is working with a Linux platform, this function would return the string `‘Linux’` followed by the version name and release number, such as `RedHat1`.
 
 ### VCUniqueID()
 This returns a unique identification string for the current Virtual Client instance.
 
-VCUniqueID() provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to [*ClientNum* ](#clientnum), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.
+`VCUniqueID()` provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to [*ClientNum* ](#clientnum), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.
 

@@ -12,7 +12,7 @@ In this Quick Start, you perform the following steps:
 2. Configure a Load Template using the WebLOAD Wizard (see [*Configuring a Load Template using WebLOAD Wizard* ](#configuring-a-load-template-using-webload-wizard).
 3. Configure Session options (see [*Setting Session Options* ](#setting-session-options).
 4. Run a test (see [*Running the Test* ](#running-the-test).
-5. ![ref9]Analyze test results (see [*Analyzing Test Results* ](#analyzing-test-results).
+5. Analyze test results (see [*Analyzing Test Results* ](#analyzing-test-results).
 
 > **Note:** We recommend that you follow the steps in the order they appear. All examples are interrelated and dependent on earlier steps.
 
@@ -106,7 +106,7 @@ The first step in defining a Load Template with the WebLOAD Wizard is defining t
 **To select a script and a performance statistic to monitor:**
 
 1. On the Test Type screen, select **Single Script**, and click **Next**.
-1. On the script/Mix Selection screen, click the ![ref13] button and browse to the location of the QuickStart.wlp script created earlier using WebLOAD Recorder. Select the script and click **Open**.
+1. On the script/Mix Selection screen, click the button and browse to the location of the QuickStart.wlp script created earlier using WebLOAD Recorder. Select the script and click **Open**.
 1. On the script / Mix Selection screen, click **Next**. The Host Selection screen appears.
 
 

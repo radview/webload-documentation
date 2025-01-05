@@ -37,7 +37,7 @@ For instructions how to import a dashboard that was saved as a JSON file, refer 
 
 1. Do either of the following: 
 
-    - In the menu bar, select **Dashboards** > **Import**.**  ![ref10]
+    - In the menu bar, select **Dashboards** > **Import**.**  
 
     ![Dashboard Menu](../images/dashboards_menu.png)
 
@@ -66,7 +66,7 @@ You can create a new empty dashboard and define it as desired. **To create a new
 
     ![Dashboard Menu](../images/dashboards_menu.png)
 
-    - In the Dashboard header, click the dashboard drop-down and click **+ Create New**.  ![ref10]
+    - In the Dashboard header, click the dashboard drop-down and click **+ Create New**. 
 
     ![Selecting to Create a New Dashboard – from the Header](../images/dashboard_create_new.jpeg)
 
@@ -84,7 +84,7 @@ After changing a dashboard as desired, you can save the customized dashboard to 
 
 **To save a customized dashboard:** 
 
-1. Click the Manage Dashboard Settings icon ![ref26] in the middle of the dashboard header, and select **Save As**. 
+1. Click the Manage Dashboard Settings icon in the middle of the dashboard header, and select **Save As**. 
 
     ![Saving a Customized Dashboard](../images/save_custom_dashboard.png)
 

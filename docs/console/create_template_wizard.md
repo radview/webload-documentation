@@ -114,7 +114,7 @@ The WebLOAD Wizard enables you to run your test using a saved Mix or to create a
 
 1. Select the source of the Mix to be used for the test on the Mix Selection screen:
 
-   - Select **Use an Existing Mix** and click the ![ref29] button to select an existing Mix (\*.mix) from your system.
+   - Select **Use an Existing Mix** and click the button to select an existing Mix (\*.mix) from your system.
 
    - Select **Create a Mix** to build a new Mix.
 
@@ -333,7 +333,7 @@ For defining host computers as Load Machines and Probing Clients, see [*Designat
 
 **To designate a host computer as a Load Machine:**
 
-1. Select the host from the Host Computers window and click the single arrow key ![ref30] adjacent to the Load Machine window.
+1. Select the host from the Host Computers window and click the single arrow key adjacent to the Load Machine window.
 
    -Or-
 
@@ -359,7 +359,7 @@ Probing Clients act as single Virtual Clients to measure the performance of targ
 **To designate a host computer as a Probing Client Machine:**
 
 1. Select the host from the Host Computers window.
-1. Click the single arrow key ![ref30] adjacent to the Probing Client Machines window. The selected host moves to the Probing Client Machine window.
+1. Click the single arrow key adjacent to the Probing Client Machines window. The selected host moves to the Probing Client Machine window.
 1. After assigning all Load Machines and Probing Client Machines, click **Next**.
 
 
@@ -544,8 +544,6 @@ You can schedule the load to be generated on each Load Machine participating in 
 
 
 The Load Profiler opens.
-
-![ref32]
 
 *Figure 58: Load Profiler*
 

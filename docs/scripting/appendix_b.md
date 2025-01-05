@@ -537,7 +537,7 @@ this.message=message this.name="UserException"
 
 
 ### The Try...Catch Statement
-![ref8]The try...catch statement marks a block of statements to try, and specifies a response should an exception be thrown. If an exception is thrown, the try...catch statement catches it.
+The try...catch statement marks a block of statements to try, and specifies a response should an exception be thrown. If an exception is thrown, the try...catch statement catches it.
 
 **Note:** There are some exceptions that are not caught with the try...catch statement. This includes the HTTP errors, which are thrown by the HTTP server.
 
