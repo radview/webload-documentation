@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1185,8 +1192,9 @@
 </ul>
 <h2 id="editing-back-end-configuration">Editing Back-end Configuration</h2>
 <h3 id="changing-back-end-configuration">Changing Back-end configuration</h3>
-<p>You can change the back-end configuration by creating a file called custom.ini in <code>C:\Program Files (x86)\RadView\WebLOAD\dashboard\grafana\conf</code>. </p>
-<p>Use the default.ini, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the Grafana documentation at[ http://docs.grafana.org/installation/configuration/</p>
+<p>You can change the back-end configuration by creating a file called <code>custom.ini</code> in 
+<code>C:\Program Files (x86)\RadView\WebLOAD\dashboard\grafana\conf</code>. </p>
+<p>Use the <code>default.ini</code>, located in the same location, to see the available configuration options. The following lists some common options. For a full description of all options, refer to the <a href="../grafana/installation/configuration/">Grafana documentation</a></p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">[</span><span class="err">server</span><span class="p">]</span><span class="w"> </span>
 </span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="err">#Pro</span><span class="kc">t</span><span class="err">ocol</span><span class="w"> </span><span class="err">(h</span><span class="kc">tt</span><span class="err">p</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps)</span><span class="w"> </span>
@@ -1229,7 +1237,7 @@
 </li>
 <li>
 <p>If you change the listening port in the datasource configuration file, you must reflect that change in the datasource configuration, as follows: </p>
-</li>
+<ol>
 <li>
 <p>Select <strong>Admin</strong> &gt; <strong>Data Sources</strong> in the WebLOAD Dashboard menu bar. </p>
 </li>
@@ -1240,17 +1248,23 @@
 <p>In the Edit Data Source window that appears, change the <strong>URL</strong> to reflect the new address. </p>
 </li>
 </ol>
-<p><img alt="Edit Data Source window* " src="../../images/edit_data_source.jpeg"/></p>
+</li>
+</ol>
+<p><img alt="Edit Data Source window " src="../../images/edit_data_source.jpeg"/></p>
 <h3 id="changing-the-webload-dashboard-database">Changing the WebLOAD Dashboard Database</h3>
 <p>You can set which database the WebLOAD Dashboard is using, by specifying the database in the datasource configuration file, located in </p>
 <p><code>C:\Program Files (x86)\RadView\WebLOAD\dashboard\webdashboard\dashboar d.settings.bat</code></p>
 <p>Note that also the remote database itself must be configured for remote connections. Refer to <em>Configuring PostgreSQL to Allow Remote Database Connections</em> in the <em>WebLOAD Installation Guide</em>. </p>
 <p>In addition, if you wish to import remote database sessions from the WebLOAD Console to the WebLOAD Dashboard while the sessions are running, do the following in the WebLOAD Console:  </p>
 <ol>
-<li>Select <strong>Tools</strong> &gt; <strong>Global Options</strong> &gt; <strong>Database</strong>.</li>
-<li>In the <strong>Database configuration</strong> section, enter the details of the remote database.</li>
+<li>
+<p>Select <strong>Tools</strong> &gt; <strong>Global Options</strong> &gt; <strong>Database</strong>.</p>
+<p><img alt="Database Tab" src="../../images/database_tab.png"/></p>
+</li>
+<li>
+<p>In the <strong>Database configuration</strong> section, enter the details of the remote database.</p>
+</li>
 </ol>
-<p><code></code></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

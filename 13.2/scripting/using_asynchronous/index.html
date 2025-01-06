@@ -689,6 +689,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1261,8 +1268,8 @@
 <h3 id="using-wlhttpasync-to-execute-requests-asynchronously">Using wlHttp.Async to Execute Requests Asynchronously</h3>
 <p>‘wlHttp.Async’ makes HTTP requests asynchronous. When using asynchronous requests, the script does not wait for the request to complete before moving on to the next statement. In order to work with the response, you can use the asynchronous callback functions:</p>
 <ul>
-<li><a href="#_bookmark140">*onDocumentComplete </a><em>–</em> Defines a callback function to be called after the asynchronous request has been completed. For example, it validates the response and makes a further request.</li>
-<li><a href="#_bookmark141">*onDataReceived </a><em>–</em> Defines a callback function to be called every time more data is received for the request. This is useful for working with asynchronous requests that need to be inspected before they are completed, for example in an HTTP streaming push scenario.</li>
+<li><a href="../../javascript/actions_objects_functions/#ondocumentcomplete-property">*onDocumentComplete </a><em>–</em> Defines a callback function to be called after the asynchronous request has been completed. For example, it validates the response and makes a further request.</li>
+<li><a href="../../javascript/actions_objects_functions/#ondatareceived-property">*onDataReceived </a><em>–</em> Defines a callback function to be called every time more data is received for the request. This is useful for working with asynchronous requests that need to be inspected before they are completed, for example in an HTTP streaming push scenario.</li>
 </ul>
 <h4 id="using-ondocumentcomplete-in-asynchronous-execution">Using onDocumentComplete in Asynchronous Execution</h4>
 <p>In the regular HTTP request example shown above, the document cannot be accessed after the request is made because it is not yet available. In order to access the response</p>
@@ -1299,13 +1306,13 @@
 <p>when the server is required to ‘push’ data to the client, for example, chat applications, user notifications, etc.</p>
 <p>There are several techniques that can be used to achieve server push:</p>
 <ul>
-<li><strong>Polling</strong>: the client (browser) sends a request to the server at regular intervals. For more information refer to <a href="#_bookmark143"><em>Using Polling Protocol in WebLOAD</em> </a>.</li>
+<li><strong>Polling</strong>: the client (browser) sends a request to the server at regular intervals. For more information refer to <a href="#using-polling-protocol-in-webload"><em>Using Polling Protocol in WebLOAD</em> </a>.</li>
 <li><strong>Long polling</strong>: the client request is kept on hold until the server can deliver a valid response. When data from the server needs to be pushed, the server responds and closes the connection. The client is then expected to start a new connection and</li>
 </ul>
 <p>wait for the server’s next message (response).</p>
-<p>For more information refer to <a href="#_bookmark144"><em>Using Long Polling in WebLOAD</em> </a>.</p>
+<p>For more information refer to <a href="#using-long-polling-in-webload"><em>Using Long Polling in WebLOAD</em> </a>.</p>
 <ul>
-<li><strong>Streaming</strong>: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to <a href="#_bookmark145"><em>Using HTTP Streaming in WebLOAD</em> </a>.</li>
+<li><strong>Streaming</strong>: the client make a request. The server builds the response progressively as more data is available (for example, using ‘chunked data’). The client reads and handles this data but keeps the connection open, waiting for more data to arrive. For more information refer to <a href="#using-http-streaming-in-webload"><em>Using HTTP Streaming in WebLOAD</em> </a>.</li>
 </ul>
 <h3 id="using-polling-protocol-in-webload">Using Polling Protocol in WebLOAD</h3>
 <p>Polling requests are regular, short requests, so there is no need for asynchronous code to implement them. Because the message sequence in playback can be different from the recorded one, it is useful to convert the polling requests to a loop.</p>
@@ -1363,7 +1370,7 @@
 </span></code></pre></div>
 <h3 id="using-http-streaming-in-webload">Using HTTP Streaming in WebLOAD</h3>
 <p>In HTTP streaming, the server response is never ending (or very long), and each new response data is considered a new ‘message’ (or it can be delimited with some delimiter).</p>
-<p>To handle the server partial responses, the ‘<a href="#_bookmark141"><em>onDataReceived</em>’ </a>callback function should be used.</p>
+<p>To handle the server partial responses, the ‘<a href="../../javascript/actions_objects_functions/#ondatareceived-property"><em>onDataReceived</em>’ </a>callback function should be used.</p>
 <p>For example:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">prevIdx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//data seen so far wlHttp.onDataReceived= function(document) {</span>
 </span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>

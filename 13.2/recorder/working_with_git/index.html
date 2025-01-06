@@ -663,6 +663,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1202,26 +1209,30 @@
 <p>As prerequisites to working with Git, you need to:</p>
 <ol>
 <li>
-<p>Specify once in WebLOAD how to access the Git Local and Remote Repositories. Refer to <a href="#_bookmark131"><em>Setting up Access to Git Local and Remote Repositories</em> </a>.</p>
+<p>Specify once in WebLOAD how to access the Git Local and Remote Repositories. Refer to <a href="#setting-up-access-to-git-local-and-remote-repositories"><em>Setting up Access to Git Local and Remote Repositories</em> </a>.</p>
 </li>
 <li>
 <p>Make sure your WebLOAD files are saved in the directory defined as the Git local repository. This can be done in one of two ways:</p>
-</li>
+<ul>
 <li>
 <p>Define the Git local repository directory to be the WebLOAD default directory.</p>
 </li>
 <li>
 <p>Change the WebLOAD default directory to be the directory of the Git local repository.</p>
-<p>To do either of the above, you need to access the window where you can view or change the location of the WebLOAD default directory:</p>
 </li>
+</ul>
+<p>To do either of the above, you need to access the window where you can view or change the location of the WebLOAD default directory:</p>
+<ul>
 <li>
 <p>In the WebLOAD Console, navigate to <strong>Global Options</strong> &gt; <strong>File Locations</strong>.</p>
 </li>
 <li>
 <p>In the WebLOAD Recorder, navigate to <strong>Settings</strong> &gt; <strong>File Locations</strong>.</p>
 </li>
-</ol>
+</ul>
 <p>Note that changing the WebLOAD default directory in either the Console UI or the WebLOAD Recorder UI, changes it for both.</p>
+</li>
+</ol>
 <h2 id="setting-up-access-to-git-local-and-remote-repositories">Setting up Access to Git Local and Remote Repositories</h2>
 <p>As a prerequisite to using Git operation from within WebLOAD, you need to once specify in WebLOAD how to access the Git Local Repository and Remote Repository.</p>
 <blockquote>
@@ -1229,29 +1240,25 @@
 </blockquote>
 <p><strong>To specify the Git local and remote repositories:</strong></p>
 <ol>
-<li>Click <strong>Repository Settings</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Repository Settings</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>The WebLOAD Repository Settings window appears.</p>
 <p><img alt="WebLOAD Repository Settings" src="../../images/webload_repo_settings.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Local Repository</strong> section:</p>
-</li>
-<li>
-<p>Specify the location of the local repository.</p>
-</li>
-<li>
-<p>Specify the <strong>current branch</strong>.</p>
+<ol>
+<li>Specify the location of the local repository.</li>
+<li>Specify the <strong>current branch</strong>.</li>
+</ol>
 </li>
 <li>
 <p>In the <strong>Remote Repository</strong> section:</p>
-</li>
-<li>
-<p>Specify the location of the remote repository (either a URL or a directory).</p>
-</li>
+<ol>
+<li>Specify the location of the remote repository (either a URL or a directory).</li>
 <li>Specify the <strong>remote branch</strong>.</li>
-<li>
-<p>Specify the <strong>User Name</strong> and <strong>Password</strong> for accessing the remote repository.</p>
+<li>Specify the <strong>User Name</strong> and <strong>Password</strong> for accessing the remote repository.</li>
+</ol>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -1265,12 +1272,14 @@
 </ul>
 <p><strong>To Commit a WebLOAD object:</strong></p>
 <ol>
-<li>Click <strong>Commit</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Commit</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>A window appears in which you can enter a Commit comment. </p>
 <p><img alt="Entering a Commit Comment" src="../../images/git_commit_message.png"/></p>
-<ol>
-<li>Optionally enter a comment, and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Optionally enter a comment, and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="performing-a-commit-dir-action">Performing a Commit Dir action</h2>
 <p>If you setup WebLOAD to support Git, you perform a Commit dir, that is, save to the Git local repository an entire folder (with all its descendants). This folder must be located under the local repository folder. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
@@ -1281,12 +1290,12 @@
 </li>
 <li>
 <p>In the File Explorer window that appears, specify the directory you wish to commit.</p>
-</li>
-</ol>
 <p>A window appears in which you can enter a Commit dir comment.</p>
 <p><img alt="Entering a Commit Dir Comment" src="../../images/git_commit_dir.png"/></p>
-<ol>
-<li>Optionally enter a comment, and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Optionally enter a comment, and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="performing-a-push-action">Performing a Push action</h2>
 <p>If you setup WebLOAD to support Git, you can perform a Push, which causes all Commits you had made to the Git local repository, to be pushed to the Git remote repository. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
@@ -1294,13 +1303,9 @@
 <ol>
 <li>
 <p>Click <strong>Push</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
-</li>
-<li>
 <p>A window appears, informing you of the Git Push operation and its success status.</p>
-</li>
-</ol>
 <p><img alt="Git Push Operation Message" src="../../images/git_push_oper.png"/></p>
-<ol>
+</li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
@@ -1313,20 +1318,24 @@
 <p>A Pull operation pulls the entire branch from the remote repository and updates the local repository and directories.</p>
 <p><strong>To perform a Pull:</strong></p>
 <ol>
-<li>Click <strong>Pull</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Pull</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>A window appears, informing you of the Git Pull operation and its success status.</p>
 <p><img alt="Git Pull Operation Message" src="../../images/git_pull_oper.png"/></p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="opening-the-git-ui">Opening the Git UI</h2>
 <p>If you setup WebLOAD to support Git, you can launch your Git UI from within WebLOAD. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
 <p><strong>To launch the Git UI:</strong></p>
 <ol>
-<li>Click <strong>Open Git Gui</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Open Git Gui</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>The Git UI is launched.</p>
+</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

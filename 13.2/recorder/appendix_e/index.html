@@ -668,6 +668,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1217,7 +1224,7 @@
 <ol>
 <li>
 <p>Start native mobile recording, as follows:</p>
-</li>
+<ol>
 <li>
 <p>In WebLOAD Recorder, click <strong>Start</strong> in the <strong>Home</strong> tab of the ribbon. The Recording dialog appears.</p>
 <p><img alt="Selecting Native Mobile Recording" src="../../images/select_native_recording.png"/></p>
@@ -1228,69 +1235,75 @@
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
+</ol>
+</li>
 <li>
 <p>Set up the mobile device proxy, as follows:</p>
-</li>
+<ol>
 <li>
 <p>Connect the mobile device to a Wireless network that can access your WebLOAD machine.</p>
 </li>
 <li>
 <p>Configure the device’s wireless proxy settings to go through the WebLOAD machine, on the noted port.</p>
-<p>This step depends on the device OS type and version. For example, see <a href="#_bookmark358">*Setting</a> <em><a href="#_bookmark358">Proxy Settings in iPhone* </a></em> and <a href="#_bookmark360"><em>Setting Proxy Settings in Android</em> </a>.</p>
+</li>
+</ol>
+<p>This step depends on the device OS type and version. For example, see <a href="#setting-proxy-settings-in-iphone"><em>Setting Proxy Settings in iPhone</em> </a>* and <a href="#setting-proxy-settings-in-android"><em>Setting Proxy Settings in Android</em> </a>.</p>
 </li>
 <li>
 <p>Perform actions in your mobile device application or web browser; the HTTP requests will be recorded in the test script.</p>
 </li>
 <li>
 <p>Stop recording, as follows:</p>
-</li>
-<li>
-<p>In WebLOAD Recorder, click <strong>Stop Recording</strong>.</p>
-</li>
+<ol>
+<li>In WebLOAD Recorder, click <strong>Stop Recording</strong>.</li>
 <li>In the mobile device, change the Proxy settings back to off.</li>
+</ol>
+</li>
 </ol>
 <blockquote>
 <p><strong>Note:</strong> </p>
 <p>You may need to open you firewall to accept connections to proxynator.exe, on port 9884.</p>
-<p>To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see <a href="#_bookmark359"><em>Recording HTTPS Traffic on iPhone</em> </a> and <a href="#_bookmark361">*Recording</a> <em><a href="#_bookmark361">HTTPS traffic on Android (4.0 and above)* </a></em>.</p>
+<p>To record secure traffic (HTTPS), the root certificate needs to be imported to the phone. For example, see <a href="#recording-https-traffic-on-iphone">*Recording HTTPS Traffic on iPhone</a> *<a href="#recording-https-traffic-on-android-40-and-above">HTTPS traffic on Android (4.0 and above)* </a></p>
 <p>When not recording, the mobile device will not be able to access the network (because the proxy is not available) – to use the network normally, revert the <strong>HTTP Proxy</strong> setting back to <strong>Off</strong>.</p>
 </blockquote>
 <h3 id="setting-proxy-settings-in-iphone">Setting Proxy Settings in iPhone</h3>
 <p><strong>To set iPhone proxy settings:</strong></p>
 <ol>
-<li>Open <strong>Settings</strong>, and access the <strong>Wi-Fi</strong> network settings:</li>
-</ol>
+<li>
+<p>Open <strong>Settings</strong>, and access the <strong>Wi-Fi</strong> network settings:</p>
 <p><img alt="Accessing Wi-Fi iPhone Settings" src="../../images/access_wifi_settings.jpeg"/></p>
-<ol>
-<li>Select edit current Wi-Fi Network settings:</li>
-</ol>
+</li>
+<li>
+<p>Select edit current Wi-Fi Network settings:</p>
 <p><img alt="Edit Current Wi-Fi iPhone Settings" src="../../images/edit_wifi_settings.jpeg"/></p>
-<ol>
-<li>Scroll down the <strong>HTTP Proxy</strong> section. Change proxy to <strong>Manual</strong> and set the <strong>Server</strong> and <strong>Port</strong> to point to the WebLOAD machines.</li>
-</ol>
+</li>
+<li>
+<p>Scroll down the <strong>HTTP Proxy</strong> section. Change proxy to <strong>Manual</strong> and set the <strong>Server</strong> and <strong>Port</strong> to point to the WebLOAD machines.</p>
 <p>The default port for the proxy-recorder is 9884. You may need to use the machine’s IP-address instead of name.</p>
 <p><img alt="Setting Wi-Fi iPhone Settings" src="../../images/setting_iphone_wifi.jpeg"/></p>
+</li>
+</ol>
 <h4 id="recording-https-traffic-on-iphone"><strong>Recording HTTPS Traffic on iPhone</strong></h4>
 <p>In order to record HTTPS traffic, the WebLOAD root certificate needs to be trusted by the phone. To import the root certificate:</p>
 <ol>
-<li>Locate the root certificate, in:</li>
-</ol>
+<li>
+<p>Locate the root certificate, in:</p>
 <p><code>c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</code></p>
-<ol>
+</li>
 <li>
 <p>Open the root.pem file on the phone. This can be done by sending the file via e-mail, or accessing the file from a web-server.</p>
 </li>
 <li>
 <p>Click <strong>Install</strong>.</p>
-</li>
-</ol>
 <p><img alt="Installing the Root CA" src="../../images/install_root_ca.jpeg"/></p>
-<ol>
-<li>A warning will appear; click <strong>Install</strong>. The certificate should now be trusted</li>
-</ol>
+</li>
+<li>
+<p>A warning will appear; click <strong>Install</strong>. The certificate should now be trusted</p>
 <p><img alt="" src="../../images/root_ca.jpeg"/></p>
-<ol>
-<li>After recording is completed, the certificate may be removed. To remove the certificate, select the following: <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Profile ‘RadView Root CA’</strong> &gt; <strong>Remove</strong>.</li>
+</li>
+<li>
+<p>After recording is completed, the certificate may be removed. To remove the certificate, select the following: <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Profile ‘RadView Root CA’</strong> &gt; <strong>Remove</strong>.</p>
+</li>
 </ol>
 <h3 id="setting-proxy-settings-in-android">Setting Proxy Settings in Android</h3>
 <p><strong>To set Android proxy settings:</strong></p>
@@ -1312,16 +1325,16 @@
 </li>
 <li>
 <p>Set <strong>Proxy</strong> to the WebLOAD machine IP-address, and <strong>Port</strong> to 9884.</p>
+<p><img alt="Proxy Settings in Android – Two Examples" src="../../images/proxy_settings_adroid.png"/></p>
 </li>
 </ol>
-<p><img alt="Proxy Settings in Android – Two Examples" src="../../images/proxy_settings_adroid.png"/></p>
 <h4 id="recording-https-traffic-on-android-40-and-above">Recording HTTPS traffic on Android (4.0 and above)</h4>
 <p>In order to record HTTPS traffic, the WebLOAD root certificate needs to be trusted by the phone. To import the root certificate:</p>
 <ol>
-<li>Locate the root certificate, in:</li>
-</ol>
+<li>
+<p>Locate the root certificate, in:</p>
 <p>c:\Program Files\RadView\WebLOAD\bin\Certificates\root.pem</p>
-<ol>
+</li>
 <li>
 <p>Copy locally, as root.crt.</p>
 </li>
@@ -1339,10 +1352,10 @@
 <p>In Simulate mode, the recording is done using the desktop browser, identified to the server as a mobile user agent.</p>
 <p><strong>To simulate a mobile:</strong></p>
 <ol>
-<li>In WebLOAD Recorder, click <strong>Start Recording</strong>.</li>
-</ol>
+<li>
+<p>In WebLOAD Recorder, click <strong>Start Recording</strong>.</p>
 <p><img alt="Simulating a Mobile" src="../../images/simulating_mobile.png"/></p>
-<ol>
+</li>
 <li>
 <p>Check the <strong>Identify As</strong> checkbox.</p>
 </li>

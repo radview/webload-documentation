@@ -969,6 +969,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1817,9 +1824,9 @@
 <h2 id="running-a-script">Running a Script</h2>
 <p>This section provides instructions for running a script. Before running a script, you can do the following:</p>
 <ul>
-<li>Set the number of iterations to run, see <a href="#_bookmark184"><em>Setting Playback Options</em> </a>.</li>
-<li>Set the file locations for a test session, see <a href="#_bookmark185"><em>Setting File Locations</em> </a>.</li>
-<li>Set WebLOAD Recorder to ignore the recorded sleep time, see <a href="#_bookmark141">*Configuring Sleep</a><a href="#_bookmark141"> Time Control Options* </a>.</li>
+<li>Set the number of iterations to run, see <a href="../configuring_recorder_options/#setting-playback-options"><em>Setting Playback Options</em> </a>.</li>
+<li>Set the file locations for a test session, see <a href="../configuring_recorder_options/#setting-file-locations"><em>Setting File Locations</em> </a>.</li>
+<li>Set WebLOAD Recorder to ignore the recorded sleep time, see <a href="../configuring_recorder_options/#configuring-sleep-time-control-options"><em>Configuring Sleep Time Control Options</em> </a>.</li>
 </ul>
 <h3 id="starting-the-execution-of-a-script">Starting the Execution of a Script</h3>
 <p><strong>To execute the script:</strong></p>
@@ -1840,20 +1847,20 @@
 <li>If the Page View tab is open, the pages returned from the Web site.</li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong> If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see <a href="#_bookmark184">*Setting Playback</a> <em><a href="#_bookmark184">Options* </a></em>on page <a href="#_bookmark184">209</a>).
+<p><strong>Note:</strong> If you specified more than one playback iteration, you are returned to the beginning of the script (for information on playback iteration, see <a href="../configuring_recorder_options/#setting-playback-options"><em>Setting Playback Options</em> </a>*).
 </p>
 </blockquote>
 <h3 id="viewing-the-execution-sequence-in-the-script-tree"><strong>Viewing the Execution Sequence in the Script Tree</strong></h3>
-<p>When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see <a href="#_bookmark115">*Viewing and</a> <em><a href="#_bookmark115">Analyzing the Test Results* </a></em>.</p>
+<p>When you run your script, WebLOAD Recorder interacts with your Web application just as a real user would. WebLOAD Recorder runs your script line by line. Execution arrows are displayed in the left margin of the Script Tree. When you select a node in the Script Tree, the corresponding information is displayed in each of the available views. For example, the Page View displays the page you have requested from the server, the HTML View displays the HTML of that page, and the HTTP Headers View displays the request and response’s headers. For more information, see <a href="#viewing-and-analyzing-the-test-results"><em>Viewing and Analyzing the Test Results</em> </a>*.</p>
 <p>WebLOAD Recorder enables you to do the following:</p>
 <ul>
-<li>Run through the entire script line by line, and add breakpoints (see <a href="#_bookmark112">*Debugging a</a><a href="#_bookmark112"> Script* </a>on page <a href="#_bookmark112">120</a>).</li>
+<li>Run through the entire script line by line, and add breakpoints (see <a href="#debugging-a-script"><em>Debugging a Script</em> </a>).</li>
 <li>Display the Current Project Options by right-clicking the Agenda root node and clicking <strong>Current Project Options</strong> from the pop-up menu,</li>
 </ul>
 <p>-Or-</p>
-<p>Click <strong>Current Project Options</strong> in the <strong>Tools</strong> tab of the ribbon (see <a href="#_bookmark138">*Configuring the</a> <em><a href="#_bookmark138">Default and Current Project Options* </a></em>on page <a href="#_bookmark138">155</a>).</p>
+<p>Click <strong>Current Project Options</strong> in the <strong>Tools</strong> tab of the ribbon (see <a href="../configuring_recorder_options/#configuring-the-default-and-current-project-options"><em>Configuring the Default and Current Project Options</em> </a>).</p>
 <p>-Or-</p>
-<p>Select <strong>Current Project Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon (see <a href="#_bookmark138"><em>Configuring the Default and Current Project Options</em> </a>on page <a href="#_bookmark138">155</a>).</p>
+<p>Select <strong>Current Project Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon (see <a href="../configuring_recorder_options/#configuring-the-default-and-current-project-options"><em>Configuring the Default and Current Project Options</em> </a>).</p>
 <p><strong>To view the Script Tree:</strong></p>
 <ul>
 <li>In the main window, click <strong>Visual Mode</strong> in the <strong>Home</strong> tab.</li>
@@ -1864,7 +1871,7 @@
 <p>JavaScript View displays the complete JavaScript of your script with an execution arrow tracking its progress during runtime.</p>
 <p>WebLOAD Recorder enables you to do the following:</p>
 <ul>
-<li>Run through the entire script line by line, add breakpoints, and add Watch variables (see <a href="#_bookmark112"><em>Debugging a Script</em> </a>on page <a href="#_bookmark112">120</a>).</li>
+<li>Run through the entire script line by line, add breakpoints, and add Watch variables (see <a href="#debugging-a-script"><em>Debugging a Script</em> </a>).</li>
 <li>Check the syntax by right-clicking in the script and clicking <strong>Check Syntax</strong> from the pop-up menu.</li>
 </ul>
 <p><strong>To view the JavaScript View:</strong></p>
@@ -1900,7 +1907,7 @@
 </ol>
 <p>-Or-</p>
 <p>Right-click a node in the Script Tree or the Execution Tree and select <strong>Compare html</strong> from the pop-up menu.</p>
-<p>The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see <a href="#_bookmark186">*Defining the Difference Viewer</a> <em><a href="#_bookmark186">Application* </a></em>.</p>
+<p>The defined Difference Viewer application launches and automatically compares the selected node in the recording and in the playback. For information about defining the Difference Viewer application, see <a href="../configuring_recorder_options/#defining-the-difference-viewer-application"><em>Defining the Difference Viewer Application</em> </a>*.</p>
 <h3 id="comparing-a-recorded-sequence-with-the-execution-sequence"><strong>Comparing a Recorded Sequence with the Execution Sequence</strong></h3>
 <p>You can compare an entire original recorded sequence with the current execution sequence using the Compare All feature. This can help you to check and fix any undesirable changes you made to the original recorded session.</p>
 <p><strong>To compare the current execution with the original sequence:</strong></p>
@@ -1932,7 +1939,7 @@
 </ul>
 <p>Double clicking a line, or right-clicking a line and selecting <strong>Go to location</strong>, opens a side-by-side view of the relevant code in the view pane, with the first difference highlighted in blue. The original recorded sequence is displayed on the left and the current execution is displayed on the right. The side by side comparison can be viewed in the Browser, HTTP Headers, and HTML Views.</p>
 <p><img alt="Go to Location" src="../../images/go_to_loc.png"/></p>
-<p>In addition, right-clicking a line and selecting <strong>Compare HTML</strong>, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see <a href="#_bookmark107">*Comparing a Script</a> <em><a href="#_bookmark107">Recording node to its Playback* </a></em>.</p>
+<p>In addition, right-clicking a line and selecting <strong>Compare HTML</strong>, launches the defined Difference Viewer application that compares the selected node in the original recording with the current execution. For more information see <a href="#comparing-a-script-recording-node-to-its-playback"><em>Comparing a Script Recording node to its Playback</em> </a>.</p>
 <h3 id="stopping-the-execution-of-a-script">Stopping the Execution of a Script</h3>
 <p>When debugging a script using a Step Into or breakpoint, the playback session stops immediately upon completion of the current WebLOAD Recorder protocol block.</p>
 <p><strong>To stop the execution of a script:</strong></p>
@@ -2036,10 +2043,12 @@
 <p><strong>To debug a script:</strong></p>
 <ol>
 <li>Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab of the ribbon.</li>
-<li>When you reach the end of the script you can:</li>
+<li>When you reach the end of the script you can:<ol>
 <li>Click <strong>Step Into</strong> in the <strong>Debug</strong> tab to return to the beginning of the script.</li>
-<li>View results (see <a href="#_bookmark115"><em>Viewing and Analyzing the Test Results</em> </a>on page <a href="#_bookmark115">130</a>).</li>
-<li>Add breakpoints (see <a href="#_bookmark113"><em>Setting Breakpoints</em> </a>on page <a href="#_bookmark113">121</a>).</li>
+<li>View results (see <a href="#viewing-and-analyzing-the-test-results"><em>Viewing and Analyzing the Test Results</em> </a>).</li>
+<li>Add breakpoints (see <a href="#setting-breakpoints"><em>Setting Breakpoints</em> </a>).</li>
+</ol>
+</li>
 <li>Return to Edit mode and revise your script.</li>
 </ol>
 <h4 id="starting-the-debugger">Starting the Debugger</h4>
@@ -2061,41 +2070,43 @@
 </li>
 <li>
 <p>Click <strong>Edit Breakpoints</strong> in the <strong>Debug</strong> tab. The Breakpoints dialog box opens.</p>
-</li>
-</ol>
 <p><img alt="Breakpoints Dialog Box" src="../../images/bp_dialog.jpeg"/></p>
-<ol>
-<li>Click the arrow next to the <strong>Break at</strong> field. The Breakpoint options appear.</li>
-</ol>
+</li>
+<li>
+<p>Click the arrow next to the <strong>Break at</strong> field. The Breakpoint options appear.</p>
 <p><img alt="Breakpoint Dialog Box Options" src="../../images/bp_dialog_ops.png"/></p>
-<ol>
-<li>Click the Line number.</li>
-</ol>
+</li>
+<li>
+<p>Click the Line number.</p>
 <p>The Line number is added to the list of breakpoints.</p>
-<ol>
-<li>To add context to the breakpoint, click the arrow again, and click <strong>Advanced</strong>. </li>
-</ol>
+</li>
+<li>
+<p>To add context to the breakpoint, click the arrow again, and click <strong>Advanced</strong>. </p>
 <p>The Advanced Breakpoint dialog box opens.</p>
 <p><img alt="Advanced Breakpoint Dialog Box" src="../../images/adv_bp_dial.png"/></p>
-<ol>
-<li>Fill in the fields, and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Fill in the fields, and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <p><strong>To set a breakpoint in the Script Tree:</strong></p>
 <ol>
 <li>Right-click an item in the Script Tree.</li>
-<li>From the pop-up menu, click <strong>Toggle Breakpoint</strong>.</li>
+<li>From the pop-up menu, click <strong>Toggle Breakpoint</strong>.
+    A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.</li>
 </ol>
-<p>A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.</p>
 <p><strong>To set a breakpoint in the JavaScript View pane:</strong></p>
 <ol>
 <li>Select the <strong>JavaScript View</strong> checkbox in the <strong>View</strong> tab to open the JavaScript View pane.</li>
 <li>In the Script Tree, click the <strong>Agenda</strong> root node to display the entire script in the JavaScript View pane.</li>
 <li>In the JavaScript View pane, select the line of code where you want the script to wait.</li>
-<li>Right-click and select <strong>Toggle Breakpoint</strong> from the pop-up menu,</li>
-</ol>
+<li>
+<p>Right-click and select <strong>Toggle Breakpoint</strong> from the pop-up menu,</p>
 <p>-Or-</p>
 <p>Click <strong>Toggle Breakpoint</strong> in the <strong>Debug</strong> tab.</p>
 <p>A red dot appears in the left margin of the JavaScript View pane adjacent to the selected code and in the Script Tree adjacent to the visual script element for which the breakpoint is defined, indicating that the breakpoint is set.</p>
+</li>
+</ol>
 <p><strong>To set a breakpoint in Debug mode:</strong></p>
 <ol>
 <li>
@@ -2117,10 +2128,12 @@
 <h4 id="running-to-a-breakpoint">Running to a Breakpoint</h4>
 <p><strong>To run until a breakpoint is reached:</strong></p>
 <ol>
-<li>Set a breakpoint (see <a href="#_bookmark113"><em>Setting Breakpoints</em> </a>on page <a href="#_bookmark113">121</a>).</li>
-<li>Click <strong>Run</strong> in the <strong>Debug</strong> tab</li>
-</ol>
+<li>Set a breakpoint (see <a href="#setting-breakpoints"><em>Setting Breakpoints</em> </a>).</li>
+<li>
+<p>Click <strong>Run</strong> in the <strong>Debug</strong> tab</p>
 <p>Click <strong>Step Into</strong> in the <strong>Debug</strong> tab to run the script step-by-step.</p>
+</li>
+</ol>
 <h4 id="removing-breakpoints">Removing Breakpoints</h4>
 <p>You can remove individual breakpoints or remove all breakpoints in the script.</p>
 <p><strong>To remove a breakpoint:</strong></p>
@@ -2156,30 +2169,36 @@
 </li>
 <li>
 <p>Click <strong>Disable/Enable Breakpoints</strong> in the <strong>Debug</strong> tab.</p>
-</li>
+<ul>
 <li>
 <p>When all of the breakpoints are disabled, the red dots in the left margin turn white.</p>
 </li>
 <li>
 <p>When all of the breakpoints are enabled, the white dots in the left margin turn red.</p>
 </li>
+</ul>
+</li>
 </ol>
 <h4 id="stepping-into-the-script">Stepping Into the Script</h4>
 <p><strong>To run the script and execute one statement at a time (Step Into):</strong></p>
 <ol>
-<li>Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab.</li>
-</ol>
+<li>
+<p>Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab.</p>
 <p>The debugger executes the next statement and then it pauses execution. If you step into a nested function call, the debugger steps into the most deeply nested function.</p>
-<ol>
-<li>Repeat step <strong>1</strong> to continue executing the script one statement at a time.</li>
+</li>
+<li>
+<p>Repeat step <strong>1</strong> to continue executing the script one statement at a time.</p>
+</li>
 </ol>
 <p><strong>To step into a specific function:</strong></p>
 <ol>
-<li>Set a breakpoint just before the function call or use the <strong>Step Into</strong> command to advance the script execution to that point.</li>
-</ol>
-<p>For information on setting breakpoints see <a href="#_bookmark113"><em>Setting Breakpoints</em> </a>.</p>
-<ol>
-<li>Click <strong>Step Into</strong> in the <strong>Debug</strong> tab.</li>
+<li>
+<p>Set a breakpoint just before the function call or use the <strong>Step Into</strong> command to advance the script execution to that point.</p>
+<p>For information on setting breakpoints see <a href="#setting-breakpoints"><em>Setting Breakpoints</em> </a>.</p>
+</li>
+<li>
+<p>Click <strong>Step Into</strong> in the <strong>Debug</strong> tab.</p>
+</li>
 </ol>
 <h4 id="stepping-out-or-over-a-function">Stepping Out or Over a Function</h4>
 <p><strong>To step over a function:</strong></p>
@@ -2192,11 +2211,11 @@
 </li>
 <li>
 <p>Click <strong>Step Over</strong> in the <strong>Debug</strong> tab.</p>
-</li>
-</ol>
 <p>The debugger executes the next function, but pauses after the function returns.</p>
-<ol>
-<li>Continue executing the program.</li>
+</li>
+<li>
+<p>Continue executing the program.</p>
+</li>
 </ol>
 <p><strong>To step out of a function:</strong></p>
 <ol>
@@ -2205,21 +2224,23 @@
 </li>
 <li>
 <p>Click <strong>Step Out</strong> in the <strong>Debug</strong> tab.</p>
+<p>The debugger continues until it has completed  execution of the return from the function, then pauses.</p>
 </li>
 </ol>
-<p>The debugger continues until it has completed execution of the return from the function, then pauses.</p>
 <h4 id="stopping-the-playback-of-the-script">Stopping the Playback of the Script</h4>
 <p>You can stop the playback of the script at a specific point. Stopping a script executes the TerminateClient or TerminateAgenda functions.</p>
 <p><strong>To stop the playback of the script:</strong></p>
 <ol>
 <li>Start debugging. Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab.</li>
-<li>Click <strong>Break Execution</strong> in the <strong>Debug</strong> tab.</li>
-</ol>
+<li>
+<p>Click <strong>Break Execution</strong> in the <strong>Debug</strong> tab.</p>
 <p>The script stops running. You can continue the playback from this point, at a later time.</p>
-<ol>
-<li>Click <strong>Stop</strong> in the <strong>Debug</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Stop</strong> in the <strong>Debug</strong> tab.</p>
 <p>The script stops running. Continuing the playback from this point is not possible.</p>
+</li>
+</ol>
 <h4 id="aborting-the-playback-of-the-script">Aborting the Playback of the Script</h4>
 <p>You can abort the playback of the script at a specific point. Aborting a script does not execute the TerminateClient or TerminateAgenda functions.</p>
 <p><strong>To abort the execution of a script:</strong></p>
@@ -2228,7 +2249,7 @@
 </ul>
 <h4 id="using-the-watch-window">Using the Watch Window</h4>
 <p>The Watch window is used for debugging your application, and is only available when you are running your script. The Watch window displays the values of selected variables or watch expressions that you specify while debugging your script. The values of the variables and expressions in the Watch window are only updated when execution is stopped at a breakpoint.</p>
-<p>Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see <a href="#_bookmark114"><em>Adding a Watch Variable or Expression</em> </a>.</p>
+<p>Use the Watch window to specify variables and expressions that you want to watch while debugging your program. You can also modify the value of a variable using the Watch window. To add a watch variable, see <a href="#adding-a-watch-variable-or-expression"><em>Adding a Watch Variable or Expression</em> </a>.</p>
 <p><strong>To open the Watch window:</strong></p>
 <ul>
 <li>Select the <strong>Watch Window</strong> checkbox in the <strong>Debug</strong> tab.</li>
@@ -2248,9 +2269,11 @@
 <p><strong>To view a variable or expression in the Watch window:</strong></p>
 <ol>
 <li>Start debugging. Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab of the ribbon.</li>
-<li>Select the <strong>Watch Window</strong> checkbox in the <strong>Debug</strong> tab to open the Watch window.</li>
-</ol>
+<li>
+<p>Select the <strong>Watch Window</strong> checkbox in the <strong>Debug</strong> tab to open the Watch window.</p>
 <p>In the Name column, plus sign (+) or minus sign (-) boxes may appear. These appear if you added an array or object variable to the Watch window. Use these boxes to expand or collapse your view of the variable.</p>
+</li>
+</ol>
 <h5 id="adding-a-watch-variable-or-expression">Adding a Watch Variable or Expression</h5>
 <p>You can add a watch variable or expression to the Watch window, while you are running your script. Valid expressions accepted in the Watch window include any valid JavaScript expression that can be added to the script.</p>
 <p>The Watch dialog box is equivalent to using the JavaScript eval function. Using the eval function you can define a variable and its value. In the same way, you can use the watch dialog box to define values for variables used throughout a script.</p>
@@ -2271,34 +2294,34 @@
 </li>
 <li>
 <p>Right-click the variable in the JavaScript View pane, and click <strong>Add Watch</strong> from the pop-up menu.</p>
-</li>
-</ol>
 <p>The Add Watch dialog box opens.</p>
 <p><img alt="Add Watch Dialog Box" src="../../images/add_watch.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the Expression field, type a variable or expression.</p>
 </li>
 <li>
 <p>Click <strong>Add</strong>.</p>
-</li>
-</ol>
 <p>The variable or expression is added to the Watch window. The Watch window evaluates the variable or expression immediately and displays the value or an error message.</p>
 <p>If you added an array or object variable to the Watch window, plus sign (+) or minus sign (-) boxes appear in the Name column. Use these boxes to expand or collapse your view of the variable.</p>
-<ol>
-<li>You can optionally edit the name or value of the variable or expression by double- clicking the name or value that you want to edit.</li>
+</li>
+<li>
+<p>You can optionally edit the name or value of the variable or expression by double- clicking the name or value that you want to edit.</p>
+</li>
 </ol>
 <h4 id="viewing-the-variables-window">Viewing the Variables Window</h4>
 <p>The Variables window provides quick access to variables that are important in the scripts current context.</p>
 <p><strong>To open the Variables Window:</strong></p>
 <ol>
 <li>Start debugging. Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab.</li>
-<li>Select the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab.</li>
-</ol>
+<li>
+<p>Select the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab.</p>
 <p><img alt="Variables Window" src="../../images/wat_variab.jpeg"/></p>
 <p>The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.</p>
-<p>The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see <a href="#_bookmark114">*Adding a Watch Variable or</a> <em><a href="#_bookmark114">Expression* </a></em>on page <a href="#_bookmark114">128</a>), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.</p>
+<p>The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window (you must use the Watch window, see <a href="#adding-a-watch-variable-or-expression"><em>Adding a Watch Variable or Expression</em> </a>), but you can expand or collapse the variables shown. You can expand an array, object, or structure variable in the Variables window if it has a plus sign (+) box in the Name field. If an array, object, or structure variable has a minus sign (-) box in the Name field, the variable is already fully expanded.</p>
 <p>The Variables window also has a Context dropdown list that displays the current scope of the variables displayed. To view variables in a different scope, select the scope from the drop-down list box.</p>
+</li>
+</ol>
 <h5 id="viewing-the-value-of-a-variable">Viewing the Value of a Variable</h5>
 <p>You can view the value of a variable in the Variables window.</p>
 <p><strong>To view a variable in the Variables window:</strong></p>
@@ -2311,9 +2334,11 @@
 <p><strong>To open the Call Stack Window:</strong></p>
 <ol>
 <li>Start debugging. Click <strong>Run</strong> or <strong>Step Into</strong> in the <strong>Debug</strong> tab.</li>
-<li>Select the <strong>Call Stack</strong> checkbox in the <strong>Debug</strong> tab.</li>
-</ol>
+<li>
+<p>Select the <strong>Call Stack</strong> checkbox in the <strong>Debug</strong> tab.</p>
 <p><img alt="Call Stack Window" src="../../images/call_stac.jpeg"/></p>
+</li>
+</ol>
 <h2 id="viewing-and-analyzing-the-test-results">Viewing and Analyzing the Test Results</h2>
 <p>While recording, editing, and running your script, WebLOAD Recorder provides information on all major events that occurred during runtime such as failures and error messages. You can navigate through the Execution Tree to view the results of your test at increasing levels of detail. This technique lets you view detailed information on any errors.</p>
 <h3 id="using-the-execution-tree-to-view-results">Using the Execution Tree to View Results</h3>
@@ -2325,18 +2350,22 @@
 <p><strong>To open the Page View:</strong></p>
 <ol>
 <li>Select the <strong>Page View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</li>
-<li>Select the <strong>Page View</strong> tab.</li>
-</ol>
+<li>
+<p>Select the <strong>Page View</strong> tab.</p>
 <p><img alt="Page View" src="../../images/exe_page_view.jpeg"/></p>
+</li>
+</ol>
 <h3 id="using-the-dom-view-to-view-results">Using the DOM View to View Results</h3>
 <p>DOM View displays all of the objects and the structure of the Web page displayed in Page View, giving you access to objects not visible in the pages presentation layer.</p>
 <p>DOM View is available when Page View is open, while recording, editing, or running your script. When an element is selected in the DOM View, the object is highlighted in the Page View.</p>
 <p><strong>To open the DOM View:</strong></p>
 <ol>
 <li>Select the <strong>DOM View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</li>
-<li>Select the <strong>DOM View</strong> tab.</li>
-</ol>
+<li>
+<p>Select the <strong>DOM View</strong> tab.</p>
 <p><img alt="DOM View" src="../../images/exe_dom_view.jpeg"/></p>
+</li>
+</ol>
 <h3 id="using-the-html-view-to-view-results">Using the HTML View to View Results</h3>
 <p>HTML view displays an HTML preview of each page and frame requested in the script. When switching between the JavaScript, HTTP Headers, Browser, and HTML Views, the new view displays the node that is selected in the Script Tree (during edit mode) or Execution Tree (during debug mode). These views are available while recording, after the recording is finished, and after opening a saved script.</p>
 <p><strong>To open the HTML View:</strong></p>
@@ -2346,26 +2375,22 @@
 </li>
 <li>
 <p>Select the <strong>HTML View</strong> tab.</p>
-</li>
-</ol>
 <p><img alt="HTML View" src="../../images/exe_html_view.png"/></p>
-<ol>
+</li>
 <li>
 <p>To search for text:</p>
-</li>
-<li>
-<p>Right-click and click <strong>Find</strong> from-the pop-up menu.</p>
-</li>
-<li>
-<p>Type the text you want to find, and click <strong>Find Next</strong>.</p>
+<ol>
+<li>Right-click and click <strong>Find</strong> from-the pop-up menu.</li>
+<li>Type the text you want to find, and click <strong>Find Next</strong>.</li>
+</ol>
 </li>
 <li>
 <p>To copy text:</p>
-</li>
-<li>
-<p>Select the text you want to copy.</p>
-</li>
+<ol>
+<li>Select the text you want to copy.</li>
 <li>Right-click and click <strong>Copy</strong> from-the pop-up menu.</li>
+</ol>
+</li>
 </ol>
 <h3 id="using-the-http-headers-view-to-view-results">Using the HTTP Headers View to View Results</h3>
 <p>The HTTP Headers View displays the GET and POST HTTP protocol commands. Other commands can also be displayed, such as CONNECT. When switching between the various views, the new view displays the node that is selected in the Script Tree.</p>
@@ -2377,12 +2402,10 @@
 </li>
 <li>
 <p>Select the <strong>HTTP Headers View</strong> tab.</p>
-</li>
-</ol>
 <p><img alt="HTTP Headers View" src="../../images/http_headers_view.jpeg"/></p>
 <p>The headers are divided into groups of headers per playback request. For each request, only the relevant headers are displayed. You can expand the headers to show the form data and all other content.</p>
 <p><img alt="HTTP Headers" src="../../images/http_headers.jpeg"/></p>
-<ol>
+</li>
 <li>
 <p>To view all of the headers on the script, click the Agenda root node.</p>
 </li>
@@ -2391,24 +2414,26 @@
 </li>
 <li>
 <p>To search for text:</p>
-</li>
+<ol>
 <li>
 <p>Right-click and click <strong>Find...</strong> from-the pop-up menu.</p>
 </li>
 <li>
 <p>In the <strong>Find what</strong> field, type the text you want to find. </p>
-<p>The <strong>Find what</strong> field is case sensitive.</p>
 </li>
-<li>
-<p>Click <strong>Find Next</strong>. The entire text of the selected node is selected.</p>
+</ol>
+<p>The <strong>Find what</strong> field is case sensitive.</p>
+<ol>
+<li>Click <strong>Find Next</strong>. The entire text of the selected node is selected.</li>
+</ol>
 </li>
 <li>
 <p>To copy text:</p>
-</li>
-<li>
-<p>Select the text you want to copy.</p>
-</li>
+<ol>
+<li>Select the text you want to copy.</li>
 <li>Right-click and click <strong>Copy</strong> from-the pop-up menu. The entire text of the selected node is copied.</li>
+</ol>
+</li>
 </ol>
 <h3 id="using-the-log-view-window-to-view-results">Using the Log View Window to View Results</h3>
 <p>In addition to the results available through viewing the Script Tree and the Execution Tree, the Log View Window displays the errors encountered during playback and additional information about your test session results.</p>
@@ -2437,40 +2462,34 @@
 <p>You can search for a specific string in all views at once.</p>
 <p><strong>To search for text in all views:</strong></p>
 <ol>
-<li>Select <strong>Find All</strong> in the <strong>Edit</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Select <strong>Find All</strong> in the <strong>Edit</strong> tab of the ribbon.</p>
 <p><img alt="Find All Dialog Box" src="../../images/find_all_dia.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Find what</strong> field, type the text you want to find.</p>
 </li>
 <li>
 <p>Under <strong>Look at</strong>, specify in which view you wish to search. You can select any combination of the following:</p>
-</li>
-<li>
-<p>JavaScript</p>
-</li>
+<ul>
+<li>JavaScript</li>
 <li>HTTP Headers</li>
-<li>
-<p>HTML</p>
+<li>HTML</li>
+</ul>
 </li>
 <li>
 <p>Optionally check the <strong>Match case</strong> checkbox.</p>
 </li>
 <li>
 <p>Click <strong>Find</strong>.</p>
+<p>A results pane appears in the bottom half of the screen, displaying all the search results.</p>
 </li>
 </ol>
-<p>A results pane appears in the bottom half of the screen, displaying all the search results.</p>
 <p><img alt="Search Results of the Find All Function" src="../../images/findall_search_results.jpeg"/></p>
-<ul>
-<li>
-<p>The icon to the left of each search result indicates in which page view the result appears.</p>
-</li>
-<li>
-<p>Double clicking a search result highlights the result both in the Script Tree and in the corresponding page view.</p>
-</li>
-</ul>
+<div class="language-text highlight"><pre><span></span><code>- The icon to the left of each search result indicates in which page view the result appears.
+
+- Double clicking a search result highlights the result both in the Script Tree and in the corresponding page view.
+</code></pre></div>
 <h4 id="printing-the-contents-of-the-log-view-window">Printing the Contents of the Log View Window</h4>
 <p><strong>To print the contents of the Log View Window:</strong></p>
 <ol>
@@ -2484,17 +2503,21 @@
 <li>Right-click inside the Log View window.</li>
 <li>Select <strong>Save</strong> from the right-click menu. The Save As dialog displays.</li>
 <li>In the <strong>File Name</strong> field, type in the name for the file.</li>
-<li>Click <strong>Save</strong>.</li>
-</ol>
+<li>
+<p>Click <strong>Save</strong>.</p>
 <p>The file is saved with the extension *.log.</p>
 <p>You can view the saved log file with any text editor.</p>
+</li>
+</ol>
 <h4 id="viewing-a-log-message">Viewing a Log Message</h4>
 <p><strong>To view the complete log message:</strong></p>
 <ol>
 <li>Right-click an entry in the Log View window.</li>
-<li>Select <strong>Display Message</strong> from the right-click menu.</li>
-</ol>
+<li>
+<p>Select <strong>Display Message</strong> from the right-click menu.</p>
 <p>The Log Message window with detailed information on the selected entry appears.</p>
+</li>
+</ol>
 <h2 id="validating-responses">Validating Responses</h2>
 <p>WebLOAD Recorder enables you to validate a response in a script by adding a response validation function. You can validate a Web page’s title, the maximum time taken to load the Web page, its content, and the length of its content. You can also</p>
 <p>determine WebLOAD’s behavior if validation fails. During playback, the results of the validation process (failure or success) are displayed in the Log View window.</p>
@@ -2505,8 +2528,6 @@
 </li>
 <li>
 <p>Click <strong>Response Validation</strong> in the <strong>Home</strong> tab of the ribbon.</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Right-click the node and select <strong>Response Validation</strong>.</p>
 <p>-Or-</p>
@@ -2519,15 +2540,15 @@
 <blockquote>
 <p><strong>Note:</strong> When accessing the Response Validation dialog box from <strong>HTML View</strong>, the dialog box appears automatically configured with the selected content.</p>
 </blockquote>
-<p><img alt="Response Validation Dialog Box" src="../../images/rsp_vald_diag.png"/></p>
-<ol>
+<p><a name="response_validation_dialog_box"></a>
+<img alt="Response Validation Dialog Box" src="../../images/rsp_vald_diag.png"/></p>
+</li>
 <li>
-<p>Configure the responses you wish to validate during playback, according to the information displayed in <a href="#_bookmark125">Table 13, </a>and click <strong>OK</strong>.</p>
+<p>Configure the responses you wish to validate during playback, according to the information displayed in the <a href="#response-validation">Table</a> and click <strong>OK</strong>.</p>
+<p><a name="response-validation"> </a></p>
 </li>
 <li>
 <p>The Response Validation function is added to your script.</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -2574,7 +2595,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Equal to x bytes</strong></td>
-<td style="text-align: left;">The size of the Web page content, in bytes, must equal the specified value for the validation to be successful.</td>
+<td style="text-align: left;">The size of the Web page content, in bytes, must equal the  specified value for the validation to be successful.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Greater than x bytes</strong></td>
@@ -2594,7 +2615,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Validate</strong></td>
-<td style="text-align: left;">Select to validate the content. For a full explanation, refer to <a href="#_bookmark126">*Performing</a> <em><a href="#_bookmark126">Multiple Text Validations of Web Page Content* </a></em>.</td>
+<td style="text-align: left;">Select to validate the content. For a full explanation, refer to <a href="#performing-multiple-text-validations-of-web-page-content"><em>Performing Multiple Text Validations of Web Page Content</em> </a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Success if response contains/does not contain x</strong></td>
@@ -2610,7 +2631,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Add Parameter</strong></td>
-<td style="text-align: left;">Opens a list of parameters you can include in the <strong>contains/does not contain</strong> text. This list is identical to the list available in the Insert Variable menu (<a href="#_bookmark68"><em>Figure 54</em></a>).</td>
+<td style="text-align: left;">Opens a list of parameters you can include in the <strong>contains/does not contain</strong> text. This list is identical to the list available in the Insert Variable menu (<a href="../../scripting/programming_your_javascript/#insert_variable_menu"><em>Figure 54</em></a>).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>In case of validation failure</em></td>
@@ -2638,29 +2659,29 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Click <strong>OK</strong>. The Response Validation function is added to your script.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong>. The Response Validation function is added to your script.</p>
+</li>
 </ol>
 <h3 id="performing-multiple-text-validations-of-web-page-content">Performing Multiple Text Validations of Web Page Content</h3>
 <p>You can use the <strong>Response Validation</strong> feature to validate a Web page’s content.</p>
 <p><strong>To validate the content of a Web page:</strong></p>
 <ol>
 <li>
-<p>Follow the instructions in <a href="#_bookmark123"><em>Validating Responses</em> </a> to access the Response Validation dialog box (<a href="#_bookmark124">Figure 90</a>).</p>
+<p>Follow the instructions in <a href="#validating-responses"><em>Validating Responses</em> </a> to access the Response Validation dialog box: (<a href="#response_validation_dialog_box">Figure</a>).</p>
 </li>
 <li>
 <p>In the <strong>Content</strong> section, check the <strong>Validate</strong> checkbox.</p>
 </li>
 <li>
 <p>Click <strong>Add</strong>.</p>
-</li>
-</ol>
 <p>The box above the Add button displays <strong>“<code>&lt;text to find&gt;</code>”</strong>.</p>
 <p><img alt="Defining Content Validation" src="../../images/def_cont_val.png"/></p>
-<ol>
+</li>
 <li>
 <p>Define a JavaScript expression and whether it must or must not appear in the Web page, as follows:</p>
-</li>
+<ol>
 <li>
 <p>Delete the string <strong>“<code>&lt;text to find&gt;</code>”</strong> and instead do either or both of the following:</p>
 <ul>
@@ -2672,12 +2693,14 @@
 <li>
 <p>Select <strong>contains</strong> if the expression must appear in the Web page; select <strong>does not contain</strong> if it should not appear in the Web page.</p>
 </li>
+</ol>
+</li>
 <li>
 <p>Repeat the previous step for every additional expression you wish to define.</p>
-</li>
-</ol>
 <p>The below image shows a content validation example. In this example, the page content will be validated only if it contains the string Welcome followed by a user name, and does not contain the string Error.</p>
 <p><img alt="Content Validation Example" src="../../images/cant_val_exam.jpeg"/></p>
+</li>
+</ol>
 <h2 id="editing-a-script-for-dynamic-html-pages">Editing a Script for Dynamic HTML Pages</h2>
 <p>When you record an HTML page in the WebLOAD Recorder, there can be dynamic values that WebLOAD adds to the script, which are recorded in the WebLOAD Recorder. Such dynamic values can contain state management information, such as the session-id, which is usually passed as URL encoded parameters or hidden form fields. The dynamic values that are recorded in the WebLOAD Recorder are different during each run. Since the value that was recorded in the WebLOAD Recorder and the dynamic value do not match, you will receive an error.</p>
 <p>To overcome this situation, you need to edit the script and perform correlation. This can be done manually, or by using WebLOAD’s Smart Copy feature. This feature</p>
@@ -2691,43 +2714,39 @@
 </blockquote>
 <p><strong>To edit a script using Smart Copy:</strong></p>
 <ol>
-<li>After recording and running your script, open the Page View with the DOM View. Select the <strong>DOM View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>After recording and running your script, open the Page View with the DOM View. Select the <strong>DOM View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</p>
 <p>The Page and DOM View appear.</p>
-<ol>
+</li>
 <li>
 <p>In the Execution Tree, select the first node.</p>
 </li>
 <li>
 <p>In the Page View, search for an error message. If there is no message, select the next node in the Execution Tree and search for a message there.</p>
-</li>
-</ol>
 <p><img alt="Page View Displaying Error Message" src="../../images/page_view_error.jpeg"/></p>
-<ol>
-<li>Once you locate the message, open the JavaScript View. Select the <strong>JavaScript View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</li>
-</ol>
+</li>
+<li>
+<p>Once you locate the message, open the JavaScript View. Select the <strong>JavaScript View</strong> checkbox in the <strong>View</strong> tab of the ribbon.</p>
 <p>The JavaScript View appears with the requested block of code selected.</p>
-<ol>
-<li>Within the selected block of code, locate the dynamic value (for example, the session-id field). This field must be retrieved from the previous block of code.</li>
-</ol>
+</li>
+<li>
+<p>Within the selected block of code, locate the dynamic value (for example, the session-id field). This field must be retrieved from the previous block of code.</p>
 <p><img alt="Dynamic Value in the JavaScript View" src="../../images/dyn_value_js.png"/></p>
-<ol>
+</li>
 <li>
 <p>Click the previous node in the Execution Tree to search for the element that contains the dynamic value. Make sure the Browser and DOM Views are open. Select the <strong>Page View</strong> and <strong>DOM View</strong> checkboxes in the <strong>View</strong> tab of the ribbon.</p>
 </li>
 <li>
 <p>In the DOM View, locate the element that contains the dynamic value. This is usually a hidden input field.</p>
-</li>
-</ol>
 <p><img alt="Dynamic Value in DOM View" src="../../images/dun_val_dom_view.png"/></p>
 <p><strong>Note:</strong> You cannot use the value recorded in the script, since the value that was recorded was dynamic, and will not match the new value that is given when you run the script.</p>
-<ol>
-<li>Right-click the element and select <strong>Smart Copy</strong> from the pop-up menu.</li>
-</ol>
+</li>
+<li>
+<p>Right-click the element and select <strong>Smart Copy</strong> from the pop-up menu.</p>
 <p><img alt="Smart Copy Pop-up Menu" src="../../images/smart_copy_pop.png"/></p>
 <p>The Smart Copy dialog box appears.</p>
 <p><img alt="Smart Copy Dialog Box" src="../../images/smart_copy_dia.png"/></p>
-<ol>
+</li>
 <li>
 <p>Click <strong>Copy to clipboard</strong> and click <strong>OK</strong>.</p>
 </li>
@@ -2736,21 +2755,21 @@
 </li>
 <li>
 <p>Create a variable for the dynamic field by typing the following at the end of the selected block of code:</p>
+<p><code>Session_id =</code></p>
 </li>
-</ol>
-<p><code>Session\_id =</code></p>
-<ol>
-<li>Paste the clipboard text (using <strong>Paste</strong> in the <strong>Edit</strong> tab of the ribbon) after the equal sign.</li>
-</ol>
+<li>
+<p>Paste the clipboard text (using <strong>Paste</strong> in the <strong>Edit</strong> tab of the ribbon) after the equal sign.</p>
 <p>For example:</p>
-<p><code>Session\_id = document.forms[1].elements[2].value</code></p>
-<ol>
-<li>In the subsequent block of code, replace</li>
-</ol>
+<p><code>Session_id = document.forms[1].elements[2].value</code></p>
+</li>
+<li>
+<p>In the subsequent block of code, replace</p>
 <p>wlHttp.FormData[“session_id”] = <code>&lt;static session id&gt;</code></p>
 <p>with</p>
-<p><code>wlHttp.FormData[“session\_id”] = session\_id</code></p>
+<p><code>wlHttp.FormData[“session_id”] = session_id</code></p>
 <p>The script is edited. You can now run the script successfully without receiving error messages.</p>
+</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

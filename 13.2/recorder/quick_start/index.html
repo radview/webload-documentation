@@ -735,6 +735,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1348,13 +1355,13 @@
 <p>You will be working with a test script. The basic steps are:</p>
 <ol>
 <li>
-<p>Recording your script – describes the steps in recording a basic script (see <a href="#_bookmark23">*Creating</a><a href="#_bookmark23"> a</a>* on page <a href="#_bookmark23">20</a>).</p>
+<p>Recording your script – describes the steps in recording a basic script (see <a href="#creating-a-script">*Creating</a></p>
 </li>
 <li>
-<p>Editing your script – explains how to edit and modify your script, insert new items into your script, and parameterize form data to create data driven tests (see <a href="#_bookmark26">*Editing</a><a href="#_bookmark26"> Your Script* </a>on page <a href="#_bookmark26">26</a>).</p>
+<p>Editing your script – explains how to edit and modify your script, insert new items into your script, and parameterize form data to create data driven tests (see <a href="#editing-your-script"><em>Editing Your Script</em> </a>).</p>
 </li>
 <li>
-<p>Running and debugging your script – explains run and debug your script (see</p>
+<p>Running and debugging your script – explains run and debug your script </p>
 </li>
 </ol>
 <blockquote>
@@ -1364,44 +1371,47 @@
 <p>The first step in creating a script is to record your actions as you interact with your Web application.</p>
 <p><strong>To create a script:</strong></p>
 <ol>
-<li>Start WebLOAD Recorder by selecting <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong>&gt; <strong>WebLOAD Recorder</strong>. </li>
-</ol>
+<li>
+<p>Start WebLOAD Recorder by selecting <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong>&gt; <strong>WebLOAD Recorder</strong>. </p>
 <p>WebLOAD Recorder opens.</p>
 <p><img alt="WebLOAD Recorder Startup Dialog Box" src="../../images/recorder_startup.png"/></p>
-<ol>
-<li>Select <strong>Create a new project.</strong></li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Create a new project.</strong></p>
 <p>The WebLOAD Recorder main window opens in Visual Editing Mode, for you to begin creating your script.</p>
 <p>When the WebLOAD Recorder main window first opens, it opens in Visual Editing Mode. In this mode, there are several active panes. The Script Tree appears on the left, and various view panes appear on the right: JavaScript View, Page View, HTML View, and HTTP headers View.</p>
 <p>In Visual Editing mode, you can simply record the actions in a browser without programming. Your interactions with your Web application are captured, recorded, and presented graphically in the Script Tree.</p>
 <p>Each node in the Script Tree is actually a visual representation of JavaScript code. You can view the contents of the nodes in the JavaScript view pane.</p>
 <p>To the left of the Script Tree are WebLOAD Recorder toolboxes that can be used to edit a script by dragging and dropping items from the WebLOAD Recorder toolboxes into the Script Tree. This makes programming easier by building the code behind an intuitive drag-and-drop interface.</p>
 <p>To the right of the View panes is the Assistant pane, which contains simple instructions to help you create your load test script. Click a link in the Assistant to go to the relevant item.</p>
-<p><img alt="WebLOAD Recorder Main Window in Editing Mode" src="../../images/recorder_edit_mode.jpeg"/></p>
-<ol>
-<li>In the main window, in Visual Editing Mode, click <strong>Start</strong> in the <strong>Home</strong> tab of the ribbon to begin recording.</li>
-</ol>
+<p><a name="recorder_edit_mode"></a>
+<img alt="WebLOAD Recorder Main Window in Editing Mode" src="../../images/recorder_edit_mode.jpeg"/></p>
+</li>
+<li>
+<p>In the main window, in Visual Editing Mode, click <strong>Start</strong> in the <strong>Home</strong> tab of the ribbon to begin recording.</p>
 <p>The following dialog appears:</p>
 <p><img alt="Recording Dialog Box" src="../../images/recording_dialog_box.png"/></p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
 <p>WebLOAD Recorder begins recording all of the actions you perform in the browser, as indicated by the recording notification in the WebLOAD Recorder status bar.</p>
 <p><img alt="status bar" src="../../images/recorder_edit_status.png"/></p>
 <p>A blank browser window opens.</p>
-<ol>
-<li>In the address bar, enter the Web address <a href="http://www.webloadmpstore.com/">www.webloadmpstore.com </a>to go to the WebLOAD test site.</li>
-</ol>
+</li>
+<li>
+<p>In the address bar, enter the Web address <a href="http://www.webloadmpstore.com/">www.webloadmpstore.com </a>to go to the WebLOAD test site.</p>
 <p><img alt="WebLOAD Test Site" src="../../images/webload_test_site.jpeg"/></p>
-<ol>
+</li>
 <li>
 <p>Navigate through the site, performing the actions you want to test. For example:</p>
-</li>
+<ol>
 <li>
 <p>Click a product to view the product details.</p>
 </li>
 <li>
 <p>Click <strong>Add to Cart</strong>.</p>
+</li>
+</ol>
 <p>Your actions are recorded and appear in the Script Tree as you navigate the site. (If you see more nodes in the Script Tree with different URLs, this may be traffic generated by browser plug-ins or extensions, for example, third-party toolbars.)</p>
 <p><img alt="Script Tree" src="../../images/agenda_scriptree.png"/></p>
 </li>
@@ -1413,9 +1423,9 @@
 </li>
 <li>
 <p>Type in QuickStart for the name of the script in the Save As dialog box and click <strong>Save</strong>.</p>
+<p>The script is saved with the extension *.wlp.</p>
 </li>
 </ol>
-<p>The script is saved with the extension *.wlp.</p>
 <p>You now have a basic script that can be used in a WebLOAD template. For complete information on creating, editing, modifying scripts, and adding functionality to your script, see the rest of the <em>WebLOAD Recorder User’s Guide</em>.</p>
 <h2 id="viewing-your-script">Viewing Your Script</h2>
 <p>You can view the recorded script in four views:</p>
@@ -1453,8 +1463,8 @@
 </ul>
 <p><img alt="HTTP Headers View Pane" src="../../images/httpheader_view.png"/></p>
 <ul>
-<li>HTML View – See <a href="#_bookmark47"><em>Viewing the Recorded Script in the HTML View Pane</em> </a>.</li>
-<li>Page View – See <a href="#_bookmark117"><em>Using the Page View to View Results</em> </a>.</li>
+<li>HTML View – See <a href="../recording_scripts/#viewing-the-recorded-script-in-the-html-view-pane"><em>Viewing the Recorded Script in the HTML View Pane</em> </a>.</li>
+<li>Page View – See <a href="../running_debugging_scripts/#using-the-page-view-to-view-results"><em>Using the Page View to View Results</em> </a>.</li>
 </ul>
 <h2 id="editing-your-script">Editing Your Script</h2>
 <p><strong>To edit your script:</strong></p>
@@ -1467,20 +1477,20 @@
 </li>
 <li>
 <p>In Visual Editing mode, you can edit the Script Tree:</p>
-</li>
+<ol>
 <li>Drag and drop items from the WebLOAD Recorder toolbox into the Script Tree.</li>
-<li>
-<p>Right-click to insert new items.</p>
+<li>Right-click to insert new items.</li>
+</ol>
 </li>
 <li>
 <p>In JavaScript Editing mode:</p>
-</li>
-<li>
-<p>Modify the JavaScript code.</p>
+<ol>
+<li>Modify the JavaScript code.</li>
+</ol>
 <blockquote>
 <p><strong>Important:</strong> Each block of code starts with a comment that contains “WLIDE”, description, and ID number. The ID number is automatically generated by WebLOAD Recorder and is the connection between the script node and the specific header. It is recommended that you do not change the contents of this comment. If you do, important data might be lost.</p>
 </blockquote>
-</li>
+<ol>
 <li>
 <p>Right-click to insert functions and commands.</p>
 </li>
@@ -1489,6 +1499,8 @@
 </li>
 <li>
 <p>Import JavaScript files.</p>
+</li>
+</ol>
 </li>
 </ol>
 <blockquote>
@@ -1524,11 +1536,11 @@
 </li>
 <li>
 <p>Release the mouse button.</p>
-</li>
-</ol>
 <p>A dialog box to enter the parameters opens or the item appears in the Script Tree.</p>
-<ol>
-<li>Click the script item in the Script Tree to view and/or edit the JavaScript code in the JavaScript view pane.</li>
+</li>
+<li>
+<p>Click the script item in the Script Tree to view and/or edit the JavaScript code in the JavaScript view pane.</p>
+</li>
 </ol>
 <h4 id="right-click-menus">Right-Click Menus</h4>
 <p>Throughout WebLOAD Recorder, context-sensitive menus appear when you click the right mouse button, giving you the appropriate options to select at that point.</p>
@@ -1539,7 +1551,7 @@
 <li>Select an item from the options available.</li>
 </ol>
 <h3 id="adding-script-items">Adding Script Items</h3>
-<p>You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see <a href="#_bookmark205"><em>The WebLOAD Recorder Toolbox Items</em> </a>.</p>
+<p>You can drag and drop an item, such as Message, from the WebLOAD Recorder toolbox. For the list of toolboxes, see <a href="../appendix_a/#the-webload-recorder-toolbox-items"><em>The WebLOAD Recorder Toolbox Items</em> </a>.</p>
 <p>In the following instructions, adding a Message is used as an example. While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log windows display information about session execution. You can include Message nodes in your script, defining points at which to send error and/or notification messages to the Log window.</p>
 <p><strong>To add a Message script item:</strong></p>
 <ol>
@@ -1554,62 +1566,56 @@
 </li>
 <li>
 <p>Release the mouse button.</p>
-</li>
-</ol>
 <p>The Message dialog box opens.</p>
 <p><img alt="Message Dialog Box" src="../../images/message_dialog.png"/></p>
-<ol>
+</li>
 <li>
 <p>Enter the text you want to appear in the message.</p>
 </li>
 <li>
 <p>To add a global variable to the message text, click the <strong>globe</strong> icon ( <img alt="" src="../../images/globe_icon.png"/>) to the right of the input text box and select a global variable from the drop-down list.</p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> When entering a string value to the message, the string must be enclosed in quotation marks, for example, “Sample Message”.</p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>Select a severity level for the message from the drop-down list. The following severity levels are available:</p>
-</li>
-<li>
-<p>Information message (WLInfoMessage)</p>
-</li>
+<ul>
+<li>Information message (WLInfoMessage)</li>
 <li>Minor error message (WLMinorError)</li>
 <li>Error message (WLError)</li>
-<li>
-<p>Severe error message (WLSevereError)</p>
+<li>Severe error message (WLSevereError)</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
+<p>The Message item appears in the Script Tree.</p>
 </li>
 </ol>
-<p>The Message item appears in the Script Tree.</p>
 <h2 id="running-and-debugging-your-script">Running and Debugging Your Script</h2>
 <p>After your script has been developed, you run it to test for errors in your application. You can then debug your script.</p>
 <h3 id="running-your-script">Running Your Script</h3>
 <p><strong>To run your script:</strong></p>
 <ol>
-<li>Click <strong>Run</strong> in the <strong>Debug</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Run</strong> in the <strong>Debug</strong> tab of the ribbon.</p>
 <p>As the script is running:</p>
 <ul>
 <li>A yellow arrow points to the node being executed in the Script Tree.</li>
 <li>If the JavaScript View tab is open, you will also see the yellow arrow pointing to the script.</li>
 <li>If the Page View tab is open, you will see the pages that return from the Web server.</li>
 <li>Nodes are added to the Execution Tree as they occur.</li>
-<li>The GET and POST HTTP protocol commands are displayed in the HTTP Headers view pane.</li>
-<li>
-<p>Messages and errors generated by the test appear in the Log Window at the bottom of the screen.</p>
+<li>The GET and POST HTTP protocol commands are displayed in  the HTTP Headers view pane.</li>
+<li>Messages and errors generated by the test appear in the Log Window at the bottom of the screen.</li>
+</ul>
 </li>
 <li>
 <p>At the prompt asking whether to save the changes to the project, click <strong>Yes</strong> and enter a file name to save your script file.</p>
-</li>
-</ul>
 <blockquote>
 <p><strong>Note:</strong> If there is more than one tester and the tests are to be shared between testers, the root directory (test plans and the results of the test plans) and the tests must be saved to a network drive.</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="debugging-your-script">Debugging Your Script</h3>
 <p>WebLOAD Recorder provides an integrated debugger with a variety of tools to help locate bugs in your script. The debugger provides special menus, windows, dialog boxes, and grids of fields for debugging. You can pause the debugger and trigger WebLOAD Recorder to wait for user input before proceeding with running the script. In the script, you can set breakpoints and step into / over / out. You can also abort the debugger without executing the TerminateClient and TerminateAgenda functions, as opposed to stopping it completely.</p>
 <p><strong>To debug your script:</strong></p>
@@ -1619,36 +1625,42 @@
 <p>-Or-</p>
 <p>Add breakpoints by clicking <strong>Toggle Breakpoint</strong> in the <strong>Debug</strong> tab of the WebLOAD Recorder ribbon, and then clicking <strong>Run</strong> to run the script.</p>
 <blockquote>
-<p><strong>Note:</strong> If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see <a href="#_bookmark181"><em>Configuring the Settings</em> </a>.</p>
+<p><strong>Note:</strong> If you stop the debugger prematurely (for example, by closing the WebLOAD Recorder or returning to edit mode), you can instruct WebLOAD, in the Settings dialog box, to prompt you to save the debugging session file. For more information about the Settings dialog box, see <a href="../configuring_recorder_options/#configuring-the-settings"><em>Configuring the Settings</em> </a>.</p>
 </blockquote>
 <h4 id="debugging-using-the-watch-window">Debugging Using the Watch Window</h4>
 <p>You can use the Watch window to specify variables and expressions that you want to watch while debugging your program.</p>
 <p><strong>To debug using the Watch window:</strong></p>
 <ol>
 <li>Start debugging.</li>
-<li>Select the <strong>Watch Window</strong> checkbox in the <strong>Debug</strong> tab</li>
-</ol>
+<li>
+<p>Select the <strong>Watch Window</strong> checkbox in the <strong>Debug</strong> tab</p>
 <p><img alt="Watch Window" src="../../images/recroder_watch_window.png"/></p>
 <p>In the Name column, plus sign (+) or minus sign (-) boxes may appear. These appear if you added an array or object variable to the Watch window. Use these boxes to expand or collapse your view of the variable.</p>
+</li>
+</ol>
 <h4 id="debugging-using-the-variables-window">Debugging Using the Variables Window</h4>
 <p>The Variables window provides quick access to variables that are important in the scripts current context.</p>
 <p><strong>To debug using the Variables Window:</strong></p>
 <ol>
 <li>Start debugging.</li>
-<li>Check the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Check the <strong>Variables Window</strong> checkbox in the <strong>Debug</strong> tab of the ribbon.</p>
 <p><img alt="Variables Window" src="../../images/variables_window.png"/></p>
 <p>The Variables window displays variables used in the current statement and in the previous statement. It also displays return values when you step over or out of a function.</p>
 <p>The Variables window contains a grid with fields for the variable name and value. The debugger automatically fills in these fields. You cannot add variables or expressions to the Variables window. The Context dropdown list displays the current scope of the variables displayed.</p>
+</li>
+</ol>
 <h4 id="debugging-using-the-call-stack-window">Debugging Using the Call Stack Window</h4>
 <p>The Call Stack window lists the function calls that led to the current statement, with the current function on the top of the stack.</p>
 <p><strong>To debug using the Call Stack Window:</strong></p>
 <ol>
 <li>Start debugging.</li>
-<li>Select the <strong>Call Stack</strong> checkbox in the <strong>Debug</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Select the <strong>Call Stack</strong> checkbox in the <strong>Debug</strong> tab of the ribbon.</p>
 <p><img alt="Call Stack Window" src="../../images/call_stack_window.png"/></p>
 <p>This Quick Start has shown you an example of how to record, create, edit, run, and debug a script in WebLOAD Recorder. For more information about all the options available in WebLOAD Recorder, see the rest of the <em>WebLOAD Recorder User’s Guide</em> and the <em>WebLOAD Recorder Online Help</em>.</p>
+</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

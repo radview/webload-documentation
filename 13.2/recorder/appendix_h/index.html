@@ -600,6 +600,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1127,7 +1134,11 @@
 <td style="text-align: left;"><p>The number of bits transmitted back and forth between the Virtual Clients and the System Under Test (SUT), divided by the time it took to transmit those bits, in seconds.</p><p>You can set the Virtual Clients to emulate a particular connection speed during the test, either by using the Variable Connection Speed settings, or by coding the connection speed in the script.</p><p>If a connection speed is specified for the test, WebLOAD reports it in the Statistics Report.</p><p>The value posted in the Current Value column is the number (sum) of bits passed per second during the last reporting interval. It should match, very closely, the connection speed you specified for the test.</p></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark379"></a><strong>Console</strong></td>
+<td style="text-align: left;"><a name="_bookmark379"></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Console</strong></td>
 <td style="text-align: left;"><p>The WebLOAD component that manages the test session.</p><p>The Console performs the following:</p><p>- Configures Load Session hosts and scripts</p><p>- Schedules Load Session scripts</p><p>- Configures Goal–Oriented test sessions</p><p>- Monitors the application's performance under the generated load</p><p>- Manages the Load Session as it is running, allowing you to pause, stop, and continue Load Session components as needed</p><p>- Displays the current performance of the SUT</p><p>- Provides a final performance reports for Probing Clients and Virtual Clients</p><p>- Manages exporting of performance reports</p></td>
 </tr>
 <tr>
@@ -1196,15 +1207,15 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Gallery</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark388"><em>Templates Gallery</em>.</a></td>
+<td style="text-align: left;">See <a href="#templates_gallery"><em>Templates Gallery</em>.</a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark380"></a><strong>Goal–Oriented Test</strong></td>
+<td style="text-align: left;"><a name="goal_oriented_test"></a><strong>Goal–Oriented Test</strong></td>
 <td style="text-align: left;"><p>A WebLOAD component enabling you to define the performance goals required, and view the status of your application when it is operating under this performance goal. WebLOAD provides a Goal–Oriented Test Wizard for configuring these performance goals. WebLOAD automatically accelerates the number of Virtual Clients accessing your website until you meet your performance goal.</p><p><strong>Note:</strong> The Goal-Oriented Test Wizard was previously called the Cruise Control Wizard.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Goal–Oriented Test Wizard</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark380"><em>Goal–Oriented Test</em>.</a></td>
+<td style="text-align: left;">See <a href="#goal_oriented_test"><em>Goal–Oriented Test</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Hit Time</strong></td>
@@ -1248,14 +1259,22 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Load Generator Machine</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark381"><em>Load Machine</em>.</a></td>
+<td style="text-align: left;">See <a href="#load_machine"><em>Load Machine</em>.</a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark381"></a><strong>Load Machine</strong></td>
+<td style="text-align: left;"><a name="load_machine"></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Load Machine</strong></td>
 <td style="text-align: left;">A host that runs Load Generators. Load Generators bombard the application under test with a large load, to enable complete scalability and integrity testing.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark382"></a><strong>Load Session</strong></td>
+<td style="text-align: left;"><a name="load_sessions"></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Load Session</strong></td>
 <td style="text-align: left;"><p>A Load Session includes both the complete Load Template and the results obtained while running that Load Session. A Load Template consists of information about the hosts and scripts participating in the current Load Session. The Load Template will also include scheduling information. The complete Load Template is illustrated in the Session Tree. Storing a Load Template saves you time when repeatedly running WebLOAD with the same, or even a similar network configuration, since you don't have to recreate your Load Template from scratch each time you want to start working.</p><p>Storing Load Session results can be useful when you want to examine results from multiple test sessions or for analyzing test session results.</p></td>
 </tr>
 <tr>
@@ -1263,7 +1282,11 @@
 <td style="text-align: left;">The number of Virtual Clients running during the last reporting interval.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark383"></a><strong>Load Template</strong></td>
+<td style="text-align: left;"><a name="load_template"></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Load Template</strong></td>
 <td style="text-align: left;">A Load Template contains the complete Load Session definition, without the test results. A Load Template includes information about the participating hosts and the scripts used in the current Load Session. The definition also includes scheduling information and the configuration of the Server Monitor and Integrated Reports. The complete Load Template is illustrated in the Session Tree. Storing a Load Template saves you time when repeatedly running WebLOAD with the same, or even a similar network configuration, since you do not have to recreate your Load Template from scratch each time you rerun a test.</td>
 </tr>
 <tr>
@@ -1296,7 +1319,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Probing Client software</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark385"><em>Probing Client</em>.</a></td>
+<td style="text-align: left;">See <a href="../../console/getting_started/#probing-client"><em>Probing Client</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Process Time</strong></td>
@@ -1352,7 +1375,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Single Client</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark385"><em>Probing Client</em>.</a></td>
+<td style="text-align: left;">See <a href="../../console/getting_started/#probing-client"><em>Probing Client</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Standard Deviation</strong></td>
@@ -1388,10 +1411,10 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Template</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark383"><em>Load Template</em>.</a></td>
+<td style="text-align: left;">See <a href="#load_template"><em>Load Template</em>.</a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark388"></a><strong>Templates Gallery</strong></td>
+<td style="text-align: left;"><a name="templates_gallery"></a><strong>Templates Gallery</strong></td>
 <td style="text-align: left;">The Templates Gallery is a single entity that contains predefined templates, user-defined templates, and portfolios.</td>
 </tr>
 <tr>
@@ -1404,7 +1427,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Test Template</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark383"><em>Load Template</em>.</a></td>
+<td style="text-align: left;">See <a href="#load_template"><em>Load Template</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>TestTalk</strong></td>
@@ -1460,11 +1483,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>WebLOAD Load Template</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark383"><em>Load Template</em>.</a></td>
+<td style="text-align: left;">See <a href="#load_template"><em>Load Template</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>WebLoad Session</strong></td>
-<td style="text-align: left;">See <a href="#_bookmark382"><em>Load Session</em>.</a></td>
+<td style="text-align: left;">See <a href="#load_sessions"><em>Load Session</em>.</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>WebLOAD Wizard</strong></td>

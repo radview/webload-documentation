@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1236,26 +1243,28 @@
 <h3 id="accessing-the-share-dashboard-options">Accessing the Share Dashboard Options</h3>
 <p><strong>To access the dashboard sharing options:</strong></p>
 <ol>
-<li>Select the <strong>Share Dashboard</strong> icon <img alt="share dashboard icon" src="../../images/share_dash_icon.png"/> in the dashboard header. A Share window appears, displaying a link to the dashboard. </li>
-</ol>
-<p><img alt="Share Dashboard – Options" src="../../images/share_dash_options.png"/></p>
-<ol>
-<li>Click any of the options: <strong>Link to Dashboard</strong>, or <strong>Export</strong> A Share Dashboard window appears. </li>
-</ol>
+<li>
+<p>Select the <strong>Share Dashboard</strong> icon <img alt="share dashboard icon" src="../../images/share_dash_icon.png"/> in the dashboard header. A Share window appears, displaying a link to the dashboard. </p>
+<p><a name="share_dashboard"></a>
+<img alt="Share Dashboard – Options" src="../../images/share_dash_options.png"/></p>
+</li>
+<li>
+<p>Click any of the options: <strong>Link to Dashboard</strong>, or <strong>Export</strong> 
+   A Share Dashboard window appears. </p>
 <p><img alt="Share Dashboard– Link tab" src="../../images/share_dash_link_tab.png"/></p>
+</li>
+</ol>
 <h3 id="sharing-a-link-to-a-dashboard">Sharing a Link to a Dashboard</h3>
 <p>You can easily share an entire dashboard, by providing the appropriate URL. <strong>To share a link to a dashboard:</strong> </p>
 <ol>
 <li>
-<p>Access the Share Dashboard window <a href="#_page72_x54.00_y286.04">(Figure 77)</a>, as described in<a href="#_page71_x54.00_y360.04"><code></code><em>Accessing the Share Dashboard Options</em>.</a> </p>
+<p>Access the Share Dashboard window <a href="#share_dashboard">(Figure)</a>, as described in<a href="#accessing-the-share-dashboard-options"><em>Accessing the Share Dashboard Options</em>.</a> </p>
 </li>
 <li>
-<p>Select the <strong>Link</strong> tab <a href="#_page72_x54.00_y286.04">(Figure 77)</a>. </p>
+<p>Select the <strong>Link</strong> tab <a href="#share_dashboard">(Figure)</a>. </p>
 </li>
 <li>
 <p>Using the options in the Share Link window, you can produce a link to various variants of the dashboard, as described in the following table.</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -1282,44 +1291,48 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Click <strong>Copy</strong> to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard.  </li>
+</li>
+<li>
+<p>Click <strong>Copy</strong> to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard.  </p>
+</li>
 </ol>
 <h2 id="exporting-a-dashboard-as-a-json-file">Exporting a Dashboard as a JSON File</h2>
-<p>You can export a dashboard as a JSON file, and import dashboards that were saved in JSON file format. For instructions how to import a dashboard that was saved as a JSON file, refer to<a href="#_page65_x109.00_y661.04"><code></code><em>Importing a Dashboard</em>.</a> </p>
+<p>You can export a dashboard as a JSON file, and import dashboards that were saved in JSON file format. For instructions how to import a dashboard that was saved as a JSON file, refer to <a href="../managing_dashboards/#importing-a-dashboard"><em>Importing a Dashboard</em>.</a> </p>
 <p><strong>To export a dashboard as a JSON file:</strong> </p>
 <ol>
 <li>
-<p>Access the Share Dashboard window <a href="#_page72_x54.00_y286.04">(Figure 77)</a>, as described in<a href="#_page71_x54.00_y360.04"><code></code><em>Accessing the Share Dashboard Options</em>.</a> </p>
+<p>Access the Share Dashboard window <a href="#share_dashboard">(Figure 77)</a>, as described in<a href="#accessing-the-share-dashboard-options"><em>Accessing the Share Dashboard Options</em>.</a> </p>
 </li>
 <li>
 <p>Select the <strong>Export</strong> tab.</p>
-</li>
-</ol>
 <p>An Export dashboard window appears. </p>
 <p><img alt="Export Dashboard window" src="../../images/export_dash_window.png"/></p>
-<ol>
+</li>
 <li>
 <p>Optionally click <strong>View JSON</strong> to view the file. </p>
 </li>
 <li>
 <p>Click <strong>Save to file</strong> to save in a desired location. </p>
+<p>A JSON file of the dashboard is created in your Downloads directory. Its name is the dashboard name followed by the current timestamp. </p>
 </li>
 </ol>
-<p>A JSON file of the dashboard is created in your Downloads directory. Its name is the dashboard name followed by the current timestamp. </p>
-<p>Note that you can view the contents of the JSON file in the dashboard. To do so, click the Manage Dashboard Settings icon ![ref26] in the middle of the dashboard header, and select <strong>View JSON</strong>. </p>
+<p>Note that you can view the contents of the JSON file in the dashboard. To do so, click the Manage Dashboard Settings icon in the middle of the dashboard header, and select <strong>View JSON</strong>. </p>
 <h2 id="sharing-a-panel">Sharing a Panel</h2>
 <p>Sharing a panel is similar to sharing a dashboard. Panel sharing is often useful when you want to share a specific segment (time range) of a panel. The following panel sharing options are available: </p>
 <ul>
 <li><strong>Link</strong> - Produces a link for sharing, with other WebLOAD Dashboard users, this panel with the current time range and selected template variables. </li>
-<li><strong>Embed</strong> - Produces the HTML code that you need to use if you wish to embed a panel using an iframe on another web site. ![ref10]</li>
+<li><strong>Embed</strong> - Produces the HTML code that you need to use if you wish to embed a panel using an iframe on another web site.</li>
 </ul>
 <h3 id="accessing-the-share-panel-options">Accessing the Share Panel Options</h3>
 <p>When you share a specific panel, you are actually sharing the dashboard, with the specific panel enlarged. </p>
 <p><strong>To access the panel sharing options:</strong> </p>
 <ol>
-<li>Optionally select a specific time range in the panel. Refer to<a href="#_page47_x54.00_y311.04"><code></code><em>Specifying the Zoom</em> </a>(on page<a href="#_page47_x54.00_y311.04"> 42)</a>. </li>
-<li>Click the panel’s title and select <strong>share</strong>. </li>
+<li>
+<p>Optionally select a specific time range in the panel. Refer to<a href="../using_dashboards/#specifying-the-zoom"><em>Specifying the Zoom</em> </a></p>
+</li>
+<li>
+<p>Click the panel’s title and select <strong>share</strong>. </p>
+</li>
 </ol>
 <p>A Share Panel window appears, with the <strong>Link</strong> tab selected. </p>
 <p><img alt="Share Panel – Link tab" src="../../images/share_panel_link_tab.png"/></p>
@@ -1328,12 +1341,10 @@
 <p><strong>To share a link to a panel:</strong> </p>
 <ol>
 <li>
-<p>Access the Share Panel window as described in<a href="#_page74_x54.00_y78.04"><em>Accessing the Share Panel Options</em>.</a> </p>
+<p>Access the Share Panel window as described in<a href="#accessing-the-share-panel-options"><em>Accessing the Share Panel Options</em>.</a> </p>
 </li>
 <li>
 <p>Select the <strong>Link</strong> tab. </p>
-</li>
-</ol>
 <p>Using the options in the Share Link window, you can produce a link to various variants of the panel, as described in the following table. </p>
 <table>
 <thead>
@@ -1361,18 +1372,27 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Click <strong>Copy</strong> to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard. </li>
+</li>
+<li>
+<p>Click <strong>Copy</strong> to copy the URL displayed in the window, and send it to those with whom you want to share the dashboard. </p>
+</li>
 </ol>
 <h3 id="sharing-a-panel-by-embedding-its-html-code">Sharing a Panel by Embedding its HTML Code</h3>
 <p>You can embed a panel using an iframe on another web site. The Embed option produces the HTML code that you need to use. Note that unless anonymous access is enabled, the user viewing that page needs to be signed into WebLOAD Dashboard for the graph to load. </p>
 <p><strong>To share a panel by embedding its HTML code:</strong> </p>
 <ol>
-<li>Optionally select a specific time range in the panel.</li>
-<li>Access the Share Panel window <a href="#_page74_x54.00_y462.04">(Figure 79)</a>, as described in<a href="#_page74_x54.00_y78.04"><em>Accessing the Share Panel Options</em>.</a> </li>
-<li>Select the <strong>Embed</strong> tab. </li>
+<li>
+<p>Optionally select a specific time range in the panel.</p>
+</li>
+<li>
+<p>Access the Share Panel window <a href="#share_panel">(Figure 79)</a>, as described in<a href="#accessing-the-share-panel-options"><em>Accessing the Share Panel Options</em>.</a> </p>
+</li>
+<li>
+<p>Select the <strong>Embed</strong> tab. </p>
+</li>
 </ol>
-<p><img alt="Share Panel – Embed tab" src="../../images/share_panel_embed.jpeg"/></p>
+<p><a name="share_panel"></a>
+<img alt="Share Panel – Embed tab" src="../../images/share_panel_embed.jpeg"/></p>
 <p>Using the options in the Embed window, you can produce the source HTML code of various variants of the panel, as described in the following table. </p>
 <table>
 <thead>

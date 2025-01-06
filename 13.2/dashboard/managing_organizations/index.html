@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -818,7 +825,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details">
 <span class="md-ellipsis">
-      User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details
+      User Editing by a Super Admin - Editing User's Permissions, Organizations, Roles and Details
     </span>
 </a>
 </li>
@@ -1252,7 +1259,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details">
 <span class="md-ellipsis">
-      User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details
+      User Editing by a Super Admin - Editing User's Permissions, Organizations, Roles and Details
     </span>
 </a>
 </li>
@@ -1322,16 +1329,20 @@
 <h1 id="managing-organizations-users-and-admins">Managing Organizations, Users and Admins</h1>
 <h2 id="understanding-organizations-and-admins">Understanding Organizations and Admins</h2>
 <h3 id="organizations-and-admins">Organizations and Admins</h3>
-<p>Organizations are a method of compartmentalizing dashboards, data source and users. You do not need to create multiple organizations if you want all your users to have access to the same set of dashboards and data. If however you do not want all users to access the same dashboards and data sources, define organizations as described in <a href="#_page93_x109.00_y356.04"><em>Adding an Organization</em>.</a> </p>
+<p>Organizations are a method of compartmentalizing dashboards, data source and users. You do not need to create multiple organizations if you want all your users to have access to the same set of dashboards and data. If however you do not want all users to access the same dashboards and data sources, define organizations as described in <a href="#adding-an-organization"><em>Adding an Organization</em>.</a> </p>
 <p>If you will be defining organizations, you can have two levels of administrators: </p>
 <ul>
-<li>Organizational administrators: These admins can manage users within specific organizations in a particular WebLOAD Dashboard installation. </li>
-<li>Super administrators: These super admins can manage users across all organizations in a WebLOAD Dashboard installation. They can also change and access system-wide settings. </li>
+<li>
+<p>Organizational administrators: These admins can manage users within specific organizations in a particular WebLOAD Dashboard installation. </p>
+</li>
+<li>
+<p>Super administrators: These super admins can manage users across all organizations in a WebLOAD Dashboard installation. They can also change and access system-wide settings. </p>
+</li>
 </ul>
 <h3 id="organizational-administrators">Organizational Administrators</h3>
 <p>As an Organizational administrator, you can add Data Sources, add Users to your Organization and modify Organization details and options. </p>
 <p>Super Administrators</p>
-<p>As a Super Administrator, you have complete access to any Organization or User in a specific WebLOAD Dashboard installation. When logged in as super admin, the menu bar contains an additional <strong>Admin</strong> option to enable you to perform global administration actions. ![ref28]</p>
+<p>As a Super Administrator, you have complete access to any Organization or User in a specific WebLOAD Dashboard installation. When logged in as super admin, the menu bar contains an additional <strong>Admin</strong> option to enable you to perform global administration actions. </p>
 <p><img alt="Admin Options for Super Admin Users" src="../../images/admin_options_super_admin.png"/></p>
 <h2 id="managing-users">Managing Users</h2>
 <p>Organizational admins can manage users within the specific organization, while super admins can manage all users, across all organizations. </p>
@@ -1339,11 +1350,13 @@
 <p>There are two main types of users: </p>
 <ul>
 <li><strong>Super admin user</strong> – has full permissions to all of the WebLOAD Dashboard’s options and settings. </li>
-<li><strong>Organizational user</strong>. Within the organization, a user can have any of the following roles: </li>
+<li><strong>Organizational user</strong>. Within the organization, a user can have any of the following roles: <ul>
 <li><strong>Viewer</strong> – Can only view the Dashboard </li>
 <li><strong>Read-Only Editor</strong> – Can edit dashboards, but cannot save the changes </li>
 <li><strong>Editor</strong> – Can manage, create and execute tests and sessions, create and update dashboards, upload resources, and save the changes. This is the typical WebLOAD Dashboard user. </li>
 <li><strong>Organizational</strong> <strong>Admin</strong> – has full permissions to all of the organization’s options and settings: can edit, save, and make changes at the organizational level, including creating organizational users and editing organizational users. </li>
+</ul>
+</li>
 </ul>
 <h3 id="user-management-by-a-super-admin">User Management by a Super Admin</h3>
 <p>Super admins can add users of any type, to any organization. <strong><em>User Creation by a Super Admin</em></strong> </p>
@@ -1354,26 +1367,24 @@
 </li>
 <li>
 <p>In the User window that appears, click <strong>+ Add new user</strong>. </p>
-</li>
-</ol>
 <p><img alt="Users window" src="../../images/users_window.png"/></p>
-<ol>
-<li>In the Add New User window that appears, enter the new user  name, email, username and password. Then click <strong>Create</strong>. </li>
-</ol>
-<p><img alt="Add New User window" src="../../images/add_new_user.png"/></p>
-<ol>
+</li>
 <li>
-<p>The new user is created, and appears in the table in the Users window <a href="#_page88_x54.00_y207.04">(Figure 90)</a>. </p>
+<p>In the Add New User window that appears, enter the new user  name, email, username and password. Then click <strong>Create</strong>. </p>
+<p><img alt="Add New User window" src="../../images/add_new_user.png"/></p>
+</li>
+<li>
+<p>The new user is created, and appears in the table in the Users window <a href="#uperadmin_user_list">(Figure)</a>. </p>
 </li>
 <li>
 <p>The new user’s settings can now be defined/edited. </p>
+<ul>
+<li>A super admin can set the new user’s permissions and other settings, by clicking <strong>Edit</strong> in the respective row in the Users window <a href="#uperadmin_user_list">(Figure)</a>. For instructions, refer to<a href="#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details"><em>User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details</em>.</a> </li>
+<li>An organizational admin can set the new user’s role in the organization, described below.</li>
+</ul>
 </li>
-<li>
-<p>A super admin can set the new user’s permissions and other settings, by clicking <strong>Edit</strong> in the respective row in the Users window <a href="#_page88_x54.00_y207.04">(Figure 90)</a>. For instructions, refer to<a href="#_page89_x109.00_y78.04"><em>User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details</em>.</a> </p>
-</li>
-<li>An organizational admin can set the new user’s role in the organization. For instructions, refer to<a href="#_page92_x109.00_y290.04">*User Editing by an Organizational Admin – Editing User’s </a><em>Role</em>. ![ref28]</li>
 </ol>
-<h4 id="user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details">User Editing by a Super Admin – Editing User’s Permissions, Organizations, Roles and Details</h4>
+<h4 id="user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details">User Editing by a Super Admin - Editing User's Permissions, Organizations, Roles and Details</h4>
 <p>A super admin can set a user’s permissions, organizational roles, and other settings. <strong>To edit a user:</strong> </p>
 <ol>
 <li>
@@ -1381,22 +1392,19 @@
 </li>
 <li>
 <p>In the Users window that appears, click <strong>Edit</strong> in the row of the user you wish to edit. </p>
-</li>
-</ol>
-<p><img alt="Users window" src="../../images/superadmin_user_list.png"/></p>
-<ol>
-<li>The Edit User window appears, enabling you to edit various user settings. </li>
-</ol>
+<p><a name="uperadmin_user_list"></a>
+<img alt="Users window" src="../../images/superadmin_user_list.png"/></p>
+<p>The Edit User window appears, enabling you to edit various user settings. </p>
 <p><img alt="Edit User window" src="../../images/superadmin_edit_user.png"/></p>
-<ol>
+</li>
 <li>
 <p>You can make the user a super administrator by selecting the <strong>Admin</strong> checkbox in the <strong>Permissions</strong> section. </p>
 </li>
 <li>
-<p>In the <strong>Organizations</strong> section you can specify in which <strong>Organizations</strong> the user is a member, and specify the user’s <strong>Role</strong> in each. The available organizational roles and their permissions are described in<a href="#_page87_x131.00_y398.04"><strong>Organizational user</strong> </a>(on page<a href="#_page87_x131.00_y398.04"> 82)</a>. </p>
+<p>In the <strong>Organizations</strong> section you can specify in which <strong>Organizations</strong> the user is a member, and specify the user’s <strong>Role</strong> in each. The available organizational roles and their permissions are described in <a href="#user-editing-by-a-super-admin-editing-users-permissions-organizations-roles-and-details"><strong>Organizational user</strong> </a>. </p>
 </li>
 <li>
-<p>You can edit the user’s name, email, username, and change his password.  ![ref28]</p>
+<p>You can edit the user’s name, email, username, and change his password.  </p>
 </li>
 </ol>
 <h3 id="user-management-by-an-organizational-admin">User Management by an Organizational Admin</h3>
@@ -1404,55 +1412,61 @@
 <h4 id="user-addition-by-an-organizational-admin">User Addition by an Organizational Admin</h4>
 <p><strong>To add a user to the organization:</strong> </p>
 <ol>
-<li>In the Menu bar, select your user name and then select <strong>Users</strong>.  </li>
-</ol>
+<li>
+<p>In the Menu bar, select your user name and then select <strong>Users</strong>.  </p>
 <p><img alt="Selecting to Access Organizational User Definitions" src="../../images/org_user_def.png"/></p>
-<ol>
-<li>In the Organization Users window that appears, click <strong>+ Add or Invite</strong>. </li>
-</ol>
+</li>
+<li>
+<p>In the Organization Users window that appears, click <strong>+ Add or Invite</strong>. </p>
 <p><img alt="add or invite" src="../../images/org_add_invite.png"/></p>
-<ol>
-<li>Enter the <strong>Email or Username</strong>, and optionally the <strong>Name</strong>, of the user you wish to invite. For each additional user you wish to add, click <strong>Invite another</strong> and enter that user’s details. Then click <strong>Invite Users</strong>. </li>
+</li>
+<li>
+<p>Enter the <strong>Email or Username</strong>, and optionally the <strong>Name</strong>, of the user you wish to invite. For each additional user you wish to add, click <strong>Invite another</strong> and enter that user’s details. Then click <strong>Invite Users</strong>. </p>
+</li>
 </ol>
 <p><img alt="Invite Users window" src="../../images/org_invite_users.png"/></p>
 <h4 id="user-editing-by-an-organizational-admin-editing-users-role">User Editing by an Organizational Admin – Editing User’s Role</h4>
 <p>An organizational admin can set a user’s role in the organization. </p>
 <p><strong>To edit a user’s role:</strong> </p>
 <ol>
-<li>In the Menu bar, select your user name and then select <strong>Users</strong>.  </li>
-</ol>
+<li>
+<p>In the Menu bar, select your user name and then select <strong>Users</strong>.  </p>
 <p><img alt="Selecting to Access Organizational User Definitions" src="../../images/org_user_def.png"/></p>
-<ol>
-<li>In the Organization Users window that appears, you can set the <strong>Role</strong> of each organizational user. </li>
-</ol>
+</li>
+<li>
+<p>In the Organization Users window that appears, you can set the <strong>Role</strong> of each organizational user. </p>
 <p><img alt="Setting an Organizational User’s Role" src="../../images/setting_org_user_role.png"/></p>
+</li>
+</ol>
 <h3 id="managing-organizations">Managing Organizations</h3>
-<p>Super admin users can add organizations (for an explanation of Organizations, refer to <a href="#_page86_x109.00_y265.04"><em>Organizations and Admins</em>)</a>.  </p>
+<p>Super admin users can add organizations (for an explanation of Organizations, refer to <a href="#organizations-and-admins"><em>Organizations and Admins</em>)</a>).  </p>
 <h4 id="adding-an-organization">Adding an Organization</h4>
 <p><strong>To add an organization:</strong> </p>
 <ol>
-<li>In the Menu bar, select your user name, and then select <strong>New Organization</strong>.  </li>
-</ol>
+<li>
+<p>In the Menu bar, select your user name, and then select <strong>New Organization</strong>.  </p>
 <p><img alt="Selecting to Add an Organization" src="../../images/org_user_def.png"/></p>
-<ol>
-<li>In the New Organization window that appears, enter an <strong>Org. name</strong>, and click <strong>Create</strong>.</li>
-</ol>
+</li>
+<li>
+<p>In the New Organization window that appears, enter an <strong>Org. name</strong>, and click <strong>Create</strong>.</p>
 <p><img alt="New Organization window" src="../../images/new_org.png"/></p>
 <p>The Org Preferences window appears, populated with the new organization’s name, enabling you to edit various organization’s settings.</p>
 <p><img alt="Org Preferences window " src="../../images/org_prefer.png"/></p>
-<p>To set the new organization’s settings, refer to the instructions in<a href="#_page96_x109.00_y78.04"><code></code><em>Editing an Organization’s Settings</em>.</a> ![ref10]</p>
+</li>
+</ol>
+<p>To set the new organization’s settings, refer to the instructions in<a href="#editing-an-organizations-settings"><em>Editing an Organization’s Settings</em>.</a> </p>
 <h4 id="editing-an-organizations-settings">Editing an Organization’s Settings</h4>
 <p><strong>To edit an organization’s settings:</strong> </p>
 <ol>
-<li>In the Menu bar, select your user name and make sure the organization name appearing below the user name, is the name of the organizations whose settings you wish to edit. If it is not, select <strong>Switch to</strong> in order to switch to that organization. </li>
-</ol>
+<li>
+<p>In the Menu bar, select your user name and make sure the organization name appearing below the user name, is the name of the organizations whose settings you wish to edit. If it is not, select <strong>Switch to</strong> in order to switch to that organization. </p>
 <p><img alt="Selecting to Access Organizational User Definitions" src="../../images/org_user_def.png"/></p>
-<ol>
-<li>In the Menu bar, select your user name and then select <strong>Preferences</strong>.  </li>
-</ol>
+</li>
+<li>
+<p>In the Menu bar, select your user name and then select <strong>Preferences</strong>.  </p>
 <p>The Org Preferences window appears, enabling you to edit various organization’s settings </p>
 <p><img alt="Editing Organization’s Settings" src="../../images/setting_org_user_role.png"/></p>
-<ol>
+</li>
 <li>
 <p>You can edit the organization’s name and address. </p>
 </li>
@@ -1461,7 +1475,7 @@
 </li>
 <li>
 <p>You can change mange the organization’s users by clicking <strong>Users &amp; Roles</strong> under <strong>Admin Pages</strong>. In the Organization Users window that appears, you can: </p>
-</li>
+<ul>
 <li>
 <p>Add users </p>
 </li>
@@ -1470,6 +1484,8 @@
 </li>
 <li>
 <p>Set the <strong>Role</strong> of each organizational user.         </p>
+</li>
+</ul>
 <p><img alt="Organization Users window" src="../../images/org_users_window.png"/></p>
 </li>
 <li>

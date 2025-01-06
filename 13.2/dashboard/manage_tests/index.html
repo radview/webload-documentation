@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1268,6 +1275,7 @@
 <p>The Load Tests page appears, listing the load tests in a table format. </p>
 <p><img alt="load tests page" src="../../images/load_tests_tables.jpeg"/></p>
 <p>The Load Tests table provides the following information and actions, for each Load Test: </p>
+<p><a name="load_test_table"> </a> </p>
 <table>
 <thead>
 <tr>
@@ -1290,7 +1298,7 @@
 </tr>
 <tr>
 <td><strong>Next  Execution</strong></td>
-<td>The date and time when the  test is next scheduled to run. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a> and <a href="#_bookmark25"><em>Scheduling a one-time test</em></a> <a href="#_bookmark25">run </a>.</td>
+<td>The date and time when the  test is next scheduled to run. Refer to <a href="#setting-recurring-test-runs"><em>Setting recurring test runs</em> </a> and <a href="#scheduling-a-one-time-test-run"><em>Scheduling a one-time test run</em></a>.</td>
 </tr>
 <tr>
 <td><strong>Last  Execution</strong></td>
@@ -1302,11 +1310,11 @@
 </tr>
 <tr>
 <td><img alt="" src="../../images/view_last_session.png"/></td>
-<td>Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to <a href="#_bookmark40"><em>Using Dashboards</em> </a></td>
+<td>Enables viewing the last  session of this test. Selecting this option opens a Dashboard page displaying  the last session of the test. Refer to <a href="../using_dashboards/"><em>Using Dashboards</em> </a></td>
 </tr>
 <tr>
 <td><img alt="run load tests" src="../../images/run_load_test.png"/></td>
-<td>Enables manually running  this test now or at a specified time. Refer to <a href="#_bookmark25"><em>Scheduling a one-time test run</em> </a>.</td>
+<td>Enables manually running  this test now or at a specified time. Refer to <a href="#scheduling-a-one-time-test-run"><em>Scheduling a one-time test run</em> </a>.</td>
 </tr>
 <tr>
 <td><img alt="stop" src="../../images/stop_test_run.png"/></td>
@@ -1314,11 +1322,11 @@
 </tr>
 <tr>
 <td><img alt="all test sessions" src="../../images/view_all_test_sessions.png"/></td>
-<td>Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page (<a href="#_bookmark30">Figure 23</a>) that displays  all of this test’s sessions.</td>
+<td>Enables viewing all this  test’s sessions. Selecting this option opens a Load Sessions page <a href="../manage_sessions/#load_sessions_page">Figure 23</a> that displays  all of this test’s sessions.</td>
 </tr>
 <tr>
 <td><img alt="delete" src="../../images/delete_load_test.png"/></td>
-<td>Instructs WebLOAD to  delete the load test. Refer to <a href="#_bookmark27"><em>Deleting a   load</em></a> <a href="#_bookmark27"><em>test</em> </a>.</td>
+<td>Instructs WebLOAD to  delete the load test. Refer to <a href="#deleting-a-load-test"><em>Deleting a load</em></a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1327,26 +1335,26 @@
 <ol>
 <li>
 <p>Perform one of the following: </p>
-</li>
-<li>
-<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
-</li>
-<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
-<li>In the homepage, see the Create a new Load Test pane. </li>
-</ol>
+<ul>
+<li>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </li>
+<li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a  new load test</strong>. The Create a new Load Test page appears. </li>
+<li>In the homepage, see the Create a new Load Test  pane. </li>
+</ul>
 <p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
-<ol>
+</li>
 <li>
 <p>Select the type of test to create. Refer to the following for detailed explanations: </p>
+<ul>
+<li>
+<p><a href="#creating-a-urlapi-load-test"><em>Creating a URL/API Load Test</em> </a></p>
 </li>
 <li>
-<p><a href="#_page19_x54.00_y325.04"><em>Creating a URL/API Load Test</em> </a>(on page<a href="#_page19_x54.00_y325.04"> 14)</a> </p>
+<p><a href="#creating-a-script-load-test"><em>Creating a Script Load Test</em> </a> </p>
 </li>
 <li>
-<p><a href="#_page22_x54.00_y352.04"><em>Creating a Script Load Test</em> </a>(on page <a href="#_page22_x54.00_y352.04"> 17)</a> </p>
+<p><a href="#creating-a-template-load-test"><em>Creating a Template Load Test</em> </a></p>
 </li>
-<li>
-<p><a href="#_page26_x54.00_y407.04"><em>Creating a Template Load Test</em> </a>(on page <a href="#_page26_x54.00_y407.04"> 21)</a> </p>
+</ul>
 </li>
 </ol>
 <h2 id="creating-a-urlapi-load-test">Creating a URL/API Load Test</h2>
@@ -1356,22 +1364,21 @@
 <ol>
 <li>
 <p>Perform one of the following: </p>
-</li>
-<li>
-<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
-</li>
+<ul>
+<li>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </li>
 <li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
 <li>In the homepage, see the Create a new Load Test pane. </li>
-</ol>
+</ul>
+<p><a name="create_new_load_test"></a></p>
 <p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
-<ol>
-<li>Select <strong>URL/API Test</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>URL/API Test</strong>.</p>
 <p>A Create Load Test page appears. </p>
 <p><img alt="create API load test" src="../../images/create_API_load_test.jpeg"/></p>
-<ol>
-<li>Specify the test settings. </li>
-</ol>
+</li>
+<li>
+<p>Specify the test settings. </p>
 <p>The following table describes the information you need to provide for defining the URL/API Load Test:</p>
 <table>
 <thead>
@@ -1435,28 +1442,30 @@
 </tr>
 <tr>
 <td><strong>Load  Generators</strong></td>
-<td>Select the load generator  machines that will participate in the load test, as described in <a href="#_bookmark23"><em>Specifying Load Generators for a   load test</em> </a>.</td>
+<td>Select the load generator  machines that will participate in the load test, as described in <a href="#specifying-load-generators-for-a-load-test"><em>Specifying Load Generators for a load test</em> </a>.</td>
 </tr>
 <tr>
 <td><strong>Recurrence</strong></td>
-<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a>.</td>
+<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#setting-recurring-test-runs"><em>Setting recurring test runs</em> </a>.</td>
 </tr>
 </tbody>
 </table>
-<p>The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. ![ref10]</p>
-<p>Thus, the load will start with 0 Virtual Users and increase over the time frame defined in the <strong>Ramp up time</strong> field to reach the number of Virtual Users defined in the <strong>Max Virtual Users</strong> field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the <strong>Time to run Max Virtual Users</strong> field, after which load will return to 0 Virtual Users value over the time frame set in the <strong>Ramp down time</strong> field. </p>
-<ol>
+<p>The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. </p>
+<p>Thus, the load will start with 0 Virtual Users and  increase over the time frame defined in the <strong>Ramp up time</strong> field to reach the number of Virtual Users defined in the <strong>Max Virtual Users</strong> field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the <strong>Time to run Max Virtual Users</strong> field, after which load will return to 0 Virtual Users value over the time frame set in the <strong>Ramp down time</strong> field. </p>
+</li>
 <li>
 <p>Select one of the following: </p>
-</li>
+<ul>
 <li>
 <p><strong>Create Test</strong> – The test definitions are saved. </p>
 </li>
 <li>
-<p><strong>Create and Run Test</strong> – The test definitions are saved, and the test starts running immediately. </p>
+<p><strong>Create and Run Test</strong> – The test definitions are  saved, and the test starts running immediately. </p>
 </li>
 <li>
 <p><strong>Run in Sandbox Mode</strong> – The system saves all the test definitions, but runs a limited test on the settings specified in the <strong>Request Parameters</strong> section while ignoring all the settings in the <strong>Load Configuration</strong>, <strong>Load Generators</strong>, and <strong>Recurrence</strong> sections. </p>
+</li>
+</ul>
 <p>This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  </p>
 </li>
 </ol>
@@ -1466,21 +1475,22 @@
 <ol>
 <li>
 <p>Perform one of the following: </p>
-</li>
-<li>
-<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
-</li>
+<ul>
+<li>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </li>
 <li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
 <li>In the homepage, see the Create a new Load Test pane. </li>
-</ol>
-<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
-<ol>
-<li>Select <strong>Script Test</strong>. </li>
-</ol>
+</ul>
+<p><a name="creating_a_script_load_test"></a>
+<img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+</li>
+<li>
+<p>Select <strong>Script Test</strong>. </p>
 <p>A Create Load Test page appears. </p>
 <p><img alt="create script load test" src="../../images/create_script_load_test.jpeg"/></p>
-<ol>
-<li>Specify the test settings. The following table describes the information you need to provide for defining the Script Load Test.</li>
+</li>
+<li>
+<p>Specify the test settings. The following table describes the information you need to provide for defining the Script Load Test.</p>
+</li>
 </ol>
 <table>
 <thead>
@@ -1496,7 +1506,7 @@
 </tr>
 <tr>
 <td><strong>Scripts</strong></td>
-<td>Specify the scripts that will participate in the test, as well as  their relative weights, as described in <a href="#_bookmark21"><em>Specifying Scripts for a load test</em> </a>.</td>
+<td>Specify the scripts that will participate in the test, as well as  their relative weights, as described in <a href="#specifying-scripts-for-a-load-test"><em>Specifying Scripts for a load test</em> </a>.</td>
 </tr>
 <tr>
 <td><strong>Load  Configuration</strong></td>
@@ -1520,11 +1530,11 @@
 </tr>
 <tr>
 <td><strong>Load  Generators</strong></td>
-<td>Select the load generator  machines as described in <a href="#_bookmark23"><em>Specifying   Load Generators</em></a> <a href="#_bookmark23"><em>for a load test</em> </a>.</td>
+<td>Select the load generator  machines as described in <a href="#specifying-load-generators-for-a-load-test"><em>Specifying Load Generators</em></a> <a href="#specifying-load-generators-for-a-load-test"><em>for a load test</em> </a>.</td>
 </tr>
 <tr>
 <td><strong>Recurrence</strong></td>
-<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#_bookmark24"><em>Setting recurring test runs</em> </a>.</td>
+<td>Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to <a href="#"><em>Setting recurring test runs</em> </a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1533,7 +1543,7 @@
 <ol>
 <li>
 <p>Select one of the following: </p>
-</li>
+<ul>
 <li>
 <p><strong>Create Test</strong> – The test definitions are saved. </p>
 </li>
@@ -1542,25 +1552,29 @@
 </li>
 <li>
 <p><strong>Run in Sandbox Mode</strong> – The system saves all the test definitions, but runs a limited test on the settings specified in the <strong>Scripts</strong> section while ignoring all the settings in the <strong>Load Configuration</strong>, <strong>Load Generators</strong>, and <strong>Recurrence</strong> sections. </p>
+</li>
+</ul>
 <p>This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  </p>
 </li>
 </ol>
 <h3 id="specifying-scripts-for-a-load-test">Specifying Scripts for a load test</h3>
-<p><strong>To specify the script participating in a<a href="#_page22_x189.00_y352.04"><code></code><em>Script Load Test</em>:</a></strong> </p>
+<p><strong>To specify the script participating in a<a href="#creating-a-script-load-test"><em>Script Load Test</em>:</a></strong> </p>
 <ol>
-<li>For every script you want to include in the Script Load test, click <strong>Add Script</strong>. </li>
-</ol>
+<li>
+<p>For every script you want to include in the Script Load test, click <strong>Add Script</strong>. </p>
 <p><img alt="select add script" src="../../images/select_add_script.png"/></p>
 <p>The <strong>Scripts</strong> page appears. </p>
 <p><img alt="Selecting a script in the Scripts page" src="../../images/scripts_page.jpeg"/></p>
-<p>The Scripts page lists the scripts uploaded to the WebLOAD Dashboard. For details how to upload a script, refer to<a href="#_page38_x54.00_y78.04"><em>Uploading Resources</em> </a>(on page<a href="#_page38_x54.00_y78.04"> 33)</a>. If a script was uploaded with the folder in which it is located, the folder name appears; in that case, click the folder name to navigate to the script itself. </p>
-<ol>
-<li>Select a script by clicking <strong>Select Script</strong> in the corresponding line.  </li>
-</ol>
+<p>The Scripts page lists the scripts uploaded to the WebLOAD Dashboard. For details how to upload a script, refer to <a href="../managing_resources/#uploading-resources"><em>Uploading Resources</em> </a>. If a script was uploaded with the folder in which it is located, the folder name appears; in that case, click the folder name to navigate to the script itself. </p>
+</li>
+<li>
+<p>Select a script by clicking <strong>Select Script</strong> in the corresponding line.  </p>
 <p>You are returned to the Script Load Test page, with the selected script appearing in its <strong>Scripts</strong> list. </p>
 <p><img alt="list of scripts" src="../../images/listof_scripts.png"/></p>
-<ol>
-<li>In the <strong>%</strong> column, specify the relative weight of each script. Make sure that the percentages all add up to 100%. If you wish to give the scripts identical weights, click <strong>Make Equal</strong>. </li>
+</li>
+<li>
+<p>In the <strong>%</strong> column, specify the relative weight of each script. Make sure that the percentages all add up to 100%. If you wish to give the scripts identical weights, click <strong>Make Equal</strong>. </p>
+</li>
 </ol>
 <h2 id="creating-a-template-load-test">Creating a Template Load Test</h2>
 <p>Use this option to create a load test based on a WebLOAD template file that was created in WebLOAD Console. </p>
@@ -1568,22 +1582,21 @@
 <ol>
 <li>
 <p>Perform one of the following: </p>
-</li>
-<li>
-<p>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </p>
-</li>
+<ul>
+<li>Select <strong>Tests</strong> &gt; <strong>New</strong> and click <strong>Add Load Test</strong>. The Create a new Load Test page appears. </li>
 <li>Select <strong>Tests</strong> &gt; <strong>Search</strong>, and click <strong>+ Add a new load test</strong>. The Create a new Load Test page appears. </li>
 <li>In the homepage, see the Create a new Load Test pane. </li>
-</ol>
-<p><img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
-<ol>
-<li>Select <strong>Template Test</strong>. </li>
-</ol>
+</ul>
+<p><a name="creating_a_template_load_test"></a>
+<img alt="create new load test" src="../../images/create_new_load_test.png"/></p>
+</li>
+<li>
+<p>Select <strong>Template Test</strong>. </p>
 <p>A Create Load Test page appears. </p>
 <p><img alt="create load test" src="../../images/create_template_load.png"/></p>
-<ol>
-<li>Specify the test settings. The following table describes the information you need to provide for defining the Template Load Test: </li>
-</ol>
+</li>
+<li>
+<p>Specify the test settings. The following table describes the information you need to provide for defining the Template Load Test: </p>
 <table>
 <thead>
 <tr>
@@ -1602,7 +1615,7 @@
 </tr>
 <tr>
 <td><strong>Path</strong></td>
-<td>Click <strong>Select Template</strong> to  select a template from the list appearing in the <strong>Resources</strong> &gt; <strong>Templates</strong> page  that appears.</td>
+<td>Click  <strong>Select Template</strong> to  select a template from the list appearing in the <strong>Resources</strong> &gt; <strong>Templates</strong> page  that appears.</td>
 </tr>
 <tr>
 <td><strong>WebRM Virtual Clients allocation</strong></td>
@@ -1610,44 +1623,42 @@
 </tr>
 <tr>
 <td><strong>Recurrence</strong></td>
-<td>Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to <a href="#_bookmark24"><em>Setting</em></a> <a href="#_bookmark24"><em>recurring   test runs</em> </a>.</td>
+<td>Select this option  if you wish to schedule automatic periodic execution of the load test. Refer  to <a href="#setting-recurring-test-runs"><em>Setting recurring test runs</em></a>.</td>
 </tr>
 </tbody>
 </table>
-<ol>
+</li>
 <li>
 <p>Select one of the following: </p>
-</li>
-<li>
-<p><strong>Create Test</strong> – The test definitions are saved. </p>
-</li>
+<ul>
+<li><strong>Create Test</strong> – The test definitions are saved. </li>
 <li><strong>Create and Run Test</strong> – The test definitions are saved, and the test starts running immediately. </li>
+</ul>
+</li>
 </ol>
 <h2 id="specifying-load-generators-for-a-load-test">Specifying Load Generators for a load test</h2>
-<p>Load generators are machines that bombard tested site with transactions to test site scalability and integrity.  Both a<a href="#_page19_x189.00_y325.04"><code></code><em>URL/API Load Test</em> </a>and a<a href="#_page22_x189.00_y352.04"><code></code><em>Script Load Test</em> </a>require you to specify the load generators that will participate in the test.  Note that the list of available load generators is defined by a Super Admin, as described in<a href="#_page81_x54.00_y262.04"><code></code><em>Adding Load Generators</em> </a>(on page<a href="#_page81_x54.00_y262.04"> 76)</a>. </p>
+<p>Load generators are machines that bombard tested site with transactions to test site scalability and integrity.  Both a <a href="#creating-a-urlapi-load-test"><em>URL/API Load Test</em> </a>and a<a href="#creating-a-script-load-test"><code></code><em>Script Load Test</em> </a>require you to specify the load generators that will participate in the test.  Note that the list of available load generators is defined by a Super Admin, as described in <a href="../managing_load_generators/#adding-load-generators"><em>Adding Load Generators</em> </a></p>
 <p><strong>To specify the load generators participating in a load test:</strong> </p>
 <ol>
 <li>
-<p>Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to <a href="#_page83_x54.00_y78.04"><em>Setting Load Generators’ Location Tag</em> </a>(on page<a href="#_page83_x54.00_y78.04"> 78)</a>. </p>
+<p>Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to <a href="../managing_load_generators/#setting-load-generators-location-tag"><em>Setting Load Generators’ Location Tag</em> </a></p>
 </li>
 <li>
 <p>Select a group of load generators with an identical Location, by entering a non- zero percentage in the corresponding <strong>%</strong> column. The percentage specifies the relative weight of this group of load generators. </p>
+<p><img alt="List of available load generators – as appearing in a load test page" src="../../images/available_load_generators.png"/></p>
+</li>
+<li>
+<p>Make sure the sum of all the percentages is 100%. </p>
+<p><img alt="specify load generators" src="../../images/specify_load_generators.png"/></p>
 </li>
 </ol>
-<p><img alt="List of available load generators – as appearing in a load test page" src="../../images/available_load_generators.png"/></p>
-<ol>
-<li>Make sure the sum of all the percentages is 100%. ![ref8]</li>
-</ol>
-<p><img alt="specify load generators" src="../../images/specify_load_generators.png"/></p>
 <h2 id="setting-recurring-test-runs">Setting recurring test runs</h2>
-<p>For each load test you create – see<a href="#_page18_x54.00_y481.04"><code></code><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a> – you can schedule automatic periodic execution of the test. </p>
-<p>Note that you can also, at any time, manually run or schedule a one-time test run. Refer to<a href="#_page30_x54.00_y78.04"><code></code><em>Scheduling a one-time test run</em> </a>(on page<a href="#_page30_x54.00_y78.04"> 25)</a>. </p>
+<p>For each load test you create – see <a href="#creating-a-new-load-test"><em>Creating a new load test</em> </a> – you can schedule automatic periodic execution of the test. </p>
+<p>Note that you can also, at any time, manually run or schedule a one-time test run. Refer to <a href="#scheduling-a-one-time-test-run"><em>Scheduling a one-time test run</em> </a>. </p>
 <p><strong>To set automatic periodic execution of a load test:</strong> </p>
 <ol>
 <li>
-<p>In the Create Load Test page, accessed as described in<a href="#_page18_x54.00_y481.04"><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>, select the <strong>Recurrence</strong> checkbox. </p>
-</li>
-<li>
+<p>In the Create Load Test page, accessed as described in<a href="#creating-a-new-load-test"><em>Creating a new load test</em> </a>, select the <strong>Recurrence</strong> checkbox. </p>
 <p><img alt="Setting test recurrence" src="../../images/setting_test_recurrence.png"/></p>
 </li>
 <li>
@@ -1665,45 +1676,43 @@
 </ol>
 <h2 id="scheduling-a-one-time-test-run">Scheduling a one-time test run</h2>
 <p>You can, at any time, manually run or schedule a one-time test run, as explained in this section. </p>
-<p>Note that you can also schedule automatic periodic execution of a test, as part of test definition. Refer to<a href="#_page18_x54.00_y481.04"><code></code><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>. </p>
+<p>Note that you can also schedule automatic periodic execution of a test, as part of test definition. Refer to <a href="#creating-a-new-load-test"><em>Creating a new load test</em> </a> </p>
 <p><strong>To manually run a load test:</strong> </p>
 <ol>
-<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="#_page17_x54.00_y600.04">(Figure 6)</a>. </li>
-</ol>
-<p><img alt="Load Tests page" src="../../images/load_tests_page.png"/></p>
-<ol>
 <li>
-<p>In the line corresponding to the test you wish to run, click ![ref15]. A Run Test query is displayed. </p>
+<p>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="./#load_test_table">(Load Test Table)</a>. </p>
+<p><img alt="Load Tests page" src="../../images/load_tests_page.png"/></p>
 </li>
 <li>
-<p><img alt="Run Test query" src="../../images/run_test_query.png"/></p>
+<p>In the line corresponding to the test you wish to run, click. A Run Test query is displayed. 
+     <img alt="Run Test query" src="../../images/run_test_query.png"/></p>
 </li>
 <li>
 <p>Do one of the following: </p>
+<ul>
+<li>To run the test now, click <strong>Run Now</strong>. </li>
+<li>To run the test at a specific later time, click  <strong>Run Later</strong>, and specify the date and time for running the test. </li>
+</ul>
+<p><img alt="Specifying to run a load test at a later time" src="../../images/specify_load_test.png"/></p>
 </li>
 <li>
-<p>To run the test now, click <strong>Run Now</strong>. </p>
+<p>Click <strong>Run</strong>. </p>
 </li>
-<li>To run the test at a specific later time, click <strong>Run Later</strong>, and specify the date and time for running the test. ![ref8]</li>
-</ol>
-<p><img alt="Specifying to run a load test at a later time" src="../../images/specify_load_test.png"/></p>
-<ol>
-<li>Click <strong>Run</strong>. </li>
 </ol>
 <h2 id="editing-a-load-test">Editing a load test</h2>
 <p><strong>To edit a load test:</strong> </p>
 <ol>
-<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. </li>
-</ol>
+<li>
+<p>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. </p>
 <p>The Load Tests table appears. </p>
-<ol>
-<li>In the <strong>Name</strong> column, click the name of the test you wish to edit. </li>
-</ol>
+</li>
+<li>
+<p>In the <strong>Name</strong> column, click the name of the test you wish to edit. </p>
 <p>The test definition page appears. The following figure shows an example of the page that appears when selecting to edit a template load test. </p>
 <p><img alt="Editing a template load test" src="../../images/upload_a_load_test.jpeg"/></p>
-<ol>
+</li>
 <li>
-<p>Edit the test definitions as desired. For an explanation of the various fields, refer to the relevant explanation in<a href="#_page18_x54.00_y481.04"><em>Creating a new load test</em> </a>(on page<a href="#_page18_x54.00_y481.04"> 13)</a>. </p>
+<p>Edit the test definitions as desired. For an explanation of the various fields, refer to the relevant explanation in <a href="#creating-a-new-load-test"><em>Creating a new load test</em> </a></p>
 </li>
 <li>
 <p>Click <strong>Update</strong>.  </p>
@@ -1712,12 +1721,21 @@
 <h2 id="deleting-a-load-test">Deleting a load test</h2>
 <p><strong>To delete a load test:</strong> </p>
 <ol>
-<li>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="#_page17_x54.00_y600.04">(Figure 6)</a>. </li>
-<li>In the line corresponding to the test you wish to edit, click ![ref17]. A Delete Test page appears. </li>
-<li><img alt="Deleting a load session" src="../../images/delete_load_sessions.png"/></li>
-<li>In the Delete Test page that appears, you can select between: </li>
+<li>
+<p>In the menu bar, select <strong>Tests</strong> &gt; <strong>Search</strong>. The Load Tests table appears <a href="./#load_test_table">(Load Test Table)</a></p>
+</li>
+<li>
+<p>In the line corresponding to the test you wish to edit, click. 
+    A Delete Test page appears. </p>
+<p><img alt="Deleting a load session" src="../../images/delete_load_sessions.png"/></p>
+</li>
+<li>
+<p>In the Delete Test page that appears, you can select between: </p>
+<ul>
 <li>Deleting the load test and all its session. </li>
 <li>Deleting only the load test, but keeping the test sessions. </li>
+</ul>
+</li>
 </ol>
 </article>
 </div>

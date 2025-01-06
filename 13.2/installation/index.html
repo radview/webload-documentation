@@ -598,6 +598,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1570,7 +1577,7 @@
 </tbody>
 </table>
 <h3 id="linux-platforms-for-webload-load-machines">Linux Platforms (for WebLOAD Load Machines)</h3>
-<p><em>Table 4: WebLOAD Load Machine System Requirements</em> </p>
+<p><em>Table: WebLOAD Load Machine System Requirements</em> </p>
 <table>
 <thead>
 <tr>
@@ -1689,7 +1696,7 @@
 <li>Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. </li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. ![ref2] When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#registering-and-updating-the-webload-license">Registering and Updating the WebLOAD License</a>. </p>
+<p><strong>Note:</strong> The installation process is the same for Load Machines and Probing Clients. When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in<a href="#registering-and-updating-the-webload-license">Registering and Updating the WebLOAD License</a>. </p>
 </blockquote>
 <h3 id="installing-webrm">Installing WebRM</h3>
 <p><strong>To install WebRM:</strong> </p>
@@ -1851,7 +1858,7 @@
 <h3 id="running-the-load-engine-on-linux">Running the Load Engine on Linux</h3>
 <p>When running the Load Engine on Linux, Load Engine runs with TestTalk. TestTalk enables communication between the different components of the WebLOAD module. When running the Load Generator through Linux you generally need to connect with other WebLOAD modules running on a remote Windows machine (for example WebLOAD Console). To connect with these remote modules, you must run TestTalk. Once TestTalk is running, you can access the remote WebLOAD modules. The remote module then initiates the communication with TestTalk and then TestTalk loads the Load Generator. </p>
 <blockquote>
-<p><strong>Note:</strong> If the Load Generator is running and TestTalk is not running, the remote ![ref8] WebLOAD application will not be able to access the Load Generator. </p>
+<p><strong>Note:</strong> If the Load Generator is running and TestTalk is not running, the remote  WebLOAD application will not be able to access the Load Generator. </p>
 </blockquote>
 <p><strong>To run TestTalk on your system:</strong> </p>
 <ol>
@@ -1876,7 +1883,7 @@
 <h3 id="standard-license-registration">Standard License Registration</h3>
 <p><strong>To open the Update License dialog box:</strong> </p>
 <ul>
-<li>At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the<strong> License</strong> dialog box opens automatically, ![ref10]</li>
+<li>At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the<strong> License</strong> dialog box opens automatically, </li>
 </ul>
 <p><strong>Note:</strong> After a WebLOAD installation, you may be prompted to restart your computer before the Update License dialog box appears. In this case, the License dialog box will appear automatically after the computer restarts. </p>
 <p>-Or- </p>
@@ -1884,7 +1891,7 @@
 <p>The License dialog box includes the following sections: </p>
 <ul>
 <li>License Details </li>
-<li>Update License ![ref2]</li>
+<li>Update License </li>
 </ul>
 <p>These sections are used to register and update your WebLOAD authorization license information. </p>
 <p><strong>To complete or update your license registration:</strong> </p>
@@ -1927,7 +1934,7 @@
 <li>After installing WebLOAD, the Update License** dialog box opens,  -Or- </li>
 </ol>
 <p>To open the Update License dialog box manually, select <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>RadView</strong> &gt; <strong>WebLOAD</strong> &gt; <strong>Utilities</strong> &gt; <strong>Update License.</strong> </p>
-<p>The Update License dialog box appears. ![ref2]</p>
+<p>The Update License dialog box appears.</p>
 <p><img alt="Update License Dialog Box" src="../images/30day_update_licesne.png"/></p>
 <ol>
 <li>Select <strong>30-day trial</strong>. </li>
@@ -1942,7 +1949,7 @@
 <li>The number of concurrent applications for the WebLOAD Console. </li>
 <li>The number of concurrent Virtual and Probing Clients. </li>
 </ul>
-<p>Installation also creates a FlexLM Service that controls the operation. ![ref2]</p>
+<p>Installation also creates a FlexLM Service that controls the operation. </p>
 <p>The WebRM Server displays a list of the number of resources (Virtual and Probing Clients) that the Console is using. The WebRM Server enables a testing team to share resources. </p>
 <p>This section describes how to connect to the WebRM Server and how to view the license details. </p>
 <p><strong><em>Connecting to the WebRM Server</em>  To connect to the WebRM Server:</strong> </p>
@@ -1972,7 +1979,7 @@
 <h2 id="configuring-connection-to-the-oracle-database-using-webload">Configuring Connection to the Oracle  Database using WebLOAD</h2>
 <p>Connecting to the Oracle Database using WebLOAD requires that you install the Oracle Data Access Components (ODAC) on your computer. For information on ODAC, refer to the appropriate Oracle documentation. </p>
 <blockquote>
-<p><strong>Note:</strong> You need to be assigned a valid username and user privileges for Oracle so that ![ref8] you can connect to the Oracle database. </p>
+<p><strong>Note:</strong> You need to be assigned a valid username and user privileges for Oracle so that you can connect to the Oracle database. </p>
 </blockquote>
 <p>The following procedure is confirmed to work with Oracle Database version 11<em>g</em>, and is also expected to work with Oracle Database version 10<em>g</em>. </p>
 <p><strong>To configure your computer to enable connection to the Oracle database using WebLOAD:</strong> </p>
@@ -1985,7 +1992,7 @@
 </li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> If tnsnames.ora does not exist, create it. ![ref8]</p>
+<p><strong>Note:</strong> If tnsnames.ora does not exist, create it. </p>
 <p>The default content is as follows: </p>
 <p><code>&lt;tns\_name&gt; =</code> </p>
 <p><code>(DESCRIPTION =</code> </p>

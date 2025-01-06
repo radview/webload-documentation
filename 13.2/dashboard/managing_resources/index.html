@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1172,8 +1179,11 @@
 <p>The Resources tab also offers the option of creating sub-folders. If you want the uploaded templates or script to continue working once they are uploaded to WebLOAD Dashboard, you will need to create the same hierarchy as the original hierarchy of the files you are uploading.  </p>
 <h2 id="viewing-resources">Viewing Resources</h2>
 <p><strong>To view the resources uploaded to WebLOAD Dashboard:</strong> </p>
-<p>1.  In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. ![ref8]</p>
-<p><img alt="Resources page* " src="../../images/resources_page.jpeg"/></p>
+<ol>
+<li>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. </li>
+</ol>
+<p><a name="resources_page"></a>
+<img alt="Resources page* " src="../../images/resources_page.jpeg"/></p>
 <p>The resources can be organized hierarchically in subfolders, or some or all of them can be located in the root of the Resources folder. To view the contents of a subfolder, click the subfolder name.  </p>
 <p>The Resources table provides the following information and available actions, for each resource or resource subfolder: </p>
 <table>
@@ -1190,7 +1200,7 @@
 </tr>
 <tr>
 <td><img alt="button - delete test" src="../../images/delete_load_test.png"/></td>
-<td>Instructs  WebLOAD to delete the resource or folder. Refer to  <a href="#_bookmark39"><em>Deleting a Resource or Resources   folder</em> </a>.</td>
+<td>Instructs  WebLOAD to delete the resource or folder. Refer to  <a href="#deleting-a-resource-or-resources-folder"><em>Deleting a Resource or Resources folder</em> </a>.</td>
 </tr>
 <tr>
 <td><img alt="button - download" src="../../images/download_resource.png"/></td>
@@ -1198,7 +1208,7 @@
 </tr>
 <tr>
 <td><img alt="button - create test" src="../../images/create_load_test.png"/></td>
-<td>Enables creating a load test based on the  resource. Refer to  <a href="#_bookmark38"><em>Creating a Load Test Based on a   Resource</em> </a>.</td>
+<td>Enables creating a load test based on the  resource. Refer to  <a href="#creating-a-load-test-based-on-a-resource"><em>Creating a Load Test Based on a Resource</em> </a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1206,22 +1216,24 @@
 <p><strong>To upload a resource into WebLOAD Dashboard:</strong> </p>
 <ol>
 <li>
-<p>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. The Resources page appears <a href="#_page37_x54.00_y429.04">(Figure 26)</a>. </p>
+<p>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. The Resources page appears <a href="#resources_page">(Figure 26)</a>. </p>
 </li>
 <li>
 <p>If you wish to add a resource into the root folder of the WebLOAD Console Resources folder, click <strong>Upload Resources</strong> in the Resources page. </p>
 </li>
 <li>
 <p>If you wish to add a resource into a subfolder of the WebLOAD Console Resources folder: </p>
+<ol>
+<li>
+<p>Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in <a href="#creating-a-resources-subfolder"><em>Creating a Resources subfolder</em> </a></p>
 </li>
 <li>
-<p>Navigate to the subfolder in the folders tree displayed in the Resources page. If the sub folder does not yet exist, create it as described in<a href="#_page38_x54.00_y556.04"><em>Creating a Resources subfolder</em> </a>(on page<a href="#_page38_x54.00_y556.04"> 33)</a> </p>
+<p>Click <strong>Upload Resource</strong>.  </p>
 </li>
-<li>Click <strong>Upload Resource</strong>.  </li>
 </ol>
 <p>The Upload Resources page appears. </p>
 <p><img alt="Upload Resources page" src="../../images/upload_resources_page.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the Upload Resources page, click <strong>Select resource files</strong>. </p>
 </li>
@@ -1236,32 +1248,39 @@
 <p><strong>To create a subfolder in the Resources folder:</strong> </p>
 <ol>
 <li>
-<p>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. The Resources page appears <a href="#_page37_x54.00_y429.04">(Figure 26)</a>. </p>
+<p>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. The Resources page appears <a href="#resources_page">(Figure)</a>. </p>
 </li>
 <li>
 <p>If you wish to add a subfolder under the root folder of the WebLOAD Console Resources folder, click <strong>Create Folder</strong> in the Resources page. </p>
 </li>
 <li>
-<p>If you wish to add a subfolder under a specific subfolder of the WebLOAD Console Resources folder, navigate to the specific subfolder in the folders tree displayed in the Resources page. Then click <strong>Create Folder</strong>. ![ref8]</p>
-</li>
-</ol>
+<p>If you wish to add a subfolder under a specific subfolder of the WebLOAD Console Resources folder, navigate to the specific subfolder in the folders tree displayed in the Resources page. Then click <strong>Create Folder</strong>. </p>
 <p>The New Resource Folder page appears. </p>
 <p><img alt="New Resource Folder page" src="../../images/new_resource_folder.png"/></p>
-<ol>
-<li>Specify the subfolder’s name, and click <strong>Create</strong>.  </li>
+</li>
+<li>
+<p>Specify the subfolder’s name, and click <strong>Create</strong>.  </p>
+</li>
 </ol>
 <h2 id="creating-a-load-test-based-on-a-resource">Creating a Load Test Based on a Resource</h2>
 <p>You can create a load test based on either of the following types of resources: </p>
-<ul>
-<li>.wlp – a script as well as resources related to the script </li>
-<li>.tpl – a template file </li>
-</ul>
+<div class="language-text highlight"><pre><span></span><code>- .wlp – a script as well as resources related to the script 
+- .tpl – a template file
+</code></pre></div>
 <p><strong>To create a load test based on a resource:</strong> </p>
 <ol>
-<li>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. </li>
-<li>In the Resources table, click <img alt="new resource" src="../../images/create_load_test.png"/> adjacent to a resource of type .wlp or .tpl. </li>
-<li>If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the <strong>Script</strong> field. See<a href="#_page22_x54.00_y352.04"><code></code><em>Creating a Script Load Test</em> </a>(on page <a href="#_page22_x54.00_y352.04"> 17)</a>. Set or edit any of the fields, and click <strong>Create Test</strong>. </li>
-<li>If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the <strong>Template</strong> field. See<a href="#_page26_x54.00_y407.04"><code></code><em>Creating a Template Load Test</em> </a>(on page <a href="#_page26_x54.00_y407.04"> 21)</a>. Set or edit any of the fields, and click <strong>Create Test</strong>. </li>
+<li>
+<p>In the menu bar, select <strong>Resources</strong> &gt; <strong>Search</strong>. </p>
+</li>
+<li>
+<p>In the Resources table, click <img alt="new resource" src="../../images/create_load_test.png"/> adjacent to a resource of type .wlp or .tpl. </p>
+</li>
+<li>
+<p>If the resource was a .wlp file, the Create Load Test for a Script-type test appears, with the .wlp already appearing in the <strong>Script</strong> field. See <a href="../manage_tests/#creating-a-script-load-test"><em>Creating a Script Load Test</em> </a>. Set or edit any of the fields, and click <strong>Create Test</strong>. </p>
+</li>
+<li>
+<p>If the resource was a .tpl file, the Create Load Test for a template-type test appears, with the .tpl already appearing in the <strong>Template</strong> field. See <a href="../manage_tests/#creating-a-template-load-test"><em>Creating a Template Load Test</em> </a>. Set or edit any of the fields, and click <strong>Create Test</strong>. </p>
+</li>
 </ol>
 <h2 id="deleting-a-resource-or-resources-folder">Deleting a Resource or Resources folder</h2>
 <ol>
@@ -1276,23 +1295,24 @@
 </li>
 <li>
 <p>You are requested to confirm the delete operation. </p>
-</li>
-</ol>
 <p><img alt="Requesting confirmation to delete a resource" src="../../images/confirm_delete_resource.png"/></p>
-<ol>
+</li>
 <li>
 <p>If the resource is a template, you can select between: </p>
-</li>
+<ul>
 <li>
 <p>Deleting the template as well as its associated test and sessions </p>
 </li>
 <li>
 <p>Deleting only the template, but keeping the associated test and sessions. </p>
 </li>
-</ol>
+</ul>
 <p><img alt="Specifying to delete a template resource" src="../../images/specify_delete_resource.png"/></p>
-<ol>
-<li>If you specified to delete a resources folder, keep in mind that although the templates located in this folder will be deleted, the tests and sessions from those folders will be kept for review and will be displayed in the Load Tests page and Load Sessions page (but without the ability to run them).  <img alt="Specifying to delete a resource subfolder" src="../../images/delete_folder.png"/></li>
+</li>
+<li>
+<p>If you specified to delete a resources folder, keep in mind that although the templates located in this folder will be deleted, the tests and sessions from those folders will be kept for review and will be displayed in the Load Tests page and Load Sessions page (but without the ability to run them). </p>
+<p><img alt="Specifying to delete a resource subfolder" src="../../images/delete_folder.png"/></p>
+</li>
 </ol>
 </article>
 </div>

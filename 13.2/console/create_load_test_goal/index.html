@@ -905,6 +905,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1736,7 +1743,7 @@
 <p><img alt="Script Selection Dialog Box" src="../../images/console_users_guide_1012.png"/></p>
 <p><strong>To run a script:</strong></p>
 <ol>
-<li>Select the source of the script to be used for this test. Click the ![ref6] button and select an existing script from your system.</li>
+<li>Select the source of the script to be used for this test. Click the button and select an existing script from your system.</li>
 <li>To optionally open and view or edit the selected script, click <strong>View</strong>. WebLOAD Recorder opens displaying the selected script.</li>
 <li>To optionally configure runtime options exclusive to this script, click <strong>Options</strong>.</li>
 </ol>
@@ -1747,7 +1754,7 @@
 <h2 id="running-a-mix-of-scripts">Running a Mix of Scripts</h2>
 <p>Using the Goal-Oriented Test Wizard you can run your test using a saved Mix or create a new Mix of scripts through the wizard. The following illustration shows the process for selecting a Mix of scripts to be used in a Goal-Oriented Test test.</p>
 <p><img alt="" src="../../images/console_users_guide_1015.png"/><img alt="" src="../../images/console_users_guide_1016.png"/></p>
-<p><img alt="" src="../../images/console_users_guide_1017.png"/>![ref7]<img alt="" src="../../images/console_users_guide_1018.png"/><img alt="" src="../../images/console_users_guide_1019.png"/><img alt="" src="../../images/console_users_guide_1020.png"/></p>
+<p><img alt="" src="../../images/console_users_guide_1017.png"/><img alt="" src="../../images/console_users_guide_1018.png"/><img alt="" src="../../images/console_users_guide_1019.png"/><img alt="" src="../../images/console_users_guide_1020.png"/></p>
 <p>Using Mix you can prepare a combination of scripts, each performing a specific activity. Then you can tune your testing by changing the combination of scripts, and changing the weight of each script in the Mix.</p>
 <p>Combining scripts through a Mix can simulate different groups of users performing different activities on the SUT at the same time. Using a Mix is another way you can create test scenarios emulating real-life behavior.</p>
 <p><img alt="Mix Selection Dialog Box" src="../../images/console_users_guide_1021.png"/></p>
@@ -1757,7 +1764,7 @@
 <p>Select the source for the Script Mix to be used for this test from the <strong>Mix Selection</strong> dialog box. You can either:</p>
 </li>
 <li>
-<p>Select <strong>Use an Existing Mix</strong> and click the  ![ref6] button to select a *.mix file from your system.</p>
+<p>Select <strong>Use an Existing Mix</strong> and click the  button to select a *.mix file from your system.</p>
 </li>
 <li>Select <strong>Create a Mix</strong> to configure a new Mix.</li>
 <li>Click <strong>Next</strong>.</li>
@@ -1785,7 +1792,7 @@
 <ol>
 <li><strong>Script name</strong> – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.</li>
 <li><strong>Weight</strong> – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.</li>
-<li><strong>Browser</strong> and <strong>Version</strong> – Select the browser type and browser version. Alternatively, click the Change button ![ref9] to edit the user agent definition. </li>
+<li><strong>Browser</strong> and <strong>Version</strong> – Select the browser type and browser version. Alternatively, click the Change button to edit the user agent definition. </li>
 <li><strong>Bandwidth</strong> – Specify a bandwidth. You can do this in one of two ways:<ul>
 <li>Select a bandwidth from the drop-down list.</li>
 <li>Enter a number, to specify that number of bits per second.</li>
@@ -1870,7 +1877,7 @@
 <li>Select a host from the Host Computer window.</li>
 </ol>
 <p>To add hosts not yet defined to the Host Computer window, see <a href="#adding-host-computers-to-the-host-computers-list"><em>Adding Host Computers to the Host Computers List</em> </a>.
-2. Click the single arrow key ![ref11] adjacent to the Load Machine or Probing Clients window.</p>
+2. Click the single arrow key adjacent to the Load Machine or Probing Clients window.</p>
 <p>The selected host moves to the Load Machine or Probing Clients window.
 3. Repeat steps 1 and 2 to define all of the hosts participating in the test.
 4. Click <strong>Next</strong>.</p>

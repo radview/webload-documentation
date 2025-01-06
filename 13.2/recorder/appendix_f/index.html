@@ -628,6 +628,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1134,35 +1141,31 @@
 <p>For instructions on how to create a Perfecto Mobile script please refer to Perfecto Mobile tutorials.</p>
 <p><strong>To create a Perfecto Mobile WebLOAD script:</strong></p>
 <ol>
-<li>Drag the <strong>Perfecto Mobile  <img alt="" src="../../images/appendix_f_004.png"/></strong>    icon from the Real Clients toolbox into the Script Tree at the desired location.</li>
-</ol>
+<li>
+<p>Drag the <strong>Perfecto Mobile  <img alt="" src="../../images/appendix_f_004.png"/></strong>    icon from the Real Clients toolbox into the Script Tree at the desired location.</p>
 <p>The Perfecto Mobile dialog box opens.</p>
 <p><img alt="" src="../../images/appendix_f_009.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Cloud Name</strong> field, enter the URL for Perfecto Mobile.</p>
 </li>
 <li>
 <p>Enter the Perfecto Mobile credentials:</p>
-</li>
-<li>
-<p>In <strong>Perfecto User</strong>, enter your user name.</p>
-</li>
-<li>
-<p>In <strong>Perfecto Password</strong>, enter your password.</p>
+<ul>
+<li>In <strong>Perfecto User</strong>, enter your user name.</li>
+<li>In <strong>Perfecto Password</strong>, enter your password.</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>Select Script</strong>. WebLOAD accesses the Perfecto Mobile scripts and displays them in the Select Script dialog box.</p>
-</li>
-</ol>
 <p>Select a desired script and click <strong>OK</strong>.</p>
 <p><img alt="Select Script Dialog Box" src="../../images/appendix_f_011.png"/></p>
-<ol>
-<li>Click <strong>Select Device</strong>. WebLOAD accesses Perfecto Mobile and displays the list of available devices in the Select Device dialog box.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Select Device</strong>. WebLOAD accesses Perfecto Mobile and displays the list of available devices in the Select Device dialog box.</p>
 <p>Select a desired device and click <strong>OK</strong>.</p>
 <p><img alt="Select Device Dialog Box" src="../../images/appendix_f_012.png"/></p>
-<ol>
+</li>
 <li>
 <p>Set the <strong>Test timeout</strong>. This is the maximum number of seconds that the test is allowed to run.</p>
 </li>
@@ -1177,9 +1180,9 @@
 </li>
 <li>
 <p>Click <strong>OK</strong>. The script is created, and is ready to be run.</p>
+<p><img alt="Script for Running a Script on a Device in the Perfecto Cloud" src="../../images/appendix_f_013.png"/></p>
 </li>
 </ol>
-<p><img alt="Script for Running a Script on a Device in the Perfecto Cloud" src="../../images/appendix_f_013.png"/></p>
 <p>If you run the Perfecto Mobile script in WebLOAD Recorder, all you see are the periodic pings. In order to gather device, transaction and action statistics, you need to run the script in the WebLOAD Console, as described in the following section.</p>
 <h2 id="viewing-session-results-of-a-perfecto-mobile-session"><strong>Viewing Session Results of a Perfecto Mobile Session</strong></h2>
 <p>To gather statistics about the Perfecto Mobile script, create in the WebLOAD Console a Load template that runs the Perfecto Mobile script repetitively but for a single user (Probing Client).</p>

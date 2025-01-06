@@ -972,6 +972,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1826,8 +1833,8 @@
 <h2 id="configuring-the-default-and-current-project-options">Configuring the Default and Current Project Options</h2>
 <p>The Project Options are settings for WebLOAD Recorder that will be in effect for each script you create.</p>
 <ul>
-<li><strong>Default Project Options</strong> are settings that will be in effect for each script you create. Each script created or edited in WebLOAD Recorder is automatically assigned these defaults. You can modify these settings to your specifications.</li>
-<li>![ref13]<strong>Current Project Options</strong> are settings that will override the Default Project Options settings and affect only the currently open script. You can modify these settings to your specifications.</li>
+<li><strong>Default Project Options</strong> are settings that will be in effect for each script you create. Each script created or edited in WebLOAD Recorder is automatically assigned these defaults. You can modify these settings to your specifications.
+-<strong>Current Project Options</strong> are settings that will override the Default Project Options settings and affect only the currently open script. You can modify these settings to your specifications.</li>
 </ul>
 <blockquote>
 <h5 id="notes"><strong>Notes:</strong></h5>
@@ -1855,7 +1862,7 @@
 <p>The Current Project Options dialog box opens with the Sleep Time Control tab displayed.</p>
 <p><img alt="Current Project Options Dialog Box" src="../../images/curr_proj_options.png"/></p>
 <p>The following table describes the tabs in the Default and Current Project Options dialog box.</p>
-<p><em>Table 14: Default and Current Project Options Dialog Box Tabs</em></p>
+<p><em>Table: Default and Current Project Options Dialog Box Tabs</em></p>
 <table>
 <thead>
 <tr>
@@ -1907,11 +1914,9 @@
 </li>
 <li>
 <p>Select the <strong>Pass/Fail Definition</strong> tab.</p>
-</li>
-</ol>
 <p>The Pass/Fail Definition tab moves to the front of the dialog box. </p>
 <p><img alt="Pass/Fail Definition Tab" src="../../images/pass_fail_def.png"/></p>
-<ol>
+</li>
 <li>
 <p>Set test failure criteria. By default, WebLOAD Recorder will fail a test if a severe error occurs during the test run. You can also set WebLOAD Recorder to fail the test if a set numbers of errors or warnings are encountered.</p>
 </li>
@@ -1928,13 +1933,11 @@
 </li>
 <li>
 <p>Select the <strong>Sleep Time Control</strong> (default) tab. The Sleep Time Control tab moves to the front of the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Sleep Time Control Tab" src="../../images/sleep_time_control.png"/></p>
-<ol>
+</li>
 <li>
 <p>Specify the type of sleep to use when playing the script. There are four options:</p>
-</li>
+<ul>
 <li>
 <p>Select <strong>Sleep time as recorded</strong> to run the script with the delays corresponding to the natural pauses that occurred when recording the script.</p>
 </li>
@@ -1946,6 +1949,8 @@
 </li>
 <li>
 <p>Select <strong>Set sleep time deviation</strong> and set the percentage of deviate from the recorded value to represent a range of users.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -1960,31 +1965,25 @@
 </li>
 <li>
 <p>Select the <strong>Browser Parameters</strong> tab.</p>
-</li>
-</ol>
 <p>The Browser Parameters tab moves to the front of the dialog box.</p>
 <p><img alt="Browser Parameters Tab of Default/Current Project Options Dialog Box" src="../../images/brow_parameter.png"/></p>
-<ol>
+</li>
 <li>
 <p>To set the Browser and Version:</p>
-</li>
-<li>
-<p>Select the browser from the <strong>Select the browser</strong> drop-down list. An appropriate version automatically appears in the <strong>Select the version</strong> field.</p>
-</li>
-<li>
-<p>You can select an alternative version from the drop-down list, or click the Change <img alt="" src="../../images/change_button.jpeg"/> button to edit the version definition (see <a href="#_bookmark143"><em>Editing Browser Version</em></a><a href="#_bookmark143">* Definitions </a>).</p>
+<ol>
+<li>Select the browser from the <strong>Select the browser</strong> drop-down list. An appropriate version automatically appears in the <strong>Select the version</strong> field.</li>
+<li>You can select an alternative version from the drop-down list, or click the Change <img alt="" src="../../images/change_button.jpeg"/> button to edit the version definition (see <a href="#editing-browser-version-definitions"><em>Editing Browser Version</em></a>).</li>
+</ol>
 </li>
 <li>
 <p>To simulate specific cache behaviors, select the <strong>DNS cache</strong> checkbox and <strong>SSL cache</strong> checkbox.</p>
 </li>
 <li>
 <p>To set Redirection limits:</p>
-</li>
-<li>
-<p>Select the <strong>Enable redirection</strong> checkbox.</p>
-</li>
-<li>
-<p>In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.</p>
+<ol>
+<li>Select the <strong>Enable redirection</strong> checkbox.</li>
+<li>In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.</li>
+</ol>
 </li>
 <li>
 <p>To enable a persistent connection to the server, select the <strong>Persistent connection</strong> checkbox.</p>
@@ -1994,12 +1993,10 @@
 </li>
 <li>
 <p>To set character encoding:</p>
-</li>
-<li>
-<p>Select a character encoding type from the drop-down list.</p>
-</li>
-<li>
-<p>To enforce character encoding, select the <strong>Enforce character encoding</strong> checkbox.</p>
+<ol>
+<li>Select a character encoding type from the drop-down list.</li>
+<li>To enforce character encoding, select the <strong>Enforce character encoding</strong> checkbox.</li>
+</ol>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -2087,10 +2084,10 @@
 </blockquote>
 <p><strong>To add a browser version:</strong></p>
 <ol>
-<li>Click the browse button in the <strong>Browser Type</strong> area on the Browser Parameters tab. The User Agent dialog box opens.</li>
-</ol>
+<li>
+<p>Click the browse button in the <strong>Browser Type</strong> area on the Browser Parameters tab. The User Agent dialog box opens.</p>
 <p><img alt="User Agent Dialog Box" src="../../images/user_agent_dia.png"/></p>
-<ol>
+</li>
 <li>
 <p>Manually edit the version definition.</p>
 </li>
@@ -2107,10 +2104,8 @@
 </li>
 <li>
 <p>Select the <strong>HTTP Parameters</strong> tab. The HTTP Parameters tab appears at the front of the dialog box. </p>
-</li>
-</ol>
 <p><img alt="HTTP Parameters Dialog Box" src="../../images/http_para.png"/></p>
-<ol>
+</li>
 <li>
 <p>Set the HTTP version by clicking <strong>HTTP version 1.0</strong> or <strong>HTTP version 1.1</strong>.</p>
 </li>
@@ -2165,10 +2160,12 @@
 <p><strong>To define the browser cache behavior:</strong></p>
 <ol>
 <li>Click <strong>Default/Current Project Options</strong> in the <strong>Tools</strong> tab of the ribbon. The Default/Current Project Options dialog box opens.</li>
-<li>Select the <strong>Browser Cache</strong> tab.</li>
-</ol>
+<li>
+<p>Select the <strong>Browser Cache</strong> tab.</p>
 <p>The Browser Cache tab moves to the front of the dialog box.</p>
 <p><img alt="Browser Cache Tab" src="../../images/brow_cache.png"/></p>
+</li>
+</ol>
 <p>The following table describes the fields in the Browser Cache tab.</p>
 <table>
 <thead>
@@ -2214,7 +2211,7 @@
 </table>
 <h3 id="configuring-authentication-settings">Configuring Authentication Settings</h3>
 <p>WebLOAD Recorder enables you to define the global and proxy authentication settings.</p>
-<p>WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see <a href="#_bookmark176">*Configuring a Double</a> <em><a href="#_bookmark176">Proxy* </a></em>.</p>
+<p>WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the two proxies, see <a href="#configuring-a-double-proxy"><em>Configuring a Double Proxy</em> </a>*.</p>
 <p><strong>To configure Authentication settings:</strong></p>
 <ol>
 <li>
@@ -2222,12 +2219,12 @@
 </li>
 <li>
 <p>Select the <strong>Authentication</strong> tab.</p>
-</li>
-</ol>
 <p>The Authentication tab moves to the front of the dialog box.</p>
 <p><img alt="Authentication Tab" src="../../images/authen_tab.jpg"/></p>
-<ol>
-<li>Fill in the fields, as described below and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Fill in the fields, as described below and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <p>The following table defines all the fields and options in the Authentication tab.</p>
 <table>
@@ -2239,20 +2236,13 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td style="text-align: left;"><em>Global Authentication Settings</em></td>
+<td style="text-align: left;"></td>
 </tr>
-</tbody>
-</table>
-<p><em>Global Authentication Settings</em></p>
-<table>
-<thead>
 <tr>
-<th style="text-align: left;"><strong>User name</strong> and <strong>Password</strong></th>
-<th style="text-align: left;">The user name and password that the script should use to log onto restricted HTTP sites.</th>
+<td style="text-align: left;"><strong>User name</strong> and <strong>Password</strong></td>
+<td style="text-align: left;">The user name and password that the script should use to log onto restricted HTTP sites.</td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td style="text-align: left;"><p><strong>NT user name</strong> and</p><p><strong>NT password</strong></p></td>
 <td style="text-align: left;">The user name the script should use for Windows NT Challenge response authentication.</td>
@@ -2292,16 +2282,14 @@
 </li>
 <li>
 <p>Select the <strong>Diagnostic</strong> tab.</p>
-</li>
-</ol>
 <p>The Diagnostic tab moves to the front of the dialog box.</p>
 <p><img alt="Diagnostic Ta" src="../../images/diag_tab.png"/></p>
-<ol>
-<li>
-<p>Set the <strong>Enable syntax check</strong> option, see <a href="#_bookmark149"><em>Enabling Syntax Checking</em> </a>.</p>
 </li>
 <li>
-<p>Set the <strong>Enable the enhanced RadView support diagnostic</strong> option, see <a href="#_bookmark150">*Enabling</a><a href="#_bookmark150"> RadView Support Diagnostic* </a>.</p>
+<p>Set the <strong>Enable syntax check</strong> option, see <a href="#enabling-syntax-checking"><em>Enabling Syntax Checking</em> </a>.</p>
+</li>
+<li>
+<p>Set the <strong>Enable the enhanced RadView support diagnostic</strong> option, see <a href="#enabling-radview-support-diagnostic"><em>Enabling RadView Support Diagnostic</em> </a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -2365,13 +2353,11 @@
 </li>
 <li>
 <p>Select the <strong>Java Options</strong> tab.</p>
-</li>
-</ol>
 <p>The Java Options tab moves to the front of the dialog box.</p>
 <p><img alt="Java Options Tab" src="../../images/java_opt.png"/></p>
-<ol>
-<li>In the Select run-time JVM to be used drop down, select one of the available Java Virtual Machines. The default setting is the WebLOAD standard Java Virtual Machine.</li>
-</ol>
+</li>
+<li>
+<p>In the Select run-time JVM to be used drop down, select one of the available Java Virtual Machines. The default setting is the WebLOAD standard Java Virtual Machine.</p>
 <p>The selected value is passed to wlGlobals.JVMtype and is the key for</p>
 <p>WLJVMs.xml. This XML file (located on every WebLOAD Machine in the</p>
 <p>...\extensions\JVMs directory) contains the following parameters for each JVM:</p>
@@ -2381,10 +2367,12 @@
 <li>Options</li>
 </ul>
 <p>When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.</p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
 <p>The Java Options are saved.</p>
+</li>
+</ol>
 <h2 id="configuring-the-recording-and-script-generation-options">Configuring the Recording and Script Generation Options</h2>
 <p>The Recording and Script Generation Options enable you to define the behavior of the WebLOAD Recorder during the recording and script generation of a Web session.</p>
 <h3 id="opening-the-recording-and-script-generation-options">Opening the Recording and Script Generation Options</h3>
@@ -2396,7 +2384,8 @@
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder</p>
 <p><strong>Home</strong> tab of the ribbon.</p>
 <p>The Recording and Script Generation Options dialog box opens with the File Extensions tab displayed.</p>
-<p><img alt="Recording and Script Generation Options Dialog Box – File Extensions Tab" src="../../images/rec_script_gen_options.png"/></p>
+<p><a name="rec_script_gen_options"></a>
+<img alt="Recording and Script Generation Options Dialog Box – File Extensions Tab" src="../../images/rec_script_gen_options.png"/></p>
 <p>The following table describes the tabs in the Recording and Script Generation Options dialog box.</p>
 <table>
 <thead>
@@ -2420,7 +2409,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Browser Settings</strong></td>
-<td style="text-align: left;"><p>Select the default browser.</p><p>If you selected either Microsoft Internet Explorer or Netscape Navigator, you can also request that the program configure the proxy value automatically (default). If you want to configure the proxy value manually, see <a href="#_bookmark17"><em>Configuring the Proxy Value for Your Browser</em> </a>.</p></td>
+<td style="text-align: left;"><p>Select the default browser.</p><p>If you selected either Microsoft Internet Explorer or Netscape Navigator, you can also request that the program configure the proxy value automatically (default). If you want to configure the proxy value manually, see <a href="../before_you_begin/#configuring-the-proxy-value-for-your-browser"><em>Configuring the Proxy Value for Your Browser</em> </a>.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><p><strong>File Extensions</strong></p><p>(default)</p></td>
@@ -2456,16 +2445,17 @@
 <p>Use the Script Generation tab in the Recording and Script Generation Options dialog box to specify what the WebLOAD Recorder should record in your script. The Script Generation tab lists all the HTTP objects that can be automatically identified by the WebLOAD Recorder and recorded in the script so you do not have to enter them manually. For example, you can instruct WebLOAD Recorder whether or not to record and display the headers.</p>
 <p><strong>To specify the HTTP objects to be recorded:</strong></p>
 <ol>
-<li>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder</li>
-</ol>
+<li>
+<p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder</p>
 <p><strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Script Generation</strong> tab. </li>
-</ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#rec_script_gen_options">Figure</a>).</p>
+</li>
+<li>
+<p>Select the <strong>Script Generation</strong> tab. </p>
 <p>The Script Generation tab moves to the front of the dialog box. </p>
-<p><img alt="Script Generation Tab" src="../../images/script_gen_tab.png"/></p>
-<ol>
+<p><a name="setting_dialog_box"></a>
+<img alt="Settings Dialog Box" src="../../images/rec_script_gen_options_script_gen.png"/></p>
+</li>
 <li>
 <p>Select or clear the options to specify what the WebLOAD Recorder should record in your script.</p>
 </li>
@@ -2565,28 +2555,8 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate Host List</strong></td>
-<td style="text-align: left;">Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br/>If selected, each host name in the recording is replaced by a variable.<br/>To specify the actual value of each host variable, define it in the <a href="#_bookmark65"><em>InitAgenda</em></a><em>()</em> function</td>
+<td style="text-align: left;">Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br/>If selected, each host name in the recording is replaced by a variable.<br/>To specify the actual value of each host variable, define it in the InitAgenda() function</td>
 <td style="text-align: left;">Instead of the script including, for example: <a href="http://www.amazon.com/">wlHttp.Get("https://www.amazon.com/")</a> <br/>It will include the following:<br/>wlHttp.Get("https://" + domain_www_amazon_com + "/")<br/>You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br/>domain_www_amazon_com=”<a href="http://www.amazon.com/">www.amazon.com</a>” and another test in which: domain_www_amazon_com=”<a href="http://www.qalab.com/">www.qalab.com</a>”</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">wlHttp.Get("https://" +</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">domain_www_amazon_com + "/")</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">You can then, using the same script, run one test in which you edit the InitAgenda()function so that:</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">domain_www_amazon_com=”<a href="http://www.amazon.com/">www.amazon.com</a>” and another test in which: domain_www_amazon_com=”<a href="http://www.qalab.com/">www.qalab.com</a>”</td>
 </tr>
 </tbody>
 </table>
@@ -2599,25 +2569,23 @@
 </blockquote>
 <p><strong>To set the WebLOAD Recorder to record data types:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Post Data</strong> tab. The Post Data tab moves to the front of the dialog box.</li>
-</ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
+<li>
+<p>Select the <strong>Post Data</strong> tab. The Post Data tab moves to the front of the dialog box.</p>
 <p><img alt="Post Data Tab" src="../../images/post_data.png"/></p>
-<ol>
+</li>
 <li>
 <p>Fill in the fields as described in table below.</p>
 </li>
 <li>
 <p>Optionally, you can double-click an item from the DATA block or DATAFILE block lists to display the item’s full text.</p>
-</li>
-</ol>
 <p><img alt="Post Data Full Text Message Box" src="../../images/post_data_mess.png"/></p>
-<ol>
+</li>
 <li>
 <p>Click <strong>OK</strong> to return to the Post Data tab.</p>
 </li>
@@ -2670,7 +2638,7 @@
 <li>application/json-rpc</li>
 <li>application/xml; charset=utf-8</li>
 <li>text/xml</li>
-<li>![ref13]text/xml; charset=utf-8</li>
+<li>text/xml; charset=utf-8</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> The recorder searches for exact content types from this list. Therefore, text/xml and text/xml; charset=utf-8 are different content types even though the former is a subset of the latter.</p>
@@ -2685,21 +2653,17 @@
 <p>Use the Default Encoding Type tab in the Recording and Script Generation Options dialog box to set up the default encoding type.</p>
 <p><strong>To configure the default encoding type:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
 <p>Select the <strong>Default Encoding Type</strong> tab.</p>
-</li>
-<li>
 <p>The Default Encoding Type tab moves to the front of the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Default Encoding Type Tab" src="../../images/def_encod.png"/> </p>
-<ol>
+</li>
 <li>
 <p>Select an option as the default encoding type.</p>
 </li>
@@ -2711,26 +2675,28 @@
 <p>Use the Browser Settings tab in the Recording and Script Generation Options dialog box to set up the default browser.</p>
 <p><strong>To configure the default browser:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
-<p>Or- </p>
-<p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Browser Settings</strong> tab.</li>
-</ol>
-<p>The Browser Settings tab moves to the front of the dialog box.</p>
-<p><img alt="Browser Settings Tab" src="../../images/brow_sett.png"/></p>
-<ol>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark161">Table 23</a>.</p>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
+<p>Or- </p>
+<p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
+<li>
+<p>Select the <strong>Browser Settings</strong> tab.</p>
+<p>The Browser Settings tab moves to the front of the dialog box.</p>
+<p><a name="browser_settings_tab"></a>
+<img alt="Browser Settings Tab" src="../../images/brow_sett.png"/></p>
+</li>
+<li>
+<p>Fill in the fields, as described in the <a href="#browser_settings_tab_fields_and_options">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>. </p>
-</li>
-</ol>
 <p>A message appears stating that in order for WebLOAD Recorder to change your proxy definition automatically, you must close all instances of the browser before recording.</p>
 <p>After you close all instances of the browser, the WebLOAD Recorder screen appears.</p>
+</li>
+</ol>
 <p>The following table defines all the fields and options in the Browser Settings tab.</p>
+<p><a name="browser_settings_tab_fields_and_options"></a></p>
 <table>
 <thead>
 <tr>
@@ -2745,7 +2711,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Web browser</strong></td>
-<td style="text-align: left;"><p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine <em>after</em> WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see <a href="#_bookmark17"><em>Configuring the Proxy Value for Your Browser</em> </a>on page <a href="#_bookmark17">14</a>).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p></td>
+<td style="text-align: left;"><p>Select this option to define Google Chrome, Mozilla Firefox or Microsoft Internet Explorer as your default browser.</p><p>If you selected Mozilla Firefox as your browser, and Mozilla Firefox was installed on the machine <em>after</em> WebLOAD Recorder was installed, a message appears recommending that you install the Firefox extension responsible for setting the proxy definitions automatically.</p><p>If you accept, the extension is installed.</p><p>If you do not accept, the Set the proxy definitions automatically checkbox is automatically cleared, and you should configure the proxy value manually (see <a href="../before_you_begin/#configuring-the-proxy-value-for-your-browser"><em>Configuring the Proxy Value for Your Browser</em> </a>).</p><p>The next time you check the Set the proxy definitions automatically</p><p>checkbox, WebLOAD Recorder will show the installation message again.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Other browser</strong></td>
@@ -2753,7 +2719,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Mobile native application</strong></td>
-<td style="text-align: left;">Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in <a href="#_bookmark356">Recording</a> <a href="#_bookmark356">Mobile Applications </a>.</td>
+<td style="text-align: left;">Select this option to define a mobile native application as your default browser. This option is intended for recording from a mobile device. To do so, you must setup the device and the system as described in <a href="../appendix_e/#appendix-e-recording-mobile-applications">Recording Mobile Applications </a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>None</strong></td>
@@ -2765,7 +2731,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Set the proxy definitions automatically</strong></td>
-<td style="text-align: left;">If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see <a href="#_bookmark17"><em>Configuring the Proxy Value for Your Browser</em> </a>.</td>
+<td style="text-align: left;">If you selected either Mozilla Firefox or Microsoft Internet Explorer, you can also set WebLOAD Recorder to configure their proxy settings automatically (default). If you want to configure the proxy value manually, see <a href="../before_you_begin/#configuring-the-proxy-value-for-your-browser"><em>Configuring the Proxy Value for Your Browser</em> </a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Clear browser cache</strong></td>
@@ -2793,104 +2759,64 @@
 <p>Use the Correlation Options tab in the Recording and Script Generation Options dialog box to set up the correlation options.</p>
 <p><strong>To configure the correlation options:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. </p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Correlation Options</strong> tab.</li>
-</ol>
-<p>The Correlation Options tab moves to the front of the dialog box.</p>
-<p><img alt="Correlation Options Tab" src="../../images/corr_options.png"/></p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark164">Table 24</a>.</p>
+<p>Select the <strong>Correlation Options</strong> tab.</p>
+<p>The Correlation Options tab moves to the front of the dialog box.
+<a name="recording_and_script_generation"></a>
+<img alt="Correlation Options Tab" src="../../images/corr_options.png"/></p>
+</li>
+<li>
+<p>Fill in the fields, as described in the <a href="#correlation_options_tab_fields_and_option">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Field</strong></th>
-<th style="text-align: left;"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Add correlation comments to script</strong></td>
-<td style="text-align: left;"><p>Select this option to instruct WebLOAD to add comments to your script in the places where correlation was performed and create a log of all the changes that were made to your script’s JavaScript.</p><p>When selected, the following comment is added to your script before a command that extracts the dynamic value from a response or that uses a parameter instead of a dynamic value in a request:</p><p>//WLCORR – Extracting the dynamic value from the response according to Correlation Rule <id>s</id></p><p>-Or-</p><p>//WLCORR – Using the Correlation Parameter instead of the dynamic value according to Correlation Rule <id>s</id></p><p>where <code>&lt;ID&gt;</code> is the correlation rule ID.</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Preserve user changes</strong></td>
-<td style="text-align: left;"><p>Specify whether to preserve or discard user changes before running correlation.</p><p>- When this option is unselected, all manual (user) changes to the script are discarded before running correlation. This is equivalent to performing Script Regeneration prior to running correlation.</p><p>- When this option is selected (default), user changes are preserved when correlation is run. If the changes introduced by correlation conflict with the changes made by the user, the user is requested to resolve the conflict, as described in <a href="#_bookmark86">*Resolving Conflicts between Manual</a><a href="#_bookmark86"> Changes and Correlation Changes* </a>on page <a href="#_bookmark86">96.</a></p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Correlation level</strong></td>
-<td style="text-align: left;"><p>Specify the correlation level to determine the type of correlation to run automatically after recording the script:</p><p>Possible values:</p><p>- Do not run – Do not run correlation after recording the script.</p><p>- Use existing rules – Perform manual correlation after recording the script, using the existing rules.</p><p>- Discover rules – Perform automatic correlation after recording the script, to discover and suggest new rules.</p><p>- Prompt – After recording the script, a dialog box is displayed enabling you to select the type of correlation you wish to perform (Do not run, Use existing rules, or Discover rules).</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Logging level</strong></td>
-<td style="text-align: left;"><p>Specify the correlation logging level to determine the amount and content of the comments that the correlation engine adds to your script’s JavaScript.</p><p>Possible values:</p><p>- 0 – None. No log messages are added to the JavaScript.</p><p>- 1 – Minimal. Fatal, Error, and Warning messages are added to the JavaScript. Fatal messages indicate that an unrecoverable error occurred, Error messages indicate that a recoverable error occurred, and Warning messages indicate that there is a possible error.</p><p>- 2 – Medium. In addition to the messages added with the minimal logging level, Info messages are added to the JavaScript. Info messages provide important information, such as, when a rule finds a value or when a correlation hint is found.</p><p>- 3 – Full. In addition to the messages added with the medium logging level, Debug messages are added to the JavaScript. Debugging messages provide detailed information about the script.</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Logging file</strong></td>
-<td style="text-align: left;"><p>Specify the location of the correlation log file. The default file is</p><p>correlation.log and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Log</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Correlation rules file</strong></td>
-<td style="text-align: left;"><p>Specify the location of the correlation rules XML file. The default file is</p><p>correlationRules.xml and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Extensions\Correlation</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Edit Rules</strong></td>
-<td style="text-align: left;">Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see <a href="#_bookmark89"><em>Configuring the Correlation Rules</em> </a>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Flex / AMF correlation</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Correlate Flex / AMF messages</strong></td>
-<td style="text-align: left;"><p>Create automatic correlation rules to correlate RPC Flex messages and Messaging Flex messages.</p><p>Selecting this option enables correlation of the DSId value. This correlation is part of the AMF script generation, which means the correlation is performed during recording.</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Auto generate DSIds</strong></td>
-<td style="text-align: left;"><p>If selected, a new DSId is generated during session initialization. The generated DSId is used for all AMF requests until the next session initialization.</p><p>If not selected, the DSId is retrieved from the session initialization request (nil request) and is used for all AMF requests until the next session initialization.</p></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Disable Flex correlation</strong></td>
-<td style="text-align: left;">Disable Flex correlation.</td>
-</tr>
-</tbody>
-</table>
+<p><a name="correlation_options_tab_fields_and_option"></a>
+|<strong>Field</strong>|<strong>Description</strong>|
+| :- | :- |
+|<strong>Add correlation comments to script</strong>|<p>Select this option to instruct WebLOAD to add comments to your script in the places where correlation was performed and create a log of all the changes that were made to your script’s JavaScript.</p><p>When selected, the following comment is added to your script before a command that extracts the dynamic value from a response or that uses a parameter instead of a dynamic value in a request:</p><p>//WLCORR – Extracting the dynamic value from the response according to Correlation Rule <id>s</id></p><p>-Or-</p><p>//WLCORR – Using the Correlation Parameter instead of the dynamic value according to Correlation Rule <id>s</id></p><p>where <code>&lt;ID&gt;</code> is the correlation rule ID.</p>|
+|<strong>Preserve user changes</strong>|<p>Specify whether to preserve or discard user changes before running correlation.</p><p>- When this option is unselected, all manual (user) changes to the script are discarded before running correlation. This is equivalent to performing Script Regeneration prior to running correlation.</p><p>- When this option is selected (default), user changes are preserved when correlation is run. If the changes introduced by correlation conflict with the changes made by the user, the user is requested to resolve the conflict, as described in <a href="../correlating_scripts/#resolving-conflicts-between-manual-changes-and-correlation-changes"><em>Resolving Conflicts between Manual Changes and Correlation Changes</em> </a></p>|
+|<strong>Correlation level</strong>|<p>Specify the correlation level to determine the type of correlation to run automatically after recording the script:</p><p>Possible values:</p><p>- Do not run – Do not run correlation after recording the script.</p><p>- Use existing rules – Perform manual correlation after recording the script, using the existing rules.</p><p>- Discover rules – Perform automatic correlation after recording the script, to discover and suggest new rules.</p><p>- Prompt – After recording the script, a dialog box is displayed enabling you to select the type of correlation you wish to perform (Do not run, Use existing rules, or Discover rules).</p>|
+|<strong>Logging level</strong>|<p>Specify the correlation logging level to determine the amount and content of the comments that the correlation engine adds to your script’s JavaScript.</p><p>Possible values:</p><p>- 0 – None. No log messages are added to the JavaScript.</p><p>- 1 – Minimal. Fatal, Error, and Warning messages are added to the JavaScript. Fatal messages indicate that an unrecoverable error occurred, Error messages indicate that a recoverable error occurred, and Warning messages indicate that there is a possible error.</p><p>- 2 – Medium. In addition to the messages added with the minimal logging level, Info messages are added to the JavaScript. Info messages provide important information, such as, when a rule finds a value or when a correlation hint is found.</p><p>- 3 – Full. In addition to the messages added with the medium logging level, Debug messages are added to the JavaScript. Debugging messages provide detailed information about the script.</p>|
+|<strong>Logging file</strong>|<p>Specify the location of the correlation log file. The default file is</p><p>correlation.log and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Log</p>|
+|<strong>Correlation rules file</strong>|<p>Specify the location of the correlation rules XML file. The default file is</p><p>correlationRules.xml and the default location is:</p><p>C:\Program Files\Radview\WebLOAD\Extensions\Correlation</p>|
+|<strong>Edit Rules</strong>|Open the Correlation Rules Editor. For more information about the Correlation Rules Editor, see <a href="../correlating_scripts/#configuring-the-correlation-rules"><em>Configuring the Correlation Rules</em> </a>.|
+|Flex / AMF correlation||
+|<strong>Correlate Flex / AMF messages</strong>|<p>Create automatic correlation rules to correlate RPC Flex messages and Messaging Flex messages.</p><p>Selecting this option enables correlation of the DSId value. This correlation is part of the AMF script generation, which means the correlation is performed during recording.</p>|
+|<strong>Auto generate DSIds</strong>|<p>If selected, a new DSId is generated during session initialization. The generated DSId is used for all AMF requests until the next session initialization.</p><p>If not selected, the DSId is retrieved from the session initialization request (nil request) and is used for all AMF requests until the next session initialization.</p>|
+|<strong>Disable Flex correlation</strong>|Disable Flex correlation.|</p>
 <h3 id="configuring-the-auto-correlation-options">Configuring the Auto-Correlation Options</h3>
 <p>Use the Auto Correlation Options tab in the Recording and Script Generation Options dialog box to set up the Auto Discovery correlation options.</p>
 <p><strong>To configure the Auto Discovery correlation options:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
 <p>Select the <strong>Auto Correlation Options</strong> tab.</p>
 </li>
 <li>
 <p>The Auto Correlation Options tab moves to the front of the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Auto Correlation Options Tab" src="../../images/auto_corre.png"/></p>
-<ol>
+</li>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark166">Table 25</a>.</p>
+<p>Fill in the fields, as described in the <a href="#auto_correlation_options_tab_fields_and_option">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
+<p><a name="auto_correlation_options_tab_fields_and_option"></a></p>
 <table>
 <thead>
 <tr>
@@ -2921,29 +2847,28 @@
 <p>Use the URL Filtering tab in the Recording and Script Generation Options dialog box to configure which types of URLs the WebLOAD Recorder records.</p>
 <p><strong>To configure the URL filtering options:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. </p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
 <p>Select the <strong>URL Filtering</strong> tab.</p>
 </li>
 <li>
 <p>The URL Filtering tab moves to the front of the dialog box.</p>
-</li>
-</ol>
 <p><img alt="URL Filtering Tab" src="../../images/url_filt_tab.png"/></p>
-<ol>
+</li>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark168">Table 26</a>.</p>
+<p>Fill in the fields, as described in the <a href="#url_filtering_tab_fields_and_options">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
-<p>The following table describes the fields in the URL Filtering tab.</p>
+<p><a name="url_filtering_tab_fields_and_options"></a>
+The following table describes the fields in the URL Filtering tab.</p>
 <table>
 <thead>
 <tr>
@@ -2980,7 +2905,7 @@
 </table>
 <h3 id="configuring-the-file-extensions">Configuring the File Extensions</h3>
 <p>Use the File Extension tab in the Recording and Script Generation Options dialog box to configure which types of files the WebLOAD Recorder records.</p>
-<p>Both the File Extensions and the Content Types tabs (see <a href="#_bookmark171">*Configuring the Content Types</a> <em><a href="#_bookmark171">to Record* </a></em>on page <a href="#_bookmark171">198</a>), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.</p>
+<p>Both the File Extensions and the Content Types tabs (see <a href="#configuring-the-content-types-to-record"><em>Configuring the Content Types to Record</em> </a>), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.</p>
 <p>In a case where the file extension and content types contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the File Extensions and Content Types tabs are configured with the following settings:</p>
 <ul>
 <li>Filter the following file extensions as – Recorded Extensions: gif</li>
@@ -2989,25 +2914,26 @@
 <p>A resource with the gif file extension that contains image/gif content is recorded in WebLOAD Recorder even though the image/gif content type is set to be ignored.</p>
 <p><strong>To configure the file extensions:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or-</p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>File Extensions</strong> tab.</li>
-</ol>
-<p>The File Extensions tab moves to the front of the dialog box.</p>
-<p><img alt="File Extensions Tab" src="../../images/file_exten.png"/></p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
-<p>Fill in the fields, as described <a href="#_bookmark170">Table 27</a>.</p>
+<p>Select the <strong>File Extensions</strong> tab.
+    The File Extensions tab moves to the front of the dialog box.</p>
+<p><img alt="File Extensions Tab" src="../../images/file_exten.png"/></p>
+</li>
+<li>
+<p>Fill in the fields, as described the <a href="#file_extensions_tab">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
-<p>The following table describes the fields in the File Extensions tab.</p>
+<p><a name="file_extensions_tab"></a>
+The following table describes the fields in the File Extensions tab.</p>
 <table>
 <thead>
 <tr>
@@ -3048,7 +2974,7 @@
 </table>
 <h3 id="configuring-the-content-types-to-record">Configuring the Content Types to Record</h3>
 <p>Use the Content Types tab in the Recording and Script Generation Options dialog box to set up which types of Web content the WebLOAD Recorder records.</p>
-<p>Both the Content Types and the File Extensions tabs (see <a href="#_bookmark169">*Configuring the File Extensions</a>* on page <a href="#_bookmark169">196</a>), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you</p>
+<p>Both the Content Types and the File Extensions tabs (see <a href="#configuring-the-file-extensions">*Configuring the File Extensions</a> ), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you</p>
 <p>define which objects should be recorded by type, such as “image/gif”, “image/jpeg”, or “text/html”.</p>
 <p>In a case where the content types and file extension contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the Content Types and File Extensions tabs are configured with the following settings:</p>
 <ul>
@@ -3058,17 +2984,17 @@
 <p>A resource with the gif file extension that contains image/gif content is recorded in WebLOAD Recorder even though the gif file extension is set to be ignored.</p>
 <p><strong>To configure the content types to record:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or-</p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. </p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Content Types</strong> tab.</li>
-</ol>
-<p>The Content Types tab moves to the front of the dialog box.</p>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
+<li>
+<p>Select the <strong>Content Types</strong> tab.
+    The Content Types tab moves to the front of the dialog box.</p>
 <p><img alt="Content Types Tab" src="../../images/cont_type_tab.png"/></p>
-<ol>
+</li>
 <li>
 <p>Fill in the fields.</p>
 </li>
@@ -3118,28 +3044,30 @@
 <h3 id="setting-the-proxy-options">Setting the Proxy Options</h3>
 <p>Use the Proxy Options tab in the Recording and Script Generation Options dialog box to designate the proxy server at your organization as the <em>application proxy</em> during recording sessions or to change the proxy port number for WebLOAD Recorder.</p>
 <p>When you record scripts with the WebLOAD Recorder, your browser must be configured to use proxy port 9884 (which is the default proxy port). In other words, you must record scripts through proxy port 9884.</p>
-<p>WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see <a href="#_bookmark176">*Configuring a Double</a> <em><a href="#_bookmark176">Proxy* </a></em>.</p>
+<p>WebLOAD Recorder enables you to configure a double proxy configuration, which instructs the recorder to use two application proxies, one for regular HTTP traffic and another for secure (SSL) traffic. To configure the double proxy, see <a href="#configuring-a-double-proxy"><em>Configuring a Double Proxy</em> </a>*.</p>
 <p><strong>To set the proxy options:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon.</p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
-<li>Select the <strong>Proxy Options</strong> tab.</li>
-</ol>
-<p>The Proxy Options tab moves to the front of the dialog box.</p>
-<p><img alt="Proxy Options Tab" src="../../images/prodxy_topns.png"/></p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark175">Table 29</a>.</p>
+<p>Select the <strong>Proxy Options</strong> tab.</p>
+<p>The Proxy Options tab moves to the front of the dialog box.</p>
+<p><a name="prodxy_topns"></a>
+<img alt="Proxy Options Tab" src="../../images/prodxy_topns.png"/></p>
+</li>
+<li>
+<p>Fill in the fields, as described in the <a href="#proxy_option_tab">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
 <p>The following table describes the fields and options on the Proxy Options tab.</p>
+<p><a name="proxy_option_tab"></a></p>
 <table>
 <thead>
 <tr>
@@ -3158,7 +3086,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Use transparent proxy</strong></td>
-<td style="text-align: left;">Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the <strong>Proxy port</strong> field is disabled. For more information, see <a href="#_bookmark51"><em>Recording Desktop Web Applications</em> </a>on page <a href="#_bookmark51">59.</a></td>
+<td style="text-align: left;">Select this option to enable WebLOAD Recorder to record from any Web client that does not support proxy configurations. When selected, the <strong>Proxy port</strong> field is disabled. For more information, see <a href="../recording_scripts/#recording-desktop-web-applications"><em>Recording Desktop Web Applications</em> </a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>Application proxy options</em></td>
@@ -3166,7 +3094,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Use the following definitions for the application’s proxy server</strong></td>
-<td style="text-align: left;">Select this option if you use a proxy server to access the Internet. When selected, the <strong>HTTP proxy/Port, SSL proxy/Port</strong> and the <strong>Proxy authentication</strong> area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see <a href="#_bookmark55"><em>Troubleshooting</em> </a>.</td>
+<td style="text-align: left;">Select this option if you use a proxy server to access the Internet. When selected, the <strong>HTTP proxy/Port, SSL proxy/Port</strong> and the <strong>Proxy authentication</strong> area fields are enabled and updated with the current settings from your Internet browser. (This is only relevant for Internet Explorer and Mozilla Firefox. If you are using a different Internet browser, update these fields manually). For additional information on determining if your browser is configured with a proxy, see <a href="../recording_scripts/#troubleshooting"><em>Troubleshooting</em> </a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HTTP proxy/Port</strong></td>
@@ -3228,21 +3156,17 @@
 <p>Use the Proxy Certificates tab in the Recording and Script Generation Options dialog box to configure the Server Side and Client Side certificates.</p>
 <p><strong>To set the proxy certificates:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. </p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
 <p>Select the <strong>Proxy Certificates</strong> tab.</p>
-</li>
-<li>
 <p>The Proxy Certificates tab moves to the front of the dialog box. </p>
-</li>
-</ol>
 <p><img alt="Proxy Certificates Tab" src="../../images/prod_cert_tab.png"/></p>
-<ol>
+</li>
 <li>
 <p>Fill in the fields.</p>
 </li>
@@ -3293,7 +3217,7 @@
 <p>Use the Security tab in the Recording and Script Generation Options dialog box to mask passwords in the script.</p>
 <p>There are two kinds of passwords you can mask:</p>
 <ul>
-<li>Protocol passwords – WebLOAD protocol password fields. These are the various possible password fields of the wlHttp object. They include the five following fields:</li>
+<li>Protocol passwords – WebLOAD protocol password fields. These are the various possible password fields of the wlHttp object. They include the five following fields:<ul>
 <li>ProxyNTPassWord</li>
 <li>ProxyPassWord</li>
 <li>HttpsProxyPassWord</li>
@@ -3301,34 +3225,33 @@
 <li>NTPassWord</li>
 <li>Form passwords – Password fields in form data. These can vary, depending on the form. You can list the names of the passwords fields whose contents you wish to encrypt.</li>
 </ul>
+</li>
+</ul>
 <p>In the JavaScript code, the encrypted password is replaced with a ‘decrypt’ statement for the encrypted value, as shown in the following example:</p>
 <p><img alt="js code" src="../../images/js_code_sam.png"/></p>
 <p>Note that the purpose of the masking operation is to make sure passwords are not <strong>visible</strong> in plain text.</p>
 <p><strong>To set the password encryption options:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </li>
-</ol>
+<li>
+<p>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. </p>
 <p>Or- </p>
 <p>Select <strong>Recording and Script Generation Options</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. </p>
-<p>The Recording and Script Generation Options dialog box appears (see <a href="#_bookmark154">Figure 114</a>).</p>
-<ol>
+<p>The Recording and Script Generation Options dialog box appears (see <a href="#recording_and_script_generation">Figure</a>).</p>
+</li>
 <li>
 <p>Select the <strong>Security</strong> tab.</p>
-</li>
-<li>
 <p>The Security tab moves to the front of the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Security Tab" src="../../images/sec_tab.png"/></p>
-<ol>
+</li>
 <li>
-<p>Fill in the fields, as described in <a href="#_bookmark180">Table 31</a>.</p>
+<p>Fill in the fields, as described in the <a href="#security_tab_options">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
-<p>The following table describes the fields and options on the Security tab.</p>
+<p><a name="security_tab_options"></a>
+The following table describes the fields and options on the Security tab.</p>
 <table>
 <thead>
 <tr>
@@ -3382,7 +3305,7 @@
 <ul>
 <li>Select <strong>Settings</strong> from the WebLOAD Recorder <strong>Home</strong> tab of the ribbon. The Settings dialog box opens.</li>
 </ul>
-<p><img alt="Settings Dialog Box" src="../../images/set_dia_box.png"/></p>
+<p><img alt="Set Dia Box" src="../../images/set_dia_box.png"/></p>
 <p>The following table describes the options in the Settings dialog box.</p>
 <table>
 <thead>
@@ -3414,7 +3337,7 @@
 <p>Set the number of iterations to be run during a test session and whether to prompt to save the session file before returning from debug mode to edit mode.</p>
 <p><strong>To set Playback iterations:</strong></p>
 <ol>
-<li>In the Settings dialog box (<a href="#_bookmark183">Figure 128</a>), click <strong>Playback</strong>. The Playback Options screen is displayed (see <a href="#_bookmark183">Figure 128</a>).</li>
+<li>In the Settings dialog box (<a href="#setting_dialog_box">Settings Dialog Box</a>), click <strong>Playback</strong>. The Playback Options screen is displayed (see <a href="#setting_dialog_box">Settings Dialog Box</a>).</li>
 <li>Specify the number of iterations to run during script playback. The default value is 1.</li>
 <li>Select <strong>Prompt to save the debugging session file</strong> if you wish to be prompted to save the session file before switching to edit mode. When this is not selected, you are prompted to save the session file only when closing a script or exiting WebLOAD Recorder.</li>
 <li>Click <strong>OK</strong>.</li>
@@ -3423,8 +3346,8 @@
 <p>Define the default file locations during a test session.</p>
 <p><strong>To set the file locations:</strong></p>
 <ol>
-<li>In the Settings dialog box (<a href="#_bookmark183">Figure 128</a>), click <strong>File Locations</strong>. The File Locations screen is displayed.</li>
-</ol>
+<li>
+<p>In the Settings dialog box (<a href="#setting_dialog_box">Settings Dialog Box</a>), click <strong>File Locations</strong>. The File Locations screen is displayed.</p>
 <p><img alt="Settings Dialog Box with File Validation Test" src="../../images/recorder_1097.png"/></p>
 <p>The Description area at the bottom of the dialog provides a short explanation of each file location item.</p>
 <p>The following file locations can be defined:</p>
@@ -3433,8 +3356,8 @@
 <li>User Include Files: Default path for user Include files.</li>
 <li>User Copy Files: Default path for user Copy files.</li>
 <li>User PostData Files: Default path for user PostData files.</li>
-<li>
-<p>User Certificate Files: Default path for user Certificate files.</p>
+<li>User Certificate Files: Default path for user Certificate files.</li>
+</ul>
 </li>
 <li>
 <p>Double-click the file location option that you wish to reset, and select a new file location.</p>
@@ -3442,22 +3365,20 @@
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
-</ul>
+</ol>
 <h3 id="defining-the-difference-viewer-application">Defining the Difference Viewer Application</h3>
 <p>Define which application is used for comparing and displaying the differences which may exist between a recording and its playback.</p>
 <p><strong>To define the difference viewer application:</strong></p>
 <ol>
-<li>In the Settings dialog box (<a href="#_bookmark183">Figure 128</a>), click <strong>Diff Viewer</strong>. The Diff Viewer screen is displayed.</li>
-</ol>
+<li>
+<p>In the Settings dialog box (<a href="#setting_dialog_box">Settings Dialog Box</a>), click <strong>Diff Viewer</strong>. The Diff Viewer screen is displayed.</p>
 <p><img alt="Settings Dialog Box with Diff Viewer Options" src="../../images/recorder_1098.png"/> </p>
 <p>By default, WinMerge is selected.</p>
-<ol>
+</li>
 <li>
 <p>Optionally, select <strong>External</strong> and enter the relevant information into the corresponding field to specify a different application. Enter the following information:</p>
-</li>
-<li>
-<p>The path to the application’s executable file. (Mandatory.)</p>
-</li>
+<ol>
+<li>The path to the application’s executable file. (Mandatory.)</li>
 <li>% rname – Represents the name for the dialog box which displays the recording file. (Optional.)</li>
 <li>% pname – Represents the name for the dialog box which displays the playback file. (Optional.)</li>
 <li>% record – Represents the path of the recording file. (Optional.)</li>
@@ -3475,54 +3396,57 @@
 </li>
 <li>
 <p>Araxis</p>
+</li>
+</ul>
 <p>C:\Program Files\Araxis\compare.exe /max /wait /title1:% rname /title2:% pname % record % playback</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
-</ul>
+</ol>
 <h3 id="defining-the-merge-tool-application">Defining the Merge Tool Application</h3>
 <p>Define which application is used for resolving conflicts between user changes and correlation changes made to the JavaScript code.</p>
 <p><strong>To define the merge tool application:</strong></p>
 <ol>
-<li>In the Settings dialog box (<a href="#_bookmark183">Figure 128</a>), click <strong>Merge Tool</strong>. The Merge Tool screen is displayed. </li>
-</ol>
+<li>
+<p>In the Settings dialog box (<a href="#setting_dialog_box">Settings Dialog Box</a>), click <strong>Merge Tool</strong>. The Merge Tool screen is displayed. </p>
 <p><img alt="Settings Dialog Box with Merge Tool Options" src="../../images/recorder_1099.png"/></p>
 <p>By default, WinMerge is selected. WinMerge enables 2-way merging.</p>
-<ol>
+</li>
 <li>
 <p>Optionally, select <strong>External</strong> and enter the relevant information into the corresponding field to specify a different application such as Araxis or TortoiseSVN which enable 3-way merging. Enter the following information:</p>
-</li>
-<li>
-<p>%basefile – Represents the path of the base file, before user and correlation changes.</p>
-</li>
+<ol>
+<li>%basefile – Represents the path of the base file, before user and correlation changes.</li>
 <li>%corrfile – Represents the path of the file with the correlation changes.</li>
 <li>%userfile – Represents the path of the file with the user changes.</li>
 <li>%outfile – Represents the outcome of the merge file.</li>
 </ol>
-<p>##### <strong>Examples:</strong></p>
+<p><strong>Examples:</strong></p>
 <ul>
-<li>
-<p>Perforce Merge:</p>
+<li>Perforce Merge:</li>
+</ul>
 <p><code>C:\Path-To\P4Merge.exe %basefile %corrfile %userfile %outfile</code></p>
-</li>
-<li>
-<p>KDiff3:</p>
+<ul>
+<li>KDiff3:</li>
+</ul>
 <p><code>C:\Path-To\kdiff3.exe %basefile %userfile %corrfile -o %outfile --L1 Base --L2 User --L3 Correlation</code></p>
-</li>
-<li>
-<p>Araxis:</p>
+<ul>
+<li>Araxis:</li>
+</ul>
 <p><code>C:\Path-To\compare.exe /max /wait /3 /title1:Correlation /title2:Base /title3:User %corrfile %basefile %userfile %outfile /a2</code></p>
-</li>
-<li>
-<p>WinMerge (2.8 or later):</p>
+<ul>
+<li>WinMerge (2.8 or later):</li>
+</ul>
 <p><code>C:\Path-To\WinMerge.exe %outfile DiffMerge:</code></p>
+<ul>
+<li>DiffMerge:</li>
+</ul>
 <p><code>C:\Path-To\DiffMerge.exe -caption=%mname -result=%outfile –merge -nosplash -t1=%yname -t2=%bname -t3=%tname %userfile %basefile %corrfile</code></p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
-</ul>
+</ol>
 <h2 id="customizing-the-quick-access-toolbar">Customizing the Quick Access Toolbar</h2>
 <p>You can use the <strong>Customize Quick Access Toolbar</strong> option in the Quick Access toolbar to customize the Quick Access toolbar.</p>
 <h2 id="configuring-the-parameterization-manager">Configuring the Parameterization Manager</h2>
@@ -3541,27 +3465,25 @@
 <ul>
 <li>Click <strong>Parameterization Manager</strong> in the <strong>Home</strong> tab of the ribbon. The Parameterization Manager dialog box opens.</li>
 </ul>
+<p><a name="parameterization_manager_dialog_box_a"></a></p>
 <p><img alt="Parameterization Manager Dialog Box" src="../../images/recorder_1100.png"/></p>
 <h3 id="setting-parameters-in-the-parameterization-manager">Setting Parameters in the Parameterization Manager</h3>
 <ol>
-<li>In the Parameterization Manager Dialog Box (<a href="#_bookmark191"><em>Figure 132</em></a>), click <strong>Add</strong>.</li>
+<li>In the Parameterization Manager Dialog Box (<a href="#parameterization_manager_dialog_box_a">*Figure *</a>), click <strong>Add</strong>.</li>
 <li>In the <strong>Name</strong> field, enter a name for the parameter.</li>
 <li>
 <p>In the <strong>Type</strong> field, select the parameter type:</p>
+<ul>
+<li><strong>Date/Time</strong> – Defines a date/time parameter. For more information see <a href="#defining-a-datetime-parameter"><em>Defining a Date/Time Parameter</em> </a>.</li>
+<li>
+<p><strong>File</strong> – Defines a data file parameter. For more information see <a href="#defining-a-data-file"><em>Defining a Data File</em> </a>. To create a new data file, see <a href="#creating-a-data-file"><em>Creating a Data File</em> </a></p>
 </li>
 <li>
-<p><strong>Date/Time</strong> – Defines a date/time parameter. For more information see <a href="#_bookmark193">*Defining</a><a href="#_bookmark193"> a Date/Time Parameter* </a>.</p>
+<p><strong>Number</strong> – Defines a number parameter. For more information see <a href="#defining-a-number-parameter"><em>Defining a Number Parameter</em> </a>.</p>
 </li>
-<li>
-<p><strong>File</strong> – Defines a data file parameter. For more information see <a href="#_bookmark195">*Defining a Data</a><a href="#_bookmark195"> File* </a>. To create a new data file, see <a href="#_bookmark198"><em>Creating a Data File</em> </a>(on</p>
-<p>page <a href="#_bookmark198">222</a>).</p>
-</li>
-<li>
-<p><strong>Number</strong> – Defines a number parameter. For more information see <a href="#_bookmark199">*Defining a</a><a href="#_bookmark199"> Number Parameter* </a>.</p>
-</li>
-<li>
-<p><strong>Random String</strong> – Defines a random string parameter. For more information see</p>
-<p><a href="#_bookmark201"><em>Defining a Random String Parameter</em> </a>.</p>
+<li><strong>Random String</strong> – Defines a random string parameter. For more information see</li>
+</ul>
+<p><a href="#defining-a-random-string-parameter"><em>Defining a Random String Parameter</em> </a>.</p>
 <p>The parameters definitions are stored with the script. You can change the parameters’ definition at any time by using the Parameterization Manager again.</p>
 </li>
 </ol>
@@ -3569,19 +3491,17 @@
 <p><strong>To define a date/time parameter:</strong></p>
 <ol>
 <li>
-<p>In the Parameterization Manager Dialog Box (<a href="#_bookmark191"><em>Figure 132</em></a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
+<p>In the Parameterization Manager Dialog Box (<a href="#parameterization_manager_dialog_box_a">*Figure *</a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
 </li>
 <li>
 <p>In the <strong>Type</strong> field, select <strong>Date/Time</strong>. The fields appropriate for defining a date/time parameter appear in the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Parameterization Manager – Date/Time Dialog Box" src="../../images/recorder_1101.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Description</strong> field, optionally enter a description for the date/time parameter.</p>
 </li>
 <li>
-<p>Fill in the fields as described in <a href="#_bookmark194">Table 33</a>.</p>
+<p>Fill in the fields as described in the <a href="#parameterization_manager_dialog_box_a">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -3650,19 +3570,17 @@
 <p><strong>To select a data file:</strong></p>
 <ol>
 <li>
-<p>In the Parameterization Manager Dialog Box (<a href="#_bookmark191"><em>Figure 132</em></a>), click <strong>Add</strong>.</p>
+<p>In the Parameterization Manager Dialog Box (<a href="#parameterization_manager_dialog_box_a">*Figure *</a>), click <strong>Add</strong>.</p>
 </li>
 <li>
 <p>In the <strong>Type</strong> field, select <strong>File</strong>. The fields appropriate for selecting a data file and configuring its settings appear in the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Parameterization Manager – File Dialog Box" src="../../images/recorder_1102.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Description</strong> field, optionally enter a description of the file.</p>
 </li>
 <li>
-<p>Fill in the fields as described in <a href="#_bookmark197">Table 34</a>.</p>
+<p>Fill in the fields as described in the <a href="#parameterization_manager_dialog_box_a">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -3691,7 +3609,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Create New Data File</strong></td>
-<td style="text-align: left;"><p>Enables creating a new data file. For information, see <a href="#_bookmark198"><em>Creating a Data File</em></a></p><p>.</p></td>
+<td style="text-align: left;"><p>Enables creating a new data file. For information, see <a href="#creating-a-data-file"><em>Creating a Data File</em></a></p><p>.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>Select access method</em></td>
@@ -3735,7 +3653,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Use first row as title row</strong></td>
-<td style="text-align: left;">Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to <a href="#_bookmark203">*Inserting User-Defined Parameters in a Script</a>* .</td>
+<td style="text-align: left;">Uses the first row of the file as the title row. If you select this option, the values of the first row are not used as data but as parameter names. For further explanations, refer to <a href="#inserting-user-defined-parameters-in-a-script"><em>Inserting User-Defined Parameters in a Script</em></a> .</td>
 </tr>
 </tbody>
 </table>
@@ -3743,11 +3661,11 @@
 <p>You can create a new data file.</p>
 <p><strong>To create a data file:</strong></p>
 <ol>
-<li>From the Parameterization Manager – File dialog box (<a href="#_bookmark196">Figure 134</a>), click <strong>Create New Data File</strong>. </li>
-</ol>
+<li>
+<p>From the Parameterization Manager – File dialog box: (<a href="#parameterization_manager_dialog_box_a">Figure</a>), click <strong>Create New Data File</strong>. </p>
 <p>The Create Data File dialog box appears.</p>
 <p><img alt="Create Data File Dialog Box" src="../../images/recorder_1105.png"/></p>
-<ol>
+</li>
 <li>
 <p>Select a file delimiter from the drop-down list.</p>
 </li>
@@ -3764,29 +3682,25 @@
 <p>In the table, type a value in each cell.</p>
 </li>
 <li>
-<p>Click <strong>OK</strong>.</p>
-</li>
-<li>
-<p>A Save As dialog box appears. Save the new data file.</p>
+<p>Click <strong>OK</strong>.
+    A Save As dialog box appears. Save the new data file.</p>
 </li>
 </ol>
 <h4 id="defining-a-number-parameter">Defining a Number Parameter</h4>
 <p><strong>To define a number parameter:</strong></p>
 <ol>
 <li>
-<p>In the Parameterization Manager Dialog Box (<a href="#_bookmark191"><em>Figure 132</em></a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
+<p>In the Parameterization Manager Dialog Box (<a href="#parameterization_manager_dialog_box_a">*Figure *</a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
 </li>
 <li>
 <p>In the <strong>Type</strong> field, select <strong>Number</strong>. The fields appropriate for defining a number parameter appear in the dialog box. </p>
-</li>
-</ol>
 <p><img alt="Parameterization Manager – Number Dialog Box" src="../../images/recorder_1106.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Description</strong> field, optionally enter a description of the number parameter.</p>
 </li>
 <li>
-<p>Fill in the fields as described in <a href="#_bookmark200">Table 35</a>.</p>
+<p>Fill in the fields as described in the <a href="#parameterization_manager_dialog_box_a">Table</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -3863,25 +3777,24 @@
 <p><strong>To define a random string parameter:</strong></p>
 <ol>
 <li>
-<p>In the Parameterization Manager Dialog Box (<a href="#_bookmark191"><em>Figure 132</em></a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
+<p>In the Parameterization Manager Dialog Box (<a href="#parameterization_manager_dialog_box_a">*Figure *</a>), click <strong>Add</strong>. The Parameterization Manager dialog box opens.</p>
 </li>
 <li>
 <p>In the <strong>Type</strong> field, select <strong>Random String</strong>. The fields appropriate for defining a random string parameter appear in the dialog box.</p>
-</li>
-</ol>
 <p><img alt="Parameterization Manager – Random String Dialog Box" src="../../images/recorder_1108.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Description</strong> field, optionally enter a description of the random string parameter.</p>
 </li>
 <li>
-<p>Fill in the fields as described in <a href="#_bookmark202">Table 36</a>.</p>
+<p>Fill in the fields as described in <a href="#parameterization_manager_random_string_dialog_box">Parameterization Manager – Random String dialog box</a>.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
 </li>
 </ol>
 <p>The following table describes the fields and buttons in the Parameterization Manager – Random String dialog box.</p>
+<p><a name="parameterization_manager_random_string_dialog_box"></a></p>
 <table>
 <thead>
 <tr>
@@ -3909,11 +3822,11 @@
 </tbody>
 </table>
 <blockquote>
-<p><strong>Note:</strong> Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see <a href="#_bookmark195"><em>Defining a Data File</em> </a>on page <a href="#_bookmark195">218</a>).</p>
+<p><strong>Note:</strong> Using a random string parameter in a script does not provide unique values. If you need unique values, or special formatting of the string, create a data file with unique values and use File parameterization (see <a href="#defining-a-data-file"><em>Defining a Data File</em> </a>).</p>
 </blockquote>
 <h3 id="inserting-user-defined-parameters-in-a-script">Inserting User-Defined Parameters in a Script</h3>
 <p>WebLOAD Recorder enables you to edit parameters having static values and replace the static values with a call to a set of specified values. During runtime, the script runs the parameter using values from the set.</p>
-<p>The first step is to use the Parameterization Manager to define the set of values (see <a href="#_bookmark189"><em>Configuring the Parameterization Manager</em> </a>on page <a href="#_bookmark189">213</a><em>)</em>. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.</p>
+<p>The first step is to use the Parameterization Manager to define the set of values (see <a href="#configuring-the-parameterization-manager"><em>Configuring the Parameterization Manager</em> </a><em>)</em>. The set of values is a type of parameter (Number parameter, String parameter, Date/Time parameter or Data File parameter). The second step, described in this section, is to replace a static value in the script with a call to the defined parameter.</p>
 <p><strong>To insert a user-defined parameter in a script:</strong></p>
 <ol>
 <li>
@@ -3921,37 +3834,37 @@
 </li>
 <li>
 <p>In the JavaScript View pane, select the static value you want to replace. For example, in the line : </p>
-</li>
-</ol>
 <p><code>wlHttp.FormData["name"] = "john"</code> </p>
 <p><code>select "John".</code></p>
-<ol>
-<li>Right-click and select <strong>Insert Variable</strong>.</li>
-</ol>
-<p>The Insert Variable menu appears (<a href="#_bookmark68">Figure 54</a>).</p>
-<ol>
-<li>Select the parameter you defined in the Parameterization Manager.</li>
-</ol>
+</li>
+<li>
+<p>Right-click and select <strong>Insert Variable</strong>.</p>
+<p>The Insert Variable menu appears, see (<a href="../../scripting/programming_your_javascript/#insert_variable_menu">Figure</a>).</p>
+</li>
+<li>
+<p>Select the parameter you defined in the Parameterization Manager.</p>
 <p>The selected parameter replaces the static value in the script. In our example, if you selected Users_firstname.getValue()from the Insert Variable menu, the line now shows:</p>
 <p><code>wlHttp.FormData["name"] = Users\_firstname.getValue();</code></p>
 <p>Note that if you are using a parameter from a data file, the parameter name reflects whether the data file includes a title row.</p>
 <ul>
 <li>
-<p>If the data file includes a title row, the parameter name is of type:</p>
-<p><code>{Parameter name}\_{column title}.getValue().</code></p>
+<p>If the data file includes a title row, the parameter name is of type:
+      <code>{Parameter name}\_{column title}.getValue().</code></p>
 </li>
 <li>
-<p>If the data file does not include a title row, the column number is used, and the parameter name is of type:</p>
-<p><code>{Parameter name}\_Col{column number}.getValue()</code></p>
+<p>If the data file does not include a title row, the column number is used, and the parameter name is of type:
+      <code>{Parameter name}\_Col{column number}.getValue()</code></p>
 </li>
 </ul>
+</li>
+</ol>
 <blockquote>
-<p><strong>Note:</strong> To replace multiple occurrences of a static value, you can use the <strong>Edit &gt; Replace</strong>tool.</p>
+<p><strong>Note:</strong> To replace multiple occurrences of a static value, you can use the <strong>Edit &gt; Replace</strong> tool.</p>
 </blockquote>
 <h4 id="example-of-using-user-defined-parameters-in-a-script">Example of Using User-Defined Parameters in a Script</h4>
 <p>If the original recorded script includes:</p>
-<p><code>wlHttp.FormData["first\_name"] = "John"</code>
-<code>wlHttp.FormData["last\_name"] = "Smith"</code></p>
+<p><code>wlHttp.FormData["first\_name"] = "John"</code></p>
+<p><code>wlHttp.FormData["last\_name"] = "Smith"</code></p>
 <p><code>wlHttp.FormData["age"] = "47"</code></p>
 <p>and you wish to replace the static values (John, Smith, 47) with parameters, you can define a random number parameter ‘Age’, and a file parameter that calls the ‘Users’ data file having columns ‘firstName’ and ‘lastName’.</p>
 <p>Using the Insert Variable menu, modify the script as follows:</p>

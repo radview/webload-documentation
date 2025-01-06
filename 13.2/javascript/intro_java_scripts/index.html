@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1504,7 +1511,7 @@
 <p>WebLOAD Recorder provides a complete graphic user interface for creating and editing script files. Additions or changes to a script are usually made through the WebLOAD Recorder, working with intuitive icons representing user actions in a graphic Script Tree. For greater clarity, the JavaScript code that corresponds to each user action in a script is also visible in the JavaScript View pane on the WebLOAD Recorder desktop.</p>
 <p>While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects.</p>
 <p>Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:</p>
-<p>JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the <em>WebLOAD Scripting Guide.</em> Use the IntelliSense Editor, described in <a href="#_bookmark18"><em>Using the IntelliSense</em></a><a href="#_bookmark18"> <em>JavaScript Editor</em> </a>, to add lines of code or functions to the JavaScript Object.</p>
+<p>JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the <em>WebLOAD Scripting Guide.</em> Use the IntelliSense Editor, described in <a href="#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>, to add lines of code or functions to the JavaScript Object.</p>
 <p>Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.</p>
 <p><strong>Note:</strong> Once a branch has been converted to a single JavaScript Object, the various user activity icons that were on that branch are no longer individually accessible.</p>
 <p>Imported JavaScript File—an external JavaScript file that should be incorporated within the body of the current script. Select <strong>Edit</strong> <strong></strong> <strong>Import JavaScript File</strong> from the</p>
@@ -1515,7 +1522,7 @@
 <p>An IntelliSense Editor mode for the JavaScript View pane.</p>
 <p>Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. IntelliSense supports the following shortcut keys:</p>
 <p><strong>Period (“.”)</strong> – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see</p>
-<p><a href="#_bookmark19">Figure 2</a>).</p>
+<p><a href="../../scripting/programming_your_javascript/#function_insertion">Figure 2</a>).</p>
 <p><strong><code>&lt;CTRL&gt;</code> <code>&lt;Space&gt;</code></strong> – While typing the name of an object, you can type <code>&lt;CTRL&gt;</code></p>
 <p><code>&lt;Space&gt;</code> to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).</p>
 <p>In addition, the IntelliSense Editor gives a structure to the code with the outline bar and line numbering.</p>
@@ -1542,7 +1549,7 @@
 <p>In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.</p>
 <p>A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select <strong>Tools</strong> <strong></strong> <strong>Check Syntax</strong> to check the syntax of the code in your script file.</p>
 <p><strong>Important:</strong> WebLOAD Recorder scripts should be edited only within the confines of WebLOAD Recorder, not an external editor. If you use an external editor to modify the JavaScript code in a script file generated by WebLOAD Recorder, your visual script will be lost.</p>
-<p>Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a Script Tree is described in <a href="#_bookmark17"><em>Accessing the JavaScript Code within the Script Tree</em> </a>.</p>
+<p>Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a Script Tree is described in <a href="#accessing-the-javascript-code-within-the-script-tree"><em>Accessing the JavaScript Code within the Script Tree</em> </a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

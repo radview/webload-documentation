@@ -714,6 +714,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1307,8 +1314,8 @@
 </ul>
 <p>The template will gather and display statistics from both scripts in the WebLOAD reports. In order to easily distinguish between the statistics from the regular WebLOAD script and those from the Selenium script, it is recommended to give the transactions in each of the two scripts a different distinctive name. For example:</p>
 <ul>
-<li>Selenium-user-login in the Selenium script</li>
-<li>WL-user-login in the WebLOAD script</li>
+<li><code>Selenium-user-login</code> in the Selenium script</li>
+<li><code>WL-user-login</code> in the WebLOAD script</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> This appendix is intended for users creating Selenium code to be used in WebLOAD only. If you wish to use Selenium as usual and add WebLOAD navigation- timing functionality, refer to the <em>Working with Java Selenium Scripts</em> section in Chapter 3 <em>Advanced JavaScript Script Features</em> of the <em>WebLOAD Scripting Guide</em>.</p>
@@ -1317,17 +1324,26 @@
 <p>This section describes how to use Selenium scripts in WebLOAD.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <ol>
-<li>Download the Selenium required jars:</li>
 <li>
-<p>In the selenium web-site (<a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a>), select the <strong>Download</strong></p>
-<p>tab.</p>
+<p>Download the Selenium required jars:</p>
+<ol>
+<li>
+<p>In the selenium web-site (<a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a>), select the <strong>Download</strong> tab.</p>
 </li>
 <li>
 <p>In ‘Selenium Client &amp; WebDriver Language Bindings’, download the Java version (selenium-java-x.x.zip).</p>
 </li>
-<li>Unzip the downloaded file in a temporary location.</li>
-<li>Copy the selenium-java-x.x.jar and all jars in the ‘libs’ folder to the WebLOAD Java extensions folder: c:\ProgramData\RadView\WebLOAD\extensions\java</li>
-<li>If there are duplicate jars (same base name with different number), delete the older versions.</li>
+</ol>
+</li>
+<li>
+<p>Unzip the downloaded file in a temporary location.</p>
+</li>
+<li>
+<p>Copy the selenium-java-x.x.jar and all jars in the ‘libs’ folder to the WebLOAD Java extensions folder: c:\ProgramData\RadView\WebLOAD\extensions\java</p>
+</li>
+<li>
+<p>If there are duplicate jars (same base name with different number), delete the older versions.</p>
+</li>
 </ol>
 <blockquote>
 <p><strong>Important:</strong> Selenium dependencies include jar files that are already shipped with WebLOAD, but not always the same version. Make sure there are no duplicates by deleting the older versions. For example, if you have both commons-codec-1.9.jar and commons-codec-1.3.jar, delete the commons-codec-1.3.jar file.</p>
@@ -1336,8 +1352,12 @@
 <h3 id="step-1-create-a-webload-selenium-script"><strong>Step 1: Create a WebLOAD Selenium Script</strong></h3>
 <p>Do one of the following:</p>
 <ul>
-<li>Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to <a href="#_bookmark370"><em>Recording and Exporting a Selenium Script</em> </a>. It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.</li>
-<li>Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to <a href="#_bookmark342"><em>Selenium Building Blocks</em> </a>.</li>
+<li>
+<p>Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to <a href="#recording-and-exporting-a-selenium-script"><em>Recording and Exporting a Selenium Script</em> </a>. It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.</p>
+</li>
+<li>
+<p>Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to <a href="../appendix_a/#selenium-building-blocks"><em>Selenium Building Blocks</em> </a>. </p>
+</li>
 </ul>
 <h4 id="recording-and-exporting-a-selenium-script">Recording and Exporting a Selenium Script</h4>
 <h5 id="prerequisites-for-selenium-ide-export">Prerequisites for Selenium IDE Export</h5>
@@ -1354,47 +1374,51 @@
 </ol>
 <h5 id="recording-with-selenium-ide">Recording with Selenium IDE</h5>
 <ol>
-<li>Launch Selenium IDE by clicking the Selenium IDE button in the Firefox toolbar.</li>
-</ol>
+<li>
+<p>Launch Selenium IDE by clicking the Selenium IDE button in the Firefox toolbar.</p>
 <p><img alt="Launch Selenium IDE from Firefox" src="../../images/appendix_g_019.jpeg"/></p>
 <p>The Selenium IDE is launched.</p>
-<ol>
-<li>Record a desired script in the Selenium IDE.</li>
-</ol>
+</li>
+<li>
+<p>Record a desired script in the Selenium IDE.</p>
 <p><img alt="Recording a Script in Selenium IDE" src="../../images/appendix_g_020.png"/></p>
 <blockquote>
 <p><strong>Note:</strong> It is possible to record the same script both in Selenium and in WebLOAD simultaneously.</p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>After you finish recording, export the Selenium script to WebLOAD format as follows:</p>
-</li>
+<ol>
 <li>
 <p>In the Selenium IDE, select <strong>Export Test Case As</strong> &gt; <strong>WebLOAD JavaScript</strong>.</p>
+<p><img alt="Exporting Selenium Script to WebLOAD JavaScript Format" src="../../images/appendix_g_021.png"/></p>
+</li>
+<li>
+<p>Enter a name for the script. The script is saved as a WebLOAD .js file.</p>
+<p>Note that the .js file contains a WebLOAD command, reportStatistics, which appears periodically throughout the script. The command instructs WebLOAD to collect navigation timing statistics from the browser regarding the current page.</p>
 </li>
 </ol>
-<p><img alt="Exporting Selenium Script to WebLOAD JavaScript Format" src="../../images/appendix_g_021.png"/></p>
-<ol>
-<li>Enter a name for the script. The script is saved as a WebLOAD .js file.</li>
+</li>
 </ol>
-<p>Note that the .js file contains a WebLOAD command, reportStatistics, which appears periodically throughout the script. The command instructs WebLOAD to collect navigation timing statistics from the browser regarding the current page.</p>
 <blockquote>
-<p><strong>Note:</strong> By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in <a href="#_bookmark344"><em>Selenium Report Statistics</em> </a>.</p>
+<p><strong>Note:</strong> By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in <a href="../appendix_a/#selenium-report-statistics"><em>Selenium Report Statistics</em> </a>.</p>
 </blockquote>
 <h3 id="step-2-create-a-webload-recorder-project-file-from-the-selenium-script">Step 2: Create a WebLOAD Recorder Project File from the Selenium Script</h3>
 <p>Perform one of the following:</p>
 <ul>
-<li><a href="#_bookmark372"><em>Automatic Conversion to a Project File</em></a></li>
-<li><a href="#_bookmark373">Manual Conversion to a Project File</a></li>
+<li><a href="#automatic-conversion-to-a-project-file"><em>Automatic Conversion to a Project File</em></a></li>
+<li><a href="#manual-conversion-to-a-project-file">Manual Conversion to a Project File</a></li>
 </ul>
 <h6 id="automatic-conversion-to-a-project-file"><strong><em>Automatic Conversion to a Project File</em></strong></h6>
 <ol>
-<li>In the WebLOAD Recorder, click <strong>Open</strong> in the <strong>File</strong> tab of the ribbon and select the JavaScript .js file you exported from Selenium.</li>
-</ol>
+<li>
+<p>In the WebLOAD Recorder, click <strong>Open</strong> in the <strong>File</strong> tab of the ribbon and select the JavaScript .js file you exported from Selenium.</p>
 <p>The Open message appears.</p>
 <p><img alt="Converting a JavaScript file to a WebLOAD Recorder project file" src="../../images/appendix_g_022.png"/></p>
-<ol>
-<li>Click <strong>Yes</strong> to convert the JavaScript file to a WebLOAD Recorder project file.</li>
+</li>
+<li>
+<p>Click <strong>Yes</strong> to convert the JavaScript file to a WebLOAD Recorder project file.</p>
+</li>
 </ol>
 <h6 id="manual-conversion-to-a-project-file">Manual Conversion to a Project File</h6>
 <ol>
@@ -1428,23 +1452,24 @@
 <ol>
 <li>
 <p>In the WebLOAD Console, define a load session template that does the following:</p>
-</li>
-<li>
-<p>Runs the Selenium script with a single user.</p>
-</li>
+<ul>
+<li>Runs the Selenium script with a single user.</li>
 <li>Runs the regular WebLOAD script with many users.</li>
-</ol>
+</ul>
 <blockquote>
 <p><strong>Note:</strong> For instructions on how to define two different scripts in a single template, refer to <em>Adding a New Script/Mix to the Template</em>, in the <em>WebLOAD™ Console User’s Guide</em>.</p>
 </blockquote>
-<ol>
-<li>Run the load session.</li>
+</li>
+<li>
+<p>Run the load session.</p>
+</li>
 </ol>
 <h3 id="step-5-view-the-test-results">Step 5: View the Test Results</h3>
 <p>View the load session test results in the WebLOAD Console, WebLOAD Analytics, or the WebLOAD Web Dashboard.</p>
-<p>The following table describes the navigation timing measurements. These measurements are gathered by WebLOAD’s reportStatistics command. By default, these measurements report navigation timing statistics as an average across all pages for which the reportStatistics command was invoked.</p>
-<p>If you added an optional Page Name parameter to a reportStatistics command (refer to <a href="#_bookmark344"><em>Selenium Report Statistics</em> </a>on page <a href="#_bookmark344">363</a>), the resultant measurement names will be displayed as <measurement name="">-<page name="">. Thus for example, the measurement Selenium Redirect – Home Page displays the redirect time for the home page.</page></measurement></p>
+<p>The following table describes the navigation timing measurements. These measurements are gathered by WebLOAD’s <code>reportStatistics</code> command. By default, these measurements report navigation timing statistics as an average across all pages for which the <code>reportStatistics</code> command was invoked.</p>
+<p>If you added an optional <code>Page Name</code> parameter to a <code>reportStatistics</code> command (refer to <a href="../appendix_a/#selenium-report-statistics"><em>Selenium Report Statistics</em> </a>), the resultant measurement names will be displayed as <code>&lt;Measurement Name&gt;-&lt;Page Name&gt;</code>. Thus for example, the measurement <code>Selenium Redirect – Home Page</code> displays the redirect time for the home page.</p>
 <p>Note that in all navigation timing measurements, time is reported in units of seconds.</p>
+<p><a name="navigation_timing_statistics"> </a></p>
 <table>
 <thead>
 <tr>
@@ -1516,7 +1541,7 @@
 </tr>
 </tbody>
 </table>
-<p>The following figure explains the various timing attributes listed in <a href="#_bookmark377">Table 104.</a></p>
+<p>The following figure explains the various timing attributes listed in the <a href="#navigation_timing_statistics">Table</a></p>
 <p><img alt="Timing Attributes used in Navigation Timing Measurements" src="../../images/appendix_g_024.png"/></p>
 </article>
 </div>

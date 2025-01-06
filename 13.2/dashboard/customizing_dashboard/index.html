@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1447,7 +1454,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="customizing-a-dashboard">Customizing a Dashboard</h1>
 <p>You can customize a dashboard as desired, and then save the customized dashboard if you wish. Note however that two types of changes are not considered customizations and are not saved: the selected sessions and the selected time filter. </p>
-<p>To save your customizations, refer to<a href="#customizing-a-dashboard"><code></code><em>Saving your Customized Dashboard</em> </a>. </p>
+<p>To save your customizations, refer to <a href="../managing_dashboards/#saving-your-customized-dashboard"><em>Saving your Customized Dashboard</em> </a>. </p>
 <h2 id="customizing-rows">Customizing Rows</h2>
 <h3 id="adding-a-row">Adding a row</h3>
 <p>To add a new row, click <strong>+ ADD ROW</strong> at the bottom of a dashboard page </p>
@@ -1498,7 +1505,7 @@
 <h2 id="customizing-panels">Customizing Panels</h2>
 <p>To edit a panel, click the panel title and click <strong>edit</strong> in the box that appears.  </p>
 <p><img alt="Panel Options" src="../../images/panel_options.png"/></p>
-<p>An editing pane appears, with various editing options that depend on the panel type (text, graph, table or singlestat), as described below. ![ref8]</p>
+<p>An editing pane appears, with various editing options that depend on the panel type (text, graph, table or singlestat), as described below. </p>
 <h3 id="editing-a-panels-general-options">Editing a Panel’s General Options</h3>
 <p>Select the <strong>General</strong> tab to edit the panel’s general options.  </p>
 <p><img alt="Edit Panel – General Options" src="../../images/edit_panel_general_options.jpeg"/></p>
@@ -1513,21 +1520,23 @@
 </li>
 <li>
 <p>Select the <strong>Metrics</strong> tab. The metrics currently displayed in the graph are displayed in the table. </p>
+<p><img alt="Graph Settings – Metrics" src="../../images/graph_settings.jpeg"/></p>
+</li>
+<li>
+<p>To add a measurement, click <strong>Add Measurement</strong>. A new line appears in the table. </p>
+<p><img alt="Graph Settings – Adding a New Measurement Line" src="../../images/add_measurment_new.png"/></p>
+</li>
+<li>
+<p>Edit the new line:  </p>
+<ul>
+<li>Select metrics for the new line you added. </li>
+</ul>
+</li>
+<li>
+<p>Optionally edit the selection of a metric in an existing line.  </p>
 </li>
 </ol>
-<p><img alt="Graph Settings – Metrics" src="../../images/graph_settings.jpeg"/></p>
-<ol>
-<li>To add a measurement, click <strong>Add Measurement</strong>. A new line appears in the table. </li>
-</ol>
-<p><img alt="Graph Settings – Adding a New Measurement Line" src="../../images/graph_settings_add_measurement.png"/></p>
-<ol>
-<li>Edit the new line:  </li>
-</ol>
-<p>Select metrics for the new line you added. </p>
-<ol>
-<li>Optionally edit the selection of a metric in an existing line.  </li>
-</ol>
-<p>The following table describes some of the operations available in the <strong>Metrics</strong> tab. ![ref8]</p>
+<p>The following table describes some of the operations available in the <strong>Metrics</strong> tab. </p>
 <table>
 <thead>
 <tr>
@@ -1580,8 +1589,8 @@
 <li>Click the panel’s title and select <strong>edit</strong>. </li>
 <li>Select the <strong>Axes</strong> tab. </li>
 </ol>
-<p>A pane appears, displaying the current axes definitions. You can change any of the definitions, and the graph display changes accordingly.  ![ref10]</p>
-<p><img alt="Graph Settings – Axes" src="../../images/graph_axes.png"/></p>
+<p>A pane appears, displaying the current axes definitions. You can change any of the definitions, and the graph display changes accordingly.  </p>
+<p><img alt="Graph Settings – Axes" src="../../images/defining_axes.png"/></p>
 <h4 id="defining-the-legend">Defining the Legend</h4>
 <p><strong>To edit a panel’s legend:</strong> </p>
 <ol>
@@ -1607,7 +1616,7 @@
 <p>A pane appears, displaying the time range definitions. You can change any of the definitions, and the graph display changes accordingly.  </p>
 <p><img alt="Graph Settings – Time Range" src="../../images/graph_time.png"/></p>
 <h3 id="editing-a-singlestat-panel">Editing a Singlestat Panel</h3>
-<p>Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to<a href="#specifying-the-metrics"><code></code><em>Specifying the Metrics</em>)</a>, but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. ![ref10]</p>
+<p>Working with a singlestat panel is similar to working with a graph panel. A measurement is selected in same way (refer to <a href="#specifying-the-metrics"><em>Specifying the Metrics</em></a>), but you can only select a single measurement for a singlestat panel. Note that this makes singlestat panels unsuitable when working with multiple sessions. </p>
 <p><strong><em>Defining the Singlestat Display Options</em></strong> </p>
 <p><strong>To edit a singlestat panel’s display:</strong> </p>
 <ol>
@@ -1621,18 +1630,24 @@
 <p><img alt="Table Panel Header" src="../../images/table_panel_header.png"/></p>
 <p>The header of the table panel provides the following options: </p>
 <ul>
-<li>Sorting the table display – Clicking any column head sorts the table by that column in ascending or descending order. </li>
-<li>Filtering by severity – By clicking the down arrow in the <strong>Severity</strong> column head, you can select whether to view messages of all severity types, or of a certain type.</li>
+<li>
+<p>Sorting the table display – Clicking any column head sorts the table by that column in ascending or descending order. </p>
+</li>
+<li>
+<p>Filtering by severity – By clicking the down arrow in the <strong>Severity</strong> column head, you can select whether to view messages of all severity types, or of a certain type.</p>
+</li>
 </ul>
 <h3 id="editing-a-text">Editing a Text</h3>
 <p>To edit the text in a Text panel, click the panel’s title and select <strong>edit</strong>, and then select the <strong>Panel</strong> tab. </p>
 <p><img alt="Text Settings – Panel Tab" src="../../images/text_settings.png"/></p>
 <p>You can: </p>
 <ul>
-<li>Select the mode: </li>
+<li>Select the mode: <ul>
 <li><strong>Text</strong> – Plain text </li>
 <li><strong>Html</strong> – HTML </li>
 <li><strong>Markdown</strong> - Markdown markup syntax  </li>
+</ul>
+</li>
 <li>Edit the text as desired.  </li>
 </ul>
 <h3 id="adding-panels">Adding Panels</h3>
@@ -1642,54 +1657,59 @@
 <h3 id="duplicating-a-panel">Duplicating a Panel</h3>
 <p>The duplication feature is useful if you wish to create a panel that is very similar to an existing one, or that is based on an existing panel. </p>
 <p><strong>To duplicate a panel:</strong> </p>
-<p>1.  Click the panel’s title and select <strong>Duplicate</strong>. </p>
+<ol>
+<li>Click the panel’s title and select <strong>Duplicate</strong>. </li>
+</ol>
 <p>A new panel – a duplicate of the original – is created in the dashboard. You can now edit it as desired. </p>
 <h3 id="deleting-a-panel">Deleting a Panel</h3>
 <p><strong>To delete a panel:</strong> </p>
 <ol>
-<li>Click the panel’s title and select the <strong>Delete</strong> icon the top right corner.</li>
-</ol>
+<li>
+<p>Click the panel’s title and select the <strong>Delete</strong> icon the top right corner.</p>
 <p><img alt="Delete Panel button" src="../../images/delete_panel.png"/></p>
-<ol>
-<li>Confirm the deletion. </li>
+</li>
+<li>
+<p>Confirm the deletion. </p>
+</li>
 </ol>
 <h2 id="customizing-general-dashboard-settings">Customizing General Dashboard Settings</h2>
 <p>You can customize various general dashboard settings. </p>
 <p><strong>To configure general dashboard settings:</strong> </p>
 <ol>
-<li>Click the Manage Dashboard Settings icon in the middle of the dashboard header, and select <strong>Settings</strong>. </li>
-</ol>
+<li>
+<p>Click the Manage Dashboard Settings icon in the middle of the dashboard header, and select <strong>Settings</strong>. </p>
 <p><img alt="Selecting to Configure Dashboard Settings" src="../../images/dashboard_settings.png"/></p>
 <p>A Dashboard <strong>Settings</strong> pane appears, with multiple tabs. </p>
-<ol>
-<li>Set the <strong>General</strong> settings as desired.  </li>
-</ol>
+</li>
+<li>
+<p>Set the <strong>General</strong> settings as desired.  </p>
 <p><img alt="Dashboard Settings – General" src="../../images/general_settings.png"/></p>
 <p>For example, if you select <strong>Shared Crosshair</strong>, then hovering over one the graphs causes a corresponding crosshairs to appear in all the graphs. </p>
 <p><img alt="Shared Crosshair" src="../../images/shared_crosshair.png"/></p>
-<ol>
-<li>Set the <strong>Rows</strong> settings as desired. For example, use the up and down arrows to switch between the locations of rows in the dashboard.  </li>
-</ol>
+</li>
+<li>
+<p>Set the <strong>Rows</strong> settings as desired. For example, use the up and down arrows to switch between the locations of rows in the dashboard.  </p>
 <p><img alt="Dashboard Settings – Rows" src="../../images/dashboard_settings_rows.png"/></p>
-<ol>
-<li>Set the <strong>Links</strong> settings as desired. This enables adding links that appear under the Dashboard header. You can add a link to any site, or to a dashboard.  </li>
-</ol>
+</li>
+<li>
+<p>Set the <strong>Links</strong> settings as desired. This enables adding links that appear under the Dashboard header. You can add a link to any site, or to a dashboard.  </p>
 <p><img alt="Dashboard Settings – Links" src="../../images/settings_links.png"/></p>
-<ol>
-<li>Set the <strong>Time picker</strong> settings as desired. For example, you can set the <strong>Auto- refresh</strong> options that appear in the <strong>Refreshing every</strong> dropdown. </li>
-</ol>
+</li>
+<li>
+<p>Set the <strong>Time picker</strong> settings as desired. For example, you can set the <strong>Auto- refresh</strong> options that appear in the <strong>Refreshing every</strong> dropdown. </p>
 <p><img alt="Dashboard Settings – Time picker" src="../../images/settings_time.png"/></p>
-<ol>
-<li>Click <strong>Metadata</strong> to view the dashboard’s metadata. This includes information about dashboard creation and updating. </li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Metadata</strong> to view the dashboard’s metadata. This includes information about dashboard creation and updating. </p>
 <p><img alt="Dashboard Settings – Metadata" src="../../images/dashboard_metadata.png"/></p>
+</li>
+</ol>
 <h3 id="templating-a-dashboard">Templating a Dashboard</h3>
 <p>Templating enables the creation of highly interactive and dynamic dashboards. Instead of hard-coding things like server, application and sensor name in you metric queries you can use variables in their place. Variables are shown as dropdown select boxes at the top of the dashboard. These dropdowns make it easy to change the data being displayed in your dashboard. </p>
-<p>For more information, refer to<a href="http://docs.grafana.org/reference/templating/"> http://docs.grafana.org/reference/templating/.</a> </p>
+<p>For more information, refer to <a href="../grafana/reference/templating/">Grafana Templating</a></p>
 <h3 id="annotating-a-dashboard">Annotating a Dashboard</h3>
 <p>Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get title, tags, and text information for the event. </p>
-<p>For more information, refer to<a href="http://docs.grafana.org/reference/annotations/"> http://docs.grafana.org/reference/annotations/.</a></p>
-<p><code></code></p>
+<p>For more information, refer to<a href="../grafana/reference/annotations/">Grafana Annotations</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

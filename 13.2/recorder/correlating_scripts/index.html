@@ -814,6 +814,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1499,7 +1506,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="correlating-scripts">Correlating Scripts</h1>
 <p>This section provides instructions for correlating scripts with WebLOAD Recorder. The WebLOAD correlation engine helps you overcome one of the main challenges of recording or replaying Web application load tests: dynamic data.</p>
-<p>Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see <a href="#_bookmark95"><em>Session Management</em> </a>on page <a href="#_bookmark95">107</a>.) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.</p>
+<p>Dynamically generated data changes every time you run a Web application. For example, the session ID that uniquely identifies a user’s active session is allocated by the Web server or the application every time such a session is initiated. (The session ID is also used for session management. For more information, see <a href="#session-management"><em>Session Management</em> </a>.) Such dynamic data cannot simply be recorded as is and played back, because the playback will inevitably fail.</p>
 <p>WebLOAD enables you to correlate the most common methods used to pass dynamic data between a server and a client. The methods are:</p>
 <ul>
 <li><strong>Cookies</strong> – This method is mostly used for session management, but cookies may also contain additional dynamic data sent from a server. In most situations, the browser returns the sent cookie in subsequent requests. This scenario is handled automatically by WebLOAD and no additional correlation activities are required. WebLOAD also supports cases where a value received in a cookie is sent as request data or a cookie is created in the client-side JavaScript.</li>
@@ -1510,7 +1517,7 @@
 <h2 id="about-correlating-scripts-with-webload-recorder">About Correlating Scripts with WebLOAD Recorder</h2>
 <p>WebLOAD contains a powerful rule based correlation engine. You can define rules that describe how dynamic values should be extracted in their application.</p>
 <p>WebLOAD also provides automatic discovery of potential correlation rules. Using auto-discovery of rules eliminates the need to manually define correlation rules in some common cases.</p>
-<p>WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see <a href="#_bookmark89"><em>Configuring the Correlation Rules</em> </a>.</p>
+<p>WebLOAD Recorder identifies dynamic data using correlation rules. These rules can be configured to suit your correlation needs. For more information on correlation rules, see <a href="#configuring-the-correlation-rules"><em>Configuring the Correlation Rules</em> </a>.</p>
 <p>The WebLOAD correlation engine enables you to:</p>
 <ul>
 <li><strong>Automatically discover potential correlation rules</strong> – WebLOAD can automatically suggest correlation rules for common scenarios, based on the values sent and received in the script, or for a specific value.</li>
@@ -1528,31 +1535,34 @@
 <ul>
 <li><strong>Auto-discovery of correlation rules</strong> – When performing correlation with</li>
 </ul>
-<p>auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see <a href="#_bookmark85">*Approving the Correlation Engine Rules</a>* .</p>
+<p>auto-discovery of correlation rules, the correlation engine compiles a list of the suggested correlation rules, enabling you to select the rules that are applicable to your application. For more information, see <a href="#approving-the-correlation-engine-rules">*Approving the Correlation Engine Rules</a>* .</p>
 <ul>
 <li><strong>In the Correlation Rules Editor</strong> – Before running the correlation engine, you can use the correlation rules editor to add and edit the rules.</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> You can turn discovered rules into permanent rules and then edit the rules in the correlation rules editor.</p>
 </blockquote>
-<p>For more information, see <a href="#_bookmark89"><em>Configuring the Correlation Rules</em> </a>.</p>
+<p>For more information, see <a href="#configuring-the-correlation-rules"><em>Configuring the Correlation Rules</em> </a>.</p>
 <blockquote>
 <p><strong>Note:</strong> Correlation cannot be performed on scripts that were not recorded.</p>
 </blockquote>
 <h3 id="performing-auto-discovery-correlation">Performing Auto-discovery Correlation</h3>
 <p><strong>To perform correlation with auto-discovery of rules:</strong></p>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlate Script and Discover Rules</strong> from the drop-down list.</li>
-</ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlate Script and Discover Rules</strong> from the drop-down list.</p>
 <p>The Perform Script Correlation dialog box appears.</p>
+<p><a name="perform_script_correlation"></a></p>
 <p><img alt="Perform Script Correlation Dialog Box" src="../../images/perform_script_coo_dialog.png"/></p>
-<ol>
-<li>Click <strong>Save and Continue</strong> to save the changes in your script and perform correlation.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Save and Continue</strong> to save the changes in your script and perform correlation.</p>
 <p>-Or-</p>
 <p>Click <strong>Don’t Save and Continue</strong> to perform correlation without saving the changes in your script.</p>
 <p>-Or-</p>
 <p>Click <strong>Cancel</strong> to close the Perform Script Correlation dialog box without performing correlation in your script.</p>
+</li>
+</ol>
 <h3 id="performing-auto-discovery-correlation-for-specific-values">Performing Auto-discovery Correlation for Specific Values</h3>
 <p>WebLOAD enables you to perform correlation with auto-discovery of rules for any value you select in a script. This provides correlation when normal auto-discovery is not sufficient. Auto-discovery correlation for specific values can be used instead of normal auto-discovery in the following cases:</p>
 <ul>
@@ -1574,44 +1584,40 @@
 </li>
 <li>
 <p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Script for Specific Value</strong> from the drop-down list.</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Right-click and select <strong>Correlate Specific Value</strong>.</p>
 <p>The Correlation Specific Value dialog box appears, displaying the selected value.</p>
-<ol>
-<li>
-<p>Click <strong>OK</strong>.</p>
 </li>
 <li>
-<p>WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears (<a href="#_bookmark81">Figure 61</a>).</p>
+<p>Click <strong>OK</strong>.
+    WebLOAD performs a regular correlation with auto-discovery of rules. The Perform Script Correlation dialog box appears (<a href="#perform_script_correlation">Figure</a>).</p>
 </li>
 <li>
 <p>Click <strong>Save and Continue</strong> to save the changes in your script and perform correlation.</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Click <strong>Don’t Save and Continue</strong> to perform correlation without saving the changes in your script.</p>
 <p>-Or-</p>
 <p>Click <strong>Cancel</strong> to close the Perform Script Correlation dialog box without performing correlation in your script.</p>
+</li>
+</ol>
 <h3 id="setting-the-default-correlation-action">Setting the Default Correlation Action</h3>
 <p>You can control the default correlation action that WebLOAD should perform after recording.</p>
 <p><strong>To control which correlation action is performed after recording:</strong></p>
 <ol>
-<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. The Recording and Script Generation Options dialog box appears (<a href="#_bookmark154">Figure 114</a>).</li>
-<li>Select the <strong>Correlation Options</strong> tab.</li>
-</ol>
-<p>The Correlation Options tab moves to the front of the dialog box (<a href="#_bookmark163">Figure 120</a>).</p>
-<ol>
+<li>Click <strong>Recording and Script Generation Options</strong> in the <strong>Tools</strong> tab of the ribbon. The Recording and Script Generation Options dialog box appears in the (<a href="../configuring_recorder_options/#rec_script_gen_options">Figure</a>).</li>
+<li>
+<p>Select the <strong>Correlation Options</strong> tab.</p>
+<p>The Correlation Options tab moves to the front of the dialog box (<a href="../../images/corr_options.png">Figure</a>)).</p>
+</li>
 <li>
 <p>In the Correlation level drop-down, select one of the following:</p>
-</li>
-<li>
-<p><strong>Do not run</strong> – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.</p>
-</li>
+<ul>
+<li><strong>Do not run</strong> – When recording is complete, go directly to the script without performing correlation. You can run the correlation engine at a later time.</li>
 <li><strong>Use existing rules</strong> – Run the correlation engine once the script recording is complete, only using the existing rules (do not try to auto-discover new rules).</li>
 <li><strong>Discover rules</strong> – Run the correlation engine using existing rules and try to discover new rules.</li>
-<li><strong>Prompt</strong> – A dialog that provides you with all of the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see <a href="#_bookmark36"><em>Recording a script</em> </a>.</li>
+<li><strong>Prompt</strong> – A dialog that provides you with all of  the options is displayed when the recording is complete. This is the default setting. For more information on using the Recording Complete dialog box, see <a href="../recording_scripts/#recording-a-script"><em>Recording a script</em> </a>.</li>
+</ul>
+</li>
 </ol>
 <h2 id="automatic-discovery-of-correlation-rules">Automatic Discovery of Correlation Rules</h2>
 <p>WebLOAD enables you to automatically discover potential correlation rules.</p>
@@ -1628,16 +1634,18 @@
 </ul>
 </blockquote>
 <p>When running correlation with auto-discovery, the correlation engine uses the existing defined rules and does not discover them again. Inactive rules are also not rediscovered or used. Making a rule inactive can be used to prevent discovering rules that you already know are unneeded.</p>
-<p>When the correlation process is complete, a review form is displayed for the user to choose which rules to use. For more information see <a href="#_bookmark85">*Approving the Correlation Engine</a> <em><a href="#_bookmark85">Rules* </a></em>on page <a href="#_bookmark85">94.</a></p>
+<p>When the correlation process is complete, a review form is displayed for the user to choose which rules to use. For more information see <a href="#approving-the-correlation-engine-rules"><em>Approving the Correlation Engine Rules</em> </a></p>
 <h2 id="approving-the-correlation-engine-rules"><strong>Approving the Correlation Engine Rules</strong></h2>
 <p>When performing Auto-discovery correlation, the correlation engine compiles a list of the suggested correlation rules according to the dynamic values that were recorded in the script. This enables you to determine which rules to approve and use during the correlation.</p>
 <p><strong>To approve the correlation engine rules:</strong></p>
 <ol>
-<li>After running correlation with auto-discovery of rules, the Correlation engine results dialog box appears.</li>
-</ol>
+<li>
+<p>After running correlation with auto-discovery of rules, the Correlation engine results dialog box appears.</p>
 <p><img alt="Correlation Engine Results Dialog Box" src="../../images/corr_engine_results.png"/></p>
-<ol>
-<li>Edit the rules in the Correlation Engine Results dialog box according to the following table and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Edit the rules in the Correlation Engine Results dialog box according to the following table and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <table>
 <thead>
@@ -1685,7 +1693,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Rule Type</strong></td>
-<td style="text-align: left;"><p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see <a href="#_bookmark93">*Defining Correlation</a> <em><a href="#_bookmark93">Rules* </a></em>on page <a href="#_bookmark93">101.</a></p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p></td>
+<td style="text-align: left;"><p>The method used to find the dynamic data to be correlated, according to the selected rule’s definition. To modify the rule, see <a href="#defining-correlation-rules"><em>Defining Correlation Rules</em> </a></p><p>Possible values are:</p><p>- All body text</p><p>- Form field values</p><p>- User defined</p><p>- Replace with expression</p><p>- Search in cookies</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>…</strong></td>
@@ -1698,18 +1706,19 @@
 </tbody>
 </table>
 <h2 id="resolving-conflicts-between-manual-changes-and-correlation-changes">Resolving Conflicts between Manual Changes and Correlation Changes</h2>
-<p>Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see <a href="#_bookmark162"><em>Configuring the Correlation Options</em> </a>on page <a href="#_bookmark162">189</a>). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.</p>
-<p><a href="#_bookmark87">Figure 63 </a>shows a sample Conflict Resolution window.</p>
-<p><img alt="Conflict Resolution Window" src="../../images/corr_resooution.png"/></p>
+<p>Starting from WebLOAD 10.1, when you run correlation all the manual changes you may have made in the original JavaScript code are preserved by default (see <a href="../configuring_recorder_options/#configuring-the-correlation-options"><em>Configuring the Correlation Options</em> </a>). However, the process of correlation also introduces some changes into the original JavaScript. Sometimes your manual changes conflict with the correlation changes. When this happens, a Conflict Resolution window appears in which you are asked to resolve the conflict.</p>
+<p>The following <a href="#conflict_resolution_window">Figure</a> shows a sample Conflict Resolution window.</p>
+<p><a name="conflict_resolution_window"></a>
+<img alt="Conflict Resolution Window" src="../../images/corr_resooution.png"/></p>
 <p>The left side of the Conflict Resolution window displays the correlated version without any user changes, and the right side displays the user version without any correlation changes. You must do one of the following:</p>
 <ul>
 <li>Click <strong>Use correlated version</strong> – This keeps all correlation changes and discards all user changes.</li>
 <li>Click <strong>Use user version</strong> – This keeps all user changes and discards all correlation changes.</li>
-<li>Click <strong>Edit conflict</strong> – This enables editing the JavaScript to your satisfaction. When you select this option, a WinMerge window appears by default. For information, refer to <a href="#_bookmark88"><em>Editing Conflicts between Manual Changes and Correlation Changes</em> </a>below. When you finish editing, click <strong>Resolved</strong> in the Conflict Resolution window.</li>
+<li>Click <strong>Edit conflict</strong> – This enables editing the JavaScript to your satisfaction. When you select this option, a WinMerge window appears by default. For information, refer to <a href="#editing-conflicts-between-manual-changes-and-correlation-changes"><em>Editing Conflicts between Manual Changes and Correlation Changes</em> </a>below. When you finish editing, click <strong>Resolved</strong> in the Conflict Resolution window.</li>
 </ul>
 <h3 id="editing-conflicts-between-manual-changes-and-correlation-changes">Editing Conflicts between Manual Changes and Correlation Changes</h3>
 <p>When you select to edit conflicts between manual changes and correlation changes, a merge tool is automatically launched, displaying the two conflicting versions.</p>
-<p>The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in <a href="#_bookmark187"><em>Defining the Merge Tool Application</em> </a>.</p>
+<p>The default merge tool is the WinMerge application. Note that you can optionally specify a different merge tool, as described in <a href="../configuring_recorder_options/#defining-the-merge-tool-application"><em>Defining the Merge Tool Application</em> </a>.</p>
 <p><img alt="WinMerge Conflict Resolution Window" src="../../images/confl_resolu_window.jpeg"/></p>
 <ol>
 <li>Select the lines you wish to edit, and edit them as desired.</li>
@@ -1725,7 +1734,8 @@
 <li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
 </ul>
 <p>The Correlation Rules Editor opens, displaying application- and development framework-specific correlation rules by groups.</p>
-<p><img alt="Correlation Rules Editor*" src="../../images/corr_rule_editro.png"/></p>
+<p><a name="correlation_rules_editor"></a>
+<img alt="Correlation Rules Editor*" src="../../images/corr_rule_editro.png"/></p>
 <p>The following table describes the options in the Correlation Rules Editor.</p>
 <table>
 <thead>
@@ -1781,18 +1791,18 @@
 <p>You can create correlation rules and groups to better suit your correlation requirements.</p>
 <h5 id="to-create-a-correlation-rule"><strong>To create a correlation rule:</strong></h5>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
-</ol>
-<p>The Correlation Rules Editor dialog box opens (see <a href="#_bookmark91">Figure 65</a>).</p>
-<ol>
-<li>In the Default rule set area, select the correlation rule under which you wish to create your correlation rule and click <strong>New Rule</strong>,</li>
-</ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</p>
+<p>The Correlation Rules Editor dialog box opens (see the <a href="#correlation_rules_editor">Figure</a>).</p>
+</li>
+<li>
+<p>In the Default rule set area, select the correlation rule under which you wish to create your correlation rule and click <strong>New Rule</strong>,</p>
 <p>-Or-</p>
 <p>Right-click the correlation rule under which you wish to create your correlation rule and select <strong>New Rule</strong> from the pop-up menu.</p>
 <p>A new rule is created in the tree, at the specified location.</p>
-<ol>
+</li>
 <li>
-<p>Modify the correlation rule parameters, as described in <a href="#_bookmark93"><em>Defining Correlation Rules</em></a></p>
+<p>Modify the correlation rule parameters, as described in <a href="#defining-correlation-rules"><em>Defining Correlation Rules</em></a></p>
 </li>
 <li>
 <p>Click <strong>OK</strong>. The new correlation rule is added to the Default rule set.</p>
@@ -1800,39 +1810,41 @@
 </ol>
 <h5 id="to-create-a-correlation-group"><strong>To create a correlation group:</strong></h5>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
-</ol>
-<p>The Correlation Rules Editor dialog box opens (see <a href="#_bookmark91">Figure 65</a>).</p>
-<ol>
-<li>In the Default rule set area, select the correlation group under which you wish to create your group and click <strong>New Group</strong>,</li>
-</ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</p>
+<p>The Correlation Rules Editor dialog box opens (see the <a href="#correlation_rules_editor">Figure</a>).</p>
+</li>
+<li>
+<p>In the Default rule set area, select the correlation group under which you wish to create your group and click <strong>New Group</strong>,</p>
 <p>-Or-</p>
 <p>Right-click the correlation group under which you wish to create your group and select <strong>New Group</strong> from the pop-up menu.</p>
 <p>A new group is created in the tree, at the specified location.</p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h3 id="defining-correlation-rules">Defining Correlation Rules</h3>
 <p>You can modify the existing correlation rules and groups to better define your correlation requirements.</p>
 <h5 id="to-modify-an-existing-correlation-rule"><strong>To modify an existing correlation rule:</strong></h5>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
-</ol>
-<p>The Correlation Rules Editor dialog box opens (see <a href="#_bookmark91">Figure 65</a>).</p>
-<ol>
-<li>In the Default rule set area, expand a correlation rule group. The correlation rules belonging to the group are displayed.</li>
-</ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</p>
+<p>The Correlation Rules Editor dialog box opens (see the <a href="#correlation_rules_editor">Figure</a>).</p>
+</li>
+<li>
+<p>In the Default rule set area, expand a correlation rule group. The correlation rules belonging to the group are displayed.</p>
 <p><img alt="Correlation Rule Group – Expanded" src="../../images/corr_rule_grp_expan.jpeg"/></p>
-<ol>
-<li>Click a correlation rule. The Correlation Rules Properties appear.</li>
-</ol>
+</li>
+<li>
+<p>Click a correlation rule. The Correlation Rules Properties appear.</p>
 <p><img alt="Correlation Rule Properties" src="../../images/corr_rule_prop.jpeg"/></p>
 <blockquote>
 <p><strong>Note:</strong> The <strong>Match by</strong> fields vary according to the value selected in the <strong>Rule type</strong> field.</p>
 </blockquote>
-<ol>
-<li>Modify the correlation rule properties according to the information in the following table:</li>
-</ol>
+</li>
+<li>
+<p>Modify the correlation rule properties according to the information in the following table:</p>
 <table>
 <thead>
 <tr>
@@ -1929,7 +1941,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>Replace with expression</strong></td>
+<td style="text-align: left;"><strong>Replace with  expression</strong></td>
 <td style="text-align: left;"><strong>Expression</strong></td>
 <td style="text-align: left;"><p>Replace data according to the Field name, regardless of the value. Replace the value with the value in Expression.</p><p>For example:</p><p>Rule type = Replace with expression</p><p>Expression = new Date().getTime() Field name = timestamp</p><p>During correlation, the timestamp value is replaced with “newDate().getTime()” instead of the date on which the script was recorded.</p></td>
 </tr>
@@ -1971,42 +1983,46 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Click <strong>OK</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
 <p>The correlation rule is modified.</p>
+</li>
+</ol>
 <h3 id="renaming-correlation-rules">Renaming Correlation Rules</h3>
 <p>You can rename correlation rules and groups to better organize the correlation rules according to your specific correlation requirements.</p>
 <h5 id="to-rename-a-correlation-rule"><strong>To rename a correlation rule:</strong></h5>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
-</ol>
-<p>The Correlation Rules Editor dialog box opens (see <a href="#_bookmark91">Figure 65</a>).</p>
-<ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</p>
+<p>The Correlation Rules Editor dialog box opens (see the <a href="#correlation_rules_editor">Figure</a>).</p>
+</li>
 <li>
 <p>Expand the correlation group to which your correlation rule is associated.</p>
 </li>
 <li>
 <p>Slow double-click the correlation rule,</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Right-click the correlation rule and select <strong>Rename</strong> from the pop-up menu. The correlation rule’s name becomes editable.</p>
-<ol>
-<li>Rename the correlation rule and click anywhere in the Default rule set area. The correlation rule is renamed.</li>
+</li>
+<li>
+<p>Rename the correlation rule and click anywhere in the Default rule set area. The correlation rule is renamed.</p>
+</li>
 </ol>
 <h5 id="to-rename-a-correlation-group"><strong>To rename a correlation group:</strong></h5>
 <ol>
-<li>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</li>
-</ol>
-<p>The Correlation Rules Editor dialog box opens (see <a href="#_bookmark91">Figure 65</a>).</p>
-<ol>
-<li>Slow double-click a correlation group.</li>
-</ol>
+<li>
+<p>Click <strong>Correlation</strong> in the <strong>Home</strong> tab of the ribbon and select <strong>Correlation Rules Editor</strong> from the drop-down list.</p>
+<p>The Correlation Rules Editor dialog box opens (see the <a href="#correlation_rules_editor">Figure</a>).</p>
+</li>
+<li>
+<p>Slow double-click a correlation group.</p>
 <p>-Or-</p>
 <p>Right-click a correlation group and select <strong>Rename</strong> from the pop-up menu. The correlation group’s name becomes editable.</p>
-<ol>
-<li>Rename the correlation group and click anywhere in the Default rule set area. The correlation group is renamed.</li>
+</li>
+<li>
+<p>Rename the correlation group and click anywhere in the Default rule set area. The correlation group is renamed.</p>
+</li>
 </ol>
 <h2 id="session-management">Session Management</h2>
 <p>The HTTP protocol has no built-in method of uniquely identifying or tracking a particular user or session within an application, without transmitting some data between the client and the server. The most common method for an internet</p>
@@ -2018,7 +2034,7 @@
 </ul>
 <p>The following sections provide information on how some of the most commonly used Web and application servers perform session management.</p>
 <h3 id="ibm-websphere-application-server">IBM WebSphere Application Server</h3>
-<p>The IBM WebSphere Application Server (WAS) supports all the session management methods listed in <a href="#_bookmark95"><em>Session Management</em> </a>, but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.</p>
+<p>The IBM WebSphere Application Server (WAS) supports all the session management methods listed in <a href="#session-management"><em>Session Management</em> </a>, but works best with cookies (which is its default method). The WAS implementation of this method differs from a pure cookie-based method by using only one cookie, JSESSIONID, that contains only the session ID information. (A pure cookie-based method would use multiple cookies, containing possibly sensitive user state information, such as an account number or user ID.) JSESSIONID is used by the server to associate the request with the information already stored on the server for that session ID.</p>
 <p>In an HTTP session, all the attributes associated with a user’s request are stored on the server. Since the only information transmitted between the server and the browser is the session ID cookie, which has a limited lifetime, an HTTP session can provide a much more secure session management method than cookies, when configured in conjunction with SSL.</p>
 <h3 id="microsoft-aspnet">Microsoft ASP.NET</h3>
 <p>Microsoft ASP.NET uses HTTP cookies to send a user a unique session key. For example, an ASP.NET application that uses sessions can respond to a user’s request with the following HTTP header:</p>

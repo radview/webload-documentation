@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1100,7 +1107,7 @@
 </tr>
 <tr>
 <td><strong>Application Being Tested  (ABT)</strong></td>
-<td>See <a href="#_bookmark610"><em>SUT</em>.</a></td>
+<td>See <a href="#sut"><em>SUT</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Attempted  Connections</strong></td>
@@ -1127,7 +1134,7 @@
 <td>The number of bits  transmitted back and forth between the Virtual Clients and the System Under  Test (SUT), divided by the time it took to transmit those bits, in seconds.  You can set the Virtual  Clients to emulate a particular connection speed during the test, either by  using the Variable Connection Speed settings, or by coding the connection  speed in the script.  If a connection speed is specified for the test,  WebLOAD reports it in the Statistics Report.  The value posted in the Current Value column is  the number (sum) of bits passed per second during the last reporting  interval. It should match, very closely, the connection speed you specified  for the test.</td>
 </tr>
 <tr>
-<td><strong>Console</strong></td>
+<td><a name="console"></a> <strong>Console</strong></td>
 <td>The  WebLOAD component that manages the test session. The Console performs the  following:  <br/> Configures Load Session  hosts and scripts  <br/> Schedules Load Session scripts  <br/> Configures Goal–Oriented  test sessions  <br/> Monitors the application's  performance under the generated  load  <br/> Manages the Load Session  as it is running, allowing you to pause, stop, and continue Load Session  components as needed  <br/> Displays the current  performance of the SUT  <br/> Provides a final  performance reports for Probing Clients and Virtual Clients  <br/> Manages exporting of  performance reports</td>
 </tr>
 <tr>
@@ -1195,12 +1202,12 @@
 <td>The time it takes a  Virtual Client to receive the first byte of data.</td>
 </tr>
 <tr>
-<td><strong>Goal–Oriented Test</strong></td>
+<td><a name="goal_oriented_test"></a> <strong>Goal–Oriented Test</strong></td>
 <td>A WebLOAD component  enabling you to define the performance goals required, and view the status of  your application when it is operating under this performance goal. WebLOAD  provides a Goal–Oriented Test Wizard for configuring these performance goals.  WebLOAD automatically accelerates the number of Virtual Clients accessing  your website until you meet your performance goal.  <strong>Note:</strong> The Goal-Oriented Test Wizard was previously called the Cruise  Control Wizard.</td>
 </tr>
 <tr>
 <td><strong>Goal–Oriented  Test Wizard</strong></td>
-<td>See <a href="#_bookmark603"><em>Goal–Oriented   Test</em>.</a></td>
+<td>See <a href="#goal_oriented_test"><em>Goal–Oriented Test</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Hit Time</strong></td>
@@ -1244,14 +1251,14 @@
 </tr>
 <tr>
 <td><strong>Load  Generator Machine</strong></td>
-<td>See <a href="#_bookmark604"><em>Load   Machine</em>.</a></td>
+<td>See <a href="../../analytics/glossary/#load_machine"><em>Load  Machine</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Load Machine</strong></td>
 <td>A host that runs Load Generators. Load Generators  bombard the application under test with a large load, to enable complete  scalability and integrity testing.</td>
 </tr>
 <tr>
-<td><strong>Load Session</strong></td>
+<td><a name="load_session"></a><strong>Load Session</strong></td>
 <td>A Load Session includes  both the complete Load Template and the results obtained while running that  Load Session. A Load Template consists of information about the hosts and  scripts participating in the current Load Session. The Load Template will  also include scheduling information. The complete Load Template is  illustrated in the Session Tree. Storing a Load Template saves you time when  repeatedly running WebLOAD with the same, or even a similar network  configuration, since you don't have to recreate your Load Template from  scratch each time you want to start working.  Storing Load Session  results can be useful when you want to examine results from multiple test  sessions or for analyzing test session results.</td>
 </tr>
 <tr>
@@ -1259,7 +1266,7 @@
 <td>The number of Virtual  Clients running during the last reporting interval.</td>
 </tr>
 <tr>
-<td><strong>Load  Template</strong></td>
+<td><a name="load_template"></a><strong>Load  Template</strong></td>
 <td>A Load Template contains  the complete Load Session definition, without the test results. A Load  Template includes information about the participating hosts and the scripts  used in the current Load Session. The definition also includes scheduling  information and the configuration of the Server Monitor and Integrated  Reports. The complete Load Template is illustrated in the Session Tree.  Storing a Load Template saves you time when repeatedly running WebLOAD with  the same, or even a similar network configuration, since you do not have to  recreate your Load Template from scratch each time you rerun a test.</td>
 </tr>
 <tr>
@@ -1279,11 +1286,11 @@
 <td>Ratios that calculate an  average value for an action or process. For example: Transactions Per Second,  Rounds Per Second.</td>
 </tr>
 <tr>
-<td><strong>Portfolio</strong></td>
+<td><a name="portfolio"></a> <strong>Portfolio</strong></td>
 <td>A Portfolio of reports enables you to  generate a single, inclusive report that contains all the charts generated by  the templates included in the portfolio.</td>
 </tr>
 <tr>
-<td><strong>Probing Client</strong></td>
+<td><a name="probing_client"></a> <strong>Probing Client</strong></td>
 <td>A software program which  "bombards" the SUT as a single Virtual Client, to further measure  the performance of the SUT. WebLOAD generates exact values for Probing Client  performance.</td>
 </tr>
 <tr>
@@ -1292,7 +1299,7 @@
 </tr>
 <tr>
 <td><strong>Probing  Client software</strong></td>
-<td>See <a href="#_bookmark608"><em>Probing   Client</em>.</a></td>
+<td>See <a href="#probing_client"><em>Probing   Client</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Process Time</strong></td>
@@ -1304,10 +1311,10 @@
 </tr>
 <tr>
 <td><strong>Report  Portfolio</strong></td>
-<td>See <a href="#_bookmark607"><em>Portfolio</em>.</a></td>
+<td>See <a href="#portfolio"><em>Portfolio</em>.</a></td>
 </tr>
 <tr>
-<td><strong>Resource Manager</strong></td>
+<td><a name="resource_manager"></a> <strong>Resource Manager</strong></td>
 <td>Distributes and circulates  WebLOAD testing resources (Virtual Clients and Probing Clients) amongst users  on a "need to use" basis. The Resource Manager is packaged with a  maximum number of Virtual Clients, Probing Clients and Connected Workstation  ports, as defined by the WebLOAD package.  With the Resource Manager,  every WebLOAD Console can operate in Standalone Workstation mode or Connected  Workstation mode.</td>
 </tr>
 <tr>
@@ -1348,7 +1355,7 @@
 </tr>
 <tr>
 <td><strong>Single  Client</strong></td>
-<td>See <a href="#_bookmark608"><em>Probing   Client</em>.</a></td>
+<td>See <a href="#probing_client"><em>Probing   Client</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Standard  Deviation</strong></td>
@@ -1379,12 +1386,12 @@
 <td>The number of times the  Virtual Clients completed an entire iteration of the script, divided by the  elapsed time, in seconds.  The value posted in the  Current Value column is the number (sum) of successful iterations of the  script per second during the last reporting interval.</td>
 </tr>
 <tr>
-<td><strong>SUT</strong></td>
+<td><a name="sut"></a> <strong>SUT</strong></td>
 <td>The system running the Web  application currently under test. The SUT (System Under Test) is accessed by  clients through its URL address. The SUT can reside on any machine or on  multiple machines, anywhere on the global Internet or your local intranet.</td>
 </tr>
 <tr>
 <td><strong>Template</strong></td>
-<td>See <a href="#_bookmark606"><em>Load   Template</em>.</a></td>
+<td>See <a href="#load_template"><em>Load   Template</em>.</a></td>
 </tr>
 <tr>
 <td><strong>Templates Gallery</strong></td>
@@ -1392,15 +1399,15 @@
 </tr>
 <tr>
 <td><strong>Test Program</strong></td>
-<td>See <a href="#_bookmark612"><em>Test Script</em>.</a></td>
+<td>See <a href="#test_script"><em>Test Script</em>.</a></td>
 </tr>
 <tr>
-<td><strong>Test Script</strong></td>
+<td><a name="test_script"></a> <strong>Test Script</strong></td>
 <td>The script. This defines  the test scenario used in your Load Session. Scripts are written in  JavaScript.</td>
 </tr>
 <tr>
 <td><strong>Test  Template</strong></td>
-<td>See <a href="#_bookmark606"><em>Load   Template</em>.</a></td>
+<td>See <a href="#load_template"><em>Load   Template</em>.</a></td>
 </tr>
 <tr>
 <td><strong>TestTalk</strong></td>
@@ -1448,7 +1455,7 @@
 </tr>
 <tr>
 <td><strong>WebLOAD Console</strong></td>
-<td>See <a href="#_bookmark602"><em>Console</em>.</a></td>
+<td>See <a href="#console"><em>Console</em>.</a></td>
 </tr>
 <tr>
 <td><strong>WebLOAD Integrated Development Environment (IDE)</strong></td>
@@ -1458,65 +1465,17 @@
 <td><strong>WebLOAD Wizard</strong></td>
 <td>A WebLOAD Wizard that  steps you through the configuration process. Each screen of the WebLOAD  Wizard contains text explaining the configuration process. The WebLOAD Wizard  enables you to create a basic Load Template. After using the demo, you can  use the Console menus to add functionality not available through the WebLOAD  Wizard.</td>
 </tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th><strong>Glossary  Term</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th><strong>Glossary  Term</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><strong>WebLOAD Load  Template</strong></td>
-<td>See <a href="#_bookmark606"><em>Load   Template</em>.</a></td>
+<td>See <a href="#load_template"><em>Load   Template</em>.</a></td>
 </tr>
 <tr>
 <td><strong>WebLoad  Session</strong></td>
-<td>See <a href="#_bookmark605"><em>Load   Session</em>.</a></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td>See <a href="#load_session"><em>Load   Session</em>.</a></td>
 </tr>
 <tr>
 <td><strong>WebRM</strong></td>
-<td>See <a href="#_bookmark609"><em>Resource   Manager</em>.</a></td>
+<td>See <a href="#resource_manager"><em>Resource   Manager</em>.</a></td>
 </tr>
 </tbody>
 </table>

@@ -706,6 +706,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1577,22 +1584,22 @@
 <td style="text-align: left;"><p>The number of times the Virtual Clients completed an entire iteration of the script divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number (sum) of successful iterations of the script per second during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of successful rounds = 180 Successful Rounds Per Second = 180 / 600 = 0.3.</p></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark412"></a>Throughput (bytes per second)</td>
+<td style="text-align: left;">Throughput (bytes per second)</td>
 <td style="text-align: left;">Per-time unit</td>
 <td style="text-align: left;"><p>The average number of bytes per second transmitted from the SUT to the Virtual Clients running this script during the last reporting interval.</p><p>In other words, this is the amount of the Response Data Size (sum) divided by the number of seconds in the reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min.</p><p>- Reporting interval = 20 sec.</p><p>- Data size in bytes sent during last interval = 6,000 Throughput = 6,000 / 20 = 300.</p></td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark413"></a>Time to First Byte</td>
+<td style="text-align: left;">Time to First Byte</td>
 <td style="text-align: left;">Timer</td>
 <td style="text-align: left;">The time it takes from when a request is sent until the Virtual Client receives the first byte of data.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a name="_bookmark414"></a>Total <transaction name=""> TPS</transaction></td>
+<td style="text-align: left;">Total <transaction name=""> TPS</transaction></td>
 <td style="text-align: left;">Per-time unit</td>
 <td style="text-align: left;"><p>The number of times the Virtual Client encountered the transaction divided by the elapsed time, in seconds.</p><p>The value posted in the Current Value column is the number of times the Virtual Client encountered the transaction during the last reporting interval.</p><p>For example, if:</p><p>- Elapsed time of test = 10 min. (600 sec.)</p><p>- Number of times the VC encountered the transaction = 11,400 Total Transactions Per Second = 11,400 / 600 = 19.</p></td>
 </tr>
 <tr>
-<td style="text-align: left;"><user-defined><a name="_bookmark415"></a> Timer</user-defined></td>
+<td style="text-align: left;">Timer</td>
 <td style="text-align: left;">Timer</td>
 <td style="text-align: left;"><p>You can add timers to scripts to keep track of the amount of time it takes to complete specific actions (see the <em>WebLOAD Scripting Guide</em>). If there are any timers in the scripts that you are running, WebLOAD Console reports their values in the Statistics Report.</p><p>The row heading is the name (argument) of the timer, that is, the string in parenthesis in the SetTimer() function call. The timer represents the time it takes to complete all the actions between the SetTimer() call and its corresponding SendTimer() call, in seconds.</p><p>The value posted is the average time it took a Virtual Client to complete the actions between the pair of timer calls, in seconds, during the last reporting interval.</p></td>
 </tr>
@@ -1602,7 +1609,7 @@
 <td style="text-align: left;"><p>You can add user-defined transaction functions to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction function in the script that you are running, WebLOAD Console reports three counters for it in the Statistics Report.</p><p>The row heading is the name (argument) of the user-defined transaction, that is, the string in parenthesis in the BeginTransaction() function call.</p><p>The counters are the total number of times the transaction occurred, the number of times the transaction succeeded, and the number of times the transaction failed during the last reporting interval.</p></td>
 </tr>
 <tr>
-<td style="text-align: left;"><user-defined><a name="_bookmark417"></a> Transaction Timers</user-defined></td>
+<td style="text-align: left;"><user-defined> Transaction Timers</user-defined></td>
 <td style="text-align: left;">Timer</td>
 <td style="text-align: left;"><p>You can add user-defined transaction functions to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction function in the script that you are running, WebLOAD Console reports a timer for it in the Statistics Report. Transaction timers are only measured for successful transactions.</p><p>The row heading is the name (argument) of the user-defined transaction, that is, the string in parentheses in the BeginTransaction() function call.</p><p>The timer represents the average time it took to complete all the actions between the BeginTransaction() call and its corresponding EndTransaction() call, in seconds, during the last reporting interva</p></td>
 </tr>

@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1290,9 +1297,9 @@
 <h2 id="dashboards-tab-components">Dashboards tab components</h2>
 <p>The high level UI components of the <strong>Dashboards</strong> tab include: </p>
 <ul>
-<li><a href="#_page42_x192.00_y413.04"><strong><em>Header</em></strong> </a>– Provides global settings, filters and controls </li>
-<li><a href="#_page43_x109.00_y382.04"><strong><em>Rows</em></strong> </a>– Each row contains panels for data display </li>
-<li><a href="#_page44_x109.00_y78.04"><strong><em>Panels</em></strong> </a>– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format ![ref10]</li>
+<li><a href="#dashboard-header"><strong><em>Header</em></strong> </a>– Provides global settings, filters and controls </li>
+<li><a href="#rows"><strong><em>Rows</em></strong> </a>– Each row contains panels for data display </li>
+<li><a href="#panels"><strong><em>Panels</em></strong> </a>– Display data in graph, text, table, singlestat, Alert list, Dashboard list, or Plugin list format </li>
 </ul>
 <p><img alt="Dashboard Components" src="../../images/dashboard_comoponents.jpeg"/></p>
 <h3 id="dashboard-header">Dashboard Header</h3>
@@ -1310,37 +1317,37 @@
 <tr>
 <td>1</td>
 <td>Dashboard name and selection</td>
-<td><a href="#_bookmark76"><em>Loading a Dashboard</em> </a></td>
+<td><a href="../managing_dashboards/#loading-a-dashboard"><em>Loading a Dashboard</em> </a></td>
 </tr>
 <tr>
 <td>2</td>
 <td>Select session – Enables  selecting the session(s) to be viewed and analyzed.</td>
-<td><a href="#_bookmark48"><em>Specifying the Sessions to view in   the</em></a> <a href="#_bookmark48"><em>Dashboard</em> </a></td>
+<td><a href="#specifying-the-sessions-to-view-in-the-dashboard"><em>Specifying the Sessions to view in   the Dashboard</em> </a></td>
 </tr>
 <tr>
 <td>3</td>
 <td>Star or unstar a dashboard  – Enables marking/unmarking a dashboard as a favorite for filtering purposes.</td>
-<td><a href="#_bookmark76"><em>Loading a Dashboard</em> </a></td>
+<td><a href="../managing_dashboards/#loading-a-dashboard"><em>Loading a Dashboard</em> </a></td>
 </tr>
 <tr>
 <td>4</td>
 <td>Share dashboard – Enables  sharing the current state of the dashboard</td>
-<td><a href="#_bookmark84"><em>Sharing a Dashboard</em> </a></td>
+<td><a href="../sharing_dashboards/#sharing-a-dashboard"><em>Sharing a Dashboard</em> </a></td>
 </tr>
 <tr>
 <td>5</td>
 <td>Save</td>
-<td><a href="#_bookmark80"><em>Saving your Customized Dashboard</em></a></td>
+<td><a href="../managing_dashboards/#saving-your-customized-dashboard"><em>Saving your Customized Dashboard</em></a></td>
 </tr>
 <tr>
 <td>6</td>
 <td>Settings – Enables  configuring the  dashboard’s general  settings</td>
-<td><a href="#_bookmark72"><em>Customizing General Dashboard</em></a> <a href="#_bookmark72"><em>Settings</em> </a></td>
+<td><a href="../customizing_dashboard/#customizing-general-dashboard-settings"><em>Customizing General Dashboard Settings</em> </a></td>
 </tr>
 <tr>
 <td>7</td>
 <td>Time format: <br/><strong>Relative Time</strong> – Show the time since session start. Useful for session  comparison  <br/><strong>Absolute Time</strong> –  Show the real time of the session  when it ran. Useful for currently running sessions</td>
-<td><a href="#_bookmark51"><em>Selecting the Time Format</em> </a></td>
+<td><a href="#selecting-the-time-format"><em>Selecting the Time Format</em> </a></td>
 </tr>
 <tr>
 <td>8</td>
@@ -1355,7 +1362,7 @@
 <tr>
 <td>10</td>
 <td>Time picker</td>
-<td><a href="#_bookmark52"><em>Setting the Time Picker</em></a></td>
+<td><a href="#setting-the-time-picker"><em>Setting the Time Picker</em></a></td>
 </tr>
 <tr>
 <td>11</td>
@@ -1368,18 +1375,19 @@
 <p>A row is a horizontal container for panels. A row can be hidden (collapsed) and its height controls its panels’ height. </p>
 <ul>
 <li>To add a new row, click <strong>+ ADD ROW</strong> at the bottom of a dashboard page. </li>
-<li>To edit a row, click the three grey dots and select the desired option. For more information, refer to<a href="#_page51_x54.00_y289.04"><code></code><em>Customizing Rows</em> </a>(on page<a href="#_page51_x54.00_y289.04"> 46)</a>. </li>
+<li>To edit a row, click the three grey dots and select the desired option. For more information, refer to <a href="../customizing_dashboard/#customizing-rows"><em>Customizing Rows</em> </a>. </li>
 </ul>
 <p><img alt="Row Editing Options" src="../../images/row_editing_options.png"/></p>
 <h3 id="panels">Panels</h3>
 <p>A panel is a data display unit. There are various types of panels – such as graph, text, table, singlestat, Alert list, Dashboard list, and Plugin list. </p>
 <ul>
-<li>To add a new panel, click the three grey dots of the desired row and select <strong>Add Panel</strong> <a href="#_page43_x54.00_y695.04">(Figure 34)</a>. </li>
-<li>To edit a panel, click the panel title and click <strong>edit</strong> in the box that appears. For more information, refer to<a href="#_page52_x54.00_y463.04"><code></code><em>Customizing Panels</em> </a>(on page<a href="#_page52_x54.00_y463.04"> 47)</a>. </li>
+<li>To add a new panel, click the three grey dots of the desired row and select <strong>Add Panel</strong> <a href="#graph_panel">(Figure)</a>. </li>
+<li>To edit a panel, click the panel title and click <strong>edit</strong> in the box that appears. For more information, refer to <a href="../customizing_dashboard/#customizing-panels"><em>Customizing Panels</em> </a></li>
 </ul>
 <h4 id="graph-panel">Graph Panel</h4>
 <p>A graph panel presents session measurement data in graphic format. In each graph panel you can display multiple measurements from multiple sessions. You can also set various display options, such as colors, graph style (lines, bars, points), Y-axis formats (bytes, milliseconds, etc.) and more. </p>
-<p><img alt="Graph Panel" src="../../images/graph_panel.png"/></p>
+<p><a name="graph_panel"></a>
+<img alt="Graph Panel" src="../../images/graph_panel.png"/></p>
 <h4 id="table-panel">Table Panel</h4>
 <p>A table panel presents data in table format; by default the log messages from specified sessions. You can sort the display by various parameters, and filter the display by severity. </p>
 <p><img alt="Table Panel" src="../../images/table_panel.png"/></p>
@@ -1394,24 +1402,25 @@
 <p>WebLOAD Dashboard dashboards are useful both for analyzing the results of a specific session, and for comparing the results of different sessions.  </p>
 <p><strong>To select a session for viewing in the dashboard tab:</strong> Do any of the following: </p>
 <ul>
-<li>In the Load Sessions table <a href="#_page33_x54.00_y697.04">(<em>Figure 23</em>)</a>, click the session name.  </li>
+<li>In the Load Sessions table <a href="#selecting_sessions">(<em>Figure</em>)</a>, click the session name.  </li>
 </ul>
 <p>The session appears in the currently selected dashboard. </p>
 <ul>
-<li>In Load Tests table <a href="#_page17_x54.00_y600.04">(<em>Figure 6</em>)</a>, click the Show Last Session button <img alt="view last session" src="../../images/view_last_session.png"/>. That last session appears in the currently selected dashboard. </li>
+<li>In Load Tests table <a href="../manage_tests/#load_test_table">(<em>Load Test Table</em>)</a>, click the Show Last Session button <img alt="view last session" src="../../images/view_last_session.png"/>. That last session appears in the currently selected dashboard. </li>
 </ul>
 <p><strong>To select multiple sessions for viewing in the dashboard tab:</strong> </p>
 <p>Do any of the following: </p>
 <ul>
 <li>
-<p>In the Load Sessions table <a href="#_page33_x54.00_y697.04">(<em>Figure 23</em>)</a>, click <strong>Show in Dashboard</strong> for each session you wish to view in the Dashboard. As soon as you select a dashboard, the dashboard refreshes to show the selected sessions’ data in the panels. </p>
+<p>In the Load Sessions table <a href="#selecting_sessions">(<em>Figure</em>)</a>, click <strong>Show in Dashboard</strong> for each session you wish to view in the Dashboard. As soon as you select a dashboard, the dashboard refreshes to show the selected sessions’ data in the panels. </p>
 </li>
 <li>
-<p>In the <strong>dashboard</strong> page, select the session from the <strong>Sessions</strong> drop-down list <a href="#_page47_x54.00_y285.04">(<em>Figure 39</em>)</a>. You can select as many sessions as you wish. You can use the search box to aid you in finding the sessions you wish to view.  </p>
+<p>In the <strong>dashboard</strong> page, select the session from the <strong>Sessions</strong> drop-down list <a href="#selecting_sessions">(<em>Figure</em>)</a>. You can select as many sessions as you wish. You can use the search box to aid you in finding the sessions you wish to view.  </p>
 </li>
 </ul>
 <p>As soon as you select a session or sessions, the dashboard refreshes to show the sessions’ data in the panels. </p>
-<p><img alt="Selecting Sessions - from the Header" src="../../images/select_sessions.png"/></p>
+<p><a name="selecting_sessions"></a>
+<img alt="Selecting Sessions - from the Header" src="../../images/select_sessions.png"/></p>
 <h2 id="specifying-the-zoom">Specifying the Zoom</h2>
 <p>Using a graph panel’s zoom option, you can set the time period for which all panels display information. For example, if you select to zoom into the time period from 00:30 to 01:00, all panels will refresh to show information for that time period only, and the metric panels, for example, will display metrics for that time period only. </p>
 <p><strong>To zoom in:</strong> </p>
@@ -1422,13 +1431,16 @@
 <p>The dashboard refreshes to show the graph for the selected time range only. </p>
 <p><img alt="Display of a Selected Time Range" src="../../images/display_time_range.png"/></p>
 <p><strong>To zoom out:</strong> </p>
-<p>Use the <strong>Zoom to Data</strong> or <strong>Zoom Out</strong> options in the dashboard<a href="#_page42_x192.00_y413.04"><code></code><em>Header</em>.</a> </p>
+<p>Use the <strong>Zoom to Data</strong> or <strong>Zoom Out</strong> options in the <a href="#dashboard-header"><em>Dashboard Header</em>.</a> </p>
 <h2 id="selecting-the-time-format">Selecting the Time Format</h2>
-<p>You can view dashboard data in either Relative time or Absolute time (see item  in <a href="#_page42_x54.00_y540.04">Figure 33)</a>. This affects the graphs’ display as follows: </p>
+<p>You can view dashboard data in either Relative time or Absolute time (see item 7 in <a href="#absolute_time">Figure)</a>). This affects the graphs’ display as follows: </p>
 <p><em>If you are viewing data for a single session:</em> </p>
 <ul>
-<li><img alt="relative time" src="../../images/relative_time.png"/><strong>Relative time</strong> – The start time is shifted over to zero.  </li>
-<li><img alt="absolute time" src="../../images/absolute_time.png"/><strong>Absolute time</strong> – Shows the real time. This format is useful for viewing currently running sessions. ![ref8]</li>
+<li><img alt="relative time" src="../../images/relative_time.png"/><strong>Relative time</strong> – The start time is shifted over to zero. </li>
+</ul>
+<p><a name="absolute_time"> </a></p>
+<ul>
+<li><img alt="absolute time" src="../../images/absolute_time.png"/><strong>Absolute time</strong> – Shows the real time. This format is useful for viewing currently running sessions. </li>
 </ul>
 <p><em>If you are comparing sessions:</em> </p>
 <ul>

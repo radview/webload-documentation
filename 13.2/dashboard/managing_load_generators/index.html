@@ -599,6 +599,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../console/appendix_a/">
 <span class="md-ellipsis">
     Appendix A - Integrating with AppDynamics
@@ -1140,36 +1147,28 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="managing-load-generators">Managing Load Generators</h1>
-<p>Both a<a href="#_page19_x189.00_y325.04"><code></code><em>URL/API Load Test</em> </a>and<a href="#_page22_x189.00_y352.04"><code></code><em>Script Load Test</em> </a>require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  ![ref27]</p>
+<p>Both a<a href="../manage_tests/#creating-a-urlapi-load-test"><code></code><em>URL/API Load Test</em> </a>and<a href="../manage_tests/#creating-a-script-load-test"><code></code><em>Script Load Test</em> </a>require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  </p>
 <h2 id="adding-load-generators">Adding Load Generators</h2>
 <p><strong>To add a new load generator:</strong> </p>
 <ol>
-<li>In the menu bar, select <strong>Admin</strong> &gt; <strong>Load Generators</strong>. The Load Generators window appears.  </li>
-</ol>
+<li>
+<p>In the menu bar, select <strong>Admin</strong> &gt; <strong>Load Generators</strong>. The Load Generators window appears.  </p>
 <p><img alt="Load Generators page" src="../../images/load_generators_page.jpeg"/></p>
-<ol>
+</li>
 <li>
 <p>Click <strong>+Add a new load generator</strong>. </p>
-</li>
-<li>
 <p>An Add New Load Generator window appears.</p>
-</li>
-</ol>
 <p><img alt="Add new load generator" src="../../images/add_load_gen.png"/></p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Name</strong> field, specify the load generator’s IP address or host name.  </p>
 </li>
 <li>
 <p>In <strong>Generator Type</strong>, select whether the generator is a <strong>Local Machine</strong> or a <strong>Cloud Machine</strong>.  </p>
+<p>If you want to specify a Cloud Machine, first make sure it was specified as a Cloud Host in the WebLOAD Console. Refer to<a href="#specifying-a-cloud-host-as-a-load-generator"><em>Specifying a Cloud Host as a Load Generator</em> </a></p>
 </li>
 <li>
-<p>If you want to specify a Cloud Machine, first make sure it was specified as a Cloud Host in the WebLOAD Console. Refer to<a href="#_page84_x54.00_y78.04">*Specifying a Cloud Host as a Load </a><em>Generator</em> (on page<a href="#_page84_x54.00_y78.04"> 79)</a>.  </p>
-</li>
-<li>
-<p>In <strong>Location</strong>, enter a human-readable field. This value does not have to be unique per load generator machine, and has an important role, as described in<a href="#_page83_x54.00_y78.04"><em>Setting Load Generators’ Location Tag</em> </a>(on page<a href="#_page83_x54.00_y78.04"> 78)</a>. </p>
-</li>
-<li>
+<p>In <strong>Location</strong>, enter a human-readable field. This value does not have to be unique per load generator machine, and has an important role, as described in<a href="./#setting-load-generators-location-tag"><em>Setting Load Generators’ Location Tag</em> </a></p>
 <p>Note that if you leave the <strong>Location</strong> field empty, the system will automatically give this field the value entered in the <strong>Name</strong> field. </p>
 </li>
 </ol>
@@ -1178,43 +1177,53 @@
 <p><img alt="Load Generators" src="../../images/load_gen_list.png"/></p>
 <p>This is helpful when defining a load test, because of the relationship between Name and Location, as follows: </p>
 <ul>
-<li>
-<p>Multiple separate machines can have the same <strong>Location</strong> (by defining multiple load generators whose <strong>Locations</strong> are identical but whose <strong>Names</strong> are not). For example: </p>
-</li>
-<li>
-<p>If: You want all load generators in Test Lab 1 to participate in certain tests. </p>
-</li>
-<li>Then Give the same “Test Lab 1” <strong>Location</strong> to all the load generator machines located in Test Lab 1.  </li>
-<li>
-<p>Finally: You need only to select “Test Lab 1” in the Load Generators section of the Create Load Test page, and all the load generators whose Location is “Test Lab 1” will be included. </p>
-</li>
-<li>
-<p>Likewise, any one machine can be given multiple different <strong>Locations</strong> (by defining multiple load generators whose <strong>Names</strong> are identical but whose <strong>Locations</strong> are not). For example: </p>
-</li>
-<li>
-<p>If: You sometimes want to choose load generators based on their operating system, and other times based on their geographical location. </p>
-</li>
-<li>
-<p>Then: Define each load generator twice, once with <strong>Location</strong> describing its OS (Windows or Linux), and once with <strong>Location</strong> describing its geographical location (New York or London).  </p>
-</li>
-<li>
+<li>Multiple separate machines can have the same <strong>Location</strong> (by defining multiple load generators whose <strong>Locations</strong> are identical but whose <strong>Names</strong> are not). For example: </li>
+</ul>
+<p>If:</p>
+<ul>
+<li>You want all load generators in Test Lab 1 to participate in certain tests. </li>
+</ul>
+<p>Then:</p>
+<ul>
+<li>Give the same “Test Lab 1” <strong>Location</strong> to all the load generator machines located in Test Lab 1.  </li>
+</ul>
+<p>Finally:</p>
+<ul>
+<li>You need only to select “Test Lab 1” in the Load Generators section of the Create Load Test page, and all the load generators whose Location is “Test Lab 1” will be included. </li>
+</ul>
+<hr/>
+<ul>
+<li>Likewise, any one machine can be given multiple different <strong>Locations</strong> (by defining multiple load generators whose <strong>Names</strong> are identical but whose <strong>Locations</strong> are not). For example: </li>
+</ul>
+<p>If:</p>
+<ul>
+<li>You sometimes want to choose load generators based on their operating system, and other times based on their geographical location. </li>
+</ul>
+<p>Then: </p>
+<ul>
+<li>Define each load generator twice, once with <strong>Location</strong> describing its OS (Windows or Linux), and once with <strong>Location</strong> describing its geographical location (New York or London).  </li>
+</ul>
 <p>Finally: </p>
-<p>You need only to select “Windows”, “Linux”, “New York” or “London” in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included. ![ref10]</p>
-</li>
+<ul>
+<li>You need only to select “Windows”, “Linux”, “New York” or “London” in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included.</li>
 </ul>
 <h2 id="specifying-a-cloud-host-as-a-load-generator">Specifying a Cloud Host as a Load Generator</h2>
 <p>If you want to specify a cloud machine as a load generator, you need to first define the cloud host machine in the WebLOAD Console. </p>
 <p><strong>To define a cloud host in WebLOAD Console:</strong> </p>
 <ol>
-<li>In WebLOAD Console, set up a WebLOAD Dashboard Account as follows: </li>
+<li>In WebLOAD Console, set up a WebLOAD Dashboard Account as follows: <ol>
 <li>Create an Amazon EC2 account. </li>
 <li>Click <strong>Cloud Options</strong> in the <strong>Tools</strong> tab of the ribbon to create a WebLOAD Dashboard account in which you specify your Amazon security credentials, the specific Amazon region where the machines should be located, and the WebLOAD image to install on the Amazon machines.  </li>
 </ol>
+</li>
+</ol>
 <p>For a full description , refer to <em>Setting Up Cloud Computers</em> in the <em>WebLOAD Console User Guide</em>. </p>
 <ol>
-<li>In WebLOAD Console, define cloud host computers as follows: </li>
+<li>In WebLOAD Console, define cloud host computers as follows: <ol>
 <li>Click <strong>Add</strong> in the Host Selection window of the WebLOAD wizard.  </li>
 <li>In the Add Host Computer window that appears, select <strong>Add Cloud host</strong> . </li>
+</ol>
+</li>
 </ol>
 <p>For a full description , refer to <em>Adding Host Computers</em> in the <em>WebLOAD Console User Guide</em>. </p>
 <p><img alt="Defining cloud host computers in WebLOAD Console" src="../../images/define_cloud_host.jpeg"/></p>
