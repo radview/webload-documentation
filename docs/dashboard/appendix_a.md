@@ -32,11 +32,11 @@ protocol = http
 
 #The ip address to bind to, empty will bind to all interfaces 
 
-http\_addr = 
+http_addr = 
 
 #The http port to use 
 
-http\_port = 3000 
+http_port = 3000 
 
 #The public facing domain name used to access from a browser 
 
@@ -46,17 +46,17 @@ domain = localhost
 
 #default admin user, created on startup
 
-admin\_user = admin 
+admin_user = admin 
 
 #default admin password, can be changed before first start of grafana, or in profile settings 
 
-admin\_password = admin 
+admin_password = admin 
 
 [users] 
 
 #disable user signup / registration 
 
-allow\_sign\_up = true 
+allow_sign_up = true 
 ```
 
 
@@ -96,3 +96,33 @@ In addition, if you wish to import remote database sessions from the WebLOAD Con
     ![Database Tab](../images/database_tab.png)
 
 1. In the **Database configuration** section, enter the details of the remote database.
+
+### Changing settings from XML file
+
+You can change database configuration from `WLAnalyticsPrefs.xml` (found in `C:\ProgramData\RadView\WebLOAD\WLAnalyticsPrefs.xml`). Changes here affect WebLOAD Analytics, Console and the Dashboard and is the prefered way to change the configuration.
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<properties>
+  <entry key="DATABASE_NAME">radview</entry>
+  <entry key="DATABASE_HOST">localhost</entry>
+  <entry key="DATABASE_PORT">5432</entry>
+  <entry key="DATABASE_USERNAME">reporter</entry>
+  <entry key="DATABASE_PASSWORD"></entry>
+
+  <entry key="BIND_PORT">8080</entry>
+  <entry key="BASE_URI"></entry>
+  <entry key="BIND_ADDRESS">0.0.0.0</entry>
+  <entry key="DOC_ROOT">static</entry>
+  <entry key="BIN_DIR">../../bin</entry>
+  <entry key="AUTH_USER"></entry>
+  <entry key="AUTH_PASSWORD"></entry>
+  <entry key="AUTH_ROLE">ADMIN</entry>
+  <entry key="ALLOWED_ORIGIN">*</entry>
+  <entry key="DASHBOARD_DIR">dashboard</entry>
+  <entry key="UPLOAD_DIR">sessions</entry>
+  <entry key="DATA_DIR">C:/ProgramData/RadView/WebLOAD</entry>
+  <entry key="RESOURCES_DIR">resources</entry>
+  <entry key="SHARED_RESOURCES">false</entry>
+</properties>
+```
