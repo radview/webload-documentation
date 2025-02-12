@@ -1,13 +1,3 @@
-+++
-title = "Grafana CLI"
-description = "Guide to using grafana-cli"
-keywords = ["grafana", "cli", "grafana-cli", "command line interface"]
-type = "docs"
-[menu.docs]
-parent = "admin"
-weight = 8
-+++
-
 # Grafana CLI
 
 Grafana cli is a small executable that is bundled with grafana server and is suppose to be executed on the same machine as grafana runs.

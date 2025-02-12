@@ -658,9 +658,9 @@ WebLOAD Recorder’s default proxy server settings are:
 
 Some operation systems provide the ability to configure the proxy setting of the LAN
 
-connection. The following example demonstrates configuring the Internet application’s proxy setting of the LAN connection in Windows XP:
+connection. The following example demonstrates configuring the Internet application’s proxy setting of the LAN connection in Windows:
 
-**To configure the proxy setting in Windows XP:**
+**To configure the proxy setting in Windows:**
 
 1. From the **Start** menu, select **Settings** > **Control Panel**. The Control Panel dialog box appears.
 
