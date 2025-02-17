@@ -65,10 +65,45 @@ This document provides a detailed description of various cloud account types and
 ## Azure Cloud
 
 - **Description**: Microsoft Azure Cloud
+### Working with Azure in WebLOAD:
 
-### Parameters
+- Create an Azure account
+- Sign in the the Azure portal at [https://portal.azure.com](https://portal.azure.com)
+- Go to “Cost Management + Billing”
+  - View “Azure Subscriptions” / “My Subscriptions” - note your **Subscription ID**
+- Go to “Azure Active Directory”
+  - Goto “Properties”. Note the ‘Directory ID’ or ‘Tenant ID’. This is your **Tenant ID**
+  - App registrations - New Application Registration
+  - Type: Web app / API
+  - Name, URL - enter something, it’s not important
+  - Note the Application ID - this is your **identity**
+  - Click ‘Settings’ - “Certificates and Secrets” (Keys - Passwords )
+  - Enter some description and duration and click ‘Save’, it will generate a value. Note that as your **Credentials**
+- Add permissions
+  - ‘All Services’ -> Subscriptions
+  - Click on your subscription
+  - ‘Access Controls (IAM)’
+    -‘+ Add’ (‘Add role assignment’)
+    - Role - Contributor
+    - Select - type the application name you created in the previous step
+    - Click ‘Save’
+- Register providers
+  - ‘All Services’ -> Subscriptions
+  - Click on your subscription
+  - Resource providers
+  - Search and ‘Register’ the following:
+    - Microsoft.Advisor
+    - Microsoft.Compute
+    - Microsoft.DevTestLab
+    - Microsoft.Network
+    - Microsoft.ResourceHealth
+    - Microsoft.Security
+    - Microsoft.Storage
+- In WebLOAD - Tools - Cloud Options - Add Azure account with the details above
 
-#### Credentials
+### Azure Parameters
+
+#### Azure Credentials
 
 - **Identity (String; Required)**: Can be found in Azure Portal under Azure Active Directory > App registrations > Application ID.
 - **Credentials (Password; Required)**: The password value generated in Azure Active Directory > App registrations > Keys.
@@ -78,14 +113,14 @@ This document provides a detailed description of various cloud account types and
 - **Tenant Id (String; Required)**: Can be found in Azure Portal under Azure Active Directory > Properties > Directory ID.
 - **Subscription Id (String; Required)**: Can be found in Azure Portal under Cost Management + Billing > Subscriptions.
 
-#### Region
+#### Region (Region)
 
 - **Region Name (List; Required)**:
   - **Values**: eastasia, southeastasia, centralus, eastus, eastus2, westus, northcentralus, southcentralus, northeurope, westeurope, japanwest, japaneast, brazilsouth, australiaeast, australiasoutheast, southindia, centralindia, westindia, canadacentral, canadaeast, uksouth, ukwest, westcentralus, westus2, koreacentral, koreasouth, francecentral
   - **Default**: westus2
   - **Description**: Region to run the instance.
 
-### Advanced Parameters
+### Advanced Parameters (Azure)
 
 - **Instance Spec (String)**: Default is `osFamily=CENTOS,osVersionMatches=8.3`. Specification query for instance.
 - **Image Publishers (String)**: Default is `OpenLogic`. Filters images based on publishers.
@@ -96,27 +131,27 @@ This document provides a detailed description of various cloud account types and
 
 - **Description**: Google Compute Engine. Create a project in [Google Console](https://console.developers.google.com/); enable the Google Compute Engine API under APIs and auth > APIs; create new Client ID as Service Account; download a JSON key and note the email address as identity.
 
-### Parameters
+### Parameters (GCP)
 
-#### Credentials
+#### Credentials (GCP)
 
 - **Identity (String; Required)**: Identity is the service account email address.
 - **Credentials Path (Password; Required)**: Path to the service account client ID JSON Key file.
 
-#### Region
+#### Region (GCP)
 
 - **Region Name (List; Required)**:
   - **Values**: asia-east1-a, asia-northeast1-a, asia-south1-a, asia-southeast1-a, australia-southeast1-a, europe-north1-a, europe-west1-b, europe-west2-a, europe-west3-a, europe-west4-a, northamerica-northeast1-a, southamerica-east1-a, us-central1-a, us-east1-b, us-east4-a, us-west1-a, us-west2-a
   - **Default**: us-west1-a
   - **Description**: Region to run the instance.
 
-#### Instance
+#### Instance (GCP)
 
 - **Min Cores (String)**: Default is `2`. Minimum number of CPU cores the machines should have.
 - **Min RAM (String)**: Default is `8000`. Minimum RAM in megabytes the machines should have.
 - **Min Disk Size (String)**: Minimum disk size in gigabytes the machines should have.
 
-### Advanced Parameters
+### Advanced Parameters (GCP)
 
 - **Instance Spec (String)**: Default is `osFamily=CENTOS,osVersionMatches=8`. Specification query for instance.
 - **Hardware Id (String)**: Specific hardware ID to use. Use 'list' to get the available options.
@@ -143,28 +178,28 @@ This document provides a detailed description of various cloud account types and
 
 - **Description**: Amazon Elastic Container Service (ECS) facilitates containerized application deployment and management.
 
-### Parameters
+### Parameters (ECS)
 
-#### Credentials
+#### Credentials (ECS)
 
 - **Access Key (String; Optional)**: AWS Access Key for authentication.
 - **Secret Access Key (Password; Optional)**: Matches the Access Key for secure authentication.
 
-#### Region
+#### Region (ECS)
 
 - **Region Name (List; Required)**:
   - **Values**: Includes various global regions for deploying ECS resources.
   - **Default**: us-east-1
   - **Description**: Defines the deployment region for containerized resources.
 
-#### Instance
+#### Instance (ECS)
 
 - **Subnet Id (String)**: Specifies the subnet for deploying ECS tasks.
 - **Cluster (String)**: Default is `default`. Specifies the ECS cluster for resource allocation.
 - **CPU (String)**: Default is `2 vCPU`. Configures the number of virtual CPUs.
 - **Memory (String)**: Default is `4 GB`. Specifies memory allocation for tasks.
 
-### Advanced Parameters
+### Advanced Parameters (ECS)
 
 - **Security Group Id (String)**: Defines security settings for task access.
 - **Execution Role (String)**: Default is `ecsTaskExecutionRole`. Specifies the role granting API permissions for ECS tasks.
@@ -176,9 +211,9 @@ This document provides a detailed description of various cloud account types and
 
 The Jclouds-based Generic Cloud supports various cloud providers and offers flexibility for configuring and managing cloud instances. The cloud implementation allows for interoperability across multiple cloud platforms, including AWS, Azure, Google Compute Engine, and others.
 
-### Parameters
+### Parameters (Generic)
 
-#### Cloud Provider
+#### Cloud Provider (Generic)
 - **Provider (String; Required)**
   - **Default Value**: `aws-ec2`
   - **Description**: Specifies the cloud provider. Supported values include:
@@ -208,7 +243,7 @@ The Jclouds-based Generic Cloud supports various cloud providers and offers flex
     - azurecompute-arm
     - google-compute-engine
 
-#### Credentials
+#### Credentials (Generic)
 
 - **Identity (String; Required)**
   - **Description**: Represents the identity used for authentication, such as a username or AWS Access Key.
@@ -216,13 +251,13 @@ The Jclouds-based Generic Cloud supports various cloud providers and offers flex
 - **Credentials (Password; Required)**
   - **Description**: Password or Secret Access Key associated with the identity.
 
-#### Region
+#### Region (Generic)
 
 - **Location (String; Required)**
   - **Default Value**: `us-east-1`
   - **Description**: Specifies the region or availability zone to use. Use `list` to retrieve the available options.
 
-#### Instance
+#### Instance (Generic)
 
 - **Min Cores (String; Required)**
   - **Default Value**: `2`
@@ -235,7 +270,7 @@ The Jclouds-based Generic Cloud supports various cloud providers and offers flex
 - **Min Disk Size (String; Optional)**
   - **Description**: The minimum disk size (in GB) the machine should have.
 
-### Advanced Parameters
+### Advanced Parameters (Generic)
 
 #### Instance Configuration
 
