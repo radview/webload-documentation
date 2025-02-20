@@ -485,13 +485,13 @@ You can initiate WebLOAD Recorder testing directly through the CLI. You can ente
 
 **To run WebLOAD Recorder testing through the CLI:**
 
-Enter the webloadIDE.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.
+Enter the WebloadRecorder.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.
 
 #### Syntax
 
 Use the following syntax to define the parameters for running a WebLOAD Recorder test **through a Command Line Interface.:**
 
-`webloadide.exe [<flags>][] [<session name to save to>][]`
+`WebloadRecorder.exe [<flags>][] [<session name to save to>][]`
 
 To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in [*Examples*](#examples).
 
@@ -501,7 +501,7 @@ When running a test invoked by the executable, you can specify the following par
 
 |**Parameter**|**Description**|**Comments**|
 | :- | :- | :- |
-|Flags|<p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p>|Optional parameter|
+|Flags|<p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p><p>/r - auto record</p><p>Start Recorder in recording mode - can be used for recording automation. Can also add  /time X to automatically after X seconds, for example  /time 30. You can also use special link to control the recording - add transactions and stop recorindg, see [Special Links](#special-link-during-recording) </p>|Optional parameter|
 |Project or session name to open|The name of the .wlp file or .wls file (Project file or Session file) to run.|Optional parameter|
 |Session name to save to|The name of the .wls file containing the test data. This file will be saved in the current directory unless otherwise specified.|Optional parameter|
 |Number of rounds to run|The number of iterations to run during runtime. The default value is 1.|Optional parameter|
@@ -512,13 +512,21 @@ The parameters are all optional. If no parameters are entered, the executable la
 
 **Example 1:**
 
-`webloadide.exe test1.wlp`
+`WebloadRecorder.exe /r test1.wlp /time 60`
 
-This command opens WebLOAD Recorder with the test1 project file and waits for user input.
+Start WebLOAD Recorder in Recording mode, ready to record any traffic that goes to localhost:9884 - for automation, point the traffic to this proxy. Save results to test1 project file and waits for user input. Stop recording after 60 seconds, or when getting stop signal. To stop or add transactions see [special links](#special-link-during-recording).
+
+Tip: To correlate script automatically upon recording, change in WebLOAD Recorder, Tools -> Recording and script generation options -> Correlation Options -> Correlation level to 'Use existing rules' or 'Discover rules' to trigger correlation for recorded scripts.
 
 **Example 2:**
 
-`webloadide.exe /a test1.wlp test2.wlp 3`
+`WebloadRecorder.exe test1.wlp`
+
+This command opens WebLOAD Recorder with the test1 project file and waits for user input.
+
+**Example 3:**
+
+`WebloadRecorder.exe /a test1.wlp test2.wlp 3`
 
 This command:
 
@@ -528,9 +536,9 @@ This command:
 
 - Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.
 
-**Example 3:**
+**Example 4:**
 
-`webloadide.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2`
+`WebloadRecorder.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2`
 
 This command:
 
@@ -541,3 +549,11 @@ This command:
 - Opens the WebLOAD Recorder project file test2.wlp.
 - Runs the project test2.wlp for two iterations.
 - Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.
+
+#### Special Link During Recording
+
+During recording, you can use these special links to trigger special behavior. This can be useful when automating recroding that is done through another software, for example when the script is running from Selenium and being recorded by WebLOAD.
+
+- `https://www.radview.com/stop-recording/` - instructs the recording to end
+- `https://www.radview.com/begin-transaction/?name=` - Add BeginTransaction with the given name
+- `https://www.radview.com/end-transaction/?name=` - Add EndTransaction with the given name
