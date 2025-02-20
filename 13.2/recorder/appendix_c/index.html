@@ -307,57 +307,11 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Appendix C - Launching WebLOAD Recorder
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Appendix C - Launching WebLOAD Recorder
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#running-webload-recorder-testing-through-the-cli">
-<span class="md-ellipsis">
-      Running WebLOAD Recorder Testing through the CLI
-    </span>
-</a>
-<nav aria-label="Running WebLOAD Recorder Testing through the CLI" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#syntax">
-<span class="md-ellipsis">
-      Syntax
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#parameters">
-<span class="md-ellipsis">
-      Parameters
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples">
-<span class="md-ellipsis">
-      Examples
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../appendix_d/">
@@ -1124,44 +1078,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#running-webload-recorder-testing-through-the-cli">
-<span class="md-ellipsis">
-      Running WebLOAD Recorder Testing through the CLI
-    </span>
-</a>
-<nav aria-label="Running WebLOAD Recorder Testing through the CLI" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#syntax">
-<span class="md-ellipsis">
-      Syntax
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#parameters">
-<span class="md-ellipsis">
-      Parameters
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples">
-<span class="md-ellipsis">
-      Examples
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -1170,76 +1086,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="appendix-c-launching-webload-recorder-testing-through-the-command-line-interface">Appendix C: Launching WebLOAD Recorder Testing through the Command Line Interface</h1>
 <p>This section provides instructions and examples for using Command Line Interface (CLI) to launch WebLOAD Recorder testing.</p>
-<h2 id="running-webload-recorder-testing-through-the-cli">Running WebLOAD Recorder Testing through the CLI</h2>
-<p>You can also initiate WebLOAD Recorder testing directly through the CLI. You can enter the WebLOAD Recorder launch command into a batch file or into an external script and WebLOAD Recorder will run directly, without user intervention, using the parameters specified.</p>
-<p><strong>To run WebLOAD Recorder testing through the CLI:</strong></p>
-<p>Enter the webloadIDE.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.</p>
-<h3 id="syntax">Syntax</h3>
-<p>Use the following syntax to define the parameters for running a WebLOAD Recorder test through a Command Line Interface:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>webloadide.exe [&lt;flags&gt;][&lt;project or session name to open&gt;] 
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>[&lt;session name to save to&gt;][&lt;Number of rounds to run&gt;]
-</span></code></pre></div>
-<p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#examples"><em>Examples</em> </a>.</p>
-<h3 id="parameters">Parameters</h3>
-<p>When running a test invoked by the executable, you can specify the following parameters:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Parameter</strong></th>
-<th style="text-align: left;"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p></td>
-</tr>
-<tr>
-<td style="text-align: left;">Project or session name to open</td>
-<td style="text-align: left;">The name of the .wlp file or .wls file (Project file or Session file) to run.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Session name to save to</td>
-<td style="text-align: left;">The name of the .wls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Number of rounds to run</td>
-<td style="text-align: left;">The number of iterations to run during runtime. The default value is 1.</td>
-</tr>
-</tbody>
-</table>
-<p>Parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag  flag is not set, the</p>
-<p>&lt; Session name to save to &gt;, and the &lt; Number of rounds to run &gt; parameters are ignored.</p>
-<h3 id="examples">Examples</h3>
-<p><strong>Example 1:</strong></p>
-<p><code>webloadide.exe test1.wlp</code></p>
-<p>This command opens WebLOAD Recorder with the test1 project file and waits for user input.</p>
-<p><strong>Example 2:</strong></p>
-<p><code>webloadide.exe /a test1.wlp test2.wlp 3</code></p>
-<p>This command:</p>
-<ul>
-<li>Opens WebLOAD Recorder and automatically runs a test using the test1.wlp</li>
-</ul>
-<p>project file.</p>
-<ul>
-<li>Runs the project for three iterations.</li>
-<li>Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.</li>
-</ul>
-<p><strong>Example 3:</strong></p>
-<p><code>webloadide.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2</code></p>
-<p>This command:</p>
-<ul>
-<li>Opens WebLOAD Recorder and automatically runs a test using the test1.wlp</li>
-</ul>
-<p>project file.</p>
-<ul>
-<li>Runs the project test1.wlp for three iterations.</li>
-<li>Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.</li>
-<li>Opens the WebLOAD Recorder project file test2.wlp.</li>
-<li>Runs the project test2.wlp for two iterations.</li>
-<li>Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.</li>
-</ul>
+<p>See <a href="../../automation/webload_cli/#running-webload-recorder-testing-through-the-cli">Automation guide</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

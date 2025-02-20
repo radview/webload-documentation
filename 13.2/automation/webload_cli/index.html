@@ -1111,6 +1111,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-link-during-recording">
+<span class="md-ellipsis">
+      Special Link During Recording
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1670,6 +1677,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-link-during-recording">
+<span class="md-ellipsis">
+      Special Link During Recording
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2152,10 +2166,10 @@ combination of the following:</p>
 <h2 id="running-webload-recorder-testing-through-the-cli">Running WebLOAD Recorder Testing through the CLI</h2>
 <p>You can initiate WebLOAD Recorder testing directly through the CLI. You can enter the WebLOAD Recorder launch command into a batch file or into an external script and WebLOAD Recorder will run directly, without user intervention, using the parameters specified.</p>
 <p><strong>To run WebLOAD Recorder testing through the CLI:</strong></p>
-<p>Enter the webloadIDE.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.</p>
+<p>Enter the WebloadRecorder.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.</p>
 <h4 id="syntax_5">Syntax</h4>
 <p>Use the following syntax to define the parameters for running a WebLOAD Recorder test <strong>through a Command Line Interface.:</strong></p>
-<p><code>webloadide.exe [&lt;flags&gt;][] [&lt;session name to save to&gt;][]</code></p>
+<p><code>WebloadRecorder.exe [&lt;flags&gt;][] [&lt;session name to save to&gt;][]</code></p>
 <p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#examples"><em>Examples</em></a>.</p>
 <h4 id="parameters_4">Parameters</h4>
 <p>When running a test invoked by the executable, you can specify the following parameters:</p>
@@ -2170,7 +2184,7 @@ combination of the following:</p>
 <tbody>
 <tr>
 <td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p></td>
+<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p><p>/r - auto record</p><p>Start Recorder in recording mode - can be used for recording automation. Can also add  /time X to automatically after X seconds, for example  /time 30. You can also use special link to control the recording - add transactions and stop recorindg, see <a href="#special-link-during-recording">Special Links</a> </p></td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
@@ -2193,10 +2207,14 @@ combination of the following:</p>
 <p>The parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag  flag is not set, the <code>&lt; Session name to save to &gt;</code>, and the &lt; Number of rounds to run &gt; parameters are ignored.</p>
 <h4 id="examples_4">Examples</h4>
 <p><strong>Example 1:</strong></p>
-<p><code>webloadide.exe test1.wlp</code></p>
-<p>This command opens WebLOAD Recorder with the test1 project file and waits for user input.</p>
+<p><code>WebloadRecorder.exe /r test1.wlp /time 60</code></p>
+<p>Start WebLOAD Recorder in Recording mode, ready to record any traffic that goes to localhost:9884 - for automation, point the traffic to this proxy. Save results to test1 project file and waits for user input. Stop recording after 60 seconds, or when getting stop signal. To stop or add transactions see <a href="#special-link-during-recording">special links</a>.</p>
+<p>Tip: To correlate script automatically upon recording, change in WebLOAD Recorder, Tools -&gt; Recording and script generation options -&gt; Correlation Options -&gt; Correlation level to 'Use existing rules' or 'Discover rules' to trigger correlation for recorded scripts.</p>
 <p><strong>Example 2:</strong></p>
-<p><code>webloadide.exe /a test1.wlp test2.wlp 3</code></p>
+<p><code>WebloadRecorder.exe test1.wlp</code></p>
+<p>This command opens WebLOAD Recorder with the test1 project file and waits for user input.</p>
+<p><strong>Example 3:</strong></p>
+<p><code>WebloadRecorder.exe /a test1.wlp test2.wlp 3</code></p>
 <p>This command:</p>
 <ul>
 <li>
@@ -2209,8 +2227,8 @@ combination of the following:</p>
 <p>Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.</p>
 </li>
 </ul>
-<p><strong>Example 3:</strong></p>
-<p><code>webloadide.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2</code></p>
+<p><strong>Example 4:</strong></p>
+<p><code>WebloadRecorder.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2</code></p>
 <p>This command:</p>
 <ul>
 <li>
@@ -2223,6 +2241,13 @@ combination of the following:</p>
 <li>Opens the WebLOAD Recorder project file test2.wlp.</li>
 <li>Runs the project test2.wlp for two iterations.</li>
 <li>Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.</li>
+</ul>
+<h4 id="special-link-during-recording">Special Link During Recording</h4>
+<p>During recording, you can use these special links to trigger special behavior. This can be useful when automating recroding that is done through another software, for example when the script is running from Selenium and being recorded by WebLOAD.</p>
+<ul>
+<li><code>https://www.radview.com/stop-recording/</code> - instructs the recording to end</li>
+<li><code>https://www.radview.com/begin-transaction/?name=</code> - Add BeginTransaction with the given name</li>
+<li><code>https://www.radview.com/end-transaction/?name=</code> - Add EndTransaction with the given name</li>
 </ul>
 </article>
 </div>
