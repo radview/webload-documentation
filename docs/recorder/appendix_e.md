@@ -85,13 +85,87 @@ In order to record HTTPS traffic, the WebLOAD root certificate needs to be trust
 
 1. A warning will appear; click **Install**. The certificate should now be trusted
 
-    ![](../images/root_ca.jpeg)
+    ![Trust root CA](../images/root_ca.jpeg)
+
+1. You need to turn on SSL trust for that certificate, go to:
+ Settings > General > About > Certificate Trust Settings. Under "Enable full trust for root certificates", turn on trust for the certificate.
+
+    ![Enable Trust root CA](../images/trust_root_ca_iphone.png)
 
 1. After recording is completed, the certificate may be removed. To remove the certificate, select the following: **Settings** > **General** > **Profile ‘RadView Root CA’** > **Remove**.
 
+### Setting Proxy Settings in Android Emulator
 
+Follow these steps exactly as shown. Any small change will likely cause it not to work!
 
-### Setting Proxy Settings in Android
+Watch the video here: [Android Recording](https://youtu.be/Hc9QQ-J5nI8)
+
+#### Install emulator
+
+- Download Android studio/SDK: [https://developer.android.com/studio](https://developer.android.com/studio)
+- Standard install
+- Open ‘Virtual Device Manager’
+- Choose a device WITHOUT google play, for example Pixel 3a XL
+- Download “Q” system level and select it.
+
+#### Install RadView root certificate
+
+Needed in order to record https traffic - practically this is always needed.
+
+Use adb commands, adb will be in:
+C:\Users\myuser\AppData\Local\Android\Sdk\platform-tools
+
+Emulator will be in :
+c:\users\myuser\AppData\Local\Android\Sdk\emulator\emulator.exe
+
+(See below these command as a script - Script to set-up emulator)
+
+`emulator.exe -list-avds`
+
+Should show:
+Pixel_3a_XL_API_29
+
+`emulator -avd Pixel_3a_XL_API_29 -writable-system`
+
+`adb root`
+
+`adb shell avbctl disable-verification`
+
+`adb reboot`
+
+`adb root`
+
+`adb remount`
+
+`adb push "c:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\root.pem" /system/etc/security/cacerts/3b4f28f8.0`
+
+`adb shell chmod 664 /system/etc/security/cacerts/3b4f28f8.0`
+
+`adb reboot`
+
+#### Record in WebLOAD
+
+Set proxy settings:
+
+On the desktop machine:
+
+Open Firewall settings, advanced, add rule to allow traffic on TCP port 9884
+
+Start WebLOAD Recorder.
+
+- Start Recording (Click ‘Start’ on the red circle icon).
+- Choose "Native Mobile Recording" (Preior to WebLOAD 13.2 - Choose “Chrome” and click Ok. This will open a Chrome window, leave it open and ignore it until the end of recording)
+- On the Mobile device (emulator) change proxy to use WebLOAD:
+  - Open WiFi Settings, find the “AndoirdWiFi” and change settings:
+  - Click the Pencil to edit:
+  - Expand the ‘Advanced options’
+    - Set ‘Proxy’ to ‘manual’
+    - Set ‘Proxy hostname’ to ‘10.0.2.2’ (this will point to the machine running the emulator. localhost/127.0.0.1 means the android device)
+    - Set ‘Proxy port’ to 9884
+
+Now traffic from the apps and browser should be captured in WebLOAD.
+
+### Setting Proxy Settings in Android (Legacy phones)
 
 **To set Android proxy settings:**
 
