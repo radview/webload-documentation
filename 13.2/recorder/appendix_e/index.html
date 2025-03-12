@@ -365,12 +365,44 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setting-proxy-settings-in-android">
+<a class="md-nav__link" href="#setting-proxy-settings-in-android-emulator">
 <span class="md-ellipsis">
-      Setting Proxy Settings in Android
+      Setting Proxy Settings in Android Emulator
     </span>
 </a>
-<nav aria-label="Setting Proxy Settings in Android" class="md-nav">
+<nav aria-label="Setting Proxy Settings in Android Emulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-emulator">
+<span class="md-ellipsis">
+      Install emulator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-radview-root-certificate">
+<span class="md-ellipsis">
+      Install RadView root certificate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#record-in-webload">
+<span class="md-ellipsis">
+      Record in WebLOAD
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-proxy-settings-in-android-legacy-phones">
+<span class="md-ellipsis">
+      Setting Proxy Settings in Android (Legacy phones)
+    </span>
+</a>
+<nav aria-label="Setting Proxy Settings in Android (Legacy phones)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#recording-https-traffic-on-android-40-and-above">
@@ -1178,12 +1210,44 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setting-proxy-settings-in-android">
+<a class="md-nav__link" href="#setting-proxy-settings-in-android-emulator">
 <span class="md-ellipsis">
-      Setting Proxy Settings in Android
+      Setting Proxy Settings in Android Emulator
     </span>
 </a>
-<nav aria-label="Setting Proxy Settings in Android" class="md-nav">
+<nav aria-label="Setting Proxy Settings in Android Emulator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-emulator">
+<span class="md-ellipsis">
+      Install emulator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-radview-root-certificate">
+<span class="md-ellipsis">
+      Install RadView root certificate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#record-in-webload">
+<span class="md-ellipsis">
+      Record in WebLOAD
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-proxy-settings-in-android-legacy-phones">
+<span class="md-ellipsis">
+      Setting Proxy Settings in Android (Legacy phones)
+    </span>
+</a>
+<nav aria-label="Setting Proxy Settings in Android (Legacy phones)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#recording-https-traffic-on-android-40-and-above">
@@ -1299,13 +1363,67 @@
 </li>
 <li>
 <p>A warning will appear; click <strong>Install</strong>. The certificate should now be trusted</p>
-<p><img alt="" src="../../images/root_ca.jpeg"/></p>
+<p><img alt="Trust root CA" src="../../images/root_ca.jpeg"/></p>
+</li>
+<li>
+<p>You need to turn on SSL trust for that certificate, go to:
+ Settings &gt; General &gt; About &gt; Certificate Trust Settings. Under "Enable full trust for root certificates", turn on trust for the certificate.</p>
+<p><img alt="Enable Trust root CA" src="../../images/trust_root_ca_iphone.png"/></p>
 </li>
 <li>
 <p>After recording is completed, the certificate may be removed. To remove the certificate, select the following: <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Profile ‘RadView Root CA’</strong> &gt; <strong>Remove</strong>.</p>
 </li>
 </ol>
-<h3 id="setting-proxy-settings-in-android">Setting Proxy Settings in Android</h3>
+<h3 id="setting-proxy-settings-in-android-emulator">Setting Proxy Settings in Android Emulator</h3>
+<p>Follow these steps exactly as shown. Any small change will likely cause it not to work!</p>
+<p>Watch the video here: <a href="https://youtu.be/Hc9QQ-J5nI8">Android Recording</a></p>
+<h4 id="install-emulator">Install emulator</h4>
+<ul>
+<li>Download Android studio/SDK: <a href="https://developer.android.com/studio">https://developer.android.com/studio</a></li>
+<li>Standard install</li>
+<li>Open ‘Virtual Device Manager’</li>
+<li>Choose a device WITHOUT google play, for example Pixel 3a XL</li>
+<li>Download “Q” system level and select it.</li>
+</ul>
+<h4 id="install-radview-root-certificate">Install RadView root certificate</h4>
+<p>Needed in order to record https traffic - practically this is always needed.</p>
+<p>Use adb commands, adb will be in:
+C:\Users\myuser\AppData\Local\Android\Sdk\platform-tools</p>
+<p>Emulator will be in :
+c:\users\myuser\AppData\Local\Android\Sdk\emulator\emulator.exe</p>
+<p>(See below these command as a script - Script to set-up emulator)</p>
+<p><code>emulator.exe -list-avds</code></p>
+<p>Should show:
+Pixel_3a_XL_API_29</p>
+<p><code>emulator -avd Pixel_3a_XL_API_29 -writable-system</code></p>
+<p><code>adb root</code></p>
+<p><code>adb shell avbctl disable-verification</code></p>
+<p><code>adb reboot</code></p>
+<p><code>adb root</code></p>
+<p><code>adb remount</code></p>
+<p><code>adb push "c:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\root.pem" /system/etc/security/cacerts/3b4f28f8.0</code></p>
+<p><code>adb shell chmod 664 /system/etc/security/cacerts/3b4f28f8.0</code></p>
+<p><code>adb reboot</code></p>
+<h4 id="record-in-webload">Record in WebLOAD</h4>
+<p>Set proxy settings:</p>
+<p>On the desktop machine:</p>
+<p>Open Firewall settings, advanced, add rule to allow traffic on TCP port 9884</p>
+<p>Start WebLOAD Recorder.</p>
+<ul>
+<li>Start Recording (Click ‘Start’ on the red circle icon).</li>
+<li>Choose "Native Mobile Recording" (Preior to WebLOAD 13.2 - Choose “Chrome” and click Ok. This will open a Chrome window, leave it open and ignore it until the end of recording)</li>
+<li>On the Mobile device (emulator) change proxy to use WebLOAD:</li>
+<li>Open WiFi Settings, find the “AndoirdWiFi” and change settings:</li>
+<li>Click the Pencil to edit:</li>
+<li>Expand the ‘Advanced options’<ul>
+<li>Set ‘Proxy’ to ‘manual’</li>
+<li>Set ‘Proxy hostname’ to ‘10.0.2.2’ (this will point to the machine running the emulator. localhost/127.0.0.1 means the android device)</li>
+<li>Set ‘Proxy port’ to 9884</li>
+</ul>
+</li>
+</ul>
+<p>Now traffic from the apps and browser should be captured in WebLOAD.</p>
+<h3 id="setting-proxy-settings-in-android-legacy-phones">Setting Proxy Settings in Android (Legacy phones)</h3>
 <p><strong>To set Android proxy settings:</strong></p>
 <ol>
 <li>
