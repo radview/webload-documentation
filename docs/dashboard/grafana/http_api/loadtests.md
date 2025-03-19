@@ -152,7 +152,8 @@ POST /api/loadtest
 
 ***Example Request***
 
-```POST /api/loadtest?DatasourceName=mydatasource HTTP/1.1 
+```text
+POST /api/loadtest?DatasourceName=mydatasource HTTP/1.1 
 Accept: application/json 
 Content-Type: application/json Authorization: 
 Bearer <YOUR_API_TOKEN>
@@ -283,7 +284,7 @@ GET /api/loadtest/agenda/10 HTTP/1.1
 Accept: application/json 
 Content-Type: application/json 
 Authorization: Bearer <YOUR_API_TOKEN>
-
+```
 
 ***Example Response***
 
