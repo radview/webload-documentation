@@ -1,11 +1,14 @@
 # HTTP API Reference
 
-The Grafana backend exposes an HTTP API, the same API is used by the frontend to do everything from saving
-dashboards, creating users and updating data sources.
+The API can be used to control the Dashboard.
+For example on to use it to start a load test and generate Analytics report, see:
+
+- [Python script](./sample_api_python.md)
+- [Groovy script](./sample_api_groovy.md)
 
 ## Supported HTTP APIs:
 
-
+* [Loadtest API](./loadtests.md)
 * [Authentication API](./auth.md)
 * [Dashboard API](./dashboard.md)
 * [Data Source API](./data_source.md)
