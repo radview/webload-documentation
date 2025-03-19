@@ -1386,19 +1386,19 @@ Supports an optional search query, along with <code>page</code> and <code>perpag
 <p><strong>Note:</strong> This endpoint also requires the data source name in the URL route.</p>
 </blockquote>
 <p><strong><em>Example Request</em></strong></p>
-<p>```POST /api/loadtest?DatasourceName=mydatasource HTTP/1.1 
-Accept: application/json 
-Content-Type: application/json Authorization: 
-Bearer <your_api_token></your_api_token></p>
-<p>{ "name": "my_loadtest", "path": "/tests/my_loadtest.js", "state": "idle", "schedule": "0 1 * * *", "location": "us-east", "data": { "spawncount": 100 } }
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>***Example Response***
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>```text
-</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>HTTP/1.1 200 
-</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>Content-Type: application/json
-</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>{ "message": "loadtest added", "id": 6, "name": "my_loadtest" }
-</span></code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>POST /api/loadtest?DatasourceName=mydatasource HTTP/1.1 
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>Accept: application/json 
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>Content-Type: application/json Authorization: 
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>Bearer &lt;YOUR_API_TOKEN&gt;
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>{ "name": "my_loadtest", "path": "/tests/my_loadtest.js", "state": "idle", "schedule": "0 1 * * *", "location": "us-east", "data": { "spawncount": 100 } }
+</span></code></pre></div>
+<p><strong><em>Example Response</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>HTTP/1.1 200 
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>Content-Type: application/json
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>{ "message": "loadtest added", "id": 6, "name": "my_loadtest" }
+</span></code></pre></div>
 <h2 id="add-an-agenda-based-loadtest">Add an agenda-based loadtest</h2>
 <p>Creates a new <strong>agenda-based</strong> loadtest (testType = 2) using a data source name.</p>
 <p>POST /api/loadtest/agenda</p>
@@ -1449,18 +1449,18 @@ Bearer <your_api_token></your_api_token></p>
 This sets <code>testType</code> to <code>2</code> internally.</p>
 </blockquote>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>POST /api/loadtest/agenda?DatasourceName=mydatasource HTTP/1.1 
-</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>Accept: application/json 
-</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>Content-Type: application/json 
-</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
-</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>{ "name": "agenda_demo", "path": "/tests/agenda_runner.js", "state": "idle", "schedule": "0 3 * * *", "location": "us-east", "data": { "spawncount": 20, "agendaPath": "/agendas/demo_agenda.json", "agendas": [ { "agendaname": "step1", "agendapath": "/agendas/step1.js", "percentage": 50, "execoptions": [ { "Name": "timeout", "Value": "30" } ], "sleepoptions": {} } ] } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>POST /api/loadtest/agenda?DatasourceName=mydatasource HTTP/1.1 
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>Accept: application/json 
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>Content-Type: application/json 
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>{ "name": "agenda_demo", "path": "/tests/agenda_runner.js", "state": "idle", "schedule": "0 3 * * *", "location": "us-east", "data": { "spawncount": 20, "agendaPath": "/agendas/demo_agenda.json", "agendas": [ { "agendaname": "step1", "agendapath": "/agendas/step1.js", "percentage": 50, "execoptions": [ { "Name": "timeout", "Value": "30" } ], "sleepoptions": {} } ] } }
 </span></code></pre></div>
 <p><strong><em>Example Response</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>HTTP/1.1 200 
-</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>Content-Type: application/json
-</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>{ "message": "loadtest added", "id": 10, "name": "agenda_demo" }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>HTTP/1.1 200 
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>Content-Type: application/json
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>{ "message": "loadtest added", "id": 10, "name": "agenda_demo" }
 </span></code></pre></div>
 <h2 id="add-a-url-based-loadtest">Add a URL-based loadtest</h2>
 <p>Creates a new <strong>URL-based</strong> loadtest (testType = 3) using a data source name.</p>
@@ -1511,18 +1511,18 @@ This sets <code>testType</code> to <code>2</code> internally.</p>
 <p>This sets <code>testType = 3</code> internally. For example, can store multiple URLs, request methods, headers, etc.</p>
 </blockquote>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>POST /api/loadtest/url?DatasourceName=mydatasource HTTP/1.1 
-</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>Accept: application/json 
-</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>Content-Type: application/json 
-</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
-</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>
-</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>{ "name": "url_test_example", "path": "/urls/url_test_example", "state": "idle", "schedule": "0 4 * * *", "data": { "spawncount": 30, "url": "https://example.com", "urls": [ { "url": "https://example.com/login", "method": "POST", "requestbody": "{}", "headers": [ {"Name": "Content-Type", "Value": "application/json"} ], "formdata": [] } ] } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>POST /api/loadtest/url?DatasourceName=mydatasource HTTP/1.1 
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>Accept: application/json 
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>Content-Type: application/json 
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>{ "name": "url_test_example", "path": "/urls/url_test_example", "state": "idle", "schedule": "0 4 * * *", "data": { "spawncount": 30, "url": "https://example.com", "urls": [ { "url": "https://example.com/login", "method": "POST", "requestbody": "{}", "headers": [ {"Name": "Content-Type", "Value": "application/json"} ], "formdata": [] } ] } }
 </span></code></pre></div>
 <p><strong><em>Example Response</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>HTTP/1.1 200 
-</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>Content-Type: application/json
-</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>{ "message": "loadtest added", "id": 11, "name": "url_test_example" }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>HTTP/1.1 200 
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>Content-Type: application/json
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>{ "message": "loadtest added", "id": 11, "name": "url_test_example" }
 </span></code></pre></div>
 <h2 id="get-a-single-loadtest-by-id">Get a single loadtest by ID</h2>
 <p>Retrieve a single loadtest, given its numeric ID.</p>
@@ -1530,35 +1530,17 @@ This sets <code>testType</code> to <code>2</code> internally.</p>
 <p><strong><em>Example Request</em></strong></p>
 <p>GET /api/loadtest/10 HTTP/1.1 Accept: application/json Content-Type: application/json Authorization: Bearer <your_api_token></your_api_token></p>
 <p><strong><em>Example Response</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>HTTP/1.1 200 
-</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>Content-Type: application/json
-</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
-</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>{ "id": 10, "orgId": 1, "name": "agenda_demo", "path": "/tests/agenda_runner.js", "schedule": "0 3 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T03:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "data": { "spawncount": 20, "agendaPath": "/agendas/demo_agenda.json", ... }, "testType": 2 }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>HTTP/1.1 200 
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>Content-Type: application/json
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>{ "id": 10, "orgId": 1, "name": "agenda_demo", "path": "/tests/agenda_runner.js", "schedule": "0 3 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T03:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "data": { "spawncount": 20, "agendaPath": "/agendas/demo_agenda.json", ... }, "testType": 2 }
 </span></code></pre></div>
 <h2 id="get-a-single-agenda-loadtest-by-id">Get a single <strong>agenda</strong> loadtest by ID</h2>
 <p>Similar to above, but if you specifically know the test was created as <code>testType = 2</code> (agenda-based), you can use:</p>
 <p>GET /api/loadtest/agenda/:id</p>
 <p>This returns the same kind of object but often includes extra fields like <code>agendaPath</code>, <code>agendas</code>, <code>detailedSchedule</code>, etc.</p>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>GET /api/loadtest/agenda/10 HTTP/1.1 
-</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>Accept: application/json 
-</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>Content-Type: application/json 
-</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
-</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>
-</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>
-</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>***Example Response***
-</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
-</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>```text
-</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>HTTP/1.1 200 
-</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>Content-Type: application/json
-</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>
-</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>{ "id": 10, "orgId": 1, "name": "agenda_demo", "path": "/tests/agenda_runner.js", "schedule": "0 3 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T03:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "agendaPath": "/agendas/demo_agenda.json", "spawnCount": 20, "detailedSchedule": { "rampUpTime": 60, "duration": 300, "rampDownTime": 60, "maxVC": 100, "limitRounds": false }, "agendas": [ { "agendaname": "step1", "agendapath": "/agendas/step1.js", "percentage": 50, "execoptions": [ { "Name": "timeout", "Value": "30" } ], "sleepoptions": {} } ], "testType": 2, "data": { ... } }
-</span></code></pre></div>
-<h2 id="get-a-single-url-based-loadtest-by-id">Get a single <strong>URL-based</strong> loadtest by ID</h2>
-<p>GET /api/loadtest/url/:id</p>
-<p>Returns extended URL-based test details if <code>testType = 3</code>.</p>
-<p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>GET /api/loadtest/url/11 HTTP/1.1 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>GET /api/loadtest/agenda/10 HTTP/1.1 
 </span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>Accept: application/json 
 </span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>Content-Type: application/json 
 </span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
@@ -1567,7 +1549,22 @@ This sets <code>testType</code> to <code>2</code> internally.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>HTTP/1.1 200 
 </span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>Content-Type: application/json
 </span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>{ "id": 11, "orgId": 1, "name": "url_test_example", "path": "/urls/url_test_example", "schedule": "0 4 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T04:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "url": "https://example.com", "urls": [ { "url": "https://example.com/login", "method": "POST", "requestbody": "{}", "headers": [ { "Name": "Content-Type", "Value": "application/json" } ], "formdata": [] } ], "spawnCount": 30, "testType": 3, "data": { ... } }
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>{ "id": 10, "orgId": 1, "name": "agenda_demo", "path": "/tests/agenda_runner.js", "schedule": "0 3 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T03:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "agendaPath": "/agendas/demo_agenda.json", "spawnCount": 20, "detailedSchedule": { "rampUpTime": 60, "duration": 300, "rampDownTime": 60, "maxVC": 100, "limitRounds": false }, "agendas": [ { "agendaname": "step1", "agendapath": "/agendas/step1.js", "percentage": 50, "execoptions": [ { "Name": "timeout", "Value": "30" } ], "sleepoptions": {} } ], "testType": 2, "data": { ... } }
+</span></code></pre></div>
+<h2 id="get-a-single-url-based-loadtest-by-id">Get a single <strong>URL-based</strong> loadtest by ID</h2>
+<p>GET /api/loadtest/url/:id</p>
+<p>Returns extended URL-based test details if <code>testType = 3</code>.</p>
+<p><strong><em>Example Request</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>GET /api/loadtest/url/11 HTTP/1.1 
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>Accept: application/json 
+</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>Content-Type: application/json 
+</span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span></code></pre></div>
+<p><strong><em>Example Response</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>HTTP/1.1 200 
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>Content-Type: application/json
+</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>{ "id": 11, "orgId": 1, "name": "url_test_example", "path": "/urls/url_test_example", "schedule": "0 4 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T04:00:00Z", "state": "idle", "datasourceId": 1, "location": "us-east", "url": "https://example.com", "urls": [ { "url": "https://example.com/login", "method": "POST", "requestbody": "{}", "headers": [ { "Name": "Content-Type", "Value": "application/json" } ], "formdata": [] } ], "spawnCount": 30, "testType": 3, "data": { ... } }
 </span></code></pre></div>
 <h2 id="update-a-loadtest">Update a loadtest</h2>
 <p>Updates an existing loadtest by ID.</p>
@@ -1621,50 +1618,50 @@ This sets <code>testType</code> to <code>2</code> internally.</p>
 </tbody>
 </table>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>PUT /api/loadtest/5 HTTP/1.1 
-</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>Accept: application/json 
-</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>Content-Type: application/json 
-</span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
-</span><span id="__span-13-5"><a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>
-</span><span id="__span-13-6"><a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>{ "name": "staging_test_updated", "path": "/tests/new_staging.js", "schedule": "0 */4 * * *", "scheduleOverride": 1, "data": { "spawncount": 80 } }
-</span></code></pre></div>
-<p><strong><em>Example Response</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>HTTP/1.1 200 
-</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>Content-Type: application/json
-</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>{ "message": "loadtest updated", "id": 5, "name": "staging_test_updated" }
-</span></code></pre></div>
-<h2 id="delete-a-loadtest-by-id">Delete a loadtest by ID</h2>
-<p>Removes a loadtest by its ID.</p>
-<p>DELETE /api/loadtest/:id</p>
-<p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>DELETE /api/loadtest/10 HTTP/1.1 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>PUT /api/loadtest/5 HTTP/1.1 
 </span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>Accept: application/json 
 </span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>Content-Type: application/json 
 </span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>{ "name": "staging_test_updated", "path": "/tests/new_staging.js", "schedule": "0 */4 * * *", "scheduleOverride": 1, "data": { "spawncount": 80 } }
 </span></code></pre></div>
 <p><strong><em>Example Response</em></strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>HTTP/1.1 200 
 </span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>Content-Type: application/json
 </span><span id="__span-16-3"><a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>
-</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>{ "message": "load test deleted" }
+</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>{ "message": "loadtest updated", "id": 5, "name": "staging_test_updated" }
+</span></code></pre></div>
+<h2 id="delete-a-loadtest-by-id">Delete a loadtest by ID</h2>
+<p>Removes a loadtest by its ID.</p>
+<p>DELETE /api/loadtest/:id</p>
+<p><strong><em>Example Request</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>DELETE /api/loadtest/10 HTTP/1.1 
+</span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>Accept: application/json 
+</span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>Content-Type: application/json 
+</span><span id="__span-17-4"><a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span></code></pre></div>
+<p><strong><em>Example Response</em></strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>HTTP/1.1 200 
+</span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>Content-Type: application/json
+</span><span id="__span-18-3"><a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>{ "message": "load test deleted" }
 </span></code></pre></div>
 <h2 id="delete-a-loadtest-by-name">Delete a loadtest by name</h2>
 <p>Removes a loadtest by its name.</p>
 <p>DELETE /api/loadtest/name/:name</p>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>DELETE /api/loadtest/name/prod_loadtest HTTP/1.1 
-</span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>Accept: application/json 
-</span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>Content-Type: application/json 
-</span><span id="__span-17-4"><a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
-</span><span id="__span-17-5"><a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>
-</span><span id="__span-17-6"><a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>***Example Response***
-</span><span id="__span-17-7"><a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>
-</span><span id="__span-17-8"><a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a>```text
-</span><span id="__span-17-9"><a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a>HTTP/1.1 200 
-</span><span id="__span-17-10"><a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a>Content-Type: application/json
-</span><span id="__span-17-11"><a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a>
-</span><span id="__span-17-12"><a href="#__codelineno-17-12" id="__codelineno-17-12" name="__codelineno-17-12"></a>{ "message": "loadtest was deleted" }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>DELETE /api/loadtest/name/prod_loadtest HTTP/1.1 
+</span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>Accept: application/json 
+</span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>Content-Type: application/json 
+</span><span id="__span-19-4"><a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+</span><span id="__span-19-5"><a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a>***Example Response***
+</span><span id="__span-19-7"><a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a>
+</span><span id="__span-19-8"><a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a>```text
+</span><span id="__span-19-9"><a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a>HTTP/1.1 200 
+</span><span id="__span-19-10"><a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a>Content-Type: application/json
+</span><span id="__span-19-11"><a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a>
+</span><span id="__span-19-12"><a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a>{ "message": "loadtest was deleted" }
 </span></code></pre></div>
 <h2 id="start-a-loadtest-by-id">Start a loadtest by ID</h2>
 <p>Forces a loadtest to start immediately by updating its <code>state</code> and next execution.</p>
@@ -1678,16 +1675,16 @@ This sets <code>testType</code> to <code>2</code> internally.</p>
 <p>Retrieves a single loadtest by its unique name.</p>
 <p>GET /api/loadtest/name/:name</p>
 <p><strong><em>Example Request</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>GET /api/loadtest/name/staging_test HTTP/1.1 
-</span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>Accept: application/json 
-</span><span id="__span-18-3"><a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>Content-Type: application/json 
-</span><span id="__span-18-4"><a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>GET /api/loadtest/name/staging_test HTTP/1.1 
+</span><span id="__span-20-2"><a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>Accept: application/json 
+</span><span id="__span-20-3"><a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>Content-Type: application/json 
+</span><span id="__span-20-4"><a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>Authorization: Bearer &lt;YOUR_API_TOKEN&gt;
 </span></code></pre></div>
 <p><strong><em>Example Response</em></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>HTTP/1.1 200 
-</span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>Content-Type: application/json
-</span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>
-</span><span id="__span-19-4"><a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>{ "id": 5, "orgId": 1, "name": "staging_test", "path": "/tests/staging.js", "schedule": "0 */2 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T02:00:00Z", "state": "scheduled", "datasourceId": 1, "location": "us-east", "data": { ... }, "testType": 1 }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>HTTP/1.1 200 
+</span><span id="__span-21-2"><a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>Content-Type: application/json
+</span><span id="__span-21-3"><a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>{ "id": 5, "orgId": 1, "name": "staging_test", "path": "/tests/staging.js", "schedule": "0 */2 * * *", "scheduleOverride": 0, "nextExec": "2025-04-22T02:00:00Z", "state": "scheduled", "datasourceId": 1, "location": "us-east", "data": { ... }, "testType": 1 }
 </span></code></pre></div>
 <p><strong>NOTE</strong>: The request and response bodies above are representative examples; actual fields (especially within <code>data</code>) can vary depending on the testType and extended settings. Always ensure you include the required headers and valid JSON structures in your requests.</p>
 </article>
