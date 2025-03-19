@@ -2,6 +2,8 @@
 
 The following are global JavaScript functions that are used by WebLOAD and can be used to perform specific tasks.
 
+## Protocol Script Functions
+
 ### Methods
 
 #### DebugMessage(str)
@@ -840,3 +842,147 @@ Generated ID
 Type
 
 string
+
+## Instrument Handlers
+
+Handlers are custom functions that can be set to be called before or after certain commands.
+
+A handler has an "ID", which is a string name to indentify it, and a function to be called. This can be an annonymous function (see examples).
+
+### Method handlers
+
+#### addBeforeRequestHandler(id, func)
+
+Handler function is called before each HTTP Request. Original arguments are given as array. Can be used to add commands before the request.
+
+**Example**
+
+```js
+addBeforeRequestHandler(
+    "info-before", 
+    function(args) { 
+            InfoMessage("about to make request to " + args[0]); 
+            wlHttp.SaveSource=true;
+        } 
+    );
+
+//will print "about to make request to http://something.com"
+wlHttp.Get("http://something.com");
+```
+
+#### addAfterRequestHandler(id, func)
+
+Handler function is called after each HTTP Request. Original arguments are given as array. Can be used to check information after the request
+
+**Example**
+
+```js
+addAfterRequestHandler(
+    "after-request-check", 
+    function(args) { 
+            InfoMessage("check request to " + args[0]); 
+            if (document.wlSource.indexOf("ERROR")>=0) {
+                WarningMessage("Request had ERROR");
+            }
+        } 
+    );
+wlHttp.SaveSource=true;
+wlHttp.Post("http://something.com");
+```
+
+#### addOnScriptAbortHandler(id, func)
+
+Handler function is called whenver a virtual client is terminated.
+
+**Example**
+
+```js
+addOnScriptAbortHandler(
+    "after-request-check", 
+    function(args) { 
+            InfoMessage("client is stopping"); 
+        } 
+    );
+
+ErrorMessage("stop client");
+```
+
+#### addBeforeBeginTransactionHandler(id, func)
+
+Handler function is called before each BeginTransaction(), function given original arguments.
+
+**Example**
+
+```js
+addBeforeBeginTransactionHandler(
+    "before-trx", 
+    function(trx) { 
+            InfoMessage("wait outside transaction " + trx); 
+            Sleep(5000)
+        } 
+    );
+
+BeginTransaction("Transaction1");
+InfoMessage("Inside Transaction1");
+EndTransaction("Transaction1");
+```
+
+#### addAfterBeginTransactionHandler(id, func)
+
+Handler function is called after each BeginTransaction(), function given original arguments.
+
+**Example**
+
+```js
+addAfterBeginTransactionHandler(
+    "before-trx", 
+    function(trx) { 
+            InfoMessage("wait inside transaction " + trx); 
+            Sleep(5000)
+        } 
+    );
+
+BeginTransaction("Transaction1");
+InfoMessage("Inside Transaction1");
+EndTransaction("Transaction1");
+```
+
+#### addBeforeEndTransactionHandler(id, func)
+
+Handler function is called before each EndTransaction(), function given original arguments.
+
+**Example**
+
+```js
+addBeforeEndTransactionHandler(
+    "before-trx-end", 
+    function(trx) { 
+            InfoMessage("make extra request inside transaction " + trx); 
+            wlHttp.Get("http://some-extra-request");
+        } 
+    );
+
+BeginTransaction("Transaction1");
+InfoMessage("Inside Transaction1");
+EndTransaction("Transaction1");
+```
+
+#### addAfterEndTransactionHandler(id, func)
+
+Handler function is called after each EndTransaction(), function given original arguments.
+
+**Example**
+
+```js
+addAfterEndTransactionHandler(
+    "before-trx-end", 
+    function(trx) { 
+            InfoMessage("make extra request outside transaction " + trx); 
+            wlHttp.Get("http://some-extra-request");
+        } 
+    );
+
+BeginTransaction("Transaction1");
+InfoMessage("Inside Transaction1");
+EndTransaction("Transaction1");
+```
