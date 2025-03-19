@@ -7,7 +7,7 @@ The Front-end API controls load-tests, users, organizations, and is accessible o
 
 See scripts that uses these APIs to start tests and generate reports:
 
-- [Python script](./sample_api_python.md)
-- [Groovy script](./sample_api_groovy.md)
+- [Python script](./grafana/http_api/sample_api_python.md)
+- [Groovy script](./grafana/http_api/sample_api_groovy.md)
 
 <swagger-ui src="swagger.json"/>
