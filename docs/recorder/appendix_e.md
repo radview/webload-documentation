@@ -119,26 +119,45 @@ c:\users\myuser\AppData\Local\Android\Sdk\emulator\emulator.exe
 
 (See below these command as a script - Script to set-up emulator)
 
-`emulator.exe -list-avds`
-
+List devices.
 Should show:
 Pixel_3a_XL_API_29
 
+`emulator.exe -list-avds`
+
+Start the emulator in writable mode (make sure it's *not* turned on before running). Should start the emulator in a new window, wait for it to load ("boot completed")
+
 `emulator -avd Pixel_3a_XL_API_29 -writable-system`
 
+start adb root, should say: restarting adbd as root
+
 `adb root`
+
+diable verification, should say: Successfully disabled verification.
 
 `adb shell avbctl disable-verification`
 
+Reboot the device for changes to take effect. WAIT for reboot to start and end. Emulator window will have "boot completed" again - this takes time!
+
 `adb reboot`
+
+start as root, should not display anything
 
 `adb root`
 
+remount, should say: remount succeeded
+
 `adb remount`
+
+copy cert, should say: 1 file pushed
 
 `adb push "c:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\root.pem" /system/etc/security/cacerts/3b4f28f8.0`
 
+chmod, should not display anything
+
 `adb shell chmod 664 /system/etc/security/cacerts/3b4f28f8.0`
+
+Final reboot, wait for it to start and end, start recording in WebLOAD, change WiFi proxy settings to 10.0.2.2 port 9884 and record scenario
 
 `adb reboot`
 
@@ -161,6 +180,7 @@ Start WebLOAD Recorder.
     - Set ‘Proxy’ to ‘manual’
     - Set ‘Proxy hostname’ to ‘10.0.2.2’ (this will point to the machine running the emulator. localhost/127.0.0.1 means the android device)
     - Set ‘Proxy port’ to 9884
+![Android Wifi Settings](../images/android_wifi_settings.png)
 
 Now traffic from the apps and browser should be captured in WebLOAD.
 
