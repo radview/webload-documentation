@@ -1392,17 +1392,27 @@ C:\Users\myuser\AppData\Local\Android\Sdk\platform-tools</p>
 <p>Emulator will be in :
 c:\users\myuser\AppData\Local\Android\Sdk\emulator\emulator.exe</p>
 <p>(See below these command as a script - Script to set-up emulator)</p>
-<p><code>emulator.exe -list-avds</code></p>
-<p>Should show:
+<p>List devices.
+Should show:
 Pixel_3a_XL_API_29</p>
+<p><code>emulator.exe -list-avds</code></p>
+<p>Start the emulator in writable mode (make sure it's <em>not</em> turned on before running). Should start the emulator in a new window, wait for it to load ("boot completed")</p>
 <p><code>emulator -avd Pixel_3a_XL_API_29 -writable-system</code></p>
+<p>start adb root, should say: restarting adbd as root</p>
 <p><code>adb root</code></p>
+<p>diable verification, should say: Successfully disabled verification.</p>
 <p><code>adb shell avbctl disable-verification</code></p>
+<p>Reboot the device for changes to take effect. WAIT for reboot to start and end. Emulator window will have "boot completed" again - this takes time!</p>
 <p><code>adb reboot</code></p>
+<p>start as root, should not display anything</p>
 <p><code>adb root</code></p>
+<p>remount, should say: remount succeeded</p>
 <p><code>adb remount</code></p>
+<p>copy cert, should say: 1 file pushed</p>
 <p><code>adb push "c:\Program Files (x86)\RadView\WebLOAD\bin\Certificates\root.pem" /system/etc/security/cacerts/3b4f28f8.0</code></p>
+<p>chmod, should not display anything</p>
 <p><code>adb shell chmod 664 /system/etc/security/cacerts/3b4f28f8.0</code></p>
+<p>Final reboot, wait for it to start and end, start recording in WebLOAD, change WiFi proxy settings to 10.0.2.2 port 9884 and record scenario</p>
 <p><code>adb reboot</code></p>
 <h4 id="record-in-webload">Record in WebLOAD</h4>
 <p>Set proxy settings:</p>
@@ -1418,7 +1428,8 @@ Pixel_3a_XL_API_29</p>
 <li>Expand the ‘Advanced options’<ul>
 <li>Set ‘Proxy’ to ‘manual’</li>
 <li>Set ‘Proxy hostname’ to ‘10.0.2.2’ (this will point to the machine running the emulator. localhost/127.0.0.1 means the android device)</li>
-<li>Set ‘Proxy port’ to 9884</li>
+<li>Set ‘Proxy port’ to 9884
+<img alt="Android Wifi Settings" src="../../images/android_wifi_settings.png"/></li>
 </ul>
 </li>
 </ul>
