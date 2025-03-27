@@ -22,13 +22,6 @@ orgId = "1"
 docRoot = "http://localhost:3000/" 
 datasourceEndpoint = "http://localhost:3000/api/datasources/proxy/1"
 
-
-# Example of usage
-if __name__ == "__main__":
-    session_id = run_test_by_name("my test name")
-    wait_session_end(session_id)
-    save_analytics_report([session_id], "summary.pdf", "Performance Summary")
-
 def get_test_id(test_name):
     enc_test_name = urllib.parse.quote(test_name)
     find_test_url = f"{docRoot}/api/loadtest/search?query={enc_test_name}"
@@ -140,4 +133,11 @@ def get_data(url):
         raise Exception(f"HTTP Error {response.status_code} while getting {url}")
 
     return response.text
+
+# Example of usage
+if __name__ == "__main__":
+    session_id = run_test_by_name("my test name")
+    wait_session_end(session_id)
+    save_analytics_report([session_id], "summary.pdf", "Performance Summary")
+
 ```
