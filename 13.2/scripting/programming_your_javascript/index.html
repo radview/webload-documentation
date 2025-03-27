@@ -1020,6 +1020,38 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pacing-and-sleep-time">
+<span class="md-ellipsis">
+      Pacing and Sleep Time
+    </span>
+</a>
+<nav aria-label="Pacing and Sleep Time" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleep-and-sleepalways">
+<span class="md-ellipsis">
+      Sleep() and SleepAlways()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#round-and-transaction-pacing">
+<span class="md-ellipsis">
+      Round and Transaction Pacing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-sleep-is-executed-and-measureed">
+<span class="md-ellipsis">
+      How Sleep is executed and measureed
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -2357,6 +2389,38 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pacing-and-sleep-time">
+<span class="md-ellipsis">
+      Pacing and Sleep Time
+    </span>
+</a>
+<nav aria-label="Pacing and Sleep Time" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleep-and-sleepalways">
+<span class="md-ellipsis">
+      Sleep() and SleepAlways()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#round-and-transaction-pacing">
+<span class="md-ellipsis">
+      Round and Transaction Pacing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-sleep-is-executed-and-measureed">
+<span class="md-ellipsis">
+      How Sleep is executed and measureed
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -3486,6 +3550,36 @@
 <h3 id="vcuniqueid">VCUniqueID()</h3>
 <p>This returns a unique identification string for the current Virtual Client instance.</p>
 <p><code>VCUniqueID()</code> provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to <a href="#clientnum"><em>ClientNum</em> </a>, which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.</p>
+<h2 id="pacing-and-sleep-time">Pacing and Sleep Time</h2>
+<p>There are various ways and methods to control how virtual users similate wait time to simulate think time or sleep time, and how this time is reflected in the statistics.</p>
+<h3 id="sleep-and-sleepalways">Sleep() and SleepAlways()</h3>
+<p>To add wait time to the script, use <a href="../../javascript/actions_objects_functions/#sleep-function">Sleep()</a> with number of milliseconds to wait, for example:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1">//Sleep 5 seconds:</span>
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+<p>The actual wait time will depent on the sleep settings, by default the Recorder ignores sleep, and Console uses Sleep As Recorded but this can be changed in the <a href="../../console/set_script_options/#setting-sleep-time-playback-settings">Sleep time settings</a></p>
+<p>To override the settings and always wait, use <a href="../../javascript/actions_objects_functions/#sleepalways-function">SleepAlways()</a> with number of milliseconds to wait, for example:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">//Always Sleep 5 seconds, regardless of settings:</span>
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nx">SleepAlways</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+<h3 id="round-and-transaction-pacing">Round and Transaction Pacing</h3>
+<p>Pacing is used to set a minimum time for exection, to set a constant pace of operation. This can be done on the whole script (round) level, or for a single transaction.</p>
+<p>For example:
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="s2">"Login"</span><span class="p">,</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span>
+</span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://dologin"</span><span class="p">);</span>
+</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">"Login"</span><span class="p">);</span>
+</span></code></pre></div></p>
+<p>This will make sure that the "Login" transaction will take no less that 5 seconds. For example, if the request takes 1 second, 4 seconds of sleep time is added. If the request takes 2 seconds, 3 seconds of sleep time is added. If the request takes more than 5 minues, not sleep time is added but the transaction will take longer than expected so for pacing to work, make sure to add enough time. See <a href="../../javascript/actions_objects_functions/#begintransaction-function">BeginTransaction()</a>.</p>
+<p>Pacing can also be performed of the whole script level using <a href="../../javascript/actions_objects_functions/#elapsedroundtime-property">ElapsedRoundTime</a> property. For example:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">(){</span>
+</span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">ElapsedRoundTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50000</span><span class="p">;</span><span class="w"> </span><span class="c1">//round should take at least 5 seconds</span>
+</span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="how-sleep-is-executed-and-measureed">How Sleep is executed and measureed</h3>
+<p>Sleep() commands in the script are affected by the sleep time settings. There are settings in the Recorder (default is ignores sleep) and separetly in the Console (default to Sleep As Recorded). The Sleep behavior can be controlled in the <a href="../../console/set_script_options/#setting-sleep-time-playback-settings">Sleep time settings</a>.</p>
+<p>Transaction times by default contain sleep time. You can use setting to cause transaction times not to include sleep times. See <a href="../../console/set_script_options/#setting-sleep-time-playback-settings">Sleep Time in Transactions</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
