@@ -1515,3 +1515,11 @@ function InitAgenda(){
 Sleep() commands in the script are affected by the sleep time settings. There are settings in the Recorder (default is ignores sleep) and separetly in the Console (default to Sleep As Recorded). The Sleep behavior can be controlled in the [Sleep time settings](../console/set_script_options.md#setting-sleep-time-playback-settings).
 
 Transaction times by default contain sleep time. You can use setting to cause transaction times not to include sleep times. See [Sleep Time in Transactions](../console/set_script_options.md#setting-sleep-time-playback-settings)
+
+### Sleep Synchronization
+
+Sometimes it is usedful to have all virtual users sleep the same amount, to synchronize their behavior (for example when many users start an action at same time).
+
+Use [SleepUntil(millis)](../javascript/js_helper_funcs.md#sleepuntilmillisfrombeginning) to until until certain amout of time has passed since the begining of the session (regardless of when this particular virtual client started - all clients will wait for this same point in time).
+
+[SleepEvery(millis)](../javascript/js_helper_funcs.md#sleepeverymillis) - similar to SleepUntil but recorring.
