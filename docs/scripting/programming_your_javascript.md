@@ -1465,3 +1465,53 @@ This returns a unique identification string for the current Virtual Client insta
 
 `VCUniqueID()` provides an identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to [*ClientNum* ](#clientnum), which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a combination of the current thread number, round number, and other internal markers.
 
+## Pacing and Sleep Time
+
+There are various ways and methods to control how virtual users similate wait time to simulate think time or sleep time, and how this time is reflected in the statistics.
+
+### Sleep() and SleepAlways()
+
+To add wait time to the script, use [Sleep()](../javascript/actions_objects_functions.md#sleep-function) with number of milliseconds to wait, for example:
+
+```javascript
+//Sleep 5 seconds:
+Sleep(5000); 
+```
+
+The actual wait time will depent on the sleep settings, by default the Recorder ignores sleep, and Console uses Sleep As Recorded but this can be changed in the [Sleep time settings](../console/set_script_options.md#setting-sleep-time-playback-settings)
+
+To override the settings and always wait, use [SleepAlways()](../javascript/actions_objects_functions.md#sleepalways-function ) with number of milliseconds to wait, for example:
+
+```javascript
+//Always Sleep 5 seconds, regardless of settings:
+SleepAlways(5000); 
+```
+
+### Round and Transaction Pacing
+
+Pacing is used to set a minimum time for exection, to set a constant pace of operation. This can be done on the whole script (round) level, or for a single transaction.
+
+For example:
+```javascript
+BeginTransaction("Login", 5000);
+
+wlHttp.Get("http://dologin");
+
+EndTransaction("Login");
+```
+
+This will make sure that the "Login" transaction will take no less that 5 seconds. For example, if the request takes 1 second, 4 seconds of sleep time is added. If the request takes 2 seconds, 3 seconds of sleep time is added. If the request takes more than 5 minues, not sleep time is added but the transaction will take longer than expected so for pacing to work, make sure to add enough time. See [BeginTransaction()](../javascript/actions_objects_functions.md#begintransaction-function).
+
+Pacing can also be performed of the whole script level using [ElapsedRoundTime](../javascript/actions_objects_functions.md#elapsedroundtime-property) property. For example:
+
+```javascript
+function InitAgenda(){
+    wlGlobals.ElapsedRoundTime = 50000; //round should take at least 5 seconds
+}
+```
+
+### How Sleep is executed and measureed
+
+Sleep() commands in the script are affected by the sleep time settings. There are settings in the Recorder (default is ignores sleep) and separetly in the Console (default to Sleep As Recorded). The Sleep behavior can be controlled in the [Sleep time settings](../console/set_script_options.md#setting-sleep-time-playback-settings).
+
+Transaction times by default contain sleep time. You can use setting to cause transaction times not to include sleep times. See [Sleep Time in Transactions](../console/set_script_options.md#setting-sleep-time-playback-settings)

@@ -183,16 +183,7 @@ wlHttp.Get(“http://something”);
 
 Use the BeginTransaction() and EndTransaction() functions to define the start and finish of a logical block of code that you wish to redefine as a single logical transaction unit. This enables setting timers, verification tests, and other measurements for this single logical unit.
 
-Optionally, you can specify a period of time, which is the minimum amount of time for the transaction. If the total time of the transaction is less than the time period specified, the machine sleeps for the remainder of the time in order to simulate the intermittent activity of real users.
-
-The behavior of the sleep time is affected by the Sleep Time Control settings that are set in the Current Project Options of the WebLOAD Recorder and Console. These settings can be one of the following:
-
-* **Sleep time as recorded** – Runs the script with the delays corresponding to the natural pauses that occurred when recording the script.
-* **Ignore recorded sleep time (default)** – Eliminates any pauses when running the script and runs a worst-case stress test.
-* **Set random sleep time** – Sets the ranges of delays to represent a range of users.
-* **Set sleep time deviation** – Sets the percentage of deviation from the recorded value to represent a range of users.
-
-For more information on setting the Sleep Time Control settings, see *Configuring Sleep Time Control Options* in the *WebLoad Recorder User’s Guide*.
+Optionally, you can specify a period of time, which is the minimum amount of time for the transaction to control pacing. If the total time of the transaction is less than the time period specified, the machine sleeps for the remainder of the time in order to simulate the intermittent activity of real users.
 
 **Note:** If the transaction fails, it still sleeps for the specified time interval. This is true even if an error not directly connected to the transaction is received, for example, HTTP 500 for a GET within the transaction.
 
@@ -1539,8 +1530,10 @@ For more information on setting the Sleep Time Control settings, see *Configurin
 
 **Example**
 
-```
-function InitAgenda(){wlGlobals.ElapsedRoundTime = 1056}
+```javascript
+function InitAgenda(){
+    wlGlobals.ElapsedRoundTime = 50000; //round should take at least 5 seconds
+}
 ```
 
 ## element (object)
@@ -7952,6 +7945,42 @@ Specify one of the sleep options when running a test script in the Sleep Time Co
 * **Set sleep time deviation** – Sets the percentage of deviation from the recorded value to represent a range of users.
 
 For more information on setting the Sleep Time Control settings, see *Configuring Sleep Time Control Options* in the *WebLOAD Recorder User’s Guide*.
+
+**See also**
+
+* DisableSleep (see [*DisableSleep (property)* ](#disablesleep-property))
+* SendCounter() (see [*SendCounter() (function)* ](#sendcounter-function))
+* SendMeasurement() (see [*SendMeasurement() (function)* ](#sendmeasurement-function))
+* SendTimer() (see [*SendTimer() (function)* ](#sendtimer-function))
+* SetTimer() (see [*SetTimer() (function)* ](#sendtimer-function))
+* SleepDeviation (see [*SleepDeviation (property)* ](#sleepdeviation-property))
+* SleepRandomMax (see [*SleepRandomMax (property)* ](#sleeprandommax-property))
+* SleepRandomMin (see [*SleepRandomMin (property)* ](#sleeprandommin-property))
+* SynchronizationPoint() (see [*SynchronizationPoint() (function)* ](#synchronizationpoint-function))
+* [*Timing Functions* ](./using_javascript_ref.md#timing-functions)
+* [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor)
+
+## SleepAlways() (function)
+
+**Description**
+
+Pause for a specified number of milliseconds, regardless of settings. Unlke [Sleep()](#sleep-function), this function does not take into account sleep settings, and will sleep the given time even when sleep settings is set to ignore or have a max-sleep setting.
+
+| **Parameter  Name** | **Description**                                             |
+| ------------------------- | ----------------------------------------------------------------- |
+| PauseTime                 | An integer value specifying the number of  milliseconds to pause. |
+
+**Syntax** SleepAlways(PauseTime) **Parameters**
+
+**Example**
+
+To pause for 1 second, regaredless of settings, write:
+
+SleepAlways(1000)
+
+**Comment**
+
+This command ignore the sleep options defined in the Sleep Time Control tab
 
 **See also**
 
