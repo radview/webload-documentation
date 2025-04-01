@@ -582,12 +582,12 @@ In WebLOAD Recorder, enable maintaining connections during execution by checking
 
 **Description**
 
-Indicates whether to close the connections at the end of each round. The default value of ClearCookiesAtEndOfRound is **false**, to connections can be reused between rounds. By setting this flag to true, the connections will be closed at the end of each round.
+Indicates whether to close the connections at the end of each round. The default value of ClearCookiesAtEndOfRound is **true**, connections are closed between rounds. By setting this flag to false, the connections will be reused.
 
 **Example**
 
 ```javascript
-wlGlobals.CloseConnectionsAtEndOfRound  = true
+wlGlobals.CloseConnectionsAtEndOfRound  = false
 
 ```
 
