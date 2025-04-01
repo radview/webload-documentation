@@ -6238,9 +6238,9 @@ wlHttp.ClearSSLCache()</p>
 <li><a href="#wlglobals-object">wlGlobals</a></li>
 </ul>
 <p><strong>Description</strong></p>
-<p>Indicates whether to close the connections at the end of each round. The default value of ClearCookiesAtEndOfRound is <strong>false</strong>, to connections can be reused between rounds. By setting this flag to true, the connections will be closed at the end of each round.</p>
+<p>Indicates whether to close the connections at the end of each round. The default value of ClearCookiesAtEndOfRound is <strong>true</strong>, connections are closed between rounds. By setting this flag to false, the connections will be reused.</p>
 <p><strong>Example</strong></p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">CloseConnectionsAtEndOfRound</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">CloseConnectionsAtEndOfRound</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 </span></code></pre></div>
 <h2 id="cols-property">cols (property)</h2>
 <p><strong>Property of Object</strong></p>
