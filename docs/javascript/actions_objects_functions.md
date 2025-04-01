@@ -574,6 +574,23 @@ In WebLOAD Recorder, enable maintaining connections during execution by checking
 * [*HTTP Components* ](./using_javascript_ref.md#http-components)
 * KeepAlive (see [*KeepAlive (property)* ](#keepalive-property))
 
+## CloseConnectionsAtEndOfRound  (property)
+
+**Property of Object**
+
+* [wlGlobals](#wlglobals-object)
+
+**Description**
+
+Indicates whether to close the connections at the end of each round. The default value of ClearCookiesAtEndOfRound is **false**, to connections can be reused between rounds. By setting this flag to true, the connections will be closed at the end of each round.
+
+**Example**
+
+```javascript
+wlGlobals.CloseConnectionsAtEndOfRound  = true
+
+```
+
 ## cols (property)
 
 **Property of Object**
@@ -617,7 +634,9 @@ ConnectTimeout is used to set the amount of time the system will wait for an HTT
 
 **Example**
 
- wlGlobals.ConnectTimeout = 7
+```javascript
+wlGlobals.ConnectTimeout = 7
+```
 
  **See also**
 
