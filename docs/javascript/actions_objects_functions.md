@@ -5694,19 +5694,20 @@ The Outfile property is used to implement the Log Report.
 
 **Example**
 
-To write the response data from
-
-`[“http://note/radview/radview.html](http://note/radview/radview.html)” in “c:\temp.html”`
+To write the response data from http://note/radview/radview.html to “c:\temp.html”
 
 you might write:
 
-`wlHttp.Outfile = “c:\\temp.html”`
-
-`[wlHttp.Get(“http://note/radview/radview.html](http://note/radview/radview.html)”)`
+```javascript
+wlHttp.Outfile = "c:\\temp.html"
+wlHttp.Get("http://note/radview/radview.html")
+```
 
 **Comment**
 
 The Outfile property saves *server response data*. To save *script output* m*essages*, use the wlOutputFile. (see [*wlOutputFile (object)* ](#wloutputfile-object))
+
+*Note*: If the content is zipped (for example when wlGlobals.AcceptEncodingGzip = true. The response headers will show "Content-Encoding: gzip") the outfile will be the zipped content. To view the content you can unzip it, for example by using the extension to ".gz"
 
 **See also**
 
