@@ -2292,6 +2292,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#readfile-function">
+<span class="md-ellipsis">
+      ReadFile() (function)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#receivetimeout-property">
 <span class="md-ellipsis">
       ReceiveTimeout (property)
@@ -4831,6 +4838,13 @@
 <a class="md-nav__link" href="#range-method">
 <span class="md-ellipsis">
       Range() (method)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#readfile-function">
+<span class="md-ellipsis">
+      ReadFile() (function)
     </span>
 </a>
 </li>
@@ -11300,6 +11314,16 @@ wlHttp.ClearSSLCache()</p>
 <li>(see <a href="#seed-method"><em>Seed() (method)</em> </a>)</li>
 <li>Select() (see <a href="#select-method"><em>Select() (method)</em> </a>)</li>
 </ul>
+<h2 id="readfile-function">ReadFile() (function)</h2>
+<p><strong>Description</strong></p>
+<p>Reads the entire contents of the given file.</p>
+<p><strong>Syntax</strong></p>
+<p>ReadFile(fileName)</p>
+<p><strong>Parameters</strong></p>
+<p>fileName to read</p>
+<p><strong>Comment</strong></p>
+<p>ReadFile a low level function to read a full file. For parameterization usage, <a href="../../recorder/configuring_recorder_options/#configuring-the-parameterization-manager">Parameterization Manager</a> is more appropriate.</p>
+<p>If the file is not found, an error is shown. Older versions (prior to 12.7) would return an empty string instead. To use the old behavior if needed, use <code>ReadFile_deprecated()</code>, alternatively, use <code>UNDOC_WLFileExist(fileName)</code> to check if the file exists.</p>
 <h2 id="receivetimeout-property">ReceiveTimeout (property)</h2>
 <p><strong>Property of Objects</strong></p>
 <ul>
