@@ -6677,6 +6677,26 @@ A random integer that falls within the specified range.
 * (see [*Seed() (method)* ](#seed-method))
 * Select() (see [*Select() (method)* ](#select-method))
 
+## ReadFile() (function)
+
+**Description**
+
+Reads the entire contents of the given file.
+
+**Syntax**
+
+ReadFile(fileName)
+
+**Parameters**
+
+fileName to read
+
+**Comment**
+
+ReadFile a low level function to read a full file. For parameterization usage, [Parameterization Manager](../recorder/configuring_recorder_options.md#configuring-the-parameterization-manager) is more appropriate.
+
+If the file is not found, an error is shown. Older versions (prior to 12.7) would return an empty string instead. To use the old behavior if needed, use `ReadFile_deprecated()`, alternatively, use `UNDOC_WLFileExist(fileName)` to check if the file exists.
+
 ## ReceiveTimeout (property)
 
 **Property of Objects**
