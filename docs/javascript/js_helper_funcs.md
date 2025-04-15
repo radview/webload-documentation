@@ -853,7 +853,7 @@ A handler has an "ID", which is a string name to indentify it, and a function to
 
 #### addBeforeRequestHandler(id, func)
 
-Handler function is called before each HTTP Request. Original arguments are given as array. Can be used to add commands before the request.
+Handler function is called before each HTTP Request. Original arguments are given as array. Can be used to add commands before the request. 
 
 **Example**
 
@@ -868,6 +868,23 @@ addBeforeRequestHandler(
 
 //will print "about to make request to http://something.com"
 wlHttp.Get("http://something.com");
+```
+
+The handler function can return a boolean value to skip the default behavior. Default is `false` (don't skip), but returning `true` will cause skipping the command. For example:
+
+```js
+Example:
+addBeforeRequestHandler("skip_bad", function(args) { 
+ var url = args[0];
+ if (url.indexOf("bad")>=0) {
+    InfoMessage("skip request to " + url); 
+    return true; //cause the default behavior to be skipped, i.e. don't perform the Get()
+ } else {
+    InfoMessage("making request to " + url); 
+ }
+});
+wlHttp.Get("http://www.good.com") //do it
+wlHttp.Get("http://bad_one.com") //skip it
 ```
 
 #### addAfterRequestHandler(id, func)
