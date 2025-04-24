@@ -1,0 +1,1982 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../intro_java_scripts/" rel="prev"/>
+<link href="../actions_objects_functions/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Using the WebLOAD JavaScript Reference - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#using-the-webload-javascript-reference">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Using the WebLOAD JavaScript Reference
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/global_lab_load_generators/">
+<span class="md-ellipsis">
+    Global Lab Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/rest_api/">
+<span class="md-ellipsis">
+    Using the REST API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#http-components">
+<span class="md-ellipsis">
+      HTTP Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collections">
+<span class="md-ellipsis">
+      Collections
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-management-functions">
+<span class="md-ellipsis">
+      File Management Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identification-variables-and-functions">
+<span class="md-ellipsis">
+      Identification Variables and Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#message-functions">
+<span class="md-ellipsis">
+      Message Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objects">
+<span class="md-ellipsis">
+      Objects
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ssl-cipher-command-suite">
+<span class="md-ellipsis">
+      SSL Cipher Command Suite
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timing-functions">
+<span class="md-ellipsis">
+      Timing Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameterization">
+<span class="md-ellipsis">
+      Parameterization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transaction-verification-components">
+<span class="md-ellipsis">
+      Transaction Verification Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../js_helper_funcs/">
+<span class="md-ellipsis">
+    JavaScript Helper Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#http-components">
+<span class="md-ellipsis">
+      HTTP Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collections">
+<span class="md-ellipsis">
+      Collections
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-management-functions">
+<span class="md-ellipsis">
+      File Management Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identification-variables-and-functions">
+<span class="md-ellipsis">
+      Identification Variables and Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#message-functions">
+<span class="md-ellipsis">
+      Message Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objects">
+<span class="md-ellipsis">
+      Objects
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ssl-cipher-command-suite">
+<span class="md-ellipsis">
+      SSL Cipher Command Suite
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timing-functions">
+<span class="md-ellipsis">
+      Timing Functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameterization">
+<span class="md-ellipsis">
+      Parameterization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transaction-verification-components">
+<span class="md-ellipsis">
+      Transaction Verification Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="using-the-webload-javascript-reference">Using the WebLOAD JavaScript Reference</h1>
+<p>The WebLOAD JavaScript programming tools provide a powerful means of adding sophisticated, complex tailoring to recorded scripts. WebLOAD supports literally hundreds of functions, objects, properties, and methods, to provide optimal programming power for your test session script.</p>
+<p>To simplify access to the WebLOAD JavaScript toolset, this section organizes the functions and objects into major categories, providing you with information to help you locate a specific tool or capability.</p>
+<blockquote>
+<p><strong>Note:</strong> These categories do not constitute an exhaustive list of all WebLOAD JavaScript objects, properties, methods, and functions. This is simply a list of the major categories, to help you quickly identify the most commonly used items.</p>
+</blockquote>
+<p>The WebLOAD JavaScript toolset includes many additional elements. For a complete, alphabetical reference list of all toolset components, see <a href="../actions_objects_functions/#webload-actions-objects-and-functions"><em>WebLOAD Actions, Objects, and Functions</em> </a>.</p>
+<p><strong>The WebLOAD JavaScript toolset can be organized into the following categories:</strong></p>
+<ul>
+<li><strong>Collections</strong>—Meta-objects that serve as arrays or sets of individual objects. </li>
+<li><strong>File Management</strong>—Functions used to manage access to a script’s external files. </li>
+<li><strong>Identification Components</strong>—Functions and variables used to identify specific elements or points of time during a test session, for clarity in understanding session results and output reports. </li>
+<li><strong>Message Functions</strong>—Functions used to display messages in the WebLOAD Console Log Window. </li>
+<li>
+<p><strong>Objects</strong>—A brief introduction to the WebLOAD JavaScript object set. </p>
+</li>
+<li>
+<p><strong>SSL Cipher Command Suite</strong>—A set of functions and properties that implement full SSL/TLS 1.0 protocol support. </p>
+</li>
+<li>
+<p><strong>Timing Functions</strong>—Functions used to time or synchronize any operation or group of user activities in a script. </p>
+</li>
+<li>
+<p><strong>Transaction Verification Components</strong>—Components used to create customized transaction verification functions. </p>
+</li>
+<li>
+<p><strong>Parameterization</strong>—A brief introduction explanation and reference to all parameterization objects and functions. </p>
+</li>
+<li>
+<p><strong>Internet Protocol Support</strong>—Objects that implement full support of the complete range of Internet protocols. </p>
+</li>
+</ul>
+<h2 id="http-components">HTTP Components</h2>
+<p><strong>Properties and Methods of Objects</strong></p>
+<ul>
+<li>
+<p>wlGlobals (see <a href="../actions_objects_functions/#wlglobals-object"><em>wlGlobals (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlHttp (see <a href="../actions_objects_functions/#wlhttp-object"><em>wlHttp (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlLocals (see <a href="../actions_objects_functions/#wllocals-object"><em>wlLocals (object)</em> </a>)</p>
+</li>
+</ul>
+<p><strong>Description</strong></p>
+<p>The wlGlobals, wlLocals, and wlHttp objects share a set of components that manage user HTTP activities. This section lists these browser properties and methods. Some of the components are common to all three objects. Some of the properties or methods are used by only one object, and are marked so in the tables.</p>
+<blockquote>
+<p><strong>Note:</strong> The values assigned in a wlHttp object override any global defaults assigned in wlGlobals or local defaults in wlLocals. WebLOAD uses the wlGlobals or wlLocals defaults only if you do not assign values to the corresponding properties in the wlHttp object.</p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<p><code>NewValue* = wlGlobals.*BrowserMethod()*</code> </p>
+<p><code>wlGlobals.*BrowserProperty* = *PropertyValue</code></p>
+<p><strong>Example</strong></p>
+<p>Each individual property and method includes examples of the syntax for that property.</p>
+<p><strong>Methods</strong></p>
+<ul>
+<li>
+<p>ClearDNSCache() (see <a href="../actions_objects_functions/#cleardnscache-method"><em>ClearDNSCache() (method)</em> </a>)</p>
+</li>
+<li>
+<p>ClearSSLCache() (see <a href="../actions_objects_functions/#clearsslcache-method"><em>ClearSSLCache() (method)</em> </a>)</p>
+</li>
+</ul>
+<p>The following methods are for wlHttp objects only:</p>
+<ul>
+<li>
+<p>CloseConnection() (see <a href="../actions_objects_functions/#closeconnection-method"><em>CloseConnection() (method)</em> </a>)</p>
+</li>
+<li>
+<p>Get() (see <a href="../actions_objects_functions/#get-transaction-method"><em>Get() (transaction method)</em> </a>)</p>
+</li>
+<li>
+<p>Post() (see <a href="../actions_objects_functions/#post-method"><em>Post() (method)</em> </a>)</p>
+</li>
+<li>
+<p>Head() (see <a href="../actions_objects_functions/#head-method"><em>Head() (method)</em> </a>)</p>
+</li>
+</ul>
+<p><strong>Data Methods</strong></p>
+<ul>
+<li>
+<p>wlClear() (see <a href="../actions_objects_functions/#wlclear-method"><em>wlClear() (method)</em> </a>)</p>
+</li>
+<li>
+<p>wlGet() (see <a href="../actions_objects_functions/#wlget-method"><em>wlGet() (method)</em> </a>)</p>
+</li>
+<li>
+<p>wlSet() (see <a href="../actions_objects_functions/#wlset-method"><em>wlSet() (method)</em> </a>)</p>
+</li>
+</ul>
+<p><a name="figure5"></a>
+<img alt="Figure 5" src="../../images/figure5.png"/></p>
+<p><strong>Properties</strong></p>
+<p>The following properties are for wlHttp objects only</p>
+<p><strong>Data Properties</strong></p>
+<ul>
+<li>
+<p>Data (see <a href="../actions_objects_functions/#data-property"><em>Data (property)</em> </a>)</p>
+</li>
+<li>
+<p>DataFile (see <a href="../actions_objects_functions/#datafile-property"><em>DataFile (property)</em> </a>)</p>
+</li>
+<li>
+<p>Erase (see <a href="../actions_objects_functions/#erase-property"><em>Erase (property)</em> </a>)</p>
+</li>
+<li>
+<p>FileName (see <a href="../actions_objects_functions/#filename-property"><em>FileName (property)</em> </a>)</p>
+</li>
+<li>
+<p>FormData (see <a href="../actions_objects_functions/#formdata-property"><em>FormData (property)</em> </a>)</p>
+</li>
+<li>
+<p>Header (see <a href="../actions_objects_functions/#header-property"><em>Header (property)</em> </a>)</p>
+</li>
+<li>
+<p>DataCollection.type (see <a href="../actions_objects_functions/#type-property"><em>type (property)</em> </a>)</p>
+</li>
+<li>
+<p>DataCollection.value (see <a href="../actions_objects_functions/#value-property"><em>value (property)</em> </a>)</p>
+</li>
+</ul>
+<p>The following properties are used by wlHttp, wlLocals, and wlGlobals objects unless otherwise noted.</p>
+<p><strong>Configuration Properties</strong></p>
+<ul>
+<li>
+<p>ConnectionSpeed (see <a href="../actions_objects_functions/#connectionspeed-property"><em>ConnectionSpeed (property)</em> </a>) (wlGlobals only)</p>
+</li>
+<li>
+<p>DisableSleep (see <a href="../actions_objects_functions/#disablesleep-property"><em>DisableSleep (property)</em> </a>)</p>
+</li>
+<li>
+<p>DNSUseCache (see <a href="../actions_objects_functions/#dnsusecache-property"><em>DNSUseCache (property)</em> </a>)</p>
+</li>
+<li>
+<p>KeepAlive (see <a href="../actions_objects_functions/#keepalive-property"><em>KeepAlive (property)</em> </a>)</p>
+</li>
+<li>
+<p>LoadGeneratorThreads (see <a href="../actions_objects_functions/#loadgeneratorthreads-property"><em>LoadGeneratorThreads (property)</em> </a>)</p>
+</li>
+<li>
+<p>MultiIPSupport see <a href="../actions_objects_functions/#multiipsupport-property"><em>MultiIPSupport (property)</em> </a></p>
+</li>
+<li>
+<p>NTUserName, NTPassWord (see <a href="../actions_objects_functions/#ntusername-ntpassword-properties"><em>NTUserName, NTPassWord (properties)</em> </a>)</p>
+</li>
+<li>
+<p>Outfile (see <a href="../actions_objects_functions/#outfile-property"><em>Outfile (property)</em> </a>)</p>
+</li>
+<li>
+<p>PassWord (see <a href="../actions_objects_functions/#password-property"><em>PassWord (property)</em> </a>)</p>
+</li>
+<li>
+<p>ProbingClientThreads (see <a href="../actions_objects_functions/#probingclientthreads-property"><em>ProbingClientThreads (property)</em> </a>)</p>
+</li>
+<li>
+<p>Proxy, ProxyUserName, ProxyPassWord (see <a href="../actions_objects_functions/#proxy-proxyusername-proxypassword-properties"><em>Proxy, ProxyUserName, ProxyPassWord (properties)</em> </a></p>
+</li>
+<li>
+<p>RedirectionLimit (see <a href="../actions_objects_functions/#redirectionlimit-property"><em>RedirectionLimit (property)</em> </a>)</p>
+</li>
+<li>
+<p>SaveSource (see <a href="../actions_objects_functions/#savesource-property"><em>SaveSource (property)</em> </a>)</p>
+</li>
+<li>
+<p>SaveTransaction (see <a href="../actions_objects_functions/#savetransaction-property"><em>SaveTransaction (property)</em> </a>) (wlGlobals only)</p>
+</li>
+<li>
+<p>SSLBitLimit (see <a href="../actions_objects_functions/#sslbitlimit-property"><em>SSLBitLimit (property)</em> </a>) (wlGlobals only)</p>
+</li>
+<li>
+<p>SSLCryptoStrength (see <a href="../actions_objects_functions/#sslcryptostrength-property"><em>SSLCryptoStrength (property)</em> </a>)) (wlGlobals</p>
+</li>
+<li>
+<p>only)</p>
+</li>
+<li>
+<p>SSLClientCertificateFile, SSLClientCertificatePassword (see <a href="../actions_objects_functions/#sslclientcertificatefile-sslclientcertificatepassword-properties"><em>SSLClientCertificateFile, SSLClientCertificatePassword (properties)</em> </a>)</p>
+</li>
+<li>
+<p>SSLUseCache (see <a href="../actions_objects_functions/#sslusecache-property"><em>SSLUseCache (property)</em> </a>)</p>
+</li>
+<li>
+<p>SSLVersion (see <a href="../actions_objects_functions/#sslversion-property"><em>SSLVersion (property)</em> </a>)</p>
+</li>
+<li>
+<p>type (see <a href="../actions_objects_functions/#type-property"><em>type (property)</em> </a>)</p>
+</li>
+<li>
+<p>Url (see <a href="../actions_objects_functions/#url-property"><em>Url (property)</em> </a>)</p>
+</li>
+<li>
+<p>UserAgent (see <a href="../actions_objects_functions/#useragent-property"><em>UserAgent (property)</em> </a>)</p>
+</li>
+<li>
+<p>UserName (see <a href="../actions_objects_functions/#username-property"><em>UserName (property)</em> </a>))</p>
+</li>
+<li>
+<p>UsingTimer (see <a href="../actions_objects_functions/#usingtimer-property"><em>UsingTimer (property)</em> </a>)</p>
+</li>
+<li>
+<p>Version (see <a href="../actions_objects_functions/#version-property"><em>Version (property)</em> </a>)</p>
+</li>
+<li>
+<p>wlTarget (see <a href="../actions_objects_functions/#wltarget-property"><em>wlTarget (property)</em> </a>)</p>
+</li>
+</ul>
+<p><strong>See also</strong></p>
+<ul>
+<li>
+<p>wlGlobals (see <a href="../actions_objects_functions/#wlglobals-object"><em>wlGlobals (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlHttp (see <a href="../actions_objects_functions/#wlhttp-object"><em>wlHttp (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlLocals (see <a href="../actions_objects_functions/#wllocals-object"><em>wlLocals (object)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="collections">Collections</h2>
+<p><strong>Description</strong></p>
+<p>Collections are arrays or sets of individual objects. For example, the elements collection refers to a collection of individual element objects.</p>
+<p>Access individual members of a collection either through an index number or directly through the member’s name or ID. The following three syntax choices are equivalent:</p>
+<ul>
+<li>Collection[index#]</li>
+<li>Collection[“ID”] </li>
+<li>Collection.ID</li>
+</ul>
+<p>Test session scripts work with all browser DOM collections and objects. The recommended way to access these objects is through the classic browser document object, via the relevant collection. For example, access a table through:</p>
+<ul>
+<li>document.links[0]</li>
+</ul>
+<p><strong>Properties</strong></p>
+<p>Each collection of objects includes the single property length, which contains the size of the collection, that is, the number of objects included in this collection. You may also use the index value to access individual objects from within a collection.</p>
+<p>For example, to find out how many images objects are contained within the images collection of a document, check the value of:</p>
+<p><code>document.images.length</code></p>
+<p>In this <em>Guide</em>, the description of each individual object includes information on the collection, if any, to which that object belongs.</p>
+<h2 id="file-management-functions">File Management Functions</h2>
+<p><strong>Description</strong></p>
+<p>These functions manage access to a script’s function and input files, including opening and closing files, copying files, specifying include files, and reading lines from ASCII input files.</p>
+<blockquote>
+<p><strong>Note:</strong> Input file management is also provided by wlInputFile (see <a href="../actions_objects_functions/#wlinputfile-object"><em>wlInputFile (object)</em> </a>). Output file management is also provided by wlOutputFile (see <a href="../actions_objects_functions/#wloutputfile-object"><em>wlOutputFile (object)</em> </a>).</p>
+</blockquote>
+<p><strong>See also</strong></p>
+<ul>
+<li>
+<p>Close() (see <a href="../actions_objects_functions/#close-function"><em>Close() (function)</em> </a>)</p>
+</li>
+<li>
+<p>CopyFile() (see <a href="../actions_objects_functions/#copyfile-function"><em>CopyFile() (function)</em> </a>)</p>
+</li>
+<li>
+<p>Delete() (see <a href="../actions_objects_functions/#delete-cookie-method"><em>Delete() (cookie method)</em> </a>)</p>
+</li>
+<li>
+<p>GetLine() (wlOutputFile) (see <a href="../actions_objects_functions/#getline-function"><em>GetLine() (function)</em> </a>)</p>
+</li>
+<li>
+<p>GetLine() (wlInputFile) (see <a href="../actions_objects_functions/#getline-method"><em>GetLine() (method)</em> </a>)</p>
+</li>
+<li>
+<p>IncludeFile() (see <a href="../actions_objects_functions/#includefile-function"><em>IncludeFile() (function)</em> </a>)</p>
+</li>
+<li>
+<p>Open() (wlOutputFile) (see <a href="../actions_objects_functions/#open-function"><em>Open() (function)</em> </a>)</p>
+</li>
+<li>
+<p>Open() (wlInputFile) (see <a href="../actions_objects_functions/#open-method"><em>Open() (method)</em> </a>)</p>
+</li>
+<li>
+<p>Reset() (see <a href="../actions_objects_functions/#reset-method"><em>Reset() (method)</em> </a>)</p>
+</li>
+<li>
+<p>Using the IntelliSense JavaScript Editor </p>
+</li>
+<li>
+<p>wlOutputFile() (see <a href="../actions_objects_functions/#wloutputfile-object"><em>wlOutputFile (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlInputFile() (see <a href="../actions_objects_functions/#wlinputfile-object"><em>wlInputFile (object)</em> </a>))</p>
+</li>
+<li>
+<p>Write() (see <a href="../actions_objects_functions/#write-method"><em>Write() (method)</em> </a>)</p>
+</li>
+<li>
+<p>Writeln() (see <a href="../actions_objects_functions/#write-method"><em>Writeln() (method)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="identification-variables-and-functions">Identification Variables and Functions</h2>
+<p><strong>Description</strong></p>
+<p>For performance statistics to be meaningful, testers must be able to identify the exact point being measured. WebLOAD therefore provides the following identification variables and functions:</p>
+<ul>
+<li>
+<p>Two variables, ClientNum (see <a href="../actions_objects_functions/#clientnum-property"><em>ClientNum (property)</em> </a>) and RoundNum, (see <a href="../actions_objects_functions/#roundnum-variable"><em>RoundNum (variable)</em> </a>) identify the client and round number of the current script instance.</p>
+</li>
+<li>
+<p>The GeneratorName() (see <a href="../actions_objects_functions/#generatorname-function"><em>GeneratorName() (function)</em> </a>) function identifies the current Load Generator.</p>
+</li>
+<li>
+<p>The GetOperatingSystem() (see <a href="../actions_objects_functions/#getoperatingsystem-function"><em>GetOperatingSystem() (function)</em> </a>) function identifies the operating system of the current Load Generator.</p>
+</li>
+<li>
+<p>The VCUniqueID() (see <a href="../actions_objects_functions/#vcuniqueid-function"><em>VCUniqueID() (function)</em> </a>) function identifies the current Virtual Client instance.</p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>The following example illustrates common use of these variables and functions. Use these variables and function to support the WebLOAD measurement features and obtain meaningful performance statistics.</p>
+<p>Suppose your script submits data to a server on an HTML form. You want to label one of the form fields so you can tell which WebLOAD client submitted the data, and in which round of the main script.</p>
+<p>You can do this using a combination of the ClientNum and RoundNum variables. Together, these variables uniquely identify the WebLOAD client and round. For example, you can submit a string such as the following in a form field:</p>
+<p><code>“C” + ClientNum.toString() + “R” + RoundNum.toString()</code></p>
+<p><strong>GUI mode</strong></p>
+<p>WebLOAD recommends accessing these identification variables and functions through the WebLOAD Recorder. All the variables that appear in this list are available for use at all times in a script file. In the WebLOAD Recorder main window, click <strong>Variable Windows</strong> in the <strong>Debug</strong> tab of the ribbon.</p>
+<p>For example, it is convenient to add ClientNum to a Message Node to clarify which client sent the messages that appear in the WebLOAD Console Log window.</p>
+<p><strong>See also</strong></p>
+<ul>
+<li>
+<p>ClientNum (see <a href="../actions_objects_functions/#clientnum-property"><em>ClientNum (property)</em> </a>)</p>
+</li>
+<li>
+<p>GeneratorName() (see <a href="../actions_objects_functions/#generatorname-function"><em>GeneratorName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>GetOperatingSystem() (see <a href="../actions_objects_functions/#getoperatingsystem-function"><em>GetOperatingSystem() (function)</em> </a>)</p>
+</li>
+<li>
+<p>RoundNum (see <a href="../actions_objects_functions/#roundnum-variable"><em>RoundNum (variable)</em> </a>)</p>
+</li>
+<li>
+<p>VCUniqueID() (see <a href="../actions_objects_functions/#vcuniqueid-function"><em>VCUniqueID() (function)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="message-functions">Message Functions</h2>
+<p><strong>Description</strong></p>
+<p>These functions display messages in the Log Window of WebLOAD Recorder or Console. Some of the functions raise errors and interrupt test session execution. For information on using the Log Window and on message types, see the <em>WebLOAD Console User’s Guide</em>.</p>
+<p><strong>Example</strong></p>
+<p>In the following example, the script attempts to download an HTML page. If it fails on the first try, it pauses for 3 minutes and tries again. If it fails on the second try, it aborts the current round.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/index.html](http://www.ABCDEF.com/index.html)”</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">//First try wlHttp.Get()</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlStatusNumber</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="err">“</span><span class="nx">Thread</span><span class="w"> </span><span class="err">“</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="err">“</span><span class="w"> </span><span class="nx">pausing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="nx">min</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="nx">Sleep</span><span class="p">(</span><span class="mf">180000</span><span class="p">)</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">//Second try</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">()</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlStatusNumber</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ErrorMessage</span><span class="p">(</span><span class="err">“</span><span class="nx">Aborting</span><span class="w"> </span><span class="nx">round</span><span class="w"> </span><span class="err">“</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">RoundNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="err">“</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">thread</span><span class="w"> </span><span class="err">“</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">}</span><span class="w">   </span><span class="c1">// End of second try</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>GUI mode</strong></p>
+<blockquote>
+<p><strong>Note:</strong> Message functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. Message function commands can be added to the script in Visual Editing mode using the Toolbox message item and the Insert menu command. The JavaScript code line that corresponds to this message function appears in the JavaScript View pane.</p>
+</blockquote>
+<p>Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in <a href="../intro_java_scripts/#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>.</p>
+<p>Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.</p>
+<p><strong>See also</strong></p>
+<ul>
+<li><em>Error Management</em> in the <em>WebLOAD Scripting Guide</em></li>
+<li>
+<p>ErrorMessage() (see <a href="../actions_objects_functions/#errormessage-function"><em>ErrorMessage() (function)</em> </a>)</p>
+</li>
+<li>
+<p>GetMessage() (see <a href="../actions_objects_functions/#getmessage-method"><em>GetMessage() (method)</em> </a>)</p>
+</li>
+<li>
+<p>GetSeverity() (see <a href="../actions_objects_functions/#getseverity-method"><em>GetSeverity() (method)</em> </a>)</p>
+</li>
+<li>
+<p>InfoMessage() (see <a href="../actions_objects_functions/#infomessage-function"><em>InfoMessage() (function)</em> </a>)</p>
+</li>
+<li>
+<p><a href="#message-functions"><em>Message Functions</em> </a></p>
+</li>
+<li>
+<p>ReportLog() (see <a href="../actions_objects_functions/#reportlog-method"><em>ReportLog() (method)</em> </a>)</p>
+</li>
+<li>
+<p>SevereErrorMessage() (see <a href="../actions_objects_functions/#severeerrormessage-function"><em>SevereErrorMessage() (function)</em> </a>)</p>
+</li>
+<li>
+<p><a href="../intro_java_scripts/#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a></p>
+</li>
+<li>
+<p>WarningMessage() (see <a href="../actions_objects_functions/#warningmessage-function"><em>WarningMessage() (function)</em> </a>)</p>
+</li>
+<li>
+<p>wlException (see <a href="../actions_objects_functions/#wlexception-object"><em>wlException (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlException() (see <a href="../actions_objects_functions/#wlexception-constructor"><em>wlException() (constructor)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<p><strong>Description</strong></p>
+<p><a href="../intro_java_scripts/#webload-scripts-work-with-an-extended-version-of-the-standard-dom"><em>WebLOAD scripts Work with an Extended Version of the Standard DOM</em> </a>presents an overview of the Document Object Model (DOM), describing some of the basic objects used by standard Web browsers when working with HTML Web pages. The classic browser DOM includes a wide range of objects, properties, and methods for maximum utility and versatility. For more information about the standard DOM structure and components, go to the following websites:</p>
+<ul>
+<li>
+<p>http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html</p>
+</li>
+<li>
+<p>http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dom/domov erview.asp</p>
+</li>
+<li>
+<p>http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/refere nce/dhtmlrefs.asp</p>
+</li>
+</ul>
+<p>Since WebLOAD emulates the HTTP activities included in a test session, WebLOAD supports the standard DOM object set that implements those activities. Only the DOM objects, properties, and methods of special interest to WebLOAD programmers working with test session scripts are listed here. This guide also includes reference material for the objects, properties, and methods that were added by WebLOAD as extensions to the basic DOM, to implement specific test session features.</p>
+<p>Website testing usually means testing how typical user activities are handled by the application being tested. Are the user actions managed quickly, correctly and appropriately? Is the application responsive to the user’s requests? Will the typical user be happy working with this application? When verifying that an application handles user activities correctly, WebLOAD usually focuses on the user activities, recording user actions through WebLOAD Recorder when initially creating scripts and recreating those actions during subsequent test sessions. The focus on user activities represents a high-level, conceptual approach to test session design.</p>
+<p>Sometimes a tester may prefer to use a low-level, “nuts-and-bolts” approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in the <em>WebLOAD JavaScript Reference Guide</em> that are relevant to the HTTP Transaction Mode are noted as such in the entry.</p>
+<h2 id="ssl-cipher-command-suite">SSL Cipher Command Suite</h2>
+<p><strong>Description</strong></p>
+<p>WebLOAD provides full SSL/TLS 1.0/TLS 1.2 protocol support through a set of SSL properties for the wlGlobals object combined with a set of functions called the Cipher Command Suite. These SSL functions allow you to identify, enable, and disable selected SSL protocols or security levels. For a complete list of the supported SSL protocols, see <a href="../appendix_a/#ssl-ciphers-complete-list"><em>SSL Ciphers – Complete List</em> </a></p>
+<p><strong>Functions</strong></p>
+<p>The Cipher Command Suite includes the following functions:</p>
+<ul>
+<li>
+<p>SSLCipherSuiteCommand() (see <a href="../actions_objects_functions/#sslciphersuitecommand-function"><em>SSLCipherSuiteCommand() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLDisableCipherID() (see <a href="../actions_objects_functions/#ssldisablecipherid-function"><em>SSLDisableCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLDisableCipherName() (see <a href="../actions_objects_functions/#ssldisableciphername-function"><em>SSLDisableCipherName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLEnableCipherID() (see <a href="../actions_objects_functions/#sslenablecipherid-function"><em>SSLEnableCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLEnableCipherName() (see <a href="../actions_objects_functions/#sslenableciphername-function"><em>SSLEnableCipherName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherCount() (see <a href="../actions_objects_functions/#sslgetciphercount-function"><em>SSLGetCipherCount() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherID() (see <a href="../actions_objects_functions/#sslgetcipherid-function"><em>SSLGetCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherInfo() (see <a href="../actions_objects_functions/#sslgetcipherinfo-function"><em>SSLGetCipherInfo() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherName() (see <a href="../actions_objects_functions/#sslgetciphername-function"><em>SSLGetCipherName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherStrength() (see <a href="../actions_objects_functions/#sslgetcipherstrength-function"><em>SSLGetCipherStrength() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLEnableStrength() (see <a href="../actions_objects_functions/#sslenablestrength-function"><em>SSLEnableStrength() (function)</em> </a>)</p>
+</li>
+</ul>
+<p><strong>Comment</strong></p>
+<p>Use the Cipher Command Suite to check or verify SSL configuration information at any point in your script. However, any <em>changes</em> to a script’s SSL property configuration, whether through the wlGlobals properties or the Cipher Command Suite functions, must be made in the script’s <em>initialization functions</em>. Configuration changes made in the InitAgenda() function will affect all client threads spawned during that script’s test session. Configuration changes made in the InitClient() function will affect only individual clients. Do not make changes to the SSL property configuration using wlHttp or wlLocals properties or in a script’s main body. The results will be undefined for all subsequent transactions.</p>
+<p><strong>See also</strong></p>
+<ul>
+<li><a href="./#http-components"><em>HTTP Components</em> </a></li>
+<li>
+<p>SSLBitLimit (see <a href="../actions_objects_functions/#sslbitlimit-property"><em>SSLBitLimit (property)</em> </a>) (wlGlobals only)</p>
+</li>
+<li>
+<p>SSLCipherSuiteCommand() (see <a href="../actions_objects_functions/#sslciphersuitecommand-function"><em>SSLCipherSuiteCommand() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLClientCertificateFile, SSLClientCertificatePassword (see <a href="../actions_objects_functions/#sslclientcertificatefile-sslclientcertificatepassword-properties"><em>SSLClientCertificateFile, SSLClientCertificatePassword (properties)</em> </a>)</p>
+</li>
+<li>
+<p>SSLCryptoStrength (see <a href="../actions_objects_functions/#sslcryptostrength-property"><em>SSLCryptoStrength (property)</em> </a>) (wlGlobals only)</p>
+</li>
+<li>
+<p>SSLDisableCipherID() (see <a href="../actions_objects_functions/#ssldisablecipherid-function"><em>SSLDisableCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLDisableCipherName() (see <a href="../actions_objects_functions/#ssldisableciphername-function"><em>SSLDisableCipherName() (function)</em> </a></p>
+</li>
+<li>
+<p>SSLEnableCipherID() (see <a href="../actions_objects_functions/#sslenablecipherid-function"><em>SSLEnableCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLEnableCipherName() (see <a href="../actions_objects_functions/#sslenableciphername-function"><em>SSLEnableCipherName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherCount() (see <a href="../actions_objects_functions/#sslgetciphercount-function"><em>SSLGetCipherCount() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherID() (see <a href="../actions_objects_functions/#sslgetcipherid-function"><em>SSLGetCipherID() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherInfo() (see <a href="../actions_objects_functions/#sslgetcipherinfo-function"><em>SSLGetCipherInfo() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherName() (see <a href="../actions_objects_functions/#sslgetciphername-function"><em>SSLGetCipherName() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLGetCipherStrength() (see <a href="../actions_objects_functions/#sslgetcipherstrength-function"><em>SSLGetCipherStrength() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLUseCache (see <a href="../actions_objects_functions/#sslusecache-property"><em>SSLUseCache (property)</em> </a>)</p>
+</li>
+<li>
+<p>SSLEnableStrength() (see <a href="../actions_objects_functions/#sslenablestrength-function"><em>SSLEnableStrength() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SSLVersion (see <a href="../actions_objects_functions/#sslversion-property"><em>SSLVersion (property)</em> </a>)</p>
+</li>
+<li>
+<p>wlGlobals (see <a href="../actions_objects_functions/#wlglobals-object"><em>wlGlobals (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlHttp (see <a href="../actions_objects_functions/#wlhttp-object"><em>wlHttp (object)</em> </a>)</p>
+</li>
+<li>
+<p>wlLocals (see <a href="../actions_objects_functions/#wllocals-object"><em>wlLocals (object)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="timing-functions">Timing Functions</h2>
+<p><strong>Description</strong></p>
+<p>The timer functions let you time or synchronize any operation or group of user activities in a script, such as a navigation or mouse click, and send the time statistics to the WebLOAD Console.</p>
+<p><strong>Example</strong></p>
+<p>The following script connects to the home Web page of company. On every fifth round, the script also connects to a second Web page. The script uses different timers to measure the time for each connection.</p>
+<blockquote>
+<p><strong>Note:</strong> This script fragment contains a main script only.</p>
+</blockquote>
+<p>WebLOAD reports three time statistics:</p>
+<ul>
+<li>
+<p>The round time, which includes both connections.</p>
+</li>
+<li>
+<p>Page 1 Time, reported in every round for the first connection only.</p>
+</li>
+<li>
+<p>Page 2 Time, reported in every fifth round for the second connection only.</p>
+</li>
+</ul>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">SetTimer</span><span class="p">(</span><span class="err">“</span><span class="nx">Page</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">Time</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com](http://www.ABCDEF.com/)”) </span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nx">SendTimer</span><span class="p">(</span><span class="err">“</span><span class="nx">Page</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">Time</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">RoundNum</span><span class="o">%</span><span class="mf">5</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nx">SetTimer</span><span class="p">(</span><span class="err">“</span><span class="nx">Page</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="nx">Time</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">([</span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.ABCDEF.com/product_info.html](http://www.ABCDEF.com/product_info.html)”) </span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="nx">SendTimer</span><span class="p">(</span><span class="err">“</span><span class="nx">Page</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="nx">Time</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Functions</strong></p>
+<p>The set of timer functions includes the following:</p>
+<ul>
+<li>
+<p>SendCounter() (see <a href="../actions_objects_functions/#sendcounter-function"><em>SendCounter() (function)</em> </a>))</p>
+</li>
+<li>
+<p>SendMeasurement() (see <a href="../actions_objects_functions/#sendmeasurement-function"><em>SendMeasurement() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SendTimer() (see <a href="../actions_objects_functions/#sendtimer-function"><em>SendTimer() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SetTimer() (see <a href="../actions_objects_functions/#settimer-function"><em>SetTimer() (function)</em> </a>)</p>
+</li>
+<li>
+<p>Sleep() (see <a href="../actions_objects_functions/#sleep-function"><em>Sleep() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SynchronizationPoint() (see <a href="../actions_objects_functions/#synchronizationpoint-function"><em>SynchronizationPoint() (function)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="parameterization">Parameterization</h2>
+<p>Parameterization enables you to edit a script containing static values and transform it into a script that will run multiple variations of the static values.</p>
+<p>When recording a script, WebLOAD captures the data that is being sent, including login details, user selections, and entered text. When running the script under load, simulating many users, it is desirable to use variations in the data, so as to simulate the application more realistically. To do so, you can replace the static values with parameters.</p>
+<p>Parameter values can come from a file, or be automatically generated numbers, strings and dates. Using parameterization enables you to specify how the script should select values from the data file. For example:</p>
+<ul>
+<li>
+<p>Order considerations – Whether to randomly select values from the data file, or use them in the order they appear.</p>
+</li>
+<li>
+<p>Uniqueness considerations – Whether the same value can be used at the same time by different virtual clients.</p>
+</li>
+</ul>
+<p>You can also specify the update policy, which defines when a new value will be read or calculated. For example, whether to update the value on each round, or once at the beginning of the test.</p>
+<p>In addition to defining a data file, you can also use parameterization to define a random number format, date/time format, and string format. These can also be used to replace static values. For example, if the online shop delivers books between 1-14 days from the date of purchase, you can define a random number format of 1-14 and replace the static desired delivery period value with a call to the random number format.</p>
+<p><strong>Functions</strong></p>
+<p>The set of parameterization functions includes the following:</p>
+<ul>
+<li>
+<p>wlTimeParam() (see <a href="../actions_objects_functions/#wltimeparam-parameterization"><em>wlTimeParam() (parameterization)</em> </a>)</p>
+</li>
+<li>
+<p>wlDataFileParam() (see <a href="../actions_objects_functions/#wldatafileparam-parameterization"><em>wlDataFileParam() (parameterization)</em> </a>)</p>
+</li>
+<li>
+<p>wlNumberParam() (see <a href="../actions_objects_functions/#wlnumberparam-parameterization"><em>wlNumberParam() (parameterization)</em> </a>)</p>
+</li>
+<li>
+<p>wlStringParam() (see <a href="../actions_objects_functions/#wlstringparam-parameterization"><em>wlStringParam() (parameterization)</em> </a>)</p>
+</li>
+</ul>
+<h2 id="transaction-verification-components">Transaction Verification Components</h2>
+<p><strong>Description</strong></p>
+<p>Customized transaction verification functions are created out of the following components:</p>
+<ul>
+<li>
+<p>BeginTransaction() (see <a href="../actions_objects_functions/#begintransaction-function"><em>BeginTransaction() (function)</em> </a></p>
+</li>
+<li>
+<p>CreateDOM() (see <a href="../actions_objects_functions/#createdom-function"><em>CreateDOM() (function)</em> </a>)</p>
+</li>
+<li>
+<p>CreateTable() (see <a href="../actions_objects_functions/#createtable-function"><em>CreateTable() (function)</em> </a>)</p>
+</li>
+<li>
+<p>EndTransaction() (see <a href="../actions_objects_functions/#endtransaction-function"><em>EndTransaction() (function)</em> </a>)</p>
+</li>
+<li>
+<p>ReportEvent() (see <a href="../actions_objects_functions/#reportevent-function"><em>ReportEvent() (function)</em> </a>)</p>
+</li>
+<li>
+<p>SetFailureReason() (see <a href="../actions_objects_functions/#setfailurereason-function"><em>SetFailureReason() (function)</em> </a>)</p>
+</li>
+<li>
+<p>VerificationFunction() (user-defined) (see <a href="../actions_objects_functions/#verificationfunction-user-defined-function"><em>VerificationFunction() (user-defined)(function)</em> </a>)</p>
+</li>
+</ul>
+<p><strong>See also</strong></p>
+<ul>
+<li>
+<p>TimeoutSeverity (see <a href="../actions_objects_functions/#timeoutseverity-property"><em>TimeoutSeverity (property)</em> </a>)</p>
+</li>
+<li>
+<p>TransactionTime (see <a href="../actions_objects_functions/#transactiontime-property"><em>TransactionTime (property)</em> </a>)</p>
+</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

@@ -1,0 +1,2343 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../overview/" rel="prev"/>
+<link href="../webload_jenkins/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Running WebLOAD from the Command Line - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#running-webload-from-the-command-line">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Running WebLOAD from the Command Line
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/global_lab_load_generators/">
+<span class="md-ellipsis">
+    Global Lab Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/rest_api/">
+<span class="md-ellipsis">
+    Using the REST API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registering-and-updating-your-webload-license-through-the-cli">
+<span class="md-ellipsis">
+      Registering and Updating your WebLOAD License through the CLI
+    </span>
+</a>
+<nav aria-label="Registering and Updating your WebLOAD License through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-a-webload-console-test-through-the-cli">
+<span class="md-ellipsis">
+      Running a WebLOAD Console Test through the CLI
+    </span>
+</a>
+<nav aria-label="Running a WebLOAD Console Test through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_1">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_1">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_1">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json-based-load-test-console-cli">
+<span class="md-ellipsis">
+      JSON Based Load test - Console CLI
+    </span>
+</a>
+<nav aria-label="JSON Based Load test - Console CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_2">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fields">
+<span class="md-ellipsis">
+      Fields
+    </span>
+</a>
+<nav aria-label="Fields" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-required-one">
+<span class="md-ellipsis">
+      Test (required, one)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agendas-array-required-at-least-one">
+<span class="md-ellipsis">
+      Agendas (array, required at least one)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleepoptions-dict-optional">
+<span class="md-ellipsis">
+      SleepOptions (dict, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-machines-one-of-the-following-is-required">
+<span class="md-ellipsis">
+      Load Machines (one of the following is required)
+    </span>
+</a>
+<nav aria-label="Load Machines (one of the following is required)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loadgenerator-array">
+<span class="md-ellipsis">
+      LoadGenerator (array)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locations-array">
+<span class="md-ellipsis">
+      Locations (array)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-dict-required-all-times-in-minutes">
+<span class="md-ellipsis">
+      Schedule (dict, required) all times in minutes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slamanager-array-optional">
+<span class="md-ellipsis">
+      SlaManager (array, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optional-statistics-names">
+<span class="md-ellipsis">
+      Optional statistics names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#successoptions-object-optional">
+<span class="md-ellipsis">
+      SuccessOptions (object, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-json-code-simple">
+<span class="md-ellipsis">
+      Sample Json code - simple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-json-code-advanced">
+<span class="md-ellipsis">
+      Sample Json code - advanced
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-an-analytics-report-through-the-cli">
+<span class="md-ellipsis">
+      Generating an Analytics Report through the CLI
+    </span>
+</a>
+<nav aria-label="Generating an Analytics Report through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-wlanalyticscmdexe">
+<span class="md-ellipsis">
+      Running WLAnalyticsCMD.exe
+    </span>
+</a>
+<nav aria-label="Running WLAnalyticsCMD.exe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_3">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_2">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_2">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-wlanalyticsexe">
+<span class="md-ellipsis">
+      Running WLAnalytics.exe
+    </span>
+</a>
+<nav aria-label="Running WLAnalytics.exe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_4">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_3">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_3">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-webload-recorder-testing-through-the-cli">
+<span class="md-ellipsis">
+      Running WebLOAD Recorder Testing through the CLI
+    </span>
+</a>
+<nav aria-label="Running WebLOAD Recorder Testing through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_5">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_4">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_4">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-link-during-recording">
+<span class="md-ellipsis">
+      Special Link During Recording
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/js_helper_funcs/">
+<span class="md-ellipsis">
+    JavaScript Helper Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registering-and-updating-your-webload-license-through-the-cli">
+<span class="md-ellipsis">
+      Registering and Updating your WebLOAD License through the CLI
+    </span>
+</a>
+<nav aria-label="Registering and Updating your WebLOAD License through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-a-webload-console-test-through-the-cli">
+<span class="md-ellipsis">
+      Running a WebLOAD Console Test through the CLI
+    </span>
+</a>
+<nav aria-label="Running a WebLOAD Console Test through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_1">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_1">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_1">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json-based-load-test-console-cli">
+<span class="md-ellipsis">
+      JSON Based Load test - Console CLI
+    </span>
+</a>
+<nav aria-label="JSON Based Load test - Console CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_2">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fields">
+<span class="md-ellipsis">
+      Fields
+    </span>
+</a>
+<nav aria-label="Fields" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-required-one">
+<span class="md-ellipsis">
+      Test (required, one)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agendas-array-required-at-least-one">
+<span class="md-ellipsis">
+      Agendas (array, required at least one)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sleepoptions-dict-optional">
+<span class="md-ellipsis">
+      SleepOptions (dict, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-machines-one-of-the-following-is-required">
+<span class="md-ellipsis">
+      Load Machines (one of the following is required)
+    </span>
+</a>
+<nav aria-label="Load Machines (one of the following is required)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loadgenerator-array">
+<span class="md-ellipsis">
+      LoadGenerator (array)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locations-array">
+<span class="md-ellipsis">
+      Locations (array)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-dict-required-all-times-in-minutes">
+<span class="md-ellipsis">
+      Schedule (dict, required) all times in minutes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slamanager-array-optional">
+<span class="md-ellipsis">
+      SlaManager (array, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optional-statistics-names">
+<span class="md-ellipsis">
+      Optional statistics names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#successoptions-object-optional">
+<span class="md-ellipsis">
+      SuccessOptions (object, optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-json-code-simple">
+<span class="md-ellipsis">
+      Sample Json code - simple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-json-code-advanced">
+<span class="md-ellipsis">
+      Sample Json code - advanced
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-an-analytics-report-through-the-cli">
+<span class="md-ellipsis">
+      Generating an Analytics Report through the CLI
+    </span>
+</a>
+<nav aria-label="Generating an Analytics Report through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-wlanalyticscmdexe">
+<span class="md-ellipsis">
+      Running WLAnalyticsCMD.exe
+    </span>
+</a>
+<nav aria-label="Running WLAnalyticsCMD.exe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_3">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_2">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_2">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-wlanalyticsexe">
+<span class="md-ellipsis">
+      Running WLAnalytics.exe
+    </span>
+</a>
+<nav aria-label="Running WLAnalytics.exe" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_4">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_3">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_3">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-webload-recorder-testing-through-the-cli">
+<span class="md-ellipsis">
+      Running WebLOAD Recorder Testing through the CLI
+    </span>
+</a>
+<nav aria-label="Running WebLOAD Recorder Testing through the CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax_5">
+<span class="md-ellipsis">
+      Syntax
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameters_4">
+<span class="md-ellipsis">
+      Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples_4">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#special-link-during-recording">
+<span class="md-ellipsis">
+      Special Link During Recording
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="running-webload-from-the-command-line">Running WebLOAD from the Command Line</h1>
+<p>You can run the following WebLOAD components from the command line:</p>
+<ul>
+<li>WebLOAD License – You can register and update your WebLOAD license.</li>
+<li>WebLOAD Console – You can launch a WebLOAD test that invokes the WebLOAD Console and runs a specified test according to the specified parameters.</li>
+<li>WebLOAD Analytics – You can launch WebLOAD Analytics and generate a report for a specified session, then publish or print it.</li>
+<li>WebLOAD Recorder – You can launch a WebLOAD Recorder test that invokes the WebLOAD Recorder and runs a specified test according to the specified parameters.</li>
+</ul>
+<h2 id="registering-and-updating-your-webload-license-through-the-cli">Registering and Updating your WebLOAD License through the CLI</h2>
+<p>You can register or upload a WebLOAD license through a command line interface. You can enter the WebLOAD Update License command into a batch file or into an external script and it will run directly, without user intervention, using the parameters specified.</p>
+<p><strong>To register or update you WebLOAD license through the command line interface:</strong></p>
+<p>Enter the wlUpdateLicenseApplicationCmd command together with the optional parameters (described below) into your external script, to automatically launch a WebLOAD License action.</p>
+<h3 id="syntax">Syntax</h3>
+<p>Use the following syntax to define the parameters for registering or updating a WebLOAD license through a command line interface:</p>
+<p><code>wlUpdateLicenseApplicationCmd {-help}|{-info}|{-free}|{-file ``*license\_file*}|{-server *server\_address*}|{-hostid}</code></p>
+<h3 id="parameters"><strong>Parameters</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">-help</td>
+<td style="text-align: left;">Display all available command parameters and their syntax.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">-info</td>
+<td style="text-align: left;">Display the full license details of the installed license.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">-free</td>
+<td style="text-align: left;">Create and install a license for a free WebLOAD version. This version provides 50 virtual clients, and is available for an unlimited period of time. You can use the free WebLOAD edition immediately after running this command.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>-file</p><p><em>license_file</em></p></td>
+<td style="text-align: left;">Install the specified license file, which you received from RadView (refer to the <em>WebLOAD Installation Guide</em> for further explanations). If license registration is successful, a confirmation appears in the command-line output. You can then begin working with WebLOAD.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- server</p><p><em>server_address</em></p></td>
+<td style="text-align: left;">Connect to the WebRM server, whose address is the specified IP address. This option is relevant if you installed a WebRM server. For further explanations, refer to the <em>WebLOAD Installation Guide</em>.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">-hostid</td>
+<td style="text-align: left;">Display the host ID of the computer. This information is needed if you wish to receive a WebLOAD license file from RadView. For further explanations, refer to the <em>WebLOAD Installation Guide</em>.</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p><strong>Example 1:</strong></p>
+<p>wlUpdateLicenseApplicationCmd -info</p>
+<p>This command provides as output the license information.</p>
+<p><strong>Example 2:</strong></p>
+<p>wlUpdateLicenseApplicationCmd -file webload.lic</p>
+<p>This command uploads the specified license file, and installs it. Following successful installation, you can begin working with WebLOAD.</p>
+<h2 id="running-a-webload-console-test-through-the-cli">Running a WebLOAD Console Test through the CLI</h2>
+<p>You can perform load testing through a command line interface. You can enter the WebLOAD Console launch command into a batch file or into an external script and WebLOAD Console will run directly, without user intervention, using the parameters specified.</p>
+<p><strong>To run WebLOAD Console through the command line interface:</strong></p>
+<p>Enter the WebLOAD.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD test. When your script runs, the executable file will invoke WebLOAD Console and run the specified test according to the specified parameters.</p>
+<blockquote>
+<p><strong>Note:</strong> Verify that the script used with the template specified, and any included files, are accessible to the Load Template or Load Session file that will be run.</p>
+</blockquote>
+<h3 id="syntax_1">Syntax</h3>
+<p>Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:</p>
+<p><code>WebLOAD.exe [&lt;file name to open&gt;][] [&lt;flags&gt;]</code></p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">File name to open</td>
+<td style="text-align: left;">The name of the *.tpl or *.ls file (Load Template or Load Session file) to run. Or *.json - see <a href="#json-based-load-test-console-cli">JSON Based Load test</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Optional parameter</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">File name to save</td>
+<td style="text-align: left;">The name of the *.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flags</td>
+<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em><code>&lt;*time*&gt;</code></em> – Automatically run the test for the length of time specified in <em><code>&lt;time&gt;</code>/</em></p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</num></p><p>- /pc <code>&lt;num&gt;</code>– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;*results\_file\_name*&gt;</code></em> – Place the results in the specified file (an XML file).</p><p>- /ag <code>&lt;script name&gt;</code> - The name of an existing script (*.wlp) to open.</p></td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+</tbody>
+</table>
+<p>The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag <code>&lt;/ar&gt;</code> flag is not set, the</p>
+<p><code>&lt;file name to save&gt;</code> and the <code>&lt;time&gt;</code> parameters are ignored.</p>
+<blockquote>
+<p><strong>Note:</strong> If there is a conflict between the time defined in this command and the time defined in the WebLOAD Scheduler, the load test runs for the shorter of the two periods defined.</p>
+</blockquote>
+<h3 id="examples_1">Examples</h3>
+<p><strong>Example 1</strong></p>
+<p><code>WebLOAD.exe test1.tpl</code></p>
+<p>This command opens the Console and the test1.tpl template. The Console waits for user input.</p>
+<p><strong>Example 2</strong></p>
+<p>WebLOAD.exe test1.tpl march9.ls /ar 30</p>
+<p>This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
+<p><strong>Example 3</strong></p>
+<p><code>WebLOAD.exe /ag c:\agendas\MyAgenda.wlp</code></p>
+<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyAgenda.wlp script is automatically selected and the WebLOAD Wizard waits for user input.</p>
+<p><strong>Example 4</strong></p>
+<p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml</code></p>
+<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.</p>
+<p><strong>Example 5</strong></p>
+<p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3</code></p>
+<p>This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
+<h2 id="json-based-load-test-console-cli">JSON Based Load test - Console CLI</h2>
+<h3 id="syntax_2">Syntax</h3>
+<p>Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File name to open</td>
+<td>The name of the <em>.tpl or</em>.ls or *.json file to run.</td>
+<td>Optional parameter</td>
+</tr>
+<tr>
+<td>File name to save</td>
+<td>The name of the *.ls file containing the test data.</td>
+<td>Optional parameter</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+<code>WebLOAD.exe load_test.json test_results.ls /ar /rc result_code.xml</code></p>
+<h3 id="fields">Fields</h3>
+<h4 id="test-required-one">Test (required, one)</h4>
+<ul>
+<li><code>name</code> (string, required): The name of the test.</li>
+<li><code>type</code> (string, required): The type of the test. The value is "agenda".</li>
+</ul>
+<h4 id="agendas-array-required-at-least-one">Agendas (array, required at least one)</h4>
+<ul>
+<li><code>agendaname</code> (string, required): The name of the agenda.</li>
+<li><code>agendapath</code> (string, required): The path to the agenda script (js or wlp).</li>
+<li><code>percentage</code> (int, required): The percentage of the agenda.</li>
+<li><code>execoptions</code> (array, optional): The execution options for the agenda. Options are added as wlGlobals settings. See WebLOAD JavaScript Reference Guide for possible values.</li>
+<li><code>Name</code> (string): The name of the wlGlobals execution option.</li>
+<li><code>Value</code> (string): The value of the execution option.</li>
+</ul>
+<h4 id="sleepoptions-dict-optional">SleepOptions (dict, optional)</h4>
+<p><code>SleepType</code> (string) The sleep options for the agenda. (one of the following):</p>
+<ul>
+<li>1 - Sleep time as recorded</li>
+<li><code>SetMaxSleepTime</code> (bool): Whether to set the maximum sleep time.</li>
+<li><code>MaxSleepTime</code> (int): The maximum sleep time.</li>
+<li>2 - Ignore recorded sleep time</li>
+<li>3 - Set random sleep time between</li>
+<li><code>SleepRandMax</code> (int): The maximum random sleep time.</li>
+<li><code>SleepRandMin</code> (int): The minimum random sleep time.</li>
+<li>4 - Set sleep time deviation</li>
+<li><code>SleepDeviation</code> (int): The sleep deviation in percent, so 10 means plus minus 10% of the recorded sleep time.</li>
+</ul>
+<p><code>TransactionSleepType</code> (string): The transaction sleep type. (one of the following):</p>
+<ul>
+<li>"0" - Transaction timers include sleep time ('Transaction Time')</li>
+<li>"1" - Transaction timers exclude sleep time ('Transaction Net Time')</li>
+<li>"2" - Transaction timers exclude sleep time but named "Transaction Time"</li>
+<li>"3" - Both timers - including and excluding sleep time</li>
+</ul>
+<h4 id="load-machines-one-of-the-following-is-required">Load Machines (one of the following is required)</h4>
+<ul>
+<li>
+<h5 id="loadgenerator-array">LoadGenerator (array)</h5>
+<p>A list of objects that represent the load generators to be used in the test.
+  - <code>name</code> (string, required): The name of the load generator machine. (Each name can only appear once in the list)
+  - <code>type</code> (string, required): The type of the load generator machine. "PC" for windows or linux load-generator, "Cloud" for cloud based load-generator as defined in the console.</p>
+</li>
+<li>
+<h5 id="locations-array">Locations (array)</h5>
+<p>A list of objects that represent the locations used in the test. Locations are defined in the Dashboard and can contain more than one load-generator
+  - <code>distribution</code> (int, required): The distribution percentage.
+  - <code>name</code> (string, required): The name of the location.</p>
+</li>
+</ul>
+<h4 id="schedule-dict-required-all-times-in-minutes">Schedule (dict, required) all times in minutes</h4>
+<ul>
+<li><code>RampUpTime</code> (int, optional): The ramp-up time.</li>
+<li><code>Duration</code> (int, optional): The duration of the test.</li>
+<li><code>RampDownTime</code> (int, optional): The ramp-down time.</li>
+<li><code>MaxVC</code> (int, required): The maximum virtual users count.</li>
+<li><code>LimitRounds</code> (bool, optional): Whether to limit the rounds.</li>
+<li><code>Rounds</code> (int): If LimitRounds is set to true, what is the maximum number of rounds to run before stopping the test. The test will still use the proviced schedule of ramp-up, duration and ramp-down but will stop once the total number of rounds reached the target.</li>
+</ul>
+<h4 id="slamanager-array-optional">SlaManager (array, optional)</h4>
+<p>This list contains one object that specifies the SLA manager settings.</p>
+<ul>
+<li><code>name</code> (string): The name of the SLA rule.</li>
+<li><code>message</code> (string): A message to be shown in case the SLA rules are violated.</li>
+<li><code>msg</code> (string): This is the Action Definition:</li>
+<li>0 - Display info message</li>
+<li>1 - Display warning</li>
+<li>2 - Display error</li>
+<li>3 - Display fatal error and stop test execution</li>
+<li><code>operator</code> (string): The operator to be used when evaluating the rule. The value can be "and" or "or".</li>
+<li><code>stats</code> (list of objects): A list of objects that define the statistics for the SLA rule.</li>
+</ul>
+<p>Each object in the <code>stats</code> list contains the following attributes:</p>
+<ul>
+<li><code>id</code> (string, optional): The ID of the statistic.</li>
+<li><code>name</code> (string, required): The name of the statistic.</li>
+<li><code>op</code> (string, required): The operator to be used when evaluating the statistic. The values can be:</li>
+<li>"&gt;"</li>
+<li>"&lt;"</li>
+<li>"&gt;="</li>
+<li>"&lt;="</li>
+<li>"="</li>
+<li><code>type</code> (string, required): The type of the statistic. The values can be "Min", "Max", "Avg", or "Last".</li>
+<li><code>value</code> (number, required): The values to be compared to the statistic.</li>
+</ul>
+<h4 id="optional-statistics-names">Optional statistics names</h4>
+<ul>
+<li>Aborted Rounds</li>
+<li>Attempted Connections</li>
+<li>Connect Time</li>
+<li>Connection Speed (Bits Per Second)</li>
+<li>Content Size</li>
+<li>DNS Lookup Time</li>
+<li>Failed Connections</li>
+<li>Failed Hits</li>
+<li>Failed Hits Per Second</li>
+<li>Failed Rounds</li>
+<li>Failed Rounds Per Second</li>
+<li>Hit Time</li>
+<li>Hits</li>
+<li>Hits Per Second</li>
+<li>Load Size</li>
+<li>Page Time</li>
+<li>Pages</li>
+<li>Pages Per Second</li>
+<li>Packets Sent</li>
+<li>Packets Sent Per Second</li>
+<li>Process Time</li>
+<li>Receive Time</li>
+<li>Response Data Size</li>
+<li>Response Time</li>
+<li>Return status</li>
+<li>Round Time</li>
+<li>Rounds</li>
+<li>Rounds Per Second</li>
+<li>Send Time</li>
+<li>Successful Connections</li>
+<li>Successful Hits</li>
+<li>Successful Hits Per Second</li>
+<li>Successful Rounds</li>
+<li>Successful Rounds Per Second</li>
+<li>Successful Transactions</li>
+<li>Successful Transactions Per Second</li>
+<li>Throughput (Bytes Per Second)</li>
+<li>Time To First Byte</li>
+<li>Transaction Time</li>
+<li>Transactions</li>
+<li>Transactions Per Second</li>
+</ul>
+<h4 id="successoptions-object-optional">SuccessOptions (object, optional)</h4>
+<p>This object specifies the success options for the test.
+combination of the following:</p>
+<ul>
+<li><code>FailSevereError</code> (boolean):  Fail the test if a severe error occurs during the test run.</li>
+<li><code>FailOnErrorsCount</code> (boolean):  Fail the test if the number of errors is higher than.</li>
+<li><code>FailOnErrorCountNumber</code> (number): The number of errors that should occur before the test fails.</li>
+<li><code>FailOnWarningsCount</code> (boolean): Fail the test if the number of warnings is higher than</li>
+<li><code>FailOnWarningCountNumber</code> (number): The number of warnings that should occur before the test fails.</li>
+<li><code>FailOnError</code> (boolean): Stop the test when a failure occours.</li>
+</ul>
+<h4 id="sample-json-code-simple">Sample Json code - simple</h4>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"simple script test"</span><span class="p">,</span><span class="w">        </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="nt">"agendas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myAgenda"</span><span class="p">,</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\data\\myAgenda.wlp"</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nt">"loadGenerator"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PC"</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">],</span><span class="w">        </span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="nt">"RampUpTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="nt">"Duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="nt">"RampDownTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">            </span><span class="nt">"MaxVC"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="p">}</span><span class="w">        </span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="sample-json-code-advanced">Sample Json code - advanced</h4>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Detailed script test"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agenda"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nt">"agendas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myAgenda"</span><span class="p">,</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\myAgenda.wlp"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">                </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="nt">"execoptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                        </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserAgentOption"</span><span class="p">,</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                        </span><span class="nt">"Value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mozilla/5.0"</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                </span><span class="p">],</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">                </span><span class="nt">"SleepOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">                    </span><span class="nt">"SleepType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">                    </span><span class="nt">"SetMaxSleepTime"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">                    </span><span class="nt">"MaxSleepTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">                </span><span class="nt">"agendaname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jsBasedScript"</span><span class="p">,</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">                </span><span class="nt">"agendapath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:\\jsBasedScript.js"</span><span class="p">,</span>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">                </span><span class="nt">"percentage"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="nt">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us_east1"</span><span class="p">,</span>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                </span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us_west1"</span><span class="p">,</span>
+</span><span id="__span-1-35"><a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">                </span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+</span><span id="__span-1-36"><a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-37"><a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>
+</span><span id="__span-1-38"><a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">        </span><span class="p">],</span><span class="w">        </span>
+</span><span id="__span-1-39"><a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">        </span><span class="nt">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-40"><a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">            </span><span class="nt">"RampUpTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+</span><span id="__span-1-41"><a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">            </span><span class="nt">"Duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-1-42"><a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">            </span><span class="nt">"RampDownTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-1-43"><a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">            </span><span class="nt">"MaxVC"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-1-44"><a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">            </span><span class="nt">"LimitRounds"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-45"><a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">            </span><span class="nt">"Rounds"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+</span><span id="__span-1-46"><a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-47"><a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">        </span><span class="nt">"slaManager"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-48"><a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-49"><a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check login time and page time"</span><span class="p">,</span>
+</span><span id="__span-1-50"><a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">                </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"or"</span><span class="p">,</span>
+</span><span id="__span-1-51"><a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="w">                </span><span class="nt">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-52"><a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-53"><a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login Time"</span><span class="p">,</span>
+</span><span id="__span-1-54"><a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Current Value"</span><span class="p">,</span>
+</span><span id="__span-1-55"><a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w">                        </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;"</span><span class="p">,</span>
+</span><span id="__span-1-56"><a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-1-57"><a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-1-58"><a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="w">                    </span><span class="p">{</span>
+</span><span id="__span-1-59"><a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Page Time"</span><span class="p">,</span>
+</span><span id="__span-1-60"><a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Current Value"</span><span class="p">,</span>
+</span><span id="__span-1-61"><a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">                        </span><span class="nt">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;"</span><span class="p">,</span>
+</span><span id="__span-1-62"><a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</span><span id="__span-1-63"><a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-1-64"><a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="w">                </span><span class="p">],</span>
+</span><span id="__span-1-65"><a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login or page time is too high"</span><span class="p">,</span>
+</span><span id="__span-1-66"><a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="w">                </span><span class="nt">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span>
+</span><span id="__span-1-67"><a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-68"><a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-1-69"><a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">        </span><span class="nt">"successOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-70"><a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="w">            </span><span class="nt">"FailOnError"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-71"><a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="w">            </span><span class="nt">"FailOnErrorsCount"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-72"><a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="w">            </span><span class="nt">"FailOnErrorCountNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">            </span>
+</span><span id="__span-1-73"><a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="w">            </span><span class="nt">"FailSevereError"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-74"><a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-75"><a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-76"><a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="generating-an-analytics-report-through-the-cli">Generating an Analytics Report through the CLI</h2>
+<p>WebLOAD Analytics can be executed in command line mode. This enables incorporating WebLOAD Analytics in scripts. Two executables are available:</p>
+<ul>
+<li><strong>WLAnalyticsCMD.exe</strong> – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes.</li>
+<li><strong>WLAnalytics.exe</strong> – Launches the WebLOAD Analytics UI, and generates a report for a specified session.</li>
+</ul>
+<p>The executables are located in <em><code>&lt;Installation dir&gt;</code></em>\bin. For example:</p>
+<p><code>C:\Program Files\RadView\WebLOAD\bin.</code></p>
+<h3 id="running-wlanalyticscmdexe">Running WLAnalyticsCMD.exe</h3>
+<p>Use this executable to generate a report for a specified session, and publish or print it.</p>
+<h4 id="syntax_3">Syntax</h4>
+<p><strong>WLAnalyticsCmd.exe –m U</strong>|<strong>P</strong> {<strong>-t</strong> <em>template_path</em>}|{<strong>-p</strong> <em>portfolio_path</em>}</p>
+<p>{<strong>-s</strong> <em>session_name</em>}|{<strong>-ls</strong> <em>session_path</em>} [<strong>-f DOC</strong>|<strong>ODT</strong>|<strong>HTML</strong>|<strong>XLS</strong>|<strong>RTF</strong>|<strong>PDF</strong>] [<strong>-l</strong> <em>report_location</em>] [<strong>-n</strong> <em>output_report_name</em>] [<strong>-h</strong>]</p>
+<h4 id="parameters_2">Parameters</h4>
+<table><tr><th colspan="1" valign="top"><b>Parameter</b></th><th colspan="1" valign="top"><b>Description</b></th><th colspan="1" valign="top"><b>Comments</b></th></tr>
+<tr><td colspan="1" valign="top"><b>-m</b></td><td colspan="1" valign="top"><p>Indicates the action. Specify one of the following</p><p><b>U</b> – Publish.</p><p><b>P</b> – Print.</p></td><td colspan="1" valign="top">Mandatory parameter.</td></tr>
+<tr><td colspan="1" valign="top"><b>-t</b> <i>template_path</i></td><td colspan="1" valign="top"><p>Generates a chart from a specified template.</p><p>You must specify the path to the template directory (either absolute or relative to the gallery).</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>You must specify one of the two options:</p><p><b>-t</b> or <b>–p</b>.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-p</b> <i>portfolio_path</i></td><td colspan="1" valign="top"><p>Generates a report from a portfolio.</p><p>You must specify the path to the portfolio directory (either absolute or relative to the Portfolio category).</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-s</b> <i>session_name</i></td><td colspan="1" valign="top"><p>Specifies a session already loaded into WebLOAD. You must specify the session name.</p><p><b>Note</b>: You can use this parameter multiple times to specify multiple sessions. This is necessary if you are generating a regression chart.</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p></p><p></p><p></p><p></p><p>You must specify one of the two options:</p><p><b>-s</b> or <b>–ls</b>.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-ls</b> <i>session_path</i></td><td colspan="1" valign="top"><p>Specifies a load session file to import into WebLOAD.</p><p>You must specify the full path.</p><p><b>Note</b>: You can use this parameter multiple times to load multiple sessions. This is necessary if you are generating a regression chart.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-f</b></td><td colspan="1" valign="top"><p>Specifies the output format for a published report. Select one of the following: <b>DOC</b>, <b>ODT</b>, <b>HTML</b>, <b>XLS</b>, <b>RTF</b>, or <b>PDF</b>.</p><p>If you do not specify an output format, the default format, specified in Analytics Preferences, is used.</p></td><td colspan="1" valign="top">Optional parameter.</td></tr>
+<tr><td colspan="1" valign="top"><b>-l</b> <i>report_location</i></td><td colspan="1" valign="top"><p>Specifies the location of the published report.</p><p>If you do not specify a location, the default location, specified in Analytics Preferences, is used.</p></td><td colspan="1" valign="top">Optional parameter.</td></tr>
+<tr><td colspan="1" valign="top"><p><b>-n</b></p><p><i>output_report_name</i></p></td><td colspan="1" valign="top">Specifies a name for the newly created report. If you do not specify a name, the application provides a default name.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
+<tr><td colspan="1" valign="top"><b>-h</b></td><td colspan="1" valign="top">Displays the help.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Note that you must specify:</p>
+<ul>
+<li>Publish or print.</li>
+<li>A template or portfolio.</li>
+<li>A session, either previously loaded or to be imported.</li>
+</ul>
+</blockquote>
+<h4 id="examples_2">Examples</h4>
+<p><strong>Example 1:</strong></p>
+<p>To load the mysession.ls Load Session, generate a ‘General/Load Size Summary’ chart, and publish it in the default file format, in the default location, under the name test-report:</p>
+<p><code>WLAnalyticsCmd.exe -m U -t "General\Load Size Summary" -ls "C:\mysession.ls" –n "test-report"</code></p>
+<p><strong>Example 2:</strong></p>
+<p>To use the loaded first-session Load Session, generate a ‘Summary Portfolio’ portfolio, and print it:</p>
+<p><code>WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s “first- session"</code></p>
+<p><strong>Example 3:</strong></p>
+<p>To use the loaded first-session and second-session Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in C:\myreports, using a default name:</p>
+<p><code>WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s</code></p>
+<p><code>“first-session" -s "second-session" –f PDF –l “c:\myreports”</code></p>
+<h3 id="running-wlanalyticsexe">Running WLAnalytics.exe</h3>
+<p>Use this executable to open the WebLOAD Analytics UI, and open a report or generate a report for a specified session.</p>
+<h4 id="syntax_4">Syntax</h4>
+<p>**<code>WLAnalytics.exe** {**-t** *template\_path*}|{**- p** *portfolio\_path*}</code></p>
+<p><code>{**-s** *session\_name*}|{**-ls** *session\_path*} [**-h**] [**-noSplash**]</code></p>
+<h4 id="parameters_3">Parameters</h4>
+<table><tr><th colspan="1" valign="top"><b>Parameter</b></th><th colspan="1" valign="top"><b>Description</b></th><th colspan="1" valign="top"><b>Comments</b></th></tr>
+<tr><td colspan="1" valign="top"><b>-t</b> <i>template_path</i></td><td colspan="1" valign="top"><p>Generates a chart from a specified template.</p><p>You must specify the path to the template directory (either absolute or relative to the gallery).</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>You must specify one of the two options:</p><p><b>-t</b> or <b>–p</b>.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-p</b> <i>portfolio_path</i></td><td colspan="1" valign="top"><p>Generates a report from a portfolio.</p><p>You must specify the path to the portfolio directory (either absolute or relative to the Portfolio category).</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-s</b> <i>session_name</i></td><td colspan="1" valign="top"><p>Specifies a session already loaded into WebLOAD. You must specify the session name.</p><p><b>Note</b>: You can use this parameter multiple times to specify multiple sessions. This is necessary if you are generating a regression chart.</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p></p><p></p><p></p><p></p><p>You must specify one of the two options:</p><p><b>-s</b> or <b>–ls</b>.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-ls</b> <i>session_path</i></td><td colspan="1" valign="top"><p>Specifies a load session file to import into WebLOAD.</p><p>You must specify the full path.</p><p><b>Note</b>: You can use this parameter multiple times to load multiple sessions. This is necessary if you are generating a regression chart.</p></td></tr>
+<tr><td colspan="1" valign="top"><b>-h</b></td><td colspan="1" valign="top">Displays the help.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
+<tr><td colspan="1" valign="top"><b>-noSplash</b></td><td colspan="1" valign="top">Launches without a Splash screen.</td><td colspan="1" valign="top">Optional parameter.</td></tr>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Note that you must specify:</p>
+<ul>
+<li>A template, report, or portfolio.</li>
+<li>A session, either previously loaded or to be imported.
+</li>
+</ul>
+</blockquote>
+<h4 id="examples_3">Examples</h4>
+<p><strong>Example 1:</strong></p>
+<p>To open the WebLOAD Analytics UI, load the mysession.ls Load Session, and generate a ‘General/Load Size Summary’ chart:</p>
+<p><code>WLAnalytics.exe -t "General\Load Size Summary" -ls "C:\mysession.ls"</code></p>
+<p><strong>Example 2:</strong></p>
+<p>To open the WebLOAD Analytics UI, use the loaded first-session Load Session, and generate a ‘Summary Portfolio’ portfolio:</p>
+<p><code>WLAnalytics.exe -p "Summary Portfolio" -s “first-session"</code></p>
+<h2 id="running-webload-recorder-testing-through-the-cli">Running WebLOAD Recorder Testing through the CLI</h2>
+<p>You can initiate WebLOAD Recorder testing directly through the CLI. You can enter the WebLOAD Recorder launch command into a batch file or into an external script and WebLOAD Recorder will run directly, without user intervention, using the parameters specified.</p>
+<p><strong>To run WebLOAD Recorder testing through the CLI:</strong></p>
+<p>Enter the WebloadRecorder.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.</p>
+<h4 id="syntax_5">Syntax</h4>
+<p>Use the following syntax to define the parameters for running a WebLOAD Recorder test <strong>through a Command Line Interface.:</strong></p>
+<p><code>WebloadRecorder.exe [&lt;flags&gt;][] [&lt;session name to save to&gt;][]</code></p>
+<p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#examples"><em>Examples</em></a>.</p>
+<h4 id="parameters_4">Parameters</h4>
+<p>When running a test invoked by the executable, you can specify the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flags</td>
+<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p><p>/r - auto record</p><p>Start Recorder in recording mode - can be used for recording automation. Can also add  <code>/time</code> X to automatically stop recording after X seconds, for example  /time 30. Specify the .wlp (or .js) to save to. You can also use special link to control the recording - add transactions and stop recorindg, see <a href="#special-link-during-recording">Special Links</a> </p></td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Project or session name to open</td>
+<td style="text-align: left;">The name of the .wlp file or .wls file (Project file or Session file) to run.</td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Session name to save to</td>
+<td style="text-align: left;">The name of the .wls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Number of rounds to run</td>
+<td style="text-align: left;">The number of iterations to run during runtime. The default value is 1.</td>
+<td style="text-align: left;">Optional parameter</td>
+</tr>
+</tbody>
+</table>
+<p>The parameters are all optional. If no parameters are entered, the executable launches WebLOAD Recorder and does not run a test. If the autorun flag  flag is not set, the <code>&lt; Session name to save to &gt;</code>, and the &lt; Number of rounds to run &gt; parameters are ignored.</p>
+<h4 id="examples_4">Examples</h4>
+<p><strong>Example 1:</strong></p>
+<p><code>WebloadRecorder.exe /r test1.wlp /time 60</code></p>
+<p>Start WebLOAD Recorder in Recording mode, ready to record any traffic that goes to localhost:9884 - for automation, point the traffic to this proxy. Save results to test1 project file and waits for user input. Stop recording after 60 seconds, or when getting stop signal. To stop or add transactions see <a href="#special-link-during-recording">special links</a>.</p>
+<p>Tip: To correlate script automatically upon recording, change in WebLOAD Recorder, Tools -&gt; Recording and script generation options -&gt; Correlation Options -&gt; Correlation level to 'Use existing rules' or 'Discover rules' to trigger correlation for recorded scripts.</p>
+<p><strong>Example 2:</strong></p>
+<p><code>WebloadRecorder.exe test1.wlp</code></p>
+<p>This command opens WebLOAD Recorder with the test1 project file and waits for user input.</p>
+<p><strong>Example 3:</strong></p>
+<p><code>WebloadRecorder.exe /a test1.wlp test2.wlp 3</code></p>
+<p>This command:</p>
+<ul>
+<li>
+<p>Opens WebLOAD Recorder and automatically runs a test using the test1.wlp project file.</p>
+</li>
+<li>
+<p>Runs the project for three iterations.</p>
+</li>
+<li>
+<p>Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.</p>
+</li>
+</ul>
+<p><strong>Example 4:</strong></p>
+<p><code>WebloadRecorder.exe /a test1.wlp test1.wls 3 /a test2.wlp test2.wls 2</code></p>
+<p>This command:</p>
+<ul>
+<li>
+<p>Opens WebLOAD Recorder and automatically runs a test using the test1.wlp project file.</p>
+</li>
+<li>
+<p>Runs the project test1.wlp for three iterations.</p>
+</li>
+<li>Saves the test results in the WebLOAD Recorder session file test1.wls, which includes all of the test data and results.</li>
+<li>Opens the WebLOAD Recorder project file test2.wlp.</li>
+<li>Runs the project test2.wlp for two iterations.</li>
+<li>Saves the test results in the WebLOAD Recorder session file test2.wls, which includes all of the test data and results.</li>
+</ul>
+<h4 id="special-link-during-recording">Special Link During Recording</h4>
+<p>During recording, you can use these special links to trigger special behavior. This can be useful when automating recroding that is done through another software, for example when the script is running from Selenium and being recorded by WebLOAD.</p>
+<ul>
+<li><code>https://www.radview.com/stop-recording/</code> - instructs the recording to end</li>
+<li><code>https://www.radview.com/begin-transaction/?name=</code> - Add BeginTransaction with the given name</li>
+<li><code>https://www.radview.com/end-transaction/?name=</code> - Add EndTransaction with the given name</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

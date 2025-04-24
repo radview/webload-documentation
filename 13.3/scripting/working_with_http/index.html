@@ -1,0 +1,2516 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../advanced_javascript_features/" rel="prev"/>
+<link href="../using_asynchronous/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Working with HTTP Protocol - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#working-with-http-protocol">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Working with HTTP Protocol
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-webload-dom-structure">
+<span class="md-ellipsis">
+      Understanding the WebLOAD DOM Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-multiple-ip-addresses">
+<span class="md-ellipsis">
+      Using Multiple IP Addresses
+    </span>
+</a>
+<nav aria-label="Using Multiple IP Addresses" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-ip-addresses-in-the-script">
+<span class="md-ellipsis">
+      Generating IP Addresses in the script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-web-pages">
+<span class="md-ellipsis">
+      Parsing Web Pages
+    </span>
+</a>
+<nav aria-label="Parsing Web Pages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page">
+<span class="md-ellipsis">
+      Parsing and Navigating Nested Frames on a Dynamic HTML Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-wlhtml-to-follow-a-dynamic-link">
+<span class="md-ellipsis">
+      Using wlHtml to Follow a Dynamic Link
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-submission-properties">
+<span class="md-ellipsis">
+      Data Submission Properties
+    </span>
+</a>
+<nav aria-label="Data Submission Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formdata">
+<span class="md-ellipsis">
+      FormData
+    </span>
+</a>
+<nav aria-label="FormData" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-formdata-using-get">
+<span class="md-ellipsis">
+      Getting FormData Using Get
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-using-post">
+<span class="md-ellipsis">
+      Submitting FormData Using Post()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-with-missing-fields">
+<span class="md-ellipsis">
+      Submitting FormData with Missing Fields
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-formdata-with-data-files">
+<span class="md-ellipsis">
+      Using FormData with Data Files
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data">
+<span class="md-ellipsis">
+      Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datafile">
+<span class="md-ellipsis">
+      DataFile
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#header">
+<span class="md-ellipsis">
+      Header
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase">
+<span class="md-ellipsis">
+      Erase
+    </span>
+</a>
+<nav aria-label="Erase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasetrue-default">
+<span class="md-ellipsis">
+      Erase=true (default)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasefalse">
+<span class="md-ellipsis">
+      Erase=false
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#posting-form-data-using-elements">
+<span class="md-ellipsis">
+      Posting form Data Using Elements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-cookies-through-the-wlcookie-object">
+<span class="md-ellipsis">
+      Managing Cookies through the wlCookie Object
+    </span>
+</a>
+<nav aria-label="Managing Cookies through the wlCookie Object" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlcookie-object">
+<span class="md-ellipsis">
+      The wlCookie Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-webload-works-with-cookies">
+<span class="md-ellipsis">
+      How WebLOAD Works with Cookies
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlcookie-methods">
+<span class="md-ellipsis">
+      wlCookie Methods
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-cookie">
+<span class="md-ellipsis">
+      Example: using a cookie
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-binary-data">
+<span class="md-ellipsis">
+      Handling Binary Data
+    </span>
+</a>
+<nav aria-label="Handling Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data">
+<span class="md-ellipsis">
+      Recording Binary Data
+    </span>
+</a>
+<nav aria-label="Recording Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data-as-a-data-file">
+<span class="md-ellipsis">
+      Recording Binary Data as a Data File
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encoding-binary-data-in-the-script">
+<span class="md-ellipsis">
+      Encoding Binary Data in the script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-authentication-in-the-script">
+<span class="md-ellipsis">
+      Handling Authentication in the Script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/global_lab_load_generators/">
+<span class="md-ellipsis">
+    Global Lab Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/rest_api/">
+<span class="md-ellipsis">
+    Using the REST API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/js_helper_funcs/">
+<span class="md-ellipsis">
+    JavaScript Helper Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-webload-dom-structure">
+<span class="md-ellipsis">
+      Understanding the WebLOAD DOM Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-multiple-ip-addresses">
+<span class="md-ellipsis">
+      Using Multiple IP Addresses
+    </span>
+</a>
+<nav aria-label="Using Multiple IP Addresses" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generating-ip-addresses-in-the-script">
+<span class="md-ellipsis">
+      Generating IP Addresses in the script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-web-pages">
+<span class="md-ellipsis">
+      Parsing Web Pages
+    </span>
+</a>
+<nav aria-label="Parsing Web Pages" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsing-and-navigating-nested-frames-on-a-dynamic-html-page">
+<span class="md-ellipsis">
+      Parsing and Navigating Nested Frames on a Dynamic HTML Page
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-wlhtml-to-follow-a-dynamic-link">
+<span class="md-ellipsis">
+      Using wlHtml to Follow a Dynamic Link
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-submission-properties">
+<span class="md-ellipsis">
+      Data Submission Properties
+    </span>
+</a>
+<nav aria-label="Data Submission Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formdata">
+<span class="md-ellipsis">
+      FormData
+    </span>
+</a>
+<nav aria-label="FormData" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-formdata-using-get">
+<span class="md-ellipsis">
+      Getting FormData Using Get
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-using-post">
+<span class="md-ellipsis">
+      Submitting FormData Using Post()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-formdata-with-missing-fields">
+<span class="md-ellipsis">
+      Submitting FormData with Missing Fields
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-formdata-with-data-files">
+<span class="md-ellipsis">
+      Using FormData with Data Files
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data">
+<span class="md-ellipsis">
+      Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datafile">
+<span class="md-ellipsis">
+      DataFile
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#header">
+<span class="md-ellipsis">
+      Header
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase">
+<span class="md-ellipsis">
+      Erase
+    </span>
+</a>
+<nav aria-label="Erase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasetrue-default">
+<span class="md-ellipsis">
+      Erase=true (default)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erasefalse">
+<span class="md-ellipsis">
+      Erase=false
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#posting-form-data-using-elements">
+<span class="md-ellipsis">
+      Posting form Data Using Elements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-cookies-through-the-wlcookie-object">
+<span class="md-ellipsis">
+      Managing Cookies through the wlCookie Object
+    </span>
+</a>
+<nav aria-label="Managing Cookies through the wlCookie Object" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-wlcookie-object">
+<span class="md-ellipsis">
+      The wlCookie Object
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-webload-works-with-cookies">
+<span class="md-ellipsis">
+      How WebLOAD Works with Cookies
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wlcookie-methods">
+<span class="md-ellipsis">
+      wlCookie Methods
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-using-a-cookie">
+<span class="md-ellipsis">
+      Example: using a cookie
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-binary-data">
+<span class="md-ellipsis">
+      Handling Binary Data
+    </span>
+</a>
+<nav aria-label="Handling Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data">
+<span class="md-ellipsis">
+      Recording Binary Data
+    </span>
+</a>
+<nav aria-label="Recording Binary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-binary-data-as-a-data-file">
+<span class="md-ellipsis">
+      Recording Binary Data as a Data File
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encoding-binary-data-in-the-script">
+<span class="md-ellipsis">
+      Encoding Binary Data in the script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handling-authentication-in-the-script">
+<span class="md-ellipsis">
+      Handling Authentication in the Script
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="working-with-http-protocol">Working with HTTP Protocol</h1>
+<p>Website load testing usually means testing how typical user activities are handled by the system under test not in a single-user scenario but rather under heavy usage load. Using load testing, we can test the system’s performance, scalability and reliability, all in real-life simulated usage scenarios and patterns. A system’s performance is all about how fast it functions; its reliability is about how often it’s available (where a system might be unavailable due to a lack of a certain resource or because of a bug); and a</p>
+<p>system’s scalability is about how these two factors (performance and reliability) change as the usage of the system increases.</p>
+<p>WebLOAD was designed as a protocol-level load testing tool, enabling the QA</p>
+<p>professional to “bombard” the system under test with protocol-level commands and transactions, simulating real usage of a large amount of users. The main and most important protocol for load testing Internet applications is the HTTP protocol.</p>
+<p>WebLOAD supports the common HTTP methods and headers, as defined in the HTTP RFCs, most notably RFC 2616 (1999), that was defined by the W3C and the IETF.The WebLOAD DOM extension set includes objects, methods, properties, and functions that support designing tests at the HTTP protocol level. Using the DOM, functional and verification tests can be done, to check the system’s reliability under load.</p>
+<p>This chapter documents the features that apply to QA professionals creating scripts based on the HTTP Protocol, where HTTP transactions and the responses they trigger are the focus of the test session. This chapter includes a few sample scripts that you can study to help learn the HTTP Protocol testing technique. The examples are fictitious, but you can copy the scripts and edit them for use in real WebLOAD tests. More sample scripts may be found on the WebLOAD Script Libraries, at <a href="http://www.webload.org/index.php?option=com_wrapper&amp;Itemid=160">http://www.webload.org/index.php?option=com_wrapper&amp;Itemid=160.</a></p>
+<h2 id="understanding-the-webload-dom-structure">Understanding the WebLOAD DOM Structure</h2>
+<p>For optimum website testing, WebLOAD extended the standard browser DOM with many features and functions that are critical to site testing and evaluation. The following figure, an extended version of the basic DOM hierarchy tree, highlights many of the added elements of the WebLOAD DOM hierarchy. The remainder of this chapter provides more detailed information about some of the special elements and features that WebLOAD added to the basic DOM model that are used when working in HTTP Protocol mode.</p>
+<p><img alt="WebLOAD DOM Hierarchy" src="../../images/dom_hierarchy.png"/></p>
+<p>The preceding illustration highlights in bold the WebLOAD extensions used by WebLOAD when working with the Document Object Model.</p>
+<blockquote>
+<p><strong>Note:</strong> WebLOAD-specific objects are identified by the wl prefix.</p>
+</blockquote>
+<p>The following table lists some of the extensions that WebLOAD has added to the standard DOM objects, properties, and methods.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>WebLOAD extensions</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Objects</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">wlCookie</td>
+<td style="text-align: left;">Sets and deletes cookies.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlException</td>
+<td style="text-align: left;">WebLOAD error management object.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlGeneratorGlobal and wlSystemGlobal objects</td>
+<td style="text-align: left;">Handles global values shared between script threads or Load Generators.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlGlobals</td>
+<td style="text-align: left;">Manages global system and configuration values.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlHeader</td>
+<td style="text-align: left;">Contains the key/value pairs in the HTTP command headers that brought the document. (Get, Post, etc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlHtml</td>
+<td style="text-align: left;">Retrieves parsed elements of HTTP header fields.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlHttp</td>
+<td style="text-align: left;">Performs HTTP transactions and stores configuration property values for individual transactions.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlLocals</td>
+<td style="text-align: left;">Stores local configuration property values.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlMeta</td>
+<td style="text-align: left;">Stores the parsed data for an HTML meta object.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlOutputFile</td>
+<td style="text-align: left;">Writes script output messages to a global output file.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlRand</td>
+<td style="text-align: left;">Generates random numbers.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlSearchPair</td>
+<td style="text-align: left;">Contains the key/value pairs in a document’s URL search strings.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlTable, row, and cell objects</td>
+<td style="text-align: left;">Contains the parsed data from an HTML table.</td>
+</tr>
+<tr>
+<td style="text-align: left;">XML DOM objects</td>
+<td style="text-align: left;"><p>XML DOM object set that both accesses XML site information <em>and</em></p><p>generates new XML data to send back to the server for processing.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Properties</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">wlSource</td>
+<td style="text-align: left;">Contains the complete HTML source code of the frame, in a read- only string.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlStatusLine</td>
+<td style="text-align: left;">Contains the status line of the HTTP header, in a read-only string.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlStatusNumber</td>
+<td style="text-align: left;">Contains the HTTP status value, which WebLOAD retrieves from the HTTP header, in a read-only integer.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlVersion</td>
+<td style="text-align: left;">Contains the HTTP protocol version, which WebLOAD retrieves from the HTTP header, in a read-only string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Methods</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">wlGetAllForms</td>
+<td style="text-align: left;">Retrieves a collection of all forms (<form> elements) in an HTML page and its nested frames.</form></td>
+</tr>
+<tr>
+<td style="text-align: left;">wlGetAllFrames</td>
+<td style="text-align: left;">Retrieves a collection of all frames in an HTML page, at any level of nesting.</td>
+</tr>
+<tr>
+<td style="text-align: left;">wlGetAllLinks</td>
+<td style="text-align: left;">Retrieves a collection of all links (<a> elements) in an HTML page and its nested frames.</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-multiple-ip-addresses">Using Multiple IP Addresses</h2>
+<p>WebLOAD enables the creation of a single test script that includes multiple IP addresses, simulating the behavior of actual users.</p>
+<blockquote>
+<p><strong>Note:</strong> Before you enable support of multiple IP addresses, you must first generate additional IP addresses on your machine to use when testing.</p>
+</blockquote>
+<p>Enable the use of all available IP addresses through the property <code>wlGlobals.MultiIPSupport</code>. The values of <code>MultiIPSupport</code> are:</p>
+<ul>
+<li>false – Use only one IP address. (default)</li>
+<li>true – Use all available IP addresses.</li>
+</ul>
+<p>Indicate whether WebLOAD should use the same IP or a different IP for every round, by setting the value of the <code>wlGlobals.MultiIPSupportType</code> property which supports the following values:</p>
+<ul>
+<li>PerClient – WebLOAD preserves the current behavior, meaning that there are different IPs per client but the same IP is used for all rounds. This is the default setting.</li>
+<li>PerRound – WebLOAD supports the use of a different IP from the pool per client, per round, until the pool is exhausted, after which it returns to the beginning.</li>
+</ul>
+<p>The exact number of IPs that WebLOAD supports depends on the operating system being used:</p>
+<ul>
+<li>With Unix, WebLOAD uses the <code>gethostbyname()</code> function to access the IP address. There is no limit to the number of IP addresses that WebLOAD supports.</li>
+<li>With Windows, WebLOAD loads an SNMP agent dll file, through which WebLOAD accesses the IP information. The SNMP agent exists on all Windows versions since Win95 and NT, even if an SNMP agent is not installed. This method queries all of the IPs, one at a time, and places the result in a list maintained in the WebLOAD’s engine code. WebLOAD continues to go over the entire IP list, until it reaches the engine code’s limit of 100,000 IPs.</li>
+</ul>
+<p>If for some reason the SNMP does not work, WebLOAD uses another method whose limitation is 35 IPs.</p>
+<h3 id="generating-ip-addresses-in-the-script"><strong>Generating IP Addresses in the script</strong></h3>
+<p>After enabling the use of all available IP addresses, you can generate additional IP addresses on your machine by setting the TCP/IP properties through the Windows UI. For further instructions consult your system administrator. Alternatively, you can use the FillIP.bat file provided with WebLOAD, as described below.</p>
+<p><strong>To generate IP addresses in the script:</strong></p>
+<ol>
+<li>
+<p>Locate the <code>FillIP.bat</code> file in <code>&lt;WebLOAD directory&gt;\bin</code>.</p>
+</li>
+<li>
+<p>Run the batch file by entering the file name in the command line or double-clicking the file.</p>
+<p>The command line window appears.
+<img alt="Command Line Window" src="../../images/command_line_window.png"/></p>
+</li>
+<li>
+<p>Enter the <code>netsh</code> command to generate the list of IP addresses.</p>
+<p><code>FillIP IP\_prefix subnet\_mask gateway from to</code></p>
+</li>
+</ol>
+<p>The <code>netsh</code> command parameters are described in the following table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">IP_prefix</td>
+<td style="text-align: left;"><p>The prefix used for all of the generated IP addresses. For example, if IP_prefix</p><p>is 192.168 then the generated IP address structure is 192.168.xxx.xxx.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">subnet_mask</td>
+<td style="text-align: left;">The subnet_mask is matched with the IP address to determine the fourth section of the generated IP address, along with the gateway value. For example 255.255.0.0.</td>
+</tr>
+<tr>
+<td style="text-align: left;">gateway</td>
+<td style="text-align: left;">The gateway used for all of the generated IP addresses to determine the fourth section of the generated IP address, along with the subnet_mask value. For example, 192.168.0.1.</td>
+</tr>
+<tr>
+<td style="text-align: left;">from to</td>
+<td style="text-align: left;">Used to generate the third section in the IP address. For example, if from to is 1 24, then the generated IP addresses are all from xxx.xxx.1.xxx to xxx.xxx.24.xxx.</td>
+</tr>
+</tbody>
+</table>
+<p>Upon successful completion, the Command Line window returns OK. If an error is encountered (for example, an illegal IP address), the Command Line window returns details about the error.</p>
+<p>For example, to generate approximately 6000 IP addresses, use the following command in the script:</p>
+<p><code>FillIP 192.168 255.255.0.0 192.168.0.1 1 24</code></p>
+<p>The following IP addresses are generated:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">192.168.1.1</th>
+<th style="text-align: left;">192.168.2.1</th>
+<th style="text-align: left;">…</th>
+<th style="text-align: left;">192.168.24.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">192.168.1.2</td>
+<td style="text-align: left;">192.168.2.2</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">192.168.24.2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>…</p><p>192.168.1.255</p></td>
+<td style="text-align: left;"><p></p><p>192.168.2.255</p></td>
+<td style="text-align: left;"><p></p><p>…</p></td>
+<td style="text-align: left;"><p></p><p>192.168.24.255</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parsing-web-pages">Parsing Web Pages</h2>
+<p>Web testing sessions work with Web pages, by accessing a specified page and verifying that all operations are completed correctly. As part of the Web page access, downloaded Web pages are parsed and the data from each page stored in a logical structure. This section gives a brief overview of the parsing approach to a Web page.</p>
+<h3 id="parsing-and-navigating-nested-frames-on-a-dynamic-html-page"><strong>Parsing and Navigating Nested Frames on a Dynamic HTML Page</strong></h3>
+<p>The following script downloads a dynamic HTML page belonging to a retailer that advertises on the Internet. The second frame on the page offers bargain prices on three different items each hour. The script performs the following operations, some of which are marked in bold in the script code:</p>
+<ul>
+<li>Downloads the page including the nested frames.</li>
+<li>Retrieves the second frame.</li>
+<li>Searches the HTML source code of the second frame to find the <title> element.</title></li>
+<li>Confirms that the title is "Offer of the Hour". (If it is not, the script displays an error message and stops the current round of the thread where the error occurred. The thread continues with the next round.)</li>
+<li>Randomly selects one of the first three links in the second frame.</li>
+<li>Follows the link.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> This script includes DOM objects that are not explained in this section. For more information about a specific object or usage, (such as <code>wlGlobals</code>, <code>wlRand</code>, or <code>wlHttp</code>), see that object’s section in the <em>WebLOAD JavaScript Reference Guide</em></p>
+</blockquote>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">//Enable parsing of all links </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">ParseLinks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">//Enable downloading nested frames</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="kc">true</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">{</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">//Initialize the random number generator with a</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">//different seed for each thread (ensures that each</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">//thread follows a different sequence of links)       </span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="nx">wlRand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">ClientNum</span><span class="p">)</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c1">//Main script Body</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1">//Store the most recent download in document .wlSource </span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">SaveSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1">//Download the dynamic HTML page</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/general_sample/frames/frames.htm"</span><span class="p">)</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="c1">//Retrieve the second frame </span>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">MyFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">frames</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="nx">MyFrame</span><span class="p">)</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-0-24"><a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="c1">//Confirm that the &lt;TITLE&gt; element of the frame is</span>
+</span><span id="__span-0-26"><a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="c1">//"Offer of the Hour". If it is not, display an error</span>
+</span><span id="__span-0-27"><a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="c1">//message and abort the current round.</span>
+</span><span id="__span-0-28"><a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="c1">//Remember to escape the slash in &lt;/TITLE&gt;</span>
+</span><span id="__span-0-29"><a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="c1">// Using extractValue to catch the title</span>
+</span><span id="__span-0-31"><a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nx">myTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">extractValue</span><span class="p">(</span><span class="w"> </span><span class="s2">"&lt;title&gt;"</span><span class="p">,</span><span class="w"> </span><span class="s2">"&lt;\/title&gt;"</span><span class="p">,</span><span class="w"> </span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">wlSource</span><span class="p">)</span>
+</span><span id="__span-0-32"><a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1">// will print the content of the title </span>
+</span><span id="__span-0-34"><a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="nx">InfoMessage</span><span class="w"> </span><span class="p">(</span><span class="nx">myTitle</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-0-35"><a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">myTitle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"offer of the hour"</span><span class="p">)</span>
+</span><span id="__span-0-37"><a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="p">{</span>
+</span><span id="__span-0-38"><a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="nx">ErrorMessage</span><span class="p">(</span><span class="s2">"Thread "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">", Round "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">RoundNum</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">": Title is not ‘Offer of the Hour’ but is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">myTitle</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-0-39"><a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="p">}</span>
+</span><span id="__span-0-40"><a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="c1">//Retrieve the URL of a randomly selected link</span>
+</span><span id="__span-0-41"><a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="nx">SelectedItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlRand</span><span class="p">.</span><span class="nx">Select</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span>
+</span><span id="__span-0-42"><a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="nx">LinkUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MyFrame</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">[</span><span class="nx">SelectedItem</span><span class="p">].</span><span class="nx">href</span><span class="w"> </span><span class="nx">InfoMessage</span><span class="p">(</span><span class="nx">LinkUrl</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-0-43"><a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1">//Follow the link </span>
+</span><span id="__span-0-44"><a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">LinkUrl</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="using-wlhtml-to-follow-a-dynamic-link">Using wlHtml to Follow a Dynamic Link</h3>
+<p>The third link on a company’s home page is an advertisement that links to one of several products. On successive accesses, the advertisement switches dynamically among the products.</p>
+<p>The following WebLOAD script tests the time that a user would need to follow the link.</p>
+<p>The script:</p>
+<ul>
+<li>Links to the home page and parses the HTML code.</li>
+<li>Retrieves the URL of the third link.</li>
+<li>Measures the time it takes WebLOAD to:<ul>
+<li>Download the main page and, depending on the parameters, do any of the following:<ul>
+<li>Download frames, images, tables, or whatever else has been specified.</li>
+<li>Download nested subframes, images, etc.</li>
+<li>Parse the document.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>In this script, WebLOAD displays two time statistics:</p>
+<ul>
+<li>The Round Time.</li>
+<li>The Link Time.</li>
+</ul>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="p">{</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="c1">//Set the default URL to the dynamic HTML home page</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"http://www.ABCDEF.com"</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="c1">//Parse links. Forms are not needed. </span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">ParseLinks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">ParseForms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">//Main script</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1">//Connect to the home page </span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">()</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">// Retrieve the third link on the home page using the manual</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1">// GetLinkByIndex() method.</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">// See IdentifyObject() for the dynamic ASM alternative </span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nx">Link3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlHtml</span><span class="p">.</span><span class="nx">GetLinkByIndex</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="c1">//Measure the time to connect to the link </span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nx">SetTimer</span><span class="p">(</span><span class="s2">"Link Time"</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">Link3</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="nx">SendTimer</span><span class="p">(</span><span class="s2">"Link Time"</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="data-submission-properties">Data Submission Properties</h2>
+<p>You may submit many types of data to an HTTP server in a Get, Post, or Head command. For example, you can submit a search string, the results of form fields, or a file. You may assign values to variable data stored in these collections using the <code>wlSet</code> method.</p>
+<p>The <code>wlHttp</code> object provides the following collections to store the data that you want to submit:</p>
+<ul>
+<li><code>FormData</code></li>
+<li><code>Data</code></li>
+<li><code>DataFile</code></li>
+<li><code>Header</code></li>
+</ul>
+<p>At the time you first create your test script, you should decide which collection is most appropriate for your test session activities.</p>
+<ul>
+<li><code>FormData</code> is the standard collection of field values, common to all HTML forms.</li>
+<li><code>Header</code> is the collection of header field values only.</li>
+<li><code>Data</code> and DataFile are both collections that hold sets of data.<ul>
+<li><code>Data</code> collections are stored within the script itself, and are useful when you prefer to see the data directly.</li>
+<li><code>DataFile</code> collections store the data in local text files, writing only the name of the data file within the script itself, and are useful when you are working with large amounts of data, which would be too cumbersome to store within the script code itself.</li>
+</ul>
+</li>
+</ul>
+<p>Your script can work with both <code>Data</code> and <code>DataFile</code>collections. Do not use both properties on the same object (a single HTTP request can use either <code>Data</code> or <code>DataFile</code> collections, but not both).</p>
+<h3 id="formdata"><strong>FormData</strong></h3>
+<p><code>FormData</code> is a collection containing form field values. WebLOAD submits the field values to the HTTP server when you call one of the following methods of the <code>wlHttp</code> object:</p>
+<ul>
+<li><code>Get()</code></li>
+<li><code>Post()</code></li>
+<li><code>Head()</code></li>
+</ul>
+<p>The collection indices are the field names (HTML name attributes). Before you call <code>wlHttp.Post()</code>, set the value of each element to the data that you want to submit in the HTML field. The fields can be any HTML controls, such as:</p>
+<ul>
+<li>buttons</li>
+<li>text areas</li>
+<li>hidden controls</li>
+</ul>
+<p>Generally, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD) sends a URL-encoded request to the server, the data is HTTP encoded. Different clients
+– browsers or JavaScript functions such as Ajax – perform encoding with slight differences. Encoding form data replaces special characters such as blanks, “&gt;“ signs, and so on, with “%xx” (an ASCII hexa number). For example, a space is encoded as “%20” or as a “+”.</p>
+<p>The <code>Get()</code> method converts a URL address to contain only allowed URL characters. The <code>Post()</code> method converts the content of forms to contain only allowed URL characters. Forms contain one of the following content types:</p>
+<ul>
+<li><code>FormData [“key”]</code> – a value</li>
+<li><code>Data []</code> – raw information</li>
+<li><code>DataFile []</code> – both a value and raw information</li>
+</ul>
+<p>Turn off the encoding when the script sends large requests that have no data that needs to be encoded. This improves performance as it bypasses the scanning and reformatting of the request buffer. You can enable or disable encoding, by accessing the HTTP Parameters tab in the Current or Default Project Options dialog box, in WebLOAD Recorder. Check or uncheck Encode Form Data to enable or disable encoding.</p>
+<h4 id="getting-formdata-using-get">Getting FormData Using Get</h4>
+<p>You can get form data using a <code>Get()</code> call. For example:</p>
+<p><code>wlHttp.FormData["FirstName"] = "Bill"</code></p>
+<p><code>wlHttp.FormData["LastName"] = "Smith"</code> </p>
+<p><code>wlHttp.FormData["EmailAddress"] = "bsmith@ABCDEF.com"</code> </p>
+<p><code>[wlHttp.Get("http://www.ABCDEF.com/submit.cgi")](http://www.ABCDEF.com/submit.cgi)</code></p>
+<p>WebLOAD appends the form data to the URL as a query statement, using the</p>
+<p>following syntax:</p>
+<p><code>http://www.ABCDEF.com/submit.cgi</code>
+<code>?FirstName=Bill&amp;LastName=Smith</code>
+<code>&amp;EmailAddress=bsmith@ABCDEF.com</code></p>
+<h4 id="submitting-formdata-using-post">Submitting FormData Using Post()</h4>
+<p>Suppose you are testing an HTML form that requires name and email address data. You need to submit the form to the submit.cgi program, which processes the data.</p>
+<p>You can code this in the following way:</p>
+<p><code>wlHttp.FormData["FirstName"] = "Bill"</code> </p>
+<p><code>wlHttp.FormData["LastName"] = "Smith"</code></p>
+<p><code>wlHttp.FormData["EmailAddress"] = "bsmith@ABCDEF.com"</code>
+<code>wlHttp.Post("http://www.ABCDEF.com/submit.cgi")</code></p>
+<p>The <code>Post()</code> call connects to <code>submit.cgi</code> and sends the <code>FormData</code> fields. In the above example, WebLOAD would post the following fields:</p>
+<p><code>FirstName=Bill</code> </p>
+<p><code>LastName=Smith</code></p>
+<p><code>EmailAddress=bsmith@ABCDEF.com</code></p>
+<h4 id="submitting-formdata-with-missing-fields">Submitting FormData with Missing Fields</h4>
+<p>You can use the string "<code>$WL$EMPTY$STRING$</code>" to represent a missing name or value (an empty string) in a FormData field. You can use the string "<code>$WL$VOID$STRING$</code>" to represent a token that is posted alone, without even an equal sign.</p>
+<p>The following lines illustrate the syntax:</p>
+<p><code>wlHttp.FormData["FirstName"] ="$WL$EMPTY$STRING$"</code> </p>
+<p><code>wlHttp.FormData["$WL$EMPTY$STRING$"] = "Smith"</code> </p>
+<p><code>wlHttp.FormData["EmailAddress"] = "$WL$VOID$STRING$"</code> </p>
+<p><code>wlHttp.Post("http://www.ABCDEF.com/submit.cgi")</code></p>
+<p>In this example, the <code>Post()</code> call sends the following data:</p>
+<p><code>FirstName=</code></p>
+<p><code>=Smith</code></p>
+<p><code>EmailAddress</code></p>
+<p>A <code>Get()</code> call using the same form data would send:</p>
+<p><code>http://www.ABCDEF.com/submit.cgi?FirstName=&amp;=Smith&amp;EmailAddress</code></p>
+<blockquote>
+<p><strong>Note:</strong> JavaScript supports two equivalent notations for named collection elements:
+<code>FormData.FirstName</code>
+<code>FormData["FirstName"]</code>
+The latter notation also supports spaces in the name, for example, FormData["First Name"].</p>
+</blockquote>
+<h4 id="using-formdata-with-data-files">Using FormData with Data Files</h4>
+<p>You can coordinate the <code>FormData</code> property with input data files. In this case, one of the <code>FormData</code> fields stores identifying information about the data file, including the name of the file and the type of data in the file (text, binary, bmp, etc.).</p>
+<p>The following lines illustrate the syntax:</p>
+<p><code>wlHttp.FormData[“InputFile.wlFile-Name”] = ”myFavoritePicture”</code> </p>
+<p><code>wlHttp.FormData[“InputFile.wlContent-Type] = ”bmp”</code></p>
+<p>The following script fragment illustrates the <code>FormData</code> properties documented in this section. The input file lines are marked in bold.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>...
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>/***** WLIDE - URL : http://ws3/webft/fullform.asp - ID:4 *****/
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; 
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>wlHttp.Header["Referer"] = "http://ws3/webft/index.asp"
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>wlHttp.Get("http://ws3/webft/fullform.asp")
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>// END WLIDE
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>/***** WLIDE - Sleep - ID:5 *****/ 
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>Sleep(18890)
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>// END WLIDE
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>/***** WLIDE - URL : [http://ws3/webft/fullform.asp ](http://ws3/webft/fullform.asp)- ID:6 *****/
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; 
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>wlHttp.Header["Referer"] = "http://ws3/webft/fullform.asp"
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>wlHttp.FormdataEncodingType = 1
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>wlHttp.ContentType = "application/x-www-form-urlencoded"
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>wlHttp.FormData["text1"] = "user1" 
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>wlHttp.FormData["password1"] = "password1"
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>wlHttp.FormData["textarea1"] = "some text" 
+</span><span id="__span-2-23"><a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>wlHttp.FormData["checkbox1"] = "second value" 
+</span><span id="__span-2-24"><a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>wlHttp.FormData["select1"] = "first select value" wlHttp.FormData["submit2"] = "Submit2" 
+</span><span id="__span-2-25"><a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>wlHttp.Post("http://ws3/webft/fullform.asp")
+</span><span id="__span-2-26"><a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>// END WLIDE
+</span><span id="__span-2-27"><a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>...
+</span><span id="__span-2-28"><a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>/***** WLIDE - URL : http://ws3/upload/ssl-upload.html - ID:16*****/
+</span><span id="__span-2-29"><a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0;
+</span><span id="__span-2-30"><a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 
+</span><span id="__span-2-31"><a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-32"><a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>wlHttp.Get("http://ws3/upload/ssl-upload.html")
+</span><span id="__span-2-33"><a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>// END WLIDE
+</span><span id="__span-2-34"><a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>/***** WLIDE - Sleep - ID:17 *****/ 
+</span><span id="__span-2-35"><a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>Sleep(22999)
+</span><span id="__span-2-36"><a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>// END WLIDE
+</span><span id="__span-2-37"><a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>/***** WLIDE - URL : http://ws3/upload/ssl-upload-handler.php -ID:18 *****/
+</span><span id="__span-2-39"><a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>wlGlobals.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"
+</span><span id="__span-2-40"><a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>wlHttp.Header["Referer"] = "http://ws3/upload/ssl-upload.html"
+</span><span id="__span-2-41"><a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>wlHttp.EncodeFormdata = false;
+</span><span id="__span-2-42"><a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>wlHttp.ContentType = "multipart/form-data" 
+</span><span id="__span-2-43"><a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>wlHttp.FormData["text"] = "abcd" 
+</span><span id="__span-2-44"><a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>wlHttp.FormData["uploadFile[].wlFile-Name"] = "a.txt" 
+</span><span id="__span-2-45"><a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>wlHttp.FormData["uploadFile[].wlContent-Type"] = "text/plain"
+</span><span id="__span-2-46"><a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a>wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"
+</span><span id="__span-2-47"><a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a>wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"
+</span><span id="__span-2-48"><a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a>wlHttp.FormData["uploadFile[].wlFile-Name"] = "$WL$EMPTY$STRING$"
+</span><span id="__span-2-49"><a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a>wlHttp.FormData["uploadFile[].wlContent-Type"] = "application/octet-stream"
+</span><span id="__span-2-50"><a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a>wlHttp.FormData["submit"] = "Submit Query"
+</span><span id="__span-2-51"><a href="#__codelineno-2-51" id="__codelineno-2-51" name="__codelineno-2-51"></a>wlHttp.Post("http://ws3/upload/ssl-upload-handler.php")
+</span><span id="__span-2-52"><a href="#__codelineno-2-52" id="__codelineno-2-52" name="__codelineno-2-52"></a>
+</span><span id="__span-2-53"><a href="#__codelineno-2-53" id="__codelineno-2-53" name="__codelineno-2-53"></a>// END WLIDE
+</span></code></pre></div>
+<h3 id="data">Data</h3>
+<p><code>Data</code> is a string to be submitted in an HTTP Post command. The Data property has two subfields:</p>
+<ul>
+<li><code>Data.Type</code>—the MIME type for the submission</li>
+<li><code>Data.Value</code>—the string to submit 
+    You can use Data in two ways:</li>
+<li>As an alternative to <code>FormData</code> if you know the syntax of the form submission.</li>
+<li>To submit a string that is not a standard HTML form and cannot be represented by <code>FormData</code>.</li>
+</ul>
+<p>Thus the following three code samples are equivalent:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>//Sample 1 
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>wlHttp.Data.Type =
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    "application/x-www-form-urlencoded" 
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>wlHttp.Data.Value =
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>    "SearchFor=icebergs&amp;SearchType=ExactTerm"
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>wlHttp.Post("http://www.ABCDEF.com/query.exe")
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>//Sample 2
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>wlHttp.FormData.SearchFor = "icebergs" 
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>wlHttp.FormData.SearchType = "ExactTerm" 
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>wlHttp.Post("http://www.ABCDEF.com/query.exe")
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>//Sample 3 
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>wlHttp.Post
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>("http://www.ABCDEF.com/query.exe" + "?SearchFor=icebergs&amp;SearchType=ExactTerm")
+</span></code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> <code>Data</code> and <code>DataFile</code> are both collections that hold sets of data.
+<code>Data</code> collections are stored within the script itself, and are useful when you prefer to see the data directly.
+<code>DataFile</code> collections store the data in local text files, and are useful when you are working with large amounts of data, which would be too cumbersome to store within the script code itself. When working with <code>DataFile</code> collections, only the name of the text file is stored in the script itself.</p>
+</blockquote>
+<p>Your script can work with both Data and DataFile collections. Do not use both properties for the same lHTTP object (a single HTTP request can use either Data or DataFile properties, but not both). When you record your script with the WebLOAD Recorder, use the Post Data tab in the Recording and Script Generation Options dialog box to define the default behavior for submitting content types. The default behaviors are <code>Data</code> and <code>DataFile</code>, although you can edit these definitions and add additional predefined behaviors for other content types as well.</p>
+<h3 id="datafile">DataFile</h3>
+<p><code>DataFile</code> is a file to be submitted in an HTTP Post command. WebLOAD sends the file using a MIME protocol.</p>
+<p><code>DataFile</code> has two subfields:</p>
+<ul>
+<li>
+<p><code>DataFile.Type</code>—the MIME type</p>
+</li>
+<li>
+<p><code>DataFile.Filename</code>—the name of the file, for example:</p>
+<p><code>"c:\\MyWebloadData\\BigFile.doc"</code></p>
+</li>
+</ul>
+<p>WebLOAD sends the contents of the file stored in <filename> in the Post command.</filename></p>
+<h3 id="header"><strong>Header</strong></h3>
+<p>A collection of HTTP header fields that you want to send in a <code>Get()</code>, <code>Post()</code>, or <code>Head()</code> call.</p>
+<p>By default, WebLOAD sends the following header in any HTTP command:</p>
+<p><code>Accept: */*</code>
+<code>User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0) Host: &lt;host&gt;</code>
+<code>Connection:Keep-Alive</code>
+Here, <code>&lt;host&gt;</code> is the host name to which you are connecting, for example:</p>
+<p><code>www.ABCDEF.com:81.</code>
+By default, the Referer header is also recorded and sent, where it is being used by the Web server.</p>
+<p>You may reset these properties, for example, as follows:</p>
+<p><code>wlHttp.UserAgent = "Mozilla/4.03 [en] (WinNT; I)"</code></p>
+<blockquote>
+<p><strong>Note:</strong> The user-agent header is defined in WebLOAD Recorder. Access <strong>Tools</strong>  <strong>Default or Current Project Options</strong>, select the Browser Parameters tab, and edit the user-agent field.</p>
+</blockquote>
+<p>Alternatively, you can use the Header property to override one of the default header fields. For example, you can redefine the following header field:</p>
+<p><code>wlHttp.Header["user-agent"] = "Mozilla/4.03 [en] (WinNT; I)"</code></p>
+<p>Additional header fields are recorded and sent according to the checked Record Headers options in the Script Content tab of the Recording and Script Generation Options dialog box (in WebLOAD Recorder):</p>
+<p><code>Accept-Language: en-us</code>
+<code>UA-CPU: x86</code>
+<code>Pragma: no-cache</code></p>
+<blockquote>
+<p><strong>Note:</strong> The headers <code>If-Modified-Since</code> and <code>If-None-Matched</code> will be commented out to overcome the situation where recorded links were fetched from the browser’s cache during the recording. The request header <code>Accept-Encode: gzip</code> will also be commented out, to ensure correct behavior.</p>
+</blockquote>
+<p>When the Record Custom Headers option is enabled, WebLOAD records any headers that are not explicitly defined in the RFC, such as the SOAP Action header. This option is not selected by default.</p>
+<blockquote>
+<p><strong>Note:</strong> Any information set using the <code>wlHttp.Header</code> property <em>takes priority</em> over any defaults set using the global, local, or other wlHttp properties. If there is any discrepancy between the document header information and the HTTP values, WebLOAD will work with the information found in the <code>wlHttp.Header</code> property while also issuing a warning to the user.</p>
+</blockquote>
+<p>WebLOAD offers a simple way to reset configuration properties using the Options tab of the Session Control menu. Resetting configuration properties as you run and rerun various testing scenarios allows you to fine tune your tests to match your exact needs at that moment. However, that this real-time configuration setting will be overruled by any configuration properties that are explicitly set by <code>wlHttp.Header</code> within your test scripts. For greatest reliability and flexibility, WebLOAD recommends that you set header properties using the more general <code>wlGlobals</code>, <code>wlLocals</code>, and <code>wlHttp</code> object properties, fine-tuning your test sessions using the WebLOAD Session menu.See <a href="../programming_your_javascript/#rules-of-scope-for-local-and-global-variables"><em>Rules of Scope for Local and Global Variables</em> </a>, for more information on precedence and priority in script variables. Remember that you cannot override the host header or set a cookie header using the <code>Header</code> property. </p>
+<h3 id="erase">Erase</h3>
+<p>Clear the WebLOAD properties of a <code>wlHttp</code> object after each <code>Get(), Post(),</code> or <code>Head()</code> call.</p>
+<p><code>WlHttp.Erase</code> is a read/write property. The default value is <code>true</code>. This section will describe the implications of each setting.</p>
+<h4 id="erasetrue-default">Erase=true (default)</h4>
+<p>When <code>Erase</code> is set to <code>true</code>, WebLOAD automatically erases all <code>wlHttp</code> property values after each HTTP access. You must reassign any properties you need before the next HTTP access. For this reason, assign the properties of <code>wlHttp</code> only in the <em>main script</em>, not in <code>InitClient()</code>, so they will be reassigned in every round.</p>
+<p>Thus if <code>Erase</code> is set to <code>true</code> the following script is incorrect. In this script, the <code>wlHttp</code> properties are assigned values in <code>InitClient()</code>. The script would connect to the Url and submit the FormData only in the first round. After the first <code>Post()</code> call, the <code>Url</code> and FormData property values are erased, so WebLOAD cannot use them in subsequent rounds.</p>
+<p>The following script displays the incorrect method of assigning the <code>wlHttp</code> properties:</p>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Wrong! </span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="s2">"http://www.ABCDEF.com/products.exe"</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w"> </span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Product Interest"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Modems"</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1">//Main script </span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">()</span>
+</span></code></pre></div>
+To solve the problem, assign the wlHttp property values in the main script, so that the assignments are executed before each <code>Get()</code>, <code>Post()</code>, or <code>Head()</code> call:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">//Main script   //OK </span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">   </span><span class="s2">"http://www.ABCDEF.com/products.exe"</span><span class="w"> </span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w"> </span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Product Interest"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Modems"</span><span class="w"> </span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Alternatively, you could assign values to <code>wlLocals</code> properties, which are not erased:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//OK </span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="s2">"http://www.ABCDEF.com/products.exe"</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w"> </span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Product Interest"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="s2">"Modems"</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">//Main script </span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">()</span>
+</span></code></pre></div>
+<h4 id="erasefalse">Erase=false</h4>
+<p>You may set <code>Erase</code> to <code>false</code> to prevent erasure. For example, if for some reason you absolutely had to assign values to the wlHttp properties in the <code>InitClient()</code> function of the script, change the value of the <code>Erase</code> property to <code>false</code>. If Erase is <code>false</code>, the properties retain their values through subsequent rounds.</p>
+<p>Thus another way to correct the preceding example is to write:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//OK </span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Erase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"http://www.ABCDEF.com/products.exe"</span><span class="w"> </span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w"> </span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"Product Interest"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Modems"</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1">//Main script </span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">()</span>
+</span></code></pre></div>
+<p>User-defined properties are not linked to the <code>wlHttp.Erase</code> property and will not be erased automatically by WebLOAD. The only way to reset or erase user-defined properties is for the user to set the new values explicitly.</p>
+<h3 id="posting-form-data-using-elements">Posting form Data Using Elements</h3>
+<p><strong>Note:</strong> This script includes DOM objects that are not explained in this section. For more information about a specific object or usage, (such as <code>wlGlobals</code> or <code>wlHttp</code>), see that object’s section in the <em>WebLOAD JavaScript Reference Guide</em>.</p>
+<p>The home page of a company displays the following form, where a user can specify interest in different products.</p>
+<p><img alt="Home Page Form Example" src="../../images/script_guide_109.png"/></p>
+<p>The HTML code for the form is:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">action</span><span class="o">=</span><span class="s">"http://www.ABCDEF.com/FormProcessor.exe"</span> 
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>Your name: <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"yourname"</span><span class="p">&gt;</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">name</span><span class="o">=</span><span class="s">"interest"</span><span class="p">&gt;</span>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>     <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">selected</span><span class="p">&gt;</span>Modems<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>     <span class="p">&lt;</span><span class="nt">OPTION</span><span class="p">&gt;</span>CD-ROMs<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>   <span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>   <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Send"</span><span class="p">&gt;</span>
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>A script can download the form as follows:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">     </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">Url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"http://www.ABCDEF.com"</span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">     </span><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">ParseForms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">}</span>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">()</span>
+</span></code></pre></div>
+<p>WebLOAD parses the HTML code and creates an elements collection containing the first two form elements (the text box and the drop-down list). WebLOAD does not include the third element (the Send button) in the collection because it does not have a name attribute.</p>
+<p>This is a listing of the <code>elements</code> collection:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>document.forms[0].elements[0].name<span class="w"> </span>=<span class="w"> </span>"yourname"<span class="w"> </span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>document.forms[0].elements[0].type<span class="w"> </span>=<span class="w"> </span>"text"<span class="w"> </span>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>document.forms[0].elements[0].value<span class="w"> </span>=<span class="w"> </span>""<span class="w"> </span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>document.forms[0].elements[1].name<span class="w"> </span>=<span class="w"> </span>"interest"<span class="w"> </span>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>document.forms[0].elements[1].type<span class="w"> </span>=<span class="w"> </span>"SELECT"<span class="w"> </span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>document.forms[0].elements[1].selectedindex<span class="w"> </span>=<span class="w"> </span>0<span class="w"> </span>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>document.forms[0].elements[1].options[0].text<span class="w"> </span>=<span class="w"> </span>"Modems"<span class="w"> </span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>document.forms[0].elements[1].options[0].value<span class="w"> </span>=<span class="w"> </span>"Modems"<span class="w"> </span>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>document.forms[0].elements[1].options[0].selected<span class="w"> </span>=<span class="w"> </span>true<span class="w"> </span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>document.forms[0].elements[1].options[1].text<span class="w"> </span>=<span class="w"> </span>"CD-ROMs"<span class="w"> </span>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>document.forms[0].elements[1].options[1].value<span class="w"> </span>=<span class="w"> </span>"CD-ROMs"<span class="w"> </span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>document.forms[0].elements[1].options[1].selected<span class="w"> </span>=<span class="w"> </span>false
+</span></code></pre></div>
+<p>The script can use the above data to post the form back to the server. The following code illustrates how the script might do this.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nx">MyArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">elements</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">MyArray</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">"text"</span><span class="w"> </span><span class="o">:</span>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">         </span><span class="c1">//Retrieve the default value of a text box </span>
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">         </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[[</span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">]</span><span class="w"> </span>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">         </span><span class="k">break</span>
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">         </span><span class="k">case</span><span class="w"> </span><span class="s2">"SELECT"</span>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">         </span><span class="c1">//Retrieve the first option in a drop-down list</span>
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">         </span><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">]</span><span class="o">=</span><span class="nx">MyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">options</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">value</span><span class="w">         </span>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">         </span><span class="k">break</span>
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="nx">i</span><span class="o">++</span>
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">}</span>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="c1">//Post the data to the form server</span>
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">action</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="managing-cookies-through-the-wlcookie-object">Managing Cookies through the wlCookie Object</h2>
+<h3 id="the-wlcookie-object">The wlCookie Object</h3>
+<p>The <code>wlCookie</code> object sets and deletes cookies. These activities may be required by an HTTP server.</p>
+<blockquote>
+<p><strong>Note:</strong> You may use the methods of <code>wlCookie</code> to create as many cookies as needed. For example, each WebLOAD client running a script can set its own cookie identified by a unique name.</p>
+</blockquote>
+<p><code>wlCookie</code> is a local object. WebLOAD automatically creates an independent <code>wlCookie</code> object for each thread of a script. You cannot manually declare <code>wlCookie</code> objects yourself. See the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification for the <code>wlCookie</code> object and its methods.</p>
+<h3 id="how-webload-works-with-cookies">How WebLOAD Works with Cookies</h3>
+<p>WebLOAD always accepts cookies that are sent from a server. When WebLOAD connects to a server, it automatically submits any cookies in the server’s domain that it has stored. By default, WebLOAD clears the cookie cache after every round.</p>
+<p>The <code>wlCookie</code> object lets you supplement or override this behavior in the following ways:</p>
+<ul>
+<li>A thread can create its own cookies.</li>
+<li>A thread can delete cookies that it created.</li>
+</ul>
+<p>Except for the above, WebLOAD does not distinguish in any way between cookies that it receives from a server and those that you create yourself. For example, if a thread creates a cookie in a particular domain, it automatically submits the cookie when it connects to any server in the domain.</p>
+<h3 id="wlcookie-methods">wlCookie Methods</h3>
+<p>The <code>wlCookie</code> object works with the following methods:</p>
+<ul>
+<li><code>ClearAll()</code>—Delete all cookies set by wlCookie in the current thread.</li>
+<li><code>Delete()</code>—Delete the cookie identified by the method parameters. The cookie must have been previously created by <code>wlCookie</code>.</li>
+<li><code>Get()</code>—Returns the cookie value. If there is more than one cookie with the same parameters it returns the first cookie.</li>
+<li><code>Set()</code>—Creates a cookie. You can set an arbitrary number of cookies in any thread. If you set more than one cookie applying to a particular domain, WebLOAD submits them all when it connects to the domain.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Set cookies within the main script of the script. WebLOAD deletes all the cookies at the end of each round. If you wish to delete cookies in the middle of a round, use the <code>Delete()</code> or <code>ClearAll()</code> method.</p>
+</blockquote>
+<h3 id="example-using-a-cookie">Example: using a cookie</h3>
+<p>Cookies are used by applications to store the application requests on the client side. This enables the client to perform a one-time application request and from then on the request information is retrieved from the client’s cookies.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">//Request information entered into the application </span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ContentType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-www-form-urlencoded"</span><span class="w"> </span>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"username"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"zadp10"</span><span class="w"> </span>
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"password"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Start100"</span><span class="w"> </span>
+</span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"submit1"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Login"</span>
+</span><span id="__span-12-6"><a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1">//Setting the cookie</span>
+</span><span id="__span-12-8"><a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="nx">wlCookie</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="err">“</span><span class="nx">UserID</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">zapd10</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">www</span><span class="p">.</span><span class="nx">abcdef</span><span class="p">.</span><span class="nx">net</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="o">/</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">Sun</span><span class="p">,</span><span class="w"> </span><span class="mf">19</span><span class="o">-</span><span class="w"> </span><span class="nx">Jun</span><span class="o">-</span><span class="mf">2011</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">29</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-12-9"><a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="c1">//WebLOAD submits the cookie </span>
+</span><span id="__span-12-11"><a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"https://www.abcdef.net/default.aspx"</span><span class="p">)</span>
+</span><span id="__span-12-12"><a href="#__codelineno-12-12" id="__codelineno-12-12" name="__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a href="#__codelineno-12-13" id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="c1">//Getting the cookie</span>
+</span><span id="__span-12-14"><a href="#__codelineno-12-14" id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="nx">CookieValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlCookie</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"UserID"</span><span class="p">)</span>
+</span><span id="__span-12-15"><a href="#__codelineno-12-15" id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="c1">//The value returned in CookieValue is “zapd10”</span>
+</span></code></pre></div>
+<p>In some cases it is also necessary to delete the cookie settings. You can do this by entering:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>    //Delete the cookie 
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>    wlCookie.ClearAll()
+</span></code></pre></div></p>
+<h2 id="handling-binary-data">Handling Binary Data</h2>
+<p>WebLOAD supports the simulation of binary data sent from the browser to the server. Binary data is handled specially, since it cannot be displayed as JavaScript literals in the script, unlike other types of data that can be displayed, such as numbers or text.</p>
+<h3 id="recording-binary-data">Recording Binary Data</h3>
+<p>WebLOAD supports recording binary data in a script in one of the following ways:</p>
+<ul>
+<li>Recording binary data as a data file, which is external to the script.</li>
+<li>Encoding binary data in the script, so that you can view and edit the data.</li>
+</ul>
+<h4 id="recording-binary-data-as-a-data-file">Recording Binary Data as a Data File</h4>
+<p>Modifying the script Options settings in the WebLOAD Recorder enables writing binary data into a data file, which is stored locally. When working with data files, only the name of the file is stored in the script itself.</p>
+<p>Recording binary data as a data file, enables WebLOAD to simulate sending binary data to the application, although the data itself cannot be edited in the script.</p>
+<p><strong>To record binary data as a data file:</strong></p>
+<ol>
+<li>
+<p>In WebLOAD Recorder, select <strong>Tools Recording and Script Generation Options</strong>. The Recording and Script Generation Options dialog box appears.</p>
+</li>
+<li>
+<p>In the Recording and Script Generation Options dialog box select the <strong>Post Data</strong>tab. </p>
+<p>The Post Data tab appears. </p>
+<p><img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_110.png"/></p>
+</li>
+<li>
+<p>In the Add New Type field, enter the binary content-type, such as application/x-amf, which is used for binary content generated by a Flash application.</p>
+</li>
+<li>
+<p>Click <strong>As DATAFILE</strong>.</p>
+<p>The binary content-type is added to the DATAFILE block list.</p>
+</li>
+<li>
+<p>In the Recording and Script Generation Options dialog box, select the <strong>Content Types</strong> tab.</p>
+<p>The Content Types tab appears.</p>
+<p><img alt="Recording and Script Generation Options – Content Types Tab" src="../../images/script_guide_111.png"/></p>
+</li>
+<li>
+<p>Ensure that the appropriate binary content-type appears in the Recorded Types area. If the content does not appear, add the binary content type in the Add new content type field and click <strong>Add</strong>.</p>
+<p>After setting the Record Option settings, binary data is stored in a local data file and the name of the file appears in the script.</p>
+</li>
+</ol>
+<p>The following sample script demonstrates how WebLOAD records binary data as a data file:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="p">{</span>
+</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="nx">CopyFile</span><span class="p">(</span><span class="s2">"wl2288601006.dat"</span><span class="p">,</span><span class="s2">"wl2288601006.dat"</span><span class="p">)</span>
+</span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">}</span>
+</span><span id="__span-14-5"><a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span>
+</span><span id="__span-14-6"><a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">)</span>
+</span><span id="__span-14-7"><a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="nx">Sleep</span><span class="p">(</span><span class="mf">9056</span><span class="p">)</span>
+</span><span id="__span-14-9"><a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-14-10"><a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf"</span>
+</span><span id="__span-14-11"><a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Content-type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span>
+</span><span id="__span-14-12"><a href="#__codelineno-14-12" id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Content-length"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"58"</span><span class="w"> </span>
+</span><span id="__span-14-13"><a href="#__codelineno-14-13" id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">DataFile</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span>
+</span><span id="__span-14-14"><a href="#__codelineno-14-14" id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">DataFile</span><span class="p">[</span><span class="s2">"Filename"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wl2288601006.dat"</span>
+</span><span id="__span-14-15"><a href="#__codelineno-14-15" id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flashservices/gateway.php"</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="encoding-binary-data-in-the-script">Encoding Binary Data in the script</h4>
+<p>Modifying the script Options settings in the WebLOAD Recorder enables the encoding of binary data in the script during the recording. Once recorded, the script can be edited, parameterized, and load tested as a regular script.</p>
+<p><strong>To enable encoding binary data in the script:</strong></p>
+<ol>
+<li>
+<p>In WebLOAD Recorder, select the <strong>Tools</strong>  <strong>Recording and Script Generation Options</strong> dialog box.</p>
+<p>The Recording and Script Generation Options dialog box appears.</p>
+</li>
+<li>
+<p>In the Recording and Script Generation Options dialog box select the <strong>Script Generation</strong> tab.</p>
+<p>The Script Generation tab appears.</p>
+<p><img alt="Recording and Script Generation Options - Script Generation Tab" src="../../images/script_guide_112.png"/></p>
+</li>
+<li>
+<p>Select the <strong>Encode binary data</strong> checkbox.</p>
+<p>This enables the user to view and parameterize the binary content.</p>
+</li>
+<li>
+<p>In the Recording and Script Generation Options dialog box, select the <strong>Post Data</strong> tab.</p>
+<p>The Post Data tab appears.</p>
+<p><a name="recording_and_script_generation_options"></a>
+<img alt="Recording and Script Generation Options – Post Data Tab" src="../../images/script_guide_113.png"/></p>
+</li>
+<li>
+<p>In the Add New Type field, enter the binary content-type, such as <code>application/x-amf</code>, which is used for binary text generated by a Flash application.</p>
+</li>
+<li>
+<p>Click <strong>As DATA</strong>. 
+     The binary content-type is added to the DATA block list.</p>
+</li>
+<li>
+<p>In the Recording and Script Generation Options dialog box, select the <strong>Content Types</strong> tab.</p>
+<p>The Content Types tab appears (see the <a href="#recording_and_script_generation_options">Figure</a>).</p>
+</li>
+<li>
+<p>Ensure that the appropriate binary content-type appears in the Recorded Types area. If the content does not appear, add the binary content type in the Add new content type field and click <strong>Add</strong>.</p>
+</li>
+</ol>
+<p>After setting the Record Option settings, when binary data is recorded and encoded in a script, <code>wlHttp.EncodeRequestBinaryData = true</code> is automatically added to the script. This encodes the binary data into the following usable format:</p>
+<p><code>wlHttp.Data["Value"] = "%00%00%00%00%00%01%00/com.oreilly.frdg.SearchProducts.getSearch Result%00%02/1%00%00%00%18%0a%00%00%00%01%03%00%06search%02%00%0 4wood%00%00%09"</code></p>
+<p>The following sample script demonstrates how WebLOAD handles binary data encoded in the script:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitAgenda</span><span class="p">()</span>
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="p">{</span>
+</span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="s2">"wlamf.js"</span><span class="p">,</span><span class="nx">WLExecuteScript</span><span class="p">);</span>
+</span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">}</span>
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">GetFrames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span>
+</span><span id="__span-15-7"><a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-15-8"><a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="nx">wlGlobals</span><span class="p">.</span><span class="nx">UserAgent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)"</span>
+</span><span id="__span-15-10"><a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span><span class="p">)</span>
+</span><span id="__span-15-11"><a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a>
+</span><span id="__span-15-12"><a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-15-13"><a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-15-14"><a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html"</span>
+</span><span id="__span-15-15"><a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.htm"</span><span class="p">)</span>
+</span><span id="__span-15-16"><a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>
+</span><span id="__span-15-17"><a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-15-18"><a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-15-19"><a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.htm"</span>
+</span><span id="__span-15-20"><a href="#__codelineno-15-20" id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/history.swf"</span><span class="p">)</span>
+</span><span id="__span-15-21"><a href="#__codelineno-15-21" id="__codelineno-15-21" name="__codelineno-15-21"></a>
+</span><span id="__span-15-22"><a href="#__codelineno-15-22" id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-15-23"><a href="#__codelineno-15-23" id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-15-24"><a href="#__codelineno-15-24" id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="s2">"http://www.webloadmpstore.com/flex/bin/Sample.html)[ttp://www.webloadmpstore.com/flex/bin/Sample.html"</span>
+</span><span id="__span-15-25"><a href="#__codelineno-15-25" id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf"</span><span class="p">)</span>
+</span><span id="__span-15-26"><a href="#__codelineno-15-26" id="__codelineno-15-26" name="__codelineno-15-26"></a>
+</span><span id="__span-15-27"><a href="#__codelineno-15-27" id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">EncodeRequestBinaryData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-15-28"><a href="#__codelineno-15-28" id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Header</span><span class="p">[</span><span class="s2">"Referer"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-15-29"><a href="#__codelineno-15-29" id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="s2">"http://www.webloadmpstore.com/flex/bin/Shop.swf"</span>
+</span><span id="__span-15-30"><a href="#__codelineno-15-30" id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Type"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"application/x-amf"</span><span class="w"> </span>
+</span><span id="__span-15-31"><a href="#__codelineno-15-31" id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Data</span><span class="p">[</span><span class="s2">"Value"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-15-32"><a href="#__codelineno-15-32" id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="s2">"%00%03%00%00%00%01%00%15talkback.returnString%00%02/1%00%00%00% 15%0a%00%00%00%02%02%00%06George%02%00%04Bush"</span>
+</span><span id="__span-15-33"><a href="#__codelineno-15-33" id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">"http://www.webloadmpstore.com/flashservices/gateway.php"</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="handling-authentication-in-the-script">Handling Authentication in the Script</h2>
+<p>WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user authentication methods.</p>
+<p>WebLOAD handles authentication in playback in the following way:</p>
+<ol>
+<li>WebLOAD sends a regular request with no request for authentication, to which the server responds with an “unauthorized” error (401), and a prompt to enter a username and password.</li>
+<li>
+<p>If WebLOAD is using:</p>
+<ul>
+<li><strong>Basic authentication</strong>, WebLOAD encrypts the username and password in <code>wlHttp.Username</code> and <code>wlHttp.Password</code>, and makes a request.</li>
+<li><strong>NTLM authentication</strong>, WebLOAD sets the following:
+   <code>wlGlobals.AuthType = "NTLM"</code>, where <code>NTLM</code> is the default value if no authentication type is specified.</li>
+<li><strong>Kerberos authentication</strong>, WebLOAD sets the following:
+    <code>wlGlobals.AuthType = "Kerberos"</code>.</li>
+</ul>
+<p><code>wlGlobals.KDCServer = &lt;server name&gt;</code>. If no value is specified for KDCServer, the authentication type is automatically assumed to be <code>NTLM</code>, even if the <code>AuthType</code> is <code>Kerberos</code>.</p>
+</li>
+</ol>
+<p>The following examples demonstrate the authentication processes in WebLOAD.</p>
+<p><strong>Kerberos authentication:</strong></p>
+<p><code>wlGlobals.AuthType = "Kerberos"</code> </p>
+<p><code>wlGlobals.KDCServer = "mulier.qalab.internal"</code> </p>
+<p><code>wlHttp.NTPassWord = "Buga859"</code> </p>
+<p><code>wlHttp.NTUserName = "qalab.internal\\test"</code> </p>
+<p><code>wlHttp.Get("&lt;http://mulier.qalab.internal/&gt;")</code></p>
+<p><strong>NTLM authentication:</strong></p>
+<p><code>wlGlobals.AuthType = "NTLM"</code> </p>
+<p><code>wlHttp.NTPassWord = "Buga859"</code> </p>
+<p><code>wlHttp.NTUserName = "qalab.internal\\test"</code> </p>
+<p><code>wlHttp.Get("&lt;http://mulier.qalab.internal/&gt;")</code></p>
+<p>OR</p>
+<p><code>wlHttp.NTPassWord = "Buga859"</code> </p>
+<p><code>wlHttp.NTUserName = "qalab.internal\\test"</code> </p>
+<p><code>wlHttp.Get("&lt;http://mulier.qalab.internal/&gt;")</code></p>
+<p><strong>Basic authentication:</strong></p>
+<p><code>wlHttp.PassWord = "Buga859"</code> </p>
+<p><code>wlHttp.UserName = "test"</code></p>
+<p><code>wlHttp.Get("&lt;http://mulier.qalab.internal/&gt;")</code></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

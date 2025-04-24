@@ -1,0 +1,1644 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../introduction/" rel="prev"/>
+<link href="../using_javascript_ref/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Introduction to JavaScript - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-javascript-scripts">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introduction to JavaScript
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../recorder/introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../recorder/appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/global_lab_load_generators/">
+<span class="md-ellipsis">
+    Global Lab Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/rest_api/">
+<span class="md-ellipsis">
+    Using the REST API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-scripts">
+<span class="md-ellipsis">
+      What are scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-scripts-work-with-an-extended-version-of-the-standard-dom">
+<span class="md-ellipsis">
+      WebLOAD scripts Work with an Extended Version of the Standard DOM
+    </span>
+</a>
+<nav aria-label="WebLOAD scripts Work with an Extended Version of the Standard DOM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-the-document-object-model">
+<span class="md-ellipsis">
+      What is the Document Object Model?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-dom-structure">
+<span class="md-ellipsis">
+      Understanding the DOM Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dom-objects-commonly-used-in-a-script">
+<span class="md-ellipsis">
+      DOM Objects Commonly Used in a script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-extension-set">
+<span class="md-ellipsis">
+      WebLOAD Extension Set
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-would-i-edit-the-javascript-in-my-scripts">
+<span class="md-ellipsis">
+      When Would I Edit the JavaScript in My scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-script-components">
+<span class="md-ellipsis">
+      Accessing script Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-javascript-code-in-a-script">
+<span class="md-ellipsis">
+      Editing the JavaScript Code in a script
+    </span>
+</a>
+<nav aria-label="Editing the JavaScript Code in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-the-javascript-code-within-the-script-tree">
+<span class="md-ellipsis">
+      Accessing the JavaScript Code within the Script Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-intellisense-javascript-editor">
+<span class="md-ellipsis">
+      Using the IntelliSense JavaScript Editor
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../js_helper_funcs/">
+<span class="md-ellipsis">
+    JavaScript Helper Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-scripts">
+<span class="md-ellipsis">
+      What are scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-scripts-work-with-an-extended-version-of-the-standard-dom">
+<span class="md-ellipsis">
+      WebLOAD scripts Work with an Extended Version of the Standard DOM
+    </span>
+</a>
+<nav aria-label="WebLOAD scripts Work with an Extended Version of the Standard DOM" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-the-document-object-model">
+<span class="md-ellipsis">
+      What is the Document Object Model?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-dom-structure">
+<span class="md-ellipsis">
+      Understanding the DOM Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dom-objects-commonly-used-in-a-script">
+<span class="md-ellipsis">
+      DOM Objects Commonly Used in a script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#webload-extension-set">
+<span class="md-ellipsis">
+      WebLOAD Extension Set
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-would-i-edit-the-javascript-in-my-scripts">
+<span class="md-ellipsis">
+      When Would I Edit the JavaScript in My scripts?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-script-components">
+<span class="md-ellipsis">
+      Accessing script Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-javascript-code-in-a-script">
+<span class="md-ellipsis">
+      Editing the JavaScript Code in a script
+    </span>
+</a>
+<nav aria-label="Editing the JavaScript Code in a script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-the-javascript-code-within-the-script-tree">
+<span class="md-ellipsis">
+      Accessing the JavaScript Code within the Script Tree
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-intellisense-javascript-editor">
+<span class="md-ellipsis">
+      Using the IntelliSense JavaScript Editor
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-javascript-scripts">Introduction to JavaScript scripts</h1>
+<p>The <em>WebLOAD JavaScript Reference Guide</em> provides a detailed description of the syntax and usage of the full set of WebLOAD JavaScript features, including the actions, objects, and functions used to create sophisticated test session scripts.</p>
+<p><strong>Note:</strong> Most WebLOAD users do not need this level of detail to create effective testing sessions for their website. Scripts are usually recorded and edited using WebLOAD Recorder, a simple, intuitive interface that provides users with a comprehensive set of testing tools literally at their fingertips, through point-and-click or drag-and-drop convenience. The details in this guide are provided for the convenience of more sophisticated programmers, who may wish to add specific, perhaps complex tailoring to their recorded scripts.</p>
+<p>This chapter provides a general introduction to JavaScript scripts.</p>
+<h2 id="what-are-scripts">What are scripts?</h2>
+<p>WebLOAD runs test sessions that simulate the actions of a real user through the use of script files. Scripts are client programs that access the server you want to test. Users create scripts by recording a series of typical activities with the application being tested using WebLOAD Recorder WebLOAD Recorder automatically converts the user activities into script programs. You do not need to know anything about writing scripts to test an application with WebLOAD. No programming or editing skills are required to create or run a successful test session.</p>
+<p>Scripts are created using WebLOAD Recorder. WebLOAD Recorder operates in conjunction with a Web browser such as Microsoft’s Internet Explorer. As a user navigates the test application in the browser, (for example, navigating between pages, typing text into a form, or clicking the mouse), WebLOAD Recorder records all user actions in a script. During later website testing sessions, WebLOAD simulates every action of the original user and automatically handles all Web interactions, including parsing dynamic HTML, and full support for all security requirements, such as user authentication or SSL protocol use.</p>
+<p>A simple recorded script is ideal if your WebLOAD test involves a typical sequence of Web activities. These activities are all recorded in your script, and are represented in</p>
+<p>the WebLOAD Recorder by a Script Tree, a set of clear, intuitive icons and visual devices arranged into a logical hierarchical sequence. Each of these activity icons actually represents a block of code within the underlying test script. Scripts are constructed automatically out of ‘building blocks’ of test code, and most users create and run test sessions quite easily, without ever looking into those building blocks to see the actual code inside.</p>
+<p>Some users prefer to manually edit the code of a recorded script to create more complex, sophisticated test sessions. For example, for a script to work with Java or COM components, a certain degree of programming is required. This guide documents the syntax of the JavaScript objects and functions available to programmers who wish to add more complex functionality to their scripts.</p>
+<p>Scripts are written in JavaScript. JavaScript is an object-oriented scripting language developed by Netscape Communications Corporation. JavaScript is best known for its use in conjunction with HTML to automate World Wide Web pages. However, JavaScript is actually a full-featured programming language that can be used for many purposes besides Web automation. WebLOAD has chosen JavaScript as the scripting language for test session scripts. WebLOAD JavaScript scripts combine the ease and simplicity of WebLOAD’s visual, intuitive programming environment with the flexibility and power of JavaScript object-oriented programming.</p>
+<p>For detailed information on using WebLOAD, including creating scripts, running test sessions, and analyzing the results, see the <em>WebLOAD Recorder User’s Guide</em> and the <em>WebLOAD Console User’s Guide</em>.</p>
+<h2 id="webload-scripts-work-with-an-extended-version-of-the-standard-dom">WebLOAD scripts Work with an Extended Version of the Standard DOM</h2>
+<p>WebLOAD Recorder operates in conjunction with a Web browser such as Microsoft’s Internet Explorer. As you execute a sequence of HTTP actions in the browser, WebLOAD Recorder records your actions in a JavaScript script. All Web browsers rely on an extended Document Object Model, or DOM, for optimum handling of HTML pages. The standard browser DOM defines both the logical structure of HTML documents and the way a document is accessed and manipulated. WebLOAD scripts use a standard browser DOM to access and navigate Internet Web pages, including Dynamic HTML and nested links and pages. To facilitate website testing, WebLOAD extends the standard browser DOM with many features, objects, and functions that expedite site testing and evaluation.</p>
+<p>This section provides a brief overview of the standard DOM structure. Most of the information in this overview was provided by the World Wide Web Consortium (W3C), which develops interoperable technologies (specifications, guidelines, software, and tools) to lead the Web to its full potential as a forum for information, commerce,</p>
+<p>communication, and collective understanding. For more information about the standard DOM structure and components, go to the following websites:</p>
+<p>http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html</p>
+<p>http://msdn2.microsoft.com/en-us/library/ms533043.aspx</p>
+<p>http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/ dhtmlrefs.asp</p>
+<h3 id="what-is-the-document-object-model">What is the Document Object Model?</h3>
+<p>The Document Object Model (DOM) is an application programming interface (API) for valid HTML and well-formed XML documents. The DOM defines the logical structure of documents and the way a document is accessed and manipulated. With the Document Object Model, programmers can build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the Document Object Model, with a few exceptions—in particular, the DOM interfaces for the XML internal and external subsets have not yet been specified.</p>
+<p>As a W3C specification, one important objective for the Document Object Model is to provide a standard programming interface that can be used in a wide variety of environments and applications. The DOM is designed to be used with any programming language.</p>
+<p>Essentially, the DOM is a programming API for documents based on an object structure that closely resembles the structure of the documents it models. For instance, consider this table, taken from an HTML document:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">TBODY</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Shady Grove<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Aeolian<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Over the River, Charlie<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;</span>Dorian<span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">&lt;/</span><span class="nt">TBODY</span><span class="p">&gt;</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h3 id="understanding-the-dom-structure">Understanding the DOM Structure</h3>
+<p>In the DOM, documents have a logical structure that is very much like a tree; to be more precise, that is like a “forest” or “grove”, which can contain more than one tree. Each document contains zero or one doctype nodes, one root element node, and zero or more comments or processing instructions; the root element serves as the root of the element tree for the document. However, the DOM does not specify that documents must be implemented as a tree or a grove, nor does it specify how the relationships among objects be implemented. The DOM is a logical model that may be implemented in any convenient manner. In this specification, we use the term <em>structure model</em> to describe the tree-like representation of a document. We also use the term “tree” when referring to the arrangement of those information items which can be reached by using “tree-walking” methods; (this does not include attributes). One important property of DOM structure models is <em>structural isomorphism</em>: if any two Document Object Model implementations are used to create a representation of the same document, they will create the same structure model, in accordance with the XML Information Set [Infoset].</p>
+<blockquote>
+<p><strong>Note:</strong> There may be some variations depending on the parser being used to build the DOM. For instance, the DOM may not contain white spaces in element content if the parser discards them.</p>
+</blockquote>
+<p>The name “Document Object Model” was chosen because it is an “object model” in the traditional object oriented design sense. Documents are modeled using objects, and the model encompasses not only the structure of a document, but also the behavior of a document and the objects of which it is composed. In other words, the nodes in the above diagram do not represent a data structure; they represent objects, which have functions and identity. As an object model, the DOM identifies:</p>
+<ul>
+<li>The interfaces and objects used to represent and manipulate a document.</li>
+<li>The semantics of these interfaces and objects - including both behavior and attributes.</li>
+<li>The relationships and collaborations among these interfaces and objects.</li>
+</ul>
+<p>The structure of SGML documents has traditionally been represented by an abstract data model, not by an object model. In an abstract data model, the model is centered around the data. In object oriented programming languages, the data itself is encapsulated in objects that hide the data, protecting it from direct external manipulation. The functions associated with these objects determine how the objects may be manipulated, and they are part of the object model.</p>
+<p>The information in this section has been excerpted from the World Wide Web Consortium introduction to the DOM. For the complete text of the DOM overview, see<a href="http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html"> http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html. </a>The complete document is found at http://www.w3.org/TR/2001/WD-DOM-Level-3-Core- 20010913/.</p>
+<p>Copyright © 1994-2001 World Wide Web Consortium (http://www.w3.org/), (Massachusetts Institute of Technology (http://www.lcs.mit.edu/), Institut National de Recherche en Informatique et en Automatique (http://www.inria.fr/), Keio University (http://www.keio.ac.jp/)).</p>
+<p>All Rights Reserved. http://www.w3.org/Consortium/Legal/ W3C® DOCUMENT NOTICE AND LICENSE</p>
+<p>Copyright © 1994-2001 World Wide Web Consortium (http://www.w3.org/), (Massachusetts Institute of Technology (http://www.lcs.mit.edu/), Institut National de Recherche en Informatique et en Automatique (http://www.inria.fr/), Keio University (http://www.keio.ac.jp/)).</p>
+<p>All Rights Reserved. http://www.w3.org/Consortium/Legal/</p>
+<p>Public documents on the W3C site are provided by the copyright holders under the following license. The software or Document Type Definitions (DTDs) associated with W3C specifications are governed by the Software Notice. By using and/or copying this document, or the W3C document from which this statement is linked, you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions:</p>
+<p>Permission to use, copy, and distribute the contents of this document, or the W3C document from which this statement is linked, in any medium for any purpose and without fee or royalty is hereby granted, provided that you include the following on <em>ALL</em> copies of the document, or portions thereof, that you use:</p>
+<ol>
+<li>A link or URL to the original W3C document.</li>
+<li>The pre-existing copyright notice of the original author, or if it doesn’t exist, a notice of the form: “Copyright © [$date-of-document] World Wide Web Consortium (http://www.w3.org/), (Massachusetts Institute of Technology (http://www.lcs.mit.edu/), Institut National de Recherche en Informatique et en Automatique (http://www.inria.fr/), Keio University (http://www.keio.ac.jp/)). All Rights Reserved. <a href="http://www.w3.org/Consortium/Legal/">http://www.w3.org/Consortium/Legal/ </a>(Hypertext is preferred, but a textual representation is permitted.)</li>
+<li><em>If it exists</em>, the STATUS of the W3C document.</li>
+</ol>
+<p>When space permits, inclusion of the full text of this <strong>NOTICE</strong> should be provided. We request that authorship attribution be provided in any software, documents, or other items or products that you create pursuant to the implementation of the contents of this document, or any portion thereof.</p>
+<p>No right to create modifications or derivatives of W3C documents is granted pursuant to this license. However, if additional requirements (documented in the Copyright FAQ) are satisfied, the right to create modifications or derivatives is sometimes granted by the W3C to individuals complying with those requirements.</p>
+<p>THIS DOCUMENT IS PROVIDED “AS IS,” AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.</p>
+<p>COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.</p>
+<p>The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to this document or its contents without specific, written prior permission. Title to copyright in this document will at all times remain with copyright holders.</p>
+<hr/>
+<p>This formulation of W3C’s notice and license became active on April 05 1999 so as to account for the treatment of DTDs, schemas and bindings. See the older formulation for the policy prior to this date. Please see our Copyright FAQ for common questions about using materials from our site, including specific terms and conditions for packages like libwww, Amaya, and Jigsaw. Other questions about this notice can be directed to <a href="mailto:site-policy@w3.org">site-policy@w3.org </a>(mailto:site-policy@w3.org).</p>
+<p>(Last updated by reagle on 1999/04/99.)</p>
+<h3 id="dom-objects-commonly-used-in-a-script">DOM Objects Commonly Used in a script</h3>
+<p>On Internet websites, a simple HTML document may be constructed of a single page, or the document may be constructed of many nested pages, each one including multiple ‘child’ windows, in a recursive structure. Browser DOMs were designed to reflect this flexible approach.</p>
+<p>When using the DOM, a single Web page document has a logical structure that resembles a single tree. In nested Web pages, each child window is simply one tree in a recursive forest of trees. The typical DOM is ideal for representing Internet Web page access because it provides a flexible, generic model that encompasses both the attributes of the object itself and its interfaces and behaviors. Typical DOM objects include:</p>
+<ul>
+<li>The document itself.</li>
+<li>The frames nested in an HTML page, together with any additional nested windows.</li>
+<li>The location information.</li>
+<li>The links, forms, and images on the page.</li>
+<li>The tables, scripts, XML Data Islands, and Meta objects on the page.</li>
+<li>Individual elements of a specific form or frame.</li>
+</ul>
+<p>The following table provides a brief overview of the main DOM object components of a typical Web page.</p>
+<p><strong>DOM objects commonly used in scripts</strong></p>
+<p>The following table lists the DOM objects commonly used in scripts. A detailed description of each of these objects can be found in the following sections. </p>
+<table>
+<thead>
+<tr>
+<th><strong>Object</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>window</strong></td>
+<td>The window  object  represents an open browser window. Typically, the browser creates a single window  object when  it opens an HTML document. However, if a document defines one or more frames  the browser creates one window object for the original  document and one additional window object (<em>a child window</em>) for each frame. The  child window may be affected by actions that occur in the parent. For  example, closing the parent window causes all child windows to close.</td>
+</tr>
+<tr>
+<td><strong>document</strong></td>
+<td>The document  object  represents the HTML document in a browser window, storing the HTML data in a  parsed format. Use the document object to retrieve links,  forms, nested frames, images, scripts, and other information about the  document. By default, document used alone represents the  document in the current window. You usually refer directly to the document;  the window  part is  optional and is understood implicitly.</td>
+</tr>
+<tr>
+<td><strong>frame</strong></td>
+<td>Each frame  object  represents one of the frames imbedded within a Web page. Frames and windows  are essentially comparable. The recursive aspect of the DOM is implemented at  this level. A window may contain a collection of frames. Each frame may  contain multiple child windows, each of which may contain more frames that  contain more windows, and so on.</td>
+</tr>
+<tr>
+<td><strong>location</strong></td>
+<td>The location object contains  information on the current window URL.</td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td>A link object contains  information on an external document to which the current document is linked.</td>
+</tr>
+<tr>
+<td><strong>form, element, and input</strong></td>
+<td>A form  object  contains the set of elements and input controls (text, radio buttons,  checkboxes, etc.) that are all components of a single form. Each element  object stores the parsed data for a single HTML form element such as <code>&lt;INPUT&gt;</code>, <code>&lt;BUTTON&gt;</code>, or <code>&lt;SELECT&gt;</code>. Each input object  stores the information defining one of the input controls in the form.  Controls are organized by type, for example input type=checkbox.  Forms enable client-side  users to submit data to a server in a standardized format. A form is designed  to collect the required data using a variety of controls, such as INPUT or SELECT. Users viewing the form  fill in the data and then click the SUBMIT button to send it to the server. A script on the server then  processes the data. Notice that the object syntax corresponds to a path  through the DOM hierarchy tree, beginning at the root window and continuing  until the specified item’s properties.</td>
+</tr>
+<tr>
+<td><strong>image</strong></td>
+<td>Each image  object  contains one of the embedded images found in a document.</td>
+</tr>
+<tr>
+<td><strong>script</strong></td>
+<td>A script  object  defines a script for the current document that will be interpreted by a  script engine.</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>The title  object  contains the document title, stored as a text string.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="webload-extension-set">WebLOAD Extension Set</h3>
+<p>WebLOAD has added the following extensions to the standard DOM properties and methods. This guide provides syntax specifications for these objects.</p>
+<p><strong>WebLOAD DOM extension set highlights</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>WebLOAD  object extensions</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>wlCookie</strong></td>
+<td>Sets and deletes cookies.</td>
+</tr>
+<tr>
+<td><strong>wlException</strong></td>
+<td>WebLOAD error management object.</td>
+</tr>
+<tr>
+<td><strong>wlGeneratorGlobal and wlSystemGlobal objects</strong></td>
+<td>Handles global values  shared between script threads or Load Generators.</td>
+</tr>
+<tr>
+<td><strong>wlGlobals</strong></td>
+<td>Manages global system and configuration  values.</td>
+</tr>
+<tr>
+<td><strong>wlHeaders</strong></td>
+<td>Contains the key/value pairs in the HTTP  command headers that brought the document. (Get, Post, etc.)</td>
+</tr>
+<tr>
+<td><strong>wlHttp</strong></td>
+<td>Performs HTTP transactions and stores  configuration property values for individual transactions.</td>
+</tr>
+<tr>
+<td><strong>wlLocals</strong></td>
+<td>Stores local configuration property values.</td>
+</tr>
+<tr>
+<td><strong>wlMetas</strong></td>
+<td>Stores the parsed data for an HTML meta object.</td>
+</tr>
+<tr>
+<td><strong>wlOutputFile</strong></td>
+<td>Writes script output messages to a global  output file.</td>
+</tr>
+<tr>
+<td><strong>wlRand</strong></td>
+<td>Generates random numbers.</td>
+</tr>
+<tr>
+<td><strong>wlSearchPairs</strong></td>
+<td>Contains the key/value  pairs in a document’s URL search strings.</td>
+</tr>
+<tr>
+<td><strong>wlTables, row, and cell objects</strong></td>
+<td>Contains the parsed data from an HTML  table.</td>
+</tr>
+<tr>
+<td><strong>XML DOM  objects</strong></td>
+<td>XML DOM object set that  generates new XML data to send back to the server for processing.</td>
+</tr>
+</tbody>
+</table>
+<p>Website testing usually means testing how typical user activities are handled by the application being tested. Are the user actions managed quickly, correctly, appropriately? Is the application responsive to the user’s requests? Will the typical user be happy working with this application? When verifying that an application handles user activities correctly, WebLOAD usually focuses on the user activities, recording user actions through the WebLOAD Recorder when initially creating scripts and recreating those actions during subsequent test sessions. The focus on user activities represents a high-level, conceptual approach to test session design.</p>
+<p>Sometimes a tester may prefer to use a low-level, “nuts-and-bolts” approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in this guide that are relevant to the HTTP Transaction Mode are noted as such in the entries.</p>
+<h2 id="when-would-i-edit-the-javascript-in-my-scripts">When Would I Edit the JavaScript in My scripts?</h2>
+<p>WebLOAD Recorder automatically creates JavaScript scripts for test sessions based on the actions performed by the user during recording. You don’t have to be familiar with the JavaScript language to work with WebLOAD and test Web applications. However, as your testing needs increase, you may want to edit and expand the set of scripts that were already recorded. Many users prefer to design test sessions around a set of basic scripts created through WebLOAD Recorder and then expand or tailor those scripts to meet a particular testing need. Some of the reasons for editing JavaScript scripts include:</p>
+<ul>
+<li>Recycling and updating a useful library of test scripts from earlier versions of WebLOAD.</li>
+<li>Creating advanced, specialized verification functions.</li>
+<li>Debugging the application being tested.</li>
+<li>Optimization capabilities, to maximize your application’s functionality at minimal cost.</li>
+</ul>
+<p>This guide documents the syntax and usage of the actions, functions, objects, and variables provided by WebLOAD to add advanced functionality and tailoring to the JavaScript scripts created through WebLOAD Recorder. JavaScript is very similar to other object-oriented programming languages such as C++, Java, and Visual Basic. The syntax of JavaScript is also very similar to C. If you know any of these other languages, you will find JavaScript very easy to learn. You can probably learn enough about JavaScript to start programming just by studying the examples in this book.</p>
+<blockquote>
+<p><strong>Note:</strong> For detailed information about the JavaScript language, please refer to the section entitled <em>The Core JavaScript Language</em> in the <em>Netscape JavaScript Guide</em>, which is supplied in Adobe Acrobat format with the WebLOAD software. You may also learn the elements of JavaScript programming from many books on Web publishing. Keep in mind that some specific JavaScript objects relating to Web publishing do not exist in the WebLOAD test environment.</p>
+</blockquote>
+<h2 id="accessing-script-components">Accessing script Components</h2>
+<p>WebLOAD uses test session scripts to simulate user activities at a website. A script is initially created by WebLOAD Recorder during a recording session. As a user works with a test application in a browser, (for example, navigating between pages, typing text into a form, or clicking the mouse), WebLOAD Recorder stores information about all user actions in a script. Scripts are also edited using WebLOAD Recorder. Users may add functionality or customize their scripts through the objects, functions, and other features described in this guide.</p>
+<p>Customizing scripts may involve nothing more than dragging an icon from the WebLOAD Recorder toolbar and dropping it into a graphic representation of the script. It may involve entering or changing data through a user-friendly dialog box, or with the help of a Wizard. Some users may even add special features to their scripts by editing the underlying code of the script itself. When working with scripts, users may be working on many different levels. For that reason, the WebLOAD Recorder desktop includes multiple view options, providing information on multiple levels. See the <em>WebLOAD Scripting Guide</em> for a more extensive, illustrated explanation of the WebLOAD Recorder desktop components.</p>
+<p>Most users access scripts primarily through a <em>Script Tree</em>, a set of clear, intuitive icons and visual devices representing user activities during a recording session, arranged into a logical structure. Each user activity in the Script Tree is referred to as a node. Nodes are organized in a hierarchical arrangement. The outmost level, or <em>root</em> level, is a single script node. The second level directly under the root script node includes all the Web pages to which the user navigated over the course of the recording session. The third level, organized under each Web page, includes all the</p>
+<p>user activities that occurred on the parent Web page. These activities are themselves organized into additional levels. For example, all data input on a single form in a Web page is organized into a single sub-tree of user input nodes collected under the node for that form. The Script Tree appears on the left side of the WebLOAD Recorder desktop.</p>
+<p>Web page nodes are added to the Script Tree in one of two ways. Some Web pages are the result of a user action on the previous page, such as clicking a link and jumping to a new page. Other Web pages are created as a result of direct or indirect navigation, such as entering a URL in the browser window, or pop-up windows triggered by a previous navigation. The sets of user activities contained between two direct-navigation Web pages in a Script Tree parallel the <em>navigation blocks</em> found within the JavaScript script code.</p>
+<p>During a WebLOAD Recorder recording session, a new navigation block is created each time a user completes a direct navigation, manually entering a new URL into the WebLOAD Recorder address bar. Each navigation block is surrounded by a try{} catch{} statement in the corresponding JavaScript script code.</p>
+<p>Navigation blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if an error is encountered during a test session, WebLOAD should throw the error, skip to the next navigation block, and continue with the test session. Errors during playback are indicated by a red X appearing beside the problematic action in the Script Tree.</p>
+<p>The graphic nodes in a Script Tree actually represent blocks of code within the underlying recorded script. The JavaScript code corresponding to a selected node is automatically displayed in the <em>JavaScript View pane</em>. The JavaScript View pane is one of the tabs available in the WebLOAD Recorder desktop.</p>
+<p>The graphic nodes in a Script Tree represent user actions on a website. An exact replica, or snapshot, of each user activity is stored during recording and available in the Browser View to aid in debugging and help users remember what each action accomplished. The <em>Browser View pane</em> is one of the tabs available in the WebLOAD Recorder desktop.</p>
+<p>Web pages are created through HTML programs. The HTML code that underlies each stored Web page is also stored during recording sessions. For easy reference, the HTML code of the Web page associated with a selected node is displayed in the <em>HTML View pane</em>. The HTML View pane is one of the tabs available in the WebLOAD Recorder desktop.</p>
+<p>Web pages have a logical structure that may be represented through a series of DOM object trees. The DOM tree for a selected Web page is essentially a hierarchically structured, more easily understood representation of the DOM objects found in the HTML code for that Web page. The DOM tree of the Web page associated with a selected node is displayed in the <em>DOM View pane</em>. The DOM View pane is one of the tabs available in the WebLOAD Recorder desktop. When</p>
+<p>working with the DOM View, the center pane is actually split in half, with the upper half displaying the DOM View and the lower half displaying the corresponding Web page, seen in the Browser View.</p>
+<p>The following figure illustrates a WebLOAD Recorder desktop displaying the Script Tree and DOM and Browser Views. The Script Tree is on the left. The Browser View pane on the lower right focuses on a piece of the selected form as it appeared on the Web page at the time this script was recorded. The DOM View pane on the upper right displays the DOM objects that represent the selected form, arranged in a tree that corresponds to the user activity in the selected form.</p>
+<h2 id="editing-the-javascript-code-in-a-script">Editing the JavaScript Code in a script</h2>
+<h3 id="accessing-the-javascript-code-within-the-script-tree">Accessing the JavaScript Code within the Script Tree</h3>
+<p>WebLOAD Recorder provides a complete graphic user interface for creating and editing script files. Additions or changes to a script are usually made through the WebLOAD Recorder, working with intuitive icons representing user actions in a graphic Script Tree. For greater clarity, the JavaScript code that corresponds to each user action in a script is also visible in the JavaScript View pane on the WebLOAD Recorder desktop.</p>
+<p>While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects.</p>
+<p>Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:</p>
+<p>JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the <em>WebLOAD Scripting Guide.</em> Use the IntelliSense Editor, described in <a href="#using-the-intellisense-javascript-editor"><em>Using the IntelliSense JavaScript Editor</em> </a>, to add lines of code or functions to the JavaScript Object.</p>
+<p>Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.</p>
+<p><strong>Note:</strong> Once a branch has been converted to a single JavaScript Object, the various user activity icons that were on that branch are no longer individually accessible.</p>
+<p>Imported JavaScript File—an external JavaScript file that should be incorporated within the body of the current script. Select <strong>Edit</strong> <strong></strong> <strong>Import JavaScript File</strong> from the</p>
+<p>WebLOAD Recorder menu to import the file of your choice. Often testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.</p>
+<p>Converted Script Tree—if necessary, an entire Script Tree can be converted to a single JavaScript Object node consisting of a straight JavaScript text file. Right click the Script Tree’s root node and choose Convert to JavaScript Object from the pop- up menu. However, this conversion is not recommended unless manual editing of an entire script file is truly required for the test session.</p>
+<h3 id="using-the-intellisense-javascript-editor">Using the IntelliSense JavaScript Editor</h3>
+<p>For those users who wish to manually edit their scripts, WebLOAD Recorder provides three levels of programming assistance:</p>
+<p>An IntelliSense Editor mode for the JavaScript View pane.</p>
+<p>Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. IntelliSense supports the following shortcut keys:</p>
+<p><strong>Period (“.”)</strong> – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see</p>
+<p><a href="../../scripting/programming_your_javascript/#function_insertion">Figure 2</a>).</p>
+<p><strong><code>&lt;CTRL&gt;</code> <code>&lt;Space&gt;</code></strong> – While typing the name of an object, you can type <code>&lt;CTRL&gt;</code></p>
+<p><code>&lt;Space&gt;</code> to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).</p>
+<p>In addition, the IntelliSense Editor gives a structure to the code with the outline bar and line numbering.</p>
+<p>Collapsing the code enables you to view the heading of the section, without seeing the code within the section. To expand or collapse different sections of the code:</p>
+<p>Click the plus sign (+) or minus sign (-) on the outline bar,</p>
+<p>-Or-</p>
+<p>Right-click within the IntelliSense Editor and select Outlining from the pop-up menu. The available outlining options are:</p>
+<p><strong>Toggle outline</strong> – Collapses or expands the section at the mouse location.</p>
+<p><strong>Toggle all outline</strong> – Collapses or expands all outlines.</p>
+<p><strong>Collapse to definition</strong> – Collapses all outlines.</p>
+<p>You can enable or disable both the outline bar and line numbering features by:</p>
+<p>Selecting <strong>Edit</strong> <strong></strong> <strong>Enable Outlining</strong> or <strong>Line Numbers</strong>,</p>
+<p>-Or-</p>
+<p>Right-clicking within the IntelliSense Editor and selecting <strong>Enable Outlining</strong> or</p>
+<p><strong>Line Numbers</strong> from the pop-up menu.</p>
+<p>When these features are enabled, a checkmark appears next to the name in the Edit and pop-up menus. By default, these features are enabled, but WebLOAD opens with the settings that were saved during the previous WebLOAD session. During playback and debug modes, all outlines are expanded.</p>
+<p>Use WebLOAD Recorder’s predefined delimiters to keep your code structured and organized. The available delimiters include:</p>
+<p>For JavaScript functions, use the “{“ as the start delimiter and the “}” end delimiter.</p>
+<p>For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end</p>
+<p>delimiter “End WLIDE”.</p>
+<p>For more information, see the <em>WebLOAD Scripting Guide.</em></p>
+<p>A selection of the most commonly used functions and commands, available through the <strong>Insert</strong> menu.</p>
+<p>You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the <strong>Insert</strong> menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.</p>
+<p>In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.</p>
+<p>A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select <strong>Tools</strong> <strong></strong> <strong>Check Syntax</strong> to check the syntax of the code in your script file.</p>
+<p><strong>Important:</strong> WebLOAD Recorder scripts should be edited only within the confines of WebLOAD Recorder, not an external editor. If you use an external editor to modify the JavaScript code in a script file generated by WebLOAD Recorder, your visual script will be lost.</p>
+<p>Script code that you wish to write or edit must be part of a JavaScript Object in the Script Tree. Adding or converting JavaScript Objects in a Script Tree is described in <a href="#accessing-the-javascript-code-within-the-script-tree"><em>Accessing the JavaScript Code within the Script Tree</em> </a>.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

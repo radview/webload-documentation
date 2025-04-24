@@ -1,0 +1,1637 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Product documentation for RadView WebLOAD" name="description"/>
+<link href="../appendix_f/" rel="prev"/>
+<link href="../appendix_h/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.42" name="generator"/>
+<title>Appendix G - Selenium Integration - WebLOAD Documentation</title>
+<link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#selenium-integration">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="WebLOAD Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Appendix G - Selenium Integration
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+        
+  
+    
+  
+  Quick Start
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  Recorder
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../scripting/introduction/">
+          
+  
+  Scripting
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../console/introduction/">
+          
+  
+  Console
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dashboard/introduction/">
+          
+  
+  Dashboard
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../automation/introduction/">
+          
+  
+  Automation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../javascript/introduction/">
+          
+  
+  JavaScript Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../analytics/introduction/">
+          
+  
+  Analytics
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../installation/">
+        
+  
+    
+  
+  Installation
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WebLOAD Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="WebLOAD Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    WebLOAD Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Recorder
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Recorder
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../before_you_begin/">
+<span class="md-ellipsis">
+    Before you Begin
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quick_start/">
+<span class="md-ellipsis">
+    QuickStart
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../recording_scripts/">
+<span class="md-ellipsis">
+    Recording Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../editing_scripts/">
+<span class="md-ellipsis">
+    Editing Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../correlating_scripts/">
+<span class="md-ellipsis">
+    Correlating Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../running_debugging_scripts/">
+<span class="md-ellipsis">
+    Running and Debugging Scripts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working_with_git/">
+<span class="md-ellipsis">
+    Working with GIT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configuring_recorder_options/">
+<span class="md-ellipsis">
+    Configuring the WebLOAD Recorder Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD Recorder File Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Launching WebLOAD Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Converting Certificate Files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Recording Mobile Applications
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Integrating with Perfecto Mobile
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Appendix G - Selenium Integration
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-selenium-scripts">
+<span class="md-ellipsis">
+      Using Selenium Scripts
+    </span>
+</a>
+<nav aria-label="Using Selenium Scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+<span class="md-ellipsis">
+      Prerequisites
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-create-a-webload-selenium-script">
+<span class="md-ellipsis">
+      Step 1: Create a WebLOAD Selenium Script
+    </span>
+</a>
+<nav aria-label="Step 1: Create a WebLOAD Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-and-exporting-a-selenium-script">
+<span class="md-ellipsis">
+      Recording and Exporting a Selenium Script
+    </span>
+</a>
+<nav aria-label="Recording and Exporting a Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites-for-selenium-ide-export">
+<span class="md-ellipsis">
+      Prerequisites for Selenium IDE Export
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-with-selenium-ide">
+<span class="md-ellipsis">
+      Recording with Selenium IDE
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-create-a-webload-recorder-project-file-from-the-selenium-script">
+<span class="md-ellipsis">
+      Step 2: Create a WebLOAD Recorder Project File from the Selenium Script
+    </span>
+</a>
+<nav aria-label="Step 2: Create a WebLOAD Recorder Project File from the Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-conversion-to-a-project-file">
+<span class="md-ellipsis">
+      Automatic Conversion to a Project File
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-conversion-to-a-project-file">
+<span class="md-ellipsis">
+      Manual Conversion to a Project File
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-edit-both-scripts">
+<span class="md-ellipsis">
+      Step 3: Edit Both Scripts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-run-both-scripts-in-a-test-session">
+<span class="md-ellipsis">
+      Step 4: Run Both Scripts in a Test Session
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-view-the-test-results">
+<span class="md-ellipsis">
+      Step 5: View the Test Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../appendix_h/">
+<span class="md-ellipsis">
+    Appendix H - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Scripting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/programming_your_javascript/">
+<span class="md-ellipsis">
+    Programming your JavaScript Script
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/advanced_javascript_features/">
+<span class="md-ellipsis">
+    Advanced JavaScript Script Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/working_with_http/">
+<span class="md-ellipsis">
+    Working with HTTP Protocol
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/using_asynchronous/">
+<span class="md-ellipsis">
+    Using Asynchronous Requests
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Scripting Samples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../scripting/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - LiveConnect Overview
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Console
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Console
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/introducing_webload/">
+<span class="md-ellipsis">
+    Introducing WebLOAD
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_features/">
+<span class="md-ellipsis">
+    Console Features
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_templates/">
+<span class="md-ellipsis">
+    Creating Load Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/plan_test_session/">
+<span class="md-ellipsis">
+    Planning a Test Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/connect_webrm/">
+<span class="md-ellipsis">
+    Connecting to WebRM
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/manage_load_templates_sessions/">
+<span class="md-ellipsis">
+    Managing Load Templates and Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_template_wizard/">
+<span class="md-ellipsis">
+    Creating Load Templates with the WebLOAD Wizard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/create_load_test_goal/">
+<span class="md-ellipsis">
+    Creating Load Templates with Goal-Oriented Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/config_load_template/">
+<span class="md-ellipsis">
+    Configuring a Load Template Manually
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_global_opt/">
+<span class="md-ellipsis">
+    Setting Global Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/set_script_options/">
+<span class="md-ellipsis">
+    Setting Script Options
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/func_verifi_test/">
+<span class="md-ellipsis">
+    Functional Verification Testing
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/run_test_analyze_results/">
+<span class="md-ellipsis">
+    Running Tests and Analyzing  Test Results
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/running_a_load_session/">
+<span class="md-ellipsis">
+    Running a Load Session
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/working_with_git/">
+<span class="md-ellipsis">
+    Working with Git
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/viewing_log_window/">
+<span class="md-ellipsis">
+    Viewing the Log Window
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/console_performance_reports/">
+<span class="md-ellipsis">
+    WebLOAD Console Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/statistics_reports/">
+<span class="md-ellipsis">
+    WebLOAD Statistics Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/data_drilling_reports/">
+<span class="md-ellipsis">
+    Data Drilling Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/export_performance_reports/">
+<span class="md-ellipsis">
+    Exporting Performance Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/performance_measurements_manager/">
+<span class="md-ellipsis">
+    Performance Measurements Manager
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/cloud/">
+<span class="md-ellipsis">
+    Working with Cloud accounts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Integrating with AppDynamics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - Integrating with Dynatrace
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - Integrating with Nagios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - Integrating with New Relic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - WebLOAD Console Error Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_f/">
+<span class="md-ellipsis">
+    Appendix F - Reference Materials
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../console/appendix_g/">
+<span class="md-ellipsis">
+    Appendix G - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Dashboard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Dashboard
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_tests/">
+<span class="md-ellipsis">
+    Managing Test
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/manage_sessions/">
+<span class="md-ellipsis">
+    Managing Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_resources/">
+<span class="md-ellipsis">
+    Managing Resources
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/using_dashboards/">
+<span class="md-ellipsis">
+    Using Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/customizing_dashboard/">
+<span class="md-ellipsis">
+    Customizing a Dashboard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_dashboards/">
+<span class="md-ellipsis">
+    Managing Dashboards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/sharing_dashboards/">
+<span class="md-ellipsis">
+    Sharing a Dashboard or Panel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/creating_playlist/">
+<span class="md-ellipsis">
+    Creating and Playing a Playlist
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_load_generators/">
+<span class="md-ellipsis">
+    Managing Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/managing_organizations/">
+<span class="md-ellipsis">
+    Managing Organizations, Users, and Admins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/global_lab_load_generators/">
+<span class="md-ellipsis">
+    Global Lab Load Generators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/rest_api/">
+<span class="md-ellipsis">
+    Using the REST API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dashboard/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Automation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/overview/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_cli/">
+<span class="md-ellipsis">
+    Running WebLOAD from the Command Line
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_jenkins/">
+<span class="md-ellipsis">
+    Running WebLOAD in Jenkins
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../automation/webload_openapi/">
+<span class="md-ellipsis">
+    Running WebLOAD Using REST API
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    JavaScript Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            JavaScript Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/intro_java_scripts/">
+<span class="md-ellipsis">
+    Introduction to JavaScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/using_javascript_ref/">
+<span class="md-ellipsis">
+    Using the WebLOAD JavaScript Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/actions_objects_functions/">
+<span class="md-ellipsis">
+    WebLOAD Actions, Objects, and Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/internet_protocol/">
+<span class="md-ellipsis">
+    WebLOAD Internet Protocols Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/xmlparser/">
+<span class="md-ellipsis">
+    XML Parser Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/websocket_object/">
+<span class="md-ellipsis">
+    WebSocket Object
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/js_helper_funcs/">
+<span class="md-ellipsis">
+    JavaScript Helper Functions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C - HTTP Protocol Status Messages
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D - WebLOAD-supported Character Sets
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../javascript/appendix_e/">
+<span class="md-ellipsis">
+    Appendix E - Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    Analytics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Analytics
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/overview/">
+<span class="md-ellipsis">
+    WebLOAD Analytics System Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/getting_started/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_charts/">
+<span class="md-ellipsis">
+    Generating Charts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/changing_chart_settings/">
+<span class="md-ellipsis">
+    Changing Chart Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/generating_reports/">
+<span class="md-ellipsis">
+    Generating Reports
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/load_sessions/">
+<span class="md-ellipsis">
+    Working with Load Sessions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/templates/">
+<span class="md-ellipsis">
+    Working with Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/portfolios/">
+<span class="md-ellipsis">
+    Working with Portfolios
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/defining_preferences/">
+<span class="md-ellipsis">
+    Defining Your Preferences
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_a/">
+<span class="md-ellipsis">
+    Appendix A. WebLOAD Analytics File System Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_b/">
+<span class="md-ellipsis">
+    Appendix B. Understanding the Statistics
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_c/">
+<span class="md-ellipsis">
+    Appendix C. Running Analytics in Command Line Mode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/appendix_d/">
+<span class="md-ellipsis">
+    Appendix D. Understanding the Templates
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../analytics/glossary/">
+<span class="md-ellipsis">
+    Appendix E. Glossary
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-selenium-scripts">
+<span class="md-ellipsis">
+      Using Selenium Scripts
+    </span>
+</a>
+<nav aria-label="Using Selenium Scripts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+<span class="md-ellipsis">
+      Prerequisites
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-create-a-webload-selenium-script">
+<span class="md-ellipsis">
+      Step 1: Create a WebLOAD Selenium Script
+    </span>
+</a>
+<nav aria-label="Step 1: Create a WebLOAD Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-and-exporting-a-selenium-script">
+<span class="md-ellipsis">
+      Recording and Exporting a Selenium Script
+    </span>
+</a>
+<nav aria-label="Recording and Exporting a Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites-for-selenium-ide-export">
+<span class="md-ellipsis">
+      Prerequisites for Selenium IDE Export
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recording-with-selenium-ide">
+<span class="md-ellipsis">
+      Recording with Selenium IDE
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-create-a-webload-recorder-project-file-from-the-selenium-script">
+<span class="md-ellipsis">
+      Step 2: Create a WebLOAD Recorder Project File from the Selenium Script
+    </span>
+</a>
+<nav aria-label="Step 2: Create a WebLOAD Recorder Project File from the Selenium Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-conversion-to-a-project-file">
+<span class="md-ellipsis">
+      Automatic Conversion to a Project File
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-conversion-to-a-project-file">
+<span class="md-ellipsis">
+      Manual Conversion to a Project File
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-edit-both-scripts">
+<span class="md-ellipsis">
+      Step 3: Edit Both Scripts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-run-both-scripts-in-a-test-session">
+<span class="md-ellipsis">
+      Step 4: Run Both Scripts in a Test Session
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-5-view-the-test-results">
+<span class="md-ellipsis">
+      Step 5: View the Test Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="selenium-integration">Selenium Integration</h1>
+<p>Selenium is a browser automation tool, enabling you to record and playback your interactions with a browser. Its development environment (IDE) is a Firefox add-on, and it can run various browser drivers, such as IE, Chrome, and Firefox. Selenium is open-source software, and can be used without charge.</p>
+<p>WebLOAD enables integration of a Selenium script into WebLOAD, and the gathering of navigation timing statistics. This is useful for gathering information regarding user experience, such as how long it takes to login, or how long it takes a page to render.</p>
+<p>While WebLOAD simulates the load on a server, Selenium simulates the end-user experience. A hybrid WebLOAD-Selenium solution can thus give you the advantages of both simulation types. To implement such a solution, you can run a WebLOAD load session that does the following:</p>
+<ul>
+<li>Runs a regular WebLOAD script with many users.</li>
+<li>Run a Selenium script that simulates the same actions, for a single user.</li>
+</ul>
+<p>The template will gather and display statistics from both scripts in the WebLOAD reports. In order to easily distinguish between the statistics from the regular WebLOAD script and those from the Selenium script, it is recommended to give the transactions in each of the two scripts a different distinctive name. For example:</p>
+<ul>
+<li><code>Selenium-user-login</code> in the Selenium script</li>
+<li><code>WL-user-login</code> in the WebLOAD script</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> This appendix is intended for users creating Selenium code to be used in WebLOAD only. If you wish to use Selenium as usual and add WebLOAD navigation- timing functionality, refer to the <em>Working with Java Selenium Scripts</em> section in Chapter 3 <em>Advanced JavaScript Script Features</em> of the <em>WebLOAD Scripting Guide</em>.</p>
+</blockquote>
+<h2 id="using-selenium-scripts">Using Selenium Scripts</h2>
+<p>This section describes how to use Selenium scripts in WebLOAD.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ol>
+<li>
+<p>Download the Selenium required jars:</p>
+<ol>
+<li>
+<p>In the selenium web-site (<a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a>), select the <strong>Download</strong> tab.</p>
+</li>
+<li>
+<p>In ‘Selenium Client &amp; WebDriver Language Bindings’, download the Java version (selenium-java-x.x.zip).</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Unzip the downloaded file in a temporary location.</p>
+</li>
+<li>
+<p>Copy the selenium-java-x.x.jar and all jars in the ‘libs’ folder to the WebLOAD Java extensions folder: c:\ProgramData\RadView\WebLOAD\extensions\java</p>
+</li>
+<li>
+<p>If there are duplicate jars (same base name with different number), delete the older versions.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> Selenium dependencies include jar files that are already shipped with WebLOAD, but not always the same version. Make sure there are no duplicates by deleting the older versions. For example, if you have both commons-codec-1.9.jar and commons-codec-1.3.jar, delete the commons-codec-1.3.jar file.</p>
+<p><strong>Note:</strong> Version numbers are not decimal numbers, so for example commons-codec- 1.10.jar is newer than commons-codec-1.3.jar.</p>
+</blockquote>
+<h3 id="step-1-create-a-webload-selenium-script"><strong>Step 1: Create a WebLOAD Selenium Script</strong></h3>
+<p>Do one of the following:</p>
+<ul>
+<li>
+<p>Record a Selenium script using the Selenium IDE, and export it to WebLOAD. Refer to <a href="#recording-and-exporting-a-selenium-script"><em>Recording and Exporting a Selenium Script</em> </a>. It is recommended to record the script both in Selenium IDE and in WebLOAD simultaneously.</p>
+</li>
+<li>
+<p>Create a Selenium script in WebLOAD using the Selenium building blocks. Refer to <a href="../appendix_a/#selenium-building-blocks"><em>Selenium Building Blocks</em> </a>. </p>
+</li>
+</ul>
+<h4 id="recording-and-exporting-a-selenium-script">Recording and Exporting a Selenium Script</h4>
+<h5 id="prerequisites-for-selenium-ide-export">Prerequisites for Selenium IDE Export</h5>
+<ol>
+<li>
+<p>Install Firefox.</p>
+</li>
+<li>
+<p>Install the Selenium IDE plug-in for Firefox.</p>
+</li>
+<li>
+<p>Go to <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-webload-formatter/">https://addons.mozilla.org/en-US/firefox/addon/selenium-</a><a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-webload-formatter/"> ide-webload-formatter/ </a>and install the WebLOAD plug-in for Selenium that enables exporting Selenium scripts to WebLOAD.</p>
+</li>
+</ol>
+<h5 id="recording-with-selenium-ide">Recording with Selenium IDE</h5>
+<ol>
+<li>
+<p>Launch Selenium IDE by clicking the Selenium IDE button in the Firefox toolbar.</p>
+<p><img alt="Launch Selenium IDE from Firefox" src="../../images/appendix_g_019.jpeg"/></p>
+<p>The Selenium IDE is launched.</p>
+</li>
+<li>
+<p>Record a desired script in the Selenium IDE.</p>
+<p><img alt="Recording a Script in Selenium IDE" src="../../images/appendix_g_020.png"/></p>
+<blockquote>
+<p><strong>Note:</strong> It is possible to record the same script both in Selenium and in WebLOAD simultaneously.</p>
+</blockquote>
+</li>
+<li>
+<p>After you finish recording, export the Selenium script to WebLOAD format as follows:</p>
+<ol>
+<li>
+<p>In the Selenium IDE, select <strong>Export Test Case As</strong> &gt; <strong>WebLOAD JavaScript</strong>.</p>
+<p><img alt="Exporting Selenium Script to WebLOAD JavaScript Format" src="../../images/appendix_g_021.png"/></p>
+</li>
+<li>
+<p>Enter a name for the script. The script is saved as a WebLOAD .js file.</p>
+<p>Note that the .js file contains a WebLOAD command, reportStatistics, which appears periodically throughout the script. The command instructs WebLOAD to collect navigation timing statistics from the browser regarding the current page.</p>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> By default, WebLOAD reports navigation timing statistics as an average across all pages accessed by the Selenium Driver. If you wish to also display the statistics for a particular page separately, use a modified reportStatistics command, as described in <a href="../appendix_a/#selenium-report-statistics"><em>Selenium Report Statistics</em> </a>.</p>
+</blockquote>
+<h3 id="step-2-create-a-webload-recorder-project-file-from-the-selenium-script">Step 2: Create a WebLOAD Recorder Project File from the Selenium Script</h3>
+<p>Perform one of the following:</p>
+<ul>
+<li><a href="#automatic-conversion-to-a-project-file"><em>Automatic Conversion to a Project File</em></a></li>
+<li><a href="#manual-conversion-to-a-project-file">Manual Conversion to a Project File</a></li>
+</ul>
+<h6 id="automatic-conversion-to-a-project-file"><strong><em>Automatic Conversion to a Project File</em></strong></h6>
+<ol>
+<li>
+<p>In the WebLOAD Recorder, click <strong>Open</strong> in the <strong>File</strong> tab of the ribbon and select the JavaScript .js file you exported from Selenium.</p>
+<p>The Open message appears.</p>
+<p><img alt="Converting a JavaScript file to a WebLOAD Recorder project file" src="../../images/appendix_g_022.png"/></p>
+</li>
+<li>
+<p>Click <strong>Yes</strong> to convert the JavaScript file to a WebLOAD Recorder project file.</p>
+</li>
+</ol>
+<h6 id="manual-conversion-to-a-project-file">Manual Conversion to a Project File</h6>
+<ol>
+<li>
+<p>Open the JavaScript .js file you exported from Selenium, in a text browser such as Notepad.</p>
+</li>
+<li>
+<p>Copy the contents of the file to the clipboard.</p>
+</li>
+<li>
+<p>In the WebLOAD Recorder, select <strong>New Project</strong> in the <strong>File</strong> tab of the ribbon.</p>
+</li>
+<li>
+<p>Click <strong>Full Script</strong> in the <strong>Home</strong> tab of the ribbon.</p>
+</li>
+<li>
+<p>Paste the copied contents into the JavaScript View pane.</p>
+</li>
+<li>
+<p>Save the project as a .wlp file.</p>
+</li>
+</ol>
+<h3 id="step-3-edit-both-scripts"><strong>Step 3: Edit Both Scripts</strong></h3>
+<p>As mentioned above, it is possible to record the same actions both in Selenium and in WebLOAD simultaneously. Whether you do so or not, after creating a WebLOAD script that parallels the Selenium script, edit both scripts as desired.</p>
+<p>At this point it is recommended to give the transactions in each of the two scripts different distinctive names so that you will be able to easily distinguish between the statistics of each when viewing the test results. For example, give the login action the following names:</p>
+<ul>
+<li><strong>Selenium_user_login</strong> – in the Selenium script</li>
+<li><strong>WL_user_login</strong> – in the WebLOAD script</li>
+</ul>
+<h3 id="step-4-run-both-scripts-in-a-test-session">Step 4: Run Both Scripts in a Test Session</h3>
+<ol>
+<li>
+<p>In the WebLOAD Console, define a load session template that does the following:</p>
+<ul>
+<li>Runs the Selenium script with a single user.</li>
+<li>Runs the regular WebLOAD script with many users.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> For instructions on how to define two different scripts in a single template, refer to <em>Adding a New Script/Mix to the Template</em>, in the <em>WebLOAD™ Console User’s Guide</em>.</p>
+</blockquote>
+</li>
+<li>
+<p>Run the load session.</p>
+</li>
+</ol>
+<h3 id="step-5-view-the-test-results">Step 5: View the Test Results</h3>
+<p>View the load session test results in the WebLOAD Console, WebLOAD Analytics, or the WebLOAD Web Dashboard.</p>
+<p>The following table describes the navigation timing measurements. These measurements are gathered by WebLOAD’s <code>reportStatistics</code> command. By default, these measurements report navigation timing statistics as an average across all pages for which the <code>reportStatistics</code> command was invoked.</p>
+<p>If you added an optional <code>Page Name</code> parameter to a <code>reportStatistics</code> command (refer to <a href="../appendix_a/#selenium-report-statistics"><em>Selenium Report Statistics</em> </a>), the resultant measurement names will be displayed as <code>&lt;Measurement Name&gt;-&lt;Page Name&gt;</code>. Thus for example, the measurement <code>Selenium Redirect – Home Page</code> displays the redirect time for the home page.</p>
+<p>Note that in all navigation timing measurements, time is reported in units of seconds.</p>
+<p><a name="navigation_timing_statistics"> </a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Measurement Name</strong></th>
+<th style="text-align: left;"><strong>Type</strong></th>
+<th style="text-align: left;"><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Selenium Redirect Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>Redirection Time.</p><p>The time from redirectStart to redirectEnd.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium App Cache Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>Fetch from cache, if relevant.</p><p>The time from redirectEnd to fetchStart.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium DNS Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>DNS Lookup time.</p><p>The time from domainLookupStart to domainLookupEnd.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium Connect Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>TCP Connect time.</p><p>The time from connectStart to connectEnd.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium Request Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>Request until first-byte.</p><p>The time from requestStart to responseStart.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium First Byte Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time from navigationStart to responseStart.</p><p>Note that the First Byte is calculated since navigation start, and not since request end as in WebLOAD.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium Page Response Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>Response download time. The time from responseStart to</p><p>responseEnd.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium domInteractive Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time from navigationStart to domInteractive.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium domContentLoaded Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;"><p>The time from navigationStart to</p><p>domContentLoadedEventStart.</p><p>Note that this measures the time until domContentLoadedEvent-Start but not event end, meaning until all content is loaded, but not including the javascript execution.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium Processing Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time from load responseEnd to loadEventStart.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium onLoad Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time from loadEventStart to loadEventEnd.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Selenium Full Page Time</td>
+<td style="text-align: left;">Timer</td>
+<td style="text-align: left;">The time from navigationStart to loadEventEnd.</td>
+</tr>
+</tbody>
+</table>
+<p>The following figure explains the various timing attributes listed in the <a href="#navigation_timing_statistics">Table</a></p>
+<p><img alt="Timing Attributes used in Navigation Timing Measurements" src="../../images/appendix_g_024.png"/></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>
