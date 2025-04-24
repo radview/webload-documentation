@@ -1,12 +1,16 @@
 # Managing Load Generators
 
-Both a[` `*URL/API Load Test* ](./manage_tests.md#creating-a-urlapi-load-test)and[` `*Script Load Test* ](./manage_tests.md#creating-a-script-load-test)require you to specify, from among the available load generators, which load generators to include in the test. However, the list of available load generators can only be defined by a Super Admin.  
+Both a[` `*URL/API Load Test* ](./manage_tests.md#creating-a-urlapi-load-test)and[` `*Script Load Test* ](./manage_tests.md#creating-a-script-load-test)require you to specify, from among the available load generators, which load generators to include in the test.
+
+This section is about Organization level Load-Generators which controls which load-generators are available per organization and offers another level of abstraction (Locations), not to be confused with [Globa Lab Load Generators](./global_lab_load_generators.md) that is a global service to manage all local load-generators accross all Consoles.
 
 ## Adding Load Generators 
 
 **To add a new load generator:** 
 
-1. In the menu bar, select **Admin** > **Load Generators**. The Load Generators window appears.  
+1. In the menu bar, select **Profile** > **Load Generators**. The Load Generators window appears.  
+
+    ![Select Load Generators](../images/org_load_generators.png)
 
     ![Load Generators page](../images/load_generators_page.jpeg)
 

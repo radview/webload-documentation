@@ -104,6 +104,7 @@ nav:
     - Creating and Playing a Playlist: dashboard/creating_playlist.md
     - Managing Load Generators: dashboard/managing_load_generators.md
     - Managing Organizations, Users, and Admins: dashboard/managing_organizations.md
+    - Global Lab Load Generators: dashboard/global_lab_load_generators.md
     - Using the REST API: dashboard/rest_api.md
     - Appendix A - Editing WebLOAD Dashboard Configuration: dashboard/appendix_a.md
   - Automation:

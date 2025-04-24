@@ -170,9 +170,16 @@ To set the new organization’s settings, refer to the instructions in[*Editing 
 
      ![Organization Users window](../images/org_users_window.png)
 
-6. You can use API keys to access some functionality in a REST API, by clicking **API Keys** under **Admin Pages**. 
+#### Managing API Keys
+
+To access the REST API programatically, you need to create an API key, by clicking **API Keys** under **Admin Pages**. 
+
+The Key has a name for reference and a value. The value is only visible when creating the key and cannot be retrieved later. The key act under a role to control it's permissions, it is recommended to use least privileged role required.
 
 ![API Keys window](../images/api_keys.png)
 
+Use the Key in an Authorization Header as Bearer, for example:
 
-
+```text
+curl -H "Authorization: Bearer eyJrIjoiSVl..." http://localhost:3000/api/dashboards/home
+```
