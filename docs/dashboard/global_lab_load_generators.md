@@ -34,7 +34,7 @@ Global Lab Load Generators are not the same as the Organization level [Load Gene
 
     ![console lab load generator](../images/console_cloud_lab.png)
 
-1. Specifcy the end-point URL that points to the Dashboard server that manages the load-generators, e.g. : `http://mydashboard:300`
+1. Specifcy the end-point URL that points to the Dashboard server that manages the load-generators, e.g. : `http://mydashboard:3000`
 
 1. Specify the credentials - this is the API Key value from the step above
 
