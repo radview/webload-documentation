@@ -1371,6 +1371,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamicreplacefieldfieldname-valuegenerator">
+<span class="md-ellipsis">
+      dynamicReplaceField(fieldName, valueGenerator)
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2009,6 +2016,13 @@
 <a class="md-nav__link" href="#addafterendtransactionhandlerid-func">
 <span class="md-ellipsis">
       addAfterEndTransactionHandler(id, func)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dynamicreplacefieldfieldname-valuegenerator">
+<span class="md-ellipsis">
+      dynamicReplaceField(fieldName, valueGenerator)
     </span>
 </a>
 </li>
@@ -3460,6 +3474,36 @@
 </span><span id="__span-23-9"><a href="#__codelineno-23-9" id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="s2">"Transaction1"</span><span class="p">);</span>
 </span><span id="__span-23-10"><a href="#__codelineno-23-10" id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="nx">InfoMessage</span><span class="p">(</span><span class="s2">"Inside Transaction1"</span><span class="p">);</span>
 </span><span id="__span-23-11"><a href="#__codelineno-23-11" id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">"Transaction1"</span><span class="p">);</span>
+</span></code></pre></div>
+<h4 id="dynamicreplacefieldfieldname-valuegenerator">dynamicReplaceField(fieldName, valueGenerator)</h4>
+<p>Dynamically replace a field name in a wlHttp object, if it exists, in all subsequent calls.</p>
+<p>The value can be one of the following types:</p>
+<ul>
+<li>Literal value - that value will be used instead of current field value. </li>
+<li>Function value - if the given value is a function, that function will be called each time and the returned value used</li>
+<li>Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling getValue() for it)</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span>
+</span><span id="__span-24-2"><a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="p">{</span>
+</span><span id="__span-24-3"><a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">  </span><span class="nx">numberParam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WLNumberParam</span><span class="p">(</span><span class="s2">"numberParam"</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">WLParamRandom</span><span class="p">,</span><span class="nx">WLParamLocal</span><span class="p">,</span><span class="nx">WLParamUpdateRound</span><span class="p">,</span><span class="nx">WLParamCycle</span><span class="p">);</span>
+</span><span id="__span-24-4"><a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="p">}</span>
+</span><span id="__span-24-5"><a href="#__codelineno-24-5" id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">generateTimestamp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-6"><a href="#__codelineno-24-6" id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
+</span><span id="__span-24-7"><a href="#__codelineno-24-7" id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="p">}</span>
+</span><span id="__span-24-8"><a href="#__codelineno-24-8" id="__codelineno-24-8" name="__codelineno-24-8"></a>
+</span><span id="__span-24-9"><a href="#__codelineno-24-9" id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="c1">//replace the 'user_name' field with the literal string "James"</span>
+</span><span id="__span-24-10"><a href="#__codelineno-24-10" id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="nx">dynamicReplaceField</span><span class="p">(</span><span class="s2">"user_name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"James"</span><span class="p">);</span>
+</span><span id="__span-24-11"><a href="#__codelineno-24-11" id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="c1">//replace the 'user_id' field with the value given by parameter 'numberParam'</span>
+</span><span id="__span-24-12"><a href="#__codelineno-24-12" id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="nx">dynamicReplaceField</span><span class="p">(</span><span class="s2">"user_id"</span><span class="p">,</span><span class="w"> </span><span class="nx">numberParam</span><span class="p">);</span>
+</span><span id="__span-24-13"><a href="#__codelineno-24-13" id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="c1">//replace the 'timestamp' field with the value returned by calling generateTimestamp() </span>
+</span><span id="__span-24-14"><a href="#__codelineno-24-14" id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="nx">dynamicReplaceField</span><span class="p">(</span><span class="s2">"timestamp"</span><span class="p">,</span><span class="w"> </span><span class="nx">generateTimestamp</span><span class="p">);</span>
+</span><span id="__span-24-15"><a href="#__codelineno-24-15" id="__codelineno-24-15" name="__codelineno-24-15"></a>
+</span><span id="__span-24-16"><a href="#__codelineno-24-16" id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="c1">//values sent in this request will change based on the string, pamater and function above:</span>
+</span><span id="__span-24-17"><a href="#__codelineno-24-17" id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"user_name"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"John"</span>
+</span><span id="__span-24-18"><a href="#__codelineno-24-18" id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"user_id"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"98889"</span>
+</span><span id="__span-24-19"><a href="#__codelineno-24-19" id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">"timestamp"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"178820233222"</span>
+</span><span id="__span-24-20"><a href="#__codelineno-24-20" id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">"https://www.httpbin.org/get"</span><span class="p">)</span>
 </span></code></pre></div>
 </article>
 </div>
