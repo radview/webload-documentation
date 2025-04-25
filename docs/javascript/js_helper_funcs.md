@@ -1003,3 +1003,38 @@ BeginTransaction("Transaction1");
 InfoMessage("Inside Transaction1");
 EndTransaction("Transaction1");
 ```
+
+#### dynamicReplaceField(fieldName, valueGenerator)
+
+Dynamically replace a field name in a wlHttp object, if it exists, in all subsequent calls.
+
+The value can be one of the following types:
+
+* Literal value - that value will be used instead of current field value. 
+* Function value - if the given value is a function, that function will be called each time and the returned value used
+* Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling getValue() for it)
+
+**Example**
+
+```js
+function InitClient()
+{
+  numberParam = WLNumberParam("numberParam",1, 10000, 1, WLParamRandom,WLParamLocal,WLParamUpdateRound,WLParamCycle);
+}
+function generateTimestamp() {
+  return new Date().getTime();
+}
+
+//replace the 'user_name' field with the literal string "James"
+dynamicReplaceField("user_name", "James");
+//replace the 'user_id' field with the value given by parameter 'numberParam'
+dynamicReplaceField("user_id", numberParam);
+//replace the 'timestamp' field with the value returned by calling generateTimestamp() 
+dynamicReplaceField("timestamp", generateTimestamp);
+
+//values sent in this request will change based on the string, pamater and function above:
+wlHttp.FormData["user_name"] = "John"
+wlHttp.FormData["user_id"] = "98889"
+wlHttp.FormData["timestamp"] = "178820233222"
+wlHttp.Get("https://www.httpbin.org/get")
+```
