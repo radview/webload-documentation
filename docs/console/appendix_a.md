@@ -15,7 +15,7 @@ By integrating WebLOAD scripts with AppDynamics you will be able to identify slo
 
 To enable WebLOAD for AppDynamics:
 
-1.	Add the line wlGlobals.AddWebLoadHeader=true in the JavaScript code of the script.
+1.	Add the line `wlGlobals.AddWebLoadHeader=true` in the JavaScript code of the script.
 
 This causes WebLOAD to send extra data upon every request of the script. The extra data identifies the request as a WebLOAD request, lists the name of the currently running script, and lists the name of the corresponding transaction.
 

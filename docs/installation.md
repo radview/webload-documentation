@@ -463,49 +463,9 @@ After selecting the license server, you can view the current license details in 
 
 You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. 
 
+## Configuring Secure TestTalk
 
-
-
-## Configuring Connection to the Oracle  Database using WebLOAD
-
-Connecting to the Oracle Database using WebLOAD requires that you install the Oracle Data Access Components (ODAC) on your computer. For information on ODAC, refer to the appropriate Oracle documentation. 
-
-> **Note:** You need to be assigned a valid username and user privileges for Oracle so that you can connect to the Oracle database. 
-
-The following procedure is confirmed to work with Oracle Database version 11*g*, and is also expected to work with Oracle Database version 10*g*. 
-
-**To configure your computer to enable connection to the Oracle database using WebLOAD:** 
-
-1. Navigate to $ORACLE\_HOME\NETWORK\ADMIN. 
-
-1. Open tnsnames.ora for editing. 
-
-   > **Note:** If tnsnames.ora does not exist, create it. 
-   >
-   > The default content is as follows: 
-   >
-   > `<tns\_name> =`  
-   >
-   > `(DESCRIPTION =`  
-   >
-   > `(ADDRESS = (PROTOCOL = TCP)(HOST = `<host or ip>`)(PORT = 1521))    (CONNECT\_DATA =`  
-   >
-   > `(SERVER = DEDICATED)` 
-   >
-   > `(SERVER\_NAME = `<instance\_name>`)` 
-   >
-   > `)` 
-   >
-   > `)` 
-
-1. Make the following definitions in the file: 
-
-​		tns\_name = `<tns name configured in the listener on the server (default orcl)>` host = `<hostname or IP address of the server>` 
-
-​		instance name = `<instance configured on the server (default orcl)>` 
-
-​		Log out and log in, or restart, to activate the environmental variables. 
-
+### Configuring testtalk.ini
 
 
 ## Uninstalling WebLOAD
