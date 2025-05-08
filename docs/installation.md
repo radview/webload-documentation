@@ -463,9 +463,152 @@ After selecting the license server, you can view the current license details in 
 
 You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. 
 
-## Configuring Secure TestTalk
+# TestTalk Setup Instructions
 
-### Configuring testtalk.ini
+## Configuring `testtalk.ini`
+
+The following settings should be added to your `testtalk.ini` configuration file:
+
+```ini
+UseOpenSsl=1
+CertificatesPath="path/to/certificates"
+VerifyServerCertificate=1
+VerifyClientCertificate=1
+```
+
+- **UseOpenSsl**: Enables OpenSSL for SSL/TLS if set to `1`. If set to `0`, OpenSSL is disabled.
+- **CertificatesPath**: Directory path containing your certificates (can be any folder you choose).
+- **VerifyServerCertificate**: Set to `1` to enable server certificate verification.
+- **VerifyClientCertificate**: Set to `1` to enable client certificate verification.
+
+Replace `"path/to/certificates"` with the actual folder where your certificate files are stored.
+> **Note:** By default, certificate files are provided inside the TestTalk Certificate installation directory. You can copy or point `CertificatesPath` to that folder.
+
+---
+
+## Required Certificate Files
+
+Ensure the following files exist in your certificates directory:
+
+- `ca.crt`: CA public certificate.
+- `ca.key`: CA private key.
+- `ca_bundle.crt`: Copy of the CA certificate.
+- `server.crt`: Server public certificate.
+- `server.key`: Server private key.
+- `server.csr`: Server Certificate Signing Request.
+- `client.crt`: Client public certificate.
+- `client.key`: Client private key.
+- `client.csr`: Client Certificate Signing Request.
+
+---
+
+## Script: `generate_certificates.sh`
+
+Use this script to generate all required certificates.
+
+```bash
+#!/bin/bash
+
+# Configurable variables for CA subject details
+CA_COUNTRY="AU"
+CA_STATE="Some-State"
+CA_LOCALITY="City"
+CA_ORGANIZATION="MyCompany"
+CA_ORGANIZATIONAL_UNIT="IT"
+CA_COMMON_NAME="MyTestCA"
+
+# Configurable variables for Server subject details
+SERVER_COUNTRY="AU"
+SERVER_STATE="Some-State"
+SERVER_LOCALITY="City"
+SERVER_ORGANIZATION="MyCompany"
+SERVER_ORGANIZATIONAL_UNIT="IT"
+SERVER_COMMON_NAME="127.0.0.1"
+
+# Configurable variables for Client subject details
+CLIENT_COUNTRY="AU"
+CLIENT_STATE="Some-State"
+CLIENT_LOCALITY="City"
+CLIENT_ORGANIZATION="MyCompany"
+CLIENT_ORGANIZATIONAL_UNIT="IT"
+CLIENT_COMMON_NAME="MyClient"
+
+# Other configuration variables
+CA_KEY="ca.key"
+CA_CERT="ca.crt"
+SERVER_KEY="server.key"
+SERVER_CSR="server.csr"
+SERVER_CERT="server.crt"
+CLIENT_KEY="client.key"
+CLIENT_CSR="client.csr"
+CLIENT_CERT="client.crt"
+SERIAL_FILE="ca.srl"
+CERT_VALIDITY_DAYS=3650
+
+# Construct the subject strings
+CERT_SUBJECT_CA="/C=$CA_COUNTRY/ST=$CA_STATE/L=$CA_LOCALITY/O=$CA_ORGANIZATION/OU=$CA_ORGANIZATIONAL_UNIT/CN=$CA_COMMON_NAME"
+CERT_SUBJECT_SERVER="/C=$SERVER_COUNTRY/ST=$SERVER_STATE/L=$SERVER_LOCALITY/O=$SERVER_ORGANIZATION/OU=$SERVER_ORGANIZATIONAL_UNIT/CN=$SERVER_COMMON_NAME"
+CERT_SUBJECT_CLIENT="/C=$CLIENT_COUNTRY/ST=$CLIENT_STATE/L=$CLIENT_LOCALITY/O=$CLIENT_ORGANIZATION/OU=$CLIENT_ORGANIZATIONAL_UNIT/CN=$CLIENT_COMMON_NAME"
+
+# Clean up any previously generated files
+rm -f $CA_KEY $CA_CERT $SERVER_KEY $SERVER_CSR $SERVER_CERT $CLIENT_KEY $CLIENT_CSR $CLIENT_CERT $SERIAL_FILE
+
+# Step 1: Generate the CA private key
+openssl genrsa -out $CA_KEY 2048
+
+# Step 2: Create a self-signed CA certificate
+openssl req -x509 -new -nodes -key $CA_KEY -sha256 -days $CERT_VALIDITY_DAYS -out $CA_CERT -subj "$CERT_SUBJECT_CA"
+
+# Step 3: Generate the server private key
+openssl genrsa -out $SERVER_KEY 2048
+
+# Step 4: Create a CSR for the server
+openssl req -new -key $SERVER_KEY -out $SERVER_CSR -subj "$CERT_SUBJECT_SERVER"
+
+# Step 5: Sign the server CSR with the CA to create the server certificate
+openssl x509 -req -in $SERVER_CSR -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -out $SERVER_CERT -days $CERT_VALIDITY_DAYS -sha256
+
+# Step 6: Generate the client private key
+openssl genrsa -out $CLIENT_KEY 2048
+
+# Step 7: Create a CSR for the client
+openssl req -new -key $CLIENT_KEY -out $CLIENT_CSR -subj "$CERT_SUBJECT_CLIENT"
+
+# Step 8: Sign the client CSR with the CA to create the client certificate
+openssl x509 -req -in $CLIENT_CSR -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -out $CLIENT_CERT -days $CERT_VALIDITY_DAYS -sha256
+
+# Step 9: Verify the server and client certificates
+echo "Verifying server certificate..."
+openssl verify -CAfile $CA_CERT $SERVER_CERT
+echo "Verifying client certificate..."
+openssl verify -CAfile $CA_CERT $CLIENT_CERT
+
+# Copy the CA certificate to the bundle
+cp ca.crt ca_bundle.crt
+
+# Output the results
+if [ $? -eq 0 ]; then
+  echo "All certificates generated and verified successfully:"
+  echo "CA Certificate: $CA_CERT"
+  echo "Server Certificate: $SERVER_CERT"
+  echo "Client Certificate: $CLIENT_CERT"
+else
+  echo "Error: Certificate verification failed."
+fi
+```
+
+---
+
+## Important Notes
+
+- **Secure Your Keys:** Keep `ca.key`, `server.key`, and `client.key` safe.
+- **Backup Before Running Script:** The script will overwrite existing certificates.
+- **Update Certificates Regularly:** Renew certificates before expiration.
+
+
+
+
+
 
 
 ## Uninstalling WebLOAD
