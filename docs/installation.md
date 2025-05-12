@@ -93,7 +93,7 @@ Where the flags (case sensitive) are:
 
 #### Using the Installation Wizard
 
-When you install WebLOAD on your computer, the installation program asks you for the components to install. As part of the installation process, WebLOAD installs a database management system (PostgreSQL 8.3) for use with WebLOAD Analytics. For more information about PostgreSQL, refer to[ www.postgresql-support.de.](http://www.postgresql-support.de/) 
+When you install WebLOAD on your computer, the installation program asks you for the components to install. As part of the installation process, WebLOAD installs a database management system (PostgreSQL) for use with WebLOAD Analytics. For more information about PostgreSQL, refer to[ www.postgresql-support.de.](http://www.postgresql-support.de/) 
 
 Install the WebLOAD components as follows: 
 
@@ -189,7 +189,7 @@ You can run the Postgre SQL database using a dedicated machine with several WebL
 
 1. Install Postgre SQL.  
 
-   > **Note:** It is recommended to install Postgre SQL Version 8.3. You can download the application from[ http://www.postgresql.org/download/ ](http://www.postgresql.org/download/)and install it using its default installation settings. 
+   > **Note:** It is recommended to install Postgre SQL Version 13. You can download the application from[ http://www.postgresql.org/download/ ](http://www.postgresql.org/download/)and install it using its default installation settings. 
 
 2. Copy all the files from the C:\Program Files\RadView\WebLOAD\bin\database directory to a temporary folder on the dedicated server. 
 
@@ -207,7 +207,7 @@ For WebLOAD Analytics clients to work with the remote database, you must perform
 
 **To configure a remote database connection through Postgre SQL:** 
 
-1. Run **Start** > **PostgreSql 8.3** > **PgAdmin III**. The PgAdmin III application opens. 
+1. Run **Start** > **PostgreSql** > **PgAdmin**. The PgAdmin application opens. 
 2. Edit the postgresql.conf file, as follows: 
    1. Select **File** > **Open**.  
    2. Browse to C:\program files\Postgres\Data\, select postgresql.conf, and click **Open**. The postgresql.conf configuration file opens. 
@@ -463,9 +463,9 @@ After selecting the license server, you can view the current license details in 
 
 You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. 
 
-# TestTalk Setup Instructions
+## TestTalk Setup Instructions
 
-## Configuring `testtalk.ini`
+### Configuring `testtalk.ini`
 
 The following settings should be added to your `testtalk.ini` configuration file:
 
@@ -486,7 +486,7 @@ Replace `"path/to/certificates"` with the actual folder where your certificate f
 
 ---
 
-## Required Certificate Files
+### Required Certificate Files
 
 Ensure the following files exist in your certificates directory:
 
@@ -502,7 +502,7 @@ Ensure the following files exist in your certificates directory:
 
 ---
 
-## Script: `generate_certificates.sh`
+### Script: `generate_certificates.sh`
 
 Use this script to generate all required certificates.
 
@@ -599,22 +599,15 @@ fi
 
 ---
 
-## Important Notes
+### Important Notes
 
 - **Secure Your Keys:** Keep `ca.key`, `server.key`, and `client.key` safe.
 - **Backup Before Running Script:** The script will overwrite existing certificates.
 - **Update Certificates Regularly:** Renew certificates before expiration.
 
-
-
-
-
-
-
 ## Uninstalling WebLOAD
 
-
-When you uninstall WebLOAD, you are prompted to remove PostgreSQL 8.3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL 8.3 installed in order to maintain all the information stored in the database. 
+When you uninstall WebLOAD, you are prompted to remove PostgreSQL .3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL installed in order to maintain all the information stored in the database. 
 
 **To uninstall WebLOAD:** 
 
