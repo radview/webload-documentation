@@ -463,11 +463,13 @@ After selecting the license server, you can view the current license details in 
 
 You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. 
 
+
 ## TestTalk Setup Instructions
 
 ### Configuring `testtalk.ini`
 
-The following settings should be added to your `testtalk.ini` configuration file:
+The following settings are included by default in the `testtalk.ini` configuration file.
+You may customize them as needed:
 
 ```ini
 UseOpenSsl=1
@@ -477,12 +479,13 @@ VerifyClientCertificate=1
 ```
 
 - **UseOpenSsl**: Enables OpenSSL for SSL/TLS if set to `1`. If set to `0`, OpenSSL is disabled.
-- **CertificatesPath**: Directory path containing your certificates (can be any folder you choose).
+- **CertificatesPath**: Directory path containing your certificates.
+  - Default on **Windows**: `C:\ProgramData\Radview\WebLOAD\certificates\testtalk`
+  - Default on **Linux**: `~/radview/webload13.3.0/linux/certificates/testtalk`
 - **VerifyServerCertificate**: Set to `1` to enable server certificate verification.
 - **VerifyClientCertificate**: Set to `1` to enable client certificate verification.
 
-Replace `"path/to/certificates"` with the actual folder where your certificate files are stored.
-> **Note:** By default, certificate files are provided inside the TestTalk Certificate installation directory. You can copy or point `CertificatesPath` to that folder.
+> **Note:** Certificate files are installed by default. You can point `CertificatesPath` to a different folder if needed.
 
 ---
 
@@ -598,6 +601,7 @@ fi
 ```
 
 ---
+
 
 ### Important Notes
 
