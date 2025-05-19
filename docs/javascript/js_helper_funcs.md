@@ -152,7 +152,7 @@ JUnit like helper function - compare actal and expected and throw an error in th
 | --- | --- | --- | --- |
 | `expected` | \*  |     | value to be compared to |
 | `actual` | \*  |     | actual value |
-| `message` | string | <optional> | custom message to show if values don't match |
+| `message` | string | (optional) | custom message to show if values don't match |
 
 #### assertFalse(expr, messageopt)
 
@@ -163,7 +163,7 @@ JUnit style assert that expression is false
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
 | `expr` | boolean |     | expression to check |
-| `message` | string | <optional> | custom message |
+| `message` | string | (optional) | custom message |
 
 #### assertNotEquals(expected, actual, messageopt)
 
@@ -175,7 +175,7 @@ JUnit like helper function - compare actal and expected and throw an error in th
 | --- | --- | --- | --- |
 | `expected` | \*  |     | value to be compared to |
 | `actual` | \*  |     | actual value |
-| `message` | string | <optional> | custom message to show if values are the same |
+| `message` | string | (optional) | custom message to show if values are the same |
 
 #### assertTrue(expr, messageopt)
 
@@ -186,7 +186,7 @@ JUnit style assert that expression is true
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
 | `expr` | boolean |     | expression to check |
-| `message` | string | <optional> | custom message |
+| `message` | string | (optional) | custom message |
 
 #### clearMDC()
 
@@ -204,9 +204,9 @@ Close all WebSocket objects
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `ws_prefix` | string | <optional> | ws  | prefix of var name |
-| `from_idx` | number | <optional> | 1   |     |
-| `to_idx` | number | <optional> | 20  |     |
+| `ws_prefix` | string | (optional) | ws  | prefix of var name |
+| `from_idx` | number | (optional) | 1   |     |
+| `to_idx` | number | (optional) | 20  |     |
 
 **Example**
 
@@ -542,8 +542,8 @@ Extract based on regular expression, from src, with possible template - number e
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
 | `reStr` | string |     |     | string with RegExp expression |
-| `src` | string | <optional> | document.wlSource | source to search at |
-| `template` | string | <optional> |     | template to use the extracted values with |
+| `src` | string | (optional) | document.wlSource | source to search at |
+| `template` | string | (optional) |     | template to use the extracted values with |
 
 **Returns:**
 
@@ -598,9 +598,9 @@ Extracts a value from a string having a prefix and a suffix
 | `prefix` | string |     | text before value to extract to find |
 | `suffix` | string |     | text after value to extract to find |
 | `str` | string |     | string to look for. Mostly this will be document.wlSource to look in previous http response |
-| `order` | number | <optional> | which occurence to return. Default is first (1). Negative value means from end, so -1 is last. |
-| `left_offset` | number | <optional> | number of chars from left to remove from returned value. |
-| `right_offset` | number | <optional> | number of chars from right to remove from returned value. |
+| `order` | number | (optional) | which occurence to return. Default is first (1). Negative value means from end, so -1 is last. |
+| `left_offset` | number | (optional) | number of chars from left to remove from returned value. |
+| `right_offset` | number | (optional) | number of chars from right to remove from returned value. |
 
 **Returns:**
 
@@ -643,6 +643,21 @@ extractValueByLength("abc$", 4, "xxabc$4321xxx")
 //return  "$4444$"
 extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
 ```
+
+#### extractCookieRegex (regex, returnCookieName)
+
+Extract value based on cookie name regular expression
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `regex` | string | Regular expresion. For example "myCookie.*" |
+| `returnCookieName` | boolean | optional, when false (default) return the value of the cookie. When set to true, return the cookie name |
+
+**Returns:**
+
+Value (or name) of searched cookie.
 
 #### extractXPath(expr, source)
 
@@ -712,7 +727,7 @@ Return value in MDC (Mapped Diagnostic Context)
 
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
-| `name` | string | <optional> | item to return, if omiited all values are returned |
+| `name` | string | (optional) | item to return, if omiited all values are returned |
 
 See:
 
@@ -792,12 +807,12 @@ Store extracted correlation value for future use. Validate it against the record
 | --- | --- | --- | --- |
 | `varName` | string |     | name of correlation value to set |
 | `extractedValue` | string |     | the value to store |
-| `originalValue` | string | <optional> | original (recorded) value to compare (only first 200 chars are compared) |
-| `errorFunc` | string \| number | <optional> | function used to log not found errors. Default is WarningMessage. Can be degined globally using 'correlationErrorFunc'. If given value is a number constant, for example 'WLMinorError' then it also triggers Full Error Details to be logged |
+| `originalValue` | string | (optional) | original (recorded) value to compare (only first 200 chars are compared) |
+| `errorFunc` | string \| number | (optional) | function used to log not found errors. Default is WarningMessage. Can be degined globally using 'correlationErrorFunc'. If given value is a number constant, for example 'WLMinorError' then it also triggers Full Error Details to be logged |
 
 See:
 
-*   [getCorrelationValue](#getcorrelationvaluevarname-func-object)
+* [getCorrelationValue](#getcorrelationvaluevarname-func--object)
 
 #### setCorrelationValueSilent()
 
