@@ -1203,6 +1203,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#extractcookieregex-regex-returncookiename">
+<span class="md-ellipsis">
+      extractCookieRegex (regex, returnCookieName)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#extractxpathexpr-source">
 <span class="md-ellipsis">
       extractXPath(expr, source)
@@ -1851,6 +1858,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#extractcookieregex-regex-returncookiename">
+<span class="md-ellipsis">
+      extractCookieRegex (regex, returnCookieName)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#extractxpathexpr-source">
 <span class="md-ellipsis">
       extractXPath(expr, source)
@@ -2261,7 +2275,7 @@
 <tr>
 <td><code>message</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>custom message to show if values don't match</td>
 </tr>
 </tbody>
@@ -2288,7 +2302,7 @@
 <tr>
 <td><code>message</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>custom message</td>
 </tr>
 </tbody>
@@ -2321,7 +2335,7 @@
 <tr>
 <td><code>message</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>custom message to show if values are the same</td>
 </tr>
 </tbody>
@@ -2348,7 +2362,7 @@
 <tr>
 <td><code>message</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>custom message</td>
 </tr>
 </tbody>
@@ -2376,21 +2390,21 @@
 <tr>
 <td><code>ws_prefix</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>ws</td>
 <td>prefix of var name</td>
 </tr>
 <tr>
 <td><code>from_idx</code></td>
 <td>number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>1</td>
 <td></td>
 </tr>
 <tr>
 <td><code>to_idx</code></td>
 <td>number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>20</td>
 <td></td>
 </tr>
@@ -2864,14 +2878,14 @@
 <tr>
 <td><code>src</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>document.wlSource</td>
 <td>source to search at</td>
 </tr>
 <tr>
 <td><code>template</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td></td>
 <td>template to use the extracted values with</td>
 </tr>
@@ -2966,19 +2980,19 @@
 <tr>
 <td><code>order</code></td>
 <td>number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>which occurence to return. Default is first (1). Negative value means from end, so -1 is last.</td>
 </tr>
 <tr>
 <td><code>left_offset</code></td>
 <td>number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>number of chars from left to remove from returned value.</td>
 </tr>
 <tr>
 <td><code>right_offset</code></td>
 <td>number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>number of chars from right to remove from returned value.</td>
 </tr>
 </tbody>
@@ -3042,6 +3056,32 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>//return  "$4444$"
 </span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>extractValueByLength("abc$", 4, "xxabc$4321abc$4444$xxx", 2, -1, 1)
 </span></code></pre></div>
+<h4 id="extractcookieregex-regex-returncookiename">extractCookieRegex (regex, returnCookieName)</h4>
+<p>Extract value based on cookie name regular expression</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>regex</code></td>
+<td>string</td>
+<td>Regular expresion. For example "myCookie.*"</td>
+</tr>
+<tr>
+<td><code>returnCookieName</code></td>
+<td>boolean</td>
+<td>optional, when false (default) return the value of the cookie. When set to true, return the cookie name</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<p>Value (or name) of searched cookie.</p>
 <h4 id="extractxpathexpr-source">extractXPath(expr, source)</h4>
 <p>Extract from XML using XPath expression</p>
 <p><strong>Parameters:</strong></p>
@@ -3162,7 +3202,7 @@
 <tr>
 <td><code>name</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>item to return, if omiited all values are returned</td>
 </tr>
 </tbody>
@@ -3291,20 +3331,20 @@
 <tr>
 <td><code>originalValue</code></td>
 <td>string</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>original (recorded) value to compare (only first 200 chars are compared)</td>
 </tr>
 <tr>
 <td><code>errorFunc</code></td>
 <td>string | number</td>
-<td><optional></optional></td>
+<td>(optional)</td>
 <td>function used to log not found errors. Default is WarningMessage. Can be degined globally using 'correlationErrorFunc'. If given value is a number constant, for example 'WLMinorError' then it also triggers Full Error Details to be logged</td>
 </tr>
 </tbody>
 </table>
 <p>See:</p>
 <ul>
-<li><a href="#getcorrelationvaluevarname-func-object">getCorrelationValue</a></li>
+<li><a href="#getcorrelationvaluevarname-func--object">getCorrelationValue</a></li>
 </ul>
 <h4 id="setcorrelationvaluesilent">setCorrelationValueSilent()</h4>
 <p>Like setCorrelationValue() but does not show a WarningMessage() when not extracted.</p>

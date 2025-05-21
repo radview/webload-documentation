@@ -1290,11 +1290,43 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuring-connection-to-the-oracle-database-using-webload">
+<a class="md-nav__link" href="#testtalk-setup-instructions">
 <span class="md-ellipsis">
-      Configuring Connection to the Oracle Database using WebLOAD
+      TestTalk Setup Instructions
     </span>
 </a>
+<nav aria-label="TestTalk Setup Instructions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-testtalkini">
+<span class="md-ellipsis">
+      Configuring testtalk.ini
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required-certificate-files">
+<span class="md-ellipsis">
+      Required Certificate Files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-generate_certificatessh">
+<span class="md-ellipsis">
+      Script: generate_certificates.sh
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-notes">
+<span class="md-ellipsis">
+      Important Notes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uninstalling-webload">
@@ -1524,11 +1556,43 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuring-connection-to-the-oracle-database-using-webload">
+<a class="md-nav__link" href="#testtalk-setup-instructions">
 <span class="md-ellipsis">
-      Configuring Connection to the Oracle Database using WebLOAD
+      TestTalk Setup Instructions
     </span>
 </a>
+<nav aria-label="TestTalk Setup Instructions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-testtalkini">
+<span class="md-ellipsis">
+      Configuring testtalk.ini
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required-certificate-files">
+<span class="md-ellipsis">
+      Required Certificate Files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-generate_certificatessh">
+<span class="md-ellipsis">
+      Script: generate_certificates.sh
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-notes">
+<span class="md-ellipsis">
+      Important Notes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#uninstalling-webload">
@@ -1684,7 +1748,7 @@
 </tbody>
 </table>
 <h4 id="using-the-installation-wizard">Using the Installation Wizard</h4>
-<p>When you install WebLOAD on your computer, the installation program asks you for the components to install. As part of the installation process, WebLOAD installs a database management system (PostgreSQL 8.3) for use with WebLOAD Analytics. For more information about PostgreSQL, refer to<a href="http://www.postgresql-support.de/"> www.postgresql-support.de.</a> </p>
+<p>When you install WebLOAD on your computer, the installation program asks you for the components to install. As part of the installation process, WebLOAD installs a database management system (PostgreSQL) for use with WebLOAD Analytics. For more information about PostgreSQL, refer to<a href="http://www.postgresql-support.de/"> www.postgresql-support.de.</a> </p>
 <p>Install the WebLOAD components as follows: </p>
 <ul>
 <li>Install the full WebLOAD product on computers that will be used to run the WebLOAD Console. </li>
@@ -1772,7 +1836,7 @@
 <li>Install Postgre SQL.  </li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> It is recommended to install Postgre SQL Version 8.3. You can download the application from<a href="http://www.postgresql.org/download/"> http://www.postgresql.org/download/ </a>and install it using its default installation settings. </p>
+<p><strong>Note:</strong> It is recommended to install Postgre SQL Version 13. You can download the application from<a href="http://www.postgresql.org/download/"> http://www.postgresql.org/download/ </a>and install it using its default installation settings. </p>
 </blockquote>
 <ol>
 <li>
@@ -1792,7 +1856,7 @@
 <p>For WebLOAD Analytics clients to work with the remote database, you must perform the following configuration steps on the host machine.  </p>
 <p><strong>To configure a remote database connection through Postgre SQL:</strong> </p>
 <ol>
-<li>Run <strong>Start</strong> &gt; <strong>PostgreSql 8.3</strong> &gt; <strong>PgAdmin III</strong>. The PgAdmin III application opens. </li>
+<li>Run <strong>Start</strong> &gt; <strong>PostgreSql</strong> &gt; <strong>PgAdmin</strong>. The PgAdmin application opens. </li>
 <li>Edit the postgresql.conf file, as follows: </li>
 <li>Select <strong>File</strong> &gt; <strong>Open</strong>.  </li>
 <li>Browse to C:\program files\Postgres\Data\, select postgresql.conf, and click <strong>Open</strong>. The postgresql.conf configuration file opens. </li>
@@ -1983,40 +2047,141 @@
 <p>After selecting the license server, you can view the current license details in the License Details section of the Update License dialog box.  </p>
 <h3 id="license-administration-through-the-command-line-interface">License administration through the Command Line Interface</h3>
 <p>You can register or upload a WebLOAD license through a command line interface. You can enter the wlUpdateLicenseApplicationCmd command into a batch file or into an external script to automatically launch a WebLOAD License action, without user intervention, using the parameters you specify. </p>
-<h2 id="configuring-connection-to-the-oracle-database-using-webload">Configuring Connection to the Oracle  Database using WebLOAD</h2>
-<p>Connecting to the Oracle Database using WebLOAD requires that you install the Oracle Data Access Components (ODAC) on your computer. For information on ODAC, refer to the appropriate Oracle documentation. </p>
+<h2 id="testtalk-setup-instructions">TestTalk Setup Instructions</h2>
+<h3 id="configuring-testtalkini">Configuring <code>testtalk.ini</code></h3>
+<p>The following settings are included by default in the <code>testtalk.ini</code> configuration file.
+You may customize them as needed:</p>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="na">UseOpenSsl</span><span class="o">=</span><span class="s">1</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="na">CertificatesPath</span><span class="o">=</span><span class="s">"path/to/certificates"</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="na">VerifyServerCertificate</span><span class="o">=</span><span class="s">1</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="na">VerifyClientCertificate</span><span class="o">=</span><span class="s">1</span>
+</span></code></pre></div>
+<ul>
+<li><strong>UseOpenSsl</strong>: Enables OpenSSL for SSL/TLS if set to <code>1</code>. If set to <code>0</code>, OpenSSL is disabled.</li>
+<li><strong>CertificatesPath</strong>: Directory path containing your certificates.</li>
+<li>Default on <strong>Windows</strong>: <code>C:\ProgramData\Radview\WebLOAD\certificates\testtalk</code></li>
+<li>Default on <strong>Linux</strong>: <code>~/radview/webload13.3.0/linux/certificates/testtalk</code></li>
+<li><strong>VerifyServerCertificate</strong>: Set to <code>1</code> to enable server certificate verification.</li>
+<li><strong>VerifyClientCertificate</strong>: Set to <code>1</code> to enable client certificate verification.</li>
+</ul>
 <blockquote>
-<p><strong>Note:</strong> You need to be assigned a valid username and user privileges for Oracle so that you can connect to the Oracle database. </p>
+<p><strong>Note:</strong> Certificate files are installed by default. You can point <code>CertificatesPath</code> to a different folder if needed.</p>
 </blockquote>
-<p>The following procedure is confirmed to work with Oracle Database version 11<em>g</em>, and is also expected to work with Oracle Database version 10<em>g</em>. </p>
-<p><strong>To configure your computer to enable connection to the Oracle database using WebLOAD:</strong> </p>
-<ol>
-<li>
-<p>Navigate to $ORACLE_HOME\NETWORK\ADMIN. </p>
-</li>
-<li>
-<p>Open tnsnames.ora for editing. </p>
-</li>
-</ol>
-<blockquote>
-<p><strong>Note:</strong> If tnsnames.ora does not exist, create it. </p>
-<p>The default content is as follows: </p>
-<p><code>&lt;tns\_name&gt; =</code> </p>
-<p><code>(DESCRIPTION =</code> </p>
-<p><code>(ADDRESS = (PROTOCOL = TCP)(HOST =</code><host ip="" or=""><code>)(PORT = 1521))    (CONNECT\_DATA =</code> </host></p>
-<p><code>(SERVER = DEDICATED)</code> </p>
-<p><code>(SERVER\_NAME =</code><instance\_name><code>)</code> </instance\_name></p>
-<p><code>)</code> </p>
-<p><code>)</code> </p>
-</blockquote>
-<ol>
-<li>Make the following definitions in the file: </li>
-</ol>
-<p>​       tns_name = <code>&lt;tns name configured in the listener on the server (default orcl)&gt;</code> host = <code>&lt;hostname or IP address of the server&gt;</code> </p>
-<p>​       instance name = <code>&lt;instance configured on the server (default orcl)&gt;</code> </p>
-<p>​       Log out and log in, or restart, to activate the environmental variables. </p>
+<hr/>
+<h3 id="required-certificate-files">Required Certificate Files</h3>
+<p>Ensure the following files exist in your certificates directory:</p>
+<ul>
+<li><code>ca.crt</code>: CA public certificate.</li>
+<li><code>ca.key</code>: CA private key.</li>
+<li><code>ca_bundle.crt</code>: Copy of the CA certificate.</li>
+<li><code>server.crt</code>: Server public certificate.</li>
+<li><code>server.key</code>: Server private key.</li>
+<li><code>server.csr</code>: Server Certificate Signing Request.</li>
+<li><code>client.crt</code>: Client public certificate.</li>
+<li><code>client.key</code>: Client private key.</li>
+<li><code>client.csr</code>: Client Certificate Signing Request.</li>
+</ul>
+<hr/>
+<h3 id="script-generate_certificatessh">Script: <code>generate_certificates.sh</code></h3>
+<p>Use this script to generate all required certificates.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># Configurable variables for CA subject details</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nv">CA_COUNTRY</span><span class="o">=</span><span class="s2">"AU"</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">CA_STATE</span><span class="o">=</span><span class="s2">"Some-State"</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nv">CA_LOCALITY</span><span class="o">=</span><span class="s2">"City"</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nv">CA_ORGANIZATION</span><span class="o">=</span><span class="s2">"MyCompany"</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nv">CA_ORGANIZATIONAL_UNIT</span><span class="o">=</span><span class="s2">"IT"</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nv">CA_COMMON_NAME</span><span class="o">=</span><span class="s2">"MyTestCA"</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1"># Configurable variables for Server subject details</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nv">SERVER_COUNTRY</span><span class="o">=</span><span class="s2">"AU"</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="nv">SERVER_STATE</span><span class="o">=</span><span class="s2">"Some-State"</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="nv">SERVER_LOCALITY</span><span class="o">=</span><span class="s2">"City"</span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nv">SERVER_ORGANIZATION</span><span class="o">=</span><span class="s2">"MyCompany"</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nv">SERVER_ORGANIZATIONAL_UNIT</span><span class="o">=</span><span class="s2">"IT"</span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nv">SERVER_COMMON_NAME</span><span class="o">=</span><span class="s2">"127.0.0.1"</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1"># Configurable variables for Client subject details</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nv">CLIENT_COUNTRY</span><span class="o">=</span><span class="s2">"AU"</span>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nv">CLIENT_STATE</span><span class="o">=</span><span class="s2">"Some-State"</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="nv">CLIENT_LOCALITY</span><span class="o">=</span><span class="s2">"City"</span>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="nv">CLIENT_ORGANIZATION</span><span class="o">=</span><span class="s2">"MyCompany"</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="nv">CLIENT_ORGANIZATIONAL_UNIT</span><span class="o">=</span><span class="s2">"IT"</span>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nv">CLIENT_COMMON_NAME</span><span class="o">=</span><span class="s2">"MyClient"</span>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="c1"># Other configuration variables</span>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="nv">CA_KEY</span><span class="o">=</span><span class="s2">"ca.key"</span>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="nv">CA_CERT</span><span class="o">=</span><span class="s2">"ca.crt"</span>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="nv">SERVER_KEY</span><span class="o">=</span><span class="s2">"server.key"</span>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="nv">SERVER_CSR</span><span class="o">=</span><span class="s2">"server.csr"</span>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="nv">SERVER_CERT</span><span class="o">=</span><span class="s2">"server.crt"</span>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="nv">CLIENT_KEY</span><span class="o">=</span><span class="s2">"client.key"</span>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="nv">CLIENT_CSR</span><span class="o">=</span><span class="s2">"client.csr"</span>
+</span><span id="__span-1-35"><a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="nv">CLIENT_CERT</span><span class="o">=</span><span class="s2">"client.crt"</span>
+</span><span id="__span-1-36"><a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="nv">SERIAL_FILE</span><span class="o">=</span><span class="s2">"ca.srl"</span>
+</span><span id="__span-1-37"><a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="nv">CERT_VALIDITY_DAYS</span><span class="o">=</span><span class="m">3650</span>
+</span><span id="__span-1-38"><a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>
+</span><span id="__span-1-39"><a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="c1"># Construct the subject strings</span>
+</span><span id="__span-1-40"><a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="nv">CERT_SUBJECT_CA</span><span class="o">=</span><span class="s2">"/C=</span><span class="nv">$CA_COUNTRY</span><span class="s2">/ST=</span><span class="nv">$CA_STATE</span><span class="s2">/L=</span><span class="nv">$CA_LOCALITY</span><span class="s2">/O=</span><span class="nv">$CA_ORGANIZATION</span><span class="s2">/OU=</span><span class="nv">$CA_ORGANIZATIONAL_UNIT</span><span class="s2">/CN=</span><span class="nv">$CA_COMMON_NAME</span><span class="s2">"</span>
+</span><span id="__span-1-41"><a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="nv">CERT_SUBJECT_SERVER</span><span class="o">=</span><span class="s2">"/C=</span><span class="nv">$SERVER_COUNTRY</span><span class="s2">/ST=</span><span class="nv">$SERVER_STATE</span><span class="s2">/L=</span><span class="nv">$SERVER_LOCALITY</span><span class="s2">/O=</span><span class="nv">$SERVER_ORGANIZATION</span><span class="s2">/OU=</span><span class="nv">$SERVER_ORGANIZATIONAL_UNIT</span><span class="s2">/CN=</span><span class="nv">$SERVER_COMMON_NAME</span><span class="s2">"</span>
+</span><span id="__span-1-42"><a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="nv">CERT_SUBJECT_CLIENT</span><span class="o">=</span><span class="s2">"/C=</span><span class="nv">$CLIENT_COUNTRY</span><span class="s2">/ST=</span><span class="nv">$CLIENT_STATE</span><span class="s2">/L=</span><span class="nv">$CLIENT_LOCALITY</span><span class="s2">/O=</span><span class="nv">$CLIENT_ORGANIZATION</span><span class="s2">/OU=</span><span class="nv">$CLIENT_ORGANIZATIONAL_UNIT</span><span class="s2">/CN=</span><span class="nv">$CLIENT_COMMON_NAME</span><span class="s2">"</span>
+</span><span id="__span-1-43"><a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>
+</span><span id="__span-1-44"><a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="c1"># Clean up any previously generated files</span>
+</span><span id="__span-1-45"><a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>rm<span class="w"> </span>-f<span class="w"> </span><span class="nv">$CA_KEY</span><span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span><span class="nv">$SERVER_KEY</span><span class="w"> </span><span class="nv">$SERVER_CSR</span><span class="w"> </span><span class="nv">$SERVER_CERT</span><span class="w"> </span><span class="nv">$CLIENT_KEY</span><span class="w"> </span><span class="nv">$CLIENT_CSR</span><span class="w"> </span><span class="nv">$CLIENT_CERT</span><span class="w"> </span><span class="nv">$SERIAL_FILE</span>
+</span><span id="__span-1-46"><a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>
+</span><span id="__span-1-47"><a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="c1"># Step 1: Generate the CA private key</span>
+</span><span id="__span-1-48"><a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>openssl<span class="w"> </span>genrsa<span class="w"> </span>-out<span class="w"> </span><span class="nv">$CA_KEY</span><span class="w"> </span><span class="m">2048</span>
+</span><span id="__span-1-49"><a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>
+</span><span id="__span-1-50"><a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="c1"># Step 2: Create a self-signed CA certificate</span>
+</span><span id="__span-1-51"><a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-new<span class="w"> </span>-nodes<span class="w"> </span>-key<span class="w"> </span><span class="nv">$CA_KEY</span><span class="w"> </span>-sha256<span class="w"> </span>-days<span class="w"> </span><span class="nv">$CERT_VALIDITY_DAYS</span><span class="w"> </span>-out<span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">"</span><span class="nv">$CERT_SUBJECT_CA</span><span class="s2">"</span>
+</span><span id="__span-1-52"><a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>
+</span><span id="__span-1-53"><a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="c1"># Step 3: Generate the server private key</span>
+</span><span id="__span-1-54"><a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>openssl<span class="w"> </span>genrsa<span class="w"> </span>-out<span class="w"> </span><span class="nv">$SERVER_KEY</span><span class="w"> </span><span class="m">2048</span>
+</span><span id="__span-1-55"><a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a>
+</span><span id="__span-1-56"><a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="c1"># Step 4: Create a CSR for the server</span>
+</span><span id="__span-1-57"><a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span><span class="nv">$SERVER_KEY</span><span class="w"> </span>-out<span class="w"> </span><span class="nv">$SERVER_CSR</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">"</span><span class="nv">$CERT_SUBJECT_SERVER</span><span class="s2">"</span>
+</span><span id="__span-1-58"><a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>
+</span><span id="__span-1-59"><a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="c1"># Step 5: Sign the server CSR with the CA to create the server certificate</span>
+</span><span id="__span-1-60"><a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-in<span class="w"> </span><span class="nv">$SERVER_CSR</span><span class="w"> </span>-CA<span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span>-CAkey<span class="w"> </span><span class="nv">$CA_KEY</span><span class="w"> </span>-CAcreateserial<span class="w"> </span>-out<span class="w"> </span><span class="nv">$SERVER_CERT</span><span class="w"> </span>-days<span class="w"> </span><span class="nv">$CERT_VALIDITY_DAYS</span><span class="w"> </span>-sha256
+</span><span id="__span-1-61"><a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a>
+</span><span id="__span-1-62"><a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="c1"># Step 6: Generate the client private key</span>
+</span><span id="__span-1-63"><a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a>openssl<span class="w"> </span>genrsa<span class="w"> </span>-out<span class="w"> </span><span class="nv">$CLIENT_KEY</span><span class="w"> </span><span class="m">2048</span>
+</span><span id="__span-1-64"><a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>
+</span><span id="__span-1-65"><a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="c1"># Step 7: Create a CSR for the client</span>
+</span><span id="__span-1-66"><a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span><span class="nv">$CLIENT_KEY</span><span class="w"> </span>-out<span class="w"> </span><span class="nv">$CLIENT_CSR</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">"</span><span class="nv">$CERT_SUBJECT_CLIENT</span><span class="s2">"</span>
+</span><span id="__span-1-67"><a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a>
+</span><span id="__span-1-68"><a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="c1"># Step 8: Sign the client CSR with the CA to create the client certificate</span>
+</span><span id="__span-1-69"><a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-in<span class="w"> </span><span class="nv">$CLIENT_CSR</span><span class="w"> </span>-CA<span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span>-CAkey<span class="w"> </span><span class="nv">$CA_KEY</span><span class="w"> </span>-CAcreateserial<span class="w"> </span>-out<span class="w"> </span><span class="nv">$CLIENT_CERT</span><span class="w"> </span>-days<span class="w"> </span><span class="nv">$CERT_VALIDITY_DAYS</span><span class="w"> </span>-sha256
+</span><span id="__span-1-70"><a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a>
+</span><span id="__span-1-71"><a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="c1"># Step 9: Verify the server and client certificates</span>
+</span><span id="__span-1-72"><a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Verifying server certificate..."</span>
+</span><span id="__span-1-73"><a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a>openssl<span class="w"> </span>verify<span class="w"> </span>-CAfile<span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span><span class="nv">$SERVER_CERT</span>
+</span><span id="__span-1-74"><a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Verifying client certificate..."</span>
+</span><span id="__span-1-75"><a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a>openssl<span class="w"> </span>verify<span class="w"> </span>-CAfile<span class="w"> </span><span class="nv">$CA_CERT</span><span class="w"> </span><span class="nv">$CLIENT_CERT</span>
+</span><span id="__span-1-76"><a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a>
+</span><span id="__span-1-77"><a href="#__codelineno-1-77" id="__codelineno-1-77" name="__codelineno-1-77"></a><span class="c1"># Copy the CA certificate to the bundle</span>
+</span><span id="__span-1-78"><a href="#__codelineno-1-78" id="__codelineno-1-78" name="__codelineno-1-78"></a>cp<span class="w"> </span>ca.crt<span class="w"> </span>ca_bundle.crt
+</span><span id="__span-1-79"><a href="#__codelineno-1-79" id="__codelineno-1-79" name="__codelineno-1-79"></a>
+</span><span id="__span-1-80"><a href="#__codelineno-1-80" id="__codelineno-1-80" name="__codelineno-1-80"></a><span class="c1"># Output the results</span>
+</span><span id="__span-1-81"><a href="#__codelineno-1-81" id="__codelineno-1-81" name="__codelineno-1-81"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-1-82"><a href="#__codelineno-1-82" id="__codelineno-1-82" name="__codelineno-1-82"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"All certificates generated and verified successfully:"</span>
+</span><span id="__span-1-83"><a href="#__codelineno-1-83" id="__codelineno-1-83" name="__codelineno-1-83"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"CA Certificate: </span><span class="nv">$CA_CERT</span><span class="s2">"</span>
+</span><span id="__span-1-84"><a href="#__codelineno-1-84" id="__codelineno-1-84" name="__codelineno-1-84"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Server Certificate: </span><span class="nv">$SERVER_CERT</span><span class="s2">"</span>
+</span><span id="__span-1-85"><a href="#__codelineno-1-85" id="__codelineno-1-85" name="__codelineno-1-85"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Client Certificate: </span><span class="nv">$CLIENT_CERT</span><span class="s2">"</span>
+</span><span id="__span-1-86"><a href="#__codelineno-1-86" id="__codelineno-1-86" name="__codelineno-1-86"></a><span class="k">else</span>
+</span><span id="__span-1-87"><a href="#__codelineno-1-87" id="__codelineno-1-87" name="__codelineno-1-87"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Error: Certificate verification failed."</span>
+</span><span id="__span-1-88"><a href="#__codelineno-1-88" id="__codelineno-1-88" name="__codelineno-1-88"></a><span class="k">fi</span>
+</span></code></pre></div>
+<hr/>
+<h3 id="important-notes">Important Notes</h3>
+<ul>
+<li><strong>Secure Your Keys:</strong> Keep <code>ca.key</code>, <code>server.key</code>, and <code>client.key</code> safe.</li>
+<li><strong>Backup Before Running Script:</strong> The script will overwrite existing certificates.</li>
+<li><strong>Update Certificates Regularly:</strong> Renew certificates before expiration.</li>
+</ul>
 <h2 id="uninstalling-webload">Uninstalling WebLOAD</h2>
-<p>When you uninstall WebLOAD, you are prompted to remove PostgreSQL 8.3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL 8.3 installed in order to maintain all the information stored in the database. </p>
+<p>When you uninstall WebLOAD, you are prompted to remove PostgreSQL .3, which is used to manage the WebLOAD Analytics database. RadView Software recommends that you keep PostgreSQL installed in order to maintain all the information stored in the database. </p>
 <p><strong>To uninstall WebLOAD:</strong> </p>
 <ol>
 <li>Close all WebLOAD modules including TestTalk. </li>
