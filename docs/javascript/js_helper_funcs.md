@@ -111,7 +111,7 @@ SleepEvery a certain multiple number of milliseconds has passed since the beginn
 **Example**
 
 ```js
-SleepUntil(5000); //wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10
+SleepEvery(5000); //wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10
 ```
 
 #### SleepUntil(millisFromBeginning)
@@ -812,7 +812,7 @@ Store extracted correlation value for future use. Validate it against the record
 
 See:
 
-* [getCorrelationValue](#getcorrelationvaluevarname-func--object)
+* [getCorrelationValue](#getcorrelationvaluevarname-func-object)
 
 #### setCorrelationValueSilent()
 
