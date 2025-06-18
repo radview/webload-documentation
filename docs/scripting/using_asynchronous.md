@@ -16,16 +16,25 @@ InfoMessage(document.wlSource);
 However in asynchronous requests, execution is not blocked, rather it immediately continues. Asynchronous requests are executed by calling the ‘wlHttp.Async’ property.
 
 ### Using wlHttp.Async to Execute Requests Asynchronously
-‘wlHttp.Async’ makes HTTP requests asynchronous. When using asynchronous requests, the script does not wait for the request to complete before moving on to the next statement. In order to work with the response, you can use the asynchronous callback functions:
+`wlHttp.Async` makes HTTP requests asynchronous. When using asynchronous requests, the script does not wait for the request to complete before moving on to the next statement. In order to work with the response, you can use the asynchronous callback functions:
 
 - [*onDocumentComplete*](../javascript/actions_objects_functions.md#ondocumentcomplete-property)– Defines a callback function to be called after the asynchronous request has been completed. For example, it validates the response and makes a further request.
 - [*onDataReceived*](../javascript/actions_objects_functions.md#ondatareceived-property)– Defines a callback function to be called every time more data is received for the request. This is useful for working with asynchronous requests that need to be inspected before they are completed, for example in an HTTP streaming push scenario.
+
+In order to use Asynchronous requests, you need to set a global settings to allow it in `InitAgenda` - `wlGlobals.SyncAlways=false`
 
 #### Using onDocumentComplete in Asynchronous Execution
 
 In the regular HTTP request example shown above, the document cannot be accessed after the request is made because it is not yet available. In order to access the response document, you need to register a function that will be called when the response is available, using the ‘onDocumentComplete’ property. For example:
 
 ```javascript
+function InitAgenda()
+{
+   //Allow asynchronous requests:
+   wlGlobals.SyncAlways=false;
+}
+
+
 wlHttp.Async = true;
 wlHttp.onDocumentComplete = function(document)
 { 
@@ -36,13 +45,15 @@ wlHttp.Get("http://make/async/request");
 Sleep(1000);
 ```
 
-
-
 #### Using onDataReceived in Asynchronous Execution
 
 To inspect the partial response as it is being received, use the ‘onDataReceived’ property. For example:
 
 ```javascript
+function InitAgenda()
+{
+   wlGlobals.SyncAlways=false;
+}
 wlHttp.Async = true;
 wlHttp.onDataReceived = function(document) { 
    InfoMessage("response so far:" + document.wlSource);
@@ -174,8 +185,4 @@ wlHttp.onDocumentComplete=function(document){
    }, 3000);
  }
 wlHttp.Get(“http://send-first-message”);
-
-
 ```
-
-
