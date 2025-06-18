@@ -2213,7 +2213,7 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">SleepUntil</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">SleepEvery</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10</span>
 </span></code></pre></div>
 <h4 id="sleepuntilmillisfrombeginning">SleepUntil(millisFromBeginning)</h4>
 <p>SleepUntil a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.</p>
@@ -3344,7 +3344,7 @@
 </table>
 <p>See:</p>
 <ul>
-<li><a href="#getcorrelationvaluevarname-func--object">getCorrelationValue</a></li>
+<li><a href="#getcorrelationvaluevarname-func-object">getCorrelationValue</a></li>
 </ul>
 <h4 id="setcorrelationvaluesilent">setCorrelationValueSilent()</h4>
 <p>Like setCorrelationValue() but does not show a WarningMessage() when not extracted.</p>
