@@ -627,104 +627,97 @@ Run the script. Each time the browser refreshes itself, a message in the log vie
 
 ```javascript
 function InitAgenda()
-
 {
-
 wlGlobals.SaveSource = true
-
 // END WLIDE
-
 }
 
-/\*\*\*\*\* WLIDE - URL : Home Page	- ID:20 \*\*\*\*\*/ wlGlobals.GetFrames = false wlHttp.Get("<http://www.webloadmpstore.com/index.php>")
-
+/***** WLIDE - URL : Home Page - ID:20 *****/
+wlGlobals.GetFrames = false
+wlHttp.Get("http://www.webloadmpstore.com/index.php")
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - Sleep - ID:22 \*\*\*\*\*/ Sleep(8371)
 
+/***** WLIDE - Sleep - ID:22 *****/
+Sleep(8371)
 // END WLIDE
 
-/\*\*\*\*\* WLIDE -Search page - ID:23 \*\*\*\*\*/
 
-wlHttp.Header["Referer"] = "<http://www.webloadmpstore.com/index.php>"
-
-wlHttp.ContentType = "application/x-www-form-urlencoded" wlHttp.FormData["event"] = "search"
-
-
-
-wlHttp.FormData["searchTerm"] = "webload" wlHttp.Post("<http://www.webloadmpstore.com/search.php>")
-
+/***** WLIDE -Search page - ID:23 *****/
+wlHttp.Header["Referer"] =
+"http://www.webloadmpstore.com/index.php"
+wlHttp.ContentType = "application/x-www-form-urlencoded"
+wlHttp.FormData["event"] = "search"
+wlHttp.FormData["searchTerm"] = "webload"
+wlHttp.Post("http://www.webloadmpstore.com/search.php")
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - Sleep - ID:24 \*\*\*\*\*/ Sleep(8542)
 
+/***** WLIDE - Sleep - ID:24 *****/
+Sleep(8542)
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - JavaScriptObject - ID:27 \*\*\*\*\*/ function evalResponse (source) {
 
-json\_response = eval("(" + source + ")")
-
-InfoMessage ( "The number of online users is: " + json\_response.usersOnline + " and The current time is: " + json\_response.time)
-
+/***** WLIDE - JavaScriptObject - ID:27 *****/
+function evalResponse (source) {
+    json_response = eval("(" + source + ")")
+    InfoMessage ( "The number of online users is: " +
+    json_response.usersOnline + " and The current time is: " +
+    json_response.time)
 }
-
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:7 \*\*\*\*\*/
 
-wlHttp.Header["Referer"] = "<http://www.webloadmpstore.com/search.php>"
-
-wlHttp.Get("<http://www.webloadmpstore.com/usersonlinecounter.php> ")
+/***** WLIDE - URL : Ajax - ID:7 *****/
+wlHttp.Header["Referer"] =
+"http://www.webloadmpstore.com/search.php"
+wlHttp.Get("http://www.webloadmpstore.com/usersonlinecounter.php")
 
 evalResponse(document.wlSource)
-
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - Sleep - ID:8 \*\*\*\*\*/ Sleep(10811)
 
+/***** WLIDE - Sleep - ID:8 *****/
+Sleep(10811)
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:9 \*\*\*\*\*/
 
-wlHttp.Header["Referer"] = "<http://www.webloadmpstore.com/search.php>"
-
-wlHttp.Get("<http://www.webloadmpstore.com/usersonlinecounter.php> ")
+/***** WLIDE - URL : Ajax - ID:9 *****/
+wlHttp.Header["Referer"] =
+"http://www.webloadmpstore.com/search.php"
+wlHttp.Get("http://www.webloadmpstore.com/usersonlinecounter.php")
 
 evalResponse(document.wlSource)
-
-// END WLIDE
-
-/\*\*\*\*\* WLIDE - Sleep - ID:10 \*\*\*\*\*/ Sleep(10640)
-
 // END WLIDE
 
 
+/***** WLIDE - Sleep - ID:10 *****/
+Sleep(10640)
+// END WLIDE
 
-
-
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:11 \*\*\*\*\*/
-
-wlHttp.Header["Referer"] = "<http://www.webloadmpstore.com/search.php>"
-
-wlHttp.Get("<http://www.webloadmpstore.com/usersonlinecounter.php> ")
+/***** WLIDE - URL : Ajax - ID:11 *****/
+wlHttp.Header["Referer"] =
+"http://www.webloadmpstore.com/search.php"
+wlHttp.Get("http://www.webloadmpstore.com/usersonlinecounter.php")
 
 evalResponse(document.wlSource)
-
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - Sleep - ID:12 \*\*\*\*\*/ Sleep(10655)
 
+/***** WLIDE - Sleep - ID:12 *****/
+Sleep(10655)
 // END WLIDE
 
-/\*\*\*\*\* WLIDE - URL : Ajax - ID:13 \*\*\*\*\*/
 
-wlHttp.Header["Referer"] = "<http://www.webloadmpstore.com/search.php>"
-
-wlHttp.Get("<http://www.webloadmpstore.com/usersonlinecounter.php> ")
+/***** WLIDE - URL : Ajax - ID:13 *****/
+wlHttp.Header["Referer"] =
+"http://www.webloadmpstore.com/search.php"
+wlHttp.Get("http://www.webloadmpstore.com/usersonlinecounter.php")
 
 evalResponse(document.wlSource)
-
 // END WLIDE
+
+
 ```
 
 
