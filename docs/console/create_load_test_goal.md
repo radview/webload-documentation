@@ -81,15 +81,11 @@ You must have a script to continue configuring a test with the Goal-Oriented Tes
 **To run a script:**
 
 1. Select the source of the script to be used for this test. Click the button and select an existing script from your system.
-2. To optionally open and view or edit the selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
-3. To optionally configure runtime options exclusive to this script, click **Options**.
-
-   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting Script Options* ](set_script_options.md).
-4. Click **Next**.
-
-   The Goal-Oriented Test Wizard progresses to the PMM Settings screen. See
-
-   [*Selecting Performance Measurements* ](console_performance_reports.md).
+1. To optionally open and view or edit the selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
+1. To optionally configure runtime options exclusive to this script, click **Options**.
+    The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [*Setting Script Options* ](set_script_options.md).
+1. Click **Next**.
+    The Goal-Oriented Test Wizard progresses to the PMM Settings screen. See [*Selecting Performance Measurements* ](console_performance_reports.md).
 
 ## Running a Mix of Scripts
 
@@ -109,11 +105,10 @@ Combining scripts through a Mix can simulate different groups of users performin
 
 1. Select the source for the Script Mix to be used for this test from the **Mix Selection** dialog box. You can either:
 
-   - Select **Use an Existing Mix** and click the  button to select a \*.mix file from your system.
-   - Select **Create a Mix** to configure a new Mix.
-2. Click **Next**.
-
-   WebLOAD Console progresses to the Mix Definition dialog box. See [*Defining a Mix*](#defining-a-mix).
+    - Select **Use an Existing Mix** and click the ![](../images/appendix_a_085.png) button to select a `*.mix` file from your system.
+    - Select **Create a Mix** to configure a new Mix.
+1. Click **Next**.
+    WebLOAD Console progresses to the Mix Definition dialog box. See [*Defining a Mix*](#defining-a-mix).
 
 ### Defining a Mix
 
@@ -126,34 +121,34 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 **To create a Mix:**
 
 1. Enter a descriptive name in the **Mix name** field.
-2. Specify whether the relative weights of the script refer to execution time or to number of virtual clients:
+1. Specify whether the relative weights of the script refer to execution time or to number of virtual clients:
 
-   - **Based on the number of virtual clients** – The mix interprets the relative weights in terms of number of virtual users. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution runs script A with 25% of the virtual users and script B with 75% of the users.
-   - **Based on the execution time** – The mix interprets the relative weights in terms of time. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution run script A for 25% of the time and script B for 75% of the time.
-3. Click **Add**.
+       - **Based on the number of virtual clients** – The mix interprets the relative weights in terms of number of virtual users. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution runs script A with 25% of the virtual users and script B with 75% of the users.
+       - **Based on the execution time** – The mix interprets the relative weights in terms of time. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution run script A for 25% of the time and script B for 75% of the time.
 
-   The Open dialog box appears, enabling you to select the script to add to the Mix.
-4. Select a script from your file system and click **Open**. The script is added to the Mix.
-5. Optionally, select the script and set any of the following parameters:
+1. Click **Add**.
+       The Open dialog box appears, enabling you to select the script to add to the Mix.
+1. Select a script from your file system and click **Open**. The script is added to the Mix.
+1. Optionally, select the script and set any of the following parameters:
 
-   1. **Script name** – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.
-   2. **Weight** – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.
-   3. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button to edit the user agent definition. 
-   4. **Bandwidth** – Specify a bandwidth. You can do this in one of two ways:
-      - Select a bandwidth from the drop-down list.
-      - Enter a number, to specify that number of bits per second.
-   5. **Max Connections** – Specify the number of max connections for the load generator.
-6. Optionally, click **Options** to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.
+      1. **Script name** – Specify a name for the script and its particular settings. Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.
+      1. **Weight** – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.
+      1. **Browser** and **Version** – Select the browser type and browser version. Alternatively, click the Change button to edit the user agent definition. 
+      1. **Bandwidth** – Specify a bandwidth. You can do this in one of two ways:
 
-   The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](set_script_options.md).
-7. Repeat steps [3 ] through [6 ] to add additional scripts to the Mix.
-8. In the Weight box, type or select the relative weight for the Script. Click **Make Equal** to assign equal weight to all of the Scripts in the Mix.
-9. Click **Save**.
+         - Select a bandwidth from the drop-down list.
+         - Enter a number, to specify that number of bits per second.
+      
+      1. **Max Connections** – Specify the number of max connections for the load generator.
 
-   The Mix configuration is saved with the extension \*.mix.
-10. Click **Next**.
-
-    WebLOAD Console progresses to the PMM Settings screen. See [*Selecting Performance Measurements* ](#selecting-performance-measurements).
+1. Optionally, click **Options** to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.
+        The Script Options dialog box opens. For information on setting the Script Options, see [*Setting Script Options* ](set_script_options.md).
+1. Repeat steps [3 ] through [6 ] to add additional scripts to the Mix.
+1. In the Weight box, type or select the relative weight for the Script. Click **Make Equal** to assign equal weight to all of the Scripts in the Mix.
+1. Click **Save**.
+       The Mix configuration is saved with the extension \*.mix.
+1. Click **Next**.
+       WebLOAD Console progresses to the PMM Settings screen. See [*Selecting Performance Measurements* ](#selecting-performance-measurements).
 
 #### Deleting a script from a Mix
 
@@ -168,8 +163,7 @@ A Mix is a set of scripts, each performing different activity, to simulate group
 
 1. Select the script you want to view.
 2. Click **View**.
-
-   The WebLOAD Recorder is launched, and displays the selected script.
+    The WebLOAD Recorder is launched, and displays the selected script.
 
 #### Selecting Performance Measurements
 
@@ -179,12 +173,12 @@ You can optionally open the Performance Measurements Manager and configure WebLO
 
 1. Click **Add Monitors** to the Performance Measurements Manager and configure the performance statistics to monitor and display in real-time during the test.
 
-   The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](performance_measurements_manager.md).
-2. Click **Next**.
+    The Performance Measurements Manager opens. For more information on configuring the statistics to monitor, see [*Performance Measurements Manager* ](performance_measurements_manager.md).
 
-   The Goal-Oriented Test Wizard progresses to the Host Selection screen. See
+1. Click **Next**.
+    The Goal-Oriented Test Wizard progresses to the Host Selection screen. See
 
-   [*Selecting Host Computers* ](#selecting-host-computers).
+    [*Selecting Host Computers* ](#selecting-host-computers).
 
 ## Selecting Host Computers
 
@@ -214,22 +208,23 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
 1. In the Host Selection dialog box, click **Add**. The Add Host Computer dialog box appears.
 
-   ![Add Host Computer Dialog Box](../images/console_users_guide_1029.png)
-2. To add a local host computer, select **Add by host name or IP address** and enter the host computer name or IP address in the **Address** field.
-3. To add cloud host machines:
+    ![Add Host Computer Dialog Box](../images/console_users_guide_1029.png)
 
-   1. Select **Add Cloud host**.
+1. To add a local host computer, select **Add by host name or IP address** and enter the host computer name or IP address in the **Address** field.
 
-      If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears. Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud Accounts* ](create_template_wizard.md#creating-webload-cloud-accounts).
-   2. Select a WebLOAD cloud account from the **Name** drop-down box.
-   3. In the **Number of Machines** field, enter the number of machines you wish to add from the selected WebLOAD cloud account.
-   4. Repeat steps [b]-[c ] to specify machines from another WebLOAD cloud account.
+1. To add cloud host machines:
 
-      Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears. For information about the available actions, refer to the explanations following.
-4. Click **OK**.
+    1. Select **Add Cloud host**.
+        If you have not yet created a WebLOAD cloud account, a dialog box appears. Click **OK** and the Cloud Accounts dialog box appears. Create one or more WebLOAD cloud accounts as described in [*Creating WebLOAD Cloud Accounts* ](create_template_wizard.md#creating-webload-cloud-accounts).
+    1. Select a WebLOAD cloud account from the **Name** drop-down box.
+    1. In the **Number of Machines** field, enter the number of machines you wish to add from the selected WebLOAD cloud account.
+    1. Repeat steps b-c to specify machines from another WebLOAD cloud account.
+        Optionally, click **Cloud Options** to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears. For information about the available actions, refer to the explanations following.
 
-   - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
-   - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “`<*WebLOAD Cloud Account Name*>`<*X*>” where X is a number that is incremented for each added cloud host machine.
+1. Click **OK**.
+
+    - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
+    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “`<*WebLOAD Cloud Account Name*>`<*X*>” where X is a number that is incremented for each added cloud host machine.
 
      For defining Host Computers as Load Machines and Probing Clients, see [*Designating a Host Computer as a Load Machine* ](#designating-a-host-computer-as-a-load-machine) and [*Designating a Host Computer as a Probing Client Machine* ](#designating-a-host-computer-as-a-probing-client-machine).
 
@@ -239,16 +234,18 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 
 1. Select a host from the Host Computer window.
 
-   To add hosts not yet defined to the Host Computer window, see [*Adding Host Computers to the Host Computers List* ](#adding-host-computers-to-the-host-computers-list).
-2. Click the single arrow key adjacent to the Load Machine or Probing Clients window.
+    To add hosts not yet defined to the Host Computer window, see [*Adding Host Computers to the Host Computers List* ](#adding-host-computers-to-the-host-computers-list).
 
-   The selected host moves to the Load Machine or Probing Clients window.
-3. Repeat steps 1 and 2 to define all of the hosts participating in the test.
-4. Click **Next**.
+1. Click the single arrow key adjacent to the Load Machine or Probing Clients window.
 
-After configuring the hosts participating in the Goal-Oriented test, the Goal- Oriented Test Wizard prompts you for the goals you want to achieve.
+    The selected host moves to the Load Machine or Probing Clients window.
 
-The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#defining-performance-goals).
+1. Repeat steps 1 and 2 to define all of the hosts participating in the test.
+1. Click **Next**.
+
+    After configuring the hosts participating in the Goal-Oriented test, the Goal- Oriented Test Wizard prompts you for the goals you want to achieve.
+
+    The Goal Definition dialog box appears, see [*Defining Performance Goals* ](#defining-performance-goals).
 
 > **Note:** If you define a Probing Client host, the Probing Client Script Selection dialog box appears
 
@@ -307,8 +304,8 @@ The goal table in the center of the dialog box contains the following fields:
 
 | **Field Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source               | `<p>`The source you are tracking to determine when your goal is reached. The source can be either:`</p><p>`- A Probing Client Machine`</p><p>`- A Load Machine`</p><p>`The source for Load Machines is “Total” because your results are the average of all Virtual Clients. The Source for Probing Client Machines is the name of the Probing Client.`</p>`                                                                                        |
-| Measurement          | `<p>`The measurement or activity that you are testing such as:`</p><p>`- Response Time`</p><p>`- Hits Per Second`</p><p>`- Round Time`</p>`                                                                                                                                                                                                                                                                                                          |
+| Source               | <p>The source you are tracking to determine when your goal is reached. The source can be either:</p><p>- A Probing Client Machine</p><p>- A Load Machine</p><p>The source for Load Machines is “Total” because your results are the average of all Virtual Clients. The Source for Probing Client Machines is the name of the Probing Client.</p>                                                                                        |
+| Measurement          | <p>The measurement or activity that you are testing such as:</p><p>- Response Time</p><p>- Hits Per Second</p><p>- Round Time</p>                                                                                                                                                                                                                                                                                                          |
 | Type                 | The type of measurement or activity being tested. This is the current slice average or current slice sum.                                                                                                                                                                                                                                                                                                                                                      |
 | Op                   | The operator is the condition of the test. This may be either `>=` or `<=` depending on the measurement being tracked. Here you indicate whether the results should be greater than, or less than the desired value for the goal to be reached. For example, if the measurement being tracked were Response Time, you would select the operator >= to achieve the goal when the time needed to receive a response from the server exceeds the limit for this goal. |
 | Value                | The limit that determines when this goal is achieved.                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -329,7 +326,7 @@ Below the Operator radio buttons, are the following control buttons:
 | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Add Goal         | Open the Add Goal dialog box to add a new measurement to the test goals.                                                                                |
 | Delete           | Delete a test goal.                                                                                                                                     |
-| Defaults         | Open the Default Goals dialog box. For more information on using Defaults, see[*Setting and Using Defaults* ](#setting-and-using-defaults). |
+| Defaults         | Open the Default Goals dialog box. For more information on using Defaults, see [*Setting and Using Defaults* ](#setting-and-using-defaults). |
 | Set As Defaults  | Set the current goals as default measurements and save them for future use.                                                                             |
 
 ### Adding Performance Goals
@@ -340,38 +337,44 @@ Goals are configured by defining boundary values for selected WebLOAD Console me
 
 1. Click the **Add Goal** button to add measurements on which to base your goals.
 
-   The Goal Definition dialog box opens. All of the WebLOAD Console built-in measurements are displayed in a tree structure.
+    ![](../images/console_users_guide_1036.png)
 
-   ![](../images/console_users_guide_1036.png)
-2. Optionally add a previously-defined custom measurement of type Timer to the tree, as follows:
+    The Goal Definition dialog box opens. All of the WebLOAD Console built-in measurements are displayed in a tree structure.
 
-   1. Click **Add Timer**. A new node appears in the Goal Definition dialog box, with an empty name field.
-   2. Enter the timer’s name in the name field.
-3. Optionally add to the tree, measurements based on a previously-defined transaction (which you created when editing the script in the WebLOAD Recorder), as follows:
+1. Optionally add a previously-defined custom measurement of type Timer to the tree, as follows:
 
-   1. Click **Add Transaction**.
-   2. In the Add Transaction dialog box that appears, enter the transaction name.
+    1. Click **Add Timer**. A new node appears in the Goal Definition dialog box, with an empty name field.
+    1. Enter the timer’s name in the name field.
 
-      Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined “Login” transaction, the following seven measurements are added.
+1. Optionally add to the tree, measurements based on a previously-defined transaction (which you created when editing the script in the WebLOAD Recorder), as follows:
 
-      ![Goal Definition Dialog Box – Result of Add Transaction Action](../images/console_users_guide_1037.png)
-4. To create rule conditions, select the checkbox adjacent to the measurements to include in the goal definition.
+    1. Click **Add Transaction**.
+    1. In the Add Transaction dialog box that appears, enter the transaction name.
 
-   For example, to define a test goal for the response time not to exceed 5 seconds, select the checkbox adjacent to Response Time.
+       Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined “Login” transaction, the following seven measurements are added.
 
-   > **Note**: A gray circle next to a measurement indicates that no default subcomponents are defined (the upper level component cannot be selected). To select subcomponents, click the + to expand the tree.
-   >
-5. Click **OK**.
+       ![Goal Definition Dialog Box – Result of Add Transaction Action](../images/console_users_guide_1037.png)
 
-   WebLOAD Console closes the list and opens a row for each of the selected measurements in the Goal Definition dialog box.
 
-   ![Selecting Goal-Oriented Test Performance Goals Dialog Box](../images/console_users_guide_1038.jpeg)
-6. Click in the **Op** field and select an operator from the drop-down list.
-7. Click in the **Value** field and type a boundary value for the goal.
-8. Ensure that the Report field is checked to include the goal measurement in the Goal-Oriented Test default Integrated Report.
-9. Click **Next**.
+1. To create rule conditions, select the checkbox adjacent to the measurements to include in the goal definition.
 
-   WebLOAD Console displays the Acceleration dialog box. For additional information, see [*Defining the Acceleration Rate* ](#defining-the-acceleration-rate).
+    For example, to define a test goal for the response time not to exceed 5 seconds, select the checkbox adjacent to Response Time.
+
+    > **Note**: A gray circle next to a measurement indicates that no default subcomponents are defined (the upper level component cannot be selected). To select subcomponents, click the + to expand the tree.
+    >
+
+1. Click **OK**.
+
+    WebLOAD Console closes the list and opens a row for each of the selected measurements in the Goal Definition dialog box.
+
+    ![Selecting Goal-Oriented Test Performance Goals Dialog Box](../images/console_users_guide_1038.jpeg)
+
+1. Click in the **Op** field and select an operator from the drop-down list.
+1. Click in the **Value** field and type a boundary value for the goal.
+1. Ensure that the Report field is checked to include the goal measurement in the Goal-Oriented Test default Integrated Report.
+1. Click **Next**.
+
+    WebLOAD Console displays the Acceleration dialog box. For additional information, see [*Defining the Acceleration Rate* ](#defining-the-acceleration-rate).
 
 #### Configuring a Goal - An Example
 
@@ -381,22 +384,23 @@ Suppose your goal is for your Web application server Response Time not to exceed
 
 1. Click **Add Goal**.
 
-   The Goal Definition window is displayed.
-2. Select **Response Time** from the list of measurements and click OK.
+    The Goal Definition window is displayed.
 
-   This measurement is displayed in the table on the Goal Definition dialog box.
-3. Because the goal is for the Response Time not to exceed five seconds, select the operator **>=** and the Goal Value **5** by modifying the Op and Goal Value cells.
+1. Select **Response Time** from the list of measurements and click OK.
 
-When you run the test, WebLOAD Console increases the load on the SUT until the Response Time for each simulated user reaches or exceeds five seconds and then it stops the test.
+    This measurement is displayed in the table on the Goal Definition dialog box.
+
+1. Because the goal is for the Response Time not to exceed five seconds, select the operator **>=** and the Goal Value **5** by modifying the Op and Goal Value cells.
+
+    When you run the test, WebLOAD Console increases the load on the SUT until the Response Time for each simulated user reaches or exceeds five seconds and then it stops the test.
 
 #### Deleting a Goal
 
 **To delete a goal:**
 
 1. Select the goal to be deleted on the Goal Definition screen by clicking the number to the left of the goal.
-2. Click **Delete**.
-
-   The goal is removed from the Goal Definition dialog box.
+1. Click **Delete**.
+    The goal is removed from the Goal Definition dialog box.
 
 ### Setting and Using Defaults
 
@@ -417,11 +421,12 @@ The Set As Default button sets all of the Goals located on the Goal Definition d
 
 1. On the Goal Definition dialog box, click **Default**. The Goal Defaults dialog box appears.
 
-   ![Goal Defaults Dialog Box](../images/console_users_guide_1039.png)
-2. Select the goal to be included in the Goal-Oriented Test test session by selecting the number to the left of the goal (use the Ctrl or Shift keys to select more than one goal).
-3. Click **OK**.
+    ![Goal Defaults Dialog Box](../images/console_users_guide_1039.png)
 
-   The goal(s) are added to the test definition.
+1. Select the goal to be included in the Goal-Oriented Test test session by selecting the number to the left of the goal (use the Ctrl or Shift keys to select more than one goal).
+1. Click **OK**.
+
+    The goal(s) are added to the test definition.
 
 ## Defining the Acceleration Rate
 
@@ -433,16 +438,17 @@ The Goal-Oriented Test increases the number of Virtual Clients accessing the app
 
 1. Click the slider and move up and down the scale to select an acceleration rate. RadView recommends:
 
-   0. Accelerating at a rate of 15 Virtual Clients to reach your goals quickly.
-   1. Accelerating at a rate of 5 Virtual Clients for fine-tuned results.
-2. Type or select the initial load to begin the Goal-Oriented Test Session in the Start load with Virtual Clients box.
-3. The Goal-Oriented Test automatically optimizes the load distribution of Virtual Clients among the Load Generators participating in the test. To override this feature and distribute the load evenly between the Load Generators select the Distribute load evenly amongst Load Generators checkbox.
-4. Click **Next**.
+    - Accelerating at a rate of 15 Virtual Clients to reach your goals quickly.
+    - Accelerating at a rate of 5 Virtual Clients for fine-tuned results.
 
-   The wizard progresses to the Goals Achieved dialog box.
+1. Type or select the initial load to begin the Goal-Oriented Test Session in the Start load with Virtual Clients box.
+1. The Goal-Oriented Test automatically optimizes the load distribution of Virtual Clients among the Load Generators participating in the test. To override this feature and distribute the load evenly between the Load Generators select the Distribute load evenly amongst Load Generators checkbox.
+1. Click **Next**.
 
-   > **Note:** The number of users that WebLOAD Console can generate on any given Load Machine in an efficient manner (so that the addition of users will not reduce the performance on that machine) is dependent on the power of the host machine. When WebLOAD Console estimates that it has reached the maximum output on a specific host, a log message is sent. WebLOAD Console continues to accelerate the load until the end of the Goal-Oriented test session.
-   >
+    The wizard progresses to the Goals Achieved dialog box.
+
+    > **Note:** The number of users that WebLOAD Console can generate on any given Load Machine in an efficient manner (so that the addition of users will not reduce the performance on that machine) is dependent on the power of the host machine. When WebLOAD Console estimates that it has reached the maximum output on a specific host, a log message is sent. WebLOAD Console continues to accelerate the load until the end of the Goal-Oriented test session.
+    >
 
 ## Defining WebLOAD Console’s Action Once the Goals are Reached
 
@@ -490,14 +496,15 @@ WebLOAD Console saves all of the values for the complete set of measurements. Yo
 
 1. From the Finish dialog box, click **Finish**.
 
-   A message box appears asking if you want to save the current Load Template.
+    A message box appears asking if you want to save the current Load Template.
 
-   ![Save Current Load Template Message Box](../images/console_users_guide_1043.png)
-2. Click **Yes** to save the current Load Template as a \*.tpl file.
+    ![Save Current Load Template Message Box](../images/console_users_guide_1043.png)
 
-   Load Templates contain the parameters that you defined for the test, such as the participating hosts in a test and the test plan. Using Load Templates saves you the time of reconfiguring the Load Session when repeating tests.
+1. Click **Yes** to save the current Load Template as a `*.tpl` file.
 
-The Goal-Oriented Test Wizard is finished and the test begins. WebLOAD Console displays the Goal-Oriented Test Default Report.
+    Load Templates contain the parameters that you defined for the test, such as the participating hosts in a test and the test plan. Using Load Templates saves you the time of reconfiguring the Load Session when repeating tests.
+
+    The Goal-Oriented Test Wizard is finished and the test begins. WebLOAD Console displays the Goal-Oriented Test Default Report.
 
 ## Viewing the Goal-Oriented Test Default Report
 

@@ -21,21 +21,18 @@ The following diagram illustrates the workflow for manually configuring a load t
 
 1. Select **Create a new template manually** on the WebLOAD Startup dialog box.
 
-   ![WebLOAD Console Startup Dialog Box](../images/console_users_guide_1049.png)
+    ![WebLOAD Console Startup Dialog Box](../images/console_users_guide_1049.png)
 
-
-
-2. Click **OK**.
-
+1. Click **OK**.
    The WebLOAD Console appears.
 
-3. Click **Scripts Selection** in the **Home** tab of the ribbon,
+1. Click **Scripts Selection** in the **Home** tab of the ribbon,
 
-   -Or-
+    -Or-
 
-   Right-click the Load Session item in the Script Tree and select **Modify Script Selection**.
+    Right-click the Load Session item in the Script Tree and select **Modify Script Selection**.
 
-The script/Mix Selection dialog box opens. 
+    The script/Mix Selection dialog box opens. 
 
 
 
@@ -60,28 +57,27 @@ Select the scripts to run through the script / Mix Selection dialog box.
 
 1. Click in the **Script Path** field and enter the name and the full path for the script or mix of scripts.
 
-   The path name can be entered manually or through browsing the directory structure.
+    The path name can be entered manually or through browsing the directory structure.
 
-   To include additional scripts/mix of scripts, click **Add** and repeat step 1.
+    To include additional scripts/mix of scripts, click **Add** and repeat step 1.
 
-2. To optionally open and view or edit a selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
+1. To optionally open and view or edit a selected script, click **View**. WebLOAD Recorder opens displaying the selected script.
 
-3. To optionally open and view or edit a selected mix of scripts, click **View**.
+1. To optionally open and view or edit a selected mix of scripts, click **View**.
 
-   The Edit Mix dialog box opens (it is essentially identical to the [Mix Creation Dialog Box](create_template_wizard.md#creating-a-mix).
+    The Edit Mix dialog box opens (it is essentially identical to the [Mix Creation Dialog Box](create_template_wizard.md#creating-a-mix).
 
-4. To optionally configure runtime options exclusive to a selected Script, click **Options**.
+1. To optionally configure runtime options exclusive to a selected Script, click **Options**.
 
-   The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on Script options, see [Setting Script Options](set_script_options.md).
+    The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on Script options, see [Setting Script Options](set_script_options.md).
 
-5. To optionally configure runtime options exclusive to a script in a selected mix, click **View**. In the Edit Mix dialog box that appears, select the script and click **Options**. The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [Setting Script Options](set_script_options.md).
+1. To optionally configure runtime options exclusive to a script in a selected mix, click **View**. In the Edit Mix dialog box that appears, select the script and click **Options**. The Script Options dialog box opens enabling you to define the runtime options for the selected script. For more information on script options, see [Setting Script Options](set_script_options.md).
 
-6. Click **OK**.
+1. Click **OK**.
 
-   The scripts selected to run in the test are displayed in the Session Tree.
+    The scripts selected to run in the test are displayed in the Session Tree.
 
-   ![Session Tree](../images/console_users_guide_1052.png)
-
+    ![Session Tree](../images/console_users_guide_1052.png)
 
 
 
@@ -114,15 +110,15 @@ In this dialog box, you define the host computers participating in the test. The
 
 1. Click **Add**.
 
-   The Add Host Computer dialog box opens.
+    The Add Host Computer dialog box opens.
    
-   ![Add Host Computer Dialog Box](../images/console_users_guide_1055.png)
+    ![Add Host Computer Dialog Box](../images/console_users_guide_1055.png)
 
-2. Enter the name or IP address of the host computer you want to add.
+1. Enter the name or IP address of the host computer you want to add.
 
-3. Click **OK**.
+1. Click **OK**.
 
-   WebLOAD Console adds the machine to the Host Computer list.
+    WebLOAD Console adds the machine to the Host Computer list.
 
 ## Defining Load Machines
 
@@ -133,21 +129,22 @@ Load Machines are the machines that generate the Virtual Clients and bombard the
 **To designate a host computer as a Load Machine:**
 
 1. Select the Host from the Host Computer field.
-2. Click the single arrow key adjacent to the Load Machine field.
+1. Click the single arrow key ![](../images/console_users_guide_0147.png) adjacent to the Load Machine field.
 
-   -Or-
+    -Or-
 
-   Double-click the host.
+    Double-click the host.
 
-   The selected Host moves to the Load Machine field.
-3. Click **OK**.
+    The selected Host moves to the Load Machine field.
+
+1. Click **OK**.
 
 #### Designating all Host Computers as Load Machines
 
 **To designate all host computers as Load Machines:**
 
-1. Click the double arrow key adjacent to the Load Machine field. All of the Host Computers move to the Load Machine field.
-2. Click **OK**.
+1. Click the double arrow key ![](../images/console_users_guide_0148.png) adjacent to the Load Machine field. All of the Host Computers move to the Load Machine field.
+1. Click **OK**.
 
 ### Defining Probing Client Machines
 
@@ -158,17 +155,17 @@ Probing Clients act as single Virtual Clients to measure the performance of targ
 **To designate a host computer as a Probing Client Machine:**
 
 1. Select the **Host** from the Host Computer field.
-2. Click the single arrow key adjacent to the Probing Client Machines field. The selected Host moves to the Probing Client Machine field.
-3. Click **OK**.
+1. Click the single arrow key ![](../images/console_users_guide_0147.png) adjacent to the Probing Client Machines field. The selected Host moves to the Probing Client Machine field.
+1. Click **OK**.
 
 ## Deleting a Host Computer
 
 **To delete a host computer:**
 
 1. Select the host name from the Host Computer list.
-2. Click **Delete**.
+1. Click **Delete**.
 
-   The host is deleted from the Host Computer list.
+    The host is deleted from the Host Computer list.
    
    
 
@@ -188,37 +185,37 @@ You can create a load schedule by:
 
 1. Double-click a host in the Session Tree,
 
-   -Or-
+    -Or-
 
-   Right-click the script the Load Machines are running and select **Modify Load Machine Schedule**.
+    Right-click the script the Load Machines are running and select **Modify Load Machine Schedule**.
 
-   The Schedule Manually dialog box opens.
+    The Schedule Manually dialog box opens.
    
-   ![Schedule Manually Dialog Box](../images/console_users_guide_1056.png)
+    ![Schedule Manually Dialog Box](../images/console_users_guide_1056.png)
 
 
 
-2. Expand the Load Machine tree using the **+ / -** button adjacent to the Load Machine you want to schedule.
+1. Expand the Load Machine tree using the **+ / -** button adjacent to the Load Machine you want to schedule.
 
-3. Enter the number of days and the starting time to generate the load in the From field.
+1. Enter the number of days and the starting time to generate the load in the From field.
 
-   The starting time is defined for each particular script relative to the beginning of the test.
+    The starting time is defined for each particular script relative to the beginning of the test.
+ 
+    > **Note:** Days are numbered 00 through to 99. Seconds are numbered 1 through 59. To enter one minute, use the 1:00 syntax, not 00:60.
 
-   > **Note:** Days are numbered 00 through to 99. Seconds are numbered 1 through 59. To enter one minute, use the 1:00 syntax, not 00:60.
+1. Enter the number of days and the ending time to generate the load in the To field.
 
-4. Enter the number of days and the ending time to generate the load in the To field.
+    The ending time is defined for each particular Script relative to the beginning of the test. If the To field is left blank, WebLOAD Console continues generating the load until the From time in the next entry for this Load Machine, or if this is the last entry, until the test is stopped manually.
 
-   The ending time is defined for each particular Script relative to the beginning of the test. If the To field is left blank, WebLOAD Console continues generating the load until the From time in the next entry for this Load Machine, or if this is the last entry, until the test is stopped manually.
+1. Enter the number of Virtual Clients to generate during the time frame defined in steps 3 and 4.
+1. Schedule additional Virtual Client loads for this Load Machine:
+    1. Click **Add** to add a blank line to the schedule grid.
+    1. Repeat steps 3 through 5.
 
-5. Enter the number of Virtual Clients to generate during the time frame defined in steps 3 and 4.
-6. Schedule additional Virtual Client loads for this Load Machine:
-   1. Click **Add** to add a blank line to the schedule grid.
-   2. Repeat steps 3 through 5.
+1. Repeat steps 3 through 6 for each Load Machine or Probing Client defined in the Session Tree.
+1. Click **OK**.
 
-7. Repeat steps 3 through 6 for each Load Machine or Probing Client defined in the Session Tree.
-8. Click **OK**.
-
-> **Note:** The **Limit run to X rounds** option is disabled because you cannot set or change it for an individual load machine. This option can only be set at the script level.
+    > **Note:** The **Limit run to X rounds** option is disabled because you cannot set or change it for an individual load machine. This option can only be set at the script level.
 
 
 
@@ -228,33 +225,31 @@ You can create a load schedule by:
 
 1. Double-click a host in the Session Tree,
 
-   -Or-
+    -Or-
 
-   Right-click the script the hosts are running and select **Modify Load Machine Schedule**.
+    Right-click the script the hosts are running and select **Modify Load Machine Schedule**.
 
-   The Schedule Manually dialog box opens.
+    The Schedule Manually dialog box opens.
    
-   ![Schedule Manually Dialog Box](../images/console_users_guide_1057.jpeg)
+    ![Schedule Manually Dialog Box](../images/console_users_guide_1057.jpeg)
 
-2. Click the Load Machine you want to schedule.
+1. Click the Load Machine you want to schedule.
 
-3. Click the **Load Profiler** button.
+1. Click the **Load Profiler** button.
 
-   The Load Profiler opens.
+    The Load Profiler opens.
+ 
+    ![Load Profiler](../images/console_users_guide_1058.jpeg)
 
-   ![Load Profiler](../images/console_users_guide_1058.jpeg)
+1. Select a pattern from the Select scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](create_template_wizard.md#scheduling-models).
 
+1. Fill in the fields at the bottom of the dialog box.
 
+1. Click **Append** to include the load definition in the schedule,
 
-4. Select a pattern from the Select scheduling model field at the top of the dialog box. For an explanation of each model, see [*Scheduling Models* ](create_template_wizard.md#scheduling-models).
+    -Or-
 
-5. Fill in the fields at the bottom of the dialog box.
-
-6. Click **Append** to include the load definition in the schedule,
-
-   -Or-
-
-   Click **Replace** to substitute the load definition for the one appearing in the Schedule Manually dialog box.
+    Click **Replace** to substitute the load definition for the one appearing in the Schedule Manually dialog box.
 
 
 
@@ -266,11 +261,13 @@ After configuring the scripts to run, the Load Machines to generate the load, an
 
 1. Click **Start Session** in the **Session** tab of the ribbon.
 
-   A message box appears asking if you want to save the current Load Template.
+    A message box appears asking if you want to save the current Load Template.
 
-2. Click **Yes** to save the current Load Template as a \*.tpl file.
+    ![](../images/console_users_guide_0166.png)
 
-   Load Templates contain the parameters that you defined for the test, such as the scripts to run, participating hosts, and the test plan. Saving Load Templates saves you the time of reconfiguring the Load Session when repeating tests.
+1. Click **Yes** to save the current Load Template as a `*.tpl` file.
 
-   For more information on running tests, see [*Running a Load Session* ](running_a_load_session.md).
+    Load Templates contain the parameters that you defined for the test, such as the scripts to run, participating hosts, and the test plan. Saving Load Templates saves you the time of reconfiguring the Load Session when repeating tests.
+
+    For more information on running tests, see [*Running a Load Session* ](running_a_load_session.md).
 

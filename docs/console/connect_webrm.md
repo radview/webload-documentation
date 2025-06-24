@@ -38,13 +38,13 @@ Following the configuration of WebLOAD Console to work with WebRM, configure the
 
 1. Open your Console by selecting **Start** >**Programs** > **RadView** > **WebLOAD** > **WebLOAD Console**. The Request Resources dialog appears:
 
-   ![Request Resources Dialog Box](../images/console_users_guide_0125.png)
+     ![Request Resources Dialog Box](../images/console_users_guide_0125.png)
 
-2. Enter the number of Virtual Clients and Probing Clients you will need for your test. If you request more than the number of resources allowed for your license, or more than are currently available, you will be prompted with a dialog stating that the resources you requested are unavailable. This dialog will also list what resources are currently available so that you can resubmit your request.
+1. Enter the number of Virtual Clients and Probing Clients you will need for your test. If you request more than the number of resources allowed for your license, or more than are currently available, you will be prompted with a dialog stating that the resources you requested are unavailable. This dialog will also list what resources are currently available so that you can resubmit your request.
 
-3. If you know that you will require the same number of resources each time you connect to WebRM, check **Always request same number of clients**.
+1. If you know that you will require the same number of resources each time you connect to WebRM, check **Always request same number of clients**.
 
-4. Click OK.
+1. Click OK.
 
 
 ## Updating the Number of Requested Resources
@@ -55,7 +55,7 @@ You can easily change the number of resources granted to you.
 
 1. In the WebLOAD Console, select **Update Floating License Resources** in the **Home** tab of the ribbon.
 
-   The Request Resources dialog appears, displaying the resources currently granted to you.
+    The Request Resources dialog appears, displaying the resources currently granted to you.
 
 1. Edit the Virtual Client and Probing Client settings to reflect the new total number of Virtual and Probing clients you need.
 

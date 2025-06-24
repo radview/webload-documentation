@@ -49,15 +49,16 @@ For information on creating templates with the WebLOAD Wizard, see [*Creating Lo
 ### Opening a Saved Load Template
 **To open a saved Load Template:**
 
-1. Click **Open** in the **File** tab of the ribbon and browse your directory structure for the location of the saved Load Template (\*.tpl) file,
+1. 
+   Click **Open** in the **File** tab of the ribbon and browse your directory structure for the location of the saved Load Template (`*.tpl`) file,
 
-   -Or-
+      -Or-
 
-   Select the **Open an Existing Template** option from the WebLOAD Console dialog box at system start-up and browse your directory structure for the location of the saved Load Template (\*.tpl)file.
+      Select the **Open an Existing Template** option from the WebLOAD Console dialog box at system start-up and browse your directory structure for the location of the saved Load Template (\*.tpl)file.
 
-2. Double-click the template you want to open.
-
-3. The file opens and the test configuration displays in the Session Tree.
+1. Double-click the template you want to open.
+   
+      The file opens and the test configuration displays in the Session Tree.
 
 ### Saving Additional Information with the Load Template
 The Additional Information dialog box provides details about the Load Template that help identify it. For example:
@@ -78,29 +79,27 @@ You can set additional information properties for the active Load Template.
 
 1. Select **Additional information** from the Console System button. The Template Additional Information dialog box opens.
 
-   ![Template Additional Information Dialog Box](../images/console_users_guide_0128.png)
+     ![Template Additional Information Dialog Box](../images/console_users_guide_0128.png)
+
+   
+1. Complete the fields to save additional information, useful for later reference, with the Load Template.
+
+    The following fields are available:
+
+
+      | **Field**                                  | **Description**                                              |
+      | :----------------------------------------- | :----------------------------------------------------------- |
+      | Title                                      | Provides a space for you to type a title for this Load Template. The title can be different then the template file name. |
+      | Subject                                    | Provides a space for you to type a description of the subject of the Load Template. Use this property to group similar Load Templates together. |
+      | Created by                                 | Provides a space for you to type the name of the person who authored this Load Template. |
+      | Test description                           | Provides a space for you to type a description of the test objectives and what the Load Template is designed to test. |
+      | Version and build of the System Under Test | Provides a space for you to type the name, version, and build number of the system under test. |
+      | Template comments                          | Provides a space for you to type any comments regarding the Load Template. |
+      | Custom                                     | Provides a space for you to type any comments you want saved with this Load Template. |
 
    
 
-2. Complete the fields to save additional information, useful for later reference, with the Load Template.
-
-   The following fields are available:
-
-   
-
-   | **Field**                                  | **Description**                                              |
-   | :----------------------------------------- | :----------------------------------------------------------- |
-   | Title                                      | Provides a space for you to type a title for this Load Template. The title can be different then the template file name. |
-   | Subject                                    | Provides a space for you to type a description of the subject of the Load Template. Use this property to group similar Load Templates together. |
-   | Created by                                 | Provides a space for you to type the name of the person who authored this Load Template. |
-   | Test description                           | Provides a space for you to type a description of the test objectives and what the Load Template is designed to test. |
-   | Version and build of the System Under Test | Provides a space for you to type the name, version, and build number of the system under test. |
-   | Template comments                          | Provides a space for you to type any comments regarding the Load Template. |
-   | Custom                                     | Provides a space for you to type any comments you want saved with this Load Template. |
-
-   
-
-3. Click **OK**.
+1. Click **OK**.
 
 ### Creating a Mix
 
@@ -162,27 +161,27 @@ You can set additional information properties for the active Load Session.
 
 1. Select **Additional information** from the Console System button. The Session Additional Information dialog box opens.
 
-   ![Session Additional Information Dialog Box](../images/console_users_guide_0130.png)
+    ![Session Additional Information Dialog Box](../images/console_users_guide_0130.png)
 
-2. Complete the fields to save additional information, useful for later reference, with the Load Session. Some of the fields, such as title, subject, and system under test, may already be completed if the information was saved with the Load Template.
+1. Complete the fields to save additional information, useful for later reference, with the Load Session. Some of the fields, such as title, subject, and system under test, may already be completed if the information was saved with the Load Template.
 
-   The following fields are available:
+      The following fields are available:
 
-   | **Field**                                  | **Description**                                              |
-   | :----------------------------------------- | :----------------------------------------------------------- |
-   | Title                                      | Provides a space for you to type a title for this Load Session. The title can be different from the template file name. |
-   | Subject                                    | Provides a space for you to type a description of the subject of the Load Session. Use this property to group similar Load Sessions together. |
-   | Created by                                 | Provides a space for you to type the name of the person who authored this Load Session. |
-   | Test description                           | Provides a space for you to type a description of the test objectives and what the Load Session is designed to test. |
-   | version and build of the System Under Test | Provides a space for you to type the name, version and build number of the system under test. |
-   | Results description                        | Provides a space for you to type a description of the test results. |
-   | Template comments                          | Provides a space for you to type any comments regarding the Load Session. |
-   | Session comments                           | Provides a space for you to type any comments regarding the Load Session. |
-   | Custom                                     | Provides a space for you to type any comments you want saved with this Load Session. |
+      | **Field**                                  | **Description**                                              |
+      | :----------------------------------------- | :----------------------------------------------------------- |
+      | Title                                      | Provides a space for you to type a title for this Load Session. The title can be different from the template file name. |
+      | Subject                                    | Provides a space for you to type a description of the subject of the Load Session. Use this property to group similar Load Sessions together. |
+      | Created by                                 | Provides a space for you to type the name of the person who authored this Load Session. |
+      | Test description                           | Provides a space for you to type a description of the test objectives and what the Load Session is designed to test. |
+      | version and build of the System Under Test | Provides a space for you to type the name, version and build number of the system under test. |
+      | Results description                        | Provides a space for you to type a description of the test results. |
+      | Template comments                          | Provides a space for you to type any comments regarding the Load Session. |
+      | Session comments                           | Provides a space for you to type any comments regarding the Load Session. |
+      | Custom                                     | Provides a space for you to type any comments you want saved with this Load Session. |
 
    
 
-3. Click **OK**.
+1. Click **OK**.
 
 
 
@@ -192,13 +191,13 @@ You can set additional information properties for the active Load Session.
 
 1. Click **Open** in the **File** tab of the ribbon and browse your directory structure for the location of the saved (\*.ls file),
 
-   -Or-
+    -Or-
 
-   Select the **Open an Existing Load Session** option from the WebLOAD Console dialog box at system start-up and browse your directory structure for the location of the saved (\*.ls file).
+    Select the **Open an Existing Load Session** option from the WebLOAD Console dialog box at system start-up and browse your directory structure for the location of the saved (\*.ls file).
 
 1. Double-click the session you want to open.
 
-   The file is opened, the test configuration is displayed in the Session Tree and the WebLOAD Default Report is displayed in the Results window.
+    The file is opened, the test configuration is displayed in the Session Tree and the WebLOAD Default Report is displayed in the Results window.
 
 
 

@@ -10,7 +10,7 @@ WebLOAD Console also enables you to insert application level transactions into t
 
 ## The Functional Testing Tab
 
-The verification tests you specify within WebLOAD Console are performed on all Web pages in the script. To configure verification tests on all pages, set the global verification options through the **Default / Current Session Options**  **Functional Testing** dialog box. This section describes the options available through the Functional Testing tab.
+The verification tests you specify within WebLOAD Console are performed on all Web pages in the script. To configure verification tests on all pages, set the global verification options through the **Default / Current Session Options** > **Functional Testing** dialog box. This section describes the options available through the Functional Testing tab.
 
 
 
@@ -79,20 +79,20 @@ Use Text verifications to verify the absence or presence of selected text expres
 
 1. Select the checkbox adjacent to the Text Search test.
 
-   > **Note:** Selecting a lower level checkbox selects and highlights the upper level checkbox.
+    > **Note:** Selecting a lower level checkbox selects and highlights the upper level checkbox.
 
 1. Select the severity level from the drop-down list next to the test. 
 
 1. Enter a literal string with the text for which you are searching in the Text field. The text string is case sensitive.
 
-   A search on the specified text is performed throughout the entire HTML, including the tags.
+    A search on the specified text is performed throughout the entire HTML, including the tags.
 
 1. Select the type of test to run from the drop-down list in the Option field:
 
-   - **Find** ‒ The verification test will pass if the selected text is found in the current Web page.
-   - **Not to Find** ‒ The verification test will fail if the selected text is found in the current Web page.
+    - **Find** ‒ The verification test will pass if the selected text is found in the current Web page.
+    - **Not to Find** ‒ The verification test will fail if the selected text is found in the current Web page.
 
-   For example, to ensure that the word error does not appear on the page during runtime, enter the word *error* in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
+    For example, to ensure that the word error does not appear on the page during runtime, enter the word *error* in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
 
 1. Select the severity level from the Severity drop–down list. For further information, see [*Verification Function Return Values* ](#verification-function-return-values).
 
@@ -117,49 +117,44 @@ Application-level transactions and verifications are defined through the WebLOAD
 
 
 ```javascript
-BeginTransaction(“`<Transaction-Name>`“)
-
-`<any valid JavaScript statements>` EndTransaction(“`<Transaction-Name>`“,
-
-`<Verification-Expression>`,`<Save-Flag>`)
+BeginTransaction(“<Transaction-Name>“)
+      <any valid JavaScript statements>
+EndTransaction(“<Transaction-Name>“,
+            <Verification-Expression>,<Save-Flag>)
 ```
 
 Where:
 
-- Transaction-Name is a user-supplied string.
+- `Transaction-Name` is a user-supplied string.
 
-- Verification-Function (optional) is the name of the function to be called that evaluates the transaction severity level (MinorError, Error, SevereError or Custom Function). If no such expression is present, the default value is Success.
-- save-flag is an optional Boolean flag specifying whether WebLOAD Console should save only the results of problematic transaction instance that triggered an error (default), or save all transaction instances.
+- `Verification-Function` (optional) is the name of the function to be called that evaluates the transaction severity level (MinorError, Error, SevereError or Custom Function). If no such expression is present, the default value is Success.
+
+- `save-flag` is an optional Boolean flag specifying whether WebLOAD Console should save only the results of problematic transaction instance that triggered an error (default), or save all transaction instances.
 
 ### User-Defined Transaction Example
 The following example illustrates implementing a user-defined transaction:
 
 ```javascript
 BeginTransaction(“UpdateBankAccount”)
-
-/\* The user-defined transaction “UpdateBankAccount” starts\*/ try {
-
-wlHttp.ExpectNavigation(“http://…”) wlHttp.Navigate([“www.](http://www/)	com”)
-
+   /* The user-defined transaction “UpdateBankAccount” starts*/ 
+try {
+wlHttp.ExpectNavigation(“http://…”) 
+wlHttp.Navigate("www.....com”)
 wlHttp.SyncDOM(1);
-
 }
 
-/\* The body of the transaction\*/
-
+   /* The body of the transaction\*/
 <any valid JavaScript statement>
 
 EndTransaction(“UpdateBankAccount”,
-
-UpdateBankAccount\_VerificationFunction()) function UpdateBankAccount\_VerificationFunction()
+   UpdateBankAccount\_VerificationFunction()) 
+function UpdateBankAccount\_VerificationFunction()
 
 {
-
-return WLSuccess;
-
+   return WLSuccess;
 }
 
-/\* The user-defined transaction “UpdateBankAccount” ends\*/
+/* The user-defined transaction “UpdateBankAccount” ends\*/
 ```
 
 
@@ -195,7 +190,7 @@ Transactions may be assigned one of the following return values:
 |SevereError|The specific transaction failed. The Load Generator on which the error occurred is stopped.|
 
 >
-> **Note:** If a return value (return()) is not specified, the default value is Success, indicating that the transaction completed successfully.
+> **Note:** If a return value (`return()`) is not specified, the default value is Success, indicating that the transaction completed successfully.
 >
 
 
@@ -210,8 +205,8 @@ Record transaction events with the following syntax:
 
 Where:
 
-- event-name is a string that identifies the specific event.
-- description is an optional string providing more information about the specific event.
+- `event-name` is a string that identifies the specific event.
+- `description` is an optional string providing more information about the specific event.
 
 
 ## Tracking Reasons for Transaction Failure
@@ -231,37 +226,34 @@ For example:
 Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see [*User-Defined Transactions and Verification Syntax* ](#user-defined-transactions-and-verification-syntax), the UpdateBankAccount verification function might appear as follows:
 
 ```javascript
-function UpdateBankAccount\_VerificationFunction()
-
-}
-
-VerifyUpdateBankAccount () { if <Condition-success> then
-
-return(WLSuccess)} else
-
-if (document. URL == “../no-login”) then { SetFailureReason(“User Not Logged”) return(WLError) }
-
-else
-
-if (document.URL == “...wrong-	password”) then { SetFailureReason(“Wrong Password”) return(WLError); }
-
-else
-
-return(WLSevereError)
-
+function UpdateBankAccount_VerificationFunction()
+{
+    VerifyUpdateBankAccount () { 
+      if <Condition-success> then
+         return(WLSuccess)} 
+         else
+      if (document. URL == “../no-login”) then { 
+         SetFailureReason(“User Not Logged”) 
+         return(WLError) }
+      else
+      if (document.URL == “...wrong-	password”) then { 
+         SetFailureReason(“Wrong Password”) 
+         return(WLError); }
+      else
+         return(WLSevereError)
 }
 ```
 
 Explanation:
 
-- Return(WLSuccess) ‒ indicates that the actual transaction succeeded and it is added to the SuccessfulUpdateBankAccount transactions counter.
-- The SetFailureReason() function accepts a string as a parameter. This string is used to identify the cause of the transaction failure (“User Not Logged”, “Wrong Password”, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.
-- When the reason for failure is “User Not Logged” or “Wrong Password”, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.
-- If you mark the transaction as failed, but do not specify any failure reason, the system registers a “General Failure” which is the default failure severity.
+- `Return(WLSuccess)` ‒ indicates that the actual transaction succeeded and it is added to the SuccessfulUpdateBankAccount transactions counter.
+- The `SetFailureReason()` function accepts a string as a parameter. This string is used to identify the cause of the transaction failure (“User Not Logged”, `“Wrong Password”`, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.
+- When the reason for failure is `“User Not Logged”` or `“Wrong Password”`, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.
+- If you mark the transaction as failed, but do not specify any failure reason, the system registers a `“General Failure”` which is the default failure severity.
 
 
 
-If during the execution of a test the above transaction succeeded 15 times and failed 5, and the SetFailureReason() function was called 3 times with the string “Wrong Password” and 2 times with the string “User Not Logged”, the Statistics Report appears as follows:
+If during the execution of a test the above transaction succeeded 15 times and failed 5, and the `SetFailureReason()` function was called 3 times with the string `“Wrong Password”` and 2 times with the string `“User Not Logged”`, the Statistics Report appears as follows:
 
 |**Test**|**Time**|
 | :- | :- |
@@ -302,10 +294,10 @@ A description of each error is listed in the Log Window. You can select whether 
 The Log Window displays the following additional information about your test session results:
 
 - **Message Status** ‒ The result and severity of each message. Messages fall into four categories:
-  - Success / Info Message
-  - Minor Error
-  - Error
-  - Severe Error
+      - Success / Info Message
+      - Minor Error
+      - Error
+      - Severe Error
 - **Attachments** ‒ Double-click the paperclip adjacent to the message to view additional information.
 - **Time** ‒ The duration of the action specified in the Message column.
 - **Generator Name** ‒ The generator that originated the message.
