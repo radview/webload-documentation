@@ -38,7 +38,7 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 | **Requirements** | **Load  Machine**                                            |
 | ---------------- | ------------------------------------------------------------ |
 | Hardware         | 2 Core CPU (4 Core CPU Recommended) |
-| Version          | Linux RHEL 7 and up or equivalent  |
+| Version          | Linux RHEL 8 and up or equivalent  |
 | Free Disk Space  | 20 GB                                                         |
 | Swap Space       | RAM*2                                                        |
 | Memory           | 2 GB RAM (minimum); 16 GB is recommended                      |

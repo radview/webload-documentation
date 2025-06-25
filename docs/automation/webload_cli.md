@@ -557,25 +557,21 @@ During recording, you can use these special links to trigger special behavior. T
 - `https://www.radview.com/stop-recording/` - instructs the recording to end
 - `https://www.radview.com/begin-transaction/?name=` - Add BeginTransaction with the given name
 - `https://www.radview.com/end-transaction/?name=` - Add EndTransaction with the given name
+- `https://www.radview.com/code-block/?` - Add JavaScript code block, See [Adding Custom Code During Recording](#adding-custom-code-during-recording)
+
 ## Adding Custom Code During Recording
- 
-WebLOAD Recorder allows you to inject custom JavaScript code into your test script **while recording**, by simply navigating to a specially formatted URL in your browser.
- 
-### Usage
- 
-To inject a code block during a recording session, open a browser tab and navigate to:
- 
-```
-https://www.radview.com/code-block/?
-```
- 
-You can append query parameters to specify:
+
+WebLOAD Recorder allows you to inject custom JavaScript code into your test script **while recording**, by making a request to specific special URL. This is useful for Recording automation - you can use any automation platform that is capable of making requests - for example Selenium + Python, or Playright + nodejs, etc.
+Make an HTTP request to `https://www.radview.com/code-block/?`
+
+Append query parameters to specify:
+
 - The **JavaScript code** to inject
 - The **sections** where the code should be inserted:  
   `InitClient`, `InitAgenda`, `TerminateClient`, `TerminateAgenda`
- 
+
 ### Parameters
- 
+
 | Parameter          | Description                                                                 |
 |-------------------|-----------------------------------------------------------------------------|
 | `JS`              | Optional. The JavaScript code to insert.            |
@@ -583,34 +579,25 @@ You can append query parameters to specify:
 | `InitAgenda`      | Optional. Code will be inserted into the **Init Agenda** section.            |
 | `TerminateClient` | Optional. Code will be inserted into the **Terminate Client** section.       |
 | `TerminateAgenda` | Optional. Code will be inserted into the **Terminate Agenda** section.       |
- 
+
 - At least one of the parameters must be specified.
-- All parameters must be URL- encoded. 
- 
+- All parameters must be URL- encoded.
+
 ### Examples
- 
-#### Insert code into the main recording agenda:
- 
-```
-https://www.radview.com/code-block/?JS=doLogin%28%22user%22%2C%20%22password%22%29
-```
 
+#### Insert code into the main recording agenda
 
-##### CodeBlock created:
-```
+`https://www.radview.com/code-block/?JS=doLogin%28%22user%22%2C%20%22password%22%29`
+
+##### CodeBlock created
+
+``` javascript
 
 /***** WLIDE - ID:2 - CodeBlock *****/
 doLogin("user", "password")
 // END WLIDE
 ```
- 
-#### Insert code into multiple specific sections:
- 
-```
-https://www.radview.com/code-block/?JS=InfoMessage(%22dd%22)&InitClient=message2&InitAgenda=3&TerminateClient=4&TerminateAgenda=9
-```
- 
-> 💡 **Tip:** You can use any standard browser tab to execute this action during recording. The Recorder will automatically intercept the request and inject the provided code.
 
+#### Insert code into multiple specific sections
 
-
+`https://www.radview.com/code-block/?JS=InfoMessage(%22dd%22)&InitClient=message2&InitAgenda=3&TerminateClient=4&TerminateAgenda=9`
