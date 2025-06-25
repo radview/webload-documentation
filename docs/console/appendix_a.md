@@ -29,32 +29,31 @@ This section describes how to configure AppDynamics Lite and AppDynamics Pro to 
 
 **To configure AppDynamics Lite to recognize WebLOAD transactions:**
 
-2. In AppDynamics Lite, select **Configure** > **Transaction Detection**.
+1. In AppDynamics Lite, select **Configure** > **Transaction Detection**.
 
-   ![Transaction Detection Tab](../images/console_users_guide_3009.png)
+    ![Transaction Detection Tab](../images/console_users_guide_3009.png)
 
-3. In the **Servlet** transaction type:
+1. In the **Servlet** transaction type:
 
-   1. Check the option **Enabled**.
-   2. Check the option **Discover Transactions automatically for all Servlet requests, and name them by their URI**.
-   3. Click **Configure Naming** (adjacent to **Discover Transactions automatically for all Servlet requests, and name them by their URI**).
+    1. Check the option **Enabled**.
+    1. Check the option **Discover Transactions automatically for all Servlet requests, and name them by their URI**.
 
-
-4. The Servlet Transaction Naming Configuration window appears.
+1. Click **Configure Naming** (adjacent to **Discover Transactions automatically for all Servlet requests, and name them by their URI**).
 
 
-
-![Servlet Transaction Naming Configuration Window](../images/console_users_guide_3010.png)
-
+    The Servlet Transaction Naming Configuration window appears.
 
 
-5. In the Servlet Transaction Naming Configuration window**,** specify the WebLOAD naming convention by performing the following:
-   1. Select **Use the full URI** or **Use a part of the URI**.
-   1. Select **Name Transactions dynamically using part of the request**.
-   1. Select **Use a header value in Transaction names**.
+    ![Servlet Transaction Naming Configuration Window](../images/console_users_guide_3010.png)
 
-6. In the **Header Name** field, enter WebLOAD-TransactionName.
-7. Click **Save**.
+
+1. In the Servlet Transaction Naming Configuration window**,** specify the WebLOAD naming convention by performing the following:
+    1. Select **Use the full URI** or **Use a part of the URI**.
+    1. Select **Name Transactions dynamically using part of the request**.
+    1. Select **Use a header value in Transaction names**.
+
+1. In the **Header Name** field, enter WebLOAD-TransactionName.
+1. Click **Save**.
 
 When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [*Viewing WebLOAD Performance in AppDynamics](#viewing-webload-performance-in-appdynamics).
 
@@ -70,58 +69,52 @@ In AppDynamics Pro, in addition to configuring AppDynamics to recognize WebLOAD 
 
 1. In AppDynamics Pro, access the **Applications** menu and select the WebLOAD application.
 
-   ![Applications Menu](../images/console_users_guide_3012.jpeg)
+    ![Applications Menu](../images/console_users_guide_3012.jpeg)
 
 
+1. Select **Configure** > **Instrumentation** > **Transaction Detection**.
 
-2. Select **Configure** > **Instrumentation** > **Transaction Detection**.
-
-   ![Transaction Detection Page](../images/console_users_guide_3013.jpeg)
-
+    ![Transaction Detection Page](../images/console_users_guide_3013.jpeg)
 
 
-3. In the **Transaction Detection** page, select the WebLOAD node (called **WebLOADTest** in our example) and select **Use Custom Configuration for this Tier**.
+1. In the **Transaction Detection** page, select the WebLOAD node (called **WebLOADTest** in our example) and select **Use Custom Configuration for this Tier**.
 
-   ![Transaction Detection – Use Custom Configuration](../images/console_users_guide_3014.jpeg)
+    ![Transaction Detection – Use Custom Configuration](../images/console_users_guide_3014.jpeg)
 
-4. In **Custom Rules**, click the green + (plus) icon.
+1. In **Custom Rules**, click the green + (plus) icon.
 
-   ![Selecting an Entry Point Type for a Rule](../images/console_users_guide_3015.jpeg)
+    ![Selecting an Entry Point Type for a Rule](../images/console_users_guide_3015.jpeg)
 
-5. In the Select the Entry Point Type for this Rule window that appears, select **Servlet** and click **Next**.
+1. In the Select the Entry Point Type for this Rule window that appears, select **Servlet** and click **Next**.
 
-   A New Business Transaction Match Rule – Servlet window appears, for defining a new rule.
-
-   ![Defining a New Business Transaction Match Rule for a Servlet](../images/console_users_guide_3016.png)
-
-
-
-6. Select the **Transaction Match Criteria** tab.
-7. In the **Transaction Match Criteria** tab:
-   1. In **URI**, select **Is Not Empty**.
-   2. In **Header**:
-      - Select **Check for parameter existence**.
-      - In **Parameter Name**, enter WebLOAD-TransactionName.
-   3. Click **Create Custom Match Rule**.
-
-8. Select the new rule in the **Custom Rules** list.
-
-   ![Selecting the WebLOAD Rule](../images/console_users_guide_3017.jpeg)
+    A New Business Transaction Match Rule – Servlet window appears, for defining a new rule.
+ 
+    ![Defining a New Business Transaction Match Rule for a Servlet](../images/console_users_guide_3016.png)
 
 
+1. Select the **Transaction Match Criteria** tab.
+1. In the **Transaction Match Criteria** tab:
+    1. In **URI**, select **Is Not Empty**.
+    1. In **Header**:
+          - Select **Check for parameter existence**.
+          - In **Parameter Name**, enter WebLOAD-TransactionName.
+    1. Click **Create Custom Match Rule**.
 
-9. In the Business Transaction Match Rule window that appears, select the **Split Transactions Using Request Data** tab.
+1. Select the new rule in the **Custom Rules** list.
 
-   ![Specifying a WebLOAD Prefix for WebLOAD Transaction Names](../images/console_users_guide_3018.jpeg)
+    ![Selecting the WebLOAD Rule](../images/console_users_guide_3017.jpeg)
 
 
+1. In the Business Transaction Match Rule window that appears, select the **Split Transactions Using Request Data** tab.
 
-10. In the **Split Transactions Using Request Data** tab:
+    ![Specifying a WebLOAD Prefix for WebLOAD Transaction Names](../images/console_users_guide_3018.jpeg)
+
+1. In the **Split Transactions Using Request Data** tab:
     1. Check the option **Split Transactions using request data**.
-    2. Select the option **Use a header value in Transaction names** and enter
-    3. WebLOAD-TransactionName as the **Header Name**.
+    1. Select the option **Use a header value in Transaction names** and enter
+    `WebLOAD-TransactionName` as the **Header Name**.
 
-When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [Viewing WebLOAD Performance in AppDynamics](#viewing-webload-performance-in-appdynamics).
+    When you run a WebLOAD test, AppDynamics displays the WebLOAD transactions in its Business Transactions list, as described in [Viewing WebLOAD Performance in AppDynamics](#viewing-webload-performance-in-appdynamics).
 
 
 

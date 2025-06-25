@@ -92,12 +92,12 @@ The File menu includes the following functions for PMM configuration file manage
 
 |**Menu Entry**|**Icon**|**Description**|
 | :- | :- | :- |
-|New Configuration / New|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\File_New.png]</p>|Clears the configuration in the PMM main window.|
+|New Configuration / New|<p></p><p>![](../images/console_users_guide_2109.png)</p>|Clears the configuration in the PMM main window.|
 |Open (available only in the PMM standalone tool)|<p></p><p>![](../images/console_users_guide_2110.png)</p>|Opens the Open dialog box, enabling you to select the PMM file to open.|
-|Import PMM|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\ImportPMM.png]</p>|<p>Opens an existing PMM configuration.</p><p>If a configuration is already defined in the Configuration pane, PMM prompts you to Append the selected file to the existing configuration, or replace the existing configuration.</p>|
-|Export PMM|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\ExportPMM.png]</p>|<p>Saves the current configuration to a \*.pmm file. The following information is saved:</p><p>- Data sources</p><p>- Hosts</p><p>- Selected measurements from each data source on each host</p><p></p><p>**Note:** Exporting a configuration from the PMM within WebLOAD Console does not assign the configuration to the current template. To update the template with the configuration displayed, click **Close and update Template**.</p>|
-|Save / Save As (available only in the PMM standalone tool)|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\File _Save.png]</p>|Saves the current configuration to a \*.pmm file.|
-|p>Close and Update Template (available only in the PMM initiated through the WebLOAD</p><p>Console)</p>|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\CloseUpdateTemplate.png]</p>|<p>Closes PMM and updates the current WebLOAD template with the current PMM configuration.</p><p>**Note:** The PMM configuration is not saved outside of the template.</p>|
+|Import PMM|<p></p><p>![](../images/console_users_guide_2111.png)</p>|<p>Opens an existing PMM configuration.</p><p>If a configuration is already defined in the Configuration pane, PMM prompts you to Append the selected file to the existing configuration, or replace the existing configuration.</p>|
+|Export PMM|<p></p><p>![](../images/console_users_guide_2112.png)</p>|<p>Saves the current configuration to a \*.pmm file. The following information is saved:</p><p>- Data sources</p><p>- Hosts</p><p>- Selected measurements from each data source on each host</p><p></p><p>**Note:** Exporting a configuration from the PMM within WebLOAD Console does not assign the configuration to the current template. To update the template with the configuration displayed, click **Close and update Template**.</p>|
+|Save / Save As (available only in the PMM standalone tool)|<p></p><p>![](../images/console_users_guide_2113.png)</p>|Saves the current configuration to a \*.pmm file.|
+|Close and Update Template (available only in the PMM initiated through the WebLOAD</p><p>Console)</p>|<p></p><p>![](../images/console_users_guide_2114.png)</p>|<p>Closes PMM and updates the current WebLOAD template with the current PMM configuration.</p><p>**Note:** The PMM configuration is not saved outside of the template.</p>|
 |Exit|none|Closes PMM.|
 
 
@@ -108,7 +108,7 @@ The Actions menu includes the following functions for creating a PMM configurati
 
 |**Menu Entry**|**Icon**|**Description**|
 | :- | :- | :- |
-|Add Data Source|<p></p><p>![*]</p>|Opens the PMM Wizard for configuring new data sources, hosts and measurements to monitor.|
+|Add Data Source|<p></p><p>![](../images/console_users_guide_2115.png)</p>|Opens the PMM Wizard for configuring new data sources, hosts and measurements to monitor.|
 |Delete|<p></p><p>![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\delete.png](../images/console_users_guide_2116.png)</p>|Deletes the currently selected item and all sub-items from the configuration.|
 |Clear All (available only in the PMM standalone tool)|<p></p><p>![](../images/console_users_guide_2117.png)</p>|Removes all elements from the current configuration.|
 |Expand Tree|<p></p><p>![](../images/console_users_guide_2118.png)</p>|Expands the configuration tree.|
@@ -221,13 +221,13 @@ If the PMM currently displays a configuration file, creating a new configuration
 
 **To clear an existing configuration from the configuration window in order to define a new configuration file:**
 
-1. Click the **New  ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\File_New.png]** toolbar button.
+1. Click the **New** ![](../images/console_users_guide_2109.png) toolbar button.
 
-   A dialog box appears asking for confirmation.
+    A dialog box appears asking for confirmation.
 
 1. Click **Yes**.
 
-   The PMM configuration window is cleared.
+    The PMM configuration window is cleared.
 
 
 
@@ -238,17 +238,17 @@ PMM configurations can either be opened alone, or they can also be added to any 
 **To open an existing configuration file:**
 
 1. #### **File** > **Import PMM**,
-   -Or-
+    -Or-
 
-   Click the **Import  ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\ImportPMM.png]** toolbar button.
+    Click the **Import** ![](../images/console_users_guide_2111.png) toolbar button.
 
-   The Open dialog box opens for selecting an existing PMM configuration file.
+    The Open dialog box opens for selecting an existing PMM configuration file.
 
 1. Browse to the location of the PMM configuration files, select a file, and click **Open**.
 
-   If a configuration is already defined and displayed within the PMM configuration window, a message box displays:
+    If a configuration is already defined and displayed within the PMM configuration window, a message box displays:
 
-![PMM Append/Replace Message Box](../images/console_users_guide_2128.png)
+    ![PMM Append/Replace Message Box](../images/console_users_guide_2128.png)
 
 
 
@@ -270,11 +270,11 @@ PMM configurations can only be attached to WebLOAD Console templates when workin
 1. Open / define the PMM configuration you want to attach to the template. For information on defining PMM configurations, see [*Specifying the Data Sources, Hosts, and Measurements to Monitor* ](#specifying-the-data-sources-hosts-and-measurements-to-monitor).
 1. Select **File** > **Close and update Template**,
 
-   -Or-
+    -Or-
 
-   Click the ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\CloseUpdateTemplate.png] **Close & update** toolbar button.
+    Click the ![](../images/console_users_guide_2114.png) **Close & update** toolbar button.
 
-   PMM closes and the configuration file is assigned to the current template.
+    PMM closes and the configuration file is assigned to the current template.
 
 
 
@@ -298,9 +298,9 @@ When working with PMM from within WebLOAD Console you create configurations for 
 
 1. From the PMM activated in WebLOAD Console, select **File** > **Export PMM**,
 
-   -Or-
+    -Or-
 
-   Click the **Export ![\\Jordan\d$\work\RadView\Designs\11. [New]_16_Color_Icons\PMM-icons\png\ExportPMM.png]** toolbar button. The Save As dialog box opens.
+    Click the **Export** ![](../images/console_users_guide_2112.png) toolbar button. The Save As dialog box opens.
 
 1. Browse to the location you want to save your PMM file, enter a name for the file in the File Name field, and click **Save**.
 
@@ -314,11 +314,11 @@ When working with PMM as a standalone tool, you can save configurations for use 
 
 1. From the PMM standalone tool, select **File** > **Save**,
 
-   -Or-
+    -Or-
    
-   Click the **Save** toolbar button. The Save As dialog box opens.
+    Click the **Save**  ![](../images/console_users_guide_2113.png) toolbar button. The Save As dialog box opens.
 
-2. Browse to the location you want to save your PMM file, enter a name for the file in the File Name field, and click **Save**.
+1. Browse to the location you want to save your PMM file, enter a name for the file in the File Name field, and click **Save**.
 
 
 
@@ -340,19 +340,18 @@ Data sources are the performance objects you want to monitor.
 
 **To add new data sources:**
 
-1. Click the  **Add data source** toolbar button.
+1. Click the ![](../images/console_users_guide_2130.png) **Add data source** toolbar button.
 
-   The Performance Measurements Manager Wizard opens.
+    The Performance Measurements Manager Wizard opens.
 
-   ![Performance Measurements Manager Wizard](../images/console_users_guide_2131.png)
+    ![Performance Measurements Manager Wizard](../images/console_users_guide_2131.png)
 
 
+1. Check or clear **Do not display this page again**.
 
-2. Check or clear **Do not display this page again**.
+1. Click **Next**.
 
-3. Click **Next**.
-
-   The Data Source screen appears.
+    The Data Source screen appears.
 
 
 
@@ -366,61 +365,61 @@ Data sources are the performance objects you want to monitor.
 
 1. Expand the tree to view all available data sources. PMM supports the following types of data sources:
 
-   **Application Servers:**
+      **Application Servers:**
 
-   - Adobe LiveCycle ES using JMX
+      - Adobe LiveCycle ES using JMX
 
-   - GlassFish AS using JMX
+      - GlassFish AS using JMX
 
-   - IBM WebSphere 5 using WAS
+      - IBM WebSphere 5 using WAS
 
-   - JBoss 4.x-5.x GA using JMX
+      - JBoss 4.x-5.x GA using JMX
 
-   - JOnAS using JMX
-   - Microsoft Active Server Pages
-   - Microsoft ASP .Net
-   - Oracle WebLogic 10.0 using JMX
-   - Oracle WebLogic using SNMP
-   - SAP NetWeaver using JMX
-   - Tomcat 6.x using JMX
-   - WebSphere 6.1 using JMX
-   - WebSphere 7.0 using JMX
+      - JOnAS using JMX
+      - Microsoft Active Server Pages
+      - Microsoft ASP .Net
+      - Oracle WebLogic 10.0 using JMX
+      - Oracle WebLogic using SNMP
+      - SAP NetWeaver using JMX
+      - Tomcat 6.x using JMX
+      - WebSphere 6.1 using JMX
+      - WebSphere 7.0 using JMX
 
-   **Databases:**
+      **Databases:**
 
-   - Microsoft SQL Server
-   - Microsoft SQL Server using SNMP (does not support SQL 2005 or 2008)
-   - MySQL database using SNMP
-   - Oracle
+      - Microsoft SQL Server
+      - Microsoft SQL Server using SNMP (does not support SQL 2005 or 2008)
+      - MySQL database using SNMP
+      - Oracle
 
-   **System:**
+      **System:**
 
-   - UNIX/Linux platforms Network data using SNMP
-   - UNIX/Linux platforms using RSTATD
-   - UNIX/Linux UC-Davis
-   - Windows .Net Framework
-   - Windows platform
-   - **Web Servers:**
-   - Apache 2 web server using SNMP
-   - Apache web server using SNMP
-   - Microsoft Internet Information Server (IIS)
-   - Sun One (former iPlanet 6)
+      - UNIX/Linux platforms Network data using SNMP
+      - UNIX/Linux platforms using RSTATD
+      - UNIX/Linux UC-Davis
+      - Windows .Net Framework
+      - Windows platform
+      - **Web Servers:**
+      - Apache 2 web server using SNMP
+      - Apache web server using SNMP
+      - Microsoft Internet Information Server (IIS)
+      - Sun One (former iPlanet 6)
 
-   **General:**
+      **General:**
 
-   - General JMX – General JMX can be used to connect to any server that supports both JMX (JSR-3) and JMX Remoting (JSR-160).General Performance 
-   - Monitor – General Performance Monitor can be used just like the System > Windows Platform. The difference is that it gives access to all Performance Monitor counters.
-   - General SNMP – General SNMP can be used similarly to other SNMP-based PMs. The difference is that is gives access to all MIBs served by the SNMP agent on that machine.
-   - General UNIX – General UNIX can be used similarly to the System > UNIX platform using RSTATD. The difference is that is gives access to all RSTATD counters.
+      - General JMX – General JMX can be used to connect to any server that supports both JMX (JSR-3) and JMX Remoting (JSR-160).General Performance 
+      - Monitor – General Performance Monitor can be used just like the System > Windows Platform. The difference is that it gives access to all Performance Monitor counters.
+      - General SNMP – General SNMP can be used similarly to other SNMP-based PMs. The difference is that is gives access to all MIBs served by the SNMP agent on that machine.
+      - General UNIX – General UNIX can be used similarly to the System > UNIX platform using RSTATD. The difference is that is gives access to all RSTATD counters.
 
-   **External**
+      **External**
 
-   - Nagios – Collects performance data from an installed Nagios server
-   - New Relic– Collects performance data from an installed New Relic server
+      - Nagios – Collects performance data from an installed Nagios server
+      - New Relic– Collects performance data from an installed New Relic server
 
 
 
-2. Select a server or system as a data source, and click **Next**. The Host Selection screen appears.
+1. Select a server or system as a data source, and click **Next**. The Host Selection screen appears.
 
 
 
@@ -434,40 +433,39 @@ Data sources are the performance objects you want to monitor.
 
 1. Click **Browse** to select a host to monitor.
 
-   The Host Selection dialog box opens.
+    The Host Selection dialog box opens.
 
-   ![Host Selection Dialog Box](../images/console_users_guide_2134.jpeg)
+    ![Host Selection Dialog Box](../images/console_users_guide_2134.jpeg)
 
-2. Select the host to monitor from the list and click **Select**. The host is added to the Selecting a Host screen.
+1. Select the host to monitor from the list and click **Select**. The host is added to the Selecting a Host screen.
 
-3. Some application server data sources require that you enter the application server’s port value. Contact your system administrator for the information.
+1. Some application server data sources require that you enter the application server’s port value. Contact your system administrator for the information.
 
-4. Following are port numbers commonly used by some application server data sources:
+1. Following are port numbers commonly used by some application server data sources:
 
-   - Tomcat – 8080.
+      - Tomcat – 8080.
 
-   - JBoss – 1099.
+      - JBoss – 1099.
 
-   - WebSphere – 9080.
+      - WebSphere – 9080.
 
-   - WebLogic – 7001.
+      - WebLogic – 7001.
 
+1. Click **Next**.
 
-5. Click **Next**.
+    PMM attempts to connect to the host. If you are accessing this host for the first time within this Load Template, PMM prompts you for your username and password on the host.
 
-   PMM attempts to connect to the host. If you are accessing this host for the first time within this Load Template, PMM prompts you for your username and password on the host.
-
-![Prompt for Accessing the Host Computer](../images/console_users_guide_2135.jpeg)
-
-
-
-Enter your username and password.
-
-If a connection is successfully made, the Wizard progresses to the Measurements to Monitor screen.
+    ![Prompt for Accessing the Host Computer](../images/console_users_guide_2135.jpeg)
 
 
 
-If a connection cannot be established, the Wizard returns to the Host Selection screen, enabling you to select an alternate host.
+    Enter your username and password.
+
+    If a connection is successfully made, the Wizard progresses to the Measurements to Monitor screen.
+
+
+
+    If a connection cannot be established, the Wizard returns to the Host Selection screen, enabling you to select an alternate host.
 
 
 
@@ -481,19 +479,19 @@ If a connection cannot be established, the Wizard returns to the Host Selection 
 
 1. Select one or more measurements to monitor by clicking the checkbox adjacent to the item. PMM only collects the data for measurements that are selected. All other data is not collected.
 
-   Explanations of each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
+      Explanations of each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
 
-   The list of available measurements varies depending upon the type of data source. Each data source is supplied with a default set of measurements to monitor.
-   
-   > **Notes:**
-   >
-   > An empty circle ![](../images/console_users_guide_2137.png) next to a measurement indicates that the measurement contains sub- components and that no default sub-components are defined (the upper level component cannot be selected). To select sub-components, click the **+** to expand the tree.
-   >
-   > A circle with a checkmark ![](../images/console_users_guide_2138.png) next to a measurement indicates that the measurement contains sub-components and that default sub-components are defined. To view and configure the configured subcomponents, click the **+** to expand the tree.
+      The list of available measurements varies depending upon the type of data source. Each data source is supplied with a default set of measurements to monitor.
+      
+      > **Notes:**
+      >
+      > An empty circle ![](../images/console_users_guide_2137.png) next to a measurement indicates that the measurement contains sub- components and that no default sub-components are defined (the upper level component cannot be selected). To select sub-components, click the **+** to expand the tree.
+      >
+      > A circle with a checkmark ![](../images/console_users_guide_2138.png) next to a measurement indicates that the measurement contains sub-components and that default sub-components are defined. To view and configure the configured subcomponents, click the **+** to expand the tree.
 
-2. Click **Next**.
+1. Click **Next**.
 
-   The Wizard displays a summary of the host, data source, and measurements configured for monitoring.
+    The Wizard displays a summary of the host, data source, and measurements configured for monitoring.
 
    
 
@@ -507,11 +505,11 @@ If a connection cannot be established, the Wizard returns to the Host Selection 
 
 1. To accept the configuration, click **Finish**.
 
-   The PMM Wizard closes and the selected configuration is added to the PMM main window.
+    The PMM Wizard closes and the selected configuration is added to the PMM main window.
    
-   ![PMM Main Window](../images/console_users_guide_2140.jpeg)
+    ![PMM Main Window](../images/console_users_guide_2140.jpeg)
 
-2. To add additional data sources, hosts, and measurements to monitor, click the **Add data source** toolbar button and repeat the process.
+1. To add additional data sources, hosts, and measurements to monitor, click the **Add data source** toolbar button and repeat the process.
 
 
 
@@ -523,19 +521,19 @@ Measurements can be added quickly and easily to a data source configured in the 
 
 1. Right-click the data source to which you want to add measurements and click **Add measurements** from the pop-up menu.
 
-   The Measurements to Monitor screen for the selected data source appears.
+    The Measurements to Monitor screen for the selected data source appears.
 
 1. Select all of the measurements you want to monitor for the data source by selecting the checkbox adjacent to the measurement names.
 
-   Explanations for each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
+    Explanations for each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
 
 1. Click **Next**.
 
-   A summary of the current configuration appears.
+    A summary of the current configuration appears.
 
 1. To accept the configuration, click **Finish**.
 
-   The PMM Wizard closes and the configuration is updated in the PMM main window.
+    The PMM Wizard closes and the configuration is updated in the PMM main window.
 
 
 
@@ -547,23 +545,23 @@ Data sources can be added quickly and easily to a host configured in the PMM win
 
 1. Right-click the host in the PMM main window to which you want to add a data source, and click **Add data source** from the pop-up menu.
 
-   The Select a Data Source Wizard screen appears.
+    The Select a Data Source Wizard screen appears.
 
 1. Select the data-source to add to the configuration and click **Next**.
 
-   The PMM Wizard progresses to the Measurements to Monitor screen.
+    The PMM Wizard progresses to the Measurements to Monitor screen.
 
 1. Select all of the measurements you want to monitor for the data source.
 
-   Explanations of each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
+    Explanations of each measurement are available by clicking the measurement name. The explanation appears at the bottom of the window.
 
 1. Click **Next**.
 
-   A summary of the current configuration appears.
+    A summary of the current configuration appears.
 
 1. To accept the configuration, click **Finish**.
 
-   The PMM Wizard closes and the configuration is updated in the PMM main window.
+    The PMM Wizard closes and the configuration is updated in the PMM main window.
 
 ### Deleting a Data Source
 
@@ -572,11 +570,11 @@ Data sources can be added quickly and easily to a host configured in the PMM win
 1. Right-click the data source you wish to delete in the PMM main window.
 1. Select **Delete** from the pop-up menu.
 
-   A message box appears asking for confirmation.
+    A message box appears asking for confirmation.
 
 1. Click **Yes**.
 
-   The data source is removed from the configuration and is no longer monitored.
+    The data source is removed from the configuration and is no longer monitored.
 
 ### Deleting a Monitored Host
 
@@ -585,11 +583,11 @@ Data sources can be added quickly and easily to a host configured in the PMM win
 1. Right-click the host you wish to delete in the PMM main window.
 1. Select **Delete** from the pop-up menu.
 
-   A message box appears asking for confirmation.
+    A message box appears asking for confirmation.
 
-3. Click **Yes**.
+1. Click **Yes**.
 
-The host, and all data sources and measurements configured for the host are removed from the configuration and are no longer monitored.
+    The host, and all data sources and measurements configured for the host are removed from the configuration and are no longer monitored.
 
 ### **Deleting a Measurement**
 
@@ -598,11 +596,11 @@ The host, and all data sources and measurements configured for the host are remo
 1. Right-click the measurement you wish to delete in the PMM main window.
 1. Select **Delete** from the pop-up menu.
 
-   A message box appears asking for confirmation.
-
+    A message box appears asking for confirmation.
+ 
 1. Click **Yes**.
 
-   The measurement is removed from the configuration and no longer monitored.
+    The measurement is removed from the configuration and no longer monitored.
 
 ### Configuring Administrator Privileges for Perfmon (Windows)
 
@@ -622,8 +620,8 @@ In order to successfully monitor a host server using Perfmon (Windows), you must
 1. Right-click **My Computer** and click **Manage.** The Computer Management screen appears.
 1. In the Local Users and Groups area, add your WebLOAD Console username to the following groups:
 
-   - Performance Log Users
-   - Performance Monitor Users
+    - Performance Log Users
+    - Performance Monitor Users
 
 
 
@@ -636,8 +634,8 @@ In order to successfully monitor a host server using Perfmon (Windows), you must
 1. Select your WebLOAD Console username and click **Properties**.
 1. Click the Member of tab and add the user to the following groups:
 
-   - Performance Log Users
-   - Performance Monitor Users
+    - Performance Log Users
+    - Performance Monitor Users
 
 
 
@@ -649,19 +647,19 @@ The following method must be used for non-server PCs, but can also be used for s
 
 1. Grant at least Read permission to the following files:
 
-   - `<Windows directory>\system32\perfcxxx.dat`
+    - `<Windows directory>\system32\perfcxxx.dat`
    
-   - `<Windows directory>\system32\perfhxxx.dat`
+    - `<Windows directory>\system32\perfhxxx.dat`
    
      where xxx represents the system language (e.g., 009 for English).
 
-2. Open regedit32 and find the following keys:
-   - `HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\ SecurePipeServers\Winreg`
-   - `HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\Windows\NT\ CurrentVersion\Perflib`
+1. Open regedit32 and find the following keys:
+    - `HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\ SecurePipeServers\Winreg`
+    - `HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\Windows\NT\ CurrentVersion\Perflib`
 
-3. Grant your user at least Read permission to these keys and their sub-keys and close regedit32.
+1. Grant your user at least Read permission to these keys and their sub-keys and close regedit32.
 
-   Your user has access to monitor the performance of the host server using Perfmon (Windows).
+    Your user has access to monitor the performance of the host server using Perfmon (Windows).
 
 For more information about configuring administrator privileges on a host server using Perfmon (Windows), see *Controlling remote Performance Monitor access to Windows NT servers*, located at [http://support.microsoft.com/default.aspx?scid=kb;en-us;164018.](http://support.microsoft.com/default.aspx?scid=kb%3Ben-us%3B164018)
 
@@ -745,16 +743,16 @@ When this software package is not installed or has not been installed properly, 
 
   1. Log in to the server by typing the following command line directly on the server:
 
-     `wsadmin.bat -user <user name> -password <user password>`
+      `wsadmin.bat -user <user name> -password <user password>`
 
 
-  2. Type the following command to disable the security settings:
+  1. Type the following command to disable the security settings:
 
      `$AdminTask setGlobalSecurity {-interactive}”`
 
-  3. Type $AdminConfig save to save the new configuration.
+  1. Type `$AdminConfig` save to save the new configuration.
 
-  4. Restart the application server.
+  1. Restart the application server.
 
      
 #### JBoss 4.x – 5.x using JMX – Configuration Tasks
@@ -767,25 +765,25 @@ To enable the PMM to monitor the JBoss 4.x – 5.x using JMX, you need to config
 
 1. Edit the server execution file (for example, /usr/local/jboss/bin/run.sh) by adding the following flags:
 
-   `JAVA\_OPTS=$JAVA\_OPTS -Dcom.sun.management.jmxremote=true JAVA\_OPTS=$JAVA\_OPTS -`
+      `JAVA\_OPTS=$JAVA\_OPTS -Dcom.sun.management.jmxremote=true JAVA\_OPTS=$JAVA\_OPTS -`
 
-   `Dcom.sun.management.jmxremote.port=6789`
+      `Dcom.sun.management.jmxremote.port=6789`
 
-   `JAVA\_OPTS=$JAVA\_OPTS -`
+      `JAVA\_OPTS=$JAVA\_OPTS -`
 
-   `Dcom.sun.management.jmxremote.authenticate=false`
+      `Dcom.sun.management.jmxremote.authenticate=false`
 
-   `JAVA\_OPTS=$JAVA\_OPTS -`
+      `JAVA\_OPTS=$JAVA\_OPTS -`
 
-   `Dcom.sun.management.jmxremote.ssl=false`
+      `Dcom.sun.management.jmxremote.ssl=false`
 
-   where jmxremote.port is some arbitrary free TCP port.
+      where jmxremote.port is some arbitrary free TCP port.
 
-1. Run JBoss with -b0.0.0.0. This instructs the server not to bind exclusively to localhost.
+1. Run JBoss with `-b0.0.0.0`. This instructs the server not to bind exclusively to localhost.
 
-> **Note:** By default, the JBoss Naming Service (JNDI) is listening on TCP port 1099. This port is the default port, retrieved from the Service Binding Manager. You can change the default port by changing the following configuration file:
->
-> `/usr/local/jboss/server/all/conf/jboss-service.xml.`
+      > **Note:** By default, the JBoss Naming Service (JNDI) is listening on TCP port 1099. This port is the default port, retrieved from the Service Binding Manager. You can change the default port by changing the following configuration file:
+      >
+      > `/usr/local/jboss/server/all/conf/jboss-service.xml.`
 
 
 
@@ -793,24 +791,25 @@ To enable the PMM to monitor the JBoss 4.x – 5.x using JMX, you need to config
 
 **To configure WebLOAD to use JBoss 4.x.x:**
 
-1. Put the jars jboss-management.jar and jbossall-client.jar into <WebLoad- ProgramData-Dir>\extensions\Java.
+1. Put the jars `jboss-management.jar` and jbossall-client.jar into `<WebLoad- ProgramData-Dir>\extensions\Java`.
 1. Try to connect to port 1099 (JNDI) with the default installation.
 
 **To configure WebLOAD to use JBoss 5.x.x:**
 
-1. Put the following jars into <WebLoad-ProgramData-Dir>\extensions\Java:
+1. Put the following jars into `<WebLoad-ProgramData-Dir>\extensions\Java`:
 
-   0. lib/jboss-common-core.jar
-   0. client/jmx-invoker-adaptor-client.jar
-   0. client/jbossjmx-ant.jar
-   0. client/jboss-logging-spi.jar
-   0. client/jboss-client.jar
-   0. common/lib/jboss-serialization.jar
-   0. common/lib/jboss-remoting.jar
-   0. common/lib/jboss-security-spi.jar
-   0. common/lib/jboss-integration.jar
-   0. common/lib/jboss-javaee.jar
-   0. common/lib/jboss-management.jar
+      - lib/jboss-common-core.jar
+      - client/jmx-invoker-adaptor-client.jar
+      - client/jbossjmx-ant.jar
+      - client/jboss-logging-spi.jar
+      - client/jboss-client.jar
+      - common/lib/jboss-serialization.jar
+      - common/lib/jboss-remoting.jar
+      - common/lib/jboss-security-spi.jar
+      - common/lib/jboss-integration.jar
+      - common/lib/jboss-javaee.jar
+      - common/lib/jboss-management.jar
+
 1. Try to connect to port 1099 (JNDI) with the default installation.
 
 
@@ -826,19 +825,14 @@ To enable the PMM to monitor Oracle WebLogic 10.0 Using JMX, you need to configu
 In the server's start-up script (for example, startWebLogic.cmd), add the following rows:
 
 `set JAVA\_OPTIONS=%JAVA\_OPTIONS% -`
-
 `Dcom.sun.management.jmxremote=true`
 
 `set JAVA\_OPTIONS=%JAVA\_OPTIONS% -`
-
 `Dcom.sun.management.jmxremote.port=6790`
 
-`set JAVA\_OPTIONS=%JAVA\_OPTIONS% -`
-
-`Dcom.sun.management.jmxremote.authenticate=false`
+`set JAVA\_OPTIONS=%JAVA\_OPTIONS% -` `Dcom.sun.management.jmxremote.authenticate=false`
 
 `set JAVA\_OPTIONS=%JAVA\_OPTIONS% -`
-
 `Dcom.sun.management.jmxremote.ssl=false`
 
 #### Oracle WebLogic Using SNMP – Configuration Tasks
@@ -851,30 +845,30 @@ To enable the PMM to monitor Oracle WebLogic using SNMP, you need to configure t
 
 1. Log into the WebLogic Administration Console.
 1. In the Domain Structure tree, expand the **Diagnostics** node and click the **SNMP**
-
-   node.
+      node.
 
 1. Perform the following in the **Server SNMP Agents** table:
-   1. Click **New** to add and configure a new SNMP Server agent.
-   1. Specify a name.
-   1. Click **OK** to continue.
+      1. Click **New** to add and configure a new SNMP Server agent.
+      1. Specify a name.
+      1. Click **OK** to continue.
+         The new SNMP Server Agent is added with the following settings: Enabled = false, UDP Port = 161.
 
-      The new SNMP Server Agent is added with the following settings: Enabled = false, UDP Port = 161.
+      1. Click the name of the new SNMP Server Agent to configure its settings.
+   
+      1. Check the **Enabled** option.
+   
+      1. Change the SNMP UDP port number. You can set it to be any free UDP port, such as 3161.
+   
+      1. Change the Trap Version to V2.
+   
+      1. Click **Save** to continue.
 
-   1. Click the name of the new SNMP Server Agent to configure its settings.
-   
-   1. Check the **Enabled** option.
-   
-   1. Change the SNMP UDP port number. You can set it to be any free UDP port, such as 3161.
-   
-   1. Change the Trap Version to V2.
-   
-   1. Click **Save** to continue.
+1. Set the target server for monitoring, as follows:
+    1. Click the **Targets** tab.
 
-4. Set the target server for monitoring, as follows:
-   1. Click the **Targets** tab.
-   1. Select the relevant servers from the list. Select only one server per agent.
-   1. Click **Save** to continue.
+    1. Select the relevant servers from the list. Select only one server per agent.
+
+    1. Click **Save** to continue.
 
 The basic configuration of an SNMP Server agent is complete. No restart is needed.
 
@@ -893,16 +887,17 @@ To enable the PMM to monitor SAP NetWeaver Using JMX, you need to configure the 
 
 1. Copy the following jars for SAP NetWeaver installation to
 
-   `C:\Program Files\RadView\WebLOAD\extensions\java:`
+      `C:\Program Files\RadView\WebLOAD\extensions\java:`
 
-   - `com\_sap\_pj\_jmx.jar – the SAP-JMX library.`
-   - `client.jar – the SAP AS Java client API (includes the JMX Adapter).`
-   - `exception.jar – the SAP exception framework.`
-   - `logging.jar – the SAP Logging API.`
+      - `com_sap_pj_jmx.jar` – the SAP-JMX library.
+      - `client.jar` – the SAP AS Java client API (includes the JMX Adapter).
+      - `exception.jar` – the SAP exception framework.
+      - `logging.jar` – the SAP Logging API.
+
 1. In the PMM wizard, perform the following:
 
-   1. In the Selecting a Host window, specify the RMI-P4 port.
-   1. When you are prompted for your username and password on the host, enter the credentials of a user with a default administrator role.
+    1. In the Selecting a Host window, specify the RMI-P4 port.
+    1. When you are prompted for your username and password on the host, enter the credentials of a user with a default administrator role.
 
 
 
@@ -928,30 +923,29 @@ To enable the PMM to monitor WebSphere 6.1 using JMX, you need to configure the 
 ##### **Server-side configuration**
 
 1. Add -Djavax.management.builder.initial= - Dcom.sun.management.jmxremote to the Generic JVM Argument, as follows:
-   1. Launch the WebSphere Application Server.
-   1. Connect to the Administration Console.
-   1. Select **Servers** > **Server Types** > **WebSphere application servers**, and specify which server to manage (default: server1).
-   1. In the Configuration tab, select **Server Infrastructure** > **Java and Process Management** > **Process Definition**.
-   1. #### Select **Additional Properties** > **Java Virtual Machine**.
-   1. Set the Generic JVM arguments to -Djavax.management.builder.initial=
+    1. Launch the WebSphere Application Server.
+    1. Connect to the Administration Console.
+    1. Select **Servers** > **Server Types** > **WebSphere application servers**, and specify which server to manage (default: server1).
+    1. In the Configuration tab, select **Server Infrastructure** > **Java and Process Management** > **Process Definition**.
+    1. #### Select **Additional Properties** > **Java Virtual Machine**.
+    1. Set the Generic JVM arguments to -Djavax.management.builder.initial=
 
-      -Dcom.sun.management.jmxremote.
+         -`Dcom.sun.management.jmxremote`.
 
-1. Add the following lines to `/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties:`
+1. Add the following lines to 
+   `/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties:`
 
-   `com.sun.management.jmxremote.port=9999` 
+    `com.sun.management.jmxremote.port=9999` 
 
-   `com.sun.management.jmxremote.authenticate=false` 
+    `com.sun.management.jmxremote.authenticate=false` 
    
-   `com.sun.management.jmxremote.ssl=false`
+    `com.sun.management.jmxremote.ssl=false`
 
 
 
 ##### WebLOAD Configuration:
 
-Copy the following libraries from the application server’s installation directory to the
-
-<WebLOAD\_DIR>\ extensions\java\ directory:
+Copy the following libraries from the application server’s installation directory to the `<WebLOAD_DIR>\ extensions\java\` directory:
 
 - `com.ibm.ws.admin.client\_6.1.0.jar`
 - `com.ibm.ws.runtime\_6.1.0.jar`
@@ -963,31 +957,29 @@ To enable the PMM to monitor WebSphere 6.1 Using JMX, you need to configure the 
 
 ##### Server-side configuration
 
-1. Add -Djavax.management.builder.initial= - Dcom.sun.management.jmxremote to the Generic JVM Argument, as follows:
-   1. Launch the WebSphere Application Server.
-   1. Connect to the Administration Console.
-   1. Select **Servers** > **Server Types** > **WebSphere application servers**, and specify which server to manage (default: server1).
-   1. In the Configuration tab, select **Server Infrastructure** > **Java and Process Management** > **Process Definition**.
-   1. #### Select **Additional Properties** > **Java Virtual Machine**.
-   1. Set the Generic JVM arguments to `-Djavax.management.builder.initial=`
-
-      `-Dcom.sun.management.jmxremote`.
+1. Add `-Djavax.management.builder.initial= - Dcom.sun.management.jmxremote` to the Generic JVM Argument, as follows:
+      1. Launch the WebSphere Application Server.
+      1. Connect to the Administration Console.
+      1. Select **Servers** > **Server Types** > **WebSphere application servers**, and specify which server to manage (default: server1).
+      1. In the Configuration tab, select **Server Infrastructure** > **Java and Process Management** > **Process Definition**.
+      1. #### Select **Additional Properties** > **Java Virtual Machine**.
+      1. Set the Generic JVM arguments to `-Djavax.management.builder.initial=`
+          `-Dcom.sun.management.jmxremote`.
 
 1. Add the following lines to
+ 
+    `/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties:`
 
-   `/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties:`
-
-   `com.sun.management.jmxremote.port=9999` 
+    `com.sun.management.jmxremote.port=9999` 
    
-   `com.sun.management.jmxremote.authenticate=false` 
+    `com.sun.management.jmxremote.authenticate=false` 
    
-   `com.sun.management.jmxremote.ssl=false`
+    `com.sun.management.jmxremote.ssl=false`
 
 ##### WebLOAD Configuration:
 
-Copy the following libraries from the application server’s installation directory to the
-
-<WebLOAD\_DIR>\ extensions\java\ directory:
+Copy the following libraries from the application server’s installation directory to the 
+`<WebLOAD\_DIR>\ extensions\java\` directory:
 
 - `[WebSphere]/AppServer/runtimes/com.ibm.ws.admin.client\_7.0.0. jar`
 - `[WebSphere]/AppServer/plugins/com.ibm.ws.runtime.jar`
@@ -1017,64 +1009,67 @@ The PMM Oracle database monitor uses SNMP to retrieve statistics.
 1. Install SNMP support for Oracle using the Oracle Database installation.
 1. Specify the port where the Oracle master agent is listening.
 
-   The required port is specified in the TRANSPORT section of the MASTER.CFG file located in the \ADMIN directory.
+    The required port is specified in the TRANSPORT section of the MASTER.CFG file located in the \ADMIN directory.
 
-   For example, add the following section to the MASTER.CFG file:
+    For example, add the following section to the MASTER.CFG file:
 
-   TRANSPORT ordinary SNMP OVER UDP SOCKET
+    `TRANSPORT ordinary SNMP`
+     `OVER UDP SOCKET`
+     `AT PORT 161`
 
-   AT PORT 161
+    Use port 161 for the Oracle Peer SNMP master agent.
 
-   Use port 161 for the Oracle Peer SNMP master agent.
+1. Specify the authentication in the `COMMUNITY` section of the `MASTER.CFG` file. For example:
 
-1. Specify the authentication in the COMMUNITY section of the MASTER.CFG file. For example:
+      `COMMUNITY public` 
+      
+      `ALLOW ALL OPERATIONS` 
+      
+      `USE NO ENCRYPTION`
 
-   `COMMUNITY public` 
-   
-   `ALLOW ALL OPERATIONS` 
-   
-   `USE NO ENCRYPTION`
+1. Specify an unused port where the encapsulated agent, such as Microsoft SNMP service, should listen. Microsoft SNMP service typically uses port 1161. The port is specified in the `SERVICES` file located in the `NT_HOME|\SYSTEM32\DRIVERS\ETC` directory.
 
-5. Specify an unused port where the encapsulated agent, such as Microsoft SNMP service, should listen. Microsoft SNMP service typically uses port 1161. The port is specified in the SERVICES file located in the NT\_HOME|\SYSTEM32\DRIVERS\ETC directory.
+      For example, modify the `nt_home\system32\drivers\etc\services` file from:
 
-   For example, modify the nt\_home\system32\drivers\etc\services file from:
+      …
 
-   …
+      `snmp 161/udp`
 
-   snmp 161/udp
+      …
 
-   …
+      To:
 
-   To:
+      `snmp 1161/udp`
 
-   snmp 1161/udp
+1. Specify which non-PEER master agents are to be encapsulated by editing the encapsulator configuration file, ENCAPS.CFG, located in the \ADMIN directory. You must add the AGENT entry, including MIB-subtrees manageable by NMS, for the encapsulated master agent.
 
-6. Specify which non-PEER master agents are to be encapsulated by editing the encapsulator configuration file, ENCAPS.CFG, located in the \ADMIN directory. You must add the AGENT entry, including MIB-subtrees manageable by NMS, for the encapsulated master agent.
+      For example, modify the `encaps.cfg` file as follows: 
+      
+      `AGENT AT PORT 1161 WITH COMMUNITY public` 
+      `SUBTREES 1.3.6.1.2.1.1,`
 
-   For example, modify the encaps.cfg file as follows: AGENT AT PORT 1161 WITH COMMUNITY public SUBTREES 1.3.6.1.2.1.1,
+      `1.3.6.1.2.1.2,`
 
-   `1\.3.6.1.2.1.2,`
+      `1.3.6.1.2.1.3,`
 
-   `1\.3.6.1.2.1.3,`
+      `1.3.6.1.2.1.4,`
 
-   `1\.3.6.1.2.1.4,`
+      `1.3.6.1.2.1.5,`
 
-   `1\.3.6.1.2.1.5,`
+      `1.3.6.1.2.1.6,`
 
-   `1\.3.6.1.2.1.6,`
+      `1.3.6.1.2.1.7,`
 
-   `1\.3.6.1.2.1.7,`
+      `1.3.6.1.2.1.8,`
 
-   `1\.3.6.1.2.1.8,`
+      `1.3.6.1.4.1.77`
 
-   `1\.3.6.1.4.1.77`
+      `FORWARD ALL TRAPS;`
 
-   `FORWARD ALL TRAPS;`
+      > **Note:** The port (1161) must match the unused port specified in step 5.
 
-   > **Note:** The port (1161) must match the unused port specified in step 5.
-
-7. Make the “OracleSNMPPeerEncapsulator” service automatic and start it.
-8. Reboot your computer.
+1. Make the “OracleSNMPPeerEncapsulator” service automatic and start it.
+1. Reboot your computer.
 
 
 
@@ -1091,10 +1086,10 @@ The PMM Oracle database monitor uses an SNMP Master Agent to communicate with th
 
 The necessary SNMP files are installed automatically when you install the Oracle Intelligent Agent. After installing the Oracle Intelligent Agent, you will have to edit the following files as described below:
 
-- $ORACLE\_HOME/network/snmp/peer/CONFIG.master
-- $ORACLE\_HOME/network/snmp/peer/CONFIG.encap
-- $ORACLE\_HOME/network/snmp/peer/start\_peer
-- /etc/snmpd.config
+- `$ORACLE_HOME/network/snmp/peer/CONFIG.master`
+- `$ORACLE_HOME/network/snmp/peer/CONFIG.encap`
+- `$ORACLE_HOME/network/snmp/peer/start_peer`
+- `/etc/snmpd.config`
 
 ###### CONFIG.Master (Peer Master Agent file)
 
@@ -1106,22 +1101,22 @@ The necessary SNMP files are installed automatically when you install the Oracle
 
 **To edit the CONFIG.encap file:**
 
-- Find the line AGENT AT PORT. It normally reads AGENT AT PORT 1161 WITH COMMUNITY public.
+- Find the line `AGENT AT PORT`. It normally reads `AGENT AT PORT 1161 WITH COMMUNITY public`.
 
-If you modify the port number from 1161, you must also modify the start\_peer
+If you modify the port number from 1161, you must also modify the `start_peer`
 
 script.
 
 
 
-###### start\_peer Script
+###### start_peer Script
 
-**To edit the start\_peer script:**
+**To edit the start_peer script:**
 
-1. Find the line NEW\_SNMPD\_PORT= and verify that it is using the same port number listed above in the CONFIG.encap file.
-1. Find the line NEW\_TRAPD\_PORT= and verify the port number is different from
+1. Find the line `NEW_SNMPD_PORT=` and verify that it is using the same port number listed above in the CONFIG.encap file.
+1. Find the line `NEW_TRAPD_PORT=` and verify the port number is different from
 
-   NEW\_SNMPD\_PORT=.
+    `NEW_SNMPD_PORT=`.
    
    
 
@@ -1131,7 +1126,7 @@ script.
 
 1. Add the following line to the file:
 
-   trap <hostname or ipaddress>
+    `trap <hostname or ipaddress>`
 
 1. Replace the information in angle brackets with the actual hostname or IP address of the local host where the file is located.
 
@@ -1141,25 +1136,31 @@ script.
 
 **To start the SNMP agents:**
 
-1. Make sure no SNMP components are running. The three main components are the master\_peer, encap\_peer, and snmpd. If any of these processes are running, use the ps command to find them, and the kill command to terminate the processes.
+1. Make sure no SNMP components are running. The three main components are the `master_peer`, `encap_peer`, and `snmpd`. If any of these processes are running, use the ps command to find them, and the kill command to terminate the processes.
 
-   For example:
+    For example:
 
-   ps -ef | grep snmp
+    `ps -ef | grep snmp`
 
-   This command checks to see if the SNMP Master Agent is running.
+    This command checks to see if the SNMP Master Agent is running.
 
 1. Start the PEER Master Agent, PEER encapsulator, and native Digital UNIX SNMP Agent:
 
-   cd $ORACLE\_HOME/network/snmp/peer su root
+    `cd $ORACLE_HOME/network/snmp/peer`
+   
+    `su root`
 
-   ./start\_peer -a
+    `./start_peer -a`
 
-   This command starts all three processes.
+    This command starts all three processes.
 
 1. Now use the ps command to verify that all three processes were started:
 
-   ps -aux |grep peer ps -aux |grep snmpd ps -ef | grep snmp
+    `ps -aux |grep peer`
+    
+    `ps -aux |grep snmpd`
+    
+    `ps -ef | grep snmp`
 
 
 
@@ -1212,7 +1213,7 @@ The PMM Sun One monitor uses SNMP to retrieve server statistics.
 1. Install SNMP support for Windows.
 1. Ensure that the iPlanet SNMP agent is installed and activated on the iPlanet server host.
 
-   Configure the Sun One server to be a proxy for the SNMP agent.
+    Configure the Sun One server to be a proxy for the SNMP agent.
 
 1. Configure the Sun One server host to use port 1161 as the SNMP message port.
 1. Enable **SNMP Statistics Collection** on the SNMP Subagent Configuration page of the Server Manager.
@@ -1224,35 +1225,35 @@ To enable PMM to monitor performance data from the Sun One application server yo
 **To set up the Sun One SNMP agent on Solaris:**
 
 1. Check whether an SNMP daemon (snmpd) is running on port 161. If an SNMP daemon is running:
-   1. Make sure you know how to restart it and which MIB it supports.
-   1. Kill its process.
-1. Edit the CONFIG file located in the plugins/snmp/magt server root directory from:
+    1. Make sure you know how to restart it and which MIB it supports.
+    1. Kill its process.
+1. Edit the `CONFIG` file located in the `plugins/snmp/magt` server root directory from:
 
-   …
+    …
 
-   snmp 161/udp
+    `snmp 161/udp`
 
-   …
+    …
 
-   To:
-
-   …
+    To:
+ 
+    …
    
-   snmp 1161/udp
+    `snmp 1161/udp`
    
-   …
+    …
+ 
+1. Manually activate the Sun One master agent and subagent.
 
-3. Manually activate the Sun One master agent and subagent.
+    1. At the command prompt, enter the commands:
 
-   1. At the command prompt, enter the commands:
+       `cd <iws\_install>/Servers/plugins/snmp cd maget`
 
-      `cd <iws\_install>/Servers/plugins/snmp cd maget`
+       `./magt CONFIG INIT& cd ../sagt`
 
-      `./magt CONFIG INIT& cd ../sagt`
+       `./sagt -c CONFIG &`
 
-      `./sagt -c CONFIG &`
-
-   2. Restart the Sun One Server and the subagent from the Web server Administration.
+   1. Restart the Sun One Server and the subagent from the Web server Administration.
 
 
 
@@ -1314,11 +1315,13 @@ Install WebLOAD on any Windows machine that can access the server you want to pr
 
 #### Setting INI Properties
 
-Set the following parameters in webload.ini of the Load Generator installation
+Set the following parameters in `webload.ini` of the Load Generator installation
 
-(<Install Dir>\bin):
+`(<Install Dir>\bin)`:
 
-PROTOCOLS=“pmprobeprotocol.dll;JSCOMObject.dll” PROTOCOLS\_NAMES=“Performance Monitor Probe;COM Object”
+`PROTOCOLS=“pmprobeprotocol.dll;JSCOMObject.dll”`
+
+` PROTOCOLS_NAMES=“Performance Monitor Probe;COM Object”`
 
 ##### Setting the Probed Measurements
 
@@ -1331,12 +1334,12 @@ You can run the Remote Performance Measurement Manager utility to select the ser
 **To select a server and statistics:**
 
 1. From the Start menu, select **Start** > **Programs** > **<WebLOAD Installation>** > **Utilities** > **Performance Measurements Manager**, to select the servers you want to probe and the measurements that should be received.
-1. Save the selected definitions in any file you choose, for example: myload.pmm.
-1. Modify the C:\Program Files\RadView\WebLOAD\bin\webload.ini file, as follows:
-   1. Locate the LOAD\_PMM\_FILE\_PATH=““ parameter.
-   1. Insert the path and name of your selected definitions file. For example:
+1. Save the selected definitions in any file you choose, for example: `myload.pmm`.
+1. Modify the `C:\Program Files\RadView\WebLOAD\bin\webload.ini` file, as follows:
+    1. Locate the LOAD_PMM_FILE_PATH=““ parameter.
+    1. Insert the path and name of your selected definitions file. For example:
 
-      LOAD\_PMM\_FILE\_PATH=“C:\\temp\\myload.pmm”
+      `LOAD_PMM_FILE_PATH=“C:\\temp\\myload.pmm”`
 
 > **Note:** Currently, only the “Perfmon” measurements for probing Windows are supported when using the Remote PMM feature.
 
@@ -1353,7 +1356,7 @@ You can run the Remote Performance Measurement Manager utility to select the ser
 1. Open the C:\Program Files\RadView\WebLOAD\bin\webload.ini file.
 1. Modify the following parameter value from “9000” to a different port number, for example: “9011:”
 
-   TESTTALK\_NETWORK\_PORT=“9011”.
+    `TESTTALK_NETWORK_PORT=“9011”.`
 
 1. Save and close the file.
 1. Exit TestTalk.
@@ -1369,22 +1372,22 @@ Once you have installed and configured the Remote Machine Load Generator, you ca
 
 1. Click **Add Remote PMM** in the **Home** tab of the Console ribbon. The Add PMM Probing Client dialog box is displayed.
 
-   ![Add PMM Probing Client Dialog Box](../images/console_users_guide_2143.png)
+    ![Add PMM Probing Client Dialog Box](../images/console_users_guide_2143.png)
 
-2. Enter the remote host’s name or IP address,
+1. Enter the remote host’s name or IP address,
 
-   -Or-
+    -Or-
 
-   Select a host from a list of available hosts by clicking ![](../images/console_users_guide_2144.png). The Host Selection dialog box is displayed.
+    Select a host from a list of available hosts by clicking ![](../images/console_users_guide_2144.png). The Host Selection dialog box is displayed.
 
-   ![Host Selection Dialog Box](../images/console_users_guide_2145.png)
+    ![Host Selection Dialog Box](../images/console_users_guide_2145.png)
 
-   1. Select a host.
-   2. Click **Select**. The selected host name is displayed in the Host Name/IP field of the Add PMM Probing Client dialog box.
+      1. Select a host.
+      1. Click **Select**. The selected host name is displayed in the Host Name/IP field of the Add PMM Probing Client dialog box.
 
 
 
-3. Click **OK**. A new script called RemotePMMScript is automatically added to the template.
+1. Click **OK**. A new script called RemotePMMScript is automatically added to the template.
 
 > **Note:** You can rename the new script by right-clicking on the new script and typing in a new name.
 
@@ -1402,18 +1405,18 @@ Load Session’s database and the WebLOAD Console statistics are also calculated
 
 1. Select **Import External Statistics** from the **Session** tab of the ribbon. The Import External Statistics dialog box appears.
 
-   ![Import External Statistics Dialog Box](../images/console_users_guide_2146.jpeg)
+    ![Import External Statistics Dialog Box](../images/console_users_guide_2146.jpeg)
 
-2. In the Statistics File Type drop–down list, select one of the following types of statistics files:
+1. In the Statistics File Type drop–down list, select one of the following types of statistics files:
 
-   - **Anue System**
+    - **Anue System**
 
-   - **PerfMonitor**
+    - **PerfMonitor**
 
-3. In the Statistics File Name field, browse for or enter the name of the external statistics file. The file has a \*.csv extension.
+1. In the Statistics File Name field, browse for or enter the name of the external statistics file. The file has a \*.csv extension.
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The external statistics are imported into the report.
+    The external statistics are imported into the report.
 
 

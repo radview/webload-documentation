@@ -70,18 +70,18 @@ When you enable Dynatrace in WebLOAD (refer to [*The Dynatrace Tab* ](set_global
 
 1. Click **Global Options** in the **Tools** tab of the ribbon,
 
-   -Or-
+    -Or-
 
-   Select **Global Options** from the Console System button.
+    Select **Global Options** from the Console System button.
 
 1. Select the **Dynatrace** tab.
 1. In the **Timestamp** field, change:
 
-   `rest/integration/opendashboard?source=live:Monitoring&filter= tf:CustomTimeframe?`
+    `rest/integration/opendashboard?source=live:Monitoring&filter= tf:CustomTimeframe?`
 
-   To:
+    To:
 
-   `rest/integration/opendashboard?source=live:<Your-desired- system-profile>&filter=tf:CustomTimeframe?`
+    `rest/integration/opendashboard?source=live:<Your-desired- system-profile>&filter=tf:CustomTimeframe?`
 
 Whenever you click a point of interest in WebLOAD and select **DynaTrace**, the point of interest will be displayed in the Dynatrace system profile you specified in the **Timestamp** field.
 
@@ -95,15 +95,15 @@ If an error occurs at any time during a test session, an error message displays 
 
 1. In the Log Window, double-click the paperclip icon adjacent to the error.
 
-   ![Selecting an Attachment of an Error in the Log Window](../images/console_users_guide_3027.png)
+    ![Selecting an Attachment of an Error in the Log Window](../images/console_users_guide_3027.png)
 
 1. In the Event Viewer that appears, click the **Dynatrace** button
 
-   ![Selecting Dynatrace in the Event Viewer](../images/console_users_guide_3028.png)
+    ![Selecting Dynatrace in the Event Viewer](../images/console_users_guide_3028.png)
 
-A Dynatrace window appears, displaying the details of the relevant transaction.
+1. A Dynatrace window appears, displaying the details of the relevant transaction.
 
-![Viewing in Dynatrace the Transaction Related to a WebLOAD Error](../images/console_users_guide_3029.png)
+    ![Viewing in Dynatrace the Transaction Related to a WebLOAD Error](../images/console_users_guide_3029.png)
 
 
 

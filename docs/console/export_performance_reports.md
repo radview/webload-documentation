@@ -47,23 +47,20 @@ You can view all of the data available in the Performance Reports from a single 
 1. Display the Integrated Report you want to export. If there is more than one report open, focus on the report you want to export.
 1. Click **Export Report**  **Export to Excel** in the **Session** tab of the ribbon.
 
-   The report is sent to Excel, which opens automatically and displays the Integrated Report.
+    The report is sent to Excel, which opens automatically and displays the Integrated Report.
+   
+     **Notes:**
+   
+    If Excel is not installed, you receive the following error: Cannot Open Excel.
+   
+    Exporting a large amount of data to Excel may take some time. Wait until the export to Excel has completed before continuing work with the Console.
    
    
-   
-   **Notes:**
-   
-   If Excel is not installed, you receive the following error: Cannot Open Excel.
-   
-   Exporting a large amount of data to Excel may take some time. Wait until the export to Excel has completed before continuing work with the Console.
-   
-   
+1. Save the Excel file.
 
-3. Save the Excel file.
+    The following screen shows an Integrated Report after it is exported to an Excel spreadsheet. This screen shows a tabular presentation for a graphic screen displayed in WebLOAD Console.
 
-   The following screen shows an Integrated Report after it is exported to an Excel spreadsheet. This screen shows a tabular presentation for a graphic screen displayed in WebLOAD Console.
-
-   ![Integrated Report in Excel Spreadsheet](../images/console_users_guide_2101.png)
+    ![Integrated Report in Excel Spreadsheet](../images/console_users_guide_2101.png)
 
 
 
@@ -140,7 +137,7 @@ WebLOAD Console provides a wealth of statistical information about the performan
 
 **To export all Statistics to Excel:**
 
-- Click **Export All**  **Export All to Excel** in the **Session** tab of the ribbon.
+- Click **Export All** > **Export All to Excel** in the **Session** tab of the ribbon.
 
   Excel opens automatically and displays all of the Statistics gathered by WebLOAD Console.
 
@@ -170,7 +167,7 @@ See [*Customizing the Export File* ](#customizing-the-export-file), for informat
 1. Enter the name of your new Tab file. The file has a \*.tab extension.
 1. Click **Save**.
 
-   Once the file is saved, the data is displayed.
+    Once the file is saved, the data is displayed.
 
 
 
@@ -203,28 +200,28 @@ Before data is exported you can define the way the data is displayed in the expo
 
 1. Click **Global Options** in the **Tools** tab of the ribbon,
 
-   -Or-
+    -Or-
 
-   Select **Global Options** from the Console System button. The Global Options dialog box opens.
+    Select **Global Options** from the Console System button. The Global Options dialog box opens.
 
 1. Select the **Export** tab.
 
-   The Export tab is displayed.
+    The Export tab is displayed.
    
-   ![Global Options Export Tab](../images/console_users_guide_2104.jpeg)
+    ![Global Options Export Tab](../images/console_users_guide_2104.jpeg)
    
-   The Export tab contains the following fields:
+    The Export tab contains the following fields:
    
-   | **Field Name**                    | **Description**                                              |
-   | :-------------------------------- | :----------------------------------------------------------- |
-   | Export every statistics reporting | The frequency of the number of samples exported. For example, if 1 is entered for this value, WebLOAD Console exports every sample taken. If 2 is entered for this value, WebLOAD Console exports every second sample. When configuring this option, you must consider the setting selected for sampling. If for example, the Statistics Reporting Resolution is set to 20 seconds and Export Every Statistics Reporting is set to 2, the measurement exported reflects a sampling every 40 seconds. The measurements are the measurements taken at the intervals: 20, 60, 100, 140… This option is useful in cases where there is a large amount of data due to a long test session. |
-   | Open viewer when exporting        | Select this checkbox to launch the Tab File and HTML Default Viewer after the Tab or HTML file is exported. This is selected by default |
-   | Tab File delimiter                | <p>Definition of the delimiter used when exporting the statistical data to a tab file. All strings can be used as delimiters by entering the string in the Tab File Delimiter field.</p><p>- To use tab characters as delimiters enter \t.</p><p>- To use a new line as a delimiter, enter \r or \n.</p><p>- To use a space as a delimiter, use \s.</p> |
-   | Tab\HTML File default directory   | The default directory for saving Tab and HTML files.         |
-   | Tab File default viewer           | The default viewer to open after the Tab file is exported.   |
-   
-   
+      | **Field Name**                    | **Description**                                              |
+      | :-------------------------------- | :----------------------------------------------------------- |
+      | Export every statistics reporting | The frequency of the number of samples exported. For example, if 1 is entered for this value, WebLOAD Console exports every sample taken. If 2 is entered for this value, WebLOAD Console exports every second sample. When configuring this option, you must consider the setting selected for sampling. If for example, the Statistics Reporting Resolution is set to 20 seconds and Export Every Statistics Reporting is set to 2, the measurement exported reflects a sampling every 40 seconds. The measurements are the measurements taken at the intervals: 20, 60, 100, 140… This option is useful in cases where there is a large amount of data due to a long test session. |
+      | Open viewer when exporting        | Select this checkbox to launch the Tab File and HTML Default Viewer after the Tab or HTML file is exported. This is selected by default |
+      | Tab File delimiter                | <p>Definition of the delimiter used when exporting the statistical data to a tab file. All strings can be used as delimiters by entering the string in the Tab File Delimiter field.</p><p>- To use tab characters as delimiters enter \t.</p><p>- To use a new line as a delimiter, enter \r or \n.</p><p>- To use a space as a delimiter, use \s.</p> |
+      | Tab\HTML File default directory   | The default directory for saving Tab and HTML files.         |
+      | Tab File default viewer           | The default viewer to open after the Tab file is exported.   |
+      
+      
 
-3. Click **OK**.
+1. Click **OK**.
 
 

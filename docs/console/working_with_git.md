@@ -14,15 +14,15 @@ As prerequisites to working with Git, you need to:
 
 1. Make sure your WebLOAD files are saved in the directory defined as the Git local repository. This can be done in one of two ways:
 
-   - Define the Git local repository directory to be the WebLOAD default directory.
-   - Change the WebLOAD default directory to be the directory of the Git local repository.
+    - Define the Git local repository directory to be the WebLOAD default directory.
+    - Change the WebLOAD default directory to be the directory of the Git local repository.
 
-   To do either of the above, you need to access the window where you can view or change the location of the WebLOAD default directory:
+       To do either of the above, you need to access the window where you can view or change the location of the WebLOAD default directory:
 
-   - In the WebLOAD Console, navigate to **Global Options** > **File Locations**.
-   - In the WebLOAD Recorder, navigate to **Settings** > **File Locations**.
+    - In the WebLOAD Console, navigate to **Global Options** > **File Locations**.
+    - In the WebLOAD Recorder, navigate to **Settings** > **File Locations**.
 
-Note that changing the WebLOAD default directory in either the Console UI or the WebLOAD Recorder UI, changes it for both.
+       Note that changing the WebLOAD default directory in either the Console UI or the WebLOAD Recorder UI, changes it for both.
 
 
 ## Setting up Access to Git Local and Remote Repositories
@@ -34,18 +34,18 @@ As a prerequisite to using Git operation from within WebLOAD, you need to once s
 
 1. Click **Repository Settings** in the **Tools** tab of the ribbon. The WebLOAD Repository Settings window appears.
 
-   ![WebLOAD Repository Settings](../images/console_users_guide_2023.png)
+    ![WebLOAD Repository Settings](../images/console_users_guide_2023.png)
 
-2. In the **Local Repsitory** section:
-   1. Specify the location of the local repository.
-   2. Specify the **current branch**.
+1. In the **Local Repsitory** section:
+    1. Specify the location of the local repository.
+    1. Specify the **current branch**.
 
-3. In the **Remote Repository** section:
-   1. Specify the location of the remote repository (either a URL or a directory).
-   1. Specify the **remote branch**.
-   1. Specify the **User Name** and **Password** for accessing the remote repository.
-
-4. Click **OK**.
+1. In the **Remote Repository** section:
+    1. Specify the location of the remote repository (either a URL or a directory).
+    1. Specify the **remote branch**.
+    1. Specify the **User Name** and **Password** for accessing the remote repository.
+ 
+1. Click **OK**.
 
 
 ## Performing a Commit action
@@ -59,13 +59,11 @@ If you setup WebLOAD to support Git, you can perform a Commit, that is, save to 
 
 1. Click **Commit** in the **Tools** tab of the ribbon.
 
-   A window appears in which you can enter a Commit comment.
+     A window appears in which you can enter a Commit comment.
 
-![Entering a Commit Comment](../images/console_users_guide_2025.png)
+    ![Entering a Commit Comment](../images/console_users_guide_2025.png)
 
-
-
-2. Optionally enter a comment, and click **OK**.
+1. Optionally enter a comment, and click **OK**.
 
 
 
@@ -78,10 +76,9 @@ If you setup WebLOAD to support Git, you perform a Commit dir, that is, save to 
 1. Click **Commit dir** in the **Tools** tab of the ribbon.
 1. In the File Explorer window that appears, specify the directory you wish to commit.
 
-   A window appears in which you can enter a Commit dir comment.
+    A window appears in which you can enter a Commit dir comment.
    
-   ![Entering a Commit Dir Comment](../images/console_users_guide_2026.png)
-
+    ![Entering a Commit Dir Comment](../images/console_users_guide_2026.png)
 
 
 3. Optionally enter a comment, and click **OK**.
@@ -95,14 +92,12 @@ If you setup WebLOAD to support Git, you can perform a Push, which causes all Co
 
 1. Click **Push** in the **Tools** tab of the ribbon.
 
-   A window appears, informing you of the Git Push operation and its success status.
+    A window appears, informing you of the Git Push operation and its success status.
    
-   ![Git Push Operation Message](../images/console_users_guide_2027.png)
+    ![Git Push Operation Message](../images/console_users_guide_2027.png)
 
-
-
-2. Click **OK**.
-3. If the Push operation is rejected, for example because a conflict has arisen due to changes made by two different users, a window appears, displaying the Git rejection message. Follow the instructions in the message, and resolve the rejection using your chosen Git UI.
+1. Click **OK**.
+1. If the Push operation is rejected, for example because a conflict has arisen due to changes made by two different users, a window appears, displaying the Git rejection message. Follow the instructions in the message, and resolve the rejection using your chosen Git UI.
 
 
 ## Performing a Pull action
@@ -115,13 +110,11 @@ A Pull operation pulls the entire branch from the remote repository and updates 
 
 1. Click **Pull** in the **Tools** tab of the ribbon.
 
-   A window appears, informing you of the Git Pull operation and its success status.
+    A window appears, informing you of the Git Pull operation and its success status.
    
-   ![Git Pull Operation Message](../images/console_users_guide_2028.png)
+    ![Git Pull Operation Message](../images/console_users_guide_2028.png)
 
-
-
-2. Click **OK**.
+1. Click **OK**.
 
    
 
@@ -131,6 +124,7 @@ If you setup WebLOAD to support Git, you can launch your Git UI from within WebL
 
 **To launch the Git UI:**
 
-1\.	Click **Open Git Gui** in the **Tools** tab of the ribbon. The Git UI is launched.
+1. Click **Open Git Gui** in the **Tools** tab of the ribbon. 
+    The Git UI is launched.
 
 

@@ -130,13 +130,13 @@ The following table describes the buttons in the Report dialog box.
 
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
 
-2. Select a report.
+1. Select a report.
 
-   The Open button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.
+    The Open button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.
 
-3. Click **Open**.
+1. Click **Open**.
 
-   The Integrated Report displays in the Console Results Window. WebLOAD Console displays the results of your test in a graphical format. Click the **Data Editor ![](../images/console_users_guide_2044.png)** toolbar button at the top of the Results Window to display your test results in a tabular format.
+    The Integrated Report displays in the Console Results Window. WebLOAD Console displays the results of your test in a graphical format. Click the **Data Editor ![](../images/console_users_guide_2044.png)** toolbar button at the top of the Results Window to display your test results in a tabular format.
 
 
 ## Editing a Report
@@ -145,6 +145,9 @@ The following table describes the buttons in the Report dialog box.
 
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
 1. Select a report and click **Edit**. The Report dialog box appears.
+    ![](../images/console_users_guide_2045.jpeg)
+    
+
 1. Make the necessary changes, and click **OK**.
 
 ## Renaming a Report
@@ -156,19 +159,19 @@ You can assign a meaningful name to a report. The default name for reports is �
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
 1. Select a report to rename.
 
-   The Rename button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.
+    The Rename button is enabled and a description of the measurements included in the report appears at the bottom of the dialog box.
 
 1. Click **Rename**.
 
-   The Rename Report dialog box appears.
+    The Rename Report dialog box appears.
 
-![](../images/console_users_guide_2046.png)
+    ![](../images/console_users_guide_2046.png)
 
-4. Type a new name for the report.
+1. Type a new name for the report.
 
-5. Click **OK**.
+1. Click **OK**.
 
-   The selected report is renamed.
+    The selected report is renamed.
 
 
 
@@ -179,11 +182,11 @@ You can assign a meaningful name to a report. The default name for reports is �
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
 1. Select a report to delete.
 
-   A description of the measurements included in the report appears at the bottom of the dialog box.
+    A description of the measurements included in the report appears at the bottom of the dialog box.
 
 1. Click **OK**.
 
-   The selected report is deleted.
+    The selected report is deleted.
 
 
 
@@ -195,11 +198,13 @@ You can configure an Integrated Report while the test is running. To view data f
 
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
 
-2. Click **New**.
+    ![](../images/console_users_guide_2038.png)
 
-   The New Report dialog box appears.
+1. Click **New**.
 
-![New Report Dialog Box](../images/console_users_guide_2047.png)
+    The New Report dialog box appears.
+
+    ![New Report Dialog Box](../images/console_users_guide_2047.png)
 
 
 
@@ -245,14 +250,14 @@ You can define user-defined timers in the script to measure specific activity. F
 
 1. Right-click the upper level item in the configuration tree to which you would like to add a timer.
 
-   A drop-down menu appears.
+    A drop-down menu appears.
 
 1. Click **Add Timer**.
 1. Enter the name of the timer in the text box.
 1. Select the timer attributes you would like to include in the report.
 1. Click **OK**.
 
-   The new timer is included in the Integrated Report.
+    The new timer is included in the Integrated Report.
 
 
 
@@ -267,12 +272,12 @@ WebLOAD Console enables you to import a complete report configuration or to impo
 1. Select the Load Template to import.
 1. Click **Open**.
 
-   The Import dialog box displays a list of reports contained in the selected Load Template.
+    The Import dialog box displays a list of reports contained in the selected Load Template.
 
 1. Select the report that contains the desired configuration.
 1. Click **OK**.
 
-   The report is configured to display the same measurements.
+    The report is configured to display the same measurements.
 
 > **Note:** If the imported configuration contains a measurement not configured in the current report, WebLOAD Console ignores the measurement in the Load Template file and does not add it to the report.
 
@@ -285,27 +290,24 @@ This function imports the Integrated Report test configuration from the selected
 1. Select the upper level component in the configuration tree for which you want to import a report configuration.
 1. Click **Import**.
 
-   The Open dialog box appears.
+    The Open dialog box appears.
 
 1. Select the Load Template to import and click **Open**.
 
-   The Import dialog box displays a list of reports contained in the selected Load Template.
+    The Import dialog box displays a list of reports contained in the selected Load Template.
+
+    ![Import Dialog Box](../images/console_users_guide_2048.png)
 
 
+1. Select the report that contains the desired configuration. WebLOAD Console displays the list of components (Load Machines and Probing Clients) included in that report.
 
-![Import Dialog Box](../images/console_users_guide_2048.png)
+1. Select the component that contains the desired configuration.
 
+    The current component is configured to display the same measurements.
 
+    > **Note:** If the imported component contains a measurement that is not configured in the current report, WebLOAD Console ignores the measurement in the Load Template file. It does not add it to the report.
 
-4. Select the report that contains the desired configuration. WebLOAD Console displays the list of components (Load Machines and Probing Clients) included in that report.
-
-5. Select the component that contains the desired configuration.
-
-   The current component is configured to display the same measurements.
-
-> **Note:** If the imported component contains a measurement that is not configured in the current report, WebLOAD Console ignores the measurement in the Load Template file. It does not add it to the report.
-
-This function imports the Integrated Report test configuration from the selected Load Template file. None of the other information in the Load Template file is imported.
+    This function imports the Integrated Report test configuration from the selected Load Template file. None of the other information in the Load Template file is imported.
 
 
 
@@ -325,11 +327,13 @@ In addition, if the [*Show Performance Warnings* ](set_script_options.md#enablin
 **To add Load Generator statistics to an integrated report:**
 
 1. Open a report, as follows:
-   1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
-   1. Click **New** to open a new report, or select an existing report and click **Edit**. The Report dialog box appears.
+    1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Reports dialog box appears.
+    1. Click **New** to open a new report, or select an existing report and click **Edit**. The Report dialog box appears.
 1. Alternatively, click Update in the Integrated Report toolbar, to update the display in the report while a test is in progress.
 
-   The Report dialog box appears.
+    The Report dialog box appears.
+
+    ![New Report Dialog Box](../images/console_users_guide_2047.png)
 
 1. Select items under **\_Performance@LoadGenerator** to indicate the Load Generator measurements you want displayed in the Integrated Report.
 
@@ -356,14 +360,14 @@ Combining performance results from several different Load Sessions into a single
 1. Click **Integrated Report Manager** in the **Session** tab of the ribbon. The Integrated Report dialog box appears.
 1. Click **New**.
 
-   The Reports dialog box appears.
+    The Reports dialog box appears.
 
 1. In the Reports dialog box, click **Add Session**. The Open dialog box appears.
 1. Select the Load Session ( \*.ls) file to add and click **Open**. The Load Session is added to the Report dialog box.
 1. Configure the Integrated Report to include the measurements you want to view, see [*Configuring an Integrated Report* ](#configuring-an-integrated-report). If a measurement is already selected in the current Load Session it is automatically selected in the Load Session selected to be included in the report.
 1. Click **OK**.
 
-   The report displays in the Console Results window.
+    The report displays in the Console Results window.
 
 
 
@@ -374,8 +378,7 @@ Combining performance results from several different Load Sessions into a single
 1. Select the Load Session you want to remove from the Integrated Report configuration in the Reports dialog box.
 1. Click **Remove Session**.
 
-   The Load Session is removed from the Report dialog box, and any measurements displayed for that Load Session in the Console Results window are removed.
-
+    The Load Session is removed from the Report dialog box, and any measurements displayed for that Load Session in the Console Results window are removed.
 
 
 ## Viewing Integrated Reports
@@ -413,25 +416,25 @@ The report above shows an Integrated Report that includes four measurements. Eac
 
 1. Right-click a specific measurement from the lower part of the report and select
 
-   **Change Scale** from the pop-up menu,
+    **Change Scale** from the pop-up menu,
 
-   -Or-
+    -Or-
 
-   Double-click a specific measurement from the lower part of the report. The Change Scale dialog box appears.
+    Double-click a specific measurement from the lower part of the report. The Change Scale dialog box appears.
 
-![Change Scale Dialog Box](../images/console_users_guide_2052.jpeg)
+    ![Change Scale Dialog Box](../images/console_users_guide_2052.jpeg)
 
 
 
-2. Select one of the following:
-   - **Auto Adjusted scale** – This uses an automatic scaling algorithm that determines the best way for the measurements to be displayed in the chart view. The scale adjusts itself according to changes in real time and the value adjusts itself according to the scale value. The Y scale of an integrated report for a number of measurements is 0-100. The points of each chart series (specific measurements) are calculated according to the automatic scaling algorithm: Real value \* 100 / scale value.
-   - **User Adjusted scale** – This enables you to manually set the scale value.
+1. Select one of the following:
+    - **Auto Adjusted scale** – This uses an automatic scaling algorithm that determines the best way for the measurements to be displayed in the chart view. The scale adjusts itself according to changes in real time and the value adjusts itself according to the scale value. The Y scale of an integrated report for a number of measurements is 0-100. The points of each chart series (specific measurements) are calculated according to the automatic scaling algorithm: Real value \* 100 / scale value.
+    - **User Adjusted scale** – This enables you to manually set the scale value.
 
-3. Enter the new scale value.
+1. Enter the new scale value.
 
-4. Click **OK**.
+1. Click **OK**.
 
-   The scale of the report for that measurement changes in real time. The scale value for a measurement can also be changed after the test has run.
+    The scale of the report for that measurement changes in real time. The scale value for a measurement can also be changed after the test has run.
 
 
 

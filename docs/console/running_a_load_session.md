@@ -71,7 +71,7 @@ When running a test invoked by the executable, you can specify the following par
 |File name to open|The name of the `*.tpl` or `*.ls` file (Load Template or Load Session file) to run.|Optional parameter|
 |File name to save|The name of the `*.ls` file containing the test data. This file will be saved in the current directory unless otherwise specified.|Optional parameter|
 |Flags|<p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar `<time>` – Automatically run the test for the length of time specified in `<time>`</p><p>- /vc – The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc – The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc *`<results_file_name>`* – Place the results in the specified file (an XML file).</p>|Optional parameter|
-|/ag `<script name>`|The name of an existing script (\*.wlp) to open.|Optional parameter|
+|/ag <script name>|The name of an existing script (\*.wlp) to open.|Optional parameter|
 
 
 The parameters are all optional. If no parameters are entered, the executable launches the Console and does not run a test. If the autorun flag `</ar>` flag is not set, the `<file name to save>` and the `<time>` parameters are ignored.
@@ -87,25 +87,25 @@ The parameters are all optional. If no parameters are entered, the executable la
 
 `WebLOAD.exe test1.tpl`
 
-This command opens the Console and the test1.tpl template. The Console waits for user input.
+This command opens the Console and the `test1.tpl` template. The Console waits for user input.
 
 **Example 2:**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30`
 
-This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.
+This command opens the Console and automatically runs a test using the `test1.tpl` template file. The test results are saved in the Load Session file `march9.ls`, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.
 
 **Example 3:**
 
 `WebLOAD.exe /ag c:\scripts\MyScript.wlp`
 
-This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.
+This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The `MyScript.wlp` script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.
 
 **Example 4:**
 
 `WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml`
 
-This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.
+This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in `result1.xml`.
 
 **Example 5:**
 
