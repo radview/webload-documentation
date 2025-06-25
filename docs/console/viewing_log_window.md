@@ -12,14 +12,14 @@ Before the Load Session begins, you can set the options that affect the way the 
 
 1. Click **Global Options** in the **Tools** tab of the ribbon,
 
-   -Or-
+    -Or-
 
-   Select **Global Options** from the Console System button.
+    Select **Global Options** from the Console System button.
 
 1. Select the **General** tab.
 1. Click the following radio buttons:
-   - Stop Session after n log message
-   - Stop sending log messages after n log messages
+    - Stop Session after n log message
+    - Stop sending log messages after n log messages
 1. Click **OK**.
 
 The following table describes the log window options:
@@ -66,8 +66,6 @@ The Log Window displays:
 
 
 
-
-
 ### Sorting Error Messages
 
 **To sort error messages:**
@@ -105,7 +103,7 @@ The following table describes the Log Window menu commands:
 
 1. Right-click inside the Log Window.
 
-   The Log Window pop-up menu appears.
+    The Log Window pop-up menu appears.
 
 1. Click **Print**.
 
@@ -117,16 +115,16 @@ The following table describes the Log Window menu commands:
 
 1. Right-click inside the Log Window.
 
-   The Log Window pop-up menu appears.
+    The Log Window pop-up menu appears.
 
 1. Select **Save** or **Save As**.
 
-   The Windows Save As dialog box appears.
+    The Windows Save As dialog box appears.
 
 1. Type the name of the file in the File Name field.
 1. Click **Save**.
 
-   The file is saved as a \*.mdb file. The file can be opened using Microsoft Access or Excel.
+    The file is saved as a \*.mdb file. The file can be opened using Microsoft Access or Excel.
 
 
 

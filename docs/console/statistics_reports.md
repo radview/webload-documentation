@@ -44,13 +44,13 @@ By default, WebLOAD Console displays values for its statistics at 20-second inte
 **To change the length of the reporting interval:**
 
 1. Click **Global Options** in the **Tools** tab of the ribbon,
+    
+    -Or-
 
-   -Or-
+    Select **Global Options** from the Console System button.
 
-   Select **Global Options** from the Console System button.
-
-2. Select the **General** tab.
-3. Change the value in the Statistics reporting resolution field to any number of seconds between 1 and 3,600.
+1. Select the **General** tab.
+1. Change the value in the Statistics reporting resolution field to any number of seconds between 1 and 3,600.
 
 
 
@@ -108,7 +108,7 @@ The following list displays the various statistics, by context. The displays the
 - HTTP Response Status
 - Content Size
 - Report statistics – The statistics collected by the reportStatistics command in a Selenium script. Refer to the *Navigation Timing Statistics* table in the *Selenium Integration* appendix of the *WebLOAD™ Recorder User’s Guide*.
-- `<User-Defined>` statistics:
+- <User-Defined> statistics:
   - Automatic Data Collection
   - Timer
   - Counters
@@ -193,6 +193,8 @@ Each cell in the Statistics Report is an access point for another report:
 - Double-click a row heading to display a Summary by Measurement Report.
 - Double-click a column heading to display a Summary by script or Summary by Total Report.
 - Double-click a cell to display a summary report for that statistical measurement.
+
+   ![](../images/console_users_guide_2072.jpeg)
 
 
 
