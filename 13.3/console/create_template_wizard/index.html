@@ -4316,15 +4316,17 @@
 <h2 id="opening-the-webload-wizard">Opening the WebLOAD Wizard</h2>
 <p><strong>To open the WebLOAD Wizard:</strong></p>
 <ol>
-<li>Select <strong>WebLOAD Wizard</strong> from the WebLOAD Startup dialog box,</li>
-</ol>
+<li>
+<p>Select <strong>WebLOAD Wizard</strong> from the WebLOAD Startup dialog box,</p>
 <p>-Or-</p>
 <p>Click <strong>WebLOAD Wizard</strong> in the <strong>Home</strong> tab of the ribbon. The WebLOAD Wizard Welcome dialog box opens.</p>
 <p><img alt="WebLOAD Wizard Welcome Dialog Box" src="../../images/console_users_guide_0134.png" /></p>
-<ol>
-<li>Click <strong>Next</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
 <p>The WebLOAD Wizard progresses to the script/Mix Type dialog box.</p>
+</li>
+</ol>
 <h2 id="selecting-a-script-or-mix">Selecting a script or Mix</h2>
 <p>The next step in a WebLOAD session is to select the type of script you want to run during your test session. A script is the test script used to test your application.</p>
 <p><img alt="Test Type Selection Dialog Box" src="../../images/console_users_guide_0135.png" /></p>
@@ -4352,13 +4354,15 @@
 <ol>
 <li>Click the button to select the source of the script to be used for the test.</li>
 <li>To optionally open and view or edit the selected Script, click <strong>View</strong>. WebLOAD Recorder opens, displaying the selected script.</li>
-<li>To optionally configure runtime options exclusive to this script, click <strong>Options</strong>.</li>
-</ol>
+<li>
+<p>To optionally configure runtime options exclusive to this script, click <strong>Options</strong>.</p>
 <p>The Script Options dialog box opens enabling you to define the runtime options for the selected script. </p>
-<ol>
-<li>Click <strong>Next</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
 <p>The WebLOAD Wizard progresses to the Host Selection dialog box. See <a href="#selecting-host-computers"><em>Selecting Host Computers</em> </a>.</p>
+</li>
+</ol>
 <h2 id="selecting-a-mix">Selecting a Mix</h2>
 <p>The WebLOAD Wizard enables you to run your test using a saved Mix or to create a new Mix of scripts through the wizard. If you do not have any scripts to work with, to create a Mix, you must exit the wizard, and create a script using one of the authoring tools, such as WebLOAD Recorder.</p>
 <p><img alt="Mix Selection Dialog Box" src="../../images/console_users_guide_0138.png" /></p>
@@ -4366,18 +4370,20 @@
 <ol>
 <li>
 <p>Select the source of the Mix to be used for the test on the Mix Selection screen:</p>
-</li>
+<ul>
 <li>
 <p>Select <strong>Use an Existing Mix</strong> and click the button to select an existing Mix (*.mix) from your system.</p>
 </li>
 <li>
 <p>Select <strong>Create a Mix</strong> to build a new Mix.</p>
 </li>
+</ul>
+</li>
 <li>
 <p>Click <strong>Next</strong>.</p>
+<p>WebLOAD Console progresses to the Mix Creation dialog box. </p>
 </li>
 </ol>
-<p>WebLOAD Console progresses to the Mix Creation dialog box. </p>
 <h3 id="creating-a-mix">Creating a Mix</h3>
 <p>A Mix is a set of scripts, each performing different activity, to simulate groups of users performing different activities on the SUT at the same time. If you selected <strong>Use an Existing Mix</strong> on the script / Mix Selection screen, the selected Mix appears on the screen, enabling you to modify the Mix. You can also create a new Mix.</p>
 <p><img alt="Mix Creation Dialog Box" src="../../images/console_users_guide_0140.png" /></p>
@@ -4388,63 +4394,46 @@
 </li>
 <li>
 <p>Specify whether the relative weights of the script refer to execution time or to number of virtual clients:</p>
-</li>
-<li>
-<p><strong>Based on the number of virtual clients</strong> – The mix interprets the relative weights in terms of number of virtual users. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution runs script A with 25% of the virtual users and script B with 75% of the users.</p>
-</li>
-<li>
-<p><strong>Based on the execution time</strong> – The mix interprets the relative weights in terms of time. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution run script A for 25% of the time and script B for 75% of the time.</p>
+<ul>
+<li><strong>Based on the number of virtual clients</strong> – The mix interprets the relative weights in terms of number of virtual users. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution runs script A with 25% of the virtual users and script B with 75% of the users.</li>
+<li><strong>Based on the execution time</strong> – The mix interprets the relative weights in terms of time. For example, if the weight of Script A is 25 and of Script B is 75, the mix execution run script A for 25% of the time and script B for 75% of the time.</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>Add</strong>.</p>
-</li>
-</ol>
 <p>The Open dialog box appears, enabling you to select the Script to add to the Mix.</p>
-<ol>
+</li>
 <li>
 <p>Select a script from your file system and click <strong>Open</strong>. The script is added to the Mix.</p>
 </li>
 <li>
 <p>Optionally, select the script and set any of the following parameters:</p>
-</li>
-<li>
-<p><strong>Script</strong> – Specify a name for the script and its particular settings.</p>
+<p>a. <strong>Script</strong> – Specify a name for the script and its particular settings.</p>
 <p>Keep in mind that in a mix, in addition to running different scripts, you can also run the same script under different settings. For example, a mix can contain two items: Script A running on Chrome, and the same Script A running on Mozilla Firefox. Give a different descriptive name to each of the two mix items.</p>
-</li>
-<li>
-<p><strong>Weight</strong> – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.</p>
-</li>
-<li>
-<p><strong>Browser</strong> and <strong>Version</strong> – Select the browser type and browser version. Alternatively, click the Change button <img alt="" src="../../images/console_users_guide_0141.png" /> to edit the user agent definition. </p>
-</li>
-<li>
-<p><strong>Bandwidth</strong> – Specify a bandwidth. You can do this in one of two ways:</p>
-<ul>
-<li>Select a bandwidth from the drop-down list.</li>
-<li>Enter a number, to specify that number of bits per second.</li>
-</ul>
-</li>
-<li>
-<p><strong>Max Connections</strong> – Specify the number of max connections for the load generator.</p>
+<p>b. <strong>Weight</strong> – Specify the relative weight of this script, as a positive whole number. The application will run each script based on its weight in relation to the total of weights. When the total of weights is 100, the weight is equivalent to a percentage; however, this is not required. For example, if you specified a weight of 1 for Script A and a weight of 3 for Script B, then the system assigns script A a relative weight of 1/4, and to Script B the relative weight of 3/4. This is equivalent to a weight of 25 for Script A and 75 for Script B; in both cases, Script A will run 25% of the rounds, and Script B will run 75% of the rounds.</p>
+<p>c. <strong>Browser</strong> and <strong>Version</strong> – Select the browser type and browser version. Alternatively, click the Change button <img alt="" src="../../images/console_users_guide_0141.png" /> to edit the user agent definition. </p>
+<p>d. <strong>Bandwidth</strong> – Specify a bandwidth. You can do this in one of two ways:</p>
+<div class="language-text highlight"><pre><span></span><code>     - Select a bandwidth from the drop-down list.
+     - Enter a number, to specify that number of bits per second.
+</code></pre></div>
+<p>e. <strong>Max Connections</strong> – Specify the number of max connections for the load generator.</p>
 </li>
 <li>
 <p>Optionally, click <strong>Options</strong> to set any of the settings available from the Script Options dialog box (such as the browser to emulate, connection settings and playback sleep options). This will change the settings of the currently selected item only.</p>
-</li>
-</ol>
 <p>The Script Options dialog box opens. For information on setting the Script Options, see <a href="../set_script_options/"><em>Setting Script Options</em> </a>.</p>
-<ol>
+</li>
 <li>
 <p>Repeat steps 2 through 5 to add additional scripts to the Mix.</p>
 </li>
 <li>
 <p>Click <strong>Save</strong>.</p>
+<p>The Mix configuration is saved with the extension *.mix.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+<p>The WebLOAD Wizard progresses to the Host Selection dialog box. See <a href="#selecting-host-computers"><em>Selecting Host Computers</em> </a>.</p>
 </li>
 </ol>
-<p>The Mix configuration is saved with the extension *.mix.</p>
-<ol>
-<li>Click <strong>Next</strong>.</li>
-</ol>
-<p>The WebLOAD Wizard progresses to the Host Selection dialog box. See <a href="#selecting-host-computers"><em>Selecting Host Computers</em> </a>.</p>
 <h4 id="deleting-a-script-from-a-mix">Deleting a script from a Mix</h4>
 <p><strong>To delete a script from a Mix:</strong></p>
 <ol>
@@ -4486,10 +4475,10 @@
 <p>Note that you can use the same Amazon cloud account to create multiple WebLOAD cloud accounts. For example, to simulate a scenario where some users are located in US East and some in EU West, create two WebLOAD cloud accounts. Enter the same Amazon cloud account credentials in both, but specify a different region for each.</p>
 <p><strong>To create WebLOAD cloud accounts in WebLOAD Console:</strong></p>
 <ol>
-<li>Click <strong>Cloud Options</strong> in the <strong>Tools</strong> tab of the ribbon. The Cloud Accounts dialog box appears.</li>
-</ol>
+<li>
+<p>Click <strong>Cloud Options</strong> in the <strong>Tools</strong> tab of the ribbon. The Cloud Accounts dialog box appears.</p>
 <p><img alt="Cloud Accounts Dialog Box" src="../../images/console_users_guide_0145.png" /></p>
-<ol>
+</li>
 <li>
 <p>Click <strong>Add</strong> to define a WebLOAD cloud account.</p>
 </li>
@@ -4498,14 +4487,10 @@
 </li>
 <li>
 <p>Enter the Amazon cloud security credentials in the <strong>Access Key ID</strong> and <strong>Secret Access Key</strong> fields. To determine the security credentials, perform the following:</p>
-</li>
-<li>
-<p>Log into your EC2 Amazon account and click <strong>Your Account &gt; Security Credentials</strong>. A dialog box appears displaying your Access Key ID. Your Secret Access Key is hidden by default.</p>
-</li>
-<li>Click <strong>Show</strong> to display the Secret Access Key.</li>
-</ol>
+<p>a. Log into your EC2 Amazon account and click <strong>Your Account &gt; Security Credentials</strong>. A dialog box appears displaying your Access Key ID. Your Secret Access Key is hidden by default.
+  b. Click <strong>Show</strong> to display the Secret Access Key.</p>
 <p>Alternatively, in the Cloud Accounts window, click <strong>here</strong> to open the Amazon AWS Accounts screen. In this screen you can create an Amazon cloud account, or enter your Amazon credentials if you had already created an Amazon cloud account.</p>
-<ol>
+</li>
 <li>
 <p>In the <strong>Region</strong> drop-down box, you can select a specific Amazon data-center for use, by region. In the adjacent field you can optionally enter a specific URL for the cloud end-point. Any end-point which supports the EC2 API is a valid option for this field.</p>
 </li>
@@ -4531,8 +4516,12 @@
 </ul>
 <p>Keep in mind the following:</p>
 <ul>
-<li>It takes Amazon approximately 15 minutes to prepare the Cloud Machines. If you select <strong>Stop Always</strong>, this process will need to be repeated after every session stop, even if you want to run multiple sessions or if you stopped a session prematurely with the intention of restarting the session immediately.</li>
-<li>If you select <strong>Don’t Stop</strong>, the Cloud Machines will not be automatically stopped when you end a session. This means that you will continue to be charged for those machines even after a session ends successfully. Click <strong>Terminate Cloud Machines</strong> in the <strong>Tools</strong> tab of the ribbon to manually shut down the Cloud Machines and stop the payment timer.</li>
+<li>
+<p>It takes Amazon approximately 15 minutes to prepare the Cloud Machines. If you select <strong>Stop Always</strong>, this process will need to be repeated after every session stop, even if you want to run multiple sessions or if you stopped a session prematurely with the intention of restarting the session immediately.</p>
+</li>
+<li>
+<p>If you select <strong>Don’t Stop</strong>, the Cloud Machines will not be automatically stopped when you end a session. This means that you will continue to be charged for those machines even after a session ends successfully. Click <strong>Terminate Cloud Machines</strong> in the <strong>Tools</strong> tab of the ribbon to manually shut down the Cloud Machines and stop the payment timer.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -4542,53 +4531,47 @@
 <h3 id="adding-host-computers">Adding Host Computers</h3>
 <p><strong>To add a host computer:</strong></p>
 <ol>
-<li>In the Host Selection dialog box, click <strong>Add</strong>. The Add Host Computer dialog box appears.</li>
-</ol>
+<li>
+<p>In the Host Selection dialog box, click <strong>Add</strong>. The Add Host Computer dialog box appears.</p>
 <p><img alt="Add Host Computer Dialog Box" src="../../images/console_users_guide_0146.png" /></p>
-<ol>
+</li>
 <li>
 <p>To add a local host computer, select <strong>Add by host name or IP address</strong> and enter the host computer name or IP address in the <strong>Address</strong> field.</p>
 </li>
 <li>
 <p>To add cloud host machines:</p>
-</li>
-</ol>
-<p>Select <strong>Add Cloud host</strong>.</p>
-<ol>
-<li>
+<p>a.Select <strong>Add Cloud host</strong>.</p>
 <p>If you have not yet created a WebLOAD cloud account, a dialog box appears. Click <strong>OK</strong> and the Cloud Accounts dialog box appears. Create one or more WebLOAD cloud accounts as described in <a href="#creating-webload-cloud-accounts"><em>Creating WebLOAD Cloud Accounts</em> </a>.</p>
-</li>
-<li>
-<p>Select a WebLOAD cloud account from the <strong>Name</strong> drop-down box.</p>
-</li>
-<li>
-<p>In the <strong>Number of Machines</strong> field, enter the number of machines you wish to add from the selected WebLOAD cloud account.</p>
-</li>
-<li>
-<p>Repeat steps [b] to specify machines from another WebLOAD cloud account.</p>
+<p>b. Select a WebLOAD cloud account from the <strong>Name</strong> drop-down box.</p>
+<p>c. In the <strong>Number of Machines</strong> field, enter the number of machines you wish to add from the selected WebLOAD cloud account.</p>
+<p>d. Repeat steps [b] to specify machines from another WebLOAD cloud account.</p>
 <p>Optionally, click <strong>Cloud Options</strong> to add or modify WebLOAD cloud accounts. The Cloud Accounts dialog box appears. For information about the available actions, refer to the explanations following.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
-</li>
+<ul>
 <li>
 <p>If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.</p>
 </li>
 <li>
 <p>If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “<code>&lt;*WebLOAD Cloud Account Name*&gt;</code>&lt;<em>X</em>&gt;” where X is a number that is incremented for each added cloud host machine.</p>
 </li>
-</ol>
+</ul>
 <p>For defining host computers as Load Machines and Probing Clients, see <a href="#designating-a-host-computer-as-a-load-machine"><em>Designating a Host Computer as a Load Machine</em> </a>, and <a href="#designating-a-host-computer-as-a-probing-client-machine"><em>Designating a Host Computer as a Probing Client Machine</em> </a>.</p>
+</li>
+</ol>
 <h3 id="designating-a-host-computer-as-a-load-machine">Designating a Host Computer as a Load Machine</h3>
 <p><strong>To designate a host computer as a Load Machine:</strong></p>
 <ol>
-<li>Select the host from the Host Computers window and click the single arrow key adjacent to the Load Machine window.</li>
-</ol>
+<li>
+<p>Select the host from the Host Computers window and click the single arrow key adjacent to the Load Machine window.</p>
 <p>-Or-</p>
 <p>Double-click the host.</p>
 <p>The selected host moves to the Load Machines window.</p>
-<ol>
-<li>To designate additional Load Machines repeat steps 1 and 2.</li>
+</li>
+<li>
+<p>To designate additional Load Machines repeat steps 1 and 2.</p>
+</li>
 </ol>
 <p>After assigning all Load Machines and Probing Client Machines, click <strong>Next</strong>. The wizard progresses to the Schedule dialog box. See <a href="#scheduling-the-load-session"><em>Scheduling the Load Session</em> </a>.</p>
 <h3 id="designating-all-host-computers-as-load-machines">Designating all Host Computers as Load Machines</h3>
@@ -4611,13 +4594,15 @@
 <h3 id="replacing-a-load-machine-or-probing-client-machine">Replacing a Load Machine or Probing Client Machine</h3>
 <p><strong>To replace a Load Machine or Probing Client Machine:</strong></p>
 <ol>
-<li>From the Host Selection dialog box, select the host computer in the Load Machines or Probing Client Machine window and click the left arrow button   .</li>
-</ol>
+<li>
+<p>From the Host Selection dialog box, select the host computer in the Load Machines or Probing Client Machine window and click the left arrow button   .</p>
 <p>-Or-</p>
 <p>In the Load Machines window, double-click the host computer.</p>
 <p>The host computer is moved from the Load Machines or Probing Client Machine window to the Host Computers window.</p>
-<ol>
-<li>From the Host Computers window, select a host computer.</li>
+</li>
+<li>
+<p>From the Host Computers window, select a host computer.</p>
+</li>
 <li>Click the right arrow button.
    The host computer is moved from the Host Computers window to the Load Machines or Probing Client Machine window.</li>
 </ol>
@@ -4625,9 +4610,11 @@
 <p><strong>To delete a host computer:</strong></p>
 <ol>
 <li>Select the host name from the Host Computers list.</li>
-<li>Click <strong>Delete</strong>.</li>
-</ol>
+<li>
+<p>Click <strong>Delete</strong>.</p>
 <p>The host is deleted from the Host Computers list.</p>
+</li>
+</ol>
 <h2 id="scheduling-the-load-session">Scheduling the Load Session</h2>
 <p>When you schedule a test session, you define the load to be generated throughout the Load Session.</p>
 <p>Use the Schedule dialog box to plan your test session.</p>
@@ -4636,20 +4623,18 @@
 <ol>
 <li>
 <p>Define how you want to distribute the load between the Load Machines running the script.</p>
-</li>
-<li>
-<p>Select <strong>Individual scheduling</strong> to instruct WebLOAD Console how to distribute the load over the Load Machines throughout the test.</p>
-</li>
-<li>
-<p>Select <strong>Collective scheduling</strong> to distribute the load evenly between the Load Machines.</p>
+<ul>
+<li>Select <strong>Individual scheduling</strong> to instruct WebLOAD Console how to distribute the load over the Load Machines throughout the test.</li>
+<li>Select <strong>Collective scheduling</strong> to distribute the load evenly between the Load Machines.</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>If you selected <strong>Collective scheduling</strong>, the WebLOAD Wizard progresses to the Collective Scheduling screen. </p>
-</li>
+<ul>
+<li>If you selected <strong>Collective scheduling</strong>, the WebLOAD Wizard progresses to the Collective Scheduling screen. </li>
 <li>If you selected <strong>Individual scheduling</strong>, the Wizard progresses to the Individual Scheduling screen. </li>
+</ul>
+</li>
 </ol>
 <h3 id="collectively-distributing-the-load">Collectively Distributing the Load</h3>
 <p>WebLOAD simplifies the process of scheduling the test session by enabling you to automatically distribute the load between the Load Machines, saving you the time of creating a load schedule for each Load Machine individually.</p>
@@ -4663,34 +4648,32 @@
 <h4 id="creating-a-collective-load-schedule">Creating a Collective Load Schedule</h4>
 <p><strong>To create a collective load schedule manually:</strong></p>
 <ol>
-<li>Enter the number of days and the starting time to generate the load in the From field.</li>
-</ol>
+<li>
+<p>Enter the number of days and the starting time to generate the load in the From field.</p>
 <p>The starting time is defined for each particular script relative to the beginning of the test session.</p>
 <p><strong>Note:</strong> Days are numbered 00 through to 99. Following them are hours:minutes:seconds. Seconds are numbered 1 through 59. To enter one minute, use the 1:00 syntax not 00:60.</p>
-<ol>
-<li>Enter the number of days and the ending time to generate the load in the To field.</li>
-</ol>
+</li>
+<li>
+<p>Enter the number of days and the ending time to generate the load in the To field.</p>
 <p>The ending time is defined for each particular script relative to the beginning of the test session.</p>
 <p>If the To field is left blank, WebLOAD Console continues generating the load until the From time in the next entry for this script, or, if this is the last entry for this script, until the test session is stopped manually.</p>
-<ol>
+</li>
 <li>
 <p>Under Load Size enter the number of Virtual Clients to generate during the time frame defined in steps 1 and 2. The load is distributed equally among the Load Machines defined for the script.</p>
 </li>
 <li>
 <p>Optionally, schedule additional Virtual Client loads for this script:</p>
-</li>
-<li>
-<p>Click <strong>Add</strong> to add a blank line to the schedule grid.</p>
-</li>
-<li>
-<p>Repeat steps 1 through 3.</p>
+<ol>
+<li>Click <strong>Add</strong> to add a blank line to the schedule grid.</li>
+<li>Repeat steps 1 through 3.</li>
+</ol>
 </li>
 <li>
 <p>Click <strong>Next</strong>.</p>
-</li>
-</ol>
 <p>WebLOAD Console displays the Finish dialog box.</p>
 <p>The WebLOAD Wizard continues the configuration process with the Finish dialog box. For further instructions, see <a href="#completing-the-webload-wizard"><em>Completing the WebLOAD Wizard</em> </a>.</p>
+</li>
+</ol>
 <h4 id="limiting-a-run-by-number-of-rounds">Limiting a Run by Number of Rounds</h4>
 <p><strong>To limit a run by the number of rounds</strong></p>
 <ul>
@@ -4703,7 +4686,8 @@
 <p>Select an entry in the schedule grid by clicking it to enable the Load Profiler button for that entry.</p>
 </li>
 <li>
-<p>Click the Load Profiler button. The Load Profiler opens.</p>
+<p>Click the Load Profiler button. The Load Profiler opens.
+    <img alt="" src="../../images/console_users_guide_0155.jpeg" /></p>
 </li>
 <li>
 <p>Select a schedule pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see <a href="#scheduling-models"><em>Scheduling Models</em> </a>.</p>
@@ -4713,10 +4697,10 @@
 </li>
 <li>
 <p>Click <strong>Append</strong> to include the load definition in the schedule,</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Click <strong>Replace</strong> to substitute the load definition for the one appearing in the Schedule dialog box.</p>
+</li>
+</ol>
 <h3 id="individually-scheduling-the-load">Individually Scheduling the Load</h3>
 <p>You can schedule the load to be generated on each Load Machine participating in the test session individually, enabling you to distribute the load based on the strengths of the Load Machines running in the test session.</p>
 <p><img alt="Individual Scheduling Dialog Box" src="../../images/console_users_guide_0153.png" /></p>
@@ -4730,56 +4714,57 @@
 <p>Limit the run by time, by number of rounds, or both. If you limit the run by setting both a time condition and a number of rounds condition, then the run will stop as soon as one of the conditions is fulfilled</p>
 </li>
 </ol>
-<p>To limit the run by time, perform the following for each Load Machine or Probing Client Machine defined in the Session Tree.</p>
+<p>1.To limit the run by time, perform the following for each Load Machine or Probing Client Machine defined in the Session Tree.</p>
+<div class="language-text highlight"><pre><span></span><code>a. Enter the number of days and the starting time, to generate the load in the **From** field.
+
+ The starting time is defined for each particular script relative to the beginning of the test session.
+
+  **Note:** Days are numbered 00 through to 99. Following the days are the hours, minutes, and seconds in the following format: hours:minutes:seconds. Seconds are numbered 1 through 59. To enter one minute, use the 1:00 syntax not 00:60.
+
+  a. Enter the number of days and the ending time, to generate the load in the **To** field.
+
+   The ending time is defined for each particular script relative to the beginning of the test session. If the **To** field is left blank, WebLOAD Console continues generating the load until the From time in the next entry for this Load Machine, or if this is the last entry, until the test session is stopped manually.
+</code></pre></div>
 <ol>
-<li>
-<p>Enter the number of days and the starting time, to generate the load in the <strong>From</strong> field.</p>
-</li>
-<li>
-<p>The starting time is defined for each particular script relative to the beginning of the test session.</p>
-<p><strong>Note:</strong> Days are numbered 00 through to 99. Following the days are the hours, minutes, and seconds in the following format: hours:minutes:seconds. Seconds are numbered 1 through 59. To enter one minute, use the 1:00 syntax not 00:60.</p>
-</li>
-<li>
-<p>Enter the number of days and the ending time, to generate the load in the <strong>To</strong> field.</p>
-</li>
-<li>
-<p>The ending time is defined for each particular script relative to the beginning of the test session. If the <strong>To</strong> field is left blank, WebLOAD Console continues generating the load until the From time in the next entry for this Load Machine, or if this is the last entry, until the test session is stopped manually.</p>
-</li>
 <li>
 <p>In the <strong>Virtual Clients</strong> field enter the number of Virtual Clients to generate during the time frame defined in steps (a) and (b).</p>
 </li>
 <li>
 <p>You can optionally schedule additional Virtual Client loads for this Load Machine:</p>
-<ol>
-<li>Click <strong>Add</strong> to add a blank line to the schedule grid.</li>
-<li>Repeat steps (a) through (c).</li>
-</ol>
+<div class="language-text highlight"><pre><span></span><code>1. Click **Add** to add a blank line to the schedule grid.
+1. Repeat steps (a) through (c).
+</code></pre></div>
 </li>
 <li>
 <p>To limit the run by number of rounds, enter the number of rounds in the <strong>Limit Run to</strong> field.</p>
 </li>
 <li>
 <p>Click <strong>Next</strong>.</p>
+<p>The WebLOAD Wizard continues the configuration process with the Finish screen. For further instructions, go to <a href="#completing-the-webload-wizard"><em>Completing the WebLOAD Wizard</em> </a>.</p>
 </li>
 </ol>
-<p>The WebLOAD Wizard continues the configuration process with the Finish screen. For further instructions, go to <a href="#completing-the-webload-wizard"><em>Completing the WebLOAD Wizard</em> </a>.</p>
 <h4 id="scheduling-a-session-individually-with-the-load-profiler">Scheduling a Session Individually with the Load Profiler</h4>
 <p><strong>To schedule a session individually with the Load Profiler:</strong></p>
 <ol>
-<li>Click the <strong>Load Profiler</strong> button.</li>
-</ol>
+<li>
+<p>Click the <strong>Load Profiler</strong> button.</p>
 <p>The Load Profiler opens.</p>
-<p><em>Figure 58: Load Profiler</em></p>
-<ol>
-<li>Select a pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see <a href="#scheduling-models"><em>Scheduling Models</em> </a>.</li>
+<p><img alt="" src="../../images/console_users_guide_0155.jpeg" /></p>
+</li>
+<li>
+<p>Select a pattern from the Scheduling model field at the top of the dialog box. For an explanation of each model, see <a href="#scheduling-models"><em>Scheduling Models</em> </a>.</p>
+</li>
 <li>Fill in the fields at the bottom of the dialog box.</li>
-<li>Click <strong>Append</strong> to include the load definition in the schedule,</li>
-</ol>
+<li>
+<p>Click <strong>Append</strong> to include the load definition in the schedule,</p>
 <p>-Or-</p>
 <p>Click <strong>Replace</strong> to substitute the load definition for the setting in the Schedule dialog box.</p>
+</li>
+</ol>
 <h3 id="scheduling-models">Scheduling Models</h3>
 <p>WebLOAD Console includes numerous scheduling models to provide a wide variety of options and aid you in quickly achieving a schedule that meets you testing goals.</p>
 <h4 id="linear-scheduling-model">Linear Scheduling Model</h4>
+<p><img alt="" src="../../images/console_users_guide_0155.jpeg" /></p>
 <p>The linear model increases the load with linearly increasing values. Using this model you need to define:</p>
 <ul>
 <li><strong>Total time in minutes</strong> ‒ the number of minutes to generate the load using this model.</li>

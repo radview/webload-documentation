@@ -4162,15 +4162,15 @@
 <h2 id="setting-the-ssl-options">Setting the SSL Options</h2>
 <p><strong>To access and configure the SSL tab options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>SSL</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>SSL</strong> tab.</p>
 <p><img alt="Current Session Options SSL Tab" src="../../images/console_users_guide_1089.png" /></p>
-<ol>
+</li>
 <li>
 <p>Check <strong>SSL Bit Limit</strong> and select the highest SSL Bit Limit available between the Virtual Clients and the server.</p>
 </li>
@@ -4182,18 +4182,18 @@
 <p>Sleep time is a pause to simulate the intermittent activity of real users. WebLOAD Console enables you to set a script to execute with the sleep times recorded in the script, random sleep times or no sleep times at all.</p>
 <p><strong>To set sleep time playback settings:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Sleep Time Control</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Sleep Time Control</strong> tab.</p>
 <p><img alt="Current Session Options Sleep Time Control Tab" src="../../images/console_users_guide_1090.png" /></p>
-<ol>
+</li>
 <li>
 <p>In <strong>Playback Sleep Time</strong>, specify the type of sleep to use when playing back the script:</p>
-</li>
+<ul>
 <li>
 <p>Select <strong>Sleep time as recorded</strong> (default) to run the script with the delays corresponding to the natural pauses that occurred when recording the script. <strong>Max time</strong> provides an option of restricting playback of length sleep times, to no more than a specified number of seconds.</p>
 </li>
@@ -4206,9 +4206,11 @@
 <li>
 <p>Select <strong>Set sleep time deviation</strong> and set which percentage of the recorded sleep time to use when running the script.</p>
 </li>
+</ul>
+</li>
 <li>
 <p>In <strong>Sleep Time in Transactions</strong>, specify how to calculate and display transaction timers:</p>
-</li>
+<ul>
 <li>
 <p><strong>Transaction timers include sleep time (‘Transaction Time’)</strong> – If you select this option, then if a transaction includes sleep commands, by default the sleep times will be included in the transaction time. The transaction time measurement will be called “Transaction <em><code>&lt;transaction name&gt;</code></em> Time”.</p>
 </li>
@@ -4221,6 +4223,8 @@
 <li>
 <p><strong>Both timers – including and excluding sleep time</strong> – If you select this option, then if a transaction includes a sleep command, by default, two timers will be displayed. One timer, called “Transaction <em><code>&lt;transaction name&gt;</code></em> Time”, will show the transaction time if sleep time is included in the transaction time. The second timer, called “Transaction <em><code>&lt;transaction name&gt;</code></em> Net Time”, will show the transaction time if sleep time is excluded from the transaction time.</p>
 </li>
+</ul>
+</li>
 <li>
 <p>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/ Current Session Options dialog box.</p>
 </li>
@@ -4229,19 +4233,21 @@
 <p>The WebLOAD Recorder enables you to define round termination settings.</p>
 <p><strong>To define the round termination behavior:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Terminate Round</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Terminate Round</strong> tab.</p>
 <p>The Terminate Round tab moves to the front of the dialog box.</p>
 <p><img alt="Current Session Options Terminate Round Tab" src="../../images/console_users_guide_1092.png" /></p>
-<ol>
-<li>In the <strong>Terminate round options</strong> section, you can specify whether to complete a round even if a Stop command is received, as described in the following table.</li>
-<li>In the <strong>Round timeout</strong> section, you can set the timeout period of a single round and the behavior of the system in cases where the timeout is reached, as described in the following table.</li>
-</ol>
+</li>
+<li>
+<p>In the <strong>Terminate round options</strong> section, you can specify whether to complete a round even if a Stop command is received, as described in the following table.</p>
+</li>
+<li>
+<p>In the <strong>Round timeout</strong> section, you can set the timeout period of a single round and the behavior of the system in cases where the timeout is reached, as described in the following table.</p>
 <table>
 <thead>
 <tr>
@@ -4280,21 +4286,25 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ol>
 <h2 id="setting-the-browser-cache">Setting the Browser Cache</h2>
 <p>The WebLOAD Recorder enables you to define the behavior of the cache that WebLOAD Console uses in order to simulate the behavior of a browser’s cache. WebLOAD can cache JavaScript files, style sheets, images, applets, and XML files.</p>
 <p><strong>To define the browser cache behavior:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Cache</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Cache</strong> tab.</p>
 <p>The Browser Cache tab moves to the front of the dialog box.</p>
 <p><img alt="Current Session Options Brower Cache Tab" src="../../images/console_users_guide_1093.png" /></p>
-<ol>
-<li>From the <strong>Browser Cache Types</strong> drop-down list, select <strong>Load Generator</strong> or <strong>Probing Client</strong>. .</li>
+</li>
+<li>
+<p>From the <strong>Browser Cache Types</strong> drop-down list, select <strong>Load Generator</strong> or <strong>Probing Client</strong>. .</p>
+</li>
 <li>Select the type of cache and the content to filter according to the following table and click <strong>OK</strong>.</li>
 </ol>
 <table>
@@ -4351,184 +4361,212 @@
 <p>Each of these configuration options is described in this section.</p>
 <p><strong>To configure the Browser Parameters options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
 <p><img alt="Current Session Options Browser Parameters Tab" src="../../images/console_users_guide_1094.png" /></p>
-<ol>
+</li>
 <li>
 <p>Check the browser features you wish to use. Each option is described in this section.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/ Current Session Options dialog box.</p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> The script (coded to account for a particular option) always overrides the Browser Parameters options. WebLOAD recommends always setting these options through the Console user interface.</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="setting-the-browser-type-and-version">Setting the Browser Type and Version</h3>
 <p>The browser type and version settings specify the type of browser the WebLOAD Virtual Clients should emulate. You can set WebLOAD Console to emulate any of the standard browsers, or you can specify any specific application by supplying a custom user-agent that is included in all HTTP headers. By default, all Virtual Clients use the WebLOAD Default browser agent.</p>
 <p><strong>To set the browser type and user-agent:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-<li>Select a browser type from the <strong>Select the browser type</strong> drop-down list.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
+</li>
+<li>
+<p>Select a browser type from the <strong>Select the browser type</strong> drop-down list.</p>
 <p>Note that by default, the browser type and version are <strong>As recorded</strong>, which means: as recorded in the WebLOAD Recorder.</p>
 <p><img alt="Browser Type Drop-Down List" src="../../images/console_users_guide_1095.png" /></p>
-<ol>
-<li>You can select an alternative version from the drop-down list, or click the Browse button to add a new user agent definition. See <a href="#adding-a-browser-version-definitions">Adding a Browser Version Definitions </a>.</li>
+</li>
+<li>
+<p>You can select an alternative version from the drop-down list, or click the Browse button to add a new user agent definition. See <a href="#adding-a-browser-version-definitions">Adding a Browser Version Definitions </a>.</p>
+</li>
 </ol>
 <h4 id="adding-a-browser-version-definitions">Adding a Browser Version Definitions</h4>
 <p>The available browser version list is appropriate for the browser type you select. You can add to the browser version list.</p>
 <p><strong>To add a browser version:</strong></p>
 <ol>
 <li>Select <strong>Custom</strong> in the <strong>Select the browser type</strong> drop-down list within the <strong>Browser Type</strong> area of the Browser Parameters tab.</li>
-<li>Click the browse button adjacent to <strong>Select the version</strong>. The User Agent dialog box appears.</li>
-</ol>
+<li>
+<p>Click the browse button adjacent to <strong>Select the version</strong>. The User Agent dialog box appears.</p>
 <p><img alt="User Agent Dialog Box" src="../../images/console_users_guide_1097.jpeg" /></p>
-<ol>
-<li>Enter the new browser version definition.</li>
+</li>
+<li>
+<p>Enter the new browser version definition.</p>
+</li>
 <li>Click <strong>OK</strong>.</li>
 </ol>
 <h3 id="setting-load-generator-and-probing-client-max-connections">Setting Load Generator and Probing Client Max Connections</h3>
 <p><strong>To set the Load Generator and Probing Client multiple connection settings:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
+</li>
 <li>
 <p>Set the max connection properties as follows in the <strong>Max Connections</strong> section:</p>
-</li>
-<li>
-<p>To enable multiple connections for Probing Clients, check the <strong>Probing Client</strong> checkbox. If you enable multiple connections, select the number of connections from the drop down list.</p>
-</li>
+<ul>
+<li>To enable multiple connections for Probing Clients, check the <strong>Probing Client</strong> checkbox. If you enable multiple connections, select the number of connections from the drop down list.</li>
 <li>To enable multiple connections for Load Generators, check the <strong>Load Generator</strong> checkbox. If you enable multiple connections, select the number of connections from the drop down list.</li>
-</ol>
+</ul>
 <p><img alt="Max Connections" src="../../images/console_users_guide_1098.png" /></p>
+</li>
+</ol>
 <h3 id="setting-redirection-limits">Setting Redirection Limits</h3>
 <p><strong>To set a redirection limit:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-<li>Select <strong>Enable redirection</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
+</li>
+<li>
+<p>Select <strong>Enable redirection</strong>.</p>
 <p><img alt="Redirection Properties" src="../../images/console_users_guide_1099.jpeg" /></p>
-<ol>
-<li>In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.</li>
+</li>
+<li>
+<p>In the Redirection limit field, type or select the desired redirection limit. The default limit is 10.</p>
+</li>
 </ol>
 <h3 id="simulating-dns-cache">Simulating DNS Cache</h3>
 <p>When DNS Caching is enabled (default), WebLOAD Console caches the IP addresses received from the domain name server, reducing the domain name resolution time. Disable DNS caching if you want to include the time for domain name resolution in the WebLOAD Console performance statistics.</p>
 <p><strong>To simulate DNS cache:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
 <p>Under DNS Cache, select <strong>Probing Client</strong> and <strong>Load Generator</strong>.</p>
 <p><img alt="DNS Cache Properties" src="../../images/console_users_guide_1100.jpeg" /></p>
+</li>
+</ol>
 <h3 id="simulating-ssl-cache">Simulating SSL Cache</h3>
 <p>When SSL Caching is enabled (default), WebLOAD Console caches the SSL decoding keys received from an SSL server, and WebLOAD Console only receives the key on the first SSL connection in each round. In subsequent connections, WebLOAD Console retrieves the key from cache. Enabling SSL Cache also reduces transmission time during SSL communication. Disable SSL caching if you want to measure the transmission time of the decoding key in the WebLOAD Console performance statistics for each SSL connection.</p>
 <p><strong>To simulate SSL cache:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
 <p>Under SSL Cache, select <strong>Probing Client</strong> and <strong>Load Generator</strong>.</p>
 <p><img alt="SSL Cache Properties" src="../../images/console_users_guide_1101.jpeg" /></p>
+</li>
+</ol>
 <h3 id="enabling-persistent-connection-keep-alive">Enabling Persistent Connection (Keep-Alive)</h3>
 <p>When enabled, WebLOAD Console keeps an HTTP connection alive between successive accesses in the same round of the main script. Keeping a connection alive saves time between accesses. WebLOAD Console attempts to keep the connection alive unless you switch to a different server. However, some HTTP servers may refuse to keep a connection alive. You should not keep a connection alive if establishing the connection is part of the performance test.</p>
 <p><strong>To enable persistent connection:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
 <p>Under Persistent Connection, select <strong>Probing Client</strong> and <strong>Load Generator</strong>.</p>
 <p><img alt="Persistent Connection Properties" src="../../images/console_users_guide_1102.jpeg" /></p>
+</li>
+</ol>
 <h3 id="enabling-gzip-support">Enabling GZip Support</h3>
-<p>Enabling GZip support sets the wlGlobals.AcceptEncodingGzip flag. For each request, WebLOAD Console sends the header “Accept-Encoding: gzip, deflate”. This tells the server that the client can accept zipped content. When this header is turned on, the server MAY send a response with the header “content-encoding: gzip” or “content- encoding: deflate”. If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Console will unzip/inflate the content.</p>
+<p>Enabling GZip support sets the <code>wlGlobals.AcceptEncodingGzip</code> flag. For each request, WebLOAD Console sends the header “Accept-Encoding: gzip, deflate”. This tells the server that the client can accept zipped content. When this header is turned on, the server MAY send a response with the header “content-encoding: gzip” or “content- encoding: deflate”. If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Console will unzip/inflate the content.</p>
 <blockquote>
 <p><strong>Note:</strong> Most servers will work correctly even if the client does not send the “Accept-</p>
 </blockquote>
-<p>Encoding: gzip, deflate” header. Therefore, unless needed, it is recommended not to set the wlGlobals.AcceptEncodingGzip flag because it is performance heavy.</p>
+<p>Encoding: gzip, deflate” header. Therefore, unless needed, it is recommended not to set the <code>wlGlobals.AcceptEncodingGzip</code> flag because it is performance heavy.</p>
 <p>However, some servers will fail if it is not sent. Microsoft Internet Explorer/Mozilla sends it by default.</p>
-<p>You can manually code the script to send the “Accept-Encoding: gzip, deflate” header even if the wlGlobals.AcceptEncodingGzip flag is not set. In this case, if the server returns zipped content, WebLOAD Console will not unzip it, so the content will not be available for WebLOAD Console to function properly.</p>
+<p>You can manually code the script to send the “Accept-Encoding: gzip, deflate” header even if the <code>wlGlobals.AcceptEncodingGzip</code> flag is not set. In this case, if the server returns zipped content, WebLOAD Console will not unzip it, so the content will not be available for WebLOAD Console to function properly.</p>
 <blockquote>
 <p><strong>Note:</strong> Enabling GZip support sets the Browser Emulation Settings to the maximum browser emulation accuracy. Disabling GZip support sets the Browser Emulation Settings to the maximum Load Generator capacity.</p>
 </blockquote>
 <p><strong>To enable GZip support:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
-<li>nder HTTP Properties, select <strong>GZip support</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
+</li>
+<li>
+<p>nder HTTP Properties, select <strong>GZip support</strong>.</p>
 <p><img alt="GZip Support" src="../../images/console_users_guide_1103.jpeg" /></p>
+</li>
+</ol>
 <h3 id="setting-character-encoding">Setting Character Encoding</h3>
 <p>The character encoding settings enable you to select a specific character set. You can indicate whether the parser should use the character set it parses in the HTML pages or override it using the specified character set.</p>
 <p><strong>To specify character encoding:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Browser Parameters</strong> (default) tab.</li>
+</li>
+<li>
+<p>Select the <strong>Browser Parameters</strong> (default) tab.</p>
+</li>
 <li>Under Character encoding, in the Select Character Encoding drop-down, select the value corresponding to the character set that you want to use. The default value is Default (0), the regional settings of the computer.</li>
-<li>Check the <strong>Enforce character encoding</strong> checkbox to override the character set parsed from the HTML pages with the value specified in the Select Character Encoding drop-down list. Uncheck the <strong>Enforce character encoding</strong> checkbox to indicate that the parser should use the character set it parses in the HTML pages. The default value is false (use the encoding from the HTML pages).</li>
-</ol>
+<li>
+<p>Check the <strong>Enforce character encoding</strong> checkbox to override the character set parsed from the HTML pages with the value specified in the Select Character Encoding drop-down list. Uncheck the <strong>Enforce character encoding</strong> checkbox to indicate that the parser should use the character set it parses in the HTML pages. The default value is false (use the encoding from the HTML pages).</p>
 <p><img alt="Character Encoding Settings" src="../../images/console_users_guide_1104.jpeg" /></p>
+</li>
+</ol>
 <h2 id="setting-the-http-parameters">Setting the HTTP Parameters</h2>
 <p>The HTTP Parameters option enables you to define HTTP client behavior on the HTTP protocol level.</p>
 <p><strong>To set the HTTP Parameters options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>HTTP Parameters</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>HTTP Parameters</strong> tab.</p>
 <p><img alt="Current Session Options HTTP Parameters Tab" src="../../images/console_users_guide_1105.png" /></p>
-<ol>
-<li>Set the HTTP version by clicking <strong>HTTP version 1.0</strong> or <strong>HTTP version 1.1</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Set the HTTP version by clicking <strong>HTTP version 1.0</strong> or <strong>HTTP version 1.1</strong>.</p>
 <blockquote>
 <p><strong>Note:</strong> For the WebLOAD Console 7.x protocol engine, the default HTTP version is 1.1. For the WebLOAD Console 5.x protocol engine, the default HTTP version is 1.0.</p>
 </blockquote>
-<ol>
-<li>Select one or more <strong>HTTP Properties</strong> checkboxes.</li>
-<li>Click <strong>OK</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select one or more <strong>HTTP Properties</strong> checkboxes.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
 <p>The following table describes the fields and buttons in the HTTP Parameters dialog box.</p>
 <table>
 <thead>
@@ -4568,21 +4606,23 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ol>
 <h2 id="setting-authentication">Setting Authentication</h2>
 <p>The Authentication option enables you to define the Global and Proxy authentication settings.</p>
 <p><strong>To set authentication:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Authentication</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Authentication</strong> tab.</p>
 <p><img alt="Current Session Options Authentication Tab" src="../../images/console_users_guide_1106.png" /></p>
-<ol>
-<li>Type the appropriate user names and passwords into the corresponding Global Authentication Settings input text boxes:</li>
-</ol>
+</li>
+<li>
+<p>Type the appropriate user names and passwords into the corresponding Global Authentication Settings input text boxes:</p>
 <table>
 <thead>
 <tr>
@@ -4617,24 +4657,26 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Type the appropriate proxy host name, port number, user name, and password into the corresponding Proxy Authentication input text boxes when working with proxy authentication.</li>
+</li>
+<li>
+<p>Type the appropriate proxy host name, port number, user name, and password into the corresponding Proxy Authentication input text boxes when working with proxy authentication.</p>
+</li>
 <li>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</li>
 </ol>
 <h2 id="bandwidth-settings">Bandwidth Settings</h2>
 <p>WebLOAD Console enables you to simulate various systems and connection configurations, including setting a ‘virtual limit’ on the bandwidth available during a test. Setting a limit on bandwidth allows testers to test applications for users that may be limited in their workplace connections speeds.</p>
 <p><strong>To configure the connection speed:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Connection</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Connection</strong> tab.</p>
 <p><img alt="Current Session Options Connection Tab" src="../../images/console_users_guide_1108.png" /></p>
 <p>The Variable Bandwidth feature enables you to set the bandwidth for the load and emulate users connecting through different modem connections (14400, 28800…).</p>
-<ol>
+</li>
 <li>
 <p>Select the desired bandwidth from the <strong>Load Generator Bandwidth</strong> drop-down list.</p>
 </li>
@@ -4643,14 +4685,12 @@
 </li>
 <li>
 <p>Check the <strong>Use network emulation</strong> option if you wish to view and control the emulation settings (download/upload bandwidth, delay, and packet loss) that are used to emulate each of the selections you make in the <strong>Load Generator Bandwidth</strong> and <strong>Probing Client Bandwidth</strong> fields.</p>
+<p>You can click any of the emulation settings to manually set it to a custom value:</p>
+<p><img alt="Current Session Options Connection Tab – Manual Editing" src="../../images/console_users_guide_1109.png" /></p>
 </li>
 <li>
-<p>You can click any of the emulation settings to manually set it to a custom value:</p>
+<p>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</p>
 </li>
-</ol>
-<p><img alt="Current Session Options Connection Tab – Manual Editing" src="../../images/console_users_guide_1109.png" /></p>
-<ol>
-<li>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</li>
 </ol>
 <h2 id="enabling-network-emulation"><strong>Enabling Network Emulation</strong></h2>
 <p>Network Emulation services are supported by WebLOAD through the open source ipfirewall (ipfw) engine. To use network emulation, you need to install ipfw, as described below.</p>
@@ -4662,27 +4702,29 @@
 <p><strong>To install ipfw on a Windows machine:</strong></p>
 <ol>
 <li>Download <a href="https://s3.amazonaws.com/radview/dummynet.zip">https://s3.amazonaws.com/radview/dummynet.zip. </a>The zip file includes two folders: 32bit and 64bit. You need the folder that corresponds to the Windows version installed on the Load Generator – either 32-bit or 64-bit.</li>
-<li>Change the name of the relevant folder to ipfw, and place it under the directory</li>
-</ol>
-<p>C:\Program Files (x86)\RadView\WebLOAD\bin.</p>
-<p>Alternatively, copy the ipfw folder to any other location, and in the C:\Program Files (x86)\RadView\WebLOAD\bin\networkemulation.ini file, set IPFW_PATH="<code>&lt;path&gt;</code>/ipfw.exe".</p>
+<li>
+<p>Change the name of the relevant folder to ipfw, and place it under the directory</p>
+<p><code>C:\Program Files (x86)\RadView\WebLOAD\bin.</code></p>
+<p>Alternatively, copy the ipfw folder to any other location, and in the <code>C:\Program Files (x86)\RadView\WebLOAD\bin\networkemulation.ini file, set IPFW\_PATH="</code><path><code>/ipfw.exe".</code></p>
+</li>
+<li>
+<p>Install the NDIS driver as follows:</p>
 <ol>
-<li>Install the NDIS driver as follows:</li>
 <li>Open the configuration panel for the network card in use by right-clicking the icon on the systray, or by selecting <strong>Control Panel</strong> -&gt; <strong>Network</strong> and then selecting the card.</li>
 <li>Select <strong>Properties</strong> &gt; <strong>Install</strong> &gt; <strong>Service</strong> &gt; <strong>Add</strong>.</li>
-<li>Click <strong>Driver Disk</strong> and select netipfw.inf in this folder.</li>
+<li>Click <strong>Driver Disk</strong> and select <code>netipfw.inf</code> in this folder.</li>
 <li>Select <strong>ipfw+dummynet</strong> which is the only service you should see.</li>
 <li>Click <strong>Accept</strong> when warnings appear regarding the installation of an unsigned driver (typically two warnings per installed network card).</li>
+</ol>
+</li>
 <li>
 <p>Verify installation is successful, as follows:</p>
-</li>
-<li>
-<p>Open a command prompt window by running cmd.exe as an Administrator.</p>
-</li>
+<ol>
+<li>Open a command prompt window by running cmd.exe as an Administrator.</li>
 <li>Run the cd command to navigate to the ipfw installation directory.</li>
-<li>Run ipfw.exe list</li>
-<li>
-<p>Verify you get the following output: 65535 allow ip from any to any</p>
+<li>Run <code>ipfw.exe list</code></li>
+<li>Verify you get the following output: <code>65535 allow ip from any to any</code></li>
+</ol>
 </li>
 <li>
 <p>Make sure to run TestTalk as administrator on the Load Generator machine.</p>
@@ -4699,14 +4741,14 @@
 <p>On each Load Generator.</p>
 <p><strong>To install ipfw on a Linux CentOS 7 machine:</strong></p>
 <ol>
-<li>Install the following necessary prerequisites for building a dummynet kernel module:</li>
-</ol>
+<li>
+<p>Install the following necessary prerequisites for building a dummynet kernel module:</p>
 <p><code>$ sudo yum -y groupinstall "Development Tools"</code></p>
 <p><code>$ sudo yum -y install glibc-devel.i686 glibc-devel</code></p>
-<ol>
+</li>
 <li>
 <p>Install a kernel source matching the specific kernel on the machine, as follows:</p>
-</li>
+<ol>
 <li>
 <p>If you are not sure which kernel version you have, run the following command:</p>
 <p><code>$ sudo uname -r</code></p>
@@ -4715,12 +4757,14 @@
 <p>Download the kernel sources as follows (replace the version in the example with your version):</p>
 <p><code>$ cd /tmp</code></p>
 <p><code>$ wget [http://vault.centos.org/7.1.1503/centosplus/Source](http://vault.centos.org/7.1.1503/centosplus/Source/SPackages/kernel-plus-3.10.0-229.el7.centos.plus.src.rpm)</code></p>
-<p><code>[/SPackages/kernel-plus-3.10.0-229.el7.centos.plus.src.rpm](http://vault.centos.org/7.1.1503/centosplus/Source/SPackages/kernel-plus-3.10.0-229.el7.centos.plus.src.rpm)</code></p>
+<p><code>[/SPackages/kernel-plus-3.10.0-229.el7.centos.plus.src.rpm](http://vault.centos.org/7.1.1503/centosplus/Source/SPackages/ kernel-plus-3.10.0-229.el7.centos.plus.src.rpm)</code></p>
 <p><code>$ mkdir -p /tmp/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}</code></p>
 <p><code>$ echo "%\_topdir /tmp/rpmbuild" &gt; ~/.rpmmacros</code></p>
 </li>
 <li>
 <p>Run the following commands, using the kernel version of the kernel you downloaded in the previous step:</p>
+</li>
+</ol>
 <p><code>$ rpm -i &lt;downloaded file name&gt; 2&gt;&amp;1 | grep -v mockb</code></p>
 <p><code>$ sudo tar xvfvJ /tmp/rpmbuild/SOURCES/linux-&lt;kernel id/name&gt;.tar.xz -C /usr/src/kernels/</code></p>
 <p><code>$ cd /usr/src/kernels/linux-&lt;kernel id/name&gt;</code></p>
@@ -4731,7 +4775,7 @@
 </li>
 <li>
 <p>Build the ipfw, as follows:</p>
-</li>
+<ol>
 <li>
 <p>Compile the ipfw_source_package.zip, which is part of WebLOAD installation package, by running the following commands:</p>
 <p><code>$ cd /tmp/</code></p>
@@ -4757,35 +4801,41 @@
 <p><code>$ sudo chmod +x /etc/rc.modules</code></p>
 </li>
 </ol>
+</li>
+</ol>
 <h2 id="diagnostic-settings">Diagnostic Settings</h2>
 <p>Diagnostic options can be enabled while developing a script or for tracking problems in existing scripts.</p>
 <p><strong>To configure the diagnostic options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Diagnostic</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Diagnostic</strong> tab.</p>
 <p><img alt="Current Session Options Diagnostic Tab" src="../../images/console_users_guide_1110.png" /></p>
 <blockquote>
 <p><strong>Note:</strong> Running a Load Session with the diagnostic options enabled may affect system performance. Therefore, we recommend that these options remain disabled while running a Load Session with multiple threads.</p>
 </blockquote>
-<ol>
-<li>Check the diagnostic features you wish to use. Each diagnostic option is described in this section.</li>
+</li>
+<li>
+<p>Check the diagnostic features you wish to use. Each diagnostic option is described in this section.</p>
+</li>
 <li>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</li>
 </ol>
 <h3 id="enabling-syntax-checking">Enabling Syntax Checking</h3>
 <p>Enable Syntax Checking to perform the following tests on a script while it is running.</p>
 <p><strong>To enable syntax checking:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Diagnostic</strong> tab.</li>
+</li>
+<li>
+<p>Select the <strong>Diagnostic</strong> tab.</p>
+</li>
 <li>Select <strong>Enable syntax checking</strong>.</li>
 </ol>
 <p>The following diagnostics are performed:</p>
@@ -4814,36 +4864,42 @@
 <p>Log reports are used to see the script flow, and the response headers received while a script is running. When log report is enabled, an outfile is automatically created for each get and post transaction and for each frame received.</p>
 <p><strong>To enable log report diagnostics:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Diagnostic</strong> tab.</li>
-<li>Select <strong>Enable log report</strong> to configure WebLOAD Console to create a Log Report.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Diagnostic</strong> tab.</p>
+</li>
+<li>
+<p>Select <strong>Enable log report</strong> to configure WebLOAD Console to create a Log Report.</p>
 <p><img alt="Enable Log Report Checkbox" src="../../images/console_users_guide_1111.jpeg" /></p>
-<ol>
-<li>Click in the Output directory field and select the directory for saving Log Report files.</li>
-</ol>
+</li>
+<li>
+<p>Click in the Output directory field and select the directory for saving Log Report files.</p>
 <p>The default directory is: C:\Program Files\RadView\WebLOAD\User\Log.</p>
-<ol>
-<li>Select which rounds should generate the Log Report in the Start round and End round fields.</li>
-</ol>
+</li>
+<li>
+<p>Select which rounds should generate the Log Report in the Start round and End round fields.</p>
 <p>The log report displays the time a request was made, the round number, the request number, the URL received and the response headers. If GetContents = “Yes” the same information is displayed for each frame.</p>
 <p>A message is sent to the Log Window for each request. The message appears in the following format:</p>
 <p><code>\### Thread:000, Round Num:001, Request Num:001 ### URL</code></p>
 <p>Each request is numbered sequentially for each thread and round number.</p>
+</li>
+</ol>
 <h3 id="enabling-enhanced-radview-support-diagnostic">Enabling enhanced RadView Support Diagnostic</h3>
 <p>Enabling the enhanced RadView Support Diagnostic option creates large files in the WebLOAD\User\Log directory and may affect Load Generator performance.</p>
 <p><strong>To enable enhanced RadView support diagnostic:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Diagnostic</strong> tab.</li>
+</li>
+<li>
+<p>Select the <strong>Diagnostic</strong> tab.</p>
+</li>
 <li>
 <h4 id="select-enable-the-enhanced-radview-support-diagnostic">Select <strong>Enable the enhanced RadView Support Diagnostic</strong>.</h4>
 </li>
@@ -4852,56 +4908,58 @@
 <p>Enable the <strong>Show Performance Warnings</strong> option if you want WebLOAD to automatically send warning messages when Load Generators are getting overloaded. This can enable you to better utilize the Load Generators in your current and future tests.</p>
 <p><strong>To enable showing performance warnings:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Diagnostic</strong> tab.</li>
+</li>
+<li>
+<p>Select the <strong>Diagnostic</strong> tab.</p>
+</li>
 <li>Select <strong>Show Performance Warnings</strong>.</li>
 </ol>
 <h2 id="functional-testing-options">Functional Testing Options</h2>
 <p>Functional testing enables you to insert verification tests into the script to verify that the links, images, forms, tables and frames in your Web application continue to act as expected.</p>
 <p><strong>To access and configure the functional testing options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Functional Testing</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Functional Testing</strong> tab.</p>
 <p><img alt="Current Session Options Functional Testing Tab" src="../../images/console_users_guide_1112.png" /></p>
-<ol>
-<li>Select the functional testing tools you wish to use. Each testing option is described in this section.</li>
+</li>
+<li>
+<p>Select the functional testing tools you wish to use. Each testing option is described in this section.</p>
+</li>
 <li>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/ Current Session Options dialog box.</li>
 </ol>
 <h3 id="setting-automatic-data-collection">Setting Automatic Data Collection</h3>
 <p>Setting automatic data collection instructs WebLOAD Console to handle every page, object and HTTP object in the Script as a transaction. The name of the transaction is the name of the page or object and data is gathered for each transaction.</p>
 <p><strong>To set automatic data collection:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
+</li>
 <li>
 <p>Select the <strong>Functional Testing</strong> tab.</p>
 </li>
 <li>
 <p>Select one of the following:</p>
-</li>
-<li>
-<p><strong>All Pages</strong> or <strong>Failed Pages</strong> to turn all page transactions in the script into Named Transactions. The transaction name will be the page name (the URL being accessed without the query string) with the HTTP method used to retrieve it (GET or POST). The following statistics will be gathered for all page transactions: total number of transactions (counter), number of failed and successful transactions (counter), and the page time for each transaction (timer). Transaction Data Drilling will be available for all transactions if you select All Pages or for failed transactions only if you select Failed Pages. Select one or more of the following to specify whether to collect data at object or HTTP level or both.</p>
 <ul>
+<li><strong>All Pages</strong> or <strong>Failed Pages</strong> to turn all page transactions in the script into Named Transactions. The transaction name will be the page name (the URL being accessed without the query string) with the HTTP method used to retrieve it (GET or POST). The following statistics will be gathered for all page transactions: total number of transactions (counter), number of failed and successful transactions (counter), and the page time for each transaction (timer). Transaction Data Drilling will be available for all transactions if you select All Pages or for failed transactions only if you select Failed Pages. Select one or more of the following to specify whether to collect data at object or HTTP level or both.</li>
 <li><strong>Object level</strong> – Creates sub transactions for all content (for example, gif, ico, and js).</li>
 <li><strong>HTTP level</strong> – Breaks down every transaction, including sub transactions, into HTTP elements (for example, open connection, send, time to first byte, and receive).</li>
 <li><strong>None</strong> to disable turning page transactions in the script into Named Transactions. Statistics are not gathered for page transactions.</li>
 </ul>
-</li>
-</ol>
 <p><strong>Note:</strong> For the WebLOAD Console 7.x protocol engine, the default automatic data collection setting was None. For the WebLOAD Console 5.x protocol engine, the default automatic data collection setting was Failed Pages.</p>
 <p><img alt="Pages Checkbox" src="../../images/console_users_guide_1113.png" /></p>
+</li>
+</ol>
 <h3 id="setting-page-time-verifications">Setting Page Time Verifications</h3>
 <p>Setting page time verifications enables you to define a limit to the maximum amount of time a page should take to load. If the maximum time is exceeded, a message or error entry appears in the log window, depending on the severity level set for page time verifications.</p>
 <blockquote>
@@ -4909,35 +4967,37 @@
 </blockquote>
 <p><strong>To set page time verification:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
+</li>
 <li>
 <p>Select the <strong>Functional Testing</strong> tab.</p>
 </li>
 <li>
 <p>Check <strong>Verification</strong>.</p>
-</li>
-</ol>
 <p><img alt="Verification Checkbox" src="../../images/console_users_guide_1114.jpeg" /></p>
-<ol>
-<li>Specify the maximum amount of time that a page should take to load in the Max Time field.</li>
-<li>Specify the severity level if the page exceeds the specified time in the Severity Level field.</li>
-</ol>
+</li>
+<li>
+<p>Specify the maximum amount of time that a page should take to load in the Max Time field.</p>
+</li>
+<li>
+<p>Specify the severity level if the page exceeds the specified time in the Severity Level field.</p>
 <blockquote>
 <p><strong>Note:</strong> It is important to specify a meaningful time period. For example, if you specify 3 seconds for a page which is likely to take longer, numerous essentially meaningless failures will result. Conversely, if you specify 10 seconds for a page which should take less than 1 second, the test becomes meaningless.</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="inserting-a-text-verification-test">Inserting a Text Verification Test</h3>
 <p>Use Text verifications to verify the absence or presence of selected text expressions within your Web page.</p>
 <p><strong>To insert a text verification test into your script:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> or <strong>Script Options</strong> from the Console System button.</p>
-<ol>
+</li>
 <li>
 <p>Select the <strong>Functional Testing</strong> tab.</p>
 </li>
@@ -4946,31 +5006,29 @@
 </li>
 <li>
 <p>Select the percentage of time the tests should be performed. This is the percentage of Virtual Clients that will perform the verification tests.</p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> For backward compatibility of scripts that were recorded with the AAT and support table comparisons, you can select only the Verification checkbox, without selecting any additional options.</p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>Check the Text Search checkbox.</p>
 </li>
 <li>
 <p>Enter a literal string with the text for which you are searching in the Text field</p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> The text string is case sensitive.</p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>Select the type of test to run from the drop-down list in the Option field:</p>
-</li>
+<ul>
 <li>
 <p><strong>Find</strong> ‒ The verification test will pass if the selected text is found in the current Web page.</p>
 </li>
 <li>
 <p><strong>Not to Find</strong> ‒ The verification test will fail if the selected text is found in the current Web page.</p>
+</li>
+</ul>
 <p>For example, to ensure that the word “error” does not appear on the page during runtime, enter the word “error” in the Text field, and select <strong>Not to Find</strong>. If the text error is found on the page, WebLOAD Console will report the error.</p>
 </li>
 <li>
@@ -4978,10 +5036,10 @@
 </li>
 <li>
 <p>Click <strong>Add</strong> to add another string to the list of Text Search strings,</p>
-</li>
-</ol>
 <p>-Or-</p>
 <p>Click <strong>Delete</strong> to delete a selected string from the list of Text Search strings.</p>
+</li>
+</ol>
 <h2 id="pass-fail-definition-settings">Pass / Fail Definition Settings</h2>
 <p>The Pass / Fail Definition options enable you to set test failure conditions.</p>
 <blockquote>
@@ -4989,24 +5047,24 @@
 </blockquote>
 <p><strong>To configure pass/fail definition options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Pass/Fail Definition</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Pass/Fail Definition</strong> tab.</p>
 <p><img alt="Current Session Options Pass/Fail Definition Tab" src="../../images/console_users_guide_1115.png" /></p>
 <p>You can set WebLOAD Console to declare a test as failed based on a number of criteria. First, you must decide if you want the test to be professed a failure after an absolute number of failures or a relative number of failures. Then you set the conditions upon which a test is declared a failure.</p>
-<ol>
-<li>Select <strong>Absolute</strong> (default) to set the total number of failures required for a test to be declared failed,</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Absolute</strong> (default) to set the total number of failures required for a test to be declared failed,</p>
 <p>-Or-</p>
 <p>Select <strong>Relative</strong> to set the percent of failed transactions need for a test to be declared failed.</p>
-<ol>
+</li>
 <li>
 <p>Set the conditions upon which to declare a test failed and the action to take if a test fails.</p>
-</li>
+<ul>
 <li>
 <p><strong>Fail the test if a severe error occurs during the test run</strong> ‒ Sends a failure message and declares the test failed in the event of a severe error.</p>
 </li>
@@ -5023,7 +5081,9 @@
 <p><strong>Stop the test when a failure occurs</strong> ‒ Stops the test if the test is declared failed.</p>
 </li>
 <li>
-<p><strong>Check rule only after    minutes of execution</strong> ‒ This option is only enabled when the pass / fail definition is set to relative. Use this option to set a stabilizing period for the test when it starts. Errors or warning received during this time frame will not fail the test, and the rules set for failing the test will only be checked after this timeframe has expired.</p>
+<p><strong>Check rule only after   minutes of execution</strong> ‒ This option is only enabled when the pass / fail definition is set to relative. Use this option to set a stabilizing period for the test when it starts. Errors or warning received during this time frame will not fail the test, and the rules set for failing the test will only be checked after this timeframe has expired.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</p>
@@ -5036,15 +5096,15 @@
 </blockquote>
 <p><strong>To configure reset mechanism options:</strong></p>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Reset Mechanism</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Reset Mechanism</strong> tab.</p>
 <p><img alt="Current Session Options Reset Mechanism Tab" src="../../images/console_users_guide_1116.png" /></p>
-<ol>
+</li>
 <li>
 <p>Check the <strong>Enable the Load Generator reset mechanism</strong> checkbox to allow WebLOAD Console to restart the Load Generators.</p>
 </li>
@@ -5056,28 +5116,28 @@
 </li>
 <li>
 <p>Set the number of seconds for Unresponsive LG for more than (Timeout).</p>
-</li>
-</ol>
 <p><strong>Note:</strong> The Load Generator Timeout is valid only if the Reset Mechanism is enabled.</p>
-<ol>
-<li>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong> to accept the modifications, or <strong>Cancel</strong> to reject them, and exit the Default/Current Session Options dialog box.</p>
+</li>
 </ol>
 <h2 id="configuring-the-java-options">Configuring the Java Options</h2>
 <p>The Java options enable you to define the Java Virtual Machine to be used by WebLOAD Recorder, for executing Java classes.</p>
 <h4 id="to-configure-java-option-settings"><strong>To configure Java Option settings:</strong></h4>
 <ol>
-<li>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Default/Current Session Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Default/Current Session Options</strong> from the Console System button. The Default/Current Session Options dialog box appears.</p>
-<ol>
-<li>Select the <strong>Java Options</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Java Options</strong> tab.</p>
 <p>The Java Options tab moves to the front of the dialog box.</p>
 <p><img alt="Current Session Options Java Options Tab" src="../../images/console_users_guide_1117.png" /></p>
-<ol>
-<li>In the Select run-time JVM to be drop down, select one of the available Java Virtual Machines.</li>
-</ol>
+</li>
+<li>
+<p>In the Select run-time JVM to be drop down, select one of the available Java Virtual Machines.</p>
 <p>The default setting is the WebLOAD standard Java Virtual Machine. The selected value is passed to wlGlobals.JVMtype and is the key for WLJVMs.xml. This XML file (located on every WebLOAD Machine in the <code>&lt;WebLOAD Installation Directory&gt;</code>\extensions\JVMs directory) contains the following parameters for each JVM:</p>
 <ul>
 <li>
@@ -5088,13 +5148,15 @@
 </li>
 <li>
 <p>Options</p>
+</li>
+</ul>
 <p>When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD Console installation path.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
-</li>
-</ul>
 <p>The Java Options are saved.</p>
+</li>
+</ol>
 
 
 

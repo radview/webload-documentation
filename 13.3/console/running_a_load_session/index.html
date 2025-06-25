@@ -3926,7 +3926,7 @@
 </blockquote>
 <h4 id="syntax">Syntax</h4>
 <p>Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:</p>
-<p><code>WebLOAD.exe [&lt;file name to open&gt;][] [&lt;flags&gt;][][/ag &lt;script name&gt;]</code></p>
+<p><code>WebLOAD.exe [&lt;file name to open&gt;] [&lt;file name to save&gt;] [&lt;flags&gt;] [&lt;time&gt;] [/ag &lt;script name&gt;]</code></p>
 <h4 id="parameters">Parameters</h4>
 <p>When running a test invoked by the executable, you can specify the following parameters:</p>
 <table>
@@ -3940,17 +3940,17 @@
 <tbody>
 <tr>
 <td style="text-align: left;">File name to open</td>
-<td style="text-align: left;">The name of the *.tpl or *.ls file (Load Template or Load Session file) to run.</td>
+<td style="text-align: left;">The name of the <code>*.tpl</code> or <code>*.ls</code> file (Load Template or Load Session file) to run.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
 <td style="text-align: left;">File name to save</td>
-<td style="text-align: left;">The name of the *.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
+<td style="text-align: left;">The name of the <code>*.ls</code> file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
 <td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em>time</em> – Automatically run the test for the length of time specified in <em>time/</em></p><p>- /vc – The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc – The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;results_file_name&gt;</code></em> – Place the results in the specified file (an XML file).</p></td>
+<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <code>&lt;time&gt;</code> – Automatically run the test for the length of time specified in <code>&lt;time&gt;</code></p><p>- /vc – The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc – The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;results_file_name&gt;</code></em> – Place the results in the specified file (an XML file).</p></td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
