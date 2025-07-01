@@ -66,15 +66,15 @@ communication, and collective understanding. For more information about the stan
 
  
 
-http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html
+[http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html](http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html)
 
  
 
-http://msdn2.microsoft.com/en-us/library/ms533043.aspx
+[http://msdn2.microsoft.com/en-us/library/ms533043.aspx](http://msdn2.microsoft.com/en-us/library/ms533043.aspx)
 
  
 
-http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/ dhtmlrefs.asp
+[http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/dhtmlrefs.asp](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/dhtmlrefs.asp)
 
  
 
@@ -94,27 +94,16 @@ Essentially, the DOM is a programming API for documents based on an object struc
 
 ```html
 <TABLE>
-
-<TBODY>
-
-<TR>
-
-<TD>Shady Grove</TD>
-
-<TD>Aeolian</TD>
-
-</TR>
-
-<TR>
-
-<TD>Over the River, Charlie</TD>
-
-<TD>Dorian</TD>
-
-</TR>
-
-</TBODY>
-
+  <TBODY>
+    <TR>
+        <TD>Shady Grove</TD>
+        <TD>Aeolian</TD>
+    </TR>
+    <TR>
+          <TD>Over the River, Charlie</TD>
+          <TD>Dorian</TD>
+        </TR>
+  </TBODY>
 </TABLE>
 ```
 
@@ -233,15 +222,15 @@ The following table lists the DOM objects commonly used in scripts. A detailed d
 
 | **Object**                   | **Description**                                              |
 | ---------------------------- | ------------------------------------------------------------ |
-| **window**                   | The window  object  represents an open browser window. Typically, the browser creates a single window  object when  it opens an HTML document. However, if a document defines one or more frames  the browser creates one window object for the original  document and one additional window object (*a child window*) for each frame. The  child window may be affected by actions that occur in the parent. For  example, closing the parent window causes all child windows to close. |
-| **document**                 | The document  object  represents the HTML document in a browser window, storing the HTML data in a  parsed format. Use the document object to retrieve links,  forms, nested frames, images, scripts, and other information about the  document. By default, document used alone represents the  document in the current window. You usually refer directly to the document;  the window  part is  optional and is understood implicitly. |
-| **frame**                    | Each frame  object  represents one of the frames imbedded within a Web page. Frames and windows  are essentially comparable. The recursive aspect of the DOM is implemented at  this level. A window may contain a collection of frames. Each frame may  contain multiple child windows, each of which may contain more frames that  contain more windows, and so on. |
-| **location**                 | The location object contains  information on the current window URL. |
-| **link**                     | A link object contains  information on an external document to which the current document is linked. |
-| **form, element, and input** | A form  object  contains the set of elements and input controls (text, radio buttons,  checkboxes, etc.) that are all components of a single form. Each element  object stores the parsed data for a single HTML form element such as `<INPUT>`, `<BUTTON>`, or `<SELECT>`. Each input object  stores the information defining one of the input controls in the form.  Controls are organized by type, for example input type=checkbox.  Forms enable client-side  users to submit data to a server in a standardized format. A form is designed  to collect the required data using a variety of controls, such as INPUT or SELECT. Users viewing the form  fill in the data and then click the SUBMIT button to send it to the server. A script on the server then  processes the data. Notice that the object syntax corresponds to a path  through the DOM hierarchy tree, beginning at the root window and continuing  until the specified item’s properties. |
-| **image**                    | Each image  object  contains one of the embedded images found in a document. |
-| **script**                   | A script  object  defines a script for the current document that will be interpreted by a  script engine. |
-| **title**                    | The title  object  contains the document title, stored as a text string. |
+| **window**                   | The `window`  object  represents an open browser `window`. Typically, the browser creates a single `window`  object when  it opens an HTML document. However, if a document defines one or more frames  the browser creates one `window` object for the original  document and one additional `window` object (*a child `window`*) for each frame. The  child `window` may be affected by actions that occur in the parent. For  example, closing the parent `window` causes all child windows to close. |
+| **document**                 | The `document`  object  represents the HTML `document` in a browser `window`, storing the HTML data in a  parsed format. Use the `document` object to retrieve links,  forms, nested frames, images, scripts, and other information about the  `document`. By default, `document` used alone represents the  `document` in the current `window`. You usually refer directly to the `document`;  the `window`  part is  optional and is understood implicitly. |
+| **frame**                    | Each `frame`  object  represents one of the frames imbedded within a Web page. Frames and windows  are essentially comparable. The recursive aspect of the DOM is implemented at  this level. A `window` may contain a collection of frames. Each frame may  contain multiple child windows, each of which may contain more frames that  contain more windows, and so on. |
+| **location**                 | The `location` object contains  information on the current `window` URL. |
+| **link**                     | A `link` object contains  information on an external document to which the current document is linked. |
+| **form, element, and input** | A `form`  object  contains the set of elements and input controls (text, radio buttons,  checkboxes, etc.) that are all components of a single form. Each element  object stores the parsed data for a single HTML form element such as `<INPUT>`, `<BUTTON>`, or `<SELECT>`. Each input object  stores the information defining one of the input controls in the form.  Controls are organized by type, for example input type=checkbox.  Forms enable client-side  users to submit data to a server in a standardized format. A form is designed  to collect the required data using a variety of controls, such as INPUT or SELECT. Users viewing the form  fill in the data and then click the SUBMIT button to send it to the server. A script on the server then  processes the data. Notice that the object syntax corresponds to a path  through the DOM hierarchy tree, beginning at the root window and continuing  until the specified item’s properties. |
+| **image**                    | Each `image`  object  contains one of the embedded images found in a document. |
+| **script**                   | A `script`  object  defines a script for the current document that will be interpreted by a  script engine. |
+| **title**                    | The `title`  object  contains the document title, stored as a text string. |
 
 
 
@@ -318,41 +307,25 @@ Customizing scripts may involve nothing more than dragging an icon from the WebL
 
  
 
-Most users access scripts primarily through a *Script Tree*, a set of clear, intuitive icons and visual devices representing user activities during a recording session, arranged into a logical structure. Each user activity in the Script Tree is referred to as a node. Nodes are organized in a hierarchical arrangement. The outmost level, or *root* level, is a single script node. The second level directly under the root script node includes all the Web pages to which the user navigated over the course of the recording session. The third level, organized under each Web page, includes all the
+- Most users access scripts primarily through a *Script Tree*, a set of clear, intuitive icons and visual devices representing user activities during a recording session, arranged into a logical structure. Each user activity in the Script Tree is referred to as a node. Nodes are organized in a hierarchical arrangement. The outmost level, or *root* level, is a single script node. The second level directly under the root script node includes all the Web pages to which the user navigated over the course of the recording session. The third level, organized under each Web page, includes all the user activities that occurred on the parent Web page. These activities are themselves organized into additional levels. For example, all data input on a single form in a Web page is organized into a single sub-tree of user input nodes collected under the node for that form. The Script Tree appears on the left side of the WebLOAD Recorder desktop.
 
+- Web page nodes are added to the Script Tree in one of two ways. Some Web pages are the result of a user action on the previous page, such as clicking a link and jumping to a new page. Other Web pages are created as a result of direct or indirect navigation, such as entering a URL in the browser window, or pop-up windows triggered by a previous navigation. The sets of user activities contained between two direct-navigation Web pages in a Script Tree parallel the *navigation blocks* found within the JavaScript script code.
 
-
- 
-
- 
-
-user activities that occurred on the parent Web page. These activities are themselves organized into additional levels. For example, all data input on a single form in a Web page is organized into a single sub-tree of user input nodes collected under the node for that form. The Script Tree appears on the left side of the WebLOAD Recorder desktop.
-
-Web page nodes are added to the Script Tree in one of two ways. Some Web pages are the result of a user action on the previous page, such as clicking a link and jumping to a new page. Other Web pages are created as a result of direct or indirect navigation, such as entering a URL in the browser window, or pop-up windows triggered by a previous navigation. The sets of user activities contained between two direct-navigation Web pages in a Script Tree parallel the *navigation blocks* found within the JavaScript script code.
-
-During a WebLOAD Recorder recording session, a new navigation block is created each time a user completes a direct navigation, manually entering a new URL into the WebLOAD Recorder address bar. Each navigation block is surrounded by a try{} catch{} statement in the corresponding JavaScript script code.
-
-Navigation blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if an error is encountered during a test session, WebLOAD should throw the error, skip to the next navigation block, and continue with the test session. Errors during playback are indicated by a red X appearing beside the problematic action in the Script Tree.
+     During a WebLOAD Recorder recording session, a new navigation block is created each time a user completes a direct navigation, manually entering a new URL into the WebLOAD Recorder address bar. Each navigation block is surrounded by a `try{}` `catch{}` statement in the corresponding JavaScript script code. Navigation blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if an error is encountered during a test session, WebLOAD should throw the error, skip to the next navigation block, and continue with the test session. Errors during playback are indicated by a red X appearing beside the problematic action in the Script Tree.
 
  
 
-The graphic nodes in a Script Tree actually represent blocks of code within the underlying recorded script. The JavaScript code corresponding to a selected node is automatically displayed in the *JavaScript View pane*. The JavaScript View pane is one of the tabs available in the WebLOAD Recorder desktop.
+- The graphic nodes in a Script Tree actually represent blocks of code within the underlying recorded script. The JavaScript code corresponding to a selected node is automatically displayed in the *JavaScript View pane*. The JavaScript View pane is one of the tabs available in the WebLOAD Recorder desktop.
 
-The graphic nodes in a Script Tree represent user actions on a website. An exact replica, or snapshot, of each user activity is stored during recording and available in the Browser View to aid in debugging and help users remember what each action accomplished. The *Browser View pane* is one of the tabs available in the WebLOAD Recorder desktop.
+- The graphic nodes in a Script Tree represent user actions on a website. An exact replica, or snapshot, of each user activity is stored during recording and available in the Browser View to aid in debugging and help users remember what each action accomplished. The *Browser View pane* is one of the tabs available in the WebLOAD Recorder desktop.
 
-Web pages are created through HTML programs. The HTML code that underlies each stored Web page is also stored during recording sessions. For easy reference, the HTML code of the Web page associated with a selected node is displayed in the *HTML View pane*. The HTML View pane is one of the tabs available in the WebLOAD Recorder desktop.
+- Web pages are created through HTML programs. The HTML code that underlies each stored Web page is also stored during recording sessions. For easy reference, the HTML code of the Web page associated with a selected node is displayed in the *HTML View pane*. The HTML View pane is one of the tabs available in the WebLOAD Recorder desktop.
 
-Web pages have a logical structure that may be represented through a series of DOM object trees. The DOM tree for a selected Web page is essentially a hierarchically structured, more easily understood representation of the DOM objects found in the HTML code for that Web page. The DOM tree of the Web page associated with a selected node is displayed in the *DOM View pane*. The DOM View pane is one of the tabs available in the WebLOAD Recorder desktop. When
-
-
-
- 
-
- 
-
-working with the DOM View, the center pane is actually split in half, with the upper half displaying the DOM View and the lower half displaying the corresponding Web page, seen in the Browser View.
+- Web pages have a logical structure that may be represented through a series of DOM object trees. The DOM tree for a selected Web page is essentially a hierarchically structured, more easily understood representation of the DOM objects found in the HTML code for that Web page. The DOM tree of the Web page associated with a selected node is displayed in the *DOM View pane*. The DOM View pane is one of the tabs available in the WebLOAD Recorder desktop. When working with the DOM View, the center pane is actually split in half, with the upper half displaying the DOM View and the lower half displaying the corresponding Web page, seen in the Browser View.
 
 The following figure illustrates a WebLOAD Recorder desktop displaying the Script Tree and DOM and Browser Views. The Script Tree is on the left. The Browser View pane on the lower right focuses on a piece of the selected form as it appeared on the Web page at the time this script was recorded. The DOM View pane on the upper right displays the DOM objects that represent the selected form, arranged in a tree that corresponds to the user activity in the selected form.
+![](../images/script_tree_DOM_BV.png)
+
 
 ## Editing the JavaScript Code in a script
 
@@ -364,31 +337,20 @@ WebLOAD Recorder provides a complete graphic user interface for creating and edi
 
  
 
-While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects.
+While most people never really work with the JavaScript code within their script, some users do wish to manually edit the JavaScript code underlying their Script Tree. For example, some test sessions may involve advanced WebLOAD testing features that cannot be completely implemented though the GUI, such as Java or XML objects.Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:
 
-Editing the JavaScript code in a script does not necessarily mean editing a huge JavaScript file. Most of the time users only wish to add or edit a specific feature or a small section of the code. WebLOAD Recorder provides access to the JavaScript code in a script through JavaScript Object nodes, which are seen on the following levels:
 
- 
+- JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the *WebLOAD Scripting Guide.* Use the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor), to add lines of code or functions to the JavaScript Object.
 
-JavaScript Object nodes—individual nodes in the Script Tree. Empty JavaScript Object nodes may be dragged from the WebLOAD Recorder toolbar and dropped onto the Script Tree at any point selected by the user, as described in the *WebLOAD Scripting Guide.* Use the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](#using-the-intellisense-javascript-editor), to add lines of code or functions to the JavaScript Object.
-
-Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.
+- Converted Web page—the sub-tree or branch of a Script Tree that represents all user activity within a single Web page, converted to a single JavaScript Object node. A Web page branch is ‘rooted’ in the Script Tree with an icon that represents the user’s navigation to that page’s URL. The icons on that branch represent all user activities from the point at which that Web page was first accessed until the point at which the user navigated to a different Web page. Some testing features may require manually editing or rewriting the JavaScript code for user activities within a Web page. To manually edit code in a recorded script, the Web page branch that includes that code must be converted to a JavaScript Object. Converting a Web page branch to a JavaScript Object is simple. Right click the preferred Web page node in the Script Tree and select Convert to JavaScript Object from the pop-up menu. The entire Web page branch becomes a single JavaScript Object, which can then be edited through the IntelliSense Editor.
 
  
 
 **Note:** Once a branch has been converted to a single JavaScript Object, the various user activity icons that were on that branch are no longer individually accessible.
 
-Imported JavaScript File—an external JavaScript file that should be incorporated within the body of the current script. Select **Edit** **** **Import JavaScript File** from the
+- Imported JavaScript File—an external JavaScript file that should be incorporated within the body of the current script. Select **Edit** **** **Import JavaScript File** from the WebLOAD Recorder menu to import the file of your choice. Often testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.
 
-
-
- 
-
- 
-
-WebLOAD Recorder menu to import the file of your choice. Often testers work with a library of pre-existing library files from which they may choose functions that are relevant to the current test session. This modular approach to programming simplifies and speeds up the testing process, and is fully supported and endorsed by WebLOAD.
-
-Converted Script Tree—if necessary, an entire Script Tree can be converted to a single JavaScript Object node consisting of a straight JavaScript text file. Right click the Script Tree’s root node and choose Convert to JavaScript Object from the pop- up menu. However, this conversion is not recommended unless manual editing of an entire script file is truly required for the test session.
+- Converted Script Tree—if necessary, an entire Script Tree can be converted to a single JavaScript Object node consisting of a straight JavaScript text file. Right click the Script Tree’s root node and choose Convert to JavaScript Object from the pop- up menu. However, this conversion is not recommended unless manual editing of an entire script file is truly required for the test session.
 
  
 
@@ -398,59 +360,48 @@ For those users who wish to manually edit their scripts, WebLOAD Recorder provid
 
  
 
-An IntelliSense Editor mode for the JavaScript View pane.
+- An IntelliSense Editor mode for the JavaScript View pane.
 
-Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. IntelliSense supports the following shortcut keys:
+     Add new lines of code to your script or edit existing JavaScript functions through the IntelliSense Editor mode of the JavaScript View pane. The IntelliSense Editor helps you write the JavaScript code for a new function by formatting new code and prompting with suggestions and descriptions of appropriate code choices and syntax as programs are being written. IntelliSense supports the following shortcut keys:
 
  
 
-**Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see
+     - **Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see [Figure 2](../scripting/programming_your_javascript.md#function_insertion)).
 
-[Figure 2](../scripting/programming_your_javascript.md#function_insertion)).
-
-**`<CTRL>` `<Space>`** – While typing the name of an object, you can type `<CTRL>`
-
-`<Space>` to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type wl the IntelliSense Editor displays a drop-down list of all of the objects that begin with wl (such as wlhttp).
+     - **`<CTRL>` `<Space>`** – While typing the name of an object, you can type `<CTRL>``<Space>` to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type `wl` the IntelliSense Editor displays a drop-down list of all of the objects that begin with `wl` (such as `wlhttp`).
 
 In addition, the IntelliSense Editor gives a structure to the code with the outline bar and line numbering.
 
  
-
 Collapsing the code enables you to view the heading of the section, without seeing the code within the section. To expand or collapse different sections of the code:
 
  
 
-Click the plus sign (+) or minus sign (-) on the outline bar,
+- Click the plus sign (+) or minus sign (-) on the outline bar,
 
--Or-
-
- 
-
-Right-click within the IntelliSense Editor and select Outlining from the pop-up menu. The available outlining options are:
-
-
+     -Or-
 
  
+- Right-click within the IntelliSense Editor and select Outlining from the pop-up menu. The available outlining options are:
 
- 
 
-**Toggle outline** – Collapses or expands the section at the mouse location.
+- **Toggle outline** – Collapses or expands the section at the mouse location.
 
-**Toggle all outline** – Collapses or expands all outlines.
+- **Toggle all outline** – Collapses or expands all outlines.
 
-**Collapse to definition** – Collapses all outlines.
+- **Collapse to definition** – Collapses all outlines.
+
 
 You can enable or disable both the outline bar and line numbering features by:
 
  
 
-Selecting **Edit** **** **Enable Outlining** or **Line Numbers**,
+- Selecting **Edit** **** **Enable Outlining** or **Line Numbers**,
 
--Or-
+     -Or-
 
  
-
-Right-clicking within the IntelliSense Editor and selecting **Enable Outlining** or
+- Right-clicking within the IntelliSense Editor and selecting **Enable Outlining** or
 
 **Line Numbers** from the pop-up menu.
 
@@ -462,22 +413,24 @@ Use WebLOAD Recorder’s predefined delimiters to keep your code structured and 
 
  
 
-For JavaScript functions, use the “{“ as the start delimiter and the “}” end delimiter.
+- For JavaScript functions, use the “{“ as the start delimiter and the “}” end delimiter.
 
-For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end
-
-delimiter “End WLIDE”.
+- For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end delimiter “End WLIDE”.
 
 For more information, see the *WebLOAD Scripting Guide.*
 
-A selection of the most commonly used functions and commands, available through the **Insert** menu.
 
-You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the **Insert** menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.
+![](../images/script_guide_041.png)
+
+- A  selection of the most commonly used functions and commands, available through the **Insert** menu. You can choose to program your own JavaScript Object code within your script and take advantage of the WebLOAD Recorder to simplify your programming efforts. Rather than manually typing out the code for each command, with the risk of making a mistake, even a trivial typographical error, and adding invalid code to the script file, you may select an item from the **Insert** menu, illustrated in the following figure, to bring up a list of available commands and functions for the selected item. WebLOAD Recorder automatically inserts the correct code for the selected item into the JavaScript Object currently being edited. You may then change specific parameter values without any worries about accidental mistakes in the function syntax.
  
-
+    ![](../images/script_guide_027.png)
+    
 In addition to the Insert menu, you may select an item from the Insert Variable menu, to add system and user-defined parameters to the script. This eliminates the need for manual coding.
 
-A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select **Tools** **** **Check Syntax** to check the syntax of the code in your script file.
+![](../images/script_guide_028.png)
+
+- A Syntax Checker that checks the syntax of the code in your script file and catches simple syntax errors before you spend any time running a test session. While standing in the JavaScript View pane of the WebLOAD Recorder desktop, select **Tools** **>** **Check Syntax** to check the syntax of the code in your script file.
 
  
 

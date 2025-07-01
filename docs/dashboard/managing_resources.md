@@ -83,8 +83,8 @@ The Resources table provides the following information and available actions, fo
 
 You can create a load test based on either of the following types of resources: 
 
-    - .wlp – a script as well as resources related to the script 
-    - .tpl – a template file 
+- .wlp – a script as well as resources related to the script 
+- .tpl – a template file 
 
 **To create a load test based on a resource:** 
 

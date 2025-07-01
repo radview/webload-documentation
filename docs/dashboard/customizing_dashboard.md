@@ -102,7 +102,7 @@ The following table describes some of the operations available in the **Metrics*
 | 3        | Depending on your choice  in ②,  enables  selecting a sub-category of statistics. |
 | 4        | Depending on your choice  in ③,  enables  selecting a sub-category of statistics. |
 | 5        | Depending on your choice in ④, enables selecting a statistic. |
-| 6        | Enables:   Toggling between  Edit mode and Display mode   Duplicating a line   Moving a line up   Moving a line down |
+| 6        | Enables:<p></p>   - Toggling between Edit mode and Display mode<p></p>   - Duplicating a line<p></p>   - Moving a line up<p></p>   - Moving a line down |
 | 7        | Toggles between showing  and hiding the metrics in the graph |
 | 8        | Deletes the line.                                            |
 | 9        | Adds a new line in the  table for defining a new metric in the graph. |

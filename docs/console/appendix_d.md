@@ -24,17 +24,15 @@ Prior to integrating New Relic in WebLOAD, make sure you fulfill the following p
 1. Access New Relic as a Pro user.
 1. Navigate to **User** > **Account Settings**.
 
-    ![New Relic – selecting Account Settings](../images/console_users_guide_3041.jpeg)
-
+      ![New Relic – selecting Account Settings](../images/console_users_guide_3041.jpeg)
 
 1. Select **Integrations** > **API Keys**.
 
-    ![New Relic – selecting the API Keys option](../images/console_users_guide_3042.jpeg)
-
-
+      ![New Relic – selecting the API Keys option](../images/console_users_guide_3042.jpeg)
+ 
 1. In the **API Keys** page, in the **Admin’s API Key** column, click **(Show key)** in the appropriate line.
 
-   ![](../images/console_users_guide_3044.jpeg)
+      ![](../images/console_users_guide_3044.jpeg)
 
 1. Record the value of the API key. You will need to enter it in the PMM later on.
 
@@ -51,18 +49,17 @@ New Relic integration is carried out by adding the New Relic data source in the 
 1. In the Selecting a Data Source screen, select **External** > **New Relic**.
     ![Selecting New Relic in Data Source Screen](../images/console_users_guide_3045.jpeg)
 
-1. In the Selecting a Host screen, enter the **API Key** you had recorded in [Get or Generate a New Relic API Key]    
-    (#get-or-generate-a-new-relic-api-key). Note that you can change the New Relic **Root URL** if required; in most cases the default value is the correct one.
+1. In the Selecting a Host screen, enter the **API Key** you had recorded in [Get or Generate a New Relic API Key](#get-or-generate-a-new-relic-api-key). Note that you can change the New Relic **Root URL** if required; in most cases the default value is the correct one.
     ![Specifying New Relic Server in Host Selection Screen](../images/console_users_guide_3046.jpeg)
 
 1. In the Selecting the Measurements to Monitor screen, do the following for each site/OS/host/device you wish to monitor
-    Expand a site/OS/host/device by clicking the **+ a**djacent to the item.
+      1. Expand a site/OS/host/device by clicking the **+ a**djacent to the item.
 
-       ![ Selecting the Item to Monitor](../images/console_users_guide_3047.png)
+         ![ Selecting the Item to Monitor](../images/console_users_guide_3047.png)
 
-    1. The sub components list all the statistics collected by New Relic for this item. Select the desired statistics.
+     1. The sub components list all the statistics collected by New Relic for this item. Select the desired statistics.
 
-       ![Selecting the Measurements to Monitor Screen](../images/console_users_guide_3048.png)
+         ![Selecting the Measurements to Monitor Screen](../images/console_users_guide_3048.png)
 
 1. After all the desired items and statistics are selected, click **Next**. The Wizard displays a summary of the host, data source, and measurements configured for monitoring.
 
@@ -79,7 +76,8 @@ New Relic integration is carried out by adding the New Relic data source in the 
 After integrating WebLOAD with New Relic, you can specify, while running a session, which New Relic statistics to view in the report view.
 
 1. Open a report as described in [*Opening Reports* ](console_performance_reports.md#opening-reports).
-1. In the **PM@<New-Relic-host>** node, select the statistics you wish to display in the report.
+1. In the **PM@<New-Relic-host>** node, select the statistics you wish to display in the
+report
 
 
       ![Selecting the Statistics to Display in a Report](../images/console_users_guide_3050.png)

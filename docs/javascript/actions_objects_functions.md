@@ -27,7 +27,9 @@ In WebLOAD Recorder, select or deselect the **GZip Support** checkbox in the Bro
 
 In WebLOAD Console, select or deselect the **GZip Support** checkbox in the Browser Parameters tab of the **Default** or **Current Options** dialog box or the **Script Options** dialog box, accessed from the **Tools** tab of the ribbon.
 
-**Example** a.AcceptEncodingGZip = true
+**Example**
+
+`a.AcceptEncodingGZip = true`
 
 **See also**
 
@@ -47,7 +49,7 @@ Sets the wlGlobals.AcceptLanguage flag, which defines a global value for the Acc
 
 **Example**
 
-wlGlobals.AcceptLanguage = “En-us”
+`wlGlobals.AcceptLanguage = “En-us”`
 
 **GUI mode**
 
@@ -94,7 +96,7 @@ Adds the specified number value to the specified shared integer variable.
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SharedIntVarName         | The name of a shared integer variable to be  incremented.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | number                   | An integer with the amount to add to the  specified variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ScopeFlag                | One of two flags, WLCurrentAgenda or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object:`<br>`The WLCurrentAgenda scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  `<br>`The WLAllAgendas scope  flag signifies variable values that you wish to share between all threads of  one or more scripts, common to a single spawned process, running on a single  Load Generator.  When used as a method of the wlSystemGlobal object:  `<br>`The WLCurrentAgenda scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load Generators, system wide.  `<br>`The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all processes, on all Load  Generators, system-wide. |
+| ScopeFlag                | One of two flags, `WLCurrentAgenda` or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object: <p></p> - The `WLCurrentAgenda` scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  <p></p>  - The `WLAllAgendas` scope flag signifies variable values that you wish to share between all threads of  one or more scripts, common to a single spawned process, running on a single  Load Generator. <p></p> When used as a method of the `wlSystemGlobal` object:  <p></p> - The `WLCurrentAgenda` scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load Generators, system wide.  <p></p> - The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all processes, on all Load  Generators, system-wide. |
 
 **Example**
 
@@ -132,7 +134,7 @@ To set the authentication method to be used by the server:
 
 **Comment**
 
-If the AuthType property was set to “Kerberos” and the server does not support Kerberos, WebLOAD will automatically change the authentication method to “NTLM”.
+If the `AuthType` property was set to “Kerberos” and the server does not support Kerberos, WebLOAD will automatically change the authentication method to “NTLM”.
 
 **See also**
 
@@ -160,13 +162,9 @@ When using asynchronous requests, the script does not wait for the request to co
 
 ```javascript
 wlHttp.Async = true;
-
 wlHttp.onDocumentComplete = function(document) {
-
-InfoMessage(“Response “ + document.wlSource);
-
+    InfoMessage(“Response “ + document.wlSource);
 }
-
 wlHttp.Get(“http://something”);
 ```
 
@@ -181,7 +179,7 @@ wlHttp.Get(“http://something”);
 
 **Description**
 
-Use the BeginTransaction() and EndTransaction() functions to define the start and finish of a logical block of code that you wish to redefine as a single logical transaction unit. This enables setting timers, verification tests, and other measurements for this single logical unit.
+Use the `BeginTransaction()` and `EndTransaction()` functions to define the start and finish of a logical block of code that you wish to redefine as a single logical transaction unit. This enables setting timers, verification tests, and other measurements for this single logical unit.
 
 Optionally, you can specify a period of time, which is the minimum amount of time for the transaction to control pacing. If the total time of the transaction is less than the time period specified, the machine sleeps for the remainder of the time in order to simulate the intermittent activity of real users.
 
@@ -191,13 +189,9 @@ Optionally, you can specify a period of time, which is the minimum amount of tim
 
 ```javascript
 BeginTransaction(TransName, [SleepTime])
-
 …
-
-`<any valid JavaScript code>`
-
+  <any valid JavaScript code>
 …
-
 EndTransaction(TransName,Verification,[SaveFlag])
 ```
 
@@ -205,12 +199,14 @@ EndTransaction(TransName,Verification,[SaveFlag])
 
 | **Parameter Name** | **Description**                                                                                                      |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| TransName                | The name assigned to this transaction, a  user-supplied string.                                                            |
-| SleepTime                | An integer value  specifying the interval of time (in milliseconds) for the minimum amount of  time for the transaction. . |
+| `TransName`                | The name assigned to this transaction, a  user-supplied string.                                                            |
+| `SleepTime`                | An integer value  specifying the interval of time (in milliseconds) for the minimum amount of  time for the transaction. . |
 
-> **Note:** BeginTransaction() and EndTransaction() functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. For example, the following figure illustrates a section in the Script Tree bracketed by BeginTransaction and EndTransaction nodes. The EndTransaction node is highlighted in the Script Tree.
+> **Note:** `BeginTransaction()` and `EndTransaction()` functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. For example, the following figure illustrates a section in the Script Tree bracketed by BeginTransaction and EndTransaction nodes. The EndTransaction node is highlighted in the Script Tree.
 
-To mark the beginning of a transaction, drag the **Begin Transaction** icon from the Load toolbox into the Script Tree, directly above the first action you want to include in the transaction. The Begin Transaction dialog box opens. For additional information about the BeginTransaction() function, refer to *Begin and End Transaction* in the *WebLOAD Recorder User’s Guide*.
+![](../images/EndTransaction_Nodes.png)
+
+To mark the beginning of a transaction, drag the **Begin Transaction** ![](../images/begin_trans.png) icon from the Load toolbox into the Script Tree, directly above the first action you want to include in the transaction. The Begin Transaction dialog box opens. For additional information about the `BeginTransaction()` function, refer to *Begin and End Transaction* in the *WebLOAD Recorder User’s Guide*.
 
 **See also**
 
@@ -227,22 +223,22 @@ To mark the beginning of a transaction, drag the **Begin Transaction** icon from
 
 **Property of Objects**
 
-cell objects are grouped into collections of cells. The cells collection is a property of the following objects:
+`cell` objects are grouped into collections of `cells`. The `cells` collection is a property of the following objects:
 
 * row (see [*row (object)* ](#row-object))
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 **Description**
 
-A cell object contains all the data found in a single table cell. If the cells collection is a property of a wlTables object, then the collection refers to all the cells in a particular table. If the cells collection is a property of a row object, then the collection refers to all the cells in a particular row. Individual cell objects may be addressed by index number, similar to any object within a collection.
+A `cell` object contains all the data found in a single table cell. If the `cells` collection is a property of a `wlTables` object, then the collection refers to all the cells in a particular table. If the `cells` collection is a property of a `row` object, then the collection refers to all the cells in a particular row. Individual `cell` objects may be addressed by index number, similar to any object within a collection.
 
 **Syntax**
 
-Individual cell objects may be addressed by index number, similar to any object within a collection. For example, to access a property of the 16th cell in myTable, counting across rows and with the first cell indexed at 0, you could write:
+Individual `cell` objects may be addressed by index number, similar to any object within a collection. For example, to access a property of the 16th cell in `myTable`, counting across rows and with the first cell indexed at 0, you could write:
 
-`document.wlTables.myTable.cells[15].<*cell-property*>`
+`document.wlTables.myTable.cells[15].<cell-property>`
 
-If you are working directly with the cells in a wlTables object, as opposed to the cells within a single row object, you may also specify a range of cells from anywhere within the table using the standard spreadsheet format. Specify a group of cells using a string with the following format:
+If you are working directly with the cells in a `wlTables` object, as opposed to the cells within a single `row` object, you may also specify a range of cells from anywhere within the table using the standard spreadsheet format. Specify a group of cells using a string with the following format:
 
 * Use *letters* to indicate columns, starting with the letter **A** to represent the first column.
 * Use *numbers* to indicate rows, starting with the number **1** to represent the first column.
@@ -255,19 +251,19 @@ If you are working directly with the cells in a wlTables object, as opposed to t
 
 `document.wlTables.myTable.cells[“A1:C3”]`
 
-In this example, the string “A1:C3” includes all cells from the first column of the first row up to the third column in the third row, *reading across rows*. This means that the first cell read is in the first column of the first row, the second cell read is in the *second column* of the *first row*, the third cell read is in the third column of the first row, and so on until the end of the first row. If the table includes eight columns, then the ninth cell read will be in the first column of the second row, and so on.
+In this example, the string `“A1:C3”` includes all cells from the first column of the first row up to the third column in the third row, *reading across rows*. This means that the first cell read is in the first column of the first row, the second cell read is in the *second column* of the *first row*, the third cell read is in the third column of the first row, and so on until the end of the first row. If the table includes eight columns, then the ninth cell read will be in the first column of the second row, and so on.
 
 **For cells within a row object:**
 
-To access a property of the 4th cell in the 3rd row in myTable, counting across rows and with the first cell indexed at 0, you could write:
+To access a property of the 4th cell in the 3rd row in `myTable`, counting across rows and with the first cell indexed at 0, you could write:
 
-`document.wlTables.myTable.rows[2].cells[3].<*cell-property*>`
+`document.wlTables.myTable.rows[2].cells[3].<cell-property>`
 
 > **Note:** Individual table cells often are merged and span multiple rows. In such a case, the cell will only appear in the collection for the *first* of the set of rows that the cell spans.
 
 **Properties**
 
-Each cell object contains information about the data found in one cell of a table. The cell object includes the following properties:
+Each `cell` object contains information about the data found in one cell of a table. The `cell` object includes the following properties:
 
 * cellIndex (see [*cellIndex (property)* ](#cellindex-property))
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
@@ -276,7 +272,7 @@ Each cell object contains information about the data found in one cell of a tabl
 
 **Comment**
 
-cell is often accessed through the wlTables family of table, row, and cell objects.
+`cell` is often accessed through the wlTables family of table, row, and cell objects.
 
 **See also**
 
@@ -298,11 +294,11 @@ cell is often accessed through the wlTables family of table, row, and cell objec
 
 **Description**
 
-An integer containing the ordinal index number of this cell object within the parent table or row. Cells are indexed starting from zero, so the cellIndex of the first cell in a table or row is 0.
+An integer containing the ordinal index number of this `cell` object within the parent table or row. Cells are indexed starting from zero, so the `cellIndex` of the first cell in a table or row is 0.
 
 **Comment**
 
-cellIndex is a member of the wlTables family of table, row, and cell objects.
+`cellIndex` is a member of the wlTables family of table, row, and cell objects.
 
 **See also**
 
@@ -342,13 +338,13 @@ In WebLOAD Recorder, select a character set in the Character Encoding list box i
 
 **See also**
 
-* EnforceCharEncoding (see [*EnforceCharEncoding (property)* ](#enforcecharencoding-property)))
+- EnforceCharEncoding (see [*EnforceCharEncoding (property)* ](#enforcecharencoding-property)))
 
 ## checked (property)
 
 **Property of Object**
 
-* element (see [*element (object)* ](#element-object))
+- element (see [*element (object)* ](#element-object))
 
 **Description**
 
@@ -430,7 +426,8 @@ To enable or disable DNS caching, set the DNSUseCache (see [*DNSUseCache (proper
 Clear the SSL decoding-key cache.
 
 **Syntax**
-wlHttp.ClearSSLCache()
+
+`wlHttp.ClearSSLCache()`
 
 **GUI mode**
 
@@ -455,15 +452,15 @@ To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (proper
 
 **Description**
 
-ClientNum is set to the serial number of the client in the WebLOAD test configuration. ClientNum is a read-only local property. Each client in a Load Generator has a unique ClientNum. However, two clients in two different Load Generators may have the same ClientNum.
+`ClientNum` is set to the serial number of the client in the WebLOAD test configuration. `ClientNum` is a read-only local property. Each client in a Load Generator has a unique `ClientNum`. However, two clients in two different Load Generators may have the same `ClientNum`.
 
-> **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
+> **Note:** While `ClientNum` is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
 
-If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the Script (InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
+If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access `ClientNum` anywhere in the local context of the Script (InitClient(), main script, TerminateClient(), etc.). `ClientNum` does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
 
-If you mix Scripts within a single Load Generator, instances of two or more Scripts may run simultaneously on each client. Instances on the same client have the same ClientNum value.
+If you mix Scripts within a single Load Generator, instances of two or more Scripts may run simultaneously on each client. Instances on the same client have the same `ClientNum` value.
 
-ClientNum reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames (see [*LoadGeneratorThreads (property)* ](#loadgeneratorthreads-property)).
+`ClientNum` reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames (see [*LoadGeneratorThreads (property)* ](#loadgeneratorthreads-property)).
 
 **Comment**
 
@@ -471,9 +468,11 @@ Earlier versions of WebLOAD referred to this value as ThreadNum. The variable na
 
 **GUI mode**
 
-WebLOAD recommends accessing global system variables, including the ClientNum identification property, through the WebLOAD Recorder. The variables that appear in this list are available for use at any point in a script file. In the WebLOAD Recorder main window, click **Variable Windows** in the **Debug** tab of the ribbon..
+WebLOAD recommends accessing global system variables, including the `ClientNum` identification property, through the WebLOAD Recorder. The variables that appear in this list are available for use at any point in a script file. In the WebLOAD Recorder main window, click **Variable Windows** in the **Debug** tab of the ribbon..
 
-For example, it is convenient to add ClientNum to a Message Node to clarify which client sent the messages that appear in the WebLOAD Console Log window.
+For example, it is convenient to add `ClientNum` to a Message Node to clarify which client sent the messages that appear in the WebLOAD Console Log window.
+
+![](../images/variables_window.png)
 
 **See also**
 
@@ -492,7 +491,7 @@ For example, it is convenient to add ClientNum to a Message Node to clarify whic
 
 **Description**
 
-Closes an open file. When called as a method of the wlOutputFile object, closes the open output file being managed by that object.
+Closes an open file. When called as a method of the `wlOutputFile` object, closes the open output file being managed by that object.
 
 **Syntax**
 
@@ -509,7 +508,7 @@ Closes an open file. When called as a method of the wlOutputFile object, closes 
 | **Parameter  Name**       | **Description**                                                                                                                          |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Function  call:**       |                                                                                                                                                |
-| Filename                        | A string with the name of the ASCII output file to  be closed.                                                                                 |
+| `Filename`                        | A string with the name of the ASCII output file to  be closed.                                                                                 |
 | **wlOutputFile  method:** | No parameter is necessary  when this function is called as a method of the wlOutputFile object, since  the file to be closed is already known. |
 
 **Example**
@@ -528,7 +527,7 @@ Closes an open file. When called as a method of the wlOutputFile object, closes 
 
 **Comment**
 
-When you use the Close() function to close a file, data will be flashed to the disk.
+When you use the `Close()` function to close a file, data will be flashed to the disk.
 
 **See also**
 
@@ -553,11 +552,11 @@ When you use the Close() function to close a file, data will be flashed to the d
 
 **Description**
 
-Closes all open connections. If CloseConnection() is not called, all connections that were opened with the KeepAlive option (see [*KeepAlive (property)* ](#keepalive-property)) remain open until the end of the round. HTTP connections are automatically closed at the end of each round.
+Closes all open connections. If `CloseConnection()` is not called, all connections that were opened with the KeepAlive option (see [*KeepAlive (property)* ](#keepalive-property)) remain open until the end of the round. HTTP connections are automatically closed at the end of each round.
 
 **Syntax**
 
-wlHttp.CloseConnection()
+`wlHttp.CloseConnection()`
 
 **GUI mode**
 
@@ -600,23 +599,19 @@ wlGlobals.CloseConnectionsAtEndOfRound  = false
 
 **Description**
 
-When working with wlTables objects, an integer containing the number of columns in this table. The column number is taken from the COLS attribute in the `<TABLE>` tag. This property is optional. If the table does not have a COLS attribute then the value is undefined. When working with element objects of type TextArea, an integer containing the number of columns in this TextArea.
+When working with `wlTables` objects, an integer containing the number of columns in this table. The column number is taken from the COLS attribute in the `<TABLE>` tag. This property is optional. If the table does not have a COLS attribute then the value is undefined. When working with `element` objects of type `TextArea`, an integer containing the number of columns in this TextArea.
 
 **Comment**
 
-cols is often accessed through the wlTables family of table, row, and cell objects.
+`cols` is often accessed through the `wlTables` family of table, row, and cell objects.
 
 **See also**
 
 * cell
 * cellIndex
 * [*Collections* ](./using_javascript_ref.md#collections)
-*
-
-
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
-* 
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property) (row property)
 * tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
@@ -662,17 +657,11 @@ You may assign a connection speed using the wlGlobals.ConnectionSpeed property. 
 
 ```javascript
 InitAgenda()
-
 {
-
-wlGlobals.ConnectionSpeed=28800
-
+  wlGlobals.ConnectionSpeed=28800
 }
-
 // main Script body
-
- [wlHttp.Get(“http://abcdef](http://abcdef/)”) 
-
+wlHttp.Get("http://abcdef")
 Sleep(1000)
 ```
 
@@ -696,7 +685,7 @@ Retrieves the value of the CONTENT attribute of the META tag (read-only string).
 
 **Syntax**
 
-` wlMetas[`
+`wlMetas[index#].content`
 
  **Example**
 
@@ -716,15 +705,15 @@ Verifies the content length of the service response.
 
 **Syntax**
 
-wlVerification.ContentLength(operator, length, severity)
+`wlVerification.ContentLength(operator, length, severity)`
 
 **Parameters**
 
 | **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| operator                  | One  of the following mathematical operators:`<br>`< - less than.  `<br>`> - greater than.  * = - equal to.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| operator                  | One  of the following mathematical operators: <p></p> < - less than. <p></p> > - greater than.  <p></p>  = - equal to.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | length                    | The  expected length of the content in bytes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| severity                  | Possible values of this parameter are:`<br>`WLSuccess. The transaction  terminated successfully.  `<br>`WLMinorError. This specific  transaction failed, but the test session may continue as usual. The Script  displays a warning message in the Log window and continues execution from the next statement.  `<br>`WLError. This specific  transaction failed and the current test  round was aborted. The Script displays an error message in the Log window and  begins a new round.  `<br>`WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The Script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
+| severity                  | Possible values of this parameter are: <p></p> - `WLSuccess`. The transaction  terminated successfully.   <p></p> - `WLMinorError`. This specific  transaction failed, but the test session may continue as usual. The Script  displays a warning message in the Log window and continues execution from the next statement.   <p></p> - `WLError`. This specific  transaction failed and the current test  round was aborted. The Script displays an error message in the Log window and  begins a new round.   <p></p> - `WLSevereError`. This specific  transaction failed and the test  session must be stopped completely. The Script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
 
 **Example**
 
@@ -781,7 +770,11 @@ The ConvertHiddenFields method takes the URL to be submitted via a Get or Post a
 
 Use
 
-SaveCurrentHiddenFields(url) after the page with the fields and specify the URL of the page.
+`SaveCurrentHiddenFields(url)`
+
+after the page with the fields and specify the URL of the page.
+
+
 
 **Comment**
 
@@ -793,15 +786,10 @@ The page you are working with is called frame1.html and is an internal frame of 
 
 ```
 Get page.html 
-
 Get frame1.html 
-
 Get frame2.html 
-
 Get frame3.html
-
- Get frame4.html
-
+Get frame4.html
 Post the form from frame1.html
 ```
 
@@ -842,7 +830,7 @@ When set to true, the client checks if the cookie expiration matches the system 
 
 **Example**
 
-wlGlobals.CookieExpiration = false
+`wlGlobals.CookieExpiration = false`
 
 **See also**
 
@@ -859,13 +847,13 @@ wlGlobals.CookieExpiration = false
 
 **Description**
 
-When set to true, the client checks if the cookie path matches the request path during GET/POST. Use this property if you need to emulate the setting of client side cookies or modify server cookies on the client side.
+When set to `true`, the client checks if the cookie path matches the request path during GET/POST. Use this property if you need to emulate the setting of client side cookies or modify server cookies on the client side.
 
 > **Note:** This property can only be inserted manually.
 
 **Example**
 
-wlGlobals.CookiePath = false
+`wlGlobals.CookiePath = false`
 
 **See also**
 
@@ -880,57 +868,68 @@ Copies files from a source file on the console to a destination file on the Load
 
 **Syntax**
 
-CopyFile(SrcFileName [, DestFileName])
+`CopyFile(SrcFileName [, DestFileName])`
 
 **Parameters**
 
-| **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SrcFileName              | A literal string or  variable containing the full literal name of the file to be copied. WebLOAD  assumes that the source file is located in the default directory specified in  the File Locations tab (User Copy Files entry) in the**Tools** ****  **Global Options** dialog box in the WebLOAD  Console or in the **Tools** **** **Settings** dialog box in the WebLOAD Recorder. For additional information about  the file’s location, refer to *Determining  the Included File Location* in the *WebLOAD  Scripting Guide*. |
-| DestFileName             | An optional literal string  or variable containing the full literal name of the file into which the  source file will be copied. If the target parameter is omitted, WebLOAD will  copy the source file to the current directory and return the file name as the  return value of the CopyFile function.                                                                                                                                                                                                                                                                        |
+| **Parameter Name**                                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|`SrcFileName`                       | A literal string or  variable containing the full literal name of the file to be copied. WebLOAD  assumes that the source file is located in the default directory specified in  the File Locations tab (User Copy Files entry) in the**Tools** **>**  **Global Options** dialog box in the WebLOAD  Console or in the **Tools** **>** **Settings** dialog box in the WebLOAD Recorder. For additional information about  the file’s location, refer to *Determining  the Included File Location* in the *WebLOAD  Scripting Guide*. |
+|`DestFileName`                      | An optional literal string  or variable containing the full literal name of the file into which the  source file will be copied. If the target parameter is omitted, WebLOAD will  copy the source file to the current directory and return the file name as the  return value of the `CopyFile` function.                                                                                                                                                                                                                                                                        |
 
 **Return Value**
 
-Optionally, a string with the target file name, returned if the DestFileName
+Optionally, a string with the target file name, returned if the `DestFileName`
 
 parameter is not specified.
 
 **Example**
 
-To copy the auxiliary file src.txt, located on the WebLOAD Console, to the destination file dest.txt on the current Load Generator, use the following command:
+To copy the auxiliary file `src.txt`, located on the WebLOAD Console, to the destination file `dest.txt` on the current Load Generator, use the following command:
 
 ```
-function InitAgenda() {…CopyFile(“src.txt”, “dest.txt”)…}
+function InitAgenda() {
+    …
+    CopyFile(“src.txt”, “dest.txt”)
+    …
+}
 ```
 
 You may then access the file as usual in the main body of the Script. For example:
 
 `DataArr = GetLine(“dest.txt”)`
 
-It is convenient to specify only the SrcFileName. To copy the auxiliary file file.dat, located on the WebLOAD Console, to the current Load Generator, using a single file name:
+It is convenient to specify only the `SrcFileName`. To copy the auxiliary file `file.dat`, located on the WebLOAD Console, to the current Load Generator, using a single file name:
 
 ```
-function InitAgenda() {…filename = CopyFile(“file.dat”)…}…GetLine(filename)…
+function InitAgenda() {
+    …
+    filename = CopyFile(“file.dat”)
+    …
+    }
+    …
+    GetLine(filename)
+    …
 ```
 
 **GUI mode**
 
-> **Note:** CopyFile() and IncludeFile() functions can be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
+> **Note:** `CopyFile()` and `IncludeFile()` functions can be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
 
 **Comment**
 
 WebLOAD does not create new directories, so any directories specified as target directories *must already exist*.
 
-The CopyFile command must be inserted in the InitAgenda() section of your JavaScript program.
+The `CopyFile` command must be inserted in the `InitAgenda()` section of your JavaScript program.
 
 The load engine first looks for the file to be copied in the default User Copy Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
 
 1. If a full path name has been hardcoded into the CopyFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
 
-**Note:** It is not recommended to hardcode a full path name, since the Script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
+     **Note:** It is not recommended to hardcode a full path name, since the Script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
 
-2. Assuming no hardcoded full path name in the Script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
-3. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
+1. Assuming no hardcoded full path name in the Script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
+1. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
 
 **See also**
 
@@ -951,7 +950,7 @@ The load engine first looks for the file to be copied in the default User Copy F
 
 **Description**
 
-CreateDOM functions return a complete Document Object Model (DOM) tree. You may compare this expected DOM to the actual DOM generated automatically as your JavaScript Script runs
+`CreateDOM` functions return a complete Document Object Model (DOM) tree. You may compare this expected DOM to the actual DOM generated automatically as your JavaScript Script runs
 
 > **Note:** WebLOAD uses an extended version of the standard DOM. For more information, see *Understanding the WebLOAD DOM structure* in the *WebLOAD Scripting Guide*.
 
@@ -959,11 +958,14 @@ CreateDOM functions return a complete Document Object Model (DOM) tree. You may 
 
 `DOM = CreateDOM(HTMLFileName)`
 
+
+
+
 **Parameters**
 
 | **Parameter Name** | **Description**                                                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| HTMLFileName             | A literal string or  variable containing the full literal name of the HTML file in which the  information about the expected DOM is  found. |
+| `HTMLFileName`             | A literal string or  variable containing the full literal name of the HTML file in which the  information about the expected DOM is  found. |
 
 **Return Value**
 
@@ -994,25 +996,37 @@ The actual DOM is created automatically each time an HTTP request is accessed th
 
 **Description**
 
-WebLOAD provides a CreateTable function to automatically convert the tables found on an HTML page to parallel wlTables objects. This simplifies access to the exact table entry in which the user is interested. The CreateTable() function returns a window object that includes a wlTables collection. This is a collection of wlTables objects, each of which corresponds to one of the tables found on the HTML page used as the function parameter. The table data may be accessed as any standard wlTables data.
+WebLOAD provides a `CreateTable` function to automatically convert the tables found on an HTML page to parallel `wlTables` objects. This simplifies access to the exact table entry in which the user is interested. The `CreateTable()` function returns a `window` object that includes a `wlTables` collection. This is a collection of `wlTables` objects, each of which corresponds to one of the tables found on the HTML page used as the function parameter. The table data may be accessed as any standard `wlTables` data.
 
-    **Parameter Name**                  **Description**                            HTMLFileName                  A literal string or      variable containing the full literal name of the HTML file in which the      tables to be converted are found.
+**Syntax** 
 
-**Syntax** CreateTable(HTMLFileName) **Parameters**
+`CreateTable(HTMLFileName)`
+
+ **Parameters**
+
+
+**Parameters**
+
+| **Parameter Name** | **Description**                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `HTMLFileName`             | A literal string or variable containing the full literal name of the HTML file in which the tables to be converted are found. |
+
 
 **Return Value**
 
-Returns a window object that includes a wlTables collection.
+Returns a `window` object that includes a `wlTables` collection.
 
 **Example**
 
 ```
-NewTableSet = CreateTable(“HTMLTablePage”) NumTables = NewTableSet.wlTables.length FirstTableName = NewTableSet.wlTables[0].id
+NewTableSet = CreateTable(“HTMLTablePage”) 
+NumTables = NewTableSet.wlTables.length 
+FirstTableName = NewTableSet.wlTables[0].id
 ```
 
 **Comment**
 
-CreateTable() is a member of the wlTables family of table, row, and cell objects.
+`CreateTable()` is a member of the wlTables family of table, row, and cell objects.
 
 **See also**
 
@@ -1039,10 +1053,13 @@ Holds a string to be submitted in an HTTP Post command.
 
 The Data property has two subfields:
 
-* Data.Type – The MIME type for the submission
-* Data.Value – The string to submit You can use Data in two ways:
-  * As an alternative to FormData if you know the syntax of the form submission.
-  * To submit a string that is not a standard HTML form and cannot be represented by FormData.
+* `Data.Type` – The MIME type for the submission
+* `Data.Value` – The string to submit 
+
+You can use Data in two ways:
+
+  * As an alternative to `FormData` if you know the syntax of the form submission.
+  * To submit a string that is not a standard HTML form and cannot be represented by `FormData`.
 
 Data is for posting data that is not meant to be HTTP encoded, for example Web service calls.
 
@@ -1050,17 +1067,20 @@ Data is for posting data that is not meant to be HTTP encoded, for example Web s
 
 Thus the following three code samples are equivalent:
 
+```
 //Sample 1
-
-wlHttp.Data.Type = “application/x-www-form-urlencoded” wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm” wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
-
+wlHttp.Data.Type = “application/x-www-form-urlencoded” 
+wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm” 
+wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
 //Sample 2
+wlHttp.FormData.SearchFor = “icebergs” 
+wlHttp.FormData.SearchType = “ExactTerm” 
+wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
+//Sample 3 
+wlHttp.Post(“http://www.ABCDEF.com/query.exe” +
+    “?SearchFor=icebergs&SearchType=ExactTerm”)
+```
 
-wlHttp.FormData.SearchFor = “icebergs” wlHttp.FormData.SearchType = “ExactTerm” wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
-
-//Sample 3 wlHttp.Post(“http://www.ABCDEF.com/query.exe” +
-
-“?SearchFor=icebergs&SearchType=ExactTerm”)
 
 **Methods**
 
@@ -1073,9 +1093,9 @@ wlHttp.FormData.SearchFor = “icebergs” wlHttp.FormData.SearchType = “Exact
 
 **Comment**
 
-Data and DataFile are both collections that hold sets of data. Data collections are stored within the Script itself, and are useful when you prefer to see the data directly. DataFile collections store the data in local text files, and are useful when you are working with large amounts of data, which would be too cumbersome to store within the Script code itself. When working with DataFile collections, only the name of the text file is stored in the Script itself.
+`Data` and `DataFile` are both collections that hold sets of data. Data collections are stored within the Script itself, and are useful when you prefer to see the data directly. `DataFile` collections store the data in local text files, and are useful when you are working with large amounts of data, which would be too cumbersome to store within the Script code itself. When working with `DataFile` collections, only the name of the text file is stored in the Script itself.
 
-Your Script should work with either Data or DataFile collections. Do not use both properties within the same Script.
+Your Script should work with either `Data` or `DataFile` collections. Do not use both properties within the same Script.
 
 **See also**
 
@@ -1099,10 +1119,10 @@ A file to be submitted in an HTTP Post command.
 
 WebLOAD sends the file using a MIME protocol. DataFile has two subfields:
 
-* DataFile.Type-the MIME type
-* DataFile.FileName-the name of the file, for example,
-
-`“c:`
+* `DataFile.Type`-the MIME type
+* `DataFile.FileName`-the name of the file, for example,
+     `“c:\\MyWebloadData\\BigFile.doc”`
+`
 
 WebLOAD sends the file when you call the wlHttp.Post() method.
 
@@ -1116,7 +1136,7 @@ WebLOAD sends the file when you call the wlHttp.Post() method.
 
 **Comment**
 
-DataFile is used for sending files and parallels the posting of mulipart data in HTML. Data and DataFile are both collections that hold sets of data. Data collections are stored within the Script itself, and are useful when you prefer to see the data directly. DataFile collections store the data in local text files, and are useful when you are working with large amounts of data which would be too cumbersome to store within the Script code itself, or binary data. When working with DataFile collections, only the name of the text file is stored in the Script itself.
+`DataFile` is used for sending files and parallels the posting of mulipart data in HTML. `Data` and `DataFile` are both collections that hold sets of data. `Data` collections are stored within the Script itself, and are useful when you prefer to see the data directly. `DataFile` collections store the data in local text files, and are useful when you are working with large amounts of data which would be too cumbersome to store within the Script code itself, or binary data. When working with `DataFile` collections, only the name of the text file is stored in the Script itself.
 
 **See also**
 
@@ -1134,13 +1154,21 @@ DataFile is used for sending files and parallels the posting of mulipart data in
 
 Displays a debug message in the Log View of WebLOAD Recorder.
 
-    **Parameter Name**                  **Description**                            msg                  A string with an      informative message to be sent to WebLOAD Recorder, to be displayed in      the Log View.
 
-**Syntax** DebugMessage(msg) **Parameters**
+**Syntax** 
+
+`DebugMessage(msg)`
+
+ **Parameters**
+
+
+| **Parameter Name** | **Description**                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `msg`             | A string with an informative message to be sent to WebLOAD Recorder, to be displayed in the Log View. |
 
 **Comment**
 
-If you call DebugMessage() in the main script, WebLOAD sends a debug message to the Log View of WebLOAD Recorder. The message is not written to the Console’s Log
+If you call `DebugMessage()` in the main script, WebLOAD sends a debug message to the Log View of WebLOAD Recorder. The message is not written to the Console’s Log
 
 View during script execution and has no impact on the continued execution of the Script.
 
@@ -1168,7 +1196,9 @@ The value of DecodeBinaryEnd starts from 0 and designates an offset from the beg
 
 **Note:** This property can only be inserted manually.
 
-**Example** wlGlobals.DecodeBinaryEnd=4 **See also**
+**Example** wlGlobals.DecodeBinaryEnd=4 
+
+**See also**
 
 * DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#decodebinarynullas-property)))
 * DecodeBinaryStart (see [*DecodeBinaryStart (property)* ](#decodebinarystart-property))
@@ -1189,11 +1219,11 @@ Supports the decoding of binary data. Decoding is not performed by default. In o
 
 **Syntax**
 
-wlGlobals.DecodeBinaryNullAs = “TextString”
+`wlGlobals.DecodeBinaryNullAs = “TextString”`
 
 **Example**
 
-WLGlobals.DecodeBinaryNullAs = “Classified”
+`WLGlobals.DecodeBinaryNullAs = “Classified”`
 
 **See also**
 
@@ -4898,7 +4928,7 @@ wlGlobals.ProbingClientThreads = “Single”
 
 **Comment**
 
-The extra threads have no effect on the ClientNum value of the client. The ClientNum variable reports only the main thread number of each client, not the extra threads.
+The extra threads have no effect on the `ClientNum` value of the client. The `ClientNum` variable reports only the main thread number of each client, not the extra threads.
 
 **GUI mode**
 
@@ -6471,7 +6501,7 @@ wlGlobals.LoadGeneratorThreads = “Multiple”
 
 **Comment**
 
-The extra threads have no effect on the ClientNum value of the client. The ClientNum variable reports only the main thread number of each client, not the extra threads.
+The extra threads have no effect on the `ClientNum` value of the client. The `ClientNum` variable reports only the main thread number of each client, not the extra threads.
 
 **GUI mode**
 
@@ -9268,17 +9298,17 @@ The following code verifies that the server response does not contain the word "
 
 **Description**
 
-Assigns a unique number to a process based on the client/Load Generator/script. This number is unique across the script’s slave processes and is saved in the ClientNum property. Each client in a Load Generator is assigned a unique number. However, two clients in two different Load Generators may have the same number.
+Assigns a unique number to a process based on the client/Load Generator/script. This number is unique across the script’s slave processes and is saved in the `ClientNum` property. Each client in a Load Generator is assigned a unique number. However, two clients in two different Load Generators may have the same number.
 
- **Note:** While ClientNum is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
+ **Note:** While `ClientNum` is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
 
-If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access ClientNum anywhere in the local context of the script
+If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access `ClientNum` anywhere in the local context of the script
 
-(InitClient(), main script, TerminateClient(), etc.). ClientNum does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
+(InitClient(), main script, TerminateClient(), etc.). `ClientNum` does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
 
-If you mix scripts within a single Load Generator, instances of two or more scripts may run simultaneously on each client. Instances on the same client have the same ClientNum value.
+If you mix scripts within a single Load Generator, instances of two or more scripts may run simultaneously on each client. Instances on the same client have the same `ClientNum` value.
 
-ClientNum reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames (see [*LoadGeneratorThreads (property)* ](#loadgeneratorthreads-property)).
+`ClientNum` reports only the main client number. It does not report any extra threads spawned by a client to download nested images and frames (see [*LoadGeneratorThreads (property)* ](#loadgeneratorthreads-property)).
 
 **Comment**
 
@@ -9813,7 +9843,7 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 
 **Description**
 
-VCUniqueID() provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to ClientNum. which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
+VCUniqueID() provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to `ClientNum`. which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
 
 **Syntax** 
 

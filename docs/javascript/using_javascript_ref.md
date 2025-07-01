@@ -56,15 +56,15 @@ The wlGlobals, wlLocals, and wlHttp objects share a set of components that manag
 
  
 
-> **Note:** The values assigned in a wlHttp object override any global defaults assigned in wlGlobals or local defaults in wlLocals. WebLOAD uses the wlGlobals or wlLocals defaults only if you do not assign values to the corresponding properties in the wlHttp object.
+> **Note:** The values assigned in a `wlHttp` object override any global defaults assigned in `wlGlobals` or local defaults in `wlLocals`. WebLOAD uses the `wlGlobals` or `wlLocals` defaults only if you do not assign values to the corresponding properties in the `wlHttp` object.
 
  
 
 **Syntax**
 
-`NewValue* = wlGlobals.*BrowserMethod()*` 
+`NewValue* = wlGlobals.BrowserMethod()` 
 
-`wlGlobals.*BrowserProperty* = *PropertyValue`
+`wlGlobals.BrowserProperty = PropertyValue`
 
 
 
@@ -102,8 +102,14 @@ The following methods are for wlHttp objects only:
 
 - wlSet() (see [*wlSet() (method)* ](./actions_objects_functions.md#wlset-method))
 
+
+
+
+
 <a name = "figure5"></a>
 ![Figure 5](../images/figure5.png)
+
+
 
 
 **Properties**
@@ -219,15 +225,15 @@ Collections are arrays or sets of individual objects. For example, the elements 
 
 Access individual members of a collection either through an index number or directly through the member’s name or ID. The following three syntax choices are equivalent:
 
-- Collection[index#]
-- Collection[“ID”] 
-- Collection.ID
+- `Collection[index#]`
+- `Collection[“ID”] `
+- `Collection.ID`
 
 
 
-Test session scripts work with all browser DOM collections and objects. The recommended way to access these objects is through the classic browser document object, via the relevant collection. For example, access a table through:
+Test session scripts work with all browser DOM collections and objects. The recommended way to access these objects is through the classic browser `document` object, via the relevant collection. For example, access a table through:
 
-- document.links[0]
+- `document.links[0]`
 
 
  
@@ -238,7 +244,7 @@ Each collection of objects includes the single property length, which contains t
 
  
 
-For example, to find out how many images objects are contained within the images collection of a document, check the value of:
+For example, to find out how many `images` objects are contained within the `images` collection of a document, check the value of:
 
 `document.images.length`
 
@@ -322,7 +328,7 @@ The following example illustrates common use of these variables and functions. U
 
 Suppose your script submits data to a server on an HTML form. You want to label one of the form fields so you can tell which WebLOAD client submitted the data, and in which round of the main script.
 
-You can do this using a combination of the ClientNum and RoundNum variables. Together, these variables uniquely identify the WebLOAD client and round. For example, you can submit a string such as the following in a form field:
+You can do this using a combination of the` ClientNum` and `RoundNum` variables. Together, these variables uniquely identify the WebLOAD client and round. For example, you can submit a string such as the following in a form field:
 
  
 
@@ -334,7 +340,7 @@ You can do this using a combination of the ClientNum and RoundNum variables. Tog
 
 WebLOAD recommends accessing these identification variables and functions through the WebLOAD Recorder. All the variables that appear in this list are available for use at all times in a script file. In the WebLOAD Recorder main window, click **Variable Windows** in the **Debug** tab of the ribbon.
 
-For example, it is convenient to add ClientNum to a Message Node to clarify which client sent the messages that appear in the WebLOAD Console Log window.
+For example, it is convenient to add `ClientNum to a Message Node to clarify which client sent the messages that appear in the WebLOAD Console Log window.
 
 
 
@@ -371,25 +377,20 @@ In the following example, the script attempts to download an HTML page. If it fa
 
 ```javascript
 function InitClient() {
-
-wlLocals.Url = [“http://www.ABCDEF.com/index.html](http://www.ABCDEF.com/index.html)”
-
+    wlLocals.Url = “http://www.ABCDEF.com/index.html"
 }
-
-//First try wlHttp.Get()
-
-if (document.wlStatusNumber != 200) { InfoMessage(“Thread “ + ClientNum.toString() +
-
-“ pausing for 3 min”) Sleep(180000)
-
-//Second try
-
+//First try 
 wlHttp.Get()
-
-if (document.wlStatusNumber != 200) { ErrorMessage(“Aborting round “ + RoundNum.toString() + “ of thread “ + ClientNum.toString())
-
-}   // End of second try
-
+if (document.wlStatusNumber != 200) { 
+    InfoMessage(“Thread “ + ClientNum.toString() +
+    " pausing for 3 min") 
+    Sleep(180000)
+  //Second try
+    wlHttp.Get()
+    if (document.wlStatusNumber != 200) { 
+      ErrorMessage(“Aborting round “ + RoundNum.toString() + “ 
+      of thread “ + ClientNum.toString())
+    }   // End of second try
 }
 ```
 
@@ -400,10 +401,8 @@ if (document.wlStatusNumber != 200) { ErrorMessage(“Aborting round “ + Round
  
 
 > **Note:** Message functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. Message function commands can be added to the script in Visual Editing mode using the Toolbox message item and the Insert menu command. The JavaScript code line that corresponds to this message function appears in the JavaScript View pane.
-
-Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
-
-Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.
+        Message function command lines may also be added directly to the code in a JavaScript Object within a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
+        Messages can also be added to the script using the Toolbox Message icon . Drag the Message icon to the Script Tree. The Message dialog box appears. Type or select the information to appear in the message. Use double quotes to include a string value, or click  to select a variable. Select the severity of the message from the Message Severity drop-down list.
 
  
 
@@ -443,11 +442,11 @@ Messages can also be added to the script using the Toolbox Message icon . Drag t
 
 [*WebLOAD scripts Work with an Extended Version of the Standard DOM* ](./intro_java_scripts.md#webload-scripts-work-with-an-extended-version-of-the-standard-dom)presents an overview of the Document Object Model (DOM), describing some of the basic objects used by standard Web browsers when working with HTML Web pages. The classic browser DOM includes a wide range of objects, properties, and methods for maximum utility and versatility. For more information about the standard DOM structure and components, go to the following websites:
 
-- http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html
+- [http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html](http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/introduction.html)
 
-- http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dom/domov erview.asp
+- [http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dom/domoverview.asp](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dom/domoverview.asp)
 
-- http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/refere nce/dhtmlrefs.asp
+- [http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/refere nce/dhtmlrefs.asp](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/refere nce/dhtmlrefs.asp)
 
 
 
@@ -503,7 +502,7 @@ The Cipher Command Suite includes the following functions:
 
 **Comment**
 
-Use the Cipher Command Suite to check or verify SSL configuration information at any point in your script. However, any *changes* to a script’s SSL property configuration, whether through the wlGlobals properties or the Cipher Command Suite functions, must be made in the script’s *initialization functions*. Configuration changes made in the InitAgenda() function will affect all client threads spawned during that script’s test session. Configuration changes made in the InitClient() function will affect only individual clients. Do not make changes to the SSL property configuration using wlHttp or wlLocals properties or in a script’s main body. The results will be undefined for all subsequent transactions.
+Use the Cipher Command Suite to check or verify SSL configuration information at any point in your script. However, any *changes* to a script’s SSL property configuration, whether through the `wlGlobals` properties or the Cipher Command Suite functions, must be made in the script’s *initialization functions*. Configuration changes made in the `InitAgenda()` function will affect all client threads spawned during that script’s test session. Configuration changes made in the `InitClient()` function will affect only individual clients. Do not make changes to the SSL property configuration using `wlHttp` or `wlLocals` properties or in a script’s main body. The results will be undefined for all subsequent transactions.
 
  
 
@@ -573,27 +572,20 @@ WebLOAD reports three time statistics:
 
 - The round time, which includes both connections.
 
-- Page 1 Time, reported in every round for the first connection only.
+- `Page 1 Time`, reported in every round for the first connection only.
 
-- Page 2 Time, reported in every fifth round for the second connection only.
+- `Page 2 Time`, reported in every fifth round for the second connection only.
 
 
 
 ```javascript
-SetTimer(“Page 1 Time”) [wlHttp.Get(“http://www.ABCDEF.com](http://www.ABCDEF.com/)”) 
-
+SetTimer(“Page 1 Time”) 
+wlHttp.Get("http://www.ABCDEF.com")
 SendTimer(“Page 1 Time”)
-
-if (RoundNum%5 == 0) 
-
-{ 
-
-SetTimer(“Page 2 Time”)
-
-wlHttp.Get([“http://www.ABCDEF.com/product_info.html](http://www.ABCDEF.com/product_info.html)”) 
-
-SendTimer(“Page 2 Time”)
-
+if (RoundNum%5 == 0) { 
+   SetTimer(“Page 2 Time”)
+   wlHttp.Get("http://www.ABCDEF.com/product_info.html")
+   SendTimer(“Page 2 Time”)
 }
 ```
 

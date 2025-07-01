@@ -10,12 +10,12 @@ You can run WebLOAD using a new REST Open API. With this API, you can remotely a
 
 1. Install the WebLOAD Dashboard, which is part of the regular WebLOAD installation, as follows:
 
-   In the Select Components window of the WebLOAD installation wizard, select either of the following options:
+    In the Select Components window of the WebLOAD installation wizard, select either of the following options:
 
-   - Select **Full Installation** and check the **WebLOAD Dashboard** checkbox to have the dashboard installed locally as part of a full installation.
-   - Select **Dashboard Server** to only install a central dashboard server.
+    - Select **Full Installation** and check the **WebLOAD Dashboard** checkbox to have the dashboard installed locally as part of a full installation.
+    - Select **Dashboard Server** to only install a central dashboard server.
 
-   ![Web Dashboard Installation Options](../images/automation_users_guide_044.png)
+    ![Web Dashboard Installation Options](../images/automation_users_guide_044.png)
 
    
 

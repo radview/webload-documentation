@@ -69,62 +69,62 @@ After entering the load test specifications, WebLOAD automatically creates a tes
 
 1. Perform one of the following: 
 
-     - Select **Tests** > **New** and click **Add Load Test**. The Create a new Load Test page appears. 
-     - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
-     - In the homepage, see the Create a new Load Test pane. 
+      - Select **Tests** > **New** and click **Add Load Test**. The Create a new Load Test page appears. 
+      - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
+      - In the homepage, see the Create a new Load Test pane. 
    
-    <a name="create_new_load_test"></a>
+      <a name="create_new_load_test"></a>
    
-    ![create new load test](../images/create_new_load_test.png)
+      ![create new load test](../images/create_new_load_test.png)
 
    
 
 1. Select **URL/API Test**.
 
-    A Create Load Test page appears. 
+      A Create Load Test page appears. 
    
-    ![create API load test](../images/create_API_load_test.jpeg)
+      ![create API load test](../images/create_API_load_test.jpeg)
 
 
 1. Specify the test settings. 
 
-    The following table describes the information you need to provide for defining the URL/API Load Test:
+            The following table describes the information you need to provide for defining the URL/API Load Test:
 
-    | **Item**                                     | **Description**                                              |
-    | -------------------------------------------- | ------------------------------------------------------------ |
-    | **General**                                  |                                                              |
-    | **Test  Name**                               | The name of the Load test.                                   |
-    | **Request  parameters**                      | In this section, specify  the URL of the site to be tested. You can in addition create an HTTP web  service call. |
-    | **Request  URL**                             | Specify the URL of the  site to be tested.                   |
-    | ***Method\***                                | Optionally, specify a  method for an HTTP web service call, from the drop-down list: **Get**, **Post**, **Put**, or **Delete**. |
-    | **Request  Body**                            | Optionally, specify the  web service body for the HTTP web service call. |
-    | **HTTP  Headers**                            | Optionally, specify the web service header(s):  Click **Add** for  every header you wish to specify, and select the  header from the dropdown list, or enter a  custom header; then enter a value for the header. |
-    | **Sleep**                                    | Specify the sleep time between each URL/API call.            |
-    | **Load  Configuration**                      | For each of the following, enter a number, or use the slider tool to  specify the number. |
-    | **Max  Virtual Users**                       | The maximum number of  Virtual Users to generate.            |
-    | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
-    | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
-    | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual User |
-    | **Load  Generators**                         |  Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a load test* ](#specifying-load-generators-for-a-load-test). |
-    | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#setting-recurring-test-runs). |
+            | **Item**                                     | **Description**                                              |
+            | -------------------------------------------- | ------------------------------------------------------------ |
+            | **General**                                  |                                                              |
+            | **Test  Name**                               | The name of the Load test.                                   |
+            | **Request  parameters**                      | In this section, specify  the URL of the site to be tested. You can in addition create an HTTP web  service call. |
+            | **Request  URL**                             | Specify the URL of the  site to be tested.                   |
+            | ***Method\***                                | Optionally, specify a  method for an HTTP web service call, from the drop-down list: **Get**, **Post**, **Put**, or **Delete**. |
+            | **Request  Body**                            | Optionally, specify the  web service body for the HTTP web service call. |
+            | **HTTP  Headers**                            | Optionally, specify the web service header(s):  Click **Add** for  every header you wish to specify, and select the  header from the dropdown list, or enter a  custom header; then enter a value for the header. |
+            | **Sleep**                                    | Specify the sleep time between each URL/API call.            |
+            | **Load  Configuration**                      | For each of the following, enter a number, or use the slider tool to  specify the number. |
+            | **Max  Virtual Users**                       | The maximum number of  Virtual Users to generate.            |
+            | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
+            | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
+            | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual User |
+            | **Load  Generators**                         |  Select the load generator  machines that will participate in the load test, as described in [*Specifying Load Generators for a load test* ](#specifying-load-generators-for-a-load-test). |
+            | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#setting-recurring-test-runs). |
 
-   
 
-   
 
-    The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. 
 
-    Thus, the load will start with 0 Virtual Users and  increase over the time frame defined in the **Ramp up time** field to reach the number of Virtual Users defined in the **Max Virtual Users** field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the **Time to run Max Virtual Users** field, after which load will return to 0 Virtual Users value over the time frame set in the **Ramp down time** field. 
+
+           The URL/API load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. 
+
+           Thus, the load will start with 0 Virtual Users and  increase over the time frame defined in the **Ramp up time** field to reach the number of Virtual Users defined in the **Max Virtual Users** field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the **Time to run Max Virtual Users** field, after which load will return to 0 Virtual Users value over the time frame set in the **Ramp down time** field. 
 
 1. Select one of the following: 
 
-    - **Create Test** – The test definitions are saved. 
- 
-    - **Create and Run Test** – The test definitions are  saved, and the test starts running immediately. 
+     - **Create Test** – The test definitions are saved. 
+    
+     - **Create and Run Test** – The test definitions are  saved, and the test starts running immediately. 
 
-    - **Run in Sandbox Mode** – The system saves all the test definitions, but runs a limited test on the settings specified in the **Request Parameters** section while ignoring all the settings in the **Load Configuration**, **Load Generators**, and **Recurrence** sections. 
+     - **Run in Sandbox Mode** – The system saves all the test definitions,  but runs a limited test on the settings specified in the **Request Parameters** section while ignoring all the settings in the **Load Configuration**, **Load Generators**, and **Recurrence** sections. 
 
-       This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  
+      This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  
 
 
 
@@ -136,50 +136,50 @@ Use this option to create a load test based on a WebLOAD script that was created
 
 1. Perform one of the following: 
 
-    - Select **Tests** > **New** and click **Add Load Test**. The Create a new Load Test page appears. 
-    - Select **Tests** > **Search**, and click **+ Add a new load test**. The Create a new Load Test page appears. 
-    - In the homepage, see the Create a new Load Test pane. 
+     - Select **Tests** > **New** and click **Add Load Test**. The Create a   new Load Test page appears. 
+     - Select **Tests** > **Search**, and click **+ Add a new load test**.    The Create a new Load Test page appears. 
+     - In the homepage, see the Create a new Load Test pane. 
 
-    <a name="creating_a_script_load_test"></a>
-   ![create new load test](../images/create_new_load_test.png)
+     <a name="creating_a_script_load_test"></a>
+     ![create new load test](../images/create_new_load_test.png)
 
    
 
 1. Select **Script Test**. 
 
-    A Create Load Test page appears. 
+     A Create Load Test page appears. 
 
-    ![create script load test](../images/create_script_load_test.jpeg)
+     ![create script load test](../images/create_script_load_test.jpeg)
 
    
 
 1. Specify the test settings. The following table describes the information you need to provide for defining the Script Load Test.
 
-   | **Item**                                     | **Description**                                              |
-   | -------------------------------------------- | ------------------------------------------------------------ |
-   | **General**                                  | The name of the Load test.                                   |
-   | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#specifying-scripts-for-a-load-test). |
-   | **Load  Configuration**                      | For each of the following,  enter a number, or use the slider tool to specify the number. |
-   | **Max Virtual Users**                        | The maximum number of Virtual Users to generate.             |
-   | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
-   | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
-   | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual Users |
-   | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying Load Generators*](#specifying-load-generators-for-a-load-test) [*for a load test* ](#specifying-load-generators-for-a-load-test). |
-   | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#). |
+     | **Item**                                     | **Description**                                              |
+     | -------------------------------------------- | ------------------------------------------------------------ |
+     | **General**                                  | The name of the Load test.                                   |
+     | **Scripts**                                  | Specify the scripts that will participate in the test, as well as  their relative weights, as described in [*Specifying Scripts for a load test* ](#specifying-scripts-for-a-load-test). |
+     | **Load  Configuration**                      | For each of the following,  enter a number, or use the slider tool to specify the number. |
+     | **Max Virtual Users**                        | The maximum number of Virtual Users to generate.             |
+     | **Ramp up time in minutes**                  | The time interval over  which to increase the load from 0 Virtual Users to the number of virtual  users specified in Max Virtual Users. |
+     | **Time to run Max Virtual Users in minutes** | The time interval during  which to run the load at the max number of Virtual Users |
+     | **Ramp down time in minutes**                | The time interval over  which to decrease the load in order to return to 0 Virtual Users |
+     | **Load  Generators**                         | Select the load generator  machines as described in [*Specifying Load Generators*](#specifying-load-generators-for-a-load-test) [*for a load test* ](#specifying-load-generators-for-a-load-test). |
+     | **Recurrence**                               | Select this option if you  wish to schedule automatic periodic execution of the load test. Refer to [*Setting recurring test runs* ](#). |
 
    
 
-   The Script load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. 
+     The Script load test generates an increasing load over a set time frame until reaching a defined maximum load size. The maximum load size is then run for a set period after which the load is reduced back to the base load again over a time frame defined by the user. The load increments are calculated automatically by WebLOAD based on the parameters defined. 
 
-   Thus, the load will start with 0 Virtual Users and increase over the time frame defined in the **Ramp up time** field to reach the number of Virtual Users defined in the **Max Virtual Users** field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the **Time to run Max Virtual Users** field, after which load will return to 0 Virtual Users value over the time frame set in the **Ramp down time** field. 
+     Thus, the load will start with 0 Virtual Users and increase over the time frame defined in the **Ramp up time** field to reach the number of Virtual Users defined in the **Max Virtual Users** field. The test will then continue running with the maximum number of Virtual Clients for the period of time defined in the **Time to run Max Virtual Users** field, after which load will return to 0 Virtual Users value over the time frame set in the **Ramp down time** field. 
 
 1. Select one of the following: 
 
      - **Create Test** – The test definitions are saved. 
 
-    - **Create and Run Test** – The test definitions are saved, and the test starts running immediately.
+     - **Create and Run Test** – The test definitions are saved, and the test starts running immediately.
 
-    - **Run in Sandbox Mode** – The system saves all the test definitions, but runs a limited test on the settings specified in the **Scripts** section while ignoring all the settings in the **Load Configuration**, **Load Generators**, and **Recurrence** sections. 
+     - **Run in Sandbox Mode** – The system saves all the test definitions, but runs a limited test on the settings specified in the **Scripts** section while ignoring all the settings in the **Load Configuration**, **Load Generators**, and **Recurrence** sections. 
 
      This option is intended for SaaS users wishing to run a limited test prior to running the full test specified in the test definitions.  
 
