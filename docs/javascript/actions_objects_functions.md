@@ -272,7 +272,7 @@ Each `cell` object contains information about the data found in one cell of a ta
 
 **Comment**
 
-`cell` is often accessed through the wlTables family of table, row, and cell objects.
+`cell` is often accessed through the `wlTables` family of table, row, and cell objects.
 
 **See also**
 
@@ -298,7 +298,7 @@ An integer containing the ordinal index number of this `cell` object within the 
 
 **Comment**
 
-`cellIndex` is a member of the wlTables family of table, row, and cell objects.
+`cellIndex` is a member of the `wlTables` family of table, row, and cell objects.
 
 **See also**
 
@@ -456,7 +456,7 @@ To enable or disable SSL caching, set the SSLUseCache (see [*SSLUseCache (proper
 
 > **Note:** While `ClientNum` is unique within a single Load Generator, it is not unique system wide. Use VCUniqueID() (see [*VCUniqueID() (function)* ](#vcuniqueid-function)) to obtain an ID number which is unique system-wide.
 
-If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access `ClientNum` anywhere in the local context of the Script (InitClient(), main script, TerminateClient(), etc.). `ClientNum` does not exist in the global context (InitAgenda(), TerminateAgenda(), etc.).
+If there are N clients in a Load Generator, the clients are numbered 0, 1, 2, ..., N-1. You can access `ClientNum` anywhere in the local context of the Script (InitClient(), main script, TerminateClient(), etc.). `ClientNum` does not exist in the global context (`InitAgenda()`, TerminateAgenda(), etc.).
 
 If you mix Scripts within a single Load Generator, instances of two or more Scripts may run simultaneously on each client. Instances on the same client have the same `ClientNum` value.
 
@@ -1248,7 +1248,11 @@ The value of DecodeBinaryEnd starts from 0 and designates an offset from the beg
 
 > **Note:** This property can only be inserted manually.
 
-**Example** wlGlobals.DecodeBinaryStart=1 **See also**
+**Example** 
+
+`wlGlobals.DecodeBinaryStart=1`
+
+ **See also**
 
 * DecodeBinaryEnd (see [*DecodeBinaryEnd (property)* ](#decodebinaryend-property))
 * DecodeBinaryNullAs (see [*DecodeBinaryNullAs (property)* ](#decodebinarynullas-property))
@@ -1311,52 +1315,48 @@ The default value of the form element (read-only string).
 
 **Description**
 
-Use the DefineConcurrent()function to define the beginning point, after which all Post and Get HTTP requests are collected, but not executed, until an ExecuteConcurrent() function is run. At this point, the collected HTTP requests are executed concurrently, by two or more threads. The number of threads is defined
+Use the `DefineConcurrent()` function to define the beginning point, after which all Post and Get HTTP requests are collected, but not executed, until an `ExecuteConcurrent()` function is run. At this point, the collected HTTP requests are executed concurrently, by two or more threads. The number of threads is defined
 
 in WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an ExecuteConcurrent() function in the script. For more information about the ExecuteConcurrent() function, see [*ExecuteConcurrent() (function)* ](#executeconcurrent-function).
+To simultaneously execute Post and Get HTTP requests, you must define where in the script to begin collecting the requests and where to stop collecting and begin executing them. The HTTP requests are collected until the engine encounters an `ExecuteConcurrent()` function in the script. For more information about the `ExecuteConcurrent()` function, see [*`ExecuteConcurrent()` (function)* ](#executeconcurrent-function).
 
-All requests performed from the beginning of the DefineConcurrent() function to the ExecuteConcurrent() function are stored in an array of documents. You can access every document by index number or document name as follows:
+All requests performed from the beginning of the `DefineConcurrent()` function to the `ExecuteConcurrent()` function are stored in an array of documents. You can access every document by index number or document name as follows:
 
-* By index: wlConcurrentDocuments[i]
-* By DocName: wlConcurrentDocuments["documentname"]
+* By index: `wlConcurrentDocuments[i]`
+* By DocName: `wlConcurrentDocuments["documentname"]`
 
-The DocName is an optional name you set for a document for quick access from wlConcurrentDocuments. The format for setting the name is: wlHttp.DocName = “documentname”
-
-where DocName is written with a capital D and N.
-
-The default document name is: all_Concurrent_`<index>`.
+The DocName is an optional name you set for a document for quick access from `wlConcurrentDocuments`. The format for setting the name is: `wlHttp.DocName = “documentname”` where `DocName` is written with a capital `D` and `N`.
+The default document name is: `all_Concurrent_<index>.`
 
 **Example**
 
+```
 DefineConcurrent()
-
 …
-
-`<any valid JavaScript code, including Post and Get requests>` wlHttp.DocName = "document"
+    <any valid JavaScript code, including Post and Get requests>
+wlHttp.DocName = "document"
 
 …
 
 ExecuteConcurrent()
-
-for (i=0;i<wlConcurrentDocuments.length;i++) InfoMessage("index "+i+" : "+wlConcurrentDocuments[i].URL)
-
+for (i=0; i<wlConcurrentDocuments.length; i++) 
+    InfoMessage("index "+i+" : "+wlConcurrentDocuments[i].URL)
 InfoMessage("by DocName: "+wlConcurrentDocuments["document"].URL)
-
 InfoMessage("default name: "
-
 +wlConcurrentDocuments["all_Concurrent_2"].URL)
+```
+
 
 **GUI mode**
 
-> **Note:** The DefineConcurrent()function is usually inserted into script files directly through the WebLOAD Recorder. Drag the **Define Concurrent** icon from the Load toolbox into the Script Tree at the desired location.
+> **Note:** The `DefineConcurrent()` function is usually inserted into script files directly through the WebLOAD Recorder. Drag the **Define Concurrent** ![](../images/appendix_a_040.png) icon from the Load toolbox into the Script Tree at the desired location.
 
-For additional information about the DefineConcurrent() function, refer to *Define Concurrent* in the *WebLOAD Recorder User’s Guide*.
+For additional information about the `DefineConcurrent()` function, refer to *Define Concurrent* in the *WebLOAD Recorder User’s Guide*.
 
 **See also**
 
-* ExecuteConcurrent() (see [*ExecuteConcurrent() (function)* ](#executeconcurrent-function))
+* `ExecuteConcurrent()` (see [*`ExecuteConcurrent()` (function)* ](#executeconcurrent-function))
 
 ## Delete() (method)
 
@@ -1372,9 +1372,18 @@ This function is implemented as a method of the following object:
 
 Perform an HTTP or HTTPS Delete command.
 
-    **Parameter Name**                  **Description**                            [URL]                  An optional parameter identifying the      document URL.      You may optionally      specify the URL as a parameter of the method. Delete() connects to the first URL that has been      specified from the following list, in the order specified:      *      A Url parameter specified in the method call.      *      The Url property of the wlHttp object.      *      The local default wlLocals.Url.      `<br>`The global default wlGlobals.Url.
 
-**Syntax** Delete([URL] **Parameters**
+**Syntax** 
+
+`Delete([URL]`
+
+**Parameters**
+
+
+| **Parameter Name** | **Description**                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[URL]`             | An optional parameter identifying the      document URL.      You may optionally      specify the URL as a parameter of the method. `Delete()` connects to the first URL that has been      specified from the following list, in the order specified:      <p></p> * A `Url` parameter specified in the method call.    <p></p> * The `Url` property of the `wlHttp` object.   <p></p> * The local default `wlLocals.Url.`   <p></p> * The global default `wlGlobals.Url.` |
+
 
 **See also**
 
@@ -1404,23 +1413,23 @@ Perform an HTTP or HTTPS Delete command.
 
 **Description**
 
-This method deletes all cookies set by wlCookie in the current thread.
+This method deletes all cookies set by `wlCookie` in the current thread.
 
 **Syntax**
 
-wlCookie.Delete(name, domain, path)
+`wlCookie.Delete(name, domain, path)`
 
 **Parameters**
 
 | **Parameter  Name** | **Description**                                                                                           |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| name                      | A descriptive name used for the cookie to  be deleted, for example, “CUSTOMER”.                               |
-| domain                    | The top-level domain name  for the cookie being deleted, for example,[“www.ABCDEF.com](http://www.ABCDEF.com/)”. |
+| name                      | A descriptive name used for the cookie to  be deleted, for example, `“CUSTOMER”`.                               |
+| domain                    | The top-level domain name  for the cookie being deleted, for example,`“www.ABCDEF.com”`. |
 | path                      | The top-level directory  path, within the specified domain, for the cookie being deleted, for example,  “/”.  |
 
 **Example**
 
-wlCookie.Delete(“CUSTOMER”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, “/”)
+`wlCookie.Delete(“CUSTOMER”, “www.ABCDEF.com”, “/”)`
 
 **See also**
 
@@ -1471,11 +1480,11 @@ Setting this property defines how the engine should handle the Sleep command in 
 
 **Comment**
 
-Sleep periods during test sessions are by default kept to the length of the sleep period recorded by the user during the original recording session. If you wish to include sleep intervals but change the time period, set DisableSleep to false and assign values to the other sleep properties as follows:
+Sleep periods during test sessions are by default kept to the length of the sleep period recorded by the user during the original recording session. If you wish to include sleep intervals but change the time period, set `DisableSleep` to `false` and assign values to the other sleep properties as follows:
 
-* SleepRandomMin – Assign random sleep interval lengths, with the minimum time period equal to this property value.
-* SleepRandomMax – Assign random sleep interval lengths, with the maximum time period equal to this property value.
-* SleepDeviation – Assign random sleep interval lengths, with the time period ranging between this percentage value more or less than the original recorded time period.
+* `SleepRandomMin` – Assign random sleep interval lengths, with the minimum time period equal to this property value.
+* `SleepRandomMax` – Assign random sleep interval lengths, with the maximum time period equal to this property value.
+* `SleepDeviation` – Assign random sleep interval lengths, with the time period ranging between this percentage value more or less than the original recorded time period.
 
 **GUI mode**
 
@@ -1498,12 +1507,12 @@ WebLOAD recommends setting the sleep mode through the WebLOAD Console. Select a 
 
 **Description**
 
-Enable caching of IP addresses that WebLOAD receives from a domain name server. The value of DNSUseCache may be:
+Enable caching of IP addresses that WebLOAD receives from a domain name server. The value of `DNSUseCache` may be:
 
 * **false** – Disable IP address caching.
 * **true** – Enable IP address caching (default).
 
-Assign a true value to reduce the time for domain name resolution. Assign a false value if you want to include the time for name resolution in the WebLOAD performance statistics.
+Assign a `true` value to reduce the time for domain name resolution. Assign a `false` value if you want to include the time for name resolution in the WebLOAD performance statistics.
 
 **GUI mode**
 
@@ -1524,15 +1533,15 @@ To clear the DNS cache, set the ClearDNSCache() (see [*ClearDNSCache() (method)*
 
 **Description**
 
-Represents the HTML document in a given browser window. The document object is one of the main entry points into the DOM, used to retrieve parsed HTML data. document objects store the complete parse results for downloaded HTML pages. Use the document properties to retrieve links, forms, nested frames, and other information about the document.
+Represents the HTML `document` in a given browser window. The `document` object is one of the main entry points into the DOM, used to retrieve parsed HTML data. `document` objects store the complete parse results for downloaded HTML pages. Use the `document` properties to retrieve links, forms, nested frames, and other information about the `document`.
 
-document objects are local to a single thread. WebLOAD creates an independent document object for each thread of a script. You cannot create new document objects using the JavaScript new operator, but you can access HTML documents through the properties and methods of the standard DOM objects. document properties are read- only.
+`document` objects are local to a single thread. WebLOAD creates an independent `document` object for each thread of a script. You cannot create new `document` objects using the JavaScript new operator, but you can access HTML `document`s through the properties and methods of the standard DOM objects. `document` properties are read- only.
 
 **Syntax**
 
-Access all elements of the Browser DOM through the document object, using the standard syntax. For example, to access links, use the following expression:
+Access all elements of the Browser DOM through the `document` object, using the standard syntax. For example, to access links, use the following expression:
 
-document.links[0]
+`document.links[0]`
 
 **Methods**
 
@@ -1566,7 +1575,7 @@ document.links[0]
 
 **Description**
 
-The minimum amount of time (in milliseconds) for the round to be played back. If the total time it takes for the round to be played back is less than the time period specified, the machine sleeps for the remainder of the time. This property must be set in InitAgenda(). If it is set anywhere else, it is ignored.
+The minimum amount of time (in milliseconds) for the round to be played back. If the total time it takes for the round to be played back is less than the time period specified, the machine sleeps for the remainder of the time. This property must be set in `InitAgenda()`. If it is set anywhere else, it is ignored.
 
 The behavior of the sleep time is affected by the Sleep Time Control settings that are set in the Current Project Options of the WebLOAD Recorder and Console. These settings can be one of the following:
 
@@ -1581,7 +1590,8 @@ For more information on setting the Sleep Time Control settings, see *Configurin
 
 ```javascript
 function InitAgenda(){
-    wlGlobals.ElapsedRoundTime = 50000; //round should take at least 5 seconds
+    wlGlobals.ElapsedRoundTime = 50000; 
+    //round should take at least 5 seconds
 }
 ```
 
@@ -1589,43 +1599,45 @@ function InitAgenda(){
 
 **Property of Object**
 
-element objects are grouped into collections of elements. The elements collection is also a property of the following objects:
+`element` objects are grouped into collections of `elements`. The `elements` collection is also a property of the following objects:
 
 * form (see [*form (object)* ](#form-object))
 
 **Description**
 
-Each element object stores the parsed data for a single HTML form element such as
-
-`<INPUT>`, `<BUTTON>`, `<TEXTAREA>`, or `<SELECT>`. The full elements collection stores all the controls found in a given form except for objects of input type=image. (Compare to the form (see [*form (object)* ](#form-object)) object, which stores the parsed data for an entire HTML form.)
+Each `element` object stores the parsed data for a single HTML form element such as `<INPUT>`, `<BUTTON>`, `<TEXTAREA>`, or `<SELECT>`. The full `elements` collection stores all the controls found in a given form except for objects of `input type=image`. (Compare to the form (see [*form (object)* ](#form-object)) object, which stores the parsed data for an entire HTML form.)
 
 element objects are local to a single thread. You cannot create new element objects using the JavaScript new operator, but you can access HTML elements through the properties and methods of the standard DOM objects. element properties are read- only.
 
 **Syntax**
 
-element objects are organized into collections of elements. elements[0] refers to the first child element, elements[1] refers to the second child element, etc. To access an individual element’s properties, check the length property of the elements collection and use an index number to access the individual elements. For example, to
-
-find out how many element objects are contained within forms[1], check the value of:
-
-document.forms[1].elements.length
+`element` objects are organized into collections of `elements. elements[0]` refers to the first child element, `elements[1]` refers to the second child element, etc. To access an individual element’s properties, check the `length` property of the `elements` collection and use an index number to access the individual elements. For example, to find out how many `element` objects are contained within `forms[1]`, check the value of:
+    
+`document.forms[1].elements.length`
 
 You can access a member of the elements collection either by its index number or by its HTML name attribute. For example, suppose that the first element of a form is coded by the HTML tag.
-
+   
 `<INPUT type=“text” name=“yourname”>`
 
 You can access this element by writing either of the following expressions:
+     
+`document.forms[0].elements[0]`
 
-document.forms[0].elements[0] document.forms[0].elements[“yourname”] document.forms[0].elements.yourname document.forms[0].yourname
+`document.forms[0].elements[“yourname”]`
+
+`document.forms[0].elements.yourname`
+
+`document.forms[0].yourname`
 
 **Example**
 
 Access each element’s properties directly using either of the following lines:
 
-document.forms[0].elements[0].type
+`document.forms[0].elements[0].type`
 
 -Or-
 
-document.forms[0].yourname.type
+`document.forms[0].yourname.type`
 
 **Properties**
 
@@ -1651,7 +1663,7 @@ document.forms[0].yourname.type
 
 **Comment**
 
-The most frequently accessed input elements are of type Button, CheckBox, File, Image, Password, Radio, Reset, Select, Submit, Text, and TextArea.
+The most frequently accessed input elements are of type `Button`, `CheckBox`, `File`, `Image`, `Password`, `Radio`, `Reset`, `Select`, `Submit`, `Text`, and `TextArea`.
 
 **See also**
 
@@ -1711,7 +1723,7 @@ For example, if a mobile operator wants to simulate the sending of binary data f
 
 **Example**
 
-wlGlobals.EncodeRequestBinaryData = true
+`wlGlobals.EncodeRequestBinaryData = true`
 
 **GUI mode**
 
@@ -1740,7 +1752,7 @@ The default value of EncodeResponseBinaryData is **false**. When set to true, th
 
 **Example**
 
-wlGlobals.EncodeResponseBinaryData = true
+`wlGlobals.EncodeResponseBinaryData = true`
 
 **See also**
 
@@ -1764,20 +1776,17 @@ A read-only string that specifies the MIME encoding for the form.
 
 **Description**
 
-Use the BeginTransaction() and EndTransaction() functions to define the start and finish of a logical block of code that you wish to redefine as a single logical transaction unit. This enables setting timers, verification tests, and other measurements for this single logical unit.
+Use the `BeginTransaction()` and `EndTransaction()` functions to define the start and finish of a logical block of code that you wish to redefine as a single logical transaction unit. This enables setting timers, verification tests, and other measurements for this single logical unit.
 
 **Syntax**
 
 ```javascript
 BeginTransaction(TransName)
-
 …
-
-`<any valid JavaScript code>`
-
+  <any valid JavaScript code>`
 …
-
-[SetFailureReason(ReasonName)] EndTransaction(TransName,Verification,[SaveFlag],[FailureReason])
+  [SetFailureReason(ReasonName)] 
+EndTransaction(TransName,Verification,[SaveFlag],[FailureReason])
 ```
 
 **Parameters**
@@ -1785,15 +1794,19 @@ BeginTransaction(TransName)
 | **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TransName                 | The name assigned to this transaction, a  user-supplied string.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Verification              | A call to any verification  function that returns one of the following values: WLSuccess, WLMinorError, WLError, or WLSevereError. If the verification  function does not explicitly return a value, the default value is always WLSuccess.  Verification may also be  an expression, constant, or variable that evaluates to one of the preceding  return values. See VerificationFunction() (user-defined) (see[*VerificationFunction()*](#verificationfunction-user-defined-function) [*(user-defined) (function)* ](#verificationfunction-user-defined-function)), for more information. |
-| [SaveFlag]                | An optional Boolean flag  specifying whether WebLOAD should save the results of*all transaction instances*, successes and failures, (true), for later analysis with  Data Drilling, or should save only results of *failed transaction instances* that triggered some sort of error  flag, (false, default).                                                                                                                                                                                                                                        |
+| Verification              | A call to any verification  function that returns one of the following values: `WLSuccess`,` WLMinorError`, `WLError`, or `WLSevereError`. If the verification  function does not explicitly return a value, the default value is always `WLSuccess`.  Verification may also be  an expression, constant, or variable that evaluates to one of the preceding  return values. See VerificationFunction() (user-defined) (see[*VerificationFunction()*](#verificationfunction-user-defined-function) [*(user-defined) (function)* ](#verificationfunction-user-defined-function)), for more information. |
+| [SaveFlag]                | An optional Boolean flag  specifying whether WebLOAD should save the results of*all transaction instances*, successes and failures, (`true`), for later analysis with  Data Drilling, or should save only results of *failed transaction instances* that triggered some sort of error  flag, (`false`, default).                                                                                                                                                                                                                                        |
 | [FailureReason]           | An optional user-supplied string that  provides a reason for the failure.GUI mode                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-**Note:** BeginTransaction() and EndTransaction() functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. For example, the following figure illustrates a section in the Script Tree bracketed by BeginTransaction and EndTransaction nodes. The EndTransaction node is highlighted in the Script Tree.
+**Note:** `BeginTransaction()` and `EndTransaction()` functions are usually accessed and inserted into script files directly through the WebLOAD Recorder. For example, the following figure illustrates a section in the Script Tree bracketed by BeginTransaction and EndTransaction nodes. The EndTransaction node is highlighted in the Script Tree.
 
-To mark the end of a transaction, drag the **End Transaction** icon from the Load toolbox into the Script Tree, directly after the last action you want included in the script.
 
-For additional information about the EndTransaction() function, refer to *Begin and End Transaction* in the *WebLOAD Recorder User’s Guide*.
+![](../images/BeginTran_EndTran.png)
+
+
+To mark the end of a transaction, drag the **End Transaction** ![](../images/end_trans.png) icon from the Load toolbox into the Script Tree, directly after the last action you want included in the script.
+
+For additional information about the `EndTransaction()` function, refer to *Begin and End Transaction* in the *WebLOAD Recorder User’s Guide*.
 
 **See also**
 
@@ -1817,14 +1830,18 @@ For additional information about the EndTransaction() function, refer to *Begin 
 
 **Description**
 
-Indicates whether the parser should use the character set it parses in the HTML pages or override it using the CharEncoding property. The default value is **false** (use the encoding from the HTML pages).
+Indicates whether the parser should use the character set it parses in the HTML pages or override it using the `CharEncoding` property. The default value is **false** (use the encoding from the HTML pages).
 
-The EnforceCharEncoding property can be set to one of the following values:
+The `EnforceCharEncoding` property can be set to one of the following values:
 
-* **true** – Use the CharEncoding property.
+* **true** – Use the `CharEncoding` property.
 * **false** (default) – Get the encoding from the HTML pages.
 
-**Example** wlGlobals.EnforceCharEncoding = false **GUI mode**
+**Example** 
+
+`wlGlobals.EnforceCharEncoding = false`
+
+ **GUI mode**
 
 In WebLOAD Console, check **Enforce Character Encoding** in the Browser Parameters
 
@@ -1849,69 +1866,65 @@ In WebLOAD Recorder, check **Enforce Character Encoding** in the Browser Paramet
 
 **Description**
 
-Indicates whether or not to clear the WebLOAD properties of a wlHttp object after each Get(), Post(), or Head() call. wlHttp.Erase is a read/write property. The default value is **true**. This section briefly discusses the implications of each setting.
+Indicates whether or not to clear the WebLOAD properties of a `wlHttp` object after each `Get()`, `Post()`, or `Head()` call. `wlHttp.Erase` is a read/write property. The default value is **true**. This section briefly discusses the implications of each setting.
 
-wlHttp.Erase=true (default)
+**wlHttp.Erase=true (default)**
 
-When Erase is set to true, WebLOAD automatically erases all wlHttp property values after each HTTP access. You must reassign any properties you need before the next HTTP access. For this reason, assign the properties of wlHttp only in the *main script*, not in InitClient(), so they will be reassigned in every round.
+When `Erase` is set to `true`, WebLOAD automatically erases all `wlHttp` property values after each HTTP access. You must reassign any properties you need before the next HTTP access. For this reason, assign the properties of `wlHttp` only in the *main script*, not in `InitClient()`, so they will be reassigned in every round.
 
-Thus if Erase is set to true the following script is incorrect. In this script, the wlHttp properties are assigned values in InitClient(). The script would connect to the Url and submit the FormData only in the first round. After the first Post() call, the Url and FormData property values are erased, so WebLOAD cannot use them in subsequent rounds.
+Thus if `Erase` is set to `true` the following script is incorrect. In this script, the wlHttp properties are assigned values in `InitClient()`. The script would connect to the `Url` and submit the FormData only in the first round. After the first `Post()` call, the `Url` and `FormData` property values are erased, so WebLOAD cannot use them in subsequent rounds.
 
 ```javascript
 function InitClient() {  //Wrong!
-
-wlHttp.Url = [“http://www.ABCDEF.com/products.exe](http://www.ABCDEF.com/products.exe)” wlHttp.FormData[“Name”] = “John Smith” wlHttp.FormData[“Product Interest”] = “Modems”
-
+    wlHttp.Url = “http://www.ABCDEF.com/products.exe” 
+    wlHttp.FormData[“Name”] = “John Smith” 
+    wlHttp.FormData[“Product Interest”] = “Modems”
 }
+//Main script 
+wlHttp.Post()
 
-//Main script wlHttp.Post()
+```
+To solve the problem, assign the `wlHttp` property values in the **main script**, so that the assignments are executed before each `Get()`, `Post()`, or `Head()` call:
 
-To solve the problem, assign the wlHttp property values in the **main script**, so that the
-
-assignments are executed before each Get(), Post(), or Head() call:
-
+```
 //Main script     //OK
+wlHttp.Url = “http://www.ABCDEF.com/products.exe” 
+wlHttp.FormData[“Name”] = “John Smith” 
+wlHttp.FormData[“Product Interest”] = “Modems” 
+wlHttp.Post()
 
-wlHttp.Url = [“http://www.ABCDEF.com/products.exe](http://www.ABCDEF.com/products.exe)” wlHttp.FormData[“Name”] = “John Smith” wlHttp.FormData[“Product Interest”] = “Modems” wlHttp.Post()
-
+```
 Alternatively, you could assign values to **wlLocals properties**, which are not erased:
 
+```
 function InitClient() {     //OK
-
-wlLocals.Url = [“http://www.ABCDEF.com/products.exe](http://www.ABCDEF.com/products.exe)” wlLocals.FormData[“Name”] = “John Smith” wlLocals.FormData[“Product Interest”] = “Modems”
-
+    wlLocals.Url = “http://www.ABCDEF.com/products.exe” 
+    wlLocals.FormData[“Name”] = “John Smith” 
+    wlLocals.FormData[“Product Interest”] = “Modems”
 }
 
-//Main script wlHttp.Post() **wlHttp.Erase=false
+//Main script 
+wlHttp.Post() 
+wlHttp.Erase=false
 ```
 
-You may set Erase to false to prevent erasure. For example, if for some reason you absolutely had to assign values to the wlHttp properties in the InitClient() function of the script, change the value of the Erase property to false. If Erase is false, the properties retain their values through subsequent rounds.
+You may set `Erase` to `false` to prevent erasure. For example, if for some reason you absolutely had to assign values to the `wlHttp` properties in the `InitClient()` function of the script, change the value of the `Erase` property to `false`. If `Erase` is `false`, the properties retain their values through subsequent rounds.
 
 Thus another way to correct the preceding example is to write:
 
 ```javascript
-function InitClient() 
-
-{            //OK 
-
-
-
+function InitClient() {       //OK 
 wlHttp.Erase = false 
-
-wlHttp.Url =[“http://www.ABCDEF.com/products.exe](http://www.ABCDEF.com/products.exe)” 
-
+wlHttp.Url =
+        “http://www.ABCDEF.com/products.exe” 
 wlHttp.FormData[“Name”] = “John Smith” 
-
 wlHttp.FormData[“Product Interest”] = “Modems”
-
 }
-
-//Main script wlHttp.Post()
+//Main script 
+wlHttp.Post()
 ```
 
-User-defined properties are not linked to the wlHttp.Erase property and will not be
-
-erased automatically by WebLOAD. The only way to reset or erase user-defined properties is for the user to set the new values explicitly.
+User-defined properties are not linked to the `wlHttp.Erase` property and will not be erased automatically by WebLOAD. The only way to reset or erase user-defined properties is for the user to set the new values explicitly.
 
 **See also**
 
@@ -1932,17 +1945,22 @@ erased automatically by WebLOAD. The only way to reset or erase user-defined pro
 
 Use this function to display an error message in the Log Window and abort the current round.
 
-    **Parameter Name**                  **Description**                            msg                  A string with an error      message to be sent to the WebLOAD Console.
 
-**Syntax** ErrorMessage(msg) **Parameters**
+**Syntax** 
+`ErrorMessage(msg)`
+
+ **Parameters**
+
+
+| **Parameter Name** | **Description**                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `msg`             |  string with an error      message to be sent to the WebLOAD Console. |
 
 **Comment**
 
-If you call ErrorMessage() in the main script, WebLOAD stops the current round of execution. Execution continues with the next round, at the beginning of the main script.
+If you call `ErrorMessage()` in the main script, WebLOAD stops the current round of execution. Execution continues with the next round, at the beginning of the main script.
 
-You may also use the wlException object with the built-in try()/catch()
-
-commands to catch errors within your script.
+You may also use the wlException object with the built-in `try()/catch()` commands to catch errors within your script.
 
 **GUI mode**
 
@@ -1971,13 +1989,13 @@ Message function command lines may also be added directly to the code in a JavaS
 
 **Description**
 
-ErrorMessage is used to define a global error message that appears in the Log window when a verification fail error occurs. When defined, ErrorMessage affects all the verifications in which an error message is not defined. If you define an error message for a specific verification, it overrides the global error message defined in the ErrorMessage property.
+`ErrorMessage` is used to define a global error message that appears in the Log window when a verification fail error occurs. When defined, `ErrorMessage` affects all the verifications in which an error message is not defined. If you define an error message for a specific verification, it overrides the global error message defined in the `ErrorMessage` property.
 
 **Example**
 
-To set the global error message displayed in the Log window in the event of any verification fail errors to my personalized error message, write:
+To set the global error message displayed in the Log window in the event of any verification fail errors to my `personalized error message`, write:
 
-wlVerification.ErrorMessage = “my personalized error message”
+`wlVerification.ErrorMessage = “my personalized error message”`
 
 **See also**
 
@@ -1996,20 +2014,24 @@ Enables testers to include scripts and specify the point during script execution
 
 **Syntax**
 
-EvaluateScript(“Script”, RunModeConstant)
+`EvaluateScript(“Script”, RunModeConstant)`
 
 **Parameters**
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Script                   | A valid JavaScript syntax, including  function calls.                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| RunModeConstant          | One of the following list  of constants that acts as a flag when passed as a parameter to EvaluateScript(). Defines the point during  script execution at which WebLOAD should execute the script being included  here. Possible choices include:`WLAfterInitAgenda`  `WLBeforeInitClient`  `WLBeforeThreadActivation`  `WLOnThreadActivation`  `WLBeforeRound`  `WLAfterRound`  `WLAfterTerminateClient`  `WLAfterTerminateAgenda` |
+| RunModeConstant          | One of the following list  of constants that acts as a flag when passed as a parameter to `EvaluateScript().` Defines the point during  script execution at which WebLOAD should execute the script being included  here. Possible choices include: <p></p> - `WLAfterInitAgenda`  <p></p> - `WLBeforeInitClient`  <p></p> - `WLBeforeThreadActivation`  <p></p> - `WLOnThreadActivation`  <p></p> - `WLBeforeRound`  <p></p> - `WLAfterRound`  <p></p> - `WLAfterTerminateClient`  <p></p> - `WLAfterTerminateAgenda` |
 
 **Comment**
 
 If the script to be executed is in an external file, use the following:
 
-IncludeFile(filename.js) EvaluateScript(“MyFunction()”,WLAfterRound) Where MyFunction() is defined in filename.js.
+`IncludeFile(filename.js)`
+
+`EvaluateScript(“MyFunction()”,WLAfterRound)`
+
+Where `MyFunction()` is defined in filename.js.
 
 ## event (property)
 
@@ -2026,31 +2048,30 @@ Represents the event that occurred to the parent object or the event for which t
 
 **Description**
 
-Use the ExecuteConcurrent()function to define the point after which all Post and Get HTTP requests, which have been collected since the DefineConcurrent() function was run, are executed. At this point, the collected HTTP requests are executed concurrently, by two or more threads. The number of threads is defined in the
+Use the `ExecuteConcurrent()` function to define the point after which all Post and Get HTTP requests, which have been collected since the `DefineConcurrent()` function was run, are executed. At this point, the collected HTTP requests are executed concurrently, by two or more threads. The number of threads is defined in the
 
 WebLOAD Console in the multithreading number in the Browser Parameters tab of the Script Options dialog box.
 
-**Note:** This function can only be inserted in your script *after* a DefineConcurrent() function. For more information about the DefineConcurrent() function, see [*DefineConcurrent() (function)* ](#defineconcurrent-function).
+**Note:** This function can only be inserted in your script *after* a `DefineConcurrent()` function. For more information about the `DefineConcurrent()` function, see [*DefineConcurrent() (function)* ](#defineconcurrent-function).
 
-When the engine encounters the ExecuteConcurrent() function, it stops collecting the HTTP requests in the script and starts their execution.
+When the engine encounters the `ExecuteConcurrent()` function, it stops collecting the HTTP requests in the script and starts their execution.
 
 **Example**
 
-`DefineConcurrent()`
+```
+DefineConcurrent()
+…
+    <any valid JavaScript code, including Post and Get requests>
+… 
+ExecuteConcurrent()
 
-`…`
-
-`<any valid JavaScript code, including Post and Get requests>`
-
-`…`
-
-`ExecuteConcurrent()`
+```
 
 **GUI mode**
 
-**Note:** The ExecuteConcurrent()function is usually inserted into script files directly through the WebLOAD Recorder. Drag the **Execute Concurrent** icon, from the Load toolbox, into the Script Tree at the desired location.
+**Note:** The `ExecuteConcurrent()` function is usually inserted into script files directly through the WebLOAD Recorder. Drag the **Execute Concurrent** ![](../images/execute_concu.png) icon, from the Load toolbox, into the Script Tree at the desired location.
 
-For additional information about the ExecuteConcurrent() function, refer to
+For additional information about the `ExecuteConcurrent()` function, refer to
 
 *Execute Concurrent* in the *WebLOAD Recorder User’s Guide*.
 
@@ -2066,7 +2087,7 @@ Use this function to extract a specific string contained within another string.
 
 **Syntax**
 
-retVarName = extractValue(prefix, suffix, str, instance)
+`retVarName = extractValue(prefix, suffix, str, instance)`
 
 **Parameters**
 
@@ -2074,34 +2095,30 @@ retVarName = extractValue(prefix, suffix, str, instance)
 | ------------------------ | ----------------------------------------------------------------- |
 | retVarName               | A variable name that will be generated to  the agenda             |
 | prefix                   | A string indicating the beginning of the  string to be extracted. |
-| suffix                   | A string indicating the end of the string  to be extracted.       |
-
-| **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| str                       | The string to be extracted is contained  within this string.                                                                                                                                                                                                                                                                                                |
+| suffix                   | A string indicating the end of the string  to be extracted.       | str                       | The string to be extracted is contained  within this string.                                                                                                                                                                                                                                                                                                |
 | instance                  | When there is more than  one appearance of the prefix string following by the suffix string, this  optional parameter can be used to indicate the correct string to be returned.  The default value is 1.  For example, when instance  is 3, the third appearance of the  prefix string followed by the suffix string indicates the string to be  returned. |
 
 **Return Value**
 
-The extractValue function returns the extracted string.
+The `extractValue` function returns the extracted string.
 
 **Example**
 
 The following function extracts ‘x’ out of ‘axb’:
 
-retStr = extractValue(“a”, “b”, “axb”)
+`retStr = extractValue(“a”, “b”, “axb”)`
 
-Since no instance parameter is specified, WebLOAD automatically adds the default value of the instance parameter:
+Since no `instance` parameter is specified, WebLOAD automatically adds the default value of the `instance` parameter:
 
-retStr = extractValue(“a”, “b”, “axb”,1)
+`retStr = extractValue(“a”, “b”, “axb”,1)`
 
 The following function extracts ‘tttatt’ out of ‘zzzatttattbaxbzzzbzz’:
 
-retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,1)
+`retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,1)`
 
 The following function extracts ‘x’ out of ‘zzzatttattbaxbzzzbzz’:
 
-retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,2)
+`retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,2)`
 
 ## FileName (property)
 
@@ -2115,7 +2132,7 @@ This property is a string that holds the name of the file being submitted throug
 
 **Syntax**
 
-wlHttp.DataFile.FileName = “DataFileName”
+`wlHttp.DataFile.FileName = “DataFileName”`
 
 **See also**
 
@@ -2145,7 +2162,7 @@ The value of the FilterURL property is a list of filters separated by semi-colon
 
 **Example**
 
-For example, if FilterURL = “ynet;cnn.com”, the engine will filter URLs from ynet.com and ynet.co.il, as well as URLS from cnn.com.
+For example, if `FilterURL = “ynet;cnn.com”`, the engine will filter URLs from ynet.com and ynet.co.il, as well as URLS from cnn.com.
 
 **See also**
 
@@ -2155,21 +2172,21 @@ For example, if FilterURL = “ynet;cnn.com”, the engine will filter URLs from
 
 **Property of Object**
 
-form objects are grouped into collections of forms. The forms collection is a property of the following object:
+`form` objects are grouped into collections of `forms`. The `forms` collection is a property of the following object:
 
 * document (see [*document (object)* ](#document-object))
 
 **Description**
 
-Specifies that the contained controls are all elements of a form. Each form object stores the parsed data for a complete HTML form (`<FORM>` tag). A form object contains the complete set of elements and input controls (text, radio buttons, checkboxes, etc.) that are all components of a single form. (Compare to the element (see [*element (object)* ](#element-object)) object, which stores the parsed data for a single HTML form element.)
+Specifies that the contained controls are all elements of a `form`. Each `form` object stores the parsed data for a complete HTML `form` (`<FORM>` tag). A `form` object contains the complete set of elements and input controls (text, radio buttons, checkboxes, etc.) that are all components of a single `form`. (Compare to the element (see [*element (object)* ](#element-object)) object, which stores the parsed data for a single HTML `form` element.)
 
-form objects are local to a single thread. You cannot create new form objects using the JavaScript new operator, but you can access HTML forms through the properties and methods of the standard DOM objects. form properties are read-only.
+`form` objects are local to a single thread. You cannot create new `form` objects using the JavaScript new operator, but you can access HTML `forms` through the properties and methods of the standard DOM objects. `form` properties are read-only.
 
-form objects are grouped together within collections of forms, as described in Collections (see [*Collections* ](./using_javascript_ref.md#collections)). A forms collection contains all form links (HTML `<FORM>` elements) within the document.
+`form` objects are grouped together within collections of `forms`, as described in Collections (see [*Collections* ](./using_javascript_ref.md#collections)). A forms collection contains all form links (HTML `<FORM>` elements) within the document.
 
 **Syntax**
 
-The forms collection includes a length property that reports the number of form objects within a document (read-only). To find out how many form objects are contained within a document, check the value of:
+The `forms` collection includes a length property that reports the number of `form` objects within a document (read-only). To find out how many `form` objects are contained within a document, check the value of:
 
 document.forms.length
 
@@ -2177,11 +2194,13 @@ Use an index number to access an individual form’s properties. Access each for
 
 `document.forms[*index*#].<*form-property*>`
 
-You can also access a member of the forms collection by its HTML name attribute. For example, suppose that the first form on an HTML page is introduced by the tag:
+You can also access a member of the `forms` collection by its HTML name attribute. For example, suppose that the first form on an HTML page is introduced by the tag:
 
-`<FORM name=“SignUp”`
-
-action=[“http://www.ABCDEF.com/FormProcessor.exe](http://www.ABCDEF.com/FormProcessor.exe)” method=“post”>
+```
+<FORM name=“SignUp”`
+    action=“http://www.ABCDEF.com/FormProcessor.exe” 
+    method=“post”>
+```
 
 You can access this form by writing any of the following expressions:
 
@@ -2219,9 +2238,9 @@ You can access this form by writing any of the following expressions:
 
 **Description**
 
-A collection containing form field values. WebLOAD submits the field values to the HTTP server when you call the Get(), Post(), or Head() method of the wlHttp object. FormData goes through HTTP encoding before being sent to the server in the same manner as content-type=application/x-www-form-urlencoded.
+A collection containing form field values. WebLOAD submits the field values to the HTTP server when you call the `Get()`, `Post()`, or `Head()` method of the `wlHttp` object. FormData goes through HTTP encoding before being sent to the server in the same manner as content-type=application/x-www-form-urlencoded.
 
-The collection indices are the field names (HTML name attributes). Before you call wlHttp.Post(), set the value of each element to the data that you want to submit in the HTML field. The fields can be any HTML controls, such as buttons, text areas, or hidden controls.
+The collection indices are the field names (HTML name attributes). Before you call `wlHttp.Post()`, set the value of each element to the data that you want to submit in the HTML field. The fields can be any HTML controls, such as buttons, text areas, or hidden controls.
 
 **Method**
 
@@ -2229,7 +2248,7 @@ Use the wlClear() (see [*wlClear() (method)* ](#wlclear-method)) method to delet
 
 JavaScript supports two equivalent notations for named collection elements: FormData.FirstName or FormData[“FirstName”]. The latter notation also supports spaces in the name, for example, FormData[“First Name”].
 
-##### Getting FormData using Get()
+#### Getting FormData using Get()
 
 You can get form data using a Get() call. For example:
 
@@ -2237,37 +2256,39 @@ You can get form data using a Get() call. For example:
 
 `wlHttp.FormData[“LastName”] = “Smith”`
 
-`wlHttp.FormData[“EmailAddress”] = [“bsmith@ABCDEF.com](mailto:bsmith@ABCDEF.com)”`
+`wlHttp.FormData[“EmailAddress”] = “bsmith@ABCDEF.com”`
 
 `wlHttp.Get(“http://www.ABCDEF.com/submit.cgi”)`
 
 WebLOAD appends the form data to the URL as a query statement, using the following syntax:
 
-`http://www.ABCDEF.com/submit.cgi`
+```
+http://www.ABCDEF.com/submit.cgi
+     ?FirstName=Bill&LastName=Smith
+     &EmailAddress=bsmith@ABCDEF.com
 
-`?FirstName=Bill&LastName=Smith [&amp;Ema](mailto:&EmailAddress=bsmith@ABCDEF.com)[ilAddress=bsmith@ABCDEF.com](mailto:ilAddress=bsmith@ABCDEF.com)`
+```
 
-##### Submitting FormData using Post()
+#### Submitting FormData using Post()
 
 Suppose you are testing an HTML form that requires name and email address data. You need to submit the form to the submit.cgi program, which processes the data. You can code this in the following way:
 
 ```
 wlHttp.FormData[“FirstName”] = “Bill” 
-
 wlHttp.FormData[“LastName”] = “Smith”
-
- wlHttp.FormData[“EmailAddress”] = [“bsmith@ABCDEF.com](mailto:bsmith@ABCDEF.com)” 
-
+wlHttp.FormData[“EmailAddress”] = “bsmith@ABCDEF.com
 wlHttp.Post(“http://www.ABCDEF.com/submit.cgi”)
+
 ```
 
-The Post() call connects to submit.cgi and sends the FormData fields. In the above example, WebLOAD would post the following fields:
+The `Post()` call connects to `submit.cgi` and sends the `FormData` fields. In the above example, WebLOAD would post the following fields:
 
-`FirstName=Bil`
+```
+FirstName=Bil
+LastName=Smith
+EmailAddress=bsmith@ABCDEF.com
 
- `LastName=Smith`
-
-`[EmailAddress=bsmith@ABCDEF.com`](mailto:EmailAddress=bsmith@ABCDEF.com)
+```
 
 You may also submit FormData with missing fields or with data files.
 
@@ -2292,19 +2313,19 @@ You may also submit FormData with missing fields or with data files.
 
 **Description**
 
-The frames object retrieves a collection of all window objects defined by the given document or defined by the document associated with the given window. Each window object contains one of the child windows found in a browser window frameset. The frames collection stores the complete parse results for downloaded HTML frames, including nested child windows. Use the frames properties to retrieve information about any child windows to which the current window or document are linked.
+The `frames` object retrieves a collection of all window objects defined by the given document or defined by the document associated with the given window. Each window object contains one of the child windows found in a browser window frameset. The `frames` collection stores the complete parse results for downloaded HTML `frames`, including nested child windows. Use the `frames` properties to retrieve information about any child windows to which the current window or document are linked.
 
-frames collections are local to a single thread. WebLOAD creates an independent frames collection for each thread of a script. You cannot create new frames collections using the JavaScript new operator, but you can access HTML frames through the properties and methods of the standard DOM objects. frames properties are read-only.
+`frames` collections are local to a single thread. WebLOAD creates an independent `frames` collection for each thread of a script. You cannot create new `frames` collections using the JavaScript `new` operator, but you can access HTML frames through the properties and methods of the standard DOM objects. frames properties are read-only.
 
 **Syntax**
 
-The frames collection includes a length property that reports the number of frame objects within a document (read-only). To find out how many window objects are contained within a document, check the value of:
+The `frames` collection includes a length property that reports the number of frame objects within a document (read-only). To find out how many window objects are contained within a document, check the value of:
 
 `document.frames.length`
 
 Use an index number to access an individual frame’s properties. Access each window’s properties directly using the following syntax:
 
-`document.frames[#].<*child-property*>`
+`document.frames[#].<child-property>`
 
 You can also access a member of the frames collection by its HTML name attribute. For example:
 
@@ -2312,9 +2333,9 @@ You can also access a member of the frames collection by its HTML name attribute
 
 -Or-
 
-document.frames.namestring
+`document.frames.namestring`
 
-If the GetFrames property is false, the frames collection is empty.
+If the GetFrames property is `false`, the frames collection is empty.
 
 **Example**
 
@@ -2324,15 +2345,15 @@ Access each window’s properties directly through an index number:
 
 Access the first child window using the following expression:
 
-``frames[0]``
+`frames[0]`
 
 Access the first child window’s link objects directly using the following syntax:
 
-`frames[0]`.`frames[0]`.links[#].`<*property*>`
+`frames[0].frames[0].links[#].<property>`
 
 For example:
 
-``document.`frames[0]``.links[0].protocol`
+`document.frames[0].links[0].protocol`
 
 **Properties**
 
@@ -2354,13 +2375,13 @@ For example:
 
 **Description**
 
-Function is used to define a global JavaScript function called when a verification fail error occurs. When defined, Function affects all the verifications in which a JavaScript function is not defined. If you define a JavaScript function for a specific verification, it overrides the global JavaScript function defined in the Function property.
+`Function` is used to define a global JavaScript function called when a verification fail error occurs. When defined, `Function` affects all the verifications in which a JavaScript function is not defined. If you define a JavaScript function for a specific verification, it overrides the global JavaScript function defined in the `Function` property.
 
 **Example**
 
 To set the global JavaScript function called in the event of any verification fail errors to
 
-`GetOperatingSystem(), write:`
+`GetOperatingSystem(),` write:
 
 `wlVerification.Function = GetOperatingSystem()`
 
@@ -2377,11 +2398,11 @@ To set the global JavaScript function called in the event of any verification fa
 
 **Description**
 
-GeneratorName() provides a unique identification for the current Load Generator instance, even with multiple spawned processes running simultaneously. The identification string is composed of a combination of the current Load Generator name, computer name, and other internal markers.
+`GeneratorName()` provides a unique identification for the current Load Generator instance, even with multiple spawned processes running simultaneously. The identification string is composed of a combination of the current Load Generator name, computer name, and other internal markers.
 
 **Syntax**
 
-GeneratorName()
+`GeneratorName()`
 
 **Return Value**
 
@@ -2389,9 +2410,9 @@ Returns a unique identification string for the current Load Generator.
 
 **GUI mode**
 
-WebLOAD recommends accessing global system variables, including the GeneratorName() identification function through the WebLOAD Recorder. All the variables that appear in this list are available for use at all times in a script file. In the WebLOAD Recorder main window, click **Variables Windows** in the **Debug** tab of the ribbon**.**
+WebLOAD recommends accessing global system variables, including the `GeneratorName()` identification function through the WebLOAD Recorder. All the variables that appear in this list are available for use at all times in a script file. In the WebLOAD Recorder main window, click **Variables Windows** in the **Debug** tab of the ribbon**.**
 
-For example, it is convenient to add GeneratorName() to a Message Node to clarify which Load Generator sent the messages that appear in the WebLOAD Console Log window.
+For example, it is convenient to add `GeneratorName()` to a Message Node to clarify which Load Generator sent the messages that appear in the WebLOAD Console Log window.
 
 **See also**
 
@@ -2422,7 +2443,7 @@ Returns the current value of the specified shared variable.
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SharedVarName            | The name of a shared variable whose value should  be returned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ScopeFlag                | One of two flags, WLCurrentAgenda or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object:`<br>`The WLCurrentAgenda scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  `<br>`The WLAllAgendas scope flag signifies variable values that you wish to share between  all threads of one or more scripts, common to a single spawned process,  running on a single Load Generator.  When used as a method of the wlSystemGlobal object:  `<br>`The WLCurrentAgenda scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load Generators, system wide.  `<br>`The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all processes, on all Load  Generators, system-wide. |
+| ScopeFlag                | One of two flags, WLCurrentAgenda or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object:<p></p>- The WLCurrentAgenda scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  <p></p>- The WLAllAgendas scope flag signifies variable values that you wish to share between  all threads of one or more scripts, common to a single spawned process,  running on a single Load Generator.  When used as a method of the `wlSystemGlobal` object:  <p></p>- The WLCurrentAgenda scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load Generators, system wide.  <p></p>- The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all processes, on all Load  Generators, system-wide. |
 
 **Return Value**
 
@@ -2490,60 +2511,64 @@ Perform an HTTP or HTTPS Get command. The method gets the FormData, Data, or Dat
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify  the URL as a parameter of the method. Get() connects to the first URL that has been specified  from the following list, in the order specified:`<br>`A Url parameter  specified in the method call.  `<br>`The Url property of  the wlHttp object.  `<br>`The local default wlLocals.Url.  `<br>`The global default wlGlobals.Url.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report.  Use*named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates.  The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to true by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get and Post HTTP transaction.  This makes statistical analysis simpler, since all HTTP transaction activity  is measured, recorded, and reported for you automatically. You do not have to  remember to add naming instructions to each Get and Post command in your script. The name assigned by  WebLOAD is simply the URL used by that Get or Post transaction. If your  script includes multiple transactions to the same URL, the information will  be collected cumulatively for those transactions. |
+| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify  the URL as a parameter of the method. `Get()` connects to the first URL that has been specified  from the following list, in the order specified:<p></p>- A `Url` parameter  specified in the method call.  <p></p>- The Url property of  the `wlHttp` object.  <p></p>- The local default `wlLocals.Url`.  <p></p>- The global default `wlGlobals.Url.`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report.  <p></p>Use *named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates. <p></p> The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to `true` by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get and Post HTTP transaction.  This makes statistical analysis simpler, since all HTTP transaction activity  is measured, recorded, and reported for you automatically. You do not have to  remember to add naming instructions to each Get and Post command in your script. The name assigned by  WebLOAD is simply the URL used by that Get or Post transaction. If your  script includes multiple transactions to the same URL, the information will  be collected cumulatively for those transactions. |
 
 **Example**
 
 ```javascript
 function InitAgenda() {
-
-//Set the default URL
-
-wlGlobals.Url = [“http://www.ABCDEF.com](http://www.ABCDEF.com/)”
-
+    //Set the default URL
+    wlGlobals.Url = “http://www.ABCDEF.com”
 }
-
 //Main script
+//Connect to the default URL: 
+wlHttp.Get()
+//Connect to a different, explicitly set URL: 
+wlHttp.Get(“http://www.ABCDEF.com/product_info.html”)
+//Assign a name to the following HTTP transact:
+url= http://www.ABCDEF.com/product_info.html
+wlHttp.Get(url,
+       “UpdateBankAccount”)
 
-//Connect to the default URL: wlHttp.Get()
+```
 
-//Connect to a different, explicitly set URL: [wlHttp.Get(“http://www.ABCDEF.com/product_info.html](http://www.ABCDEF.com/product_info.html)”)
+Use named transactions as a shortcut in place of the 
+`BeginTransaction()...EndTransaction()` module. For example, this is one way to identify a logical transaction unit:
 
-//Assign a name to the following HTTP transaction: url= [http://www.ABCDEF.com/product_info.html](http://www.abcdef.com/product_info.html) wlHttp.Get(url,
 
-“UpdateBankAccount”)
+```
 
-Use named transactions as a shortcut in place of the BeginTransaction()...EndTransaction() module. For example, this is one way to identify a logical transaction unit:
-
-BeginTransaction(“UpdateBankAccount”) wlHttp.Get(url)
-
-// the body of the transaction
-
-// any valid JavaScript statements wlHttp.Post(url);
-
+BeginTransaction(“UpdateBankAccount”) 
+  wlHttp.Get(url)
+        // the body of the transaction
+        // any valid JavaScript statements wlHttp.Post(url);
+  wlHttp.Post(url);
 EndTransaction(“UpdateBankAccount”)
+        // and so on
 
-// and so on
+```
 
 Using the named transaction syntax, you could write:
 
-wlHttp.Get(url,”UpdateBankAccount”)
-
-// the body of the transaction
-
-// any valid JavaScript statements wlHttp.Post(url,”UpdateBankAccount”)
-
-// and so on
-
-For the HTTPS protocol, include “https://” in the URL and set the required properties of the wlGlobals object:
-
-[wlHttp.Get(“https://www.ABCDEF.com](http://www.ABCDEF.com/)”)
 ```
+
+wlHttp.Get(url,”UpdateBankAccount”)
+        // the body of the transaction
+        // any valid JavaScript statements 
+wlHttp.Post(url,”UpdateBankAccount”)
+        // and so on
+```
+
+For the HTTPS protocol, include `“https://”` in the URL and set the required properties of the `wlGlobals` object:
+
+
+`wlHttp.Get("https://www.ABCDEF.com")`
+
 
 **Comment**
 
-You may not use the TransName parameter by itself. Get() expects to receive either *no* parameters, in which case it uses the script’s default URL, or *one* parameter, which must be an alternate URL value, or *two* parameters, including both a URL value and the transaction name to be assigned to this transaction.
+You may not use the `TransName` parameter by itself. `Get()` expects to receive either *no* parameters, in which case it uses the script’s default URL, or *one* parameter, which must be an alternate URL value, or *two* parameters, including both a URL value and the transaction name to be assigned to this transaction.
 
 **See also**
 
@@ -2609,7 +2634,7 @@ Enables the retrieval of cascading style sheets in an HTML page. The default val
 
 **Example**
 
-wlGlobals.GetCss = true
+`wlGlobals.GetCss = true`
 
 **See also**
 
@@ -2650,11 +2675,11 @@ The first element with the requested identification value or Null if no element 
 
 Used to retrieve an array of all elements with the specified identification value by querying the DOM of the HTML from the last response.
 
-> **Note:** An element can be from the `document.forms[].elements[], document.links[] or document.images[]` collections.
+> **Note:** An element can be from the `document.forms[].elements[]`, `document.links[]` or `document.images[]` collections.
 
 **Syntax**
 
-GetElementsById(“id”)
+`GetElementsById(“id”)`
 
 **Return Value**
 
@@ -2663,23 +2688,21 @@ A list of the requested elements.
 **Example**
 
 ```javascript
-wlHttp.Get("www.abc.com](http://www.abc.com/)")
-
-var elementArr = GetElementsById("id4"); for (var i in elementArr ) {
-
-var elm = elementArr[i];
-
-InfoMessage( "ID:" + elm.id + ", Name:" + elm.name + ", Type:" + elm.type + ", Value:" + elm.value );
+wlHttp.Get("www.abc.com")
+var elementArr = GetElementsById("id4"); 
+for (var i in elementArr ) {
+    var elm = elementArr[i];
+    InfoMessage( "ID:" + elm.id + ", Name:" + elm.name + ", Type:" + elm.type + ", Value:" + elm.value );
 
 }
 ```
 
 The expected output is:
 
+```
 4.11    ID:id4, Name:event, Type:hidden, Value:search
-
 4.23    ID:id4, Name:process, Type:hidden, Value:login
-
+```
 **See also**
 
 * GetElementsByName() (see [*GetElementsByName() (function)* ](#getelementsbyname-function))
@@ -2696,6 +2719,10 @@ Used to retrieve the element with the specified name by querying the DOM of the 
 **Syntax**
 
 `GetElementByName(“name”)`
+
+| **Parameter Name** | **Description**                                               |
+| ------------------------ | ------------------------------------------------------------------- |
+| name                     | The name of the elements to retrieve, enclosed in  quotation marks. |
 
 **Return Value**
 
@@ -2729,20 +2756,22 @@ A list of the requested elements.
 **Example**
 
 ```javascript
-[wlHttp.Get("http://www.webloadmpstore.com/login.php")](http://www.webloadmpstore.com/login.php) var elementArr = GetElementsByName("event");
-
-for (var i in elementArr ) { var elm = elementArr[i];
-
-InfoMessage( "Name:" + elm.name + ", ID:" + elm.id + ", Type:" + elm.type + ", Value:" + elm.value );
-
+wlHttp.Get("http://www.webloadmpstore.com/login.php")
+var elementArr = GetElementsByName("event");
+for (var i in elementArr ) { 
+    var elm = elementArr[i];
+    InfoMessage( "Name:" + elm.name + ", ID:" + elm.id + ", Type:" + 
+    elm.type + ", Value:" + elm.value );
 }
 ```
 
 The expected output is:
 
+```
 4.11    Name:event, ID:, Type:hidden, Value:search
 
 4.23    Name:event, ID:, Type:hidden, Value:login
+```
 
 **See also**
 
@@ -2761,11 +2790,18 @@ Used to retrieve the value of the element with the specified identification valu
 
 `GetElementValueById(“id”)`
 
+| **Parameter Name** | **Description**                                               |
+| ------------------------ | ------------------------------------------------------------------- |
+| id                     | The identification value of the element, enclosed in quotation marks. |
+
 **Return Value**
 
 The value of the first element with the requested identification value or Null if no element was found.
 
-**Example** GetElementValueById(“sessionid”) **See also**
+**Example** 
+`GetElementValueById(“sessionid”)`
+
+ **See also**
 
 * GetElementValueByName() (see [*GetElementValueByName() (function)* ](#getelementvaluebyname-function))
 
@@ -2781,6 +2817,10 @@ Used to retrieve the value of the element with the specified name by querying th
 
 `GetElementValueByName(“name”)`
 
+| **Parameter Name** | **Description**                                               |
+| ------------------------ | ------------------------------------------------------------------- |
+| name                     | The name of the elements to retrieve, enclosed in  quotation marks. |
+
 **Return Value**
 
 The value of the first element with the requested name or Null if no element was found.
@@ -2788,12 +2828,12 @@ The value of the first element with the requested name or Null if no element was
 **Example**
 
 ```javascript
-wlHttp.Get("http://www.webloadmpstore.com/login.php")](http://www.webloadmpstore.com/login.php) var elementArr = GetElementValueByName("event");
-
-for (var i in elementArr ) { var elm = elementArr[i];
-
-InfoMessage( "Name:" + elm.name + ", ID:" + elm.id + ", Type:" + elm.type + ", Value:" + elm.value );
-
+wlHttp.Get("http://www.webloadmpstore.com/login.php")
+var elementArr = GetElementValueByName("event");
+for (var i in elementArr ) { 
+    var elm = elementArr[i];
+    InfoMessage( "Name:" + elm.name + ", ID:" + elm.id + ", Type:" + 
+    elm.type + ", Value:" + elm.value );
 }
 ```
 
@@ -2817,7 +2857,7 @@ Enables the retrieval of embedded objects in an HTML page. The default value of 
 
 **Example**
 
-wlGlobals.GetEmbeds = true
+`wlGlobals.GetEmbeds = true`
 
 **See also**
 
@@ -2841,7 +2881,7 @@ Retrieve the HTML value attribute (initial value) of a form field, given its nam
 
 **Syntax**
 
-GetFieldValue(FieldName [, frame])
+`GetFieldValue(FieldName [, frame])`
 
 **Parameters**
 
@@ -2860,7 +2900,7 @@ The requested value of the specified field.
 
 **Comment**
 
-By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method only searches within the specified frame and all its nested frames.
+By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional `frame` parameter. In that case, the method only searches within the specified `frame` and all its nested frames.
 
 ## GetFieldValueInForm() (method)
 
@@ -2870,7 +2910,7 @@ By default, the method searches in all frames of the parse tree and returns the 
 
 **Description**
 
-Retrieve the HTML value attribute (initial value) of a form field, given its name attribute. This method is similar to GetFieldValue(), but the search is limited to a specific form within a specific frame.
+Retrieve the HTML value attribute (initial value) of a form field, given its name attribute. This method is similar to `GetFieldValue()`, but the search is limited to a specific form within a specific frame.
 
 **Syntax**
 
@@ -2893,12 +2933,11 @@ The requested HTML value attribute of the form field.
 If an HTML page includes two frames with a form in the second frame.
 
 `wlHtml.GetFieldValueInForm(0, “FirstName”, Frame1)`
-
-searches the first form in Frame1 and returns “Bill”.
+searches the first form in Frame1 and returns `“Bill”`.
 
 **Comment**
 
-The method does not search within nested frames. Omit the optional frame parameter if the HTML page does not contain frames.
+The method does not search within nested frames. Omit the optional `frame` parameter if the HTML page does not contain frames.
 
 ## GetFormAction() (method)
 
@@ -2930,12 +2969,11 @@ The requested form object.
 If an HTML page includes two frames with a form in the second frame
 
 `wlHtml.GetFormAction(0, Frame1)`
-
 returns a form object for the form.
 
 **Comment**
 
-The method does not search within nested frames. Omit the optional frame parameter if the HTML page does not contain frames.
+The method does not search within nested frames. Omit the optional `frame` parameter if the HTML page does not contain frames.
 
 ## GetFrameByUrl() (method)
 
@@ -2966,23 +3004,22 @@ The requested frame.
 
 ```javascript
 //Retrieve Frame0
-
-Frame0 = wlHtml.GetFrame[ByUrl(“http://MyCompany/Frame0.html](http://MyCompany/Frame0.html)”)
-
+Frame0 = wlHtml.GetFrameByUrl(“http://MyCompany/Frame0.html”)
 //Retrieve Frame0.1
-
-Frame0_1 = wlHtml.GetFrameByUrl([“http://MyCompany/Frame0B.html](http://MyCompany/Frame0B.html)”)
+Frame0_1 = wlHtml.GetFrameByUrl(“http://MyCompany/Frame0B.html”)
+```
 
 You may use * as a wildcard character in the URL. The method returns the first frame matching the search pattern. For example:
 
-// To match URL [(http://MyCompany/Frame0B.html)](http://MyCompany/Frame0B.html)) Frame0_1 = wlHtml.GetFrameByUrl(“*B.htm*”)
+```
+// To match URL (http://MyCompany/Frame0B.html)
+Frame0_1 = wlHtml.GetFrameByUrl(“*B.htm*”)
+```
 
-You may narrow the search to frames nested within a specific parent frame by
+You may narrow the search to frames nested within a specific parent frame by specifying the optional `frame` parameter. For example:
 
-specifying the optional frame parameter. For example:
-
+```
 //Search within Frame0 and retrieve Frame0.0
-
 Frame0_0 = wlHtml.GetFrameByUrl(“*/MyCompany/*”,Frame0)
 ```
 
@@ -3004,11 +3041,11 @@ Comment out `GetFrames=false` when you use the GetFrameByUrl method.
 
 Enables the retrieval of Frames and IFrames in an HTML page. The default value of GetFrames is **true**.
 
-**Note:** This property can only be inserted manually.   Although the default value for GetFrames is true, during recording, the following is automatically inserted in the script: wlGlobals.`GetFrames=false`;
+**Note:** This property can only be inserted manually.   Although the default value for GetFrames is true, during recording, the following is automatically inserted in the script: `wlGlobals.GetFrames=false`;
 
 **Example**
 
-wlGlobals.GetFrames = true
+`wlGlobals.GetFrames = true`
 
 **Comments**
 
@@ -3032,11 +3069,16 @@ When GetMetas is true, GetFrames should also be true as the redirection is retri
 
 **Description**
 
-Retrieve a location object representing the URL of an HTML page. Optionally, specify a nested frame.
+Retrieve a `location` object representing the URL of an HTML page. Optionally, specify a nested `frame`.
 
 **Syntax**
 
 `GetFrameUrl([frame])`
+
+| **Parameter Name** | **Description**                                               |
+| ------------------------ | ------------------------------------------------------------------- |
+| [frame]                     | An optional frame specification, used to limit the scope of the
+search to a specific frame. |
 
 **Comment**
 
@@ -3048,9 +3090,7 @@ The requested location object.
 
 **Comment**
 
-This method is equivalent to the location property of a frame object (see [*frames (object)](#frames-object)
-
-).
+This method is equivalent to the location property of a frame object (see [*frames (object)](#frames-object)).
 
 ## GetHeaderValue() (method)
 
@@ -3064,7 +3104,7 @@ Retrieve the value of an HTTP header field.
 
 **Syntax**
 
-GetHeaderValue(HeaderName [, frame])
+`GetHeaderValue(HeaderName [, frame])`
 
 **Parameters**
 
@@ -3077,11 +3117,25 @@ GetHeaderValue(HeaderName [, frame])
 
 The requested HTTP header field value.
 
-`wlHtml.GetHeaderValue(“Host”) returns “Server2.MyCompany.com”.`
+````
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html
+Connection: close
+Host: Server2.MyCompany.com:80
+
+wlHtml.GetHeaderValue(“Host”)
+returns “Server2.MyCompany.com".
+
+````
 
 -Or-
 
-`document.wlHeaders[“host”] document.frame[0].wlHeaders[“host”]`
+```
+document.wlHeaders[“host”] 
+document.frame[0].wlHeaders[“host”]
+```
 
 **Comment**
 
@@ -3117,19 +3171,26 @@ The requested host information.
 
 For the following HTTP Header example:
 
-`HTTP/1.1 200 OK`
+```
 
-`Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT`
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html 
+Connection: close
+Host: Server2.MyCompany.com:80 
 
-`Content-type: text/html Connection: close`
-
-`Host: Server2.MyCompany.com:80 wlHtml.GetHost()`
-
-`returns “Server2.MyCompany.com:80”.`
+wlHtml.GetHost()
+returns “Server2.MyCompany.com:80”.
+```
 
 -Or-
 
-`document.wlHeaders[“hostname”] document.frame[0].wlHeaders[“hostname”]`
+```
+document.wlHeaders[“hostname”] 
+document.frame[0].wlHeaders[“hostname”]
+
+```
 
 **Comment**
 
@@ -3151,13 +3212,26 @@ Retrieve the host name of a URL, not including the port number.
 
 `GetHostName([frame])`
 
+
+**Parameters**
+
+| **Parameter Name** | **Description**                                                                        |
+| ------------------------ | -------------------------------------------------------------------------------------------- |
+| [frame]                  | An optional frame  specification, used to limit the scope of the search to a specific frame. |
+
 **Return Value**
 
 The requested host name.
 
-`wlHtml.GetHostName()`
-
-`returns “Server2.MyCompany.com”.`
+```
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html
+Connection: close
+Host: Server2.MyCompany.com:80
+```
+calling `wlHtml.GetHostName()` returns “Server2.MyCompany.com”.
 
 **Comment**
 
@@ -3175,9 +3249,9 @@ If you are specifying a frame, comment out `GetFrames=false`.
 
 **Description**
 
-Enables the retrieval of images in an HTML page. The default value of GetImages is true.
+Enables the retrieval of images in an HTML page. The default value of `GetImages `is true.
 
-When GetImages is false, the load engine does not retrieve the images from an HTML page.
+When `GetImages` is false, the load engine does not retrieve the images from an HTML page.
 
 > **Note:** This property can only be inserted manually.
 
@@ -3211,7 +3285,7 @@ When set to true, the “Thin” client will retrieve images. The default value 
 
 **Example**
 
-wlGlobals.GetImagesInThinClient = true
+`wlGlobals.GetImagesInThinClient = true`
 
 **See also**
 
@@ -3243,17 +3317,17 @@ Returns a string with the IP address for the current Virtual Client.
 
 **Example**
 
-...
+```
+wlHttp.MultiIPSupport = true 
+CurrentIPAddress = wlHttp.GetIPAddress()
+wlHttp.Get()
 
-`wlHttp.MultiIPSupport = true CurrentIPAddress = wlHttp.GetIPAddress() wlHttp.Get()`
-
-...
-
+```
 **Comment**
 
-Requesting the identity of the *current* IP address is only meaningful if your script is handling more than one IP address. GetIPAddress() therefore can only return a value if MultiIPSupport=true. If MultiIPSupport is turned off this method will return “Undefined”.
+Requesting the identity of the *current* IP address is only meaningful if your script is handling more than one IP address. `GetIPAddress()` therefore can only return a value if `MultiIPSupport=true`. If `MultiIPSupport` is turned off this method will return `“Undefined”`.
 
-The scope of MultiIPSupport depends, of course, on whether it was set through wlGlobals, wlLocals, or wlHttp. For example, if your script sets wlGlobals.MultiIPSupport, then GetIPAddress() returns a value at any point in the script. If you set only wlHttp.MultiIPSupport, then GetIPAddress()returns a value only if called before the next immediate HTTP transaction.
+The scope of `MultiIPSupport` depends, of course, on whether it was set through `wlGlobals`, `wlLocals`, or `wlHttp`. For example, if your script sets `wlGlobals.MultiIPSupport`, then `GetIPAddress()` returns a value at any point in the script. If you set only wlHttp.`MultiIPSupport`, then `GetIPAddress()` returns a value only if called before the next immediate HTTP transaction.
 
 **See also**
 
@@ -3263,13 +3337,13 @@ The scope of MultiIPSupport depends, of course, on whether it was set through wl
 
 **Description**
 
-The GetLine() function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
+The `GetLine()` function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
 
 * If you opened the file using the default sequential mode (see [*Open() (function)* ](#open-function)), then:
-* The first GetLine() call in any thread of a Load Generator reads the first line of the file.
-* Each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads the next line of the file.
-* When the last line of the file has been read, the next access loops back to the first line of the file.
-* If you opened the file for random access (see [*Open() (function)* ](#open-function)), each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads some randomly selected line of the file. To read the input file lines in random order, you must include Open(filename, WLRandom) in the script’s InitAgenda() function.
+     * The first `GetLine()` call in any thread of a Load Generator reads the first line of the file.
+     * Each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads the next line of the file.
+     * When the last line of the file has been read, the next access loops back to the first line of the file.
+* If you opened the file for random access (see [*Open() (function)* ](#open-function)), each successive call in any thread of any process of the Load Generator (across the master and slave processes of a single Load Generator/script combination) reads some randomly selected line of the file. To read the input file lines in random order, you must include `Open(filename, WLRandom)` in the script’s `InitAgenda()` function.
 
 In this way, a relatively small file can supply an unending stream of test data, and different clients are supplied with different sequences of data.
 
@@ -3277,7 +3351,7 @@ In this way, a relatively small file can supply an unending stream of test data,
 
 **Syntax**
 
-GetLine(filename[, delimiter])
+`GetLine(filename[, delimiter])`
 
 **Parameters**
 
@@ -3288,12 +3362,16 @@ GetLine(filename[, delimiter])
 
 **Return Value**
 
-The GetLine function returns an array containing both the full lines and the individual tokens. The array (called LineArray in this example) includes the following elements:
+The `GetLine` function returns an array containing both the full lines and the individual tokens. The array (called `LineArray` in this example) includes the following elements:
 
-* LineArray[0]-the complete line. For example: “John,Smith, [jsmith@ABC.com](mailto:jsmith@ABC.com)”
-* LineArray[1]-the first token. In this example:“John”
-* LineArray[2]-the second token. In this example:“Smith”
-* LineArray[3]-the third token. In this example:[“jsmith@ABC.com](mailto:jsmith@ABC.com)”
+* LineArray[0]-the complete line. For example: 
+     `“John,Smith,jsmith@ABC.com”`
+* LineArray[1]-the first token. In this example:
+     `“John”`
+* LineArray[2]-the second token. In this example:
+     `“Smith”`
+* LineArray[3]-the third token. In this example:
+     `“jsmith@ABC.com”`
 * LineArray.RoundNum-number of rounds through the file (including the current round). For example: 4
 * LineArray.LineNum-the number of the line that was just read. For example: 1
 
@@ -3303,7 +3381,7 @@ To read and parse the next line of the mydata.txt ASCII input file, in this case
 
 `LineArray = GetLine(“c:\\temp\\mydata.txt”)`
 
-To specify a different delimiter:
+To specify a different `delimiter`:
 
 `LineArray = GetLine(“c:\\temp\\mydata.txt”, “:”)`
 
@@ -3311,7 +3389,7 @@ To specify a different delimiter:
 
 JavaScript requires that you double the backslash in strings. If your directory path includes the backslash character, remember to double the backslashes, as in the preceding example.
 
-If the line found in the file contains no separator characters, then the entire line is considered to be a single token. In that case, the function returns a two-element array (LineArray[0] and LineArray[1]), each containing the entire line.
+If the line found in the file contains no separator characters, then the entire line is considered to be a single token. In that case, the function returns a two-element array (`LineArray[0]` and `LineArray[1]`), each containing the entire line.
 
 **See also**
 
@@ -3335,15 +3413,15 @@ If the line found in the file contains no separator characters, then the entire 
 
 **Description**
 
-The GetLine() function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
+The `GetLine()` function reads and parses data from an ASCII file. The function reads the file one line at a time in the following way:
 
 * If you opened the file using the default WLFileSequential access method (see [*Open() (method)* ](#open-method)), then:
-* The first GetLine() call in any thread of a Load Generator reads the first line of the file.
-* Each successive call in any thread of any process of any Load Generator reads the next line of the file.
-* When the last line of the file has been read, the next access loops back to the first line of the file.
+     * The first `GetLine()` call in any thread of a Load Generator reads the first line of the file.
+     * Each successive call in any thread of any process of any Load Generator reads the next line of the file.
+     * When the last line of the file has been read, the next access loops back to the first line of the file.
 * If you opened the file using the WLFileSequentialUnique access method (see[ *Open() (method)* ](#open-method)), then the procedure is basically as when using the WLFileSequential access mode, except that the if the value/row is being used by another VC, it is not retrieved, but skipped.
-* If you opened the file using the WLFileRandom access method (see [*Open() (method)*](#open-method) ), GetLine() reads a random value/row from the file, where there might be multiple access to the same line by different Load Generator machines.
-* If you opened the file using the WLFileRandomUnique access method (see [*Open()*](#open-method)[ *(method)* ](#open-method)), GetLine() reads a unique, unused value/row randomly from the file.
+* If you opened the file using the WLFileRandom access method (see [*Open() (method)*](#open-method) ), `GetLine()` reads a random value/row from the file, where there might be multiple access to the same line by different Load Generator machines.
+* If you opened the file using the WLFileRandomUnique access method (see [*Open()*](#open-method)[ *(method)* ](#open-method)), `GetLine()` reads a unique, unused value/row randomly from the file.
 
 > **Note:** The last line of the file should not include a carriage return.
 
@@ -3359,12 +3437,16 @@ The GetLine() function reads and parses data from an ASCII file. The function re
 
 **Return Value**
 
-The GetLine function returns an array containing both the full lines and the individual tokens. The array (called strInputFileLine in this example) includes the following elements:
+The GetLine function returns an array containing both the full lines and the individual tokens. The array (called `strInputFileLine` in this example) includes the following elements:
 
-* strInputFileLine [0]-the complete line. For example:“John,Smith, [jsmith@ABC.com](mailto:jsmith@ABC.com)”
-* strInputFileLine [1]-the first token. In this example:“John”
-* strInputFileLine [2]-the second token. In this example:“Smith”
-* strInputFileLine [3]-the third token. In this example:[“jsmith@ABC.com](mailto:jsmith@ABC.com)”
+* strInputFileLine [0]-the complete line. For example: 
+      `“John,Smith, jsmith@ABC.com”`
+* strInputFileLine [1]-the first token. In this example:
+     `“John”`
+* strInputFileLine [2]-the second token. In this example:
+     `“Smith”`
+* strInputFileLine [3]-the third token. In this example:
+     `“jsmith@ABC.com”`
 * strInputFileLine.LineNum-the number of the line that was just read. For example: 1
 
 **Example**
@@ -3375,7 +3457,7 @@ To read and parse the next line of the ASCII input file specified in myFileObj:
 
 **Comment**
 
-If the line found in the file contains no separator characters, then the entire line is considered to be a single token. In that case, the function returns a two-element array (strInputFileLine[0] and strInputFileLine[1]), each containing the entire line.
+If the line found in the file contains no separator characters, then the entire line is considered to be a single token. In that case, the function returns a two-element array (`strInputFileLine[0]` and `strInputFileLine[1])`, each containing the entire line.
 
 **See also**
 
@@ -3412,15 +3494,18 @@ The requested location object.
 
 Suppose the HTML on a page contains:
 
-`<A [href=“http://MyCompany/link1.html](http://MyCompany/link1.html)”>Product information </A>`
+`<A href=“http://MyCompany/link1.html”>Product information </A>`
 
 In this example,
 
 `wlHtml.GetLinkByName(“Product information”)`
 
-returns a location object for [http://MyCompany/link1.html.](http://MyCompany/link1.html)
+returns a location object for `http://MyCompany/link1.html.`
 
-The search is case sensitive. You may use the * wildcard character in the Hypertext string. For example, wlHtml.GetLinkByName(“*roduct info*”) also returns an object for [http://MyCompany/link1.html.](http://MyCompany/link1.html)
+The search is case sensitive. You may use the * wildcard character in the `Hypertext` string. For example, 
+
+`wlHtml.GetLinkByName(“*roduct info*”)`
+ also returns an object for `http://MyCompany/link1.html.`
 
 **Comment**
 
@@ -3457,17 +3542,16 @@ The requested location object.
 
 Suppose the HTML on a page contains:
 
-`<A [href=“http://MyCompany/link1.html](http://MyCompany/link1.html)”>`Product information `</A>`
+`<A href=“http://MyCompany/link1.html”>Product information </A>`
 
 In this example,
 
 `wlHtml.GetLinkByUrl(“*link1.htm*”)`
-
-returns a location object for [http://MyCompany/link1.html.](http://MyCompany/link1.html)
+returns a `location` object for `http://MyCompany/link1.html.`
 
 **Comment**
 
-By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method searches within the specified frame and all its nested frames.
+By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method searches within the specified `frame` and all its nested frames.
 
 If you are specifying a frame, comment out `GetFrames=false`.
 
@@ -3514,9 +3598,9 @@ Text string of the error message for this object.
 
 **Description**
 
-The GetMetas property, when set to true, enables the support of redirection for non-recorded scripts, for websites using the HTML META tag (for example, www.ynet.co.il).
+The `GetMetas` property, when set to true, enables the support of redirection for non-recorded scripts, for websites using the HTML META tag (for example, www.ynet.co.il).
 
-> **Note:** Since scripts that were recorded automatically include the redirected URL, the GetMetas property should be used only in scripts that were written manually and that contain a URL with meta direction.
+> **Note:** Since scripts that were recorded automatically include the redirected URL, the `GetMetas` property should be used only in scripts that were written manually and that contain a URL with meta direction.
 
 **Example**
 
@@ -3537,7 +3621,7 @@ Returns a string identifying the operating system running on the current Load Ge
 
 **Syntax**
 
-GetOperatingSystem()
+`GetOperatingSystem()`
 
 **Return Value**
 
@@ -3580,7 +3664,7 @@ Enables the retrieval of objects not covered by the other Get methods in an HTML
 
 **Example**
 
-wlGlobals.GetOthers = true
+`wlGlobals.GetOthers = true`
 
 **See also**
 
@@ -3604,7 +3688,7 @@ Retrieve the port number of the current URL.
 
 **Syntax**
 
-GetPortNum([frame]) ****
+`GetPortNum([frame])`
 
 **Return Value**
 
@@ -3614,19 +3698,20 @@ The requested number.
 
 For the following HTTP Header example:
 
-`HTTP/1.1 200 OK`
+``` 
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html 
+Connection: close
+Host: Server2.MyCompany.com:80
+```
 
-`Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT`
-
-`Content-type: text/html Connection: close`
-
-`Host: Server2.MyCompany.com:80`
-
-wlHtml.GetPortNum() would return a value such as 80.
+`wlHtml.GetPortNum()` would return a value such as 80.
 
 **Comment**
 
-By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method searches within the specified frame and all its nested frames.
+By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional `frame` parameter. In that case, the method searches within the specified `frame` and all its nested frames.
 
 If you are specifying a frame, comment out `GetFrames=false`.
 
@@ -3659,9 +3744,9 @@ The requested value.
 
 The following search string:
 
-`wlHtml.GetQSFieldValue([“http://www.ABCDEF.com/query.exe](http://www.ABCDEF.com/query.exe)” + “?SearchFor=icebergs&SearchType=ExactTerm”,”SearchFor”)`
+`wlHtml.GetQSFieldValue(“http://www.ABCDEF.com/query.exe + “?SearchFor=icebergs&SearchType=ExactTerm”,”SearchFor”)`
 
-returns “icebergs”.
+returns `“icebergs”`.
 
 ## GetScripts (property)
 
@@ -3703,14 +3788,14 @@ Returns the severity level value stored in this object.
 
 **Syntax**
 
-*wlExceptionObject*.GetSeverity()
+*`wlExceptionObject.GetSeverity()`*
 
 **Return Value**
 
 Integer, representing one of the following error level values:
 
-* WLError-this specific transaction failed and the current test round was aborted. The script displays an error message in the Log window and begins a new round.
-* WLSevereError-this specific transaction failed and the test session must be stopped completely. The script displays an error message in the Log window and the Load Generator on which the error occurred is stopped.
+* `WLError`-this specific transaction failed and the current test round was aborted. The script displays an error message in the Log window and begins a new round.
+* `WLSevereError`-this specific transaction failed and the test session must be stopped completely. The script displays an error message in the Log window and the Load Generator on which the error occurred is stopped.
 
 **Example**
 
@@ -3754,19 +3839,21 @@ The requested status string.
 
 For the following HTTP Header example:
 
-`HTTP/1.1 200 OK`
+```
+HTTP/1.1 200 OK`
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html Connection: close
+Host: Server2.MyCompany.com:80
 
-`Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT`
 
-`Content-type: text/html Connection: close`
+wlHtml.GetStatusLine()  //would return “OK”.
+```             
 
-`Host: Server2.MyCompany.com:80`
-
-wlHtml.GetStatusLine() would return “OK”.
 
 **Comment**
 
-By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method searches within the specified frame and all its nested frames.
+By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional `frame` parameter. In that case, the method searches within the specified `frame` and all its nested frames.
 
 If you are specifying a frame, comment out `GetFrames=false`.
 
@@ -3798,19 +3885,19 @@ The requested status number.
 
 For the following HTTP Header example:
 
-`HTTP/1.1 200 OK`
+```
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html 
+Connection: close
+Host: Server2.MyCompany.com:80
 
-`Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT`
-
-`Content-type: text/html Connection: close`
-
-`Host: Server2.MyCompany.com:80`
-
-wlHtml.GetStatusNumber() would return 200.
-
+lHtml.GetStatusNumber()  //would return 200.
+```
 **Comment**
 
-By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional frame parameter. In that case, the method searches within the specified frame and all its nested frames.
+By default, the method searches in all frames of the parse tree and returns the first match. You may narrow the search by specifying an optional `frame` parameter. In that case, the method searches within the specified `frame` and all its nested frames.
 
 If you are specifying a frame, comment out `GetFrames=false`.
 
@@ -3840,15 +3927,18 @@ The requested URI string.
 
 For the following HTTP Header example:
 
-`HTTP/1.1 200 OK`
+```
+HTTP/1.1 200 OK
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html 
+Connection: close
+Host: Server2.MyCompany.com:80
 
-`Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT`
+wlHtml.GetUri() //would return “WebPage.html”.
 
-`Content-type: text/html Connection: close`
+```
 
-`Host: Server2.MyCompany.com:80`
-
-wlHtml.GetUri() would return “WebPage.html”.
 
 **Comment**
 
@@ -3872,7 +3962,7 @@ Enables the retrieval of external XML in an HTML page. The default value of GetX
 
 **Example**
 
-wlGlobals.GetXML = true
+`wlGlobals.GetXML = true`
 
 **See also**
 
@@ -3899,13 +3989,12 @@ The HTML anchor portion of the URL, not including the # initial symbol (read-onl
 
 Given the following HTML fragment:
 
-`<A href="https://www.ABCDEF.com:80/products/order.html#modems">`
-
-`[&lt;A ](“https://www.ABCDEF.com:80/products/order.html#modems”)[href=“http://www.ABCDEF.com/search.exe?](http://www.ABCDEF.com/search.exe)`
-
-`SearchFor=modems&SearchType=ExactTerm”>`
-
+```
+<A href="https://www.ABCDEF.com:80/products/order.html#modems">
+< A href=“http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm”>
 links[0].hash is “modems”.
+```
 
 ## Head() (method)
 
@@ -3919,12 +4008,11 @@ Perform an HTTP or HTTPS Head command.
 
 **Syntax**
 
-Head()
+`Head()`
 
 **Comment**
 
-This method operates in the same way as Get(), but it retrieves only the HTTP or
-
+This method operates in the same way as `Get()`, but it retrieves only the HTTP or
 HTTPS header from the server. It does not download the body of the URL, such as a Web page.
 
 **See also**
@@ -3946,15 +4034,17 @@ HTTPS header from the server. It does not download the body of the URL, such as 
 
 **Description**
 
-A collection of HTTP header fields that you want to send in a Get(), Post(), or Head() call.
+A collection of HTTP header fields that you want to send in a `Get()`, `Post()`, or `Head()` call.
 
 **Example**
 
 By default, WebLOAD sends the following header in any HTTP command:
 
-`host: <host>`
-
-`user-agent: Radview/HttpLoader 1.0 accept: */`*
+```
+host: <host>
+user-agent: Radview/HttpLoader 1.0 
+accept: */*
+```
 
 Here, `<host>` is the host name to which you are connecting, for example:
 
@@ -3968,6 +4058,7 @@ Alternatively, you can use the Header property to override one of the default he
 
 `wlHttp.Header[“user-agent”] = “Mozilla/4.03 [en] (WinNT; I)”`
 
+
 **GUI mode**
 
 WebLOAD offers a simple way to reset configuration properties using the various tabs of the **Default Options** dialog box, accessed from the **Tools** tab of the ribbon. Resetting configuration properties as you run and rerun various testing scenarios enables you to fine tune your tests to match your exact needs at that moment. For example, you can reset the user-agent value through the Browser Parameters tab.
@@ -3978,9 +4069,9 @@ Use the wlClear() (see [*wlClear() (method)* ](#wlclear-method)) method to delet
 
 You cannot override the host header or set a cookie header using the Header property. To set a cookie, see wlCookie (see [*wlCookie (object)* ](#wlcookie-object))
 
-Use the wlHttp.Header property to change or reset specific individual values immediately before executing the next wlHttp GET/POST request.
+Use the `wlHttp.Header` property to change or reset specific individual values immediately before executing the next `wlHttp GET/POST request`.
 
-Any information set using the wlHttp.Header property *takes priority* over any defaults set through the GUI (recommended) or using the wlGlobals, wlLocals, or wlHttp properties. If there is any discrepancy between the document header information and the HTTP values, WebLOAD will work with the information found in the wlHttp.Header property while also issuing a warning to the user.
+Any information set using the `wlHttp.Header` property *takes priority* over any defaults set through the GUI (recommended) or using the `wlGlobals`, `wlLocals`, or `wlHttp` properties. If there is any discrepancy between the document header information and the HTTP values, WebLOAD will work with the information found in the `wlHttp.Header` property while also issuing a warning to the user.
 
 **See also**
 
@@ -4014,14 +4105,13 @@ The host portion of the URL, including both the host name and the port (read-onl
 
 Given the following HTML fragment:
 
-`<A href="https://www.ABCDEF.com:80/products/order.html#modems">`
-
-`[&lt;A ](“https://www.ABCDEF.com:80/products/order.html#modems”)[href=“http://www.ABCDEF.com/search.exe?](http://www.ABCDEF.com/search.exe)`
-
-`SearchFor=modems&SearchType=ExactTerm”>`
-
+```
+<A href="https://www.ABCDEF.com:80/products/order.html#modems">
+<A href=“http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm”>
 links[0].host is “www.ABCDEF.com:80”
 
+```
 ## hostname (property)
 
 **Property of Object**
@@ -4037,13 +4127,13 @@ The host name portion of the URL (read-only string).
 
 Given the following HTML fragment:
 
-`<A href="https://www.ABCDEF.com:80/products/order.html#modems">`
+```
+<A href="https://www.ABCDEF.com:80/products/order.html#modems">
+<A href=“http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm”>
+links[0].host is “www.ABCDEF.com"
 
-`[&lt;A ](“https://www.ABCDEF.com:80/products/order.html#modems”)[href=“http://www.ABCDEF.com/search.exe?](http://www.ABCDEF.com/search.exe)`
-
-`SearchFor=modems&SearchType=ExactTerm”>`
-
-links[0].hostname is [“www.ABCDEF.com](http://www.ABCDEF.com/)”
+```
 
 ## href (property)
 
@@ -4060,21 +4150,20 @@ The complete URL of the link (read-only string).
 
 Given the following HTML fragment:
 
-`<A href="https://www.ABCDEF.com:80/products/order.html#modems">`
+```
+<A href="https://www.ABCDEF.com:80/products/order.html#modems">
+<A href=“http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm”>
+links[0].href is 
+“https://www.ABCDEF.com/products/order.html#modems”
 
-`[&lt;A ](“https://www.ABCDEF.com:80/products/order.html#modems”)[href=“http://www.ABCDEF.com/search.exe?](http://www.ABCDEF.com/search.exe)`
-
-`SearchFor=modems&SearchType=ExactTerm”>`
-
-links[0].href is
-
-[“https://www.ABCDEF.com/products/order.html#modems](http://www.ABCDEF.com/products/order.html#modems)”
+```
 
 **Comment**
 
-The href property contains the entire URL. The other link properties contain portions of the URL. links[#].href is the default property for the link object. For example, if
+The `hre`f property contains the entire URL. The other `link` properties contain portions of the URL. `links[#].href` is the default property for the `link` object. For example, if
 
-`[links[0\]=‘http://microsoft.com](http://microsoft.com/)’`
+`links[0\]=‘http://microsoft.com’`
 
 then the following two URL specifications are equivalent:
 
@@ -4082,7 +4171,7 @@ then the following two URL specifications are equivalent:
 
 and
 
-mylink=links[0]
+`mylink=links[0]`
 
 ## HttpCacheScope (property)
 
@@ -4111,7 +4200,7 @@ Defines when the Http cache will be cleared. Possible values are:
 
 In the WebLOAD Recorder, select one of the cache scope options in the Browser Cache tab of the **Default/Current Project Options** dialog box, accessed from the **Tools** tab of the ribbon.
 
->     **Note:** The default value for the cache scope is **SingleRound**.
+> **Note:** The default value for the cache scope is **SingleRound**.
 
 **See also**
 
@@ -4147,15 +4236,23 @@ In WebLOAD Console, in the **Browser Cache** tab of the **Default** or **Current
 
 ## httpEquiv (property)
 
-**Property of Object
+**Property of Object**
 
-* wlMetas (see [*wlMetas (object)* ](#wlmetas-object))
+*  wlMetas (see [*wlMetas (object)* ](#wlmetas-object))
 
 **Description**
 
 Retrieves the value of the HTTP-EQUIV attribute of the META tag (read-only string).
 
-**Syntax** wlMetas[*index#*].httpEquiv **Example** document.wlMetas[0].httpEquiv **See also**
+**Syntax** 
+
+`wlMetas[index#].httpEquiv`
+
+ **Example** 
+ 
+`document.wlMetas[0].httpEquiv`
+
+ **See also**
 
 * content (see [*content (property)* ](#content-property))
 * Name (see [*Name (property)* ](#name-property))
@@ -4171,21 +4268,22 @@ Retrieves the value of the HTTP-EQUIV attribute of the META tag (read-only strin
 
 **Description**
 
-Identifies the proxy server that the script uses for HTTP SSL access when UseSameProxyforSSL is set to false. The user name and password are for SSL proxy servers that require user authorization. These properties are used when you are working with a separate SSL proxy.
+Identifies the proxy server that the script uses for HTTP SSL access when `UseSameProxyforSSL` is set to false. The user name and password are for SSL proxy servers that require user authorization. These properties are used when you are working with a separate SSL proxy.
 
->     **Note:** This property can only be inserted manually.
+> **Note:** This property can only be inserted manually.
 
 **Syntax**
 
-`wlGlobals.*httpsProxyProperty* = “TextString”`
+`wlGlobals.httpsProxyProperty = “TextString”`
 
 **Example**
 
-> wlGlobals.httpsProxy = “proxy.ABCDEF.com:8080”
->
-> wlGlobals.httpsProxyUserName = “Bill”
->
-> wlGlobals.httpsProxyPassWord = “Classified”
+```
+wlGlobals.httpsProxy = “proxy.ABCDEF.com:8080”
+wlGlobals.httpsProxyUserName = “Bill” 
+wlGlobals.httpsProxyPassWord = “Classified”
+
+```
 
 **See also**
 
@@ -4206,11 +4304,11 @@ Identifies the proxy server that the script uses for HTTP SSL access when UseSam
 
 **Description**
 
-Provides user authorization to the proxy server that the script uses for HTTP SSL access on Windows servers when UseSameProxyforSSL is set to false.
+Provides user authorization to the proxy server that the script uses for HTTP SSL access on Windows servers when `UseSameProxyforSSL` is set to `false`.
 
 **Syntax**
 
-`wlGlobals.*httpsProxyNTProperty* = “TextString”`
+`wlGlobals.httpsProxyNTProperty = “TextString”`
 
 **Example**
 
@@ -4246,7 +4344,7 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 Retrieves the string identifying the parent object. The ID value is taken from the ID attribute within the tag. This property is optional. If this object does not have an ID attribute then the value is undefined.
 
-When working with element, forms, frames, image, or map objects, returns a string containing an alternative identification means for the complete image, map, forms or frame or for elements of type Button, CheckBox, File, Image, Password, Radio, Reset, Select, Submit, Text, and TextArea.
+When working with `element`, `forms`, `frames`, `image`, or `map` objects, returns a string containing an alternative identification means for the complete image, map, forms or frame or for elements of type Button, CheckBox, File, Image, Password, Radio, Reset, Select, Submit, Text, and TextArea.
 
 **Example**
 
@@ -4262,19 +4360,19 @@ If the first table on a page is assigned the ID tag myTable, access the table us
 
 -Or-
 
-document.wlTables[myTable]
+`document.wlTables[myTable]`
 
-If duplicate identifiers are found, the id property will refer to the first wlTables object found with that identifier.
+If duplicate identifiers are found, the id property will refer to the first `wlTables` object found with that identifier.
 
 ##### wlXmls example:
 
-If the first XML object on a page is assigned the ID tag myXmlDoc, access the object using any of the following:
+If the first XML object on a page is assigned the ID tag `myXmlDoc`, access the object using any of the following:
 
 `MyBookstore = document.wlXmls[0]`
 
 -Or-
 
-MyBookstore = document.wlXmls.myXmlDoc
+M`yBookstore = document.wlXmls.myXmlDoc`
 
 -Or-
 
@@ -4288,13 +4386,11 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#cols-property)
-*
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
 * load() (see [*load() (method)* ](#load-method))
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method)
 * [*load() and loadXML() Method Comparison* ](#load-and-loadxml-method-comparison)
-* 
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property) (row property)
 * src (see [*src (property)* ](#src-property))
@@ -4306,23 +4402,23 @@ If duplicate identifiers are found, the id property will refer to the first XML 
 
 **Property of Objects**
 
-Image objects on a Web page are accessed through the document.all collection of the standard DOM structure.
+`Image` objects on a Web page are accessed through the `document.all` collection of the standard DOM structure.
 
 **Description**
 
-Each Image object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). Image objects are accessed through Images [*Collections* ](./using_javascript_ref.md#collections). (Compare to the element (see [*element (object)* ](#element-object)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#form-object)) object, which stores the parsed data for an entire HTML form.)
+Each `Image` object represents one of the images or video clips embedded in a document (HTML `<IMG>` element). `Image `objects are accessed through Images [*Collections* ](./using_javascript_ref.md#collections). (Compare to the element (see [*element (object)* ](#element-object)) object, which stores the parsed data for a single HTML form element, where the element may be any one of a variety of types, and the form (see [*form (object)* ](#form-object)) object, which stores the parsed data for an entire HTML form.)
 
-image objects are grouped together within collections of images, accessed directly through the document object (document.images[#]).
+`image` objects are grouped together within collections of `images`, accessed directly through the `document` object (`document.images[#]`).
 
 **Syntax**
 
-To find out how many image objects are contained within a document, check the value of:
+To find out how many `image` objects are contained within a document, check the value of:
 
-document.images.length
+`document.images.length`
 
 Access each image’s properties directly using the following syntax:
 
-`document.images[*index*#].<*image-property*>`
+`document.images[index#].<image-property>`
 
 **Example**
 
@@ -4358,35 +4454,31 @@ Instructs WebLOAD to include the specified file, and optionally execute scripts 
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filename                 | A string or variable  containing the full literal name of the file to be included. WebLOAD assumes  that the file is located in the default directory specified in the File  Locations tab (User Include Files entry) in the**Tools** ****  **Global Options** dialog box in the WebLOAD  Console or in the **Tools** **** **Settings** dialog box in the WebLOAD Recorder. For additional information about  the included file’s location, refer to *Determining  the Included File Location* in the *WebLOAD  Scripting Guide*. Once the file is found, any functions or variables  defined within that file are compiled and included within the calling script  when the script is compiled. |
-| WLExecuteScript          | WLExecuteScript  is a global  constant that acts as a flag when passed as a parameter to IncludeFile(). WLExecuteScript is an optional parameter. When included, WebLOAD  will not only compile the definitions found in the specified file. WebLOAD  will also execute any additional commands or functions found within that file  outside the included function definitions. With WLExecuteScript  , WebLOAD  enables work with self- initializing include files that can define, set, and  execute the commands necessary to initialize a work environment at compile  time.                                                                                                                                                              |
+| filename                 | A string or variable  containing the full literal name of the file to be included. WebLOAD assumes  that the file is located in the default directory specified in the File  Locations tab (User Include Files entry) in the**Tools** **>**  **Global Options** dialog box in the WebLOAD  Console or in the **Tools** **>** **Settings** dialog box in the WebLOAD Recorder. For additional information about  the included file’s location, refer to *Determining  the Included File Location* in the *WebLOAD  Scripting Guide*. Once the file is found, any functions or variables  defined within that file are compiled and included within the calling script  when the script is compiled. |
+| WLExecuteScript          | `WLExecuteScript` is a global  constant that acts as a flag when passed as a parameter to `IncludeFile()`. `WLExecuteScript` is an optional parameter. When included, WebLOAD  will not only compile the definitions found in the specified file. WebLOAD  will also execute any additional commands or functions found within that file  outside the included function definitions. With `WLExecuteScript` , WebLOAD  enables work with self- initializing include files that can define, set, and  execute the commands necessary to initialize a work environment at compile  time.                                                                                                                                                              |
 
 **Example**
 
-To include the external file MyFunction.js, located on the WebLOAD Console during WebLOAD testing, use the following command:
+To include the external file `MyFunction.js`, located on the WebLOAD Console during WebLOAD testing, use the following command:
 
 ```javascript
-function InitAgenda() 
-
-{ 
-
-IncludeFile(“MyFunction.js”)
-
+function InitAgenda() { 
+    IncludeFile(“MyFunction.js”)
 }
 ```
 
 **Comment**
 
-The IncludeFile command must be inserted in the InitAgenda() section of your JavaScript program.
+The `IncludeFile` command must be inserted in the `InitAgenda()` section of your JavaScript program.
 
 The load engine first looks for the file to be included in the default User Include Files directory. If the file is not there, the file request is handed over to WebLOAD, which searches for the file using the following search path order:
 
-1. If a full path name has been hardcoded into the IncludeFile command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
+1. If a full path name has been hardcoded into the `IncludeFile` command, the system searches the specified location. If the file is not found in an explicitly coded directory, the system returns an error code of File Not Found and will not search in any other locations.
 
-> **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
+     > **Note:** It is not recommended to hardcode a full path name, since the script will then not be portable between different systems. This is especially important for networks that use both UNIX and Windows systems.
 
-2. Assuming no hardcoded full path name in the script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
-3. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
+1. Assuming no hardcoded full path name in the script code, the system looks for the file in the current working directory, the directory from which WebLOAD was originally executed.
+1. Finally, if the file is still not found, the system searches for the file sequentially through all the directories listed in the File Locations tab.
 
 **See also**
 
@@ -4425,13 +4517,18 @@ Displays a generally informative (but not necessarily problematic) message in th
 
 **Syntax**
 
-InfoMessage(msg)
+`InfoMessage(msg)`
 
 **Parameters**
 
+| **Parameter Name** | **Description**                                                            |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| msg               | A string with an informative message to be sent to the WebLOAD Console. |
+
+
 **Comment**
 
-If you call InfoMessage() in the main script, WebLOAD sends an informative message to the Log window and continues with script execution as usual. The message has no impact on the continued execution of the WebLOAD test.
+If you call `InfoMessage()` in the main script, WebLOAD sends an informative message to the Log window and continues with script execution as usual. The message has no impact on the continued execution of the WebLOAD test.
 
 **GUI mode**
 
@@ -4464,17 +4561,17 @@ Sets or retrieves the HTML found between the start and end tags of the object.
 
 **Syntax**
 
-When working with cell objects, use the uppercase form:
+When working with `cell` objects, use the uppercase form:
 
 `…cells[2].InnerHTML`
 
 When working with script or wlXmls objects, use the lowercase form:
 
-…scripts[2].innerHTML
+`…scripts[2].innerHTML`
 
 **Comment**
 
-The InnerHTML property for cell objects is written in uppercase.
+The `InnerHTML` property for `cell` objects is written in uppercase.
 
 **See also**
 
@@ -4505,7 +4602,7 @@ The InnerHTML property for cell objects is written in uppercase.
 
 **Description**
 
-Sets or retrieves the image found between the `<Start>` and `<End>` tags of the object. When working with a button object, the image that appears on the button. When working with a link or location object, the image that appears over the link. When working with a TableCell object, the image that appears over a table cell.
+Sets or retrieves the image found between the `<Start>` and `<End>` tags of the object. When working with a `button` object, the image that appears on the button. When working with a `link` or `locatio`n object, the image that appears over the link. When working with a `TableCell` object, the image that appears over a table cell.
 
 **See also**
 
@@ -4523,7 +4620,7 @@ Sets or retrieves the image found between the `<Start>` and `<End>` tags of the 
 
 **Description**
 
-Represents the inner link field for the parent image object.
+Represents the inner link field for the parent `image` object.
 
 **See also**
 
@@ -4542,9 +4639,7 @@ Represents the inner link field for the parent image object.
 
 **Description**
 
-Sets or retrieves *only the text* found between the `<Start>` and `<End>` tags of the object. When working with a Button element object, the text that appears on the button.
-
-When working with a link or location object, the text that appears over the link. When working with a TableCell object, the text that appears over a table cell.
+Sets or retrieves *only the text* found between the `<Start>` and `<End>` tags of the object. When working with a Button element object, the text that appears on the button. When working with a `link` or `location` object, the text that appears over the link. When working with a `TableCell` object, the text that appears over a table cell.
 
 **See also**
 
@@ -4552,10 +4647,6 @@ When working with a link or location object, the text that appears over the link
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-*
-
-
-* 
 * element (see [*element (object)* ](#element-object))
 * id (see [*id (property)* ](#id-property)) (wlTables and wlXmls property)
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell and wlXmls property)
@@ -4578,17 +4669,17 @@ When working with a link or location object, the text that appears over the link
 
 **Description**
 
-The JVMType property indicates the JVM to be used in the Load Generator. The value of this property is defined using the WebLOAD Console or WebLOAD Recorder and overrides the JVM definition in webload.ini.
+The JVMType property indicates the JVM to be used in the Load Generator. The value of this property is defined using the WebLOAD Console or WebLOAD Recorder and overrides the JVM definition in `webload.ini.`
 
-The value (string) of this property is the key for WLJVMs.xml. This file (located on every WebLOAD Machine in the `<WebLOAD Installation Directory>`\extensions\JVMs directory) contains the following parameters for each JVM:
+The value (string) of this property is the key for `WLJVMs.xml`. This file (located on every WebLOAD Machine in the `<WebLOAD Installation Directory>\extensions\JVMs` directory) contains the following parameters for each JVM:
 
 * Type (the value from the flag)
 * Path (should be machine-agnostic)
 * Options
 
-When Type is "Default", the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.
+When Type is "Default", the RadView default (installed) JVM will be used. The default JVM’s path is defined in `webload.ini`, as it depends on the WebLOAD installation path.
 
-> **Note:** The classpath definitions are defined in webload.ini.
+> **Note:** The classpath definitions are defined in `webload.ini`.
 
 **GUI mode**
 
@@ -4606,7 +4697,7 @@ In WebLOAD Recorder, select a JVM from the **Select run-time JVM to be used** dr
 
 Specifies the address of the Key Distribution Center (KDC) server if you are using the Kerberos authentication method.
 
->     **Note:** The KDCServer property is only relevant for playback.
+> **Note:** The `KDCServer` property is only relevant for playback.
 
 **Syntax**
 
@@ -4620,7 +4711,7 @@ Specifies the address of the Key Distribution Center (KDC) server if you are usi
 
 **Example**
 
-wlGlobals.KDCServer = “qa4”
+`wlGlobals.KDCServer = “qa4”`
 
 **GUI mode**
 
@@ -4631,7 +4722,7 @@ To specify the name of the KDC server if you are using the Kerberos authenticati
 
 **Comment**
 
-Only the server name should be specified in KDCServer. For example, specify “qa4” rather than “qa4.radview.co.il”.
+Only the server name should be specified in `KDCServer`. For example, specify “qa4” rather than “qa4.radview.co.il”.
 
 **See also**
 
@@ -4654,7 +4745,7 @@ Enable WebLOAD to keep an HTTP connection alive between successive accesses in t
 
 Keeping a connection alive saves time between accesses. WebLOAD attempts to keep the connection alive unless you switch to a different server. However, some HTTP servers may refuse to keep a connection alive.
 
-Use the wlHttp.CloseConnection() method to explicitly close a connection that you have kept alive. Otherwise, the connection is automatically closed at the end of each round.
+Use the `wlHttp.CloseConnection()` method to explicitly close a connection that you have kept alive. Otherwise, the connection is automatically closed at the end of each round.
 
 **Comment**
 
@@ -4680,11 +4771,11 @@ WebLOAD recommends maintaining or closing connections through the WebLOAD Consol
 
 **Description**
 
-Used to indicate whether to get the location headers of all redirections. The default value of KeepRedirectionHeaders is false.
+Used to indicate whether to get the location headers of all redirections. The default value of `KeepRedirectionHeaders` is false.
 
 **Example**
 
-wlGlobals.KeepRedirectionHeaders = true
+`wlGlobals.KeepRedirectionHeaders = true`
 
 **Comment**
 
@@ -4712,29 +4803,29 @@ The search key name (read-only).
 
 ##### For wlHeaders:
 
-document.wlHeaders[*index#*].key = “TextString”
+`document.wlHeaders[index#].key = “TextString”`
 
 ##### For wlSearchPairs:
 
-document.links[1].wlSearchPairs[*index#*].key = “TextString”
+`document.links[1].wlSearchPairs[index#].key = “TextString”`
 
 ##### For wlHttp.Header:
 
-wlHttp.Header[“key”] = “TextString”
+`wlHttp.Header[“key”] = “TextString”`
 
 **Example**
 
 ##### For wlHeaders:
 
-document.wlHeaders[0].key = “Server”
+`document.wlHeaders[0].key = “Server”`
 
 ##### For wlSearchPairs:
 
-document.links[1].wlSearchPairs[0].key = “Server”
+`document.links[1].wlSearchPairs[0].key = “Server”`
 
 ##### For wlHttp.Header:
 
-wlHttp.Header[“key”] = “Server”
+`wlHttp.Header[“key”] = “Server”`
 
 **See also**
 
@@ -4752,31 +4843,33 @@ Retrieves the language in which the current script is written.
 
 **Example**
 
-“javascript” specifies that the script is written in JavaScript. “vbscript” specifies that the script is written in Visual Basic Script.
+`“javascript`” specifies that the script is written in JavaScript. 
+
+`“vbscript”` specifies that the script is written in Visual Basic Script.
 
 ## link (object)
 
 **Property of Objects**
 
-Links on a Web page are accessed through link objects that are grouped into collections of links. The links collection is a property of the document object.
+Links on a Web page are accessed through `link` objects that are grouped into collections of `links`. The `links` collection is a property of the document object.
 
 **Description**
 
-A link object contains information on an external document to which the current document is linked. Each link object points to one of the URL links (HTML `<A>` elements) within the document. Each link object stores the parsed data for the HTML link (`<A>` element).
+A `link` object contains information on an external document to which the current document is linked. Each `link` object points to one of the URL `links` (HTML `<A>` elements) within the document. Each `link` object stores the parsed data for the HTML `link` (`<A>` element).
 
-link objects are local to a single thread. You cannot create new link objects using the JavaScript new operator, but you can access HTML links through the properties and methods of the standard DOM objects. link properties are read-only.
+`link` objects are local to a single thread. You cannot create new `link` objects using the JavaScript new operator, but you can access HTML `links` through the properties and methods of the standard DOM objects. `link` properties are read-only.
 
-link objects are organized into Collections (see [*Collections* ](using_javascript_ref.md#collections)) of links or anchors. To access an individual link’s properties, check the length property of the links collection and use an index number to access the individual links.
+`link` objects are organized into Collections (see [*Collections* ](using_javascript_ref.md#collections)) of `links` or `anchors`. To access an individual link’s properties, check the `length` property of the `links` collection and use an index number to access the individual `links`.
 
 **Syntax**
 
-To find out how many link objects are contained within a document, check the value of:
+To find out how many `link` objects are contained within a document, check the value of:
 
-document.links.length
+`document.links.length`
 
 Access each link’s properties directly using the following syntax:
 
-document.links[#].`<*link-property*>`
+`document.links[#].<link-property>`
 
 **Example**
 
@@ -4810,17 +4903,17 @@ document.links[#].`<*link-property*>`
 
 **Method of Objects**
 
-XML DOM objects on a Web page are accessed through collections of wlXmls objects. The load() function is a method of the following object:
+XML DOM objects on a Web page are accessed through collections of `wlXmls` objects. The `load()` function is a method of the following object:
 
 * wlXmls (see [*wlXmls (object)* ](#wlxmls-object))
 
 **Description**
 
-Call load(URL) to download XML documents from a website and automatically load these documents into XML DOM objects.
+Call `load(URL)` to download XML documents from a website and automatically load these documents into XML DOM objects.
 
-Do not include any external references when using load().
+Do not include any external references when using `load()`.
 
-load() relies on the MSXML parser to performs any HTTP transactions needed to download the XML document. The MSXML module accesses external servers and completes all necessary transactions without any control or even knowledge on the part of the WebLOAD system tester. From WebLOAD’s perspective, these transactions are never performed in the context of the test session. For this reason, any settings that the user enters through the WebLOAD script or Console will not be relayed to the MSXML module and will have no effect on the document ‘load’. For the same reason, the results of any transactions completed this way will not be included in the WebLOAD statistics reports.
+`load()` relies on the MSXML parser to performs any HTTP transactions needed to download the XML document. The MSXML module accesses external servers and completes all necessary transactions without any control or even knowledge on the part of the WebLOAD system tester. From WebLOAD’s perspective, these transactions are never performed in the context of the test session. For this reason, any settings that the user enters through the WebLOAD script or Console will not be relayed to the MSXML module and will have no effect on the document ‘load’. For the same reason, the results of any transactions completed this way will not be included in the WebLOAD statistics reports.
 
 **Syntax**
 
@@ -4834,11 +4927,14 @@ load() relies on the MSXML parser to performs any HTTP transactions needed to do
 
 **Example**
 
-`myXMLDoc = document.wlXmls[0] myXMLdoc.load([“http://server/xmls/file.xml](http://server/xmls/file.xml)”)`
+```
+myXMLDoc = document.wlXmls[0]
+myXMLdoc.load(“http://server/xmls/file.xml”)
+```
 
 **Comment**
 
-You may use load() repeatedly to load and reload XML data into XML DOM objects. Remember that each new ‘load’ into an XML DOM object will overwrite any earlier data stored in that object.
+You may use `load()` repeatedly to load and reload XML data into XML DOM objects. Remember that each new ‘load’ into an XML DOM object will overwrite any earlier data stored in that object.
 
 **See also**
 
@@ -4854,7 +4950,7 @@ You may use load() repeatedly to load and reload XML data into XML DOM objects. 
 
 **Description**
 
-WebLOAD supports both the load() and the loadXML() methods to provide the user with maximum flexibility. The following table summarizes the advantages and disadvantages of each method:
+WebLOAD supports both the `load()` and the `loadXML()` methods to provide the user with maximum flexibility. The following table summarizes the advantages and disadvantages of each method:
 
 |                     | **Advantages**                                                                                               | **Disadvantages**                                                                                                                                                                                                                                                                                                  |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -4869,7 +4965,7 @@ If you wish to measure the time it took to load the XML document using the load(
 
 `SetTimer(“GetXMLTime”)`
 
-`myXMLdoc.load([“http://server/xmls/file.xml](http://server/xmls/file.xml)”)`
+`myXMLdoc.load(“http://server/xmls/file.xml”)`
 
 `SendTimer(“GetXMLTime”)`
 
@@ -4896,33 +4992,27 @@ If you wish to measure the time it took to load the XML document using the load(
 
 Optionally, WebLOAD can allocate extra threads to download nested images and frames.
 
-For clients that you define in a Load Generator, this option is controlled by the LoadGeneratorThreads property. The default value of this property is **Single**, which means that Virtual Clients will not use extra threads to download data from the Server.
+For clients that you define in a `Load Generator`, this option is controlled by the LoadGeneratorThreads property. The default value of this property is **Single**, which means that Virtual Clients will not use extra threads to download data from the Server.
 
-For the Probing Client, the option is controlled by the ProbingClientThreads property. The default is **Multiple**, which means that the client can use three extra threads for nested downloads. This simulates the behavior of Web browsers, which often use extra threads to download nested images and frames.
+For the Probing Client, the option is controlled by the `ProbingClientThreads` property. The default is **Multiple**, which means that the client can use three extra threads for nested downloads. This simulates the behavior of Web browsers, which often use extra threads to download nested images and frames.
 
 The possible values of these properties are:
 
 * **Single** – Do not use extra threads to download nested images and frames. (default for LoadGeneratorThreads)
-* **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames (default for ProbingClientThreads).
+* **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames (default for `ProbingClientThreads`).
 * Any specific number of threads between 1 and 8, such as “5” – Allocate that exact number of extra threads per client to download nested images and frames.
 
 **Example**
 
-You can assign any of these properties independently within a single script. In that case, if you configure a Probing Client to run the script, WebLOAD uses the value of ProbingClientThreads and ignores LoadGeneratorThreads (vice versa if you configure a Load Generator to run the script). For example, you might write:
+You can assign any of these properties independently within a single script. In that case, if you configure a Probing Client to run the script, WebLOAD uses the value of `ProbingClientThreads` and ignores LoadGeneratorThreads (vice versa if you configure a Load Generator to run the script). For example, you might write:
 
 ```javascript
 function InitAgenda() {
-
 //Do not use extra threads if a
-
 // Probing Client runs the script
-
 wlGlobals.ProbingClientThreads = “Single”
-
-//Use extra threads if a
-
-// Load Generator runs the script wlGlobals.LoadGeneratorThreads = “Multiple”
-
+//Use extra threads if a Load Generator runs the script 
+wlGlobals.LoadGeneratorThreads = “Multiple”
 }
 ```
 
@@ -4944,33 +5034,44 @@ WebLOAD recommends enabling or disabling multi-threaded virtual clients through 
 
 **Method of Object**
 
-XML DOM objects on a Web page are accessed through collections of wlXmls objects. The loadXML() function is a method of the following objects:
+XML DOM objects on a Web page are accessed through collections of `wlXmls` objects. The `loadXML()` function is a method of the following objects:
 
 * wlXmls (see [*wlXmls (object)* ](#wlxmls-object))
 
 **Description**
 
-Call loadXML(XMLDocString) to load XML documents into XML DOM objects. This allows users to work with XML documents and data that did not originate in HTML Data Islands, such as with Native Browsing. In a typical scenario, a user downloads an XML document. WebLOAD saves the document contents in string form. The string is then used as the parameter for loadXML(). The information is loaded automatically into an XML object.
+Call `loadXML(XMLDocString)` to load XML documents into XML DOM objects. This allows users to work with XML documents and data that did not originate in HTML Data Islands, such as with Native Browsing. In a typical scenario, a user downloads an XML document. WebLOAD saves the document contents in string form. The string is then used as the parameter for `loadXML()`. The information is loaded automatically into an XML object.
 
-> **Note:** Creating a new, blank XML DOM object with WLXmlDocument() and then loading it with a parsed XML string using loadXML() is essentially equivalent to creating a new XML DOM object and loading it immediately using WLXmlDocument(xmlStr). As with the WLXmlDocument(xmlStr) constructor, only standalone, self-contained DTD strings may be used for the loadXML() parameter. External references in the DTD section are not allowed.
+> **Note:** Creating a new, blank XML DOM object with `WLXmlDocument()` and then loading it with a parsed XML string using `loadXML()` is essentially equivalent to creating a new XML DOM object and loading it immediately using `WLXmlDocument`(xmlStr). As with the `WLXmlDocument(xmlStr)` constructor, only standalone, self-contained DTD strings may be used for the `loadXML()` parameter. External references in the DTD section are not allowed.
 
-**Syntax** loadXML(XMLDocStr) **Parameters**
+**Syntax** 
+
+`loadXML(XMLDocStr)`
+
+**Parameters**
+
+| **Parameter Name** | **Description**                                                            |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| XMLDocStr               | String parameter that contains a literal XML document in string format. |
 
 **Example**
 
-`//create a new XML document object NewXMLObj = new WLXmlDocument() wlHttp.SaveSource = true`
+```javascript 
+//create a new XML document object
+NewXMLObj = new WLXmlDocument() 
+wlHttp.SaveSource = true
+wlHttp.Get(“http://www.server.com/xmls/doc.xml”) 
+XMLDocStr = document.wlSource
+//load the new object with XML data
+//from the saved source. We are assuming 
+// no external references, as explained above 
+NewXMLObj.loadXML(XMLDocStr)
 
-`[wlHttp.Get(“http://www.server.com/xmls/doc.xml](http://www.server.com/xmls/doc.xml)”) XMLDocStr = document.wlSource`
-
-`//load the new object with XML data`
-
-`//from the saved source. We are assuming`
-
-`//no external references, as explained above NewXMLObj.loadXML(XMLDocStr)`
+```
 
 **Comment**
 
-You may use loadXML() repeatedly to load and reload XML data into XML DOM objects. Remember that each new ‘load’ into an XML DOM object will overwrite any earlier data stored in that object.
+You may use `loadXML()` repeatedly to load and reload XML data into XML DOM objects. Remember that each new ‘load’ into an XML DOM object will overwrite any earlier data stored in that object.
 
 **See also**
 
@@ -4992,17 +5093,17 @@ You may use loadXML() repeatedly to load and reload XML data into XML DOM object
 
 A location object stores the parsed URL and location data of the frame or root window. For an overview of parsing, see *Parsing Web pages* in the *WebLOAD Scripting Guide*.
 
-location objects are local to a single thread. You cannot create new location objects using the JavaScript new operator, but you can access HTML locations through the properties and methods of the standard DOM objects. The properties of location are read-only.
+`location` objects are local to a single thread. You cannot create new `location` objects using the JavaScript `new` operator, but you can access HTML locations through the properties and methods of the standard DOM objects. The properties of `location` are read-only.
 
 **Syntax**
 
 Access the location’s properties directly using the following syntax:
 
-document.location.`<*location-property*>`
+`document.location.<location-property>`
 
  **Properties**
 
-> **Note:** The properties of location are identical to those of link. The only exception is that location has no target property. Also, the location object is not part of any collection. The location properties are listed below for reference.
+> **Note:** The properties of `location` are identical to those of `link`. The only exception is that `location` has no `target` property. Also, the `location` object is not part of any collection. The `location` properties are listed below for reference.
 
 * hash (see [*hash (property)* ](#hash-property))
 * host (see [*host (property)* ](#host-property))
@@ -5021,15 +5122,15 @@ document.location.`<*location-property*>`
 
 **Comment**
 
-The href property contains the entire URL. The other location properties contain portions of the URL. location.href is the default property for the location object.
+The `href` property contains the entire URL. The other `location` properties contain portions of the URL. `location.href` is the default property for the `location` object.
 
 For example, if
 
-`[location=‘http://microsoft.com](http://microsoft.com/)’`
+`location=‘http://microsoft.com’`
 
 then the following two URL specifications are equivalent:
 
-mylocation=location.href
+`mylocation=location.href`
 
 -Or-
 
@@ -5037,7 +5138,7 @@ mylocation=location.href
 
 **See also**
 
-* link (see [*link (object)* ](#link-object))
+* link (see [*link (object)*](#link-object))
 
 ## MaxLength (property)
 
@@ -5057,14 +5158,14 @@ Verifies the PageTime of the service response. If the PageTime (time to download
 
 **Syntax**
 
-wlVerification.MaxPageTime(timeLimit, severity)
+`wlVerification.MaxPageTime(timeLimit, severity)`
 
 **Parameters**
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timeLimit                | The maximum amount of time to download the  page in seconds.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| severity                 | Possible values of this parameter are:`<br>`WLSuccess. The transaction  terminated successfully.  `<br>`WLMinorError. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the  next statement.  `<br>`WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  `<br>`WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
+| severity                 | Possible values of this parameter are:<p></p>- `WLSuccess`. The transaction  terminated successfully. <p></p>- `WLMinorError`. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the  next statement.  <p></p>- `WLError`. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round. <p></p>- `WLSevereError`. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
 
 **See also**
 
@@ -5083,7 +5184,7 @@ wlVerification.MaxPageTime(timeLimit, severity)
 
 **Description**
 
-Specifies the method that the browser should use to send the form data to the server (read-only string). A value of “Get” will append the arguments to the action URL and open it as if it were an anchor. A value of “Post” will send the data through an HTTP Post transaction. The default is “Post”.
+Specifies the method that the browser should use to send the form data to the server (read-only string). A value of `“Get”` will append the arguments to the action URL and open it as if it were an anchor. A value of `“Post”` will send the data through an HTTP Post transaction. The default is `“Post”`.
 
 ## MultiIPSupport (property)
 
@@ -5095,18 +5196,18 @@ Specifies the method that the browser should use to send the form data to the se
 
 **Description**
 
-WebLOAD enables use of all available IP addresses. This allows testers to simulate clients with different IP addresses using only one Load Generator. You must first generate additional IP addresses on your machine to use when testing and then set the MultiIPSupport property to true to enable multiple IP support. For more information about generating additional IP addresses, see *Generating IP Addresses in the script* in the *WebLOAD Scripting Guide*.
+WebLOAD enables use of all available IP addresses. This allows testers to simulate clients with different IP addresses using only one Load Generator. You must first generate additional IP addresses on your machine to use when testing and then set the `MultiIPSupport` property to true to enable multiple IP support. For more information about generating additional IP addresses, see *Generating IP Addresses in the script* in the *WebLOAD Scripting Guide*.
 
-> **Note:** Setting the MultiIPSupport property to true without generating additional IP addresses on your machine will not enable multiple IP support.
+> **Note:** Setting the `MultiIPSupport` property to true without generating additional IP addresses on your machine will not enable multiple IP support.
 
-The possible values of wlGlobals.MultiIPSupport are:
+The possible values of `wlGlobals.MultiIPSupport` are:
 
 * **false** – Use only one IP address. (default)
 * **true** – Use all available IP addresses.
 
-When connecting Load Generators through a modem, MultiIPSupport should be set to false.
+When connecting Load Generators through a modem, `MultiIPSupport` should be set to false.
 
-Probing Clients use only one IP address. Load Generators are set by default to use only one IP address, but may be set to use multiple IP addresses through the MultiIPSupport property.
+Probing Clients use only one IP address. Load Generators are set by default to use only one IP address, but may be set to use multiple IP addresses through the `MultiIPSupport` property.
 
 **GUI mode**
 
@@ -5116,7 +5217,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 **Comment**
 
-When the Load Generator has more than one IP address (one or more addresses on a network interface card or one or more network interface cards) WebLOAD uses ALL of the available IP addresses. Before setting MultiIPSupport to true, make sure that all of the Applications Being Tested to which the script refers are accessible through all the network interface cards.
+When the Load Generator has more than one IP address (one or more addresses on a network interface card or one or more network interface cards) WebLOAD uses ALL of the available IP addresses. Before setting `MultiIPSupport` to `true`, make sure that all of the Applications Being Tested to which the script refers are accessible through all the network interface cards.
 
 Use the GetIPAddress() (see [*GetIPAddress() (method)* ](#getipaddress-method))) method to check the identity of the current IP address.
 
@@ -5137,16 +5238,14 @@ Use the GetIPAddress() (see [*GetIPAddress() (method)* ](#getipaddress-method)))
 
 **Description**
 
-The MultiIPSupportType property works with the wlGlobals.MultiIPSupport
-
-property, and supports the following values:
+The MultiIPSupportType property works with the `wlGlobals.MultiIPSupport` property, and supports the following values:
 
 * **PerClient** (default) – Preserves the current behavior. This means that there are different IPs per client but the same IP is used for all rounds.
 * **PerRound** – Supports the use of a different IP from the pool per client, per round, until the pool is exhausted, after which it returns to the beginning.
 
-This property is only referenced when wlGlobals.MultiIPSupport is true.
+This property is only referenced when `wlGlobals.MultiIPSupport` is true.
 
-> **Note:** To support multiple IP addresses, you must generate additional IP addresses on your machine and then set the MultiIPSupport property to true. For more information about generating additional IP addresses, see *Generating IP Addresses in the script* in the *WebLOAD Scripting Guide*.
+> **Note:** To support multiple IP addresses, you must generate additional IP addresses on your machine and then set the `MultiIPSupport` property to true. For more information about generating additional IP addresses, see *Generating IP Addresses in the script* in the *WebLOAD Scripting Guide*.
 
 **GUI mode**
 
@@ -5156,7 +5255,7 @@ In WebLOAD Recorder, check or uncheck **Multi IP Support** in the HTTP Parameter
 
 **Comment**
 
-When the Load Generator has more than one IP address (one or more addresses on a network interface card or one or more network interface cards), WebLOAD uses ALL of the available IP addresses. Before setting MultiIPSupport to true, make sure that all of the Systems under Test (SUT) to which the script refers are accessible through all the network interface cards.
+When the Load Generator has more than one IP address (one or more addresses on a network interface card or one or more network interface cards), WebLOAD uses ALL of the available IP addresses. Before setting `MultiIPSupport` to true, make sure that all of the Systems under Test (SUT) to which the script refers are accessible through all the network interface cards.
 
 Use GetIPAddress() (see [*GetIPAddress() (method)* ](#getipaddress-method)) to check the identity of the current IP address.
 
@@ -5177,15 +5276,13 @@ Use GetIPAddress() (see [*GetIPAddress() (method)* ](#getipaddress-method)) to c
 
 **Description**
 
-The MultiIPSupportProtocol property works with the wlGlobals.MultiIPSupport
-
-property, and supports the following values:
+The MultiIPSupportProtocol property works with the `wlGlobals.MultiIPSupport` property, and supports the following values:
 
 * **All** (default) – Support both the IPv4 and IPv6 protocols.
 * **IPv4Only** – Support only the IPv4 IP protocol.
 * **IPv6Only** – Support only the IPv6 IP protocol.
 
-This property is only referenced when wlGlobals.MultiIPSupport is true.
+This property is only referenced when `wlGlobals.MultiIPSupport` is true.
 
 **GUI mode**
 
@@ -5219,9 +5316,9 @@ Sets or retrieves the identification string of the parent object.
 
 > **Note:** You can access a collection member either by its index number or by its HTML name attribute.
 
-When working with a wlMetas collection, the Name property holds the value of the NAME attribute of the META tag.
+When working with a `wlMetas` collection, the `Name` property holds the value of the NAME attribute of the META tag.
 
-When working with an elements collection, the Name property holds the HTML name attribute of the form element (read-only string). The is the identification string for elements of type Button, CheckBox, File, Image, Password, Radio, Reset, Select, Submit, Text, and TextArea. The name attribute is required. If a form element does not have a name, WebLOAD does not include it in the elements collection.
+When working with an `elements` collection, the `Name` property holds the HTML name attribute of the form element (read-only string). The is the identification string for elements of type Button, CheckBox, File, Image, Password, Radio, Reset, Select, Submit, Text, and TextArea. The name attribute is required. If a form element does not have a name, WebLOAD does not include it in the `element`s collection.
 
 **Syntax**
 
@@ -5229,11 +5326,11 @@ Collection members may be accessed either through an index number or through a m
 
 Access the first child window on a Web page using the following expression:
 
-``frames[0]``
+`frames[0]`
 
 Access the first child window’s link objects directly using the following syntax:
 
-``frames[0]`.`frames[0]`.links[#].<*property*>`
+`frames[0].frames[0].links[#].<property>`
 
 Alternatively, you may access a member of the frames collection by its HTML name attribute. For example:
 
@@ -5241,7 +5338,7 @@ Alternatively, you may access a member of the frames collection by its HTML name
 
 -Or-
 
-document.frames.namestring
+`document.frames.namestring`
 
 **See also**
 
@@ -5276,7 +5373,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **Syntax**
 
-You may also set NT user values using the wlGlobals properties. For example:
+You may also set NT user values using the `wlGlobals` properties. For example:
 
 `wlGlobals.NTUserName = “Bill”`
 
@@ -5284,7 +5381,7 @@ You may also set NT user values using the wlGlobals properties. For example:
 
 **Comment**
 
-WebLOAD automatically sends the user name and password when a wlHttp object connects to an HTTP site. If an HTTP server requests NT Challenge Response authentication and you have not assigned values to NTUserName and NTPassWord, WebLOAD submits the Windows NT user name and password under which the script is running.
+WebLOAD automatically sends the user name and password when a `wlHttp` object connects to an HTTP site. If an HTTP server requests NT Challenge Response authentication and you have not assigned values to `NTUserName` and `NTPassWord`, WebLOAD submits the Windows NT user name and password under which the script is running.
 
 **See also**
 
@@ -5304,15 +5401,22 @@ Return a random integer.
 
 **Syntax**
 
-wlRand.Num([seed])
+`wlRand.Num([seed])`
 
 **Return Value**
 
 A random integer.
 
+**Parameters**
+
+
+| **Parameter Name** | **Description**                                                            |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| [seed]               | Optional seed integer used on first call to this method only if there was no previous call to the wlRand.Seed() method. |
+
 **Example**
 
-wlRand.Num(12345)
+`wlRand.Num(12345)`
 
 **See also**
 
@@ -5432,39 +5536,24 @@ InfoMessage(“Response “ + document.wlSource);
 
 **Description**
 
-Opens the input file specified in the wlInputFile object. This should be done in the
-
-InitClient section of your script.
+Opens the input file specified in the `wlInputFile` object. This should be done in the `InitClient` section of your script.
 
 **Syntax**
 
 ```javascript
 function InitAgenda()
-
 {
-
-…
-
-fileID = CopyFile(`<full path>`)
-
-…
-
+  …
+  fileID = CopyFile(<full path>)
+  …
 }
-
 function InitClient()
-
 {
-
-…
-
-MyFileObj = new wlInputFile(*fileID*)
-
-MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod],
-
-[EndOfFileBehavior], [HeaderLines], [‘Delimiter’])
-
-…
-
+  …
+  MyFileObj = new wlInputFile(fileID)
+  MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod],
+  [EndOfFileBehavior], [HeaderLines], [‘Delimiter’])
+  …
 }
 ```
 
@@ -5472,11 +5561,11 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod],
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| AccessMethod             | An optional parameter that  defines the method for reading the next value/row from the file. All values  are enumerated numeric values. Possible values are:`<br>`WLFileSequential. Every client gets the  next value/row from the file, where there might be multiple access to the same line by different Load Generator  machines. This is the default value.  `<br>`WLFileSequentialUnique. Gets the next unique  value/row from the file. Preferably, the unique value is the next available  value in sequential order. If another VC is using this value/row, the VC is  not able to access this value/row and will get the next available value/row.  It is recommended to have more values/rows in the file than the number of  clients to avoid delays.  `<br>`WLFileRandom. Gets a random value/row  from the file. There might be multiple access to the same line by different  Load Generator machines.  `<br>`WLFileRandomUnique. Gets a unique, unused value/row randomly from the file. It is  recommended to have more values/rows in the file than the number of clients  to avoid  delays.                                                                                                         |
-| ShareMethod              | An optional parameter indicating how the  file is shared among scripts. All values are enumerated numeric values.  Possible values are:`<br>`**WLFileNotShared**. The file can be read only by the current script, and each Load  Generator machine manages a copy of  the file for its VCs independently. If there are multiple Load Generator  processes on a single machine, then the processes share the file. This is the  default value.  `<br>`**WLFileLGShared**. The file can be read only by the  current script, and all Load Generators on any Load Generator machine  share the same copy of the file, which is synchronized between them.  `<br>`**WLFileAgendaShared**. The file can be shared by more than one script.  The unique identifier of the file is its path. The file can be shared by  different scripts, but a copy of the file is managed separately for each Load  Generator machine. If you are using the script–Shared share method, all the  scripts sharing the file should use the WLFileSequentialUnique access method.  `<br>`**WLFileAgendaLGShared**. A single file is shared among Load Generators and among scripts.                                 |
-| UsageMethod              | An optional parameter that  defines when to release the value/row back to the ‘pool’ so that it can be  read again from the file. This parameter is only relevant for the  WLFileSequentialUnique and WLFileRandomUnique access methods. All values are  enumerated numeric values. Possible values are:`<br>`**WLFilePerRound**. The script reads a new  value/row from the file once every  round. The value/row is released at the end of the round. This is the default value.  `<br>`**WLFileOncePerClient**. The script reads a new value/row from the file  once at the beginning of the test (in InitClient). The value/row is released  at TerminateClient.  `<br>`**WLFileOncePerSession**. The  script reads a new value/row from the file once, at the beginning of the  session (in InitClient). The value/row is released at the end of the session  (in TerminateAgenda).  `<br>`**WLFileAnytime**. The script can read a new  value/row from the file at any time during a round. It can read a new  value/row more than once during a round. The values are released at the end  of the round. This enables more than one  value/row  to be used concurrently and uniquely. |
-| EndOfFileBehavior        | An optional parameter that  defines how WebLOAD behaves when it reaches the end of the file. All values  are enumerated numeric values.**Note:** If you have defined the AccessMethod as WLFileSequential or  WLFileSequentialUnique, the EndOfFileBehavior parameter is mandatory.  Possible values are:  `<br>`**WLFileStartOver**. Start from the beginning  of the file. This is the default value.  `<br>`**WLFileKeepLast**. Keep the last value.  `<br>`**WLFileAbortVC**. Abort the specific VC that  tried to read past the end of the  file. An error message is written to the log  file.  `<br>`**WLFileAbortTest**. Abort the entire test when a VC tries to  read past the end of the  file. An error message is written to the log file.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| HeaderLines              | An optional parameter that defines the  number of header lines the file contains. All values are enumerated numeric  values. Possible values are:`<br>`0. The file does not  contain any header lines. This is the default  value.  `<br><X>`. Where `<X>`  is any number above zero. The file contains  `<X>` header lines at  its beginning. The values contained in these header lines are not used as  parameters but as variable  names in  the JavaScript code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| AccessMethod             | An optional parameter that  defines the method for reading the next value/row from the file. All values  are enumerated numeric values. Possible values are:<p></p>- `WLFileSequential`. Every client gets the  next value/row from the file, where there might be multiple access to the same line by different Load Generator  machines. This is the default value.  <p></p>- `WLFileSequentialUnique`. Gets the next unique  value/row from the file. Preferably, the unique value is the next available  value in sequential order. If another VC is using this value/row, the VC is  not able to access this value/row and will get the next available value/row.  It is recommended to have more values/rows in the file than the number of  clients to avoid delays. <p></p>- `WLFileRandom`. Gets a random value/row  from the file. There might be multiple access to the same line by different  Load Generator machines. <p></p>- `WLFileRandomUnique`. Gets a unique, unused value/row randomly from the file. It is  recommended to have more values/rows in the file than the number of clients  to avoid  delays.                                                                                                         |
+| ShareMethod              | An optional parameter indicating how the  file is shared among scripts. All values are enumerated numeric values.  Possible values are:<p></p>- **WLFileNotShared**. The file can be read only by the current script, and each Load  Generator machine manages a copy of  the file for its VCs independently. If there are multiple Load Generator  processes on a single machine, then the processes share the file. This is the  default value.  <p></p>- **WLFileLGShared**. The file can be read only by the  current script, and all Load Generators on any Load Generator machine  share the same copy of the file, which is synchronized between them. <p></p>- **WLFileAgendaShared**. The file can be shared by more than one script.  The unique identifier of the file is its path. The file can be shared by  different scripts, but a copy of the file is managed separately for each Load  Generator machine. If you are using the script–Shared share method, all the  scripts sharing the file should use the WLFileSequentialUnique access method.  <p></p>- **WLFileAgendaLGShared**. A single file is shared among Load Generators and among scripts.                                 |
+| UsageMethod              | An optional parameter that  defines when to release the value/row back to the ‘pool’ so that it can be  read again from the file. This parameter is only relevant for the  WLFileSequentialUnique and WLFileRandomUnique access methods. All values are  enumerated numeric values. Possible values are:<p></p>- **WLFilePerRound**. The script reads a new  value/row from the file once every  round. The value/row is released at the end of the round. This is the default value.  <p></p>- **WLFileOncePerClient**. The script reads a new value/row from the file  once at the beginning of the test (in InitClient). The value/row is released  at TerminateClient.  <p></p>- **WLFileOncePerSession**. The  script reads a new value/row from the file once, at the beginning of the  session (in InitClient). The value/row is released at the end of the session  (in TerminateAgenda).  <p></p>- **WLFileAnytime**. The script can read a new  value/row from the file at any time during a round. It can read a new  value/row more than once during a round. The values are released at the end  of the round. This enables more than one  value/row  to be used concurrently and uniquely. |
+| EndOfFileBehavior        | An optional parameter that  defines how WebLOAD behaves when it reaches the end of the file. All values  are enumerated numeric values. <p></p>  **Note:** If you have defined the AccessMethod as WLFileSequential or  WLFileSequentialUnique, the EndOfFileBehavior parameter is mandatory.  Possible values are:  <p></p>- **WLFileStartOver**. Start from the beginning  of the file. This is the default value.  <p></p>- **WLFileKeepLast**. Keep the last value.  <p></p>- **WLFileAbortVC**. Abort the specific VC that  tried to read past the end of the  file. An error message is written to the log  file.  <p></p>- **WLFileAbortTest**. Abort the entire test when a VC tries to  read past the end of the  file. An error message is written to the log file.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| HeaderLines              | An optional parameter that defines the  number of header lines the file contains. All values are enumerated numeric  values. Possible values are:<p></p>- 0. The file does not  contain any header lines. This is the default  value.<p></p>- Where `<X>`  is any number above zero. The file contains  `<X>` header lines at  its beginning. The values contained in these header lines are not used as  parameters but as variable  names in  the JavaScript code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Delimiter                | (Optional) The delimiter  being used in the file. The default value is a comma.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 **Example**
@@ -5485,21 +5574,14 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod],
 function InitAgenda()
 
 {
-
-InFile1 = CopyFile(“C:\\temp\input.txt”)
-
+    InFile1 = CopyFile(“C:\\temp\input.txt”)
 }
-
 Function InitClient()
-
 {
-
-myFileObj = new wlInputFile(InFile1) myFileObj.open(WLFileSequentialUnique, WLFileAgendaShared)
-
+    myFileObj = new wlInputFile(InFile1) 
+    myFileObj.open(WLFileSequentialUnique, WLFileAgendaShared)
 }
-
 /*** WLIDE …. ***/
-
 strLine = myFileObj.getLine(“,”)
 ```
 
@@ -5522,7 +5604,7 @@ Opens the output file, specified in the wlOutputFile object. By default, the fil
 
 read sequentially for each slave. When all the information in the file is read (see[*GetLine() (function)* ](#getline-function)), it is returned to the beginning of the file.
 
-Alternatively, to open the input file and read its contents in random order, you must include Open(filename, wlRandom) in the script’s InitAgenda() function.
+Alternatively, to open the input file and read its contents in random order, you must include `Open(filename, wlRandom)` in the script’s `InitAgenda()` function.
 
 > **Note:** The last line of the file should not include a carriage return.
 
@@ -5530,15 +5612,16 @@ Alternatively, to open the input file and read its contents in random order, you
 
 For sequential access:
 
-`MyFileObj = new wlOutputFile(*filename*)`
+```
+MyFileObj = new wlOutputFile(filename)
+…
+MyFileObj.Open()
 
-`…`
-
-`MyFileObj.Open()`
+```
 
 For random access:
 
-`Open(*filename*, wlRandom)`
+`Open(filename, wlRandom)`
 
 **Parameters**
 
@@ -5566,28 +5649,28 @@ For random access:
 
 **Property of Object**
 
-Option objects are grouped into collections of options that are themselves properties of the following:
+`Option` objects are grouped into collections of `options` that are themselves properties of the following:
 
 * element (see [*element (object)* ](#element-object))
 * *Select* 
 
 **Description**
 
-A collection of the nested `<OPTION>` objects only found within elements of type SELECT, that is, forms[n].elements[n].type = “SELECT”. Each option object denotes one choice in a select element, containing information about a selected form element.
+A collection of the nested `<OPTION>` objects only found within elements of type SELECT, that is, `forms[n].elements[n].type = “SELECT”`. Each `option` object denotes one choice in a `select` element, containing information about a selected form element.
 
-option objects are local to a single thread. You cannot create new option objects using the JavaScript new operator, but you can access HTML options through the properties and methods of the standard DOM objects. option properties are read- only.
+`option` objects are local to a single thread. You cannot create new `option` objects using the JavaScript new operator, but you can access HTML `options` through the properties and methods of the standard DOM objects. `option` properties are read- only.
 
-option objects are grouped together within collections of options. To access an individual option’s properties, check the length property of the options collection and use an index number to access the individual options.
+`option` objects are grouped together within collections of `options`. To access an individual option’s properties, check the length property of the options collection and use an index number to access the individual options.
 
 **Syntax**
 
-To find out how many option objects are contained within a form element, check the value of:
+To find out how many `option` objects are contained within a form element, check the value of:
 
 `document.forms[#].elements[#].options.length`
 
 Access each option’s properties directly using the following syntax:
 
-`document.forms[#].elements[#].options[#].<*option-property*>`
+`document.forms[#].elements[#].options[#].<option-property>`
 
 For example:
 
@@ -5595,45 +5678,34 @@ For example:
 
 **Comment**
 
-Options only exist if the type of the parent element is `<SELECT>`, that is, forms[n].elements[n].type = “SELECT”. For example, to check whether a form element is of type `<SELECT>` and includes an options collection, you could use the following script:
+Options only exist if the type of the parent element is `<SELECT>`, that is, `forms[n].elements[n].type = “SELECT”`. For example, to check whether a form element is of type `<SELECT>` and includes an options collection, you could use the following script:
 
 ```javascript
 function InitAgenda()
-
 {
-
 wlGlobals.Proxy = “webproxy.xyz.com:8080”
-
-// Through proxy wlGlobals.SaveSource = true wlGlobals.ParseForms = true wlGlobals.ParseTables = true
-
+    // Through proxy 
+wlGlobals.SaveSource = true 
+wlGlobals.ParseForms = true 
+wlGlobals.ParseTables = true
 }
-
 function CheckElementType(WebTestSite)
-
 {
-
 wlHttp.Get(WebTestSite)
-
 if (document.forms.length > 0)
-
-if (document.forms[0].elements.length > 0)
-
-{
-
-InfoMessage(“We have a candidate. “ +
-
-“Element type is “ + document.forms[0].elements[0].type)
-
-InfoMessage (“document.forms[0].elements[0].options.length is “
-
-\+ document.forms[0].elements[0].options.length)
-
+    if (document.forms[0].elements.length > 0)
+    {
+        InfoMessage(“We have a candidate. “ +
+                        “Element type is “ + 
+        document.forms[0].elements[0].type)
+        InfoMessage (“document.forms[0].elements[0].options.length is “
+        + document.forms[0].elements[0].options.length)
+    }
 }
-
-}
+CheckElementType(“http://www.TestSite1.com/domain/pulldown.htm”)
+CheckElementType(“http://www.TestSite2.com/”) 
+ErrorMessage(“Done!”)
 ```
-
-CheckElementType([“http://www.TestSite1.com/domain/pulldown.htm](http://www.TestSite1.com/domain/pulldown.htm)”) CheckElementType(“http://www.TestSite2.com/”) ErrorMessage(“Done!”)
 
 **Properties**
 
@@ -5661,7 +5733,7 @@ Perform an HTTP or HTTPS Options command.
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [URL]                    | An optional parameter identifying the document URL.  You may optionally specify  the URL as a parameter of the method. Options() connects to the first URL that has been specified  from the following list, in the order specified:`<br>`A Url parameter  specified in the method call.  `<br>`The Url property of  the wlHttp object.  `<br>`The local default wlLocals.Url.  `<br>`The global default wlGlobals.Url. |
+| [URL]                    | An optional parameter identifying the document URL.  You may optionally specify  the URL as a parameter of the method. Options() connects to the first URL that has been specified  from the following list, in the order specified:<p></p>- A Url parameter  specified in the method call.  <p></p>- The Url property of  the wlHttp object.  <p></p>- The local default wlLocals.Url.  <p></p>- The global default wlGlobals.Url. |
 
 **See also**
 
@@ -5710,21 +5782,21 @@ Represents the outer link field for the parent image object.
 
 The name of a file to which WebLOAD writes response data from the HTTP server.
 
-The Outfile will contain the data from the *next* HTTP transaction, so the Outfile
+The `Outfile` will contain the data from the *next* HTTP transaction, so the `Outfile` command must *precede* the next transaction.
 
-command must *precede* the next transaction.
+The default is "", which means do not write the response data.
 
-The default is ““, which means do not write the response data.
+If there is more than one transaction after the `Outfile` property, only the response data from the *first* transaction will be written. To write the response data from each transaction an `Outfile` statement must be placed PRIOR to *each* transaction.
 
-If there is more than one transaction after the Outfile property, only the response data from the *first* transaction will be written. To write the response data from each transaction an Outfile statement must be placed PRIOR to *each* transaction.
+The `Outfile` property is independent of the SaveSource property. `Outfile` saves in a file. SaveSource stores the downloaded data in `document.wlSource`, in memory.
 
-The Outfile property is independent of the SaveSource property. Outfile saves in a file. SaveSource stores the downloaded data in document.wlSource, in memory.
-
-The Outfile property is used to implement the Log Report.
+The `Outfile` property is used to implement the Log Report.
 
 **Example**
 
-To write the response data from http://note/radview/radview.html to “c:\temp.html”
+To write the response data from 
+
+`http://note/radview/radview.html` in  `“c:\temp.html”`
 
 you might write:
 
@@ -5735,7 +5807,7 @@ wlHttp.Get("http://note/radview/radview.html")
 
 **Comment**
 
-The Outfile property saves *server response data*. To save *script output* m*essages*, use the wlOutputFile. (see [*wlOutputFile (object)* ](#wloutputfile-object))
+The `Outfile` property saves *server response data*. To save *Agenda output messages*, use the wlOutputFile. (see [*wlOutputFile (object)* ](#wloutputfile-object))
 
 *Note*: If the content is zipped (for example when wlGlobals.AcceptEncodingGzip = true. The response headers will show "Content-Encoding: gzip") the outfile will be the zipped content. To view the content you can unzip it, for example by using the extension to ".gz"
 
@@ -5751,7 +5823,7 @@ The Outfile property saves *server response data*. To save *script output* m*ess
 
 **Description**
 
-PageContentLength is used to retrieve the size in bytes of the content object in the GET/POST request. The content object may only be HTML, ASP, or JPG.
+`PageContentLength` is used to retrieve the size in bytes of the content object in the GET/POST request. The content object may only be HTML, ASP, or JPG.
 
 **Syntax**
 
@@ -5759,9 +5831,10 @@ PageContentLength is used to retrieve the size in bytes of the content object in
 
 **Example**
 
-[`wlHttp.Get(&#34;http://www.google.com/&#34;)](http://www.google.com/)`
-
-`InfoMessage("page size" + wlVerification.PageContentLength)`
+```
+lHttp.Get("http://www.google.com/")
+InfoMessage("page size" + wlVerification.PageContentLength)
+```
 
 **See also**
 
@@ -5776,7 +5849,7 @@ PageContentLength is used to retrieve the size in bytes of the content object in
 
 **Property of Object**
 
-* wlVerification (see [*wlVerification (object)* ](#wlverification-object))
+* `wlVerification` (see [*wlVerification (object)* ](#wlverification-object))
 
 **Description**
 
@@ -5784,13 +5857,14 @@ PageTime is used to retrieve the page time of the last GET. That is, the total t
 
 **Syntax**
 
-wlVerification.PageTime
+`wlVerification.PageTime`
 
 **Example**
 
-[`wlHttp.Get(&#34;http://www.google.com/&#34;)](http://www.google.com/)`
-
-`InfoMessage("page time" + wlVerification.PageTime)`
+```
+wlHttp.Get("http://www.google.com/")
+InfoMessage("page time" + wlVerification.PageTime)
+```
 
 **See also**
 
@@ -5855,11 +5929,11 @@ Enables/disables parsing of Java applets on an HTML page. The ParseApplets prope
 * **true** (default) – Enables parsing of Java applets.
 * **false** – Disables parsing of Java applets.
 
-> **Note:** This property can only be inserted manually.   If GetApplets is true, ParseApplets will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually. If GetApplets is true, ParseApplets will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
-wlGlobals.ParseApplets = false
+`wlGlobals.ParseApplets = false`
 
 **See also**
 
@@ -5895,7 +5969,7 @@ Enables parsing of cascading style sheets on an HTML page. The ParseApplets prop
 
 **Example**
 
-wlGlobals.ParseCss = true
+`wlGlobals.ParseCss = true`
 
 **See also**
 
@@ -5933,7 +6007,7 @@ Enables parsing of embedded objects on an HTML page. The ParseEmbeds property ca
 
 **Example**
 
-wlGlobals.ParseEmbeds = true
+`wlGlobals.ParseEmbeds = true`
 
 **See also**
 
@@ -5965,7 +6039,9 @@ Enables parsing of forms on an HTML page. The ParseForms property can be set to 
 * **true** (default) – Enables parsing of forms.
 * **false** – Disables parsing of forms.
 
-> **Note:** This property can only be inserted manually.   If GetForms is true, ParseForms will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually. 
+
+> **Note:**  If GetForms is true, ParseForms will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
@@ -6001,7 +6077,9 @@ Enables parsing of images on an HTML page. The ParseImages property can be set t
 * **true** (default) – Enables parsing of images.
 * **false** – Disables parsing of images.
 
-> **Note:** This property can only be inserted manually.   If GetImages is true, ParseImages will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually. 
+
+> **Note** If GetImages is true, ParseImages will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
@@ -6037,7 +6115,9 @@ Enables parsing of links and areas on an HTML page. The ParseLinks property can 
 * **true** (default) – Enables parsing of links.
 * **false** – Disables parsing of links.
 
-> **Note:** This property can only be inserted manually.   If GetLinks is true, ParseLinks will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually. 
+
+> **Note:**If GetLinks is true, ParseLinks will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
@@ -6073,7 +6153,9 @@ Enables parsing of metas on an HTML page. The ParseMetas property can be set to 
 * **true** (default) – Enables parsing of metas.
 * **false** – Disables parsing of metas.
 
-> **Note:** This property can only be inserted manually. If GetMetas is true, ParseMetas will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually. 
+
+> **Note:** If GetMetas is true, ParseMetas will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
@@ -6104,13 +6186,13 @@ Enables parsing of metas on an HTML page. The ParseMetas property can be set to 
 
 **Description**
 
-When set to true, the webpage is parsed and the DOM is created only the first time the page is visited. The same data is reused on future visits. The ParseOnce property is set when you call SetClientType(“Thin”). By default, the ParseOnce property is set to true.
+When set to `true`, the webpage is parsed and the DOM is created only the first time the page is visited. The same data is reused on future visits. The ParseOnce property is set when you call `SetClientType(“Thin”)`. By default, the ParseOnce property is set to `true`.
 
 > **Note:** This property can only be inserted manually.
 
 **Example**
 
-wlGlobals.ParseOnce = true
+`wlGlobals.ParseOnce = true`
 
 **See also**
 
@@ -6147,7 +6229,7 @@ Enables parsing on an HTML page for all objects not covered by specific parsing 
 
 **Example**
 
-wlGlobals.ParseOthers = true
+`wlGlobals.ParseOthers = true`
 
 **See also**
 
@@ -6183,7 +6265,7 @@ Enables parsing of JavaScript scripts on an HTML page. The ParseScripts property
 
 **Example**
 
-wlGlobals.ParseScripts = true
+`wlGlobals.ParseScripts = true`
 
 **See also**
 
@@ -6215,11 +6297,12 @@ Enables parsing of tables on an HTML page. The ParseTables property can be set t
 * **true** (default) – Enables parsing of tables.
 * **false** – Disables parsing of tables.
 
-> **Note:** This property can only be inserted manually.   If GetTables is true, ParseTables will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually.   
+> **Note:** If GetTables is true, ParseTables will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
-wlGlobals.ParseTables = true
+`wlGlobals.ParseTables = true`
 
  **See also**
 
@@ -6251,11 +6334,13 @@ Enables parsing of XML on an HTML page. The ParseXML property can be set to one 
 * **true** (default) – Enables parsing of XML.
 * **false** – Disables parsing of XML.
 
-> **Note:** This property can only be inserted manually.  If GetXML is true, ParseXML will automatically be assumed to be true, even if it is set to false.
+> **Note:** This property can only be inserted manually.  
+
+> **Note:** If GetXML is true, ParseXML will automatically be assumed to be true, even if it is set to false.
 
 **Example**
 
-wlGlobals.ParseXML = true
+`wlGlobals.ParseXML = true`
 
 **See also**
 
@@ -6322,7 +6407,8 @@ The URI portion of the URL, including the directory path and filename (read-only
 
 **Example**
 
-`“/products/order.html” “/search.exe”`
+`“/products/order.html”`
+`“/search.exe”`
 
 ## port (property)
 
@@ -6357,86 +6443,82 @@ Perform an HTTP or HTTPS Post command. The method sends the FormData, Data, or D
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify  the URL as a parameter of the method. Post() connects to first URL that has  been specified from the following list:`<br>`A Url parameter  specified in the method call.  `<br>`The Url property of  the wlHttp object.  `<br>`The local default wlLocals.Url.  `<br>`The global default wlGlobals.Url.  The URL must be a server that accepts the posted  data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report,  described in the*Data Drilling- WebLOAD  transaction reports* section of the *WebLOAD  Scripting Guide*.  Use *named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates.  The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to true by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get and Post HTTP transaction.  This makes statistical analysis simpler, since all HTTP transaction activity  is measured, recorded, and reported for you automatically. You do not have to  remember to add naming instructions to each Get and Post command in your script. The name assigned by  WebLOAD is simply the URL used by that Get or Post transaction. If your  script includes multiple transactions to the same URL, the information will  be collected cumulatively for those transactions. |
+| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify  the URL as a parameter of the method. Post() connects to first URL that has  been specified from the following list:<p></p>- A Url parameter  specified in the method call.  <p></p>- The Url property of  the wlHttp object.  <p></p>- The local default wlLocals.Url.  <p></p>- The global default wlGlobals.Url.  The URL must be a server that accepts the posted  data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report,  described in the*Data Drilling- WebLOAD  transaction reports* section of the *WebLOAD  Scripting Guide*.<p></p> Use *named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates.<p></p> The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to true by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get and Post HTTP transaction.  This makes statistical analysis simpler, since all HTTP transaction activity  is measured, recorded, and reported for you automatically. You do not have to  remember to add naming instructions to each Get and Post command in your script. The name assigned by  WebLOAD is simply the URL used by that Get or Post transaction. If your  script includes multiple transactions to the same URL, the information will  be collected cumulatively for those transactions. |
 
 **Example**
 
 ```javascript
 function InitAgenda() {
-
-//Set the default URL
-
-wlGlobals.Url = [“http://www.ABCDEF.com](http://www.ABCDEF.com/)”
-
+  //Set the default URL
+  wlGlobals.Url = “http://www.ABCDEF.com”
 }
-
 //Main script
-
-//Connect to the default URL: wlHttp.Post()
-
-//Connect to a different, explicitly set URL: wlHttp.Post(“http://www.ABCDEF.com/product_info.html”)
-
-//Assign a name to the following HTTP transact: [wlHttp.Get(“http://www.ABCDEF.com/product_info.html](http://www.ABCDEF.com/product_info.html)”,
-
-“UpdateBankAccount”)
-
+//Connect to the default URL: 
+wlHttp.Post()
+//Connect to a different, explicitly set URL: 
+wlHttp.Post(“http://www.ABCDEF.com/product_info.html”)
+//Assign a name to the following HTTP transact: 
+wlHttp.Get(“http://www.ABCDEF.com/product_info.html”,
+                    “UpdateBankAccount”)
 //Submit to a CGI program
+wlHttp.Url = “http://www.ABCDEF.com/search.cgi” 
+wlHttp.FormData[“SeachTerm”] = “ocean+currents” 
+wlHttp.Post()
+//Submit to an HTTP server of any type 
+wlHttp.FormData[“FirstName”] = “Bill” 
+wlHttp.FormData[“LastName”] = “Smith” 
+wlHttp.Post(“http://www.ABCDEF.com/formprocessor.exe”)
 
-wlHttp.Url = [“http://www.ABCDEF.com/search.cgi](http://www.ABCDEF.com/search.cgi)” wlHttp.FormData[“SeachTerm”] = “ocean+currents” wlHttp.Post()
+```
 
-//Submit to an HTTP server of any type wlHttp.FormData[“FirstName”] = “Bill” wlHttp.FormData[“LastName”] = “Smith” wlHttp.Post(“http://www.ABCDEF.com/formprocessor.exe”)
+Use named transactions as a shortcut in place of the `BeginTransaction()...EndTransaction()` module. For example, this is one way to identify a logical transaction unit:
 
-Use named transactions as a shortcut in place of the BeginTransaction()...EndTransaction() module. For example, this is one way to identify a logical transaction unit:
-
-BeginTransaction(“UpdateBankAccount”) wlHttp.Get(url)
-
-// the body of the transaction
-
-// any valid JavaScript statements wlHttp.Post(url);
-
+```
+BeginTransaction(“UpdateBankAccount”) 
+    wlHttp.Get(url)
+        // the body of the transaction
+        // any valid JavaScript statements 
+    wlHttp.Post(url);
 EndTransaction(“UpdateBankAccount”)
+        // and so on
 
-// and so on
+```
 
 Using the named transaction syntax, you could write:
 
+```
 wlHttp.Get(url,”UpdateBankAccount”)
-
-// the body of the transaction
-
-// any valid JavaScript statements wlHttp.Post(url,”UpdateBankAccount”)
-
-// and so on
+    // the body of the transaction
+    // any valid JavaScript statements 
+wlHttp.Post(url,”UpdateBankAccount”)
+    // and so on
 ```
 
-For the HTTPS protocol, include “https://” in the URL and set the required properties of the wlGlobals object:
+For the HTTPS protocol, include `“https://”` in the URL and set the required properties of the `wlGlobals` object:
 
 `wlHttp.Post("https://www.ABCDEF.com")`
-
 The URL can contain a string of attribute data.
 
-wlHttp.Post(“http://www.ABCDEF.com/query.exe”+ “?SearchFor=icebergs&SearchType=ExactTerm”)
-
-Alternatively, you can specify the attributes in the FormData or Data property. The method automatically appends these in the correct syntax to the URL. Thus the following two code fragments are each equivalent to the preceding Post command.
+```
+wlHttp.Post(“http://www.ABCDEF.com/query.exe”+ 
+    “?SearchFor=icebergs&SearchType=ExactTerm”)
+```
+Alternatively, you can specify the attributes in the `FormData` or `Data` property. The method automatically appends these in the correct syntax to the URL. Thus the following two code fragments are each equivalent to the preceding Post command.
 
 `wlHttp.Data.Type = “application/x-www-form-urlencoded”`
-
 `wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm”`
-
 `wlHttp.Post(“http://www.ABCDEF.com/query.exe”)`
 
 -Or-
 
 `wlHttp.FormData.SearchFor = “icebergs”`
-
 `wlHttp.FormData.SearchType = “ExactTerm”`
-
 `wlHttp.Post(“http://www.ABCDEF.com/query.exe”)`
 
 **Comment**
 
-You may not use the TransName parameter by itself. Post() expects to receive either *no* parameters, in which case it uses the script’s default URL, or *one* parameter, which must be an alternate URL value, or *two* parameters, including both a URL value and the transaction name to be assigned to this transaction.
+You may not use the `TransName` parameter by itself. `Post()` expects to receive either *no* parameters, in which case it uses the script’s default URL, or *one* parameter, which must be an alternate URL value, or *two* parameters, including both a URL value and the transaction name to be assigned to this transaction.
 
 **See also**
 
@@ -6467,35 +6549,28 @@ You may not use the TransName parameter by itself. Post() expects to receive eit
 
 Optionally, WebLOAD can allocate extra threads to download nested images and frames.
 
-For clients that you define in a Load Generator, this option is controlled by the LoadGeneratorThreads property. The default value of this property is **Single**, which means that Virtual Clients will not use extra threads to download data from the server.
+For clients that you define in a Load Generator, this option is controlled by the `LoadGeneratorThreads` property. The default value of this property is **Single**, which means that Virtual Clients will not use extra threads to download data from the server.
 
 For the Probing Client, the option is controlled by the ProbingClientThreads property. The default is **Multiple**, which means that the client can use three extra threads for nested downloads. This simulates the behavior of Web browsers, which often use extra threads to download nested images and frames.
 
 The possible values of these properties are:
 
 * **Single** – Do not use extra threads to download nested images and frames. (default for LoadGeneratorThreads)
-* **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames. (default for ProbingClientThreads)
+* **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames. (default for `ProbingClientThreads`)
 * Any specific number of threads between 1 and 8, such as “5” – Allocate that exact number of extra threads per client to download nested images and frames.
 
 **Example**
 
-You can assign any of these properties independently within a single script. In that case, if you configure a Probing Client to run the script, WebLOAD uses the value of ProbingClientThreads and ignores LoadGeneratorThreads (vice versa if you configure a Load Generator to run the script). For example, you might write:
+You can assign any of these properties independently within a single script. In that case, if you configure a Probing Client to run the script, WebLOAD uses the value of `ProbingClientThreads` and ignores `LoadGeneratorThreads` (vice versa if you configure a Load Generator to run the script). For example, you might write:
 
 ```javascript
 function InitAgenda() {
-
-//Do not use extra threads if a
-
-// Probing Client runs the script
-
-wlGlobals.ProbingClientThreads = “Single”
-
-//Use extra threads if a
-
-// Load Generator runs the script
-
-wlGlobals.LoadGeneratorThreads = “Multiple”
-
+    //Do not use extra threads if a
+    // Probing Client runs the script
+    wlGlobals.ProbingClientThreads = “Single”
+    //Use extra threads if a
+    // Load Generator runs the script
+    wlGlobals.LoadGeneratorThreads = “Multiple”
 }
 ```
 
@@ -6554,14 +6629,12 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **Syntax**
 
-`wlGlobals.*ProxyProperty* = “TextString”`
+`wlGlobals.ProxyProperty = “TextString”`
 
 **Example**
 
 `wlGlobals.Proxy = “proxy.ABCDEF.com:8080”`
-
 `wlGlobals.ProxyUserName = “Bill”`
-
 `wlGlobals.ProxyPassWord = “Classified”`
 
 **See also**
@@ -6581,7 +6654,7 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **Description**
 
-The ProxyExceptions property accepts a string based on what the user entered in the Proxy Options tab of the Recording and Script Generation Options dialog box. This string indicates the URLs whose support does not go through the proxy. The format of this string is based on the Internet Explorer format. For more information, see [http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corppro](http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corpprox.mspx?mfr=true) [x.mspx?mfr=true.](http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corpprox.mspx?mfr=true)
+The `ProxyExceptions` property accepts a string based on what the user entered in the Proxy Options tab of the Recording and Script Generation Options dialog box. This string indicates the URLs whose support does not go through the proxy. The format of this string is based on the Internet Explorer format. For more information, see [http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corppro](http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corpprox.mspx?mfr=true) [x.mspx?mfr=true.](http://www.microsoft.com/technet/prodtechnol/ie/ieak/techinfo/deploy/60/en/corpprox.mspx?mfr=true)
 
 **Example**
 
@@ -6612,11 +6685,11 @@ WebLOAD by default senses the appropriate authentication configuration settings 
 If you prefer to explicitly set authentication values, WebLOAD recommends setting user authentication values through the WebLOAD Console in one of the following ways:
 
 * Use the Authentication tab of the **Default** or **Current Options** dialog box to enter user authentication information.
-* You may also set proxyNT user values using the wlGlobals properties. WebLOAD automatically connects via the proxy when a wlHttp object connects to an HTTP site.
+* You may also set proxyNT user values using the `wlGlobals` properties. WebLOAD automatically connects via the proxy when a `wlHttp` object connects to an HTTP site.
 
 **Syntax**
 
-`wlGlobals.*ProxyNTProperty* = “TextString”`
+`wlGlobals.ProxyNTProperty = “TextString”`
 
 **Example**
 
@@ -6650,8 +6723,8 @@ Perform an HTTP or HTTPS Put command. The method sends the FormData, Data, or Da
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify the URL as a parameter  of the method. Put() connects to first URL that has been specified from the  following list:`<br>`A Url parameter specified in the method call.  `<br>`The Url property of the wlHttp object.  `<br>`The local default wlLocals.Url.  `<br>`The global default wlGlobals.Url.  The URL must be a server that accepts the  submitted data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report,  described in the*Data Drilling- WebLOAD  transaction reports* section of the *WebLOAD  Scripting Guide*.  Use *named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates.  The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to true by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get, Post and Put HTTP  transaction. This makes statistical analysis simpler, since all HTTP  transaction activity is measured, recorded, and reported for you  automatically. You do not have to remember to add naming instructions to each  Get, Post and Put command in your script. The name assigned by WebLOAD is  simply the URL used by that Get, Post or Put transaction. If your script  includes multiple transactions to the same URL, the information will be  collected cumulatively for those transactions. |
+| [URL]                    | An optional parameter identifying the document  URL.  You may optionally specify the URL as a parameter  of the method. Put() connects to first URL that has been specified from the  following list:<p></p>- A Url parameter specified in the method call.  <p></p>- The Url property of the wlHttp object.  <p></p>- The local default wlLocals.Url.  <p></p>- The global default wlGlobals.Url.  The URL must be a server that accepts the  submitted data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [TransName]              | An optional user-supplied  string with the transaction name as it will appear in the Statistics Report,  described in the*Data Drilling- WebLOAD  transaction reports* section of the *WebLOAD  Scripting Guide*.  Use *named transactions* to identify specific HTTP transactions by  name. This simplifies assigning counters when you want WebLOAD to  automatically calculate a specific transaction’s occurrence, success, and  failure rates.  The run-time statistics  for transactions to which you have assigned a name appear in the Statistics  Report. For your convenience, WebLOAD offers an Automatic Transaction option.  In the WebLOAD Console, select Automatic Transaction from the General Tab of  the Global Options dialog box. Automatic Transaction is set to `true` by default. With Automatic Transaction,  WebLOAD automatically assigns a name to every Get, Post and Put HTTP  transaction. This makes statistical analysis simpler, since all HTTP  transaction activity is measured, recorded, and reported for you  automatically. You do not have to remember to add naming instructions to each  Get, Post and Put command in your script. The name assigned by WebLOAD is  simply the URL used by that Get, Post or Put transaction. If your script  includes multiple transactions to the same URL, the information will be  collected cumulatively for those transactions. |
 
 **Comment**
 
@@ -6682,11 +6755,11 @@ You may not use the TransName parameter by itself. Put() expects to receive eith
 
 **Description**
 
-Return a random integer between start and end.
+Return a random integer between `start` and `end`.
 
 **Syntax**
 
-wlRand.Range(start, end, [seed])
+`wlRand.Range(start, end, [seed])`
 
 **Parameters**
 
@@ -6700,7 +6773,10 @@ wlRand.Range(start, end, [seed])
 
 A random integer that falls within the specified range.
 
-**Example** wlRand.Num(12345) **See also**
+**Example** 
+`wlRand.Num(12345)`
+
+**See also**
 
 * Num() (see [*Num() (method)* ](#num-method))
 * Seed()
@@ -6784,7 +6860,7 @@ wlGlobals.RedirectionLimit = 10
 
 **Description**
 
-The Referer property is used by the recorder to store the referer header and is a synonym for wlHTTP.Headers[“referer”]. The Referer property is used as shorthand for accessing the referer header in the wlHTTP.Headers collection.
+The Referer property is used by the recorder to store the referer header and is a synonym for wlHttp.Headers[“referer”]. The Referer property is used as shorthand for accessing the referer header in the wlHttp.Headers collection.
 
 **GUI mode**
 
@@ -7720,7 +7796,7 @@ Assigns a number, Boolean, or string value to the specified shared variable. If 
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SharedVarName             | The name of a shared variable to be set.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | value                     | The value to be assigned to the specified  variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ScopeFlag                 | One of two flags, WLCurrentAgenda or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object:`<br>`The WLCurrentAgenda scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  `<br>`The WLAllAgendas scope flag signifies variable values that you wish to share between  all threads of one or more scripts, common to a single spawned process,  running on a single Load Generator.  When used as a method of the wlSystemGlobal object:  `<br>`The WLCurrentAgenda scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load  Generators, system wide.  `<br>`The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all  processes,  on all Load Generators, system-wide. |
+| ScopeFlag                 | One of two flags, WLCurrentAgenda or WLAllAgendas, signifying the scope of  the shared variable.  When used as a method of the wlGeneratorGlobal object:<p></p>- The WLCurrentAgenda scope flag signifies variable values that you wish  to share between all threads of a single script, part of a single process,  running on a single Load Generator.  <p></p>- The WLAllAgendas scope flag signifies variable values that you wish to share between  all threads of one or more scripts, common to a single spawned process,  running on a single Load Generator.  When used as a method of the `wlSystemGlobal` object:  <p></p>- The WLCurrentAgenda scope flag signifies  variable values that you wish to share between all threads of a single  script, potentially shared by multiple processes, running on multiple Load  Generators, system wide.  <p></p>- The WLAllAgendas scope flag signifies  variable values that you wish to share between all threads of all scripts,  run by all  processes,  on all Load Generators, system-wide. |
 
 **Example**
 
@@ -8263,7 +8339,7 @@ Set the SSL configuration environment before running a test script.
 
 | **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SSLCipherCommand          | One of the following commands, used to set  the SSL configuration environment before running a test script.`<br>`EnableAll –  Enable all SSL protocols (default)  `<br>`DisableAll –  Disable all SSL protocols  `<br>`ShowAll –  List all SSL protocols (provides internal information for RadView Support Diagnostics)  `<br>`ShowEnabled –  List currently enabled SSL protocols (provides internal information for  RadView Support Diagnostics)  Note that the command name should appear in  quotes. |
+| SSLCipherCommand          | One of the following commands, used to set  the SSL configuration environment before running a test script.<p></p>- EnableAll –  Enable all SSL protocols (default)  <p></p>- DisableAll –  Disable all SSL protocols  <p></p>- ShowAll –  List all SSL protocols (provides internal information for RadView Support Diagnostics)  <p></p>- ShowEnabled –  List currently enabled SSL protocols (provides internal information for  RadView Support Diagnostics)  Note that the command name should appear in  quotes. |
 
 **Syntax**
 
@@ -8271,7 +8347,7 @@ Set the SSL configuration environment before running a test script.
 
 **Example**
 
-You may wish to test your application with only a single SSL protocol enabled. The easiest way to do that would be to disable all protocols, and then enable the selected protocol in the InitClient() function.
+You may wish to test your application with only a single SSL protocol enabled. The easiest way to do that would be to disable all protocols, and then enable the selected protocol in the` InitClient()` function.
 
 ```javascript
 InitClient()
@@ -8446,7 +8522,7 @@ SSLDisableCipherID(CipherID)
 
 **Example**
 
-You may wish to test your application with all but one SSL protocol enabled. The easiest way to do that would be to disable the selected protocol in the InitClient() function.
+You may wish to test your application with all but one SSL protocol enabled. The easiest way to do that would be to disable the selected protocol in the` InitClient()` function.
 
 ```javascript
 Initclient()
@@ -8502,7 +8578,7 @@ SSLDisableCipherName(CipherName)
 
 **Example**
 
-You may wish to test your application with all but one SSL protocol enabled. The easiest way to do that would be to disable the selected protocol in the InitClient() function.
+You may wish to test your application with all but one SSL protocol enabled. The easiest way to do that would be to disable the selected protocol in the` InitClient()` function.
 
 ```javascript
 InitClient()
@@ -8607,7 +8683,7 @@ SSLEnableStrength(128)
 
 **Example**
 
-Your test session may include a variety of function calls related to specific protocols. For example, you may wish to test your application with only a single SSL protocol enabled. Unfortunately, protocol names can be long and awkward. To simplify your script code, you could get the ID number of a selected protocol and refer to the selected protocol by ID number for the remainder of the script. The following InitClient() function fragment disables all protocols, gets a protocol ID number, and enables the selected protocol in the InitClient() function.
+Your test session may include a variety of function calls related to specific protocols. For example, you may wish to test your application with only a single SSL protocol enabled. Unfortunately, protocol names can be long and awkward. To simplify your script code, you could get the ID number of a selected protocol and refer to the selected protocol by ID number for the remainder of the script. The following` InitClient()` function fragment disables all protocols, gets a protocol ID number, and enables the selected protocol in the` InitClient()` function.
 
 ```
 InitClient()
@@ -9049,7 +9125,7 @@ StopClient ([SeverityLevel], [Reason])
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SeverityLevel            | Optionally, specify the  severity level of the error that occurred. The possible values are:`<br>`WLMinorError. The message is displayed  as a warning message.  `<br>`WLError. The  message is displayed as an error message. If no severity level is specified, WLMinorError is assumed.  **Note:** Error levels are used for display  in the log window and do not define any logical behavior. |
+| SeverityLevel            | Optionally, specify the  severity level of the error that occurred. The possible values are:<p></p>- WLMinorError. The message is displayed  as a warning message.  <p></p>- WLError. The  message is displayed as an error message. If no severity level is specified, WLMinorError is assumed.  **Note:** Error levels are used for display  in the log window and do not define any logical behavior. |
 | Reason                   | An optional string containing the reason  for stopping the virtual client running the script.  If no reason is specified, a default message is  displayed. See[*Default   Message* ](#default_message)below.                                                                                                                                                                                                     |
 <a name = "default_message"></a>
 **Default Message**
@@ -9253,7 +9329,7 @@ While link and location objects share most of their properties, the target
 
 property is used by the link object only and is not accessed by the location object.
 
-The form.target and link.target properties identify the most recent, immediate location of the target frame using the name string or keyword that was assigned to that frame. Compare this to the wlHttp.wlTarget property of a transaction, which uses the WebLOAD shorthand notation, described in the *WebLOAD Scripting Guide*, to store the complete path of the frame, from the root window of the Web page. The last field of the wlHttp.wlTarget string is the target name stored in the form.target and link.target properties.
+The form.target and link.target properties identify the most recent, immediate location of the target frame using the name string or keyword that was assigned to that frame. Compare this to the `wlHttp.wlTarget` property of a transaction, which uses the WebLOAD shorthand notation, described in the *WebLOAD Scripting Guide*, to store the complete path of the frame, from the root window of the Web page. The last field of the `wlHttp.wlTarget` string is the target name stored in the form.target and link.target properties.
 
 **See also**
 
@@ -9275,7 +9351,7 @@ wlVerification.Text(searchOption, text, severity)
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | searchOption              | Possible values are: WLFind or WLNotFind.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | text                      | String text to find in the  document.wlSource.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| severity                  | Possible values of this parameter are:`<br>`WLSuccess. The transaction  terminated successfully.  `<br>`WLMinorError. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the next statement.  `<br>`WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  `<br>`WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
+| severity                  | Possible values of this parameter are:<p></p>- WLSuccess. The transaction  terminated successfully.  <p></p>- WLMinorError. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the next statement.  <p></p>- WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  <p></p>- WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
 
 **Example**
 
@@ -9439,7 +9515,7 @@ wlVerification.Title(`<ExpectedTitle>`, `<Severity>`\`<FunctionName>` [, `<Error
 | **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ExpectedTitle             | A user-supplied string  that identifies the expected title of the HTML Web page. If the string you  enter in this parameter appears in the HTML Web page’s title, the validation  is successful.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Severity                  | Possible values of this parameter are:`<br>`WLSuccess. The transaction  terminated successfully.  `<br>`WLMinorError. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the next statement.  `<br>`WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  `<br>`WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
+| Severity                  | Possible values of this parameter are:<p></p>- WLSuccess. The transaction  terminated successfully.  <p></p>- WLMinorError. This specific  transaction failed, but the test session may continue as usual. The script  displays a warning message in the Log window and continues execution from the next statement.  <p></p>- WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  <p></p>- WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
 | FunctionName              | A pre-defined Javascript  function that is called if the verification fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | [ErrorMessage]            | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [FunctionArguments]       | The arguments for the  function that is called if the verification fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -9679,9 +9755,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 You may also set user values using the wlGlobals properties. WebLOAD automatically sends the user name and password when a wlHttp object connects to an HTTP site. For example:
 
-wlGlobals.UserName = “Bill”
+`wlGlobals.UserName = “Bill”`
 
-wlGlobals.PassWord = “TopSecret”
+`wlGlobals.PassWord = “TopSecret”`
 
 **Comments**
 
@@ -9713,7 +9789,10 @@ This property is used when you are working with a separate SSL proxy.
 
  **Note:** This property can only be inserted manually.
 
-**Example** wlGlobals.UseSameProxyForSSL = false **See also**
+**Example** 
+`wlGlobals.UseSameProxyForSSL = false`
+
+ **See also**
 
 * [*HTTP Components* ](./using_javascript_ref.md#http-components)
 * *Security* in the *WebLOAD Scripting Guide*
@@ -9730,23 +9809,24 @@ This property is used when you are working with a separate SSL proxy.
 
 **Description**
 
-The name of a timer to use for the Get() or Post() method.
+The name of a timer to use for the `Get()` or `Post()` method.
 
 **Example**
 
-WebLOAD zeros the timer immediately before a Get() or Post() call and sends the timer value to the WebLOAD Console immediately after the call. This is equivalent to calling the SetTimer() and SendTimer() functions. Thus the following two code examples are equivalent:
+WebLOAD zeros the timer immediately before a `Get()` or `Post()` call and sends the timer value to the WebLOAD Console immediately after the call. This is equivalent to calling the `SetTimer()` and `SendTimer()` functions. Thus the following two code examples are equivalent:
 
 //**Version 1**
 
-`wlHttp.UsingTimer = “Timer1”`
-
-`wlHttp.Get(“http://www.ABCDEF.com](http://www.ABCDEF.com/)”)`
-
+```
+wlHttp.UsingTimer = “Timer1”`
+wlHttp.Get(“http://www.ABCDEF.com”)
+```
 //**Version 2**
-
-`SetTimer(“Timer1”) [wlHttp.Get(“http://www.ABCDEF.com](http://www.ABCDEF.com/)”)` 
-
-`SendTimer(“Timer1”)`
+```
+SetTimer(“Timer1”) 
+wlHttp.Get(“http://www.ABCDEF.com”)
+SendTimer(“Timer1”)`
+```
 
 **See also**
 
@@ -9771,11 +9851,11 @@ WebLOAD zeros the timer immediately before a Get() or Post() call and sends the 
 
 Sets and retrieves the value associated with the parent object.
 
-When working with elements or options, this property holds the text associated with this object. This is the value that is returned to the server when a FORM control of type Button, Checkbox, Radiobutton, Reset, or Submit is submitted. Thus the value property holds the HTML value attribute of the object (the `<OPTION>` element). If the element does not have a value attribute, WebLOAD sets the value property equal to the text property.
+When working with `elements` or `options`, this property holds the text associated with this object. This is the value that is returned to the server when a FORM control of type Button, Checkbox, Radiobutton, Reset, or Submit is submitted. Thus the `value` property holds the HTML value attribute of the object (the `<OPTION>` element). If the element does not have a value attribute, WebLOAD sets the `value` property equal to the `text` property.
 
-When working with wlHeaders or wlSearchPairs objects, this property holds the value of the search key.
+When working with `wlHeaders` or `wlSearchPairs` objects, this property holds the value of the search key.
 
-When working with wlHttp.Data or wlHttp.Header objects, this property holds the value of the data string being submitted through an HTTP Post command.
+When working with `wlHttp.Data` or `wlHttp.Header` objects, this property holds the value of the data string being submitted through an HTTP Post command.
 
 **Syntax**
 
@@ -9785,7 +9865,7 @@ When working with wlHttp.Data or wlHttp.Header objects, this property holds the 
 
 **For wlHeaders:**
 
-`document.wlHeaders[*index#*].value = “TextString”`
+`document.wlHeaders[index#].value = “TextString”`
 
 For example:
 
@@ -9793,7 +9873,7 @@ For example:
 
 **For wlSearchPairs:**
 
-`document.links[1].wlSearchPairs[*index#*].value = “TextString”`
+`document.links[1].wlSearchPairs[index#].value = “TextString”`
 
 For example:
 
@@ -9811,7 +9891,7 @@ When working with wlHttp.Data objects, use the uppercase form:
 
 **Comment**
 
-The Value property for element and wlHttp.Data objects is written in uppercase.
+The `Value` property for element and `wlHttp.Data` objects is written in uppercase.
 
 **See also**
 
@@ -9843,12 +9923,11 @@ The Value property for element and wlHttp.Data objects is written in uppercase.
 
 **Description**
 
-VCUniqueID() provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to `ClientNum`. which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
+`VCUniqueID()` provides a unique identification for the current Virtual Client instance which is unique system-wide, across multiple Load Generators, even with multiple spawned processes running simultaneously. Compare this to `ClientNum`. which provides an identification number that is only unique within a single Load Generator. The identification string is composed of a concatenation of the script name, Load Generator name, current thread number, and round number.
 
 **Syntax** 
 
-VCUniqueID() 
-
+`VCUniqueID()`
 
 
 **Return Value**
@@ -9857,18 +9936,18 @@ Returns a unique identification string for the current Virtual Client instance.
 
 **Example**
 
-InfoMessage(VCUniqueID())
+`InfoMessage(VCUniqueID())`
 
 The results are
 
-[j@chaimsh.0.1](mailto:j@chaimsh.0.1)
+j@chaimsh.0.1
 
 where:
 
-* j is the name of the script.
-* chaimsh is the name of the Load Generator.
-* 0 is the client number.
-* 1 is the round number.
+* `j` is the name of the script.
+* `chaimsh` is the name of the Load Generator.
+* `0` is the client number.
+* `1` is the round number.
 
 **See also**
 
@@ -9884,16 +9963,11 @@ where:
 User-defined verification function to be used with a ‘named’ transaction. A function written by the user, tailored to the specific testing and verification needs of the application being tested.
 
 **Syntax**
-
-UserDefinedVerificationFunction(specified by user)
-
 ```
+UserDefinedVerificationFunction(specified by user)
 {
-
-…
-
-`<any valid JavaScript code>` return value
-
+  …
+  <any valid JavaScript code> return value
 }
 ```
 
@@ -9903,37 +9977,29 @@ Specified by user.
 
 **Return Value**
 
-The user-defined Verification() function returns a value based on user-specified criterion. You define the success and failure criterion for user-defined transactions. You also determine the severity level of any failures. The severity level determines the execution path when the main script resumes control. Less severe failures may be noted and ignored. More severe failures may cause the whole test to be aborted.
+The user-defined `Verification()` function returns a value based on user-specified criterion. You define the success and failure criterion for user-defined transactions. You also determine the severity level of any failures. The severity level determines the execution path when the main script resumes control. Less severe failures may be noted and ignored. More severe failures may cause the whole test to be aborted.
 
 Set the severity level in the verification function return statement. All failures are logged and displayed in the Log Window, similar to any other WebLOAD test failure. Refer to the *WebLOAD Console User’s Guide* for more information on return values and error codes. Transactions may be assigned one of the following return values:
 
-* WLSuccess – The transaction terminated successfully.
-* WLMinorError – This specific transaction failed, but the test session may continue as usual. The script displays a warning message in the Log window and continues execution from the next statement.
-* WLError – This specific transaction failed and the current test round was aborted. The script displays an error message in the Log window. If you are working with
-
-WebLOAD, a new round is begun only if WebLOAD is configured for multiple iterations.
-
-* WLSevereError – This specific transaction failed and the test session must be stopped completely. The script displays an error message in the Log window. If you are working with WebLOAD Recorder, the test session is stopped. If you are working with WebLOAD, the Load Generator on which the error occurred is stopped.
+* `WLSuccess` – The transaction terminated successfully.
+* `WLMinorError` – This specific transaction failed, but the test session may continue as usual. The script displays a warning message in the Log window and continues execution from the next statement.
+* `WLError` – This specific transaction failed and the current test round was aborted. The script displays an error message in the Log window. If you are working with WebLOAD, a new round is begun only if WebLOAD is configured for multiple iterations.
+* `WLSevereError` – This specific transaction failed and the test session must be stopped completely. The script displays an error message in the Log window. If you are working with WebLOAD Recorder, the test session is stopped. If you are working with WebLOAD, the Load Generator on which the error occurred is stopped.
 
 The default return value is WLSuccess. If no other return value is specified for the transaction, the default assumption is that the transaction terminated successfully.
 
 **Example**
 
-The following sample verification function checks if the current title of the Web
-
-page matches the page title expected at this point. (In this case, the function looks for a match with a Google page.)
+The following sample verification function checks if the current title of the Web page matches the page title expected at this point. (In this case, the function looks for a match with a Google page.)
 
 ```
 function Transaction1_VerificationFunction()
-
 {
-
-InfoMessage(document.title) if(document.title.indexOf(“Google”)>0)
-
-return WLSuccess else
-
-return WLMinorError
-
+  InfoMessage(document.title) 
+  if(document.title.indexOf(“Google”)>0)
+    return WLSuccess else
+  else
+    return WLMinorError
 }
 ```
 
@@ -9965,9 +10031,7 @@ For a more complete explanation and examples of functional testing and transacti
 
 **Description**
 
-Sets the HTTP version number for the current test session. 
-
-Current supported versions:
+Sets the HTTP version number for the current test session.  Current supported versions:
 
 * `1.0` (`1`) 
 * `1.1`
@@ -9995,14 +10059,19 @@ WebLOAD recommends selecting an HTTP version through the WebLOAD Console. Click 
 Use this function to display a warning message in the Log window.
 
 
-
 **Syntax** 
 
-WarningMessage(msg) ****
+`WarningMessage(msg)`
+
+**Parameters**
+
+| **Parameter Name** | **Description**                                |
+| ------------------ | ---------------------------------------------- |
+| msg             | A string with a warning message to be sent to the Log window. |
 
 **Comment**
 
-If you call WarningMessage() in the main script, WebLOAD sends a warning message to the Log window and continues with script execution as usual. The message has no impact on the continued execution of the test session.
+If you call `WarningMessage()` in the main script, WebLOAD sends a warning message to the Log window and continues with script execution as usual. The message has no impact on the continued execution of the test session.
 
 **GUI mode**
 
@@ -10033,17 +10102,17 @@ into the script. The Message dialog box opens. Enter the message text, select th
 
 **Description**
 
-The window object represents an open browser window. window objects store the complete parse results for downloaded HTML pages. Use the window object to gain access to the document in the window. From the window properties you can retrieve the document itself, check the location, and access other subframes that are nested within that window. Typically, the browser creates a single window object when it opens an HTML document. However, if a document defines one or more frames the browser creates one window object for the original document and one additional window object (a *child window*) for each frame. The child window may be affected by actions that occur in the parent. For example, closing the parent window causes all child windows to close.
+The `window` object represents an open browser window. `window` objects store the complete parse results for downloaded HTML pages. Use the `window` object to gain access to the document in the window. From the `window` properties you can retrieve the document itself, check the location, and access other subframes that are nested within that window. Typically, the browser creates a single `window` object when it opens an HTML document. However, if a document defines one or more frames the browser creates one `window` object for the original document and one additional `window` object (a *child window*) for each frame. The child window may be affected by actions that occur in the parent. For example, closing the parent window causes all child windows to close.
 
  **Note:** The 'parent' window item is usually implicitly understood when accessing the HTML document information.
 
-window objects are also accessed through nested frames, where the frame object's
+`window` objects are also accessed through nested frames, where the` frame` object's
 
-window property points to a child window nested within the given frame (read-only).
+`window` property points to a child window nested within the given frame (read-only).
 
 **Example**
 
-When working with multiple child windows of a frames collection, access the first child window using the following expressions:
+When working with multiple child windows of a `frames` collection, access the first child window using the following expressions:
 
 `frames[0]`
 
@@ -10083,7 +10152,7 @@ For example:
 
 **Method of Objects**
 
-The wlHttp object includes the following collections for storing data. These data storage collections each include the method wlClear().
+The `wlHttp` object includes the following collections for storing data. These data storage collections each include the method `wlClear()`.
 
 * wlHttp.Data (see [*Data (property)* ](#data-property))
 * wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
@@ -10092,33 +10161,37 @@ The wlHttp object includes the following collections for storing data. These dat
 
 **Description**
 
-wlClear() is used to clear property values from the specified wlHttp data collection.
+w`lClear()` is used to clear property values from the specified `wlHttp` data collection.
 
 **Syntax**
 
-wlHttp.*DataCollection*.wlClear([FieldName])
+`wlHttp.DataCollection.wlClear([FieldName])`
 
 **Parameters**
 
-[FieldName]-An optional user-supplied string with the name of the field to be cleared.
+[`FieldName`]-An optional user-supplied string with the name of the field to be cleared.
 
 **Example**
 
 If called with no parameters, then all values set for the collection are cleared:
 
-wlHttp.FormData[“a”] = “DDD” wlHttp.FormData[“B”] = “FFF” wlHttp.FormData.wlClear()
 
-// Clear all value from all fields in FormData InfoMessage (wlHttp.FormData[“a”])
-
+```
+wlHttp.FormData[“a”] = “DDD” 
+wlHttp.FormData[“B”] = “FFF” 
+wlHttp.FormData.wlClear()
+// Clear all value from all fields in FormData 
+InfoMessage (wlHttp.FormData[“a”])
 // This statement has no meaning, since there
-
 // is currently no value assigned to “a”
 
-If wlClear() is passed a FieldName parameter, then only the value of the specified field is cleared:
+```
+If `wlClear()` is passed a `FieldName` parameter, then only the value of the specified field is cleared:
 
+```
 wlHttp.FormData.wlClear(“FirstName”)
-
 // Clears only value assigned to “FirstName”
+```
 
 **See also**
 
@@ -10133,13 +10206,13 @@ wlHttp.FormData.wlClear(“FirstName”)
 
 **Description**
 
-The wlCookie object gets, sets and deletes cookies. These activities may be required by an HTTP server.
+The `wlCookie` object gets, sets and deletes cookies. These activities may be required by an HTTP server.
 
  **Note:** Cookie management is usually handled automatically through the standard DOM document.cookie property.
 
-WebLOAD supports the wlCookie object as an alternate approach to cookie management. You may use the methods of wlCookie to create as many cookies as needed. For example, each WebLOAD client running a script can set its own cookie identified by a unique name. wlCookie is a local object. WebLOAD automatically creates an independent wlCookie object for each thread of a script. You cannot manually declare wlCookie objects yourself.
+WebLOAD supports the `wlCookie` object as an alternate approach to cookie management. You may use the methods of `wlCookie` to create as many cookies as needed. For example, each WebLOAD client running a script can set its own cookie identified by a unique name. `wlCookie` is a local object. WebLOAD automatically creates an independent `wlCookie` object for each thread of a script. You cannot manually declare `wlCookie` objects yourself.
 
-By default, WebLOAD always accepts cookies that are sent from a server. When WebLOAD connects to a server, it automatically submits any cookies in the server’s domain that it has stored. The wlCookie object lets you supplement or override this behavior in the following ways:
+By default, WebLOAD always accepts cookies that are sent from a server. When WebLOAD connects to a server, it automatically submits any cookies in the server’s domain that it has stored. The `wlCookie` object lets you supplement or override this behavior in the following ways:
 
 * A thread can create its own cookies.
 * A thread can delete cookies that it created.
@@ -10147,21 +10220,25 @@ By default, WebLOAD always accepts cookies that are sent from a server. When Web
 
 Aside from these two abilities, WebLOAD does not distinguish in any way between cookies that it receives from a server and those that you create yourself. For example, if a thread creates a cookie in a particular domain, it automatically submits the cookie when it connects to any server in the domain.
 
- **Note:** This property can only be inserted manually.
+ > **Note:** This property can only be inserted manually.
 
-**Syntax** wlCookie.*method()* **Example**
+**Syntax** 
 
+`wlCookie.*method()`
+
+ **Example**
+
+```
 //Set a cookie
-
-wlCookie.Set(“CUSTOMER”, “JOHN_SMITH”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, “/”, “Wed, 08-Apr-98 17:29:00 GMT”)
-
-//WebLOAD submits the cookie [wlHttp.Get(“www.ABCDEF.com/products/OrderForm.cgi](http://www.ABCDEF.com/products/OrderForm.cgi)”)
-
+wlCookie.Set(“CUSTOMER”, “JOHN_SMITH”, “www.ABCDEF.com”, 
+            “/”, “Wed, 08-Apr-98 17:29:00 GMT”)
+//WebLOAD submits the cookie 
+wlHttp.Get(“www.ABCDEF.com/products/OrderForm.cgi”)
 //Get the value of a cookie
-
-retValue = wlCookie.Get(“CUSTOMER”, “[www.ABCDEF.com](http://www.abcdef.com/)”, “/” )
-
-//Delete the cookie wlCookie.ClearAll()
+retValue = wlCookie.Get(“CUSTOMER”, “www.ABCDEF.com”, “/” )
+//Delete the cookie 
+wlCookie.ClearAll()
+```
 
 **Methods**
 
@@ -10174,11 +10251,11 @@ retValue = wlCookie.Get(“CUSTOMER”, “[www.ABCDEF.com](http://www.abcdef.co
 
 **Description**
 
-WLDataFileField creates the data file field parameter.
+`WLDataFileField` creates the data file field parameter.
 
 **Syntax**
 
-fileFieldParam = WLDataFileField(paramName, ColumnNumber);
+`fileFieldParam = WLDataFileField(paramName, ColumnNumber);`
 
 **Parameters**
 
@@ -10197,7 +10274,11 @@ Define a data file parameter.
 
 **Syntax**
 
-`<paramName>` = wlDataFileParam(FileID, CopyFileId, HeaderLines, Delimiter, AccessMethod, Scope, UsageMethod, EndOfFileBehavior);
+```
+<paramName> = wlDataFileParam(FileID, CopyFileId, HeaderLines, 
+Delimiter, AccessMethod, Scope, UsageMethod, EndOfFileBehavior);
+
+```
 
 **Parameters**
 
@@ -10205,41 +10286,39 @@ Define a data file parameter.
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | FileID                    | A string which is a unique parameter  identifier.                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | CopyFileId                | An identifier which refers  to the local file. This value is returned by the CopyFile command.                                                                                                                                                                                                                                                                                                                                                                                 |
-| HeaderLines               | A parameter that defines  the number of header lines the file contains. All values are enumerated  numeric values. Possible values are:`<br>`0. The file does not contain any header  lines. This is the default value.  `<br><X>`. Where `<X>` is any  number above zero. The file contains  `<X>` header lines at  the beginning of the file. The values contained in these header lines are not  used as parameters but  as variable  names in the JavaScript code. |
+| HeaderLines               | A parameter that defines  the number of header lines the file contains. All values are enumerated  numeric values. Possible values are:<p></p>- 0. The file does not contain any header  lines. This is the default value. <p></p>- `<X>`. Where `<X>` is any  number above zero. The file contains  `<X>` header lines at  the beginning of the file. The values contained in these header lines are not  used as parameters but  as variable  names in the JavaScript code. |
 | Delimiter                 | Character used to separate  fields in one line of the input file. The default delimiter character is a  comma.                                                                                                                                                                                                                                                                                                                                                                 |
-| AccessMethod | Defines the method for reading the next row  from the file. All values are enumerated numeric values. Possible values are:`<br>`WLParamRandom. Gets a random row from  the file.  `<br>`WLParamOrdered. Every client gets the  next row from the file (order is important).  `<br>`WLParamNotOrdered. Every client gets the  next row from the file (order is not important). |
-| Scope | Defines the scope (sharing  policy) of the parameter. Possible values are:`<br>`WLParamGlobal. All virtual clients read  rows from the shared (global ) pool.  `<br>`WLParamLocal. Each virtual client  reads rows from its own copy of the pool.  `<br>`WLParamGlobalLocked. All virtual clients read  a unique row from the global pool, which is shared by all virtual clients  on all load  generators. |
-| UsageMethod | Defines when the parameter  is updated, meaning when a new  value will be read. Possible values are:`<br>`WLParamUpdateRound. The script reads a new  row from the file one time for  each round. Using the same parameter again in the same round will result in  the same value.  `<br>`WLParamUpdateOnce. The script reads a new  row from the file once at the beginning of the test (in InitClient). Every usage of the  parameter by that Virtual Client will always result in the same value.  `<br>`WLParamUpdateUse. The parameter’s value  will be read each time it is used. |
-| EndOfFileBehavior | Defines how WebLOAD  behaves when it reaches the end of the file. All values are enumerated  numeric values.`<br>`WLParamKeepLast. Keep the last value.  `<br>`WLParamCycle. Start from the beginning  of the file. Each row can be used any number of times.  `<br>`WLParamStopVC. Abort the specific  Virtual Client that tried to read past the end of the file. An error message  is written to the log file. |
+| AccessMethod | Defines the method for reading the next row  from the file. All values are enumerated numeric values. Possible values are:<p></p>- `WLParamRandom`. Gets a random row from  the file.  <p></p>- `WLParamOrdered`. Every client gets the  next row from the file (order is important).  <p></p>- `WLParamNotOrdered`. Every client gets the  next row from the file (order is not important). |
+| Scope | Defines the scope (sharing  policy) of the parameter. Possible values are:<p></p>- `WLParamGlobal`. All virtual clients read  rows from the shared (global ) pool.  <p></p>- `WLParamLocal`. Each virtual client  reads rows from its own copy of the pool.  <p></p>- `WLParamGlobalLocked`. All virtual clients read  a unique row from the global pool, which is shared by all virtual clients  on all load  generators. |
+| UsageMethod | Defines when the parameter  is updated, meaning when a new  value will be read. Possible values are:<p></p>- `WLParamUpdateRound`. The script reads a new  row from the file one time for  each round. Using the same parameter again in the same round will result in  the same value.  <p></p>- `WLParamUpdateOnce`. The script reads a new  row from the file once at the beginning of the test (in InitClient). Every usage of the  parameter by that Virtual Client will always result in the same value.  <p></p>- `WLParamUpdateUse`. The parameter’s value  will be read each time it is used. |
+| EndOfFileBehavior | Defines how WebLOAD  behaves when it reaches the end of the file. All values are enumerated  numeric values.<p></p>- `WLParamKeepLast`. Keep the last value.  <p></p>- `WLParamCycle`. Start from the beginning  of the file. Each row can be used any number of times.  <p></p>-` WLParamStopVC`. Abort the specific  Virtual Client that tried to read past the end of the file. An error message  is written to the log file. |
 
 **Example**
 
 ```javascript
 function InitAgenda()
-
 {
-
-myFileParam_File = CopyFile("C:\\My Documents\\WebLOAD\\Sessions\\param1.txt")
-
+myFileParam_File = CopyFile("C:\\My 
+Documents\\WebLOAD\\Sessions\\param1.txt")
 }
-
 function InitClient()
-
 {
-
-myFileParam_DataFileParam = wlDataFileParam ( "myFileParam",myFileParam_File, 1,",",wlParamRandom,WLParamGlobalLocked,wlParamUpdateRound,wlParamCycl e);
-
+myFileParam_DataFileParam = wlDataFileParam ( 
+"myFileParam",myFileParam_File, 
+1,",",wlParamRandom,WLParamGlobalLocked,
+wlParamUpdateRound,wlParamCycle);
 myFileParam_col1 = wlDataFileField( myFileParam_DataFileParam, 1);
 
 myFileParam_col2 = wlDataFileField( myFileParam_DataFileParam, 2);
 
 }
-
-/***** WLIDE - Message - ID:4 *****/ InfoMessage(myFileParam_col1.getValue())
+/***** WLIDE - Message - ID:4 *****/ 
+InfoMessage(myFileParam_col1.getValue())
 
 // END WLIDE
 
-/***** WLIDE - Message - ID:5 *****/ InfoMessage(myFileParam_col2.getValue())
+/***** WLIDE - Message - ID:5 *****/ 
+InfoMessage(myFileParam_col2.getValue())
 ```
 
 **Methods**
@@ -10252,15 +10331,13 @@ myFileParam_col2 = wlDataFileField( myFileParam_DataFileParam, 2);
 
 **Description**
 
-script scripts that encounter an error during runtime do not simply fail and die. This would not be helpful to testers who are trying to analyze when, where, and why an error in their application occurs. WebLOAD scripts incorporate a set of error management routines to provide a robust error logging and recovery mechanism whenever possible. The wlException object is part of the WebLOAD error management protocol.
+script scripts that encounter an error during runtime do not simply fail and die. This would not be helpful to testers who are trying to analyze when, where, and why an error in their application occurs. WebLOAD scripts incorporate a set of error management routines to provide a robust error logging and recovery mechanism whenever possible. The `wlException` object is part of the WebLOAD error management protocol.
 
-WebLOAD users have a variety of options for error recovery during a test session. The built-in error flags provide the simplest set of options; an informative message, a simple warning, stop the current round and skip to the beginning of the next round, or stop the test session completely. Users may also use try()/catch() commands to enclose logical blocks of code within a round. This provides the option of catching any minor errors that occur within the enclosed block and continuing with the next logical block of code within the current round, rather than skipping the rest of the round completely.
+WebLOAD users have a variety of options for error recovery during a test session. The built-in error flags provide the simplest set of options; an informative message, a simple warning, stop the current round and skip to the beginning of the next round, or stop the test session completely. Users may also use `try()/catch()` commands to enclose logical blocks of code within a round. This provides the option of catching any minor errors that occur within the enclosed block and continuing with the next logical block of code within the current round, rather than skipping the rest of the round completely.
 
-Users may add their own try()/catch() pairs to a script, delimiting their own logical code blocks and defining their own alternate set of activities to be executed in case an error occurs within that block. If an error is caught while the script is in the middle of executing the code within a protected logical code block (by try()),
+Users may add their own `try()/catch()` pairs to a script, delimiting their own logical code blocks and defining their own alternate set of activities to be executed in case an error occurs within that block. If an error is caught while the script is in the middle of executing the code within a protected logical code block (by `try()`), WebLOAD will detour to a user-defined error function (the `catch(`) block) and then continue execution with the next navigation block in the script.
 
-WebLOAD will detour to a user-defined error function (the catch() block) and then continue execution with the next navigation block in the script.
-
-wlException objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a try()/catch() pair may utilize the wlException object. Use the wlException methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.
+`wlException` objects store information about errors that have occurred, including informative message strings and error severity levels. Users writing error recovery functions to handle the errors caught within a `try()/catch()` pair may utilize the `wlException` object. Use the `wlException` methods to perhaps send error messages to the Log Window or trigger a system error of the specified severity level.
 
 **Example**
 
@@ -10268,39 +10345,25 @@ The following code fragment illustrates a typical error-handling routine:
 
 ```javascript
 try{
-
-...
-
-//do a lot of things
-
-...
-
-//error occurs here
-
-...
-
+  ...
+  //do a lot of things
+  // ...
+  //error occurs here
+  ...
 }
 
 catch(e){
-
-myException = new wlException(e,“we have a problem”)
-
-//things to do in case of error
-
-if (myException.GetSeverity() == WLError) {
-
-// Do one set of Error activities myException.ReportLog()
-
-throw myException
-
-}
-
-else {
-
-// Do a different set of Severe Error activities throw myException
-
-}
-
+  myException = new wlException(e,“we have a problem”)
+  //things to do in case of error
+  if (myException.GetSeverity() == WLError) {
+    // Do one set of Error activities 
+    myException.ReportLog()
+    throw myException
+  }
+  else {
+  // Do a different set of Severe Error activities 
+  throw myException
+  }
 }
 ```
 
@@ -10330,22 +10393,22 @@ else {
 
 **Description**
 
-Creates a new wlException object.
+Creates a new `wlException` object.
 
 **Syntax**
 
-NewExceptionObject = new wlException(severity, message)
+`NewExceptionObject = new wlException(severity, message)`
 
 **Parameters**
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| severity                 | One of the following integer constants:`<br>`WLError. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  `<br>`WLSevereError. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
+| severity                 | One of the following integer constants:<p></p>- `WLError`. This specific  transaction failed and the current test  round was aborted. The script displays an error message in the Log window and  begins a new round.  <p></p>- `WLSevereError`. This specific  transaction failed and the test  session must be stopped completely. The script displays an error message in  the Log window and the Load Generator on  which the  error occurred is stopped. |
 | message                  | The exception message stored as a text  string.                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 **Return Value**
 
-Returns a new wlException object.
+Returns a new `wlException` object.
 
 **Example**
 
@@ -10369,17 +10432,17 @@ Returns a new wlException object.
 
 **Description**
 
-WebLOAD provides a global object called wlGeneratorGlobal. The wlGeneratorGlobal object enables sharing of global variables and values between all threads of a single Load Generator, even when running multiple scripts. (Compare to the wlSystemGlobal (see [*wlSystemGlobal (object)* ](#wlsystemglobal-object))object, which enables sharing of global variables and values system-wide, between all threads of all Load Generators participating in a test session, and to the [wlGlobals](#wlglobals-object) object, which enables sharing of global variables and values between threads of a single script, running on a single Load Generator.)
+WebLOAD provides a global object called `wlGeneratorGlobal`. The `wlGeneratorGlobal` object enables sharing of global variables and values between all threads of a single Load Generator, even when running multiple scripts. (Compare to the `wlSystemGlobal` (see [*wlSystemGlobal (object)* ](#wlsystemglobal-object))object, which enables sharing of global variables and values system-wide, between all threads of all Load Generators participating in a test session, and to the [wlGlobals](#wlglobals-object) object, which enables sharing of global variables and values between threads of a single script, running on a single Load Generator.)
 
 Globally shared variables are useful when tracking a value or maintaining a count across multiple threads or platforms. For example, you may include these shared values in the messages sent to the Log window during a test session.
 
-WebLOAD creates exactly one wlGeneratorGlobal object for each Load Generator participating in a test session. Use the wlGeneratorGlobal methods to create and access variable values that you wish to share between threads of a Load Generator.
+WebLOAD creates exactly one `wlGeneratorGlobal` object for each Load Generator participating in a test session. Use the `wlGeneratorGlobal` methods to create and access variable values that you wish to share between threads of a Load Generator.
 
-Edit wlGeneratorGlobal properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor). While global variables may be accessed anywhere in your script, be sure to initially declare wlGeneratorGlobal values in the InitAgenda() *function only*. Do not define new values within the main body of a Script, for they will not be shared correctly by all threads.
+Edit `wlGeneratorGlobal` properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor). While global variables may be accessed anywhere in your script, be sure to initially declare `wlGeneratorGlobal` values in the `InitAgenda()` *function only*. Do not define new values within the main body of a Script, for they will not be shared correctly by all threads.
 
 **Methods**
 
-The wlGeneratorGlobal object includes the following methods:
+The `wlGeneratorGlobal` object includes the following methods:
 
 * Add() (see [*Add() (method)* ](#add-method))
 * Get() (see [*Get() (addition method)* ](#get-addition-method))
@@ -10387,7 +10450,7 @@ The wlGeneratorGlobal object includes the following methods:
 
 **Properties**
 
-wlGeneratorGlobal incorporates a dynamic property set that consists of whatever global variables have been defined, set, and accessed by the user through the wlGeneratorGlobal method set only.
+`wlGeneratorGlobal` incorporates a dynamic property set that consists of whatever global variables have been defined, set, and accessed by the user through the `wlGeneratorGlobal` method set only.
 
 **See also**
 
@@ -10399,17 +10462,17 @@ wlGeneratorGlobal incorporates a dynamic property set that consists of whatever 
 
 **Method of Object**
 
-Each of the different types of collections of elements found in the parsed DOM tree includes the method wlGet().
+Each of the different types of collections of elements found in the parsed DOM tree includes the method `wlGet()`.
 
 **Description**
 
-wlGet() is used when getting data from a property in the collection to distinguish between keywords and user-defined variables that share the same names. The need for this care is explained in this section.
+`wlGet()` is used when getting data from a property in the collection to distinguish between keywords and user-defined variables that share the same names. The need for this care is explained in this section.
 
 
 
 **Syntax** 
 
-*Collection*.wlGet(PropertyName) 
+`Collection.wlGet(PropertyName) `
 
 **Return Value**
 
@@ -10421,25 +10484,22 @@ The value of the specified property
 
 **Comment**
 
-In JavaScript, users may work interchangeably with either an array[index] or
-
-array.index notation. For example, the following two references are interchangeable:
+In JavaScript, users may work interchangeably with either an `array[index]` or `array.index` notation. For example, the following two references are interchangeable:
 
 `wlHttp.FormData[“Sunday”]`
 
 -Or-
 
 `wlHttp.FormData.Sunday`
+This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called `length`. This could lead to a confusing situation, where the word `length` appearing in a script could represent either the number of elements in a `FormData` array, as explained in length, or the value of the `length` field in the form. Errors would arise from a reasonable assignment statement such as:
 
-This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called length. This could lead to a confusing situation, where the word length appearing in a script could represent either the number of elements in a FormData array, as explained in length, or the value of the length field in the form. Errors would arise from a reasonable assignment statement such as:
-
-wlHttp.FormData[“length”] = 7
+`wlHttp.FormData[“length”] = 7`
 
 This is equivalent to the illegal assignment statement:
 
-wlHttp.FormData.length = 7
+`wlHttp.FormData.length = 7`
 
-WebLOAD therefore uses wlGet() to retrieve field data whenever the name could lead to potential ambiguity. When recording scripts with WebLOAD Recorder, WebLOAD recognizes potential ambiguities and inserts the appropriate wlGet() statements automatically.
+WebLOAD therefore uses `wlGet()` to retrieve field data whenever the name could lead to potential ambiguity. When recording scripts with WebLOAD Recorder, WebLOAD recognizes potential ambiguities and inserts the appropriate `wlGet()` statements automatically.
 
 **See also**
 
@@ -10460,13 +10520,11 @@ Retrieve a collection of all forms (`<FORM>` elements) in an HTML page and its n
 
 **Syntax** 
 
-wlGetAllForms() 
+`wlGetAllForms()` 
 
 **Return Value**
 
-A collection that includes the forms in the top-level frame (from which you called the
-
-method) and all its subframes at any level of nesting.
+A collection that includes the forms in the top-level frame (from which you called the method) and all its subframes at any level of nesting.
 
 **See also**
 
@@ -10482,7 +10540,10 @@ method) and all its subframes at any level of nesting.
 
 Retrieve a collection of all frames in an HTML page, at any level of nesting.
 
-**Syntax** wlGetAllFrames() **Return Value**
+**Syntax** 
+`wlGetAllFrames()`
+
+ **Return Value**
 
 A collection that includes the top-level frame (from which you called the method) and
 
@@ -10502,11 +10563,12 @@ all its subframes.
 
 Retrieve a collection of all links (`<A>` elements) in an HTML page and its nested frames.
 
-**Syntax** wlGetAllLinks() **Return Value**
+**Syntax** 
+`wlGetAllLinks()`
 
-A collection that includes links in the top-level frame (from which you called the
+**Return Value**
 
-method) and all its subframes at any level of nesting.
+A collection that includes links in the top-level frame (from which you called the method) and all its subframes at any level of nesting.
 
 **See also**
 
@@ -10516,17 +10578,17 @@ method) and all its subframes at any level of nesting.
 
 **Description**
 
-The wlGlobals object stores the default global configuration properties set by the user through the WebLOAD Recorder or Console, including properties defining expected dialog boxes, verification test selections, and dynamic state management.
+The `wlGlobals` object stores the default global configuration properties set by the user through the WebLOAD Recorder or Console, including properties defining expected dialog boxes, verification test selections, and dynamic state management.
 
-wlGlobals is a global object, whose property values are shared by all threads of a script running on a single Load Generator. The wlGlobals object enables sharing of user-defined global variables and values between threads of a single script, running on a single Load Generator. (Compare to the wlGeneratorGlobal (see [*wGeneratorGlobal*](#wlgeneratorglobal-object) [*(object)* ](#wlgeneratorglobal-object)) object, which enables sharing of global variables and values between all threads of a single Load Generator, and the wlSystemGlobal (see [*wlSystemGlobal (object)* ](#wlsystemglobal-object)) object, which enables sharing of global variables and values system-wide, between all threads of all Load Generators participating in a test session.)
+`wlGlobals` is a global object, whose property values are shared by all threads of a script running on a single Load Generator. The `wlGlobals` object enables sharing of user-defined global variables and values between threads of a single script, running on a single Load Generator. (Compare to the wlGeneratorGlobal (see [*wGeneratorGlobal*](#wlgeneratorglobal-object) [*(object)* ](#wlgeneratorglobal-object)) object, which enables sharing of global variables and values between all threads of a single Load Generator, and the `wlSystemGlobal` (see [*wlSystemGlobal (object)* ](#wlsystemglobal-object)) object, which enables sharing of global variables and values system-wide, between all threads of all Load Generators participating in a test session.)
 
- **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder or Console. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor). If you do decide to edit the global variable values in your script, set wlGlobals properties in the InitAgenda() *function only*. Do not define new values within the main body of a script. The values will not be shared correctly by all script threads.
+ **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder or Console. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor). If you do decide to edit the global variable values in your script, set `wlGlobals` properties in the `InitAgenda()` *function only*. Do not define new values within the main body of a script. The values will not be shared correctly by all script threads.
 
-The configuration properties of the wlGlobals object are almost all duplicated in the wlLocals (see [*wlLocals (object)* ](./actions_objects_functions.md#wllocals-object)), which contains the local configuration settings for browser actions, and in the wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object)), which contains configuration settings that are limited to a single specific browser action. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*.
+The configuration properties of the `wlGlobals` object are almost all duplicated in the wlLocals (see [*wlLocals (object)* ](./actions_objects_functions.md#wllocals-object)), which contains the local configuration settings for browser actions, and in the wlHttp (see [*wlHttp (object)* ](./actions_objects_functions.md#wlhttp-object)), which contains configuration settings that are limited to a single specific browser action. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*.
 
 **Properties**
 
-The wlGlobals object includes the following property classes:
+The `wlGlobals` object includes the following property classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
 * [*HTTP Components* ](./using_javascript_ref.md#http-components)
@@ -10538,7 +10600,7 @@ Each individual property class includes the syntax specifications that apply to 
 
 **GUI mode**
 
-The wlGLobals, property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
+The `wlGLobals`, property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
 
 The recommended way to set configuration values is through the WebLOAD Recorder, using the Default, Current, and Global Options dialog boxes accessed from the **Tools** tab in the Console desktop ribbon. The dialog boxes provide a means of defining and setting configuration values with ease, simplicity, and clarity.
 
@@ -10555,47 +10617,54 @@ The recommended way to set configuration values is through the WebLOAD Recorder,
 
 **Property of Objects**
 
-Headers on a Web page are accessed through wlHeaders objects that are grouped into collections of wlHeaders. The wlHeaders collection is a property of the following objects:
+Headers on a Web page are accessed through `wlHeaders` objects that are grouped into collections of `wlHeaders`. The `wlHeaders` collection is a property of the following objects:
 
 * document (see [*document (object)* ](#document-object))
 
 **Description**
 
-Each wlHeaders object contains a key-value pair. wlHeaders objects provide access to the key/value pairs in the HTTP *response headers*. (Information found in *request headers* is available through the wlHttp.Header property. For key-value pairs found in *URL search strings*, see [*wlSearchPairs (object)* ](#begintransaction-function).)
+Each `wlHeaders` object contains a key-value pair. `wlHeaders` objects provide access to the key/value pairs in the HTTP *response headers*. (Information found in *request headers* is available through the `wlHttp.Header` property. For key-value pairs found in *URL search strings*, see [*wlSearchPairs (object)* ](#begintransaction-function).)
 
-wlHeaders objects are local to a single thread. You cannot create new wlHeaders objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlHeaders properties are read only.
+`wlHeaders` objects are local to a single thread. You cannot create new `wlHeaders` objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. `wlHeaders` properties are read only.
 
 **Syntax**
 
-wlHeaders objects are grouped together within collections of wlHeaders. To access an individual wlHeaders’s properties, check the length property of the wlHeaders collection and use an index number to access the individual wlHeaders object, with the following syntax:
+`wlHeaders` objects are grouped together within collections of `wlHeaders`. To access an individual `wlHeaders`’s properties, check the length property of the `wlHeaders` collection and use an index number to access the individual `wlHeaders` object, with the following syntax:
 
-NumberofHeaderObjects = document.wlHeaders.length document.wlHeaders[*index*#].`<*wlHeaders-property*>`
+`NumberofHeaderObjects = document.wlHeaders.length`
+
+`document.wlHeaders[index#].<wlHeaders-property>`
 
 **Example**
 
 WebLOAD stores the header pairs from the response to the most recent Get, Post, or Head command in the document.wlHeaders collection. The following statement would retrieve an HTTP header:
 
-wlHttp.Head(“[http://www.ABCDEF.com](http://www.ABCDEF.com/)”)
+`wlHttp.Head(“http://www.ABCDEF.com”)`
 
 For a header that looks something like this:
 
+```
 HTTP/1.1 200 OK
-
-Server: Netscape-Enterprise/3.0F Date: Sun, 11 Jan 1998 08:25:20 GMT
-
-Content-type: text/html Connection: close
-
+Server: Netscape-Enterprise/3.0F 
+Date: Sun, 11 Jan 1998 08:25:20 GMT
+Content-type: text/html 
+Connection: close
 Host: Server2.MyCompany.com
+```
 
 WebLOAD parses the header pairs as follows:
 
-document.wlHeaders[0].key = “Server” document.wlHeaders[0].value = “Netscape-Enterprise/3.0F” document.wlHeaders[1].key = “Date” document.wlHeaders[1].value = “Sun, 11 Jan 1998 08:25:20 GMT”
+```
+document.wlHeaders[0].key = “Server” 
+document.wlHeaders[0].value = “Netscape-Enterprise/3.0F” 
+document.wlHeaders[1].key = “Date” 
+document.wlHeaders[1].value = “Sun, 11 Jan 1998 08:25:20 GMT”
 
 ...
-
+```
 **Properties**
 
-The wlHeaders object includes the following properties:
+The `wlHeaders` object includes the following properties:
 
 * key (see [*key (property)* ](#key-property))
 * value (see [*value (property)* ](#value-property))
@@ -10612,9 +10681,9 @@ The wlHeaders object includes the following properties:
 
 **Description**
 
-If your script downloads HTML code, you can use the wlHtml object to retrieve parsed elements of the code. The wlHtml object also lets you retrieve the HTTP header fields and status and parse URL addresses into their host, port, and URI components.
+If your script downloads HTML code, you can use the `wlHtml` object to retrieve parsed elements of the code. The `wlHtml` object also lets you retrieve the HTTP header fields and status and parse URL addresses into their host, port, and URI components.
 
-wlHtml is a local object. WebLOAD automatically creates an independent wlHtml object for each thread of a script. You cannot manually declare wlHtml objects yourself.
+`wlHtml` is a local object. WebLOAD automatically creates an independent `wlHtml` object for each thread of a script. You cannot manually declare `wlHtml` objects yourself.
 
 **Methods**
 
@@ -10640,11 +10709,11 @@ wlHtml is a local object. WebLOAD automatically creates an independent wlHtml ob
 
 **Description**
 
-The wlHttp object stores configuration information for immediate user activities, including properties defining expected dialog boxes, verification test selections, and dynamic state management. Many of these properties are duplicated in the wlGlobals (see [*w*](#parseonce-property)[*lGlobals (object)* ](#parseonce-property)), which contains the default global configuration settings for browser actions, and in the wlLocals (see [*wlLocals (object)*](./actions_objects_functions.md#wllocals-object)), which contains the local configuration settings for browser actions. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*. The wlHttp object also contains the methods that implement the user activities saved during the WebLOAD Recorder recording session. User activities may be recreated through one of two approaches: the high-level User Action mode or the low-level HTTP Protocol mode. Methods for each of these testing modes are included in the wlHttp object.
+The `wlHttp` object stores configuration information for immediate user activities, including properties defining expected dialog boxes, verification test selections, and dynamic state management. Many of these properties are duplicated in the wlGlobals (see [*w*](#parseonce-property)[*lGlobals (object)* ](#parseonce-property)), which contains the default global configuration settings for browser actions, and in the wlLocals (see [*wlLocals (object)*](./actions_objects_functions.md#wllocals-object)), which contains the local configuration settings for browser actions. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*. The `wlHttp` object also contains the methods that implement the user activities saved during the WebLOAD Recorder recording session. User activities may be recreated through one of two approaches: the high-level User Action mode or the low-level HTTP Protocol mode. Methods for each of these testing modes are included in the `wlHttp` object.
 
 **Properties and Methods**
 
-The wlHttp object includes the following property and method classes:
+The `wlHttp` object includes the following property and method classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
 * [*HTTP Components* ](./using_javascript_ref.md#http-components)
@@ -10656,7 +10725,7 @@ Each individual function class includes the syntax specifications that apply to 
 
 **GUI mode**
 
-The wlHttp property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
+The `wlHttp` property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
 
  **Note:** The recommended way to set configuration values is through the WebLOAD Recorder, using the Default, Current, and Global Options dialog boxes accessed from the **Tools** tab in the Console desktop ribbon. The dialog boxes provide a means of defining and setting configuration values with ease, simplicity, and clarity.
 
@@ -10671,21 +10740,21 @@ The wlHttp property and method descriptions explain how to explicitly set values
 
 **Description**
 
-The wlInputFile object supports reading values from an external text file. This is useful when you need to parameterize your script. The input file supports the following access methods:
+The `wlInputFile` object supports reading values from an external text file. This is useful when you need to parameterize your script. The input file supports the following access methods:
 
 * Unique access to a parameters file’s record. This ensures that a value that was read by VC1 will not be read by any other VC as long as VC1 is using this value.
 * Shared access for a parameters file among Load Generators and Load Machines and among different scripts.
 * Sequential and random access to a parameters file.
 
-The wlInputFile object enables Load Generators running on more than one load machine to access a single parameters file in a way that enables unique reading of the parameters from the file. In addition, a single parameters file can be accessed by more
+The `wlInputFile` object enables Load Generators running on more than one load machine to access a single parameters file in a way that enables unique reading of the parameters from the file. In addition, a single parameters file can be accessed by more
 
 than one script in a way that enables unique reading of parameters from the file by all of the scripts.
 
-Create wlInputFile objects and manage your files using the constructor and methods described in this section.
+Create `wlInputFile` objects and manage your files using the constructor and methods described in this section.
 
 **Syntax**
 
-MyFileObj = new wlInputFile(fileID)
+`MyFileObj = new wlInputFile(fileID)`
 
 **Parameters**
 
@@ -10696,15 +10765,12 @@ MyFileObj = new wlInputFile(fileID)
 **Example**
 
 ```javascript
-fileID = CopyFile(`<full path>`)
-
+fileID = CopyFile(<full path>)
 …
-
-MyFileObj = new wlInputFile(*fileID*)
-
+MyFileObj = new wlInputFile(fileID)
 …
-
-MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior], [HeaderLines])
+MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], 
+[EndOfFileBehavior], [HeaderLines])
 ```
 
 **Methods**
@@ -10727,11 +10793,11 @@ MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior]
 
 **Description**
 
-Creates a new wlInputFile object. For optimal performance, construct a new file object in the InitClient section of your script. The file is copied from the Console to the Load Generator. The input file specified in the wlInputFile object is opened.
+Creates a new `wlInputFile` object. For optimal performance, construct a new file object in the `InitClient` section of your script. The file is copied from the Console to the Load Generator. The input file specified in the `wlInputFile` object is opened.
 
 **Syntax**
 
-myFileObj = new wlInputFile(fileID)
+`myFileObj = new wlInputFile(fileID)`
 
 **Parameters**
 
@@ -10746,30 +10812,26 @@ A pointer to a new wlInputFile object.
 **Example**
 
 ```javascript
-fileID = CopyFile(`<full path>`)
-
+fileID = CopyFile(<full path>)
 …
-
-MyFileObj = new wlInputFile(*fileID*)
-
+MyFileObj = new wlInputFile(fileID)
 …
-
-MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], [EndOfFileBehavior], [HeaderLines])
+MyFileObj.Open([AccessMethod], [ShareMethod], [UsageMethod], 
+[EndOfFileBehavior], [HeaderLines])
 ```
-
 
 
 ## wlLocals (object)
 
 **Description**
 
-The wlLocals object stores the local default configuration information for user activities, such as the URL, user name and password, proxy server, and dialog box management. wlLocals is a local object. WebLOAD creates an independent wlLocals object for *each thread* of a script. You cannot declare wlLocals objects yourself.
+The `wlLocals` object stores the local default configuration information for user activities, such as the URL, user name and password, proxy server, and dialog box management. `wlLocals` is a local object. WebLOAD creates an independent `wlLocals` object for *each thread* of a script. You cannot declare `wlLocals` objects yourself.
 
-The properties of the wlLocals object are all duplicated in the [wlGlobals](#wlglobals-object), which contains the default global settings, and in the  [wlHttp](#wlhttp-object), which contains the settings for an immediate action. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*.
+The properties of the `wlLocals` object are all duplicated in the [wlGlobals](#wlglobals-object), which contains the default global settings, and in the  [wlHttp](#wlhttp-object), which contains the settings for an immediate action. To understand how there could potentially be three different settings for a single configuration property, see the *WebLOAD Scripting Guide*.
 
 **Properties**
 
-The wlLocals object includes the following property classes:
+The `wlLocals` object includes the following property classes:
 
 * *Automatic State Management for HTTP Protocol Mode* 
 * [*HTTP Components* ](./using_javascript_ref.md#http-components)
@@ -10781,7 +10843,7 @@ Each individual function class includes the syntax specifications that apply to 
 
 **GUI mode**
 
-The wlLocals property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
+The `wlLocals` property and method descriptions explain how to explicitly set values for these session configuration properties within your JavaScript script files.
 
  **Note:** The recommended way to set configuration values is through the WebLOAD Recorder, using the Default, Current, and Global Options dialog boxes accessed from the **Tools** tab in the Console desktop ribbon. The dialog boxes provide a means of defining and setting configuration values with ease, simplicity, and clarity.
 
@@ -10796,33 +10858,37 @@ The wlLocals property and method descriptions explain how to explicitly set valu
 
 **Property of Objects**
 
-META objects on a Web page are accessed through wlMetas objects that are grouped into collections of wlMetas. The wlMetas collection is a property of the following objects:
+META objects on a Web page are accessed through `wlMetas` objects that are grouped into collections of `wlMetas`. The `wlMetas` collection is a property of the following objects:
 
 * document (see [*document (object)* ](#document-object))
 
 **Description**
 
-Each wlMetas object stores the parsed data for an HTML meta object (`<META>` tag). wlMetas objects are local to a single thread. You cannot create new wlMetas objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlMetas properties are read only.
+Each `wlMetas` object stores the parsed data for an HTML meta object (`<META>` tag). `wlMetas` objects are local to a single thread. You cannot create new `wlMetas` objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. `wlMetas` properties are read only.
 
 **Syntax**
 
-wlMetas objects are grouped together within collections of wlMetas. To access an individual wlMetas’s properties, check the length property of the wlMetas collection and use an index number to access the individual wlMetas object, with the following syntax:
+`wlMetas` objects are grouped together within collections of `wlMetas`. To access an individual `wlMetas`’s properties, check the length property of the `wlMetas` collection and use an index number to access the individual `wlMetas` object, with the following syntax:
 
-NumberofMetaObjects = document.wlMetas.length document.wlMetas[#].`<*wlMetas-property*>`
+```
+NumberofMetaObjects = document.wlMetas.length 
+document.wlMetas[#].<wlMetas-property>
+
+```
 
 **Example**
 
-To find out how many wlMetas objects are contained within a document header, check the value of:
+To find out how many `wlMetas` objects are contained within a document header, check the value of:
 
-document.wlMetas.length
+`document.wlMetas.length`
 
-Access each wlMetas’s properties directly using the preceding syntax. For example:
+Access each `wlMetas`’s properties directly using the preceding syntax. For example:
 
-document.wlMetas[0].key
+`document.wlMetas[0].key`
 
 **Properties**
 
-The wlMetas object includes the following properties:
+The `wlMetas` object includes the following properties:
 
 * content (see [*content (property)* ](#content-property))
 * httpEquiv (see [*httpEquiv (property)* ](#httpequiv-property))
@@ -10843,7 +10909,10 @@ Define a number parameter.
 
 **Syntax**
 
-paramName = wlNumberParam (ParamID, MinValue, MaxValue,Step, AccessMethod, Scope, UsageMethod, OutOfValuesBehavior);
+```
+paramName = wlNumberParam (ParamID, MinValue, MaxValue,Step, 
+AccessMethod, Scope, UsageMethod, OutOfValuesBehavior);
+```
 
 **Parameters**
 
@@ -10853,10 +10922,10 @@ paramName = wlNumberParam (ParamID, MinValue, MaxValue,Step, AccessMethod, Scope
 | MinValue                 | The minimum value of the number range.                                                                                                                                                                                                                                                                                                                                                                |
 | MaxValue                 | The maximum value of the number range.                                                                                                                                                                                                                                                                                                                                                                |
 | Step                     | The increment between numbers.                                                                                                                                                                                                                                                                                                                                                                        |
-| AccessMethod             | Defines the method for  calculating the next value from the range. All values are enumerated numeric  values. Possible values are:`<br>`wlParamRandom. Gets a random value from  the range.  `<br>`wlParamOrdered. Every client gets the  next value from the range (order  is important).  `<br>`wlParamNotOrdered. Every client gets the  next value from the range (order is not important). |
-| Scope | Defines the scope (  sharing policy) of the parameter. Possible values are:`<br>`wlParamGlobal. All virtual clients read  values from the shared (global )  pool.  `<br>`wlParamLocal. Each virtual client  reads values from its own pool.  `<br>`wlParamGlobalLocked. All virtual clients read unique values from the shared (global  ) pool. |
-| Usage Method | Defines when the parameter  is updated, meaning when a new value will be read. Possible values are:`<br>`WLParamUpdateRound. The script reads a new  value from the file once for each round. Using the same parameter again in the same round will result in  the same value.  `<br>`WLParamUpdateOnce. The script reads a new  value from the file once at the  beginning of the test (in InitClient). All usage of the  parameter by that Virtual Client will always result in the same value.  `<br>`WLParamUpdateUse. The parameter’s value  will be read each time it is used. |
-| OutOfValuesBehavior | Defines how WebLOAD  behaves when it reaches the end of the range. All values are enumerated  numeric values. Possible values are:`<br>`WLParamKeepLast. Keep the last value.  `<br>`WLParamCycle. Start from the beginning  of the range.  `<br>`WLParamStopVC. Abort the specific  Virtual Client that tried to read past the end of the range. An error message  is written  to the log  file. |
+| AccessMethod             | Defines the method for  calculating the next value from the range. All values are enumerated numeric  values. Possible values are:<p></p>- `wlParamRandom`. Gets a random value from  the range.  <p></p>- `wlParamOrdered.` Every client gets the  next value from the range (order  is important).  <p></p>- `wlParamNotOrdered.` Every client gets the  next value from the range (order is not important). |
+| Scope | Defines the scope (  sharing policy) of the parameter. Possible values are:<p></p>-` wlParamGlobal.` All virtual clients read  values from the shared (global )  pool.  <p></p>- `wlParamLocal.` Each virtual client  reads values from its own pool.  <p></p>- `wlParamGlobalLocked.` All virtual clients read unique values from the shared (global  ) pool. |
+| Usage Method | Defines when the parameter  is updated, meaning when a new value will be read. Possible values are:<p></p>- `WLParamUpdateRound.` The script reads a new  value from the file once for each round. Using the same parameter again in the same round will result in  the same value.  <p></p>- `WLParamUpdateOnce.` The script reads a new  value from the file once at the  beginning of the test (in InitClient). All usage of the  parameter by that Virtual Client will always result in the same value.  <p></p>- `WLParamUpdateUse.` The parameter’s value  will be read each time it is used. |
+| OutOfValuesBehavior | Defines how WebLOAD  behaves when it reaches the end of the range. All values are enumerated  numeric values. Possible values are:<p></p>- `WLParamKeepLast.` Keep the last value.  <p></p>- `WLParamCycle.` Start from the beginning  of the range.  <p></p>- `WLParamStopVC.` Abort the specific  Virtual Client that tried to read past the end of the range. An error message  is written  to the log  file. |
 
 **Example**
 
@@ -10864,12 +10933,11 @@ paramName = wlNumberParam (ParamID, MinValue, MaxValue,Step, AccessMethod, Scope
 function InitClient()
 
 {
-
-NewParam1 = wlNumberParam("NewParam1",1, 100, 1, wlParamRandom, wlParamLocal, wlParamUpdateRound, wlParamCycle);
-
+NewParam1 = wlNumberParam("NewParam1",1, 100, 1, wlParamRandom, 
+wlParamLocal, wlParamUpdateRound, wlParamCycle);
 }
-
-/***** WLIDE - Message - ID:3 *****/ InfoMessage(NewParam1.getValue())
+/***** WLIDE - Message - ID:3 *****/ 
+InfoMessage(NewParam1.getValue())
 
 // END WLIDE
 ```
@@ -10880,19 +10948,14 @@ NewParam1 = wlNumberParam("NewParam1",1, 100, 1, wlParamRandom, wlParamLocal, wl
 
 **Description**
 
-The wlOutputFile object writes script output messages to a global output file. Create wlOutputFile objects and manage your files using the constructor and methods described in this section.
+The `wlOutputFile` object writes script output messages to a global output file. Create `wlOutputFile` objects and manage your files using the constructor and methods described in this section.
 
 **Syntax**
 
 ```javascript
-MyFileObj = new wlOutputFile(“*filename”*)
-
+MyFileObj = new wlOutputFile(“filename”)
 …
-
 MyFileObj.Write(“Happy Birthday”)
-
-…
-
 delete MyFileObj
 ```
 
@@ -10915,26 +10978,25 @@ Each individual property includes examples of the syntax for that property.
 You may also use the WebLOAD functions listed here to open and close output files.
 
 * To **open** an output file:
-
-Open(filename)
+        `Open(filename)`
 
 * To **close** an output file:
-
-Close(filename)
-
-When you use the Close() function to close a file data will be flashed to the disk.
-
->  **Note:** Declaring a new wlOutputFile object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a *unique filename* for the new output file if you do not want to overwrite previous script data.
+     `Close(filename)`
 
 
+When you use the `Close()` function to close a file data will be flashed to the disk.
 
-If you declare a new wlOutputFile object in the InitAgenda() function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence-each thread will write to the output file in real time as it reaches that line in the script execution.
+>  **Note:** Declaring a new `wlOutputFile` object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a *unique filename* for the new output file if you do not want to overwrite previous script data.
 
-If you declare a new wlOutputFile object in the InitClient() function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
 
-If you declare a new wlOutputFile object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.
 
-Generally, you should only create new wlOutputFile objects in the InitAgenda() or InitClient() functions of a script, not in the main script. If a statement in the main script creates an object, *a new object is created each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
+If you declare a new `wlOutputFile` object in the `InitAgenda()` function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence-each thread will write to the output file in real time as it reaches that line in the script execution.
+
+If you declare a new `wlOutputFile` object in the `InitClient()` function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
+
+If you declare a new `wlOutputFile` object in the main body of a script, and then run your script for multiple iterations, use the `RoundNum` variable as part of the new filename to be sure that each new round will create a unique output file.
+
+Generally, you should only create new `wlOutputFile` objects in the `InitAgenda()` or `InitClient()` functions of a script, not in the main script. If a statement in the main script creates an object, *a new object is created each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
 
 **See also**
 
@@ -10954,21 +11016,21 @@ Generally, you should only create new wlOutputFile objects in the InitAgenda() o
 
 **Description**
 
-To create a new wlOutputFile object, use the wlOutputFile() constructor.
+To create a new `wlOutputFile` object, use the `wlOutputFile()` constructor.
 
 **Syntax**
 
-new wlOutputFile(filename)
+`new wlOutputFile(filename)`
 
 **Parameters**
 
 | **Parameter Name** | **Description**                      |
 | ------------------------ | ------------------------------------------ |
-| filename                 | Name of the new output file to be created. |
+| `filename`                 | Name of the new output file to be created. |
 
 **Return Value**
 
-A pointer to a new wlOutputFile object.
+A pointer to a new `wlOutputFile` object.
 
 **Example**
 
@@ -10976,15 +11038,15 @@ A pointer to a new wlOutputFile object.
 
 
 
-Declaring a new wlOutputFile object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a *unique filename* for the new output file if you do not want to overwrite previous script data.
+Declaring a new `wlOutputFile` object creates a new, empty output file. If a file of that name already exists, the file will be completely overwritten. Information will not be appended to the end of an existing file. Be sure to choose a *unique filename* for the new output file if you do not want to overwrite previous script data.
 
-If you declare a new wlOutputFile object in the InitAgenda() function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence-each thread will write to the output file in real time as it reaches that line in the script execution.
+If you declare a new `wlOutputFile` object in the InitAgenda() function of a script, the output file will be shared by all the script threads. There is no way to specify a specific thread writing sequence-each thread will write to the output file in real time as it reaches that line in the script execution.
 
-If you declare a new wlOutputFile object in the InitClient() function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
+If you declare a new `wlOutputFile` object in the` InitClient()` function or main body of a script, use the thread number variable as part of the new filename to be sure that each thread will create a unique output file.
 
-If you declare a new wlOutputFile object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.
+If you declare a new `wlOutputFile` object in the main body of a script, and then run your script for multiple iterations, use the RoundNum variable as part of the new filename to be sure that each new round will create a unique output file.
 
-*Ideally*, create new wlOutputFile objects only in the InitAgenda() function of a script, not in the main script. If a statement in the main script creates an object, a new object is created *each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
+*Ideally*, create new `wlOutputFile` objects only in the `InitAgenda()` function of a script, not in the main script. If a statement in the main script creates an object, a new object is created *each time the statement is executed*. If WebLOAD repeats the main script many times, a large number of objects may be created and the system may run out of memory.
 
 **See also**
 
@@ -11007,13 +11069,14 @@ If you declare a new wlOutputFile object in the main body of a script, and then 
 
 **Description**
 
-The wlRand object is a random number generator.
+The `wlRand` object is a random number generator.
 
-wlRand is a local object. WebLOAD automatically creates an independent wlRand
+`wlRand` is a local object. WebLOAD automatically creates an independent `wlRand` object for the test session script. You cannot declare `wlRand` objects yourself.
 
-object for the test session script. You cannot declare wlRand objects yourself.
+**Syntax** 
+`wlRand.Method()`
 
-**Syntax** wlRand.*Method*() **Example**
+**Example**
 
 The following example generates three random numbers having the following possible
 
@@ -11024,18 +11087,16 @@ values:
 * One of the three numbers 0, 1, or 1.5.
 
 ```
-function InitAgenda() 
-
-{ 
-
-wlRand.Seed(23)
-
+function InitAgenda() { 
+    wlRand.Seed(23)
 }
+
+
+AnyInteger = wlRand.Num() 
+OneToNine = wlRand.Range(1, 9)
+OneOfThreeNumbers = wlRand.Select(0, 1, 1.5)
 ```
 
-`AnyInteger = wlRand.Num() OneToNine = wlRand.Range(1, 9)`
-
-OneOfThreeNumbers = wlRand.Select(0, 1, 1.5)
 
 **Methods**
 
@@ -11058,58 +11119,60 @@ OneOfThreeNumbers = wlRand.Select(0, 1, 1.5)
 
 **Description**
 
-Each wlSearchPairs object contains a parsed version of the search attribute string, storing the key/value pairs found in a document’s *URL search strings*. (For key-value pairs found in HTTP *response headers*, see wlHeaders (see [*wlHeaders (object)* ](#wlheaders-object)). Information found in *request headers* is available through the wlHttp.Header (see [*Header (property)* ](#header-property)) property.)
+Each ` wlSearchPairs` object contains a parsed version of the search attribute string, storing the key/value pairs found in a document’s *URL search strings*. (For key-value pairs found in HTTP *response headers*, see wlHeaders (see [*wlHeaders (object)* ](#wlheaders-object)). Information found in *request headers* is available through the `wlHttp.Header` (see [*Header (property)* ](#header-property)) property.)
 
-wlSearchPairs objects are grouped into wlSearchPairs collections, where the collections are themselves properties of the link and location objects.
+` wlSearchPairs` objects are grouped into ` wlSearchPairs` collections, where the collections are themselves properties of the link and location objects.
 
-wlSearchPairs objects are local to a single thread. You cannot create new wlSearchPairs objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. wlSearchPairs properties are read only.
+` wlSearchPairs` objects are local to a single thread. You cannot create new ` wlSearchPairs` objects using the JavaScript new operator, but you can access them through the properties and methods of the standard DOM objects. ` wlSearchPairs` properties are read only.
 
 **Syntax**
 
-wlSearchPairs objects are grouped together within collections of wlSearchPairs. To access an individual wlSearchPairs’s properties, check the length property of the wlSearchPairs collection and use an index number to access the individual wlSearchPairs object, with the following syntax:
+` wlSearchPairs` objects are grouped together within collections of ` wlSearchPairs`. To access an individual ` wlSearchPairs`’s properties, check the length property of the ` wlSearchPairs` collection and use an index number to access the individual ` wlSearchPairs` object, with the following syntax:
 
 `NumberofSearchPairObjects = document.links[1].wlSearchPairs.length` 
 
-`document.links[1].wlSearchPairs[*index*#].<*wlSearchPairs-property*>`
+`document.links[1].wlSearchPairs[index#].<wlSearchPairs-property>`
 
 **Example**
 
-To find out how many wlSearchPairs objects are contained within a document’s link, check the value of:
+To find out how many ` wlSearchPairs` objects are contained within a document’s link, check the value of:
 
-document.links[1].wlSearchPairs.length
+`document.links[1].wlSearchPairs.length`
 
-Access each wlSearchPairs’s properties directly through the index number of that item. For example:
+Access each ` wlSearchPairs`’s properties directly through the index number of that item. For example:
 
-document.links[1].wlSearchPairs[0].key
+`document.links[1].wlSearchPairs[0].key`
 
 Suppose that the third link on a Web page has the following HTML code:
 
-<A [href=“http://www.ABCDEF.com/ProductFind.exe?](http://www.ABCDEF.com/ProductFind.exe)
-
-Product=modems&Type=ISDN”> ISDN Modems `</A>`
-
+```
+<A href=“http://www.ABCDEF.com/ProductFind.exe?
+         Product=modems&Type=ISDN”> ISDN Modems `</A>`
+```
 You can download the page and parse the links using the following script:
 
 ```javascript
 function InitAgenda() {
-
-wlGlobals.Url = "http://www.ABCDEF.com"
-
-//Enable link parsing wlGlobals.ParseLinks = true
-
+  wlGlobals.Url = "http://www.ABCDEF.com"
+  //Enable link parsing 
+  wlGlobals.ParseLinks = true
 }
-
 wlHttp.Get()
 ```
 
 
-For the link in question, WebLOAD stores the attribute pairs in the document.links[2].wlSearchPairs property. This property is actually a collection containing two wlSearchPairs objects. The following is a complete listing of the collection.
+For the link in question, WebLOAD stores the attribute pairs in the `document.links[2].wlSearchPairs  property. This property is actually a collection containing two ` wlSearchPairs` objects. The following is a complete listing of the collection.
 
-document.links[2].wlSearchPairs[0].key = “Product” document.links[2].wlSearchPairs[0].value = “modems” document.links[2].wlSearchPairs[1].key = “Type” document.links[2].wlSearchPairs[1].value = “ISDN”
+```
+document.links[2].wlSearchPairs[0].key = “Product” 
+document.links[2].wlSearchPairs[0].value = “modems” 
+document.links[2].wlSearchPairs[1].key = “Type” 
+document.links[2].wlSearchPairs[1].value = “ISDN”
+```
 
 **Properties**
 
-The wlSearchPairs object includes the following properties:
+The ` wlSearchPairs` object includes the following properties:
 
 * key (see [*key (property)* ](#key-property))
 * value (see [*value (property)* ](#value-property))
@@ -11129,7 +11192,7 @@ The wlSearchPairs object includes the following properties:
 
 **Method of Objects**
 
-The wlHttp object includes the following collections for storing data. These data storage collections each include the method wlSet().
+The `wlHttp` object includes the following collections for storing data. These data storage collections each include the method `wlSet()`.
 
 * wlHttp.Data (see [*Data (property)* ](#data-property))
 * wlHttp.DataFile (see [*DataFile (property)* ](#datafile-property))
@@ -11138,48 +11201,48 @@ The wlHttp object includes the following collections for storing data. These dat
 
 **Description**
 
-wlSet() is used when assigning a value to an element in the collection, to distinguish between keywords and user-defined variables that share the same names. The need for this care is explained in this section.
+`wlSet()` is used when assigning a value to an element in the collection, to distinguish between keywords and user-defined variables that share the same names. The need for this care is explained in this section.
 
 **Syntax**
 
-wlHttp.*Collection*.wlSet(FieldName, Value)
+`wlHttp.Collection.wlSet(FieldName, Value)`
 
 **Parameters**
 
 | **Parameter Name** | **Description**                                          |
 | ------------------------ | -------------------------------------------------------------- |
-| FieldName                | A string with the name of the field whose value is  to be set. |
-| Value                    | The value to be assigned to the specified  field.              |
+| `FieldName`                | A string with the name of the field whose value is  to be set. |
+| `Value`                    | The value to be assigned to the specified  field.              |
 
 **Return Value**
 
 The value of the specified property.
 
-**Example** wlHttp.FormData.wlSet(“FirstName”, “Bill”) **Comment**
+**Example** 
 
-In JavaScript, users may work interchangeably with either an array[index] or
+`wlHttp.FormData.wlSet(“FirstName”, “Bill”)`
 
-array.index notation. For example, the following two references are interchangeable:
+ **Comment**
 
-wlHttp.FormData[“Sunday”]
+In JavaScript, users may work interchangeably with either an `array[index]` or `array.index` notation. For example, the following two references are interchangeable:
+
+`wlHttp.FormData[“Sunday”]`
 
 -Or-
 
-wlHttp.FormData.Sunday
+`wlHttp.FormData.Sunday`
 
-This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called length. This could lead to a confusing situation, where the word length appearing in a script could represent either the number of elements in a FormData array, as explained in length, or the value of the length field in the form. Errors would arise from a reasonable assignment statement such as:
+This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called `length`. This could lead to a confusing situation, where the word `length` appearing in a script could represent either the number of elements in a `FormData` array, as explained in length, or the value of the `length` field in the form. Errors would arise from a reasonable assignment statement such as:
 
-wlHttp.FormData[“length”] = 7
+`wlHttp.FormData[“length”] = 7`
 
 This is equivalent to the illegal assignment statement:
 
-wlHttp.FormData.length = 7
+`wlHttp.FormData.length = 7`
 
-WebLOAD therefore uses wlSet() to set field data whenever the name could lead to potential ambiguity. When recording scripts with the AAT, WebLOAD recognizes
+WebLOAD therefore uses `wlSet()` to set field data whenever the name could lead to potential ambiguity. When recording scripts with the AAT, WebLOAD recognizes potential ambiguities and inserts the appropriate `wlSet()` statements automatically. In this case:
 
-potential ambiguities and inserts the appropriate wlSet() statements automatically. In this case:
-
-wlHttp.FormData.wlSet(“length”, 7)
+`wlHttp.FormData.wlSet(“length”, 7)`
 
 **See also**
 
@@ -11204,9 +11267,13 @@ The complete HTML source code of the frame (read-only string).
 
 You can use the HTML source to search for any desired information in an HTML page. For information on JavaScript searching capabilities, see *Regular Expressions* in the *Netscape JavaScript Guide*, which is supplied with the WebLOAD software.
 
-**Syntax** document.wlSource **Comment**
+**Syntax** 
 
-To use the HTML source, you must enable the SaveSource (see [*SaveSource (property)* ](#savesource-property)) property of the wlGlobals, wlLocals, or wlHttp object. To save the source in a file, use the Outfile property (see [*Outfile (property)* ](#outfile-property)).
+`document.wlSource`
+
+**Comment**
+
+To use the HTML source, you must enable the SaveSource (see [*SaveSource (property)* ](#savesource-property)) property of the `wlGlobals`, `wlLocals`, or `wlHttp` object. To save the source in a file, use the Outfile property (see [*Outfile (property)* ](#outfile-property)).
 
 **See also**
 
@@ -11253,7 +11320,7 @@ Define a random string parameter.
 
 **Syntax**
 
-`<varName>` = wlStringParam(minLength, maxLength, usage)
+`<varName> = wlStringParam(minLength, maxLength, usage)`
 
 **Parameters**
 
@@ -11261,21 +11328,22 @@ Define a random string parameter.
 | ------------------------ | -------------------------------------------------- |
 | minLength                | The minimum string length (number of characters),  |
 | maxLength                | The maximum string length (number of  characters). |
-| usage | Defines when the parameter  is updated, meaning when a new value will be calculated. Possible values are:`<br>`wlParamUpdateRound. The parameters value  will be calculated once for each round. Using the same parameter again in the same round will result with the same value.  `<br>`wlParamUpdateOnce. The parameter’s value  will be calculated once per each Virtual Client (in its InitClient function). All usage of  the parameter by that Virtual Client will always result in the same value.  `<br>`wlParamUpdateUse. The parameter’s value  will be calculated each time it is used. |
+| usage | Defines when the parameter  is updated, meaning when a new value will be calculated. Possible values are:<p></p>- `wlParamUpdateRound`. The parameters value  will be calculated once for each round. Using the same parameter again in the same round will result with the same value.  <p></p>- `wlParamUpdateOnce`. The parameter’s value  will be calculated once per each Virtual Client (in its InitClient function). All usage of  the parameter by that Virtual Client will always result in the same value.  <p></p>- `wlParamUpdateUse`. The parameter’s value  will be calculated each time it is used. |
 
 **Example**
 
-`function InitClient()`
+```javascript
+function InitClient()
+{
+NewParam1 = wlStringParam(2, 7, wlParamUpdateUse);
+}
 
-`{`
+/***** WLIDE - Message - ID:3 *****/ 
+InfoMessage(NewParam1.getValue())
 
-`NewParam1 = wlStringParam(2, 7, wlParamUpdateUse);`
+// END WLIDE
 
-`}`
-
-`/***** WLIDE - Message - ID:3 *****/ InfoMessage(NewParam1.getValue())`
-
-`// END WLIDE`
+```
 
 
 
@@ -11283,15 +11351,11 @@ Define a random string parameter.
 
 **Description**
 
-WebLOAD provides a global object called wlSystemGlobal. The wlSystemGlobal object enables sharing of global variables and values between all elements of a test session, across multiple scripts running on multiple Load Generators. (Compare to the wlGeneratorGlobal (see [*wlGeneratorGlobal (object)* ](#wlgeneratorglobal-object)), which enables sharing of global variables and values between all threads of a single Load Generator, and to the wlGlobals (see [*w*](#parseonce-property)[*lGlobals (object)* ](#parseonce-property)), which enables sharing of global variables and values between all threads of a single script, running on a single Load Generator.)
+WebLOAD provides a global object called `wlSystemGlobal`. The `wlSystemGlobal` object enables sharing of global variables and values between all elements of a test session, across multiple scripts running on multiple Load Generators. (Compare to the wlGeneratorGlobal (see [*wlGeneratorGlobal (object)* ](#wlgeneratorglobal-object)), which enables sharing of global variables and values between all threads of a single Load Generator, and to the wlGlobals (see [*w*](#parseonce-property)[*lGlobals (object)* ](#parseonce-property)), which enables sharing of global variables and values between all threads of a single script, running on a single Load Generator.)
 
 Globally shared variables are useful when tracking a value or maintaining a count across multiple threads or platforms. For example, you may include these shared values in the messages sent to the Log window during a test session.
 
-WebLOAD creates exactly one wlSystemGlobal object per a test session. Use the wlSystemGlobal object methods to create and access variable values that you wish to share system-wide. Edit wlSystemGlobal object properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
-
-While global variables may be accessed anywhere in your script, be sure to initially declare wlSystemGlobal values in the InitAgenda() *function only*. Do not define
-
-new values within the main body of a script, for they will not be shared correctly by all threads.
+WebLOAD creates exactly one `wlSystemGlobal` object per a test session. Use the `wlSystemGlobal` object methods to create and access variable values that you wish to share system-wide. Edit `wlSystemGlobal` object properties and methods through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor). While global variables may be accessed anywhere in your script, be sure to initially declare `wlSystemGlobal` values in the `InitAgenda()` *function only*. Do not define new values within the main body of a script, for they will not be shared correctly by all threads.
 
 **Methods**
 
@@ -11301,7 +11365,7 @@ new values within the main body of a script, for they will not be shared correct
 
 **Properties**
 
-wlSystemGlobal incorporates a dynamic property set that consists of whatever global variables have been defined, set, and accessed by the user through the wlSystemGlobal method set only.
+`wlSystemGlobal` incorporates a dynamic property set that consists of whatever global variables have been defined, set, and accessed by the user through the `wlSystemGlobal` method set only.
 
 **See also**
 
@@ -11313,33 +11377,36 @@ wlSystemGlobal incorporates a dynamic property set that consists of whatever glo
 
 **Property of Object**
 
-TABLE objects on a Web page are accessed through wlTables objects that are grouped into collections of wlTables. The wlTables collection is a property of the following object:
+TABLE objects on a Web page are accessed through `wlTables` objects that are grouped into collections of `wlTables`. The `wlTables` collection is a property of the following object:
 
 * document (see [*document (object)* ](#document-object))
 
 **Description**
 
-Each wlTables object contains the parsed data for an HTML table (`<TABLE>` tag), and serves as a means of providing access to the cells of the HTML table. Because table data is organized into rows and cells, the wlTables object is also linked to row and cell objects and their properties.
+Each `wlTables` object contains the parsed data for an HTML table (`<TABLE>` tag), and serves as a means of providing access to the cells of the HTML table. Because table data is organized into rows and cells, the `wlTables` object is also linked to row and `cell` objects and their properties.
 
-wlTables objects are grouped together within collections of wlTables. The tables are arranged in the order in which they appear on the HTML page.
+`wlTables` objects are grouped together within collections of `wlTables`. The tables are arranged in the order in which they appear on the HTML page.
 
 **Syntax**
 
-To access an individual wlTables’s properties, check the length property of the wlTables collection and use an index number to access the individual wlTables object, with the following syntax:
+To access an individual `wlTables`’s properties, check the length property of the `wlTables` collection and use an index number to access the individual `wlTables` object, with the following syntax:
 
-NumberofTableObjects = document.wlTables.length document.wlTables[*index*#].`<*wlTables-property*>`
+```
+NumberofTableObjects = document.wlTables.length 
+document.wlTables[index#].<wlTables-property>
+```
 
 **Example**
 
-Access each wlTables’s properties directly through the index number of that item. For example:
+Access each `wlTables`’s properties directly through the index number of that item. For example:
 
-document.wlTables[0].cols
+`document.wlTables[0].cols`
 
-wlTables objects may also be accessed directly using the table ID. This is illustrated in the *id* property description.
+`wlTables` objects may also be accessed directly using the table ID. This is illustrated in the *id* property description.
 
 **Properties**
 
-Each wlTables object contains information about the data found in the whole table, organized by rows, columns, and cells. The wlTables object includes the following properties:
+Each `wlTables` object contains information about the data found in the whole table, organized by rows, columns, and cells. The `wlTables` object includes the following properties:
 
 * cell
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
@@ -11350,15 +11417,8 @@ Each wlTables object contains information about the data found in the whole tabl
 
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
-*
-
-
-* 
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
-* 
-
-
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property) (row property)
 * tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 
@@ -11380,9 +11440,9 @@ The exact location within the Web page of the frame into which the transaction s
 
 **Comment**
 
-wlTarget uses the WebLOAD shorthand notation, described in the *WebLOAD Scripting Guide*. For example, assume the expected location is set to #1.#1. Since frame numbering begins with 0, this refers to the second subframe located within the second frame on the Web page. Neither frame has been assigned an optional name value.
+`wlTarget` uses the WebLOAD shorthand notation, described in the *WebLOAD Scripting Guide*. For example, assume the expected location is set to #1.#1. Since frame numbering begins with 0, this refers to the second subframe located within the second frame on the Web page. Neither frame has been assigned an optional name value.
 
-The wlHttp.wlTarget property of a transaction stores the complete path of the frame, from the root window of the Web page. Compare this to the form.target and link.target properties, which identify the most recent, immediate location of the target frame using the name string or keyword that was assigned to that frame. The last field of the wlHttp.wlTarget string is the target name stored in the form.target and link.target properties.
+The `wlHttp.wlTarget` property of a transaction stores the complete path of the frame, from the root window of the Web page. Compare this to the `form.target` and `link.target` properties, which identify the most recent, immediate location of the target frame using the name string or keyword that was assigned to that frame. The last field of the `wlHttp.wlTarget` string is the target name stored in the `form.target` and `link.target` properties.
 
 
 
@@ -11400,22 +11460,20 @@ Return the current date and/or time according to the format specified in the par
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format                   | Formats are comprised from symbols, prefixed with  the ‘%’ sign and from textual characters.  The following are the  symbols used to create the date/time formats:`<br>`c – complete date time as number  `<br>`H – Hours (24 hour clock)  `<br>`I – Hours (12 hour clock)  `<br>`M – minutes  `<br>`S – seconds (S.000 –  seconds with milliseconds)  `<br>`p – AM or PM  `<br>`d – day in month (number)  `<br>`m – month (number)  `<br>`y – year (2 digits)  `<br>`Y – year (4 digits)  `<br>`b – month name (3 letter)  `<br>`B – month name (full)  The following are the formats available to the  user:  `<br>`%c  `<br>`%H:%M:%S  `<br>`%I:%M:%S %p  `<br>`%d-%b-%Y  `<br>`%d/%m/%y  `<br>`%m/%d/%y  `<br>`%d/%m/%Y  `<br>`%m/%d/%Y  `<br>`%Y-%m-%d %H:%M:%S  `<br>`%Y-%m-%d %H:%M:%S.000 |
-| offset                   | The offset in days and  time. The offset can be used so the parameter will not consider the current  date but another date in the future or in the past.  A negative value indicates a date/time prior to  current date/time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| usage | Defines when the parameter  is updated, i.e., when a new value will be calculated.  Possible values are:`<br>`wlParamUpdateRound. The parameters value  will be calculated once for each round. Using the same parameter again in the  same round will result in the same value.  `<br>`wlParamUpdateOnce. The parameter’s value  will be calculated once per each Virtual Client (in its InitClient function). Every usage of  the parameter by that Virtual Client  will always result in the same value.  `<br>`wlParamUpdateUse. The parameter’s value  will be calculated each time it is used. |
+| `format`                   | Formats are comprised from symbols, prefixed with  the ‘%’ sign and from textual characters.  The following are the  symbols used to create the date/time formats:<p></p>- c – complete date time as number  <p></p>- H – Hours (24 hour clock)  <p></p>- I – Hours (12 hour clock)  <p></p>- M – minutes  <p></p>- S – seconds (S.000 –  seconds with milliseconds)  <p></p>- p – AM or PM  <p></p>- d – day in month (number)  <p></p>- m – month (number)  <p></p>- y – year (2 digits)  <p></p>- Y – year (4 digits)  <p></p>- b – month name (3 letter)  <p></p>- B – month name (full)<p></p>  The following are the formats available to the  user:  <p></p>- %c  <p></p>- %H:%M:%S  <p></p>- %I:%M:%S %p  <p></p>- %d-%b-%Y  <p></p>- %d/%m/%y  <p></p>- %m/%d/%y  <p></p>- %d/%m/%Y  <p></p>- %m/%d/%Y  <p></p>- %Y-%m-%d %H:%M:%S  <p></p>- %Y-%m-%d %H:%M:%S.000 |
+| `offset`                   | The offset in days and  time. The offset can be used so the parameter will not consider the current  date but another date in the future or in the past.<p></p> A negative value indicates a date/time prior to  current date/time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `usage` | Defines when the parameter  is updated, i.e., when a new value will be calculated.  Possible values are:<p></p>- `wlParamUpdateRound`. The parameters value  will be calculated once for each round. Using the same parameter again in the  same round will result in the same value.  <p></p>- `wlParamUpdateOnce`. The parameter’s value  will be calculated once per each Virtual Client (in its InitClient function). Every usage of  the parameter by that Virtual Client  will always result in the same value.  <p></p>- `wlParamUpdateUse`. The parameter’s value  will be calculated each time it is used. |
 
 **Example**
 
 ```javascript
 function InitClient()
-
 {
-
-NewParam1 = wlTimeParam("%Y-%m-%d %H:%M:%S", 1200, wlParamUpdateRound);
-
+NewParam1 = wlTimeParam("%Y-%m-%d %H:%M:%S", 1200, 
+wlParamUpdateRound);
 }
-
-/***** WLIDE - Message - ID:3 *****/ InfoMessage(NewParam1.getValue())
+/***** WLIDE - Message - ID:3 *****/ 
+InfoMessage(NewParam1.getValue())
 
 // END WLIDE
 ```
@@ -11426,13 +11484,13 @@ NewParam1 = wlTimeParam("%Y-%m-%d %H:%M:%S", 1200, wlParamUpdateRound);
 
 **Description**
 
-The wlverification object stores the response validation properties set by the user through the WebLOAD Recorder, including HTML Web page title, text within a Web page, time taken to load a Web page, and size of a Web page (in bytes).
+The `wlverification` object stores the response validation properties set by the user through the WebLOAD Recorder, including HTML Web page title, text within a Web page, time taken to load a Web page, and size of a Web page (in bytes).
 
  **Note:** Most global configuration property values and user-defined variables should be set through the WebLOAD Recorder. The property descriptions here are intended mainly to explain the lines of code seen in the JavaScript View of the WebLOAD Recorder desktop. Syntax details are also provided for the benefit of users who prefer to manually edit the JavaScript code of their scripts through the IntelliSense editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
 
 **Properties**
 
-The wlVerification object includes the following property classes:
+The `wlVerification` object includes the following property classes:
 
 * *Page Time*
 * *Page Content Length*
@@ -11453,7 +11511,7 @@ Each individual property class includes the syntax specifications that apply to 
 
 **GUI mode**
 
-The wlVerification property and method descriptions explain how to explicitly set values for these response validations within your JavaScript script files.
+The `wlVerification` property and method descriptions explain how to explicitly set values for these response validations within your JavaScript script files.
 
 The recommended way to set response validation values is through the WebLOAD Recorder, using the Response Validation dialog box accessed from the **Home** tab in the WebLOAD Recorder desktop ribbon. The dialog box provide a means of defining and setting response validation values with ease, simplicity, and clarity.
 
@@ -11490,9 +11548,9 @@ The HTTP protocol version, which WebLOAD retrieves from the HTTP header (read- o
 
 **Description**
 
-Call WLXmlDocument() without any parameters to create a new, blank XML DOM object. The new object may be filled later with any new data you prefer. If the DTD section of your XML document includes any external references, use this form of the WLXmlDocument() constructor to create new XML DOM objects. You may add nodes and post the new XML data to a website as described in the *WebLOAD Scripting Guide*.
+Call `WLXmlDocument()` without any parameters to create a new, blank XML DOM object. The new object may be filled later with any new data you prefer. If the DTD section of your XML document includes any external references, use this form of the `WLXmlDocument()` constructor to create new XML DOM objects. You may add nodes and post the new XML data to a website as described in the *WebLOAD Scripting Guide*.
 
-Call WLXmlDocument() with a string parameter to create new XML DOM objects from an XML string that includes a completely self-contained DTD section with no external references.
+Call `WLXmlDocument()` with a string parameter to create new XML DOM objects from an XML string that includes a completely self-contained DTD section with no external references.
 
 **Syntax**
 
@@ -11502,7 +11560,7 @@ Call WLXmlDocument() with a string parameter to create new XML DOM objects from 
 
 | **Parameter Name** | **Description**                                                         |
 | ------------------------ | ----------------------------------------------------------------------------- |
-| [xmlString]              | Optional string parameter that contains a complete  set of XML document data. |
+| `[xmlString]`              | Optional string parameter that contains a complete  set of XML document data. |
 
 **Return Value**
 
@@ -11510,7 +11568,7 @@ Returns a new XML DOM object. If the constructor was called with no parameters, 
 
 **Example**
 
-NewBlankXMLObj = new WLXmlDocument()
+`NewBlankXMLObj = new WLXmlDocument()`
 
 -Or-
 
@@ -11518,17 +11576,17 @@ NewBlankXMLObj = new WLXmlDocument()
 
 **Comment**
 
-Objects created by the WLXmlDocument() constructor provide access to the XML DOM Document Interface. They do not expose the HTML property set, (id, innerHTML, and src), as those properties have no meaning for XML DOM objects created this way.
+Objects created by the `WLXmlDocument()` constructor provide access to the XML DOM Document Interface. They do not expose the HTML property set, (`id`, `innerHTML`, and `src`), as those properties have no meaning for XML DOM objects created this way.
 
 **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#id-property))
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
-* load() (see [*load() (method)* ](#load-method)
+* load() (see [*load() (method)* ](#load-method))
 * [*load() and loadXML() Method Comparison* ](#load-and-loadxml-method-comparison)
-* loadXML() (see [*loadXML() (method)* ](#loadxml-method)
-* src (see [*src (property)* ](#src-property)
+* loadXML() (see [*loadXML() (method)* ](#loadxml-method))
+* src (see [*src (property)* ](#src-property))
 * XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property))
 
 
@@ -11541,42 +11599,43 @@ Objects created by the WLXmlDocument() constructor provide access to the XML DOM
 
 **Description**
 
-WebLOAD has extended the standard IE Browser DOM document object with the wlXmls collection of XML DOM objects, providing full access to XML structures. Using XML DOM objects, WebLOAD scripts are able to both *access* XML site information, and *generate new XML data* to send back to the server for processing, taking advantage of all the additional benefits that XML provides.
+WebLOAD has extended the standard IE Browser DOM `document` object with the `wlXmls` collection of XML DOM objects, providing full access to XML structures. Using XML DOM objects, WebLOAD scripts are able to both *access* XML site information, and *generate new XML data* to send back to the server for processing, taking advantage of all the additional benefits that XML provides.
 
 Both WebLOAD and the IE Browser use the MSXML parser to create XML DOM objects. Since WebLOAD XML DOM objects and Browser XML DOM objects are created by the same MSXML parser, the XML DOM objects that are produced for both WebLOAD and the IE Browser are identical.
 
-When working through the IE Browser, XML DOM objects are found in the all collection. When working through WebLOAD, XML DOM objects are found in the wlXmls collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.
+When working through the IE Browser, XML DOM objects are found in the all collection. When working through WebLOAD, XML DOM objects are found in the `wlXmls` collection. Since a WebLOAD XML DOM object is identical to an IE Browser XML DOM object, the WebLOAD XML DOM uses the same Document Interface (programming methods and properties) found in the IE Browser XML DOM.
 
-This section describes the wlXmls collection and the properties and methods used most often when working with WebLOAD XML DOM objects. For an explanation of the XML DOM, see the *WebLOAD Scripting Guide*. For a complete list of the XML DOM properties and methods supported by WebLOAD, see *WebLOAD-supported XML DOM Interfaces* .
+This section describes the `wlXmls` collection and the properties and methods used most often when working with WebLOAD XML DOM objects. For an explanation of the XML DOM, see the *WebLOAD Scripting Guide*. For a complete list of the XML DOM properties and methods supported by WebLOAD, see *WebLOAD-supported XML DOM Interfaces* .
 
  **Note:** WebLOAD supports a new method for parsing and manipulating XML data. For more information see [*XML Parser Object* ](../javascript/xmlparser.md#xml-parser-object)
+
+
 **Syntax**
 
-XML DOM objects are grouped together within wlXmls collections. The XML DOM objects are arranged in the order in which they appear on the HTML page.
+XML DOM objects are grouped together within `wlXmls` collections. The XML DOM objects are arranged in the order in which they appear on the HTML page.
 
-To access an individual XML DOM object’s data and Document Interface, check the length property of the wlXmls collection and use an index number to access the individual XML DOM object.
+To access an individual XML DOM object’s data and Document Interface, check the length property of the `wlXmls` collection and use an index number to access the individual XML DOM object.
 
 Access the *HTML properties* for each XML DOM object directly using the following syntax:
 
-document.wlXmls[#].`<*html-DOM property*>`
+`document.wlXmls[#].<html-DOM property>`
 
 Access the *XML DOM Document Interface* for each document element directly using the following syntax:
 
-document.wlXmls[#].XMLDocument.documentElement.`<*property*>`
+`document.wlXmls[#].XMLDocument.documentElement.<property>`
 
 **Example**
 
 To find out how many XML DOM objects are contained within a document, check the value of:
 
 `document.wlXmls.length`
-
 Access the HTML property src as follows:
 
 `document.wlXmls[0].src`
 
 Access the XML DOM document interface as follows:
 
-document.wlXmls[0].XMLDocument.documentElement.nodeName
+`document.wlXmls[0].XMLDocument.documentElement.nodeName`
 
 XML DOM objects may also be accessed directly using the XML ID. For example, if the first XML object on a page is assigned the ID tag myXmlDoc, you could access the object using any of the following:
 
@@ -11593,36 +11652,22 @@ XML DOM objects may also be accessed directly using the XML ID. For example, if 
 The following example illustrates HTML property usage. Assume you are working with a Web Bookstore site that includes the following inventory database code fragment:
 
 ```xml
+
 <xml ID="xmlBookSite">
-
 <?xml version="1.0”?>
-
 <!-- Bookstore inventory database -->
-
-<bookstore>
-
-JavaScript Reference Guide
-
-`<author>`Mark Twain `</author>`
-
-<title>Tom Sawyer</title>
-
-`<price>`$11.00 `</price>`
-
-</book>
-
-JavaScript Reference Guide
-
-`<author>`Oscar Wilde `</author>`
-
-<title>The Giant And His Garden</title>
-
-`<price>`$8.00 `</price>`
-
-</book>
-
-</bookstore>
-
+  <bookstore>
+    JavaScript Reference Guide
+    <author>Mark Twain</author>
+    <title>Tom Sawyer</title>
+    <price>$11.00 </price>
+  </book>
+  JavaScript Reference Guide
+    <author>Oscar Wilde </author>
+    <title>The Giant And His Garden</title>
+    <price>$8.00 </price>
+  </book>
+ </bookstore>
 </xml>
 ```
 
@@ -11630,23 +11675,22 @@ When accessing this website, your script may use the standard HTML properties id
 
 ```
 var XMLBookstoreDoc = document.wlXmls[0] 
-
 InfoMessage(“ID = “ + XMLBookstoreDoc.id) 
-
 InfoMessage(“HTML text = “ + XMLBookstoreDoc.innerHTML)
 ```
 
 Running this script produces the following output:
 
-`ID = xmlBookSite`
-
-`HTML text = <?xml version="1.0”?>`
-
+```
+ID = xmlBookSite`
+HTML text = <?xml version="1.0”?>`
 …etc.
+
+```
 
 **Methods and Properties**
 
-WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#id-property)), InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)), and src (see [*src (property)* ](#src-property) HTML properties are exposed. Each property is described in its own section.
+WebLOAD supports all standard W3C XML DOM properties and methods, listed in *WebLOAD-supported XML DOM Interfaces* . These HTML properties and methods are accessed via the XMLDocument (see [*XMLDocument (property)* ](#xmldocument-property)) property. In addition, if the object is constructed from a Data Island, the id (see [*id (property)* ](#id-property)), InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)), and src (see [*src (property)* ](#src-property)) HTML properties are exposed. Each property is described in its own section.
 
 * id (see [*id (property)* ](#id-property))
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property))
@@ -11675,70 +11719,24 @@ WebLOAD supports all standard W3C XML DOM properties and methods, listed in *Web
 This method writes a string to the output file.
 
 
-
 **Parameters**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| **Parameter Name** | **Description**                                |
+| ------------------ | ---------------------------------------------- |
+| string             | The text string you wish added to the  output. |
 
 
 **Syntax** 
 
-Write(string) 
+`Write(string)` 
 
 **Example**
 
-MyFileObj = new wlOutputFile(*filename*)
-
+```
+MyFileObj = new wlOutputFile(filename)
 …
-
 MyFileObj.Write(“Happy Birthday”)
+```
 
 **See also**
 
@@ -11767,7 +11765,6 @@ MyFileObj.Write(“Happy Birthday”)
 This method writes a string followed by a newline character to the output file.
 
 
-
 **Syntax** 
 
 `Writeln(string)` 
@@ -11780,11 +11777,11 @@ This method writes a string followed by a newline character to the output file.
 
 **Example**
 
-`MyFileObj = new wlOutputFile(*filename*)`
-
+```
+MyFileObj = new wlOutputFile(filename)
 …
-
-`MyFileObj.Writeln(“Happy Birthday”)`
+MyFileObj.Writeln(“Happy Birthday”)
+```
 
 **See also**
 
@@ -11809,7 +11806,7 @@ This method writes a string followed by a newline character to the output file.
 
 **Description**
 
-The XMLDocument property represents the actual XML DOM object. Through XMLDocument you are able to access all the standard XML DOM properties and methods listed in *WebLOAD-Supported XML DOM Interfaces* .
+The `XMLDocument` property represents the actual XML DOM object. Through `XMLDocument` you are able to access all the standard XML DOM properties and methods listed in *WebLOAD-Supported XML DOM Interfaces* .
 
  **Note:** WebLOAD supports a new method for parsing and manipulating XML data. For more information see [*XML Parser Object* ](../javascript/xmlparser.md#xml-parser-object)
 
@@ -11817,17 +11814,17 @@ The XMLDocument property represents the actual XML DOM object. Through XMLDocume
 
 Use the following syntax:
 
-`document.wlXmls[#].XMLDocument.documentElement.<*property*>` 
+`document.wlXmls[#].XMLDocument.documentElement.<property>` `XMLDocument` is also understood by default. You may access the XML DOM properties and methods without including XMLDocument in the object reference. For example:
 
-XMLDocument is also understood by default. You may access the XML DOM properties and methods without including XMLDocument in the object reference. For
+`document.wlXmls[0].documentElement.<property>`
 
-example:
+However, including `XMLDocument` is a good programming practice, to emphasize the fact that you are dealing directly with an XML DOM object and not a Data Island.
 
-document.wlXmls[0].documentElement.*`<property>`*
+**Example** 
 
-However, including XMLDocument is a good programming practice, to emphasize the fact that you are dealing directly with an XML DOM object and not a Data Island.
+`document.wlXmls[0].XMLDocument.documentElement.nodeName`
 
-**Example** document.wlXmls[0].XMLDocument.documentElement.nodeName **See also**
+ **See also**
 
 * [*Collections* ](./using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#id-property))
@@ -11848,7 +11845,7 @@ The XML parser object can be used to reference any element in an XML document. F
 
 WebLOAD uses the Open Source Xerces XML parser (see [http://xml.apache.org/xerces-c/](http://xml.apache.org/xercesc/)).
 
-The parse() method, not exposed by the original XML parser, is exposed by WebLOAD. This method is identical to the parseURI() method, except that it receives an XML string instead of a URI.
+The `parse()` method, not exposed by the original XML parser, is exposed by WebLOAD. This method is identical to the` parseURI()` method, except that it receives an XML string instead of a URI.
 
 For more information on the XMLParserObject see [*XML Parser Object* ](../javascript/xmlparser.md#xml-parser-object).
 
@@ -11856,13 +11853,11 @@ For more information on the XMLParserObject see [*XML Parser Object* ](../javasc
 
 The XML parser object is instanced as follows:
 
-xmlObject = new XMLParserObject();
+`xmlObject = new XMLParserObject();`
 
 **Example**
 
-For a detailed example of the implementation of the XML parser object, refer to
-
-[*Example* ](./xmlparser.md#example)
+For a detailed example of the implementation of the XML parser object, refer to [*Example* ](./xmlparser.md#example)
 
 **Methods and Properties**
 
