@@ -4584,7 +4584,6 @@ The `InnerHTML` property for `cell` objects is written in uppercase.
 * load() (see [*load() (method)* ](#load-method)
 * loadXML() (see [*loadXML() (method)* ](#loadxml-method))
 * [*load() and loadXML() Method Comparison* ](#load-and-loadxml-method-comparison)
-
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property) (row property)
 * src (see [*src (property)* ](#src-property))
@@ -4959,15 +4958,14 @@ WebLOAD supports both the `load()` and the `loadXML()` methods to provide the us
 
 **Comment**
 
-If you wish to measure the time it took to load the XML document using the load() method, create a timer whose results will appear in the WebLOAD statistics. For example:
+If you wish to measure the time it took to load the XML document using the `load()` method, create a timer whose results will appear in the WebLOAD statistics. For example:
 
-`myXMLDoc = document.wlXmls[0]`
-
-`SetTimer(“GetXMLTime”)`
-
-`myXMLdoc.load(“http://server/xmls/file.xml”)`
-
-`SendTimer(“GetXMLTime”)`
+```
+myXMLDoc = document.wlXmls[0]
+SetTimer(“GetXMLTime”)
+myXMLdoc.load(“http://server/xmls/file.xml”)
+SendTimer(“GetXMLTime”)
+```
 
 **See also**
 
@@ -5561,10 +5559,10 @@ function InitClient()
 
 | **Parameter Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| AccessMethod             | An optional parameter that  defines the method for reading the next value/row from the file. All values  are enumerated numeric values. Possible values are:<p></p>- `WLFileSequential`. Every client gets the  next value/row from the file, where there might be multiple access to the same line by different Load Generator  machines. This is the default value.  <p></p>- `WLFileSequentialUnique`. Gets the next unique  value/row from the file. Preferably, the unique value is the next available  value in sequential order. If another VC is using this value/row, the VC is  not able to access this value/row and will get the next available value/row.  It is recommended to have more values/rows in the file than the number of  clients to avoid delays. <p></p>- `WLFileRandom`. Gets a random value/row  from the file. There might be multiple access to the same line by different  Load Generator machines. <p></p>- `WLFileRandomUnique`. Gets a unique, unused value/row randomly from the file. It is  recommended to have more values/rows in the file than the number of clients  to avoid  delays.                                                                                                         |
-| ShareMethod              | An optional parameter indicating how the  file is shared among scripts. All values are enumerated numeric values.  Possible values are:<p></p>- **WLFileNotShared**. The file can be read only by the current script, and each Load  Generator machine manages a copy of  the file for its VCs independently. If there are multiple Load Generator  processes on a single machine, then the processes share the file. This is the  default value.  <p></p>- **WLFileLGShared**. The file can be read only by the  current script, and all Load Generators on any Load Generator machine  share the same copy of the file, which is synchronized between them. <p></p>- **WLFileAgendaShared**. The file can be shared by more than one script.  The unique identifier of the file is its path. The file can be shared by  different scripts, but a copy of the file is managed separately for each Load  Generator machine. If you are using the script–Shared share method, all the  scripts sharing the file should use the WLFileSequentialUnique access method.  <p></p>- **WLFileAgendaLGShared**. A single file is shared among Load Generators and among scripts.                                 |
-| UsageMethod              | An optional parameter that  defines when to release the value/row back to the ‘pool’ so that it can be  read again from the file. This parameter is only relevant for the  WLFileSequentialUnique and WLFileRandomUnique access methods. All values are  enumerated numeric values. Possible values are:<p></p>- **WLFilePerRound**. The script reads a new  value/row from the file once every  round. The value/row is released at the end of the round. This is the default value.  <p></p>- **WLFileOncePerClient**. The script reads a new value/row from the file  once at the beginning of the test (in InitClient). The value/row is released  at TerminateClient.  <p></p>- **WLFileOncePerSession**. The  script reads a new value/row from the file once, at the beginning of the  session (in InitClient). The value/row is released at the end of the session  (in TerminateAgenda).  <p></p>- **WLFileAnytime**. The script can read a new  value/row from the file at any time during a round. It can read a new  value/row more than once during a round. The values are released at the end  of the round. This enables more than one  value/row  to be used concurrently and uniquely. |
-| EndOfFileBehavior        | An optional parameter that  defines how WebLOAD behaves when it reaches the end of the file. All values  are enumerated numeric values. <p></p>  **Note:** If you have defined the AccessMethod as WLFileSequential or  WLFileSequentialUnique, the EndOfFileBehavior parameter is mandatory.  Possible values are:  <p></p>- **WLFileStartOver**. Start from the beginning  of the file. This is the default value.  <p></p>- **WLFileKeepLast**. Keep the last value.  <p></p>- **WLFileAbortVC**. Abort the specific VC that  tried to read past the end of the  file. An error message is written to the log  file.  <p></p>- **WLFileAbortTest**. Abort the entire test when a VC tries to  read past the end of the  file. An error message is written to the log file.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `AccessMethod`             | An optional parameter that  defines the method for reading the next value/row from the file. All values  are enumerated numeric values. Possible values are:<p></p>- `WLFileSequential`. Every client gets the  next value/row from the file, where there might be multiple access to the same line by different Load Generator  machines. This is the default value.  <p></p>- `WLFileSequentialUnique`. Gets the next unique  value/row from the file. Preferably, the unique value is the next available  value in sequential order. If another VC is using this value/row, the VC is  not able to access this value/row and will get the next available value/row.  It is recommended to have more values/rows in the file than the number of  clients to avoid delays. <p></p>- `WLFileRandom`. Gets a random value/row  from the file. There might be multiple access to the same line by different  Load Generator machines. <p></p>- `WLFileRandomUnique`. Gets a unique, unused value/row randomly from the file. It is  recommended to have more values/rows in the file than the number of clients  to avoid  delays.                                                                                                         |
+| `ShareMethod`              | An optional parameter indicating how the  file is shared among scripts. All values are enumerated numeric values.  Possible values are:<p></p>- **WLFileNotShared**. The file can be read only by the current script, and each Load  Generator machine manages a copy of  the file for its VCs independently. If there are multiple Load Generator  processes on a single machine, then the processes share the file. This is the  default value.  <p></p>- **WLFileLGShared**. The file can be read only by the  current script, and all Load Generators on any Load Generator machine  share the same copy of the file, which is synchronized between them. <p></p>- **WLFileAgendaShared**. The file can be shared by more than one script.  The unique identifier of the file is its path. The file can be shared by  different scripts, but a copy of the file is managed separately for each Load  Generator machine. If you are using the script–Shared share method, all the  scripts sharing the file should use the WLFileSequentialUnique access method.  <p></p>- **WLFileAgendaLGShared**. A single file is shared among Load Generators and among scripts.                                 |
+| `UsageMethod`              | An optional parameter that  defines when to release the value/row back to the ‘pool’ so that it can be  read again from the file. This parameter is only relevant for the  WLFileSequentialUnique and WLFileRandomUnique access methods. All values are  enumerated numeric values. Possible values are:<p></p>- **WLFilePerRound**. The script reads a new  value/row from the file once every  round. The value/row is released at the end of the round. This is the default value.  <p></p>- **WLFileOncePerClient**. The script reads a new value/row from the file  once at the beginning of the test (in InitClient). The value/row is released  at TerminateClient.  <p></p>- **WLFileOncePerSession**. The  script reads a new value/row from the file once, at the beginning of the  session (in InitClient). The value/row is released at the end of the session  (in TerminateAgenda).  <p></p>- **WLFileAnytime**. The script can read a new  value/row from the file at any time during a round. It can read a new  value/row more than once during a round. The values are released at the end  of the round. This enables more than one  value/row  to be used concurrently and uniquely. |
+| `EndOfFileBehavior`        | An optional parameter that  defines how WebLOAD behaves when it reaches the end of the file. All values  are enumerated numeric values. <p></p>  **Note:** If you have defined the `AccessMethod` as WLFileSequential or  WLFileSequentialUnique, the `EndOfFileBehavior` parameter is mandatory.  Possible values are:  <p></p>- **WLFileStartOver**. Start from the beginning  of the file. This is the default value.  <p></p>- **WLFileKeepLast**. Keep the last value.  <p></p>- **WLFileAbortVC**. Abort the specific VC that  tried to read past the end of the  file. An error message is written to the log  file.  <p></p>- **WLFileAbortTest**. Abort the entire test when a VC tries to  read past the end of the  file. An error message is written to the log file.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | HeaderLines              | An optional parameter that defines the  number of header lines the file contains. All values are enumerated numeric  values. Possible values are:<p></p>- 0. The file does not  contain any header lines. This is the default  value.<p></p>- Where `<X>`  is any number above zero. The file contains  `<X>` header lines at  its beginning. The values contained in these header lines are not used as  parameters but as variable  names in  the JavaScript code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Delimiter                | (Optional) The delimiter  being used in the file. The default value is a comma.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
@@ -6791,7 +6789,7 @@ Reads the entire contents of the given file.
 
 **Syntax**
 
-ReadFile(fileName)
+`ReadFile(fileName)`
 
 **Parameters**
 
@@ -6843,13 +6841,13 @@ WebLOAD recommends setting the redirection limit through the WebLOAD Console. Ch
 
 **Syntax**
 
-You may also assign a redirection limit value using the wl.RedirectionLimit property.
+You may also assign a redirection limit value using the `wl.RedirectionLimit` property.
 
-`wlGlobals.RedirectionLimit = *IntegerValue*`
+`wlGlobals.RedirectionLimit = IntegerValue`
 
 **Example**
 
-wlGlobals.RedirectionLimit = 10
+`wlGlobals.RedirectionLimit = 10`
 
 ## Referer (property)
 
@@ -6868,11 +6866,11 @@ To tell the system whether or not to record the referer header in the Referer pr
 
 **Syntax**
 
-`wlHttp.Header[“Referer”] = [“http://www.testaddress.com/](http://www.testaddress.com/)”.`
+`wlHttp.Header[“Referer”] = “http://www.testaddress.com/”.`
 
 **Example**
 
-`wlHttp.Header[“Referer”] = [“http://www.easycar.com/](http://www.easycar.com/)”`
+`wlHttp.Header[“Referer”] = “http://www.easycar.com/”`
 
 **See also**
 
@@ -6895,11 +6893,11 @@ This method deletes the wlOutputFile object and closes the output file.
 
 **Example**
 
-`MyFileObj = new wlOutputFile(*filename*)`
-
-`…`
-
-`MyFileObj.remove()`
+```
+MyFileObj = new wlOutputFile(filename)
+…
+MyFileObj.remove()
+```
 
 **See also**
 
@@ -6951,7 +6949,7 @@ This function enables you to record specific events as they occur. This informat
 
 **Description**
 
-Sends a message to the Log Window that includes the error message and severity level stored in this wlException object.
+Sends a message to the Log Window that includes the error message and severity level stored in this `wlException` object.
 
 **Syntax**
 
@@ -7012,11 +7010,11 @@ Return to the beginning of the output file.
 
 **Example**
 
-`MyFileObj = new wlOutputFile(*filename*)`
-
-`…`
-
-`MyFileObj.Reset()`
+```
+MyFileObj = new wlOutputFile(filename)
+…
+`MyFileObj.Reset()
+```
 
 **See also**
 
@@ -7041,7 +7039,7 @@ Return to the beginning of the output file.
 
 **Description**
 
-The language in which WebLOAD receives the response from the SUT. This can be HTML, XML, or Not Defined and is used to decide whether or not to parse the response. If ResponseContentType is set to HTML or XML, the content of the response is treated as either HTML or XML, as specified. If not, an algorithm checks the content type of the response. This algorithm uses two other wlGlobals: HtmlContentTypes and XmlContentTypes. These contain a list of content types that specify HTMLs and XMLs, respectively. The algorithm checks whether the content type of the response matches either of these lists.
+The language in which WebLOAD receives the response from the SUT. This can be `HTML`, `XML`, or `Not Defined` and is used to decide whether or not to parse the response. If ResponseContentType is set to HTML or XML, the content of the response is treated as either HTML or XML, as specified. If not, an algorithm checks the content type of the response. This algorithm uses two other wlGlobals: HtmlContentTypes and XmlContentTypes. These contain a list of content types that specify HTMLs and XMLs, respectively. The algorithm checks whether the content type of the response matches either of these lists.
 
 **Syntax**
 
@@ -7059,29 +7057,27 @@ The language in which WebLOAD receives the response from the SUT. This can be HT
 
 **Description**
 
-The number of times that WebLOAD has executed the main script of a client during the WebLOAD test, including the current execution. RoundNum is a read-only local variable, reporting the number of rounds for the specific WebLOAD client, no matter how many other clients may be running the same script.
+The number of times that WebLOAD has executed the main script of a client during the WebLOAD test, including the current execution. `RoundNum` is a read-only local variable, reporting the number of rounds for the specific WebLOAD client, no matter how many other clients may be running the same script.
 
-RoundNum does not exist in the global context of a script (InitAgenda(), etc.). In the local context:
+`RoundNum` does not exist in the global context of a script (InitAgenda(), etc.). In the local context:
 
-* In InitClient(), RoundNum = 0.
-* In the main script, RoundNum = 1, 2, 3, ....
-* In TerminateClient(), OnScriptAbort(), or
+* In `InitClient(), RoundNum = 0.`
+* In the main script, `RoundNum = 1, 2, 3, ....`
+* In `TerminateClient()`, `OnScriptAbort()`, or `OnErrorTerminateClient()`, `RoundNum` keeps its value from the final round.
 
-OnErrorTerminateClient(), RoundNum keeps its value from the final round.
+The WebLOAD clients do not necessarily remain in synchronization. The `RoundNum` may differ for different clients running the same script.
 
-The WebLOAD clients do not necessarily remain in synchronization. The RoundNum
+If a thread stops and restarts for any reason, the `RoundNum` continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.
 
-may differ for different clients running the same script.
+If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if **WLFileAgendaShared** GUI mode WebLOAD recommends accessing global system variables, including the `RoundNum` identification variable, through the WebLOAD Recorder. The variables that appear in this list are available for use at any point in a script file. In the WebLOAD Recorder main window, click **Variables Windows** in the **Debug** tab of the ribbon**.**.
 
-If a thread stops and restarts for any reason, the RoundNum continues from its value before the interruption. This can occur, for example, after you issue a Pause command from the WebLOAD Console.
+For example, it is convenient to add `RoundNum` to a Message Node to clarify the round in which the messages that appear in the WebLOAD Console Log window originated.
 
-If you mix scripts in a single Load Generator, WebLOAD maintains an independent round counter for each script. For example, if **WLFileAgendaShared** GUI mode
+![](../images/variables_window.png)
 
-WebLOAD recommends accessing global system variables, including the RoundNum identification variable, through the WebLOAD Recorder. The variables that appear in this list are available for use at any point in a script file. In the WebLOAD Recorder main window, click **Variables Windows** in the **Debug** tab of the ribbon**.**.
 
-For example, it is convenient to add RoundNum to a Message Node to clarify the round in which the messages that appear in the WebLOAD Console Log window originated.
 
-> **Note:** RoundNum can also be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
+> **Note:** `RoundNum` can also be added directly to the code in a script through the IntelliSense Editor, described in [*Using the IntelliSense JavaScript Editor* ](./intro_java_scripts.md#using-the-intellisense-javascript-editor).
 
 **See also**
 
@@ -7095,19 +7091,19 @@ For example, it is convenient to add RoundNum to a Message Node to clarify the r
 
 **Property of Objects**
 
-row objects are grouped into collections of rows. The rows collection is a property of the following objects:
+`row` objects are grouped into collections of `rows`. The `rows` collection is a property of the following objects:
 
 * wlTables (see [*wlTables (object)* ](#wltables-object))
 
 **Description**
 
-When working with TextArea element objects, a row object contains the number of rows in the TextArea.
+When working with `TextArea element` objects, a `row` object contains the number of rows in the TextArea.
 
-When working with wlTables objects, a row object contains all the data found in a single table row. Individual row objects may be addressed by index number, similar to any object within a collection.
+When working with `wlTables` objects, a `row` object contains all the data found in a single table row. Individual row objects may be addressed by index number, similar to any object within a collection.
 
 **Syntax**
 
-Individual row objects are addressed by index number, similar to any object within a collection. Access each row’s properties directly using the following syntax:
+Individual `row` objects are addressed by index number, similar to any object within a collection. Access each row’s properties directly using the following syntax:
 
 `document.wlTables.myTable.rows[#].<row-property>`
 
@@ -7117,13 +7113,13 @@ To find out how many row objects are contained within myTable, check the value o
 
 `document.wlTables.myTable.rows.length`
 
-To access a property of the 16th row in myTable, with the first row indexed at 0, you could write:
+To access a property of the 16th row in `myTable`, with the first row indexed at 0, you could write:
 
 `document.wlTables.myTable.rows[15].rowIndex`
 
 To access a property of the 4th cell in the 3rd row in myTable, counting across rows and with the first cell indexed at 0, you could write:
 
-`document.wlTables.myTable.rows[2].cells[3].<*cell-property*>`
+`document.wlTables.myTable.rows[2].cells[3].<cell-property>`
 
 **Properties**
 
@@ -7134,7 +7130,7 @@ Each row object contains information about the data found in the cells of a sing
 
 **Comment**
 
-The row object may be accessed as a member of the wlTables family of table, row, and cell objects.
+`The row object may be accessed as a member of the wlTables family of table, row, and cell objects.`
 
 **See also**
 
@@ -7142,15 +7138,8 @@ The row object may be accessed as a member of the wlTables family of table, row,
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-*
-
-
-* 
-
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
-* 
-
 * rowIndex (see [*rowIndex (property)* ](#rowindex-property))
 * tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 
@@ -7162,11 +7151,11 @@ The row object may be accessed as a member of the wlTables family of table, row,
 
 **Description**
 
-An integer containing the ordinal index number of this row object within the parent table. Rows are indexed starting from zero, so the rowIndex of the first row in a table is 0.
+An integer containing the ordinal index number of this `row` object within the parent table. Rows are indexed starting from zero, so the `rowIndex` of the first row in a table is 0.
 
 **Comment**
 
-The rowIndex property is a member of the wlTables family of table, row, and cell objects.
+The `rowIndex` property is a member of the `wlTables` family of table, row, and cell objects.
 
 **See also**
 
@@ -7174,15 +7163,8 @@ The rowIndex property is a member of the wlTables family of table, row, and cell
 * cellIndex
 * [*Collections* ](using_javascript_ref.md#collections)
 * cols (see [*cols (property)* ](#wltables-object)) (wlTables property)
-*
-
-
-* 
-
 * InnerHTML (see [*InnerHTML (property)* ](#innerhtml-property)) (cell property)
 * InnerText (see [*InnerText (property)* ](#innertext-property)) (cell property)
-* 
-
 * row (see [*row (object)* ](#row-object)) (wlTables property)
 * tagName (see [*tagName (property)* ](#tagname-property)) (cell property)
 * wlTables (see [*wlTables (object)* ](#wltables-object))
@@ -7221,9 +7203,9 @@ Instruct WebLOAD to store the HTML response headers in wlHeaders.
 Instruct WebLOAD to store the complete HTML source code downloaded in an HTTP command.
 
 * **false** – Do not store the source HTML (default).
-* **true** – Store the source HTML in document.wlSource.
+* **true** – Store the source HTML in `document.wlSource`.
 
-If you enable SaveSource, WebLOAD automatically stores the downloaded HTML whenever the script calls the wlHttp.Get() or wlHttp.Post() method. WebLOAD stores the most recent download in the document.wlSource property, refreshing it when the script calls wlHttp.Get() or wlHttp.Post() again. The stored code includes any scripts or other data embedded in the HTML. Your script can retrieve the code from document.wlSource and interpret it in any desired way.
+If you enable `SaveSource`, WebLOAD automatically stores the downloaded HTML whenever the script calls the `wlHttp.Get()` or `wlHttp.Post()` method. WebLOAD stores the most recent download in the document.wlSource property, refreshing it when the script calls `wlHttp.Get()` or `wlHttp.Post()` again. The stored code includes any scripts or other data embedded in the HTML. Your script can retrieve the code from `document.wlSource` and interpret it in any desired way.
 
 **See also**
 
@@ -7259,18 +7241,14 @@ The SaveTransaction property works with the following parameters in the Function
 **Example**
 
 ```javascript
-function InitAgenda() 
-
-{ 
-
-wlGlobals.SaveTransaction = true
-
+function InitAgenda() { 
+    wlGlobals.SaveTransaction = true
 }
 ```
 
 **Comment**
 
-As with all wlGlobals configuration properties, the SaveTransaction property must be set in the InitAgenda() function, as illustrated in the preceding example.
+As with all `wlGlobals` configuration properties, the `SaveTransaction` property must be set in the `InitAgenda()` function, as illustrated in the preceding example.
 
 **See also**
 
@@ -7281,29 +7259,27 @@ As with all wlGlobals configuration properties, the SaveTransaction property mus
 
 **Property of Object**
 
-Scripts on a Web page are accessed through script objects that are grouped into collections of scripts. The scripts collection is a property of the following object:
+Scripts on a Web page are accessed through `script` objects that are grouped into collections of `scripts`. The `scripts` collection is a property of the following object:
 
 * document (see [*document (object)* ](#document-object))
 
 **Description**
 
-Specifies a script object in the current document that is interpreted by a script engine.
-
-script objects are grouped together within collections of scripts.
+Specifies a script object in the current `document` that is interpreted by a script engine. `script` objects are grouped together within collections of `scripts`.
 
 **Syntax**
 
-The scripts collection includes a length property that reports the number of script objects within a document (read-only). To access an individual script’s properties, check the length property of the scripts collection and use an index number to access the individual scripts. For example, to find out how many script objects are contained within a document, check the value of:
+The `scripts` collection includes a `length` property that reports the number of script objects within a document (read-only). To access an individual script’s properties, check the `length` property of the `scripts` collection and use an index number to access the individual `scripts`. For example, to find out how many script objects are contained within a document, check the value of:
 
 `document.scripts.length`
 
 Access each script’s properties directly using the following syntax:
 
-`document.scripts[*index*#].<*scripts-property*>`
+`document.scripts[index#].<scripts-property>`
 
 **Example**
 
-document.scripts[1].language
+`document.scripts[1].language`
 
 **Properties**
 
@@ -7340,13 +7316,15 @@ The search attribute string of the URL, not including the initial ? symbol (read
 
 **Description**
 
-Initialize the random number generator. Call the Seed() method in the
-
-InitAgenda() function of a script, using any integer as a seed.
+Initialize the random number generator. Call the `Seed()` method in the `InitAgenda()` function of a script, using any integer as a `seed`.
 
 **Syntax**
 
-`wlRand.Seed(seed) ****`
+`wlRand.Seed(seed)`
+
+| **Parameter Name** | **Description**                                |
+| ------------------ | ---------------------------------------------- |
+| `seed`             | Seed integer. |
 
 **Example**
 
@@ -7372,7 +7350,7 @@ Select one element of a set at random.
 
 **Syntax**
 
-`wlRand.Select(val1, val2, ..., val*N*)`
+`wlRand.Select(val1, val2, ..., val`*N*`)`
 
 **Parameters**
 
@@ -7408,9 +7386,13 @@ Specify a second option for the amount of time the system will wait for a TCP co
 
 **Syntax**
 
-wlGlobals.SelectSecondTimeout = number
+`wlGlobals.SelectSecondTimeout = number`
 
-**Example** wlGlobals.SelectSecondTimeout = 100 **See also**
+**Example** 
+
+`wlGlobals.SelectSecondTimeout = 100` 
+
+**See also**
 
 * SelectSwitchNum (see [*SelectSwitchNum (property)* ](#selectswitchnum-property))
 * SelectTimeout (see [*SelectTimeout (property)* ](#selecttimeout-property))

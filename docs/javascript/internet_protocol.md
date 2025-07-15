@@ -20,11 +20,11 @@ This chapter provides detailed reference information on WebLOAD support for the 
 
 ## wlFTP Object
 
-The wlFTP object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object](#wlftps).
+The `wlFTP` object provides support for FTP (File Transfer Protocol) load and functional testing within WebLOAD. Support for standard FTP operation is included. FTP over secure connections (SSL) is supported through the [wlFTPs Object](#wlftps).
 
 If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Logon()` method; otherwise an exception is thrown.
 
-To access the wlFTP object, you must include the wlFtp.js file in your ``InitAgenda()`` function.
+To access the `wlFTP` object, you must include the `wlFtp.js` file in your `InitAgenda()` function.
 
 FTP/FTPS code can be generated using [FTP Buildng block](../recorder/appendix_a.md/#ftp)
 
@@ -36,7 +36,7 @@ SFTP code can be generated using [SFTP Buildng block](../recorder/appendix_a.md/
 
 The Data property lets you specify the local data stream to upload to the host. You use this property to upload data. For example:
 
-`ftp.Data = *datastream*`
+`ftp.Data = `*`datastream`*
 
  
 
@@ -44,7 +44,7 @@ The Data property lets you specify the local data stream to upload to the host. 
 
 The DataFile property lets you specify the local file to upload to the host. For example:
 
-`ftp.DataFile = filename`
+`ftp.DataFile = `*`filename`*
 
  
 
@@ -52,40 +52,39 @@ The DataFile property lets you specify the local file to upload to the host. For
 
 The document property is an array containing the files downloaded and uploaded in the current FTP session. For example:
 
-`var recentdownload = *ftp.document[1]`*
+`var recentdownload = `*`ftp.document[1]`*
 
  
 
 #### Outfile
 
-The Outfile property lets you specify the name of a downloaded file. You use this property to rename a downloaded file as it is transferred to your computer. This property must be an explicit file name, not a pattern. If you specify the Outfile property, the document property remains empty. If you are downloading a series of files, only the last file downloaded is stored in the Outfile.
+The `Outfile` property lets you specify the name of a downloaded file. You use this property to rename a downloaded file as it is transferred to your computer. This property must be an explicit file name, not a pattern. If you specify the `Outfile` property, the document property remains empty. If you are downloading a series of files, only the last file downloaded is stored in the `Outfile`.
 
- 
+If you want to store all of the files downloaded, either delete the `Outfile` property or specify an empty value. The downloaded files are then stored in the document property. For example:
 
-If you want to store all of the files downloaded, either delete the Outfile property or specify an empty value. The downloaded files are then stored in the document property. For example:
-
-`ftp.Outfile = filename`
+`ftp.Outfile = `*`filename`*
 
  
 
 #### PassiveMode
 
-The PassiveMode property lets you use FTP through firewalls. Valid values are:
+The `PassiveMode` property lets you use FTP through firewalls. Valid values are:
 
 - true - passive mode is set, and you may FTP through firewalls.
 
-- false - active mode is set, and you may not FTP through firewalls. For example:
+- false - active mode is set, and you may not FTP through firewalls. 
 
-- ftp.PassiveMode = *modesetting*
+For example:
+
+- `ftp.PassiveMode = `*`modesetting`*
 
   
 
 #### PassWord
 
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the password to the FTP host when a wlFTP object connects to an FTP host.
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the password to the FTP host when a `wlFTP` object connects to an FTP host.
 
-`ftp.PassWord = *password*`
-
+`ftp.PassWord = `*`password`*
 
 
 > **Caution:** The password appears in plain text in the script. The password is visible to any user who has access to the script.
@@ -94,23 +93,22 @@ The PassWord property lets you specify a password when logging on to a host. You
 
 #### Size
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
 
-`var filesize = *ftp.Size*`
+`var filesize = `*`ftp.Size`*
 
  
 
 #### StartByte
 
-The StartByte property lets you specify the byte offset to start transferring from. The default value is **0**. This property automatically resets to zero after each transfer. You use this property to specify a starting point when resuming interrupted transfers.
+The `StartByte` property lets you specify the byte offset to start transferring from. The default value is **0**. This property automatically resets to zero after each transfer. You use this property to specify a starting point when resuming interrupted transfers.
 
-`ftp.StartByte = *byteoffset*`
-
+`ftp.StartByte = `*`byteoffset`*
 
 
 #### TransferMode
 
-The TransferMode property lets you specify the transfer mode for uploaded and downloaded files. You must specify the transfer mode before each transfer. If you do not specify a transfer mode, auto, the default mode, is used. Valid values are:
+The `TransferMode` property lets you specify the transfer mode for uploaded and downloaded files. You must specify the transfer mode before each transfer. If you do not specify a transfer mode, auto, the default mode, is used. Valid values are:
 
 - **auto** - 0
 - **text** - 1
@@ -130,27 +128,22 @@ You may also specify the transfer mode using the following constants:
 
 For example:
 
-`ftp.TransferMode = *transfermode*`
+`ftp.TransferMode = `*`transfermode`*
 
-
-
- 
-
- 
 
 #### UserName
 
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the user name to the FTP host when a wlFTP object connects to an FTP host.
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the user name to the FTP host when a wlFTP object connects to an FTP host.
 
-`ftp.UserName = *username*`
+`ftp.UserName = `*`username`*
 
  
 
 ### wlFTP Methods
 
- 
 
-#### Append()
+
+#### *Append()*
 
 | **Syntax**       | Append(pattern)                                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -161,18 +154,18 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### AppendFile()
+#### *AppendFile()*
 
 | **Syntax**       | AppendFile(filename)                                         |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | filename         | The remote file to which you want to append data.            |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uploads a local file and  appends it to the specified file on the host. The local file is specified by  the DataFile property. The destination file is specified by the filename  parameter. If  the DataFile property is not specified, then the contents of the Data  property are sent as a datastream to be appended to the file specified by the  filename parameter. If the target  file does not exist, AppendFile() creates it. |
+| **Comments**     | Uploads a local file and  appends it to the specified file on the host. The local file is specified by  the DataFile property. The destination file is specified by the `filename  `parameter. If  the DataFile property is not specified, then the contents of the Data  property are sent as a datastream to be appended to the file specified by the  `filename` parameter. If the target  file does not exist, AppendFile() creates it. |
 
  
 
-#### ChangeDir()
+#### *ChangeDir()*
 
 | **Syntax**       | ChangeDir(*name*)                                            |
 | ---------------- | ------------------------------------------------------------ |
@@ -183,7 +176,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### ChFileMod()
+#### *ChFileMod()*
 
 | **Syntax**       | ChFileMod(filename,  *attributes*)                           |
 | ---------------- | ------------------------------------------------------------ |
@@ -191,11 +184,11 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | filename         | The name of the file you want to alter. This  parameter may be a specific file name, or it may contain wildcards. |
 | attributes       | The new attributes assigned to the file. Values  are specified in the three digit 0-7 format. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Changes attributes of the specified file according  to the values specified in the attribute parameter. |
+| **Comments**     | Changes attributes of the specified file according  to the values specified in the `attribute` parameter. |
 
  
 
-#### ChMod()
+#### *ChMod()*
 
 | **Syntax**       | ChMod(*pattern*,  *attributes*)                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -207,7 +200,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### Delete()
+#### *Delete()*
 
 | **Syntax**       | Delete(pattern)                                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -218,7 +211,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### DeleteFile()
+#### *DeleteFile()*
 
 | **Syntax**       | Delete(filename)                                             |
 | ---------------- | ------------------------------------------------------------ |
@@ -229,19 +222,18 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### Dir()
+#### *Dir()*
 
 | **Syntax**       | Dir(pattern)                                                 |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | pattern          | The name of the file or directory for which  you are searching. This may be a specific file name, or it may contain  wildcards. |
-| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful.  a[].fileName     //  name of file a[].fileAttributes // attribute  string  a[].fileTime     //  date and time of last modification  a[].fileSize     // size of file in bytes  a[].isDir       // 1 if the entry represents a  directory, 0 for a file     
-**Note:** If the host supports only basic information, only the  fileName property of the array is defined. |
+| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful. <p></p> a[].fileName                // name of file <p></p> a[].fileAttributes   //attribute  string <p></p> a[].fileTime      //date and time of last modification <p></p> a[].fileSize         //size of file in bytes <p></p> a[].isDir            //1 if the entry represents a  directory, 0 for a file <p></p> - **Note:** If the host supports only basic information, only the  fileName property of the array is defined. |
 | **Comments**     | Lists files and directories that match the pattern  parameter in the current directory of the host. This method returns detailed  information if the server supports it. |
 
  
 
-#### Download()
+#### *Download()*
 
 | **Syntax**       | Download(pattern)                                            |
 | ---------------- | ------------------------------------------------------------ |
@@ -252,7 +244,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
 
 
-####  DownloadFile()
+####  *DownloadFile()*
 
 | **Syntax**       | Download(filename)                                           |
 | ---------------- | ------------------------------------------------------------ |
@@ -263,7 +255,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### GetCurrentPath()
+#### *GetCurrentPath()*
 
 
 
@@ -274,7 +266,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
  
 
@@ -285,20 +277,20 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### ListLocalFiles()
+#### *ListLocalFiles()*
 
  
 
 | **Syntax**       | ListLocalFiles(filter)                                       |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| filter           | The files you want to  list. The filter may be a patter or a specific file name. |
-| **Return Value** | An array of matching objects with following  properties if successful, an exception if unsuccessful.  a[].fileName    // A string containing name of the file  a[].isDir    // A Boolean, true if the entry  represents a directory |
+| `filter`           | The files you want to  list. The filter may be a patter or a specific file name. |
+| **Return Value** | An array of matching objects with following  properties if successful, an exception if unsuccessful. <p></p> a[].fileName    //A string containing name of the file <p></p> a[].isDir    // A Boolean, true if the entry  represents a directory |
 | **Comments**     | Lists files matching the filter parameter in the  current directory of the local computer. |
 
  
 
-#### Logoff()
+#### *Logoff()*
 
  
 
@@ -309,21 +301,21 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### `Logon()`
+#### *Logon()*
 
  
 
 | **Syntax**       | Logon(*host*,  [*port*])                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| host             | The host to which you are connecting. You may  express the host using either the DNS number or the full name of the host. |
-| port             | The port to which you are  connecting. If you do not specify a port, the default FTP port is used. |
+| `host`             | The host to which you are connecting. You may  express the host using either the DNS number or the full name of the host. |
+| `port`             | The port to which you are  connecting. If you do not specify a port, the default FTP port is used. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
 | **Comments**     | Starts a conversation with the FTP host. If you  are logging on to a restricted site, you must have specified the UserName and  PassWord properties before using this method. |
 
  
 
-#### MakeDir()
+#### *MakeDir()*
 
  
 
@@ -336,7 +328,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### RemoveDir()
+#### *RemoveDir()*
 
  
 
@@ -345,13 +337,13 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | name             | The name of the directory that you are  deleting.            |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Deletes the named directory from the host.  <br>**Note:** You may not delete a directory until that directory is empty. Remove  all files from the directory before using the RemoveDir() method. You may use the Delete() method to delete files on the host. |
+| **Comments**     | Deletes the named directory from the host.  <br>**Note:** You may not delete a directory until that directory is empty. Remove  all files from the directory before using the `RemoveDir()` method. You may use the `Delete()` method to delete files on the host. |
 
 
 
 
 
-#### Rename()
+#### *Rename()*
 
  
 
@@ -361,11 +353,11 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | from             | The file that you want to rename.                            |
 | to               | The new file name for the  file. If this file already exists, it is overwritten. |
 | **Return Value** | Null if successful, an exception if unsuccessful.            |
-| **Comments**     | Renames the files in the current directory  described by the from  parameter to the name described in the to parameter. |
+| **Comments**     | Renames the files in the current directory  described by the `from`  parameter to the name described in the `to` parameter. |
 
  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -378,7 +370,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### Upload()
+#### *Upload()*
 
  
 
@@ -387,7 +379,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | pattern          | The file you are uploading. This may be a specific  file name, or it may contain wildcards. |
 | **Return Value** | Null if successful, an exception if unsuccessful.            |
-| **Comments**     | Uses a loop to upload the  local files specified by the pattern parameter to the host. The  file is not renamed, and values specified by the DataFile and Data property are ignored. If an iteration of the loop  fails, the loop is cancelled, potentially leaving some files not transported. |
+| **Comments**     | Uses a loop to upload the  local files specified by the `pattern` parameter to the host. The  file is not renamed, and values specified by the `DataFile` and `Data` property are ignored. If an iteration of the loop  fails, the loop is cancelled, potentially leaving some files not transported. |
 
 
 
@@ -395,7 +387,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### UploadFile()
+#### *UploadFile()*
 
  
 
@@ -404,11 +396,11 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | filename         | The destination name of  the local file. This parameter may be the same name as the local file name,  or it may be used to rename the file once it arrives at the host. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uploads a local file to  the host. The local file is specified by the DataFile property. The  destination file name is specified by the filename parameter. If the DataFile property is not specified, then the contents of  the Data property are sent as a datastream to be  saved under the name specified by the filename parameter. |
+| **Comments**     | Uploads a local file to  the host. The local file is specified by the `DataFile` property. The  destination file name is specified by the `filename `parameter. If the `DataFile `property is not specified, then the contents of  the `Data` property are sent as a datastream to be  saved under the name specified by the `filename` parameter. |
 
  
 
-#### UploadUnique()
+#### *UploadUnique()*
 
  
 
@@ -419,7 +411,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### WLFtp()
+#### *WLFtp()*
 
  
 
@@ -427,182 +419,130 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlFTP object.                                          |
 | **Comments**     | Creates a new wlFTP object, used to  interact with the server. |
-| **Example**      | function **InitClient()**{ myNewFtpObject = new WLFtp()  }   |
+    | **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLFtp() }</code></pre>   |
 
  
 
-### FTP Sample Code
+### *FTP Sample Code*
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** {
-
-// include the file that enables FTP IncludeFile("wlFtp.js",WLExecuteScript)
-
+// script Initialization
+function InitAgenda() {
+    // include the file that enables FTP 
+    IncludeFile("wlFtp.js",WLExecuteScript)
 }
-
-function **InitClient()**{
-
- 
-
-// Create the FTP object we need to interact with the server ftp=new WLFtp()
-
+function InitClient() {
+    // Create the FTP object we need to interact with the server
+    ftp=new WLFtp()
 }
-
-function **TerminateClient()**{
-
-// Delete the FTP object we used delete ftp
-
+function TerminateClient() {
+    // Delete the FTP object we used 
+    delete ftp
 }
 
 //===================================================
 
- 
-
-//**Body Of script**. Give user name and password and login ftp.UserName="UserID" // Set the user name ftp.PassWord="TopSecret"  // Set the password
-
-//this.PassiveMode=true;  // Enable this if firewall is in the way ftp.Logon("localhost") // Login to the server
+//Body Of script. Give user name and password and login 
+ftp.UserName="UserID" // Set the user name 
+ftp.PassWord="TopSecret"  // Set the password
+//this.PassiveMode=true;  // Enable this if firewall is in the way 
+ftp.Logon("localhost") // Login to the server
 
 //===================================================
 
- 
-
-//**Test Download**
-
-ftp.TransferMode = ftp.TMODE_ASCII; // Force all downloads ASCII ftp.Outfile="c:\\downloaded.txt";
-
-// Define a local file to save the downloaded file ftp.Download("file.txt");  // Grab the remote file
-
+//Test Download
+ftp.TransferMode = ftp.TMODE_ASCII; // Force all downloads ASCII 
+ftp.Outfile="c:\\downloaded.txt";
+            // Define a local file to save the downloaded file 
+ftp.Download("file.txt");  // Grab the remote file
 // The remote file may be a wildcard, so for each file
-
 // downloaded an entry is made in the document array.
-
 // With this approach an Outfile is not required. Instead the
-
 // document object holds the downloaded files for this client.
-
 // The loop below loops through each entry in the document
-
-// array and writes the file contents out to the log for (var i = 0; i < ftp.document.length; i++)
-
+// array and writes the file contents out to the log 
+for (var i = 0; i < ftp.document.length; i++)
 {
-
-InfoMessage(ftp.document[i]);
-
+    InfoMessage(ftp.document[i]);
 }
-
 //============================================================
 
- 
-
-//**Test Upload**
-
-ftp.TransferMode = ftp.TMODE_ASCII; ftp.DataFile="c:\\upload.txt";
-
-// define local file to upload ftp.UploadFile("hello.txt");
-
-// upload it to the remote host as "hello.txt" ftp.Data="hello world";
-
-// define a string to send to the remote host ftp.UploadFile("hello.txt");
-
-// upload the string and save it as "hello.txt"
-
+//Test Upload
+ftp.TransferMode = ftp.TMODE_ASCII;
+ftp.DataFile="c:\\upload.txt";
+                // define local file to upload 
+ftp.UploadFile("hello.txt");
+                // upload it to the remote host as "hello.txt" 
+ftp.Data="hello world";
+                // define a string to send to the remote host 
+ftp.UploadFile("hello.txt");
+                // upload the string and save it as "hello.txt"
 //=======================================================
 
- 
-
- 
-
-//**Test Append**
-
-ftp.TransferMode = ftp.TMODE_ASCII; ftp.DataFile="c:\\append.txt";
-
-// identify a local file to upload ftp.AppendFile("hello.txt");
-
-// add it to the existing contents of "hello.txt"
-
+//Test Append
+ftp.TransferMode = ftp.TMODE_ASCII; 
+ftp.DataFile="c:\\append.txt";
+                // identify a local file to upload 
+ftp.AppendFile("hello.txt");
+                // add it to the existing contents of "hello.txt"
 //========================================================
 
- 
 
-//**Test Delete**
-
+//Test Delete
 ftp.Delete("hello.txt");
-
-// delete "hello.txt" from the remote server
-
+                // delete "hello.txt" from the remote server
 //===========================================================
 
- 
 
-//**Test Directory Functions**
-
-ftp.MakeDir("DirectoryName");   // make a new directory ftp.ChangeDir("DirectoryName");  // change to that directory ftp.DataFile="c:\\file1.txt"; // select a local file ftp.Upload("file1.txt");   // upload it to the new directory var files = ftp.Dir("*.*");
-
-// Generate a list of the files in that directory for (var i = 0 ; i < files.length; i++)
-
+//Test Directory Functions
+ftp.MakeDir("DirectoryName");   // make a new directory 
+ftp.ChangeDir("DirectoryName");  // change to that directory 
+ftp.DataFile="c:\\file1.txt"; // select a local file 
+ftp.Upload("file1.txt");   // upload it to the new directory 
+var files = ftp.Dir("*.*");
+                // Generate a list of the files in that directory 
+for (var i = 0 ; i < files.length; i++)
 {
-
-InfoMessage("the file name is:" + files[i].fileName);
-
-// Print each file's name to the log
-
+    InfoMessage("the file name is:" + files[i].fileName);
+                // Print each file's name to the log
 }
-
-ftp.Delete("*.*");     // delete the files on the directory ftp.ChangeDir("..");  // go up a level in the tree ftp.RemoveDir("DirectoryName");  // delete the directory itself
-
+ftp.Delete("*.*");     // delete the files on the directory 
+ftp.ChangeDir("..");  // go up a level in the tree 
+ftp.RemoveDir("DirectoryName");  // delete the directory itself
 //=========================================================
 
- 
 
-//**Test Advanced Directory Handling**
-
+//Test Advanced Directory Handling
 var files = ftp.Dir("*.txt"); // show all the text files
-
-if (files.length > 0)    // **IF** there are any entries to go through
-
-{          // **THEN** print their detailed attributes to the log for (var i = 0 ; i < files.length; i++)
-
-{             // **Print** each file's details to the log InfoMessage(files[0].fileName);   // name InfoMessage(files[0].fileAttributes);  // attributes InfoMessage(files[0].fileTime);     // timestamp InfoMessage(files[0].fileSize);     // size in bytes InfoMessage(files[0].dirFlag);
-
-// set when the object is a directory
-
+if (files.length > 0)    // IF there are any entries to go through
+{          // THEN print their detailed attributes to the log 
+    for (var i = 0 ; i < files.length; i++)
+    {             // Print each file's details to the log 
+        InfoMessage(files[0].fileName);   // name 
+        InfoMessage(files[0].fileAttributes);  // attributes 
+        InfoMessage(files[0].fileTime);     // timestamp 
+        InfoMessage(files[0].fileSize);     // size in bytes 
+        InfoMessage(files[0].dirFlag);
+                // set when the object is a directory
+    }
 }
-
-
-
- 
-
- 
-
-}
-
 //==========================================================
 
- 
 
-//**Test General Functions**
-
+//Test General Functions
 status = ftp.GetStatusLine();
-
-// what was the last response from the server?
-
-InfoMessage("status= "+ status);  // print it path = ftp.GetCurrentPath();    // where am I? InfoMessage("path="+ path);   // right here
-
+            // what was the last response from the server?
+InfoMessage("status= "+ status);  // print it 
+path = ftp.GetCurrentPath();    // where am I? 
+InfoMessage("path="+ path);   // right here
 //==============================================================
 
- 
-
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
-ftp.Logoff()       // do not forget to log out of the session InfoMessage("done") // this is the end of the FTP sample script
+ftp.Logoff()       // do not forget to log out of the session 
+InfoMessage("done") // this is the end of the FTP sample script
 ```
 
  
@@ -611,89 +551,56 @@ ftp.Logoff()       // do not forget to log out of the session InfoMessage("done"
 
 ## wlFTPs Object
 
- 
 
-The wlFTPs object provides support for FTP (File Transfer Protocol) load and functional testing over secure connections (SSL).
-
- 
+The `wlFTPs` object provides support for FTP (File Transfer Protocol) load and functional testing over secure connections (SSL).
 
 If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Logon()` method; otherwise an exception is thrown.
 
  
 
-To access the wlFTPs object, you must include the wlFtps.js file in your `InitAgenda()` function.
+To access the `wlFTPs` object, you must include the `wlFtps.js` file in your `InitAgenda()` function.
 
  
 
 ### wlFTPs Properties
 
- 
-
 #### Data
 
- 
-
-The Data property lets you specify the local data stream to upload to the host. You use this property to upload data. For example:
+The `Data` property lets you specify the local data stream to upload to the host. You use this property to upload data. For example:
 
  
 
-`ftp.Data = *datastream*`
-
-
-
- 
-
- 
+`ftp.Data = `*`datastream`*
 
 #### DataFile
 
- 
-
-The DataFile property lets you specify the local file to upload to the host. For example:
-
- 
+The `DataFile` property lets you specify the local file to upload to the host. For example:
 
 `ftp.DataFile = filename`
 
  
-
 #### document
 
- 
 
-The document property is an array containing the files downloaded and uploaded in the current FTP session. For example:
+The `document` property is an array containing the files downloaded and uploaded in the current FTP session. For example:
 
- 
+`var recentdownload = `*`ftp.document[1]`*
 
-`var recentdownload = *ftp.document[1]*`
-
- 
 
 #### Outfile
 
- 
+The `Outfile` property lets you specify the name of a downloaded file. You use this property to rename a downloaded file as it is transferred to your computer. This property must be an explicit file name, not a pattern. If you specify the `Outfile` property, the document property remains empty. If you are downloading a series of files, only the last file downloaded is stored in the `Outfile`.
 
-The Outfile property lets you specify the name of a downloaded file. You use this property to rename a downloaded file as it is transferred to your computer. This property must be an explicit file name, not a pattern. If you specify the Outfile property, the document property remains empty. If you are downloading a series of files, only the last file downloaded is stored in the Outfile.
-
- 
-
-If you want to store all of the files downloaded, either delete the Outfile property or specify an empty value. The downloaded files are then stored in the document property. For example:
-
- 
+If you want to store all of the files downloaded, either delete the `Outfile` property or specify an empty value. The downloaded files are then stored in the document property. For example:
 
 `ftp.Outfile = filename`
 
- 
-
 #### PassiveMode
 
- 
-
-The PassiveMode property lets you use FTP through firewalls. Valid values are:
+The `PassiveMode` property lets you use FTP through firewalls. Valid values are:
 
 - **true** – Passive mode is set, and you may FTP through firewalls.
 - **false** – Active mode is set, and you may not FTP through firewalls. 
-
 
 
 For example:
@@ -704,60 +611,40 @@ For example:
 
 #### PassWord
 
- 
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the password to the FTP host when a `wlFTP` object connects to an FTP host.
 
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the password to the FTP host when a wlFTP object connects to an FTP host.
-
- 
-
-`ftp.PassWord = *password*`
-
+`ftp.PassWord = `*`password`*
 
 
 > **Caution:** The password appears in plain text in the script. The password is visible to any user who has access to the script.
 
-
-
 ####  Size
 
- 
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
-
- 
-
-`var filesize = *ftp.Size*`
-
+`var filesize = `*`ftp.Size`*
  
 
 #### StartByte
 
- 
 
 The StartByte property lets you specify the byte offset to start transferring from. The default value is **0**. This property automatically resets to zero after each transfer. You use this property to specify a starting point when resuming interrupted transfers.
 
  
 
-`ftp.StartByte = *byteoffset*`
+`ftp.StartByte = `*`byteoffset`*
 
  
 
 #### TransferMode
 
- 
-
-The TransferMode property lets you specify the transfer mode for uploaded and downloaded files. You must specify the transfer mode before each transfer. 
-
-
+The `TransferMode` property lets you specify the transfer mode for uploaded and downloaded files. You must specify the transfer mode before each transfer. 
 
 If you do not specify a transfer mode, auto, the default mode, is used. Valid values are:
 
 - **auto** – 0
 - **text** – 1
-
 - **binary** – 2
-
-
 
 You may also specify the transfer mode using the following constants: 
 
@@ -768,85 +655,69 @@ You may also specify the transfer mode using the following constants:
 - WLFtp.TMODE_DEFAULT – auto 
 
 
-
 For example:
 
-`ftp.TransferMode = *transfermode*`
+`ftp.TransferMode = `*`transfermode`*
 
  
 
 #### UserName
 
- 
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the user name to the FTP host when a `wlFTP` object connects to an FTP host.
 
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted FTP host. WebLOAD automatically sends the user name to the FTP host when a wlFTP object connects to an FTP host.
-
- 
-
-`ftp.UserName = *username*`
-
+`ftp.UserName = `*`username`*
 
 
 ### wlFTPs Methods
 
  
 
-#### Append()
-
- 
+#### *Append()*
 
 | **Syntax**       | Append(pattern)                                              |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| pattern          | The file to which you are appending. This  may be a specific file name, or it may contain wildcards. |
+| pattern          | The file to which you are appending. This may be a  specific file name, or it may contain wildcards. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
 | **Comments**     | Similar to the Upload() method, Append()  adds the data to the target file instead of overwriting it. If the target  file does not exist, Append() creates it. |
 
  
 
-#### AppendFile()
-
- 
+#### *AppendFile()*
 
 | **Syntax**       | AppendFile(filename)                                         |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| filename         | The remote file to which you want to append  data.           |
+| filename         | The remote file to which you want to append data.            |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uploads a local file and  appends it to the specified file on the host. The local file is specified by  the DataFile property. The destination file is specified by the filename  parameter. If  the DataFile property is not specified, then the contents of the Data  property are sent as a datastream to be appended to the file specified by the  filename parameter. If the target  file does not exist, AppendFile() creates it. |
+| **Comments**     | Uploads a local file and  appends it to the specified file on the host. The local file is specified by  the DataFile property. The destination file is specified by the `filename  `parameter. If  the DataFile property is not specified, then the contents of the Data  property are sent as a datastream to be appended to the file specified by the  `filename` parameter. If the target  file does not exist, AppendFile() creates it. |
 
  
 
-#### ChangeDir()
-
- 
+#### *ChangeDir()*
 
 | **Syntax**       | ChangeDir(*name*)                                            |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | name             | The name of the directory to which you want  to move.        |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Changes the current working directory on  the host to the one specified by the name parameter. |
+| **Comments**     | Changes the current working directory on the host  to the one specified by the name parameter. |
 
  
 
-#### ChFileMod()
-
- 
+#### *ChFileMod()*
 
 | **Syntax**       | ChFileMod(filename,  *attributes*)                           |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | filename         | The name of the file you want to alter. This  parameter may be a specific file name, or it may contain wildcards. |
-| attributes       | The new attributes assigned to the file.  Values are specified in the three digit 0-7 format. |
+| attributes       | The new attributes assigned to the file. Values  are specified in the three digit 0-7 format. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Changes attributes of the specified file  according to the values specified in the attribute parameter. |
+| **Comments**     | Changes attributes of the specified file according  to the values specified in the `attribute` parameter. |
 
  
 
-#### ChMod()
-
- 
+#### *ChMod()*
 
 | **Syntax**       | ChMod(*pattern*,  *attributes*)                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -854,52 +725,44 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | pattern          | The name of the files and  directories you want to alter. This parameter may be a specific file name, or  it may contain wildcards. |
 | attributes       | The new attributes assigned to the file.  Values are specified in the three digit 0-7 format. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uses a loop to changes attributes of the  specified files and directories according to the values specified in the attribute  parameter. If  an iteration of the loop fails, the loop is cancelled, potentially leaving  some files unchanged. To avoid this risk you must write your own loop with  error handling capability. |
+| **Comments**     | Uses a loop to changes attributes of the specified  files and directories according to the values specified in the attribute  parameter. If  an iteration of the loop fails, the loop is cancelled, potentially leaving  some files unchanged. To avoid this risk you must write your own loop with  error handling capability. |
 
  
 
-#### Delete()
-
- 
+#### *Delete()*
 
 | **Syntax**       | Delete(pattern)                                              |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | pattern          | The file you are deleting.  This may be a specific file name, or it may contain wildcards. |
-| **Return Value** | Null if successful, an exception if  unsuccessful.           |
+| **Return Value** | Null if successful, an exception if unsuccessful.            |
 | **Comments**     | Deletes the specified  files from the FTP host. This function calls the DeleteFile() method in a  loop to delete all the specified files. If an iteration of the loop fails,  the loop is cancelled, potentially leaving some files undeleted. |
 
  
 
-#### DeleteFile()
-
- 
+#### *DeleteFile()*
 
 | **Syntax**       | Delete(filename)                                             |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | filename         | The file you are deleting. This must be a  specific file name. |
-| **Return Value** | Null if successful, an exception if unsuccessful.            |
-| **Comments**     | Deletes the specified file from the FTP host.                |
+| **Return Value** | Null if successful, an exception if  unsuccessful.           |
+| **Comments**     | Deletes the specified file from the FTP  host.               |
 
  
 
-#### Dir()
-
- 
+#### *Dir()*
 
 | **Syntax**       | Dir(pattern)                                                 |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| pattern          | The name of the file or  directory for which you are searching. This may be a specific file name, or  it may contain wildcards. |
-| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful.  a[].fileName      //  name of file a[].fileAttributes // attribute  string  a[].fileTime       //  date and time of last modification  a[].fileSize        // size of  file in bytes  a[].isDir          // 1 if the entry  represents a directory, 0 for a file  **Note:** If the host supports only  basic information, only the fileName property of the array is defined. |
-| **Comments**     | Lists files and directories that match the  pattern parameter in the current directory of the host. This method returns  detailed information if the server supports it. |
+| pattern          | The name of the file or directory for which  you are searching. This may be a specific file name, or it may contain  wildcards. |
+| **Return Value** | Returns a JavaScript array with the  following members if successful, an exception if unsuccessful. <p></p> a[].fileName                // name of file <p></p> a[].fileAttributes   //attribute  string <p></p> a[].fileTime      //date and time of last modification <p></p> a[].fileSize         //size of file in bytes <p></p> a[].isDir            //1 if the entry represents a  directory, 0 for a file <p></p> - **Note:** If the host supports only basic information, only the  fileName property of the array is defined. |
+| **Comments**     | Lists files and directories that match the pattern  parameter in the current directory of the host. This method returns detailed  information if the server supports it. |
 
  
 
-#### Download()
-
- 
+#### *Download()*
 
 | **Syntax**       | Download(pattern)                                            |
 | ---------------- | ------------------------------------------------------------ |
@@ -908,24 +771,22 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
 | **Comments**     | Uses a loop to download  the specified files to the local computer. If the property has been set, the  data is saved to the specified file. If the Outfile property has not been  set, the file is saved with its current name. If an iteration of the loop  fails, the loop is cancelled, potentially leaving some files not downloaded. |
 
- 
 
-#### DownloadFile()
 
- 
+####  *DownloadFile()*
 
 | **Syntax**       | Download(filename)                                           |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| filename         | The file you are downloading. This must be a  specific file name. |
+| filename         | The file you are downloading. This must be  a specific file name. |
 | **Return Value** | Null if successful, an exception if unsuccessful.            |
 | **Comments**     | Downloads a file to the  local computer. If the property has been set, the data is saved to the  specified file. If the Outfile property has not been set, the file is saved  with its current name. |
 
-
-
-#### GetCurrentPath()
-
  
+
+#### *GetCurrentPath()*
+
+
 
 | **Syntax**       | GetCurrentPath()                                             |
 | ---------------- | ------------------------------------------------------------ |
@@ -934,31 +795,31 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
  
 
 | **Syntax**       | GetStatusLine()                                              |
 | ---------------- | ------------------------------------------------------------ |
-| **Return Value** | A string containing the  current path if successful, an exception if unsuccessful. |
+| **Return Value** | A string containing the current path if  successful, an exception if unsuccessful. |
 | **Comments**     | A string containing the latest response  string if successful, an exception if unsuccessful. |
 
  
 
-#### ListLocalFiles()
+#### *ListLocalFiles()*
 
  
 
 | **Syntax**       | ListLocalFiles(filter)                                       |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| filter           | The files you want to  list. The filter may be a patter or a specific file name. |
-| **Return Value** | An array of matching objects with following  properties if successful, an exception if unsuccessful.  a[].fileName // A string containing name of the  file  a[].isDir      // A Boolean, true if the entry  represents a directory |
-| **Comments**     | Lists files matching the filter parameter  in the current directory of the local computer. |
+| `filter`           | The files you want to  list. The filter may be a patter or a specific file name. |
+| **Return Value** | An array of matching objects with following  properties if successful, an exception if unsuccessful. <p></p> a[].fileName    //A string containing name of the file <p></p> a[].isDir    // A Boolean, true if the entry  represents a directory |
+| **Comments**     | Lists files matching the filter parameter in the  current directory of the local computer. |
 
  
 
-#### Logoff()
+#### *Logoff()*
 
  
 
@@ -967,27 +828,23 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Return Value** | Null if successful, an exception if  unsuccessful. |
 | **Comments**     | Terminates a connection to the FTP host.           |
 
-
-
  
 
+#### *Logon()*
+
  
-
-#### `Logon()`
-
-
 
 | **Syntax**       | Logon(*host*,  [*port*])                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| host             | The host to which you are connecting. You may  express the host using either the DNS number or the full name of the host. |
-| port             | The port to which you are  connecting. If you do not specify a port, the default FTP port is used. |
+| `host`             | The host to which you are connecting. You may  express the host using either the DNS number or the full name of the host. |
+| `port`             | The port to which you are  connecting. If you do not specify a port, the default FTP port is used. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
 | **Comments**     | Starts a conversation with the FTP host. If you  are logging on to a restricted site, you must have specified the UserName and  PassWord properties before using this method. |
 
  
 
-#### MakeDir()
+#### *MakeDir()*
 
  
 
@@ -1000,7 +857,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### RemoveDir()
+#### *RemoveDir()*
 
  
 
@@ -1009,11 +866,13 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | name             | The name of the directory that you are  deleting.            |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Deletes the named directory from the host.  **Note:** You may not delete a directory until that directory is empty. Remove  all files from the directory before using the RemoveDir() method. You may use the Delete() method to delete files on the host. |
+| **Comments**     | Deletes the named directory from the host.  <br>**Note:** You may not delete a directory until that directory is empty. Remove  all files from the directory before using the `RemoveDir()` method. You may use the `Delete()` method to delete files on the host. |
 
- 
 
-#### Rename()
+
+
+
+#### *Rename()*
 
  
 
@@ -1022,12 +881,12 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | from             | The file that you want to rename.                            |
 | to               | The new file name for the  file. If this file already exists, it is overwritten. |
-| **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Renames the  files in the current directory described by the from  parameter  to the name described in the to  parameter. |
+| **Return Value** | Null if successful, an exception if unsuccessful.            |
+| **Comments**     | Renames the files in the current directory  described by the `from`  parameter to the name described in the `to` parameter. |
 
+ 
 
-
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -1036,40 +895,35 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | string           | The string you are sending to the host.                      |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Sends a string to the host without  modification. This method is useful for interacting directly with the host  using non-standard or unsupported extensions. |
+| **Comments**     | Sends a string to the host without modification.  This method is useful for interacting directly with the host using  non-standard or unsupported extensions. |
 
  
 
-#### Upload()
+#### *Upload()*
 
  
 
 | **Syntax**       | Upload(*pattern*)                                            |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| pattern          | The file you are uploading. This may be a  specific file name, or it may contain wildcards. |
-| **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uses a loop to upload the  local files specified by the pattern parameter to the host. The  file is not renamed, and values specified by the DataFile and Data property are ignored. If an iteration of the loop  fails, the loop is cancelled, potentially leaving some files not transported. |
+| pattern          | The file you are uploading. This may be a specific  file name, or it may contain wildcards. |
+| **Return Value** | Null if successful, an exception if unsuccessful.            |
+| **Comments**     | Uses a loop to upload the  local files specified by the `pattern` parameter to the host. The  file is not renamed, and values specified by the `DataFile` and `Data` property are ignored. If an iteration of the loop  fails, the loop is cancelled, potentially leaving some files not transported. |
+
+
+#### *UploadFile()*
 
  
-
-#### UploadFile()
-
- 
-
 | **Syntax**       | UploadFile(filename)                                         |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| filename         | The destination name of  the local file. This parameter may be the same name as the local file name,  or it may be used to rename the  file once it arrives at the host. |
+| filename         | The destination name of  the local file. This parameter may be the same name as the local file name,  or it may be used to rename the file once it arrives at the host. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Uploads a local file to  the host. The local file is specified by the DataFile property. The  destination file name is specified by the filename parameter. If the DataFile property is not specified, then the contents of  the Data property are sent as a datastream to be  saved under the name specified by the filename parameter. |
+| **Comments**     | Uploads a local file to  the host. The local file is specified by the `DataFile` property. The  destination file name is specified by the `filename `parameter. If the `DataFile `property is not specified, then the contents of  the `Data` property are sent as a datastream to be  saved under the name specified by the `filename` parameter. |
 
+ 
 
-
-  
-
-#### UploadUnique()
-
+#### *UploadUnique()*
  
 
 | **Syntax**       | UploadUnique()                                               |
@@ -1078,209 +932,157 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Comments**     | Uploads data or a file to  a newly created, unique file on the host. The file name is created by the  host, and returned as a string value. The local file is specified by the  DataFile property. If the DataFile property is not specified, then the  contents of the Data property are sent as a datastream. |
 
  
+#### *WLFtp()*
 
-#### WLFtps()
 
- 
-
-| **Syntax**       | new WLFtps()                                                 |
+| **Syntax**       | new WLFtp()                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| **Return Value** | A new wlFTPs object.                                         |
-| **Comments**     | Creates a new wlFTPs object, used to  interact with the server. |
-| **Example**      | function **InitClient()**{ myNewFtpsObject = new WLFtps()  } |
+| **Return Value** | A new wlFTP object.                                          |
+| **Comments**     | Creates a new wlFTP object, used to  interact with the server. |
+    | **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLFtp() }</code></pre>   |
 
  
 
  
-
-
 
 
 
 ## wlHtmMailer Object
 
  
+The `wlHtmMailer` object provides support for HTM Mail load and functional testing within WebLOAD. Support for standard HTM Mail operation is included. HTM Mail over secure connections (SSL) is not currently supported.
 
-The wlHtmMailer object provides support for HTM Mail load and functional testing within WebLOAD. Support for standard HTM Mail operation is included. HTM Mail over secure connections (SSL) is not currently supported.
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
- 
+You must include `catch` and `try` functions in your script to handle exceptions when using the `wlHtmMailer` object. If you do not, the object may cause your script to freeze. A sample catch appears in the `wlHtmMailer code sample at the end of this section.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
-
- 
-
-You must include catch and try functions in your script to handle exceptions when using the wlHtmMailer object. If you do not, the object may cause your script to freeze. A sample catch appears in the wlHtmMailer code sample at the end of this section.
-
-
-
-To access the wlHtmMailer object, you must include the wlHtmMailer.js file in your `InitAgenda()` function.
+To access the `wlHtmMailer object, you must include the `wlHtmMailer.js` file in your `InitAgenda()` function.
 
  
 
 ### wlHtmMailer Properties
 
- 
+#### *AttachmentsArr*
 
-#### AttachmentsArr
-
- 
-
-The AttachmentsArr property lets you specify one or more attachments for an email. The filename variable should contain the name of the local file or datastream that you want to attach to the posting. 
+The `AttachmentsArr` property lets you specify one or more attachments for an email. The `filename` variable should contain the name of the local file or datastream that you want to attach to the posting. 
 
 
 
 For example:
 
-`wlHtmMailer.Attachments[0] = *filename`*
+`wlHtmMailer.Attachments[0] =`*`filename`*
 
  
 
-#### Bcc
+#### *Bcc*
 
  
 
-The Bcc property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [m>". For example:
+The `Bcc` property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as`"My Name <Me@MyCompany.com>"`. For example:
+
+`wlHtmMailer.Bcc = `*`blindcopyaddresses`*
+
+
+#### *Cc*
+
+The `Cc` property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"` For example:
+
+`wlHtmMailer.Cc = copyaddress; `*`copyaddress`*
 
  
 
-`wlHtmMailer.Bcc = *blindcopyaddresses*`
+#### *From*
+
+The `From` property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. For example:
+
+`wlHtmlMailer.From = `*`replyname`*
 
  
 
-#### Cc
+#### *Host*
+
+The `Host` property lets you specify a host for use in sending HTML email messages.
+
+
+
+#### *HtmlFilePath*
+
+
+The `HtmlFilePath` property specifies the full path directory location of the files associated with the email message.
 
  
 
-The Cc property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name [m>". For example:
+#### *HtmlText*
+
+
+The `HtmlText` property contains the HTML-formatted version of the email message, for example, potentially including embedded images. The corresponding plain text version of the email message is provided in the `Message` property.
+
+
+#### *Message*
+
+The `Message` property contains the plain text version of the email message. If there is a corresponding HTML-formatted version, for example, including embedded images, this version is provided in the `HtmlText property.
+
+
+#### *MessageDate*
+
+The `MessageDate` property contains the date of the email message.
 
  
 
-wlHtmMailer.Cc = copyaddress; *copyaddress*
+#### *ReplyTo*
+
+
+The `ReplyTo` property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`. For example:
 
  
 
-#### From
+`wlHtmMailer.ReplyTo = `*`replyaddress`*
 
  
 
-The From property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. For example:
-
- 
-
-wlHtmlMailer.From = *replyname*
-
- 
-
-#### Host
-
- 
-
-The Host property lets you specify a host for use in sending HTML email messages.
+#### *Size*
 
 
-
- 
-
- 
-
-#### HtmlFilePath
-
- 
-
-The HtmlFilePath property specifies the full path directory location of the files associated with the email message.
-
- 
-
-#### HtmlText
-
- 
-
-The HtmlText property contains the HTML-formatted version of the email message, for example, potentially including embedded images. The corresponding plain text version of the email message is provided in the Message property.
-
- 
-
-#### Message
-
- 
-
-The Message property contains the plain text version of the email message. If there is a corresponding HTML-formatted version, for example, including embedded images, this version is provided in the HtmlText property.
-
- 
-
-#### MessageDate
-
- 
-
-The MessageDate property contains the date of the email message.
-
- 
-
-#### ReplyTo
-
- 
-
-The ReplyTo property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [](mailto:Me@MyCompany.com)". For example:
-
- 
-
-`wlHtmMailer.ReplyTo = replyaddress`
-
- 
-
-#### Size
-
- 
 
 The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. For example:
 
- 
-
-`var filesize = wlHtmMailer.Size`
+`var filesize = `*`wlHtmMailer.Size`*
 
  
+#### *Subject*
 
-#### Subject
+The `Subject` property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email. For example:
 
- 
 
-The Subject property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email. For example:
-
- 
-
-`wlHtmMailer.Subject = subjectheader`
+`wlHtmMailer.Subject = `*`subjectheader`*
 
  
+#### *To*
 
-#### To
+The `To` property lets you specify a recipient's email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"` For example:
 
-The To property lets you specify a recipient's email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name ["](mailto:Me@MyCompany.com). For example:
 
- 
-
-`wlHtmMailer.To = recipientaddress; recipientaddress`
-
+`wlHtmMailer.To = `*`recipientaddress; recipientaddress`*
  
 
 ### wlHtmMailer Methods
 
- 
-
-#### AddAttachment()
+#### *AddAttachment()*
 
  
 
-| **Syntax**       | AddAttachment(*string*,  *type*, [*encoding*])               |
+| **Syntax**       |   AddAttachment(*string*,  *type*, [*encoding*])               |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | string           | The string you are sending  to the host. If you are sending a file, the string is the location and name  of the file. If you are sending a data attachment, the string is the data to  be attached. |
-| type             | The type of attachment you are sending.  Valid values are:  File (default)  Data |
-| [encoding]       | The type of encoding to apply to the file. Valid  values are:  7Bit (default) Quoted Base64 8Bit  8BitBinary |
+| type             | The type of attachment you are sending.  Valid values are:  <p></p> `File` (default) <p></p> `Data` |
+| [encoding]       | The type of encoding to apply to the file. Valid  values are: <p></p> `7Bit` (default) <p></p> `Quoted` <p></p> `Base64` <p></p> `8Bit` <p></p> `8BitBinary` |
 | **Return Value** | Returns an integer value  Attachment ID if successful, an exception if unsuccessful. |
 | **Comments**     | Adds an attachment to the message.                           |
 
  
 
-#### Connect()
+#### *Connect()*
 
  
 
@@ -1296,7 +1098,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### DeleteAttachment()
+#### *DeleteAttachment()*
 
  
 
@@ -1309,7 +1111,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -1320,7 +1122,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### DisplayMetrics()
+#### *DisplayMetrics()*
 
  
 
@@ -1331,7 +1133,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### GetLocalHost()
+#### *GetLocalHost()*
 
  
 
@@ -1342,7 +1144,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
  
 
@@ -1353,9 +1155,8 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### Send()
+#### *Send()*
 
- 
 
 | **Syntax**       | Send()                                                       |
 | ---------------- | ------------------------------------------------------------ |
@@ -1364,13 +1165,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
 
 
- 
-
- 
-
- 
-
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -1383,7 +1178,7 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### SetLocalHost()
+#### *SetLocalHost()*
 
  
 
@@ -1396,18 +1191,18 @@ The To property lets you specify a recipient's email address. You may specify mu
 
  
 
-#### Verify()
+#### *Verify()*
 
  
 
 | **Syntax**       | Verify()                                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Returns a 1 if the address  is valid, a 0 if the address is invalid. If the method is unable to verify  the address due to authentication or other reasons, it returns an exception. |
-| **Comments**     | Checks that the address in the To property is valid. To use this method, include  only one address in the To  property. |
+| **Comments**     | Checks that the address in the `To` property is valid. To use this method, include  only one address in the `To` property. |
 
  
 
-#### WLHtmMailer()
+#### *WLHtmMailer()*
 
  
 
@@ -1415,184 +1210,132 @@ The To property lets you specify a recipient's email address. You may specify mu
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlHtmMailer object.                                    |
 | **Comments**     | Creates a new wlHtmMailer  object, used to interact with the server. |
-| **Example**      | function **InitClient()** { myNewHtmMailerObject = new WLHtmMailer();  } |
+| **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLHtmMailer(); }</code></pre> |
 
 
-
- 
 
 ##  wlIMAP Object
 
  
+The `wlIMAP` object provides support for IMAP4 (Internet Message Access Protocol) load and functional testing within WebLOAD. Support for standard IMAP operation is included. IMAP over secure connections (SSL) is not currently supported.
 
-The wlIMAP object provides support for IMAP4 (Internet Message Access Protocol) load and functional testing within WebLOAD. Support for standard IMAP operation is included. IMAP over secure connections (SSL) is not currently supported.
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
- 
+To access the `wlIMAP` object, you must include the `wlImap.js` file in your `InitAgenda()` function.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
 
- 
-
-To access the wlIMAP object, you must include the wlImap.js file in your
-
-`InitAgenda()` function.
-
- 
 
 ### wlIMAP Properties
 
- 
+#### *CurrentMessage*
 
-#### CurrentMessage
-
- 
-
-The CurrentMessage property returns the number of the current message. You use this property to track the current message in relation to other messages on the host. 
-
-
+The `CurrentMessage` property returns the number of the current message. You use this property to track the current message in relation to other messages on the host. 
 
 For example:
 
-`var currentmessagenumber = imap.CurrentMessage`
+`var currentmessagenumber = `*`imap.CurrentMessage`*
 
  
 
-#### CurrentMessageID
+#### *CurrentMessageID*
+
+ 
+The `CurrentMessageID` property returns the ID of the current message. You use this property to track the current message in relation to other messages on the host. For example:
 
  
 
-The CurrentMessageID property returns the ID of the current message. You use this property to track the current message in relation to other messages on the host. For example:
+`var messagenumber = `*`imap.CurrentMessageID`*
 
  
 
-`var messagenumber = imap.CurrentMessageID`
-
- 
-
-#### document
-
- 
-
-The document property is an object with four properties:
-
-- Headers – A string containing the header of the message
-
-- MessageText – A string containing the text of the message
-
-- Size – An integer describing the size of the message in bytes
-
-- Attachments – An array of objects, with each attachment existing as an object with the following properties:
-
-- contentencoding – The encoding of the attachment
-
-- contenttype – The content type of the attachment
-
-- filename – The file name of the attachment
-
-- messagetext – The text of the attachment
-
-- partname – The part name of the message
-
-- size – The size of the attachment in bytes\n For example:
-
-- var recentdocument = *imap.document*
-
-- var messageheaders = *recentdocument.MessageHeaders*
-
-- var messagetext = *recentdocument.MessageText*
-
-- var messagesize = *recentdocument.MessageSize*
-
-- var messageattachments = *recentdocument.attachments*
+#### *document*
 
 
+The `document` property is an object with four properties:
+
+- `Headers` – A string containing the header of the message
+- `MessageText` – A string containing the text of the message
+- `Size` – An integer describing the size of the message in bytes
+- `Attachments` – An array of objects, with each attachment existing as an object with the following properties:    
+     - `contentencoding` – The encoding of the attachment
+     - `contenttype` – The content type of the attachment
+     - `filename` – The file name of the attachment
+     - `messagetext` – The text of the attachment
+     - `partname` – The part name of the message
+     - `size` – The size of the attachment in bytes
+
+For example:
+```
+var recentdocument = imap.document
+var messageheaders = recentdocument.MessageHeaders
+var messagetext = recentdocument.MessageText
+var messagesize = recentdocument.MessageSize
+var messageattachments = recentdocument.attachments
+
+```
 
 
-#### Mailbox
-
- 
+#### *Mailbox*
 
 The Mailbox property specifies the name of the mailbox with which you want to interact. You use this property to create, edit, and delete mailboxes. 
 
+For example: 
 
+`imap.Mailbox = `*`mailboxname`*
+
+ 
+
+#### *MaxLines*
+
+The `MaxLines` property lets you specify the maximum number of lines per email to retrieve from an IMAP host. You use this property to specify the number of lines to retrieve from each email. 
 
 For example: 
 
-`imap.Mailbox = mailboxname`
+`imap.Maxlines = `*`numberoflines`*
 
  
+#### *Outfile*
 
-#### MaxLines
-
-The MaxLines property lets you specify the maximum number of lines per email to retrieve from an IMAP host. You use this property to specify the number of lines to retrieve from each email. 
-
-
+The `Outfile` property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the `Outfile`, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new `Outfile` each time you write.
 
 For example: 
 
-`imap.Maxlines = numberoflines`
+`imap.Outfile = `*`filename*`
 
  
 
-#### Outfile
+#### *PassWord*
 
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the Outfile, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new Outfile each time you write.
-
-
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted IMAP host. WebLOAD automatically sends the password to the IMAP host when a wlIMAP object connects to an IMAP host. 
 
 For example: 
 
-`imap.Outfile = filename`
-
- 
-
-#### PassWord
-
- 
-
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted IMAP host. WebLOAD automatically sends the password to the IMAP host when a wlIMAP object connects to an IMAP host. 
+`imap.PassWord = `*`password`*
 
 
+#### *Size*
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
 
 For example: 
 
-`imap.PassWord = password`
-
-
-
-#### Size
-
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
-
-
-
-For example: 
-
-*`var filesize = imap.Size`*
+`var filesize = `*`imap.Size`*
 
  
 
-#### UserName
+#### *UserName*
 
- 
-
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted IMAP host. WebLOAD automatically sends the user name to the IMAP host when a wlIMAP object connects to an IMAP host.
-
-
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted IMAP host. WebLOAD automatically sends the user name to the IMAP host when a wlIMAP object connects to an IMAP host.
 
 For example: 
 
-`imap.UserName = username`
+`imap.UserName = `*`username`*
 
  
 
 ### wlIMAP Methods
 
- 
-
-#### Connect()
+#### *Connect()*
 
  
 
@@ -1606,18 +1349,18 @@ For example:
 
  
 
-#### CreateMailbox()
+#### *CreateMailbox()*
 
  
 
 | **Syntax**       | CreateMailbox()                                              |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Creates the mailbox  specified in the Mailbox property. The created mailboxes continue to exist  after the end of the script. To remove a mailbox, use the DeleteMailbox()  method. |
+| **Comments**     | Creates the mailbox  specified in the Mailbox property. The created mailboxes continue to exist  after the end of the script. To remove a mailbox, use the `DeleteMailbox()`  method. |
 
 
 
-#### Delete()
+#### *Delete()*
 
  
 
@@ -1630,9 +1373,8 @@ For example:
 
  
 
-#### DeleteMailbox()
+#### *DeleteMailbox()*
 
- 
 
 | **Syntax**       | DeleteMailbox()                                        |
 | ---------------- | ------------------------------------------------------ |
@@ -1641,7 +1383,7 @@ For example:
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -1652,7 +1394,7 @@ For example:
 
  
 
-#### GetMessageCount()
+#### *GetMessageCount()*
 
  
 
@@ -1663,9 +1405,8 @@ For example:
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
- 
 
 | **Syntax**       | GetStatusLine()                                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -1673,19 +1414,18 @@ For example:
 | **Comments**     | Returns the latest response string from the  host.           |
 
 
-
-#### ListMailboxes()
+#### *ListMailboxes()*
 
 | **Syntax**       | ListMailboxes(pattern)                                       |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | pattern          | The mailbox that you want to appear in the list.  This may be a specific name, or it may contain wildcards. |
 | **Return Value** | A string listing the  matching mailboxes if successful, an exception if unsuccessful. |
-| **Comments**     | Lists mailboxes matching the pattern parameter.              |
+| **Comments**     | Lists mailboxes matching the `pattern` parameter.              |
 
  
 
-#### RecentMessageCount()
+#### *RecentMessageCount()*
 
 | **Syntax**       | RecentMessageCount()                                         |
 | ---------------- | ------------------------------------------------------------ |
@@ -1694,7 +1434,7 @@ For example:
 
  
 
-#### RenameMailbox()
+#### *RenameMailbox()*
 
 | **Syntax**       | RenameMailbox(*string*)                                 |
 | ---------------- | ------------------------------------------------------- |
@@ -1705,9 +1445,8 @@ For example:
 
  
 
-#### Retrieve()
+#### *Retrieve()*
 
- 
 
 | **Syntax**       | Retrieve([*MessageSet*])                                     |
 | ---------------- | ------------------------------------------------------------ |
@@ -1716,28 +1455,22 @@ For example:
 | **Return Value** | A document for each  message specified if successful, an exception if unsuccessful. |
 | **Comments**     | Returns the message with the corresponding  ID. If no ID is specified, then the next message is returned. |
 
-
-
  
 
- 
+#### *Search()*
 
-#### Search()
-
- 
 
 | **Syntax**       | Search(*string*)                                             |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| string           | The criteria for your search. Valid values are: <br> **ALL** – All messages in the mailbox -  this is the default initial key for AND-ing.  <br/>**ANSWERED** – Messages with the  \\Answered flag set.  <br/>**BCC** – Messages that contain the  specified string in the envelope structure's BCC field.  <br/>**BEFORE** – Messages whose internal date is  earlier than the specified date.  <br/>**BODY** – Messages that contain the  specified string in the body of the message.  <br/>**CC** – Messages that contain  the specified string in the envelope structure's CC field.  <br/>**DELETED** – Messages with the  \\Deleted flag set.  <br/>**DRAFT** – Messages with the  \\Draft flag set.  <br/>**FLAGGED** – Messages with the  \\Flagged flag set.  <br/>**FROM** – Messages that contain the  specified string in the envelope structure's FROM field.  <br/>**HEADER** – Messages that have a header with the specified field- name (as  defined in ) and that contains the specified string in the field-body.  <br/>**KEYWORD** – Messages with the specified keyword set.  <br/>**LARGER** – Messages with an size larger than the specified number of octets.<br/>**NEW**  Messages that have the \\Recent flag set but not the  \\Seen flag. This is functionally equivalent to  "(RECENT UNSEEN)".   <br/>**NOT** – Messages that do not  match the specified search key.   <br/>**OLD** –  Messages that do not have the \\Recent flag set. This is functionally  equivalent to "NOT RECENT" (as opposed to "NOT NEW").  **ON** – Messages whose internal  date is within the specified date.   <br/>**OR** – Messages that match either  search key.  <br/>**RECENT** – Messages that  have the \\Recent flag set.  <br/>**SEEN** –  Messages that have the \\Seen flag set.  <br/> **SENTBEFORE** – Messages whose Date:  header is earlier than the specified date.   <br/>**SENTON** – Messages whose Date: header is  within the specified date.   <br/>**SENTSINCE** – Messages whose Date: header is  within or later than the specified date. <br/>  **SINCE** – Messages whose internal date is  within or later than the specified date.  <br/> **SMALLER** – Messages with an  RFC822.SIZE smaller than the specified number of octets. <br/>  **SUBJECT** – Messages that contain  the specified string in the envelope structure's SUBJECT field. <br/>  **TEXT** – Messages that contain the specified string in the header or body of  the message.  <br/> **TO** – Messages that contain  the specified string in the envelope structure's TO field. <br/>  **UID** – Messages with unique  identifiers corresponding to the specified unique identifier set.  <br/> **UNANSWERED** – Messages that do not have the  \\Answered flag set. <br/>  **UNDELETED** – Messages that do not  have the \\Deleted flag set.  <br/> **UNDRAFT** – Messages that do not  have the \\Draft flag set.  <br/> **UNFLAGGED** – Messages that do not have the \\Flagged flag set.  <br/> **UNKEYWORD** – Messages that do not have the specified keyword set.  <br/> **UNSEEN** – Messages that do not  have the \\Seen flag set. |
+| string           | The criteria for your search. Valid values are: <br> **ALL** – All messages in the mailbox -  this is the default initial key for AND-ing.  <br/>**ANSWERED** – Messages with the  \\Answered flag set.  <br/>**BCC** – Messages that contain the  specified string in the envelope structure's BCC field.  <br/>**BEFORE** – Messages whose internal date is  earlier than the specified date.  <br/>**BODY** – Messages that contain the  specified string in the body of the message.  <br/>**CC** – Messages that contain  the specified string in the envelope structure's CC field.  <br/>**DELETED** – Messages with the  \\Deleted flag set.  <br/>**DRAFT** – Messages with the  \\Draft flag set.  <br/>**FLAGGED** – Messages with the  \\Flagged flag set.  <br/>**FROM** – Messages that contain the  specified string in the envelope structure's FROM field.  <br/>**HEADER** – Messages that have a header with the specified field- name (as  defined in ) and that contains the specified string in the field-body.  <br/>**KEYWORD** – Messages with the specified keyword set.  <br/>**LARGER** – Messages with an size larger than the specified number of octets.<br/>**NEW**  Messages that have the \\Recent flag set but not the  \\Seen flag. This is functionally equivalent to  "(RECENT UNSEEN)".   <br/>**NOT** – Messages that do not  match the specified search key.   <br/>**OLD** –  Messages that do not have the \\Recent flag set. This is functionally  equivalent to "NOT RECENT" (as opposed to "NOT NEW").  <br/>**ON** – Messages whose internal  date is within the specified date.   <br/>**OR** – Messages that match either  search key.  <br/>**RECENT** – Messages that  have the \\Recent flag set.  <br/>**SEEN** –  Messages that have the \\Seen flag set.  <br/> **SENTBEFORE** – Messages whose Date:  header is earlier than the specified date.   <br/>**SENTON** – Messages whose Date: header is  within the specified date.   <br/>**SENTSINCE** – Messages whose Date: header is  within or later than the specified date. <br/>  **SINCE** – Messages whose internal date is  within or later than the specified date.  <br/> **SMALLER** – Messages with an  RFC822.SIZE smaller than the specified number of octets. <br/>  **SUBJECT** – Messages that contain  the specified string in the envelope structure's SUBJECT field. <br/>  **TEXT** – Messages that contain the specified string in the header or body of  the message.  <br/> **TO** – Messages that contain  the specified string in the envelope structure's TO field. <br/>  **UID** – Messages with unique  identifiers corresponding to the specified unique identifier set.  <br/> **UNANSWERED** – Messages that do not have the  \\Answered flag set. <br/>  **UNDELETED** – Messages that do not  have the \\Deleted flag set.  <br/> **UNDRAFT** – Messages that do not  have the \\Draft flag set.  <br/> **UNFLAGGED** – Messages that do not have the \\Flagged flag set.  <br/> **UNKEYWORD** – Messages that do not have the specified keyword set.  <br/> **UNSEEN** – Messages that do not  have the \\Seen flag set. |
 | **Return Value** | A string containing the  IDs of messages that meet the search criteria if successful, an exception if  unsuccessful. |
 | **Comments**     | Searches the current  mailbox for messages meeting the specified search criteria. |
 
 
 
-  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -1750,7 +1483,7 @@ For example:
 
  
 
-#### SubscribeMailbox()
+#### *SubscribeMailbox()*
 
  
 
@@ -1761,7 +1494,7 @@ For example:
 
  
 
-#### UnsubscribeMailbox()
+#### *UnsubscribeMailbox()*
 
  
 
@@ -1772,7 +1505,7 @@ For example:
 
  
 
-#### WLImap()
+#### *WLImap()*
 
  
 
@@ -1780,11 +1513,7 @@ For example:
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlIMAP object.                                         |
 | **Comments**     | Creates a new wlIMAP object, used to  interact with the server. |
-| **Example**      | function **InitClient()** { myNewImapObject = new WLImap() myNewImapObject.Connect("HostName")  } |
-
-
-
- 
+| **Example**      | <pre><code>function InitClient() {</code></pre> </br><pre><code> myNewImapObject = new WLImap() </code></pre></br><pre><code>myNewImapObject.Connect("HostName") }</code></pre> |
 
  
 
