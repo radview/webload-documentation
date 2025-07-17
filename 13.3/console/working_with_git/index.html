@@ -3483,18 +3483,18 @@
 </li>
 <li>
 <p>Make sure your WebLOAD files are saved in the directory defined as the Git local repository. This can be done in one of two ways:</p>
-</li>
-<li>
-<p>Define the Git local repository directory to be the WebLOAD default directory.</p>
-</li>
+<ul>
+<li>Define the Git local repository directory to be the WebLOAD default directory.</li>
 <li>Change the WebLOAD default directory to be the directory of the Git local repository.</li>
-</ol>
+</ul>
 <p>To do either of the above, you need to access the window where you can view or change the location of the WebLOAD default directory:</p>
 <ul>
 <li>In the WebLOAD Console, navigate to <strong>Global Options</strong> &gt; <strong>File Locations</strong>.</li>
 <li>In the WebLOAD Recorder, navigate to <strong>Settings</strong> &gt; <strong>File Locations</strong>.</li>
 </ul>
 <p>Note that changing the WebLOAD default directory in either the Console UI or the WebLOAD Recorder UI, changes it for both.</p>
+</li>
+</ol>
 <h2 id="setting-up-access-to-git-local-and-remote-repositories">Setting up Access to Git Local and Remote Repositories</h2>
 <p>As a prerequisite to using Git operation from within WebLOAD, you need to once specify in WebLOAD how to access the Git Local Repository and Remote Repository.</p>
 <blockquote>
@@ -3502,22 +3502,24 @@
 </blockquote>
 <p><strong>To specify the Git local and remote repositories:</strong></p>
 <ol>
-<li>Click <strong>Repository Settings</strong> in the <strong>Tools</strong> tab of the ribbon. The WebLOAD Repository Settings window appears.</li>
-</ol>
-<p><img alt="WebLOAD Repository Settings" src="../../images/console_users_guide_2023.png" /></p>
-<ol>
-<li>In the <strong>Local Repsitory</strong> section:</li>
-<li>Specify the location of the local repository.</li>
 <li>
-<p>Specify the <strong>current branch</strong>.</p>
+<p>Click <strong>Repository Settings</strong> in the <strong>Tools</strong> tab of the ribbon. The WebLOAD Repository Settings window appears.</p>
+<p><img alt="WebLOAD Repository Settings" src="../../images/console_users_guide_2023.png" /></p>
+</li>
+<li>
+<p>In the <strong>Local Repsitory</strong> section:</p>
+<ol>
+<li>Specify the location of the local repository.</li>
+<li>Specify the <strong>current branch</strong>.</li>
+</ol>
 </li>
 <li>
 <p>In the <strong>Remote Repository</strong> section:</p>
-</li>
+<ol>
 <li>Specify the location of the remote repository (either a URL or a directory).</li>
 <li>Specify the <strong>remote branch</strong>.</li>
-<li>
-<p>Specify the <strong>User Name</strong> and <strong>Password</strong> for accessing the remote repository.</p>
+<li>Specify the <strong>User Name</strong> and <strong>Password</strong> for accessing the remote repository.</li>
+</ol>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -3531,35 +3533,41 @@
 </ul>
 <p><strong>To Commit a WebLOAD object:</strong></p>
 <ol>
-<li>Click <strong>Commit</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Commit</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>A window appears in which you can enter a Commit comment.</p>
 <p><img alt="Entering a Commit Comment" src="../../images/console_users_guide_2025.png" /></p>
-<ol>
-<li>Optionally enter a comment, and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Optionally enter a comment, and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="performing-a-commit-dir-action">Performing a Commit Dir action</h2>
 <p>If you setup WebLOAD to support Git, you perform a Commit dir, that is, save to the Git local repository an entire folder (with all its descendants). This folder must be located under the local repository folder. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
 <p><strong>To perform a Commit dir:</strong></p>
 <ol>
 <li>Click <strong>Commit dir</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-<li>In the File Explorer window that appears, specify the directory you wish to commit.</li>
-</ol>
+<li>
+<p>In the File Explorer window that appears, specify the directory you wish to commit.</p>
 <p>A window appears in which you can enter a Commit dir comment.</p>
 <p><img alt="Entering a Commit Dir Comment" src="../../images/console_users_guide_2026.png" /></p>
-<ol>
-<li>Optionally enter a comment, and click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Optionally enter a comment, and click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="performing-a-push-action"><strong>Performing a Push action</strong></h2>
 <p>If you setup WebLOAD to support Git, you can perform a Push, which causes all Commits you had made to the Git local repository, to be pushed to the Git remote repository. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
 <p><strong>To perform a Push:</strong></p>
 <ol>
-<li>Click <strong>Push</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Push</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>A window appears, informing you of the Git Push operation and its success status.</p>
 <p><img alt="Git Push Operation Message" src="../../images/console_users_guide_2027.png" /></p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
 <li>If the Push operation is rejected, for example because a conflict has arisen due to changes made by two different users, a window appears, displaying the Git rejection message. Follow the instructions in the message, and resolve the rejection using your chosen Git UI.</li>
 </ol>
 <h2 id="performing-a-pull-action">Performing a Pull action</h2>
@@ -3567,17 +3575,22 @@
 <p>A Pull operation pulls the entire branch from the remote repository and updates the local repository and directories.</p>
 <p><strong>To perform a Pull:</strong></p>
 <ol>
-<li>Click <strong>Pull</strong> in the <strong>Tools</strong> tab of the ribbon.</li>
-</ol>
+<li>
+<p>Click <strong>Pull</strong> in the <strong>Tools</strong> tab of the ribbon.</p>
 <p>A window appears, informing you of the Git Pull operation and its success status.</p>
 <p><img alt="Git Pull Operation Message" src="../../images/console_users_guide_2028.png" /></p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
 </ol>
 <h2 id="opening-the-git-ui">Opening the Git UI</h2>
 <p>If you setup WebLOAD to support Git, you can launch your Git UI from within WebLOAD. This functionality is available in both the WebLOAD Recorder and the WebLOAD Console.</p>
 <p><strong>To launch the Git UI:</strong></p>
-<p>1. Click <strong>Open Git Gui</strong> in the <strong>Tools</strong> tab of the ribbon. The Git UI is launched.</p>
+<ol>
+<li>Click <strong>Open Git Gui</strong> in the <strong>Tools</strong> tab of the ribbon. 
+    The Git UI is launched.</li>
+</ol>
 
 
 

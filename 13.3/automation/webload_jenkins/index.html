@@ -3536,14 +3536,14 @@
 <p><a href="http://jenkins-ci.org/">Jenkins CI </a>is a Continuous Integration server that is growing in popularity. Agile development teams use Jenkins to run their builds, tests and deployments as well as their performance tests if possible. Jenkins is extendable by means of plugins. As of WebLOAD 10.1, a WebLOAD plugin is available for Jenkins.</p>
 <p><strong>To run WebLOAD jobs in Jenkins, you must:</strong></p>
 <ol>
-<li>Install a Jenkins CI server.</li>
-</ol>
+<li>
+<p>Install a Jenkins CI server.</p>
 <p>Jenkins needs to be able to control a full WebLOAD installation (in which both the WebOLAD Console and WebOLAD Analytics are installed, and which has an active license). This can be done either by installing the Jenkins Master on the WebLOAD machine, or by setting up a Jenkins Slave (recommended).</p>
 <p>For instructions, refer to the Jenkins documentation at <a href="http://jenkins-ci.org/">http://jenkins-ci.org/*.</a></p>
 <blockquote>
 <p><strong>Note:</strong> If Jenkins is running as a Service, make sure that you are using a logged in user, and not the Local System Account.</p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>Install the WebLOAD plugin in Jenkins. This is a one-time task. Refer to <a href="#installing-the-webload-plugin-for-jenkins">Installing the WebLOAD Plugin for Jenkins</a>below.</p>
 </li>
@@ -3554,79 +3554,79 @@
 <h2 id="installing-the-webload-plugin-for-jenkins">Installing the WebLOAD Plugin for Jenkins</h2>
 <p><strong>To install the WebLOAD Plugin for Jenkins:</strong></p>
 <ol>
-<li>In the Jenkins dashboard (homepage), click <strong>Manage Jenkins</strong>.</li>
-</ol>
+<li>
+<p>In the Jenkins dashboard (homepage), click <strong>Manage Jenkins</strong>.</p>
 <p><img alt="Selecting Manage Jenkins" src="../../images/automation_users_guide_030.jpeg" /></p>
-<ol>
-<li>In the Manage Jenkins page, click <strong>Manage Plugins</strong>.</li>
-</ol>
+</li>
+<li>
+<p>In the Manage Jenkins page, click <strong>Manage Plugins</strong>.</p>
 <p><img alt="Selecting Manage Plugins" src="../../images/automation_users_guide_031.jpeg" /></p>
-<ol>
-<li>Select the <strong>Available</strong> tab.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Available</strong> tab.</p>
 <p><img alt="Available Plugins" src="../../images/automation_users_guide_032.jpeg" /></p>
-<ol>
+</li>
 <li>
 <p>In the Available page:</p>
-</li>
-<li>
-<p>Select the <strong>WebLOAD Plugin</strong> in the list.</p>
-</li>
+<ol>
+<li>Select the <strong>WebLOAD Plugin</strong> in the list.</li>
 <li>Click <strong>Install without restart</strong>.</li>
 </ol>
 <p>You are returned to the Jenkins dashboard.</p>
+</li>
+</ol>
 <h2 id="creating-a-webload-job-in-jenkins">Creating a WebLOAD Job in Jenkins</h2>
 <ol>
-<li>In the Jenkins dashboard (homepage), click <strong>New Job</strong>.</li>
-</ol>
+<li>
+<p>In the Jenkins dashboard (homepage), click <strong>New Job</strong>.</p>
 <p><img alt="Selecting New Job" src="../../images/automation_users_guide_033.jpeg" /></p>
-<ol>
-<li>Enter a name for the new job, and define the type of job by selecting from the options displayed under the job name. Typically you might select <strong>Build a free- style software project</strong> or <strong>Copy existing Job</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Enter a name for the new job, and define the type of job by selecting from the options displayed under the job name. Typically you might select <strong>Build a free- style software project</strong> or <strong>Copy existing Job</strong>.</p>
 <p><img alt="Defining a Job Name and Type" src="../../images/automation_users_guide_034.jpeg" /></p>
-<ol>
-<li>Click <strong>OK</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
 <p>A standard Jenkins New Job page appears.</p>
 <p><img alt="New Job Page" src="../../images/automation_users_guide_035.jpeg" /></p>
-<ol>
+</li>
 <li>
 <p>Define the project (for help, refer to Jenkins documentation). For example, you might click <strong>Build periodically</strong> to define a project that runs automatically every Thursday at 2 AM.</p>
 </li>
 <li>
 <p>In the <strong>Build</strong> section, click <strong>Add build step</strong> and select a step. The two steps offered by the WebLOAD plugin are <strong>Execute WebLOAD load session</strong> and <strong>Generate WebLOAD Analytics Report</strong>.</p>
-</li>
-</ol>
 <p><img alt="Plugins List" src="../../images/automation_users_guide_036.jpeg" /></p>
 <p>The screen refreshes to enable defining the settings of the build step. Refer to:</p>
-<ol>
+<ul>
 <li>
 <p><a href="#defining-the-execute-load-session-build-step"><em>Defining the Execute Load Session Build Step</em> </a></p>
 </li>
 <li>
 <p><a href="#defining-the-generate-analytics-report-build-step"><em>Defining the Generate Analytics Report Build Step</em> </a></p>
 </li>
+</ul>
+</li>
 <li>
 <p>Repeat the previous step as many times as desired to add as many build actions as desired.</p>
 </li>
 <li>
 <p>Click <strong>Add post-build action</strong> and specify a post-build action or actions. For example, if you specified the JUNIT output format for an Analytics report, you can select <strong>Publish JUnit test result report.</strong></p>
-</li>
-</ol>
 <p><img alt="save apply " src="../../images/automation_users_guide_037.jpeg" /></p>
-<ol>
-<li>Click <strong>Save</strong> or <strong>Apply</strong>.</li>
+</li>
+<li>
+<p>Click <strong>Save</strong> or <strong>Apply</strong>.</p>
+</li>
 </ol>
 <h3 id="defining-the-execute-load-session-build-step">Defining the Execute Load Session Build Step</h3>
 <p>If you select <strong>Execute WebLOAD load session</strong> as a build step, the following appears:</p>
 <p><img alt="Execute WebLOAD load session – Defining" src="../../images/automation_users_guide_038.jpeg" /></p>
 <ol>
-<li>Optionally click <strong>Advanced</strong> to further refine your definitions. The following appears:</li>
-</ol>
+<li>
+<p>Optionally click <strong>Advanced</strong> to further refine your definitions. The following appears:</p>
 <p><img alt="Execute WebLOAD load session – Advanced Definition" src="../../images/automation_users_guide_039.jpeg" /></p>
-<ol>
-<li>Enter information in the fields, as described in this table.</li>
-</ol>
+</li>
+<li>
+<p>Enter information in the fields, as described in this table.</p>
 <table>
 <thead>
 <tr>
@@ -3637,7 +3637,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;">Template File</td>
-<td style="text-align: left;">The name and path of the *.tpl (Template file) or *.ls file (Load Session file) to run. The template defines which agenda to run, on which load generator, and for how long.</td>
+<td style="text-align: left;">The name and path of the <code>*.tpl</code> (Template file) or <code>*.ls</code> file (Load Session file) to run. The template defines which agenda to run, on which load generator, and for how long.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Load Session File</td>
@@ -3657,16 +3657,18 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ol>
 <h3 id="defining-the-generate-analytics-report-build-step">Defining the Generate Analytics Report Build Step</h3>
 <p>If you select <strong>Generate WebLOAD Analytics Report</strong> as a build step, the following appears:</p>
 <p><img alt="Generate WebLOAD Analytics Report – Defining" src="../../images/automation_users_guide_040.jpeg" /></p>
 <ol>
-<li>Optionally click <strong>Advanced</strong> to further refine your definitions. The following appears:</li>
-</ol>
+<li>
+<p>Optionally click <strong>Advanced</strong> to further refine your definitions. The following appears:</p>
 <p><img alt="Generate WebLOAD Analytics Report – Advanced Definition" src="../../images/automation_users_guide_041.jpeg" /></p>
-<ol>
-<li>Enter information in the fields, as described in this table.</li>
-</ol>
+</li>
+<li>
+<p>Enter information in the fields, as described in this table.</p>
 <table>
 <thead>
 <tr>
@@ -3705,17 +3707,19 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ol>
 <h2 id="common-usage-scenarios-of-an-analytics-build-action">Common Usage Scenarios of an Analytics Build Action</h2>
 <h3 id="generate-a-summary-report-of-the-last-build">Generate a summary report of the last build</h3>
 <p>Used to present the results of the recently-run load session.</p>
-<ol>
+<ul>
 <li>Input Load Session File: The Load Session from the Execute Console command.</li>
 <li>Output format: PDF, DOC or HTML</li>
 <li>Portfolio Name: Summary Portfolio</li>
-</ol>
+</ul>
 <h3 id="compare-last-build-to-x-number-of-previous-builds">Compare last build to X number of previous builds</h3>
 <p>Used for regression testing against several previous runs of the Jenkins job (builds).</p>
-<ol>
+<ul>
 <li>
 <p>Input Load Session File: The Load Session from the Execute Console command.</p>
 </li>
@@ -3728,23 +3732,23 @@
 <li>
 <p>Compare to previous builds: Number of previous builds to compare with, for example 8.</p>
 </li>
-</ol>
+</ul>
 <h3 id="compare-last-build-to-a-known-session">Compare last build to a known session</h3>
 <p>Used to compare the results to a base / benchmark load session.</p>
-<ol>
+<ul>
 <li>Input Load Session File: The Load Session from the Execute Console command.</li>
 <li>Output format: PDF, DOC or HTML</li>
 <li>Portfolio Name: Session Comparison Portfolio</li>
-<li>Compare to sessions: Path to the base session file, for example C:\base_results.ls</li>
-</ol>
+<li>Compare to sessions: Path to the base session file, for example <code>C:\base_results.ls</code></li>
+</ul>
 <h3 id="generate-a-report-in-junit-format-for-the-last-build">Generate a report in JUnit format for the last build</h3>
 <p>Used to export the validation results in JUnit format.</p>
-<ol>
+<ul>
 <li>Input Load Session File: The Load Session from the Execute Console command.</li>
 <li>Report Name: Enter a name for the report. For example, entering ‘result’ will create a ‘result.xml’ file.</li>
 <li>Output format: JUNIT</li>
 <li>Portfolio Name: Summary Portfolio</li>
-</ol>
+</ul>
 <blockquote>
 <p><strong>Notes:</strong> </p>
 <ul>

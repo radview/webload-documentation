@@ -3472,17 +3472,21 @@
 <h3 id="specifying-the-dynatrace-system-profile">Specifying the Dynatrace System Profile</h3>
 <p>When you enable Dynatrace in WebLOAD (refer to <a href="../set_global_opt/#the-dynatrace-tab"><em>The Dynatrace Tab</em> </a>, by default WebLOAD specifies that points of interest viewed in Dynatrace will be viewed in the <strong>Monitoring</strong> system profile. If you wish to change this default setting, do the following:</p>
 <ol>
-<li>Click <strong>Global Options</strong> in the <strong>Tools</strong> tab of the ribbon,</li>
-</ol>
+<li>
+<p>Click <strong>Global Options</strong> in the <strong>Tools</strong> tab of the ribbon,</p>
 <p>-Or-</p>
 <p>Select <strong>Global Options</strong> from the Console System button.</p>
-<ol>
-<li>Select the <strong>Dynatrace</strong> tab.</li>
-<li>In the <strong>Timestamp</strong> field, change:</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Dynatrace</strong> tab.</p>
+</li>
+<li>
+<p>In the <strong>Timestamp</strong> field, change:</p>
 <p><code>rest/integration/opendashboard?source=live:Monitoring&amp;filter= tf:CustomTimeframe?</code></p>
 <p>To:</p>
 <p><code>rest/integration/opendashboard?source=live:&lt;Your-desired- system-profile&gt;&amp;filter=tf:CustomTimeframe?</code></p>
+</li>
+</ol>
 <p>Whenever you click a point of interest in WebLOAD and select <strong>DynaTrace</strong>, the point of interest will be displayed in the Dynatrace system profile you specified in the <strong>Timestamp</strong> field.</p>
 <h2 id="viewing-in-dynatrace-the-transactions-related-to-webload-errors">Viewing in Dynatrace the Transactions Related to WebLOAD Errors</h2>
 <p>If an error occurs at any time during a test session, an error message displays in the Log Window. If you installed Dynatrace, you can access Dynatrace directly from WebLOAD’s Log Window to view in Dynatrace the transaction associated with the error.</p>
@@ -3493,15 +3497,17 @@
 </li>
 <li>
 <p>In the Log Window, double-click the paperclip icon adjacent to the error.</p>
-</li>
-</ol>
 <p><img alt="Selecting an Attachment of an Error in the Log Window" src="../../images/console_users_guide_3027.png" /></p>
-<ol>
-<li>In the Event Viewer that appears, click the <strong>Dynatrace</strong> button</li>
-</ol>
+</li>
+<li>
+<p>In the Event Viewer that appears, click the <strong>Dynatrace</strong> button</p>
 <p><img alt="Selecting Dynatrace in the Event Viewer" src="../../images/console_users_guide_3028.png" /></p>
+</li>
+<li>
 <p>A Dynatrace window appears, displaying the details of the relevant transaction.</p>
 <p><img alt="Viewing in Dynatrace the Transaction Related to a WebLOAD Error" src="../../images/console_users_guide_3029.png" /></p>
+</li>
+</ol>
 
 
 

@@ -3954,7 +3954,7 @@
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
-<td style="text-align: left;">/ag <code>&lt;script name&gt;</code></td>
+<td style="text-align: left;">/ag <script name></td>
 <td style="text-align: left;">The name of an existing script (*.wlp) to open.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
@@ -3967,16 +3967,16 @@
 <h4 id="examples">Examples</h4>
 <p><strong>Example 1:</strong></p>
 <p><code>WebLOAD.exe test1.tpl</code></p>
-<p>This command opens the Console and the test1.tpl template. The Console waits for user input.</p>
+<p>This command opens the Console and the <code>test1.tpl</code> template. The Console waits for user input.</p>
 <p><strong>Example 2:</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30</code></p>
-<p>This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
+<p>This command opens the Console and automatically runs a test using the <code>test1.tpl</code> template file. The test results are saved in the Load Session file <code>march9.ls</code>, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
 <p><strong>Example 3:</strong></p>
 <p><code>WebLOAD.exe /ag c:\scripts\MyScript.wlp</code></p>
-<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyScript.wlp script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.</p>
+<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The <code>MyScript.wlp</code> script is automatically selected and the WebLOAD Wizard waits for user input. For more information about the script/Mix Selection dialog box.</p>
 <p><strong>Example 4:</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml</code></p>
-<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.</p>
+<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in <code>result1.xml</code>.</p>
 <p><strong>Example 5:</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3</code></p>
 <p>This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>

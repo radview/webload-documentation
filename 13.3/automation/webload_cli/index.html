@@ -4278,7 +4278,7 @@
 <p>Enter the wlUpdateLicenseApplicationCmd command together with the optional parameters (described below) into your external script, to automatically launch a WebLOAD License action.</p>
 <h3 id="syntax">Syntax</h3>
 <p>Use the following syntax to define the parameters for registering or updating a WebLOAD license through a command line interface:</p>
-<p><code>wlUpdateLicenseApplicationCmd {-help}|{-info}|{-free}|{-file ``*license\_file*}|{-server *server\_address*}|{-hostid}</code></p>
+<p><code>wlUpdateLicenseApplicationCmd {-help}|{-info}|{-free}|{-file license_file}|{-server server_address}|{-hostid}</code></p>
 <h3 id="parameters"><strong>Parameters</strong></h3>
 <table>
 <thead>
@@ -4323,21 +4323,22 @@
 </table>
 <h3 id="examples">Examples</h3>
 <p><strong>Example 1:</strong></p>
-<p>wlUpdateLicenseApplicationCmd -info</p>
+<p><code>wlUpdateLicenseApplicationCmd -info</code></p>
 <p>This command provides as output the license information.</p>
 <p><strong>Example 2:</strong></p>
-<p>wlUpdateLicenseApplicationCmd -file webload.lic</p>
+<p><code>wlUpdateLicenseApplicationCmd -file webload.lic</code></p>
 <p>This command uploads the specified license file, and installs it. Following successful installation, you can begin working with WebLOAD.</p>
 <h2 id="running-a-webload-console-test-through-the-cli">Running a WebLOAD Console Test through the CLI</h2>
 <p>You can perform load testing through a command line interface. You can enter the WebLOAD Console launch command into a batch file or into an external script and WebLOAD Console will run directly, without user intervention, using the parameters specified.</p>
 <p><strong>To run WebLOAD Console through the command line interface:</strong></p>
-<p>Enter the WebLOAD.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD test. When your script runs, the executable file will invoke WebLOAD Console and run the specified test according to the specified parameters.</p>
+<p>Enter the <code>WebLOAD.exe</code> command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD test. When your script runs, the executable file will invoke WebLOAD Console and run the specified test according to the specified parameters.</p>
 <blockquote>
 <p><strong>Note:</strong> Verify that the script used with the template specified, and any included files, are accessible to the Load Template or Load Session file that will be run.</p>
 </blockquote>
 <h3 id="syntax_1">Syntax</h3>
 <p>Use the following syntax to define the parameters for running a WebLOAD test through a command line interface:</p>
-<p><code>WebLOAD.exe [&lt;file name to open&gt;][] [&lt;flags&gt;]</code></p>
+<p><code>WebLOAD.exe [&lt;file name to open&gt;][&lt;file name to save&gt;]
+[&lt;flags&gt;]</code></p>
 <h3 id="parameters_1">Parameters</h3>
 <table>
 <thead>
@@ -4350,22 +4351,17 @@
 <tbody>
 <tr>
 <td style="text-align: left;">File name to open</td>
-<td style="text-align: left;">The name of the *.tpl or *.ls file (Load Template or Load Session file) to run. Or *.json - see <a href="#json-based-load-test-console-cli">JSON Based Load test</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
+<td style="text-align: left;">The name of the <code>*.tpl</code> or <code>*.ls</code> file (Load Template or Load Session file) to run.</td>
 <td style="text-align: left;">Optional parameter</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">File name to save</td>
-<td style="text-align: left;">The name of the *.ls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
+<td style="text-align: left;">The name of the <code>*.ls</code> file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
 <td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em><code>&lt;*time*&gt;</code></em> – Automatically run the test for the length of time specified in <em><code>&lt;time&gt;</code>/</em></p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc <code>&lt;num&gt;</code>– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;*results\_file\_name*&gt;</code></em> – Place the results in the specified file (an XML file).</p><p>- /ag <code>&lt;script name&gt;</code> - The name of an existing script (*.wlp) to open.</p></td>
+<td style="text-align: left;"><p>- /ar – Automatically run the WebLOAD test without waiting for user input. If this flag is not specified, the Console is called up with the specified Load Template/Load Session but the test is not automatically run. The system waits for user input.</p><p>- /ar <em><code>&lt;*time*&gt;</code></em> – Automatically run the test for the length of time specified in <em><code>&lt;time&gt;</code>/</em></p><p>- /vc <num>– The number of Virtual Client licenses to allocate when using WebRM License Server.</p><p>- /pc <code>&lt;num&gt;</code>– The number of Probing Client licenses to allocate when using WebRM License Server.</p><p>- /rc <em><code>&lt;*results\_file\_name*&gt;</code></em> – Place the results in the specified file (an XML file).</p><p>- /ag <code>&lt;script name&gt;</code> - The name of an existing script (<code>*.wlp</code>) to open.</p></td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 </tbody>
@@ -4378,16 +4374,16 @@
 <h3 id="examples_1">Examples</h3>
 <p><strong>Example 1</strong></p>
 <p><code>WebLOAD.exe test1.tpl</code></p>
-<p>This command opens the Console and the test1.tpl template. The Console waits for user input.</p>
+<p>This command opens the Console and the <code>test1.tpl</code> template. The Console waits for user input.</p>
 <p><strong>Example 2</strong></p>
-<p>WebLOAD.exe test1.tpl march9.ls /ar 30</p>
-<p>This command opens the Console and automatically runs a test using the test1.tpl template file. The test results are saved in the Load Session file march9.ls, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
+<p><code>WebLOAD.exe test1.tpl march9.ls /ar 30</code></p>
+<p>This command opens the Console and automatically runs a test using the <code>test1.tpl</code> template file. The test results are saved in the Load Session file <code>march9.ls</code>, which includes all of the test data and results. This file is saved in the current directory, unless otherwise specified. The autorun flag is set, meaning that the test runs without user intervention. The test will run for 30 seconds.</p>
 <p><strong>Example 3</strong></p>
 <p><code>WebLOAD.exe /ag c:\agendas\MyAgenda.wlp</code></p>
-<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The MyAgenda.wlp script is automatically selected and the WebLOAD Wizard waits for user input.</p>
+<p>This command opens the Console and the WebLOAD Wizard to the script/Mix Selection dialog box. The <code>MyAgenda.wlp</code> script is automatically selected and the WebLOAD Wizard waits for user input.</p>
 <p><strong>Example 4</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /rc result1.xml</code></p>
-<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in result1.xml.</p>
+<p>This command performs all the actions described in Example 2 above, and in addition the execution return code is saved in <code>result1.xml</code>.</p>
 <p><strong>Example 5</strong></p>
 <p><code>WebLOAD.exe test1.tpl march9.ls /ar 30 /vc 100 /pc 3</code></p>
 <p>This command performs all the actions described in Example 2 above, and in addition it allocates 100 virtual clients and 3 probing clients from the WebRM server.</p>
@@ -4405,12 +4401,12 @@
 <tbody>
 <tr>
 <td>File name to open</td>
-<td>The name of the <em>.tpl or</em>.ls or *.json file to run.</td>
+<td>The name of the <code>*.tpl</code> or <code>*.ls</code> or *<code>.json</code> file to run.</td>
 <td>Optional parameter</td>
 </tr>
 <tr>
 <td>File name to save</td>
-<td>The name of the *.ls file containing the test data.</td>
+<td>The name of the <code>*.ls</code> file containing the test data.</td>
 <td>Optional parameter</td>
 </tr>
 </tbody>
@@ -4666,7 +4662,7 @@ combination of the following:</p>
 <li><strong>WLAnalyticsCMD.exe</strong> – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes.</li>
 <li><strong>WLAnalytics.exe</strong> – Launches the WebLOAD Analytics UI, and generates a report for a specified session.</li>
 </ul>
-<p>The executables are located in <em><code>&lt;Installation dir&gt;</code></em>\bin. For example:</p>
+<p>The executables are located in <code>&lt;Installation dir&gt;\bin</code>.  For example:</p>
 <p><code>C:\Program Files\RadView\WebLOAD\bin.</code></p>
 <h3 id="running-wlanalyticscmdexe">Running WLAnalyticsCMD.exe</h3>
 <p>Use this executable to generate a report for a specified session, and publish or print it.</p>
@@ -4696,20 +4692,20 @@ combination of the following:</p>
 </blockquote>
 <h4 id="examples_2">Examples</h4>
 <p><strong>Example 1:</strong></p>
-<p>To load the mysession.ls Load Session, generate a ‘General/Load Size Summary’ chart, and publish it in the default file format, in the default location, under the name test-report:</p>
+<p>To load the <code>mysession.ls</code> Load Session, generate a ‘General/Load Size Summary’ chart, and publish it in the default file format, in the default location, under the name <code>test-report</code>:</p>
 <p><code>WLAnalyticsCmd.exe -m U -t "General\Load Size Summary" -ls "C:\mysession.ls" –n "test-report"</code></p>
 <p><strong>Example 2:</strong></p>
-<p>To use the loaded first-session Load Session, generate a ‘Summary Portfolio’ portfolio, and print it:</p>
+<p>To use the loaded <code>first-session</code> Load Session, generate a ‘Summary Portfolio’ portfolio, and print it:</p>
 <p><code>WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s “first- session"</code></p>
 <p><strong>Example 3:</strong></p>
-<p>To use the loaded first-session and second-session Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in C:\myreports, using a default name:</p>
+<p>To use the loaded <code>first-session</code> and <code>second-session</code> Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in C:\myreports, using a default name:</p>
 <p><code>WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s</code></p>
 <p><code>“first-session" -s "second-session" –f PDF –l “c:\myreports”</code></p>
 <h3 id="running-wlanalyticsexe">Running WLAnalytics.exe</h3>
 <p>Use this executable to open the WebLOAD Analytics UI, and open a report or generate a report for a specified session.</p>
 <h4 id="syntax_4">Syntax</h4>
-<p>**<code>WLAnalytics.exe** {**-t** *template\_path*}|{**- p** *portfolio\_path*}</code></p>
-<p><code>{**-s** *session\_name*}|{**-ls** *session\_path*} [**-h**] [**-noSplash**]</code></p>
+<p><code>WLAnalytics.exe {-t template_path}|{- p portfolio_path}</code></p>
+<p><code>{-s session_name}|{-ls session_path} [-h] [-noSplash]</code></p>
 <h4 id="parameters_3">Parameters</h4>
 <table><tr><th colspan="1" valign="top"><b>Parameter</b></th><th colspan="1" valign="top"><b>Description</b></th><th colspan="1" valign="top"><b>Comments</b></th></tr>
 <tr><td colspan="1" valign="top"><b>-t</b> <i>template_path</i></td><td colspan="1" valign="top"><p>Generates a chart from a specified template.</p><p>You must specify the path to the template directory (either absolute or relative to the gallery).</p></td><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>You must specify one of the two options:</p><p><b>-t</b> or <b>–p</b>.</p></td></tr>
@@ -4741,7 +4737,8 @@ combination of the following:</p>
 <p>Enter the WebloadRecorder.exe command together with a series of optional parameters (described below) into your external script to automatically launch a WebLOAD Recorder test. When your script runs, the executable file will invoke WebLOAD Recorder and run the specified test according to the specified parameters.</p>
 <h4 id="syntax_5">Syntax</h4>
 <p>Use the following syntax to define the parameters for running a WebLOAD Recorder test <strong>through a Command Line Interface.:</strong></p>
-<p><code>WebloadRecorder.exe [&lt;flags&gt;][] [&lt;session name to save to&gt;][]</code></p>
+<p><code>webloadide.exe [&lt;flags&gt;][&lt;project or session name to open&gt;]
+[&lt;session name to save to&gt;][&lt;Number of rounds to run&gt;]</code></p>
 <p>To run more than one session, append all relevant parameters at the end of the syntax. See examples 2 and 3 in <a href="#examples"><em>Examples</em></a>.</p>
 <h4 id="parameters_4">Parameters</h4>
 <p>When running a test invoked by the executable, you can specify the following parameters:</p>
@@ -4756,17 +4753,17 @@ combination of the following:</p>
 <tbody>
 <tr>
 <td style="text-align: left;">Flags</td>
-<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p><p>/r - auto record</p><p>Start Recorder in recording mode - can be used for recording automation. Can also add  <code>/time</code> X to automatically stop recording after X seconds, for example  /time 30. Specify the .wlp (or .js) to save to. You can also use special link to control the recording - add transactions and stop recorindg, see <a href="#special-link-during-recording">Special Links</a> </p></td>
+<td style="text-align: left;"><p>/a - auto run</p><p>Automatically run the WebLOAD Recorder test without waiting for user input. If this flag is not specified, WebLOAD Recorder is opened with the specified project / session but the test is not automatically run. The system waits for user input.</p><p>/r - auto record</p><p>Start Recorder in recording mode - can be used for recording automation. Can also add  <code>/time</code> X to automatically stop recording after X seconds, for example  /time 30. Specify the <code>.wlp</code> (or .js) to save to. You can also use special link to control the recording - add transactions and stop recorindg, see <a href="#special-link-during-recording">Special Links</a> </p></td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
 <td style="text-align: left;">Project or session name to open</td>
-<td style="text-align: left;">The name of the .wlp file or .wls file (Project file or Session file) to run.</td>
+<td style="text-align: left;">The name of the <code>.wlp</code> file or <code>.wls</code> file (Project file or Session file) to run.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>
 <td style="text-align: left;">Session name to save to</td>
-<td style="text-align: left;">The name of the .wls file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
+<td style="text-align: left;">The name of the <code>.wls</code> file containing the test data. This file will be saved in the current directory unless otherwise specified.</td>
 <td style="text-align: left;">Optional parameter</td>
 </tr>
 <tr>

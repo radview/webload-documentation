@@ -3444,64 +3444,71 @@
 <p><strong>To get or generate a New Relic API key:</strong></p>
 <ol>
 <li>Access New Relic as a Pro user.</li>
-<li>Navigate to <strong>User</strong> &gt; <strong>Account Settings</strong>.</li>
-</ol>
+<li>
+<p>Navigate to <strong>User</strong> &gt; <strong>Account Settings</strong>.</p>
 <p><img alt="New Relic – selecting Account Settings" src="../../images/console_users_guide_3041.jpeg" /></p>
-<ol>
-<li>Select <strong>Integrations</strong> &gt; <strong>API Keys</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Integrations</strong> &gt; <strong>API Keys</strong>.</p>
 <p><img alt="New Relic – selecting the API Keys option" src="../../images/console_users_guide_3042.jpeg" /></p>
-<ol>
-<li>In the <strong>API Keys</strong> page, in the <strong>Admin’s API Key</strong> column, click <strong>(Show key)</strong> in the appropriate line.</li>
-</ol>
-<p><img alt="*Figure 248: New Relic – Displaying the API Key value*" src="../../images/console_users_guide_3044.jpeg" /></p>
-<ol>
-<li>Record the value of the API key. You will need to enter it in the PMM later on.</li>
+</li>
+<li>
+<p>In the <strong>API Keys</strong> page, in the <strong>Admin’s API Key</strong> column, click <strong>(Show key)</strong> in the appropriate line.</p>
+<p><img alt="" src="../../images/console_users_guide_3044.jpeg" /></p>
+</li>
+<li>
+<p>Record the value of the API key. You will need to enter it in the PMM later on.</p>
+</li>
 </ol>
 <h2 id="instructing-pmm-to-collect-data-from-new-relic">Instructing PMM to Collect Data from New Relic</h2>
 <p>New Relic integration is carried out by adding the New Relic data source in the Performance Measurements Manager (PMM), and instructing the PMM which data, collected by New Relic, to retrieve.</p>
 <p><strong>To instruct PMM to collect data from New Relic:</strong></p>
 <ol>
-<li>Run the Performance Measurements Manager wizard, as described in <a href="../performance_measurements_manager/#opening-the-performance-measurements-manager">Opening the Performance Measurements Manager </a>.</li>
-<li>In the Selecting a Data Source screen, select <strong>External</strong> &gt; <strong>New Relic</strong>.</li>
-</ol>
-<p><img alt="Selecting New Relic in Data Source Screen" src="../../images/console_users_guide_3045.jpeg" /></p>
-<ol>
-<li>In the Selecting a Host screen, enter the <strong>API Key</strong> you had recorded in <a href="#get-or-generate-a-new-relic-api-key">Get or Generate a New Relic API Key</a>. Note that you can change the New Relic <strong>Root URL</strong> if required; in most cases the default value is the correct one.</li>
-</ol>
-<p><img alt="Specifying New Relic Server in Host Selection Screen" src="../../images/console_users_guide_3046.jpeg" /></p>
-<ol>
+<li>
+<p>Run the Performance Measurements Manager wizard, as described in <a href="../performance_measurements_manager/#opening-the-performance-measurements-manager">Opening the Performance Measurements Manager</a>.</p>
+</li>
+<li>
+<p>In the Selecting a Data Source screen, select <strong>External</strong> &gt; <strong>New Relic</strong>.
+    <img alt="Selecting New Relic in Data Source Screen" src="../../images/console_users_guide_3045.jpeg" /></p>
+</li>
+<li>
+<p>In the Selecting a Host screen, enter the <strong>API Key</strong> you had recorded in <a href="#get-or-generate-a-new-relic-api-key">Get or Generate a New Relic API Key</a>. Note that you can change the New Relic <strong>Root URL</strong> if required; in most cases the default value is the correct one.
+    <img alt="Specifying New Relic Server in Host Selection Screen" src="../../images/console_users_guide_3046.jpeg" /></p>
+</li>
 <li>
 <p>In the Selecting the Measurements to Monitor screen, do the following for each site/OS/host/device you wish to monitor</p>
-</li>
+<ol>
 <li>
 <p>Expand a site/OS/host/device by clicking the <strong>+ a</strong>djacent to the item.</p>
 <p><img alt=" Selecting the Item to Monitor" src="../../images/console_users_guide_3047.png" /></p>
 </li>
 <li>
 <p>The sub components list all the statistics collected by New Relic for this item. Select the desired statistics.</p>
+<p><img alt="Selecting the Measurements to Monitor Screen" src="../../images/console_users_guide_3048.png" /></p>
 </li>
 </ol>
-<p><img alt="Selecting the Measurements to Monitor Screen" src="../../images/console_users_guide_3048.png" /></p>
-<ol>
+</li>
 <li>
 <p>After all the desired items and statistics are selected, click <strong>Next</strong>. The Wizard displays a summary of the host, data source, and measurements configured for monitoring.</p>
 </li>
 <li>
 <p>To accept the PMM configuration, click <strong>Finish</strong>.</p>
-</li>
-</ol>
 <p>The PMM Wizard closes and the selected configuration is added to the PMM main window.</p>
 <p><img alt="PMM Wizard Configuration Summary" src="../../images/console_users_guide_3049.png" /></p>
+</li>
+</ol>
 <h2 id="selecting-the-new-relic-statistics-to-display-in-reports">Selecting the New Relic Statistics to Display in Reports</h2>
 <p>After integrating WebLOAD with New Relic, you can specify, while running a session, which New Relic statistics to view in the report view.</p>
 <ol>
 <li>Open a report as described in <a href="../console_performance_reports/#opening-reports"><em>Opening Reports</em> </a>.</li>
-<li>In the <strong>PM@<New-Relic-host></strong> node, select the statistics you wish to display in the report.</li>
-</ol>
+<li>
+<p>In the <strong>PM@<New-Relic-host></strong> node, select the statistics you wish to display in the
+report</p>
 <p><img alt="Selecting the Statistics to Display in a Report" src="../../images/console_users_guide_3050.png" /></p>
 <p>The following figure shows a report in Report view, displaying the statistics collected by New Relic that were selected to appear in the report.</p>
 <p><img alt="Viewing New Relic Statistics in Report View" src="../../images/console_users_guide_3051.jpeg" /></p>
+</li>
+</ol>
 
 
 
