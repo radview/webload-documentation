@@ -6,7 +6,7 @@ WebLOAD’s WebSocket object enables creating and managing a WebSocket connectio
 
 ## WebSocket Sample Code using messages handler
 
-With message handler, you write a function that handles that message as they are received, in the onmessage() function.
+With message handler, you write a function that handles that message as they are received, in the `onmessage()` function.
 
 This mode is useful in general purpose WebSocket, where it is not know when and what messages are expected to be received.
 
@@ -92,7 +92,7 @@ Create new WebSocket object
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
 | `url` | string |     | connection string |
-| `manualHandleEvents` | boolean | <optional> | if true, will only handle events when manually asked for (for example, using ws.handlePending()). Default is to automatically handle events |
+| `manualHandleEvents` | boolean | <optional> | if true, will only handle events when manually asked for (for example, using `ws.handlePending()`). Default is to automatically handle events |
 
 **Example**
 
@@ -119,7 +119,7 @@ Callback called when WebSocket is closed
 
 #### onerror
 
-Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()
+Callback called when WebSocket has error. Event `getData()` will hold exception information, or use `evt.toString()`
 
 **Type:**
 
@@ -177,7 +177,7 @@ Function used to log messages
 
 Default Value:
 
-*   ErrorMessage or WebSocket.prototype.globalReportErrorFunction
+*   ErrorMessage or `WebSocket.prototype.globalReportErrorFunction`
 
 #### storeMessages :boolean
 
@@ -205,7 +205,7 @@ Time in milliseconds before checking new messages
 
 Default Value:
 
-*   500 or WebSocket.prototype.globalWaitTime
+*   500 or `WebSocket.prototype.globalWaitTime`
 
 ### Methods
 
@@ -230,14 +230,14 @@ Connect to WebSocket
 
 #### dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)
 
-Replace send/sendBinary data with value in correlation. Value is looked up using pollCorrelationValue, so if value does not yet exist, wait for it until timeout (30000 millis)
+Replace send/sendBinary data with value in correlation. Value is looked up using `pollCorrelationValue`, so if value does not yet exist, wait for it until timeout (30000 millis)
 
 **Parameters:**
 
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
 | `toCorrelationParam` | string |     | name of parameter to replace. The name is expected to be set via setCorrealtionValue("myParamName", "the value"); |
-| `searchValue` | string | <optional> | the replacement value to replace. The default is ${toCorrelationParam}, for example the string "session=${sessionId}" will be replaced with "session="+pollCorrelationValue("sessionId"). |
+| `searchValue` | string | <optional> | the replacement value to replace. The default is `${toCorrelationParam}`, for example the string `"session=${sessionId}"` will be replaced with `"session="+pollCorrelationValue("sessionId")`. |
 
 Since:
 
@@ -251,7 +251,7 @@ Wait for some message to be received.
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `expr` | string \| RegExp |     |     | can be a "string" or /regex/ to look for in previous or future messages |
+| `expr` | string \| RegExp |     |     | can be a `"string"` or `/regex/` to look for in previous or future messages |
 | `timeout` | number | <optional> | 30000 | how much time to wait, default is 30000 milis |
 | `keepMessages` | boolean | <optional> | false | if true, will not remove messages, if false (default) will remove all messages up to the looked up message. |
 

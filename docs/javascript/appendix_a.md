@@ -33,9 +33,8 @@ Commercial browsers and servers generally act as if they are set for **SSL_Versi
 
 ## SSL Ciphers – Complete List
 
- 
 
-WebLOAD’s SSL support is based on the OpenSSL open source project (http://www.openssl.org/).The [Table ](#cipher_abbreviations)contains a complete list of ciphers supported by WebLOAD using OpenSSL. Abbreviations used in this list are explained in the [Table.](#cipher_abbreviations)
+WebLOAD’s SSL support is based on the OpenSSL open source project [http://www.openssl.org/](http://www.openssl.org/).The [Table ](#cipher_abbreviations)contains a complete list of ciphers supported by WebLOAD using OpenSSL. Abbreviations used in this list are explained in the [Table.](#cipher_abbreviations)
 
  
 

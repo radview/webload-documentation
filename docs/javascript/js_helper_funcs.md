@@ -8,7 +8,7 @@ The following are global JavaScript functions that are used by WebLOAD and can b
 
 #### DebugMessage(str)
 
-Print message to log. Like InfoMessage() but logs only when running in WebLOAD Recorder, not in Console
+Print message to log. Like `InfoMessage()` but logs only when running in WebLOAD Recorder, not in Console
 
 **Parameters:**
 
@@ -18,7 +18,7 @@ Print message to log. Like InfoMessage() but logs only when running in WebLOAD R
 
 #### DecodeString(s)
 
-Decoding function - reverse of EncodeString
+Decoding function - reverse of `EncodeString`
 
 **Parameters:**
 
@@ -36,7 +36,7 @@ See:
 
 #### DecodeStringUnix(s)
 
-Decoding function - reverse of EncodeString + convert end-of-line from unix to dos format
+Decoding function - reverse of `EncodeString` + convert end-of-line from unix to dos format
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ See:
 
 #### DecodeStringWin(s)
 
-Decoding function - reverse of EncodeStringWin
+Decoding function - reverse of `EncodeStringWin`
 
 **Parameters:**
 
@@ -100,7 +100,7 @@ Encoding function - escape given string, replace special chars with %xx notaion.
 
 #### SleepEvery(millis)
 
-SleepEvery a certain multiple number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session for intervals.
+`SleepEvery` a certain multiple number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session for intervals.
 
 **Parameters:**
 
@@ -111,12 +111,16 @@ SleepEvery a certain multiple number of milliseconds has passed since the beginn
 **Example**
 
 ```js
-SleepEvery(5000); //wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10
+SleepEvery(5000); 
+//wait until a multiple of 5 seconds have passed, 
+// for example, if called at 00:02 seconds into the 
+// session, will wait to 00:05, if call at 00:06 will 
+// wait until 00:10
 ```
 
 #### SleepUntil(millisFromBeginning)
 
-SleepUntil a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.
+`SleepUntil` a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.
 
 **Parameters:**
 
@@ -235,7 +239,7 @@ decoded string
 
 #### decodeXmlAtt(str)
 
-Decoding function - reverse of encodeXmlAtt
+Decoding function - reverse of `encodeXmlAtt`
 
 **Parameters:**
 
@@ -295,7 +299,7 @@ decodeXmlAttNum("&#34;strategy&#34;")
 
 #### encodeURIComponentLower(s)
 
-Encoding function - Similar to encodeURIComponent but uses lower-case letters
+Encoding function - Similar to `encodeURIComponent` but uses lower-case letters
 
 **Parameters:**
 
@@ -323,7 +327,7 @@ encoded string
 
 #### encodeXMLbroken(str)
 
-Encoding function - like encodeXML but > is not replaced, only < and &
+Encoding function - like `encodeXML` but > is not replaced, only < and &
 
 **Parameters:**
 
@@ -474,7 +478,7 @@ escapeXmlBroken("&lt;some@Tag&gt;")
 
 #### extractAllValues()
 
-extractAllValues() Returns array of all values matching the prefix/suffix.
+`extractAllValues()` Returns array of all values matching the prefix/suffix.
 
 **Example**
 
@@ -501,7 +505,7 @@ Extract a value from the given HTTP Header name
 
 #### extractJSPath(expr, src)
 
-Extract value using JSPath https://www.npmjs.com/package/jspath To test, use http://www.jsonquerytool.com/ with type: JSPath (dfilatov 0.4.0)
+Extract value using JSPath [https://www.npmjs.com/package/jspath](https://www.npmjs.com/package/jspath) To test, use [http://www.jsonquerytool.com/](http://www.jsonquerytool.com/) with type: JSPath (dfilatov 0.4.0)
 
 **Parameters:**
 
@@ -516,7 +520,7 @@ extracted value or null if not found
 
 #### extractJsonValue(path, source)
 
-Get value from JSON using a simple path - path.to.item
+Get value from JSON using a simple path - `path.to.item`
 
 **Parameters:**
 
@@ -541,8 +545,8 @@ Extract based on regular expression, from src, with possible template - number e
 
 | Name | Type | Attributes | Default | Description |
 | --- | --- | --- | --- | --- |
-| `reStr` | string |     |     | string with RegExp expression |
-| `src` | string | (optional) | document.wlSource | source to search at |
+| `reStr` | string |     |     | string with `RegExp` expression |
+| `src` | string | (optional) | `document.wlSource` | source to search at |
 | `template` | string | (optional) |     | template to use the extracted values with |
 
 **Returns:**
@@ -563,7 +567,7 @@ extractRegExpTemplate ( "foo=(.*?)&", "the foo=54321&abcde&zzzz", "templated-$1$
 
 #### extractSiebelArrayValue(idx, prefix, suffix, source, instance)
 
-Extact a value from Siebel 'star' array, in format \`length@value..\`
+Extact a value from Siebel 'star' array, in format `length@value..`
 
 **Parameters:**
 
@@ -572,7 +576,7 @@ Extact a value from Siebel 'star' array, in format \`length@value..\`
 | `idx` | number | index of item in array to return. can be negative, so -1 is last one. |
 | `prefix` | string | prefix to look in source for start of array |
 | `suffix` | string | suffix to look in source for start of array |
-| `source` | string | source of data to look for. To get value from HTTP response use document.wlSource |
+| `source` | string | source of data to look for. To get value from HTTP response use `document.wlSource` |
 | `instance` | number | occurence of prefix/suffix to find the array in the source |
 
 **Returns:**
@@ -661,13 +665,13 @@ Value (or name) of searched cookie.
 
 #### extractXPath(expr, source)
 
-Extract from XML using XPath expression
+Extract from XML using `XPath` expression
 
 **Parameters:**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `expr` | string | XPath expresion. For example "/bookstore/book\[1\]/title" |
+| `expr` | string | `XPath` expresion. For example "/bookstore/book\[1\]/title" |
 | `source` | string | XML string to search for |
 
 **Returns:**
@@ -799,7 +803,7 @@ See:
 
 #### setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)
 
-Store extracted correlation value for future use. Validate it against the recorded value. Use getCorrelationValue() to retrieve the value.
+Store extracted correlation value for future use. Validate it against the recorded value. Use `getCorrelationValue()` to retrieve the value.
 
 **Parameters:**
 
@@ -816,7 +820,7 @@ See:
 
 #### setCorrelationValueSilent()
 
-Like setCorrelationValue() but does not show a WarningMessage() when not extracted.
+Like `setCorrelationValue()` but does not show a `WarningMessage()` when not extracted.
 
 #### unescapeUnix(s)
 
@@ -834,7 +838,7 @@ Decoding function - reverse of escape + convert end-of-line from unix to dos for
 
 #### unescapeXMLbroken(str)
 
-Decoding function - reverse of escapeXmlBroken
+Decoding function - reverse of `escapeXmlBroken`
 
 **Parameters:**
 
@@ -941,7 +945,7 @@ ErrorMessage("stop client");
 
 #### addBeforeBeginTransactionHandler(id, func)
 
-Handler function is called before each BeginTransaction(), function given original arguments.
+Handler function is called before each `BeginTransaction()`, function given original arguments.
 
 **Example**
 
@@ -961,7 +965,7 @@ EndTransaction("Transaction1");
 
 #### addAfterBeginTransactionHandler(id, func)
 
-Handler function is called after each BeginTransaction(), function given original arguments.
+Handler function is called after each `BeginTransaction()`, function given original arguments.
 
 **Example**
 
@@ -981,7 +985,7 @@ EndTransaction("Transaction1");
 
 #### addBeforeEndTransactionHandler(id, func)
 
-Handler function is called before each EndTransaction(), function given original arguments.
+Handler function is called before each `EndTransaction()`, function given original arguments.
 
 **Example**
 
@@ -1001,7 +1005,7 @@ EndTransaction("Transaction1");
 
 #### addAfterEndTransactionHandler(id, func)
 
-Handler function is called after each EndTransaction(), function given original arguments.
+Handler function is called after each `EndTransaction()`, function given original arguments.
 
 **Example**
 
@@ -1021,13 +1025,13 @@ EndTransaction("Transaction1");
 
 #### dynamicReplaceField(fieldName, valueGenerator)
 
-Dynamically replace a field name in a wlHttp object, if it exists, in all subsequent calls.
+Dynamically replace a field name in a `wlHttp` object, if it exists, in all subsequent calls.
 
 The value can be one of the following types:
 
 * Literal value - that value will be used instead of current field value. 
 * Function value - if the given value is a function, that function will be called each time and the returned value used
-* Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling getValue() for it)
+* Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling `getValue()` for it)
 
 **Example**
 

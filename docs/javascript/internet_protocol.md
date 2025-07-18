@@ -1300,7 +1300,7 @@ The `Outfile` property lets you specify the name of an output file. You use this
 
 For example: 
 
-`imap.Outfile = `*`filename*`
+`imap.Outfile = `*`filename`*
 
  
 
@@ -1520,53 +1520,54 @@ For example:
 ### IMAP Sample Code
 
 ```javascript
-// **script Initialization**
-function ** `InitAgenda()` ** {
+//script Initialization
+function InitAgenda() {
     IncludeFile("wlImap.js", WLExecuteScript)
 }
 
-function ** InitClient() ** {
-    imap = new WLImap() // create the new IMAP object
-    // imap.Connect("HostName"); // connect to the server
+function InitClient() {
+    imap = new WLImap()             // create the new IMAP object
+    // imap.Connect("HostName");    // connect to the server
 }
 
-function ** TerminateClient() ** {
-    imap.Disconnect(); // logout from the server delete imap     // delete the IMAP object
+function TerminateClient() {
+    imap.Disconnect();   // logout from the server 
+    delete imap         // delete the IMAP object
 }
 //===================================================
-// **Body Of script**
-InfoMessage("Speed: " + wlGlobals.ConnectionSpeed) wlGlobals.Debug = 1;
+
+//Body Of script
+InfoMessage("Speed: " + wlGlobals.ConnectionSpeed) 
+wlGlobals.Debug = 1;
 imap.UserName = "UserID";
 imap.PassWord = "TopSecret";
 imap.Mailbox = "Inbox";
 imap.Connect("00.0.0.00");
 //==================================================
-//**Test Retrieve**
-/*imap.Retrieve("100");
 
+//Test Retrieve
+/ *imap.Retrieve("100");
 for (var i = 0; i < imap.wlSource.length; i++)
-
 {
-
-InfoMessage(imap.wlSource[i]); InfoMessage(imap.document.length); InfoMessage(imap.document[i].headers); InfoMessage(imap.document[i].messageText); InfoMessage(imap.document[i].size); InfoMessage(imap.document[i].attachments.length);
-
-for (var j = 0; j < imap.document[i].attachments.length; j++)
-
-{
-
-InfoMessage(imap.document[i].attachments[j].contentEncoding); InfoMessage(imap.document[i].attachments[j].contentType); InfoMessage(imap.document[i].attachments[j].filename); InfoMessage(imap.document[i].attachments[j].messageText); InfoMessage(imap.document[i].attachments[j].partName); InfoMessage(imap.document[i].attachments[j].size);
-
-}
-
-
-
- 
-
- 
-
+    InfoMessage(imap.wlSource[i]); 
+    InfoMessage(imap.document.length); 
+    InfoMessage(imap.document[i].headers); 
+    InfoMessage(imap.document[i].messageText); 
+    InfoMessage(imap.document[i].size); 
+    InfoMessage(imap.document[i].attachments.length);
+    for (var j = 0; j < imap.document[i].attachments.length; j++)
+    {
+        InfoMessage(imap.document[i].attachments[j].contentEncoding); 
+        InfoMessage(imap.document[i].attachments[j].contentType); 
+        InfoMessage(imap.document[i].attachments[j].filename); 
+        InfoMessage(imap.document[i].attachments[j].messageText); 
+        InfoMessage(imap.document[i].attachments[j].partName); 
+        InfoMessage(imap.document[i].attachments[j].size);
+    }
 }*/
 //===========================================================
-//**Test Delete**
+
+//Test Delete
 imap.Mailbox = "Inbox";
 InfoMessage(imap.GetMessageCount());
 imap.Mailbox = "Inbox";
@@ -1574,112 +1575,96 @@ imap.Delete("2");
 imap.Mailbox = "Inbox";
 InfoMessage(imap.GetMessageCount());
 //==========================================================
-//**Test Mailbox Functions:**
-//      list mailboxes, create mailbox, and then list again
-/*InfoMessage("mailboxes are:") var v1 = imap.ListMailboxes(); for(var i=0; i < v1.length; i++)
 
-InfoMessage(v1[i]); imap.Mailbox="mailboxname"; imap.CreateMailbox(); InfoMessage("mailboxes are:") var v1 = imap.ListMailboxes(); for(var i=0; i < v1.length; i++)
-
-InfoMessage(v1[i]);
-
+//Test Mailbox Functions:
+//              list mailboxes, create mailbox, and then list again
+/ *InfoMessage("mailboxes are:") 
+var v1 = imap.ListMailboxes(); 
+for(var i=0; i < v1.length; i++)
+    InfoMessage(v1[i]); 
+imap.Mailbox="mailboxname"; 
+imap.CreateMailbox(); 
+InfoMessage("mailboxes are:") 
+var v1 = imap.ListMailboxes(); 
+for(var i=0; i < v1.length; i++) 
+    InfoMessage(v1[i]);
 */
 //=======================================================
-//      subscribe mailbox, list all subscribed mailboxes
+//              subscribe mailbox, list all subscribed mailboxes
 //imap.Mailbox="mailboxname";
 //imap.SubscribeMailbox();
-/*InfoMessage("subscribed mailboxes are:") var v2 = imap.ListSubscribedMailboxes(); for(var j=0; j < v2.length; j++)
-
+/ *InfoMessage("subscribed mailboxes are:")
+var v2 = imap.ListSubscribedMailboxes(); 
+for(var j=0; j < v2.length; j++)
 {
-
-InfoMessage(v2[j]); imap.Mailbox=v2[j];
-
+    InfoMessage(v2[j]); 
+    imap.Mailbox=v2[j];
 }*/
 //=======================================================
-//         list subscribed mailboxes,unsubscribe mailbox,
-//           and then list all subscribed mailboxes again
-/*InfoMessage("subscribed mailboxes are:") var v2 = imap.ListSubscribedMailboxes(); for(var j=0; j < v2.length; j++)
-
+//              list subscribed mailboxes,unsubscribe mailbox,
+//                 and then list all subscribed mailboxes again
+/ *InfoMessage("subscribed mailboxes are:") 
+var v2 = imap.ListSubscribedMailboxes(); 
+for(var j=0; j < v2.length; j++)
 {
-
-InfoMessage(v2[j]);
-
-
-
- 
-
- 
-
-imap.Mailbox=v2[j];
-
+    InfoMessage(v2[j]);
+    imap.Mailbox=v2[j];
 }
-
-imap.Mailbox="mailboxname"; imap.UnsubscribeMailbox(); InfoMessage("subscribed mailboxes are:") var v2 = imap.ListSubscribedMailboxes(); for(var j=0; j < v2.length; j++)
-
+imap.Mailbox="mailboxname"; 
+imap.UnsubscribeMailbox(); 
+InfoMessage("subscribed mailboxes are:") 
+var v2 = imap.ListSubscribedMailboxes(); 
+for(var j=0; j < v2.length; j++)
 {
-
-InfoMessage(v2[j]); imap.Mailbox=v2[j];
-
+    InfoMessage(v2[j]); imap.Mailbox=v2[j];
 }
-
 */
 //====================================================
-//            list mailboxes, rename mailbox,
-//            and then list mailboxes again
-/*InfoMessage("mailboxes are:") var v1 = imap.ListMailboxes(); for(var i=0; i < v1.length; i++)
-
-InfoMessage(v1[i]); imap.Mailbox="boxname"; imap.RenameMailbox("newName"); InfoMessage("mailboxes are:") var v1 = imap.ListMailboxes(); for(var i=0; i < v1.length; i++)
-
-InfoMessage(v1[i]);
-
+//               list mailboxes, rename mailbox, 
+//               and then list mailboxes again
+/ *InfoMessage("mailboxes are:") 
+var v1 = imap.ListMailboxes(); 
+for(var i=0; i < v1.length; i++)
+    InfoMessage(v1[i]); 
+imap.Mailbox="boxname"; 
+imap.RenameMailbox("newName"); 
+InfoMessage("mailboxes are:") 
+var v1 = imap.ListMailboxes(); 
+for(var i=0; i < v1.length; i++)
+    InfoMessage(v1[i]);
 */
 //======================================================
 //            get number of messages from a mailbox
-/*imap.Mailbox="main"; InfoMessage(imap.GetMessageCount()); imap.Mailbox="Inbox"; InfoMessage(imap.GetRecentMessageCount());
-
+/ *imap.Mailbox="main"; 
+InfoMessage(imap.GetMessageCount()); 
+imap.Mailbox="Inbox"; 
+InfoMessage(imap.GetRecentMessageCount());
 */
 //====================================================
 //            delete mailbox and list all the mailboxes
-/*imap.Mailbox="mailboxname"; 
-
-imap.DeleteMailbox(); InfoMessage("subscribed mailboxes are:") var v2 = imap.ListSubscribedMailboxes(); for(var j=0; j < v2.length; j++)
-
+/ *imap.Mailbox="mailboxname"; 
+imap.DeleteMailbox(); 
+InfoMessage("subscribed mailboxes are:") 
+var v2 = imap.ListSubscribedMailboxes(); 
+for(var j=0; j < v2.length; j++)
 {
-
-InfoMessage(v2[j]); 
-
-imap.Mailbox=v2[j];
-
+    InfoMessage(v2[j]); 
+    imap.Mailbox=v2[j];
 }
-
-
-
- 
-
- 
-
 */
 //=========================================================
 //            search
-/*imap.Mailbox="Inbox";
-
-var found = imap.Search("CC [user@address.com");](mailto:user@address.com) InfoMessage("found:")
-
+/ *imap.Mailbox="Inbox";
+var found = imap.Search("CC user@address.com");
+InfoMessage("found:")
 for(var j=0; j < found.length; j++)
-
 {
-
-InfoMessage(found[j]);
-
+    InfoMessage(found[j]);
 }
-
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
 */
 //===========================================================
 imap.Disconnect();
@@ -1695,107 +1680,59 @@ InfoMessage("done")
 
 ## wlNNTP Object
 
- 
+The `wlNNTP` (Network News Transfer Protocol) object provides support for NNTP load and functional testing within WebLOAD. Support for standard NNTP operation is included. NNTP over secure connections (SSL) is not currently supported.
 
-The wlNNTP (Network News Transfer Protocol) object provides support for NNTP load and functional testing within WebLOAD. Support for standard NNTP operation is included. NNTP over secure connections (SSL) is not currently supported.
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
- 
+You must include `catch` and `try` functions in your script to handle exceptions when using the `wlNNTP` object. If you do not, the object may cause your script to freeze. A sample catch appears in the NNTP code sample at the end of this section.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
-
- 
-
-You must include catch and try functions in your script to handle exceptions when using the wlNNTP object. If you do not, the object may cause your script to freeze. A sample catch appears in the NNTP code sample at the end of this section.
-
- 
-
-To access the wlNNTP object, you must include the wlNntp.js file in your
-
-`InitAgenda()` function.
-
-
-
- 
-
- 
+To access the `wlNNTP` object, you must include the `wlNntp.js` file in your `InitAgenda()` function.
 
 ### wlNNTP Properties
 
- 
+#### *ArticleText*
 
-#### ArticleText
-
- 
-
-The ArticleText property lets you specify the text appearing in the body of your article. You use this property to write the text of the article itself. 
-
-
+The `ArticleText` property lets you specify the text appearing in the body of your article. You use this property to write the text of the article itself. 
 
 For example:
 
-`nntp.ArticleText = *articlecontent*`
+`nntp.ArticleText = `*`articlecontent`*
 
- 
 
-#### Attachments
+#### *Attachments*
 
- 
-
-The Attachments property lets you specify an attachment to a posting. The filename variable should contain the name of the local file or datastream that you want to attach to the posting. For example:
-
- 
+The `Attachments` property lets you specify an attachment to a posting. The `filename` variable should contain the name of the local file or datastream that you want to attach to the posting. For example:
 
 `nntp.Attachments = filename`
 
- 
+#### *AttachmentsEncoding*
 
-#### AttachmentsEncoding
-
- 
-
-The AttachmentsEncoding property lets you specify the type of encoding you are applying to a message attachment. This property must be specified for each attachment. 
-
-
+The `AttachmentsEncoding` property lets you specify the type of encoding you are applying to a message attachment. This property must be specified for each attachment. 
 
 Valid values are:
 
-- 7Bit
-- Quoted
-
-- Base64
-
-- 8Bit
-
-- 8BitBinary
-
-
+- `7Bit`
+- `Quoted`
+- `Base64`
+- `8Bit`
+- `8BitBinary`
 
 You may also specify the encoding using the following constants: 
 
-- WLNntp.ENC_7BIT – 7bit encoding
+- `WLNntp.ENC_7BIT` – 7bit encoding
+- `WLNntp.ENC_QUOTED` – Quoted Printable encoding
+- `WLNntp.ENC_BASE64` – Base64 encoding
+- `WLNntp.ENC_8BIT` – 8Bit encoding
+- `WLNntp.ENC_8BITBINARY` – Binary encoding 
 
-- WLNntp.ENC_QUOTED – Quoted Printable encoding
+For example:
 
-- WLNntp.ENC_BASE64 – Base64 encoding
-
-- WLNntp.ENC_8BIT – 8Bit encoding
-
-- WLNntp.ENC_8BITBINARY – Binary encoding For example:
-
-- nntp.AttachmentsEncoding = *encodingtype*
+`nntp.AttachmentsEncoding = `*`encodingtype`*
 
 
+#### *AttachmentsTypes*
 
-
-
-
-
-
-#### AttachmentsTypes
-
- 
-
-The AttachmentsTypes property lets you specify the type of attachment you are including in a posting. This property must be specified for each attachment. 
+The `AttachmentsTypes` property lets you specify the type of attachment you are including in a posting. This property must be specified for each attachment. 
 
 Valid values are: 
 
@@ -1803,194 +1740,128 @@ Valid values are:
 - **false** – Specifies a type of data 
 
 
-
 For example:
 
-`nntp.AttachmentsTypes = typeofattachment`
+`nntp.AttachmentsTypes = `*`typeofattachment`*
 
- 
 
-#### Document
+#### *Document*
 
- 
-
-The Document property is an object with two properties. One is a string, MessageText containing the text of the article, and the other is an array containing the article attachments and headers. 
-
+The `Document` property is an object with two properties. One is a string, `MessageText` containing the text of the article, and the other is an array containing the article attachments and headers. 
 
 
 For example:
 
-var recentdocument = *nntp.document*
+`var recentdocument = `*`nntp.document`*
 
-var messagetext = *recentdocument.MessageText*
+`var messagetext = `*`recentdocument.MessageText`*
 
-var messageattachments = *recentdocument.attachments*
+`var messageattachments = `*`recentdocument.attachments`*
 
-var firstattachment = *messageattachments[0]*
+`var firstattachment = `*`messageattachments[0]`*
 
-var secondattachment = *messageattachments[1]*
-
- 
-
-#### From
+`var secondattachment = `*`messageattachments[1]`*
 
  
 
-The From property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. 
+#### *From*
+
+The `From` property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. 
 
 
 
 For example: 
 
-`nntp.From = replyname`
+`nntp.From = `*`replyname`*
 
  
 
-#### Group
+#### *Group*
+
+The `Group` property specifies the article group with which you are interacting. You use this to limit searches, posts, and other activities to a specific group. For example:
+
+`nntp.Group = `*`groupname`*
+
+ 
+#### *MaxHeadersLength*
+
+The `MaxHeadersLength` property lets you specify the maximum length for headers in an article. You use this property to prevent line folding. For example:
+
+`nntp.MaxHeadersLength = `*`headersize`*
 
  
 
-The Group property specifies the article group with which you are interacting. You use this to limit searches, posts, and other activities to a specific group. For example:
+#### *Organization*
+
+The `Organization` property identifies the affiliation of the author. You use this property to identify your professional or personal affiliation. For example:
+
+`nntp.Organization = `*`organizationname`*
+
+
+#### *Outfile*
+
+The `Outfile` property lets you specify the name of an output file. You use this property to save a file or article locally on your computer. For example:
+
+`nntp.Outfile = `*`filename`*
 
  
 
-`nntp.Group = groupname`
+#### *PassWord*
 
- 
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted NNTP host. WebLOAD automatically sends the password to the NNTP host when a `wlNNTP` object connects to an NNTP host. For example:
 
-#### MaxHeadersLength
-
- 
-
-The MaxHeadersLength property lets you specify the maximum length for headers in an article. You use this property to prevent line folding. For example:
-
- 
-
-`nntp.MaxHeadersLength = headersize`
-
- 
-
-#### Organization
-
- 
-
-The Organization property identifies the affiliation of the author. You use this property to identify your professional or personal affiliation. For example:
-
- 
-
-`nntp.Organization = organizationname`
-
- 
-
-#### Outfile
-
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save a file or article locally on your computer. For example:
-
- 
-
-`nntp.Outfile = filename`
-
- 
-
-#### PassWord
-
- 
-
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted NNTP host. WebLOAD automatically sends the password to the NNTP host when a wlNNTP object connects to an NNTP host. For example:
-
- 
-
-`nntp.PassWord = *password*`
+`nntp.PassWord = `*`password`*
 
 > **Caution:** The password appears in plain text in the script. The password is visible to any user who has access to the script.
 
- 
 
-#### References
+#### *References*
 
- 
+The `References` property lets you specify articles that the posted article follows. You use this property to create a thread of related articles. If the resulting reference header is longer than the limit specified in the MaxHeadersLength property, it is folded. References must be separated by commas with no spaces in between. For example:
 
-The References property lets you specify articles that the posted article follows. You use this property to create a thread of related articles. If the resulting reference header is longer than the limit specified in the MaxHeadersLength property, it is folded.
+`nntp.References = `*`article1,article2`*
 
-References must be separated by commas with no spaces in between. For example:
+#### *ReplyTo*
 
- 
+The `ReplyTo` property lets you specify the reply address for additional postings. For example:
 
-`nntp.References = article1,article2`
-
- 
-
-#### ReplyTo
+`nntp.ReplyTo = `*`replyaddress`*
 
  
 
-The ReplyTo property lets you specify the reply address for additional postings. For example:
+#### *Size*
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. For example:
+
+`var filesize = nntp.`*`Size`*
+
+
+#### *Subject*
+
+The `Subject` property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your article. For example:
+
+`nntp.Subject = `*`subjectheader`*
+
+
+#### *To*
+
+The `To` property lets you specify the newsgroup to receive your posting. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every article. For example:
+
+`nntp.To = `*`alt.newsgroup.name; rec.newsgroup.name`*
 
  
+#### *UserName*
 
-`nntp.ReplyTo = replyaddress`
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted NNTP host. WebLOAD automatically sends the user name to the NNTP host when a wlNNTP object connects to an NNTP host. For example:
 
- 
-
-#### Size
-
- 
-
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. For example:
-
- 
-
-`var filesize = nntp.Size`
-
-
-
- 
-
- 
-
-#### Subject
-
- 
-
-The Subject property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your article. For example:
-
- 
-
-`nntp.Subject = subjectheader`
-
- 
-
-#### To
-
- 
-
-The To property lets you specify the newsgroup to receive your posting. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every article. For example:
-
- 
-
-`nntp.To = alt.newsgroup.name; rec.newsgroup.name`
-
- 
-
-#### UserName
-
- 
-
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted NNTP host. WebLOAD automatically sends the user name to the NNTP host when a wlNNTP object connects to an NNTP host. For example:
-
- 
-
-`nntp.UserName = username`
+`nntp.UserName = `*`username`*
 
  
 
 ### wlNNTP Methods
 
- 
 
-#### AddAttachment()
+#### *AddAttachment()*
 
  
 
@@ -1998,14 +1869,14 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | string           | The string you are sending  to the host. If you are sending a file, the string is the location and name  of the file. If you are sending a data attachment, the string is the data to  be attached. |
-| type             | The type of attachment you are sending.  Valid values are:  File (default)  Data |
-| [encoding]       | The type of encoding to apply to the file.  Valid values are:  7Bit (default) Quoted Base64 8Bit  8BitBinary |
+| type             | The type of attachment you are sending.  Valid values are: <p></p>`File` (default)<p></p>`Data` |
+| [encoding]       | The type of encoding to apply to the file.  Valid values are:<p></p>`7Bit` (default)<p></p>`Quoted`<p></p>`Base64`<p></p>`8Bit`<p></p>`8BitBinary` |
 | **Return Value** | Returns an integer value  Attachment ID if successful, an exception if unsuccessful. |
 | **Comments**     | Adds an attachment to the message.                           |
 
 
 
-####  Connect()
+####  *Connect()*
 
  
 
@@ -2019,7 +1890,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### DeleteAttachment()
+#### *DeleteAttachment()*
 
  
 
@@ -2032,7 +1903,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -2043,7 +1914,7 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### GetArticle()
+#### *GetArticle()*
 
  
 
@@ -2052,24 +1923,24 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Parameters**   |                                                              |
 | message  Number  | The number of the message that you want to  retrieve.        |
 | **Return Value** | Null if successful. The article is stored  in the document property. An exception if unsuccessful. |
-| **Comments**     | Gets the headers and body  of the article specified in the messageNumber parameter for the group specified in the Group  property. If  the Outfile property is specified, the  returned article is stored in the output file as well as in the document  property. |
+| **Comments**     | Gets the headers and body  of the article specified in the `messageNumber` parameter for the group specified in the Group  property. If  the `Outfile` property is specified, the  returned article is stored in the output file as well as in the document  property. |
 
 
 
   
 
-#### GetArticleCount()
+#### *GetArticleCount()*
 
  
 
 | **Syntax**       | GetArticleCount()                                            |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | An integer count of the  number of articles in the group if successful, an exception if unsuccessful. |
-| **Comments**     | Returns the number of articles in the group  specified by the  Group property. |
+| **Comments**     | Returns the number of articles in the group  specified by the `Group` property. |
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
  
 
@@ -2080,46 +1951,46 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 
  
 
-#### GroupOverview()
+#### *GroupOverview()*
 
  
 
 | **Syntax**       | GroupOverview([*range*])                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| [range]          | The range for articles you  want to view. The format for range is first-last, where first is "" (an empty string) or  positive number, and last is "", a positive number, or the token end. |
-| **Return Value** | An array of objects if  successful. Each object contains one article, and the properties articleDate, articleLines, articleNumber, from, messageID, otherHeaders, references, and subject. The method returns an  exception if unsuccessful. |
-| **Comments**     | Returns an overview for  the articles in range for the group specified in the Group property. |
+| [range]          | The range for articles you  want to view. The format for `range` is first-last, where first is "" (an empty string) or  positive number, and last is "", a positive number, or the token `end`. |
+| **Return Value** | An array of objects if  successful. Each object contains one article, and the properties `articleDate, articleLines, articleNumber, from, messageID, otherHeaders, references,` and `subject`. The method returns an  exception if unsuccessful. |
+| **Comments**     | Returns an overview for  the articles in range for the group specified in the `Group` property. |
 
  
 
-#### ListGroups()
+#### *ListGroups()*
 
  
 
 | **Syntax**       | ListGroups([*startDate*])                                    |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| [startDate]      | The earliest creation date  to search. Groups created before this date are not listed. If you do not  specify a start date, all groups are listed.  The format for startDate is YYMMDD HHMMSS. |
-| **Return Value** | An array of objects if  successful. Each object contains the following properties, Canpost, lastArticle, firstArticle, and group. The method returns an  exception if unsuccessful. |
+| [startDate]      | The earliest creation date  to search. Groups created before this date are not listed. If you do not  specify a start date, all groups are listed.  The format for s`tartDate` is YYMMDD HHMMSS. |
+| **Return Value** | An array of objects if  successful. Each object contains the following properties, `Canpost, lastArticle, firstArticle`, and `group`. The method returns an  exception if unsuccessful. |
 | **Comments**     | Lists the newsgroups available on the host.                  |
 
 
 
   
 
-#### PostArticle()
+#### *PostArticle()*
 
  
 
 | **Syntax**       | PostArticle()                                                |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful. The article is stored  in the document property. An exception if unsuccessful. |
-| **Comments**     | Posts the article to the  host, attaching files using MIME as necessary. The article is constructed  using the following properties and methods:  **Header  Properties**  From Subject  Organization To  ReplyTo References MaxHeadersLength  **Body Properties/Methods** ArticleText() AddAttachment()  DeleteAttachment() |
+| **Comments**     | Posts the article to the  host, attaching files using MIME as necessary. The article is constructed  using the following properties and methods:<p></p>**Header  Properties**<p></p> `From`<p></p>`Subject`<p></p>`Organization`<p></p>`To`<p></p>`ReplyTo`<p></p>`References`<p></p>`MaxHeadersLength`<p></p>**Body Properties/Methods**<p></p>`ArticleText()`<p></p>`AddAttachment()`<p></p>`DeleteAttachment()` |
 
  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -2131,297 +2002,201 @@ The UserName property lets you specify a User ID when logging on to a host. You 
 | **Comments**     | Sends a string to the host without  modification. This method is useful for interacting directly with the host  using non-standard or unsupported extensions. |
 
 
+#### *WLNntp()*
 
  
-
- 
-
-#### WLNntp()
-
- 
-
 | **Syntax**       | new WLNntp()                                                 |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlNNTP object.                                         |
 | **Comments**     | Creates a new wlNNTP object, used to interact with  the server. |
-| **Example**      | myNewNntpObject  = new WLNntp()                              |
+| **Example**      | `myNewNntpObject  = new WLNntp() `                             |
 
  
 
 ### NNTP Sample Code
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** { IncludeFile("wlNntp.js",WLExecuteScript)
-
+// script Initialization
+function InitAgenda() { 
+    IncludeFile("wlNntp.js",WLExecuteScript)
 }
-
 //===================================================
 
- 
-
-//**Body Of script**
-
-InfoMessage("Speed: "+wlGlobals.ConnectionSpeed) nntp=new WLNntp()
-
-wlGlobals.Debug=1; InfoMessage("before login") nntp.UserName="UserID" nntp.PassWord="TopSecret" nntp.Connect("hostname")
-
+//Body Of script
+InfoMessage("Speed: "+wlGlobals.ConnectionSpeed) 
+nntp=new WLNntp()
+wlGlobals.Debug=1; 
+InfoMessage("before login") 
+nntp.UserName="UserID" 
+nntp.PassWord="TopSecret" 
+nntp.Connect("hostname")
 //=========================================================
 
- 
-
-//**Test ListGoups**
-
-/*v = nntp.ListGroups(); InfoMessage(v.length);
-
+//Test ListGoups
+/ *v = nntp.ListGroups(); 
+InfoMessage(v.length);
 for (var i = 0; i < v.length; i++)
-
 {
-
-InfoMessage("canPost = "+v[i].canPost); InfoMessage("first article = "+v[i].firstArticle); InfoMessage("group = "+v[i].group); InfoMessage("last article = "+v[i].lastArticle);
-
+    InfoMessage("canPost = "+v[i].canPost); 
+    InfoMessage("first article = "+v[i].firstArticle); 
+    InfoMessage("group = "+v[i].group); 
+    InfoMessage("last article = "+v[i].lastArticle);
 }
-
 */
-
 //===========================================================
 
- 
-
-//**Test GroupOverview**
-
-/*nntp.Group="alt.groupname"; v = nntp.GroupOverview(); InfoMessage(v.length);
-
+//Test GroupOverview
+/ *nntp.Group="alt.groupname"; 
+v = nntp.GroupOverview(); 
+InfoMessage(v.length);
 for (var i = 0; i < v.length; i++)
-
-
-
- 
-
- 
-
 {
-
-InfoMessage("article date = "+v[i].articleDate); InfoMessage("article lines = "+v[i].articleLines); InfoMessage("article number = "+v[i].articleNumber); InfoMessage("article size = "+v[i].articleSize); InfoMessage("from = "+v[i].from); InfoMessage("messageId = "+v[i].messageId); InfoMessage("other headers = "+v[i].otherHeaders); InfoMessage("references = "+v[i].references); InfoMessage("subject = "+v[i].subject);
-
+InfoMessage("article date = "+v[i].articleDate); 
+InfoMessage("article lines = "+v[i].articleLines); 
+InfoMessage("article number = "+v[i].articleNumber);
+InfoMessage("article size = "+v[i].articleSize); 
+InfoMessage("from = "+v[i].from); 
+InfoMessage("messageId = "+v[i].messageId); 
+InfoMessage("other headers = "+v[i].otherHeaders); 
+InfoMessage("references = "+v[i].references); 
+InfoMessage("subject = "+v[i].subject);
 }
-
 */
-
 //=========================================================
 
- 
-
-//**Test GetArticleCount**
-
+//Test GetArticleCount
 //nntp.Group="alt.groupname";
-
-//InfoMessage(nntp.GetArticleCount()); nntp.Group="alt.groupname"; InfoMessage(nntp.GetArticleCount());
-
+//InfoMessage(nntp.GetArticleCount()); 
+nntp.Group="alt.groupname"; 
+InfoMessage(nntp.GetArticleCount());
 //=========================================================
 
- 
-
-//**Test GetArticle**
-
-/*nntp.Group="alt.groupname"; nntp.Outfile="c:\\temp\\article.txt"; nntp.GetArticle(1); InfoMessage(nntp.document);
-
+//Test GetArticle
+/ *nntp.Group="alt.groupname"; 
+nntp.Outfile="c:\\temp\\article.txt"; 
+nntp.GetArticle(1); 
+InfoMessage(nntp.document);
 */
-
 //==========================================================
 
- 
-
-//**Test post article** nntp.From="poster name"; nntp.Subject="nntp test posting"; nntp.Organization="OrgName";
-
-nntp.To="control.cancel, alt.groupname"; [nntp.ReplyTo="poster@organization.org";](mailto:poster@organization.org) [nntp.References="anization.org>"; nntp.MaxHeadersLength=100;
-
+//Test post article 
+nntp.From="poster name"; 
+nntp.Subject="nntp test posting"; 
+nntp.Organization="OrgName";
+nntp.To="control.cancel, alt.groupname"; 
+nntp.ReplyTo="poster@organization.org"; 
+nntp.References="anization.org>"; 
+nntp.MaxHeadersLength=100;
 nntp.ArticleText="hello world";
-
 //id1 = nntp.AddAttachment
-
 //        ("c:\\temp\\file1.txt", "file", WLNntp.ENC_7BIT);
-
 //id2 = nntp.AddAttachment
-
 //        ("c:\\temp\\file2.txt", "file", WLNntp.ENC_7BIT);
-
 //id5 = nntp.AddAttachment
-
 //        ("c:\\downloded.gif", "file", WLNntp.ENC_BASE64);
-
-
-
- 
-
- 
-
 //id3 = nntp.AddAttachment
-
 //        ("c:\\temp\\file3.txt", "file", WLNntp.ENC_7BIT);
-
 //id4 = nntp.AddAttachment
-
 //        ("c:\\temp\\file4.txt", "file", WLNntp.ENC_7BIT);
-
 //nntp.DeleteAttachment(id3);
-
 //nntp.DeleteAttachment(id1);
-
 //nntp.DeleteAttachment(id4);
-
 try      //catch to handle exceptions
-
 {
-
-nntp.PostArticle();
-
+    nntp.PostArticle();
 }
-
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
 //==========================================================
-
-//InfoMessage(nntp.GetStatusLine()); nntp.Disconnect()
-
-delete nntp InfoMessage("done")
+//InfoMessage(nntp.GetStatusLine()); 
+nntp.Disconnect()
+delete nntp 
+InfoMessage("done")
 ```
-
- 
-
-
-
 
 
 ## wlPOP Object
 
- The wlPOP object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the wlPOPs Object
+The `wlPOP` object provides support for POP3 (Post Office Protocol) load and functional testing within WebLOAD. Support for standard POP operation is included. POP over secure connections (SSL) is supported through the `wlPOPs` Object
 
- 
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
-
- 
-
-To access the wlPOP object, you must include the wlPop.js file in your
-
-`InitAgenda()` function.
+To access the `wlPOP` object, you must include the `wlPop.js` file in your`InitAgenda()` function.
 
  
 
 ### wlPOP Properties
 
- 
+#### *AutoDelete*
 
-#### AutoDelete
+The `AutoDelete` property lets you specify whether or not to automatically delete an email once it has been read. You use this property to save or remove messages from your host. For example:
 
- 
-
-The AutoDelete property lets you specify whether or not to automatically delete an email once it has been read. You use this property to save or remove messages from your host. For example:
+`pop.AutoDelete = `*`status`*
 
  
 
-`pop.AutoDelete = status`
+#### *document*
+
+The `document` property is an object with four properties:
+
+
+- `Headers` – A string containing the header of the message
+- `MessageText` – A string containing the text of the message
+- `Size` – An integer describing the size of the message in bytes
+- `Attachments` – An array of objects, with each attachment existing as an object with the following properties:
+     - `contentencoding` – The encoding of the attachment
+     - `contenttype` – The content type of the attachment
+     - `filename` – The file name of the attachment
+     - `messagetext` – The text of the attachment
+     - `partname` – The part name of the message
+     - `size` – The size of the attachment in bytes 
+
+For example:
+
+`var recentdocument = `*`pop.document`*
+
+`var messageheaders = `*`recentdocument.MessageHeaders`*
+
+`var messagetext = `*`recentdocument.MessageText`*
+
+`var messagesize = `*`recentdocument.MessageSize`*
+
+`var messageattachments = `*`recentdocument.attachments`*
+
+
+#### *Headers[]*
+
+The `Headers` property is an array of objects containing header information from the host. Each object contains a key and an array of headers. For example:
+
+`var headersvalue = `*`pop.Headers[0]`*
+
+`var headerskey = `*`headersvalue.key`*
+
+`var headerstringvalues = `*`headersvalue.values[0]`*
 
  
 
-#### document
+#### *MaxLines*
 
- 
-
-The document property is an object with four properties:
-
-- Headers – A string containing the header of the message
-
-- MessageText – A string containing the text of the message
-
-- Size – An integer describing the size of the message in bytes
-
-- Attachments – An array of objects, with each attachment existing as an object with the following properties:
-
-- contentencoding – The encoding of the attachment
-
-- contenttype – The content type of the attachment
-
-- filename – The file name of the attachment
-
-- messagetext – The text of the attachment
-
-- partname – The part name of the message
-
-- size – The size of the attachment in bytes For example:
-
-- var recentdocument = *pop.document*
-
-- var messageheaders = *recentdocument.MessageHeaders*
-
-- var messagetext = *recentdocument.MessageText*
-
-- var messagesize = *recentdocument.MessageSize*
-
-- var messageattachments = *recentdocument.attachments*
-
-
-
-
-#### Headers[]
-
- 
-
-The Headers property is an array of objects containing header information from the host. Each object contains a key and an array of headers. For example:
-
-`var headersvalue = *pop.Headers[0]*`
-
-`var headerskey=*headersvalue.key*`
-
-`var headerstringvalues=*headersvalue.values[0]`*
-
- 
-
-#### MaxLines
-
- 
-
-The MaxLines property lets you specify the maximum number of lines per email to retrieve from a POP host. You use this property to specify the number of lines to retrieve from each email. For example:
-
- 
+The `MaxLines` property lets you specify the maximum number of lines per email to retrieve from a POP host. You use this property to specify the number of lines to retrieve from each email. For example:
 
 `pop.Maxlines = numberoflines`
 
 
+#### *Outfile*
 
- 
+The `Outfile` property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the `Outfile`, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new `Outfile` each time you write. For example:
 
- 
+`pop.Outfile = `*`filename`*
 
-#### Outfile
 
- 
+#### *PassWord*
 
-The Outfile property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the Outfile, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new Outfile each time you write. For example:
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the password to the POP host when a wlPOP object connects to a POP host. For example:
 
- 
-
-`pop.Outfile = filename`
-
- 
-
-#### PassWord
-
- 
-
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the password to the POP host when a wlPOP object connects to a POP host. For example:
-
- 
-
-`pop.PassWord = password`
+`pop.PassWord = `*`password`*
 
 
 
@@ -2429,51 +2204,34 @@ The PassWord property lets you specify a password when logging on to a host. You
 
  
 
-#### Size
+#### *Size*
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption For example:
+
+`var filesize = `*`pop.Size`*
 
  
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption For example:
+#### *UserName*
+
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the user name to the POP host when a wlPOP object connects to a POP host. For example:
+ 
+`pop.UserName = `*`username`*
 
  
 
-`var filesize = pop.Size`
+#### *wlSource*
 
- 
-
-#### UserName
-
- 
-
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the user name to the POP host when a wlPOP object connects to a POP host. For example:
-
- 
-
-`pop.UserName = username`
-
- 
-
-#### wlSource
-
- 
-
-The wlSource property contains the encoded multipart source of the message. This is the format in which the message is stored in the Outfile property. For example:
-
- 
-
-`var messagesource = pop.wlSource`
+The `wlSource` property contains the encoded multipart source of the message. This is the format in which the message is stored in the Outfile property. For example:
 
 
-
- 
-
- 
+`var messagesource = `*`pop.wlSource`*
 
 ### wlPOP Methods
 
- 
 
-#### Connect()
+
+#### *Connect()*
 
  
 
@@ -2487,7 +2245,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Delete()
+#### *Delete()*
 
  
 
@@ -2500,7 +2258,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -2511,7 +2269,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetCurrentMessageID()
+#### *GetCurrentMessageID()*
 
  
 
@@ -2523,10 +2281,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
 
  
-
- 
-
-#### GetMailboxSize()
+#### *GetMailboxSize()*
 
  
 
@@ -2537,7 +2292,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetMessageCount()
+#### *GetMessageCount()*
 
  
 
@@ -2548,7 +2303,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
  
 
@@ -2559,7 +2314,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Reset()
+#### *Reset()*
 
  
 
@@ -2570,7 +2325,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Retrieve()
+#### *Retrieve()*
 
  
 
@@ -2587,7 +2342,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -2600,7 +2355,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### WLPop()
+#### *WLPop()*
 
  
 
@@ -2608,343 +2363,227 @@ The wlSource property contains the encoded multipart source of the message. This
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlPOP object.                                          |
 | **Comments**     | Creates a new wlPOP object, used to  interact with the server. |
-| **Example**      | var  myNewPopObject = new WLPop();                           |
+| **Example**      | `var  myNewPopObject = new WLPop();`                           |
 
  
 
 ### POP Sample Code
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** { IncludeFile("wlPop.js",WLExecuteScript)
-
+// script Initialization
+function InitAgenda() { 
+    IncludeFile("wlPop.js",WLExecuteScript)
 }
-
-/*function **InitClient()** {
-
- 
+/*function InitClient() {
 
 }*/
-
-/*function **TerminateClient()** { delete pop;
-
+/ *function TerminateClient(){ 
+    delete pop;
 }*/
+//====================================================
 
-//===================================================
-
- 
-
-//**Body Of script**.
-
-//InfoMessage("Speed: "+wlGlobals.ConnectionSpeed) wlGlobals.Debug=1
-
-var pop=new WLPop(); pop.UserName="UserID" pop.PassWord="TopSecret" pop.Connect("00.0.0.00");
+//Body Of script.
+//InfoMessage("Speed: "+wlGlobals.ConnectionSpeed) 
+wlGlobals.Debug=1
+var pop=new WLPop(); 
+pop.UserName="UserID" 
+pop.PassWord="TopSecret" 
+pop.Connect("00.0.0.00");
 
 //======================================================
 
- 
-
-//**Test General Functions**
-
-/*count = pop.GetMessageCount();
-
-
-
- 
-
- 
-
-InfoMessage("number of messages= "+ count); count = pop.GetMailboxSize(); InfoMessage("size= "+ count);
-
-status = pop.GetStatusLine(); InfoMessage("status= "+ status); pop.SendCommand("hello"); status = pop.GetStatusLine(); InfoMessage("status= "+ status);
-
+//Test General Functions
+/ *count = pop.GetMessageCount();
+InfoMessage("number of messages= "+ count); 
+count = pop.GetMailboxSize(); 
+InfoMessage("size= "+ count);
+status = pop.GetStatusLine(); 
+InfoMessage("status= "+ status); 
+pop.SendCommand("hello"); 
+status = pop.GetStatusLine(); 
+InfoMessage("status= "+ status);
 */
-
 //=======================================================
 
- 
-
-//**Test Delete And Reset**
-
+//Test Delete And Reset
 //two tests:
-
 //1. if run as is, # of msgs should remain the same
-
 //2. if run with pop.Reset commented out, # of   msgs should be smaller
-
 InfoMessage("number of messages= "+ pop.GetMessageCount());
-
 //InfoMessage(pop.GetCurrentMessageID);
-
 //pop.MaxLines=0; pop.Delete(15);
-
 InfoMessage("number of messages= "+ pop.GetMessageCount());
-
 //InfoMessage(pop.GetCurrentMessageID);
-
-//pop.Reset(); pop.Disconnect(); pop.Connect("00.0.0.00")
-
+//pop.Reset(); 
+pop.Disconnect(); 
+pop.Connect("00.0.0.00")
 InfoMessage(pop.GetStatusLine());
-
-//InfoMessage(pop.GetCurrentMessageID); InfoMessage("number of messages= "+ pop.GetMessageCount());
-
+//InfoMessage(pop.GetCurrentMessageID); 
+InfoMessage("number of messages= "+ pop.GetMessageCount());
 //==========================================================
 
- 
-
-//**Test Retrieve**
-
+//Test Retrieve
 //InfoMessage("number of messages= "+ pop.GetMessageCount());
-
 //InfoMessage(pop.GetCurrentMessageID);
-
 //pop.AutoDelete=true
-
-/*pop.Outfile="*.xyz";
-
+/ *pop.Outfile="*.xyz";
 //pop.MaxLines=0;
-
-var count = pop.GetMessageCount(); InfoMessage(count);
-
+var count = pop.GetMessageCount(); 
+InfoMessage(count);
 for(var w = 1; w <= count; w++)
-
 {
-
-pop.Retrieve(w); InfoMessage(pop.document.headers); InfoMessage(pop.document.messageText); InfoMessage(pop.document.size);
-
-
-
- 
-
- 
-
-InfoMessage(pop.document.attachments.length);
-
-for (var j = 0; j < pop.document.attachments.length; j++)
-
-{
-
-InfoMessage(pop.document.attachments[j].contentEncoding); InfoMessage(pop.document.attachments[j].contentType); InfoMessage(pop.document.attachments[j].filename); InfoMessage(pop.document.attachments[j].messageText); InfoMessage(pop.document.attachments[j].partName); InfoMessage(pop.document.attachments[j].size);
-
-}
-
-InfoMessage("Headers:");
-
-for (var i = 0; i < pop.Headers.length; i++)
-
-{
-
-for (var j = 0; j < pop.Headers[i].values.length; j++)
-
-{
-
-InfoMessage(pop.Headers[i].key + " = " +
-
-pop.Headers[i].values[j]);
-
-}
-
-}
-
-InfoMessage("body"+pop.wlSource);
-
+    pop.Retrieve(w); 
+    InfoMessage(pop.document.headers); 
+    InfoMessage(pop.document.messageText); 
+    InfoMessage(pop.document.size);
+    InfoMessage(pop.document.attachments.length);
+    for (var j = 0; j < pop.document.attachments.length; j++)
+    {
+        InfoMessage(pop.document.attachments[j].contentEncoding);
+         InfoMessage(pop.document.attachments[j].contentType); 
+         InfoMessage(pop.document.attachments[j].filename); 
+         InfoMessage(pop.document.attachments[j].messageText); 
+         InfoMessage(pop.document.attachments[j].partName); 
+         InfoMessage(pop.document.attachments[j].size);
+    }
+    InfoMessage("Headers:");
+    for (var i = 0; i < pop.Headers.length; i++)
+    {
+        for (var j = 0; j < pop.Headers[i].values.length; j++)
+        {
+            InfoMessage(pop.Headers[i].key + " = " +
+                                        pop.Headers[i].values[j]);
+        }
+    }
+    InfoMessage("body"+pop.wlSource);
 }*/
-
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
 pop.Disconnect();
-
 //==========================================================
 ```
-
- 
-
- 
-
-
 
 
 
 ## wlPOPs Object
 
- 
+The `wlPOPs` object provides support for POP3 (Post Office Protocol) load and functional testing over secure connections (SSL).
 
-The wlPOPs object provides support for POP3 (Post Office Protocol) load and functional testing over secure connections (SSL).
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
- 
-
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
-
- 
-
-To access the wlPOPs object, you must include the wlPops.js file in your
-
-`InitAgenda()` function.
-
-
-
- 
-
+To access the `wlPOPs` object, you must include the `wlPops.js` file in your `InitAgenda()` function.
  
 
 ### wlPOPs Properties
 
- 
-
-#### AutoDelete
+#### *AutoDelete*
 
  
 
 The AutoDelete property lets you specify whether or not to automatically delete an email once it has been read. You use this property to save or remove messages from your host. For example:
 
- 
 
-`pop.AutoDelete = status`
-
- 
-
-#### document
+`pop.AutoDelete = `*`status`*
 
  
 
-The document property is an object with four properties:
+#### *document*
 
-- Headers – A string containing the header of the message
+The `document` property is an object with four properties:
 
-- MessageText – A string containing the text of the message
+- `Headers` – A string containing the header of the message
+- `MessageText` – A string containing the text of the message
+- `Size` – An integer describing the size of the message in bytes
+- `Attachments` – An array of objects, with each attachment existing as an object with the following properties:
+     - `contentencoding` – The encoding of the attachment
+     - `contenttype` – The content type of the attachment
+     - `filename` – The file name of the attachment
+     - `messagetext` – The text of the attachment
+     - `partname` – The part name of the message
+     - `size` – The size of the attachment in bytes 
+    
+For example:
 
-- Size – An integer describing the size of the message in bytes
+`var recentdocument = `*`pop.document`*
 
-- Attachments – An array of objects, with each attachment existing as an object with the following properties:
+`var messageheaders = `*`recentdocument.MessageHeaders`*
 
-- contentencoding – The encoding of the attachment
+`var messagetext = `*`recentdocument.MessageText`*
 
-- contenttype – The content type of the attachment
+`var messagesize = `*`recentdocument.MessageSize`*
 
-- filename – The file name of the attachment
-
-- messagetext – The text of the attachment
-
-- partname – The part name of the message
-
-- size – The size of the attachment in bytes For example:
-
-- var recentdocument = *pop.document*
-
-- var messageheaders = *recentdocument.MessageHeaders*
-
-- var messagetext = *recentdocument.MessageText*
-
-- var messagesize = *recentdocument.MessageSize*
-
-- var messageattachments = *recentdocument.attachments*
+`var messageattachments = `*`recentdocument.attachments`*
 
 
 
 
-#### Headers[]
+#### *Headers[]*
 
  
 
-The Headers property is an array of objects containing header information from the host. Each object contains a key and an array of headers. For example:
+The `Headers` property is an array of objects containing header information from the host. Each object contains a key and an array of headers. For example:
 
  
 
-- var headersvalue = *pop.Headers[0]*
+- `var headersvalue = `*`pop.Headers[0]`*
 
-- var headerskey=*headersvalue.key*
+- `var headerskey = `*`headersvalue.key`*
 
-- var headerstringvalues=*headersvalue.values[0]*
-
-
+- `var headerstringvalues = `*`headersvalue.values[0]`*
 
 
+#### *MaxLines*
 
 
+The `MaxLines` property lets you specify the maximum number of lines per email to retrieve from a POP host. You use this property to specify the number of lines to retrieve from each email. For example:
+ 
+`pop.Maxlines = `*`numberoflines`*
 
 
-#### MaxLines
+#### *Outfile*
+ 
+
+The `Outfile` property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the `Outfile`, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new `Outfile` each time you write. For example:
 
  
 
-The MaxLines property lets you specify the maximum number of lines per email to retrieve from a POP host. You use this property to specify the number of lines to retrieve from each email. For example:
+`pop.Outfile = `*`filename`*
 
  
+#### *PassWord*
 
-`pop.Maxlines = numberoflines`
 
- 
+The `PassWord` property lets you specify a password when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the password to the POP host when a wlPOP object connects to a POP host. For example:
 
-#### Outfile
-
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save a file or message locally on your computer. When you write to the Outfile, you overwrite the existing content. To avoid overwriting the existing content, you must specify a new Outfile each time you write. For example:
-
- 
-
-`pop.Outfile = filename`
-
- 
-
-#### PassWord
-
- 
-
-The PassWord property lets you specify a password when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the password to the POP host when a wlPOP object connects to a POP host. For example:
-
- 
-
-`pop.PassWord = password`
+`pop.PassWord = `*`password`*
 
 > **Caution:** The password appears in plain text in the script. The password is visible to any user who has access to the script.
 
  
 
-#### Size
+#### *Size*
+
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption For example:
+
+`var filesize = `*`pop.Size`*
 
  
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption For example:
+#### *UserName* 
 
- 
+The `UserName` property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the user name to the POP host when a wlPOP object connects to a POP host. For example:
 
-`var filesize = pop.Size`
-
- 
-
-#### UserName
-
- 
-
-The UserName property lets you specify a User ID when logging on to a host. You use this property to log onto a restricted POP host. WebLOAD automatically sends the user name to the POP host when a wlPOP object connects to a POP host. For example:
-
- 
-
-`pop.UserName = username`
+`pop.UserName = `*`username`*
 
 
+#### *wlSource*
 
- 
+The `wlSource` property contains the encoded multipart source of the message. This is the format in which the message is stored in the Outfile property. For example:
 
- 
-
-#### wlSource
-
- 
-
-The wlSource property contains the encoded multipart source of the message. This is the format in which the message is stored in the Outfile property. For example:
-
- 
-
-`var messagesource = pop.wlSource`
+`var messagesource = `*`pop.wlSource`*
 
  
 
@@ -2952,7 +2591,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Connect()
+#### *Connect()*
 
  
 
@@ -2966,8 +2605,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Delete()
-
+#### *Delete()*
  
 
 | **Syntax**       | Delete([*MessageID*])                                        |
@@ -2979,9 +2617,8 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
- 
 
 | **Syntax**       | Disconnect()                                       |
 | ---------------- | -------------------------------------------------- |
@@ -2990,8 +2627,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetCurrentMessageID()
-
+#### *GetCurrentMessageID()*
  
 
 | **Syntax**       | GetCurrentMessageID()                                        |
@@ -3001,8 +2637,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
 
 
-#### GetMailboxSize()
-
+#### *GetMailboxSize()*
  
 
 | **Syntax**       | GetMailboxSize()                                             |
@@ -3012,9 +2647,8 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetMessageCount()
+#### *GetMessageCount()*
 
- 
 
 | **Syntax**       | GetMessageCount()                                            |
 | ---------------- | ------------------------------------------------------------ |
@@ -3023,9 +2657,8 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### GetStatusLine()
+#### *GetStatusLine()*
 
- 
 
 | **Syntax**       | GetStatusLine()                                              |
 | ---------------- | ------------------------------------------------------------ |
@@ -3034,9 +2667,8 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Reset()
+#### *Reset()*
 
- 
 
 | **Syntax**       | Reset()                                                      |
 | ---------------- | ------------------------------------------------------------ |
@@ -3045,7 +2677,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### Retrieve()
+#### *Retrieve()*
 
  
 
@@ -3056,14 +2688,11 @@ The wlSource property contains the encoded multipart source of the message. This
 | **Return Value** | Returns the message and populates the  document property.    |
 | **Comments**     | Returns the message with the corresponding ID. If  no ID is specified, then the next message is returned |
 
-
-
   
 
-#### SendCommand()
+#### *SendCommand()*
 
  
-
 | **Syntax**       | SendCommand(*string*)                                        |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
@@ -3073,7 +2702,7 @@ The wlSource property contains the encoded multipart source of the message. This
 
  
 
-#### WLPops()
+#### *WLPops()*
 
  
 
@@ -3081,27 +2710,20 @@ The wlSource property contains the encoded multipart source of the message. This
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlPOPs object.                                         |
 | **Comments**     | Creates a new wlPOPs object, used to  interact with the server. |
-| **Example**      | var  myNewPopObject = new WLPops();                          |
+| **Example**      | `var myNewPopObject = new WLPops();`                          |
 
  
 
 
 
-## wlSMTP Object
-
+## *wlSMTP Object*
  
 
-The wlSMTP object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs Object* ](#wlsmtps-object).
+The `wlSMTP` object provides support for Simple Mail Transfer Protocol (SMTP) load and functional testing within WebLOAD. Support for standard SMTP operation is included. SMTP over secure connections (SSL) is supported through the [*wlSMTPs Object* ](#wlsmtps-object).
 
- 
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception should be thrown.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception should be thrown.
-
- 
-
-To access the wlSMTP object, you must include the wlSmtp.js file in your
-
-`InitAgenda()` function.
+To access the `wlSMTP` object, you must include the `wlSmtp.js` file in your `InitAgenda()` function.
 
  
 
@@ -3109,61 +2731,43 @@ To access the wlSMTP object, you must include the wlSmtp.js file in your
 
 ### wlSMTP Properties
 
- 
+#### *Attachments*
 
-#### Attachments
+The `Attachments` property lets you specify an attachment to an email message. The *filename* parameter is the name of the local file or datastream that you want to attach to the email message. For example: 
 
- 
-
-The Attachments property lets you specify an attachment to an email message. The *filename* parameter is the name of the local file or datastream that you want to attach to the email message. For example:
+`smtp.Attachments = `*`filename`*
 
  
 
-`smtp.Attachments = filename`
+#### *AttachmentsEncoding*
 
- 
-
-#### AttachmentsEncoding
-
- 
-
-The AttachmentsEncoding property lets you specify the type of encoding you are applying to an email attachment. This property must be specified for each attachment. 
+The `AttachmentsEncoding` property lets you specify the type of encoding you are applying to an email attachment. This property must be specified for each attachment. 
 
 Valid values are: 
 
-- 7Bit
-- Quoted
-
-- Base64
-
-- 8Bit
-
-- 8BitBinary
-
-
+- `7Bit`
+- `Quoted`
+- `Base64`
+- `8Bit`
+- `8BitBinary`
 
 You may also specify the encoding using the following constants: 
 
-- WLSmtp.ENC_7BIT – 7bit encoding
+- `WLSmtp.ENC_7BIT` – 7bit encoding
+- `WLSmtp.ENC_QUOTED` – Quoted Printable encoding
+- `WLSmtp.ENC_BASE64` – Base64 encoding
+- `WLSmtp.ENC_8BIT` – 8Bit encoding
+- `WLSmtp.ENC_8BITBINARY` – Binary encoding 
 
-- WLSmtp.ENC_QUOTED – Quoted Printable encoding
-
-- WLSmtp.ENC_BASE64 – Base64 encoding
-
-- WLSmtp.ENC_8BIT – 8Bit encoding
-
-- WLSmtp.ENC_8BITBINARY – Binary encoding For example:
-
-- smtp.AttachmentsEncoding = *encodingtype*
+For example:
+- `smtp.AttachmentsEncoding = `*`encodingtype`*
 
 
 
 
-#### AttachmentsTypes
+#### *AttachmentsTypes*
 
- 
-
-The AttachmentsTypes property lets you specify the type of attachment you are including in an email message. This property must be specified for each attachment. 
+The `AttachmentsTypes` property lets you specify the type of attachment you are including in an email message. This property must be specified for each attachment. 
 
 Valid values are: 
 
@@ -3174,77 +2778,56 @@ Valid values are:
 
 For example:
 
- 
+`smtp.AttachmentsTypes = `*`typeofattachment`*
 
-`smtp.AttachmentsTypes = typeofattachment`
+#### *Bcc*
 
- 
-
-#### Bcc
-
- 
-
-The Bcc property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [m>". 
-
+The `Bcc` property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`. 
 
 
 For example:
 
-`smtp.Bcc = blindcopyaddresses`
+`smtp.Bcc = `*`blindcopyaddresses`*
 
  
 
-#### Cc
+#### *Cc*
 
- 
-
-The Cc property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name [m>". For example:
-
- 
-
-`smtp.Cc = copyaddress; copyaddress`
-
- 
-
-#### From
-
- 
-
-The From property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. For example:
-
- 
-
-`smtp.From = replyname`
-
- 
-
-#### Message
-
- 
-
-The Message property lets you specify the text appearing in the body of your email. You use this property to write the text of the email message itself.
-
- 
-
-#### ReplyTo
-
- 
-
-The ReplyTo property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [](mailto:Me@MyCompany.com)". 
-
-
+The `Cc` property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.
 
 For example:
 
-`smtp.ReplyTo = replyaddress`
-
-
-
-#### Size
+`smtp.Cc = `*`copyaddress; copyaddress`*
 
  
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
+#### *From*
+
+The `From` property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. For example:
+ 
+`smtp.From = `*`replyname`*
+ 
+
+#### *Message*
+
+The `Message` property lets you specify the text appearing in the body of your email. You use this property to write the text of the email message itself.
+
+ 
+#### *ReplyTo*
+
+The `ReplyTo` property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`. 
+
+For example:
+
+`smtp.ReplyTo = `*`replyaddress`*
+
+
+
+#### *Size*
+
+ 
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
 
 
 
@@ -3254,35 +2837,29 @@ For example:
 
  
 
-#### Subject
+#### *Subject*
 
- 
 
-The Subject property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email. 
+The `Subject` property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email. 
 
 For example: 
 
-`smtp.Subject = subjectheader`
+`smtp.Subject = `*`subjectheader`*
 
  
 
-#### To
+#### *To*
 
-The To property lets you specify a recipient’s email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name ["](mailto:Me@MyCompany.com). For example:
+The `To` property lets you specify a recipient’s email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.
 
- 
+For example:
 
-`smtp.To = recipientaddress; recipientaddress`
-
- 
-
-#### Type
+`smtp.To = `*`recipientaddress; recipientaddress`*
 
  
+#### *Type*
 
-The Type property lets you specify the type of server with which you are working. The default value for this property is **SMTP**. 
-
-
+The `Type` property lets you specify the type of server with which you are working. The default value for this property is **SMTP**. 
 
 Valid values are:
 
@@ -3294,7 +2871,7 @@ Valid values are:
 
 For example:
 
-`smtp.Type = servertype`
+`smtp.Type = `*`servertype`*
 
  
 
@@ -3302,7 +2879,7 @@ For example:
 
  
 
-#### AddAttachment()
+#### *AddAttachment()*
 
  
 
@@ -3310,8 +2887,8 @@ For example:
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | String           | The string you are sending  to the host. If you are sending a file, the string is the location and name  of the file. If you are sending a data attachment, the string is the data to  be attached. |
-| Type             | The type of  attachment you are sending. The default value is  File. Valid values are:   File   Data |
-| encoding         | The type of encoding to apply to the file. The default value is  7Bit. Valid values are:   7Bit   Quoted   Base64   8Bit   8BitBinary |
+| Type             | The type of attachment you are sending.  Valid values are:  <p></p> `File` (default) <p></p> `Data` |
+| encoding         | ThThe type of encoding to apply to the file. Valid  values are: <p></p> `7Bit` (default) <p></p> `Quoted` <p></p> `Base64` <p></p> `8Bit` <p></p> `8BitBinary` |
 | **Return Value** | Returns an integer value  Attachment ID if successful, an exception if unsuccessful. |
 | **Comments**     | Adds an attachment to the email message.                     |
 
@@ -3319,7 +2896,7 @@ For example:
 
  
 
-#### Connect()
+#### *Connect()*
 
  
 
@@ -3333,7 +2910,7 @@ For example:
 
  
 
-#### DeleteAttachment()
+#### *DeleteAttachment()*
 
  
 
@@ -3348,7 +2925,7 @@ For example:
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -3361,7 +2938,7 @@ For example:
 
   
 
-#### Send()
+#### *Send()*
 
 
 
@@ -3372,7 +2949,7 @@ For example:
 
  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -3385,18 +2962,18 @@ For example:
 
  
 
-#### Verify()
+#### *Verify()*
 
  
 
 | **Syntax**       | Verify()                                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Returns a 1 if the address  is valid, a 0 if the address is invalid. If the method is unable to verify  the address due to authentication  or other reasons, it returns an exception. |
-| **Comments**     | Checks that the address in the To property is valid. To use this method, include  only one address in the To  property. |
+| **Comments**     | Checks that the address in the `To` property is valid. To use this method, include  only one address in the `To`  property. |
 
  
 
-#### WLSmtp()
+#### *WLSmtp()*
 
  
 
@@ -3404,182 +2981,121 @@ For example:
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlSMTP object.                                         |
 | **Comments**     | Creates a new wlSMTP object, used to  interact with the server. |
-| **Example**      | function **InitClient()** { myNewSmtpObject = new WLSmtp()  } |
+| **Example**      | <pre><code>function InitClient() { myNewSmtpObject = new WLSmtp() }</code></pre> |
 
 
 
- 
 
- 
 
 ### SMTP Sample Code
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** { IncludeFile("wlSmtp.js",WLExecuteScript)
-
-// include the file that enables SMTP
-
+// script Initialization*
+function InitAgenda() { 
+    IncludeFile("wlSmtp.js",WLExecuteScript)
+                            // include the file that enables SMTP
 }
-
-function **InitClient()** {
-
-Smtp=new WLSmtp()     // create the new SMTP object Smtp.Connect("HostName"); // connect to the server
-
+function InitClient() {
+    Smtp=new WLSmtp()     // create the new SMTP object 
+    Smtp.Connect("HostName"); // connect to the server
 }
-
-function **TerminateClient()** {
-
-Smtp.Disconnect();    // logout from the server delete Smtp    // delete the SMTP object
-
+function TerminateClient() {
+    Smtp.Disconnect();    // logout from the server 
+    delete Smtp             // delete the SMTP object
 }
-
 //================================================
 
- 
 
-// **Body Of script**
-
-//**Test Send Attachments**
-
-Smtp.To=" \"Recipient Name\" [";](mailto:Recipient@recipient.com) Smtp.From= ["Sender@sender.com";](mailto:Sender@sender.com) [Smtp.Cc="Copy1@copy.here.org, ](mailto:Copy1@copy.here.org)[Copy2@copy.there.org";](mailto:Copy2@copy.there.org)
-
-// multiple CC's [Smtp.ReplyTo="Sender@sender.com";](mailto:Sender@sender.com)
-
-// optional different reply to address Smtp.Subject="Message Subject ";  // Text string Smtp.Message="Greetings from the wlSMTP class"; // Message text
-
+// Body Of script
+//Test Send Attachments
+Smtp.To=" \"Recipient Name\" <Recipient@recipient.com>"; 
+Smtp.From= "Sender@sender.com";
+Smtp.Cc="Copy1@copy.here.org, Copy2@copy.there.org";
+                            // multiple CC's 
+Smtp.ReplyTo="Sender@sender.com";
+                // optional different reply to address 
+Smtp.Subject="Message Subject ";  // Text string 
+Smtp.Message="Greetings from the wlSMTP class"; // Message text
 // Add attachments from local file using different
-
 // encoding techniques
-
 // 7BIT are text files, the BASE64 is for a binary file
-
-// (in this case an image) id1 = Smtp.AddAttachment
-
-
-
- 
-
-id2 = Smtp.AddAttachment id3 = Smtp.AddAttachment id4 = Smtp.AddAttachment
-
+// (in this case an image) 
+id1 = Smtp.AddAttachment
+                        ("c:\\file1.txt","file",WLSmtp.ENC_7BIT);
+id2 = Smtp.AddAttachment 
+                        ("c:\\file2.txt","file",WLSmtp.ENC_7BIT);
+id3 = Smtp.AddAttachment 
+                        ("c:\\file3.txt","file",WLSmtp.ENC_7BIT); 
+id4 = Smtp.AddAttachment
+                        ("c:\\file4.txt","file",WLSmtp.ENC_7BIT);
 id5 = Smtp.AddAttachment
-
-
-
-("c:\\file1.txt","file",WLSmtp.ENC_7BIT); ("c:\\file2.txt","file",WLSmtp.ENC_7BIT); ("c:\\file3.txt","file",WLSmtp.ENC_7BIT); ("c:\\file4.txt","file",WLSmtp.ENC_7BIT);
-
-
-
-("c:\\downloded.gif","file",WLSmtp.ENC_BASE64);
-
-// You may delete attachments prior to sending the mail message Smtp.DeleteAttachment(id3);
-
+                        ("c:\\downloded.gif","file",WLSmtp.ENC_BASE64);
+// You may delete attachments prior to sending the mail message 
+Smtp.DeleteAttachment(id3);
 Smtp.DeleteAttachment(id1);
-
-
-
- 
-
- 
-
-Smtp.DeleteAttachment(id4); Smtp.Send();      // and send it! InfoMessage(Smtp.GetStatusLine());
-
-// print out the last response from the server
-
+Smtp.DeleteAttachment(id4); 
+Smtp.Send();      // and send it! 
+InfoMessage(Smtp.GetStatusLine());
+                // print out the last response from the server
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
 //=======================================================
-
 InfoMessage("done")   // End of SMTP sample script
 ```
 
  
-
-
-
-
-
 ## wlSMTPs Object
 
- 
 
-The wlSMTP object provides support for SMTP (Mail Transfer Protocol) load and functional testing over secure connections (SSL).
+The `wlSMTP` object provides support for SMTP (Mail Transfer Protocol) load and functional testing over secure connections (SSL).
 
- 
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception should be thrown.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception should be thrown.
-
- 
-
-To access the wlSMTPs object, you must include the wlSMTPs.js file in your
-
-`InitAgenda()` function.
+To access the `wlSMTPs` object, you must include the `wlSMTPs.js` file in your `InitAgenda()` function.
 
  
 
 ### wlSMTPs Properties
 
- 
+#### *Attachments*
 
-#### Attachments
-
- 
-
-The Attachments property lets you specify an attachment to an email message. The *filename* parameter is the name of the local file or datastream that you want to attach to the email message. 
-
-
+The `Attachments` property lets you specify an attachment to an email message. The *filename* parameter is the name of the local file or datastream that you want to attach to the email message. 
 
 For example:
 
-`smtp.Attachments = filename`
+`smtp.Attachments = `*`filename`*
 
  
 
-#### AttachmentsEncoding
+#### *AttachmentsEncoding*
 
- 
+The `AttachmentsEncoding` property lets you specify the type of encoding you are applying to an email attachment. This property must be specified for each attachment. 
 
-The AttachmentsEncoding property lets you specify the type of encoding you are applying to an email attachment. This property must be specified for each attachment. 
+Valid values are:
 
-The AttachmentsEncoding property lets you specify the type of encoding you are applying to an email attachment. This property must be specified for each attachment. 
-
-Valid values are: 
-
-- 7Bit
-- Quoted
-- Base64
-- 8Bit
-- 8BitBinary
-
-
+- `7Bit`
+- `Quoted`
+- `Base64`
+- `8Bit`
+- `8BitBinary`
 
 You may also specify the encoding using the following constants: 
 
-- WLSmtp.ENC_7BIT – 7bit encoding
-- WLSmtp.ENC_QUOTED – Quoted Printable encoding
-- WLSmtp.ENC_BASE64 – Base64 encoding
-- WLSmtp.ENC_8BIT – 8Bit encoding
-- WLSmtp.ENC_8BITBINARY – Binary encoding For example:
-- smtp.AttachmentsEncoding = *encodingtype*
+- `WLNntp.ENC_7BIT` – 7bit encoding
+- `WLNntp.ENC_QUOTED` – Quoted Printable encoding
+- `WLNntp.ENC_BASE64` – Base64 encoding
+- `WLNntp.ENC_8BIT` – 8Bit encoding
+- `WLNntp.ENC_8BITBINARY` – Binary encoding 
 
+For example:
 
+`smtp.AttachmentsEncoding = `*`encodingtype`*
 
- 
+#### *AttachmentsTypes*
 
-#### AttachmentsTypes
-
- 
-
-The AttachmentsTypes property lets you specify the type of attachment you are including in an email message. This property must be specified for each attachment. 
-
-
+The `AttachmentsTypes` property lets you specify the type of attachment you are including in an email message. This property must be specified for each attachment. 
 
 Valid values are:
 
@@ -3587,72 +3103,56 @@ Valid values are:
 
 - **false** – Specifies a type of data 
 
-
-
 For example:
 
-`smtp.AttachmentsTypes = typeofattachment`
+`smtp.AttachmentsTypes = `*`typeofattachment`*
 
  
 
-#### Bcc
+#### *Bcc*
 
- 
-
-The Bcc property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [m>". 
+The `Bcc` property lets you specify the email addresses of additional recipients to be blind copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.  
 
 
 
 For example:
 
-`smtp.Bcc = blindcopyaddresses`
+`smtp.Bcc = `*`blindcopyaddresses`*
 
  
 
-#### Cc
+#### *Cc*
 
  
 
-The Cc property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name [m>".
+The `Cc` property lets you specify the email addresses of additional recipients to be copied in an email. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.  
 
 
 
 For example: 
 
-`smtp.Cc = copyaddress; copyaddress`
+`smtp.Cc = `*`copyaddress; copyaddress`*
 
 
+#### *From*
 
- 
-
-#### From
-
- 
-
-The From property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. 
-
+The `From` property lets you describe the Reply To in plain language. You may use this property to identify your Reply To email address in a plain language format. 
 
 
 For example:
 
-`smtp.From = replyname`
+`smtp.From = `*`replyname`*
 
  
 
-#### Message
+#### *Message*
 
- 
+The `Message` property lets you specify the text appearing in the body of your email. You use this property to write the text of the email message itself.
 
-The Message property lets you specify the text appearing in the body of your email. You use this property to write the text of the email message itself.
 
- 
+#### *ReplyTo*
 
-#### ReplyTo
-
- 
-
-The ReplyTo property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of ["Me@MyCompany.com](mailto:Me@MyCompany.com)" or as "My Name [m>". 
-
+The `ReplyTo` property lets you specify the return address of your email. You may specify multiple addresses in a semicolon-separated list. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.   
 
 
 For example:
@@ -3660,69 +3160,56 @@ For example:
 `smtp.ReplyTo = replyaddress`
 
  
+#### *Size*
 
-#### Size
-
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
-
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
 
 
 For example:
 
-`var filesize = smtp.Size`
+`var filesize = `*`smtp.Size`*
 
  
 
-#### Subject
-
- 
-
-The Subject property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email.
+#### *Subject*
 
 
+The `Subject` property lets you specify the text appearing the subject field of your email. You use this property to provide a brief description of the contents of your email.
 
 For example: 
 
-`smtp.Subject = subjectheader`
+`smtp.Subject = `*`subjectheader`*
 
  
 
-#### To
+#### *To*
 
-The To property lets you specify a recipient’s email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of ["Me@MyCompany.com" ](mailto:Me@MyCompany.com)or as "My Name ["](mailto:Me@MyCompany.com). For example:
+The `To` property lets you specify a recipient’s email address. You may specify multiple addresses in a semicolon-separated list. You must specify this property with every email. Addresses may be specified in the format of `"Me@MyCompany.com"` or as `"My Name <Me@MyCompany.com>"`.   
 
- 
+For example:
 
-`smtp.To = recipientaddress; recipientaddress`
-
- 
-
-#### Type
-
- 
-
-The Type property lets you specify the type of server with which you are working. The default value for this property is **SMTP**. 
+`smtp.To = `*`recipientaddress; recipientaddress`*
 
 
+#### *Type*
+
+The `Type` property lets you specify the type of server with which you are working. The default value for this property is **SMTP**. 
 
 Valid values are:
 
 - **SMTP** – A standard STMP server
 - **ESMTP** – An extended SMTP server 
 
-
-
 For example:
 
-`smtp.Type = servertype`
+`smtp.Type = `*`servertype`*
 
  
 
 ### wlSMTPs Methods
 
  
-
-#### AddAttachment()
+#### *AddAttachment()*
 
  
 
@@ -3730,43 +3217,45 @@ For example:
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
 | String           | The string you are sending  to the host. If you are sending a file, the string is the location and name  of the file. If you are sending a data attachment, the string is the data to  be attached. |
-| Type             | The type of attachment you are sending. The  default value is  File. Valid values are:   File   Data |
-| encoding         | The type of encoding to apply to the file.  The default value is  7Bit. Valid values are:   7Bit   Quoted   Base64   8Bit   8BitBinary |
+| Type             | The type of attachment you are sending.  Valid values are:  <p></p> `File` (default) <p></p> `Data` |
+| encoding         | ThThe type of encoding to apply to the file. Valid  values are: <p></p> `7Bit` (default) <p></p> `Quoted` <p></p> `Base64` <p></p> `8Bit` <p></p> `8BitBinary` |
 | **Return Value** | Returns an integer value  Attachment ID if successful, an exception if unsuccessful. |
 | **Comments**     | Adds an attachment to the email message.                     |
 
+
+
  
 
-#### Connect()
+#### *Connect()*
 
  
 
 | **Syntax**       | Connect(*host*,  [*port*])                                   |
 | ---------------- | ------------------------------------------------------------ |
 | **Parameters**   |                                                              |
-| host             | The host to which you are connecting. You may  express the host using either the DNS number or the full name of the host. |
+| host             | The host to which you are connecting. You  may express the host using either the DNS number or the full name of the  host. |
 | port             | The port to which you are  connecting. If you do not specify a port, the default SMTP port is used. |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
 | **Comments**     | Starts an SMTP session with the host.                        |
 
+ 
 
-
-  
-
-#### DeleteAttachment()
+#### *DeleteAttachment()*
 
  
 
-| **Syntax**       | DeleteAttachment(*ID*)                            |
-| ---------------- | ------------------------------------------------- |
-| **Parameters**   |                                                   |
-| ID               | The ID of the attachment you are deleting.        |
-| **Return Value** | Null if successful, an exception if unsuccessful. |
-| **Comments**     | Removes an attachment from the email  message.    |
+| **Syntax**       | DeleteAttachment(*ID*)                             |
+| ---------------- | -------------------------------------------------- |
+| **Parameters**   |                                                    |
+| ID               | The ID of the attachment you are deleting.         |
+| **Return Value** | Null if successful, an exception if  unsuccessful. |
+| **Comments**     | Removes an attachment from the email  message.     |
 
  
 
-#### Disconnect()
+ 
+
+#### *Disconnect()*
 
  
 
@@ -3775,20 +3264,22 @@ For example:
 | **Return Value** | Null if successful, an exception if  unsuccessful. |
 | **Comments**     | Terminates a connection to the SMTP host.          |
 
- 
 
-#### Send()
 
- 
+  
+
+#### *Send()*
+
+
 
 | **Syntax**       | Send()                                                       |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Sends mail to recipients, attaching files using  MIME as necessary. After sending the attachments, data is deleted. |
+| **Comments**     | Sends mail to recipients, attaching files  using MIME as necessary. After sending the attachments, data is deleted. |
 
  
 
-#### SendCommand()
+#### *SendCommand()*
 
  
 
@@ -3797,149 +3288,122 @@ For example:
 | **Parameters**   |                                                              |
 | string           | The string you are sending to the host.                      |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Sends a string to the host without modification.  This method is useful for interacting directly with the host using  non-standard or unsupported extensions. |
+| **Comments**     | Sends a string to the host  without modification. This method is useful for interacting directly with the  host using non-standard or unsupported extensions. |
 
  
 
-#### Verify()
+#### *Verify()*
 
  
 
 | **Syntax**       | Verify()                                                     |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Returns a 1 if the address  is valid, a 0 if the address is invalid. If the method is unable to verify  the address due to authentication  or other reasons, it returns an exception. |
-| **Comments**     | Checks that the address in the To property is valid. To use this method, include  only one address in the To  property. |
+| **Comments**     | Checks that the address in the `To` property is valid. To use this method, include  only one address in the `To`  property. |
 
+ 
 
+#### *WLSmtp()*
 
-  
+ 
 
-#### WLSmtps()
-
-| **Syntax**       | new WLSmtps()                                                |
+| **Syntax**       | new WLSmtps()                                                 |
 | ---------------- | ------------------------------------------------------------ |
-| **Return Value** | A new wlSMTPs object.                                        |
+| **Return Value** | A new wlSMTPs object.                                         |
 | **Comments**     | Creates a new wlSMTPs object, used to  interact with the server. |
-| **Example**      | function **InitClient()** { myNewSmtpObject = new WLSmtps()  } |
-
- 
-
- 
-
-
+| **Example**      | <pre><code>function InitClient() { myNewSmtpObject = new WLSmtps() }</code></pre> |
 
 
 
 ## wlTCP Object
 
- 
+The `wlTCP` object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. TCP over secure connections (SSL) is also supported. See `wlGlobals.tcpssl = "Yes"` for secure connection.
 
-The wlTCP object provides support for TCP (Transfer Control Protocol) load and functional testing within WebLOAD. Support for standard TCP operation is included. 
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method; otherwise an exception is thrown.
 
-TCP over secure connections (SSL) is also supported. See `wlGlobals.tcpssl = "Yes"` for secure connection.
-
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method; otherwise an exception is thrown.
-
-To access the wlTCP object, you must include the wltcpj.js file in your
-
-`InitAgenda()` function.
+To access the `wlTCP` object, you must include the `wltcpj.js` file in your `InitAgenda()` function.
 
  
 
 ### wlTCP Properties
 
- 
+#### *document*
 
-#### document
-
- 
-
-The document property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the document object. The document may be cleared manually using the `Erase()` method. 
-
-
+The `document` property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the `document` object. The `document` may be cleared manually using the `Erase()` method. 
 
 For example:
 
-*`var recentdocument = tcp.document`*
+`var recentdocument = `*`tcp.document`*
 
-#### InBufferSize
+#### *InBufferSize*
 
-The InBufferSize property specifies the size, in bytes, of the incoming data buffer. To remove this setting, either delete the property, or set it to a negative value. 
-
-For example:
-
-tcp.InBufferSize = *maximuminsize*
-
- 
-
-#### LocalPort
-
-
-The LocalPort property specifies the TCP port to which you are connecting. If you do not specify the LocalPort property, you connect to a randomly selected port.
+The `InBufferSize` property specifies the size, in bytes, of the incoming data buffer. To remove this setting, either delete the property, or set it to a negative value. 
 
 For example:
 
-`tcp.LocalPort = portnumber`
+`tcp.InBufferSize = `*`maximuminsize`*
 
  
 
-#### NextPrompt
+#### *LocalPort*
 
-The NextPrompt property specifies the text for the script to look for in the next prompt from the host. A `Receive()` call is viewed as successful if the prompt contains the text string specified by the NextPrompt variable. To specify a prompt with no message, specify a NextPrompt with an empty value, or delete the NextPrompt property. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. 
+The `LocalPort` property specifies the TCP port to which you are connecting. If you do not specify the `LocalPort` property, you connect to a randomly selected port.
 
+For example:
 
+`tcp.LocalPort = `*`portnumber`*
+
+ 
+
+#### *NextPrompt*
+
+The `NextPrompt` property specifies the text for the script to look for in the next prompt from the host. A `Receive()` call is viewed as successful if the prompt contains the text string specified by the `NextPrompt` variable. To specify a prompt with no message, specify a `NextPrompt` with an empty value, or delete the `NextPrompt` property. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. 
 
 For example: 
 
-`tcp.NextPrompt = promptmessage`
+`tcp.NextPrompt = `*`promptmessage`*
 
  
 
-#### NextSize
+#### *NextSize*
 
-
-
-The NextSize property specifies the size, in bytes, of the expected data. If you specify a NextSize of 100 bytes, for example, the `Receive()` method returns to the script when the document object contains 100 bytes of data. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. For example:
-
-`tcp.NextSize = expectedsize`
-
-#### OutBufferSize
-
-
-The OutBufferSize property specifies the size, in bytes, of the outgoing data buffer. To remove this setting, either delete the property, or set it to a negative value. For example:
-
- 
-
-`tcp.OutBufferSize = maximumoutsize`
-
-
-
-#### Outfile
-
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
-
- 
-
-You write to the output file each time you use the ``Receive()`` method. If you call the `Receive()` method more than once, you must specify a different output file each time, or you overwrite the previous output file. 
-
-
+The `NextSize` property specifies the size, in bytes, of the expected data. If you specify a `NextSize` of 100 bytes, for example, the `Receive()` method returns to the script when the document object contains 100 bytes of data. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. 
 
 For example:
 
-`tcp.Outfile = filename`
+`tcp.NextSize = `*`expectedsize`*
+
+#### *OutBufferSize*
 
 
-#### ReceiveMessageText
+The `OutBufferSize` property specifies the size, in bytes, of the outgoing data buffer. To remove this setting, either delete the property, or set it to a negative value.
 
-The ReceiveMessageText property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
+ For example:
+
+`tcp.OutBufferSize = `*`maximumoutsize`*
+
+
+
+#### *Outfile*
+
+The `Outfile` property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
+
+You write to the output file each time you use the ``Receive()`` method. If you call the `Receive()` method more than once, you must specify a different output file each time, or you overwrite the previous output file. 
+
+For example:
+
+`tcp.Outfile = `*`filename`*
+
+
+#### *ReceiveMessageText*
+
+The `ReceiveMessageText` property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
 
 Possible values are: 
 
-- **Prompt was found** – The host returned the prompt specified in the NextPrompt property.
-- **Timeout** – The last command exceeded the time limit specified by the Timeout property.
-- **Byte length reached** – The host received the amount of data specified in the NextSize property.
+- **Prompt was found** – The host returned the prompt specified in the `NextPrompt` property.
+- **Timeout** – The last command exceeded the time limit specified by the `Timeout` property.
+- **Byte length reached** – The host received the amount of data specified in the `NextSize` property.
 
 
 
@@ -3949,41 +3413,36 @@ For example:
 
 
 
-#### Size
+#### *Size*
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
-
-
-
-For example:
-
-`var filesize = tcp.Size`
-
- 
-
-#### Timeout
-
- 
-
-The Timeout property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. To set an unlimited timeout, specify a value of zero, or a negative value. 
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. 
 
 
 
 For example:
 
-`tcp.Timeout = timedelay`
+`var filesize = `*`tcp.Size`*
+
+ 
+
+#### *Timeout*
+
+The `Timeout` property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. To set an unlimited timeout, specify a value of zero, or a negative value. 
+
+For example:
+
+`tcp.Timeout = `*`timedelay`*
 
 
 
-> **Note:** It is recommended that you include a Timeout property in all scripts that use the wlTCP object. If you do not, and the script fails to return a prompt, your session may freeze.
+> **Note:** It is recommended that you include a Timeout property in all scripts that use the `wlTCP` object. If you do not, and the script fails to return a prompt, your session may freeze.
 
  
 
 ### wlTCP Methods
 
  
-
-#### Connect()
+#### *Connect()*
 
 
 
@@ -3997,7 +3456,7 @@ For example:
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -4008,7 +3467,7 @@ For example:
 
  
 
-#### Erase()
+#### *Erase()*
 
  
 
@@ -4019,20 +3478,20 @@ For example:
 
  
 
-#### Receive()
+#### *Receive()*
 
  
 
 | **Syntax**       | `Receive()`                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. A `Receive()`  method  returns to the script when the NextPrompt, NextSize, or Timeout  properties  are met. If more than one of these properties is specified, the method  returns to the script when the first one is met. Subsequent uses of `Receive()`  find the next  instance of the limiting property, returning additional information from the  buffer. The content returned depends upon which of the three limiting  properties triggered the return. |
+| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. A `Receive()`  method  returns to the script when the `NextPrompt`, `NextSize`, or `Timeout`  properties  are met. If more than one of these properties is specified, the method  returns to the script when the first one is met. Subsequent uses of `Receive()`  find the next  instance of the limiting property, returning additional information from the  buffer. The content returned depends upon which of the three limiting  properties triggered the return. |
 
 
 
  
 
-#### Send()
+#### *Send()*
 
 | **Syntax**       | Send(data_to_send)                                           |
 | ---------------- | ------------------------------------------------------------ |
@@ -4043,134 +3502,113 @@ For example:
 
  
 
-#### WLTcp()
+#### *WLTcp()*
 
 | **Syntax**       | new WLTcp()                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlTCP object.                                          |
 | **Comments**     | Creates a new wlTCP object, used to  interact with the server. |
-| **Example**      | function **InitClient()** { myNewTcpObject = new WLTcp();  } |
+| **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLTcp(); }</code></pre> |
 
  
 
 ### TCP Sample Code
 
 ```javascript
-// **script Initialization**
-
+// script Initialization
 function InitAgenda() { 
     IncludeFile("wltcpj.js",WLExecuteScript)
 }
-
 function InitClient() { 
     tcp=new WLTcp();
 }
-
 function TerminateClient() {
     delete tcp;
 }
+//============================================================
+
 //**Body Of script**.
-
-
+InfoMessage("Speed: "+wlGlobals.ConnectionSpeed)
+wlGlobals.Debug=1;
 tcp.Outfile = "c:\\tcp.txt"; 
 tcp.Timeout = 2000; 
 tcp.NextPrompt = "\r\n\r\n";
-
 //tcp.NextSize=1900;
-
-tcp.Connect("www.sitename.com", 80);
-tcp.Send("GET /products/index.htm HTTP/1.0\r\n\r\n");
-
-//Sleep(3000); 
-tcp.Receive(); 
-InfoMessage(tcp.document);
-InfoMessage(tcp.ReceiveMessageText); 
-
-tcp.NextSize=10091; 
-tcp.NextPrompt="";
-tcp.Erase(); 
-tcp.Receive(); 
-InfoMessage(tcp.document);
-
-InfoMessage(tcp.ReceiveMessageText);
+//============================================================
+try
+{
+    tcp.Connect("www.sitename.com", 80);
+    tcp.Send("GET /products/index.htm HTTP/1.0\r\n\r\n");
+    //Sleep(3000); 
+    tcp.Receive(); 
+    InfoMessage(tcp.document);
+    InfoMessage(tcp.ReceiveMessageText); 
+    tcp.NextSize=10091; 
+    tcp.NextPrompt="";
+    tcp.Erase(); 
+    tcp.Receive(); 
+    InfoMessage(tcp.document);
+    InfoMessage(tcp.ReceiveMessageText);
+}
+catch(e)
+{
+    InfoMessage(e);
+}
+//==========================================================
+InfoMessage("done");
 
 ```
 
 ## wlTelnet Object
 
-The wlTelnet object provides support for Telnet load and functional testing within WebLOAD. Support for standard Telnet operation is included. Telnet over secure connections (SSL) is not currently supported.
+The `wlTelnet` object provides support for Telnet load and functional testing within WebLOAD. Support for standard Telnet operation is included. Telnet over secure connections (SSL) is not currently supported.
 
-If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate Connect() method otherwise an exception is thrown.
+If a connection is required but has expired or has not yet been established, the underlying code attempts to login. Logging in requires you to call the appropriate `Connect()` method otherwise an exception is thrown.
 
- 
-
-To access the wlTelnet object, you must include the wlTelnet.js file in your
-
-`InitAgenda()` function.
-
-
-
- 
+To access the `wlTelnet` object, you must include the `wlTelnet.js` file in your `InitAgenda()` function.
 
  
 
 ### wlTelnet Properties
 
- 
+#### *document*
 
-#### document
-
- 
-
-The document property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the document object. The document may be cleared manually using the `Erase()` method. For example:
-
- 
-
-var recentdocument = *telnet.document*
-
- 
-
-#### NextPrompt
-
- 
-
-The NextPrompt property specifies the text for the Agenda to look for in the next prompt from the host. A `Receive()` call is viewed as successful if the prompt contains the text string specified by the NextPrompt variable. To specify a prompt with no message, specify a NextPrompt with an empty value, or delete the NextPrompt property. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. 
-
-
+The `document` property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the document object. The document may be cleared manually using the `Erase()` method. 
 
 For example:
 
-`telnet.NextPrompt = promptmessage`
+`var recentdocument = `*`telnet.document`*
+
+
+#### *NextPrompt*
+
+The `NextPrompt` property specifies the text for the Agenda to look for in the next prompt from the host. A `Receive()` call is viewed as successful if the prompt contains the text string specified by the `NextPrompt` variable. To specify a prompt with no message, specify a `NextPrompt` with an empty value, or delete the `NextPrompt` property. Once this property is specified, it limits all subsequent instances of the `Receive()` method. Either delete the property or set it to zero to remove the limitation. 
+
+For example:
+
+`telnet.NextPrompt = `*`promptmessage`*
 
  
 
-#### Outfile
+#### *Outfile*
 
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
-
- 
+The `Outfile` property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
 
 You write to the output file each time you use the `Receive()` method. If you call the `Receive()` method more than once, you must specify a different output file each time, or you overwrite the previous output file. For example:
-
- 
 
 `telnet.Outfile = filename`
 
  
 
-#### ReceiveMessageText
+#### *ReceiveMessageText*
 
- 
-
-The ReceiveMessageText property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
+The `ReceiveMessageText` property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
 
 Possible values are:
 
-- **Prompt was found** – The host returned the prompt specified in the NextPrompt property.
-- **Timeout** – The last command exceeded the time limit specified by the Timeout property
-- **Byte length reached** – The host received the amount of data specified in the NextSize property.
+- **Prompt was found** – The host returned the prompt specified in the `NextPrompt` property.
+- **Timeout** – The last command exceeded the time limit specified by the `Timeout` property
+- **Byte length reached** – The host received the amount of data specified in the `NextSize property.
 
 For example: 
 
@@ -4178,33 +3616,25 @@ For example:
 
  
 
-#### Size
+#### *Size*
 
- 
-
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
-
-
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption.
 
 For example:
 
-`var filesize = telnet.Size`
+`var filesize = `*`telnet.Size`*
 
  
 
-#### Timeout
+#### *Timeout*
 
-The Timeout property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. To set an unlimited timeout, specify a value of zero, or a negative value. 
-
-
+The `Timeout` property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. To set an unlimited timeout, specify a value of zero, or a negative value. 
 
 For example: 
 
-`telnet.Timeout = timedelay`
+`telnet.Timeout = `*`timedelay`*
 
-
-
-> **Note:** It is recommended that you include a Timeout property in all scripts that use the wlTelnet object. If you do not, and the script fails to return a prompt, your session may freeze.
+> **Note:** It is recommended that you include a `Timeout` property in all scripts that use the `wlTelnet` object. If you do not, and the script fails to return a prompt, your session may freeze.
 
  
 
@@ -4212,8 +3642,8 @@ For example:
 
  
 
-#### Connect()
-
+#### *Connect()*
+*
  
 
 | **Syntax**       | Connect(*host*,  [*port*])                                   |
@@ -4230,7 +3660,7 @@ For example:
 
  
 
-#### Disconnect()
+#### *Disconnect()*
 
  
 
@@ -4241,7 +3671,7 @@ For example:
 
  
 
-#### Erase()
+#### *Erase()*
 
  
 
@@ -4252,18 +3682,18 @@ For example:
 
  
 
-#### Receive()
+#### *Receive()*
 
  
 
 | **Syntax**       | `Receive()`                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. A `Receive()`  method  returns to the script when the NextPrompt, NextSize, or Timeout  properties  are met. If more than one of these properties is specified, the method  returns to the script when the first one is met. Subsequent uses of `Receive()`  find the next  instance of the limiting property, returning additional information from the  buffer. The content returned depends upon which of the three limiting  properties triggered the return. |
+| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. A `Receive()`  method  returns to the script when the `NextPrompt`, `NextSize`, or `Timeout` properties  are met. If more than one of these properties is specified, the method  returns to the script when the first one is met. Subsequent uses of `Receive()`  find the next  instance of the limiting property, returning additional information from the  buffer. The content returned depends upon which of the three limiting  properties triggered the return. |
 
  
 
-#### Send()
+#### *Send()*
 
  
 
@@ -4276,7 +3706,7 @@ For example:
 
  
 
-#### WLTelnet()
+#### *WLTelnet()*
 
  
 
@@ -4284,155 +3714,107 @@ For example:
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlTelnet object.                                       |
 | **Comments**     | Creates a new wlTelnet object, used to  interact with the server. |
-| **Example**      | `function **InitClient()** { myNewTelnetObject = new WLTelnet()  }` |
-
-
+| **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLTelnet(); }</code></pre> |
 
 
 
 ### Telnet Sample Code
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** { IncludeFile("wlTelnet.js",WLExecuteScript)
-
-// include the file that enables Telnet
-
+// script Initialization
+function InitAgenda() { 
+    IncludeFile("wlTelnet.js",WLExecuteScript)
+                // include the file that enables Telnet
 }
-
-function **InitClient()** {
-
-Telnet=new WLTelnet()  // create a new telnet object
-
+function InitClient() {
+    Telnet=new WLTelnet()  // create a new telnet object
 }
-
-function **TerminateClient()**
-
+function TerminateClient()
 {
-
 delete Telnet      // delete the object we were using
-
 }
-
 //================================================
 
- 
-
-// **Body Of script**
-
+// Body Of script
 // Set timeout and prompt
-
 // IMPORTANT: Set a timeout when setting a prompt. Otherwise,
-
 // If the prompt is unexpected or incorrect the script will
-
-// freeze while waiting for a prompt that will never arrive Telnet.Timeout=1000;   // one second Telnet.NextPrompt="User name: "; // text to look for Telnet.Connect("000.0.0.0");   // connect
-
-Telnet.`Receive()`;        // wait for data from the remote host
-
-Telnet.Send("myname");      // send login name InfoMessage(Telnet.document);  // write out the data received InfoMessage(Telnet.ReceiveMessageText);
-
-// write out why the call returned Telnet.NextPrompt="Password: ";   // next prompt to look for Telnet.`Receive()`;    // wait for data Telnet.Outfile="c:\\filename.txt";
-
-// save this next response to file as well InfoMessage(Telnet.document);   // what did we get?
-
+// freeze while waiting for a prompt that will never arrive 
+Telnet.Timeout=1000;   // one second 
+Telnet.NextPrompt="User name: ";   // text to look for 
+Telnet.Connect("000.0.0.0");      // connect
+Telnet.Receive();             // wait for data from the remote host
+Telnet.Send("myname");            // send login name 
+InfoMessage(Telnet.document);     // write out the data received 
+InfoMessage(Telnet.ReceiveMessageText); 
+                            // write out why the call returned Telnet
+NextPrompt="Password: ";         // next prompt to look for 
+Telnet.Receive();                // wait for data 
+Telnet.Outfile="c:\\filename.txt";
+                            // save this next response to file as well
+InfoMessage(Telnet.document);   // what did we get?
 InfoMessage(Telnet.ReceiveMessageText);
-
-// write out why the call returned Telnet.Send("mypassword");   // send password Telnet.NextPrompt=">";      // new prompt to wait for Telnet.`Receive()`;        // wait for a response Telnet.Send("command");     // send command text to the host
-
-
-
- 
-
- 
-
-Telnet.`Receive()`;        // wait for a response InfoMessage(Telnet.document); // what did we get?
-
+                              // write out why the call returned 
+Telnet.Send("mypassword");        // send password 
+Telnet.NextPrompt=">";            // new prompt to wait for 
+Telnet.Receive();                 // wait for a response 
+Telnet.Send("command");           // send command text to the host
+Telnet.Receive();                 // wait for a response 
+InfoMessage(Telnet.document);     // what did we get?
 InfoMessage(Telnet.ReceiveMessageText);
-
-// write out why the call returned
-
-Telnet.Disconnect();       // finally disconnect
-
+                                  // write out why the call returned
+Telnet.Disconnect();              // finally disconnect
 //============================================================
-
 //This is another way to work with telnet. When no prompt
-
 //is set the timeout is ignored. Instead the script writer
-
 //must manually keep receiving the data by calling the receive
-
-//command. `Receive()` returns the response as well as assigning
-
+//command. Receive() returns the response as well as assigning
 //the value to the this.document property. It is up to the user
-
-//to perform a delay before he/she receives the data. Telnet.Connect("000.0.0.0"); // log in to a remote host
-
+//to perform a delay before he/she receives the data. 
+Telnet.Connect("000.0.0.0");      // log in to a remote host
 // In this case we receive three times.
-
-// In your script you may keep calling `Receive()` until the
-
+// In your script you may keep calling Receive() until the
 // telnet object's document property contains the data you are
-
-// looking for, or until you decide to do something else Telnet.`Receive()`;      // fetch the data
-
-Telnet.`Receive()`;        // Wait for more
-
-Telnet.`Receive()`;        // Wait for more InfoMessage(Telnet.document);  // Contains text from ALL receives InfoMessage(Telnet.ReceiveMessageText);  // reason calls returned Telnet.Send("Command");  // clears the document object Telnet.`Receive()`;     // fetch the data
-
-Telnet.`Receive()`;        // Wait for more
-
-Telnet.`Receive()`;        // Wait for more InfoMessage(Telnet.document); InfoMessage(Telnet.ReceiveMessageText); Telnet.Send("command");
-
-Telnet.`Receive()`;
-
-Telnet.`Receive()`;        // Wait for more
-
-Telnet.`Receive()`;        // Wait for more InfoMessage(Telnet.document); InfoMessage(Telnet.ReceiveMessageText); Telnet.Send("dir");
-
-Telnet.`Receive()`;
-
-Telnet.`Receive()`;        // Wait for more
-
-Telnet.`Receive()`;        // Wait for more InfoMessage(Telnet.document); InfoMessage(Telnet.ReceiveMessageText);
-
+// looking for, or until you decide to do something else 
+Telnet.Receive();                 // fetch the data
+Telnet.Receive();                 // Wait for more
+Telnet.Receive();                 // Wait for more 
+InfoMessage(Telnet.document);     // Contains text from ALL receives 
+InfoMessage(Telnet.ReceiveMessageText);     // reason calls returned 
+Telnet.Send("Command");            // clears the document object 
+Telnet.Receive();                  // fetch the data
+Telnet.Receive();                  // Wait for more
+Telnet.Receive();                  // Wait for more 
+InfoMessage(Telnet.document); 
+InfoMessage(Telnet.ReceiveMessageText); 
+Telnet.Send("command");
+Telnet.Receive();
+Telnet.Receive();                   // Wait for more
+Telnet.Receive();                   // Wait for more 
+InfoMessage(Telnet.document); 
+InfoMessage(Telnet.ReceiveMessageText); 
+Telnet.Send("dir");
+Telnet.Receive();
+Telnet.Receive();                  // Wait for more
+Telnet.Receive();                  // Wait for more 
+InfoMessage(Telnet.document); 
+InfoMessage(Telnet.ReceiveMessageText);
 catch (e)
-
 {
-
-InfoMessage ("Error" + e)
-
+    InfoMessage ("Error" + e)
 }
-
-
-
- 
-
- 
-
 Telnet.Disconnect();       // log out from the remote host
-
 InfoMessage("done")       // End of telnet sample script
 ```
-
- 
-
- 
-
 
 
 ## wlUDP Object
 
  
 
-The wlUDP object provides support for UDP (User Datagram Protocol) load and functional testing within WebLOAD. Support for standard UDP operation is included. UDP over secure connections (SSL) is not currently supported.
+The `wlUDP` object provides support for UDP (User Datagram Protocol) load and functional testing within WebLOAD. Support for standard UDP operation is included. UDP over secure connections (SSL) is not currently supported.
 
- 
-
-To access the wlUDP object, you must include the wlUdp.js file in your
-
-`InitAgenda()` function.
+To access the `wlUDP` object, you must include the wlUdp.js file in your `InitAgenda()` function.
 
  
 
@@ -4440,66 +3822,54 @@ To access the wlUDP object, you must include the wlUdp.js file in your
 
  
 
-#### document
+#### *document*
 
- 
+The `document` property is an array of objects sent in the current session, with each object containing the following properties:
 
-The document property is an array of objects sent in the current session, with each object containing the following properties:
+- `datagram` – The datagram retrieved from the database
 
-- datagram – The datagram retrieved from the database
+- `address` – The address of the datagram
 
-- address – The address of the datagram
-
-- port – The port used to communicate with the database
+- `port` – The port used to communicate with the database
 
 
-The document property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the document object. The document may be cleared manually using the `Erase()` method. 
+The `documen`t property contains all responses from the host since the last time the `Send()` method was used. Each time a message is returned, it is concatenated to the document object. The `document` may be cleared manually using the `Erase()` method. 
 
 
 
 For example:
 
-`var recentdocument = udp.document`
+`var recentdocument = `*`udp.document`*
 
  
 
-#### InBufferSize
+#### *InBufferSize*
+
+The `InBufferSize` property specifies the size, in bytes, of the incoming data buffer. For example:
+
+`udp.InBufferSize = `*`maximuminsize`*
 
  
 
-The InBufferSize property specifies the size, in bytes, of the incoming data buffer. For example:
+#### *LocalHost*
 
- 
+The `LocalHost` property lets you specify a local host for use in broadcasting via UDP. For example:
 
-`udp.InBufferSize = maximuminsize`
-
- 
-
-#### LocalHost
-
- 
-
-The LocalHost property lets you specify a local host for use in broadcasting via UDP. For example:
-
- 
-
-`udp.LocalHost = localhostname`
+`udp.LocalHost = `*`localhostname`*
 
 
 
-#### LocalPort
+#### *LocalPort*
 
- 
-
-The LocalPort property specifies the UDP port to which you are connecting. If you do not specify the LocalPort property, you connect to a randomly selected port. 
+The `LocalPort` property specifies the UDP port to which you are connecting. If you do not specify the `LocalPort` property, you connect to a randomly selected port. 
 
 For example: 
 
-`udp.LocalPort = portnumber`
+`udp.LocalPort = `*`portnumber`*
 
  
 
-#### MaxDatagramSize
+#### *MaxDatagramSize*
 
 
 
@@ -4507,61 +3877,42 @@ The MaxDatagramSize property specifies the maximum size, in bytes, of datagrams 
 
  
 
-`udp.MaxDatagramSize = maximumsize`
+`udp.MaxDatagramSize = `*`maximumsize`*
 
  
 
-#### NumOfResponses
+#### *NumOfResponses*
+
+The `NumOfResponses` property specifies the number of responses the testing machine waits for before proceeding. You use this property to make sure that all of your hosts have responded. To specify an unlimited number of responses, specify a NumOfResponses value of zero. For example:
+
+`udp.NumOfResponses = `*`numberofhosts`*
 
  
 
-The NumOfResponses property specifies the number of responses the testing machine waits for before proceeding. You use this property to make sure that all of your hosts have responded. To specify an unlimited number of responses, specify a NumOfResponses value of zero. For example:
+#### *OutBufferSize*
+
+The `OutBufferSize` property specifies the size, in bytes, of the outgoing data buffer. For example:
+
+
+`udp.OutBufferSize = `*`maximumoutsize`*
 
  
 
-`udp.NumOfResponses = numberofhosts`
+#### *Outfile*
 
- 
-
-#### OutBufferSize
-
- 
-
-The OutBufferSize property specifies the size, in bytes, of the outgoing data buffer. For example:
-
- 
-
-`udp.OutBufferSize = maximumoutsize`
-
- 
-
-#### Outfile
-
- 
-
-The Outfile property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
-
- 
+The `Outfile` property lets you specify the name of an output file. You use this property to save the responses from the host locally on your computer. You must specify the output file before calling the `Receive()` method to save the responses to that file.
 
 You write to the output file each time you use the `Receive()` method. If you call the `Receive()` method more than once, you must specify a different output file each time, or you will overwrite the previous output file. 
 
 
-
 For example:
 
-`udp.Outfile = filename`
+`udp.Outfile = `*`filename`*
 
 
+#### *ReceiveMessageText*
 
- 
-
- 
-
-#### ReceiveMessageText
-
- 
-
-The ReceiveMessageText property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
+The `ReceiveMessageText` property returns the reason why the host stopped responding. You use this property to determine the state of the host. 
 
 Possible values are:
 
@@ -4573,70 +3924,49 @@ For example:
 
 `InfoMessage(Telnet.ReceiveMessageText);`
 
- 
 
- 
+#### *RequestedPackets*
 
-#### RequestedPackets
-
- 
-
-The RequestedPackets property specifies the number of packets the testing machine waits for before proceeding. To specify an unlimited number of packets, specify a RequestedPackets value of zero. 
+The `RequestedPackets` property specifies the number of packets the testing machine waits for before proceeding. To specify an unlimited number of packets, specify a `RequestedPackets` value of zero. 
 
 
 
 For example:
 
-`udp.RequestedPackets = numberofpackets`
+`udp.RequestedPackets = `*`numberofpackets`*
 
  
 
-#### Size
+#### *Size*
+
+The `Size` property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. For example:
+
+`var filesize = `*`udp.Size`*
 
  
+#### *Timeout*
 
-The Size property returns the byte length of data transferred to the host. You use this property to compare starting and finishing sizes to verify that files have arrived without corruption. For example:
+The `Timeout` property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. For example:
 
- 
+`udp.Timeout = `*`timedelay`*
 
-`var filesize = udp.Size`
+> **Note:** It is recommended that you include a Timeout property in all scripts that use the `wlUDP` object. If you do not, and the script fails to return a prompt, your session may freeze.
 
- 
-
-#### Timeout
-
- 
-
-The Timeout property lets you specify the length of the delay, in milliseconds, before the script breaks its connection with the host. If you do not specify the timeout property, the script may freeze if the host does not respond as you expect it to. For example:
-
- 
-
-`udp.Timeout = timedelay`
-
-> **Note:** It is recommended that you include a Timeout property in all scripts that use the wlUDP object. If you do not, and the script fails to return a prompt, your session may freeze.
-
-
-
- 
-
- 
 
 ### wlUDP Methods
 
- 
-
-#### Bind()
+#### *Bind()*
 
  
 
 | **Syntax**       | Bind()                                                       |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if unsuccessful.            |
-| **Comments**     | Creates a UDP port and  sets the OutBufferSize, InBufferSize, MaxDatagramSize, LocalHost, and LocalPort  properties.  The value of these properties is fixed when the Bind()  method is  used. To change the value of any of these properties, you must use the UnBind() method, change the value of the property and using  the Bind() method  again. |
+| **Comments**     | Creates a UDP port and  sets the `OutBufferSize, InBufferSize, MaxDatagramSize, LocalHost`, and `LocalPort` properties.  The value of these properties is fixed when the `Bind()`  method is  used. To change the value of any of these properties, you must use the `UnBind()` method, change the value of the property and using  the `Bind()` method  again. |
 
  
 
-#### Broadcast()
+#### *Broadcast()*
 
  
 
@@ -4650,7 +3980,7 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 
  
 
-#### Erase()
+#### *Erase()*
 
  
 
@@ -4661,14 +3991,14 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 
  
 
-#### Receive()
+#### *Receive()*
 
  
 
 | **Syntax**       | `Receive()`                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. The `Receive()`  method  returns to the script when the RequestedPackets or Timeout property is met.  Subsequent uses of `Receive()` find the next instance of the limiting property,  returning additional information from the  buffer. |
+| **Comments**     | Returns all responses from  the host since the last time the `Send()` method was used. The `Receive()`  method  returns to the script when the `RequestedPackets` or `Timeout` property is met.  Subsequent uses of `Receive()` find the next instance of the limiting property,  returning additional information from the  buffer. |
 
 
 
@@ -4676,7 +4006,7 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 
  
 
-#### Send()
+#### *Send()*
 
  
 
@@ -4691,7 +4021,7 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 
  
 
-#### UnBind()
+#### *UnBind()*
 
  
 
@@ -4702,7 +4032,7 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 
  
 
-#### WLUdp()
+#### *WLUdp()*
 
  
 
@@ -4710,109 +4040,70 @@ The Timeout property lets you specify the length of the delay, in milliseconds, 
 | ---------------- | ------------------------------------------------------------ |
 | **Return Value** | A new wlUDP object.                                          |
 | **Comments**     | Creates a new wlUDP object, used to  interact with the server. |
-| **Example**      | function **InitClient()** { myNewUDPObject = new WLUdp()  }  |
+| **Example**      | <pre><code>function InitClient() { myNewFtpObject = new WLUdp() }</code></pre>  |
 
  
 
 ### UDP Sample Code
 
 ```javascript
-// **script Initialization**
-
-function **`InitAgenda()`** {
-
-IncludeFile(“wlUdp.js”,WLExecuteScript)
-
-// enable the UDP objects
+// script Initialization
+function InitAgenda() {
+    IncludeFile(“wlUdp.js”,WLExecuteScript)
+                            // enable the UDP objects
+}
+function InitClient() {
+    udp=new WLUdp();        // create a new UDP object
+}
+function TerminateClient() {
+    delete udp             // delete the UDP object
 
 }
-
-function **InitClient()** {
-
-udp=new WLUdp();    // create a new UDP object
-
-}
-
-function **TerminateClient()** {
-
-delete udp       // delete the UDP object
-
-}
-
-
-
- 
-
- 
-
 //===================================================
 
- 
-
-//**Body Of script**.
-
-//**Test Send:** set the buffer sizes appropriately for the data try
-
+//Body Of script.
+//Test Send: set the buffer sizes appropriately for the data 
+try
 {
-
-udp.OutBufferSize=10; udp.InBufferSize=12; udp.MaxDatagramSize=10;
-
-udp.Timeout=10000;    // 10 second timeout
-
-udp.NumOfResponses=1;   // return after one remote machine responds
-
-udp.Outfile=“c:\\serialize.txt”;   // file to save responses to
-
-udp.Bind();
-
-udp.Send(“00.0.0.00”, 7, “good morning”);
-
-// send a datagram to one machine on port
-
-7
-
-udp.`Receive()`;      // wait for a response InfoMessage(udp.ReceiveMessageText); // This is what happened
-
-// show the properties of the response
-
-// note that the udp.document object is an array InfoMessage(udp.document[0].datagram); // get the response InfoMessage(udp.document[0].address);  // which machine responded? InfoMessage(udp.document[0].port);   // the port
-
-// now broadcast to seven machines
-
-udp.NumOfResponses=7;   // we expect seven machines to respond udp.Outfile=“c:\\serialize.txt”; // send the responses udp.Broadcast(7, “good morning”);
-
-// send the message (again on port 7)
-
-udp.`Receive()`;      // wait for the responses InfoMessage(udp.ReceiveMessageText);  // print the return reason
-
-// For each host that responded there will be an entry
-
-// in the array. This loop examines each one for (var i = 0; i < udp.document.length; i++)
-
-{
-
-InfoMessage(“datagram= “+udp.document[i].datagram); InfoMessage(“address= “+udp.document[i].address); InfoMessage(“port= “+udp.document[i].port);
-
+    udp.OutBufferSize=10; 
+    udp.InBufferSize=12; 
+    udp.MaxDatagramSize=10;
+    udp.Timeout=10000;    // 10 second timeout
+    udp.NumOfResponses=1;   // return after one remote machine 
+    responds
+    udp.Outfile=“c:\\serialize.txt”;   // file to save responses to
+    udp.Bind();
+    udp.Send(“00.0.0.00”, 7, “good morning”);
+                            // send a datagram to one machine on port
+    7
+    udp.Receive();      // wait for a response 
+    InfoMessage(udp.ReceiveMessageText);     // This is what happened
+    // show the properties of the response
+    // note that the udp.document object is an array 
+    InfoMessage(udp.document[0].datagram);  // get the response 
+    InfoMessage(udp.document[0].address);   // which machine responded? 
+    InfoMessage(udp.document[0].port);      // the port
+    // now broadcast to seven machines
+    udp.NumOfResponses=7;   // we expect seven machines to respond 
+    udp.Outfile=“c:\\serialize.txt”;      // send the responses 
+    udp.Broadcast(7, “good morning”);
+                            // send the message (again on port 7)
+    udp.Receive();      // wait for the responses 
+    InfoMessage(udp.ReceiveMessageText);  // print the return reason
+    // For each host that responded there will be an entry
+    // in the array. This loop examines each one
+    for (var i = 0; i < udp.document.length; i++)
+    {
+        InfoMessage(“datagram= “+udp.document[i].datagram); 
+        InfoMessage(“address= “+udp.document[i].address); 
+        InfoMessage(“port= “+udp.document[i].port);
+    }
 }
-
-}
-
 catch (e)
-
 {
-
-InfoMessage (“Error” + e)
-
+    InfoMessage (“Error” + e)
 }
-
 //============================================================
-
-
-
- 
-
- 
-
 InfoMessage(“done”)   // end of the UDP sample script
 ```
 
