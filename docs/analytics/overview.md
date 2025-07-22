@@ -21,7 +21,6 @@ A basic chart consists of the following elements:
 ![Tabular Data](../images/Tabular_Data.jpeg)![Graphs](../images/Graphs.jpeg)
 
 
-
 Each chart is either static or interactive.  
 
 - A static chart, indicated by![Static Chart icon](../images/static_chart_icon.png), is a regular chart.  

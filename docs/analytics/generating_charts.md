@@ -18,11 +18,11 @@ To create a new chart, double-click a template in the Gallery tab. The chart is 
 
 You can now: 
 
-- Modify the chart by editing chart settings and then regenerating the chart (see [*Changing Chart Settings* ](changing_chart_settings.md).  
-- Print the chart (see[*Printing a Chart* ](#printing-a-chart). 
-- Publish the chart to various formats (see[*Publishing Charts* ](#publishing-charts). 
-- For an interactive chart, you can analyze the chart data in various ways (see [*Customizing Interactive Charts* ](#customizing-interactive-charts).  
-- Create a report that will include the chart, as well as other open charts of your choice (see[*Generating Reports* ](generating_reports.md). 
+- Modify the chart by editing chart settings and then regenerating the chart (see [*Changing Chart Settings* ](changing_chart_settings.md)).  
+- Print the chart (see [*Printing a Chart* ](#printing-a-chart)). 
+- Publish the chart to various formats (see [*Publishing Charts* ](#publishing-charts)). 
+- For an interactive chart, you can analyze the chart data in various ways (see [*Customizing Interactive Charts* ](#customizing-interactive-charts)).  
+- Create a report that will include the chart, as well as other open charts of your choice (see [*Generating Reports* ](generating_reports.md)). 
 
 ### Specifying a Load Session
 
@@ -36,11 +36,11 @@ If you did not open WebLOAD Analytics from WebLOAD Console, the Select Session w
 
 1. Browse to the location of the Load Session file in the From File area, and click **Open**. 
 
-   -Or- 
+      -Or- 
 
-   Select the session in the From Repository area, and click **OK**.  
+    Select the session in the From Repository area, and click **OK**.  
 
-> **Note:**  You can search for Load Sessions (see[Searching for Load Sessions](load_sessions.md#searching-for-load-sessions).
+    > **Note:**  You can search for Load Sessions (see[Searching for Load Sessions](load_sessions.md#searching-for-load-sessions).
 
 
 
@@ -53,23 +53,21 @@ A regression chart compares one selected “Main” session to all additional se
 1. In the Templates Gallery, open the Session Comparison node located under the Templates node. 
 1. Double-click a regression template. The Select Sessions window appears. 
 
-![Select Sessions for a Regression Chart](../images/Select_Sessions_for_a_Regression_Chart.jpeg)
+    ![Select Sessions for a Regression Chart](../images/Select_Sessions_for_a_Regression_Chart.jpeg)
 
+1. Optionally browse to the location of a Load Session file in the From File area, and click **Open**. 
 
+    The Load Session file appears in the From Repository area.  
 
-3. Optionally browse to the location of a Load Session file in the From File area, and click **Open**. 
+1. Optionally search for Load Sessions (see [Searching for Load Sessions](load_sessions.md#searching-for-load-sessions)). 
 
-   The Load Session file appears in the From Repository area.  
+1. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
 
-4. Optionally search for Load Sessions (see[Searching for Load Sessions](load_sessions.md#searching-for-load-sessions). 
+    The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
 
-5. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
+    The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
 
-   The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
-
-   The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
-
-6. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click ![set as main](../images/set_as_main.png).
+1. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click ![set as main](../images/set_as_main.png).
 
    
 
@@ -79,12 +77,11 @@ A regression chart compares one selected “Main” session to all additional se
 1. Click the **Settings** tab. 
 1. Click ![Selection Sessions button](../images/select_sessions_button.png). The Select Sessions window appears. 
 
-![Select Sessions window](../images/select_sessions.jpeg)
+    ![Select Sessions window](../images/select_sessions.jpeg)
 
 
-
-4. Select the Load Session you wish to remove from the Selected Sessions area. 
-4. Click ![](../images/remove_button.png). The selected Load Session is removed from the Selected Sessions area. It is still available for use in WebLOAD Analytics, and remains listed in the From Repository area. 
+1. Select the Load Session you wish to remove from the Selected Sessions area. 
+1. Click ![](../images/remove_button.png). The selected Load Session is removed from the Selected Sessions area. It is still available for use in WebLOAD Analytics, and remains listed in the From Repository area. 
 
 
 
@@ -106,7 +103,7 @@ The table in the statistical correlation chart displays correlation information 
 
 - Correlation is the linear correlation coefficient. It is a number between 0 and 1, with 1 being the highest possible correlation.  
 
-  The measurements are listed in order of correlation, with the highest first. 
+    The measurements are listed in order of correlation, with the highest first. 
 
 - Direction indicates whether correlation is positive (the measurement goes up when the leading measurement goes up, or down when the leading measurement goes down) or negative (the measurement goes up when the leading measurement goes down, or down when the leading measurement goes up). 
 
@@ -158,13 +155,12 @@ Although you can modify any template to create your own custom chart, the Blank 
 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 
-   ![Templates Gallery](../images/templates_gallery.png)
+    ![Templates Gallery](../images/templates_gallery.png)
 
 
-
-2. Select **User Defined**  **Blank Template**. The Settings tab of the Blank Template opens in the Charts area. 
-2. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to generate a chart. 
-2. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
+1. Select **User Defined** > **Blank Template**. The Settings tab of the Blank Template opens in the Charts area. 
+1. Edit the Settings of the template as desired. See [`*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to generate a chart. 
+1. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
 
 You can now analyze, print, or publish the chart.
 
@@ -186,31 +182,30 @@ The Blank Regression Template can be modified or you can use it to create additi
 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 
-   ![Templates Gallery](../images/templates_gallery.png)
+    ![Templates Gallery](../images/templates_gallery.png)
 
    
+1. Select **User Defined** > **Blank Regression Template**. The Select Sessions window appears. 
+1. Optionally browse to the location of a Load Session file in the From File area, and click **Open**. 
 
-2. Select **User Defined**  **Blank Regression Template**. The Select Sessions window appears. 
-2. Optionally browse to the location of a Load Session file in the From File area, and click **Open**. 
+    The Load Session file appears in the From Repository area.  
 
-   The Load Session file appears in the From Repository area.  
+1. Optionally search for Load Sessions (see [*Searching for Load Sessions* ](load_sessions.md#searching-for-load-sessions)). 
+1. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
 
-4. Optionally search for Load Sessions (see[` `*Searching for Load Sessions* ](load_sessions.md#searching-for-load-sessions). 
-4. In the From Repository area, select a Load Session you wish to use, and click ![add button](../images/add_button.png). 
+    The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
 
-   The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
+    The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
 
-   The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
-
-6. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click![set as main button](../images/set_as_main.png). 
-6. Edit the Settings of the template as desired. See[` `*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to create a template. 
-6. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
+1. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click ![set as main button](../images/set_as_main.png). 
+1. Edit the Settings of the template as desired. See [*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to create a template. 
+1. Click ![chart preview](../images/chart_preview_button.png). A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  
 
 You can now analyze, print, or publish the chart.  
 
-- For information about analyzing the chart, see[*Customizing Interactive Charts* ](#customizing-interactive-charts)  
-- For information about printing your chart, see[*Printing a Chart* ](#printing-a-chart)  
-- For information about publishing your chart, see[*Publishing Charts* ](#publishing-charts) 
+- For information about analyzing the chart, see [*Customizing Interactive Charts* ](#customizing-interactive-charts)  
+- For information about printing your chart, see [*Printing a Chart* ](#printing-a-chart)  
+- For information about publishing your chart, see [*Publishing Charts* ](#publishing-charts) 
 
 
 
@@ -222,20 +217,21 @@ You can view and navigate through a chart in the Preview tab.
 
 1. Click the **Preview** tab. 
 
-**Note:** If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click ![chart preview icon](../images/chart_preview_icon.png) . A Preview tab appears.
+    **Note:** If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click ![chart preview icon](../images/chart_preview_icon.png) . A Preview tab appears.
 
-2. Click the appropriate navigation button to navigate through your report, according to the information in the following tables.
+1. Click the appropriate navigation button to navigate through your report, according to the information in the following tables.
 
-   | Button | Description                             |
-   | ------ | --------------------------------------- |
-   |        | Scroll to the beginning of your report. |
-   |        | Scroll back one page.                   |
-   |        | Scroll forward one page.                |
-   |        | Scroll to the end of your report.       |
-   |        | Show the actual page size.              |
-   |        | Fit the page width to the window.       |
-   |        | Zoom in.                                |
-   |        | Zoom out.                               |
+    | Button | Description                             |
+    | ------ | --------------------------------------- |
+    |![](../images/option_one.png)| Scroll to the beginning of your report. |
+    |![](../images/option_two.png)| Scroll back one page.                   |
+    |![](../images/option_three.png)| Scroll forward one page.                |
+    |![](../images/option_four.png)| Scroll to the end of your report.       |
+    |![](../images/option_five.png)| Show the actual page size.              |
+    | ![](../images/option_six.png)|Fit the page to the window               |
+    |![](../images/option_seven.png)| Fit the page width to the window.       |
+    |![](../images/option_eight.png)| Zoom in.                                |
+    |![](../images/option_nine.png)| Zoom out.                               |
 
    
 
@@ -247,33 +243,34 @@ The ![interactive chart icon](../images/interactive_chart_icon.png) icon display
 
 1. Click the **Chart View** tab. 
 
-2. **Note:** If the chart has not yet been generated, double-click the template. The chart is generated and displayed in the Chart View tab.
+      **Note:** If the chart has not yet been generated, double-click the template. The chart is generated and displayed in the Chart View tab.
 
-3. ![Interactive Report – Chart View Tab](../images/Interactive_Report _Chart_View_Tab.jpeg)
+    ![Interactive Report – Chart View Tab](../images/Interactive_Report _Chart_View_Tab.jpeg)
 
-   
 
-4. Click the appropriate button in the interactive toolbar. 
+1. Click the appropriate button in the interactive toolbar. 
 
-5. To preserve the modifications you made to the chart display, click ![chart interactive icon](../images/chart_preview_icon.png). The modified chart appears in the Preview tab. 
+1. To preserve the modifications you made to the chart display, click ![chart interactive icon](../images/chart_preview_icon.png). The modified chart appears in the Preview tab. 
+
+
 
 | Button | Function          | Description                                                  |
 | ------ | ----------------- | ------------------------------------------------------------ |
-|        | Copy To Clipboard | Copy the chart or data to the clipboard. It can then be pasted (using Ctrl+V) into another application in any of the following formats:<br />. Bitmap – A raster graphic, which can be pasted into applications such as Microsoft Paint.<br />. Metafile – A vector graphic which can be pasted into applications such as Microsoft Word. <br />. Text – Data only, which can be pasted into applications such as Microsoft Excel. |
-|        | Gallery           | Change the line type to any type found in the gallery, such as bar-chart, area, etc. |
-|        | Anti Aliasing     | Smooth jagged edges.                                         |
-|        | Palette           | Change all colors to a predefined palette from the list of palettes. |
-|        | 2D/3D             | Switch between 2D mode and 3D mode with depth.               |
-|        | Rotated View      | Rotate the chart. Only applicable in 3D mode.                |
-|        | Rotate X Axis     | Rotate the chart around the X axis. Only applicable in Rotated View mode. |
-|        | Rotate Y Axis     | Rotate the chart around the Y axis. Only applicable in Rotated View mode. |
-|        | Clustered         | If there are several series, place them behind each other, instead of next to each other. Only applicable in 3D mode. |
-|        | Axes Settings     | Control aspects of the X Axis and Y Axis.<br />**Note**: In WebLOAD Analytics there is often more than one Y Axis, so the Y Axis setting has no effect. Instead, right- click the Y Axis you wish to change. |
-|        | Point Label       | Add labels with the numeric value of each point.             |
-|        | Data Editor       | Show the data as a list.                                     |
-|        | Legend Box        | Display a legend listing the series names, their color, and their marker shape. |
-|        | Zoom              | Enlarge image. Click Zoom again to zoom out.                 |
-|        | Properties        | Set the various chart settings.                              |
+|![](../images/copy_to_clipboard.png)| Copy To Clipboard | Copy the chart or data to the clipboard. It can then be pasted (using Ctrl+V) into another application in any of the following formats:<br />- Bitmap – A raster graphic, which can be pasted into applications such as Microsoft Paint.<br />- Metafile – A vector graphic which can be pasted into applications such as Microsoft Word. <br />- Text – Data only, which can be pasted into applications such as Microsoft Excel. |
+|![](../images/gallery.png)| Gallery           | Change the line type to any type found in the gallery, such as bar-chart, area, etc. |
+|![](../images/anti_aliasing.png)| Anti Aliasing     | Smooth jagged edges.                                         |
+|![](../images/Palette.png)| Palette           | Change all colors to a predefined palette from the list of palettes. |
+|![](../images/twoD_threeD.png)| 2D/3D             | Switch between 2D mode and 3D mode with depth.               |
+|![](../images/rotate_view.png)| Rotated View      | Rotate the chart. Only applicable in 3D mode.                |
+|![](../images/rotate_x_axis.png)| Rotate X Axis     | Rotate the chart around the X axis. Only applicable in Rotated View mode. |
+|![](../images/rotate_y_axis.png) | Rotate Y Axis     | Rotate the chart around the Y axis. Only applicable in Rotated View mode. |
+|![](../images/clustered.png)| Clustered         | If there are several series, place them behind each other, instead of next to each other. Only applicable in 3D mode. |
+|![](../images/axis_setting.png)| Axes Settings     | Control aspects of the X Axis and Y Axis.<br />**Note**: In WebLOAD Analytics there is often more than one Y Axis, so the Y Axis setting has no effect. Instead, right- click the Y Axis you wish to change. |
+|![](../images/point_label.png)| Point Label       | Add labels with the numeric value of each point.             |
+|![](../images/data_editor.png)| Data Editor       | Show the data as a list.                                     |
+|![](../images/legend_box.png)| Legend Box        | Display a legend listing the series names, their color, and their marker shape. |
+|![](../images/zoom.png)| Zoom              | Enlarge image. Click Zoom again to zoom out.                 |
+|![](../images/properties.png)| Properties        | Set the various chart settings.                              |
 
 
 
@@ -284,8 +281,8 @@ WebLOAD Analytics enables you to publish a chart in the following formats:
 - Doc (Microsoft Word). 
 - PDF (Adobe Reader). 
 - XLSX (Excel). Please note the following: 
-  - The summary table (below the graph) is exported if it is displayed. To ensure that the summary table is displayed, set the SHOW\_TABLES parameter to True . 
-  - To work with the data more conveniently, change the Chart Preview master template to *Raw*. 
+    - The summary table (below the graph) is exported if it is displayed. To ensure that the summary table is displayed, set the SHOW\_TABLES parameter to True . 
+    - To work with the data more conveniently, change the Chart Preview master template to *Raw*. 
 - XSL (Excel 97-2003). Note that it is preferable to use XSLX format whenever possible. 
 - HTML (Browser, Internet Explorer). 
 - RTF (Rich Text Format). Note that it is preferable to use Doc format whenever possible. 
@@ -297,14 +294,14 @@ WebLOAD Analytics enables you to publish a chart in the following formats:
 
 1. In the Charts area, click the **Preview** tab.  
 
-**Note:** If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click ![chart preview icon](../images/chart_preview_icon.png) . A Preview tab appears. 
+    **Note:** If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click ![chart preview icon](../images/chart_preview_icon.png) . A Preview tab appears. 
 
-2. Click ![chart publish](../images/chart_publish.png) to publish your chart as the default format specified in the Preferences window, 
+1. Click ![chart publish](../images/chart_publish.png) to publish your chart as the default format specified in the Preferences window, 
 
-   -Or- 
+    -Or- 
 
-   Click the adjacent arrow to select a different format.  
+    Click the adjacent arrow to select a different format.  
 
-   The Save As window opens to the location specified in the Preferences window. 
+    The Save As window opens to the location specified in the Preferences window. 
 
-3. Select a location and name for your chart and click **Save**. The chart is published in the chosen format and saved to the location you specified.
+1. Select a location and name for your chart and click **Save**. The chart is published in the chosen format and saved to the location you specified.

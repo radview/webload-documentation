@@ -14,29 +14,28 @@ A report is a compilation of all or some of the charts open in the Charts area. 
 
 1. Select **File** > **Generate Report** or click ![generate report](../images/generate_report_icon.png)
 
-   The Generate Report: Report Settings window appears, listing all open charts.
+    The Generate Report: Report Settings window appears, listing all open charts.
    
-   ![generate report settings](../images/generate_report_settings.png)
+    ![generate report settings](../images/generate_report_settings.png)
 
 
+1. Specify a name for the report. 
 
-2. Specify a name for the report. 
+1. Select the charts to include in the generated report. 
 
-2. Select the charts to include in the generated report. 
+1. Optionally, change the order in which the charts will be displayed by selecting a chart and clicking **Up** or **Down**. 
 
-2. Optionally, change the order in which the charts will be displayed by selecting a chart and clicking **Up** or **Down**. 
+1. Click ![generate](../images/generate.png). 
 
-2. Click ![generate](../images/generate.png). 
 
-   
 
 A Preview of the report appears. You can: 
 
 - Navigate the report using the navigation bar. 
-- Print the report (see[` `*Printing a Report* ](#printing-a-report). 
-- Publish the report to various formats (see[` `*Publishing Reports* ](#publishing-reports). 
-- Save the report to file (see[` `*Saving Reports* ](#saving-reports).  
-- Modify global report parameters (see[` `*Defining Your Preferences* ](defining_preferences.md). 
+- Print the report (see[*Printing a Report* ](#printing-a-report)). 
+- Publish the report to various formats (see[ *Publishing Reports* ](#publishing-reports)). 
+- Save the report to file (see[*Saving Reports* ](#saving-reports)).  
+- Modify global report parameters (see[*Defining Your Preferences* ](defining_preferences.md)). 
 
 
 
