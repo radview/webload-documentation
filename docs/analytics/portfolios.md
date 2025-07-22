@@ -2,7 +2,7 @@
 
 WebLOAD Analytics enables you to create a portfolio of templates that you can open in a single action. Use portfolios to group together commonly used templates to speed up your work.  
 
-> **Note:** Generating, printing, and publishing individual charts within a portfolio or entire portfolios is identical to generating, printing, and publishing charts. For more information, see[` `*Generating Charts* ](generating_charts.md) 
+> **Note:** Generating, printing, and publishing individual charts within a portfolio or entire portfolios is identical to generating, printing, and publishing charts. For more information, see [*Generating Charts* ](generating_charts.md) 
 
 
 
@@ -20,17 +20,16 @@ When you create a new portfolio, you assign the templates you wish to include by
 
 1. In the Templates Gallery Right-click in the Templates Gallery and select **New Portfolio**.  
 
-   The New Portfolio window opens. 
+    The New Portfolio window opens. 
 
-   ![new portfolio](../images/new_portfolio.png)
+    ![new portfolio](../images/new_portfolio.png)
 
    
 
 1. Enter a name for the portfolio and click **OK**. The new portfolio appears under the Portfolios folder in the Templates Gallery tree. 
 
 1. In the Templates Galley, drag-and-drop the templates you want to include in your portfolio. 
-
-1. Your portfolio is created. 
+    Your portfolio is created. 
 
    
 
@@ -45,7 +44,7 @@ When you create a new portfolio, you assign the templates you wish to include by
 1. In the Templates Gallery, open the Portfolios node. 
 1. Double-click the portfolio you wish to open.  
 
-   The charts created by the portfolio open in the Charts area. 
+     The charts created by the portfolio open in the Charts area. 
 
 > **Note:** Any charts that were already open in the Charts area remain open. 
 

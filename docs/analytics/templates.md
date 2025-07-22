@@ -11,14 +11,14 @@ Templates specify the design of a chart, including the visual layout, chart elem
 Templates can include the following elements: 
 
 - **Images** – These include the logos, images, and icons that create the chart template’s look and feel. WebLOAD Analytics provides WebLOAD logos and images by default. You can customize your templates to display your own logos and images. 
-- **Tables** – The Load Session data can be represented in tabular format in a chart. At least one table exists in all charts, by default. You can exclude tables from your chart by setting the SHOW\_TABLES parameter to False. For more information about modifying parameters, see[*Defining Your Parameter Preferences* ](defining_preferences.md#defining-your-parameter-preferences) 
-- **Graphs** – The Load Session data can be represented in graphical format in a chart. At least one graph exists in almost all charts, by default. You can include only graphs in your chart (excluding tables) by setting the SHOW\_TABLES parameter to False. For more information about modifying parameters, see[` `*Defining Your Parameter Preferences* ](defining_preferences.md#defining-your-parameter-preferences) 
+- **Tables** – The Load Session data can be represented in tabular format in a chart. At least one table exists in all charts, by default. You can exclude tables from your chart by setting the `SHOW_TABLES` parameter to False. For more information about modifying parameters, see [*Defining Your Parameter Preferences* ](defining_preferences.md#defining-your-parameter-preferences) 
+- **Graphs** – The Load Session data can be represented in graphical format in a chart. At least one graph exists in almost all charts, by default. You can include only graphs in your chart (excluding tables) by setting the `SHOW_TABLES` parameter to False. For more information about modifying parameters, see [*Defining Your Parameter Preferences*](defining_preferences.md#defining-your-parameter-preferences) 
 
-For more information about the WebLOAD Analytics template file structure, including storage of templates, images, and files, see[` `*WebLOAD Analytics File System Structure* ](appendix_a.md) 
+For more information about the WebLOAD Analytics template file structure, including storage of templates, images, and files, see [*WebLOAD Analytics File System Structure* ](appendix_a.md) 
 
 You can define a variety of additional characteristics within the chart, using local and global parameters (in the chart and in the chart master template). For example, you can specify the number of results listed in a chart, customize the look and feel of your chart, and define a threshold value for selected templates.  
 
-For more information about template preferences, see[*Defining Your Preferences* ](defining_preferences.md) 
+For more information about template preferences, see [*Defining Your Preferences*](defining_preferences.md) 
 
 ## Creating User-defined Templates
 
@@ -45,7 +45,7 @@ Only changes to the following settings enable you to create a new template:
 
 1. Select **File** > **Save Chart As Template.** The Save As Template window appears. 
 
-   ![save as template](../images/save_as_template.png)
+    ![save as template](../images/save_as_template.png)
 
 1. Select a name and category for your template, or overwrite the existing template and click **OK**. 
 
@@ -55,29 +55,28 @@ Your user-defined template is created and appears in the Templates Gallery in th
 
 ## Creating an Interactive Template from the Blank Template
 
-You can create a custom interactive template based on the Blank Template. Although you can modify any template to create your own custom template (as described in [*Creating User-defined Templates* ](#creating-user-defined-templates), the Blank Template is unique in that its Measurement Selection area is empty. 
+You can create a custom interactive template based on the Blank Template. Although you can modify any template to create your own custom template (as described in [*Creating User-defined Templates* ](#creating-user-defined-templates)), the Blank Template is unique in that its Measurement Selection area is empty. 
 
 **To create an interactive template based on the Blank Template:** 
 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 
-   ![templates gallery](../images/templates_gallery.png)
-
+    ![templates gallery](../images/templates_gallery.png)
    
 
-2. Select **User Defined** > **Blank Template**. The Settings tab of the Blank Template opens in the Charts area, with the Measurement Selection section displayed. 
+1. Select **User Defined** > **Blank Template**. The Settings tab of the Blank Template opens in the Charts area, with the Measurement Selection section displayed. 
 
-3. Edit the Settings of the template as desired. See[*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to create a template. 
+1. Edit the Settings of the template as desired. See[*Changing Chart Settings* ](changing_chart_settings.md) Note that you must specify at least one measurement in order to create a template. 
 
-4. Select a value for the X-Axis of the graph and continue defining the chart template options as described in[*Creating User-defined Templates* ](#creating-user-defined-templates)
+1. Select a value for the X-Axis of the graph and continue defining the chart template options as described in[*Creating User-defined Templates* ](#creating-user-defined-templates)
 
-5. Select **File** >  **Save Chart As Template**. The Save As Template window opens. 
+1. Select **File** >  **Save Chart As Template**. The Save As Template window opens. 
 
-   ![save as template](../images/save_as_template.png)
+    ![save as template](../images/save_as_template.png)
 
-6. Select a name and category for your template or overwrite the existing template and click **OK**. 
+1. Select a name and category for your template or overwrite the existing template and click **OK**. 
 
-   Your custom interactive template is created and appears in the Templates Gallery. 
+    Your custom interactive template is created and appears in the Templates Gallery. 
 
    
 
@@ -89,7 +88,7 @@ You can create a custom interactive regression template based on the Blank Regre
 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 
-   ![template gallery](../images/templates_gallery.png)
+    ![template gallery](../images/templates_gallery.png)
 
    
 
@@ -97,29 +96,29 @@ You can create a custom interactive regression template based on the Blank Regre
 
 3. Optionally browse to the location of a Load Session file in the From File area, and click **Open**. 
 
-   The Load Session file appears in the From Repository area.  
+    The Load Session file appears in the From Repository area.  
 
-4. Optionally search for Load Sessions (see[*Searching for Load Sessions* ](load_sessions.md#searching-for-load-sessions). 
+4. Optionally search for Load Sessions (see [*Searching for Load Sessions* ](load_sessions.md#searching-for-load-sessions)). 
 
 5. In the From Repository area, select a Load Session you wish to use, and click ![add](../images/add_button.png). 
 
-   The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
+    The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. 
 
-   The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
+    The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  
 
 6. To specify a different session as the main session, select the Load Session in the Selected Sessions area and click ![set as main](../images/set_as_main.png). 
 
-7. Edit the Settings of the template as desired (see[*Changing Chart Settings* ](changing_chart_settings.md). Note that you must specify at least one measurement in order to create a template. 
+7. Edit the Settings of the template as desired (see [*Changing Chart Settings* ](changing_chart_settings.md)). Note that you must specify at least one measurement in order to create a template. 
 
-8. Select a value for the X-Axis of the graph and continue defining the chart template options as described in[*Creating User-defined Templates* ](#creating-user-defined-templates)
+8. Select a value for the X-Axis of the graph and continue defining the chart template options as described in [*Creating User-defined Templates* ](#creating-user-defined-templates)
 
 9. Select **File** > **Save Chart As Template**. The Save As Template window opens. 
 
-   ![save as template](../images/save_as_template.png)
+    ![save as template](../images/save_as_template.png)
 
 10. Select a name and category for your template or overwrite the existing template and click **OK**. 
 
-Your custom interactive regression template is created and appears in the Templates Gallery.
+    Your custom interactive regression template is created and appears in the Templates Gallery.
 
 
 
@@ -142,11 +141,10 @@ You can create new categories, to enable easy categorization of your templates. 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery opens. 
 1. Right-click in the Templates Gallery and select **New Category** from the menu. The New Category window opens. 
 
-![new category](../images/new_category.png)
+    ![new category](../images/new_category.png)
 
 
-
-3. Enter a name for your new category, and click **OK**. The new category is listed in the Templates Gallery, which is ordered alphabetically. You can now move the templates you require into the new category. 
+1. Enter a name for your new category, and click **OK**. The new category is listed in the Templates Gallery, which is ordered alphabetically. You can now move the templates you require into the new category. 
 
    
 
@@ -175,11 +173,10 @@ You can easily rename a template or template category. This enables you to creat
 1. Select the template or template category you wish to rename. 
 1. Right-click the template or template category, and select **Rename** from the menu. 
 
-![rename template](../images\rename_template.png)
+    ![rename template](../images\rename_template.png)
 
 
-
-4. Enter the new name in the Enter a new name field, and click **OK**. The template or template category is renamed.
+1. Enter the new name in the Enter a new name field, and click **OK**. The template or template category is renamed.
 
 
 
@@ -190,9 +187,9 @@ You can easily rename a template or template category. This enables you to creat
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 1. Select the template or template category that you wish to delete. Right-click in the Templates Gallery and select **Delete** from the menu.  
 
-   A confirmation message appears. 
+    A confirmation message appears. 
 
-3. Click **Yes** to delete the template or template category. 
+1. Click **Yes** to delete the template or template category. 
 
 > **Note:** When deleting a template category, all the templates contained within the category are also deleted. 
 
@@ -215,9 +212,9 @@ Since you can use interactive reports to create your own reports on any measurem
 
 For further information about the use of JasperSoft iReport, see the following Web pages: 
 
-- [http://www.jaspersoft.com/JasperSoft_iReport.html ](http://www.jaspersoft.com/JasperSoft_iReport.html) 
+- [https://www.jaspersoft.com/products](https://www.jaspersoft.com/products) 
 
-- [http://jasperforge.org/jaspersoft/opensource/business_intelligence/ireport/ ](http://jasperforge.org/jaspersoft/opensource/business_intelligence/ireport/)
+- [https://www.jaspersoft.com/products/jaspersoft-community](https://www.jaspersoft.com/products/jaspersoft-community)
 
 - [http://sourceforge.net/projects/ireport/ ](http://sourceforge.net/projects/ireport/)
 
@@ -233,22 +230,22 @@ WebLOAD Analytics enables you to import templates created or edited in JasperSof
 
 1. In the Navigation area, click the **Gallery** tab. The Templates Gallery appears. 
 
-   Right-click in the Templates Gallery and select **Import Template**. The Import Template window opens. 
+    Right-click in the Templates Gallery and select **Import Template**. The Import Template window opens. 
 
-   ![import template](../images/import_template.png)
+    ![import template](../images/import_template.png)
 
    
 
 2. Enter the template parameters, according to the information in this table. 
 
-   | Template Field         | Description                                                  |
-   | ---------------------- | ------------------------------------------------------------ |
-   | Source template folder | The path to the template JRXML file that you wish to import. Enter the path to the template, or click Browse to navigate to the JRXML file location. |
-   | Template name          | The name of the template.                                    |
-   | Destination Category   | A drop-down list of the template categories available in WebLOAD Analytics. |
+    | Template Field         | Description                                                  |
+    | ---------------------- | ------------------------------------------------------------ |
+    | Source template folder | The path to the template JRXML file that you wish to import. Enter the path to the template, or click Browse to navigate to the JRXML file location. |
+    | Template name          | The name of the template.                                    |
+    | Destination Category   | A drop-down list of the template categories available in WebLOAD Analytics. |
 
    
 
 3. Click **OK**. The template is listed in the Gallery tab, under the selected folder. 
 
-   > **Note:** If no template categories are defined when importing a template, the Source  Template Folder field is replaced with the Create Folder field. Define a folder name before importing your template. 
+    > **Note:** If no template categories are defined when importing a template, the Source  Template Folder field is replaced with the Create Folder field. Define a folder name before importing your template. 

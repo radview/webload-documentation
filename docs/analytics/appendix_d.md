@@ -2,17 +2,13 @@
 
 This appendix describes each template, and provides analysis highlights and tips where applicable. 
 
-
-
 ## Understanding Load Session Terminology 
 
 > **Note:** All the measurements appearing in the various templates are explained in the glossary. 
 
-
-
 Each run of the script body is called a *round*. A round is composed of transactions. Each transaction can include various combinations of the following: 
 
-- Request(s) for a page. The page can include any number of graphics and contents files. Each request for a gif, jpeg, html file, etc., is a single *hit*. 
+- Request(s) for a page. The page can include any number of graphics and contents files. Each request for a `gif, jpeg, html` file, etc., is a single *hit*. 
 
 - Sleep intervals. 
 
@@ -49,8 +45,27 @@ This category of templates provides general statistical information about the Lo
 
 ` `The HTTP Errors Over Time, HTTP Responses, and HTTP Responses Over Time templates display various HTTP response status messages. The following table lists all HTTP response status codes and their descriptions. For a full description, see [*http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*.](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 
 
-|                   | 304  | Not  Modified                   |
+
+
+
+
+
+|Category           | Code | Description                     |
 | ----------------- | ---- | ------------------------------- |
+|**Informational**  | 100  | Continue                        |
+|                   | 101  | Switching Protocols             |
+|**Successful**     | 200  |Ok                               |
+|                   | 201  | Created                         |
+|                   | 202  | Accepted                        |
+|                   | 203  | Non-Authoritative Information   |
+|                   | 204  | No Content                      |
+|                   | 205  | Reset Content                   |
+|                   | 206  | Partial Content                 |
+|**Redirection**    | 300  | Multiple Choice                 |
+|                   | 301  | Moved Permanentley              |
+|                   | 302  | Found                           |
+|                   | 303  | See Other                       |
+|                   | 304  | Not  Modified                   |
 |                   | 305  | Use  Proxy                      |
 |                   | 307  | Temporary Redirect              |
 | **Client  Error** | 400  | Bad Request                     |
@@ -93,7 +108,7 @@ This template displays a bar graph showing the breakdown of connection time into
 - DNS Lookup Time – The time it takes to resolve the host name and convert it to an IP address by calling the DNS server. Note that the DNS is checked once per virtual-user, for the whole session. 
 - Connect Time – The time it takes for a Virtual Client to connect to the System Under Test (SUT), in seconds. In other words, the time it takes from the beginning of the HTTP request to the TCP/IP connection.  
 
-  Note that if the Persistent Connection option is enabled in the WebLOAD Console,  there may not be a value for Connect Time because the HTTP connection remains open between successive HTTP requests. 
+    Note that if the Persistent Connection option is enabled in the WebLOAD Console,  there may not be a value for Connect Time because the HTTP connection remains open between successive HTTP requests. 
   
   
 
@@ -105,7 +120,9 @@ This template displays the following information about the Load Session:
 - The maximum number of virtual clients. 
 - Which scripts are running.  
 - General information about the reporter. 
-- General information about the System under Test (SUT). This template is useful as an opening page for published reports. 
+- General information about the System under Test (SUT). 
+
+This template is useful as an opening page for published reports. 
 
 
 
@@ -125,9 +142,6 @@ This template displays for each time interval, the number of HTTP client side er
 The template also displays the Load Size, for reference. 
 
 
-
-
-
 ### HTTP Responses
 
 This template displays a summary of the HTTP response status messages received during the Load Session. For each type of response status, the template lists the number of responses received and what percentage it represents of all HTTP responses. 
@@ -139,7 +153,7 @@ Some common response status messages are:
 - 404 – Not Found 
 - 500 – Internal Server Error 
 
-For more information see:[` `*http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*.](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 
+For more information see: [*http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*.](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 
 
 
 
@@ -178,7 +192,9 @@ This template displays a bar graph showing the breakdown of response time betwee
 
 - Send Time – The time it takes the Virtual Client to write an HTTP request to the SUT, in seconds.  
 - Time to First Byte – The time it takes from when a request is sent until the Virtual Client receives the first byte of data. 
-- Receive Time – The elapsed time between receiving the first byte and the last byte. The template also displays the Load Size, for reference. 
+- Receive Time – The elapsed time between receiving the first byte and the last byte. 
+
+The template also displays the Load Size, for reference. 
 
 
 
@@ -189,8 +205,6 @@ This category of templates provides information about the errors logged for this
 ### Errors By Severity
 
 This template displays the total number of errors received, grouped by severity level: Info, Minor Error, Error, and Severe Error.  
-
-
 
 By default, only warnings (minor errors) and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter. 
 
@@ -219,8 +233,6 @@ For each type of failure, the template displays a description of the failure and
 ### Log Messages 
 
 This is a detailed template of all the log messages logged during the Load Session.  Note that WebLOAD automatically stops logging after a certain number of log events. 
-
-
 
 By default, only minor errors and above are displayed. To change the default setting, edit the settings of the MIN\_SEVERITY parameter. 
 
@@ -360,7 +372,7 @@ Some common response status messages are:
 - 404 – Not Found 
 - 500 – Internal Server Error 
 
-For more information see:[` `*http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*.](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 
+For more information see: [*http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 
 
 
 
@@ -421,7 +433,9 @@ For each of the specified Load Sessions, this regression template displays a bar
 
 - Send Time – The time it takes the Virtual Client to write an HTTP request to the SUT, in seconds.  
 - Time to First Byte – The time it takes from when a request is sent until the Virtual Client receives the first byte of data. 
-- Receive Time – The elapsed time between receiving the first byte and the last byte. For each Load Session, the template also displays the Load Size, for reference. 
+- Receive Time – The elapsed time between receiving the first byte and the last byte. 
+
+For each Load Session, the template also displays the Load Size, for reference. 
 
 
 

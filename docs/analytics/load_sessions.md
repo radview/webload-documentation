@@ -1,12 +1,12 @@
 # Working with Load Sessions
 
-WebLOAD Console generates the Load Session files (.ls, .sdb, .mdb, .isd, and .dat) that contain all the results collected during the execution of a Load Test. When you import a Load Session file (.ls) for use in WebLOAD Analytics, all the other files are also imported with it. All the imported Load Session files are stored in a separate WebLOAD Analytics Load Session Repository.  
+WebLOAD Console generates the Load Session files (`.ls, .sdb, .mdb, .isd`, and `.dat`) that contain all the results collected during the execution of a Load Test. When you import a Load Session file (`.ls`) for use in WebLOAD Analytics, all the other files are also imported with it. All the imported Load Session files are stored in a separate WebLOAD Analytics Load Session Repository.  
 
 WebLOAD Analytics enables you to import Load Sessions you wish to use to generate your reports, search the database for the Load Sessions you require, and delete redundant Load Sessions.  
 
 ## Importing Load Sessions
 
-You can import a single or multiple Load Sessions into the WebLOAD Analytics Load Session Repository. The Load Session’s name is automatically derived from the selected .ls file’s name. 
+You can import a single or multiple Load Sessions into the WebLOAD Analytics Load Session Repository. The Load Session’s name is automatically derived from the selected `.ls` file’s name. 
 
 **To import a Load Session:** 
 
@@ -15,7 +15,7 @@ You can import a single or multiple Load Sessions into the WebLOAD Analytics Loa
 
 > **Notes:** When you import a Load Session from WebLOAD Console into the WebLOAD  Analytics Load Session Repository, the Summary Portfolio is automatically generated for the Load Session. For information about changing this default behavior, see [Defining Your Analytics Preferences](defining_preferences.md#defining-your-analytics-preferences) 
 
-A Load Session that is currently open in WebLOAD Console cannot be imported. Unless you launch WebLOAD Analytics from within WebLOAD Console, close the Load Session before importing it. For more information about launching WebLOAD Analytics from WebLOAD Console, see[` `*Launching WebLOAD Analytics* ](getting_started.md#launching-webload-analytics) 
+A Load Session that is currently open in WebLOAD Console cannot be imported. Unless you launch WebLOAD Analytics from within WebLOAD Console, close the Load Session before importing it. For more information about launching WebLOAD Analytics from WebLOAD Console, see [*Launching WebLOAD Analytics* ](getting_started.md#launching-webload-analytics) 
 
 
 
@@ -29,7 +29,7 @@ You can narrow your search for the Load Session you require by displaying Load S
 
 **To search for a range of the most recent Load Sessions:** 
 
-1. Select **File** > **Select Sessions**, or click ![selection session](../images/select_sessions.png). The Select Session window appears. 
+1. Select **File** > **Select Sessions**, or click ![selection session](../images/select_sessions_icon.png). The Select Session window appears. 
 2. In the From Repository area, click and drag the slider to the right to display more recent Load Sessions. Click and drag to the left to display progressively older Load Sessions. 
 
    By default, the slider is set to display all sessions that appear in the WebLOAD Analytics Repository. As you move the slider to the left, it displays sessions from the last year, last three months, last month, last week, last three days, and last day, respectively. 
@@ -48,7 +48,7 @@ You can search for the Load Session you require by specifying part of the name, 
 
 **To search for a Load Session by session name:** 
 
-1. Select **File** > **Select Sessions**, or click  ![selection session](../images/select_sessions.png). The Select Session window appears. 
+1. Select **File** > **Select Sessions**, or click  ![selection session](../images/select_sessions_icon.png). The Select Session window appears. 
 2. In the **Session name** field, enter the Load Session name, or part of the name that you wish to find. Load Sessions matching the search name or part of the name, are displayed in the From Repository area, as you type. \
 
 
