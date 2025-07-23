@@ -102,17 +102,17 @@ Install the WebLOAD components as follows:
 
 **To install WebLOAD on your system:** 
 
-1. Browse to the location of the WebLOAD executable (\*.exe) installation file. 
+1. Browse to the location of the WebLOAD executable (`*.exe`) installation file. 
 1. Double-click the file. The WebLOAD Installation Wizard appears. 
 1. Follow the instructions in the Installation Wizard. 
 1. In the Select Components screen. 
-- Select the type of installation. For Load Machines and Probing Clients, select **Load Generator only**. 
-- Specify whether to install the **Load Generator As Service**.  
-  - If you select this option, TestTalk is installed as a service. Since a service can be started automatically, this is especially useful for machines that serve only as Load Generators.  
-  - If you do not select this option, TestTalk is installed as an executable file. 
-- Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. 
+    - Select the type of installation. For Load Machines and Probing Clients, select **Load Generator only**. 
+    - Specify whether to install the **Load Generator As Service**.  
+         - If you select this option, TestTalk is installed as a service. Since a service can be started automatically, this is especially useful for machines that serve only as Load Generators.  
+         - If you do not select this option, TestTalk is installed as an executable file. 
+    - Specify whether to also install the WebLOAD Cloud. The Web Cloud enables viewing, analyzing and comparing load sessions in a web browser, with full control and customization of the display. 
 
-> **Note:** The installation process is the same for Load Machines and Probing Clients. When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in[Registering and Updating the WebLOAD License](#registering-and-updating-the-webload-license). 
+> **Note:** The installation process is the same for Load Machines and Probing Clients. When the WebLOAD installation is complete, the WebLOAD License dialog box automatically opens to complete the registration process. License registration is discussed in [Registering and Updating the WebLOAD License](#registering-and-updating-the-webload-license). 
 
 
 
@@ -120,27 +120,27 @@ Install the WebLOAD components as follows:
 
 **To install WebRM:** 
 
-1. Browse to the location of the WebRM-10.0.xxx.en.exe installation file. 
+1. Browse to the location of the `WebRM-10.0.xxx.en.exe` installation file. 
 
 2. Double-click the file. The WebRM Installation Wizard appears. 
 
-3. The WebRM Installation Wizard displays the Select Destination Location dialog box. On the Select Destination Location dialog box, browse to the location where you would like WebRM installed. By default, this location is C:\Program Files\RadView\WebRM. 
+3. The WebRM Installation Wizard displays the Select Destination Location dialog box. On the Select Destination Location dialog box, browse to the location where you would like WebRM installed. By default, this location is `C:\Program Files\RadView\WebRM`. 
 
 4. Click **Next**. 
 
 5. The WebRM Installation Wizard displays the Select License Location dialog box. This dialog box displays your HostID and enables you to browse to the License location. 
 
-   **Note:** If you have already received your WebRM License file, skip to step 9.
+     **Note:** If you have already received your WebRM License file, skip to step 8.
 
-6. If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to[ support@radview.com.](mailto:support@radview.com) 
+6. If you have not received your License file, copy the HostID displayed in the text box into an email, together with your name, company, address, and phone number. Send the email to [support@radview.com.](mailto:support@radview.com) 
 
-   A WebRM license file (\*.lic) will be sent to you.  
+    A WebRM license file (`*.lic`) will be sent to you.  
 
 7. After receiving the file, save it on the hard drive of your WebRM machine and then double-click the WebRM executable installation file to restart the installation process. 
 
 8. On the Select License dialog box, browse to the location where you saved your WebRM license, select the file and click **Next.**
 
-   ![WebRM Installation Wizard – Select Start Menu Folder](images/webrm_installation_select_start.png)
+    ![WebRM Installation Wizard – Select Start Menu Folder](images/webrm_installation_select_start.png)
 
 
 
@@ -156,11 +156,11 @@ Install the WebLOAD components as follows:
 1. Close all browser windows that are open.  
 1. Uninstall the existing WebLOAD version. 
 
-   For instructions on the uninstall procedure, see[` `*Uninstalling WebLOAD* ](#uninstalling-webload). 
+    For instructions on the uninstall procedure, see [*Uninstalling WebLOAD*](#uninstalling-webload). 
 
 4. Install the new version of WebLOAD. 
 
-   For installation instructions, see[` `*Installing WebLOAD for Windows* ](#installing-webload-for-windows). 
+    For installation instructions, see [*Installing WebLOAD for Windows*](#installing-webload-for-windows). 
    
    
 
@@ -168,7 +168,7 @@ Install the WebLOAD components as follows:
 
 WebLOAD stores information from Load Sessions in a Postgre SQL database for use with WebLOAD Analytics. You can install Postgre SQL and the WebLOAD Analytics database during the WebLOAD installation or manually after WebLOAD has already been installed. You might want to perform manual installation in the following situations: 
 
-- If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to[` `*Creating the Database when Postgre SQL is Already Installed* ](#creating-the-database-when-postgre-sql-is-already-installed). 
+- If Postgre SQL is already installed on your machine and you only need to create the WebLOAD Analytics database. For instructions, refer to [*Creating the Database when Postgre SQL is Already Installed*](#creating-the-database-when-postgre-sql-is-already-installed). 
 - If you want to use a different machine as the database server and have several WebLOAD Analytics applications connect to the database. For instructions, refer to [*Installing and Configuring the Database on a Dedicated Machine* ](#installing-and-configuring-the-database-on-a-dedicated-machine). 
 
 #### Creating the Database when Postgre SQL is Already Installed
@@ -177,7 +177,7 @@ If Postgre SQL is already installed on your machine, you do not have to reinstal
 
 **To create the WebLOAD Analytics database after WebLOAD was installed:** 
 
-- Run deploy–database.bat from the C:\Program Files\RadView\WebLOAD\bin\database folder. 
+- Run `deploy–database.bat` from the `C:\Program Files\RadView\WebLOAD\bin\database` folder. 
 
 
 
@@ -189,15 +189,15 @@ You can run the Postgre SQL database using a dedicated machine with several WebL
 
 1. Install Postgre SQL.  
 
-   > **Note:** It is recommended to install Postgre SQL Version 13. You can download the application from[ http://www.postgresql.org/download/ ](http://www.postgresql.org/download/)and install it using its default installation settings. 
+    > **Note:** It is recommended to install Postgre SQL Version 13. You can download the application from [http://www.postgresql.org/download/ ](http://www.postgresql.org/download/)and install it using its default installation settings. 
 
-2. Copy all the files from the C:\Program Files\RadView\WebLOAD\bin\database directory to a temporary folder on the dedicated server. 
+2. Copy all the files from the `C:\Program` `Files\RadView\WebLOAD\bin\database` directory to a temporary folder on the dedicated server. 
 
-3. Run deploy–database.bat from the temporary folder to which you copied the files in the previous step. The WebLOAD Analytics database is created. 
+3. Run `deploy–database.bat` from the temporary folder to which you copied the files in the previous step. The WebLOAD Analytics database is created. 
 
-4. Configure Postgre SQL to allow remote connections. For more information, see [*Configuring Postgre SQL to Allow Remote Database Connections* ](#configuring-postgre-sql-to-allow-remote-database-connections).  
+4. Configure Postgre SQL to allow remote connections. For more information, see [*Configuring Postgre SQL to Allow Remote Database Connections*](#configuring-postgre-sql-to-allow-remote-database-connections).  
 
-5. Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see[*Configuring Clients to Work with the Remote Database* ](#configuring-clients-to-work-with-the-remote-database). 
+5. Configure the relevant WebLOAD Analytics clients to work with the remote database. For more information, see [*Configuring Clients to Work with the Remote Database*](#configuring-clients-to-work-with-the-remote-database). 
 
    
 
@@ -208,22 +208,22 @@ For WebLOAD Analytics clients to work with the remote database, you must perform
 **To configure a remote database connection through Postgre SQL:** 
 
 1. Run **Start** > **PostgreSql** > **PgAdmin**. The PgAdmin application opens. 
-2. Edit the postgresql.conf file, as follows: 
-   1. Select **File** > **Open**.  
-   2. Browse to C:\program files\Postgres\Data\, select postgresql.conf, and click **Open**. The postgresql.conf configuration file opens. 
-   3. Change the value of listen\_address to \*. This configures the server to listen to all addresses. 
-   4. Enable the value and save the file. 
+1. Edit the `postgresql.conf` file, as follows: 
+    1. Select **File** > **Open**.  
+    1. Browse to `C:\program files\Postgres\Data\`, select `postgresql.conf`, and click **Open**. The `postgresql.conf` configuration file opens. 
+    1. Change the value of listen\_address to \*. This configures the server to listen to all addresses. 
+    1. Enable the value and save the file. 
 
-3. Edit the Pg\_hba.conf file, as follows: 
-   1. Select **File** > **Open**.  
-   2. Browse to C:\program files\Postgres\Data\, select Pg\_hba.conf, and click **Open**. The Pg\_hba.conf configuration file opens. 
-   3. Add a new entry with the following parameters:
-      - Type = host 
-      - Database = all 
-      - User = all 
-      - IP address = `<IP subnet mask>`.0.1.1/24, where `<IP subnet mask>` is your organization’s IP subnet mask. 
-      - Method = md5 
-   4. Enable the entry and save the file. 
+3. Edit the `Pg_hba.conf` file, as follows: 
+    1. Select **File** > **Open**.  
+    1. Browse to `C:\program files\Postgres\Data\`, select `Pg_hba.conf`, and click **Open**. The `Pg_hba.conf` configuration file opens. 
+    1. Add a new entry with the following parameters:
+          - Type = host 
+          - Database = all 
+          - User = all 
+          - IP address = `<IP subnet mask>`.0.1.1/24, where `<IP subnet mask>` is your organization’s IP subnet mask. 
+          - Method = md5 
+    1. Enable the entry and save the file. 
 
 
 
@@ -234,7 +234,7 @@ For WebLOAD Analytics clients to work with the remote database, you must perform
 
 1. Open WebLOAD Analytics on the client machine. 
 
-1. Select **Window**  **Preferences**  **Database**. 
+1. Select **Window** > **Preferences** > **Database**. 
 
 1. Enter the server’s IP address and name in the Database host name field. 
 
@@ -260,29 +260,28 @@ This chapter contains the instructions for installing the WebLOAD Load Engine on
 **To install the WebLOAD Load Engine on your system:** 
 
 1. Select or create a directory for installing the WebLOAD Load Engine. This directory will be referred to as the working directory. 
-1. Download the WebLOAD-linux.version.tar.gz compressed file from a server to the working directory. 
-1. Uncompress and extract the tar file in the working directory using the following command: 
+1. Download the `WebLOAD-linux.version.tar.gz` compressed file from a server to the working directory. 
+1. Uncompress and extract the `tar` file in the working directory using the following command: 
 
-   tar –zvxf WebLOAD-linux-version.tar.gz 
+    `tar –zvxf WebLOAD-linux-version.tar.gz`
 
-4. Change directories by typing the following: 
+1. Change directories by typing the following: 
 
-   cd radview/webload`<version number>`/linux/bin 
+    `cd radview/webload<version number>/linux/bin`
 
-5. Run setup by typing the following: 
+1. Run setup by typing the following: 
 
-   ./setup 
+    `./setup` 
 
-   During the setup process, the webload.ini configuration file is created. 
+    During the setup process, the `webload.ini` configuration file is created. 
 
-6. When prompted, enter the path to the Java runtime libraries. The default path to the libraries is displayed. If you are working with a different version of Java, enter the path of the libraries using the following: 
+1. When prompted, enter the path to the Java runtime libraries. The default path to the libraries is displayed. If you are working with a different version of Java, enter the path of the libraries using the following: 
 
-   /usr/java/jre/lib/i386/server:/usr/java/jre/lib/i386/native-threads  
+    `/usr/java/jre/lib/i386/server:/usr/java/jre/lib/i386/native-threads`  
 
-   The path information is stored in the LD\_LIBRARY\_PATH variable. 
+    The path information is stored in the `LD_LIBRARY_PATH` variable. 
 
 > **Note:** The directories containing the Java libraries are separated with a colon (:). 
-
 
 
 > **Important:** The WebLOAD Load Generator will not function properly without the correct paths for the Java libraries. 
@@ -297,17 +296,18 @@ When running the Load Engine on Linux, Load Engine runs with TestTalk. TestTalk 
 
 **To run TestTalk on your system:** 
 
-1. Open the linux/bin directory within your working directory by typing the following: 
+1. Open the `linux/bin` directory within your working directory by typing the following: 
 
-   cd `<working-directory>`/linux/bin 
+    `cd <working-directory>/linux/bin` 
 
-2. Run TestTalk by typing the following: ./starttestalk 
+2. Run TestTalk by typing the following: 
+    `./starttestalk` 
 
-   TestTalk starts running. 
+    TestTalk starts running. 
 
 **To stop running TestTalk:** 
 
-- From the linux/bin directory, run ./stoptesttalk  
+- From the `linux/bin` directory, run `./stoptesttalk`  
 
 ### Installing Third Party Software for Server-side Monitoring
 
@@ -331,18 +331,16 @@ You can register and update your WebLOAD license either through an Update Licens
 
 - At the time of WebLOAD installation, when the WebLOAD Installation Wizard is finished, the** License** dialog box opens automatically, 
 
-  **Note:** After a WebLOAD installation, you may be prompted to restart your computer before the Update License dialog box appears. In this case, the License dialog box will appear automatically after the computer restarts. 
+    **Note:** After a WebLOAD installation, you may be prompted to restart your computer before the Update License dialog box appears. In this case, the License dialog box will appear automatically after the computer restarts. 
 
-  -Or- 
+    -Or- 
 
-  At any other time, from the Windows desktop, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License**. 
+    At any other time, from the Windows desktop, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License**. 
 
 The License dialog box includes the following sections: 
 
 - License Details 
 - Update License 
-
-
 
 These sections are used to register and update your WebLOAD authorization license information. 
 
@@ -350,41 +348,39 @@ These sections are used to register and update your WebLOAD authorization licens
 
 1. If you are registering a new license after an initial WebLOAD installation, access the Update License dialog box. The Update License dialog box is opened automatically after a successful WebLOAD installation is completed. 
 
-   -Or- 
+    -Or- 
 
-   If you are updating your license registration after your current license has expired, from the Windows desktop, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License**. 
+    If you are updating your license registration after your current license has expired, from the Windows desktop, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License**. 
 
-   The Update License dialog box appears. 
+    The Update License dialog box appears. 
    
-   ![Update License Dialog Box](images/update_license.png)
+    ![Update License Dialog Box](images/update_license.png)
 
-2. Create an email message with the following information: 
-   1. Copy the Host ID displayed in the text box into the email. 
-   1. Add your name, company, address, and phone number to the email message. 
-2. Send the email to license@radview.com. 
+1. Create an email message with the following information: 
+    1. Copy the Host ID displayed in the text box into the email. 
+    1. Add your name, company, address, and phone number to the email message. 
+1. Send the email to [license@radview.com](mailto:license@radview.com) 
+    
+     A WebLOAD license file (`*.lic`) will be sent to you. 
 
-   A WebLOAD license file (*.lic) will be sent to you. 
+1. Select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License** to open the Update License dialog box and install the license key. 
+1. By default, the **Use a license file** radio button is selected. This assumes that your license file is located on your local computer system. 
 
-4. Select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License** to open the Update License** dialog box and install the license key. 
-4. By default, the **Use a license file** radio button is selected. This assumes that your license file is located on your local computer system. 
+    For information on installing a floating license, or connecting to a license server, see [*WebRM Server* ](#webrm-server). 
 
-   For information on installing a floating license, or connecting to a license server, see[` `*WebRM Server* ](#webrm-server). 
+    For information on installing a license for an evaluation of WebLOAD, see [Trial License ](#trial-license). 
 
-   For information on installing a license for an evaluation of WebLOAD, see[ Trial License ](#trial-license). 
+1. Click the browse button next to the **Use a license file** text box to browse to the location of the license (`*.lic`) file sent to you by a RadView representative. 
+1. Select the correct license file and click **Open** to return to the Update License dialog box. 
+1. Click **OK** to load the new license. 
 
-5. Click the browse button next to the **Use a license file** text box to browse to the location of the license (\*.lic) file sent to you by a RadView representative. 
-6. Select the correct license file and click **Open** to return to the Update License dialog box. 
-7. Click **OK** to load the new license. 
+    If the license registration was successful, a message box appears indicating a successful license update. 
 
-   If the license registration was successful, a message box appears indicating a successful license update. 
-
-   You can now begin working with WebLOAD. 
+    You can now begin working with WebLOAD. 
    
    
 
 > **Note:** After loading the license, you can optionally click **License Information** to view the license’s full details.
-
-
 
 If the license registration was not successful, an error message appears. 
 
@@ -396,18 +392,19 @@ You can install a trial version of WebLOAD, which provides 50 virtual clients, a
 
 **To use the WebLOAD evaluation:** 
 
-1. After installing WebLOAD, the Update License** dialog box opens,  -Or- 
+1. After installing WebLOAD, the Update License dialog box opens,  
+    
+    -Or- 
 
-   To open the Update License dialog box manually, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License.** 
+    To open the Update License dialog box manually, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License.** 
 
-   The Update License dialog box appears.
+    The Update License dialog box appears.
 
-![Update License Dialog Box](images/30day_update_licesne.png)
+    ![Update License Dialog Box](images/30day_update_licesne.png)
 
 
-
-2. Select **30-day trial**. 
-2. Click **OK** or **Apply** to install the license for the trial. 
+1. Select **30-day trial**. 
+1. Click **OK** or **Apply** to install the license for the trial. 
 
    You can now begin working with the trial version of WebLOAD. 
 
@@ -430,23 +427,23 @@ The WebRM Server displays a list of the number of resources (Virtual and Probing
 
 This section describes how to connect to the WebRM Server and how to view the license details. 
 
-***Connecting to the WebRM Server*  To connect to the WebRM Server:** 
+***Connecting to the WebRM Server***
+**To connect to the WebRM Server:** 
 
 1. After installing WebLOAD, the Update License dialog box opens, 
 
     -Or- 
 
-   To open the Update License dialog box manually, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License.** 
+    To open the Update License dialog box manually, select **Start** > **Programs** > **RadView** > **WebLOAD** > **Utilities** > **Update License.** 
    
-   The Update License dialog box appears. 
+    The Update License dialog box appears. 
 
-![Update License Dialog Box – WebRM Server Installation](images/update_license_webrm.png)
+    ![Update License Dialog Box – WebRM Server Installation](images/update_license_webrm.png)
 
 
-
-2. Select **Connect to the WebRM License Server**. 
-2. Click the **Browse** button and select the machine where WebRM is installed. 
-2. Click **OK**. 
+1. Select **Connect to the WebRM License Server**. 
+1. Click the **Browse** button and select the machine where WebRM is installed. 
+1. Click **OK**. 
 
 
 
