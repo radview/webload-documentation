@@ -638,3 +638,41 @@ When you uninstall WebLOAD, you are prompted to remove PostgreSQL .3, which is u
 
    The Uninstall Wizard appears. The uninstall procedure is completed following a confirmation request. 
 
+
+## Sizing WebLOAD Load Generators
+
+When defining a load test, you need to assign Load Generator machines to execute the scripts, send requests, and receive responses.  How many load generators do you need?  
+
+### Start with our “Rule of Thumb”
+
+Radview has found that a standard machine can support about 500 virtual users when running an average script.  A “standard machine” has two CPUs and 6 to 8 gigabytes of RAM and a gigabit NIC card.  The “average script” is harder to define, see note below.  
+
+### Scaling Tests - estimate your scaling factor
+
+**Limiting Factor:** For a standard machine, the limiting resource is usually CPU.  We use a CPU utilization target of 80%.  A one-CPU machine should probably use a CPU utilization target of 70% to 75%.  A machine with 8 or more CPUs should probably use a target of 90%.  When you use very large load generator machines, CPU may not be the limiting factor – you may find that memory or network capacity are the limiting factors.  
+
+**Procedure:** Allocate an external machine, install WebLOAD load generator on it.  Define and run a test with 500 virtual users on that load generator and see what happens.  Open your session in the WebLOAD console and display the load generator memory utilization.  The default Radview scaling factor is: each virtual user should use about 0.16 percent of the CPU. 
+
+ -	If CPU is about 80% then you have an “average script” and our “rule of thumb” is a good fit for you.  Your factor is 80 divided by 500 or 0.16.
+ -	If CPU is about 90% then your script is a little heavy and your rule of thumb for this script is about 450 VUs per standard machine.  Your scaling factor is 90 / 500 or 0.18.
+ -	If CPU is about 70% then your script is on the lighter side and you rule of thumb for this script is about 600 VUs per standard machine.  Your scaling factor is 70 / 500 or 0.14. 
+
+**Over 100% result:** If your test ran the load generator at 100 percent then you have no measure of the actual CPU demand, you only know that it is more than 100 percent.  Rerun the test with a smaller number of users (maybe 250 virtual users) and calculate your factor from there.  Suppose you reran with 250 users and got 80% CPU – your factor would be 80 / 250 or 0.32.
+
+**Using the scaling factor:** Once you have your scaling factor, you can estimate how many virtual users a given machine can support.  Just divide 80 by your factor.  For example, suppose that you had a factor of 0.1.  80 divided by 0.1 equal 800 so a standard machine should support about 800 virtual users.  Suppose you had a factor of 0.25.  80 divided by 0.25 equals 320 virtual users. 
+
+**Estimating number of load generators:** suppose a scaling factor of .22 and you want to run a 5,000 VU test.  80 divided by .22 equals 363.  Let us round that so one standard machine will support about 350 virtual users.  5,000 divided by 350 equals 14.28 – call that 15 machines.  Maybe you don’t want to use our standard machines or you want fewer load generators.  Let us make a guess that a machine with 4 CPUs and 16 GB of RAM will support twice as many users.  You could do a trial run with 8 load generators each with 4 CPUs and 16 GB of RAM and see how you do.
+
+**Scaling options:** You can run a smaller test in order to estimate your factor – say, 50 virtual users instead of 500.  Keep in mind that the results from a very small test (say 10 virtual users) will contain a lot of operating system overhead.  If you use that to compute your factor you will end up with too-large load generators.  Your factor-determining test should use at least 25% of the CPU, more is better.  
+
+**Non-standard machines:** You may want to run scaling tests for machines that are different from our “standard machine”.  The technique works, you get different factors.  Keep in mind, if you use a very large machine, you may want to use 90 percent as your target CPU and check for other limiting resources. 
+
+**Other limiting factors:** This technique works well for CPU but does not take into account memory or network traffic.  You can use the same technique with memory and network but the utilization targets are different.  
+
+**Average Script**: It is easier to talk about those characteristics that make a script “not average”.  
+
+   - High memory usage
+   - High CPU usage
+   - Short to zero sleep times
+   - Complex – usually goes with high memory and CPU
+   - Many simultaneous connections
