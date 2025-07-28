@@ -3402,13 +3402,10 @@
 
 <h1 id="xml-parser-object">XML Parser Object</h1>
 <p>WebLOAD provides an embedded, third-party XML parser object to improve the multi-platform support for XML parsing within the WebLOAD environment. The XML parser object can be used instead of MSXML and Java XML parsing, resulting in lower memory consumption and increased performance during load testing.</p>
-<p>The XML parser object can be used to reference any element in an XML document. For example, you can use the XML parser object to generate an Excel file containing the desired details of a specified element. WebLOAD uses the Open Source Xerces XML parser (see <a href="http://xml.apache.org/xercesc/">http://xml.apache.org/xerces-c/</a>).</p>
+<p>The XML parser object can be used to reference any element in an XML document. For example, you can use the XML parser object to generate an Excel file containing the desired details of a specified element. WebLOAD uses the Open Source Xerces XML parser (see <a href="https://xerces.apache.org/xerces-c/">https://xerces.apache.org/xerces-c/</a>).</p>
 <p>The XML parser object is instanced as follows:</p>
 <p><code>xmlObject = new XMLParserObject();</code></p>
-<p>The parse() method, not exposed by the original XML parser, is exposed by WebLOAD. This method is identical to the parseURI() method, except that it receives an XML string instead of a URI. The following sections provide lists of exposed methods and properties as well as a detailed example of the implementation of the XML parser object.</p>
-<blockquote>
-<p><strong>Note:</strong> For additional information, refer to: <a href="http://xml.apache.org/xerces-c/ApacheDOMC%2B%2BBindingL2.html">http://xml.apache.org/xerces-c/ApacheDOMC++BindingL2.html</a></p>
-</blockquote>
+<p>The <code>parse()</code> method, not exposed by the original XML parser, is exposed by WebLOAD. This method is identical to the <code>parseURI()</code> method, except that it receives an XML string instead of a URI. The following sections provide lists of exposed methods and properties as well as a detailed example of the implementation of the XML parser object.</p>
 <h2 id="methods">Methods</h2>
 <p>The following table lists the XML parser object methods exposed by WebLOAD.</p>
 <table>
@@ -3421,47 +3418,47 @@
 <tbody>
 <tr>
 <td>xmlparser</td>
-<td><br>parseURI  <br>parse  <br>resetDocumentPool  <br>release  <br>setFeature  <br>getFeature  <br>canSetFeature  <br>load  <br>loadXML</td>
+<td><br>- parseURI  <br>- parse  <br>- resetDocumentPool  <br>- release  <br>- setFeature  <br>- getFeature  <br>- canSetFeature  <br>- load  <br>- loadXML</td>
 </tr>
 <tr>
 <td>xmlAttr</td>
-<td><br>getName  <br>getValue  <br>setValue  <br>getOwnerElement  <br>getSpecified</td>
+<td><br>- getName  <br>- getValue  <br>- setValue  <br>- getOwnerElement  <br>- getSpecified</td>
 </tr>
 <tr>
 <td>xmlCharacterData</td>
-<td><br>getData  <br>getLength  <br>appendData  <br>setData  <br>substringData  <br>deleteData  <br>insertData  <br>replaceData</td>
+<td><br>- getData  <br>- getLength  <br>- appendData  <br>- setData  <br>- substringData  <br>- deleteData  <br>- insertData  <br>- replaceData</td>
 </tr>
 <tr>
 <td>xmlDocument</td>
-<td><br>createElement  <br>getElementById  <br>getDocumentElement  <br>getElementsByTagName  <br>createTextNode  <br>createDocumentFragment  <br>getDoctype  <br>createComment  <br>createCDATAsection  <br>createAttribute  <br>createEntityReference  <br>createProcessingInstruction  <br>createElementNS  <br>createAttributeNS  <br>getElementsByTagNameNS  <br>importNode</td>
+<td><br>- createElement  <br>- getElementById  <br>- getDocumentElement  <br>- getElementsByTagName  <br>- createTextNode  <br>- createDocumentFragment  <br>- getDoctype  <br>- createComment  <br>- createCDATAsection  <br>- createAttribute  <br>- createEntityReference  <br>- createProcessingInstruction  <br>- createElementNS  <br>- createAttributeNS  <br>- getElementsByTagNameNS  <br>- importNode</td>
 </tr>
 <tr>
 <td>xmlDocumentType</td>
-<td><br>getName  <br>getPublicId  <br>getSystemId  <br>getInternalSubset  <br>getEntities  <br>getNotations</td>
+<td><br>- getName  <br>- getPublicId  <br>- getSystemId  <br>- getInternalSubset  <br>- getEntities  <br>- getNotations</td>
 </tr>
 <tr>
 <td>xmlElement</td>
-<td><br>getElementsByTagName  <br>getElementsByTagNameNS  <br>getAttribute  <br>getAttributeNS  <br>getAttributeNode  <br>getAttributeNodeNS  <br>setAttributeNode  <br>setAttributeNodeNS  <br>getTagName  <br>hasAttribute  <br>hasAttributeNS  <br>removeAttribute  <br>removeAttributeNS  <br>setAttribute  <br>setAttributeNS  <br>removeAttributeNode</td>
+<td><br>- getElementsByTagName  <br>- getElementsByTagNameNS  <br>- getAttribute  <br>- getAttributeNS  <br>- getAttributeNode  <br>- getAttributeNodeNS  <br>- setAttributeNode  <br>- setAttributeNodeNS  <br>- getTagName  <br>- hasAttribute  <br>- hasAttributeNS  <br>- removeAttribute  <br>- removeAttributeNS  <br>- setAttribute  <br>- setAttributeNS  <br>- removeAttributeNode</td>
 </tr>
 <tr>
 <td>xmlEntity</td>
-<td><br>getPublicId  <br>getSystemId  <br>getNotationName</td>
+<td><br>- getPublicId  <br>- getSystemId  <br>- getNotationName</td>
 </tr>
 <tr>
 <td>xmlnamednodemap</td>
-<td><br>getLength  <br>getNamedItem  <br>removeNamedItem  <br>getNamedItemNS  <br>removeNamedItemNS  <br>setNamedItem  <br>setNamedItemNS  <br>item</td>
+<td><br>- getLength  <br>- getNamedItem  <br>- removeNamedItem  <br>- getNamedItemNS  <br>- removeNamedItemNS  <br>- setNamedItem  <br>- setNamedItemNS  <br>- item</td>
 </tr>
 <tr>
 <td>xmlnode</td>
-<td><br>getNodeName  <br>getNodeValue  <br>getNodeType  <br>getParentNode  <br>getFirstChild  <br>getLastChild  <br>getPreviousSibling  <br>getNextSibling  <br>getChildNodes  <br>getAttributes  <br>getOwnerDocument  <br>getNamespaceURI  <br>getPrefix  <br>getLocalName  <br>hasChildNodes  <br>hasAttributes  <br>normalize  <br>release  <br>removeChild  <br>appendChild  <br>insertBefore  <br>setNodeValue  <br>setPrefix  <br>isSupported</td>
+<td><br>- getNodeName  <br>- getNodeValue  <br>- getNodeType  <br>- getParentNode  <br>- getFirstChild  <br>- getLastChild  <br>- getPreviousSibling  <br>- getNextSibling  <br>- getChildNodes  <br>- getAttributes  <br>- getOwnerDocument  <br>- getNamespaceURI  <br>- getPrefix  <br>- getLocalName  <br>- hasChildNodes  <br>- hasAttributes  <br>- normalize  <br>- release  <br>- removeChild  <br>- appendChild  <br>- insertBefore  <br>- setNodeValue  <br>- setPrefix  <br>- isSupported</td>
 </tr>
 <tr>
 <td>xmlnodelist</td>
-<td><br>Item  <br>getLength</td>
+<td><br>- Item  <br>- getLength</td>
 </tr>
 <tr>
 <td>xmlNotation</td>
-<td><br>getPublicId  <br>getSystemId  <br>xmlProcessingInstruction  <br>getTarget  <br>getData  <br>setData</td>
+<td><br>- getPublicId  <br>- getSystemId  <br>- xmlProcessingInstruction  <br>- getTarget  <br>- getData  <br>- setData</td>
 </tr>
 </tbody>
 </table>
@@ -3477,75 +3474,62 @@
 <tbody>
 <tr>
 <td>xmlAttr</td>
-<td><br>name  <br>value</td>
+<td><br>- name  <br>- value</td>
 </tr>
 <tr>
 <td>xmlCharacterData</td>
-<td><br>length  <br>data</td>
+<td><br>- length  <br>- data</td>
 </tr>
 <tr>
 <td>xmlDocument</td>
-<td><br>documentElement</td>
+<td><br>- documentElement</td>
 </tr>
 <tr>
 <td>xmlElement</td>
-<td><br>tagName</td>
+<td><br>- tagName</td>
 </tr>
 <tr>
 <td>xmlnode</td>
-<td><br>nodeName  <br>attributes  <br>childNodes  <br>firstChild  <br>lastChild  <br>namespaceURI  <br>nextSibling  <br>nodeType  <br>nodeValue  <br>ownerDocument  <br>parentNode  <br>prefix  <br>previousSibling  <br>nodeTypeString  <br>xml</td>
+<td><br>- nodeName  <br>- attributes  <br>- childNodes  <br>- firstChild  <br>- lastChild  <br>- namespaceURI  <br>- nextSibling  <br>- nodeType  <br>- nodeValue  <br>- ownerDocument  <br>- parentNode  <br>- prefix  <br>- previousSibling  <br>- nodeTypeString  <br>- xml</td>
 </tr>
 <tr>
 <td>xmlnodelist</td>
-<td><br>length</td>
+<td><br>- length</td>
 </tr>
 <tr>
 <td>xmlProcessingInstruction</td>
-<td><br>target  <br>Data</td>
+<td><br>- target  <br>- Data</td>
 </tr>
 </tbody>
 </table>
 <h2 id="example">Example</h2>
 <p>The following is an example of the use of the XML parser object:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//Create the XML parser object (xerces-c parser) xmlObject = new XMLParserObject();</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">//Create the XML parser object (xerces-c parser) </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">xmlObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLParserObject</span><span class="p">();</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">//Parse the xml file from the specified path xmlDoc = xmlObject.parseURI(&quot;C:\\xml_file.xml&quot;);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">//Parse the xml file from the specified path </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">xmlDoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlObject</span><span class="p">.</span><span class="nx">parseURI</span><span class="p">(</span><span class="s2">&quot;C:\\xml_file.xml&quot;</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">//Retrieve the first node with the “NODE5” tag</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nx">domNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;NODE5&quot;</span><span class="p">).</span><span class="nx">item</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">//Retrieve the first node with the “NODE5” tag</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nx">domNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;NODE5&quot;</span><span class="p">).</span><span class="nx">item</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">//Retrieve the node&#39;s type </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nx">nodeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">domNode</span><span class="p">.</span><span class="nx">getNodeType</span><span class="p">();</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">//Retrieve the node&#39;s parent</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nx">nodeParent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">domNode</span><span class="p">.</span><span class="nx">getParentNode</span><span class="p">().</span><span class="nx">getNodeName</span><span class="p">();</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">//Retrieve the node&#39;s type nodeType = domNode.getNodeType();</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">//Retrieve the number of child nodes</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nx">numOfChilds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">domNode</span><span class="p">.</span><span class="nx">getChildNodes</span><span class="p">().</span><span class="nx">getLength</span><span class="p">();</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1">//Retrieve the node&#39;s parent</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">//Create a new element</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nx">newNode1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;NEW_NODE1&quot;</span><span class="p">);</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nx">nodeParent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">domNode</span><span class="p">.</span><span class="nx">getParentNode</span><span class="p">().</span><span class="nx">getNodeName</span><span class="p">();</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1">//Insert the new element into DOM </span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nx">domNode1</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">newNode1</span><span class="p">,</span><span class="w"> </span><span class="nx">domNode</span><span class="p">);</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">//Retrieve the number of child nodes</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nx">numOfChilds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">domNode</span><span class="p">.</span><span class="nx">getChildNodes</span><span class="p">().</span><span class="nx">getLength</span><span class="p">();</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c1">//Create a new element</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nx">newNode1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;NEW_NODE1&quot;</span><span class="p">);</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c1">//Insert the new element into DOM domNode1.insertBefore(newNode1, domNode);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
 </span></code></pre></div>
 
 

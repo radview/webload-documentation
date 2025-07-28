@@ -4639,7 +4639,7 @@
 <p>Each run of the script body is called a <em>round</em>. A round is composed of transactions. Each transaction can include various combinations of the following: </p>
 <ul>
 <li>
-<p>Request(s) for a page. The page can include any number of graphics and contents files. Each request for a gif, jpeg, html file, etc., is a single <em>hit</em>. </p>
+<p>Request(s) for a page. The page can include any number of graphics and contents files. Each request for a <code>gif, jpeg, html</code> file, etc., is a single <em>hit</em>. </p>
 </li>
 <li>
 <p>Sleep intervals. </p>
@@ -4742,12 +4742,82 @@
 <table>
 <thead>
 <tr>
-<th></th>
-<th>304</th>
-<th>Not  Modified</th>
+<th>Category</th>
+<th>Code</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>Informational</strong></td>
+<td>100</td>
+<td>Continue</td>
+</tr>
+<tr>
+<td></td>
+<td>101</td>
+<td>Switching Protocols</td>
+</tr>
+<tr>
+<td><strong>Successful</strong></td>
+<td>200</td>
+<td>Ok</td>
+</tr>
+<tr>
+<td></td>
+<td>201</td>
+<td>Created</td>
+</tr>
+<tr>
+<td></td>
+<td>202</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td></td>
+<td>203</td>
+<td>Non-Authoritative Information</td>
+</tr>
+<tr>
+<td></td>
+<td>204</td>
+<td>No Content</td>
+</tr>
+<tr>
+<td></td>
+<td>205</td>
+<td>Reset Content</td>
+</tr>
+<tr>
+<td></td>
+<td>206</td>
+<td>Partial Content</td>
+</tr>
+<tr>
+<td><strong>Redirection</strong></td>
+<td>300</td>
+<td>Multiple Choice</td>
+</tr>
+<tr>
+<td></td>
+<td>301</td>
+<td>Moved Permanentley</td>
+</tr>
+<tr>
+<td></td>
+<td>302</td>
+<td>Found</td>
+</tr>
+<tr>
+<td></td>
+<td>303</td>
+<td>See Other</td>
+</tr>
+<tr>
+<td></td>
+<td>304</td>
+<td>Not  Modified</td>
+</tr>
 <tr>
 <td></td>
 <td>305</td>
@@ -4887,9 +4957,11 @@
 <p>This template displays a bar graph showing the breakdown of connection time into DNS Lookup Time and Connect Time. The template also displays the Load Size, for reference. </p>
 <ul>
 <li>DNS Lookup Time – The time it takes to resolve the host name and convert it to an IP address by calling the DNS server. Note that the DNS is checked once per virtual-user, for the whole session. </li>
-<li>Connect Time – The time it takes for a Virtual Client to connect to the System Under Test (SUT), in seconds. In other words, the time it takes from the beginning of the HTTP request to the TCP/IP connection.  </li>
-</ul>
+<li>
+<p>Connect Time – The time it takes for a Virtual Client to connect to the System Under Test (SUT), in seconds. In other words, the time it takes from the beginning of the HTTP request to the TCP/IP connection.  </p>
 <p>Note that if the Persistent Connection option is enabled in the WebLOAD Console,  there may not be a value for Connect Time because the HTTP connection remains open between successive HTTP requests. </p>
+</li>
+</ul>
 <p><strong>General Session Information</strong> </p>
 <p>This template displays the following information about the Load Session: </p>
 <ul>
@@ -4897,8 +4969,9 @@
 <li>The maximum number of virtual clients. </li>
 <li>Which scripts are running.  </li>
 <li>General information about the reporter. </li>
-<li>General information about the System under Test (SUT). This template is useful as an opening page for published reports. </li>
+<li>General information about the System under Test (SUT). </li>
 </ul>
+<p>This template is useful as an opening page for published reports. </p>
 <blockquote>
 <p><strong>Tip</strong></p>
 <p>You can customize the look of the General Session Information template by editing the settings of the following parameters: PEN_COMPANY, OPEN_REPORTER_NAME, OPEN_REPORTER_TITLE, OPEN_SUT_DIAGRAM, </p>
@@ -4917,7 +4990,7 @@
 <li>404 – Not Found </li>
 <li>500 – Internal Server Error </li>
 </ul>
-<p>For more information see:<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"><code></code><em>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</em>.</a> </p>
+<p>For more information see: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"><em>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</em>.</a> </p>
 <h3 id="http-responses-over-time">HTTP Responses Over Time</h3>
 <p>This template displays the number of HTTP responses at each time interval, for each response status code. </p>
 <h3 id="load-size-summary">Load Size Summary</h3>
@@ -4941,8 +5014,9 @@
 <ul>
 <li>Send Time – The time it takes the Virtual Client to write an HTTP request to the SUT, in seconds.  </li>
 <li>Time to First Byte – The time it takes from when a request is sent until the Virtual Client receives the first byte of data. </li>
-<li>Receive Time – The elapsed time between receiving the first byte and the last byte. The template also displays the Load Size, for reference. </li>
+<li>Receive Time – The elapsed time between receiving the first byte and the last byte. </li>
 </ul>
+<p>The template also displays the Load Size, for reference. </p>
 <h2 id="log-and-errors-templates">Log and Errors Templates</h2>
 <p>This category of templates provides information about the errors logged for this Load Session.  </p>
 <h3 id="errors-by-severity">Errors By Severity</h3>
@@ -5029,7 +5103,7 @@
 <li>404 – Not Found </li>
 <li>500 – Internal Server Error </li>
 </ul>
-<p>For more information see:<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"><code></code><em>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</em>.</a> </p>
+<p>For more information see: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"><em>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</em></a> </p>
 <h3 id="load-size-summary_1">Load Size Summary</h3>
 <p>For each specified Load Session, this regression template displays the progress of the load session by showing the load size over time. That is, the number of Virtual Clients running over time.  </p>
 <p>This template provides an understanding of the nature of the tests being conducted. All charts should be analyzed in the context of load size behavior. </p>
@@ -5060,8 +5134,9 @@
 <ul>
 <li>Send Time – The time it takes the Virtual Client to write an HTTP request to the SUT, in seconds.  </li>
 <li>Time to First Byte – The time it takes from when a request is sent until the Virtual Client receives the first byte of data. </li>
-<li>Receive Time – The elapsed time between receiving the first byte and the last byte. For each Load Session, the template also displays the Load Size, for reference. </li>
+<li>Receive Time – The elapsed time between receiving the first byte and the last byte. </li>
 </ul>
+<p>For each Load Session, the template also displays the Load Size, for reference. </p>
 <h3 id="slowest-transactions">Slowest Transactions</h3>
 <p>For each of the specified Load Sessions, this regression template displays the session’s transactions, ordered by the average transaction time, slowest first. </p>
 <p>You can configure the template to show only a certain number or certain percentage of the slowest transactions. To do so, edit the settings of the TRAN_PERCENT or TRAN_QTY parameters. </p>

@@ -3968,7 +3968,7 @@
 <p>WebLOAD supports WebSocket, a protocol that provides full-duplex communication channels over a single TCP connection. Unlike HTTP which is a request-response protocol, WebSocket creates connections for sending or receiving messages that are not dependent on one another. In this way, WebSocket provides full-duplex communication. WebSocket also enables streams of messages on top of TCP.</p>
 <p>WebLOAD’s WebSocket object enables creating and managing a WebSocket connection to a server, as well as sending and receiving data on the connection. Note that you can create multiple WebSocket objects.</p>
 <h2 id="websocket-sample-code-using-messages-handler">WebSocket Sample Code using messages handler</h2>
-<p>With message handler, you write a function that handles that message as they are received, in the onmessage() function.</p>
+<p>With message handler, you write a function that handles that message as they are received, in the <code>onmessage()</code> function.</p>
 <p>This mode is useful in general purpose WebSocket, where it is not know when and what messages are expected to be received.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Create a WebSocket object</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">ws1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;ws://echo.websocket.org&quot;</span><span class="w"> </span><span class="p">);</span>
@@ -4054,7 +4054,7 @@
 <td><code>manualHandleEvents</code></td>
 <td>boolean</td>
 <td><optional></td>
-<td>if true, will only handle events when manually asked for (for example, using ws.handlePending()). Default is to automatically handle events</td>
+<td>if true, will only handle events when manually asked for (for example, using <code>ws.handlePending()</code>). Default is to automatically handle events</td>
 </tr>
 </tbody>
 </table>
@@ -4076,7 +4076,7 @@
 <li>close-event</li>
 </ul>
 <h4 id="onerror">onerror</h4>
-<p>Callback called when WebSocket has error. Event getData() will hold exception information, or use evt.toString()</p>
+<p>Callback called when WebSocket has error. Event <code>getData()</code> will hold exception information, or use <code>evt.toString()</code></p>
 <p><strong>Type:</strong></p>
 <ul>
 <li>error-event</li>
@@ -4144,7 +4144,7 @@
 </ul>
 <p>Default Value:</p>
 <ul>
-<li>ErrorMessage or WebSocket.prototype.globalReportErrorFunction</li>
+<li>ErrorMessage or <code>WebSocket.prototype.globalReportErrorFunction</code></li>
 </ul>
 <h4 id="storemessages-boolean">storeMessages :boolean</h4>
 <p>when true, messages are stored after being handled for future inspection.</p>
@@ -4168,7 +4168,7 @@
 </ul>
 <p>Default Value:</p>
 <ul>
-<li>500 or WebSocket.prototype.globalWaitTime</li>
+<li>500 or <code>WebSocket.prototype.globalWaitTime</code></li>
 </ul>
 <h3 id="methods">Methods</h3>
 <h4 id="addheadername-value">addHeader(name, value)</h4>
@@ -4200,7 +4200,7 @@
 <h4 id="connect">connect()</h4>
 <p>Connect to WebSocket</p>
 <h4 id="dynamicreplacecorrelationtocorrelationparam-searchvalueopt">dynamicReplaceCorrelation(toCorrelationParam, searchValueopt)</h4>
-<p>Replace send/sendBinary data with value in correlation. Value is looked up using pollCorrelationValue, so if value does not yet exist, wait for it until timeout (30000 millis)</p>
+<p>Replace send/sendBinary data with value in correlation. Value is looked up using <code>pollCorrelationValue</code>, so if value does not yet exist, wait for it until timeout (30000 millis)</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4222,7 +4222,7 @@
 <td><code>searchValue</code></td>
 <td>string</td>
 <td><optional></td>
-<td>the replacement value to replace. The default is ${toCorrelationParam}, for example the string "session=${sessionId}" will be replaced with "session="+pollCorrelationValue("sessionId").</td>
+<td>the replacement value to replace. The default is <code>${toCorrelationParam}</code>, for example the string <code>"session=${sessionId}"</code> will be replaced with <code>"session="+pollCorrelationValue("sessionId")</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -4249,7 +4249,7 @@
 <td>string | RegExp</td>
 <td></td>
 <td></td>
-<td>can be a "string" or /regex/ to look for in previous or future messages</td>
+<td>can be a <code>"string"</code> or <code>/regex/</code> to look for in previous or future messages</td>
 </tr>
 <tr>
 <td><code>timeout</code></td>

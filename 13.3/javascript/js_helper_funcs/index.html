@@ -4569,7 +4569,7 @@
 <h2 id="protocol-script-functions">Protocol Script Functions</h2>
 <h3 id="methods">Methods</h3>
 <h4 id="debugmessagestr">DebugMessage(str)</h4>
-<p>Print message to log. Like InfoMessage() but logs only when running in WebLOAD Recorder, not in Console</p>
+<p>Print message to log. Like <code>InfoMessage()</code> but logs only when running in WebLOAD Recorder, not in Console</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4588,7 +4588,7 @@
 </tbody>
 </table>
 <h4 id="decodestrings">DecodeString(s)</h4>
-<p>Decoding function - reverse of EncodeString</p>
+<p>Decoding function - reverse of <code>EncodeString</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4613,7 +4613,7 @@
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
 <h4 id="decodestringunixs">DecodeStringUnix(s)</h4>
-<p>Decoding function - reverse of EncodeString + convert end-of-line from unix to dos format</p>
+<p>Decoding function - reverse of <code>EncodeString</code> + convert end-of-line from unix to dos format</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4638,7 +4638,7 @@
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
 <h4 id="decodestringwins">DecodeStringWin(s)</h4>
-<p>Decoding function - reverse of EncodeStringWin</p>
+<p>Decoding function - reverse of <code>EncodeStringWin</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4705,7 +4705,7 @@
 <p><strong>Returns:</strong></p>
 <p>- escaped string</p>
 <h4 id="sleepeverymillis">SleepEvery(millis)</h4>
-<p>SleepEvery a certain multiple number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session for intervals.</p>
+<p><code>SleepEvery</code> a certain multiple number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session for intervals.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4724,10 +4724,14 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">SleepEvery</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//wait until a multiple of 5 seconds have passed, for example, if called at 00:02 seconds into the session, will wait to 00:05, if call at 00:06 will wait until 00:10</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">SleepEvery</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">//wait until a multiple of 5 seconds have passed, </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// for example, if called at 00:02 seconds into the </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// session, will wait to 00:05, if call at 00:06 will </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// wait until 00:10</span>
 </span></code></pre></div>
 <h4 id="sleepuntilmillisfrombeginning">SleepUntil(millisFromBeginning)</h4>
-<p>SleepUntil a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.</p>
+<p><code>SleepUntil</code> a certain number of milliseconds has passed since the beginning of the session. Can be used to synchronize virtual users session start.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -4951,7 +4955,7 @@
 <p><strong>Returns:</strong></p>
 <p>decoded string</p>
 <h4 id="decodexmlattstr">decodeXmlAtt(str)</h4>
-<p>Decoding function - reverse of encodeXmlAtt</p>
+<p>Decoding function - reverse of <code>encodeXmlAtt</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5026,7 +5030,7 @@
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>decodeXmlAttNum(&quot;&amp;#34;strategy&amp;#34;&quot;)
 </span></code></pre></div>
 <h4 id="encodeuricomponentlowers">encodeURIComponentLower(s)</h4>
-<p>Encoding function - Similar to encodeURIComponent but uses lower-case letters</p>
+<p>Encoding function - Similar to <code>encodeURIComponent</code> but uses lower-case letters</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5068,7 +5072,7 @@
 <p><strong>Returns:</strong></p>
 <p>encoded string</p>
 <h4 id="encodexmlbrokenstr">encodeXMLbroken(str)</h4>
-<p>Encoding function - like encodeXML but &gt; is not replaced, only &lt; and &amp;</p>
+<p>Encoding function - like <code>encodeXML</code> but &gt; is not replaced, only &lt; and &amp;</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5273,7 +5277,7 @@
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>escapeXmlBroken(&quot;&amp;lt;some@Tag&amp;gt;&quot;)
 </span></code></pre></div>
 <h4 id="extractallvalues">extractAllValues()</h4>
-<p>extractAllValues() Returns array of all values matching the prefix/suffix.</p>
+<p><code>extractAllValues()</code> Returns array of all values matching the prefix/suffix.</p>
 <p><strong>Example</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>// returns: [&quot;aaa&quot;, &quot;bbb&quot;]
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>extractAllValues(&quot;&lt;td&gt;&quot;,&quot;&lt;/td&gt;&quot;,&quot;&lt;tr&gt;&lt;td&gt;aaa&lt;/td&gt;&lt;td&gt;bbb&lt;/td&gt;&lt;/tr&gt;&quot;);
@@ -5310,7 +5314,7 @@
 <p><strong>Returns:</strong></p>
 <p>- value of header of null if not found</p>
 <h4 id="extractjspathexpr-src">extractJSPath(expr, src)</h4>
-<p>Extract value using JSPath https://www.npmjs.com/package/jspath To test, use http://www.jsonquerytool.com/ with type: JSPath (dfilatov 0.4.0)</p>
+<p>Extract value using JSPath <a href="https://www.npmjs.com/package/jspath">https://www.npmjs.com/package/jspath</a> To test, use <a href="http://www.jsonquerytool.com/">http://www.jsonquerytool.com/</a> with type: JSPath (dfilatov 0.4.0)</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5336,7 +5340,7 @@
 <p><strong>Returns:</strong></p>
 <p>extracted value or null if not found</p>
 <h4 id="extractjsonvaluepath-source">extractJsonValue(path, source)</h4>
-<p>Get value from JSON using a simple path - path.to.item</p>
+<p>Get value from JSON using a simple path - <code>path.to.item</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5384,13 +5388,13 @@
 <td>string</td>
 <td></td>
 <td></td>
-<td>string with RegExp expression</td>
+<td>string with <code>RegExp</code> expression</td>
 </tr>
 <tr>
 <td><code>src</code></td>
 <td>string</td>
 <td>(optional)</td>
-<td>document.wlSource</td>
+<td><code>document.wlSource</code></td>
 <td>source to search at</td>
 </tr>
 <tr>
@@ -5412,7 +5416,7 @@
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>extractRegExpTemplate ( &quot;foo=(.*?)&amp;&quot;, &quot;the foo=54321&amp;abcde&amp;zzzz&quot;, &quot;templated-$1$-answer&quot;)
 </span></code></pre></div>
 <h4 id="extractsiebelarrayvalueidx-prefix-suffix-source-instance">extractSiebelArrayValue(idx, prefix, suffix, source, instance)</h4>
-<p>Extact a value from Siebel 'star' array, in format `length@value..`</p>
+<p>Extact a value from Siebel 'star' array, in format <code>length@value..</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5441,7 +5445,7 @@
 <tr>
 <td><code>source</code></td>
 <td>string</td>
-<td>source of data to look for. To get value from HTTP response use document.wlSource</td>
+<td>source of data to look for. To get value from HTTP response use <code>document.wlSource</code></td>
 </tr>
 <tr>
 <td><code>instance</code></td>
@@ -5594,7 +5598,7 @@
 <p><strong>Returns:</strong></p>
 <p>Value (or name) of searched cookie.</p>
 <h4 id="extractxpathexpr-source">extractXPath(expr, source)</h4>
-<p>Extract from XML using XPath expression</p>
+<p>Extract from XML using <code>XPath</code> expression</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5608,7 +5612,7 @@
 <tr>
 <td><code>expr</code></td>
 <td>string</td>
-<td>XPath expresion. For example "/bookstore/book[1]/title"</td>
+<td><code>XPath</code> expresion. For example "/bookstore/book[1]/title"</td>
 </tr>
 <tr>
 <td><code>source</code></td>
@@ -5815,7 +5819,7 @@
 <li><a href="#putmdcname-value">putMDC</a></li>
 </ul>
 <h4 id="setcorrelationvaluevarname-extractedvalue-originalvalueopt-errorfuncopt">setCorrelationValue(varName, extractedValue, originalValueopt, errorFuncopt)</h4>
-<p>Store extracted correlation value for future use. Validate it against the recorded value. Use getCorrelationValue() to retrieve the value.</p>
+<p>Store extracted correlation value for future use. Validate it against the recorded value. Use <code>getCorrelationValue()</code> to retrieve the value.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5858,7 +5862,7 @@
 <li><a href="#getcorrelationvaluevarname-func-object">getCorrelationValue</a></li>
 </ul>
 <h4 id="setcorrelationvaluesilent">setCorrelationValueSilent()</h4>
-<p>Like setCorrelationValue() but does not show a WarningMessage() when not extracted.</p>
+<p>Like <code>setCorrelationValue()</code> but does not show a <code>WarningMessage()</code> when not extracted.</p>
 <h4 id="unescapeunixs">unescapeUnix(s)</h4>
 <p>Decoding function - reverse of escape + convert end-of-line from unix to dos format</p>
 <p><strong>Parameters:</strong></p>
@@ -5881,7 +5885,7 @@
 <p><strong>Returns:</strong></p>
 <p>- decoded string</p>
 <h4 id="unescapexmlbrokenstr">unescapeXMLbroken(str)</h4>
-<p>Decoding function - reverse of escapeXmlBroken</p>
+<p>Decoding function - reverse of <code>escapeXmlBroken</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -5967,7 +5971,7 @@
 </span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="nx">ErrorMessage</span><span class="p">(</span><span class="s2">&quot;stop client&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="addbeforebegintransactionhandlerid-func">addBeforeBeginTransactionHandler(id, func)</h4>
-<p>Handler function is called before each BeginTransaction(), function given original arguments.</p>
+<p>Handler function is called before each <code>BeginTransaction()</code>, function given original arguments.</p>
 <p><strong>Example</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">addBeforeBeginTransactionHandler</span><span class="p">(</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="s2">&quot;before-trx&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -5982,7 +5986,7 @@
 </span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;Transaction1&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="addafterbegintransactionhandlerid-func">addAfterBeginTransactionHandler(id, func)</h4>
-<p>Handler function is called after each BeginTransaction(), function given original arguments.</p>
+<p>Handler function is called after each <code>BeginTransaction()</code>, function given original arguments.</p>
 <p><strong>Example</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">addAfterBeginTransactionHandler</span><span class="p">(</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="s2">&quot;before-trx&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -5997,7 +6001,7 @@
 </span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;Transaction1&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="addbeforeendtransactionhandlerid-func">addBeforeEndTransactionHandler(id, func)</h4>
-<p>Handler function is called before each EndTransaction(), function given original arguments.</p>
+<p>Handler function is called before each <code>EndTransaction()</code>, function given original arguments.</p>
 <p><strong>Example</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nx">addBeforeEndTransactionHandler</span><span class="p">(</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="s2">&quot;before-trx-end&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -6012,7 +6016,7 @@
 </span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;Transaction1&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="addafterendtransactionhandlerid-func">addAfterEndTransactionHandler(id, func)</h4>
-<p>Handler function is called after each EndTransaction(), function given original arguments.</p>
+<p>Handler function is called after each <code>EndTransaction()</code>, function given original arguments.</p>
 <p><strong>Example</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nx">addAfterEndTransactionHandler</span><span class="p">(</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="s2">&quot;before-trx-end&quot;</span><span class="p">,</span><span class="w"> </span>
@@ -6027,12 +6031,12 @@
 </span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;Transaction1&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="dynamicreplacefieldfieldname-valuegenerator">dynamicReplaceField(fieldName, valueGenerator)</h4>
-<p>Dynamically replace a field name in a wlHttp object, if it exists, in all subsequent calls.</p>
+<p>Dynamically replace a field name in a <code>wlHttp</code> object, if it exists, in all subsequent calls.</p>
 <p>The value can be one of the following types:</p>
 <ul>
 <li>Literal value - that value will be used instead of current field value. </li>
 <li>Function value - if the given value is a function, that function will be called each time and the returned value used</li>
-<li>Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling getValue() for it)</li>
+<li>Parameter - if the given value is a name of a parameter created in Parameterization Manager, the paramter new value will be used (by calling <code>getValue()</code> for it)</li>
 </ul>
 <p><strong>Example</strong></p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">InitClient</span><span class="p">()</span>

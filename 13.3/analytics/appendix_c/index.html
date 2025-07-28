@@ -3371,11 +3371,11 @@
 <li>WLAnalyticsCMD.exe – Automatically generates a report for a specified session, and publishes or prints it. WebLOAD Analytics then closes. </li>
 <li>WLAnalytics.exe – Launches the WebLOAD Analytics UI, and generates a report for a specified session.  </li>
 </ul>
-<p>The executables are located in <em><code>&lt;Installation dir&gt;</code></em>\bin. For example: C:\Program Files\RadView\WebLOAD\bin.</p>
+<p>The executables are located in <em><code>&lt;Installation dir&gt;</code></em><code>\bin</code>. For example: <code>C:\Program Files\RadView\WebLOAD\bin</code>.</p>
 <h2 id="running-wlanalyticscmdexe">Running WLAnalyticsCMD.exe</h2>
 <p>Use this executable to generate a report for a specified session, and publish or print it. </p>
 <p><strong>Syntax</strong> </p>
-<p><code>WLAnalyticsCmd.exe –m** **U**|**P** {**-t** *template\_path*}|{**-p** *portfolio\_path*} {**-s** *session\_name*}|{**-ls** *session\_path*} [**-f** **DOC**|**ODT**|**HTML**|**XLS**|**RTF**|**PDF**]</code> <code>[**-l** *report\_location*] [**-n** *output\_report\_name*] [**-h**]</code> </p>
+<p><code>WLAnalyticsCmd.exe –m U|P {-t template_path}|{-p portfolio_path} {-s session_name}|{-ls session_path} [-f DOC|ODT|HTML|XLS|RTF|PDF] [-l report_location] [-n output_report_name] [-h]</code> </p>
 <p><strong>Parameters</strong> </p>
 <table>
 <thead>
@@ -3388,41 +3388,41 @@
 <tbody>
 <tr>
 <td><strong>-m</strong></td>
-<td>Indicates  the action. Specify one of the following  <strong>U</strong> – Publish.  <strong>P</strong> – Print.</td>
+<td>Indicates  the action. Specify one of the following<br><br> <strong>U</strong> – Publish. <br><strong>P</strong> – Print.</td>
 <td>Mandatory  parameter.</td>
 </tr>
 <tr>
-<td><strong>-t</strong> <em>template_path</em></td>
+<td><strong>-t</strong> <em><code>template_path</code></em></td>
 <td>Generates  a chart from a specified template. You must specify the path to the template  directory (either absolute or relative to the gallery).</td>
 <td>You must  specify one of the two options: <strong>-t</strong> or <strong>–p</strong>.</td>
 </tr>
 <tr>
-<td><strong>-p</strong> <em>portfolio_path</em></td>
+<td><strong>-p</strong> <em><code>portfolio_path</code></em></td>
 <td>Generates  a report from a portfolio.  You must  specify the path to the portfolio directory (either absolute or relative to  the Portfolio category).</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>-s</strong> <em>session_name</em></td>
-<td>Specifies  a session already loaded into WebLOAD.  You must  specify the session name.  <strong>Note</strong>: You can use this parameter multiple times to  specify multiple sessions. This is necessary if you are generating a  regression chart.</td>
+<td><strong>-s</strong> <em><code>session_name</code></em></td>
+<td>Specifies  a session already loaded into WebLOAD.  You must  specify the session name.<br><br> <strong>Note</strong>: You can use this parameter multiple times to  specify multiple sessions. This is necessary if you are generating a  regression chart.</td>
 <td>You must specify one of the two  options: <strong>-s</strong> or <strong>–ls</strong>.</td>
 </tr>
 <tr>
-<td><strong>-ls</strong> <em>session_path</em></td>
+<td><strong>-ls</strong> <em><code>session_path</code></em></td>
 <td>Specifies  a load session file to import into WebLOAD.  You must  specify the full path.  <strong>Note</strong>: You can use this parameter multiple times to load multiple sessions. This  is necessary if you are generating a regression chart.</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>-f</strong></td>
-<td>Specifies  the output format for a published report.  Select  one of the following: <strong>DOC</strong>, <strong>ODT</strong>, <strong>HTML</strong>, <strong>XLS</strong>, <strong>RTF</strong>, or <strong>PDF</strong>.  If you  do not specify an output format, the default format, specified in Analytics  Preferences, is used.</td>
+<td>Specifies  the output format for a published report.  Select  one of the following: <strong>DOC</strong>, <strong>ODT</strong>, <strong>HTML</strong>, <strong>XLS</strong>, <strong>RTF</strong>, or <strong>PDF</strong>.<br>  If you  do not specify an output format, the default format, specified in Analytics  Preferences, is used.</td>
 <td>Optional parameter.</td>
 </tr>
 <tr>
-<td><strong>-l</strong> <em>report_location</em></td>
+<td><strong>-l</strong> <em><code>report_location</code></em></td>
 <td>Specifies  the location of the published report. If you do not specify a location, the  default location, specified in Analytics Preferences, is used.</td>
 <td>Optional parameter.</td>
 </tr>
 <tr>
-<td><strong>-n</strong>  <em>output_report_name</em></td>
+<td><strong>-n</strong> <em><code>output_report_name</code></em></td>
 <td>Specifies  a name for the newly created report. If you do not specify a name, the  application provides a default name.</td>
 <td>Optional parameter.</td>
 </tr>
@@ -3442,16 +3442,17 @@
 </ul>
 </blockquote>
 <p><strong>Examples</strong> </p>
-<p>To load the mysession.ls Load Session, generate a ‘General/Load Size Summary’ chart, and publish it in the default file format, in the default location, under the name test-report: </p>
+<p>To load the <code>mysession.ls</code> Load Session, generate a ‘General/Load Size Summary’ chart, and publish it in the default file format, in the default location, under the name <code>test-report</code>: </p>
 <p><code>WLAnalyticsCmd.exe -m U -t "General\Load Size Summary" -ls "C:\mysession.ls" –n "test-report"</code> </p>
-<p>To use the loaded first-session Load Session, generate a ‘Summary Portfolio’ portfolio, and print it: </p>
+<p>To use the loaded <code>first-session</code> Load Session, generate a ‘Summary Portfolio’ portfolio, and print it: </p>
 <p><code>WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s “first-session"</code> </p>
-<p>To use the loaded first-session and second-session Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in C:\myreports, using a default name: </p>
+<p>To use the loaded <code>first-session</code> and <code>second-session</code> Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in <code>C:\myreports</code>, using a default name: </p>
 <p><code>WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s “first- session" -s "second-session" –f PDF –l “c:\myreports”</code></p>
 <p><strong>Running WLAnalytics.exe</strong>  </p>
 <p>Use this executable to open the WebLOAD Analytics UI, and open a report or generate a report for a specified session. </p>
 <p><strong>Syntax</strong> </p>
-<p><code>**WLAnalytics.exe** {**-t** *template\_path*}|{**- p** *portfolio\_path*}  {**-s** *session\_name*}|{**-ls** *session\_path*} [**-h**] [**-noSplash**]</code> </p>
+<p><code>WLAnalytics.exe {-t template_path}|{- p portfolio_path}
+{-s session_name}|{-ls session_path} [-h] [-noSplash]</code> </p>
 <p><strong>Parameters</strong> </p>
 <table>
 <thead>
@@ -3463,23 +3464,23 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>-t</strong> <em>template_path</em></td>
+<td><strong>-t</strong> <em><code>template_path</code></em></td>
 <td>Generates  a chart from a specified template. You must specify the path to the template  directory (either absolute or relative to the gallery).</td>
 <td>You must specify one of the two options: <strong>-t</strong> or <strong>–p</strong>.</td>
 </tr>
 <tr>
-<td><strong>-p</strong> <em>portfolio_path</em></td>
+<td><strong>-p</strong> <em><code>portfolio_path</code></em></td>
 <td>Generates a report from a portfolio.  You must specify the path to the portfolio directory  (either absolute or relative to the Portfolio category).</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>-s</strong> <em>session_name</em></td>
+<td><strong>-s</strong> <em><code>session_name</code></em></td>
 <td>Specifies  a session already loaded into WebLOAD.  You must specify the session name.  <strong>Note</strong>: You can use this parameter multiple times to  specify multiple sessions. This is necessary if you are generating a  regression chart.</td>
 <td>You must specify one of the two options: <strong>-s</strong> or <strong>–ls</strong>.</td>
 </tr>
 <tr>
-<td><strong>-ls</strong> <em>session_path</em></td>
-<td>Specifies a load session file to  import into WebLOAD.  You must  specify the full path.  <strong>Note</strong>: You can use this parameter multiple times to load multiple sessions. This  is necessary if you are generating a regression chart.</td>
+<td><strong>-ls</strong> <em><code>session_path</code></em></td>
+<td>Specifies a load session file to  import into WebLOAD.  You must  specify the full path.<br><br><strong>Note</strong>: You can use this parameter multiple times to load multiple sessions. This  is necessary if you are generating a regression chart.</td>
 <td></td>
 </tr>
 <tr>
@@ -3503,7 +3504,7 @@
 </ul>
 </blockquote>
 <p><strong>Examples</strong> </p>
-<p>To open the WebLOAD Analytics UI, load the mysession.ls Load Session, and generate a ‘General/Load Size Summary’ chart: </p>
+<p>To open the WebLOAD Analytics UI, load the <code>mysession.ls</code> Load Session, and generate a ‘General/Load Size Summary’ chart: </p>
 <p><code>WLAnalytics.exe -t "General\Load Size Summary" -ls "C:\mysession.ls"</code> </p>
 <p>To open the WebLOAD Analytics UI, use the loaded first-session Load Session, and generate a ‘Summary Portfolio’ portfolio: </p>
 <p><code>WLAnalytics.exe -p "Summary Portfolio" -s “first-session"</code></p>

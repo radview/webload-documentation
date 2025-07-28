@@ -3307,7 +3307,7 @@
 
 
 <h1 id="appendix-a-webload-analytics-file-system-structure">Appendix A - WebLOAD Analytics File System Structure</h1>
-<p>The WebLOAD Analytics file structure consists of system files, database files, log files, and files containing templates and template elements. The table below describes the WebLOAD file structure and its contents. The folders listed in the table below are located in the <code>&lt;WebLOAD directory&gt;</code>\bin folder.</p>
+<p>The WebLOAD Analytics file structure consists of system files, database files, log files, and files containing templates and template elements. The table below describes the WebLOAD file structure and its contents. The folders listed in the table below are located in the <code>&lt;WebLOAD directory&gt;\bin</code> folder.</p>
 <table>
 <thead>
 <tr>
@@ -3317,55 +3317,55 @@
 </thead>
 <tbody>
 <tr>
-<td>Configuration</td>
+<td><code>Configuration</code></td>
 <td>This folder is a WebLOAD Analytics system  folder.  This folder should only be  modified by qualified RadView technicians.</td>
 </tr>
 <tr>
-<td>Database</td>
+<td><code>Database</code></td>
 <td>This folder contains the batch files required for the installation  and deployment of the WebLOAD Analytics Load Session Repository.</td>
 </tr>
 <tr>
-<td>Gallery</td>
-<td>This folder contains all  WebLOAD Analytics templates. Each  template has its own folder containing a template JRXML file and a Jasper file.  Each template category  contains the Subreports  subdirectory.</td>
+<td><code>Gallery</code></td>
+<td>This folder contains all  WebLOAD Analytics templates. Each  template has its own folder containing a template JRXML file and a Jasper file.  Each template category  contains the <code>Subreports</code>  subdirectory.</td>
 </tr>
 <tr>
-<td>Gallery[Category]</td>
-<td>A Category folder can be a group of templates, such as Pages Analysis  or any one of the following special categories:<code>&lt;br&gt;</code>Portfolios.  <code>&lt;br&gt;</code>_Master Templates.  <code>&lt;br&gt;</code>_System Templates.</td>
+<td><code>Gallery\[Category]</code></td>
+<td>A Category folder can be a group of templates, such as Pages Analysis  or any one of the following special categories:<br><br>-<code>Portfolios</code>. <br>- <code>_Master Templates</code>.<br>- <code>_System Templates</code>.</td>
 </tr>
 <tr>
-<td>Gallery[Category]\ [Template]</td>
-<td>A Template folder exists  for every template in WebLOAD Analytics, such as Load Size Summary or HTTP  Responses.  A template consists of the following files:<code>&lt;br&gt;</code>.jrxml – JasperReports template file. Defines static templates structure,  can be edited using iReport.   <code>&lt;br&gt;</code>.jasper –  JasperReports compiled report. Generated automatically from .jrxml  <code>&lt;br&gt;</code>.system.xml –  Defines a system defined interactive report.  <code>&lt;br&gt;</code>.user.xml – Stores user defined settings, when using Save Chart As Template.  <code>&lt;br&gt;</code>systemChart.xml – Stores graph configuration (such as colors, line  types, etc.)  userChart.xml – Stores user graph configuration.</td>
+<td><code>Gallery\[Category]\ [Template]</code></td>
+<td>A Template folder exists  for every template in WebLOAD Analytics, such as Load Size Summary or HTTP  Responses.  A template consists of the following files:<br><br>- <code>.jrxml</code> – JasperReports template file. Defines static templates structure,  can be edited using iReport.<br>- <code>.jasper</code> –  JasperReports compiled report. Generated automatically from .jrxml  <br>- <code>.system.xml</code> –  Defines a system defined interactive report.  <br>- <code>.user.xml</code> – Stores user defined settings, when using Save Chart As Template. <br>- <code>systemChart.xml</code> – Stores graph configuration (such as colors, line  types, etc.)<br>- <code>userChart.xml</code> – Stores user graph configuration.</td>
 </tr>
 <tr>
-<td>Gallery[Category]\  [Template]\SUBREPORTS</td>
-<td>Some static Template folders contain additional .jrxml  subreports in  this folder, and their compiled .jasper files.</td>
+<td><code>Gallery\[Category]\[Template]\SUBREPORTS</code></td>
+<td>Some static Template folders contain additional <code>.jrxml</code>  subreports in  this folder, and their compiled <code>.jasper</code> files.</td>
 </tr>
 <tr>
-<td>Gallery[Category]\  [Template]\Resources</td>
+<td>G<code>allery\[Category]\ [Template]\Resources</code></td>
 <td>Some Template folders contain this folder, which  contains the static graphical elements used by the template, including icons,  images, and logos.</td>
 </tr>
 <tr>
-<td>Gallery\Portfolios</td>
+<td><code>Gallery\Portfolios</code></td>
 <td>This category contains all the [Portfolio]  folders.</td>
 </tr>
 <tr>
-<td>Gallery\Portfolios\ [Portfolio]</td>
-<td>A Portfolio folder exists for every portfolio in WebLOAD Analytics,  such as Summary Report and Extended Summary Report.  This folder contains a .portfolio file, which is an XML file specifying the  templates included in the portfolio.</td>
+<td><code>Gallery\Portfolios\[Portfolio]</code></td>
+<td>A Portfolio folder exists for every portfolio in WebLOAD Analytics,  such as Summary Report and Extended Summary Report.  This folder contains a <code>.portfolio</code> file, which is an XML file specifying the  templates included in the portfolio.</td>
 </tr>
 <tr>
-<td>Gallery\  _Master  Templates</td>
+<td><code>Gallery\_Master Templates</code></td>
 <td>This category is intended for advanced  users and cannot be accessed from WebLOAD Analytics.  The category contains the  master templates used by charts and reports. The master template of a report  defines the report appearance. The master template of a chart is used in  conjunction with the template to define the appearance of the chart. RadView  recommends that only advanced users should modify these templates.  When  you add a master template, it is available for selection in the Preferences window.</td>
 </tr>
 <tr>
-<td>Gallery\  _System Templates</td>
+<td><code>Gallery\_System Templates</code></td>
 <td>This category is intended  for advanced users and cannot be accessed from WebLOAD Analytics.  The category contains  system templates that are references by other templates. For example, all  reports that are based on interactive reports reference a template in this  directory.</td>
 </tr>
 <tr>
-<td>Plugins</td>
+<td><code>Plugins</code></td>
 <td>This folder is a WebLOAD Analytics system folder.  This folder should only be  modified by qualified RadView technicians.</td>
 </tr>
 <tr>
-<td>Workspace</td>
+<td><code>Workspace</code></td>
 <td>This folder is created the first time that WebLOAD Analytics is  opened. It contains internal state persistence information.</td>
 </tr>
 </tbody>

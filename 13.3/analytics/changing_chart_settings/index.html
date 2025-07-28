@@ -3446,19 +3446,23 @@
 <p><strong>To change the settings of a chart:</strong> </p>
 <ol>
 <li>Select the chart in the Charts area. </li>
-<li>Click the <strong>Settings</strong> tab located above the chart. </li>
-</ol>
+<li>
+<p>Click the <strong>Settings</strong> tab located above the chart. </p>
 <p>The Settings tab appears in the Charts area. </p>
 <p><img alt="settings tab" src="../../images/Settings_Tab.jpeg" /></p>
-<ol>
-<li>In the <strong>Name</strong> field, optionally edit the name of the chart. </li>
-<li>Optionally specify a different Load Session by clicking Open. The Select Sessions window appears. See<a href="../generating_charts/#specifying-a-load-session"><em>Specifying a Load Session</em> </a> for instructions. </li>
-<li>Optionally specify scripts or measurements.  </li>
-<li>For a static chart, specify scripts in the Script Selection section. See<a href="#selecting-scripts-for-static-chart"><em>Selecting scripts – Static Chart</em> </a>. </li>
-<li>In an interactive chart, specify measurements in the Measurement Selection section. See<a href="#selecting-measurements-for-interactive-chart"><em>Selecting Measurements – Interactive Chart</em> </a>.</li>
-<li>Optionally set time filter settings. See<a href="#filtering-by-time"><em>Filtering by Time</em> </a>. </li>
-<li>Optionally set statistics-based time filter settings. See<a href="#filtering-by-statistics-based-time">Filtering by Statistics-based time</a>.</li>
-<li>Optionally change parameter settings. See<a href="#modifying-chart-parameters"><em>Modifying Chart Parameters</em> </a>. </li>
+</li>
+<li>
+<p>In the <strong>Name</strong> field, optionally edit the name of the chart. </p>
+</li>
+<li>Optionally specify a different Load Session by clicking Open. The Select Sessions window appears. See <a href="../generating_charts/#specifying-a-load-session"><em>Specifying a Load Session</em> </a> for instructions. </li>
+<li>Optionally specify scripts or measurements.  <ul>
+<li>For a static chart, specify scripts in the Script Selection section. See <a href="#selecting-scripts-for-static-chart"><em>Selecting scripts – Static Chart</em> </a>. </li>
+<li>In an interactive chart, specify measurements in the Measurement Selection section. See <a href="#selecting-measurements-for-interactive-chart"><em>Selecting Measurements – Interactive Chart</em> </a>.</li>
+</ul>
+</li>
+<li>Optionally set time filter settings. See <a href="#filtering-by-time"><em>Filtering by Time</em> </a>. </li>
+<li>Optionally set statistics-based time filter settings. See <a href="#filtering-by-statistics-based-time">Filtering by Statistics-based time</a>.</li>
+<li>Optionally change parameter settings. See <a href="#modifying-chart-parameters"><em>Modifying Chart Parameters</em> </a>. </li>
 </ol>
 <h2 id="selecting-scripts-for-static-chart">Selecting scripts for Static Chart</h2>
 <p>In a static chart, you can select specific scripts to include in your chart. The generated chart will include a separate graph and table for each script. By Default, charts are generated for all the scripts of a Load Session. </p>
@@ -3472,16 +3476,16 @@
 </li>
 <li>
 <p>Click the <strong>Script Selection</strong> section. The Script Selection area appears. </p>
-</li>
-</ol>
 <p><img alt="Script Selection area" src="../../images/script_selection_area.png" /></p>
 <blockquote>
 <p><strong>Note:</strong> If any changes are made to the script selection, an asterisk (*) is displayed besides Script Selection in the section’s title. </p>
 </blockquote>
-<ol>
-<li>Select the scripts to include in your chart. <strong>Total</strong> is the script selected by default and indicates that the chart will be generated for all the Load Session’s scripts.  </li>
-</ol>
+</li>
+<li>
+<p>Select the scripts to include in your chart. <strong>Total</strong> is the script selected by default and indicates that the chart will be generated for all the Load Session’s scripts.  </p>
 <p>The selected scripts are added to your chart settings. To regenerate the chart with the new settings, click <img alt="chart preview button" src="../../images/chart_preview_button.png" />.</p>
+</li>
+</ol>
 <h2 id="selecting-measurements-for-interactive-chart">Selecting Measurements for Interactive Chart</h2>
 <p>In an interactive chart, you can select specific measurements from all or specific scripts. By default, charts are generated for all the measurements of a Load Session. </p>
 <p><strong>To select measurements:</strong> </p>
@@ -3494,24 +3498,30 @@
 </li>
 <li>
 <p>Click the <strong>Measurement Selection</strong> section. The Measurement Selection area appears.<img alt="Measurement Selection Area* " src="../../images/measurement_selection.jpeg" /></p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> If any changes are made to the measurements selection, an asterisk (*) is  displayed besides Measurement Selection in the section’s title. </p>
 </blockquote>
-<ol>
-<li>Select the measurements to include in your chart. <strong>Total</strong> is selected by default and indicates that the report will be generated for all the Load Session’s scripts.  </li>
-<li>Select a value for the X-axis of the graph: </li>
-<li><strong>Time</strong> – Shows the selected measurements over time. In the Parameters section described in<a href="#modifying-chart-parameters">Modifying Chart Parameters</a>, you can edit the Time Format parameter and set it to one of the following values:  </li>
+</li>
+<li>
+<p>Select the measurements to include in your chart. <strong>Total</strong> is selected by default and indicates that the report will be generated for all the Load Session’s scripts.  </p>
+</li>
+<li>
+<p>Select a value for the X-axis of the graph: </p>
+<ul>
+<li><strong>Time</strong> – Shows the selected measurements over time. In the Parameters section described in<a href="#modifying-chart-parameters">Modifying Chart Parameters</a>, you can edit the Time Format parameter and set it to one of the following values:  <ul>
 <li><strong>Relative seconds</strong> – Shows the selected measurements over time. The time is displayed as the number of seconds that elapsed from the beginning of the test (20, 40, 60, 80, 120, etc.). </li>
 <li><strong>Relative time</strong> – Shows the selected measurements over time. The time is displayed as the time that passed from the beginning of the test (00:20, 00:40, 01:00, 01:20, etc.). </li>
 <li><strong>Absolute time</strong> – Shows the real time, starting from the time at the beginning of the test (17:31:40, 17:32:00, 17:32:20, …). </li>
+</ul>
+</li>
 <li><strong>Load Size</strong> – Shows the change in selected measurements over the Load Size measurement. For example, if you select the 'Response Time’ measurement, then Response Time over Load Size shows the response times in different load sizes, regardless of when the measurement was received. </li>
 <li><strong>Percentile</strong> – Shows all the percentile values of the selected measurement(s). For example, the 90th percentile means that 90% of measurements are smaller than this value, and 10% are larger than this value. </li>
 <li><strong>Summary</strong> – Shows the sum (such as the average value) of the selected measurements.  </li>
 <li><strong>Other</strong> – Shows the selected measurement(s) over any measurement of your choice. For example, 'Response Time over Content Size' shows the variations in the response time, based on the size of the response, regardless of time/load size. </li>
-</ol>
+</ul>
 <p>The selected measurements are added to your chart settings. To regenerate the chart with the new settings, click <img alt="chart preview" src="../../images/chart_preview_button.png" />.</p>
+</li>
+</ol>
 <h2 id="filtering-by-time">Filtering by Time</h2>
 <p>Reports are generated for the entire Load Session by default. Use the Time Filter to remove the beginning or end of a Load Session or focus on a specific window of Load Session time. If the template you are using does not support this filter, the Time Filter section is disabled. </p>
 <p><strong>To change the Load Session time range:</strong> </p>
@@ -3524,11 +3534,7 @@
 </li>
 <li>
 <p>Click the <strong>Time Filter</strong> section. The Time Filter appears. </p>
-</li>
-<li>
 <p><img alt="Time Filter Area" src="../../images/time_filter_area.png" /></p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Notes:</strong> </p>
 <ul>
@@ -3536,8 +3542,10 @@
 <li>You can enable or disable the Time Filter by selecting or clearing the <strong>Filter Enabled</strong> checkbox. When this checkbox is cleared, “(Disabled)” is displayed in the Time Filter section. </li>
 </ul>
 </blockquote>
-<ol>
-<li>Use the slider to change the Load Session start and end times. The number of seconds and the actual dates and times are displayed as you move the slider. </li>
+</li>
+<li>
+<p>Use the slider to change the Load Session start and end times. The number of seconds and the actual dates and times are displayed as you move the slider. </p>
+</li>
 </ol>
 <p>Only the Load Session data from the time specified is used to generate the report. </p>
 <p><strong>To clear the Time Filter:</strong> </p>
@@ -3587,8 +3595,6 @@
 </li>
 <li>
 <p>Click the <strong>Statistics-based Time Filter</strong> section. The Statistics-based Time Filter area appears. </p>
-</li>
-</ol>
 <p><img alt="Statistics-based Time Filter Area" src="../../images/statistics_based_time_filter_area.png" /></p>
 <blockquote>
 <p><strong>Notes:</strong> </p>
@@ -3597,11 +3603,11 @@
 <li>You can enable or disable the Statistics-based Time Filter by selecting or clearing the <strong>Filter Enabled</strong> checkbox. When this checkbox is cleared, “(Disabled)” is displayed in the Time Filter section. </li>
 </ul>
 </blockquote>
-<ol>
-<li>Click <img alt="add" src="../../images/add.png" />. The Measurement Selection for Statistics-based Time Filter window appears. </li>
-</ol>
+</li>
+<li>
+<p>Click <img alt="add" src="../../images/add.png" />. The Measurement Selection for Statistics-based Time Filter window appears. </p>
 <p><img alt="Measurement Selection for Statistics-based Time Filter" src="../../images/measurement_Selection_stats.jpeg" /></p>
-<ol>
+</li>
 <li>
 <p>Select the measurement that you wish to filter from the top list. </p>
 </li>
@@ -3610,26 +3616,32 @@
 </li>
 <li>
 <p>Enter a value in the Value field. </p>
+<p><strong>Note:</strong> The range of values recorded during the selected Load Session for the selected  measurement is displayed in the Value range field.  </p>
+</li>
+<li>
+<p>Click <strong>OK</strong>. The statistic is added to the Statistics-based Time Filter area. </p>
+</li>
+<li>
+<p>Repeat steps[ 5 ] through[ 8 ] for each statistic that you wish to add to the filter. </p>
+</li>
+<li>
+<p>If you added multiple statistics, select a connector (<strong>Match all conditions</strong> or <strong>Match any of the conditions</strong>) in the Statistics-based Time Filter area. </p>
 </li>
 </ol>
-<p><strong>Note:</strong> The range of values recorded during the selected Load Session for the selected  measurement is displayed in the Value range field.  </p>
-<ol>
-<li>Click <strong>OK</strong>. The statistic is added to the Statistics-based Time Filter area. </li>
-<li>Repeat steps[ 5 ] through[ 8 ] for each statistic that you wish to add to the filter. </li>
-<li>If you added multiple statistics, select a connector (<strong>Match all conditions</strong> or <strong>Match any of the conditions</strong>) in the Statistics-based Time Filter area. </li>
-</ol>
 <blockquote>
-<p><strong>Note:</strong> The Match all conditions and Match any of the conditions connectors apply to all statistics. For example, defining multiple measurements connected by Match all conditions filters according to all the statistics.</p>
+<p><strong>Note:</strong> The <strong>Match all conditions</strong> and <strong>Match any of the conditions</strong> connectors apply to all statistics. For example, defining multiple measurements connected by <strong>Match all conditions</strong> filters according to all the statistics.</p>
 </blockquote>
 <p><strong>To edit the statistics listed in the Statistics-based Time Filter area:</strong> </p>
 <ol>
-<li>In the Statistics-based Time Filter area, double-click a statistic. </li>
-</ol>
+<li>
+<p>In the Statistics-based Time Filter area, double-click a statistic. </p>
 <p>-Or- </p>
 <p>Select a statistic and click <img alt="edit" src="../../images/edit.png" />.  </p>
 <p>The Measurement Selection for Statistics-based Time Filter window appears. </p>
-<ol>
-<li>Edit the statistic as necessary and click <strong>OK</strong>. The statistic is updated. </li>
+</li>
+<li>
+<p>Edit the statistic as necessary and click <strong>OK</strong>. The statistic is updated. </p>
+</li>
 </ol>
 <p><strong>To remove a statistic from the Statistics-based Time Filter area:</strong> </p>
 <ul>
@@ -3656,8 +3668,6 @@
 </li>
 <li>
 <p>Click the <strong>Parameters</strong> section. A list of available parameters appears.  </p>
-</li>
-</ol>
 <blockquote>
 <p><strong>Note:</strong> The values displayed for the available parameters are the global values defined in the Parameters tab of the Preferences window</p>
 </blockquote>
@@ -3665,8 +3675,10 @@
 <blockquote>
 <p><strong>Note:</strong> If any changes are made to any of the parameters, an asterisk (*) is displayed besides Parameters in the section’s title.</p>
 </blockquote>
-<ol>
-<li>Select a parameter and click <img alt="edit" src="../../images/edit.png" /> to edit the parameters of your choice. Only parameters relevant to the selected template are displayed.  </li>
+</li>
+<li>
+<p>Select a parameter and click <img alt="edit" src="../../images/edit.png" /> to edit the parameters of your choice. Only parameters relevant to the selected template are displayed.  </p>
+</li>
 </ol>
 <p>To regenerate the chart using the modified parameters, click <img alt="char preview" src="../../images/chart_preview_button.png" />.</p>
 

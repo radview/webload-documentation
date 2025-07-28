@@ -3337,7 +3337,7 @@
 </tr>
 <tr>
 <td><strong>Automatic Transaction  counters</strong></td>
-<td>If you have Automatic  Transactions enabled, WebLOAD creates three counters for each GET and POST  statement in the script:  <br>  The total number of times  it occurred  <br> The number of times it succeeded  <br> The number of times it  failed during the last reporting interval.</td>
+<td>If you have Automatic  Transactions enabled, WebLOAD creates three counters for each GET and POST  statement in the script:  <br><br> - The total number of times it occurred  <br>- The number of times it succeeded  <br>- The number of times it  failed during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Average</strong></td>
@@ -3349,15 +3349,15 @@
 </tr>
 <tr>
 <td><strong>Connect Time</strong></td>
-<td>The time it takes for a  Virtual Client to connect to the System Under Test (the SUT), in seconds. In  other words, the time it takes from the beginning of the HTTP request to the  TCP/IP connection.  The value posted in the  Current Value column is the average time it took a Virtual Client to connect  to the SUT during the last reporting interval.  If the Persistent  Connection option is enabled, there may not be a value for Connect Time  because the HTTP connection remains open between successive HTTP requests.</td>
+<td>The time it takes for a  Virtual Client to connect to the System Under Test (the SUT), in seconds. In  other words, the time it takes from the beginning of the HTTP request to the  TCP/IP connection.<br><br> The value posted in the  Current Value column is the average time it took a Virtual Client to connect to the SUT during the last reporting interval.<br><br> If the Persistent  Connection option is enabled, there may not be a value for Connect Time  because the HTTP connection remains open between successive HTTP requests.</td>
 </tr>
 <tr>
 <td><strong>Connection Speed (Bits Per  Second)</strong></td>
-<td>The number of bits  transmitted back and forth between the Virtual Clients and the System Under  Test (SUT), divided by the time it took to transmit those bits, in seconds.  You can set the Virtual  Clients to emulate a particular connection speed during the test, either by  using the Variable Connection Speed settings, or by coding the connection  speed in the script.  If a connection speed is specified for the test,  WebLOAD reports it in the Statistics Report.  The value posted in the Current Value column is  the number (sum) of bits passed per second during the last reporting  interval. It should match, very closely, the connection speed you specified  for the test.</td>
+<td>The number of bits  transmitted back and forth between the Virtual Clients and the System Under  Test (SUT), divided by the time it took to transmit those bits, in seconds.<br><br> You can set the Virtual Clients to emulate a particular connection speed during the test, either by  using the Variable Connection Speed settings, or by coding the connection  speed in the script.<br><br> If a connection speed is specified for the test,  WebLOAD reports it in the Statistics Report.<br><br> The value posted in the Current Value column is  the number (sum) of bits passed per second during the last reporting  interval. It should match, very closely, the connection speed you specified  for the test.</td>
 </tr>
 <tr>
 <td><a name ="console"></a> <strong>Console</strong></td>
-<td>The  WebLOAD component that manages the test session. The Console performs the  following:  <br> Configures Load Session  hosts and scripts  <br> Schedules Load Session scripts  <br> Configures Goal–Oriented  test sessions  <br> Monitors the application's  performance under the generated  load  <br> Manages the Load Session  as it is running, allowing you to pause, stop, and continue Load Session  components as needed  <br> Displays the current  performance of the SUT  <br> Provides a final  performance reports for Probing Clients and Virtual Clients  <br> Manages exporting of  performance reports</td>
+<td>The  WebLOAD component that manages the test session. The Console performs the  following:  <br><br>- Configures Load Session  hosts and scripts  <br>- Schedules Load Session scripts  <br> Configures Goal–Oriented  test sessions  <br>- Monitors the application's  performance under the generated  load  <br>- Manages the Load Session  as it is running, allowing you to pause, stop, and continue Load Session  components as needed  <br>- Displays the current  performance of the SUT  <br>- Provides a final performance reports for Probing Clients and Virtual Clients  <br>- Manages exporting of  performance reports</td>
 </tr>
 <tr>
 <td><strong>Count</strong></td>
@@ -3369,7 +3369,7 @@
 </tr>
 <tr>
 <td><strong>Current  Slice Average</strong></td>
-<td>For per time unit statistics and counters,  average is the total of all of the current values for the last reporting  interval, divided by the number of readings.  For timers, average is the  total amount of time counted by the timer (not the elapsed time), divided by  the Count (that is, the total number of readings for the last reporting  interval). For example, the average for Transaction Time is the amount of  time it took to complete all the successful transactions in the last  reporting interval, divided by the number of successful transactions (the  Current Slice Count).</td>
+<td>For per time unit statistics and counters,  average is the total of all of the current values for the last reporting  interval, divided by the number of readings.<br><br> For timers, average is the  total amount of time counted by the timer (not the elapsed time), divided by  the Count (that is, the total number of readings for the last reporting  interval). For example, the average for Transaction Time is the amount of  time it took to complete all the successful transactions in the last  reporting interval, divided by the number of successful transactions (the  Current Slice Count).</td>
 </tr>
 <tr>
 <td><strong>Current  Slice Count</strong></td>
@@ -3401,11 +3401,11 @@
 </tr>
 <tr>
 <td><strong>Failed Hits</strong></td>
-<td>The total number of times  the Virtual Clients made an HTTP request but did not receive the correct HTTP  response from the SUT during the last reporting interval. Note that each  request for each gif, jpeg, html  file, etc.,  is a single hit.</td>
+<td>The total number of times  the Virtual Clients made an HTTP request but did not receive the correct HTTP  response from the SUT during the last reporting interval. Note that each  request for each <code>gif, jpeg, html  file</code>, etc.,  is a single hit.</td>
 </tr>
 <tr>
 <td><strong>Failed Hits  Per Second</strong></td>
-<td>The number of times the  Virtual Clients did not obtain the correct HTTP response, divided by the  elapsed time, in seconds.  The value posted in the Current Value column is  the number (sum) of unsuccessful HTTP requests per second during the last  reporting interval.</td>
+<td>The number of times the  Virtual Clients did not obtain the correct HTTP response, divided by the  elapsed time, in seconds.<br><br>The value posted in the Current Value column is  the number (sum) of unsuccessful HTTP requests per second during the last  reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Failed Pages Per Second</strong></td>
@@ -3425,7 +3425,7 @@
 </tr>
 <tr>
 <td><a name="goal_oriented_test"></a> <strong>Goal–Oriented Test</strong></td>
-<td>A WebLOAD component  enabling you to define the performance goals required, and view the status of  your application when it is operating under this performance goal. WebLOAD  provides a Goal–Oriented Test Wizard for configuring these performance goals.  WebLOAD automatically accelerates the number of Virtual Clients accessing  your website until you meet your performance goal.  <strong>Note:</strong> The Goal-Oriented Test Wizard was previously called the Cruise  Control Wizard.</td>
+<td>A WebLOAD component  enabling you to define the performance goals required, and view the status of  your application when it is operating under this performance goal. WebLOAD  provides a Goal–Oriented Test Wizard for configuring these performance goals.  WebLOAD automatically accelerates the number of Virtual Clients accessing  your website until you meet your performance goal.<br><br> <strong>Note:</strong> The Goal-Oriented Test Wizard was previously called the Cruise  Control Wizard.</td>
 </tr>
 <tr>
 <td><strong>Goal–Oriented  Test Wizard</strong></td>
@@ -3433,15 +3433,15 @@
 </tr>
 <tr>
 <td><strong>Hit Time</strong></td>
-<td>The time it takes to  complete a successful HTTP request, in seconds. Each request for each gif, jpeg, html  file, etc.,  is a single hit. The time of a hit is the sum of the Connect Time, Send Time,  Response Time, and Process Time.  The value posted in the Current  Value column is the average time it took to make an HTTP request and process  its response during the last reporting interval.</td>
+<td>The time it takes to  complete a successful HTTP request, in seconds. Each request for each <code>gif, jpeg, html</code> file, etc.,  is a single hit. The time of a hit is the sum of the Connect Time, Send Time,  Response Time, and Process Time.  The value posted in the Current  Value column is the average time it took to make an HTTP request and process  its response during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Hits</strong></td>
-<td>The total number of times the Virtual Clients made HTTP requests to the System Under Test  (SUT) during the last reporting interval.  For example, a Get  statement for a URL retrieves a page. The page can include any number of  graphics and contents files. Each request for each gif, jpeg, html file, etc., is a single hit.</td>
+<td>The total number of times the Virtual Clients made HTTP requests to the System Under Test  (SUT) during the last reporting interval.<br><br> For example, a Get  statement for a URL retrieves a page. The page can include any number of  graphics and contents files. Each request for each <code>gif, jpeg, html</code>, file, etc., is a single hit.</td>
 </tr>
 <tr>
 <td><strong>Hits Per  Second</strong></td>
-<td>The number of times the Virtual Clients  made an HTTP request, divided by the elapsed time, in seconds. Each request  for each gif, jpeg, html file, etc. is a single hit.  The value posted in the  Current Value column is the number (sum) of HTTP requests per second during  the last reporting interval.</td>
+<td>The number of times the Virtual Clients  made an HTTP request, divided by the elapsed time, in seconds. Each request  for each <code>gif, jpeg, html</code> file, etc. is a single hit.  The value posted in the  Current Value column is the number (sum) of HTTP requests per second during  the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Host</strong></td>
@@ -3461,11 +3461,11 @@
 </tr>
 <tr>
 <td><strong>Java and ActiveX counters</strong></td>
-<td>You can add function calls  to your scripts that enable you to instantiate and call methods and  properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function  calls in the script that you are running, WebLOAD reports three counters for  them in the Statistics Report:  <br> The total number of times  it occurred  <br> The number of times it succeeded  <br> The number of times it  failed during the last reporting interval.  The row heading in the  Statistics Report is the name of the function call.</td>
+<td>You can add function calls  to your scripts that enable you to instantiate and call methods and  properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function  calls in the script that you are running, WebLOAD reports three counters for  them in the Statistics Report:<br><br>- The total number of times  it occurred  <br>- The number of times it succeeded  <br>- The number of times it  failed during the last reporting interval.<br><br>The row heading in the  Statistics Report is the name of the function call.</td>
 </tr>
 <tr>
 <td><strong>Java and  ActiveX timers</strong></td>
-<td>You can add function calls  to your scripts that enable you to instantiate and call methods and  properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function  calls in the script you are running, WebLOAD reports timers for them in the  Statistics Report.  The timer value is the average amount of time it  took to complete the function call, in seconds, during the last reporting  interval.  The row heading in the  Statistics Report is the name of the function call.</td>
+<td>You can add function calls  to your scripts that enable you to instantiate and call methods and  properties in Java and ActiveX components (see the <em>WebLOAD Scripting Guide</em>). If there are ActiveX or Java function  calls in the script you are running, WebLOAD reports timers for them in the  Statistics Report.<br><br> The timer value is the average amount of time it took to complete the function call, in seconds, during the last reporting  interval.<br><br> The row heading in the  Statistics Report is the name of the function call.</td>
 </tr>
 <tr>
 <td><strong>Load  Generator</strong></td>
@@ -3493,7 +3493,7 @@
 </tr>
 <tr>
 <td><strong>Page Time</strong></td>
-<td>The time it takes to  complete a successful upper level request, in seconds. The Page Time is the  sum of the Connection Time, Send Time, Response Time, and Process Time for  all the hits on a page.  The value posted in the Current Value column is  the average time it took the Virtual Clients to make an upper level request  and process its response during the last reporting interval.</td>
+<td>The time it takes to  complete a successful upper level request, in seconds. The Page Time is the  sum of the Connection Time, Send Time, Response Time, and Process Time for  all the hits on a page.<br><br>The value posted in the Current Value column is  the average time it took the Virtual Clients to make an upper level request  and process its response during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Pages</strong></td>
@@ -3525,7 +3525,7 @@
 </tr>
 <tr>
 <td><strong>Process Time</strong></td>
-<td>The time it takes WebLOAD to parse an HTTP  response from the SUT and then populate the document-object model (DOM), in  seconds.  The value posted in the  Current Value column is the average time it took WebLOAD to parse an HTTP  response during the last reporting interval.</td>
+<td>The time it takes WebLOAD to parse an HTTP  response from the SUT and then populate the document-object model (DOM), in  seconds.<br><br> The value posted in the Current Value column is the average time it took WebLOAD to parse an HTTP  response during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Receive Time</strong></td>
@@ -3537,19 +3537,19 @@
 </tr>
 <tr>
 <td><a name = "resource_manager"></a> <strong>Resource Manager</strong></td>
-<td>Distributes and circulates  WebLOAD testing resources (Virtual Clients and Probing Clients) amongst users  on a "need to use" basis. The Resource Manager is packaged with a  maximum number of Virtual Clients, Probing Clients and Connected Workstation  ports, as defined by the WebLOAD package.  With the Resource Manager,  every WebLOAD Console can operate in Standalone Workstation mode or Connected  Workstation mode.</td>
+<td>Distributes and circulates  WebLOAD testing resources (Virtual Clients and Probing Clients) amongst users  on a "need to use" basis. The Resource Manager is packaged with a  maximum number of Virtual Clients, Probing Clients and Connected Workstation  ports, as defined by the WebLOAD package.<br><br>With the Resource Manager,  every WebLOAD Console can operate in Standalone Workstation mode or Connected  Workstation mode.</td>
 </tr>
 <tr>
 <td><strong>Response  Data Size</strong></td>
-<td>The size, in bytes, of all  the HTTP responses sent by the SUT during the last reporting interval.  WebLOAD uses this value to  calculate Throughput (bytes per second).</td>
+<td>The size, in bytes, of all  the HTTP responses sent by the SUT during the last reporting interval.<br><br> WebLOAD uses this value to  calculate Throughput (bytes per second).</td>
 </tr>
 <tr>
 <td><strong>Response  Time</strong></td>
-<td>The time it takes the SUT  to send the object of an HTTP request back to a Virtual Client, in seconds.  In other words, the time from the end of the HTTP request until the Virtual  Client has received the complete item it requested.  The value posted in the Current  Value column is the average time  it took the SUT to respond to an HTTP request during the last reporting interval.</td>
+<td>The time it takes the SUT  to send the object of an HTTP request back to a Virtual Client, in seconds.  In other words, the time from the end of the HTTP request until the Virtual  Client has received the complete item it requested.<br><br> The value posted in the Current  Value column is the average time  it took the SUT to respond to an HTTP request during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Responses</strong></td>
-<td>The number of times the  SUT responded to an HTTP request during the last reporting interval.  This number should match the number of successful  hits.</td>
+<td>The number of times the  SUT responded to an HTTP request during the last reporting interval.<br><br>This number should match the number of successful  hits.</td>
 </tr>
 <tr>
 <td><strong>Round Time</strong></td>
@@ -3561,15 +3561,15 @@
 </tr>
 <tr>
 <td><strong>Rounds Per Second</strong></td>
-<td>The number of times the  Virtual Clients attempted to run the script, divided by the elapsed time, in  seconds.  The value posted in the  Current Value column is the number (sum) of attempts (both successful and  unsuccessful) per second during the last reporting interval.</td>
+<td>The number of times the  Virtual Clients attempted to run the script, divided by the elapsed time, in  seconds.<br><br> The value posted in the Current Value column is the number (sum) of attempts (both successful and  unsuccessful) per second during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Send Time</strong></td>
-<td>The time it takes the Virtual Client to  write an HTTP request to the SUT, in seconds.  The value posted in the  Current Value column is the average time it took the Virtual Clients to write  a request to the SUT during the last reporting interval.</td>
+<td>The time it takes the Virtual Client to  write an HTTP request to the SUT, in seconds.<br><br>The value posted in the  Current Value column is the average time it took the Virtual Clients to write  a request to the SUT during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Server  Performance Measurements</strong></td>
-<td>If you selected  Performance Monitor statistics for the report, WebLOAD creates a row for them  and reports their values in the  Statistics Report.  For definitions of the  statistics, see the Server Monitor  Definition dialog box.  Be selective when choosing  server performance measurements , otherwise the system resources required to  manage the data might affect the Console.</td>
+<td>If you selected  Performance Monitor statistics for the report, WebLOAD creates a row for them  and reports their values in the  Statistics Report.<br><br> For definitions of the  statistics, see the Server Monitor  Definition dialog box.<br><br> Be selective when choosing  server performance measurements , otherwise the system resources required to  manage the data might affect the Console.</td>
 </tr>
 <tr>
 <td><strong>Session Tree</strong></td>
@@ -3585,15 +3585,15 @@
 </tr>
 <tr>
 <td><strong>Successful  Connections</strong></td>
-<td>The total number of times the Virtual  Clients were able to successfully  connect to the SUT during the last reporting interval.  This number is always less  than or equal to the number of successful hits because several hits might use  the same HTTP connection if the  Persistent Connection option is enabled.</td>
+<td>The total number of times the Virtual  Clients were able to successfully  connect to the SUT during the last reporting interval.<br><br>This number is always less  than or equal to the number of successful hits because several hits might use  the same HTTP connection if the  Persistent Connection option is enabled.</td>
 </tr>
 <tr>
 <td><strong>Successful  Hits</strong></td>
-<td>The total number of times the Virtual  Clients made an HTTP request and received the correct HTTP response from the  SUT during the last reporting interval. Each request for each gif, jpeg, html file, etc., is a single hit.</td>
+<td>The total number of times the Virtual  Clients made an HTTP request and received the correct HTTP response from the  SUT during the last reporting interval. Each request for each <code>gif, jpeg, html</code> file, etc., is a single hit.</td>
 </tr>
 <tr>
 <td><strong>Successful  Hits Per Second</strong></td>
-<td>The number of times the  Virtual Clients obtained the correct HTTP response to their HTTP requests  divided by the elapsed time, in seconds.  The value posted in the  Current Value column is the number (sum) of successful HTTP requests per  second during the last reporting interval.</td>
+<td>The number of times the  Virtual Clients obtained the correct HTTP response to their HTTP requests  divided by the elapsed time, in seconds.<br><br>The value posted in the  Current Value column is the number (sum) of successful HTTP requests per  second during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Successful  Pages Per Second</strong></td>
@@ -3605,7 +3605,7 @@
 </tr>
 <tr>
 <td><strong>Successful  Rounds Per Second</strong></td>
-<td>The number of times the  Virtual Clients completed an entire iteration of the script, divided by the  elapsed time, in seconds.  The value posted in the  Current Value column is the number (sum) of successful iterations of the  script per second during the last reporting interval.</td>
+<td>The number of times the  Virtual Clients completed an entire iteration of the script, divided by the  elapsed time, in seconds.<br><br>The value posted in the  Current Value column is the number (sum) of successful iterations of the  script per second during the last reporting interval.</td>
 </tr>
 <tr>
 <td><a name = "sut"></a> <strong>SUT</strong></td>
@@ -3649,23 +3649,23 @@
 </tr>
 <tr>
 <td><strong>User-defined Automatic Data Collection</strong></td>
-<td>If you have Automatic Data  Collection enabled, WebLOAD creates three counters for each GET and POST  statement in the script:  <br> The total number of times  the Get and Post statements occurred  <br> The number of times the  statements succeeded  <br> The number of times the  statements failed during the last  reporting interval.</td>
+<td>If you have Automatic Data  Collection enabled, WebLOAD creates three counters for each GET and POST  statement in the script:  <br><br>- The total number of times  the Get and Post statements occurred  <br>- The number of times the  statements succeeded  <br>- The number of times the statements failed during the last  reporting interval.</td>
 </tr>
 <tr>
 <td><strong>User-defined  counters</strong></td>
-<td>Your own counters that you  can add to scripts using the SendCounter() and the SendMeasurement()  functions  (see the <em>WebLOAD Scripting Guide</em>).  If there is a user-defined counter in the script that you are running,  WebLOAD reports the counter’s values in the Statistics Report.  The row heading is the  name (argument) of the counter. That is, the row heading is the string in  parenthesis in the SendCounter() or SendMeasurement() function call.  The value reported is the  number of times the counter was incremented during the last reporting  interval.</td>
+<td>Your own counters that you  can add to scripts using the <code>SendCounter()</code> and the <code>SendMeasurement()</code> functions  (see the <em>WebLOAD Scripting Guide</em>).  If there is a user-defined counter in the script that you are running,  WebLOAD reports the counter’s values in the Statistics Report.<br><br>The row heading is the  name (argument) of the counter. That is, the row heading is the string in  parenthesis in the <code>SendCounter()</code> or <code>SendMeasurement()</code> function call.<br><br> The value reported is the  number of times the counter was incremented during the last reporting  interval.</td>
 </tr>
 <tr>
 <td><strong>User-defined  timer</strong></td>
-<td>Timers that you can add to  scripts to keep track of the amount of time it takes to complete specific  actions (see the <em>WebLOAD Scripting  Guide</em>). If there are any timers in the scripts that you are running,  WebLOAD reports their values in the Statistics Report.  The row heading is the  name (argument) of the timer. That is, the row heading is the string in  parenthesis in the SetTimer() function call. The timer represents the time it takes to complete all  the actions between the SetTimer() call and its corresponding  SendTimer() call, in seconds.  The value posted is the average time it took a  Virtual Client to complete the actions between the pair of timer calls, in  seconds, during the last reporting interval.</td>
+<td>Timers that you can add to  scripts to keep track of the amount of time it takes to complete specific  actions (see the <em>WebLOAD Scripting  Guide</em>). If there are any timers in the scripts that you are running,  WebLOAD reports their values in the Statistics Report.<br><br> The row heading is the name (argument) of the timer. That is, the row heading is the string in  parenthesis in the <code>SetTimer()</code> function call. The timer represents the time it takes to complete all  the actions between the <code>SetTimer()</code> call and its corresponding <code>SendTimer()</code> call, in seconds. <br><br> The value posted is the average time it took a  Virtual Client to complete the actions between the pair of timer calls, in  seconds, during the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>User-defined Transaction counters</strong></td>
-<td>Transaction functions that  you can add to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction  function in the script that you are running, WebLOAD reports three counters  for it in the Statistics Report:  <br> The total number of times  the transaction occurred  <br> The number of times a  transaction succeeded  <br> The number of times a  transaction failed during the  last reporting interval.  The row heading is the  name (argument) of the transaction. That is, the row heading is the string in  parenthesis in the BeginTransaction() function call.</td>
+<td>Transaction functions that  you can add to scripts for functional tests (see the <em>WebLOAD Scripting Guide</em>). If there is a user-defined transaction  function in the script that you are running, WebLOAD reports three counters  for it in the Statistics Report:  <br><br>- The total number of times  the transaction occurred  <br>- The number of times a  transaction succeeded  <br>- The number of times a  transaction failed during the  last reporting interval.  The row heading is the  name (argument) of the transaction. That is, the row heading is the string in  parenthesis in the <code>BeginTransaction()</code> function call.</td>
 </tr>
 <tr>
 <td><strong>User-defined Transactions timers</strong></td>
-<td>A timer for user-defined  transaction functions. If there is a user-defined transaction function in the  script that you are running, WebLOAD reports a timer for it in the Statistics  Report.  The row heading is the  name (argument) of the user- defined transaction. That is, the row heading is  the string in parenthesis in the BeginTransaction()  function  call.  The timer represents the average time it took to  complete all the actions between the BeginTransaction()  call and its  corresponding EndTransaction() call, in seconds, during  the last reporting interval.</td>
+<td>A timer for user-defined  transaction functions. If there is a user-defined transaction function in the  script that you are running, WebLOAD reports a timer for it in the Statistics  Report.<br><br> The row heading is the name (argument) of the user- defined transaction. That is, the row heading is the string in parenthesis in the <code>BeginTransaction()</code> function call.<br><br>The timer represents the average time it took to  complete all the actions between the <code>BeginTransaction()</code> call and its  corresponding <code>EndTransaction()</code> call, in seconds, during  the last reporting interval.</td>
 </tr>
 <tr>
 <td><strong>Virtual Client</strong></td>

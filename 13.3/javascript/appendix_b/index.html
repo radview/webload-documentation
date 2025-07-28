@@ -3559,7 +3559,7 @@
 </tr>
 <tr>
 <td>validateOnParse</td>
-<td>A read/write property that  turns validation on at parse time if the value of bool is true, off if validate is false.</td>
+<td>A read/write property that  turns validation on at parse time if the value of <code>bool</code> is true, off if <code>validate</code> is false.</td>
 </tr>
 </tbody>
 </table>
@@ -3645,15 +3645,15 @@
 <tbody>
 <tr>
 <td>attributes</td>
-<td>A read-only property that returns a  NamedNodeMap containing attributes for this node.</td>
+<td>A read-only property that returns a <code>NamedNodeMap</code> containing attributes for this node.</td>
 </tr>
 <tr>
 <td>BaseName</td>
-<td>A read-only property that  returns the right-hand side of a namespace qualified name. For example, yyy for the element <code>&lt;xxx:yyy&gt;</code>. BaseName must always return a non-empty string.</td>
+<td>A read-only property that  returns the right-hand side of a namespace qualified name. For example, <code>yyy</code> for the element <code>&lt;xxx:yyy&gt;</code>. <code>BaseName</code> must always return a non-empty string.</td>
 </tr>
 <tr>
 <td>childNode</td>
-<td>A read-only property that returns a NodeList  containing all children of the node.</td>
+<td>A read-only property that returns a <code>NodeList</code>  containing all children of the node.</td>
 </tr>
 <tr>
 <td>DataType</td>
@@ -3665,11 +3665,11 @@
 </tr>
 <tr>
 <td>FirstChild</td>
-<td>A read-only property that  returns the first child node. If the node has no children, firstChild  returns null.</td>
+<td>A read-only property that  returns the first child node. If the node has no children, <code>firstChil0d</code> returns null.</td>
 </tr>
 <tr>
 <td>LastChild</td>
-<td>A read-only property that  returns the last child node. If the node has no children, lastChild  returns null.</td>
+<td>A read-only property that  returns the last child node. If the node has no children, <code>lastChild</code> returns null.</td>
 </tr>
 <tr>
 <td>NextSibling</td>
@@ -3677,7 +3677,7 @@
 </tr>
 <tr>
 <td>NamespaceURI</td>
-<td>A read-only property that  returns the URI for the namespace (the uuu portion of the namespace declaration xmlns:nnn=“uuu”). If there is no namespace on the node that is  defined within the context of the document, ““ is returned.</td>
+<td>A read-only property that  returns the URI for the namespace (the <code>uuu</code> portion of the namespace declaration <code>xmlns:nnn=“uuu”</code>). If there is no namespace on the node that is  defined within the context of the document, ““ is returned.</td>
 </tr>
 <tr>
 <td>NodeName</td>
@@ -3713,7 +3713,7 @@
 </tr>
 <tr>
 <td>prefix</td>
-<td>A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, xxx for  the element  <code>&lt;xxx:yyy&gt;</code>. If there is no  prefix specified, ““ is returned.</td>
+<td>A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, <code>xxx</code> for  the element  <code>&lt;xxx:yyy&gt;</code>. If there is no  prefix specified, ““ is returned.</td>
 </tr>
 <tr>
 <td>previousSibling</td>
@@ -3725,7 +3725,7 @@
 </tr>
 <tr>
 <td>text</td>
-<td>A string representing the  content of the element and all descendents. For example “content of tag” in  <code>&lt;sometag size=34&gt;</code> content of  tag  <code>&lt;/sometag&gt;</code>.</td>
+<td>A string representing the  content of the element and all descendents. For example “content of tag” in <br> <code>&lt;sometag size=34&gt;</code> <br> <code>content of  tag</code> <br> <code>&lt;/sometag&gt;</code>.</td>
 </tr>
 <tr>
 <td>xml</td>
@@ -3744,7 +3744,7 @@
 <tbody>
 <tr>
 <td>appendChild(newChild)</td>
-<td>A method to append newChild as the last child of this node.</td>
+<td>A method to append <code>newChild</code> as the last child of this node.</td>
 </tr>
 <tr>
 <td>cloneNode(deep)</td>
@@ -3756,7 +3756,7 @@
 </tr>
 <tr>
 <td>InsertBefore  (newChild, oldChild)</td>
-<td>A method to insert newChild  as a child of  this node. oldChild is returned. oldNode must  be a child node of the element, otherwise an error is returned. If newChild  is null, the oldChild  is removed.</td>
+<td>A method to insert <code>newChild</code>  as a child of  this node. <code>oldChild</code> is returned. oldNode must  be a child node of the element, otherwise an error is returned. If <code>newChild</code>  is null, the <code>oldChild</code>  is removed.</td>
 </tr>
 <tr>
 <td>removeChild(child)</td>
@@ -3764,23 +3764,23 @@
 </tr>
 <tr>
 <td>ReplaceChild  (newChild, oldChild)</td>
-<td>A method to replace oldChild with newChild as a child of this node.</td>
+<td>A method to replace <code>oldChild</code> with <code>newChild</code> as a child of this node.</td>
 </tr>
 <tr>
 <td>selectNodes(query)</td>
-<td>Returns a NodeList containing the results of  the query indicated by query, using the current node as the query context. If  no nodes match the query, an empty NodeList is returned. If there is an error in the query  string, the DOM error reporting is used.</td>
+<td>Returns a <code>NodeList</code> containing the results of  the query indicated by query, using the current node as the query context. If  no nodes match the query, an empty <code>NodeList</code> is returned. If there is an error in the query  string, the DOM error reporting is used.</td>
 </tr>
 <tr>
 <td>SelectSingleNode  (query)</td>
-<td>Returns a single node that  is the first node in the NodeList returned from the query,  using the current node as the query context. If no nodes match the query,  null is returned. If there is an error in the query string, an error is  returned.</td>
+<td>Returns a single node that  is the first node in the <code>NodeList</code> returned from the query,  using the current node as the query context. If no nodes match the query,  null is returned. If there is an error in the query string, an error is  returned.</td>
 </tr>
 <tr>
 <td>TransformNode (stylesheetDOMNode)</td>
-<td>Returns the results of  processing the source DOMNode and its children with the  stylesheet indicated by stylesheetDOMNode. The source defines the  entire context on which the stylesheet operates, so ancestor or id navigation  outside of the scope is not allowed. The stylesheet parameter must be either  a DOM Document node, in which case the document is assumed to be an ASL stylesheet,  or a DOM Node in the xsl namespace, in which case this node is treated as a standalone.</td>
+<td>Returns the results of  processing the source <code>DOMNode</code> and its children with the  stylesheet indicated by <code>stylesheetDOMNode</code>. The source defines the  entire context on which the stylesheet operates, so ancestor or id navigation  outside of the scope is not allowed. The stylesheet parameter must be either  a DOM Document node, in which case the document is assumed to be an ASL stylesheet,  or a DOM Node in the xsl namespace, in which case this node is treated as a standalone.</td>
 </tr>
 <tr>
 <td>TransformNodeToObject  (stylesheet, Object)</td>
-<td>Sends the results of the transform to the  requested object, either in IStream or a DOM Document.</td>
+<td>Sends the results of the transform to the  requested object, either in <code>IStream</code> or a DOM Document.</td>
 </tr>
 </tbody>
 </table>
@@ -3795,19 +3795,19 @@
 <tbody>
 <tr>
 <td>length</td>
-<td>The number of nodes in the  NodeList. The length of the list will change dynamically as children or  attributes are added/deleted from the element.</td>
+<td>The number of nodes in the  <code>NodeList</code>. The length of the list will change dynamically as children or  attributes are added/deleted from the element.</td>
 </tr>
 <tr>
 <td>nextNode</td>
-<td>Returns the next node in  the NodeList based  on the current node.</td>
+<td>Returns the next node in  the <code>NodeList</code> based  on the current node.</td>
 </tr>
 <tr>
 <td>item(index)</td>
-<td>Returns the node in the NodeList with the specified index.</td>
+<td>Returns the node in the <code>NodeList</code> with the specified index.</td>
 </tr>
 <tr>
 <td>reset()</td>
-<td>Returns the iterator to the uninstantiated  state; that is, before the first node in the NodeList.</td>
+<td>Returns the iterator to the uninstantiated  state; that is, before the first node in the <code>NodeList</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -3822,7 +3822,7 @@
 <tbody>
 <tr>
 <td>length</td>
-<td>The number of nodes in the  NamedNodeMap. The length of the list will change dynamically  as children or attributes are added/deleted from the element.</td>
+<td>The number of nodes in the  <code>NamedNodeMap</code>. The length of the list will change dynamically  as children or attributes are added/deleted from the element.</td>
 </tr>
 <tr>
 <td>getNamedItem(name)</td>
@@ -3830,31 +3830,31 @@
 </tr>
 <tr>
 <td>GetQualifiedItem  (baseName, namespaceURI)</td>
-<td>Allows the specification  of a qualifying namespaceURI to access a namespace  qualified attribute. It returns the node corresponding to the attribute with baseName  in the  namespace specified by nameSpaceURI. If the qualified name (baseName+nameSpaceURI) is not an attribute,  null is returned.</td>
+<td>Allows the specification  of a qualifying <code>namespaceURI</code> to access a namespace  qualified attribute. It returns the node corresponding to the attribute with baseName  in the  namespace specified by <code>nameSpaceURI</code>. If the qualified name (<code>baseName+nameSpaceURI</code>) is not an attribute,  null is returned.</td>
 </tr>
 <tr>
 <td>item(index)</td>
-<td>Returns the node in the NameNodeMap  with the  specified index. If the index is greater than the total number of nodes, null  is returned. If the index is less than zero, null is returned.</td>
+<td>Returns the node in the <code>NameNodeMap</code>  with the  specified index. If the index is greater than the total number of nodes, null  is returned. If the index is less than zero, null is returned.</td>
 </tr>
 <tr>
 <td>nextnode()</td>
-<td>Returns the next node in  the NodeList based  on the current node.</td>
+<td>Returns the next node in  the <code>NodeList</code> based  on the current node.</td>
 </tr>
 <tr>
 <td>RemovedNamedItem (name)</td>
 <td>Removes the attribute node  corresponding to name and returns the node. If name is not an attribute, null  is returned.</td>
 </tr>
 <tr>
-<td>RemoveQualifiedItem (basename,  namespaceURI)</td>
-<td>Removes the nameSpaceURI  qualified  attribute node corresponding to baseName and returns the node. If the qualified name is not  an attribute, null is returned.</td>
+<td>RemoveQualifiedItem (basename, namespaceURI)</td>
+<td>Removes the <code>nameSpaceURI</code>  qualified  attribute node corresponding to <code>baseName</code> and returns the node. If the qualified name is not  an attribute, null is returned.</td>
 </tr>
 <tr>
 <td>reset()</td>
-<td>Returns the iterator to  the uninstantiated state; that is before the first node in the NodeList.</td>
+<td>Returns the iterator to  the uninstantiated state; that is before the first node in the <code>NodeList</code>.</td>
 </tr>
 <tr>
 <td>SetNamedItem (namedItem)</td>
-<td>Adds the attribute Node  to the list.  If an attribute already exists with the same name as that specified by nodeName of DOMNode, the attribute is  replaced and the node is returned. Otherwise, Node is returned.</td>
+<td>Adds the attribute <code>Node</code> to the list.  If an attribute already exists with the same name as that specified by <code>nodeName</code> of <code>DOMNode</code>, the attribute is  replaced and the node is returned. Otherwise, Node is returned.</td>
 </tr>
 <tr>
 <td></td>

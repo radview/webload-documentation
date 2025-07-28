@@ -3578,58 +3578,62 @@
 <p><img alt="Chart View tab" src="../../images/chart_view_tab.jpeg" /></p>
 <p>You can now: </p>
 <ul>
-<li>Modify the chart by editing chart settings and then regenerating the chart (see <a href="../changing_chart_settings/"><em>Changing Chart Settings</em> </a>.  </li>
-<li>Print the chart (see<a href="#printing-a-chart"><em>Printing a Chart</em> </a>. </li>
-<li>Publish the chart to various formats (see<a href="#publishing-charts"><em>Publishing Charts</em> </a>. </li>
-<li>For an interactive chart, you can analyze the chart data in various ways (see <a href="#customizing-interactive-charts"><em>Customizing Interactive Charts</em> </a>.  </li>
-<li>Create a report that will include the chart, as well as other open charts of your choice (see<a href="../generating_reports/"><em>Generating Reports</em> </a>. </li>
+<li>Modify the chart by editing chart settings and then regenerating the chart (see <a href="../changing_chart_settings/"><em>Changing Chart Settings</em> </a>).  </li>
+<li>Print the chart (see <a href="#printing-a-chart"><em>Printing a Chart</em> </a>). </li>
+<li>Publish the chart to various formats (see <a href="#publishing-charts"><em>Publishing Charts</em> </a>). </li>
+<li>For an interactive chart, you can analyze the chart data in various ways (see <a href="#customizing-interactive-charts"><em>Customizing Interactive Charts</em> </a>).  </li>
+<li>Create a report that will include the chart, as well as other open charts of your choice (see <a href="../generating_reports/"><em>Generating Reports</em> </a>). </li>
 </ul>
 <h3 id="specifying-a-load-session">Specifying a Load Session</h3>
 <p>If you did not open WebLOAD Analytics from WebLOAD Console, the Select Session window appears the first time you double-click a template to create a chart. </p>
 <p><img alt="Select Session" src="../../images/select_session.png" /></p>
 <p><strong>To select a session:</strong>  </p>
 <ol>
-<li>Browse to the location of the Load Session file in the From File area, and click <strong>Open</strong>. </li>
-</ol>
+<li>
+<p>Browse to the location of the Load Session file in the From File area, and click <strong>Open</strong>. </p>
 <p>-Or- </p>
 <p>Select the session in the From Repository area, and click <strong>OK</strong>.  </p>
 <blockquote>
 <p><strong>Note:</strong>  You can search for Load Sessions (see<a href="../load_sessions/#searching-for-load-sessions">Searching for Load Sessions</a>.</p>
 </blockquote>
+</li>
+</ol>
 <h2 id="creating-a-regression-chart">Creating a Regression Chart</h2>
 <p>A regression chart compares one selected “Main” session to all additional sessions you specify. Regression charts are the only kind of chart that require you to specify multiple sessions for the generation of the chart. </p>
 <p><strong>To create a regression chart:</strong> </p>
 <ol>
 <li>In the Templates Gallery, open the Session Comparison node located under the Templates node. </li>
-<li>Double-click a regression template. The Select Sessions window appears. </li>
-</ol>
-<p><img alt="Select Sessions for a Regression Chart" src="../../images/Select_Sessions_for_a_Regression_Chart.jpeg" /></p>
-<ol>
-<li>Optionally browse to the location of a Load Session file in the From File area, and click <strong>Open</strong>. </li>
-</ol>
-<p>The Load Session file appears in the From Repository area.  </p>
-<ol>
 <li>
-<p>Optionally search for Load Sessions (see<a href="../load_sessions/#searching-for-load-sessions">Searching for Load Sessions</a>. </p>
+<p>Double-click a regression template. The Select Sessions window appears. </p>
+<p><img alt="Select Sessions for a Regression Chart" src="../../images/Select_Sessions_for_a_Regression_Chart.jpeg" /></p>
+</li>
+<li>
+<p>Optionally browse to the location of a Load Session file in the From File area, and click <strong>Open</strong>. </p>
+<p>The Load Session file appears in the From Repository area.  </p>
+</li>
+<li>
+<p>Optionally search for Load Sessions (see <a href="../load_sessions/#searching-for-load-sessions">Searching for Load Sessions</a>). </p>
 </li>
 <li>
 <p>In the From Repository area, select a Load Session you wish to use, and click <img alt="add button" src="../../images/add_button.png" />. </p>
-</li>
-</ol>
 <p>The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. </p>
 <p>The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  </p>
-<ol>
-<li>To specify a different session as the main session, select the Load Session in the Selected Sessions area and click <img alt="set as main" src="../../images/set_as_main.png" />.</li>
+</li>
+<li>
+<p>To specify a different session as the main session, select the Load Session in the Selected Sessions area and click <img alt="set as main" src="../../images/set_as_main.png" />.</p>
+</li>
 </ol>
 <p><strong>To remove a Load Session from a regression chart:</strong>  </p>
 <ol>
 <li>Select the regression chart in the Charts area. </li>
 <li>Click the <strong>Settings</strong> tab. </li>
-<li>Click <img alt="Selection Sessions button" src="../../images/select_sessions_button.png" />. The Select Sessions window appears. </li>
-</ol>
+<li>
+<p>Click <img alt="Selection Sessions button" src="../../images/select_sessions_button.png" />. The Select Sessions window appears. </p>
 <p><img alt="Select Sessions window" src="../../images/select_sessions.jpeg" /></p>
-<ol>
-<li>Select the Load Session you wish to remove from the Selected Sessions area. </li>
+</li>
+<li>
+<p>Select the Load Session you wish to remove from the Selected Sessions area. </p>
+</li>
 <li>Click <img alt="" src="../../images/remove_button.png" />. The selected Load Session is removed from the Selected Sessions area. It is still available for use in WebLOAD Analytics, and remains listed in the From Repository area. </li>
 </ol>
 <h2 id="creating-a-statistical-correlation-chart">Creating a Statistical Correlation Chart</h2>
@@ -3640,11 +3644,13 @@
 <p>Note that you can specify which measurements to display in the graph, by selecting or deselecting them in the in the table at the bottom of the Chart view tab.  </p>
 <p>The table in the statistical correlation chart displays correlation information in two columns – Correlation and Direction.  </p>
 <ul>
-<li>Correlation is the linear correlation coefficient. It is a number between 0 and 1, with 1 being the highest possible correlation.  </li>
-</ul>
+<li>
+<p>Correlation is the linear correlation coefficient. It is a number between 0 and 1, with 1 being the highest possible correlation.  </p>
 <p>The measurements are listed in order of correlation, with the highest first. </p>
-<ul>
-<li>Direction indicates whether correlation is positive (the measurement goes up when the leading measurement goes up, or down when the leading measurement goes down) or negative (the measurement goes up when the leading measurement goes down, or down when the leading measurement goes up). </li>
+</li>
+<li>
+<p>Direction indicates whether correlation is positive (the measurement goes up when the leading measurement goes up, or down when the leading measurement goes down) or negative (the measurement goes up when the leading measurement goes down, or down when the leading measurement goes up). </p>
+</li>
 </ul>
 <p><strong><em>Example</em></strong> </p>
 <p>Suppose you notice a time frame in which throughput suddenly decreases. Generate a Throughput Correlation chart, use the Time Filter to view the relevant time period, and look for measurements with a high correlation  </p>
@@ -3684,12 +3690,14 @@
 <p>Although you can modify any template to create your own custom chart, the Blank Template is unique in that its Measurement Selection area is empty. </p>
 <p><strong>To generate a chart based on the Blank Template:</strong> </p>
 <ol>
-<li>In the Navigation area, click the <strong>Gallery</strong> tab. The Templates Gallery appears. </li>
-</ol>
+<li>
+<p>In the Navigation area, click the <strong>Gallery</strong> tab. The Templates Gallery appears. </p>
 <p><img alt="Templates Gallery" src="../../images/templates_gallery.png" /></p>
-<ol>
-<li>Select <strong>User Defined</strong>  <strong>Blank Template</strong>. The Settings tab of the Blank Template opens in the Charts area. </li>
-<li>Edit the Settings of the template as desired. See<a href="../changing_chart_settings/"><code></code><em>Changing Chart Settings</em> </a> Note that you must specify at least one measurement in order to generate a chart. </li>
+</li>
+<li>
+<p>Select <strong>User Defined</strong> &gt; <strong>Blank Template</strong>. The Settings tab of the Blank Template opens in the Charts area. </p>
+</li>
+<li>Edit the Settings of the template as desired. See <a href="../changing_chart_settings/">`<em>Changing Chart Settings</em> </a> Note that you must specify at least one measurement in order to generate a chart. </li>
 <li>Click <img alt="chart preview" src="../../images/chart_preview_button.png" />. A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  </li>
 </ol>
 <p>You can now analyze, print, or publish the chart.</p>
@@ -3709,41 +3717,47 @@
 <p>The Blank Regression Template can be modified or you can use it to create additional custom interactive regression templates, as described in<a href="#creating-a-regression-chart-from-the-blank-regression-template">Creating an Interactive Regression Template from the Blank Regression Template</a>. Although you can modify any regression template to create your own custom regression template, the Blank Regression Template is unique in that it is interactive. </p>
 <p><strong>To generate a regression chart based on the Blank Regression Template:</strong> </p>
 <ol>
-<li>In the Navigation area, click the <strong>Gallery</strong> tab. The Templates Gallery appears. </li>
-</ol>
+<li>
+<p>In the Navigation area, click the <strong>Gallery</strong> tab. The Templates Gallery appears. </p>
 <p><img alt="Templates Gallery" src="../../images/templates_gallery.png" /></p>
-<ol>
-<li>Select <strong>User Defined</strong>  <strong>Blank Regression Template</strong>. The Select Sessions window appears. </li>
-<li>Optionally browse to the location of a Load Session file in the From File area, and click <strong>Open</strong>. </li>
-</ol>
+</li>
+<li>
+<p>Select <strong>User Defined</strong> &gt; <strong>Blank Regression Template</strong>. The Select Sessions window appears. </p>
+</li>
+<li>
+<p>Optionally browse to the location of a Load Session file in the From File area, and click <strong>Open</strong>. </p>
 <p>The Load Session file appears in the From Repository area.  </p>
-<ol>
-<li>Optionally search for Load Sessions (see<a href="../load_sessions/#searching-for-load-sessions"><code></code><em>Searching for Load Sessions</em> </a>. </li>
-<li>In the From Repository area, select a Load Session you wish to use, and click <img alt="add button" src="../../images/add_button.png" />. </li>
-</ol>
+</li>
+<li>
+<p>Optionally search for Load Sessions (see <a href="../load_sessions/#searching-for-load-sessions"><em>Searching for Load Sessions</em> </a>). </p>
+</li>
+<li>
+<p>In the From Repository area, select a Load Session you wish to use, and click <img alt="add button" src="../../images/add_button.png" />. </p>
 <p>The Load Session moves to the Selected Sessions area. Repeat this step to include all the Load Sessions you wish to compare. </p>
 <p>The first session you select is set as the main Load Session. The main session appears in red. The main session is the session to which all other Load Sessions are compared.  </p>
-<ol>
-<li>To specify a different session as the main session, select the Load Session in the Selected Sessions area and click<img alt="set as main button" src="../../images/set_as_main.png" />. </li>
-<li>Edit the Settings of the template as desired. See<a href="../changing_chart_settings/"><code></code><em>Changing Chart Settings</em> </a> Note that you must specify at least one measurement in order to create a template. </li>
+</li>
+<li>
+<p>To specify a different session as the main session, select the Load Session in the Selected Sessions area and click <img alt="set as main button" src="../../images/set_as_main.png" />. </p>
+</li>
+<li>Edit the Settings of the template as desired. See <a href="../changing_chart_settings/"><em>Changing Chart Settings</em> </a> Note that you must specify at least one measurement in order to create a template. </li>
 <li>Click <img alt="chart preview" src="../../images/chart_preview_button.png" />. A progress window appears while the chart is generated. The chart is displayed in the Preview tab.  </li>
 </ol>
 <p>You can now analyze, print, or publish the chart.  </p>
 <ul>
-<li>For information about analyzing the chart, see<a href="#customizing-interactive-charts"><em>Customizing Interactive Charts</em> </a>  </li>
-<li>For information about printing your chart, see<a href="#printing-a-chart"><em>Printing a Chart</em> </a>  </li>
-<li>For information about publishing your chart, see<a href="#publishing-charts"><em>Publishing Charts</em> </a> </li>
+<li>For information about analyzing the chart, see <a href="#customizing-interactive-charts"><em>Customizing Interactive Charts</em> </a>  </li>
+<li>For information about printing your chart, see <a href="#printing-a-chart"><em>Printing a Chart</em> </a>  </li>
+<li>For information about publishing your chart, see <a href="#publishing-charts"><em>Publishing Charts</em> </a> </li>
 </ul>
 <h2 id="navigating-through-a-chart">Navigating through a Chart</h2>
 <p>You can view and navigate through a chart in the Preview tab.  </p>
 <p><strong>To view and navigate through a chart:</strong> </p>
 <ol>
-<li>Click the <strong>Preview</strong> tab. </li>
-</ol>
+<li>
+<p>Click the <strong>Preview</strong> tab. </p>
 <p><strong>Note:</strong> If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click <img alt="chart preview icon" src="../../images/chart_preview_icon.png" /> . A Preview tab appears.</p>
-<ol>
-<li>Click the appropriate navigation button to navigate through your report, according to the information in the following tables.</li>
-</ol>
+</li>
+<li>
+<p>Click the appropriate navigation button to navigate through your report, according to the information in the following tables.</p>
 <table>
 <thead>
 <tr>
@@ -3753,50 +3767,52 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_one.png" /></td>
 <td>Scroll to the beginning of your report.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_two.png" /></td>
 <td>Scroll back one page.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_three.png" /></td>
 <td>Scroll forward one page.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_four.png" /></td>
 <td>Scroll to the end of your report.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_five.png" /></td>
 <td>Show the actual page size.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_six.png" /></td>
+<td>Fit the page to the window</td>
+</tr>
+<tr>
+<td><img alt="" src="../../images/option_seven.png" /></td>
 <td>Fit the page width to the window.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_eight.png" /></td>
 <td>Zoom in.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/option_nine.png" /></td>
 <td>Zoom out.</td>
 </tr>
 </tbody>
 </table>
+</li>
+</ol>
 <h2 id="customizing-interactive-charts">Customizing Interactive Charts</h2>
 <p>The <img alt="interactive chart icon" src="../../images/interactive_chart_icon.png" /> icon displayed adjacent to a template in the gallery indicates that a chart created with this template is an interactive chart. An interactive chart contains a toolbar, which provides a variety of tools for analyzing and presenting the data in the chart.  </p>
 <p><strong>To use the tools of an interactive chart:</strong> </p>
 <ol>
 <li>
 <p>Click the <strong>Chart View</strong> tab. </p>
-</li>
-<li>
 <p><strong>Note:</strong> If the chart has not yet been generated, double-click the template. The chart is generated and displayed in the Chart View tab.</p>
-</li>
-<li>
 <p><img alt="Interactive Report – Chart View Tab" src="../../images/Interactive_Report%20_Chart_View_Tab.jpeg" /></p>
 </li>
 <li>
@@ -3816,77 +3832,77 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/copy_to_clipboard.png" /></td>
 <td>Copy To Clipboard</td>
-<td>Copy the chart or data to the clipboard. It can then be pasted (using Ctrl+V) into another application in any of the following formats:<br />. Bitmap – A raster graphic, which can be pasted into applications such as Microsoft Paint.<br />. Metafile – A vector graphic which can be pasted into applications such as Microsoft Word. <br />. Text – Data only, which can be pasted into applications such as Microsoft Excel.</td>
+<td>Copy the chart or data to the clipboard. It can then be pasted (using Ctrl+V) into another application in any of the following formats:<br />- Bitmap – A raster graphic, which can be pasted into applications such as Microsoft Paint.<br />- Metafile – A vector graphic which can be pasted into applications such as Microsoft Word. <br />- Text – Data only, which can be pasted into applications such as Microsoft Excel.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/gallery.png" /></td>
 <td>Gallery</td>
 <td>Change the line type to any type found in the gallery, such as bar-chart, area, etc.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/anti_aliasing.png" /></td>
 <td>Anti Aliasing</td>
 <td>Smooth jagged edges.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/Palette.png" /></td>
 <td>Palette</td>
 <td>Change all colors to a predefined palette from the list of palettes.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/twoD_threeD.png" /></td>
 <td>2D/3D</td>
 <td>Switch between 2D mode and 3D mode with depth.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/rotate_view.png" /></td>
 <td>Rotated View</td>
 <td>Rotate the chart. Only applicable in 3D mode.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/rotate_x_axis.png" /></td>
 <td>Rotate X Axis</td>
 <td>Rotate the chart around the X axis. Only applicable in Rotated View mode.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/rotate_y_axis.png" /></td>
 <td>Rotate Y Axis</td>
 <td>Rotate the chart around the Y axis. Only applicable in Rotated View mode.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/clustered.png" /></td>
 <td>Clustered</td>
 <td>If there are several series, place them behind each other, instead of next to each other. Only applicable in 3D mode.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/axis_setting.png" /></td>
 <td>Axes Settings</td>
 <td>Control aspects of the X Axis and Y Axis.<br /><strong>Note</strong>: In WebLOAD Analytics there is often more than one Y Axis, so the Y Axis setting has no effect. Instead, right- click the Y Axis you wish to change.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/point_label.png" /></td>
 <td>Point Label</td>
 <td>Add labels with the numeric value of each point.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/data_editor.png" /></td>
 <td>Data Editor</td>
 <td>Show the data as a list.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/legend_box.png" /></td>
 <td>Legend Box</td>
 <td>Display a legend listing the series names, their color, and their marker shape.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/zoom.png" /></td>
 <td>Zoom</td>
 <td>Enlarge image. Click Zoom again to zoom out.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="" src="../../images/properties.png" /></td>
 <td>Properties</td>
 <td>Set the various chart settings.</td>
 </tr>
@@ -3897,9 +3913,11 @@
 <ul>
 <li>Doc (Microsoft Word). </li>
 <li>PDF (Adobe Reader). </li>
-<li>XLSX (Excel). Please note the following: </li>
+<li>XLSX (Excel). Please note the following: <ul>
 <li>The summary table (below the graph) is exported if it is displayed. To ensure that the summary table is displayed, set the SHOW_TABLES parameter to True . </li>
 <li>To work with the data more conveniently, change the Chart Preview master template to <em>Raw</em>. </li>
+</ul>
+</li>
 <li>XSL (Excel 97-2003). Note that it is preferable to use XSLX format whenever possible. </li>
 <li>HTML (Browser, Internet Explorer). </li>
 <li>RTF (Rich Text Format). Note that it is preferable to use Doc format whenever possible. </li>
@@ -3907,17 +3925,19 @@
 </ul>
 <p><strong>To publish a chart:</strong> </p>
 <ol>
-<li>In the Charts area, click the <strong>Preview</strong> tab.  </li>
-</ol>
+<li>
+<p>In the Charts area, click the <strong>Preview</strong> tab.  </p>
 <p><strong>Note:</strong> If the chart is an interactive chart and a preview has not yet been generated, click the Chart View tab, then click <img alt="chart preview icon" src="../../images/chart_preview_icon.png" /> . A Preview tab appears. </p>
-<ol>
-<li>Click <img alt="chart publish" src="../../images/chart_publish.png" /> to publish your chart as the default format specified in the Preferences window, </li>
-</ol>
+</li>
+<li>
+<p>Click <img alt="chart publish" src="../../images/chart_publish.png" /> to publish your chart as the default format specified in the Preferences window, </p>
 <p>-Or- </p>
 <p>Click the adjacent arrow to select a different format.  </p>
 <p>The Save As window opens to the location specified in the Preferences window. </p>
-<ol>
-<li>Select a location and name for your chart and click <strong>Save</strong>. The chart is published in the chosen format and saved to the location you specified.</li>
+</li>
+<li>
+<p>Select a location and name for your chart and click <strong>Save</strong>. The chart is published in the chosen format and saved to the location you specified.</p>
+</li>
 </ol>
 
 

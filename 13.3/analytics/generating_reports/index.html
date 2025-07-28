@@ -3499,11 +3499,11 @@
 <p>A report is a compilation of all or some of the charts open in the Charts area. A prerequisite to generating a report is to create the charts you wish to include in the report. </p>
 <p><strong>To generate a WebLOAD Analytics report:</strong> </p>
 <ol>
-<li>Select <strong>File</strong> &gt; <strong>Generate Report</strong> or click <img alt="generate report" src="../../images/generate_report_icon.png" /></li>
-</ol>
+<li>
+<p>Select <strong>File</strong> &gt; <strong>Generate Report</strong> or click <img alt="generate report" src="../../images/generate_report_icon.png" /></p>
 <p>The Generate Report: Report Settings window appears, listing all open charts.</p>
 <p><img alt="generate report settings" src="../../images/generate_report_settings.png" /></p>
-<ol>
+</li>
 <li>
 <p>Specify a name for the report. </p>
 </li>
@@ -3520,10 +3520,10 @@
 <p>A Preview of the report appears. You can: </p>
 <ul>
 <li>Navigate the report using the navigation bar. </li>
-<li>Print the report (see<a href="#printing-a-report"><code></code><em>Printing a Report</em> </a>. </li>
-<li>Publish the report to various formats (see<a href="#publishing-reports"><code></code><em>Publishing Reports</em> </a>. </li>
-<li>Save the report to file (see<a href="#saving-reports"><code></code><em>Saving Reports</em> </a>.  </li>
-<li>Modify global report parameters (see<a href="../defining_preferences/"><code></code><em>Defining Your Preferences</em> </a>. </li>
+<li>Print the report (see<a href="#printing-a-report"><em>Printing a Report</em> </a>). </li>
+<li>Publish the report to various formats (see<a href="#publishing-reports"> <em>Publishing Reports</em> </a>). </li>
+<li>Save the report to file (see<a href="#saving-reports"><em>Saving Reports</em> </a>).  </li>
+<li>Modify global report parameters (see<a href="../defining_preferences/"><em>Defining Your Preferences</em> </a>). </li>
 </ul>
 <h2 id="printing-a-report">Printing a Report</h2>
 <p><strong>To print a WebLOAD Analytics report:</strong>  </p>
@@ -3538,9 +3538,11 @@
 <ul>
 <li>Doc (Microsoft Word). </li>
 <li>PDF (Adobe Reader). </li>
-<li>XLS (Excel). Note the following: </li>
-<li>Summary tables (below the graph) are exported if they are displayed. To ensure that summary tables are displayed, set the SHOW_TABLES parameter to True in the charts you want displayed (as described in<a href="../changing_chart_settings/#modifying-chart-parameters"><code></code><em>Modifying Chart Parameters</em> </a>. </li>
-<li>To work with the data more conveniently, change the Reports master template to <em>Raw</em> (as described in<a href="../defining_preferences/#defining-your-analytics-preferences"><code></code><em>Defining Your Analytics Preferences</em> </a>. </li>
+<li>XLS (Excel). Note the following: <ul>
+<li>Summary tables (below the graph) are exported if they are displayed. To ensure that summary tables are displayed, set the SHOW_TABLES parameter to True in the charts you want displayed (as described in<a href="../changing_chart_settings/#modifying-chart-parameters"><em>Modifying Chart Parameters</em> </a>). </li>
+<li>To work with the data more conveniently, change the Reports master template to <em>Raw</em> (as described in<a href="../defining_preferences/#defining-your-analytics-preferences"><em>Defining Your Analytics Preferences</em> </a>). </li>
+</ul>
+</li>
 <li>XSL (Excel 97-2003). Note that it is preferable to use XSLX format whenever possible. </li>
 <li>HTML (Browser, Internet Explorer). </li>
 <li>RTF (Rich Text Format). Note that it is preferable to use Doc format whenever possible. </li>
@@ -3555,23 +3557,23 @@
 </li>
 <li>
 <p>Click <img alt="publish" src="../../images/chart_publish.png" /> in the report preview toolbar to publish your report as the default format specified in the Preferences window, </p>
-</li>
-</ol>
 <p>-Or- </p>
 <p>Click the adjacent arrow to select a different report format.  </p>
 <p>The Save As window opens to the location specified in the Preferences window. </p>
-<ol>
-<li>Select a location and name for your report and click <strong>Save</strong>. The report is published in the format chosen and saved to the location you specified. </li>
+</li>
+<li>
+<p>Select a location and name for your report and click <strong>Save</strong>. The report is published in the format chosen and saved to the location you specified. </p>
+</li>
 </ol>
 <h2 id="saving-reports">Saving Reports</h2>
 <p>When you save your report, it is saved to a default location, unless you specify a different location in the Save to field. To change the default location, see<a href="../defining_preferences/#defining-your-analytics-preferences"><code></code><em>Defining Your Analytics Preferences</em> </a> </p>
 <p><strong>To save your report:</strong>  </p>
 <ol>
-<li>Select <strong>File</strong>  <strong>Save</strong> or click <img alt="save" src="../../images/save_report.png" />. </li>
-</ol>
+<li>
+<p>Select <strong>File</strong> &gt; <strong>Save</strong> or click <img alt="save" src="../../images/save_report.png" />. </p>
 <p>If this is the first time you are saving your report, the Save As window opens. If you have already specified a location in the Save As window, your file is saved to the default save location. </p>
 <p><img alt=" Save As" src="../../images/save_as.png" /></p>
-<ol>
+</li>
 <li>
 <p>Enter the path to which you wish to save the report, or click <strong>Browse</strong> to navigate to the location. </p>
 </li>
@@ -3580,40 +3582,40 @@
 </li>
 </ol>
 <h2 id="opening-saved-reports">Opening Saved Reports</h2>
-<p>WebLOAD Analytics reports are by default saved to the location specified in the Analytics tab of the Preferences window. You can open a previously saved report from the Recent Reports tab, or you can retrieve your report directly from your file system. For information about changing the default location for saved reports, see<a href="../defining_preferences/#defining-your-analytics-preferences"><code></code><em>Defining Your Analytics Preferences</em> </a>  </p>
+<p>WebLOAD Analytics reports are by default saved to the location specified in the Analytics tab of the Preferences window. You can open a previously saved report from the Recent Reports tab, or you can retrieve your report directly from your file system. For information about changing the default location for saved reports, see<a href="../defining_preferences/#defining-your-analytics-preferences">`<em>Defining Your Analytics Preferences</em> </a>  </p>
 <h2 id="opening-reports-from-the-recent-reports-tab">Opening Reports from the Recent Reports Tab</h2>
 <p><strong>To open a report from the Recent Reports window:</strong> </p>
 <ol>
-<li>Click the <strong>Recent</strong> <strong>Reports</strong> tab. The Recent Reports window opens. </li>
-</ol>
+<li>
+<p>Click the <strong>Recent</strong> <strong>Reports</strong> tab. The Recent Reports window opens. </p>
 <p><img alt="Recent Reports Window* " src="../../images/recent_reports.png" /></p>
 <blockquote>
 <p><strong>Note:</strong> The number of reports listed in this window is defined in the Preferences  window (see<a href="../defining_preferences/"><em>Defining Your Preferences</em> </a>. By default, the 20 most recent reports are listed chronologically, with the most recent listed first. </p>
 </blockquote>
-<ol>
+</li>
 <li>
 <p>Click the Name column header to toggle between the following sorting options: </p>
-</li>
-<li>
-<p>Sort alphabetically (A-Z). </p>
-</li>
+<ul>
+<li>Sort alphabetically (A-Z). </li>
 <li>Sort alphabetically (Z-A). </li>
-<li>
-<p>Display the most recently used reports first. </p>
+<li>Display the most recently used reports first. </li>
+</ul>
 </li>
 <li>
 <p>Double-click the report you wish to open. You can simultaneously open multiple reports by holding down <strong>Ctrl</strong> or <strong>Shift</strong>, clicking the reports, and pressing <strong>Enter</strong>. </p>
+<p>The charts comprising the report are displayed in the Charts area. All previously opened charts are closed.  </p>
 </li>
 </ol>
-<p>The charts comprising the report are displayed in the Charts area. All previously opened charts are closed.  </p>
 <p><strong>Note:</strong> To publish or print the report, you must first click  <img alt="generate report" src="../../images/generate_report_icon.png" /> to generate a report preview, and then use the publish and print options in the report preview toolbar. </p>
 <h2 id="opening-a-report-from-the-file-system">Opening a Report From the File System</h2>
 <p><strong>To open a report from the file system:</strong> </p>
 <ol>
 <li>Select <strong>File</strong> &gt; <strong>Open Report</strong> or click <img alt="open" src="../../images/open.png" />. The Select Report File window appears.  </li>
-<li>Browse to the report you wish to open and click <strong>Open</strong>. Note that WebLOAD Analytics reports have a .report extension. </li>
-</ol>
+<li>
+<p>Browse to the report you wish to open and click <strong>Open</strong>. Note that WebLOAD Analytics reports have a <code>.report</code> extension. </p>
 <p>The charts comprising the report are displayed in the Charts area. All previously opened charts are closed.  </p>
+</li>
+</ol>
 <blockquote>
 <p><strong>Note:</strong> To publish or print the report, you must first click  <img alt="generate report" src="../../images/generate_report_icon.png" /> to generate a report preview, and then use the publish and print options in the report preview toolbar.</p>
 </blockquote>
