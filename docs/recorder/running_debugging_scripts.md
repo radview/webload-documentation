@@ -868,7 +868,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 1. Click **Add**.
 
-    The box above the Add button displays **“`<text to find>`”**.
+    The box above the Add button displays **"`<text to find>`"**.
 
     ![Defining Content Validation](../images/def_cont_val.png)
 
@@ -876,7 +876,7 @@ You can use the **Response Validation** feature to validate a Web page’s conte
 
 1. Define a JavaScript expression and whether it must or must not appear in the Web page, as follows:
 
-    1. Delete the string **“`<text to find>`”** and instead do either or both of the following:
+    1. Delete the string **"`<text to find>`"** and instead do either or both of the following:
 
           - Enter a text string enclosed in quote marks. For example, "**Welcome**".
           - Enter a parameter without quote marks. For example, **TodaysDate()**. Alternatively, you can click **Add Parameter** and select a parameter from the list of predefined parameters.
@@ -960,11 +960,11 @@ enables you to convert the dynamic value into the correct value for the specific
 
 1. In the subsequent block of code, replace
 
-    wlHttp.FormData[“session_id”] = `<static session id>`
+    wlHttp.FormData["session_id"] = `<static session id>`
 
     with
 
-    `wlHttp.FormData[“session_id”] = session_id`
+    `wlHttp.FormData["session_id"] = session_id`
 
     The script is edited. You can now run the script successfully without receiving error messages.
 

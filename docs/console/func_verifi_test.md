@@ -105,7 +105,7 @@ Use Text verifications to verify the absence or presence of selected text expres
 
 ## User-Defined Transactions and Verification
 
-Using WebLOAD Console, you can define application-level transaction and verification criteria to determine whether the transaction succeeded or failed. When a user-defined transaction executes, WebLOAD Console initiates a timer and a counter. The timer measures the time required to execute the transaction. The counter tracks the success and the failure rate of the transactions, based on user-defined criteria. For each transaction, the counter automatically increments either the “successful transaction count” or the “failed transaction count.” WebLOAD Console also lets you define the behavior of the program depending on the transaction results.
+Using WebLOAD Console, you can define application-level transaction and verification criteria to determine whether the transaction succeeded or failed. When a user-defined transaction executes, WebLOAD Console initiates a timer and a counter. The timer measures the time required to execute the transaction. The counter tracks the success and the failure rate of the transactions, based on user-defined criteria. For each transaction, the counter automatically increments either the "successful transaction count" or the "failed transaction count." WebLOAD Console also lets you define the behavior of the program depending on the transaction results.
 
 WebLOAD Console tracks all of the results from user-defined transactions and integrates the data into the WebLOAD Statistics Report, including the timer and counter statistics as well as statistics on specific failures. The results are then automatically displayed with the other WebLOAD Console statistical information.
 
@@ -117,9 +117,9 @@ Application-level transactions and verifications are defined through the WebLOAD
 
 
 ```javascript
-BeginTransaction(“<Transaction-Name>“)
+BeginTransaction("<Transaction-Name>")
       <any valid JavaScript statements>
-EndTransaction(“<Transaction-Name>“,
+EndTransaction("<Transaction-Name>",
             <Verification-Expression>,<Save-Flag>)
 ```
 
@@ -135,18 +135,18 @@ Where:
 The following example illustrates implementing a user-defined transaction:
 
 ```javascript
-BeginTransaction(“UpdateBankAccount”)
-   /* The user-defined transaction “UpdateBankAccount” starts*/ 
+BeginTransaction("UpdateBankAccount")
+   /* The user-defined transaction "UpdateBankAccount" starts*/ 
 try {
-wlHttp.ExpectNavigation(“http://…”) 
-wlHttp.Navigate("www.....com”)
+wlHttp.ExpectNavigation("http://…") 
+wlHttp.Navigate("www.....com")
 wlHttp.SyncDOM(1);
 }
 
    /* The body of the transaction\*/
 <any valid JavaScript statement>
 
-EndTransaction(“UpdateBankAccount”,
+EndTransaction("UpdateBankAccount",
    UpdateBankAccount\_VerificationFunction()) 
 function UpdateBankAccount\_VerificationFunction()
 
@@ -154,7 +154,7 @@ function UpdateBankAccount\_VerificationFunction()
    return WLSuccess;
 }
 
-/* The user-defined transaction “UpdateBankAccount” ends\*/
+/* The user-defined transaction "UpdateBankAccount" ends\*/
 ```
 
 
@@ -201,7 +201,7 @@ WebLOAD Console enables you to record specific events and transaction instances 
 
 Record transaction events with the following syntax:
 
-`ReportEvent (“<event-name>“, [“<description>“])`
+`ReportEvent ("<event-name>", ["<description>"])`
 
 Where:
 
@@ -217,7 +217,7 @@ The default reason for failure of basic transactions is General-Failure. Unless 
 
 Set the reason for a transaction failure using the following syntax:
 
-`SetFailureReason (“<failure-reason>“)`
+`SetFailureReason ("<failure-reason>")`
 
 
 
@@ -232,12 +232,12 @@ function UpdateBankAccount_VerificationFunction()
       if <Condition-success> then
          return(WLSuccess)} 
          else
-      if (document. URL == “../no-login”) then { 
-         SetFailureReason(“User Not Logged”) 
+      if (document. URL == "../no-login") then { 
+         SetFailureReason("User Not Logged") 
          return(WLError) }
       else
-      if (document.URL == “...wrong-	password”) then { 
-         SetFailureReason(“Wrong Password”) 
+      if (document.URL == "...wrong-	password") then { 
+         SetFailureReason("Wrong Password") 
          return(WLError); }
       else
          return(WLSevereError)
@@ -247,13 +247,13 @@ function UpdateBankAccount_VerificationFunction()
 Explanation:
 
 - `Return(WLSuccess)` ‒ indicates that the actual transaction succeeded and it is added to the SuccessfulUpdateBankAccount transactions counter.
-- The `SetFailureReason()` function accepts a string as a parameter. This string is used to identify the cause of the transaction failure (“User Not Logged”, `“Wrong Password”`, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.
-- When the reason for failure is `“User Not Logged”` or `“Wrong Password”`, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.
-- If you mark the transaction as failed, but do not specify any failure reason, the system registers a `“General Failure”` which is the default failure severity.
+- The `SetFailureReason()` function accepts a string as a parameter. This string is used to identify the cause of the transaction failure ("User Not Logged", `"Wrong Password"`, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.
+- When the reason for failure is `"User Not Logged"` or `"Wrong Password"`, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.
+- If you mark the transaction as failed, but do not specify any failure reason, the system registers a `"General Failure"` which is the default failure severity.
 
 
 
-If during the execution of a test the above transaction succeeded 15 times and failed 5, and the `SetFailureReason()` function was called 3 times with the string `“Wrong Password”` and 2 times with the string `“User Not Logged”`, the Statistics Report appears as follows:
+If during the execution of a test the above transaction succeeded 15 times and failed 5, and the `SetFailureReason()` function was called 3 times with the string `"Wrong Password"` and 2 times with the string `"User Not Logged"`, the Statistics Report appears as follows:
 
 |**Test**|**Time**|
 | :- | :- |
@@ -265,7 +265,7 @@ If during the execution of a test the above transaction succeeded 15 times and f
 |UpdateBankAccount timer|1\.2 sec|
 
 
-All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in [*Viewing Verification Test Results](#viewing-verification-test-results).
+All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the "actual" results, described in [*Viewing Verification Test Results](#viewing-verification-test-results).
 
 
 
@@ -278,7 +278,7 @@ When a verification test fails:
 - The failure is logged in the Log Window, described in [*Viewing Error Information in Log window](#viewing-error-information-in-the-log-window).
 - The failure is added to the Data Drilling report, described in [*Data Drilling* ](#data-drilling).
 
-All verification failures can be viewed in the Event Viewer, which displays the “actual” results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.
+All verification failures can be viewed in the Event Viewer, which displays the "actual" results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.
 
 
 
@@ -358,7 +358,7 @@ You can view the saved log file using Microsoft Access or Excel.
 
 When testing the integrity of your Web application, it is important to see not only if a given transaction succeeded or failed, but also the reasons for the failure to pinpoint the transaction’s exact weak points and bottlenecks. Data Drilling enables you to display a detailed description of all user-defined and named transactions to the instance level.
 
-With Data Drilling you can view all transaction failures and the reasons for them. Data Drilling reports provide a complete breakdown of all information about a selected event. Click an event entry to bring up detailed information about that event in the Event Viewer. The Event Viewer provides a graphic illustration of the verification failure event, displaying the “actual” results, and a description of the error.
+With Data Drilling you can view all transaction failures and the reasons for them. Data Drilling reports provide a complete breakdown of all information about a selected event. Click an event entry to bring up detailed information about that event in the Event Viewer. The Event Viewer provides a graphic illustration of the verification failure event, displaying the "actual" results, and a description of the error.
 
 
 

@@ -6,7 +6,7 @@ system’s scalability is about how these two factors (performance and reliabili
 
 WebLOAD was designed as a protocol-level load testing tool, enabling the QA
 
-professional to “bombard” the system under test with protocol-level commands and transactions, simulating real usage of a large amount of users. The main and most important protocol for load testing Internet applications is the HTTP protocol.
+professional to "bombard" the system under test with protocol-level commands and transactions, simulating real usage of a large amount of users. The main and most important protocol for load testing Internet applications is the HTTP protocol.
 
 WebLOAD supports the common HTTP methods and headers, as defined in the HTTP RFCs, most notably RFC 2616 (1999), that was defined by the W3C and the IETF.The WebLOAD DOM extension set includes objects, methods, properties, and functions that support designing tests at the HTTP protocol level. Using the DOM, functional and verification tests can be done, to check the system’s reliability under load.
 
@@ -266,11 +266,11 @@ The collection indices are the field names (HTML name attributes). Before you ca
 - hidden controls
 
 Generally, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD) sends a URL-encoded request to the server, the data is HTTP encoded. Different clients
-– browsers or JavaScript functions such as Ajax – perform encoding with slight differences. Encoding form data replaces special characters such as blanks, “>“ signs, and so on, with “%xx” (an ASCII hexa number). For example, a space is encoded as “%20” or as a “+”.
+– browsers or JavaScript functions such as Ajax – perform encoding with slight differences. Encoding form data replaces special characters such as blanks, ">" signs, and so on, with "%xx" (an ASCII hexa number). For example, a space is encoded as "%20" or as a "+".
 
 The `Get()` method converts a URL address to contain only allowed URL characters. The `Post()` method converts the content of forms to contain only allowed URL characters. Forms contain one of the following content types:
 
-- `FormData [“key”]` – a value
+- `FormData ["key"]` – a value
 - `Data []` – raw information
 - `DataFile []` – both a value and raw information
 
@@ -363,9 +363,9 @@ You can coordinate the `FormData` property with input data files. In this case, 
 
 The following lines illustrate the syntax:
 
-`wlHttp.FormData[“InputFile.wlFile-Name”] = ”myFavoritePicture”` 
+`wlHttp.FormData["InputFile.wlFile-Name"] = "myFavoritePicture"` 
 
-`wlHttp.FormData[“InputFile.wlContent-Type] = ”bmp”`
+`wlHttp.FormData["InputFile.wlContent-Type] = "bmp"`
 
 
 
@@ -702,14 +702,14 @@ wlHttp.FormData["password"] = "Start100"
 wlHttp.FormData["submit1"] = "Login"
 
 //Setting the cookie
-wlCookie.Set(“UserID”, “zapd10”, “www.abcdef.net”, “/”, “Sun, 19- Jun-2011 17:29:00 GMT”)
+wlCookie.Set("UserID", "zapd10", "www.abcdef.net", "/", "Sun, 19- Jun-2011 17:29:00 GMT")
 
 //WebLOAD submits the cookie 
 wlHttp.Post("https://www.abcdef.net/default.aspx")
 
 //Getting the cookie
 CookieValue = wlCookie.Get("UserID")
-//The value returned in CookieValue is “zapd10”
+//The value returned in CookieValue is "zapd10"
 ```
 
 In some cases it is also necessary to delete the cookie settings. You can do this by entering:
@@ -872,7 +872,7 @@ WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user 
 
 WebLOAD handles authentication in playback in the following way:
 
-1. WebLOAD sends a regular request with no request for authentication, to which the server responds with an “unauthorized” error (401), and a prompt to enter a username and password.
+1. WebLOAD sends a regular request with no request for authentication, to which the server responds with an "unauthorized" error (401), and a prompt to enter a username and password.
 1. If WebLOAD is using:
      - **Basic authentication**, WebLOAD encrypts the username and password in `wlHttp.Username` and `wlHttp.Password`, and makes a request.
     - **NTLM authentication**, WebLOAD sets the following:

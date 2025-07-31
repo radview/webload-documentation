@@ -1,6 +1,6 @@
 # Basic Concepts
 
-This document is a “bottom up” introduction to basic concepts in Grafana, and can be used as a starting point to get familiar with core features.
+This document is a "bottom up" introduction to basic concepts in Grafana, and can be used as a starting point to get familiar with core features.
 
 ### Data Source
 
@@ -36,7 +36,7 @@ For more details please refer to [User Auth](../http_api/auth.md)
 
 A Row is a logical divider within a Dashboard, and is used to group Panels together.
 
-Rows are always 12 “units” wide. These units are automatically scaled dependent on the horizontal resolution of your browser. You can control the relative width of Panels within a row by setting their own width.
+Rows are always 12 "units" wide. These units are automatically scaled dependent on the horizontal resolution of your browser. You can control the relative width of Panels within a row by setting their own width.
 
 We utilize a unit abstraction so that Grafana looks great on all screens both small and huge.
 

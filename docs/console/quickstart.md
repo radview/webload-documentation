@@ -166,7 +166,7 @@ The Performance Measurements Manage screen enables defining which statistics to 
 
     The Selecting a Data Source window appears.
 
-1. Click the plus sign (“**+”**) adjacent to **System** to expand the tree, select **Windows platform**, and click **Next**.
+1. Click the plus sign ("**+"**) adjacent to **System** to expand the tree, select **Windows platform**, and click **Next**.
 
 1. Click **Browse** to browse available hosts. In the Host selection dialog box, highlight the name of your computer in the list, and click **Select**.
 
@@ -267,7 +267,7 @@ Create an Integrated report to view the results for additional metrics gathered 
 
 1. In the tree, expand the QuickStart::Total branch.
 
-1. Click the plus sign (“**+**”) adjacent to Hit Time to expand the branch. Then expand the Current Slice branch in the same way. Check the checkbox adjacent to Average (Current Value).
+1. Click the plus sign ("**+**") adjacent to Hit Time to expand the branch. Then expand the Current Slice branch in the same way. Check the checkbox adjacent to Average (Current Value).
 
     Checkmarks appear next to Hit Time, Current Slice, and Average (Current Value).
 
@@ -275,7 +275,7 @@ Create an Integrated report to view the results for additional metrics gathered 
 
 1. Expand Successful Connections and then expand Current Slice. Select the checkbox adjacent to Sum (Current Value).
 
-1. Scroll to the PM@your-system-name branch at the bottom of the tree (PM stands for performance monitor). Click the adjacent plus sign (“+”) to expand the branch. Expand Processor:%Processor Time:\_Time and then expand Current Slice. Check the checkbox adjacent to Average (Current Value).
+1. Scroll to the PM@your-system-name branch at the bottom of the tree (PM stands for performance monitor). Click the adjacent plus sign ("+") to expand the branch. Expand Processor:%Processor Time:\_Time and then expand Current Slice. Check the checkbox adjacent to Average (Current Value).
 
     This choice displays the statistics on CPU processor usage that were collected during the load test.
 

@@ -159,7 +159,7 @@ The first step in defining a Load Template with the WebLOAD Wizard is defining t
 
 5. On the Welcome screen, click **Next**. 
 
-6. Click the “**+**” adjacent to General to expand the tree, select **General Performance Monitor**, and click **Next**. 
+6. Click the "**+**" adjacent to General to expand the tree, select **General Performance Monitor**, and click **Next**. 
 
 7. Click **Browse…** to browse available hosts. In the Host selection dialog box, highlight the name of your computer in the list, and click **Select**. 
 

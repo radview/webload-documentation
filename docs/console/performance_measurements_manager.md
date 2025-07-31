@@ -201,9 +201,9 @@ The following table lists the keystrokes you can use to move in the PMM main win
 |PAGE UP / HOME|Moves the selection to the first item in the configuration tree.|
 |PAGE DOWN|Moves the selection to the bottom item visible in the window.|
 |END|Moves the selection to the last item in the configuration tree.|
-|Plus sign “+” on the numeric keypad|Expands the selected node.|
-|Minus sign “-” on the numeric keypad|Collapses the selected node.|
-|Asterisk “\*” on the numeric keypad|Expands the entire tree below the selected node.|
+|Plus sign "+" on the numeric keypad|Expands the selected node.|
+|Minus sign "-" on the numeric keypad|Collapses the selected node.|
+|Asterisk "\*" on the numeric keypad|Expands the entire tree below the selected node.|
 
 
 
@@ -748,7 +748,7 @@ When this software package is not installed or has not been installed properly, 
 
   1. Type the following command to disable the security settings:
 
-     `$AdminTask setGlobalSecurity {-interactive}”`
+     `$AdminTask setGlobalSecurity {-interactive}"`
 
   1. Type `$AdminConfig` save to save the new configuration.
 
@@ -1068,7 +1068,7 @@ The PMM Oracle database monitor uses SNMP to retrieve statistics.
 
       > **Note:** The port (1161) must match the unused port specified in step 5.
 
-1. Make the “OracleSNMPPeerEncapsulator” service automatic and start it.
+1. Make the "OracleSNMPPeerEncapsulator" service automatic and start it.
 1. Reboot your computer.
 
 
@@ -1319,9 +1319,9 @@ Set the following parameters in `webload.ini` of the Load Generator installation
 
 `(<Install Dir>\bin)`:
 
-`PROTOCOLS=“pmprobeprotocol.dll;JSCOMObject.dll”`
+`PROTOCOLS="pmprobeprotocol.dll;JSCOMObject.dll"`
 
-` PROTOCOLS_NAMES=“Performance Monitor Probe;COM Object”`
+` PROTOCOLS_NAMES="Performance Monitor Probe;COM Object"`
 
 ##### Setting the Probed Measurements
 
@@ -1336,12 +1336,12 @@ You can run the Remote Performance Measurement Manager utility to select the ser
 1. From the Start menu, select **Start** > **Programs** > **<WebLOAD Installation>** > **Utilities** > **Performance Measurements Manager**, to select the servers you want to probe and the measurements that should be received.
 1. Save the selected definitions in any file you choose, for example: `myload.pmm`.
 1. Modify the `C:\Program Files\RadView\WebLOAD\bin\webload.ini` file, as follows:
-    1. Locate the LOAD_PMM_FILE_PATH=““ parameter.
+    1. Locate the LOAD_PMM_FILE_PATH="" parameter.
     1. Insert the path and name of your selected definitions file. For example:
 
-      `LOAD_PMM_FILE_PATH=“C:\\temp\\myload.pmm”`
+      `LOAD_PMM_FILE_PATH="C:\\temp\\myload.pmm"`
 
-> **Note:** Currently, only the “Perfmon” measurements for probing Windows are supported when using the Remote PMM feature.
+> **Note:** Currently, only the "Perfmon" measurements for probing Windows are supported when using the Remote PMM feature.
 
 #### Firewall Settings
 
@@ -1354,9 +1354,9 @@ You can run the Remote Performance Measurement Manager utility to select the ser
 **To change the default port:**
 
 1. Open the C:\Program Files\RadView\WebLOAD\bin\webload.ini file.
-1. Modify the following parameter value from “9000” to a different port number, for example: “9011:”
+1. Modify the following parameter value from "9000" to a different port number, for example: "9011:"
 
-    `TESTTALK_NETWORK_PORT=“9011”.`
+    `TESTTALK_NETWORK_PORT="9011".`
 
 1. Save and close the file.
 1. Exit TestTalk.

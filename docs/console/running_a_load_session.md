@@ -158,7 +158,7 @@ When the All hosts are unreachable or stopped error occurs and the session canno
 
 #### Correcting the Load Session Setup Not Completed Error
 
-When only some of the requested hosts are active, the “Load Session Setup not completed” error message appears as follows:
+When only some of the requested hosts are active, the "Load Session Setup not completed" error message appears as follows:
 
 ![Load Session Setup Not Completed Error Message Box](../images/console_users_guide_2015.png)
 
@@ -338,7 +338,7 @@ When using Throttle Control consider the following:
 - You *cannot* modify a script using Throttle Control.
 - You *cannot* use Throttle Control with the Goal-Oriented Test.
 - You *cannot* use Throttle Control to create a load of more than 20 users in Standalone Workstation mode.
-- If you select the root from the Session Tree and you are testing with more than one Load Machine, WebLOAD Console distributes the load among the Load Machines. During this process, the original schedule is “suspended” for the duration of Throttle Control.
+- If you select the root from the Session Tree and you are testing with more than one Load Machine, WebLOAD Console distributes the load among the Load Machines. During this process, the original schedule is "suspended" for the duration of Throttle Control.
 
 
 

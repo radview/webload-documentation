@@ -26,7 +26,7 @@ ws1.connect();
 //Note that events are handled while in Sleep 
 Sleep(1000);
 
-// Send a message with the text “hi”
+// Send a message with the text "hi"
 ws1.send("hi");
 
 Sleep(1000);

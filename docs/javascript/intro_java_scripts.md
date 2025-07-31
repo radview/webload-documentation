@@ -115,13 +115,13 @@ Essentially, the DOM is a programming API for documents based on an object struc
 
 ### Understanding the DOM Structure
 
-In the DOM, documents have a logical structure that is very much like a tree; to be more precise, that is like a “forest” or “grove”, which can contain more than one tree. Each document contains zero or one doctype nodes, one root element node, and zero or more comments or processing instructions; the root element serves as the root of the element tree for the document. However, the DOM does not specify that documents must be implemented as a tree or a grove, nor does it specify how the relationships among objects be implemented. The DOM is a logical model that may be implemented in any convenient manner. In this specification, we use the term *structure model* to describe the tree-like representation of a document. We also use the term “tree” when referring to the arrangement of those information items which can be reached by using “tree-walking” methods; (this does not include attributes). One important property of DOM structure models is *structural isomorphism*: if any two Document Object Model implementations are used to create a representation of the same document, they will create the same structure model, in accordance with the XML Information Set [Infoset].
+In the DOM, documents have a logical structure that is very much like a tree; to be more precise, that is like a "forest" or "grove", which can contain more than one tree. Each document contains zero or one doctype nodes, one root element node, and zero or more comments or processing instructions; the root element serves as the root of the element tree for the document. However, the DOM does not specify that documents must be implemented as a tree or a grove, nor does it specify how the relationships among objects be implemented. The DOM is a logical model that may be implemented in any convenient manner. In this specification, we use the term *structure model* to describe the tree-like representation of a document. We also use the term "tree" when referring to the arrangement of those information items which can be reached by using "tree-walking" methods; (this does not include attributes). One important property of DOM structure models is *structural isomorphism*: if any two Document Object Model implementations are used to create a representation of the same document, they will create the same structure model, in accordance with the XML Information Set [Infoset].
 
  
 
 > **Note:** There may be some variations depending on the parser being used to build the DOM. For instance, the DOM may not contain white spaces in element content if the parser discards them.
 
-The name “Document Object Model” was chosen because it is an “object model” in the traditional object oriented design sense. Documents are modeled using objects, and the model encompasses not only the structure of a document, but also the behavior of a document and the objects of which it is composed. In other words, the nodes in the above diagram do not represent a data structure; they represent objects, which have functions and identity. As an object model, the DOM identifies:
+The name "Document Object Model" was chosen because it is an "object model" in the traditional object oriented design sense. Documents are modeled using objects, and the model encompasses not only the structure of a document, but also the behavior of a document and the objects of which it is composed. In other words, the nodes in the above diagram do not represent a data structure; they represent objects, which have functions and identity. As an object model, the DOM identifies:
 
  
 
@@ -160,7 +160,7 @@ Permission to use, copy, and distribute the contents of this document, or the W3
  
 
 1. A link or URL to the original W3C document.
-2. The pre-existing copyright notice of the original author, or if it doesn’t exist, a notice of the form: “Copyright © [$date-of-document] World Wide Web Consortium (http://www.w3.org/), (Massachusetts Institute of Technology (http://www.lcs.mit.edu/), Institut National de Recherche en Informatique et en Automatique (http://www.inria.fr/), Keio University (http://www.keio.ac.jp/)). All Rights Reserved. [http://www.w3.org/Consortium/Legal/ ](http://www.w3.org/Consortium/Legal/)(Hypertext is preferred, but a textual representation is permitted.)
+2. The pre-existing copyright notice of the original author, or if it doesn’t exist, a notice of the form: "Copyright © [$date-of-document] World Wide Web Consortium (http://www.w3.org/), (Massachusetts Institute of Technology (http://www.lcs.mit.edu/), Institut National de Recherche en Informatique et en Automatique (http://www.inria.fr/), Keio University (http://www.keio.ac.jp/)). All Rights Reserved. [http://www.w3.org/Consortium/Legal/ ](http://www.w3.org/Consortium/Legal/)(Hypertext is preferred, but a textual representation is permitted.)
 3. *If it exists*, the STATUS of the W3C document.
 
 When space permits, inclusion of the full text of this **NOTICE** should be provided. We request that authorship attribution be provided in any software, documents, or other items or products that you create pursuant to the implementation of the contents of this document, or any portion thereof.
@@ -171,7 +171,7 @@ No right to create modifications or derivatives of W3C documents is granted purs
 
 
 
-THIS DOCUMENT IS PROVIDED “AS IS,” AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+THIS DOCUMENT IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
 
  
 
@@ -266,7 +266,7 @@ Website testing usually means testing how typical user activities are handled by
 
  
 
-Sometimes a tester may prefer to use a low-level, “nuts-and-bolts” approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in this guide that are relevant to the HTTP Transaction Mode are noted as such in the entries.
+Sometimes a tester may prefer to use a low-level, "nuts-and-bolts" approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in this guide that are relevant to the HTTP Transaction Mode are noted as such in the entries.
 
  
 
@@ -311,7 +311,7 @@ Customizing scripts may involve nothing more than dragging an icon from the WebL
 
 - Web page nodes are added to the Script Tree in one of two ways. Some Web pages are the result of a user action on the previous page, such as clicking a link and jumping to a new page. Other Web pages are created as a result of direct or indirect navigation, such as entering a URL in the browser window, or pop-up windows triggered by a previous navigation. The sets of user activities contained between two direct-navigation Web pages in a Script Tree parallel the *navigation blocks* found within the JavaScript script code.
 
-     During a WebLOAD Recorder recording session, a new navigation block is created each time a user completes a direct navigation, manually entering a new URL into the WebLOAD Recorder address bar. Each navigation block is surrounded by a `try{}` `catch{}` statement in the corresponding JavaScript script code. Navigation blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if an error is encountered during a test session, WebLOAD should throw the error, skip to the next navigation block, and continue with the test session. Errors during playback are indicated by a red X appearing beside the problematic action in the Script Tree.
+     During a WebLOAD Recorder recording session, a new navigation block is created each time a user completes a direct navigation, manually entering a new URL into the WebLOAD Recorder address bar. Each navigation block is surrounded by a `try{}` `catch{}` statement in the corresponding JavaScript script code. Navigation blocks are useful for error management, especially when running "hands-free" test sessions. For example, the user can define the default testing behavior to be that if an error is encountered during a test session, WebLOAD should throw the error, skip to the next navigation block, and continue with the test session. Errors during playback are indicated by a red X appearing beside the problematic action in the Script Tree.
 
  
 
@@ -366,7 +366,7 @@ For those users who wish to manually edit their scripts, WebLOAD Recorder provid
 
  
 
-     - **Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see [Figure 2](../scripting/programming_your_javascript.md#function_insertion)).
+     - **Period (".")** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see [Figure 2](../scripting/programming_your_javascript.md#function_insertion)).
 
      - **`<CTRL>` `<Space>`** – While typing the name of an object, you can type `<CTRL>``<Space>` to display a drop-down list of the available objects that begin with the letters that you entered. For example, if you type `wl` the IntelliSense Editor displays a drop-down list of all of the objects that begin with `wl` (such as `wlhttp`).
 
@@ -413,9 +413,9 @@ Use WebLOAD Recorder’s predefined delimiters to keep your code structured and 
 
  
 
-- For JavaScript functions, use the “{“ as the start delimiter and the “}” end delimiter.
+- For JavaScript functions, use the "{" as the start delimiter and the "}" end delimiter.
 
-- For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end delimiter “End WLIDE”.
+- For script tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter "//" and end delimiter "End WLIDE".
 
 For more information, see the *WebLOAD Scripting Guide.*
 

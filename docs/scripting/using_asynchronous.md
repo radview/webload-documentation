@@ -166,10 +166,10 @@ The following example shows how `setTimeout()` is used when executing synchronou
 
 ```javascript
 function sendMessage(){
-   wlHttp.Post(“http://send-some-message” );
+   wlHttp.Post("http://send-some-message" );
 }
 setTimeout(sendMessage, 2000);	//2 - after 2 seconds, send.
-wlHttp.Get(“http://long-request”); //1 - start the long request
+wlHttp.Get("http://long-request"); //1 - start the long request
 ```
 
 Callback functions are expected to run in a timely manner, because a callback blocks the execution of other callback functions. Therefore `Sleep()` should not be used inside a callback function (for example, the functions used in `onDocumentComplete`, onDataReceived and setTimeout itself). Instead, use `setTimeout()` inside a callback function. For example:
@@ -177,12 +177,12 @@ Callback functions are expected to run in a timely manner, because a callback bl
 ```javascript
 wlHttp.Async=true; 
 wlHttp.onDocumentComplete=function(document){
-   InfoMessage(“got response, now send a reply after
-3 seconds…”);
+   InfoMessage("got response, now send a reply after
+3 seconds…");
    setTimeout(function(){ 
     wlHttp.Async=true;
-    wlHttp.Get(“http://send-reply-message”);
+    wlHttp.Get("http://send-reply-message");
    }, 3000);
  }
-wlHttp.Get(“http://send-first-message”);
+wlHttp.Get("http://send-first-message");
 ```

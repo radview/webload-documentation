@@ -12,7 +12,7 @@ This chapter includes syntax specifications for the objects, properties, methods
 
 **Description**
 
-Sets the wlGlobals.AcceptEncodingGzip flag, which enables Gzip support. For each request, WebLOAD sends the header “Accept-Encoding: gzip, deflate”. This tells the server that the client can accept zipped content. As most servers will work correctly even if the client does not send the “Accept-Encoding: gzip, deflate” header, it is recommended not to set the wlGlobals.AcceptEncodingGzip flag because it is performance heavy. However, some servers will fail if it is not sent. The default value of AcceptEncodingGzip is **false**.
+Sets the wlGlobals.AcceptEncodingGzip flag, which enables Gzip support. For each request, WebLOAD sends the header "Accept-Encoding: gzip, deflate". This tells the server that the client can accept zipped content. As most servers will work correctly even if the client does not send the "Accept-Encoding: gzip, deflate" header, it is recommended not to set the wlGlobals.AcceptEncodingGzip flag because it is performance heavy. However, some servers will fail if it is not sent. The default value of AcceptEncodingGzip is **false**.
 
 You may want to test your application in GZIP mode in the following cases:
 
@@ -49,7 +49,7 @@ Sets the wlGlobals.AcceptLanguage flag, which defines a global value for the Acc
 
 **Example**
 
-`wlGlobals.AcceptLanguage = “En-us”`
+`wlGlobals.AcceptLanguage = "En-us"`
 
 **GUI mode**
 
@@ -88,7 +88,7 @@ Adds the specified number value to the specified shared integer variable.
 
 **Syntax**
 
-`Add(“SharedIntVarName”, number, ScopeFlag)`
+`Add("SharedIntVarName", number, ScopeFlag)`
 
 **Parameters**
 
@@ -100,9 +100,9 @@ Adds the specified number value to the specified shared integer variable.
 
 **Example**
 
-`wlGeneratorGlobal.Add(“MySharedCounter”, 5, WLCurrentAgenda)`
+`wlGeneratorGlobal.Add("MySharedCounter", 5, WLCurrentAgenda)`
 
-`wlSystemGlobal.Add(“MyGlobalCounter”, 5, WLCurrentAgenda)`
+`wlSystemGlobal.Add("MyGlobalCounter", 5, WLCurrentAgenda)`
 
 **See also**
 
@@ -123,7 +123,7 @@ Specifies the authentication method to be used by the server: Kerberos or NTLM. 
 
 **Example**
 
-`wlGlobals.AuthType = “Kerberos”`
+`wlGlobals.AuthType = "Kerberos"`
 
 **GUI mode**
 
@@ -134,7 +134,7 @@ To set the authentication method to be used by the server:
 
 **Comment**
 
-If the `AuthType` property was set to “Kerberos” and the server does not support Kerberos, WebLOAD will automatically change the authentication method to “NTLM”.
+If the `AuthType` property was set to "Kerberos" and the server does not support Kerberos, WebLOAD will automatically change the authentication method to "NTLM".
 
 **See also**
 
@@ -163,9 +163,9 @@ When using asynchronous requests, the script does not wait for the request to co
 ```javascript
 wlHttp.Async = true;
 wlHttp.onDocumentComplete = function(document) {
-    InfoMessage(“Response “ + document.wlSource);
+    InfoMessage("Response " + document.wlSource);
 }
-wlHttp.Get(“http://something”);
+wlHttp.Get("http://something");
 ```
 
 **See also**
@@ -249,9 +249,9 @@ If you are working directly with the cells in a `wlTables` object, as opposed to
 
 **For cells within a wlTables object:**
 
-`document.wlTables.myTable.cells[“A1:C3”]`
+`document.wlTables.myTable.cells["A1:C3"]`
 
-In this example, the string `“A1:C3”` includes all cells from the first column of the first row up to the third column in the third row, *reading across rows*. This means that the first cell read is in the first column of the first row, the second cell read is in the *second column* of the *first row*, the third cell read is in the third column of the first row, and so on until the end of the first row. If the table includes eight columns, then the ninth cell read will be in the first column of the second row, and so on.
+In this example, the string `"A1:C3"` includes all cells from the first column of the first row up to the third column in the third row, *reading across rows*. This means that the first cell read is in the first column of the first row, the second cell read is in the *second column* of the *first row*, the third cell read is in the third column of the first row, and so on until the end of the first row. If the table includes eight columns, then the ninth cell read will be in the first column of the second row, and so on.
 
 **For cells within a row object:**
 
@@ -744,7 +744,7 @@ Specifies the content type of the HTTP request.
 
 **Example**
 
-`wlGlobals.ContentType = “text/html”`
+`wlGlobals.ContentType = "text/html"`
 
 **See also**
 
@@ -762,7 +762,7 @@ Specifies the content type of the HTTP request.
 
 Converts hidden fields to dynamic values. This is done by correlate the Script so it uses the dynamic value of the field, not the value recorded in the Script.
 
-The ConvertHiddenFields method takes the URL to be submitted via a Get or Post action and searches for it in the current DOM. This is done by looping over the document.form[] collection until it finds a form whose action matches the URL. It then loops over its elements[] collection. Each element whose type is “hidden” is then inserted into the wlHttp.FormData collection, overriding any existing value. The recorded values are replaced by the dynamic values during playback.
+The ConvertHiddenFields method takes the URL to be submitted via a Get or Post action and searches for it in the current DOM. This is done by looping over the document.form[] collection until it finds a form whose action matches the URL. It then loops over its elements[] collection. Each element whose type is "hidden" is then inserted into the wlHttp.FormData collection, overriding any existing value. The recorded values are replaced by the dynamic values during playback.
 
 > **Note:** ConvertHiddenFields cannot be accessed directly by the user. See the example in the Comment section below.
 
@@ -890,21 +890,21 @@ To copy the auxiliary file `src.txt`, located on the WebLOAD Console, to the des
 ```
 function InitAgenda() {
     …
-    CopyFile(“src.txt”, “dest.txt”)
+    CopyFile("src.txt", "dest.txt")
     …
 }
 ```
 
 You may then access the file as usual in the main body of the Script. For example:
 
-`DataArr = GetLine(“dest.txt”)`
+`DataArr = GetLine("dest.txt")`
 
 It is convenient to specify only the `SrcFileName`. To copy the auxiliary file `file.dat`, located on the WebLOAD Console, to the current Load Generator, using a single file name:
 
 ```
 function InitAgenda() {
     …
-    filename = CopyFile(“file.dat”)
+    filename = CopyFile("file.dat")
     …
     }
     …
@@ -973,7 +973,7 @@ Returns a complete Document Object Model (DOM) tree.
 
 **Example**
 
-`DOM = CreateDOM(“HTMLsource”)`
+`DOM = CreateDOM("HTMLsource")`
 
 **Comment**
 
@@ -1019,7 +1019,7 @@ Returns a `window` object that includes a `wlTables` collection.
 **Example**
 
 ```
-NewTableSet = CreateTable(“HTMLTablePage”) 
+NewTableSet = CreateTable("HTMLTablePage") 
 NumTables = NewTableSet.wlTables.length 
 FirstTableName = NewTableSet.wlTables[0].id
 ```
@@ -1069,16 +1069,16 @@ Thus the following three code samples are equivalent:
 
 ```
 //Sample 1
-wlHttp.Data.Type = “application/x-www-form-urlencoded” 
-wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm” 
-wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
+wlHttp.Data.Type = "application/x-www-form-urlencoded" 
+wlHttp.Data.Value = "SearchFor=icebergs&SearchType=ExactTerm" 
+wlHttp.Post("http://www.ABCDEF.com/query.exe")
 //Sample 2
-wlHttp.FormData.SearchFor = “icebergs” 
-wlHttp.FormData.SearchType = “ExactTerm” 
-wlHttp.Post(“http://www.ABCDEF.com/query.exe”)
+wlHttp.FormData.SearchFor = "icebergs" 
+wlHttp.FormData.SearchType = "ExactTerm" 
+wlHttp.Post("http://www.ABCDEF.com/query.exe")
 //Sample 3 
-wlHttp.Post(“http://www.ABCDEF.com/query.exe” +
-    “?SearchFor=icebergs&SearchType=ExactTerm”)
+wlHttp.Post("http://www.ABCDEF.com/query.exe" +
+    "?SearchFor=icebergs&SearchType=ExactTerm")
 ```
 
 
@@ -1121,7 +1121,7 @@ WebLOAD sends the file using a MIME protocol. DataFile has two subfields:
 
 * `DataFile.Type`-the MIME type
 * `DataFile.FileName`-the name of the file, for example,
-     `“c:\\MyWebloadData\\BigFile.doc”`
+     `"c:\\MyWebloadData\\BigFile.doc"`
 `
 
 WebLOAD sends the file when you call the wlHttp.Post() method.
@@ -1219,11 +1219,11 @@ Supports the decoding of binary data. Decoding is not performed by default. In o
 
 **Syntax**
 
-`wlGlobals.DecodeBinaryNullAs = “TextString”`
+`wlGlobals.DecodeBinaryNullAs = "TextString"`
 
 **Example**
 
-`WLGlobals.DecodeBinaryNullAs = “Classified”`
+`WLGlobals.DecodeBinaryNullAs = "Classified"`
 
 **See also**
 
@@ -1265,7 +1265,7 @@ The value of DecodeBinaryEnd starts from 0 and designates an offset from the beg
 
 **Description**
 
-For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the default checked value of the form element (read-only string).
+For an `<INPUT type="checkbox">` or `<INPUT type="radio">` element, the default checked value of the form element (read-only string).
 
 **See also**
 
@@ -1293,7 +1293,7 @@ For an `<INPUT type=“checkbox”>` or `<INPUT type=“radio”>` element, the 
 
 **Description**
 
-Returns a Boolean value specifying whether this option was the one originally “selected” before any user acted upon this “select” control.
+Returns a Boolean value specifying whether this option was the one originally "selected" before any user acted upon this "select" control.
 
 **See also**
 
@@ -1326,7 +1326,7 @@ All requests performed from the beginning of the `DefineConcurrent()` function t
 * By index: `wlConcurrentDocuments[i]`
 * By DocName: `wlConcurrentDocuments["documentname"]`
 
-The DocName is an optional name you set for a document for quick access from `wlConcurrentDocuments`. The format for setting the name is: `wlHttp.DocName = “documentname”` where `DocName` is written with a capital `D` and `N`.
+The DocName is an optional name you set for a document for quick access from `wlConcurrentDocuments`. The format for setting the name is: `wlHttp.DocName = "documentname"` where `DocName` is written with a capital `D` and `N`.
 The default document name is: `all_Concurrent_<index>.`
 
 **Example**
@@ -1423,13 +1423,13 @@ This method deletes all cookies set by `wlCookie` in the current thread.
 
 | **Parameter  Name** | **Description**                                                                                           |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| name                      | A descriptive name used for the cookie to  be deleted, for example, `“CUSTOMER”`.                               |
-| domain                    | The top-level domain name  for the cookie being deleted, for example,`“www.ABCDEF.com”`. |
-| path                      | The top-level directory  path, within the specified domain, for the cookie being deleted, for example,  “/”.  |
+| name                      | A descriptive name used for the cookie to  be deleted, for example, `"CUSTOMER"`.                               |
+| domain                    | The top-level domain name  for the cookie being deleted, for example,`"www.ABCDEF.com"`. |
+| path                      | The top-level directory  path, within the specified domain, for the cookie being deleted, for example,  "/".  |
 
 **Example**
 
-`wlCookie.Delete(“CUSTOMER”, “www.ABCDEF.com”, “/”)`
+`wlCookie.Delete("CUSTOMER", "www.ABCDEF.com", "/")`
 
 **See also**
 
@@ -1454,7 +1454,7 @@ This method deletes all cookies set by `wlCookie` in the current thread.
 
 **Description**
 
-Indicates whether to delete existing cookies if the server sends a “set-cookie” header with empty values for the existing cookies. If DeleteEmptyCookies is false, the existing cookies are set to their empty value (null). The default value of DeleteEmptyCookies is **false**.
+Indicates whether to delete existing cookies if the server sends a "set-cookie" header with empty values for the existing cookies. If DeleteEmptyCookies is false, the existing cookies are set to their empty value (null). The default value of DeleteEmptyCookies is **false**.
 
 **Example**
 
@@ -1617,13 +1617,13 @@ element objects are local to a single thread. You cannot create new element obje
 
 You can access a member of the elements collection either by its index number or by its HTML name attribute. For example, suppose that the first element of a form is coded by the HTML tag.
    
-`<INPUT type=“text” name=“yourname”>`
+`<INPUT type="text" name="yourname">`
 
 You can access this element by writing either of the following expressions:
      
 `document.forms[0].elements[0]`
 
-`document.forms[0].elements[“yourname”]`
+`document.forms[0].elements["yourname"]`
 
 `document.forms[0].elements.yourname`
 
@@ -1687,7 +1687,7 @@ The EncodeBinary property is identical to the EncodeRequestBinaryData property. 
 
 Sets the wlGlobals.EncodeFormdata flag.
 
-Generally, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD) sends a post request to the server, the data must be HTTP encoded. Special characters such as blanks, “>“ signs, and so on, are replaced by “%xx”. For example, a space is encoded as “%20”.
+Generally, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD) sends a post request to the server, the data must be HTTP encoded. Special characters such as blanks, ">" signs, and so on, are replaced by "%xx". For example, a space is encoded as "%20".
 
 Turn off the encoding when the script sends large requests that have no data that needs to be encoded. This improves performance as it bypasses the scanning and reformatting of the request buffer.
 
@@ -1876,9 +1876,9 @@ Thus if `Erase` is set to `true` the following script is incorrect. In this scri
 
 ```javascript
 function InitClient() {  //Wrong!
-    wlHttp.Url = “http://www.ABCDEF.com/products.exe” 
-    wlHttp.FormData[“Name”] = “John Smith” 
-    wlHttp.FormData[“Product Interest”] = “Modems”
+    wlHttp.Url = "http://www.ABCDEF.com/products.exe" 
+    wlHttp.FormData["Name"] = "John Smith" 
+    wlHttp.FormData["Product Interest"] = "Modems"
 }
 //Main script 
 wlHttp.Post()
@@ -1888,9 +1888,9 @@ To solve the problem, assign the `wlHttp` property values in the **main script**
 
 ```
 //Main script     //OK
-wlHttp.Url = “http://www.ABCDEF.com/products.exe” 
-wlHttp.FormData[“Name”] = “John Smith” 
-wlHttp.FormData[“Product Interest”] = “Modems” 
+wlHttp.Url = "http://www.ABCDEF.com/products.exe" 
+wlHttp.FormData["Name"] = "John Smith" 
+wlHttp.FormData["Product Interest"] = "Modems" 
 wlHttp.Post()
 
 ```
@@ -1898,9 +1898,9 @@ Alternatively, you could assign values to **wlLocals properties**, which are not
 
 ```
 function InitClient() {     //OK
-    wlLocals.Url = “http://www.ABCDEF.com/products.exe” 
-    wlLocals.FormData[“Name”] = “John Smith” 
-    wlLocals.FormData[“Product Interest”] = “Modems”
+    wlLocals.Url = "http://www.ABCDEF.com/products.exe" 
+    wlLocals.FormData["Name"] = "John Smith" 
+    wlLocals.FormData["Product Interest"] = "Modems"
 }
 
 //Main script 
@@ -1916,9 +1916,9 @@ Thus another way to correct the preceding example is to write:
 function InitClient() {       //OK 
 wlHttp.Erase = false 
 wlHttp.Url =
-        “http://www.ABCDEF.com/products.exe” 
-wlHttp.FormData[“Name”] = “John Smith” 
-wlHttp.FormData[“Product Interest”] = “Modems”
+        "http://www.ABCDEF.com/products.exe" 
+wlHttp.FormData["Name"] = "John Smith" 
+wlHttp.FormData["Product Interest"] = "Modems"
 }
 //Main script 
 wlHttp.Post()
@@ -1995,7 +1995,7 @@ Message function command lines may also be added directly to the code in a JavaS
 
 To set the global error message displayed in the Log window in the event of any verification fail errors to my `personalized error message`, write:
 
-`wlVerification.ErrorMessage = “my personalized error message”`
+`wlVerification.ErrorMessage = "my personalized error message"`
 
 **See also**
 
@@ -2014,7 +2014,7 @@ Enables testers to include scripts and specify the point during script execution
 
 **Syntax**
 
-`EvaluateScript(“Script”, RunModeConstant)`
+`EvaluateScript("Script", RunModeConstant)`
 
 **Parameters**
 
@@ -2029,7 +2029,7 @@ If the script to be executed is in an external file, use the following:
 
 `IncludeFile(filename.js)`
 
-`EvaluateScript(“MyFunction()”,WLAfterRound)`
+`EvaluateScript("MyFunction()",WLAfterRound)`
 
 Where `MyFunction()` is defined in filename.js.
 
@@ -2106,19 +2106,19 @@ The `extractValue` function returns the extracted string.
 
 The following function extracts ‘x’ out of ‘axb’:
 
-`retStr = extractValue(“a”, “b”, “axb”)`
+`retStr = extractValue("a", "b", "axb")`
 
 Since no `instance` parameter is specified, WebLOAD automatically adds the default value of the `instance` parameter:
 
-`retStr = extractValue(“a”, “b”, “axb”,1)`
+`retStr = extractValue("a", "b", "axb",1)`
 
 The following function extracts ‘tttatt’ out of ‘zzzatttattbaxbzzzbzz’:
 
-`retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,1)`
+`retStr = extractValue("a", "b","zzzatttattbaxbzzzbzz",1)`
 
 The following function extracts ‘x’ out of ‘zzzatttattbaxbzzzbzz’:
 
-`retStr = extractValue(“a”, “b”,“zzzatttattbaxbzzzbzz”,2)`
+`retStr = extractValue("a", "b","zzzatttattbaxbzzzbzz",2)`
 
 ## FileName (property)
 
@@ -2132,7 +2132,7 @@ This property is a string that holds the name of the file being submitted throug
 
 **Syntax**
 
-`wlHttp.DataFile.FileName = “DataFileName”`
+`wlHttp.DataFile.FileName = "DataFileName"`
 
 **See also**
 
@@ -2162,7 +2162,7 @@ The value of the FilterURL property is a list of filters separated by semi-colon
 
 **Example**
 
-For example, if `FilterURL = “ynet;cnn.com”`, the engine will filter URLs from ynet.com and ynet.co.il, as well as URLS from cnn.com.
+For example, if `FilterURL = "ynet;cnn.com"`, the engine will filter URLs from ynet.com and ynet.co.il, as well as URLS from cnn.com.
 
 **See also**
 
@@ -2197,16 +2197,16 @@ Use an index number to access an individual form’s properties. Access each for
 You can also access a member of the `forms` collection by its HTML name attribute. For example, suppose that the first form on an HTML page is introduced by the tag:
 
 ```
-<FORM name=“SignUp”`
-    action=“http://www.ABCDEF.com/FormProcessor.exe” 
-    method=“post”>
+<FORM name="SignUp"`
+    action="http://www.ABCDEF.com/FormProcessor.exe" 
+    method="post">
 ```
 
 You can access this form by writing any of the following expressions:
 
 `document.forms[0]`
 
-`document.forms[“SignUp”]`
+`document.forms["SignUp"]`
 
 `document.forms.SignUp`
 
@@ -2246,19 +2246,19 @@ The collection indices are the field names (HTML name attributes). Before you ca
 
 Use the wlClear() (see [*wlClear() (method)* ](#wlclear-method)) method to delete specific FormData fields or clear all the FormData fields at once.
 
-JavaScript supports two equivalent notations for named collection elements: FormData.FirstName or FormData[“FirstName”]. The latter notation also supports spaces in the name, for example, FormData[“First Name”].
+JavaScript supports two equivalent notations for named collection elements: FormData.FirstName or FormData["FirstName"]. The latter notation also supports spaces in the name, for example, FormData["First Name"].
 
 #### Getting FormData using Get()
 
 You can get form data using a Get() call. For example:
 
-`wlHttp.FormData[“FirstName”] = “Bill”`
+`wlHttp.FormData["FirstName"] = "Bill"`
 
-`wlHttp.FormData[“LastName”] = “Smith”`
+`wlHttp.FormData["LastName"] = "Smith"`
 
-`wlHttp.FormData[“EmailAddress”] = “bsmith@ABCDEF.com”`
+`wlHttp.FormData["EmailAddress"] = "bsmith@ABCDEF.com"`
 
-`wlHttp.Get(“http://www.ABCDEF.com/submit.cgi”)`
+`wlHttp.Get("http://www.ABCDEF.com/submit.cgi")`
 
 WebLOAD appends the form data to the URL as a query statement, using the following syntax:
 
@@ -2274,10 +2274,10 @@ http://www.ABCDEF.com/submit.cgi
 Suppose you are testing an HTML form that requires name and email address data. You need to submit the form to the submit.cgi program, which processes the data. You can code this in the following way:
 
 ```
-wlHttp.FormData[“FirstName”] = “Bill” 
-wlHttp.FormData[“LastName”] = “Smith”
-wlHttp.FormData[“EmailAddress”] = “bsmith@ABCDEF.com
-wlHttp.Post(“http://www.ABCDEF.com/submit.cgi”)
+wlHttp.FormData["FirstName"] = "Bill" 
+wlHttp.FormData["LastName"] = "Smith"
+wlHttp.FormData["EmailAddress"] = "bsmith@ABCDEF.com
+wlHttp.Post("http://www.ABCDEF.com/submit.cgi")
 
 ```
 
@@ -2329,7 +2329,7 @@ Use an index number to access an individual frame’s properties. Access each wi
 
 You can also access a member of the frames collection by its HTML name attribute. For example:
 
-`document.frames[“namestring”]`
+`document.frames["namestring"]`
 
 -Or-
 
@@ -2436,7 +2436,7 @@ Returns the current value of the specified shared variable.
 
 **Syntax**
 
-`Get(“SharedVarName”, ScopeFlag)`
+`Get("SharedVarName", ScopeFlag)`
 
 **Parameters**
 
@@ -2451,9 +2451,9 @@ Returns the current value of the specified shared variable.
 
 **Example**
 
-CurrentCount = wlGeneratorGlobal.Get(“MySharedCounter”, WLCurrentAgenda)
+CurrentCount = wlGeneratorGlobal.Get("MySharedCounter", WLCurrentAgenda)
 
-CurrentCount = wlSystemGlobal.Get(“MyGlobalCounter”, WLCurrentAgenda)
+CurrentCount = wlSystemGlobal.Get("MyGlobalCounter", WLCurrentAgenda)
 
 **See also**
 
@@ -2479,9 +2479,9 @@ Searches for the value of a specific cookie and returns it. If there is more tha
 
 | **Parameter Name** | **Description**                                                                           |
 | ------------------------ | ----------------------------------------------------------------------------------------------- |
-| name                     | A  descriptive name identifying the cookie, for example,  “CUSTOMER”.                         |
-| domain                   | The top-level domain name of the cookie, for example,[“www.ABCDEF.com](http://www.ABCDEF.com/)”. |
-| path                     | The top-level directory  path, within the specified domain, of the cookie, for example, “/”.  |
+| name                     | A  descriptive name identifying the cookie, for example,  "CUSTOMER".                         |
+| domain                   | The top-level domain name of the cookie, for example,["www.ABCDEF.com](http://www.ABCDEF.com/)". |
+| path                     | The top-level directory  path, within the specified domain, of the cookie, for example, "/".  |
 
 **Return Value**
 
@@ -2489,7 +2489,7 @@ Returns the value of the cookie found.
 
 **Example**
 
-`retValue = wlCookie.Get(“CUSTOMER”, “[www.ABCDEF.com](http://www.abcdef.com/)”, “/” )`
+`retValue = wlCookie.Get("CUSTOMER", "[www.ABCDEF.com](http://www.abcdef.com/)", "/" )`
 
 ### Get() (transaction method)
 
@@ -2519,17 +2519,17 @@ Perform an HTTP or HTTPS Get command. The method gets the FormData, Data, or Dat
 ```javascript
 function InitAgenda() {
     //Set the default URL
-    wlGlobals.Url = “http://www.ABCDEF.com”
+    wlGlobals.Url = "http://www.ABCDEF.com"
 }
 //Main script
 //Connect to the default URL: 
 wlHttp.Get()
 //Connect to a different, explicitly set URL: 
-wlHttp.Get(“http://www.ABCDEF.com/product_info.html”)
+wlHttp.Get("http://www.ABCDEF.com/product_info.html")
 //Assign a name to the following HTTP transact:
 url= http://www.ABCDEF.com/product_info.html
 wlHttp.Get(url,
-       “UpdateBankAccount”)
+       "UpdateBankAccount")
 
 ```
 
@@ -2539,12 +2539,12 @@ Use named transactions as a shortcut in place of the
 
 ```
 
-BeginTransaction(“UpdateBankAccount”) 
+BeginTransaction("UpdateBankAccount") 
   wlHttp.Get(url)
         // the body of the transaction
         // any valid JavaScript statements wlHttp.Post(url);
   wlHttp.Post(url);
-EndTransaction(“UpdateBankAccount”)
+EndTransaction("UpdateBankAccount")
         // and so on
 
 ```
@@ -2553,14 +2553,14 @@ Using the named transaction syntax, you could write:
 
 ```
 
-wlHttp.Get(url,”UpdateBankAccount”)
+wlHttp.Get(url,"UpdateBankAccount")
         // the body of the transaction
         // any valid JavaScript statements 
-wlHttp.Post(url,”UpdateBankAccount”)
+wlHttp.Post(url,"UpdateBankAccount")
         // and so on
 ```
 
-For the HTTPS protocol, include `“https://”` in the URL and set the required properties of the `wlGlobals` object:
+For the HTTPS protocol, include `"https://"` in the URL and set the required properties of the `wlGlobals` object:
 
 
 `wlHttp.Get("https://www.ABCDEF.com")`
@@ -2654,7 +2654,7 @@ Used to retrieve the element with the specified identification value by querying
 
 **Syntax**
 
-`GetElementById(“id”)`
+`GetElementById("id")`
 
 | **Parameter Name** | **Description**                                                              |
 | ------------------------ | ---------------------------------------------------------------------------------- |
@@ -2679,7 +2679,7 @@ Used to retrieve an array of all elements with the specified identification valu
 
 **Syntax**
 
-`GetElementsById(“id”)`
+`GetElementsById("id")`
 
 **Return Value**
 
@@ -2718,7 +2718,7 @@ Used to retrieve the element with the specified name by querying the DOM of the 
 
 **Syntax**
 
-`GetElementByName(“name”)`
+`GetElementByName("name")`
 
 | **Parameter Name** | **Description**                                               |
 | ------------------------ | ------------------------------------------------------------------- |
@@ -2743,7 +2743,7 @@ Used to retrieve an array of all elements with the specified name by querying th
 
 **Syntax**
 
-`GetElementsByName(“name”)`
+`GetElementsByName("name")`
 
 | **Parameter Name** | **Description**                                               |
 | ------------------------ | ------------------------------------------------------------------- |
@@ -2788,7 +2788,7 @@ Used to retrieve the value of the element with the specified identification valu
 
 **Syntax**
 
-`GetElementValueById(“id”)`
+`GetElementValueById("id")`
 
 | **Parameter Name** | **Description**                                               |
 | ------------------------ | ------------------------------------------------------------------- |
@@ -2799,7 +2799,7 @@ Used to retrieve the value of the element with the specified identification valu
 The value of the first element with the requested identification value or Null if no element was found.
 
 **Example** 
-`GetElementValueById(“sessionid”)`
+`GetElementValueById("sessionid")`
 
  **See also**
 
@@ -2815,7 +2815,7 @@ Used to retrieve the value of the element with the specified name by querying th
 
 **Syntax**
 
-`GetElementValueByName(“name”)`
+`GetElementValueByName("name")`
 
 | **Parameter Name** | **Description**                                               |
 | ------------------------ | ------------------------------------------------------------------- |
@@ -2896,7 +2896,7 @@ The requested value of the specified field.
 
 **Example**
 
-`ClientFirstName = wlHtml.GetFieldValue(“FirstName”)`
+`ClientFirstName = wlHtml.GetFieldValue("FirstName")`
 
 **Comment**
 
@@ -2932,8 +2932,8 @@ The requested HTML value attribute of the form field.
 
 If an HTML page includes two frames with a form in the second frame.
 
-`wlHtml.GetFieldValueInForm(0, “FirstName”, Frame1)`
-searches the first form in Frame1 and returns `“Bill”`.
+`wlHtml.GetFieldValueInForm(0, "FirstName", Frame1)`
+searches the first form in Frame1 and returns `"Bill"`.
 
 **Comment**
 
@@ -3004,23 +3004,23 @@ The requested frame.
 
 ```javascript
 //Retrieve Frame0
-Frame0 = wlHtml.GetFrameByUrl(“http://MyCompany/Frame0.html”)
+Frame0 = wlHtml.GetFrameByUrl("http://MyCompany/Frame0.html")
 //Retrieve Frame0.1
-Frame0_1 = wlHtml.GetFrameByUrl(“http://MyCompany/Frame0B.html”)
+Frame0_1 = wlHtml.GetFrameByUrl("http://MyCompany/Frame0B.html")
 ```
 
 You may use * as a wildcard character in the URL. The method returns the first frame matching the search pattern. For example:
 
 ```
 // To match URL (http://MyCompany/Frame0B.html)
-Frame0_1 = wlHtml.GetFrameByUrl(“*B.htm*”)
+Frame0_1 = wlHtml.GetFrameByUrl("*B.htm*")
 ```
 
 You may narrow the search to frames nested within a specific parent frame by specifying the optional `frame` parameter. For example:
 
 ```
 //Search within Frame0 and retrieve Frame0.0
-Frame0_0 = wlHtml.GetFrameByUrl(“*/MyCompany/*”,Frame0)
+Frame0_0 = wlHtml.GetFrameByUrl("*/MyCompany/*",Frame0)
 ```
 
 **Comment**
@@ -3117,24 +3117,24 @@ Retrieve the value of an HTTP header field.
 
 The requested HTTP header field value.
 
-````
+```
 HTTP/1.1 200 OK
-Server: Netscape-Enterprise/3.0F
-Date: Sun, 11 Jan 1998 08:25:20 GMT
+Server: Apache
+Date: Sun, 11 Jan 2025 08:25:20 GMT
 Content-type: text/html
 Connection: close
-Host: Server2.MyCompany.com:80
+```
 
-wlHtml.GetHeaderValue(“Host”)
-returns “Server2.MyCompany.com".
-
-````
+``` javascript
+wlHtml.GetHeaderValue("Date")
+returns "Server2.MyCompany.com".
+```
 
 -Or-
 
-```
-document.wlHeaders[“host”] 
-document.frame[0].wlHeaders[“host”]
+``` javascript
+document.wlHeaders["host"] 
+document.frame[0].wlHeaders["host"]
 ```
 
 **Comment**
@@ -3181,14 +3181,14 @@ Connection: close
 Host: Server2.MyCompany.com:80 
 
 wlHtml.GetHost()
-returns “Server2.MyCompany.com:80”.
+returns "Server2.MyCompany.com:80".
 ```
 
 -Or-
 
 ```
-document.wlHeaders[“hostname”] 
-document.frame[0].wlHeaders[“hostname”]
+document.wlHeaders["hostname"] 
+document.frame[0].wlHeaders["hostname"]
 
 ```
 
@@ -3231,7 +3231,7 @@ Content-type: text/html
 Connection: close
 Host: Server2.MyCompany.com:80
 ```
-calling `wlHtml.GetHostName()` returns “Server2.MyCompany.com”.
+calling `wlHtml.GetHostName()` returns "Server2.MyCompany.com".
 
 **Comment**
 
@@ -3279,7 +3279,7 @@ When `GetImages` is false, the load engine does not retrieve the images from an 
 
 **Description**
 
-When set to true, the “Thin” client will retrieve images. The default value of GetImagesInThinClient is **false**.
+When set to true, the "Thin" client will retrieve images. The default value of GetImagesInThinClient is **false**.
 
 > **Note:** This property can only be inserted manually.
 
@@ -3325,7 +3325,7 @@ wlHttp.Get()
 ```
 **Comment**
 
-Requesting the identity of the *current* IP address is only meaningful if your script is handling more than one IP address. `GetIPAddress()` therefore can only return a value if `MultiIPSupport=true`. If `MultiIPSupport` is turned off this method will return `“Undefined”`.
+Requesting the identity of the *current* IP address is only meaningful if your script is handling more than one IP address. `GetIPAddress()` therefore can only return a value if `MultiIPSupport=true`. If `MultiIPSupport` is turned off this method will return `"Undefined"`.
 
 The scope of `MultiIPSupport` depends, of course, on whether it was set through `wlGlobals`, `wlLocals`, or `wlHttp`. For example, if your script sets `wlGlobals.MultiIPSupport`, then `GetIPAddress()` returns a value at any point in the script. If you set only wlHttp.`MultiIPSupport`, then `GetIPAddress()` returns a value only if called before the next immediate HTTP transaction.
 
@@ -3365,13 +3365,13 @@ In this way, a relatively small file can supply an unending stream of test data,
 The `GetLine` function returns an array containing both the full lines and the individual tokens. The array (called `LineArray` in this example) includes the following elements:
 
 * LineArray[0]-the complete line. For example: 
-     `“John,Smith,jsmith@ABC.com”`
+     `"John,Smith,jsmith@ABC.com"`
 * LineArray[1]-the first token. In this example:
-     `“John”`
+     `"John"`
 * LineArray[2]-the second token. In this example:
-     `“Smith”`
+     `"Smith"`
 * LineArray[3]-the third token. In this example:
-     `“jsmith@ABC.com”`
+     `"jsmith@ABC.com"`
 * LineArray.RoundNum-number of rounds through the file (including the current round). For example: 4
 * LineArray.LineNum-the number of the line that was just read. For example: 1
 
@@ -3379,11 +3379,11 @@ The `GetLine` function returns an array containing both the full lines and the i
 
 To read and parse the next line of the mydata.txt ASCII input file, in this case including a directory path:
 
-`LineArray = GetLine(“c:\\temp\\mydata.txt”)`
+`LineArray = GetLine("c:\\temp\\mydata.txt")`
 
 To specify a different `delimiter`:
 
-`LineArray = GetLine(“c:\\temp\\mydata.txt”, “:”)`
+`LineArray = GetLine("c:\\temp\\mydata.txt", ":")`
 
 **Comment**
 
@@ -3440,20 +3440,20 @@ The `GetLine()` function reads and parses data from an ASCII file. The function 
 The GetLine function returns an array containing both the full lines and the individual tokens. The array (called `strInputFileLine` in this example) includes the following elements:
 
 * strInputFileLine [0]-the complete line. For example: 
-      `“John,Smith, jsmith@ABC.com”`
+      `"John,Smith, jsmith@ABC.com"`
 * strInputFileLine [1]-the first token. In this example:
-     `“John”`
+     `"John"`
 * strInputFileLine [2]-the second token. In this example:
-     `“Smith”`
+     `"Smith"`
 * strInputFileLine [3]-the third token. In this example:
-     `“jsmith@ABC.com”`
+     `"jsmith@ABC.com"`
 * strInputFileLine.LineNum-the number of the line that was just read. For example: 1
 
 **Example**
 
 To read and parse the next line of the ASCII input file specified in myFileObj:
 
-`strInputFileLine = GetLine(“,”)`
+`strInputFileLine = GetLine(",")`
 
 **Comment**
 
@@ -3494,17 +3494,17 @@ The requested location object.
 
 Suppose the HTML on a page contains:
 
-`<A href=“http://MyCompany/link1.html”>Product information </A>`
+`<A href="http://MyCompany/link1.html">Product information </A>`
 
 In this example,
 
-`wlHtml.GetLinkByName(“Product information”)`
+`wlHtml.GetLinkByName("Product information")`
 
 returns a location object for `http://MyCompany/link1.html.`
 
 The search is case sensitive. You may use the * wildcard character in the `Hypertext` string. For example, 
 
-`wlHtml.GetLinkByName(“*roduct info*”)`
+`wlHtml.GetLinkByName("*roduct info*")`
  also returns an object for `http://MyCompany/link1.html.`
 
 **Comment**
@@ -3542,11 +3542,11 @@ The requested location object.
 
 Suppose the HTML on a page contains:
 
-`<A href=“http://MyCompany/link1.html”>Product information </A>`
+`<A href="http://MyCompany/link1.html">Product information </A>`
 
 In this example,
 
-`wlHtml.GetLinkByUrl(“*link1.htm*”)`
+`wlHtml.GetLinkByUrl("*link1.htm*")`
 returns a `location` object for `http://MyCompany/link1.html.`
 
 **Comment**
@@ -3744,9 +3744,9 @@ The requested value.
 
 The following search string:
 
-`wlHtml.GetQSFieldValue(“http://www.ABCDEF.com/query.exe + “?SearchFor=icebergs&SearchType=ExactTerm”,”SearchFor”)`
+`wlHtml.GetQSFieldValue("http://www.ABCDEF.com/query.exe + "?SearchFor=icebergs&SearchType=ExactTerm","SearchFor")`
 
-returns `“icebergs”`.
+returns `"icebergs"`.
 
 ## GetScripts (property)
 
@@ -3847,7 +3847,7 @@ Content-type: text/html Connection: close
 Host: Server2.MyCompany.com:80
 
 
-wlHtml.GetStatusLine()  //would return “OK”.
+wlHtml.GetStatusLine()  //would return "OK".
 ```             
 
 
@@ -3935,7 +3935,7 @@ Content-type: text/html
 Connection: close
 Host: Server2.MyCompany.com:80
 
-wlHtml.GetUri() //would return “WebPage.html”.
+wlHtml.GetUri() //would return "WebPage.html".
 
 ```
 
@@ -3991,9 +3991,9 @@ Given the following HTML fragment:
 
 ```
 <A href="https://www.ABCDEF.com:80/products/order.html#modems">
-< A href=“http://www.ABCDEF.com/search.exe?
-     SearchFor=modems&SearchType=ExactTerm”>
-links[0].hash is “modems”.
+< A href="http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm">
+links[0].hash is "modems".
 ```
 
 ## Head() (method)
@@ -4052,11 +4052,11 @@ Here, `<host>` is the host name to which you are connecting, for example:
 
 You may reset these properties, for example, as follows:
 
-`wlHttp.UserAgent = “Mozilla/4.03 [en] (WinNT; I)”`
+`wlHttp.UserAgent = "Mozilla/4.03 [en] (WinNT; I)"`
 
 Alternatively, you can use the Header property to override one of the default header fields. For example, you can redefine the following header field:
 
-`wlHttp.Header[“user-agent”] = “Mozilla/4.03 [en] (WinNT; I)”`
+`wlHttp.Header["user-agent"] = "Mozilla/4.03 [en] (WinNT; I)"`
 
 
 **GUI mode**
@@ -4107,9 +4107,9 @@ Given the following HTML fragment:
 
 ```
 <A href="https://www.ABCDEF.com:80/products/order.html#modems">
-<A href=“http://www.ABCDEF.com/search.exe?
-     SearchFor=modems&SearchType=ExactTerm”>
-links[0].host is “www.ABCDEF.com:80”
+<A href="http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm">
+links[0].host is "www.ABCDEF.com:80"
 
 ```
 ## hostname (property)
@@ -4129,9 +4129,9 @@ Given the following HTML fragment:
 
 ```
 <A href="https://www.ABCDEF.com:80/products/order.html#modems">
-<A href=“http://www.ABCDEF.com/search.exe?
-     SearchFor=modems&SearchType=ExactTerm”>
-links[0].host is “www.ABCDEF.com"
+<A href="http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm">
+links[0].host is "www.ABCDEF.com"
 
 ```
 
@@ -4152,10 +4152,10 @@ Given the following HTML fragment:
 
 ```
 <A href="https://www.ABCDEF.com:80/products/order.html#modems">
-<A href=“http://www.ABCDEF.com/search.exe?
-     SearchFor=modems&SearchType=ExactTerm”>
+<A href="http://www.ABCDEF.com/search.exe?
+     SearchFor=modems&SearchType=ExactTerm">
 links[0].href is 
-“https://www.ABCDEF.com/products/order.html#modems”
+"https://www.ABCDEF.com/products/order.html#modems"
 
 ```
 
@@ -4187,14 +4187,14 @@ Defines when the Http cache will be cleared. Possible values are:
 
 * **None** – Defines that all Virtual Clients simulate a browser with no available cache.
 * **SingleCommand** – Defines that cache be cleared after each request.
-* **SingleCommandIfModified** – Defines that WebLOAD will check for a newer version of the cached item with every request. Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.
+* **SingleCommandIfModified** – Defines that WebLOAD will check for a newer version of the cached item with every request. Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.
 * **SingleRound** – Defines that cache be cleared after each script execution round. This is the default value for the HttpCacheScope property.
 * **WholeRun** – Defines that the cache will never be cleared. Each client maintains its own cache.
-* **WholeRunIfModified** – Defines that WebLOAD will check for a newer version of the cached item after each round. Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.
+* **WholeRunIfModified** – Defines that WebLOAD will check for a newer version of the cached item after each round. Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.
 
 **Example**
 
-`wlGlobals.HttpCacheScope = “SingleCommand”`
+`wlGlobals.HttpCacheScope = "SingleCommand"`
 
 **GUI mode**
 
@@ -4220,7 +4220,7 @@ Specifies the type of content to include in the HTTP cache: None, HTML, JS, CSS,
 
 **Example**
 
-`wlGlobals.HttpCacheCachedTypes = “Image,CSS”`
+`wlGlobals.HttpCacheCachedTypes = "Image,CSS"`
 
 **GUI mode**
 
@@ -4274,14 +4274,14 @@ Identifies the proxy server that the script uses for HTTP SSL access when `UseSa
 
 **Syntax**
 
-`wlGlobals.httpsProxyProperty = “TextString”`
+`wlGlobals.httpsProxyProperty = "TextString"`
 
 **Example**
 
 ```
-wlGlobals.httpsProxy = “proxy.ABCDEF.com:8080”
-wlGlobals.httpsProxyUserName = “Bill” 
-wlGlobals.httpsProxyPassWord = “Classified”
+wlGlobals.httpsProxy = "proxy.ABCDEF.com:8080"
+wlGlobals.httpsProxyUserName = "Bill" 
+wlGlobals.httpsProxyPassWord = "Classified"
 
 ```
 
@@ -4308,13 +4308,13 @@ Provides user authorization to the proxy server that the script uses for HTTP SS
 
 **Syntax**
 
-`wlGlobals.httpsProxyNTProperty = “TextString”`
+`wlGlobals.httpsProxyNTProperty = "TextString"`
 
 **Example**
 
-`wlGlobals.httpsProxyNTUserName = “Bill”`
+`wlGlobals.httpsProxyNTUserName = "Bill"`
 
-`wlGlobals.httpsProxyNTPassWord = “Classified”`
+`wlGlobals.httpsProxyNTPassWord = "Classified"`
 
 **See also**
 
@@ -4376,7 +4376,7 @@ M`yBookstore = document.wlXmls.myXmlDoc`
 
 -Or-
 
-`MyBookstore = document.wlXmls[“myXmlDoc”]`
+`MyBookstore = document.wlXmls["myXmlDoc"]`
 
 If duplicate identifiers are found, the id property will refer to the first XML object found with that identifier.
 
@@ -4463,7 +4463,7 @@ To include the external file `MyFunction.js`, located on the WebLOAD Console dur
 
 ```javascript
 function InitAgenda() { 
-    IncludeFile(“MyFunction.js”)
+    IncludeFile("MyFunction.js")
 }
 ```
 
@@ -4710,7 +4710,7 @@ Specifies the address of the Key Distribution Center (KDC) server if you are usi
 
 **Example**
 
-`wlGlobals.KDCServer = “qa4”`
+`wlGlobals.KDCServer = "qa4"`
 
 **GUI mode**
 
@@ -4721,7 +4721,7 @@ To specify the name of the KDC server if you are using the Kerberos authenticati
 
 **Comment**
 
-Only the server name should be specified in `KDCServer`. For example, specify “qa4” rather than “qa4.radview.co.il”.
+Only the server name should be specified in `KDCServer`. For example, specify "qa4" rather than "qa4.radview.co.il".
 
 **See also**
 
@@ -4802,29 +4802,29 @@ The search key name (read-only).
 
 ##### For wlHeaders:
 
-`document.wlHeaders[index#].key = “TextString”`
+`document.wlHeaders[index#].key = "TextString"`
 
 ##### For wlSearchPairs:
 
-`document.links[1].wlSearchPairs[index#].key = “TextString”`
+`document.links[1].wlSearchPairs[index#].key = "TextString"`
 
 ##### For wlHttp.Header:
 
-`wlHttp.Header[“key”] = “TextString”`
+`wlHttp.Header["key"] = "TextString"`
 
 **Example**
 
 ##### For wlHeaders:
 
-`document.wlHeaders[0].key = “Server”`
+`document.wlHeaders[0].key = "Server"`
 
 ##### For wlSearchPairs:
 
-`document.links[1].wlSearchPairs[0].key = “Server”`
+`document.links[1].wlSearchPairs[0].key = "Server"`
 
 ##### For wlHttp.Header:
 
-`wlHttp.Header[“key”] = “Server”`
+`wlHttp.Header["key"] = "Server"`
 
 **See also**
 
@@ -4842,9 +4842,9 @@ Retrieves the language in which the current script is written.
 
 **Example**
 
-`“javascript`” specifies that the script is written in JavaScript. 
+`"javascript`" specifies that the script is written in JavaScript. 
 
-`“vbscript”` specifies that the script is written in Visual Basic Script.
+`"vbscript"` specifies that the script is written in Visual Basic Script.
 
 ## link (object)
 
@@ -4928,7 +4928,7 @@ Do not include any external references when using `load()`.
 
 ```
 myXMLDoc = document.wlXmls[0]
-myXMLdoc.load(“http://server/xmls/file.xml”)
+myXMLdoc.load("http://server/xmls/file.xml")
 ```
 
 **Comment**
@@ -4962,9 +4962,9 @@ If you wish to measure the time it took to load the XML document using the `load
 
 ```
 myXMLDoc = document.wlXmls[0]
-SetTimer(“GetXMLTime”)
-myXMLdoc.load(“http://server/xmls/file.xml”)
-SendTimer(“GetXMLTime”)
+SetTimer("GetXMLTime")
+myXMLdoc.load("http://server/xmls/file.xml")
+SendTimer("GetXMLTime")
 ```
 
 **See also**
@@ -4998,7 +4998,7 @@ The possible values of these properties are:
 
 * **Single** – Do not use extra threads to download nested images and frames. (default for LoadGeneratorThreads)
 * **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames (default for `ProbingClientThreads`).
-* Any specific number of threads between 1 and 8, such as “5” – Allocate that exact number of extra threads per client to download nested images and frames.
+* Any specific number of threads between 1 and 8, such as "5" – Allocate that exact number of extra threads per client to download nested images and frames.
 
 **Example**
 
@@ -5008,9 +5008,9 @@ You can assign any of these properties independently within a single script. In 
 function InitAgenda() {
 //Do not use extra threads if a
 // Probing Client runs the script
-wlGlobals.ProbingClientThreads = “Single”
+wlGlobals.ProbingClientThreads = "Single"
 //Use extra threads if a Load Generator runs the script 
-wlGlobals.LoadGeneratorThreads = “Multiple”
+wlGlobals.LoadGeneratorThreads = "Multiple"
 }
 ```
 
@@ -5058,7 +5058,7 @@ Call `loadXML(XMLDocString)` to load XML documents into XML DOM objects. This al
 //create a new XML document object
 NewXMLObj = new WLXmlDocument() 
 wlHttp.SaveSource = true
-wlHttp.Get(“http://www.server.com/xmls/doc.xml”) 
+wlHttp.Get("http://www.server.com/xmls/doc.xml") 
 XMLDocStr = document.wlSource
 //load the new object with XML data
 //from the saved source. We are assuming 
@@ -5182,7 +5182,7 @@ Verifies the PageTime of the service response. If the PageTime (time to download
 
 **Description**
 
-Specifies the method that the browser should use to send the form data to the server (read-only string). A value of `“Get”` will append the arguments to the action URL and open it as if it were an anchor. A value of `“Post”` will send the data through an HTTP Post transaction. The default is `“Post”`.
+Specifies the method that the browser should use to send the form data to the server (read-only string). A value of `"Get"` will append the arguments to the action URL and open it as if it were an anchor. A value of `"Post"` will send the data through an HTTP Post transaction. The default is `"Post"`.
 
 ## MultiIPSupport (property)
 
@@ -5332,7 +5332,7 @@ Access the first child window’s link objects directly using the following synt
 
 Alternatively, you may access a member of the frames collection by its HTML name attribute. For example:
 
-`document.frames[“namestring”]`
+`document.frames["namestring"]`
 
 -Or-
 
@@ -5373,9 +5373,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 You may also set NT user values using the `wlGlobals` properties. For example:
 
-`wlGlobals.NTUserName = “Bill”`
+`wlGlobals.NTUserName = "Bill"`
 
-`wlGlobals.NTPassWord = “Classified”`
+`wlGlobals.NTPassWord = "Classified"`
 
 **Comment**
 
@@ -5461,13 +5461,13 @@ if (document.wlStatusNumber==200)
 
 {
 
-InfoMessage( “Got response so far: “ + document.wlSource );
+InfoMessage( "Got response so far: " + document.wlSource );
 
 }
 
 }
 
-wlHttp.Get(“http:///.... ”)
+wlHttp.Get("http:///.... ")
 ```
 
 **See also**
@@ -5509,11 +5509,11 @@ wlHttp.Async = true;
 
 wlHttp.onDocumentComplete = function(document) {
 
-InfoMessage(“Response “ + document.wlSource);
+InfoMessage("Response " + document.wlSource);
 
 }
 
-[wlHttp.Get(“http://get](http://get-asynch-data/)-asynch-data”);
+[wlHttp.Get("http://get](http://get-asynch-data/)-asynch-data");
 
 //the script will continue to here immediately, not waiting for the request to complete. It will run the onDocumentComplete function when the request is finished.
 ```
@@ -5572,7 +5572,7 @@ function InitClient()
 function InitAgenda()
 
 {
-    InFile1 = CopyFile(“C:\\temp\input.txt”)
+    InFile1 = CopyFile("C:\\temp\input.txt")
 }
 Function InitClient()
 {
@@ -5580,7 +5580,7 @@ Function InitClient()
     myFileObj.open(WLFileSequentialUnique, WLFileAgendaShared)
 }
 /*** WLIDE …. ***/
-strLine = myFileObj.getLine(“,”)
+strLine = myFileObj.getLine(",")
 ```
 
 **See also**
@@ -5654,7 +5654,7 @@ For random access:
 
 **Description**
 
-A collection of the nested `<OPTION>` objects only found within elements of type SELECT, that is, `forms[n].elements[n].type = “SELECT”`. Each `option` object denotes one choice in a `select` element, containing information about a selected form element.
+A collection of the nested `<OPTION>` objects only found within elements of type SELECT, that is, `forms[n].elements[n].type = "SELECT"`. Each `option` object denotes one choice in a `select` element, containing information about a selected form element.
 
 `option` objects are local to a single thread. You cannot create new `option` objects using the JavaScript new operator, but you can access HTML `options` through the properties and methods of the standard DOM objects. `option` properties are read- only.
 
@@ -5676,12 +5676,12 @@ For example:
 
 **Comment**
 
-Options only exist if the type of the parent element is `<SELECT>`, that is, `forms[n].elements[n].type = “SELECT”`. For example, to check whether a form element is of type `<SELECT>` and includes an options collection, you could use the following script:
+Options only exist if the type of the parent element is `<SELECT>`, that is, `forms[n].elements[n].type = "SELECT"`. For example, to check whether a form element is of type `<SELECT>` and includes an options collection, you could use the following script:
 
 ```javascript
 function InitAgenda()
 {
-wlGlobals.Proxy = “webproxy.xyz.com:8080”
+wlGlobals.Proxy = "webproxy.xyz.com:8080"
     // Through proxy 
 wlGlobals.SaveSource = true 
 wlGlobals.ParseForms = true 
@@ -5693,16 +5693,16 @@ wlHttp.Get(WebTestSite)
 if (document.forms.length > 0)
     if (document.forms[0].elements.length > 0)
     {
-        InfoMessage(“We have a candidate. “ +
-                        “Element type is “ + 
+        InfoMessage("We have a candidate. " +
+                        "Element type is " + 
         document.forms[0].elements[0].type)
-        InfoMessage (“document.forms[0].elements[0].options.length is “
+        InfoMessage ("document.forms[0].elements[0].options.length is "
         + document.forms[0].elements[0].options.length)
     }
 }
-CheckElementType(“http://www.TestSite1.com/domain/pulldown.htm”)
-CheckElementType(“http://www.TestSite2.com/”) 
-ErrorMessage(“Done!”)
+CheckElementType("http://www.TestSite1.com/domain/pulldown.htm")
+CheckElementType("http://www.TestSite2.com/") 
+ErrorMessage("Done!")
 ```
 
 **Properties**
@@ -5794,7 +5794,7 @@ The `Outfile` property is used to implement the Log Report.
 
 To write the response data from 
 
-`http://note/radview/radview.html` in  `“c:\temp.html”`
+`http://note/radview/radview.html` in  `"c:\temp.html"`
 
 you might write:
 
@@ -5895,7 +5895,7 @@ The Parse property can be set to one of the following values:
 
 **Syntax**
 
-`wlGlobals.Parse = “Always”`
+`wlGlobals.Parse = "Always"`
 
 **See also**
 
@@ -6184,7 +6184,7 @@ Enables parsing of metas on an HTML page. The ParseMetas property can be set to 
 
 **Description**
 
-When set to `true`, the webpage is parsed and the DOM is created only the first time the page is visited. The same data is reused on future visits. The ParseOnce property is set when you call `SetClientType(“Thin”)`. By default, the ParseOnce property is set to `true`.
+When set to `true`, the webpage is parsed and the DOM is created only the first time the page is visited. The same data is reused on future visits. The ParseOnce property is set when you call `SetClientType("Thin")`. By default, the ParseOnce property is set to `true`.
 
 > **Note:** This property can only be inserted manually.
 
@@ -6383,9 +6383,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 You may also set user values using the wlGlobals properties. WebLOAD automatically sends the user name and password when a wlHttp object connects to an HTTP site. For example:
 
-`wlGlobals.UserName = “Bill”`
+`wlGlobals.UserName = "Bill"`
 
-`wlGlobals.PassWord = “TopSecret”`
+`wlGlobals.PassWord = "TopSecret"`
 
 **See also**
 
@@ -6405,8 +6405,8 @@ The URI portion of the URL, including the directory path and filename (read-only
 
 **Example**
 
-`“/products/order.html”`
-`“/search.exe”`
+`"/products/order.html"`
+`"/search.exe"`
 
 ## port (property)
 
@@ -6449,36 +6449,36 @@ Perform an HTTP or HTTPS Post command. The method sends the FormData, Data, or D
 ```javascript
 function InitAgenda() {
   //Set the default URL
-  wlGlobals.Url = “http://www.ABCDEF.com”
+  wlGlobals.Url = "http://www.ABCDEF.com"
 }
 //Main script
 //Connect to the default URL: 
 wlHttp.Post()
 //Connect to a different, explicitly set URL: 
-wlHttp.Post(“http://www.ABCDEF.com/product_info.html”)
+wlHttp.Post("http://www.ABCDEF.com/product_info.html")
 //Assign a name to the following HTTP transact: 
-wlHttp.Get(“http://www.ABCDEF.com/product_info.html”,
-                    “UpdateBankAccount”)
+wlHttp.Get("http://www.ABCDEF.com/product_info.html",
+                    "UpdateBankAccount")
 //Submit to a CGI program
-wlHttp.Url = “http://www.ABCDEF.com/search.cgi” 
-wlHttp.FormData[“SeachTerm”] = “ocean+currents” 
+wlHttp.Url = "http://www.ABCDEF.com/search.cgi" 
+wlHttp.FormData["SeachTerm"] = "ocean+currents" 
 wlHttp.Post()
 //Submit to an HTTP server of any type 
-wlHttp.FormData[“FirstName”] = “Bill” 
-wlHttp.FormData[“LastName”] = “Smith” 
-wlHttp.Post(“http://www.ABCDEF.com/formprocessor.exe”)
+wlHttp.FormData["FirstName"] = "Bill" 
+wlHttp.FormData["LastName"] = "Smith" 
+wlHttp.Post("http://www.ABCDEF.com/formprocessor.exe")
 
 ```
 
 Use named transactions as a shortcut in place of the `BeginTransaction()...EndTransaction()` module. For example, this is one way to identify a logical transaction unit:
 
 ```
-BeginTransaction(“UpdateBankAccount”) 
+BeginTransaction("UpdateBankAccount") 
     wlHttp.Get(url)
         // the body of the transaction
         // any valid JavaScript statements 
     wlHttp.Post(url);
-EndTransaction(“UpdateBankAccount”)
+EndTransaction("UpdateBankAccount")
         // and so on
 
 ```
@@ -6486,33 +6486,33 @@ EndTransaction(“UpdateBankAccount”)
 Using the named transaction syntax, you could write:
 
 ```
-wlHttp.Get(url,”UpdateBankAccount”)
+wlHttp.Get(url,"UpdateBankAccount")
     // the body of the transaction
     // any valid JavaScript statements 
-wlHttp.Post(url,”UpdateBankAccount”)
+wlHttp.Post(url,"UpdateBankAccount")
     // and so on
 ```
 
-For the HTTPS protocol, include `“https://”` in the URL and set the required properties of the `wlGlobals` object:
+For the HTTPS protocol, include `"https://"` in the URL and set the required properties of the `wlGlobals` object:
 
 `wlHttp.Post("https://www.ABCDEF.com")`
 The URL can contain a string of attribute data.
 
 ```
-wlHttp.Post(“http://www.ABCDEF.com/query.exe”+ 
-    “?SearchFor=icebergs&SearchType=ExactTerm”)
+wlHttp.Post("http://www.ABCDEF.com/query.exe"+ 
+    "?SearchFor=icebergs&SearchType=ExactTerm")
 ```
 Alternatively, you can specify the attributes in the `FormData` or `Data` property. The method automatically appends these in the correct syntax to the URL. Thus the following two code fragments are each equivalent to the preceding Post command.
 
-`wlHttp.Data.Type = “application/x-www-form-urlencoded”`
-`wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm”`
-`wlHttp.Post(“http://www.ABCDEF.com/query.exe”)`
+`wlHttp.Data.Type = "application/x-www-form-urlencoded"`
+`wlHttp.Data.Value = "SearchFor=icebergs&SearchType=ExactTerm"`
+`wlHttp.Post("http://www.ABCDEF.com/query.exe")`
 
 -Or-
 
-`wlHttp.FormData.SearchFor = “icebergs”`
-`wlHttp.FormData.SearchType = “ExactTerm”`
-`wlHttp.Post(“http://www.ABCDEF.com/query.exe”)`
+`wlHttp.FormData.SearchFor = "icebergs"`
+`wlHttp.FormData.SearchType = "ExactTerm"`
+`wlHttp.Post("http://www.ABCDEF.com/query.exe")`
 
 **Comment**
 
@@ -6555,7 +6555,7 @@ The possible values of these properties are:
 
 * **Single** – Do not use extra threads to download nested images and frames. (default for LoadGeneratorThreads)
 * **Multiple** – Allocate three extra threads per client (for a total of four threads per client) to download nested images and frames. (default for `ProbingClientThreads`)
-* Any specific number of threads between 1 and 8, such as “5” – Allocate that exact number of extra threads per client to download nested images and frames.
+* Any specific number of threads between 1 and 8, such as "5" – Allocate that exact number of extra threads per client to download nested images and frames.
 
 **Example**
 
@@ -6565,10 +6565,10 @@ You can assign any of these properties independently within a single script. In 
 function InitAgenda() {
     //Do not use extra threads if a
     // Probing Client runs the script
-    wlGlobals.ProbingClientThreads = “Single”
+    wlGlobals.ProbingClientThreads = "Single"
     //Use extra threads if a
     // Load Generator runs the script
-    wlGlobals.LoadGeneratorThreads = “Multiple”
+    wlGlobals.LoadGeneratorThreads = "Multiple"
 }
 ```
 
@@ -6599,7 +6599,7 @@ The HTTP protocol portion of the URL for the parent object (read-only string).
 
 **Example**
 
-`“https://”`
+`"https://"`
 
 ## Proxy, ProxyUserName, ProxyPassWord (properties)
 
@@ -6627,13 +6627,13 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **Syntax**
 
-`wlGlobals.ProxyProperty = “TextString”`
+`wlGlobals.ProxyProperty = "TextString"`
 
 **Example**
 
-`wlGlobals.Proxy = “proxy.ABCDEF.com:8080”`
-`wlGlobals.ProxyUserName = “Bill”`
-`wlGlobals.ProxyPassWord = “Classified”`
+`wlGlobals.Proxy = "proxy.ABCDEF.com:8080"`
+`wlGlobals.ProxyUserName = "Bill"`
+`wlGlobals.ProxyPassWord = "Classified"`
 
 **See also**
 
@@ -6656,7 +6656,7 @@ The `ProxyExceptions` property accepts a string based on what the user entered i
 
 **Example**
 
-`wlGlobals.ProxyExceptions = “*.example.com”`
+`wlGlobals.ProxyExceptions = "*.example.com"`
 
 **GUI mode**
 
@@ -6687,13 +6687,13 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 **Syntax**
 
-`wlGlobals.ProxyNTProperty = “TextString”`
+`wlGlobals.ProxyNTProperty = "TextString"`
 
 **Example**
 
-`wlGlobals.ProxyNTUserName = “Bill”`
+`wlGlobals.ProxyNTUserName = "Bill"`
 
-`wlGlobals.ProxyNTPassWord = “Classified”`
+`wlGlobals.ProxyNTPassWord = "Classified"`
 
 **See also**
 
@@ -6858,7 +6858,7 @@ You may also assign a redirection limit value using the `wl.RedirectionLimit` pr
 
 **Description**
 
-The Referer property is used by the recorder to store the referer header and is a synonym for wlHttp.Headers[“referer”]. The Referer property is used as shorthand for accessing the referer header in the wlHttp.Headers collection.
+The Referer property is used by the recorder to store the referer header and is a synonym for wlHttp.Headers["referer"]. The Referer property is used as shorthand for accessing the referer header in the wlHttp.Headers collection.
 
 **GUI mode**
 
@@ -6866,11 +6866,11 @@ To tell the system whether or not to record the referer header in the Referer pr
 
 **Syntax**
 
-`wlHttp.Header[“Referer”] = “http://www.testaddress.com/”.`
+`wlHttp.Header["Referer"] = "http://www.testaddress.com/".`
 
 **Example**
 
-`wlHttp.Header[“Referer”] = “http://www.easycar.com/”`
+`wlHttp.Header["Referer"] = "http://www.easycar.com/"`
 
 **See also**
 
@@ -6926,7 +6926,7 @@ This function enables you to record specific events as they occur. This informat
 
 | **Parameter  Name** | **Description**                                                                                                                                                                                                                                                                          |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EventName                 | A user-supplied string  that identifies the specific event and appears in the results tables of the  WebLOAD Data Drilling feature. Since this name is used as a table header and  sort key, it must be a short string that is used consistently to identify  events, such as “URLMismatch”. |
+| EventName                 | A user-supplied string  that identifies the specific event and appears in the results tables of the  WebLOAD Data Drilling feature. Since this name is used as a table header and  sort key, it must be a short string that is used consistently to identify  events, such as "URLMismatch". |
 | [description]             | An optional user-supplied string that may be  longer and more detailed than the EventName, providing more  information about the specific event.                                                                                                                                               |
 
 **See also**
@@ -7043,11 +7043,11 @@ The language in which WebLOAD receives the response from the SUT. This can be `H
 
 **Syntax**
 
-`wlGlobals.ResponseContentType = “TextString”`
+`wlGlobals.ResponseContentType = "TextString"`
 
 **Example**
 
-`wlGlobals.ResponseContentType = “HTML”`
+`wlGlobals.ResponseContentType = "HTML"`
 
 **See also**
 
@@ -7234,7 +7234,7 @@ Possible values of the SaveTransaction property are:
 
 The SaveTransaction property works with the following parameters in the Functional Testing tab (Automatic Data Collection area) of the Current Session Options/Default Options dialog box in the WebLOAD Console, as follows:
 
-* **Pages** – When selected, WebLOAD provides timers and counters for every “Get” in the session. When SaveTransaction is set to true, WebLOAD provides an aggregate breakdown for all objects in the page.
+* **Pages** – When selected, WebLOAD provides timers and counters for every "Get" in the session. When SaveTransaction is set to true, WebLOAD provides an aggregate breakdown for all objects in the page.
 * **Object level** – When selected, WebLOAD provides timers and counters for every object in every page. When SaveTransaction is set to true, WebLOAD provides breakdown information for every object in every page.
 * **HTTP level** – When selected, WebLOAD provides breakdown information for every failed transaction in every page. When SaveTransaction is set to true, WebLOAD provides breakdown information for every instance of every failed transaction in every page.
 
@@ -7306,7 +7306,7 @@ The search attribute string of the URL, not including the initial ? symbol (read
 
 **Example**
 
-`“SearchFor=modems&SearchType=ExactTerm”`
+`"SearchFor=modems&SearchType=ExactTerm"`
 
 ## Seed() (method)
 
@@ -7629,7 +7629,7 @@ The SendBufferSize property defines the amount of space allocated to the outgoin
 
 **Description**
 
-SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings\`<user name>`\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = “file-name” to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.
+SendClientStatistics is used to define whether or not to send statistics. It should be set in InitAgenda. The console writes the raw data to C:\Documents and Settings\`<user name>`\Local Settings\Temp\ClientStat.txt. To change the name, add CLIENT_STATISTICS_FILE = "file-name" to webload.ini on the console side. By default, this will save the raw statistics data for all the clients.
 
 Only statistics calculated by the Load Generator are supported. Statistics like hits/second are not sent and empty statistics, for example, RoundTime where no round was completed within a time slice, are sent as -1.
 
@@ -7651,9 +7651,9 @@ wlGlobals.SendClientStatistics = true
 
 **Description**
 
-This is a very simple filter for choosing clients for which to send statistics. The format is “1;4;8;”. Each number is a client number and you can specify as many client numbers as you want. Ranges and wildcards are not supported. If no client numbers are specified, statistics are sent for all clients.
+This is a very simple filter for choosing clients for which to send statistics. The format is "1;4;8;". Each number is a client number and you can specify as many client numbers as you want. Ranges and wildcards are not supported. If no client numbers are specified, statistics are sent for all clients.
 
-If spawning is being used and you specify, for example, “1”, statistics for the first VC will be sent for each slave process.
+If spawning is being used and you specify, for example, "1", statistics for the first VC will be sent for each slave process.
 
 Only statistics calculated by the Load Generator are supported. Statistics like hits/second are not sent and empty statistics, for example, RoundTime where no round was completed within a time slice, are sent as -1.
 
@@ -7661,11 +7661,11 @@ Only statistics calculated by the Load Generator are supported. Statistics like 
 
 **Syntax**
 
-wlGlobals.SendClientStatisticsFilter = “`<client number>`;`<client number>`;”
+wlGlobals.SendClientStatisticsFilter = "`<client number>`;`<client number>`;"
 
 **Example**
 
-`wlGlobals.SendClientStatisticsFilter = “2;3;8”`
+`wlGlobals.SendClientStatisticsFilter = "2;3;8"`
 
 **See also**
 
@@ -7713,7 +7713,7 @@ SendMeasurement() in the main script of a script.
 
 `NumberOfImagesInPage = document.images.length`
 
-`SendMeasurement(“NumberOfImagesInPage”,NumberOfImagesInPage)`
+`SendMeasurement("NumberOfImagesInPage",NumberOfImagesInPage)`
 
 **GUI mode**
 
@@ -7740,7 +7740,7 @@ Use this function to output the value of a timer to the WebLOAD Console. Call Se
 
 **Example**
 
-`SendTimer(“Link 3 Time”)`
+`SendTimer("Link 3 Time")`
 
 **GUI mode**
 
@@ -7770,7 +7770,7 @@ Assigns a number, Boolean, or string value to the specified shared variable. If 
 
 **Syntax**
 
-`Set(“SharedVarName”, value, ScopeFlag)`
+`Set("SharedVarName", value, ScopeFlag)`
 
 **Parameters**
 
@@ -7782,9 +7782,9 @@ Assigns a number, Boolean, or string value to the specified shared variable. If 
 
 **Example**
 
-`wlGeneratorGlobal.Set(“MySharedCounter”, 0, WLCurrentAgenda)`
+`wlGeneratorGlobal.Set("MySharedCounter", 0, WLCurrentAgenda)`
 
-`wlSystemGlobal.Set(“MyGlobalCounter”, 0, WLCurrentAgenda)`
+`wlSystemGlobal.Set("MyGlobalCounter", 0, WLCurrentAgenda)`
 
 **See also**
 
@@ -7812,11 +7812,11 @@ You can set an arbitrary number of cookies in any thread. If you set more than o
 
 | **Parameter  Name** | **Description**                                                                                                      |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| name                      | A descriptive name  identifying the type of information stored in the cookie, for example, “CUSTOMER”.                   |
-| value                     | A value for the named cookie, for example, “JOHN_SMITH”.                                                                 |
-| domain                    | The top-level domain name to which the  cookie should be submitted, for example,[“www.ABCDEF.com](http://www.ABCDEF.com/)”. |
-| path                      | The top-level directory  path, within the specified domain, to which the cookie is submitted, for  example, “/”.         |
-| expire                    | An optional expiration  timestamp of the cookie, in a format such as “Wed, 08-Apr-98 17:29:00 GMT”.                      |
+| name                      | A descriptive name  identifying the type of information stored in the cookie, for example, "CUSTOMER".                   |
+| value                     | A value for the named cookie, for example, "JOHN_SMITH".                                                                 |
+| domain                    | The top-level domain name to which the  cookie should be submitted, for example,["www.ABCDEF.com](http://www.ABCDEF.com/)". |
+| path                      | The top-level directory  path, within the specified domain, to which the cookie is submitted, for  example, "/".         |
+| expire                    | An optional expiration  timestamp of the cookie, in a format such as "Wed, 08-Apr-98 17:29:00 GMT".                      |
 
 **Comment**
 
@@ -7826,9 +7826,9 @@ Set cookies within the main script of the script. WebLOAD deletes all the cookie
 
 If you combine the examples used to illustrate the parameters for this method, you end up with the following:
 
-`wlCookie.Set(“CUSTOMER”, “JOHN_SMITH”, [“www.ABCDEF.com](http://www.ABCDEF.com/)”, “/”,`
+`wlCookie.Set("CUSTOMER", "JOHN_SMITH", ["www.ABCDEF.com](http://www.ABCDEF.com/)", "/",`
 
-`“Wed, 08-Apr-98 17:29:00 GMT”)`
+`"Wed, 08-Apr-98 17:29:00 GMT")`
 
 Where:
 
@@ -7858,7 +7858,7 @@ setClientType(thick)
 
 **Comment**
 
-When you call SetClientType(“Thin”), the ParseOnce flag is set to true. Each page will only be parsed the first time it is read and the list of all the resources it accesses will be saved. The next time the page is needed, the list will be reused and no additional parsing will be performed.
+When you call SetClientType("Thin"), the ParseOnce flag is set to true. Each page will only be parsed the first time it is read and the list of all the resources it accesses will be saved. The next time the page is needed, the list will be reused and no additional parsing will be performed.
 
 **See also**
 
@@ -7919,19 +7919,19 @@ setTimeout (Func, PauseTime)
 To pause for 1 second, write:
 
 ```javascript
-InfoMessage(“before setTimeout”);
+InfoMessage("before setTimeout");
 
 setTimeout( function() {
 
-InfoMessage(“in setTimeout”);
+InfoMessage("in setTimeout");
 
 } , 1000);
 
-InfoMessage(“after setTimeout”);
+InfoMessage("after setTimeout");
 
 Sleep(2000);
 
-InfoMessage(“after sleep”);
+InfoMessage("after sleep");
 ```
 
 **See also**
@@ -7948,7 +7948,7 @@ Use this function to zero a timer. Call SetTimer() in the main script of a scrip
 
 **Example**
 
-`SetTimer(“Link 3 Time”)`
+`SetTimer("Link 3 Time")`
 
 **GUI mode**
 
@@ -8247,7 +8247,7 @@ In WebLOAD Console, select the sleep mode in the Sleep Time Control tab of the *
 
 Retrieves the complete URL of the parent object, that is the URL to an external file that contains the source code or data for this image, script, or XML DOM object.
 
-**Example** [“www.ABCDEF.com/images/logo.gif](http://www.ABCDEF.com/images/logo.gif)” **See also**
+**Example** ["www.ABCDEF.com/images/logo.gif](http://www.ABCDEF.com/images/logo.gif)" **See also**
 
 * [*Collections* ](using_javascript_ref.md#collections)
 * id (see [*id (property)* ](#id-property))
@@ -8325,7 +8325,7 @@ Set the SSL configuration environment before running a test script.
 
 **Syntax**
 
-`SSLCipherSuiteCommand(“SSLCipherCommand”)`
+`SSLCipherSuiteCommand("SSLCipherCommand")`
 
 **Example**
 
@@ -8336,7 +8336,7 @@ InitClient()
 
 {
 
-… SSLCipherSuiteCommand(“DisableAll”) SSLEnableCipherName(“EXP-RC4-MD5”)
+… SSLCipherSuiteCommand("DisableAll") SSLEnableCipherName("EXP-RC4-MD5")
 
 …
 
@@ -8386,13 +8386,13 @@ You may set client certificate values using the wlGlobals properties.
 
 **Syntax**
 
-`wlGlobals.*SSLProperty* = “TextString”`
+`wlGlobals.*SSLProperty* = "TextString"`
 
 **Example**
 
-`wlGlobals.SSLClientCertificateFile = “c:\\certs\\cert1.pem”`
+`wlGlobals.SSLClientCertificateFile = "c:\\certs\\cert1.pem"`
 
-`wlGlobals.SSLClientCertificatePassword = “topsecret”`
+`wlGlobals.SSLClientCertificatePassword = "topsecret"`
 
 **GUI mode**
 
@@ -8430,10 +8430,10 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 Used to define the cryptographic categories to be used in the current test session. The following categories are available:
 
-* “SSL_AllCrypto” – Enable cryptography of all strengths (default).
-* “SSL_StrongCryptoOnly” – Enable only ciphers with strong cryptography (RSA keys greater than 512-bit and DES/EC keys greater than 40-bit).
-* “SSL_ExportCryptoOnly” – Enable only ciphers available for export, including only RSA keys 512-bit or weaker and DES/EC keys 40-bit or weaker.
-* “SSL_ServerGatedCrypto” – Verify that the communicating server is legally authorized to use strong cryptography before using stronger ciphers. Otherwise use export ciphers only.
+* "SSL_AllCrypto" – Enable cryptography of all strengths (default).
+* "SSL_StrongCryptoOnly" – Enable only ciphers with strong cryptography (RSA keys greater than 512-bit and DES/EC keys greater than 40-bit).
+* "SSL_ExportCryptoOnly" – Enable only ciphers available for export, including only RSA keys 512-bit or weaker and DES/EC keys 40-bit or weaker.
+* "SSL_ServerGatedCrypto" – Verify that the communicating server is legally authorized to use strong cryptography before using stronger ciphers. Otherwise use export ciphers only.
 
 These definitions work with your script’s current set of enabled ciphers. If you have enabled only certain ciphers, then setting SSLCryptoStrength would affect only the subset of enabled ciphers.
 
@@ -8455,7 +8455,7 @@ InitClient()
 
 ?
 
-SSLEnableCipherName(“DHE_DSS_RC4_SHA”) SSLEnableCipherName(“DES_CBC_MD5”) SSLEnableCipherName(“AECDH_NULL_SHA”) SSLEnableCipherName(“EXP_RC4_MD5”) wlGlobals.SSLCryptoStrength=“SSL_ExportCryptoOnly”
+SSLEnableCipherName("DHE_DSS_RC4_SHA") SSLEnableCipherName("DES_CBC_MD5") SSLEnableCipherName("AECDH_NULL_SHA") SSLEnableCipherName("EXP_RC4_MD5") wlGlobals.SSLCryptoStrength="SSL_ExportCryptoOnly"
 
 ?
 
@@ -8816,7 +8816,7 @@ Returns the ID number associated with the specified cipher.
 
 **Example**
 
-`MyCipherID = SSLGetCipherID(“EXP-RC4-MD5”)`
+`MyCipherID = SSLGetCipherID("EXP-RC4-MD5")`
 
 **See also**
 
@@ -8864,7 +8864,7 @@ Accepts either one of the following parameters:
 
 You may specify an SSL protocol using either the protocol name or the ID number. The function accepts either a string or an integer parameter, as illustrated here:
 
-`SSLGetCipherInfo(“EXP-RC4-MD5”)`
+`SSLGetCipherInfo("EXP-RC4-MD5")`
 
 -Or-
 
@@ -9066,7 +9066,7 @@ To connect to a server using any of the SSL options, include https:// in the URL
 **Example**
 
 ```
-wlGlobals.SSLVersion = “SSL_Version_3_0_Only”
+wlGlobals.SSLVersion = "SSL_Version_3_0_Only"
 
 wlHttp.Get("https://www.ABCDEF.com")
 ```
@@ -9114,17 +9114,17 @@ StopClient ([SeverityLevel], [Reason])
 
 The following default message is displayed when no reason is specified:
 
-StopClient(WLError, “Client”+%d+”was terminated by a user command in
+StopClient(WLError, "Client"+%d+"was terminated by a user command in
 
-the script”)
+the script")
 
-where %d is a parameter that takes the number of the client that was terminated. For example, “Client 38 was terminated by a user command in the script”.
+where %d is a parameter that takes the number of the client that was terminated. For example, "Client 38 was terminated by a user command in the script".
 
 **Examples**
 
-`StopClient(WLError, “Error occurred when running script, client terminated”)`
+`StopClient(WLError, "Error occurred when running script, client terminated")`
 
-`StopClient(, “Error occurred when running script, client terminated”)`
+`StopClient(, "Error occurred when running script, client terminated")`
 
 `StopClient(WLError)`
 
@@ -9146,7 +9146,7 @@ StopGenerator(string)
 
 **Example**
 
-`StopGenerator(“The script was terminated from within the script”)`
+`StopGenerator("The script was terminated from within the script")`
 
 ## string (property)
 
@@ -9184,7 +9184,7 @@ SynchronizationPoint() functions return one of the following values. These value
 The following script fragment illustrates a typical use of synchronization points. To test a Web application with all the Virtual Clients performing a particular Post operation simultaneously, add a Synchronization Point as follows. The various return values are highlighted:
 
 ```javascript
-wlHttp.Get(“url”)
+wlHttp.Get("url")
 
 …
 
@@ -9192,7 +9192,7 @@ SP = SynchronizationPoint(10000) if (SP == **WLLoadChanged**)
 
 {
 
-InfoMessage(“Syncronization failed, Load Size changed”) InfoMessage(“SP = “ + SP.toString() + “ “ + ClientNum)
+InfoMessage("Syncronization failed, Load Size changed") InfoMessage("SP = " + SP.toString() + " " + ClientNum)
 
 }
 
@@ -9200,7 +9200,7 @@ if (SP == **WLTimeout**)
 
 {
 
-InfoMessage(“Syncronization failed, Timeout expired”) InfoMessage(“SP = “ + SP.toString() + “ “ + ClientNum)
+InfoMessage("Syncronization failed, Timeout expired") InfoMessage("SP = " + SP.toString() + " " + ClientNum)
 
 }
 
@@ -9208,9 +9208,9 @@ if (SP == **WLError**)
 
 {
 
-InfoMessage(“Syncronization failed”)
+InfoMessage("Syncronization failed")
 
-InfoMessage(“SP = “ + SP.toString() + “ “ + ClientNum)
+InfoMessage("SP = " + SP.toString() + " " + ClientNum)
 
 }
 
@@ -9218,7 +9218,7 @@ if (SP == **WLSuccess**)
 
 {
 
-InfoMessage(“Synchronization succeeded”) InfoMessage(“SP = “ + SP.toString() + “ “+ ClientNum)
+InfoMessage("Synchronization succeeded") InfoMessage("SP = " + SP.toString() + " "+ ClientNum)
 
 }
 
@@ -9299,11 +9299,11 @@ The name of the window or frame into which the form or link should be downloaded
 
 In the following code fragment:
 
-`<A HREF=“newpage.htm” TARGET=“_top”> Go to New Page.`
+`<A HREF="newpage.htm" TARGET="_top"> Go to New Page.`
 
 `</A>`
 
-The target property would equal “_top” and the link will load the page into the top frame of the current frameset.
+The target property would equal "_top" and the link will load the page into the top frame of the current frameset.
 
 **Comment**
 
@@ -9376,7 +9376,7 @@ ThreadNum will still be recognized for backward compatibility.
 
 **Example**
 
-InfoMessage(“ThreadNum: “ + ThreadNum())
+InfoMessage("ThreadNum: " + ThreadNum())
 
 **See also**
 
@@ -9568,7 +9568,7 @@ wlGlobals.TransactionTime = 1
 
 -Or-
 
-wlGlobals.TransactionTime = “0.001”
+wlGlobals.TransactionTime = "0.001"
 
 **See also**
 
@@ -9596,7 +9596,7 @@ wlGlobals.TransactionTime = “0.001”
 
 This property is a string that holds the ‘type’ of the parent object.
 
-If the parent is a form element object, then type holds the HTML type attribute of the form element. For example, an `<INPUT>` element can have a type of “TEXT”, “CHECKBOX”, or “RADIO”. Certain HTML form elements, such as `<SELECT>` do not have a type attribute. In that case, element.type is the element tag itself, for example “SELECT”.
+If the parent is a form element object, then type holds the HTML type attribute of the form element. For example, an `<INPUT>` element can have a type of "TEXT", "CHECKBOX", or "RADIO". Certain HTML form elements, such as `<SELECT>` do not have a type attribute. In that case, element.type is the element tag itself, for example "SELECT".
 
  **Note:** The Type value *does not* change. Even when working with dynamic HTML, the type of a specific object remains the same through all subsequent transactions with that object.
 
@@ -9614,7 +9614,7 @@ wlHttp.Data:
 
 When working with wlHttp.Data objects, use the uppercase form:
 
-wlHttp.Data.Type = “application/x-www-form-urlencoded”
+wlHttp.Data.Type = "application/x-www-form-urlencoded"
 
 **Comment**
 
@@ -9654,7 +9654,7 @@ If the parent object is wlGlobals, this property holds the URL address to which 
 
 wlGlobals object connects.
 
-If the parent object is wlMetas, then if httpEquiv=“REFRESH” and the content property holds a URL, then the URL is extracted and stored in a link object (read- only).
+If the parent object is wlMetas, then if httpEquiv="REFRESH" and the content property holds a URL, then the URL is extracted and stored in a link object (read- only).
 
 **Example**
 
@@ -9664,7 +9664,7 @@ If the parent object is wlMetas, then if httpEquiv=“REFRESH” and the content
 
 **wlGlobals**:
 
-wlGlobals.Url = [“http://www.ABCDEF.com](http://www.ABCDEF.com/)”
+wlGlobals.Url = ["http://www.ABCDEF.com](http://www.ABCDEF.com/)"
 
 **wlMetas**:
 
@@ -9699,7 +9699,7 @@ wlMetas objects is written in all-uppercase caps.
 
 **Description**
 
-A user agent is the client application used with a particular network protocol. The phrase, “user agent” is most commonly used in reference to applications that access the World Wide Web. Web user agents range from web browsers to search engine crawlers (“spiders”), as well as mobile phones, etc. The user agent string can be sent as part of the HTTP request, prefixed with User-agent: or User-Agent:. This string typically includes information such as the application name, version, host, host operating system, and language. Some examples of user agent strings can be found at:
+A user agent is the client application used with a particular network protocol. The phrase, "user agent" is most commonly used in reference to applications that access the World Wide Web. Web user agents range from web browsers to search engine crawlers ("spiders"), as well as mobile phones, etc. The user agent string can be sent as part of the HTTP request, prefixed with User-agent: or User-Agent:. This string typically includes information such as the application name, version, host, host operating system, and language. Some examples of user agent strings can be found at:
 
 http://en.wikipedia.org/wiki/User_agent#Example_user-agent_strings
 
@@ -9737,9 +9737,9 @@ If you prefer to explicitly set authentication values, WebLOAD recommends settin
 
 You may also set user values using the wlGlobals properties. WebLOAD automatically sends the user name and password when a wlHttp object connects to an HTTP site. For example:
 
-`wlGlobals.UserName = “Bill”`
+`wlGlobals.UserName = "Bill"`
 
-`wlGlobals.PassWord = “TopSecret”`
+`wlGlobals.PassWord = "TopSecret"`
 
 **Comments**
 
@@ -9800,14 +9800,14 @@ WebLOAD zeros the timer immediately before a `Get()` or `Post()` call and sends 
 //**Version 1**
 
 ```
-wlHttp.UsingTimer = “Timer1”`
-wlHttp.Get(“http://www.ABCDEF.com”)
+wlHttp.UsingTimer = "Timer1"`
+wlHttp.Get("http://www.ABCDEF.com")
 ```
 //**Version 2**
 ```
-SetTimer(“Timer1”) 
-wlHttp.Get(“http://www.ABCDEF.com”)
-SendTimer(“Timer1”)`
+SetTimer("Timer1") 
+wlHttp.Get("http://www.ABCDEF.com")
+SendTimer("Timer1")`
 ```
 
 **See also**
@@ -9847,29 +9847,29 @@ When working with `wlHttp.Data` or `wlHttp.Header` objects, this property holds 
 
 **For wlHeaders:**
 
-`document.wlHeaders[index#].value = “TextString”`
+`document.wlHeaders[index#].value = "TextString"`
 
 For example:
 
-`document.wlHeaders[0].value = “Netscape-Enterprise/3.0F”`
+`document.wlHeaders[0].value = "Netscape-Enterprise/3.0F"`
 
 **For wlSearchPairs:**
 
-`document.links[1].wlSearchPairs[index#].value = “TextString”`
+`document.links[1].wlSearchPairs[index#].value = "TextString"`
 
 For example:
 
-`document.links[1].wlSearchPairs[0].value = “OpticsResearch”`
+`document.links[1].wlSearchPairs[0].value = "OpticsResearch"`
 
 **For wlHttp.Header:**
 
-`wlHttp.Header[“value”] = “TextString”`
+`wlHttp.Header["value"] = "TextString"`
 
 **For wlHttp.Data:**
 
 When working with wlHttp.Data objects, use the uppercase form:
 
-`wlHttp.Data.Value = “SearchFor=icebergs&SearchType=ExactTerm”`
+`wlHttp.Data.Value = "SearchFor=icebergs&SearchType=ExactTerm"`
 
 **Comment**
 
@@ -9978,7 +9978,7 @@ The following sample verification function checks if the current title of the We
 function Transaction1_VerificationFunction()
 {
   InfoMessage(document.title) 
-  if(document.title.indexOf(“Google”)>0)
+  if(document.title.indexOf("Google")>0)
     return WLSuccess else
   else
     return WLMinorError
@@ -10159,20 +10159,20 @@ If called with no parameters, then all values set for the collection are cleared
 
 
 ```
-wlHttp.FormData[“a”] = “DDD” 
-wlHttp.FormData[“B”] = “FFF” 
+wlHttp.FormData["a"] = "DDD" 
+wlHttp.FormData["B"] = "FFF" 
 wlHttp.FormData.wlClear()
 // Clear all value from all fields in FormData 
-InfoMessage (wlHttp.FormData[“a”])
+InfoMessage (wlHttp.FormData["a"])
 // This statement has no meaning, since there
-// is currently no value assigned to “a”
+// is currently no value assigned to "a"
 
 ```
 If `wlClear()` is passed a `FieldName` parameter, then only the value of the specified field is cleared:
 
 ```
-wlHttp.FormData.wlClear(“FirstName”)
-// Clears only value assigned to “FirstName”
+wlHttp.FormData.wlClear("FirstName")
+// Clears only value assigned to "FirstName"
 ```
 
 **See also**
@@ -10212,12 +10212,12 @@ Aside from these two abilities, WebLOAD does not distinguish in any way between 
 
 ```
 //Set a cookie
-wlCookie.Set(“CUSTOMER”, “JOHN_SMITH”, “www.ABCDEF.com”, 
-            “/”, “Wed, 08-Apr-98 17:29:00 GMT”)
+wlCookie.Set("CUSTOMER", "JOHN_SMITH", "www.ABCDEF.com", 
+            "/", "Wed, 08-Apr-98 17:29:00 GMT")
 //WebLOAD submits the cookie 
-wlHttp.Get(“www.ABCDEF.com/products/OrderForm.cgi”)
+wlHttp.Get("www.ABCDEF.com/products/OrderForm.cgi")
 //Get the value of a cookie
-retValue = wlCookie.Get(“CUSTOMER”, “www.ABCDEF.com”, “/” )
+retValue = wlCookie.Get("CUSTOMER", "www.ABCDEF.com", "/" )
 //Delete the cookie 
 wlCookie.ClearAll()
 ```
@@ -10335,7 +10335,7 @@ try{
 }
 
 catch(e){
-  myException = new wlException(e,“we have a problem”)
+  myException = new wlException(e,"we have a problem")
   //things to do in case of error
   if (myException.GetSeverity() == WLError) {
     // Do one set of Error activities 
@@ -10394,7 +10394,7 @@ Returns a new `wlException` object.
 
 **Example**
 
-`myUserException=new wlException(WLError, “Invalid date”)`
+`myUserException=new wlException(WLError, "Invalid date")`
 
 **See also**
 
@@ -10462,20 +10462,20 @@ The value of the specified property
 
 **Example** 
 
-`document.forms[0].elements.wlGet(“FirstName”)` 
+`document.forms[0].elements.wlGet("FirstName")` 
 
 **Comment**
 
 In JavaScript, users may work interchangeably with either an `array[index]` or `array.index` notation. For example, the following two references are interchangeable:
 
-`wlHttp.FormData[“Sunday”]`
+`wlHttp.FormData["Sunday"]`
 
 -Or-
 
 `wlHttp.FormData.Sunday`
 This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called `length`. This could lead to a confusing situation, where the word `length` appearing in a script could represent either the number of elements in a `FormData` array, as explained in length, or the value of the `length` field in the form. Errors would arise from a reasonable assignment statement such as:
 
-`wlHttp.FormData[“length”] = 7`
+`wlHttp.FormData["length"] = 7`
 
 This is equivalent to the illegal assignment statement:
 
@@ -10621,7 +10621,7 @@ Each `wlHeaders` object contains a key-value pair. `wlHeaders` objects provide a
 
 WebLOAD stores the header pairs from the response to the most recent Get, Post, or Head command in the document.wlHeaders collection. The following statement would retrieve an HTTP header:
 
-`wlHttp.Head(“http://www.ABCDEF.com”)`
+`wlHttp.Head("http://www.ABCDEF.com")`
 
 For a header that looks something like this:
 
@@ -10637,10 +10637,10 @@ Host: Server2.MyCompany.com
 WebLOAD parses the header pairs as follows:
 
 ```
-document.wlHeaders[0].key = “Server” 
-document.wlHeaders[0].value = “Netscape-Enterprise/3.0F” 
-document.wlHeaders[1].key = “Date” 
-document.wlHeaders[1].value = “Sun, 11 Jan 1998 08:25:20 GMT”
+document.wlHeaders[0].key = "Server" 
+document.wlHeaders[0].value = "Netscape-Enterprise/3.0F" 
+document.wlHeaders[1].key = "Date" 
+document.wlHeaders[1].value = "Sun, 11 Jan 1998 08:25:20 GMT"
 
 ...
 ```
@@ -10935,9 +10935,9 @@ The `wlOutputFile` object writes script output messages to a global output file.
 **Syntax**
 
 ```javascript
-MyFileObj = new wlOutputFile(“filename”)
+MyFileObj = new wlOutputFile("filename")
 …
-MyFileObj.Write(“Happy Birthday”)
+MyFileObj.Write("Happy Birthday")
 delete MyFileObj
 ```
 
@@ -11016,7 +11016,7 @@ A pointer to a new `wlOutputFile` object.
 
 **Example**
 
-`MyFileObj = new wlOutputFile(“FileName”)`
+`MyFileObj = new wlOutputFile("FileName")`
 
 
 
@@ -11128,8 +11128,8 @@ Access each ` wlSearchPairs`’s properties directly through the index number of
 Suppose that the third link on a Web page has the following HTML code:
 
 ```
-<A href=“http://www.ABCDEF.com/ProductFind.exe?
-         Product=modems&Type=ISDN”> ISDN Modems `</A>`
+<A href="http://www.ABCDEF.com/ProductFind.exe?
+         Product=modems&Type=ISDN"> ISDN Modems `</A>`
 ```
 You can download the page and parse the links using the following script:
 
@@ -11146,10 +11146,10 @@ wlHttp.Get()
 For the link in question, WebLOAD stores the attribute pairs in the `document.links[2].wlSearchPairs  property. This property is actually a collection containing two ` wlSearchPairs` objects. The following is a complete listing of the collection.
 
 ```
-document.links[2].wlSearchPairs[0].key = “Product” 
-document.links[2].wlSearchPairs[0].value = “modems” 
-document.links[2].wlSearchPairs[1].key = “Type” 
-document.links[2].wlSearchPairs[1].value = “ISDN”
+document.links[2].wlSearchPairs[0].key = "Product" 
+document.links[2].wlSearchPairs[0].value = "modems" 
+document.links[2].wlSearchPairs[1].key = "Type" 
+document.links[2].wlSearchPairs[1].value = "ISDN"
 ```
 
 **Properties**
@@ -11202,13 +11202,13 @@ The value of the specified property.
 
 **Example** 
 
-`wlHttp.FormData.wlSet(“FirstName”, “Bill”)`
+`wlHttp.FormData.wlSet("FirstName", "Bill")`
 
  **Comment**
 
 In JavaScript, users may work interchangeably with either an `array[index]` or `array.index` notation. For example, the following two references are interchangeable:
 
-`wlHttp.FormData[“Sunday”]`
+`wlHttp.FormData["Sunday"]`
 
 -Or-
 
@@ -11216,7 +11216,7 @@ In JavaScript, users may work interchangeably with either an `array[index]` or `
 
 This flexibility is convenient for programmers, who are able to select the syntax that is most appropriate for the context. However, it could potentially lead to ambiguity. For example, assume a website included a form with a field called `length`. This could lead to a confusing situation, where the word `length` appearing in a script could represent either the number of elements in a `FormData` array, as explained in length, or the value of the `length` field in the form. Errors would arise from a reasonable assignment statement such as:
 
-`wlHttp.FormData[“length”] = 7`
+`wlHttp.FormData["length"] = 7`
 
 This is equivalent to the illegal assignment statement:
 
@@ -11224,7 +11224,7 @@ This is equivalent to the illegal assignment statement:
 
 WebLOAD therefore uses `wlSet()` to set field data whenever the name could lead to potential ambiguity. When recording scripts with the AAT, WebLOAD recognizes potential ambiguities and inserts the appropriate `wlSet()` statements automatically. In this case:
 
-`wlHttp.FormData.wlSet(“length”, 7)`
+`wlHttp.FormData.wlSet("length", 7)`
 
 **See also**
 
@@ -11270,11 +11270,11 @@ To use the HTML source, you must enable the SaveSource (see [*SaveSource (proper
 
 **Description**
 
-The status line of the HTTP header (read-only string, for example “OK”).
+The status line of the HTTP header (read-only string, for example "OK").
 
 **Syntax**
 
-`document.wlHeaders[“status line”]`
+`document.wlHeaders["status line"]`
 
 
 
@@ -11418,7 +11418,7 @@ The exact location within the Web page of the frame into which the transaction s
 
 **Syntax**
 
-`wlHttp.wlTarget = “LocationString”`
+`wlHttp.wlTarget = "LocationString"`
 
 **Comment**
 
@@ -11514,7 +11514,7 @@ The recommended way to set response validation values is through the WebLOAD Rec
 
 **Description**
 
-The HTTP protocol version, which WebLOAD retrieves from the HTTP header (read- only string, for example “1.1”).
+The HTTP protocol version, which WebLOAD retrieves from the HTTP header (read- only string, for example "1.1").
 
 **Example**
 
@@ -11629,14 +11629,14 @@ XML DOM objects may also be accessed directly using the XML ID. For example, if 
 
 -Or-
 
-`MyBookstore = document.wlXmls[“myXmlDoc”]`
+`MyBookstore = document.wlXmls["myXmlDoc"]`
 
 The following example illustrates HTML property usage. Assume you are working with a Web Bookstore site that includes the following inventory database code fragment:
 
 ```xml
 
 <xml ID="xmlBookSite">
-<?xml version="1.0”?>
+<?xml version="1.0"?>
 <!-- Bookstore inventory database -->
   <bookstore>
     JavaScript Reference Guide
@@ -11657,15 +11657,15 @@ When accessing this website, your script may use the standard HTML properties id
 
 ```
 var XMLBookstoreDoc = document.wlXmls[0] 
-InfoMessage(“ID = “ + XMLBookstoreDoc.id) 
-InfoMessage(“HTML text = “ + XMLBookstoreDoc.innerHTML)
+InfoMessage("ID = " + XMLBookstoreDoc.id) 
+InfoMessage("HTML text = " + XMLBookstoreDoc.innerHTML)
 ```
 
 Running this script produces the following output:
 
 ```
 ID = xmlBookSite`
-HTML text = <?xml version="1.0”?>`
+HTML text = <?xml version="1.0"?>`
 …etc.
 
 ```
@@ -11717,7 +11717,7 @@ This method writes a string to the output file.
 ```
 MyFileObj = new wlOutputFile(filename)
 …
-MyFileObj.Write(“Happy Birthday”)
+MyFileObj.Write("Happy Birthday")
 ```
 
 **See also**
@@ -11762,7 +11762,7 @@ This method writes a string followed by a newline character to the output file.
 ```
 MyFileObj = new wlOutputFile(filename)
 …
-MyFileObj.Writeln(“Happy Birthday”)
+MyFileObj.Writeln("Happy Birthday")
 ```
 
 **See also**

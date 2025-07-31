@@ -325,7 +325,7 @@ Note that you can use the same Amazon cloud account to create multiple WebLOAD c
 
       - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
 
-    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “`<*WebLOAD Cloud Account Name*>`<*X*>” where X is a number that is incremented for each added cloud host machine.
+    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names "`<*WebLOAD Cloud Account Name*>`<*X*>" where X is a number that is incremented for each added cloud host machine.
 
 
 

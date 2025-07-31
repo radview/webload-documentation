@@ -69,15 +69,15 @@ This document provides a detailed description of various cloud account types and
 
 - Create an Azure account
 - Sign in the the Azure portal at [https://portal.azure.com](https://portal.azure.com)
-- Go to “Cost Management + Billing”
-  - View “Azure Subscriptions” / “My Subscriptions” - note your **Subscription ID**
-- Go to “Azure Active Directory”
-  - Goto “Properties”. Note the ‘Directory ID’ or ‘Tenant ID’. This is your **Tenant ID**
+- Go to "Cost Management + Billing"
+  - View "Azure Subscriptions" / "My Subscriptions" - note your **Subscription ID**
+- Go to "Azure Active Directory"
+  - Goto "Properties". Note the ‘Directory ID’ or ‘Tenant ID’. This is your **Tenant ID**
   - App registrations - New Application Registration
   - Type: Web app / API
   - Name, URL - enter something, it’s not important
   - Note the Application ID - this is your **identity**
-  - Click ‘Settings’ - “Certificates and Secrets” (Keys - Passwords )
+  - Click ‘Settings’ - "Certificates and Secrets" (Keys - Passwords )
   - Enter some description and duration and click ‘Save’, it will generate a value. Note that as your **Credentials**
 - Add permissions
   - ‘All Services’ -> Subscriptions

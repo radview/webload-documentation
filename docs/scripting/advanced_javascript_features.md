@@ -81,7 +81,7 @@ If a Data Island is identified by name through an ID, you could also access the 
 
 Island through the id property. For example, if the first Data Island begins:
 
-`<xml id=“xmlBookstoreDatabase”>`
+`<xml id="xmlBookstoreDatabase">`
 
 Then you could access the Data Island using any of the following:
 
@@ -89,7 +89,7 @@ Then you could access the Data Island using any of the following:
 
 `MyBookstore = document.wlXmls.xmlBookstoreDatabase` 
 
-`MyBookstore = document.wlXmls[“xmlBookstoreDatabase”]` 
+`MyBookstore = document.wlXmls["xmlBookstoreDatabase"]` 
 
 `MyBookstore = document.wlXmls[0]`
 
@@ -141,7 +141,7 @@ In this code fragment, a reference to XML data found at another location is foun
    <body>
       ...
       <!—reference to another source>
-      <xml id=“xmldoc\_2” src=“http://demo/bookstore.xml”>
+      <xml id="xmldoc\_2" src="http://demo/bookstore.xml">
       </xml>
       ...
    </body>
@@ -158,8 +158,8 @@ For example:
 
 ```xml
 
-<SCRIPT language=“xml” id=“xmlscript”>
-   <?xml version="1.0”?>
+<SCRIPT language="xml" id="xmlscript">
+   <?xml version="1.0"?>
    <!—XML data in-line within a script element.>
    <bookstore>
       Programmer’s Guide
@@ -182,7 +182,7 @@ For example:
 
 The preceding code illustrates XML data embedded in a script. Scripts may also include references to other sources:
 ```xml
-<SCRIPT language=“xml” id=“xmlscript” src=“book.xml”>
+<SCRIPT language="xml" id="xmlscript" src="book.xml">
 
 </SCRIPT>
 ```
@@ -694,11 +694,11 @@ The following script fragments illustrates this sequence:
 
 1. Get the XML page, either as a static page from the server:
 
-    `wlHttp.Get("http://demosite/bookstore.xml”)`
+    `wlHttp.Get("http://demosite/bookstore.xml")`
 
     Or through a database query to the bookstore:
 
-    `wlHttp.Get(“http://demosite/bookstore.exe?             author=Mark Twain&MaxPrice=$20.00”)`
+    `wlHttp.Get("http://demosite/bookstore.exe?             author=Mark Twain&MaxPrice=$20.00")`
 
 1. Create a new XML DOM object using the saved page source, which happens to include the XML string:
 
@@ -708,11 +708,11 @@ The following script fragments illustrates this sequence:
 
     For example, you may post the new XML DOM data back to the server:
 
-    `wlHttp.Data.Type=“text/xml”`
+    `wlHttp.Data.Type="text/xml"`
 
     `wlHttp.Data.Value=xmlobj.xml`
 
-    `wlHttp.Post(“Http://demosite/bookstore.exe?operation=upd ate”)`
+    `wlHttp.Post("Http://demosite/bookstore.exe?operation=upd ate")`
 
 > **Note:** The WLXmlDocument(xmlStr) constructor must be passed complete, self- contained XML strings *only*. The DTD section must not contain any external references when using this form of the constructor. 
 
@@ -726,7 +726,7 @@ The `WLXmlDocument()` constructor may be used without any parameters. In this ca
 
 You may now use the `loadXML()` method to add XML data to your new blank XML DOM object.
 
-`NewBlankXMLObj = loadXML(“<?xml version='1.0’?><bookstore></bookstore>”)`
+`NewBlankXMLObj = loadXML("<?xml version='1.0’?><bookstore></bookstore>")`
 
 To add more content to the document, create elements and add them as child nodes as described in the example in the previous section.
 
@@ -734,8 +734,8 @@ To add more content to the document, create elements and add them as child nodes
 
 The MSXML Document Interface provides two methods for loading XML documents into XML DOM objects:
 
-- `loadXML(“XMLdocumentstring”)`
-- `load(“URL”)`
+- `loadXML("XMLdocumentstring")`
+- `load("URL")`
 
 This section describes the advantages and limitations of the `loadXML()` and `load()` methods when used in WebLOAD Recorder scripts, and discusses how to select the method that will be most effective in your scripts.
 
@@ -773,7 +773,7 @@ For example:
 ```
 myXMLDoc = document.wlXmls[0]
 
-myXMLdoc.load(http://server/xmls/file.xml”)
+myXMLdoc.load(http://server/xmls/file.xml")
 ```
 
 
@@ -794,9 +794,9 @@ WebLOAD supports both the `load()` and the `loadXML()` methods to provide the us
 >
 ```
 myXMLDoc = document.wlXmls[0]
-SetTimer(“GetXML”)
-myXMLdoc.load(“http://server/xmls/file.xml”)
-SendTimer(“GetXML”)
+SetTimer("GetXML")
+myXMLdoc.load("http://server/xmls/file.xml")
+SendTimer("GetXML")
 
 ```
 
@@ -806,40 +806,40 @@ The next example will put together some of the pieces from the previous sections
 ```xml
 // 1. CREATE AN EMPTY XML OBJECT with a skeleton: 
 xmlBookstoreDoc = new WLXmlDocument
-    (“<?xml version='1.0’?><bookstore></bookstore>”)
+    ("<?xml version='1.0’?><bookstore></bookstore>")
 // 2. ADD CONTENT TO THE DOCUMENT:
 //create the first book element
-newBook = xmlBookstoreDoc.createElement(“book”)
+newBook = xmlBookstoreDoc.createElement("book")
 //append the new book to the bookstore tree 
 xmlBookstoreDoc.documentElement.appendChild(newBook)
 //create, name, and append the new book’s author element
-author = xmlBookstoreDoc.createElement(“author”) 
-name = xmlBookstoreDoc.createTextNode(“Mark Twain”) 
+author = xmlBookstoreDoc.createElement("author") 
+name = xmlBookstoreDoc.createTextNode("Mark Twain") 
 author.appendChild(name) newBook.appendChild(author)
 //create, name, and append the new book’s title element
-title =  xmlBookstoreDoc.createElement(“title”) 
-name = xmlBookstoreDoc.createTextNode(“Tom Sawyer”) 
+title =  xmlBookstoreDoc.createElement("title") 
+name = xmlBookstoreDoc.createTextNode("Tom Sawyer") 
 title.appendChild(name)
 newBook.appendChild(title)
 //create, name, and append the new book’s price element
-price = xmlBookstoreDoc.createElement(“price”) 
-amount = xmlBookstoreDoc.createTextNode(“$12.00”) 
+price = xmlBookstoreDoc.createElement("price") 
+amount = xmlBookstoreDoc.createTextNode("$12.00") 
 price.appendChild(amount) newBook.appendChild(price)
 // 3. CONTINUE TO ADD CONTENT TO THE DOCUMENT:
 //create the second element and append it to the tree 
-newBook = xmlBookstoreDoc.createElement(“book”) 
+newBook = xmlBookstoreDoc.createElement("book") 
 xmlBookstoreDoc.documentElement.appendChild(newBook)
 //create, name, and append author, title, and price elements
-author = xmlBookstoreDoc.createElement(“author”) 
-name = xmlBookstoreDoc.createTextNode(“Leo Tolstoy”) 
+author = xmlBookstoreDoc.createElement("author") 
+name = xmlBookstoreDoc.createTextNode("Leo Tolstoy") 
 author.appendChild(name)  
 newBook.appendChild(author)
-title = xmlBookstoreDoc.createElement(“title”)
-name = xmlBookstoreDoc.createTextNode(“War and Peace”)
+title = xmlBookstoreDoc.createElement("title")
+name = xmlBookstoreDoc.createTextNode("War and Peace")
 title.appendChild(name) 
 newBook.appendChild(title)
-price = xmlBookstoreDoc.createElement(“price” 
-amount = xmlBookstoreDoc.createTextNode(“$20.00”) 
+price = xmlBookstoreDoc.createElement("price" 
+amount = xmlBookstoreDoc.createTextNode("$20.00") 
 price.appendChild(amount) 
 newBook.appendChild(price)
 ```
@@ -847,7 +847,7 @@ newBook.appendChild(price)
 A new XML DOM bookstore database object has now been created and filled with information about two books. The product of the `xmlBookstoreDoc.documentElement.xml` property would be:
 
 ```xml
-<?xml version="1.0”?>
+<?xml version="1.0"?>
 <bookstore>
     <book>
           <author>Mark Twain</author>
@@ -1137,7 +1137,7 @@ Most common compilation and runtime errors can be prevented if you follow the in
   
     Your script should reference this class as follows:
   
-          `var myJavaObj = new Packages.MyJavaClass(“stringArg”)`
+          `var myJavaObj = new Packages.MyJavaClass("stringArg")`
   
     If you were not careful, you could accidentally define CLASSPATH to include the wrong directory, such as:
   
@@ -1146,7 +1146,7 @@ Most common compilation and runtime errors can be prevented if you follow the in
     Or you could accidentally include an incorrect package path in the script file, such as:
   
        `var myJavaObj = new`
-       `Packages.Jlib.MyJavaClass(“stringArg”)`
+       `Packages.Jlib.MyJavaClass("stringArg")`
   
     In either of these cases the constructor call would fail and WebLOAD would return the following error message:
   
@@ -1713,10 +1713,10 @@ Creates a new ActiveX object. The new object is simply a local JavaScript object
 **Syntax**
 
 `my_ActiveXobject = new`
-       `ActiveXObject(“ApplicationName.ObjectName” [, “rServer”])`
+       `ActiveXObject("ApplicationName.ObjectName" [, "rServer"])`
 
 In VBScript terminology, the syntax appears as follows:
-`my\_ActiveXobject = new ActiveXObject(“ServerName.TypeName”)`
+`my\_ActiveXobject = new ActiveXObject("ServerName.TypeName")`
 
 **Parameters**
 
@@ -1733,7 +1733,7 @@ A pointer to the new ActiveX object. The new object is simply a local JavaScript
 
 To create a new Excel spreadsheet:
 
-`ExcelSheet = new ActiveXObject (“Excel.Sheet”)`
+`ExcelSheet = new ActiveXObject ("Excel.Sheet")`
 
 ### Assigning Values to ActiveX Objects
 At this point, now that you have created a reference to an ActiveX object, the fact that it refers to an ActiveX object does not affect usage and syntax within your JavaScript script. Once the new object has been activated, `my_ActiveXobject` is simply a local JavaScript object that is used to communicate with a COM object. Your script works with this object exactly as it would work with any other JavaScript object. You do not have to deal with any COM overhead or syntax issues. You access the new object’s properties and methods as you would access any other JavaScript object.
@@ -1812,7 +1812,7 @@ When the data type is known, WebLOAD automatically converts between JavaScript d
 
 If `TypeInfo` information is not accessible, WebLOAD uses a basic common-sense heuristic to determine the data type and select the appropriate conversion, based on the preceding default conversion table. For example, if a variable A has been assigned a value of 5, WebLOAD assumes that the variable should be of type `Integer`.
 
-However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a `String` “5”. Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, [Using Casting Functions for JavaScript](#using-casting-functions-for-javascript-and-com-data-types).
+However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a `String` "5". Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, [Using Casting Functions for JavaScript](#using-casting-functions-for-javascript-and-com-data-types).
 
 
 
@@ -1934,11 +1934,11 @@ Creates a new remote ActiveX object. The new object is simply a local JavaScript
 
 **Syntax**
 
-`RDS\_object = new ActiveXObject (“RDS.DataSpace”)`
+`RDS\_object = new ActiveXObject ("RDS.DataSpace")`
 
 `my\_RemoteActiveXobject =`
 
-`RDS\_object.CreateObject(“AppName.ObjName”, “http://rServer”)`
+`RDS\_object.CreateObject("AppName.ObjName", "http://rServer")`
 
 **Parameters**
 
@@ -1963,7 +1963,7 @@ The following script fragment illustrates ActiveX object access from a WebLOAD J
 
 ```javascript
 // Instantiate a new ActiveX object
-DataSpace = new ActiveXObject(“RDS.Dataspace”)
+DataSpace = new ActiveXObject("RDS.Dataspace")
 // Invoke server object. localhost is the server here 
 svrObject = DataSpace.CreateObject
     ("RDSServer.DataFactory", "http://localhost")
@@ -1973,7 +1973,7 @@ svrObject = DataSpace.CreateObject
 // Create output file with the unique ClientNum included
 // as part of the name for identification purposes 
 wlLocals.MyFileObj = new wlOutputFile
-       (“C:\\OutputFile” + ClientNum + “.txt”)
+       ("C:\\OutputFile" + ClientNum + ".txt")
 // svrObject.Query returns a recordset 
 strRecord = svrObject.Query
        ("DSN=AdvWorks2", "Select\* from Customers")

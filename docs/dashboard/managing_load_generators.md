@@ -50,11 +50,11 @@ This is helpful when defining a load test, because of the relationship between N
    
    Then:
 
- - Give the same “Test Lab 1” **Location** to all the load generator machines located in Test Lab 1.  
+ - Give the same "Test Lab 1" **Location** to all the load generator machines located in Test Lab 1.  
 
    Finally:
 
-- You need only to select “Test Lab 1” in the Load Generators section of the Create Load Test page, and all the load generators whose Location is “Test Lab 1” will be included. 
+- You need only to select "Test Lab 1" in the Load Generators section of the Create Load Test page, and all the load generators whose Location is "Test Lab 1" will be included. 
 
 ------------------------------------------------
 
@@ -71,7 +71,7 @@ This is helpful when defining a load test, because of the relationship between N
 
    Finally: 
 
- - You need only to select “Windows”, “Linux”, “New York” or “London” in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included.
+ - You need only to select "Windows", "Linux", "New York" or "London" in the Load Generator section of the Create Load Test page, and only the load generators fitting that description will be included.
 
 
 ## Specifying a Cloud Host as a Load Generator

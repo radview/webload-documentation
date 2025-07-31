@@ -46,7 +46,7 @@ If you did not open WebLOAD Analytics from WebLOAD Console, the Select Session w
 
 ## Creating a Regression Chart
 
-A regression chart compares one selected “Main” session to all additional sessions you specify. Regression charts are the only kind of chart that require you to specify multiple sessions for the generation of the chart. 
+A regression chart compares one selected "Main" session to all additional sessions you specify. Regression charts are the only kind of chart that require you to specify multiple sessions for the generation of the chart. 
 
 **To create a regression chart:** 
 

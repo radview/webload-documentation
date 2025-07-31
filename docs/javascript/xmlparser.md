@@ -76,7 +76,7 @@ xmlObject = new XMLParserObject();
 //Parse the xml file from the specified path 
 xmlDoc = xmlObject.parseURI("C:\\xml_file.xml");
 
-//Retrieve the first node with the “NODE5” tag
+//Retrieve the first node with the "NODE5" tag
 domNode = xmlDoc.getElementsByTagName("NODE5").item(0);
 
 //Retrieve the node's type 

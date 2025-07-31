@@ -85,7 +85,7 @@ The WebLOAD Transactions Dashboard displays real-time statistical information ab
 
 
 
-Report data is organized in a tree structure. Report fields are organized into different “report tree branches”, illustrated in the Report Dialog Box figure.
+Report data is organized in a tree structure. Report fields are organized into different "report tree branches", illustrated in the Report Dialog Box figure.
 
 Report tree branches include:
 
@@ -152,7 +152,7 @@ The following table describes the buttons in the Report dialog box.
 
 ## Renaming a Report
 
-You can assign a meaningful name to a report. The default name for reports is “ReportX” where X is a number that is incremented with each generated report.
+You can assign a meaningful name to a report. The default name for reports is "ReportX" where X is a number that is incremented with each generated report.
 
 **To rename a report:**
 
@@ -346,7 +346,7 @@ Regression testing enables you to configure a report that compares:
 
 
 
-- Existing performance data from a previously saved or “expected” Load Session with data from the currently running test session.
+- Existing performance data from a previously saved or "expected" Load Session with data from the currently running test session.
 - Existing performance data from two previously saved Load Sessions.
 
 Combining performance results from several different Load Sessions into a single report enables you to view, verify and compare results over time and ensure that results only vary in ways that you expect them to.

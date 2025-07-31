@@ -226,7 +226,7 @@ Collections are arrays or sets of individual objects. For example, the elements 
 Access individual members of a collection either through an index number or directly through the member’s name or ID. The following three syntax choices are equivalent:
 
 - `Collection[index#]`
-- `Collection[“ID”] `
+- `Collection["ID"] `
 - `Collection.ID`
 
 
@@ -332,7 +332,7 @@ You can do this using a combination of the` ClientNum` and `RoundNum` variables.
 
  
 
-`“C” + ClientNum.toString() + “R” + RoundNum.toString()`
+`"C" + ClientNum.toString() + "R" + RoundNum.toString()`
 
 
 
@@ -377,19 +377,19 @@ In the following example, the script attempts to download an HTML page. If it fa
 
 ```javascript
 function InitClient() {
-    wlLocals.Url = “http://www.ABCDEF.com/index.html"
+    wlLocals.Url = "http://www.ABCDEF.com/index.html"
 }
 //First try 
 wlHttp.Get()
 if (document.wlStatusNumber != 200) { 
-    InfoMessage(“Thread “ + ClientNum.toString() +
+    InfoMessage("Thread " + ClientNum.toString() +
     " pausing for 3 min") 
     Sleep(180000)
   //Second try
     wlHttp.Get()
     if (document.wlStatusNumber != 200) { 
-      ErrorMessage(“Aborting round “ + RoundNum.toString() + “ 
-      of thread “ + ClientNum.toString())
+      ErrorMessage("Aborting round " + RoundNum.toString() + " 
+      of thread " + ClientNum.toString())
     }   // End of second try
 }
 ```
@@ -458,7 +458,7 @@ Website testing usually means testing how typical user activities are handled by
 
 
 
-Sometimes a tester may prefer to use a low-level, “nuts-and-bolts” approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in the *WebLOAD JavaScript Reference Guide* that are relevant to the HTTP Transaction Mode are noted as such in the entry.
+Sometimes a tester may prefer to use a low-level, "nuts-and-bolts" approach that focuses on specific internal implementation commands, such as HTTP transactions. The WebLOAD DOM extension set includes objects, methods, properties, and functions that support this approach. Items in the *WebLOAD JavaScript Reference Guide* that are relevant to the HTTP Transaction Mode are noted as such in the entry.
 
 
 
@@ -579,13 +579,13 @@ WebLOAD reports three time statistics:
 
 
 ```javascript
-SetTimer(“Page 1 Time”) 
+SetTimer("Page 1 Time") 
 wlHttp.Get("http://www.ABCDEF.com")
-SendTimer(“Page 1 Time”)
+SendTimer("Page 1 Time")
 if (RoundNum%5 == 0) { 
-   SetTimer(“Page 2 Time”)
+   SetTimer("Page 2 Time")
    wlHttp.Get("http://www.ABCDEF.com/product_info.html")
-   SendTimer(“Page 2 Time”)
+   SendTimer("Page 2 Time")
 }
 ```
 

@@ -18,7 +18,7 @@ You can also specify script options including the type of browser to emulate, co
 
 ## How does the Goal-Oriented Test Work?
 
-When operating WebLOAD Console manually, you specify the number of Virtual Clients that WebLOAD Console should simulate. The evaluation of the SUT’s performance is based on this number. For example, you might configure WebLOAD Console to test the performance of your Web application when 200 Virtual Clients perform a certain function simultaneously. WebLOAD Console runs the test and may report that when 200 Virtual Clients are running, the application Response Time is “x”.
+When operating WebLOAD Console manually, you specify the number of Virtual Clients that WebLOAD Console should simulate. The evaluation of the SUT’s performance is based on this number. For example, you might configure WebLOAD Console to test the performance of your Web application when 200 Virtual Clients perform a certain function simultaneously. WebLOAD Console runs the test and may report that when 200 Virtual Clients are running, the application Response Time is "x".
 
 The Goal-Oriented Test is different. The Goal-Oriented Test enables you to specify the performance goals that you want to achieve, and WebLOAD Console generates a Goal- Oriented Test test that automatically schedules a test to achieve the specified goals. For example, if your performance goal is for your application server’s response time not to exceed three seconds, the Goal-Oriented Test devises the test for you. The
 
@@ -224,7 +224,7 @@ Therefore, it is recommended that you define at least one Probing Client Machine
 1. Click **OK**.
 
     - If you added a local host machine, the machine is added to the Load Machines list in the Host Selection dialog box, and is listed by the host name or IP address you entered.
-    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names “`<*WebLOAD Cloud Account Name*>`<*X*>” where X is a number that is incremented for each added cloud host machine.
+    - If you added cloud host machines, a list of machines is added to the Load Machines list in the Host Selection dialog box with the names "`<*WebLOAD Cloud Account Name*>`<*X*>" where X is a number that is incremented for each added cloud host machine.
 
      For defining Host Computers as Load Machines and Probing Clients, see [*Designating a Host Computer as a Load Machine* ](#designating-a-host-computer-as-a-load-machine) and [*Designating a Host Computer as a Probing Client Machine* ](#designating-a-host-computer-as-a-probing-client-machine).
 
@@ -304,7 +304,7 @@ The goal table in the center of the dialog box contains the following fields:
 
 | **Field Name** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source               | <p>The source you are tracking to determine when your goal is reached. The source can be either:</p><p>- A Probing Client Machine</p><p>- A Load Machine</p><p>The source for Load Machines is “Total” because your results are the average of all Virtual Clients. The Source for Probing Client Machines is the name of the Probing Client.</p>                                                                                        |
+| Source               | <p>The source you are tracking to determine when your goal is reached. The source can be either:</p><p>- A Probing Client Machine</p><p>- A Load Machine</p><p>The source for Load Machines is "Total" because your results are the average of all Virtual Clients. The Source for Probing Client Machines is the name of the Probing Client.</p>                                                                                        |
 | Measurement          | <p>The measurement or activity that you are testing such as:</p><p>- Response Time</p><p>- Hits Per Second</p><p>- Round Time</p>                                                                                                                                                                                                                                                                                                          |
 | Type                 | The type of measurement or activity being tested. This is the current slice average or current slice sum.                                                                                                                                                                                                                                                                                                                                                      |
 | Op                   | The operator is the condition of the test. This may be either `>=` or `<=` depending on the measurement being tracked. Here you indicate whether the results should be greater than, or less than the desired value for the goal to be reached. For example, if the measurement being tracked were Response Time, you would select the operator >= to achieve the goal when the time needed to receive a response from the server exceeds the limit for this goal. |
@@ -351,7 +351,7 @@ Goals are configured by defining boundary values for selected WebLOAD Console me
     1. Click **Add Transaction**.
     1. In the Add Transaction dialog box that appears, enter the transaction name.
 
-       Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined “Login” transaction, the following seven measurements are added.
+       Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined "Login" transaction, the following seven measurements are added.
 
        ![Goal Definition Dialog Box – Result of Add Transaction Action](../images/console_users_guide_1037.png)
 

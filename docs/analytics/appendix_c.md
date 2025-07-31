@@ -57,11 +57,11 @@ To load the `mysession.ls` Load Session, generate a ‘General/Load Size Summary
 
 To use the loaded `first-session` Load Session, generate a ‘Summary Portfolio’ portfolio, and print it: 
 
-`WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s “first-session"` 
+`WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s "first-session"` 
 
 To use the loaded `first-session` and `second-session` Load Sessions, generate a ‘Regression/Load Size Summary’ regression chart, and publish it as a PDF file in `C:\myreports`, using a default name: 
 
-`WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s “first- session" -s "second-session" –f PDF –l “c:\myreports”`
+`WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s "first- session" -s "second-session" –f PDF –l "c:\myreports"`
 
 
 
@@ -106,4 +106,4 @@ To open the WebLOAD Analytics UI, load the `mysession.ls` Load Session, and gene
 
 To open the WebLOAD Analytics UI, use the loaded first-session Load Session, and generate a ‘Summary Portfolio’ portfolio: 
 
-`WLAnalytics.exe -p "Summary Portfolio" -s “first-session"`
+`WLAnalytics.exe -p "Summary Portfolio" -s "first-session"`

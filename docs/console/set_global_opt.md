@@ -666,7 +666,7 @@ The Service Level Agreement (SLA) Manager allows you to define conditions (SLA b
 
         - In the Add Transaction dialog box that appears, enter the transaction name.
 
-        Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined “Login” transaction, the following seven measurements are added.
+        Seven measurements, based on the specified transaction, are automatically added to the tree. For example, if you add the previously-defined "Login" transaction, the following seven measurements are added.
 
         ![Goal Definition Dialog Box – Result of Add Transaction Action](../images/console_users_guide_1084.png)
 
@@ -678,7 +678,7 @@ The Service Level Agreement (SLA) Manager allows you to define conditions (SLA b
 
     1. Click **OK**.
 
-       WebLOAD Console closes the Goal Definition dialog box, and in the Rule and Actions dialog box opens a “condition” row for each of the selected measurements.
+       WebLOAD Console closes the Goal Definition dialog box, and in the Rule and Actions dialog box opens a "condition" row for each of the selected measurements.
 
        ![Rules and Actions Dialog Box – Showing Rule Conditions](../images/console_users_guide_1084.png)
 
@@ -696,7 +696,7 @@ The Service Level Agreement (SLA) Manager allows you to define conditions (SLA b
 
      If you specify the message text, the log will display the specified text.
 
-     If you do not specify the message text, the log message will display the default SLA message format which begins with “SLA `<SLA rule name>` failed”.
+     If you do not specify the message text, the log message will display the default SLA message format which begins with "SLA `<SLA rule name>` failed".
 
      Note that a log message will appear in the log every time the SLA rule conditions are met, even if they are met multiple times in the course of load test execution.
 

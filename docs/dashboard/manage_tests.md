@@ -260,7 +260,7 @@ Load generators are machines that bombard tested site with transactions to test 
 
 **To specify the load generators participating in a load test:** 
 
-1. Keep in mind that each Location in the list defines a group of one or more load generators having the same “Location” tag. For a detailed explanation, refer to [*Setting Load Generators’ Location Tag* ](./managing_load_generators.md#setting-load-generators-location-tag)
+1. Keep in mind that each Location in the list defines a group of one or more load generators having the same "Location" tag. For a detailed explanation, refer to [*Setting Load Generators’ Location Tag* ](./managing_load_generators.md#setting-load-generators-location-tag)
 
 1. Select a group of load generators with an identical Location, by entering a non- zero percentage in the corresponding **%** column. The percentage specifies the relative weight of this group of load generators. 
 

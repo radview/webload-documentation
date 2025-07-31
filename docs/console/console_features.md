@@ -127,7 +127,7 @@ While your test session is running, the Session Tree displays its progress. The 
 
 #### The Session Tree Structure
 
-- The “root” of the tree, in the upper-most line, displays the Load Session icon.
+- The "root" of the tree, in the upper-most line, displays the Load Session icon.
 - The first level branches display the scripts to be run during the test session. The scripts may be single scripts or a Mix of scripts. The icons displayed next to the script name indicate its status. For more information on the status of Session components, see [*Status Icons* ](#status-icons).
 - The second level branches present the hosts participating in the test session. These hosts can be Load Machines or Probing Clients. A different icon represents each host type. The icons displayed adjacent to the hosts indicate their status. Several hosts can run the same script.
 
@@ -179,9 +179,9 @@ The following table lists the keystrokes you can use to move in the Session Tree
 | Page Up / Home                         | Moves the selection to the first item in the Session Tree.                                               |
 | Page Down                              | Moves the selection to the bottom item visible in the pane.                                              |
 | End                                    | Moves the selection to the last item in the Session Tree.                                                |
-| Plus sign “+” on the numeric keypad  | Expands the selected node.                                                                               |
-| Minus sign “-” on the numeric keypad | Collapses the selected node.                                                                             |
-| Asterisk “\*” on the numeric keypad  | Expands the entire tree below the selected node.                                                         |
+| Plus sign "+" on the numeric keypad  | Expands the selected node.                                                                               |
+| Minus sign "-" on the numeric keypad | Collapses the selected node.                                                                             |
+| Asterisk "\*" on the numeric keypad  | Expands the entire tree below the selected node.                                                         |
 
 #### The Session Tree in Edit Mode
 

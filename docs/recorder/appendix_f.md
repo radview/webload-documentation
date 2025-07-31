@@ -51,9 +51,9 @@ For instructions on how to create a Perfecto Mobile script please refer to Perfe
 
 1. Set the **Ping Time**. This is the frequency in seconds with which WebLOAD will check test status during test running.
 
-1. Specify whether to **Send Transactions** to WebLOAD. That is, whether to send a list of all the transactions (Groups) that are written in the Perfecto Mobile script (such as: ”Open Chrome”, “Navigate to my application”).
+1. Specify whether to **Send Transactions** to WebLOAD. That is, whether to send a list of all the transactions (Groups) that are written in the Perfecto Mobile script (such as: "Open Chrome", "Navigate to my application").
 
-1. Specify whether to **Send All Actions** to WebLOAD. That is, whether to send a list of all the actions that the script performs (such as: ”Press Key”, “Touch Drag”).
+1. Specify whether to **Send All Actions** to WebLOAD. That is, whether to send a list of all the actions that the script performs (such as: "Press Key", "Touch Drag").
 
 1. Click **OK**. The script is created, and is ready to be run.
 

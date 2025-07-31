@@ -176,7 +176,7 @@ WebLOAD Recorder provides the following features for manually editing a script:
 
     syntax as programs are being written. IntelliSense supports the following shortcut keys:
 
-- **Period (“.”)** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see
+- **Period (".")** – Enter a period after the object name, to display a drop-down list of the object’s available properties that can be added to the script (see
 
     [Figure](#intellisense_editor_mode_for_javascript_view_pane)).
 
@@ -207,10 +207,10 @@ When these features are enabled, a checkmark appears next to the name in the pop
 
 Use WebLOAD Recorder’s predefined delimiters to keep your code structured and organized. The available delimiters include:
 
-- For JavaScript functions, use “{“ as the start delimiter and “}” as the end delimiter.
-- For Script Tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter “//” and end
+- For JavaScript functions, use "{" as the start delimiter and "}" as the end delimiter.
+- For Script Tree nodes, insert a WLIDE comment from the General WebLOAD Recorder toolbox. This automatically inserts a start delimiter "//" and end
 
-    delimiter “End WLIDE”.
+    delimiter "End WLIDE".
 
 For more information, see the *WebLOAD Scripting Guide.*
 
@@ -341,31 +341,31 @@ Use the following guidelines to edit commands and functions you have placed in a
 
   For example, the generic example:
   
-  `wlHttp.PassWord = “`<Password>`“`
+  `wlHttp.PassWord = "`<Password>`"`
   
   must be replaced with the string:
   
-  `wlHttp.PassWord = “Blue”`
+  `wlHttp.PassWord = "Blue"`
 
 - Placeholders between square brackets within parentheses ([ ]) are optional function parameters. It is not mandatory to include them in the command.
 
   For example, the generic example:
 
-  `<Line\_Array> = GetLine(“<File\_Name>“ [,”<Separator>“])`
+  `<Line\_Array> = GetLine("<File\_Name>" [,"<Separator>"])`
 
   can be replaced with the string:
 
-  MyFile = GetLine(“C:\\InputFile.txt”)`
+  MyFile = GetLine("C:\\InputFile.txt")`
 
 - Placeholders between square brackets [ ] are array variables and *must* be replaced with the literal name of a variable, enclosed with square brackets.
 
   For example:
   
-  `wlHttp.Header[“<Key>“]= “<Value>“`
+  `wlHttp.Header["<Key>"]= "<Value>"`
   
   must be replaced with the string:
   
-  `wlHttp.Header[“proxy-connection”]=“Keep-Alive”`
+  `wlHttp.Header["proxy-connection"]="Keep-Alive"`
 
 - In a WebLOAD Recorder protocol block, replace the placeholder `<Block Type>`with a description. 
 
@@ -406,7 +406,7 @@ Use the WebLOAD Recorder toolboxes to add the following items to your script:
 **To drag and drop a WebLOAD Recorder toolbox item into your script:**
 
 1. Place the mouse over the item in the WebLOAD Recorder toolbox that you want to add.
-1. Press and hold the mouse button (just “clicking” has no effect).
+1. Press and hold the mouse button (just "clicking" has no effect).
 1. Drag the item into the Script Tree, highlighting the item *after* which you want to add the new item.
 1. Release the script item you have inserted.
 1. For many of the items, such as Message, Comments, and Sleep objects, additional dialog boxes are used to prompt you for the information necessary to add messages, comments, and pause times. Enter the necessary information, and click **OK**.

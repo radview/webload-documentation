@@ -159,7 +159,7 @@ The following example is used to call a function that is defined in an external 
 
 `IncludeFile(filename.js)`
 
-`EvaluateScript(“MyFunction()”,WLAfterRound)`
+`EvaluateScript("MyFunction()",WLAfterRound)`
 
 In this example, the `EvaluateScript` string is parsed, executed, and instructs the JavaScript engine to call the `MyFunction()` function right after each round is completed. At this point WebLOAD returns any syntax or runtime errors.
 
@@ -369,7 +369,7 @@ function InitAgenda() {
 
 ...
 
-IncludeFile(“MyFunction.js”)
+IncludeFile("MyFunction.js")
 
 }
 ```
@@ -469,7 +469,7 @@ function InitAgenda() {
 
 ...
 
-CopyFile(“src.txt”, “dest.txt”)
+CopyFile("src.txt", "dest.txt")
 
 ...
 
@@ -478,7 +478,7 @@ CopyFile(“src.txt”, “dest.txt”)
 
 You may then access the file as usual in the main body of the script. For example:
 
-`DataArr = GetLine(“dest.txt”)`
+`DataArr = GetLine("dest.txt")`
 
 See the *JavaScript Reference Guide* for a complete syntax specification.
 
@@ -524,11 +524,11 @@ The preceding figure highlights the standard JavaScript syntax to create and wor
 
  For example:
 
-`MyFileObj = new wlOutputFile(“filename”)`
+`MyFileObj = new wlOutputFile("filename")`
 
 `...`
 
-`MyFileObj.Write(“Happy Birthday”)`
+`MyFileObj.Write("Happy Birthday")`
 
 `...`
 
@@ -764,7 +764,7 @@ Limited scope for an error has two advantages:
 - Pinpointing the source of the error, enabling easier debugging and recovery.
 - Isolating the error to a specific script branch, in many cases allowing test execution to continue with the rest of the Script Tree despite the error.
 
-Navigation blocks and other logical activity blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if a non-fatal error is encountered during a test session, WebLOAD Recorder should throw the error, skip to the next navigation block, and continue with the test session.
+Navigation blocks and other logical activity blocks are useful for error management, especially when running "hands-free" test sessions. For example, the user can define the default testing behavior to be that if a non-fatal error is encountered during a test session, WebLOAD Recorder should throw the error, skip to the next navigation block, and continue with the test session.
 
 The **Pass/Fail Definition** tab of the **Tools > Default or Global Project Options** dialog box is used to define the default WebLOAD Recorder behavior in case of error.
 
@@ -803,7 +803,7 @@ try{
 
 catch(e){
 
-myException = new wlException(e,“we have a problem”)
+myException = new wlException(e,"we have a problem")
 
 //things to do in case of error
 
@@ -1156,10 +1156,10 @@ For users who are comfortable working inside the JavaScript code of their script
 
 `wlGeneratorGlobal` includes the following methods:
 
-- `Set(“SharedVarName”, value, WLCurrentAgenda)`— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.
+- `Set("SharedVarName", value, WLCurrentAgenda)`— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.
 
-- `Get(“SharedVarName”, WLCurrentAgenda)`— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.
-- `Add(“SharedIntVarName”, number, WLCurrentAgenda)`— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.
+- `Get("SharedVarName", WLCurrentAgenda)`— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.
+- `Add("SharedIntVarName", number, WLCurrentAgenda)`— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.
 
 #### Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag
 
@@ -1167,9 +1167,9 @@ The shared multiple script context includes global variables and settings that a
 
 `wlGeneratorGlobal` includes the methods with the `WLAllAgendas` scope flag instead of the `WLCurrentAgenda` flag:
 
-- `Set(“SharedVarName”, value, WLAllAgendas`)
-- `Get(“SharedVarName”, WLAllAgendas)`
-- `Add(“SharedIntVarName”, number, WLAllAgendas)`
+- `Set("SharedVarName", value, WLAllAgendas`)
+- `Get("SharedVarName", WLAllAgendas)`
+- `Add("SharedIntVarName", number, WLAllAgendas)`
 
 #### wlGeneratorGlobal Example
 
@@ -1220,7 +1220,7 @@ Sleep(1000)
 
 
 
-> **Note:** In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new `wlGeneratorGlobal.Get` call each time.
+> **Note:** In the preceding example, the globally shared value of "B" is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new `wlGeneratorGlobal.Get` call each time.
 
 See Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the `wlGeneratorGlobal`object in the *WebLOAD JavaScript Reference Guide* for a complete syntax specification.
 
@@ -1230,10 +1230,10 @@ The global script context includes global variables and settings that are shared
 
 `wlSystemGlobal` includes essentially the same methods described in [*Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag), applied here to global variables:
 
-- `Set(“GlobalVarName”, value, WLCurrentAgenda)`—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.
+- `Set("GlobalVarName", value, WLCurrentAgenda)`—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.
 
-- `Get(“GlobalVarName”, WLCurrentAgenda)`—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.
-- `Add(“GlobalIntVarName”, number, WLCurrentAgenda)`—increments the specified global number variable by the specified amount. If the variable has not been declared or `Set` previously, the `Add` function declares and sets the variable to the specified value.
+- `Get("GlobalVarName", WLCurrentAgenda)`—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.
+- `Add("GlobalIntVarName", number, WLCurrentAgenda)`—increments the specified global number variable by the specified amount. If the variable has not been declared or `Set` previously, the `Add` function declares and sets the variable to the specified value.
 
 #### Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag
 
@@ -1241,9 +1241,9 @@ The global multiple script context provides full, system wide global variables, 
 
 `wlSystemGlobal` includes essentially the same methods described in [*Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag* ](#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag), with the `WLAllAgendas` scope flag in stead of the `WLCurrentAgenda` flag:
 
-- `Set(“GlobalVarName”, value, WLAllAgendas)`
-- `Get(“GlobalVarName”, WLAllAgendas)`
-- `Add(“GlobalIntVarName”, number, WLAllAgendas)`
+- `Set("GlobalVarName", value, WLAllAgendas)`
+- `Get("GlobalVarName", WLAllAgendas)`
+- `Add("GlobalIntVarName", number, WLAllAgendas)`
 
 #### wlSystemGlobal Example
 

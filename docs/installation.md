@@ -79,7 +79,7 @@ Where the flags (case sensitive) are:
 | Option                          | Description                                                  |
 | ------------------------------- | ------------------------------------------------------------ |
 | /SILENT                         | Silent mode                                                  |
-| /DIR="`<destination  directory>`” | Destination directory                                        |
+| /DIR="`<destination  directory>`" | Destination directory                                        |
 | /TYPE=Agent                     | Install a Load Generator only                                |
 | /TYPE=Dashboard                 | Install the Web Dashboard only                               |
 | /SERVICE                        | Install TestTalk as a service                                |
@@ -643,9 +643,9 @@ When you uninstall WebLOAD, you are prompted to remove PostgreSQL .3, which is u
 
 When defining a load test, you need to assign Load Generator machines to execute the scripts, send requests, and receive responses.  How many load generators do you need?  
 
-### Start with our “Rule of Thumb”
+### Start with our "Rule of Thumb"
 
-Radview has found that a standard machine can support about 500 virtual users when running an average script.  A “standard machine” has two CPUs and 6 to 8 gigabytes of RAM and a gigabit NIC card.  The “average script” is harder to define, see note below.  
+Radview has found that a standard machine can support about 500 virtual users when running an average script.  A "standard machine" has two CPUs and 6 to 8 gigabytes of RAM and a gigabit NIC card.  The "average script" is harder to define, see note below.  
 
 ### Scaling Tests - estimate your scaling factor
 
@@ -653,7 +653,7 @@ Radview has found that a standard machine can support about 500 virtual users wh
 
 **Procedure:** Allocate an external machine, install WebLOAD load generator on it.  Define and run a test with 500 virtual users on that load generator and see what happens.  Open your session in the WebLOAD console and display the load generator memory utilization.  The default Radview scaling factor is: each virtual user should use about 0.16 percent of the CPU. 
 
- -	If CPU is about 80% then you have an “average script” and our “rule of thumb” is a good fit for you.  Your factor is 80 divided by 500 or 0.16.
+ -	If CPU is about 80% then you have an "average script" and our "rule of thumb" is a good fit for you.  Your factor is 80 divided by 500 or 0.16.
  -	If CPU is about 90% then your script is a little heavy and your rule of thumb for this script is about 450 VUs per standard machine.  Your scaling factor is 90 / 500 or 0.18.
  -	If CPU is about 70% then your script is on the lighter side and you rule of thumb for this script is about 600 VUs per standard machine.  Your scaling factor is 70 / 500 or 0.14. 
 
@@ -665,11 +665,11 @@ Radview has found that a standard machine can support about 500 virtual users wh
 
 **Scaling options:** You can run a smaller test in order to estimate your factor – say, 50 virtual users instead of 500.  Keep in mind that the results from a very small test (say 10 virtual users) will contain a lot of operating system overhead.  If you use that to compute your factor you will end up with too-large load generators.  Your factor-determining test should use at least 25% of the CPU, more is better.  
 
-**Non-standard machines:** You may want to run scaling tests for machines that are different from our “standard machine”.  The technique works, you get different factors.  Keep in mind, if you use a very large machine, you may want to use 90 percent as your target CPU and check for other limiting resources. 
+**Non-standard machines:** You may want to run scaling tests for machines that are different from our "standard machine".  The technique works, you get different factors.  Keep in mind, if you use a very large machine, you may want to use 90 percent as your target CPU and check for other limiting resources. 
 
 **Other limiting factors:** This technique works well for CPU but does not take into account memory or network traffic.  You can use the same technique with memory and network but the utilization targets are different.  
 
-**Average Script**: It is easier to talk about those characteristics that make a script “not average”.  
+**Average Script**: It is easier to talk about those characteristics that make a script "not average".  
 
    - High memory usage
    - High CPU usage

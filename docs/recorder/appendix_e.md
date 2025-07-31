@@ -105,7 +105,7 @@ Watch the video here: [Android Recording](https://youtu.be/Hc9QQ-J5nI8)
 - Standard install
 - Open ‘Virtual Device Manager’
 - Choose a device WITHOUT google play, for example Pixel 3a XL
-- Download “Q” system level and select it.
+- Download "Q" system level and select it.
 
 #### Install RadView root certificate
 
@@ -172,9 +172,9 @@ Open Firewall settings, advanced, add rule to allow traffic on TCP port 9884
 Start WebLOAD Recorder.
 
 - Start Recording (Click ‘Start’ on the red circle icon).
-- Choose "Native Mobile Recording" (Preior to WebLOAD 13.2 - Choose “Chrome” and click Ok. This will open a Chrome window, leave it open and ignore it until the end of recording)
+- Choose "Native Mobile Recording" (Preior to WebLOAD 13.2 - Choose "Chrome" and click Ok. This will open a Chrome window, leave it open and ignore it until the end of recording)
 - On the Mobile device (emulator) change proxy to use WebLOAD:
-  - Open WiFi Settings, find the “AndoirdWiFi” and change settings:
+  - Open WiFi Settings, find the "AndoirdWiFi" and change settings:
   - Click the Pencil to edit:
   - Expand the ‘Advanced options’
     - Set ‘Proxy’ to ‘manual’

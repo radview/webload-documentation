@@ -98,7 +98,7 @@ Reports are generated for the entire Load Session by default. Use the Time Filte
     > **Notes:** 
     >
     > - If any changes are made to this filter, an asterisk (\*) is displayed besides Time  Filter in the section’s title.
-    > - You can enable or disable the Time Filter by selecting or clearing the **Filter Enabled** checkbox. When this checkbox is cleared, “(Disabled)” is displayed in the Time Filter section. 
+    > - You can enable or disable the Time Filter by selecting or clearing the **Filter Enabled** checkbox. When this checkbox is cleared, "(Disabled)" is displayed in the Time Filter section. 
 
 1. Use the slider to change the Load Session start and end times. The number of seconds and the actual dates and times are displayed as you move the slider. 
 
@@ -146,7 +146,7 @@ The statistics-based time filter enables you to specify a numeric filter for eac
     > **Notes:** 
     >
     > - If any changes are made to this filter, an asterisk (*) is displayed beside Statistics-based Time Filter in the section’s title.
-    > - You can enable or disable the Statistics-based Time Filter by selecting or clearing the **Filter Enabled** checkbox. When this checkbox is cleared, “(Disabled)” is displayed in the Time Filter section. 
+    > - You can enable or disable the Statistics-based Time Filter by selecting or clearing the **Filter Enabled** checkbox. When this checkbox is cleared, "(Disabled)" is displayed in the Time Filter section. 
 
 1. Click ![add](../images/add.png). The Measurement Selection for Statistics-based Time Filter window appears. 
 

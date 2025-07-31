@@ -428,7 +428,7 @@ To load the `mysession.ls` Load Session, generate a ‘General/Load Size Summary
 
 To use the loaded `first-session` Load Session, generate a ‘Summary Portfolio’ portfolio, and print it:
 
-`WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s “first- session"`
+`WLAnalyticsCmd.exe -m P -p "Summary Portfolio" -s "first- session"`
 
 **Example 3:**
 
@@ -436,7 +436,7 @@ To use the loaded `first-session` and `second-session` Load Sessions, generate a
 
 `WLAnalyticsCmd.exe -m U -t "Regression\Load Size Summary" -s`
 
-`“first-session" -s "second-session" –f PDF –l “c:\myreports”`
+`"first-session" -s "second-session" –f PDF –l "c:\myreports"`
 
 ### Running WLAnalytics.exe
 
@@ -477,7 +477,7 @@ To open the WebLOAD Analytics UI, load the mysession.ls Load Session, and genera
 
 To open the WebLOAD Analytics UI, use the loaded first-session Load Session, and generate a ‘Summary Portfolio’ portfolio:
 
-`WLAnalytics.exe -p "Summary Portfolio" -s “first-session"`
+`WLAnalytics.exe -p "Summary Portfolio" -s "first-session"`
 
 ## Running WebLOAD Recorder Testing through the CLI
 

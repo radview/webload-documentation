@@ -154,13 +154,13 @@ Sleep time is a pause to simulate the intermittent activity of real users. WebLO
 
 1. In **Sleep Time in Transactions**, specify how to calculate and display transaction timers:
 
-    - **Transaction timers include sleep time (‘Transaction Time’)** – If you select this option, then if a transaction includes sleep commands, by default the sleep times will be included in the transaction time. The transaction time measurement will be called “Transaction *`<transaction name>`* Time”.
+    - **Transaction timers include sleep time (‘Transaction Time’)** – If you select this option, then if a transaction includes sleep commands, by default the sleep times will be included in the transaction time. The transaction time measurement will be called "Transaction *`<transaction name>`* Time".
 
-    - **Transaction timers exclude sleep time (‘Transaction Net Time’)** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. The transaction time measurement will be called “Transaction *`<transaction name>`* Net Time”.
+    - **Transaction timers exclude sleep time (‘Transaction Net Time’)** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. The transaction time measurement will be called "Transaction *`<transaction name>`* Net Time".
 
-    - **Transaction timers exclude sleep time, but named ‘Transaction Time’** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. However, the transaction time measurement will be called “Transaction *`<transaction name>`* Time” (without the word “Net” in the parameter name).
+    - **Transaction timers exclude sleep time, but named ‘Transaction Time’** – If you select this option, then if a transaction includes a sleep command, by default the sleep time will be excluded from the transaction time. However, the transaction time measurement will be called "Transaction *`<transaction name>`* Time" (without the word "Net" in the parameter name).
 
-    - **Both timers – including and excluding sleep time** – If you select this option, then if a transaction includes a sleep command, by default, two timers will be displayed. One timer, called “Transaction *`<transaction name>`* Time”, will show the transaction time if sleep time is included in the transaction time. The second timer, called “Transaction *`<transaction name>`* Net Time”, will show the transaction time if sleep time is excluded from the transaction time.
+    - **Both timers – including and excluding sleep time** – If you select this option, then if a transaction includes a sleep command, by default, two timers will be displayed. One timer, called "Transaction *`<transaction name>`* Time", will show the transaction time if sleep time is included in the transaction time. The second timer, called "Transaction *`<transaction name>`* Net Time", will show the transaction time if sleep time is excluded from the transaction time.
 
 1. Click **OK** to accept the modifications, or **Cancel** to reject them, and exit the Default/ Current Session Options dialog box.
 
@@ -227,9 +227,9 @@ The WebLOAD Recorder enables you to define the behavior of the cache that WebLOA
 |Browser cache types||
 |**None**|All Virtual Clients simulate a browser with no available cache.|
 |**Clear cache after each Request**|Defines that the cache will be cleared after each request.|
-|**Check for newer version after each Request**|<p>Defines that WebLOAD will check for a newer version of the cached item with every request.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.</p>|
+|**Check for newer version after each Request**|<p>Defines that WebLOAD will check for a newer version of the cached item with every request.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.</p>|
 |**Clear cache after each Round**|Defines that the cache will be cleared after each script execution round. This is the default setting.|
-|**Check for newer version after each Round**|<p>Defines that WebLOAD will check for a newer version of the cached item after each round.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.</p>|
+|**Check for newer version after each Round**|<p>Defines that WebLOAD will check for a newer version of the cached item after each round.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.</p>|
 |**Never clear cache**|Defines that the cache will never be cleared. Each client maintains its own cache.|
 |*Cache content*|<p>You can select a filter, enabling you to indicate specific content types to be cached in the script. The available filters are:</p><p>- JavaScript files</p><p>- Style sheets</p><p>- Images</p><p>- Applets</p><p>- XML files</p><p>- Dynamic</p>|
 
@@ -414,15 +414,15 @@ When enabled, WebLOAD Console keeps an HTTP connection alive between successive 
 
 
 ### Enabling GZip Support
-Enabling GZip support sets the `wlGlobals.AcceptEncodingGzip` flag. For each request, WebLOAD Console sends the header “Accept-Encoding: gzip, deflate”. This tells the server that the client can accept zipped content. When this header is turned on, the server MAY send a response with the header “content-encoding: gzip” or “content- encoding: deflate”. If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Console will unzip/inflate the content.
+Enabling GZip support sets the `wlGlobals.AcceptEncodingGzip` flag. For each request, WebLOAD Console sends the header "Accept-Encoding: gzip, deflate". This tells the server that the client can accept zipped content. When this header is turned on, the server MAY send a response with the header "content-encoding: gzip" or "content- encoding: deflate". If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Console will unzip/inflate the content.
 
-> **Note:** Most servers will work correctly even if the client does not send the “Accept-
+> **Note:** Most servers will work correctly even if the client does not send the "Accept-
 
-Encoding: gzip, deflate” header. Therefore, unless needed, it is recommended not to set the `wlGlobals.AcceptEncodingGzip` flag because it is performance heavy.
+Encoding: gzip, deflate" header. Therefore, unless needed, it is recommended not to set the `wlGlobals.AcceptEncodingGzip` flag because it is performance heavy.
 
 However, some servers will fail if it is not sent. Microsoft Internet Explorer/Mozilla sends it by default.
 
-You can manually code the script to send the “Accept-Encoding: gzip, deflate” header even if the `wlGlobals.AcceptEncodingGzip` flag is not set. In this case, if the server returns zipped content, WebLOAD Console will not unzip it, so the content will not be available for WebLOAD Console to function properly.
+You can manually code the script to send the "Accept-Encoding: gzip, deflate" header even if the `wlGlobals.AcceptEncodingGzip` flag is not set. In this case, if the server returns zipped content, WebLOAD Console will not unzip it, so the content will not be available for WebLOAD Console to function properly.
 
 > **Note:** Enabling GZip support sets the Browser Emulation Settings to the maximum browser emulation accuracy. Disabling GZip support sets the Browser Emulation Settings to the maximum Load Generator capacity.
 
@@ -491,13 +491,13 @@ The HTTP Parameters option enables you to define HTTP client behavior on the HTT
 
       |**Field**|**Description**|
       | :- | :- |
-      |**HTTP Version**|The appropriate HTTP protocol version (for example “HTTP/1.1”).|
+      |**HTTP Version**|The appropriate HTTP protocol version (for example "HTTP/1.1").|
       |**HTTP version 1.0**|Sets the HTTP protocol version to 1.0.|
       |**HTTP version 1.1**|Sets the HTTP protocol version to 1.1.|
       |***HTTP Properties***||
       |**Multi IP Support**|Sets the wlGlobals.MultiIPSupport flag to indicate that the HTTP protocol version supports more than one IP address.|
-      |**Encode Form Data**|<p>Sets the wlGlobals.EncodeFormdata flag.</p><p>In general, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD Console) sends a post request to the server, the data must be HTTP encoded. Special characters like blanks, “>“ signs, and so on, are replaced by “%xx”. For example, space is encoded as “%20”.</p><p>This encoding can be performance heavy for large data, so WebLOAD Console allows you to turn it off.</p><p>This should ONLY be done if you are sure that the data does not contain special characters. If it does, and the customer wants to improve performance via this flag, then you should replace the special characters within the script or use wlHttp.EncodeFormdata to set the flag for specific requests.</p>|
-      |**Accept Language**|Sets the wlGlobals.AcceptLanguage flag. This flag defines a global value for the “Accept-Language” header which will be sent with each request. Some applications/servers will behave differently depending on the setting. It is a simple string and WebLOAD Console does not enforce any checks on the values. It is similar to the wlGlobals.UserAgent property in the sense that it is a wlGlobals/wlHttp setting that affects the value of request headers.|
+      |**Encode Form Data**|<p>Sets the wlGlobals.EncodeFormdata flag.</p><p>In general, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD Console) sends a post request to the server, the data must be HTTP encoded. Special characters like blanks, ">" signs, and so on, are replaced by "%xx". For example, space is encoded as "%20".</p><p>This encoding can be performance heavy for large data, so WebLOAD Console allows you to turn it off.</p><p>This should ONLY be done if you are sure that the data does not contain special characters. If it does, and the customer wants to improve performance via this flag, then you should replace the special characters within the script or use wlHttp.EncodeFormdata to set the flag for specific requests.</p>|
+      |**Accept Language**|Sets the wlGlobals.AcceptLanguage flag. This flag defines a global value for the "Accept-Language" header which will be sent with each request. Some applications/servers will behave differently depending on the setting. It is a simple string and WebLOAD Console does not enforce any checks on the values. It is similar to the wlGlobals.UserAgent property in the sense that it is a wlGlobals/wlHttp setting that affects the value of request headers.|
 
 
 
@@ -527,7 +527,7 @@ The Authentication option enables you to define the Global and Proxy authenticat
       |**Proxy user name** and **Proxy password**|The user name and password the script should use for proxy servers that require user authorization.|
       |<p>**SSL client certificate file** and</p><p>**SSL client certificate password**</p>|The filename (optionally including a directory path) and password of the certificate WebLOAD Console makes available to SSL servers.|
       |**Authentication method**|<p>The authentication method supported by the server:</p><p>- NTLM (default).</p><p>- Kerberos.</p>|
-      |**Kerberos server**|The Kerberos server Fully Qualified Domain Name (FQDN). For example, specify “qa4” rather than “qa4.radview.co.il”. This field is only enabled when the authentication method is set to Kerberos.|
+      |**Kerberos server**|The Kerberos server Fully Qualified Domain Name (FQDN). For example, specify "qa4" rather than "qa4.radview.co.il". This field is only enabled when the authentication method is set to Kerberos.|
 
 
 1. Type the appropriate proxy host name, port number, user name, and password into the corresponding Proxy Authentication input text boxes when working with proxy authentication.
@@ -741,25 +741,25 @@ The following diagnostics are performed:
 
   For example, wlLocals.ParseForms = 14 prompts the following log message:
 
-  “Wrong type for the property ParseForms. The correct type is Boolean. Legal values are: “Yes”/”No” or true/false.”
+  "Wrong type for the property ParseForms. The correct type is Boolean. Legal values are: "Yes"/"No" or true/false."
 
 - **Value inspections** ‒ WebLOAD Console checks to ensure that each property is assigned a legal value.
 
-  For example, wlHttp.Version = “2.1” prompts the following log message:
+  For example, wlHttp.Version = "2.1" prompts the following log message:
 
-  “2.1 is an illegal value for the property Version. Legal values are: 1.0, 1.1.”
+  "2.1 is an illegal value for the property Version. Legal values are: 1.0, 1.1."
 
 - **Scope inspections** ‒ WebLOAD Console checks that each property is assigned a permitted scope.
 
   For example, wlLocals.ConnectionSpeed = 28800 prompts the following log message:
 
-  “The property ConnectionSpeed is not valid for the object wlLocals.”
+  "The property ConnectionSpeed is not valid for the object wlLocals."
 
 - **Case inspections** ‒ WebLOAD Console objects and properties are case sensitive. When Syntax Check is enabled, WebLOAD Console checks to ensure that all objects and properties are written correctly.
 
-  For example, wlLocals.parse = “No” prompts the following log message:
+  For example, wlLocals.parse = "No" prompts the following log message:
 
-  “The property parse should be written as Parse.”
+  "The property parse should be written as Parse."
 
 
 
@@ -789,7 +789,7 @@ Log reports are used to see the script flow, and the response headers received w
 
 1. Select which rounds should generate the Log Report in the Start round and End round fields.
 
-    The log report displays the time a request was made, the round number, the request number, the URL received and the response headers. If GetContents = “Yes” the same information is displayed for each frame.
+    The log report displays the time a request was made, the round number, the request number, the URL received and the response headers. If GetContents = "Yes" the same information is displayed for each frame.
 
     A message is sent to the Log Window for each request. The message appears in the following format:
 
@@ -932,7 +932,7 @@ Use Text verifications to verify the absence or presence of selected text expres
 
     - **Not to Find** ‒ The verification test will fail if the selected text is found in the current Web page.
 
-     For example, to ensure that the word “error” does not appear on the page during runtime, enter the word “error” in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
+     For example, to ensure that the word "error" does not appear on the page during runtime, enter the word "error" in the Text field, and select **Not to Find**. If the text error is found on the page, WebLOAD Console will report the error.
 
 1. Select the severity level from the Severity level drop-down list. For further information, see [*Verification Function Return Values](#functional-testing-options).
 
@@ -1047,7 +1047,7 @@ The Java options enable you to define the Java Virtual Machine to be used by Web
 
     - Options
 
-     When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD Console installation path.
+     When Type is "Default", the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD Console installation path.
 
 1. Click **OK**.
 

@@ -35,7 +35,7 @@ As you develop a Web application, you and your organization will usually do the 
 
     You do not need to modify the test script as it can run from WebLOAD Recorder to WebLOAD seamlessly.
 
-WebLOAD emulates multiple users on a network or server, testing to be sure the application *scales* as needed. These tests ensure that your application operates “normally” under load and stress, and your application appears as per your
+WebLOAD emulates multiple users on a network or server, testing to be sure the application *scales* as needed. These tests ensure that your application operates "normally" under load and stress, and your application appears as per your
 
 specifications and to your visitors’ expectations.
 

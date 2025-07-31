@@ -2958,7 +2958,7 @@ For example:
 | **Parameters**   |                                                              |
 | string           | The string you are sending to the host.                      |
 | **Return Value** | Null if successful, an exception if  unsuccessful.           |
-| **Comments**     | Sends a string to the host  without modification. This method is useful for interacting directly with the  host using non-standard or unsupported extensions. SendCommand automatically  appends “\r\n” at the end of the string. You can add additional instances of  “\r\n” within the string, however do not add “\r\n” at the end of the string.  For example, SendCommand(“Line1\r\n Line2\r\n Line3”) |
+| **Comments**     | Sends a string to the host  without modification. This method is useful for interacting directly with the  host using non-standard or unsupported extensions. SendCommand automatically  appends "\r\n" at the end of the string. You can add additional instances of  "\r\n" within the string, however do not add "\r\n" at the end of the string.  For example, SendCommand("Line1\r\n Line2\r\n Line3") |
 
  
 
@@ -4049,7 +4049,7 @@ The `Timeout` property lets you specify the length of the delay, in milliseconds
 ```javascript
 // script Initialization
 function InitAgenda() {
-    IncludeFile(“wlUdp.js”,WLExecuteScript)
+    IncludeFile("wlUdp.js",WLExecuteScript)
                             // enable the UDP objects
 }
 function InitClient() {
@@ -4071,9 +4071,9 @@ try
     udp.Timeout=10000;    // 10 second timeout
     udp.NumOfResponses=1;   // return after one remote machine 
     responds
-    udp.Outfile=“c:\\serialize.txt”;   // file to save responses to
+    udp.Outfile="c:\\serialize.txt";   // file to save responses to
     udp.Bind();
-    udp.Send(“00.0.0.00”, 7, “good morning”);
+    udp.Send("00.0.0.00", 7, "good morning");
                             // send a datagram to one machine on port
     7
     udp.Receive();      // wait for a response 
@@ -4085,8 +4085,8 @@ try
     InfoMessage(udp.document[0].port);      // the port
     // now broadcast to seven machines
     udp.NumOfResponses=7;   // we expect seven machines to respond 
-    udp.Outfile=“c:\\serialize.txt”;      // send the responses 
-    udp.Broadcast(7, “good morning”);
+    udp.Outfile="c:\\serialize.txt";      // send the responses 
+    udp.Broadcast(7, "good morning");
                             // send the message (again on port 7)
     udp.Receive();      // wait for the responses 
     InfoMessage(udp.ReceiveMessageText);  // print the return reason
@@ -4094,17 +4094,17 @@ try
     // in the array. This loop examines each one
     for (var i = 0; i < udp.document.length; i++)
     {
-        InfoMessage(“datagram= “+udp.document[i].datagram); 
-        InfoMessage(“address= “+udp.document[i].address); 
-        InfoMessage(“port= “+udp.document[i].port);
+        InfoMessage("datagram= "+udp.document[i].datagram); 
+        InfoMessage("address= "+udp.document[i].address); 
+        InfoMessage("port= "+udp.document[i].port);
     }
 }
 catch (e)
 {
-    InfoMessage (“Error” + e)
+    InfoMessage ("Error" + e)
 }
 //============================================================
-InfoMessage(“done”)   // end of the UDP sample script
+InfoMessage("done")   // end of the UDP sample script
 ```
 
 

@@ -31,7 +31,7 @@ The tables in this appendix list the properties and methods of the interfaces su
 | parseError         | A read-only property that  provides an object that summarizes the last parsing error encountered. |
 | preserveWhitespace | A read-write property that informs the  parser whether the default mode of processing is to preserve whitespace or  not. The default value of this property is false. |
 | readyState         | A read-only property  indicating the status of instantiating the XML processor and document  download. The value of the  readyState property is summarized in the table. |
-| resolveExternals   | A read-write property that informs the parser that  resolvable namespaces (a namespaces URI that begin with an “x- schema:” prefix), DTD external  subsets, and external entity references should be resolved at parse time. |
+| resolveExternals   | A read-write property that informs the parser that  resolvable namespaces (a namespaces URI that begin with an "x- schema:" prefix), DTD external  subsets, and external entity references should be resolved at parse time. |
 | url                | A read-only property that returns the  canonicalized URL for the XML document specified in the last call to load(). |
 | validateOnParse    | A read/write property that  turns validation on at parse time if the value of `bool` is true, off if `validate` is false. |
 
@@ -75,7 +75,7 @@ The tables in this appendix list the properties and methods of the interfaces su
 | FirstChild      | A read-only property that  returns the first child node. If the node has no children, `firstChil0d` returns null. |
 | LastChild       | A read-only property that  returns the last child node. If the node has no children, `lastChild` returns null. |
 | NextSibling     | A read-only property that  returns the node immediately following this node in the children of this  node’s parent. Returns null if no such node exists. |
-| NamespaceURI    | A read-only property that  returns the URI for the namespace (the `uuu` portion of the namespace declaration `xmlns:nnn=“uuu”`). If there is no namespace on the node that is  defined within the context of the document, ““ is returned. |
+| NamespaceURI    | A read-only property that  returns the URI for the namespace (the `uuu` portion of the namespace declaration `xmlns:nnn="uuu"`). If there is no namespace on the node that is  defined within the context of the document, "" is returned. |
 | NodeName        | A read-only property indicating the name of  the node.       |
 | NodeType        | A read-only property indicating the type of  node.           |
 | NodeTypeString  | Returns the node type in string form.                        |
@@ -84,10 +84,10 @@ The tables in this appendix list the properties and methods of the interfaces su
 | OwnerDocument   | A property that indicates  the document to which the node belongs or when the node is removed from a  document. |
 | parentNode      | A read-only property that provides a  pointer to the parent. |
 | parsed          | A read-only property that  indicates that this node and all of its descendants have been parsed and  instantiated. This is used in conjunction with asynchronous access to the  document. |
-| prefix          | A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, `xxx` for  the element  `<xxx:yyy>`. If there is no  prefix specified, ““ is returned. |
+| prefix          | A read-only property that  returns the prefix specified on the element, attribute of entity reference.  For example, `xxx` for  the element  `<xxx:yyy>`. If there is no  prefix specified, "" is returned. |
 | previousSibling | A read-only property that  returns the node immediately preceding this node in the children of this  node’s parent. Returns null if no such node exists. |
 | specified       | A read-only property  indicating the node was specified directly in the XML source and not implied  by the DTD schema. |
-| text            | A string representing the  content of the element and all descendents. For example “content of tag” in <br> `<sometag size=34>` <br> `    content of  tag` <br> `</sometag>`. |
+| text            | A string representing the  content of the element and all descendents. For example "content of tag" in <br> `<sometag size=34>` <br> `    content of  tag` <br> `</sometag>`. |
 | xml             | A read-only property that  returns the XML representation of the node and all its descendants as a  string. |
 
 
@@ -165,7 +165,7 @@ The tables in this appendix list the properties and methods of the interfaces su
 
 | **Item**                       | **Description**                                              |
 | ------------------------------ | ------------------------------------------------------------ |
-| HasFeature  (feature, version) | The method returns true if the specified  version of the parser supports the specified feature. In Level 1, “1.0” is  the only valid version value. |
+| HasFeature  (feature, version) | The method returns true if the specified  version of the parser supports the specified feature. In Level 1, "1.0" is  the only valid version value. |
 
 
 

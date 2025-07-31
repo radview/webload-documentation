@@ -124,7 +124,7 @@ While running a test session, WebLOAD Recorder and WebLOAD Recorder’s Log wind
 
 1. Create a text message by typing the text you want to appear in the message into the input text box.
  
-    > **Note:** When entering a string value to the message, the string must be enclosed in quotation marks; for example, “Sample Message”.
+    > **Note:** When entering a string value to the message, the string must be enclosed in quotation marks; for example, "Sample Message".
 
 1. To add a global variable to the message text, click the **globe** icon to the right of the input text box and select a global variable from the drop-down list.
 
@@ -515,7 +515,7 @@ Use the FTP-Upload Building Block to designate a file to be uploaded to a remote
 
     > **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
     >
-    > `“k:\Ftp\files\inputFiles\text\_upload\_”+ ThreadNum + RoundNum + “.txt”`
+    > `"k:\Ftp\files\inputFiles\text\_upload\_"+ ThreadNum + RoundNum + ".txt"`
  
 1. Click **OK**.
 
@@ -555,7 +555,7 @@ Use the FTP-Download Building Block to designate a file to be downloaded from a 
 
     **Note:** If the script will be running for multiple clients or over multiple rounds, use global variables to specify a unique file name for each client and/or round, to avoid file access conflicts and to make it easier to work with and analyze the files after the test is completed. For example:
 
-    `“k:\Ftp\files\inputFiles\text\_upload\_” + ThreadNum + RoundNum + “.txt”`
+    `"k:\Ftp\files\inputFiles\text\_upload\_" + ThreadNum + RoundNum + ".txt"`
 
 1. Click **OK**.
 
@@ -1137,7 +1137,7 @@ Use the IMAP-Search Building Block to search for a specific email item within an
 
     The IMAP-Search Building Block is added to the Script Tree and the JavaScript code is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-    In the script, the mailbox specified by the user is searched for all mail items containing the string “timesheet”.
+    In the script, the mailbox specified by the user is searched for all mail items containing the string "timesheet".
 
 
 <a name = "table_55"> </a>
@@ -1160,9 +1160,9 @@ The fields in the IMAP-Search Building Block parameters dialog box are described
 |                 | HEADER - Messages that  have a header with the specified field-name and that contains the specified  string in the field-body. |
 |                 | KEYWORD - Messages with the specified  keyword set.          |
 |                 | LARGER - Messages with a size larger than the  specified number of octets. |
-|                 | NEW Messages that have the  \\Recent flag set but not the \\Seen flag. This is functionally equivalent to  “(RECENT UNSEEN)”. |
+|                 | NEW Messages that have the  \\Recent flag set but not the \\Seen flag. This is functionally equivalent to  "(RECENT UNSEEN)". |
 |                 | NOT - Messages that do not match the specified  search key.  |
-|                 | OLD - Messages that do not have the \\Recent flag  set. This is  functionally equivalent to “NOT RECENT” (as  opposed to “NOT NEW”). |
+|                 | OLD - Messages that do not have the \\Recent flag  set. This is  functionally equivalent to "NOT RECENT" (as  opposed to "NOT NEW"). |
 |                 | ON - Messages whose internal date is within  the specified date. |
 |                 | OR - Messages that match either search key.                  |
 |                 | RECENT - Messages that have the \\Recent flag set.           |
@@ -1750,9 +1750,9 @@ The MQTT-Connect Building Block enables you to connect to the broker (i.e., the 
 
        | **Field Name** | **Description**                                              |
        | :------------- | :----------------------------------------------------------- |
-       | Broker Address | The address of the MQTT broker. For example: “mqtt.example.com” |
+       | Broker Address | The address of the MQTT broker. For example: "mqtt.example.com" |
        | Broker Port    | The MQTT Broker port number. For  example: 1883.              |
-       | Client ID      | The MQTT client ID. In some cases this can be random text, such as “random123”. |
+       | Client ID      | The MQTT client ID. In some cases this can be random text, such as "random123". |
        | User Name      | The MQTT user name.                                          |
        | Password       | The MQTT Client password.                                    |
 
@@ -1783,7 +1783,7 @@ The MQTT-Subscribe Building Block enables you to subscribe to a topic.
 
     | **Field Name** | **Description**                                         |
     | :------------- | :------------------------------------------------------ |
-    | Topic Name     | The MQTT topic name. For example: “any topic\my topic”. |
+    | Topic Name     | The MQTT topic name. For example: "any topic\my topic". |
 
    
 
@@ -1998,7 +1998,7 @@ Use the OpenDB Building Block to open and close a specified database.
 
 The OpenDB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-> **Note:** The OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No “CloseDB” Building Block is necessary.
+> **Note:** The OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No "CloseDB" Building Block is necessary.
 
 <a name ="opendb"></a>
 
@@ -2043,7 +2043,7 @@ Use the Oracle OpenDB Building Block to open and close an Oracle database.
 
 The Oracle OpenDB Building Block is added to the Script Tree. The JavaScript code, including the InitAgenda(), InitClient(), and TerminateClient() functions, is added to the script. To see the new JavaScript code, view the script in JavaScript Editing mode.
 
-> **Note:** The Oracle OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No “CloseDB” Building Block is necessary.
+> **Note:** The Oracle OpenDB Building Block automatically adds the JavaScript code required to both *open* and *close* the specified database. No "CloseDB" Building Block is necessary.
 
 <a name ="oracle_opendb"></a>
 
@@ -2338,7 +2338,7 @@ The fields in the DB Load Building Block parameters dialog box are described in 
 |File name (MDB file)|<p>Specify the full path for an MDB file.</p><p>Select the appropriate file from the Browser window that appears when you click to the right of the Value input area for this field.</p><p>Relevant for MDB databases only.</p>|
 |Input File Name|<p>Name of the input file that contains a set of SQL commands and transactions to be completed during this load test. Select the appropriate file from the Browser window that appears when you click to the right of the Value input area for this field. Relevant for MDB databases only.</p><p>A typical SQL command input file may look like the following:</p><p>Select1#select \* from john\_emp</p><p>Select2#select \* from john\_emp where name=‘john’ Select3#select \* from john\_emp where name=‘john’ or</p><p>age > 10</p><p>Update#update john\_emp set age = 20 where</p><p>name=‘john’</p><p>Insert#insert into john\_emp values (99, ‘zzz’, 2)</p><p>Delete#delete from john\_emp where id=99</p><p>The input file consists of rows of SQL commands. As with all load testing, the commands in the input file are executed in sequence, with WebLOAD looping through the file repeatedly until the test is completed. Each SQL command line in the input file is preceded by a name identifying the transaction in which the command will be located. A pound sign (#) separates the transaction name field from the SQL command field in each row.</p><p>Each SQL command is defined as a distinct HTTP transaction, enclosed in the script body within a BeginTransaction()/EndTransaction() set and identified by the transaction name. These transactions, like all transactions, are tracked automatically by the built-in WebLOAD timers and counters. Statistics on the performance of each transaction appear in the WebLOAD output reports, with each transaction identified in the report by name.</p>|
 |Delimiter character between fields|<p>Delimiter character that separates between the fields in each record.</p><p>This delimiter character must not appear as valid character within any of the data fields. The default delimiter character is a pound sign (#).</p><p>Type in a different character as needed.</p>|
-|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any “cleanup” commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
+|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any "cleanup" commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 
 
 
@@ -2377,7 +2377,7 @@ The fields in the Oracle DB Load Building Block parameters dialog box are descri
 |Input File Name|<p>Name of the input file that contains a set of SQL commands and transactions to be completed during this load test. Select the appropriate file from the Browser window that appears when you click the button to the right of the Value input area for this field. Relevant for MDB databases only.</p><p>A typical SQL command input file may look like the following:</p><p>Select1#select \* from john\_emp</p><p>Select2#select \* from john\_emp where name=‘john’</p><p>Select3#select \* from john\_emp where name=‘john’ or</p><p>age > 10</p><p>Update#update john\_emp set age = 20 where</p><p>name=‘john’</p><p>Insert#insert into john\_emp values (99, ‘zzz’, 2)</p><p>Delete#delete from john\_emp where id=99</p><p>The input file consists of rows of SQL commands. As with all load testing, the commands in the input file are executed in sequence, with WebLOAD looping through the file repeatedly until the test is completed. Each SQL command line in the input file is preceded by a name identifying the transaction in which the command will be located. A pound sign (#) separates the transaction name field from the SQL command field in each row.</p>|
 |Input File Name (continued)|Each SQL command is defined as a distinct HTTP transaction, enclosed in the script body within a BeginTransaction()/EndTransaction() set and identified by the transaction name. These transactions, like all transactions, are tracked automatically by the built-in WebLOAD timers and counters. Statistics on the performance of each transaction appear in the WebLOAD output reports, with each transaction identified in the report by name.|
 |Delimiter character between fields|<p>Delimiter character that separates between the fields in each record.</p><p>This delimiter character must not appear as valid character within any of the data fields. The default delimiter character is a pound sign (#).</p><p>Type in a different character as needed.</p>|
-|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any “cleanup” commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
+|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any "cleanup" commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 
 
 
@@ -2417,7 +2417,7 @@ The fields in the MySQL DB Load Building Block parameters dialog box are describ
 |Password|<p>Specify a password for authentication against the database.</p><p>Type the password into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 |Input File Name|<p>Name of the input file that contains a set of SQL commands and transactions to be completed during this load test. Select the appropriate file from the Browser window that appears when you click the button to the right of the Value input area for this field. Relevant for MDB databases only.</p><p>A typical SQL command input file may look like the following:</p><p>Select1#select \* from john\_emp</p><p>Select2#select \* from john\_emp where name=‘john’ Select3#select \* from john\_emp where name=‘john’</p><p>or age > 10</p><p>Update#update john\_emp set age = 20 where</p><p>name=‘john’</p><p>Insert#insert into john\_emp values (99, ‘zzz’, 2)</p><p>Delete#delete from john\_emp where id=99</p><p>The input file consists of rows of SQL commands. As with all load testing, the commands in the input file are executed in sequence, with WebLOAD looping through the file repeatedly until the test is completed. Each SQL command line in the input file is preceded by a name identifying the transaction in which the command will be located. A pound sign (#) separates the transaction name field from the SQL command field in each row.</p><p>Each SQL command is defined as a distinct HTTP transaction, enclosed in the script body within a BeginTransaction()/EndTransaction() set and identified by the transaction name. These transactions, like all transactions, are tracked automatically by the built-in WebLOAD timers and counters. Statistics on the performance of each transaction appear in the WebLOAD output reports, with each transaction identified in the report by name.</p>|
 |Delimiter character between fields|<p>Delimiter character that separates between the fields in each record.</p><p>This delimiter character must not appear as valid character within any of the data fields. The default delimiter character is a pound sign (#).</p><p>Type in a different character as needed.</p>|
-|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any “cleanup” commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
+|SQL/command to reset DB|<p>Specify an SQL command to be executed at the end of a testing round to reset the database.</p><p>This field is reserved for any "cleanup" commands that may be required in order to continue using the database for multiple iterations.</p><p>Type the complete command into the input-text window that appears when you click the small arrow to the right of the Value input area for this field.</p>|
 
 
 ## The WebLOAD Recorder Verifications Toolbox
@@ -2490,7 +2490,7 @@ xmlDom	= InitXML();
 
 /***** WLIDE - WS - Single Node - ID:2 *****/
 
-VerifyXMLNode(document.wlSource, “//Result”, “2”)
+VerifyXMLNode(document.wlSource, "//Result", "2")
 
 // END WLIDE
 ```
@@ -2553,7 +2553,7 @@ xmlDom	= InitXML();
 
 /***** WLIDE - WS - Multiple Nodes - ID:3 *****/
 
-VerifyXMLNodes(document.wlSource, ”//Result”, “5”)
+VerifyXMLNodes(document.wlSource, "//Result", "5")
 
 // END WLIDE
 ```
@@ -2832,7 +2832,7 @@ Use the WSDL Building Block to create a web service call based on data from a We
 
       
 
-     1. Enter values as desired to replace the “?” in the method body.
+     1. Enter values as desired to replace the "?" in the method body.
 
    
 
@@ -2875,7 +2875,7 @@ The following table describes the purpose of each of the WebLOAD Recorder JMS To
 1. Create JMS consumer and producer objects, either through JNDI or using the HornetQ implementation.
 1. Use send and/or receive to put or get messages from a queue.
 
-    > **Note:** The implementation relies on the WebLOAD Java connection, which enables making changes to the generated code easily. Refer to the “Working with Java” section of the *WebLOAD Scripting Guide* for more details.
+    > **Note:** The implementation relies on the WebLOAD Java connection, which enables making changes to the generated code easily. Refer to the "Working with Java" section of the *WebLOAD Scripting Guide* for more details.
 
 
 

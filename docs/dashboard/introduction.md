@@ -14,4 +14,4 @@ Some of the tasks you can accomplish using WebLOAD Dashboard include:
 - Manage access permissions for users and groups  
 - Download test results to your local machine for further analysis with WebLOAD Analytics 
 
-Note: In previous WebLOAD versions, a WebLOAD script was called an “Agenda”. 
+Note: In previous WebLOAD versions, a WebLOAD script was called an "Agenda". 

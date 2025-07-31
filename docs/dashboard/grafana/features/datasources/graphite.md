@@ -85,4 +85,4 @@ You can also create nested variables that use other variables in their definitio
 
 
 ## Query Reference
-You can reference queries by the row “letter” that they’re on (similar to  Microsoft Excel). If you add a second query to graph, you can reference the first query simply by typing in #A. This provides an easy and convenient way to build compounded queries.
+You can reference queries by the row "letter" that they’re on (similar to  Microsoft Excel). If you add a second query to graph, you can reference the first query simply by typing in #A. This provides an easy and convenient way to build compounded queries.

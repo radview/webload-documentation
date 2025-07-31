@@ -303,13 +303,13 @@ For example, if the graph shows a Login Time of 10 seconds for the 80th percenti
 
 ## Regression Templates
 
-This category of templates enables you to compare one selected “Main” session to one or more additional sessions you specify.
+This category of templates enables you to compare one selected "Main" session to one or more additional sessions you specify.
 
 Regression is very useful for comparing two sessions that were run on the same Load Template. The purpose is to gauge whether a small change in the System Under Test has degraded the performance.
 
 Most templates available under the Regression category are identical to templates of the same name available under other categories, with the following enhancement: each displayed measure is shown for all the sessions being compared. A given measure calculated for different sessions will appear with the same color, but a different line style. This enables easy comparison between measurements from different sessions.
 
-For example, in the following Pages Count regression chart, two sessions are compared: “MP_Store” and “interesting”. The Load Size measure for both is shown in green, but the line style (dotted, continuous, round points, square points) is different.
+For example, in the following Pages Count regression chart, two sessions are compared: "MP_Store" and "interesting". The Load Size measure for both is shown in green, but the line style (dotted, continuous, round points, square points) is different.
 
 
 
