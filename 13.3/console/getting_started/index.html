@@ -3975,7 +3975,7 @@
 <li>View performance reports</li>
 </ul>
 <p><em>Load Machines</em> are hosts, which run Load Generator software simulating multiple <em>Virtual Clients</em> simultaneously accessing your System Under Test (SUT). One Load Machine can run multiple Load Generators.</p>
-<p>Load Generators execute tests that “bombard” the System Under Test with a large load, to enable complete scalability and stress testing.</p>
+<p>Load Generators execute tests that "bombard" the System Under Test with a large load, to enable complete scalability and stress testing.</p>
 <p>The tests consist of multiple simultaneous requests made by Virtual Clients (which emulate Web browsers) to Web servers. Load Machines can run multiple threads.</p>
 <p>The <em>System Under Test</em> (SUT) is where the Web system under test resides. The SUT does <em>not</em> require that WebLOAD software be installed on it.</p>
 <p>The <em>Probing Client Machines</em> are also hosts. They run Probing Client software, which simulates a single Virtual Client accessing the SUT and runs at the same time as Load Machines, to further measure the performance of the SUT under load. WebLOAD returns exact values for Probing Client performance, in contrast to Load Machines, which return average values of Virtual Client performance<em>.</em></p>
@@ -3984,12 +3984,12 @@
 <li><strong>WebLOAD Recorder</strong> – A tool for recording, creating, and authoring protocol test scripts for the WebLOAD environment. For more information, see the <em>WebLOAD Recorder User’s Guide</em>.</li>
 <li><strong>TestTalk</strong> – A network agent that facilitates communication between the Console and hosts, either Load Machines or Probing Client Machines. TestTalk <em>must</em> be installed on both the Console and the hosts. TestTalk runs in the background and does not interfere with any other program running on your system.</li>
 <li><strong>WebLOAD Analytics</strong> – enables you to generate a variety of reports based on performance data and statistics gathered by WebLOAD. Use WebLOAD Analytics to select a Load Session and generate predefined or custom reports displaying the results of the test.</li>
-<li><strong>WebRM –</strong> distributes and circulates WebLOAD testing resources (Virtual Clients and Probing Clients) amongst users on a “need to use” basis. WebRM is packaged with a maximum number of Virtual Clients, Probing Clients and WebLOAD Console seats, as defined by the WebLOAD license.</li>
+<li><strong>WebRM –</strong> distributes and circulates WebLOAD testing resources (Virtual Clients and Probing Clients) amongst users on a "need to use" basis. WebRM is packaged with a maximum number of Virtual Clients, Probing Clients and WebLOAD Console seats, as defined by the WebLOAD license.</li>
 </ul>
 <h3 id="what-is-the-product-of-your-webload-testing">What is the Product of Your WebLOAD Testing?</h3>
 <p>WebLOAD continuously samples the activity while a Load Session is in progress, and saves a wide variety of measurement data. You can view all or part of the data in real time or after the Load Session is complete. Data can be displayed in tabular format or in graphical format. At the conclusion of a Load Session, data can automatically be exported to a spreadsheet program, HTML or as a tab-delimited file to a database application. Reports can also be created using WebLOAD Analytics.</p>
 <h3 id="http-client">HTTP Client</h3>
-<p>Using the HTTP client testing mode, testers can simulate the user scenario at the protocol level. Each Virtual Client sends HTTP methods (and/or other protocol calls) to the server based on the recorded script. This is a low-level, “nuts-and-bolts” approach that focuses on specific internal implementation commands, such as HTTP transactions.</p>
+<p>Using the HTTP client testing mode, testers can simulate the user scenario at the protocol level. Each Virtual Client sends HTTP methods (and/or other protocol calls) to the server based on the recorded script. This is a low-level, "nuts-and-bolts" approach that focuses on specific internal implementation commands, such as HTTP transactions.</p>
 <p>Scripts created for HTTP Client mode focus on HTTP transactions. HTTP Client scripts are created through the WebLOAD Recorder. The WebLOAD Recorder is an easy-to- use tool that facilitates the writing of test scripts for HTTP Client mode. The WebLOAD Recorder records your actions as you navigate through a Web application, automatically generating a script that reflects your actions in JavaScript, writing the GET and POST HTTP protocol commands that correspond to your browser activities. You can then use these scripts to test the performance of your Web application during WebLOAD test sessions.</p>
 <p>Working in HTTP Client mode provides users with the most efficient, portable, powerful work mode. HTTP Client mode is <em>portable to many operating systems</em>, including all different flavors of <em>Windows</em>, <em>Linux</em>, <em>Solaris</em>, and so on. HTTP Client mode runs so <em>efficiently</em> that users can achieve large benchmarks by simulating extremely heavy test loads of <em>thousands</em> of clients. HTTP Client mode also provides the most <em>comprehensive, detailed statistical analysis and test reports</em>.</p>
 <p>Working in HTTP Client mode does require a certain level of programming sophistication, since it can require hands-on programming of the JavaScript scripts with HTTP protocol code, as described in the <em>WebLOAD JavaScript Reference Guide</em>. HTTP Client mode scripts are designed to be run only on WebLOAD.</p>
@@ -4138,7 +4138,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Sleep Recording</td>
-<td style="text-align: left;">Enables you to automatically record “think” time in the script to provide a more realistic simulation of users accessing your Web application.</td>
+<td style="text-align: left;">Enables you to automatically record "think" time in the script to provide a more realistic simulation of users accessing your Web application.</td>
 </tr>
 <tr>
 <td style="text-align: left;">JavaScript Script Definition (as part of WebLOAD Recorder)</td>
@@ -4274,7 +4274,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Throttle Control</td>
-<td style="text-align: left;">Vary the number of Virtual Clients on the fly to create “what-if” scenarios as you change the load conditions.</td>
+<td style="text-align: left;">Vary the number of Virtual Clients on the fly to create "what-if" scenarios as you change the load conditions.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Probing Client</td>
@@ -4435,7 +4435,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">WebRM</td>
-<td style="text-align: left;">WebRM distributes and circulates WebLOAD testing resources (Virtual Clients, Probing Clients, and WebLOAD Consoles) amongst users on a “need to use” basis.</td>
+<td style="text-align: left;">WebRM distributes and circulates WebLOAD testing resources (Virtual Clients, Probing Clients, and WebLOAD Consoles) amongst users on a "need to use" basis.</td>
 </tr>
 </tbody>
 </table>
@@ -4489,7 +4489,7 @@
 <p>You can increase the size of the test load by distributing the load generation tasks over multiple Load Machines. You may want all of these Load Machines to test the SUT using the same script. There are several ways to share a script over multiple systems.</p>
 <h4 id="shared-disk">Shared Disk</h4>
 <p>You can configure a shared disk that can be accessed by all the systems on the network, as shown in the previous diagram. The script can then reside on the shared disk, and can be used by all systems for testing. Thus there is only one copy of the script, and all the relevant hosts run it from the shared disk.</p>
-<p>In this configuration, you must make sure that in the script configuration all hosts refer to the shared disk and are mapped to the same logical name. On one host the logical name of the shared disk may be “K” while on another host the logical name may be “L”. Each host must configure the script using the correct logical name.</p>
+<p>In this configuration, you must make sure that in the script configuration all hosts refer to the shared disk and are mapped to the same logical name. On one host the logical name of the shared disk may be "K" while on another host the logical name may be "L". Each host must configure the script using the correct logical name.</p>
 <h4 id="copying-the-test-program-to-each-host">Copying the Test Program to Each Host</h4>
 <p>Copy the script to each host participating in the test. Verify that the most updated copy of the script resides on each system.</p>
 <h2 id="working-with-a-firewall">Working with a Firewall</h2>

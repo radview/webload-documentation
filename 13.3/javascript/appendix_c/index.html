@@ -3449,7 +3449,7 @@
 <h2 id="informational-1xx">Informational 1XX</h2>
 <p>The <em>1XX</em> class of status code indicates a provisional response, consisting only of the <code>Status-Line</code> and optional headers, and is terminated by an empty line. There are no required headers for this class of status code. Since HTTP/1.0 did not define any <em>1XX</em> status codes, servers <em>must not</em> send a <em>1XX</em> response to an HTTP/1.0 client except under experimental conditions.</p>
 <p>A client must be prepared to accept one or more <em>1XX</em> status responses prior to a regular response, even if the client does not expect a <code>100 (Continue)</code> status message. Unexpected <em>1XX</em> status responses may be ignored by a user agent.</p>
-<p>Proxies must forward <em>1XX</em> responses, unless the connection between the proxy and its client has been closed, or unless the proxy itself requested the generation of the <em>1XX</em> response. (For example, if a proxy adds an <code>“Expect: 100-continue”</code> field when it forwards a request, then it need not forward the corresponding <code>100 (Continue)</code> response(s).)</p>
+<p>Proxies must forward <em>1XX</em> responses, unless the connection between the proxy and its client has been closed, or unless the proxy itself requested the generation of the <em>1XX</em> response. (For example, if a proxy adds an <code>"Expect: 100-continue"</code> field when it forwards a request, then it need not forward the corresponding <code>100 (Continue)</code> response(s).)</p>
 <table>
 <thead>
 <tr>
@@ -3608,7 +3608,7 @@
 </tr>
 <tr>
 <td>410  Gone</td>
-<td>The requested resource is  no longer available at the server and no forwarding address is known. This  condition should be considered permanent. Clients with link editing  capabilities should delete references to the <code>Request-URI</code> after user approval. If the server does not know,  or has no facility to determine, whether or not the condition is permanent,  the status code <code>404 (Not Found)</code> should be used instead.  This response is cacheable unless indicated otherwise.<br><br> The <code>410</code> response is primarily intended to assist  the task of web maintenance by notifying the recipient that the resource is  intentionally unavailable and that the server owners desire that remote links  to that resource be removed. Such an event is common for limited-time,  promotional services and for resources belonging to individuals no longer  working at the server’s site. It is not necessary to mark all permanently  unavailable resources as “gone” or to keep the mark for any length of  time-that is left to the discretion of the server owner.</td>
+<td>The requested resource is  no longer available at the server and no forwarding address is known. This  condition should be considered permanent. Clients with link editing  capabilities should delete references to the <code>Request-URI</code> after user approval. If the server does not know,  or has no facility to determine, whether or not the condition is permanent,  the status code <code>404 (Not Found)</code> should be used instead.  This response is cacheable unless indicated otherwise.<br><br> The <code>410</code> response is primarily intended to assist  the task of web maintenance by notifying the recipient that the resource is  intentionally unavailable and that the server owners desire that remote links  to that resource be removed. Such an event is common for limited-time,  promotional services and for resources belonging to individuals no longer  working at the server’s site. It is not necessary to mark all permanently  unavailable resources as "gone" or to keep the mark for any length of  time-that is left to the discretion of the server owner.</td>
 </tr>
 <tr>
 <td>411  Length Required</td>
@@ -3624,7 +3624,7 @@
 </tr>
 <tr>
 <td>414  Request-URI Too Long</td>
-<td>The server is refusing to  service the request because the <code>Request-URI</code> is longer than the server is willing to interpret.  This rare condition is only likely to occur when a client has improperly  converted a <code>POST</code> request to a <code>GET</code> request with long query information, when  the client has descended into a URI “black hole” of redirection (for example,  a redirected URI prefix that points to a suffix of itself), or when the  server is under attack by a client attempting to exploit security holes  present in some servers using fixed-length buffers for reading or  manipulating the <code>Request-URI.</code></td>
+<td>The server is refusing to  service the request because the <code>Request-URI</code> is longer than the server is willing to interpret.  This rare condition is only likely to occur when a client has improperly  converted a <code>POST</code> request to a <code>GET</code> request with long query information, when  the client has descended into a URI "black hole" of redirection (for example,  a redirected URI prefix that points to a suffix of itself), or when the  server is under attack by a client attempting to exploit security holes  present in some servers using fixed-length buffers for reading or  manipulating the <code>Request-URI.</code></td>
 </tr>
 <tr>
 <td>415  Unsupported Media Type</td>

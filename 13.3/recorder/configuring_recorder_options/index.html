@@ -4523,7 +4523,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Gzip support</strong></td>
-<td style="text-align: left;"><p>Sets the wlGlobals.AcceptEncodingGzip flag.</p><p>When this flag is set, WebLOAD Recorder behaves as follows:</p><p>1. For each request, sends the header “Accept-Encoding: gzip, deflate”. This informs the server that the client can accept zipped content.</p><p>2. <code></code>When this header is turned on, the server MAY send a response with the header “content-encoding: gzip” or “content-encoding: deflate”. If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Recorder will unzip/inflate the content.</p><p></p><p><strong>Note:</strong> Most servers will work correctly even if the client does not send the “Accept-Encoding: gzip, deflate” header.</p><p>Therefore, unless needed, it is recommended not to set the wlGlobals.AcceptEncodingGzip flag because it is performance heavy. However, some servers will fail if it is not sent. Microsoft Internet Explorer/Mozilla sends it by default.</p><p></p><p>You can manually code the script to send the “Accept-Encoding: gzip, deflate” header even if the wlGlobals.AcceptEncodingGzip flag is not set. In this case, if the server returns zipped content, WebLOAD Recorder will not unzip it.</p></td>
+<td style="text-align: left;"><p>Sets the wlGlobals.AcceptEncodingGzip flag.</p><p>When this flag is set, WebLOAD Recorder behaves as follows:</p><p>1. For each request, sends the header "Accept-Encoding: gzip, deflate". This informs the server that the client can accept zipped content.</p><p>2. <code></code>When this header is turned on, the server MAY send a response with the header "content-encoding: gzip" or "content-encoding: deflate". If either of these headers is sent, it means that the response is zipped/deflated and WebLOAD Recorder will unzip/inflate the content.</p><p></p><p><strong>Note:</strong> Most servers will work correctly even if the client does not send the "Accept-Encoding: gzip, deflate" header.</p><p>Therefore, unless needed, it is recommended not to set the wlGlobals.AcceptEncodingGzip flag because it is performance heavy. However, some servers will fail if it is not sent. Microsoft Internet Explorer/Mozilla sends it by default.</p><p></p><p>You can manually code the script to send the "Accept-Encoding: gzip, deflate" header even if the wlGlobals.AcceptEncodingGzip flag is not set. In this case, if the server returns zipped content, WebLOAD Recorder will not unzip it.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>Character Encoding</em></td>
@@ -4589,7 +4589,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><em>HTTP version</em></td>
-<td style="text-align: left;">The appropriate HTTP protocol version (for example “HTTP/1.1”).</td>
+<td style="text-align: left;">The appropriate HTTP protocol version (for example "HTTP/1.1").</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>HTTP version 1.0</strong></td>
@@ -4609,11 +4609,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Encode form data</strong></td>
-<td style="text-align: left;"><p>Sets the wlGlobals.EncodeFormdata flag.</p><p>In general, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD Recorder) sends a post request to the server, the data must be HTTP encoded. Special characters like blanks, “&gt;“ signs, and so on, are replaced by “%xx”. For example, space is encoded as “%20”.</p><p>This encoding can be performance heavy for large data, so WebLOAD Recorder enables you to turn it off.</p><p>This should ONLY be done if you are sure that the data does not contain special characters. If it does, and the customer wants to improve performance via this flag, then you should replace the special characters within the script or use wlHttp.EncodeFormdata to set the flag for specific requests.</p></td>
+<td style="text-align: left;"><p>Sets the wlGlobals.EncodeFormdata flag.</p><p>In general, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD Recorder) sends a post request to the server, the data must be HTTP encoded. Special characters like blanks, "&gt;" signs, and so on, are replaced by "%xx". For example, space is encoded as "%20".</p><p>This encoding can be performance heavy for large data, so WebLOAD Recorder enables you to turn it off.</p><p>This should ONLY be done if you are sure that the data does not contain special characters. If it does, and the customer wants to improve performance via this flag, then you should replace the special characters within the script or use wlHttp.EncodeFormdata to set the flag for specific requests.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Accept language</strong></td>
-<td style="text-align: left;">Sets the wlGlobals.AcceptLanguage flag. This flag defines a global value for the “Accept-Language” header which will be sent with each request. Some applications/servers will behave differently depending on the setting. It is a simple string and WebLOAD Recorder does not enforce any checks on the values. It is similar to the property in the sense that it is a wlGlobals/wlHttp setting that affects the value of request headers.</td>
+<td style="text-align: left;">Sets the wlGlobals.AcceptLanguage flag. This flag defines a global value for the "Accept-Language" header which will be sent with each request. Some applications/servers will behave differently depending on the setting. It is a simple string and WebLOAD Recorder does not enforce any checks on the values. It is similar to the property in the sense that it is a wlGlobals/wlHttp setting that affects the value of request headers.</td>
 </tr>
 </tbody>
 </table>
@@ -4651,7 +4651,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Check for newer version after each Request</strong></td>
-<td style="text-align: left;"><p>Defines that WebLOAD will check for a newer version of the cached item after every request.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.</p></td>
+<td style="text-align: left;"><p>Defines that WebLOAD will check for a newer version of the cached item after every request.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Clear cache after each Round</strong></td>
@@ -4659,7 +4659,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Check for newer version after each Round</strong></td>
-<td style="text-align: left;"><p>Defines that WebLOAD will check for a newer version of the cached item after each round.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an “if-modified-since” header. If the server responds with a 200 status, the engine will refresh the cache.</p></td>
+<td style="text-align: left;"><p>Defines that WebLOAD will check for a newer version of the cached item after each round.</p><p>Whenever the engine has a request for a cached resource, the engine sends the request with an "if-modified-since" header. If the server responds with a 200 status, the engine will refresh the cache.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Never clear cache</strong></td>
@@ -4719,7 +4719,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Kerberos server</strong></td>
-<td style="text-align: left;">The Kerberos server Fully Qualified Domain Name (FQDN). For example, specify “qa4” rather than “qa4.radview.co.il”. This field is only enabled when the authentication method is set to Kerberos.</td>
+<td style="text-align: left;">The Kerberos server Fully Qualified Domain Name (FQDN). For example, specify "qa4" rather than "qa4.radview.co.il". This field is only enabled when the authentication method is set to Kerberos.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>Proxy authentication settings</em></td>
@@ -4769,19 +4769,19 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Type Inspection</strong></td>
-<td style="text-align: left;"><p>WebLOAD Recorder checks that each property receives the correct type. For example, wlLocals.ParseForms = 14 prompts the following log message:</p><p>“Wrong type for the property ParseForms. The correct type is Boolean. Legal values are: “Yes”/”No” or “true”/”false”.</p></td>
+<td style="text-align: left;"><p>WebLOAD Recorder checks that each property receives the correct type. For example, wlLocals.ParseForms = 14 prompts the following log message:</p><p>"Wrong type for the property ParseForms. The correct type is Boolean. Legal values are: "Yes"/"No" or "true"/"false".</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Value Inspections</strong></td>
-<td style="text-align: left;"><p>WebLOAD Recorder checks to ensure that each property is assigned a legal value. For example, wlHttp.Version = “2.1” prompts the following log message:</p><p>“2.1 is an illegal value for the property Version. Legal values are: 1.0, 1.1.”</p></td>
+<td style="text-align: left;"><p>WebLOAD Recorder checks to ensure that each property is assigned a legal value. For example, wlHttp.Version = "2.1" prompts the following log message:</p><p>"2.1 is an illegal value for the property Version. Legal values are: 1.0, 1.1."</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Scope Inspections</strong></td>
-<td style="text-align: left;"><p>WebLOAD Recorder checks to ensure that each property is assigned a permitted scope. For example, wlLocals.ConnectionSpeed = 28800 prompts the following log message:</p><p>“The property ConnectionSpeed is not valid for the object wlLocals.”</p></td>
+<td style="text-align: left;"><p>WebLOAD Recorder checks to ensure that each property is assigned a permitted scope. For example, wlLocals.ConnectionSpeed = 28800 prompts the following log message:</p><p>"The property ConnectionSpeed is not valid for the object wlLocals."</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Case Inspections</strong></td>
-<td style="text-align: left;"><p>WebLOAD Recorder objects and properties are case sensitive. When syntax checking is enabled, WebLOAD Recorder checks to ensure that all objects and properties are written correctly. For example, wlLocals.parse = “No” prompts the following message:</p><p>“The property parse should be written Parse.”</p></td>
+<td style="text-align: left;"><p>WebLOAD Recorder objects and properties are case sensitive. When syntax checking is enabled, WebLOAD Recorder checks to ensure that all objects and properties are written correctly. For example, wlLocals.parse = "No" prompts the following message:</p><p>"The property parse should be written Parse."</p></td>
 </tr>
 </tbody>
 </table>
@@ -4828,7 +4828,7 @@
 <li>Path (should be machine-agnostic)</li>
 <li>Options</li>
 </ul>
-<p>When Type is “Default”, the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.</p>
+<p>When Type is "Default", the RadView default (installed) JVM will be used. The default JVM’s path is defined in webload.ini, as it depends on the WebLOAD installation path.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong>.</p>
@@ -4938,7 +4938,7 @@
 <tr>
 <td style="text-align: left;"><strong>Generate Authentication</strong></td>
 <td style="text-align: left;"><p>Generates the name and password that appear in the header of a request.</p><p>This option is selected by default.</p></td>
-<td style="text-align: left;">wlHttp.UserName=“John” wlHttp.Password=“Blue”</td>
+<td style="text-align: left;">wlHttp.UserName="John" wlHttp.Password="Blue"</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate proxy</strong></td>
@@ -4952,23 +4952,23 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Decode query string</strong></td>
-<td style="text-align: left;">Records the query string that is the part of the URL after the “?” sign and is used for sending parameters for the specific server item which is targeted by this URL.</td>
-<td style="text-align: left;"><p>When this option is not selected, the GET command will displayed as follows:</p><p><a href="http://localhost/netizenba">wlHttp.Get(“http://localhost/netizenba</a> nk/myAccountWelcome.asp?netizenSID=313 41549426&amp;ssn=1234&amp;password=1231&amp;I1.x=2 1&amp;I1.y=10”)</p><p>That is all the parameters that will appear as part of the URL.</p><p>When this option is selected, the URL will be parsed and displayed as follows:</p><p>wlHttp.FormData[“netizenSID”] = “31341549618”</p><p>wlHttp.FormData[“ssn”] = “124”</p><p>wlHttp.FormData[“password”] = “3424”</p><p>wlHttp.FormData[“I1.x”] = “29”</p><p>wlHttp.FormData[“I1.y”] = “14”</p><p><a href="http://localhost/netizenba">wlHttp.Get(“http://localhost/netizenb</a>a nk/myAccountWelcome.asp”)</p><p>That is a block of parameters that will be easier to parameterize.</p></td>
+<td style="text-align: left;">Records the query string that is the part of the URL after the "?" sign and is used for sending parameters for the specific server item which is targeted by this URL.</td>
+<td style="text-align: left;"><p>When this option is not selected, the GET command will displayed as follows:</p><p><a href="http://localhost/netizenba">wlHttp.Get("http://localhost/netizenba</a> nk/myAccountWelcome.asp?netizenSID=313 41549426&amp;ssn=1234&amp;password=1231&amp;I1.x=2 1&amp;I1.y=10")</p><p>That is all the parameters that will appear as part of the URL.</p><p>When this option is selected, the URL will be parsed and displayed as follows:</p><p>wlHttp.FormData["netizenSID"] = "31341549618"</p><p>wlHttp.FormData["ssn"] = "124"</p><p>wlHttp.FormData["password"] = "3424"</p><p>wlHttp.FormData["I1.x"] = "29"</p><p>wlHttp.FormData["I1.y"] = "14"</p><p><a href="http://localhost/netizenba">wlHttp.Get("http://localhost/netizenb</a>a nk/myAccountWelcome.asp")</p><p>That is a block of parameters that will be easier to parameterize.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate redirection path</strong></td>
 <td style="text-align: left;">WebLOAD Recorder records (in the script) only the first GET statement; the rest of the URLs visited when redirected are inserted into the script as comments. The script does not revisit all the URLs during playback.</td>
-<td style="text-align: left;"><p>wlHttp.Get <a href="http://www.abcdef.com/">(“http://www.abcdef.com”)</a></p><p>// Redirections: <a href="http://www.ghijkl.com/">http://www.ghijkl.com, </a>etc.</p></td>
+<td style="text-align: left;"><p>wlHttp.Get <a href="http://www.abcdef.com/">("http://www.abcdef.com")</a></p><p>// Redirections: <a href="http://www.ghijkl.com/">http://www.ghijkl.com, </a>etc.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate all headers</strong></td>
 <td style="text-align: left;"><p>Generates <strong>all</strong> HTTP headers.</p><p>The headers</p><p>If-Modified-Since, If-None-Matched, and Keep Alive will be commented out to overcome the situation where recorded links were fetched from the browser’s</p><p>cache during the recording.</p><p>The request header Accept-Encode: gzip will also be commented out, to ensure correct behavior.</p><p>When Generate All Headers is selected, Generate Referer Header and Generate Custom Header are automatically checked and disabled so that they cannot be unchecked.</p></td>
-<td style="text-align: left;"><p>wlHttp.Header[“user-agent”]</p><p>=“Mozilla/4.04 [en] (WinNT; I)”</p><p>wlHttp.Header[“accept-charset”] =“iso- 8859-1,*,utf-8”</p><p>wlHttp.Header[“proxy-connection”]</p><p>=“Keep-Alive”</p><p>wlHttp.Header[“accept-language”] =“en”</p></td>
+<td style="text-align: left;"><p>wlHttp.Header["user-agent"]</p><p>="Mozilla/4.04 [en] (WinNT; I)"</p><p>wlHttp.Header["accept-charset"] ="iso- 8859-1,*,utf-8"</p><p>wlHttp.Header["proxy-connection"]</p><p>="Keep-Alive"</p><p>wlHttp.Header["accept-language"] ="en"</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate referer header</strong></td>
 <td style="text-align: left;"><p>Generates the referer header only. This header tells the server which URL submitted the request. For example, if you click a link from page xxx, the browser will send that url as the referer.</p><p>This option is selected by default.</p><p>This option is automatically selected and cannot be changed when Generate All Headers is selected.</p></td>
-<td style="text-align: left;">wlHttp.Header[“Referer”] = <a href="http://www.easycar.com/">“http://www.easycar.com/”</a></td>
+<td style="text-align: left;">wlHttp.Header["Referer"] = <a href="http://www.easycar.com/">"http://www.easycar.com/"</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate custom headers</strong></td>
@@ -4978,7 +4978,7 @@
 <tr>
 <td style="text-align: left;"><strong>Comment status</strong></td>
 <td style="text-align: left;">Writes a comment about the status of your transactions (that is, any GET statement), including information about the contents of the pages.</td>
-<td style="text-align: left;"><p><a href="http://www.RadView.com/">wlHttp.Get(“http://www.RadView.com/”)</a></p><p>//200 OK</p></td>
+<td style="text-align: left;"><p><a href="http://www.RadView.com/">wlHttp.Get("http://www.RadView.com/")</a></p><p>//200 OK</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Comment request headers</strong></td>
@@ -4993,7 +4993,7 @@
 <tr>
 <td style="text-align: left;"><strong>Encode binary data</strong></td>
 <td style="text-align: left;">Used to specify if the binary data should be encoded. By default this flag is not selected.</td>
-<td style="text-align: left;"><p>If a mobile operator wants to simulate the sending of binary data from the browser (phone) to the server. Part of the binary data is a value (for example, phone number) that needs parameterization.</p><p>When the EncodeBinaryData flag is selected, the binary form data “x0Ax0BAMIRx00” appears as “%0A%0BAMIR%00” in the script.</p></td>
+<td style="text-align: left;"><p>If a mobile operator wants to simulate the sending of binary data from the browser (phone) to the server. Part of the binary data is a value (for example, phone number) that needs parameterization.</p><p>When the EncodeBinaryData flag is selected, the binary form data "x0Ax0BAMIRx00" appears as "%0A%0BAMIR%00" in the script.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Generate</strong>  <strong>VIEWSTATE data</strong></td>
@@ -5018,7 +5018,7 @@
 <tr>
 <td style="text-align: left;"><strong>Generate Host List</strong></td>
 <td style="text-align: left;">Enables running the same script on different hosts, with minimum editing, by replacing host names with variables.<br />If selected, each host name in the recording is replaced by a variable.<br />To specify the actual value of each host variable, define it in the InitAgenda() function</td>
-<td style="text-align: left;">Instead of the script including, for example: <a href="http://www.amazon.com/">wlHttp.Get("https://www.amazon.com/")</a> <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com=”<a href="http://www.amazon.com/">www.amazon.com</a>” and another test in which: domain_www_amazon_com=”<a href="http://www.qalab.com/">www.qalab.com</a>”</td>
+<td style="text-align: left;">Instead of the script including, for example: <a href="http://www.amazon.com/">wlHttp.Get("https://www.amazon.com/")</a> <br />It will include the following:<br />wlHttp.Get("https://" + domain_www_amazon_com + "/")<br />You can then, using the same script, run one test in which you edit the InitAgenda()function so that:<br />domain_www_amazon_com="<a href="http://www.amazon.com/">www.amazon.com</a>" and another test in which: domain_www_amazon_com="<a href="http://www.qalab.com/">www.qalab.com</a>"</td>
 </tr>
 </tbody>
 </table>
@@ -5367,7 +5367,7 @@ The following table describes the fields in the URL Filtering tab.</p>
 </table>
 <h3 id="configuring-the-file-extensions">Configuring the File Extensions</h3>
 <p>Use the File Extension tab in the Recording and Script Generation Options dialog box to configure which types of files the WebLOAD Recorder records.</p>
-<p>Both the File Extensions and the Content Types tabs (see <a href="#configuring-the-content-types-to-record"><em>Configuring the Content Types to Record</em> </a>), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as “.gif”, “.wav”, or “.txt”.</p>
+<p>Both the File Extensions and the Content Types tabs (see <a href="#configuring-the-content-types-to-record"><em>Configuring the Content Types to Record</em> </a>), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the File Extensions tab, you specify which objects should be recorded or ignored, according to their file extension, such as ".gif", ".wav", or ".txt".</p>
 <p>In a case where the file extension and content types contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the File Extensions and Content Types tabs are configured with the following settings:</p>
 <ul>
 <li>Filter the following file extensions as – Recorded Extensions: gif</li>
@@ -5437,7 +5437,7 @@ The following table describes the fields in the File Extensions tab.</p>
 <h3 id="configuring-the-content-types-to-record">Configuring the Content Types to Record</h3>
 <p>Use the Content Types tab in the Recording and Script Generation Options dialog box to set up which types of Web content the WebLOAD Recorder records.</p>
 <p>Both the Content Types and the File Extensions tabs (see <a href="#configuring-the-file-extensions">*Configuring the File Extensions</a> ), enable you to specify the types of data that are accepted and recorded by WebLOAD Recorder, or not accepted and ignored. On the Content Types tab you</p>
-<p>define which objects should be recorded by type, such as “image/gif”, “image/jpeg”, or “text/html”.</p>
+<p>define which objects should be recorded by type, such as "image/gif", "image/jpeg", or "text/html".</p>
 <p>In a case where the content types and file extension contradict each other, precedence is given to the record filter as opposed to the ignore filter. For example, if the Content Types and File Extensions tabs are configured with the following settings:</p>
 <ul>
 <li>Filter the following content types as – Recorded Types: image/gif</li>
@@ -5608,8 +5608,8 @@ The following table describes the fields in the File Extensions tab.</p>
 <p>A double proxy configuration is a way to instruct the recorder to use two application proxies: one for non-secure HTTP traffic and one for SSL traffic. When you define only an HTTP proxy as the application proxy in the Proxy Options tab in the Recording and Script Generation Options dialog box, the recorder uses the same definition for both traffic types.</p>
 <p>In order to instruct the recorder to use a separate proxy for secured HTTP traffic, define the SSL Proxy and Port values.</p>
 <p>WebLOAD Recorder also enables you to set authentication information for accessing the proxy. In the SSL proxy configuration, the User Name and Password values (in the Proxy Authentication frame) are used for both HTTP and SSL proxies. In order to set different authentication information for the SSL proxy, add the following lines to wlproxyinclude.js (which can be found in the WebLOAD include directory):</p>
-<p><code>ProxyObject.RSecondarySSLProxyUserName = “radview”</code></p>
-<p><code>ProxyObject.RSecondarySSLProxyPassword=“rad1”</code></p>
+<p><code>ProxyObject.RSecondarySSLProxyUserName = "radview"</code></p>
+<p><code>ProxyObject.RSecondarySSLProxyPassword="rad1"</code></p>
 <p>Finally, using this configuration will generate JavaScript code to indicate to the playback engine that it needs to use two proxies:</p>
 <p><code>wlHttp.UseSameProxyForSSL = false</code></p>
 <p><code>wlHttp.HttpProxy = wlHttp.HttpsProxy =</code></p>

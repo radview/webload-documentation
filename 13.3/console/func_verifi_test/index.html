@@ -3784,14 +3784,14 @@
 </li>
 </ol>
 <h2 id="user-defined-transactions-and-verification">User-Defined Transactions and Verification</h2>
-<p>Using WebLOAD Console, you can define application-level transaction and verification criteria to determine whether the transaction succeeded or failed. When a user-defined transaction executes, WebLOAD Console initiates a timer and a counter. The timer measures the time required to execute the transaction. The counter tracks the success and the failure rate of the transactions, based on user-defined criteria. For each transaction, the counter automatically increments either the “successful transaction count” or the “failed transaction count.” WebLOAD Console also lets you define the behavior of the program depending on the transaction results.</p>
+<p>Using WebLOAD Console, you can define application-level transaction and verification criteria to determine whether the transaction succeeded or failed. When a user-defined transaction executes, WebLOAD Console initiates a timer and a counter. The timer measures the time required to execute the transaction. The counter tracks the success and the failure rate of the transactions, based on user-defined criteria. For each transaction, the counter automatically increments either the "successful transaction count" or the "failed transaction count." WebLOAD Console also lets you define the behavior of the program depending on the transaction results.</p>
 <p>WebLOAD Console tracks all of the results from user-defined transactions and integrates the data into the WebLOAD Statistics Report, including the timer and counter statistics as well as statistics on specific failures. The results are then automatically displayed with the other WebLOAD Console statistical information.</p>
 <h3 id="including-a-user-defined-transaction-in-your-script">Including a User-Defined Transaction in your script</h3>
 <p>Application-level transactions and verifications are defined through the WebLOAD Recorder script editing functions. See the <em>WebLOAD Recorder User’s Guide</em> for more information.</p>
 <h3 id="user-defined-transactions-and-verification-syntax">User-Defined Transactions and Verification Syntax</h3>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="err">“</span><span class="o">&lt;</span><span class="nx">Transaction</span><span class="o">-</span><span class="nx">Name</span><span class="o">&gt;</span><span class="err">“</span><span class="p">)</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="s2">&quot;&lt;Transaction-Name&gt;&quot;</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">any</span><span class="w"> </span><span class="nx">valid</span><span class="w"> </span><span class="nx">JavaScript</span><span class="w"> </span><span class="nx">statements</span><span class="o">&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="err">“</span><span class="o">&lt;</span><span class="nx">Transaction</span><span class="o">-</span><span class="nx">Name</span><span class="o">&gt;</span><span class="err">“</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;&lt;Transaction-Name&gt;&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">Verification</span><span class="o">-</span><span class="nx">Expression</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nx">Save</span><span class="o">-</span><span class="nx">Flag</span><span class="o">&gt;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Where:</p>
@@ -3808,18 +3808,18 @@
 </ul>
 <h3 id="user-defined-transaction-example">User-Defined Transaction Example</h3>
 <p>The following example illustrates implementing a user-defined transaction:</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="err">“</span><span class="nx">UpdateBankAccount</span><span class="err">”</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="cm">/* The user-defined transaction “UpdateBankAccount” starts*/</span><span class="w"> </span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">BeginTransaction</span><span class="p">(</span><span class="s2">&quot;UpdateBankAccount&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="cm">/* The user-defined transaction &quot;UpdateBankAccount&quot; starts*/</span><span class="w"> </span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ExpectNavigation</span><span class="p">(</span><span class="err">“</span><span class="nx">http</span><span class="o">:</span><span class="c1">//…”) </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Navigate</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">www</span><span class="p">.....</span><span class="nx">com</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">ExpectNavigation</span><span class="p">(</span><span class="s2">&quot;http://…&quot;</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Navigate</span><span class="p">(</span><span class="s2">&quot;www.....com&quot;</span><span class="p">)</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">SyncDOM</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">   </span><span class="cm">/* The body of the transaction\*/</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="o">&lt;</span><span class="nx">any</span><span class="w"> </span><span class="nx">valid</span><span class="w"> </span><span class="nx">JavaScript</span><span class="w"> </span><span class="nx">statement</span><span class="o">&gt;</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="err">“</span><span class="nx">UpdateBankAccount</span><span class="err">”</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nx">EndTransaction</span><span class="p">(</span><span class="s2">&quot;UpdateBankAccount&quot;</span><span class="p">,</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">   </span><span class="nx">UpdateBankAccount</span><span class="err">\</span><span class="nx">_VerificationFunction</span><span class="p">())</span><span class="w"> </span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kd">function</span><span class="w"> </span><span class="nx">UpdateBankAccount</span><span class="err">\</span><span class="nx">_VerificationFunction</span><span class="p">()</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
@@ -3827,7 +3827,7 @@
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">WLSuccess</span><span class="p">;</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="cm">/* The user-defined transaction “UpdateBankAccount” ends\*/</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="cm">/* The user-defined transaction &quot;UpdateBankAccount&quot; ends\*/</span>
 </span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> The user-supplied UpdateBankAccount_VerificationFunction() is called to determine whether the transaction succeeded or failed. This function can be defined either in the script or in an included file.</p>
@@ -3893,7 +3893,7 @@
 <h2 id="reporting-events"><strong>Reporting Events</strong></h2>
 <p>WebLOAD Console enables you to record specific events and transaction instances as they occur. This information is very useful when analyzing website performance with Data Drilling, described in <a href="#data-drilling"><em>Data Drilling</em> </a>.</p>
 <p>Record transaction events with the following syntax:</p>
-<p><code>ReportEvent (“&lt;event-name&gt;“, [“&lt;description&gt;“])</code></p>
+<p><code>ReportEvent ("&lt;event-name&gt;", ["&lt;description&gt;"])</code></p>
 <p>Where:</p>
 <ul>
 <li><code>event-name</code> is a string that identifies the specific event.</li>
@@ -3903,7 +3903,7 @@
 <p>WebLOAD Console enables you to specify possible reasons for the failure of a given transaction. WebLOAD Console tracks the reasons for failure individually, in the Statistics Reports. The reasons for the transaction failure must be specified in the verification function.</p>
 <p>The default reason for failure of basic transactions is General-Failure. Unless another reason for failure is specified, this is set automatically whenever the transaction fails.</p>
 <p>Set the reason for a transaction failure using the following syntax:</p>
-<p><code>SetFailureReason (“&lt;failure-reason&gt;“)</code></p>
+<p><code>SetFailureReason ("&lt;failure-reason&gt;")</code></p>
 <p>For example:</p>
 <p>Continuing the UpdateBankAccount transaction example described in User-Defined Transactions and Verification (see <a href="#user-defined-transactions-and-verification-syntax"><em>User-Defined Transactions and Verification Syntax</em> </a>, the UpdateBankAccount verification function might appear as follows:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">UpdateBankAccount_VerificationFunction</span><span class="p">()</span>
@@ -3912,12 +3912,12 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Condition</span><span class="o">-</span><span class="nx">success</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">then</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">         </span><span class="k">return</span><span class="p">(</span><span class="nx">WLSuccess</span><span class="p">)}</span><span class="w"> </span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">         </span><span class="k">else</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">“</span><span class="p">..</span><span class="o">/</span><span class="nx">no</span><span class="o">-</span><span class="nx">login</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">         </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="err">“</span><span class="nx">User</span><span class="w"> </span><span class="nx">Not</span><span class="w"> </span><span class="nx">Logged</span><span class="err">”</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;../no-login&quot;</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">         </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="s2">&quot;User Not Logged&quot;</span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">         </span><span class="k">return</span><span class="p">(</span><span class="nx">WLError</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="k">else</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">“</span><span class="p">...</span><span class="nx">wrong</span><span class="o">-</span><span class="w">    </span><span class="nx">password</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">         </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="err">“</span><span class="nx">Wrong</span><span class="w"> </span><span class="nx">Password</span><span class="err">”</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;...wrong-    password&quot;</span><span class="p">)</span><span class="w"> </span><span class="nx">then</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">         </span><span class="nx">SetFailureReason</span><span class="p">(</span><span class="s2">&quot;Wrong Password&quot;</span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">         </span><span class="k">return</span><span class="p">(</span><span class="nx">WLError</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="k">else</span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">         </span><span class="k">return</span><span class="p">(</span><span class="nx">WLSevereError</span><span class="p">)</span>
@@ -3926,11 +3926,11 @@
 <p>Explanation:</p>
 <ul>
 <li><code>Return(WLSuccess)</code> ‒ indicates that the actual transaction succeeded and it is added to the SuccessfulUpdateBankAccount transactions counter.</li>
-<li>The <code>SetFailureReason()</code> function accepts a string as a parameter. This string is used to identify the cause of the transaction failure (“User Not Logged”, <code>“Wrong Password”</code>, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.</li>
-<li>When the reason for failure is <code>“User Not Logged”</code> or <code>“Wrong Password”</code>, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.</li>
-<li>If you mark the transaction as failed, but do not specify any failure reason, the system registers a <code>“General Failure”</code> which is the default failure severity.</li>
+<li>The <code>SetFailureReason()</code> function accepts a string as a parameter. This string is used to identify the cause of the transaction failure ("User Not Logged", <code>"Wrong Password"</code>, etc.). This data enables tracking of the number of failures that occur for a specific reason, as well as the time that the failures occurred.</li>
+<li>When the reason for failure is <code>"User Not Logged"</code> or <code>"Wrong Password"</code>, the severity level is Error. Consequently, when the main script resumes control the current round aborts and a new round commences.</li>
+<li>If you mark the transaction as failed, but do not specify any failure reason, the system registers a <code>"General Failure"</code> which is the default failure severity.</li>
 </ul>
-<p>If during the execution of a test the above transaction succeeded 15 times and failed 5, and the <code>SetFailureReason()</code> function was called 3 times with the string <code>“Wrong Password”</code> and 2 times with the string <code>“User Not Logged”</code>, the Statistics Report appears as follows:</p>
+<p>If during the execution of a test the above transaction succeeded 15 times and failed 5, and the <code>SetFailureReason()</code> function was called 3 times with the string <code>"Wrong Password"</code> and 2 times with the string <code>"User Not Logged"</code>, the Statistics Report appears as follows:</p>
 <table>
 <thead>
 <tr>
@@ -3965,7 +3965,7 @@
 </tr>
 </tbody>
 </table>
-<p>All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the “actual” results, described in <a href="#viewing-verification-test-results">*Viewing Verification Test Results</a>.</p>
+<p>All of the selected tests are performed on all pages in the script when you run a WebLOAD Console test session. Verification test failures are automatically added to the Data Drilling reports. All verification test failures are also displayed in the Event Viewer that highlights the "actual" results, described in <a href="#viewing-verification-test-results">*Viewing Verification Test Results</a>.</p>
 <h2 id="viewing-verification-test-results">Viewing Verification Test Results</h2>
 <p>After running your script, WebLOAD Console provides information on all major events that occurred during runtime such as verification failures and error messages.</p>
 <p>When a verification test fails:</p>
@@ -3973,7 +3973,7 @@
 <li>The failure is logged in the Log Window, described in <a href="#viewing-error-information-in-the-log-window">*Viewing Error Information in Log window</a>.</li>
 <li>The failure is added to the Data Drilling report, described in <a href="#data-drilling"><em>Data Drilling</em> </a>.</li>
 </ul>
-<p>All verification failures can be viewed in the Event Viewer, which displays the “actual” results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.</p>
+<p>All verification failures can be viewed in the Event Viewer, which displays the "actual" results, and a description of the error. The Event View can be accessed through either the Log Window or the Data Drilling reports, as described here.</p>
 <h3 id="viewing-error-information-in-the-log-window">Viewing Error Information in the Log Window</h3>
 <p>If an error occurs at any time during the test session, an error message displays in the Log Window. A browser error or a Minor Error does not cause the test session to stop. An Error stops the current round. A Severe Error terminates the session upon completion of the current navigation block.</p>
 <p>A description of each error is listed in the Log Window. You can select whether to display or hide the error log using the <strong>Log Window</strong> checkbox in the <strong>Session</strong> tab of the window.</p>
@@ -4026,7 +4026,7 @@
 <p>You can view the saved log file using Microsoft Access or Excel.</p>
 <h2 id="data-drilling">Data Drilling</h2>
 <p>When testing the integrity of your Web application, it is important to see not only if a given transaction succeeded or failed, but also the reasons for the failure to pinpoint the transaction’s exact weak points and bottlenecks. Data Drilling enables you to display a detailed description of all user-defined and named transactions to the instance level.</p>
-<p>With Data Drilling you can view all transaction failures and the reasons for them. Data Drilling reports provide a complete breakdown of all information about a selected event. Click an event entry to bring up detailed information about that event in the Event Viewer. The Event Viewer provides a graphic illustration of the verification failure event, displaying the “actual” results, and a description of the error.</p>
+<p>With Data Drilling you can view all transaction failures and the reasons for them. Data Drilling reports provide a complete breakdown of all information about a selected event. Click an event entry to bring up detailed information about that event in the Event Viewer. The Event Viewer provides a graphic illustration of the verification failure event, displaying the "actual" results, and a description of the error.</p>
 <blockquote>
 <p><strong>Note:</strong> Data Drilling is only available to you if:</p>
 <ul>

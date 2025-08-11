@@ -3936,7 +3936,7 @@
 <h3 id="performing-auto-discovery-correlation-for-specific-values">Performing Auto-discovery Correlation for Specific Values</h3>
 <p>WebLOAD enables you to perform correlation with auto-discovery of rules for any value you select in a script. This provides correlation when normal auto-discovery is not sufficient. Auto-discovery correlation for specific values can be used instead of normal auto-discovery in the following cases:</p>
 <ul>
-<li><strong>Partial values</strong> – Since auto-discovery only searches for exact matches, if the dynamic value you wish to correlate is part of the sent value, it is not found. For example, in <code>wlHttp.FormData[“data”]=”session\*1234” or wlHttp.FormData[“data”]=”</code><xml><code>&lt;data sessionid= 1234/&gt;</code><xml><code>”</code>, if only 1234 is dynamic, normal auto-discovery does not find this value.</li>
+<li><strong>Partial values</strong> – Since auto-discovery only searches for exact matches, if the dynamic value you wish to correlate is part of the sent value, it is not found. For example, in <code>wlHttp.FormData["data"]="session\*1234" or wlHttp.FormData["data"]="</code><xml><code>&lt;data sessionid= 1234/&gt;</code><xml><code>"</code>, if only 1234 is dynamic, normal auto-discovery does not find this value.</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> The only exception is in POST and GET commands, where the parameter name or values are replaced.</p>
@@ -4301,7 +4301,7 @@
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><strong>JavaScript expression</strong></td>
-<td style="text-align: left;"><p>Specify a JavaScript expression to be used as an extraction logic. This can be a valid regular expression, DOM access function, or any other function call. For example:</p><p>extractValue (“prefix”, “suffix”,</p><p>document.wlSource )</p><p>To call a custom JavaScript function, the function must be accessible for both the execution engine and the correlation engine, so it should be included as an auto-discovered JavaScript code.</p><p>For more information on the auto-discovery of JavaScript files, see <em>JavaScript Language Extension</em>, in the <em>WebLOAD Extensibility SDK</em>.</p></td>
+<td style="text-align: left;"><p>Specify a JavaScript expression to be used as an extraction logic. This can be a valid regular expression, DOM access function, or any other function call. For example:</p><p>extractValue ("prefix", "suffix",</p><p>document.wlSource )</p><p>To call a custom JavaScript function, the function must be accessible for both the execution engine and the correlation engine, so it should be included as an auto-discovered JavaScript code.</p><p>For more information on the auto-discovery of JavaScript files, see <em>JavaScript Language Extension</em>, in the <em>WebLOAD Extensibility SDK</em>.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -4313,7 +4313,7 @@
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><strong>Replace with  expression</strong></td>
 <td style="text-align: left;"><strong>Expression</strong></td>
-<td style="text-align: left;"><p>Replace data according to the Field name, regardless of the value. Replace the value with the value in Expression.</p><p>For example:</p><p>Rule type = Replace with expression</p><p>Expression = new Date().getTime() Field name = timestamp</p><p>During correlation, the timestamp value is replaced with “newDate().getTime()” instead of the date on which the script was recorded.</p></td>
+<td style="text-align: left;"><p>Replace data according to the Field name, regardless of the value. Replace the value with the value in Expression.</p><p>For example:</p><p>Rule type = Replace with expression</p><p>Expression = new Date().getTime() Field name = timestamp</p><p>During correlation, the timestamp value is replaced with "newDate().getTime()" instead of the date on which the script was recorded.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -4343,7 +4343,7 @@
 <td style="text-align: left;"><strong>Correlate exact matches only</strong></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><p>Select this option to replace the identified dynamic value with a variable only when the values are a complete match. If the value found is only a part of the sent value, the rule will be ignored.</p><p>For example, if the dynamic value found is “1234”and the variable replacing the dynamic value contains “123”:</p><p>- When <strong>Correlate exact matches only</strong> is unchecked, the value “1234” will be replaced by the variable and then a “4”.</p><p>- When <strong>Correlate exact matches only</strong> is checked, the value will not be replaced since it is not an exact match.</p><p>&emsp;<strong>Note:</strong> The values within a query string are also considered a complete match. For example, if the dynamic value is found in the following string, wl<a href="http://domain/?field=123)">Http.Get(http://domain?field=123), </a>the dynamic value “123” will be replaced by the variable regardless of whether the Correlate exact matches only is checked.</p><p>By default this is selected.</p></td>
+<td style="text-align: left;"><p>Select this option to replace the identified dynamic value with a variable only when the values are a complete match. If the value found is only a part of the sent value, the rule will be ignored.</p><p>For example, if the dynamic value found is "1234"and the variable replacing the dynamic value contains "123":</p><p>- When <strong>Correlate exact matches only</strong> is unchecked, the value "1234" will be replaced by the variable and then a "4".</p><p>- When <strong>Correlate exact matches only</strong> is checked, the value will not be replaced since it is not an exact match.</p><p>&emsp;<strong>Note:</strong> The values within a query string are also considered a complete match. For example, if the dynamic value is found in the following string, wl<a href="http://domain/?field=123)">Http.Get(http://domain?field=123), </a>the dynamic value "123" will be replaced by the variable regardless of whether the Correlate exact matches only is checked.</p><p>By default this is selected.</p></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Field name</strong></td>

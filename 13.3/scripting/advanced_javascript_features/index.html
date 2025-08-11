@@ -4750,10 +4750,10 @@
 <p><code>XMLDataIsland2 = document.wlXmls[1]</code></p>
 <p>If a Data Island is identified by name through an ID, you could also access the Data</p>
 <p>Island through the id property. For example, if the first Data Island begins:</p>
-<p><code>&lt;xml id=“xmlBookstoreDatabase”&gt;</code></p>
+<p><code>&lt;xml id="xmlBookstoreDatabase"&gt;</code></p>
 <p>Then you could access the Data Island using any of the following:</p>
 <p><code>MyBookstore = document.wlXmls.xmlBookstoreDatabase</code> </p>
-<p><code>MyBookstore = document.wlXmls[“xmlBookstoreDatabase”]</code> </p>
+<p><code>MyBookstore = document.wlXmls["xmlBookstoreDatabase"]</code> </p>
 <p><code>MyBookstore = document.wlXmls[0]</code></p>
 <p>The following HTML code fragments illustrate these Data Islands options.</p>
 <h4 id="data-islandin-line-code">Data Island—In-Line Code</h4>
@@ -4792,7 +4792,7 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      ...
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      <span class="cp">&lt;!—reference to another source&gt;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      <span class="p">&lt;</span><span class="nt">xml</span> <span class="na">id</span><span class="o">=</span><span class="s">“xmldoc\_2”</span> <span class="na">src</span><span class="o">=</span><span class="s">“http://demo/bookstore.xml”</span><span class="p">&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      <span class="p">&lt;</span><span class="nt">xml</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;xmldoc\_2&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://demo/bookstore.xml&quot;</span><span class="p">&gt;</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      <span class="p">&lt;/</span><span class="nt">xml</span><span class="p">&gt;</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      ...
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -4801,8 +4801,8 @@
 <h4 id="data-islandscripted-in-line">Data Island—Scripted In-Line</h4>
 <p>XML DOM objects created from scripts within HTML documents may also be based on either in-line XML data or references to other sources.</p>
 <p>For example:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;SCRIPT</span><span class="w"> </span><span class="na">language=</span><span class="s">“xml”</span><span class="w"> </span><span class="na">id=</span><span class="s">“xmlscript”</span><span class="nt">&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span><span class="cp">&lt;?xml version=&quot;1.0”?&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;SCRIPT</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;xml&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;xmlscript&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">   </span><span class="cp">&lt;!—XML data in-line within a script element.&gt;</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">   </span><span class="nt">&lt;bookstore&gt;</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span>Programmer’s<span class="w"> </span>Guide
@@ -4820,7 +4820,7 @@
 </span></code></pre></div>
 <h4 id="data-islandscripted-reference-to-another-source">Data Island—Scripted Reference to Another Source</h4>
 <p>The preceding code illustrates XML data embedded in a script. Scripts may also include references to other sources:
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;SCRIPT</span><span class="w"> </span><span class="na">language=</span><span class="s">“xml”</span><span class="w"> </span><span class="na">id=</span><span class="s">“xmlscript”</span><span class="w"> </span><span class="na">src=</span><span class="s">“book.xml”</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;SCRIPT</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;xml&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;xmlscript&quot;</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;book.xml&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">&lt;/SCRIPT&gt;</span>
 </span></code></pre></div></p>
@@ -5250,9 +5250,9 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 </li>
 <li>
 <p>Get the XML page, either as a static page from the server:</p>
-<p><code>wlHttp.Get("http://demosite/bookstore.xml”)</code></p>
+<p><code>wlHttp.Get("http://demosite/bookstore.xml")</code></p>
 <p>Or through a database query to the bookstore:</p>
-<p><code>wlHttp.Get(“http://demosite/bookstore.exe?             author=Mark Twain&amp;MaxPrice=$20.00”)</code></p>
+<p><code>wlHttp.Get("http://demosite/bookstore.exe?             author=Mark Twain&amp;MaxPrice=$20.00")</code></p>
 </li>
 <li>
 <p>Create a new XML DOM object using the saved page source, which happens to include the XML string:</p>
@@ -5261,9 +5261,9 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <li>
 <p>At this point you have an XML DOM object which may be manipulated in any way just as you would manipulate XML DOM objects produced by Data Islands. You may make any changes or additions you wish to the XML DOM object data, as described in previous examples illustrating changing or adding bookstore data.</p>
 <p>For example, you may post the new XML DOM data back to the server:</p>
-<p><code>wlHttp.Data.Type=“text/xml”</code></p>
+<p><code>wlHttp.Data.Type="text/xml"</code></p>
 <p><code>wlHttp.Data.Value=xmlobj.xml</code></p>
-<p><code>wlHttp.Post(“Http://demosite/bookstore.exe?operation=upd ate”)</code></p>
+<p><code>wlHttp.Post("Http://demosite/bookstore.exe?operation=upd ate")</code></p>
 </li>
 </ol>
 <blockquote>
@@ -5273,13 +5273,13 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <p>The <code>WLXmlDocument()</code> constructor may be used without any parameters. In this case, a new, blank XML DOM object will be created. For example:</p>
 <p><code>NewBlankXMLObj = new WLXmlDocument()</code></p>
 <p>You may now use the <code>loadXML()</code> method to add XML data to your new blank XML DOM object.</p>
-<p><code>NewBlankXMLObj = loadXML(“&lt;?xml version='1.0’?&gt;&lt;bookstore&gt;&lt;/bookstore&gt;”)</code></p>
+<p><code>NewBlankXMLObj = loadXML("&lt;?xml version='1.0’?&gt;&lt;bookstore&gt;&lt;/bookstore&gt;")</code></p>
 <p>To add more content to the document, create elements and add them as child nodes as described in the example in the previous section.</p>
 <h5 id="loading-xml-files-into-xml-objects">Loading XML Files into XML Objects</h5>
 <p>The MSXML Document Interface provides two methods for loading XML documents into XML DOM objects:</p>
 <ul>
-<li><code>loadXML(“XMLdocumentstring”)</code></li>
-<li><code>load(“URL”)</code></li>
+<li><code>loadXML("XMLdocumentstring")</code></li>
+<li><code>load("URL")</code></li>
 </ul>
 <p>This section describes the advantages and limitations of the <code>loadXML()</code> and <code>load()</code> methods when used in WebLOAD Recorder scripts, and discusses how to select the method that will be most effective in your scripts.</p>
 <blockquote>
@@ -5305,7 +5305,7 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <p>For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>myXMLDoc = document.wlXmls[0]
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>myXMLdoc.load(http://server/xmls/file.xml”)
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>myXMLdoc.load(http://server/xmls/file.xml&quot;)
 </span></code></pre></div>
 <p>When you use the <code>load()</code> method in your script, the MSXML module performs all the underlying HTTP transactions. External references in the DTD section are not allowed when using <code>load()</code>. However, the MSXML module accesses external servers and completes all necessary transactions without any control or even knowledge on the part of the WebLOAD system tester. From WebLOAD’s perspective, these transactions are never performed in the context of the test session. For this reason, any settings that the user enters through the WebLOAD Recorder or Console will not be relayed to the MSXML module and will have no effect on the document ‘load’. For the same reason, the results of any transactions completed this way will not be included in the WebLOAD statistics reports.</p>
 <h6 id="comparing-loadxml-and-load">Comparing loadXML() and load()</h6>
@@ -5334,54 +5334,54 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <blockquote>
 <p><strong>Note:</strong> If you wish to measure the time it took to load the XML document using the <code>load()</code> method, create a timer whose results will appear in the WebLOAD Recorder statistics. For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>myXMLDoc = document.wlXmls[0]
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>SetTimer(“GetXML”)
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>myXMLdoc.load(“http://server/xmls/file.xml”)
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>SendTimer(“GetXML”)
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>SetTimer(&quot;GetXML&quot;)
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>myXMLdoc.load(&quot;http://server/xmls/file.xml&quot;)
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>SendTimer(&quot;GetXML&quot;)
 </span></code></pre></div>
 </blockquote>
 <h3 id="example-building-an-xml-database-from-scratch"><strong>Example: Building an XML Database from Scratch</strong></h3>
 <p>The next example will put together some of the pieces from the previous sections. Here we will create a new, skeletal XML DOM object for a bookstore database, build new book elements, and add each new book to our bookstore database.</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>//<span class="w"> </span>1.<span class="w"> </span>CREATE<span class="w"> </span>AN<span class="w"> </span>EMPTY<span class="w"> </span>XML<span class="w"> </span>OBJECT<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>skeleton:<span class="w"> </span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>xmlBookstoreDoc<span class="w"> </span>=<span class="w"> </span>new<span class="w"> </span>WLXmlDocument
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span>(“<span class="cp">&lt;?xml version=&#39;1.0’?&gt;</span><span class="nt">&lt;bookstore&gt;&lt;/bookstore&gt;</span>”)
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span>(&quot;<span class="cp">&lt;?xml version=&#39;1.0’?&gt;</span><span class="nt">&lt;bookstore&gt;&lt;/bookstore&gt;</span>&quot;)
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>//<span class="w"> </span>2.<span class="w"> </span>ADD<span class="w"> </span>CONTENT<span class="w"> </span>TO<span class="w"> </span>THE<span class="w"> </span>DOCUMENT:
 </span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>//create<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>book<span class="w"> </span>element
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>newBook<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“book”)
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>newBook<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;book&quot;)
 </span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>//append<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>book<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>bookstore<span class="w"> </span>tree<span class="w"> </span>
 </span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>xmlBookstoreDoc.documentElement.appendChild(newBook)
 </span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>//create,<span class="w"> </span>name,<span class="w"> </span>and<span class="w"> </span>append<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>book’s<span class="w"> </span>author<span class="w"> </span>element
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>author<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“author”)<span class="w"> </span>
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“Mark<span class="w"> </span>Twain”)<span class="w"> </span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>author<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;author&quot;)<span class="w"> </span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;Mark<span class="w"> </span>Twain&quot;)<span class="w"> </span>
 </span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>author.appendChild(name)<span class="w"> </span>newBook.appendChild(author)
 </span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>//create,<span class="w"> </span>name,<span class="w"> </span>and<span class="w"> </span>append<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>book’s<span class="w"> </span>title<span class="w"> </span>element
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>title<span class="w"> </span>=<span class="w">  </span>xmlBookstoreDoc.createElement(“title”)<span class="w"> </span>
-</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“Tom<span class="w"> </span>Sawyer”)<span class="w"> </span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>title<span class="w"> </span>=<span class="w">  </span>xmlBookstoreDoc.createElement(&quot;title&quot;)<span class="w"> </span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;Tom<span class="w"> </span>Sawyer&quot;)<span class="w"> </span>
 </span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>title.appendChild(name)
 </span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>newBook.appendChild(title)
 </span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>//create,<span class="w"> </span>name,<span class="w"> </span>and<span class="w"> </span>append<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>book’s<span class="w"> </span>price<span class="w"> </span>element
-</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>price<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“price”)<span class="w"> </span>
-</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>amount<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“$12.00”)<span class="w"> </span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>price<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;price&quot;)<span class="w"> </span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>amount<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;$12.00&quot;)<span class="w"> </span>
 </span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>price.appendChild(amount)<span class="w"> </span>newBook.appendChild(price)
 </span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>//<span class="w"> </span>3.<span class="w"> </span>CONTINUE<span class="w"> </span>TO<span class="w"> </span>ADD<span class="w"> </span>CONTENT<span class="w"> </span>TO<span class="w"> </span>THE<span class="w"> </span>DOCUMENT:
 </span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>//create<span class="w"> </span>the<span class="w"> </span>second<span class="w"> </span>element<span class="w"> </span>and<span class="w"> </span>append<span class="w"> </span>it<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>tree<span class="w"> </span>
-</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>newBook<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“book”)<span class="w"> </span>
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>newBook<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;book&quot;)<span class="w"> </span>
 </span><span id="__span-19-25"><a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a>xmlBookstoreDoc.documentElement.appendChild(newBook)
 </span><span id="__span-19-26"><a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>//create,<span class="w"> </span>name,<span class="w"> </span>and<span class="w"> </span>append<span class="w"> </span>author,<span class="w"> </span>title,<span class="w"> </span>and<span class="w"> </span>price<span class="w"> </span>elements
-</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a>author<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“author”)<span class="w"> </span>
-</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“Leo<span class="w"> </span>Tolstoy”)<span class="w"> </span>
+</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a>author<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;author&quot;)<span class="w"> </span>
+</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;Leo<span class="w"> </span>Tolstoy&quot;)<span class="w"> </span>
 </span><span id="__span-19-29"><a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a>author.appendChild(name)<span class="w">  </span>
 </span><span id="__span-19-30"><a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a>newBook.appendChild(author)
-</span><span id="__span-19-31"><a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a>title<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“title”)
-</span><span id="__span-19-32"><a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“War<span class="w"> </span>and<span class="w"> </span>Peace”)
+</span><span id="__span-19-31"><a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a>title<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;title&quot;)
+</span><span id="__span-19-32"><a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a>name<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;War<span class="w"> </span>and<span class="w"> </span>Peace&quot;)
 </span><span id="__span-19-33"><a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a>title.appendChild(name)<span class="w"> </span>
 </span><span id="__span-19-34"><a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a>newBook.appendChild(title)
-</span><span id="__span-19-35"><a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a>price<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(“price”<span class="w"> </span>
-</span><span id="__span-19-36"><a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a>amount<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(“$20.00”)<span class="w"> </span>
+</span><span id="__span-19-35"><a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a>price<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createElement(&quot;price&quot;<span class="w"> </span>
+</span><span id="__span-19-36"><a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a>amount<span class="w"> </span>=<span class="w"> </span>xmlBookstoreDoc.createTextNode(&quot;$20.00&quot;)<span class="w"> </span>
 </span><span id="__span-19-37"><a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a>price.appendChild(amount)<span class="w"> </span>
 </span><span id="__span-19-38"><a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a>newBook.appendChild(price)
 </span></code></pre></div>
 <p>A new XML DOM bookstore database object has now been created and filled with information about two books. The product of the <code>xmlBookstoreDoc.documentElement.xml</code> property would be:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?xml version=&quot;1.0”?&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nt">&lt;bookstore&gt;</span>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="nt">&lt;book&gt;</span>
 </span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">          </span><span class="nt">&lt;author&gt;</span>Mark<span class="w"> </span>Twain<span class="nt">&lt;/author&gt;</span>
@@ -5616,13 +5616,13 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <div class="language-text highlight"><pre><span></span><code>  `CLASSPATH=%CLASSPATH%;I:\AppFiles\libs`
 </code></pre></div>
 <p>Your script should reference this class as follows:</p>
-<div class="language-text highlight"><pre><span></span><code>  `var myJavaObj = new Packages.MyJavaClass(“stringArg”)`
+<div class="language-text highlight"><pre><span></span><code>  `var myJavaObj = new Packages.MyJavaClass(&quot;stringArg&quot;)`
 </code></pre></div>
 <p>If you were not careful, you could accidentally define CLASSPATH to include the wrong directory, such as:</p>
 <p><code>CLASSPATH=%CLASSPATH%;I:\AppFiles\orig-libs</code></p>
 <p>Or you could accidentally include an incorrect package path in the script file, such as:</p>
 <p><code>var myJavaObj = new</code>
-   <code>Packages.Jlib.MyJavaClass(“stringArg”)</code></p>
+   <code>Packages.Jlib.MyJavaClass("stringArg")</code></p>
 <p>In either of these cases the constructor call would fail and WebLOAD would return the following error message:</p>
 <p><code>TypeError: &lt;classname&gt; is not a constructor</code></p>
 </li>
@@ -6077,9 +6077,9 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <p>Creates a new ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
 <p><strong>Syntax</strong></p>
 <p><code>my_ActiveXobject = new</code>
-       <code>ActiveXObject(“ApplicationName.ObjectName” [, “rServer”])</code></p>
+       <code>ActiveXObject("ApplicationName.ObjectName" [, "rServer"])</code></p>
 <p>In VBScript terminology, the syntax appears as follows:
-<code>my\_ActiveXobject = new ActiveXObject(“ServerName.TypeName”)</code></p>
+<code>my\_ActiveXobject = new ActiveXObject("ServerName.TypeName")</code></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><code>ApplicationName</code>—The name of the application providing the object.</li>
@@ -6090,7 +6090,7 @@ You can change the bookstore data in the same way by using the XMLParserObject. 
 <p>A pointer to the new ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
 <p><strong>Example</strong></p>
 <p>To create a new Excel spreadsheet:</p>
-<p><code>ExcelSheet = new ActiveXObject (“Excel.Sheet”)</code></p>
+<p><code>ExcelSheet = new ActiveXObject ("Excel.Sheet")</code></p>
 <h3 id="assigning-values-to-activex-objects">Assigning Values to ActiveX Objects</h3>
 <p>At this point, now that you have created a reference to an ActiveX object, the fact that it refers to an ActiveX object does not affect usage and syntax within your JavaScript script. Once the new object has been activated, <code>my_ActiveXobject</code> is simply a local JavaScript object that is used to communicate with a COM object. Your script works with this object exactly as it would work with any other JavaScript object. You do not have to deal with any COM overhead or syntax issues. You access the new object’s properties and methods as you would access any other JavaScript object.</p>
 <p>This section describes how to work with local ActiveX objects in your WebLOAD JavaScript script. For an example illustrating working with ActiveX objects on a remote server, see <a href="#dcom-over-http"><em>DCOM over HTTP</em> </a>.</p>
@@ -6144,7 +6144,7 @@ animal.Eat("Meat","Fish")</p>
 <p>Working with JavaScript and COM data types within a JavaScript script is simple. Passing values from JavaScript scripts as parameters to COM objects can be more complicated. COM does not expect, nor does COM know how to convert from, a JavaScript data type. WebLOAD is responsible for smoothing the interface between JavaScript and COM, converting between JavaScript and the corresponding COM data types when necessary.</p>
 <p>When the data type is known, WebLOAD automatically converts between JavaScript data types and the corresponding COM data type. If the data type is unknown, WebLOAD checks to see if a <code>TypeInfo</code> library is available for the object. (<code>TypeInfo</code> is usually available.) When available, WebLOAD takes the data type information from the <code>TypeInfo</code> library and completes the conversion as usual.</p>
 <p>If <code>TypeInfo</code> information is not accessible, WebLOAD uses a basic common-sense heuristic to determine the data type and select the appropriate conversion, based on the preceding default conversion table. For example, if a variable A has been assigned a value of 5, WebLOAD assumes that the variable should be of type <code>Integer</code>.</p>
-<p>However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a <code>String</code> “5”. Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, <a href="#using-casting-functions-for-javascript-and-com-data-types">Using Casting Functions for JavaScript</a>.</p>
+<p>However, relying on sensible assumptions may inadvertently lead to complications. For example, the user may actually intend to pass that variable A as a parameter to a method that expects a <code>String</code> "5". Or you may be working with an array containing a whole set of variables of unknown data types, a more complicated situation. For these reasons, WebLOAD recommends using casting functions when the data type is unknown, to ensure that the variables are converted to the correct data type before being passed as parameters to an ActiveX object method. The WebLOAD casting functions are described in the following section, <a href="#using-casting-functions-for-javascript-and-com-data-types">Using Casting Functions for JavaScript</a>.</p>
 <table>
 <thead>
 <tr>
@@ -6344,9 +6344,9 @@ animal.Eat("Meat","Fish")</p>
 <p><strong>Description</strong></p>
 <p>Creates a new remote ActiveX object. The new object is simply a local JavaScript object, and may be handled and manipulated like any other JavaScript object.</p>
 <p><strong>Syntax</strong></p>
-<p><code>RDS\_object = new ActiveXObject (“RDS.DataSpace”)</code></p>
+<p><code>RDS\_object = new ActiveXObject ("RDS.DataSpace")</code></p>
 <p><code>my\_RemoteActiveXobject =</code></p>
-<p><code>RDS\_object.CreateObject(“AppName.ObjName”, “http://rServer”)</code></p>
+<p><code>RDS\_object.CreateObject("AppName.ObjName", "http://rServer")</code></p>
 <p><strong>Parameters</strong></p>
 <ul>
 <li><code>RDS.DataSpace</code>—Creates an RDS object to act as a ‘bridge’ to an ActiveX object residing on the remote server.</li>
@@ -6362,7 +6362,7 @@ animal.Eat("Meat","Fish")</p>
 <h3 id="example-remote-activex-object-access">Example: Remote ActiveX Object Access</h3>
 <p>The following script fragment illustrates ActiveX object access from a WebLOAD JavaScript script. This example retrieves a recordset from a database, updates the recordset, and then makes the necessary changes to the database.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1">// Instantiate a new ActiveX object</span>
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nx">DataSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActiveXObject</span><span class="p">(</span><span class="err">“</span><span class="nx">RDS</span><span class="p">.</span><span class="nx">Dataspace</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nx">DataSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActiveXObject</span><span class="p">(</span><span class="s2">&quot;RDS.Dataspace&quot;</span><span class="p">)</span>
 </span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="c1">// Invoke server object. localhost is the server here </span>
 </span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="nx">svrObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">DataSpace</span><span class="p">.</span><span class="nx">CreateObject</span>
 </span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">    </span><span class="p">(</span><span class="s2">&quot;RDSServer.DataFactory&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;http://localhost&quot;</span><span class="p">)</span>
@@ -6372,7 +6372,7 @@ animal.Eat("Meat","Fish")</p>
 </span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="c1">// Create output file with the unique ClientNum included</span>
 </span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="c1">// as part of the name for identification purposes </span>
 </span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="nx">wlLocals</span><span class="p">.</span><span class="nx">MyFileObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">wlOutputFile</span>
-</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="w">       </span><span class="p">(</span><span class="err">“</span><span class="nx">C</span><span class="o">:</span><span class="err">\\</span><span class="nx">OutputFile</span><span class="err">”</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="err">“</span><span class="p">.</span><span class="nx">txt</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="w">       </span><span class="p">(</span><span class="s2">&quot;C:\\OutputFile&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ClientNum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.txt&quot;</span><span class="p">)</span>
 </span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="c1">// svrObject.Query returns a recordset </span>
 </span><span id="__span-39-14"><a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a><span class="nx">strRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">svrObject</span><span class="p">.</span><span class="nx">Query</span>
 </span><span id="__span-39-15"><a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a><span class="w">       </span><span class="p">(</span><span class="s2">&quot;DSN=AdvWorks2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Select\* from Customers&quot;</span><span class="p">)</span>

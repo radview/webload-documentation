@@ -5218,7 +5218,7 @@
 <p>If the script run is unsuccessful, the value is left undefined.</p>
 <p>The following example is used to call a function that is defined in an external file:</p>
 <p><code>IncludeFile(filename.js)</code></p>
-<p><code>EvaluateScript(“MyFunction()”,WLAfterRound)</code></p>
+<p><code>EvaluateScript("MyFunction()",WLAfterRound)</code></p>
 <p>In this example, the <code>EvaluateScript</code> string is parsed, executed, and instructs the JavaScript engine to call the <code>MyFunction()</code> function right after each round is completed. At this point WebLOAD returns any syntax or runtime errors.</p>
 <p>For more information on the EvaluateScript function, see the <a href="../../javascript/using_javascript_ref/"><em>WebLOAD’s JavaScript Reference Guide</em></a>.</p>
 <h4 id="cleanup-at-the-end-of-each-round">Cleanup at the End of Each Round</h4>
@@ -5402,7 +5402,7 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">...</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="err">“</span><span class="nx">MyFunction</span><span class="p">.</span><span class="nx">js</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">IncludeFile</span><span class="p">(</span><span class="s2">&quot;MyFunction.js&quot;</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -5487,14 +5487,14 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">...</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">CopyFile</span><span class="p">(</span><span class="err">“</span><span class="nx">src</span><span class="p">.</span><span class="nx">txt</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">dest</span><span class="p">.</span><span class="nx">txt</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">CopyFile</span><span class="p">(</span><span class="s2">&quot;src.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dest.txt&quot;</span><span class="p">)</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">...</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>You may then access the file as usual in the main body of the script. For example:</p>
-<p><code>DataArr = GetLine(“dest.txt”)</code></p>
+<p><code>DataArr = GetLine("dest.txt")</code></p>
 <p>See the <em>JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="determining-the-copied-file-location">Determining the Copied File Location</h4>
 <p>WebLOAD assumes that the source file is located on the Console in the default directory identified in the <strong>File Locations</strong> tab of the <strong>Tools &gt; Global Options</strong> dialog box in the Console desktop, illustrated in the following figure:</p>
@@ -5528,9 +5528,9 @@
 <p><img alt="wlOutputFile() Insertion using General Menu" src="../../images/script_guide_034.png" /></p>
 <p>The preceding figure highlights the standard JavaScript syntax to create and work with <code>wlOutputFile</code> objects.</p>
 <p>For example:</p>
-<p><code>MyFileObj = new wlOutputFile(“filename”)</code></p>
+<p><code>MyFileObj = new wlOutputFile("filename")</code></p>
 <p><code>...</code></p>
-<p><code>MyFileObj.Write(“Happy Birthday”)</code></p>
+<p><code>MyFileObj.Write("Happy Birthday")</code></p>
 <p><code>...</code></p>
 <p><code>delete MyFileObj</code></p>
 <blockquote>
@@ -5685,7 +5685,7 @@
 <li>Pinpointing the source of the error, enabling easier debugging and recovery.</li>
 <li>Isolating the error to a specific script branch, in many cases allowing test execution to continue with the rest of the Script Tree despite the error.</li>
 </ul>
-<p>Navigation blocks and other logical activity blocks are useful for error management, especially when running “hands-free” test sessions. For example, the user can define the default testing behavior to be that if a non-fatal error is encountered during a test session, WebLOAD Recorder should throw the error, skip to the next navigation block, and continue with the test session.</p>
+<p>Navigation blocks and other logical activity blocks are useful for error management, especially when running "hands-free" test sessions. For example, the user can define the default testing behavior to be that if a non-fatal error is encountered during a test session, WebLOAD Recorder should throw the error, skip to the next navigation block, and continue with the test session.</p>
 <p>The <strong>Pass/Fail Definition</strong> tab of the <strong>Tools &gt; Default or Global Project Options</strong> dialog box is used to define the default WebLOAD Recorder behavior in case of error.</p>
 <blockquote>
 <p><strong>Note:</strong> At each testing level, WebLOAD Recorder provides a choice of error handling options. Depending on the context, you may choose to repeat the action, skip to the next line, skip to the next navigation block, or stop execution completely.</p>
@@ -5713,7 +5713,7 @@
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
 </span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
 </span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nx">myException</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">wlException</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="err">“</span><span class="nx">we</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">problem</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nx">myException</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">wlException</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="s2">&quot;we have a problem&quot;</span><span class="p">)</span>
 </span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="c1">//things to do in case of error</span>
 </span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
@@ -5976,20 +5976,20 @@
 <p><code>wlGeneratorGlobal</code> includes the following methods:</p>
 <ul>
 <li>
-<p><code>Set(“SharedVarName”, value, WLCurrentAgenda)</code>— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.</p>
+<p><code>Set("SharedVarName", value, WLCurrentAgenda)</code>— assigns a number, Boolean, or string value to the specified shared variable. If the variable does not exist, WebLOAD will create a new variable.</p>
 </li>
 <li>
-<p><code>Get(“SharedVarName”, WLCurrentAgenda)</code>— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
+<p><code>Get("SharedVarName", WLCurrentAgenda)</code>— returns the current value for the specified shared variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
 </li>
-<li><code>Add(“SharedIntVarName”, number, WLCurrentAgenda)</code>— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.</li>
+<li><code>Add("SharedIntVarName", number, WLCurrentAgenda)</code>— increments the specified shared number variable by the specified amount. If the variable has not been declared or Set previously, the Add function both declares and sets the variable to the specified value.</li>
 </ul>
 <h4 id="variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag">Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag</h4>
 <p>The shared multiple script context includes global variables and settings that are shared by all threads of a multiple scripts. The <code>wlGeneratorGlobal</code> object, when used with the <code>WLAllAgendas</code> scope flag, stores variable values that you wish to share between all threads of one or more scripts, including a mix of scripts, part of one or more spawned processes, running on a single Load Generator. You can access <code>wlGeneratorGlobal</code> properties and methods anywhere in the script, in both the global and local contexts.</p>
 <p><code>wlGeneratorGlobal</code> includes the methods with the <code>WLAllAgendas</code> scope flag instead of the <code>WLCurrentAgenda</code> flag:</p>
 <ul>
-<li><code>Set(“SharedVarName”, value, WLAllAgendas</code>)</li>
-<li><code>Get(“SharedVarName”, WLAllAgendas)</code></li>
-<li><code>Add(“SharedIntVarName”, number, WLAllAgendas)</code></li>
+<li><code>Set("SharedVarName", value, WLAllAgendas</code>)</li>
+<li><code>Get("SharedVarName", WLAllAgendas)</code></li>
+<li><code>Add("SharedIntVarName", number, WLAllAgendas)</code></li>
 </ul>
 <h4 id="wlgeneratorglobal-example">wlGeneratorGlobal Example</h4>
 <p><code>wlGeneratorGlobal</code> properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>
@@ -6034,7 +6034,7 @@
 </span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">     </span><span class="nx">wlGeneratorGlobal</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">WLCurrentAgenda</span><span class="p">))</span>
 </span></code></pre></div>
 <blockquote>
-<p><strong>Note:</strong> In the preceding example, the globally shared value of “B” is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new <code>wlGeneratorGlobal.Get</code> call each time.</p>
+<p><strong>Note:</strong> In the preceding example, the globally shared value of "B" is assigned to a local variable B. If you plan to use many InfoMessage commands, it is more efficient to assign the value to a local variable, rather than using a new <code>wlGeneratorGlobal.Get</code> call each time.</p>
 </blockquote>
 <p>See Editing the JavaScript Code, for an introduction to editing your JavaScript code with the IntelliSense Editor. See the description of the <code>wlGeneratorGlobal</code>object in the <em>WebLOAD JavaScript Reference Guide</em> for a complete syntax specification.</p>
 <h4 id="variables-defined-through-the-wlsystemglobal-object-with-wlcurrentagenda-flag">Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag</h4>
@@ -6042,20 +6042,20 @@
 <p><code>wlSystemGlobal</code> includes essentially the same methods described in <a href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlallagendas-flag"><em>Variables Defined through the wlGeneratorGlobal Object with WLAllAgendas Flag</em> </a>, applied here to global variables:</p>
 <ul>
 <li>
-<p><code>Set(“GlobalVarName”, value, WLCurrentAgenda)</code>—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.</p>
+<p><code>Set("GlobalVarName", value, WLCurrentAgenda)</code>—assigns a number, Boolean, or string value to the specified global script variable. If the variable does not exist, WebLOAD will create a new variable.</p>
 </li>
 <li>
-<p><code>Get(“GlobalVarName”, WLCurrentAgenda)</code>—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
+<p><code>Get("GlobalVarName", WLCurrentAgenda)</code>—returns the current value for the specified global variable. The calling script thread waits for the requested value to be returned before continuing execution.</p>
 </li>
-<li><code>Add(“GlobalIntVarName”, number, WLCurrentAgenda)</code>—increments the specified global number variable by the specified amount. If the variable has not been declared or <code>Set</code> previously, the <code>Add</code> function declares and sets the variable to the specified value.</li>
+<li><code>Add("GlobalIntVarName", number, WLCurrentAgenda)</code>—increments the specified global number variable by the specified amount. If the variable has not been declared or <code>Set</code> previously, the <code>Add</code> function declares and sets the variable to the specified value.</li>
 </ul>
 <h4 id="variables-defined-through-the-wlsystemglobal-object-with-wlallagendas-flag">Variables Defined through the wlSystemGlobal Object with WLAllAgendas Flag</h4>
 <p>The global multiple script context provides full, system wide global variables, shared by all elements of a test session. The <code>wlSystemGlobal</code> object, when used with the <code>WLAllAgendas</code> flag, stores variable values that you wish to share between all threads of all scripts, part of one or more spawned processes, on all Load Generators and machines, system-wide. You can access <code>wlSystemGlobal</code> properties and methods anywhere in the script, in both the global and local contexts.</p>
 <p><code>wlSystemGlobal</code> includes essentially the same methods described in <a href="#variables-defined-through-the-wlgeneratorglobal-object-with-wlcurrentagenda-flag"><em>Variables Defined through the wlSystemGlobal Object with WLCurrentAgenda Flag</em> </a>, with the <code>WLAllAgendas</code> scope flag in stead of the <code>WLCurrentAgenda</code> flag:</p>
 <ul>
-<li><code>Set(“GlobalVarName”, value, WLAllAgendas)</code></li>
-<li><code>Get(“GlobalVarName”, WLAllAgendas)</code></li>
-<li><code>Add(“GlobalIntVarName”, number, WLAllAgendas)</code></li>
+<li><code>Set("GlobalVarName", value, WLAllAgendas)</code></li>
+<li><code>Get("GlobalVarName", WLAllAgendas)</code></li>
+<li><code>Add("GlobalIntVarName", number, WLAllAgendas)</code></li>
 </ul>
 <h4 id="wlsystemglobal-example">wlSystemGlobal Example</h4>
 <p><code>wlSystemGlobal</code> properties and methods can be accessed from anywhere within a script. They do not have to be set or initialized in any special place, and are not limited in where they may appear. Simply use the variables as necessary within your script code.</p>

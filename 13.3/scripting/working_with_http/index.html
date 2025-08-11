@@ -3968,7 +3968,7 @@
 <p>Website load testing usually means testing how typical user activities are handled by the system under test not in a single-user scenario but rather under heavy usage load. Using load testing, we can test the system’s performance, scalability and reliability, all in real-life simulated usage scenarios and patterns. A system’s performance is all about how fast it functions; its reliability is about how often it’s available (where a system might be unavailable due to a lack of a certain resource or because of a bug); and a</p>
 <p>system’s scalability is about how these two factors (performance and reliability) change as the usage of the system increases.</p>
 <p>WebLOAD was designed as a protocol-level load testing tool, enabling the QA</p>
-<p>professional to “bombard” the system under test with protocol-level commands and transactions, simulating real usage of a large amount of users. The main and most important protocol for load testing Internet applications is the HTTP protocol.</p>
+<p>professional to "bombard" the system under test with protocol-level commands and transactions, simulating real usage of a large amount of users. The main and most important protocol for load testing Internet applications is the HTTP protocol.</p>
 <p>WebLOAD supports the common HTTP methods and headers, as defined in the HTTP RFCs, most notably RFC 2616 (1999), that was defined by the W3C and the IETF.The WebLOAD DOM extension set includes objects, methods, properties, and functions that support designing tests at the HTTP protocol level. Using the DOM, functional and verification tests can be done, to check the system’s reliability under load.</p>
 <p>This chapter documents the features that apply to QA professionals creating scripts based on the HTTP Protocol, where HTTP transactions and the responses they trigger are the focus of the test session. This chapter includes a few sample scripts that you can study to help learn the HTTP Protocol testing technique. The examples are fictitious, but you can copy the scripts and edit them for use in real WebLOAD tests. More sample scripts may be found on the WebLOAD Script Libraries, at <a href="http://www.webload.org/index.php?option=com_wrapper&amp;Itemid=160">http://www.webload.org/index.php?option=com_wrapper&amp;Itemid=160.</a></p>
 <h2 id="understanding-the-webload-dom-structure">Understanding the WebLOAD DOM Structure</h2>
@@ -4314,10 +4314,10 @@
 <li>hidden controls</li>
 </ul>
 <p>Generally, when an HTTP client (Microsoft Internet Explorer/Firefox or WebLOAD) sends a URL-encoded request to the server, the data is HTTP encoded. Different clients
-– browsers or JavaScript functions such as Ajax – perform encoding with slight differences. Encoding form data replaces special characters such as blanks, “&gt;“ signs, and so on, with “%xx” (an ASCII hexa number). For example, a space is encoded as “%20” or as a “+”.</p>
+– browsers or JavaScript functions such as Ajax – perform encoding with slight differences. Encoding form data replaces special characters such as blanks, "&gt;" signs, and so on, with "%xx" (an ASCII hexa number). For example, a space is encoded as "%20" or as a "+".</p>
 <p>The <code>Get()</code> method converts a URL address to contain only allowed URL characters. The <code>Post()</code> method converts the content of forms to contain only allowed URL characters. Forms contain one of the following content types:</p>
 <ul>
-<li><code>FormData [“key”]</code> – a value</li>
+<li><code>FormData ["key"]</code> – a value</li>
 <li><code>Data []</code> – raw information</li>
 <li><code>DataFile []</code> – both a value and raw information</li>
 </ul>
@@ -4366,8 +4366,8 @@ The latter notation also supports spaces in the name, for example, FormData["Fir
 <h4 id="using-formdata-with-data-files">Using FormData with Data Files</h4>
 <p>You can coordinate the <code>FormData</code> property with input data files. In this case, one of the <code>FormData</code> fields stores identifying information about the data file, including the name of the file and the type of data in the file (text, binary, bmp, etc.).</p>
 <p>The following lines illustrate the syntax:</p>
-<p><code>wlHttp.FormData[“InputFile.wlFile-Name”] = ”myFavoritePicture”</code> </p>
-<p><code>wlHttp.FormData[“InputFile.wlContent-Type] = ”bmp”</code></p>
+<p><code>wlHttp.FormData["InputFile.wlFile-Name"] = "myFavoritePicture"</code> </p>
+<p><code>wlHttp.FormData["InputFile.wlContent-Type] = "bmp"</code></p>
 <p>The following script fragment illustrates the <code>FormData</code> properties documented in this section. The input file lines are marked in bold.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>...
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/***** WLIDE - URL : http://ws3/webft/fullform.asp - ID:4 *****/
@@ -4632,14 +4632,14 @@ To solve the problem, assign the wlHttp property values in the main script, so t
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">FormData</span><span class="p">[</span><span class="s2">&quot;submit1&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Login&quot;</span>
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1">//Setting the cookie</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="nx">wlCookie</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="err">“</span><span class="nx">UserID</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">zapd10</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">www</span><span class="p">.</span><span class="nx">abcdef</span><span class="p">.</span><span class="nx">net</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="o">/</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="nx">Sun</span><span class="p">,</span><span class="w"> </span><span class="mf">19</span><span class="o">-</span><span class="w"> </span><span class="nx">Jun</span><span class="o">-</span><span class="mf">2011</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">29</span><span class="o">:</span><span class="mo">00</span><span class="w"> </span><span class="nx">GMT</span><span class="err">”</span><span class="p">)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="nx">wlCookie</span><span class="p">.</span><span class="nb">Set</span><span class="p">(</span><span class="s2">&quot;UserID&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;zapd10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;www.abcdef.net&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sun, 19- Jun-2011 17:29:00 GMT&quot;</span><span class="p">)</span>
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
 </span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1">//WebLOAD submits the cookie </span>
 </span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="nx">wlHttp</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s2">&quot;https://www.abcdef.net/default.aspx&quot;</span><span class="p">)</span>
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1">//Getting the cookie</span>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="nx">CookieValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">wlCookie</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s2">&quot;UserID&quot;</span><span class="p">)</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1">//The value returned in CookieValue is “zapd10”</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1">//The value returned in CookieValue is &quot;zapd10&quot;</span>
 </span></code></pre></div>
 <p>In some cases it is also necessary to delete the cookie settings. You can do this by entering:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    //Delete the cookie 
@@ -4779,7 +4779,7 @@ To solve the problem, assign the wlHttp property values in the main script, so t
 <p>WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user authentication methods.</p>
 <p>WebLOAD handles authentication in playback in the following way:</p>
 <ol>
-<li>WebLOAD sends a regular request with no request for authentication, to which the server responds with an “unauthorized” error (401), and a prompt to enter a username and password.</li>
+<li>WebLOAD sends a regular request with no request for authentication, to which the server responds with an "unauthorized" error (401), and a prompt to enter a username and password.</li>
 <li>
 <p>If WebLOAD is using:</p>
 <ul>
