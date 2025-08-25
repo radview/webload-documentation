@@ -11,7 +11,7 @@ You can run the following WebLOAD components from the command line:
 
 You can register or upload a WebLOAD license through a command line interface. You can enter the WebLOAD Update License command into a batch file or into an external script and it will run directly, without user intervention, using the parameters specified.
 
-**To register or update you WebLOAD license through the command line interface:**
+**To register or update your WebLOAD license through the command line interface:**
 
 Enter the wlUpdateLicenseApplicationCmd command together with the optional parameters (described below) into your external script, to automatically launch a WebLOAD License action.
 
@@ -553,7 +553,7 @@ This command:
 
 #### Special Link During Recording
 
-During recording, you can use these special links to trigger special behavior. This can be useful when automating recroding that is done through another software, for example when the script is running from Selenium and being recorded by WebLOAD.
+During recording, you can use these special links to trigger special behavior. This can be useful when automating recording that is done through another software, for example when the script is running from Selenium and being recorded by WebLOAD.
 
 - `https://www.radview.com/stop-recording/` - instructs the recording to end
 - `https://www.radview.com/begin-transaction/?name=` - Add BeginTransaction with the given name
