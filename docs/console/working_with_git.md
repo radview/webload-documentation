@@ -24,7 +24,7 @@ As prerequisites to working with Git, you need to:
 
 As a prerequisite to using Git operation from within WebLOAD, you need to once specify in WebLOAD how to access the Git Local Repository and Remote Repository.
 
-> **Note:** You can perform this prerequisite task either from the WebLOAD WebLOAD Recorder, or from the WebLOAD Console. Once you perform it in one of them, Git operations will be accessible from both.
+> **Note:** You can perform this prerequisite task either from the WebLOAD Recorder or from the WebLOAD Console. Once you perform it in one of them, Git operations will be accessible from both.
 
 **To specify the Git local and remote repositories:**
 
@@ -49,24 +49,24 @@ GitHub no longer accepts account passwords for Git operations over HTTPS. Use a 
 
 ### Create a fine-grained PAT (recommended)
 
-1. **Sign in to GitHub** as your account (e.g., `my-company`).
+1. **Sign in to GitHub** as your account (e.g., `your-username`).
 2. Go to **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
 3. Fill the form:
-   - **Token name:** e.g., `my-data-push`
+   - **Token name:** e.g., `webload-push`
    - **Expiration:** choose a short duration (e.g., 90 days)
-   - **Resource owner:** your user (or the relevant org)
-   - **Repository access:** **Only selected repositories** → select your repository (e.g., `agenda`)
+   - **Resource owner:** your user (or the relevant organization)
+   - **Repository access:** **Only selected repositories** → select your repository (e.g., `your-repo`)
    - **Permissions → Repository permissions:**
      - **Contents:** **Read and write** ✅ (required to push)
      - **Metadata:** **Read-only** ✅ (required)
      - *(Optional)* **Pull requests:** **Read and write** if you’ll open/update PRs via API
 4. Click **Generate token** and **copy it** somewhere safe. You won’t see it again.
-5. If prompted for **SSO**, click **Grant** so the token works for your org.
+5. If prompted for **SSO**, click **Grant** so the token works for your organization.
 
 ### Use the PAT in WebLOAD
 
 When configuring **Remote Repository** in WebLOAD:
-- **User Name:** your GitHub username (e.g., `galb-radview`)
+- **User Name:** your GitHub username (e.g., `your-username`)
 - **Password:** **paste the PAT** you generated above
 
 > **Tip (Windows):** If you previously authenticated with the wrong GitHub account, clear cached credentials in **Control Panel → Credential Manager → Windows Credentials** (remove `git:https://github.com`), then try again.
