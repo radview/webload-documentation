@@ -142,6 +142,10 @@ In HTTP streaming, the server response is never ending (or very long), and each 
 
 To handle the server partial responses, the ‘[*onDataReceived*’ ](../javascript/actions_objects_functions.md#ondatareceived-property)callback function should be used.
 
+> **Note:** The `onDataReceived` callback is **not implemented** when `CurlClient = true`.  
+> This limitation also applies to **HTTP/2** and **HTTP/3** protocols, which are based on the Curl client.  
+> In these cases, the callback is invoked **only once**, at the end of the response.
+
 For example:
 
 ```javascript
