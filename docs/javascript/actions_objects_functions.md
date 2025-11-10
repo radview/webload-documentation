@@ -158,6 +158,10 @@ The possible values of wlHttp.Async are:
 
 When using asynchronous requests, the script does not wait for the request to complete before moving on to the next statement. In order to work with the response, you need to specify one of the asynchronous callback functions – [*onDocumentComplete (property)* ](#ondocumentcomplete-property) and/or [*onDataReceived (property)*.](#ondatareceived-property)
 
+> **Note:** The `onDataReceived` callback is **not implemented** when `CurlClient = true`.  
+> This limitation also applies to **HTTP/2** and **HTTP/3** protocols, which are based on the Curl client.  
+> In these cases, the callback is invoked **only once**, at the end of the response.
+
 **Example**
 
 ```javascript

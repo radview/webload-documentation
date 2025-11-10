@@ -868,13 +868,14 @@ wlHttp.Post("http://www.webloadmpstore.com/flashservices/gateway.php")
 
 ## Handling Authentication in the Script
 
-WebLOAD supports working with scripts containing Basic, NTLM, and Kerberos user authentication methods.
+WebLOAD supports working with scripts containing Basic, NTLM, Kerberos, Digest, user authentication methods.
 
 WebLOAD handles authentication in playback in the following way:
 
 1. WebLOAD sends a regular request with no request for authentication, to which the server responds with an "unauthorized" error (401), and a prompt to enter a username and password.
 1. If WebLOAD is using:
      - **Basic authentication**, WebLOAD encrypts the username and password in `wlHttp.Username` and `wlHttp.Password`, and makes a request.
+	 - **Digest authentication**, WebLOAD encrypts the username and password in `wlHttp.Username` and `wlHttp.Password`, and makes a request.
     - **NTLM authentication**, WebLOAD sets the following:
        `wlGlobals.AuthType = "NTLM"`, where `NTLM` is the default value if no authentication type is specified.
     - **Kerberos authentication**, WebLOAD sets the following:
@@ -925,4 +926,27 @@ OR
 `wlHttp.UserName = "test"`
 
 `wlHttp.Get("<http://mulier.qalab.internal/>")`
+
+**Digest authentication:**
+
+`wlGlobals.CurlClient = true`
+
+`wlHttp.UserName = "postman"`
+
+`wlHttp.PassWord = "password"`
+
+`wlHttp.Get("<https://postman-echo.com/digest-auth>")`
+
+> **Note:** The `CurlClient` setting must be **true** to use Digest authentication.  
+> Digest authentication is **not supported** when `CurlClient = false`.  
+> This also applies to **HTTP/2** and **HTTP/3** protocols, which are based on the Curl client.  
+> When `CurlClient` is disabled, attempting to use Digest authentication will result in an error similar to:
+>
+> ```
+> Message: Unknown authorization response.
+> ```
+
+
+
+
 
