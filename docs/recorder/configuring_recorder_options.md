@@ -920,6 +920,8 @@ The following table describes the fields and options on the Proxy Options tab.
 |*User Authentication*||
 |**User Name**|The user name used for user authentication purposes.|
 |**Password**|The password used for user authentication purposes.|
+|**Don't detect Authentication**|When this option is enabled, the application will **not** automatically add any credentials to the request. Authentication details (if required by the server) must be explicitly provided in the agenda.
+|**Don't use Default Authentication**|When this option is enabled, the application will **not** use the current Windows user’s credentials (NTLM/Kerberos/Negotiate) as fallback authentication.<br><br>Instead, if the server requires authentication and no credentials are supplied in the script/URL, the user will be **prompted interactively** for a user name and password.
 
 
 
