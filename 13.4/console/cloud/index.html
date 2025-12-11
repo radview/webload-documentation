@@ -1,0 +1,5486 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product documentation for RadView WebLOAD">
+      
+      
+      
+      
+        <link rel="prev" href="../performance_measurements_manager/">
+      
+      
+        <link rel="next" href="../appendix_a/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Working with Cloud accounts - WebLOAD Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloud-account-types-and-their-properties" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WebLOAD Documentation" class="md-header__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WebLOAD Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working with Cloud accounts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quickstart/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recorder/introduction/" class="md-tabs__link">
+          
+  
+  
+  Recorder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scripting/introduction/" class="md-tabs__link">
+          
+  
+  
+  Scripting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  
+  Console
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/introduction/" class="md-tabs__link">
+          
+  
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../automation/introduction/" class="md-tabs__link">
+          
+  
+  
+  Automation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../javascript/introduction/" class="md-tabs__link">
+          
+  
+  
+  JavaScript Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../analytics/introduction/" class="md-tabs__link">
+          
+  
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WebLOAD Documentation" class="md-nav__button md-logo" aria-label="WebLOAD Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WebLOAD Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorder
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recorder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/before_you_begin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Before you Begin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/quick_start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QuickStart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/recording_scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recording Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/editing_scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/correlating_scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlating Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/running_debugging_scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running and Debugging Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/working_with_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with GIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/configuring_recorder_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring the WebLOAD Recorder Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A - The WebLOAD Recorder Toolbox Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B - WebLOAD Recorder File Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C - Launching WebLOAD Recorder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D - Converting Certificate Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_e/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix E - Recording Mobile Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_f/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix F - Integrating with Perfecto Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_g/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix G - Selenium Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recorder/appendix_h/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix H - Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scripting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/programming_your_javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programming your JavaScript Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/advanced_javascript_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced JavaScript Script Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/working_with_http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with HTTP Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/using_asynchronous/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Asynchronous Requests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A - Scripting Samples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripting/appendix_b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B - LiveConnect Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Console
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducing_webload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducing WebLOAD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_load_templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Load Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan_test_session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning a Test Session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect_webrm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to WebRM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage_load_templates_sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Load Templates and Load Sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_template_wizard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Load Templates with the WebLOAD Wizard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_load_test_goal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Load Templates with Goal-Oriented Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_load_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring a Load Template Manually
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_global_opt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Global Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_script_options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Script Options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../func_verifi_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Verification Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_test_analyze_results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running Tests and Analyzing  Test Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../running_a_load_session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running a Load Session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working_with_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../viewing_log_window/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viewing the Log Window
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console_performance_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebLOAD Console Performance Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistics_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebLOAD Statistics Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_drilling_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Drilling Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export_performance_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporting Performance Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_measurements_manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Measurements Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Cloud accounts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Cloud accounts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aws-ec2-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS EC2 Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS EC2 Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-ec2-cloud-dynamic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS EC2 Cloud (Dynamic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS EC2 Cloud (Dynamic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-azure-in-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Azure in WebLOAD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-and-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tenant and Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (Region)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Azure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-compute-engine-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Compute Engine Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Compute Engine Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (GCP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (GCP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-ecs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amazon ECS Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon ECS Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (ECS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (ECS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-cloud-jclouds-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generic Cloud (Jclouds-based)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generic Cloud (Jclouds-based)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (Generic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (Generic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-provider-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Provider (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credentials-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Generic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Parameters (Generic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A - Integrating with AppDynamics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B - Integrating with Dynatrace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C - Integrating with Nagios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D - Integrating with New Relic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_e/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix E - WebLOAD Console Error Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_f/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix F - Reference Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix_g/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix G - Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/manage_sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/using_dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/customizing_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizing a Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Dashboards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/sharing_dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sharing a Dashboard or Panel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/creating_playlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating and Playing a Playlist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_load_generators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Load Generators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/managing_organizations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Organizations, Users, and Admins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/global_lab_load_generators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Lab Load Generators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/rest_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A - Editing WebLOAD Dashboard Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running WebLOAD from the Command Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running WebLOAD in Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/webload_openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running WebLOAD Using REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JavaScript Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/intro_java_scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/using_javascript_ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the WebLOAD JavaScript Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/actions_objects_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebLOAD Actions, Objects, and Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/internet_protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebLOAD Internet Protocols Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/xmlparser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XML Parser Object
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/websocket_object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket Object
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/js_helper_funcs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript Helper Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A - WebLOAD-supported SSL Protocol Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B - WebLOAD-supported XML DOM Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C - HTTP Protocol Status Messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D - WebLOAD-supported Character Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/appendix_e/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix E - Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analytics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebLOAD Analytics System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_charts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generating Charts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/changing_chart_settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changing Chart Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/generating_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generating Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/load_sessions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Load Sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/portfolios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Portfolios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/defining_preferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defining Your Preferences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A. WebLOAD Analytics File System Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B. Understanding the Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C. Running Analytics in Command Line Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/appendix_d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D. Understanding the Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix E. Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aws-ec2-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS EC2 Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS EC2 Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-ec2-cloud-dynamic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS EC2 Cloud (Dynamic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS EC2 Cloud (Dynamic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-azure-in-webload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with Azure in WebLOAD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-and-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tenant and Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (Region)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Azure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-compute-engine-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Compute Engine Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Compute Engine Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (GCP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (GCP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (GCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-ecs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amazon ECS Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon ECS Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (ECS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (ECS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credentials-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (ECS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-cloud-jclouds-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generic Cloud (Jclouds-based)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generic Cloud (Jclouds-based)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters (Generic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters (Generic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-provider-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Provider (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credentials-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Region (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance (Generic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Generic)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Parameters (Generic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cloud-account-types-and-their-properties">Cloud Account Types and Their Properties</h1>
+<p>This document provides a detailed description of various cloud account types and their properties.</p>
+<h2 id="aws-ec2-cloud">AWS EC2 Cloud</h2>
+<ul>
+<li><strong>Description</strong>: AWS EC2 Cloud</li>
+</ul>
+<h3 id="parameters">Parameters</h3>
+<h4 id="credentials">Credentials</h4>
+<ul>
+<li><strong>Access Key (String; Optional)</strong>: AWS Access Key. Use 'aws' or blank to use default credentials. Default credentials will try to use: Environment variables, Java system properties, The default credential profiles file, Amazon ECS container credentials, Instance profile credentials.</li>
+<li><strong>Secret Access Key (Password)</strong>: Secret Access Key matching the Access Key.</li>
+</ul>
+<h4 id="region">Region</h4>
+<ul>
+<li><strong>Region Name (List; Required)</strong>:</li>
+<li><strong>Values</strong>: us-east-1, us-west-1, us-west-2, eu-west-1, eu-west-2, eu-west-3, eu-central-1, ap-southeast-1, ap-southeast-2, ap-northeast-1, sa-east-1, af-south-1</li>
+<li><strong>Default</strong>: us-east-1</li>
+<li><strong>Description</strong>: AWS Region to run the instance.</li>
+</ul>
+<h4 id="instance">Instance</h4>
+<ul>
+<li><strong>Instance Type (String)</strong>: Default is <code>c5.large</code>. Machine size to launch. Type needs to be available in the selected region and may have limitations like requiring VPC.</li>
+<li><strong>Subnet Id (String)</strong>: SubnetId. Required when using VPC. For example: subnet-60e6945c. Subnet should auto-assign a public IPv4 address.</li>
+</ul>
+<h3 id="advanced-parameters">Advanced Parameters</h3>
+<ul>
+<li><strong>Security Group Id (String)</strong>: Security group id, allowing access from the console on ports 9000, 9010, 21, 10090-10100. If not specified, a 'RadView' security group will be created if it does not exist.</li>
+<li><strong>Use Elastic IP (String)</strong>: Default is <code>false</code>. If <code>true</code>, WebLOAD will allocate an elastic-ip to this instance if one is available.</li>
+<li><strong>Use Private IP (String)</strong>: Default is <code>false</code>. If <code>true</code>, WebLOAD will use the instance private-ip, not public-ip. This works only in a VPC environment where the console machine can access the load-generator.</li>
+<li><strong>Custom Tag List (String)</strong>: Custom tags to add to instance. Example: <code>tag1=value1;tag2=value2</code>.</li>
+<li><strong>Image Id (String)</strong>: Default is <code>Default</code>. Custom AMI ID expected to have WebLOAD configured and running.</li>
+<li><strong>Spot Price (String)</strong>: Launches instance as a spot request. Note: Spot instances depend on pricing and capacity and may be terminated without notice if the price goes up.</li>
+</ul>
+<h2 id="aws-ec2-cloud-dynamic">AWS EC2 Cloud (Dynamic)</h2>
+<ul>
+<li><strong>Description</strong>: AWS EC2 Cloud (Dynamic) - supports all regions by installing WebLOAD upon launch. Users must select an appropriate region and machine type.</li>
+</ul>
+<h3 id="parameters_1">Parameters</h3>
+<h4 id="credentials_1">Credentials</h4>
+<ul>
+<li><strong>Access Key (String; Optional)</strong>: AWS Access Key. Use 'aws' or blank to use default credentials. Default credentials will try to use: Environment variables, Java system properties, The default credential profiles file, Amazon ECS container credentials, Instance profile credentials.</li>
+<li><strong>Secret Access Key (Password)</strong>: Secret Access Key matching the Access Key.</li>
+</ul>
+<h4 id="region_1">Region</h4>
+<ul>
+<li><strong>Region Name (String; Required)</strong>:</li>
+<li><strong>Default</strong>: us-east-1</li>
+<li><strong>Description</strong>: AWS Region to run the instance.</li>
+</ul>
+<h4 id="instance_1">Instance</h4>
+<ul>
+<li><strong>Instance Type (String)</strong>: Default is <code>c5.large</code>. Machine size to launch.</li>
+<li><strong>Image Id (String)</strong>: Default is <code>amzn2-ami-kernel-5.10-hvm-2.0.20240412.0-x86_64-gp2</code>. Base AMI expected to support CloudInit.</li>
+</ul>
+<h3 id="advanced-parameters_1">Advanced Parameters</h3>
+<ul>
+<li><strong>Init Script (String)</strong>: Default is <code>cloud_init.sh</code>. Path to the script file to run when starting the instance. This script is expected to install and start WebLOAD. File must be in UNIX format.</li>
+<li><strong>Download File Name (String)</strong>: Default is <code>WebLoad-linux-v${VERSION}.${BUILD}.tar.gz</code>. Used by init-script for file download.</li>
+<li><strong>Download URL (String)</strong>: Default is <code>https://radview.s3.amazonaws.com/</code>. Path for downloading installation during initialization.</li>
+</ul>
+<h2 id="azure-cloud">Azure Cloud</h2>
+<ul>
+<li><strong>Description</strong>: Microsoft Azure Cloud</li>
+</ul>
+<h3 id="working-with-azure-in-webload">Working with Azure in WebLOAD:</h3>
+<ul>
+<li>Create an Azure account</li>
+<li>Sign in the the Azure portal at <a href="https://portal.azure.com">https://portal.azure.com</a></li>
+<li>Go to "Cost Management + Billing"</li>
+<li>View "Azure Subscriptions" / "My Subscriptions" - note your <strong>Subscription ID</strong></li>
+<li>Go to "Azure Active Directory"</li>
+<li>Goto "Properties". Note the ‘Directory ID’ or ‘Tenant ID’. This is your <strong>Tenant ID</strong></li>
+<li>App registrations - New Application Registration</li>
+<li>Type: Web app / API</li>
+<li>Name, URL - enter something, it’s not important</li>
+<li>Note the Application ID - this is your <strong>identity</strong></li>
+<li>Click ‘Settings’ - "Certificates and Secrets" (Keys - Passwords )</li>
+<li>Enter some description and duration and click ‘Save’, it will generate a value. Note that as your <strong>Credentials</strong></li>
+<li>Add permissions</li>
+<li>‘All Services’ -&gt; Subscriptions</li>
+<li>Click on your subscription</li>
+<li>‘Access Controls (IAM)’
+    -‘+ Add’ (‘Add role assignment’)<ul>
+<li>Role - Contributor</li>
+<li>Select - type the application name you created in the previous step</li>
+<li>Click ‘Save’</li>
+</ul>
+</li>
+<li>Register providers</li>
+<li>‘All Services’ -&gt; Subscriptions</li>
+<li>Click on your subscription</li>
+<li>Resource providers</li>
+<li>Search and ‘Register’ the following:<ul>
+<li>Microsoft.Advisor</li>
+<li>Microsoft.Compute</li>
+<li>Microsoft.DevTestLab</li>
+<li>Microsoft.Network</li>
+<li>Microsoft.ResourceHealth</li>
+<li>Microsoft.Security</li>
+<li>Microsoft.Storage</li>
+</ul>
+</li>
+<li>In WebLOAD - Tools - Cloud Options - Add Azure account with the details above</li>
+</ul>
+<h3 id="azure-parameters">Azure Parameters</h3>
+<h4 id="azure-credentials">Azure Credentials</h4>
+<ul>
+<li><strong>Identity (String; Required)</strong>: Can be found in Azure Portal under Azure Active Directory &gt; App registrations &gt; Application ID.</li>
+<li><strong>Credentials (Password; Required)</strong>: The password value generated in Azure Active Directory &gt; App registrations &gt; Keys.</li>
+</ul>
+<h4 id="tenant-and-subscription">Tenant and Subscription</h4>
+<ul>
+<li><strong>Tenant Id (String; Required)</strong>: Can be found in Azure Portal under Azure Active Directory &gt; Properties &gt; Directory ID.</li>
+<li><strong>Subscription Id (String; Required)</strong>: Can be found in Azure Portal under Cost Management + Billing &gt; Subscriptions.</li>
+</ul>
+<h4 id="region-region">Region (Region)</h4>
+<ul>
+<li><strong>Region Name (List; Required)</strong>:</li>
+<li><strong>Values</strong>: eastasia, southeastasia, centralus, eastus, eastus2, westus, northcentralus, southcentralus, northeurope, westeurope, japanwest, japaneast, brazilsouth, australiaeast, australiasoutheast, southindia, centralindia, westindia, canadacentral, canadaeast, uksouth, ukwest, westcentralus, westus2, koreacentral, koreasouth, francecentral</li>
+<li><strong>Default</strong>: westus2</li>
+<li><strong>Description</strong>: Region to run the instance.</li>
+</ul>
+<h3 id="advanced-parameters-azure">Advanced Parameters (Azure)</h3>
+<ul>
+<li><strong>Instance Spec (String)</strong>: Default is <code>osFamily=CENTOS,osVersionMatches=8.3</code>. Specification query for instance.</li>
+<li><strong>Image Publishers (String)</strong>: Default is <code>OpenLogic</code>. Filters images based on publishers.</li>
+<li><strong>Oauth Endpoint (String)</strong>: Custom endpoint URL if required.</li>
+<li><strong>Hardware Id (String)</strong>: Specific hardware ID to use. Example: <code>westus2/Standard_D2as_v4</code>. Use 'list' to get options.</li>
+</ul>
+<h2 id="google-compute-engine-cloud">Google Compute Engine Cloud</h2>
+<ul>
+<li><strong>Description</strong>: Google Compute Engine. Create a project in <a href="https://console.developers.google.com/">Google Console</a>; enable the Google Compute Engine API under APIs and auth &gt; APIs; create new Client ID as Service Account; download a JSON key and note the email address as identity.</li>
+</ul>
+<h3 id="parameters-gcp">Parameters (GCP)</h3>
+<h4 id="credentials-gcp">Credentials (GCP)</h4>
+<ul>
+<li><strong>Identity (String; Required)</strong>: Identity is the service account email address.</li>
+<li><strong>Credentials Path (Password; Required)</strong>: Path to the service account client ID JSON Key file.</li>
+</ul>
+<h4 id="region-gcp">Region (GCP)</h4>
+<ul>
+<li><strong>Region Name (List; Required)</strong>:</li>
+<li><strong>Values</strong>: asia-east1-a, asia-northeast1-a, asia-south1-a, asia-southeast1-a, australia-southeast1-a, europe-north1-a, europe-west1-b, europe-west2-a, europe-west3-a, europe-west4-a, northamerica-northeast1-a, southamerica-east1-a, us-central1-a, us-east1-b, us-east4-a, us-west1-a, us-west2-a</li>
+<li><strong>Default</strong>: us-west1-a</li>
+<li><strong>Description</strong>: Region to run the instance.</li>
+</ul>
+<h4 id="instance-gcp">Instance (GCP)</h4>
+<ul>
+<li><strong>Min Cores (String)</strong>: Default is <code>2</code>. Minimum number of CPU cores the machines should have.</li>
+<li><strong>Min RAM (String)</strong>: Default is <code>8000</code>. Minimum RAM in megabytes the machines should have.</li>
+<li><strong>Min Disk Size (String)</strong>: Minimum disk size in gigabytes the machines should have.</li>
+</ul>
+<h3 id="advanced-parameters-gcp">Advanced Parameters (GCP)</h3>
+<ul>
+<li><strong>Instance Spec (String)</strong>: Default is <code>osFamily=CENTOS,osVersionMatches=8</code>. Specification query for instance.</li>
+<li><strong>Hardware Id (String)</strong>: Specific hardware ID to use. Use 'list' to get the available options.</li>
+<li><strong>Credentials Out Path (String)</strong>: When set, WebLOAD will store the access credentials in the specified path.</li>
+<li><strong>Location Id (String)</strong>: Location inside the region to use.</li>
+<li><strong>Endpoint URL (String)</strong>: Custom endpoint URL if required.</li>
+<li><strong>Network (String)</strong>: Network to use.</li>
+<li><strong>Init Script (String)</strong>: Path to a script file to run when starting the instance. This script is expected to install and start WebLOAD. File must be in UNIX format.</li>
+<li><strong>Cloud Init (String)</strong>: Default is <code>true</code>. Use cloud-init metadata to specify init-script; otherwise, connect using SSH and execute the script.</li>
+<li><strong>Public Key (String)</strong>: Existing SSH public key to authorize.</li>
+<li><strong>SSH User (String)</strong>: SSH user to use.</li>
+<li><strong>SSH Password (String)</strong>: SSH password to use.</li>
+<li><strong>Private Key Path (String)</strong>: Path to the SSH private key to use.</li>
+<li><strong>Key Name (String)</strong>: Key name to use for SSH Key pair access.</li>
+<li><strong>Sudo Command (String)</strong>: Default is <code>sudo</code>. Command to use when needing to run as root.</li>
+<li><strong>Sh-Bang (String)</strong>: Default is <code>#!/bin/bash</code>. The init script's first line.</li>
+<li><strong>Download File Name (String)</strong>: Default is <code>WebLoad-linux-v${VERSION}.${BUILD}.tar.gz</code>. Used by the init script to download files.</li>
+<li><strong>Download URL (String)</strong>: Default is <code>https://radview.s3.amazonaws.com/</code>. Used by the init script as the path to download installation files.</li>
+<li><strong>Async (String)</strong>: Default is <code>true</code>. If <code>true</code>, the machines will start asynchronously.</li>
+<li><strong>Selenium Support (String)</strong>: Default is <code>false</code>. If <code>true</code>, install Google Chrome for Selenium support.</li>
+<li><strong>Security Group Id (String)</strong>: Security group that allows access from the console on ports 9000, 9010. Created on the fly if not specified.</li>
+</ul>
+<h2 id="amazon-ecs-cloud">Amazon ECS Cloud</h2>
+<ul>
+<li><strong>Description</strong>: Amazon Elastic Container Service (ECS) facilitates containerized application deployment and management.</li>
+</ul>
+<h3 id="parameters-ecs">Parameters (ECS)</h3>
+<h4 id="credentials-ecs">Credentials (ECS)</h4>
+<ul>
+<li><strong>Access Key (String; Optional)</strong>: AWS Access Key for authentication.</li>
+<li><strong>Secret Access Key (Password; Optional)</strong>: Matches the Access Key for secure authentication.</li>
+</ul>
+<h4 id="region-ecs">Region (ECS)</h4>
+<ul>
+<li><strong>Region Name (List; Required)</strong>:</li>
+<li><strong>Values</strong>: Includes various global regions for deploying ECS resources.</li>
+<li><strong>Default</strong>: us-east-1</li>
+<li><strong>Description</strong>: Defines the deployment region for containerized resources.</li>
+</ul>
+<h4 id="instance-ecs">Instance (ECS)</h4>
+<ul>
+<li><strong>Subnet Id (String)</strong>: Specifies the subnet for deploying ECS tasks.</li>
+<li><strong>Cluster (String)</strong>: Default is <code>default</code>. Specifies the ECS cluster for resource allocation.</li>
+<li><strong>CPU (String)</strong>: Default is <code>2 vCPU</code>. Configures the number of virtual CPUs.</li>
+<li><strong>Memory (String)</strong>: Default is <code>4 GB</code>. Specifies memory allocation for tasks.</li>
+</ul>
+<h3 id="advanced-parameters-ecs">Advanced Parameters (ECS)</h3>
+<ul>
+<li><strong>Security Group Id (String)</strong>: Defines security settings for task access.</li>
+<li><strong>Execution Role (String)</strong>: Default is <code>ecsTaskExecutionRole</code>. Specifies the role granting API permissions for ECS tasks.</li>
+<li><strong>Image Id (String)</strong>: Default is <code>Default</code>. Indicates a custom Docker image.</li>
+<li><strong>Custom Tag List (String)</strong>: Allows custom tagging of ECS tasks for better organization.</li>
+<li><strong>Proxy Configurations (Multiple Parameters)</strong>: Defines proxy-related configurations for network setups.</li>
+</ul>
+<h2 id="generic-cloud-jclouds-based">Generic Cloud (Jclouds-based)</h2>
+<p>The Jclouds-based Generic Cloud supports various cloud providers and offers flexibility for configuring and managing cloud instances. The cloud implementation allows for interoperability across multiple cloud platforms, including AWS, Azure, Google Compute Engine, and others.</p>
+<h3 id="parameters-generic">Parameters (Generic)</h3>
+<h4 id="cloud-provider-generic">Cloud Provider (Generic)</h4>
+<ul>
+<li><strong>Provider (String; Required)</strong></li>
+<li><strong>Default Value</strong>: <code>aws-ec2</code></li>
+<li><strong>Description</strong>: Specifies the cloud provider. Supported values include:<ul>
+<li>digitalocean2</li>
+<li>elastichosts-lon-b</li>
+<li>elastichosts-lon-p</li>
+<li>elastichosts-sat-p</li>
+<li>go2cloud-jhb1</li>
+<li>gogrid</li>
+<li>openhosting-east1</li>
+<li>profitbricks</li>
+<li>rackspace-cloudservers-uk</li>
+<li>rackspace-cloudservers-us</li>
+<li>serverlove-z1-man</li>
+<li>skalicloud-sdg-my</li>
+<li>softlayer</li>
+<li>byon</li>
+<li>cloudstack</li>
+<li>docker</li>
+<li>ec2</li>
+<li>elasticstack</li>
+<li>stub</li>
+<li>openstack-nova</li>
+<li>openstack-nova-ec2</li>
+<li>aws-ec2</li>
+<li>azurecompute</li>
+<li>azurecompute-arm</li>
+<li>google-compute-engine</li>
+</ul>
+</li>
+</ul>
+<h4 id="credentials-generic">Credentials (Generic)</h4>
+<ul>
+<li><strong>Identity (String; Required)</strong></li>
+<li>
+<p><strong>Description</strong>: Represents the identity used for authentication, such as a username or AWS Access Key.</p>
+</li>
+<li>
+<p><strong>Credentials (Password; Required)</strong></p>
+</li>
+<li><strong>Description</strong>: Password or Secret Access Key associated with the identity.</li>
+</ul>
+<h4 id="region-generic">Region (Generic)</h4>
+<ul>
+<li><strong>Location (String; Required)</strong></li>
+<li><strong>Default Value</strong>: <code>us-east-1</code></li>
+<li><strong>Description</strong>: Specifies the region or availability zone to use. Use <code>list</code> to retrieve the available options.</li>
+</ul>
+<h4 id="instance-generic">Instance (Generic)</h4>
+<ul>
+<li><strong>Min Cores (String; Required)</strong></li>
+<li><strong>Default Value</strong>: <code>2</code></li>
+<li>
+<p><strong>Description</strong>: The minimum number of CPU cores the machine should have.</p>
+</li>
+<li>
+<p><strong>Min RAM (String; Required)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>8000</code></li>
+<li>
+<p><strong>Description</strong>: The minimum amount of RAM (in MB) the machine should have.</p>
+</li>
+<li>
+<p><strong>Min Disk Size (String; Optional)</strong></p>
+</li>
+<li><strong>Description</strong>: The minimum disk size (in GB) the machine should have.</li>
+</ul>
+<h3 id="advanced-parameters-generic">Advanced Parameters (Generic)</h3>
+<h4 id="instance-configuration">Instance Configuration</h4>
+<ul>
+<li><strong>Hardware Id (String; Optional)</strong></li>
+<li>
+<p><strong>Description</strong>: Specifies the hardware ID to use. Use <code>list</code> to get available options.</p>
+</li>
+<li>
+<p><strong>EC2 AMI Query (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>owner-id=137112412989;state=available;image-type=machine</code></li>
+<li>
+<p><strong>Description</strong>: Filters AMIs based on the specified query. Defaults to Amazon-created AMIs.</p>
+</li>
+<li>
+<p><strong>Instance Spec (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>osFamily=AMZN_LINUX,imageNameMatches=amzn-ami.*,minCores=1</code></li>
+<li>
+<p><strong>Description</strong>: Specification query for the instance.</p>
+</li>
+<li>
+<p><strong>Credentials Out Path (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Path to store access credentials generated during setup.</p>
+</li>
+<li>
+<p><strong>Endpoint URL (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Custom endpoint URL, if required.</p>
+</li>
+<li>
+<p><strong>Init Script (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Path to a script file executed during instance initialization. This script is expected to install and configure services. Files must be in UNIX format.</p>
+</li>
+<li>
+<p><strong>Cloud Init (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>false</code></li>
+<li><strong>Description</strong>: When set to <code>true</code>, uses cloud-init metadata to specify the init script. Otherwise, connects using SSH to execute the script.</li>
+</ul>
+<h4 id="authentication">Authentication</h4>
+<ul>
+<li><strong>Public Key (String; Optional)</strong></li>
+<li>
+<p><strong>Description</strong>: An existing SSH public key to authorize.</p>
+</li>
+<li>
+<p><strong>SSH User (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>ec2-user</code></li>
+<li>
+<p><strong>Description</strong>: Specifies the SSH user for accessing the instance.</p>
+</li>
+<li>
+<p><strong>SSH Password (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Password for SSH access.</p>
+</li>
+<li>
+<p><strong>Private Key Path (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Path to the SSH private key for authentication.</p>
+</li>
+<li>
+<p><strong>Install Private Key Path (String; Optional)</strong></p>
+</li>
+<li><strong>Description</strong>: Path to the private key to install for SSH access.</li>
+</ul>
+<h4 id="additional-settings">Additional Settings</h4>
+<ul>
+<li><strong>Key Name (String; Optional)</strong></li>
+<li>
+<p><strong>Description</strong>: Specifies the name of the SSH Key pair.</p>
+</li>
+<li>
+<p><strong>Download File Name (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>WebLoad-linux-v${VERSION}.${BUILD}.tar.gz</code></li>
+<li>
+<p><strong>Description</strong>: File name used for downloading during the initialization process.</p>
+</li>
+<li>
+<p><strong>Download URL (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>https://radview.s3.amazonaws.com/</code></li>
+<li>
+<p><strong>Description</strong>: URL path for downloading installation files.</p>
+</li>
+<li>
+<p><strong>Sh-Bang (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>#!/bin/bash</code></li>
+<li>
+<p><strong>Description</strong>: The first line of the initialization script.</p>
+</li>
+<li>
+<p><strong>Sudo Command (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Command used for running operations as root. Usually not required for AWS.</p>
+</li>
+<li>
+<p><strong>Async (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>true</code></li>
+<li>
+<p><strong>Description</strong>: When set to <code>true</code>, allows the machines to start asynchronously.</p>
+</li>
+<li>
+<p><strong>Selenium Support (String; Optional)</strong></p>
+</li>
+<li><strong>Default Value</strong>: <code>false</code></li>
+<li>
+<p><strong>Description</strong>: When set to <code>true</code>, installs Google Chrome for Selenium testing support.</p>
+</li>
+<li>
+<p><strong>Security Group Id (String; Optional)</strong></p>
+</li>
+<li>
+<p><strong>Description</strong>: Security group allowing access from the console on ports 9000, 9010. Created dynamically if not specified.</p>
+</li>
+<li>
+<p><strong>Network (String; Optional)</strong></p>
+</li>
+<li><strong>Description</strong>: Specifies the network configuration for the instance.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
