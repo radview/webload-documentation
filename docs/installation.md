@@ -286,7 +286,7 @@ This chapter contains the instructions for installing the WebLOAD Load Engine on
 
 > **Important:** The WebLOAD Load Generator will not function properly without the correct paths for the Java libraries. 
 
-
+> **Note:** If you encounter any library errors during setup (such as `libnsl.so.1` or other shared library issues), refer to [WebLOAD 13.4.0 Dependencies Installation Guide](DEPENDENCIES.md) for distribution-specific installation instructions.
 
 ### Running the Load Engine on Linux
 
