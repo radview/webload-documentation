@@ -14,7 +14,9 @@
   {
     "version": "13.2",
     "title": "13.2",
-    "aliases": []
+    "aliases": [
+      "latest\u00a0"
+    ]
   },
   {
     "version": "13.1",
