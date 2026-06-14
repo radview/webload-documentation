@@ -15,6 +15,7 @@ extra:
     provider: mike
 
 markdown_extensions:
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -143,7 +144,8 @@ nav:
     - Appendix C. Running Analytics in Command Line Mode: analytics/appendix_c.md
     - Appendix D. Understanding the Templates: analytics/appendix_d.md
     - Appendix E. Glossary: analytics/glossary.md
-  - Installation: installation.md 
+  - Installation: installation.md
+  - Linux Dependencies: DEPENDENCIES.md
         
 not_in_nav: |
   dashboard/grafana/    

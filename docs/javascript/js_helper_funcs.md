@@ -704,7 +704,7 @@ JUnit style fail - throw error
 | --- | --- | --- |
 | `message` | \*  | to throw |
 
-#### getCorrelationValue(varName, func) → {object}
+#### getCorrelationValue(varName, func) → `{object}`
 
 Get value previously extracted
 
@@ -741,7 +741,7 @@ See:
 
 value or all values
 
-#### pollCorrelationValue(varName, func, timeout) → {object}
+#### pollCorrelationValue(varName, func, timeout) → `{object}`
 
 Get value previously extracted, wait for it if it does not exist. Useful in async situations.
 
@@ -850,7 +850,7 @@ Decoding function - reverse of `escapeXmlBroken`
 
 \- decoded string
 
-#### uuidv4() → {string}
+#### uuidv4() → `{string}`
 
 Generate v4 UUID Universally unique identifier
 

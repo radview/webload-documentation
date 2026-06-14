@@ -6248,7 +6248,7 @@ Enables parsing on an HTML page for all objects not covered by specific parsing 
 * ParseTables (see [*ParseTables (property)* ](#parseonce-property))
 * ParseXML (see [*ParseXML (property)* ](#parsexml-property))
 
-## ParseScripts (property) - **Obsolete / Always Disabled**
+## ParseScripts (property) - **Obsolete / Always Disabled** {#parsescripts-property}
 
 **Former property of Objects**  
 * wlGlobals  
@@ -9096,8 +9096,8 @@ StopClient ([SeverityLevel], [Reason])
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SeverityLevel            | Optionally, specify the  severity level of the error that occurred. The possible values are:<p></p>- WLMinorError. The message is displayed  as a warning message.  <p></p>- WLError. The  message is displayed as an error message. If no severity level is specified, WLMinorError is assumed.  **Note:** Error levels are used for display  in the log window and do not define any logical behavior. |
 | Reason                   | An optional string containing the reason  for stopping the virtual client running the script.  If no reason is specified, a default message is  displayed. See[*Default   Message* ](#default_message)below.                                                                                                                                                                                                     |
-<a name = "default_message"></a>
-**Default Message**
+
+### Default Message {#default_message}
 
 The following default message is displayed when no reason is specified:
 
