@@ -1,7 +1,13 @@
-# WebRM overview
+---
+search:
+  boost: 2
+---
 
-WebRM is the WebLOAD floating-license server. It keeps the licensed resources in
-one central pool so that multiple WebLOAD Consoles can use them as needed.
+# WebRM (WebLOAD Resource Manager) overview
+
+This online WebRM help covers the WebLOAD Resource Manager, also known as the
+WebRM license server. WebRM keeps licensed resources in one central pool so
+that multiple WebLOAD Consoles can use them as needed.
 
 WebRM can be installed on a dedicated Windows machine or on a machine that also
 runs WebLOAD components. The WebRM machine must remain reachable while Consoles

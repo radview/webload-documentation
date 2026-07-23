@@ -9,6 +9,9 @@ theme:
     - navigation.tabs.sticky
     - navigation.instant
     - navigation.sections
+    - search.suggest
+    - search.highlight
+    - search.share
 extra:
   generator: false
   version:
