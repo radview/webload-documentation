@@ -17,7 +17,7 @@ import html
 import json
 import re
 from pathlib import Path
-from typing import Dict, Iterable, List, Sequence
+from typing import Dict, Iterable, List, Sequence, Tuple
 
 from mkdocs.plugins import event_priority
 
@@ -34,17 +34,57 @@ _alias_groups: Sequence[Sequence[str]] = (
         "load machines",
         "agent",
         "agents",
+        "lg",
+        "loadgen",
+        "load gen",
     ),
     ("command line", "command-line", "cli"),
     ("correlate", "correlation"),
     ("dynamic data", "dynamic value", "dynamic values"),
+    ("csv", "comma-separated values", "comma separated values", "data file"),
     ("record", "recording", "capture browser traffic"),
-    ("webrm", "webload resource manager", "license server", "floating license"),
+    (
+        "webrm",
+        "web rm",
+        "webload resource manager",
+        "resource manager",
+        "license server",
+        "floating license",
+    ),
+    (
+        "linux platforms",
+        "supported linux version",
+        "linux system requirements",
+        "rhel",
+        "red hat enterprise linux",
+    ),
     ("performance measurements manager", "performance monitor", "pmm"),
     ("virtual client", "virtual clients", "vc"),
     ("probing client", "probing clients", "pc"),
+    ("javascript", "java script", "js"),
+    ("functional verification testing", "functional test", "fvt"),
 )
 
+_path_boosts: Sequence[Tuple[str, float]] = (
+    # Keep embedded/low-level reference material searchable, but rank focused
+    # WebLOAD task guides above it when both contain the complete query.
+    ("dashboard/grafana/", 0.1),
+    ("javascript/", 0.82),
+    # Prefer the primary product installation guide over component installers.
+    ("installation/", 1.25),
+)
+
+_upstream_search = (
+    "let r=le(e).filter(s=>s.presence!==lunr.Query.presence.PROHIBITED),"
+    "n=this.index.search(e).reduce((s,{ref:o,score:a,matchData:u})=>{"
+)
+_fuzzy_search = (
+    "let r=le(e).filter(s=>s.presence!==lunr.Query.presence.PROHIBITED),"
+    "n=this.index.search(e);if(!n.length&&!/[~:+^-]/.test(e)){"
+    "let s=e.split(/\\s+/).map(o=>{o=o.replace(/\\*$/g,\"\");"
+    "return o.length>=4?`${o}~1`:o}).join(\" \");"
+    "n=this.index.search(s)}n=n.reduce((s,{ref:o,score:a,matchData:u})=>{"
+)
 _upstream_score = (
     "let g=+!c.parent+Object.values(f).filter(l=>l).length/"
     "Object.keys(f).length;s.push(G(A({},c),{score:a*(1+K(g,2)),terms:f}))"
@@ -55,7 +95,7 @@ _coverage_score = (
     "s.push(G(A({},c),{score:a*p*(g===1?1:"
     "K(Math.max(g,.01),4)*1e-3),terms:f}))"
 )
-_worker_marker = "/* WebLOAD full-query coverage ranking v1 */"
+_worker_marker = "/* WebLOAD search relevance and typo fallback v2 */"
 
 
 def _normalize_url(url: str) -> str:
@@ -120,6 +160,13 @@ def _enhance_search_index(index_path: Path) -> None:
         page_entries.setdefault(root, []).append(entry)
 
     for root, grouped_entries in page_entries.items():
+        for prefix, factor in _path_boosts:
+            if root.startswith(prefix):
+                for entry in grouped_entries:
+                    current = float(entry.get("boost", 1))
+                    entry["boost"] = round(current * factor, 4)
+                break
+
         labels = _navigation.get(root)
         if not labels:
             continue
@@ -175,14 +222,17 @@ def _patch_search_worker(site_dir: Path) -> str:
 
     upstream = upstream_workers[0]
     source = upstream.read_text(encoding="utf-8")
-    occurrences = source.count(_upstream_score)
-    if occurrences != 1:
+    score_occurrences = source.count(_upstream_score)
+    search_occurrences = source.count(_upstream_search)
+    if score_occurrences != 1 or search_occurrences != 1:
         raise RuntimeError(
-            "Material search worker ranking code changed: expected one "
-            f"supported scoring expression, found {occurrences}."
+            "Material search worker changed: expected one supported search "
+            f"expression and one scoring expression, found {search_occurrences} "
+            f"and {score_occurrences}."
         )
 
     patched = source.replace(_upstream_score, _coverage_score)
+    patched = patched.replace(_upstream_search, _fuzzy_search)
     patched = re.sub(r"\n?//# sourceMappingURL=.*$", "", patched)
     patched = f"{_worker_marker}\n{patched}\n"
 

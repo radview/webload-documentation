@@ -44,8 +44,28 @@ foreach ($term in @('Linux', 'load generator', 'load engine', 'load machine', 'a
         $linuxSearchText.IndexOf($term, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
     ) "Linux search context is missing the equivalent term '$term'."
 }
+foreach ($term in @('LG')) {
+    Assert-True (
+        $linuxSearchText.IndexOf($term, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
+    ) "Linux search context is missing the discovery term '$term'."
+}
 Assert-True ($linuxSection[0].text -match 'hidden data-search-context="true"') `
     "Generated search context must remain hidden in rendered result snippets."
+Assert-True ([double]$linuxSection[0].boost -eq 1.25) `
+    "The primary installation guide must receive a gentle search boost."
+
+$linuxPlatform = @(
+    $index.docs |
+        Where-Object { $_.location -eq 'installation/#linux-platforms-for-webload-load-machines' }
+)
+Assert-True ($linuxPlatform.Count -eq 1) `
+    "Expected the supported Linux platforms section in the generated search index."
+Assert-True (
+    $linuxPlatform[0].text.IndexOf(
+        'supported Linux version',
+        [System.StringComparison]::OrdinalIgnoreCase
+    ) -ge 0
+) "Linux platform search context is missing the supported-version terminology."
 
 $recorderCorrelation = @(
     $index.docs |
@@ -74,6 +94,31 @@ Assert-True (
         [System.StringComparison]::OrdinalIgnoreCase
     ) -lt 0
 ) "Unrelated JavaScript entries must not inherit page-wide correlation aliases."
+Assert-True ([double]$javascriptDynamicValue[0].boost -eq 0.82) `
+    "Low-level JavaScript reference entries must be ranked below task guides."
+
+$grafanaEntry = @(
+    $index.docs |
+        Where-Object { $_.location -like 'dashboard/grafana/*' } |
+        Select-Object -First 1
+)
+Assert-True ($grafanaEntry.Count -eq 1) `
+    "Expected embedded Grafana reference content in the search index."
+Assert-True ([double]$grafanaEntry[0].boost -eq 0.1) `
+    "Embedded Grafana reference entries must be down-ranked without being hidden."
+
+$webRmOverview = @(
+    $index.docs |
+        Where-Object { $_.location -eq 'webrm/overview/' }
+)
+Assert-True ($webRmOverview.Count -eq 1) `
+    "Expected the WebRM overview in the generated search index."
+Assert-True (
+    $webRmOverview[0].text.IndexOf(
+        'web rm',
+        [System.StringComparison]::OrdinalIgnoreCase
+    ) -ge 0
+) "WebRM search context must support the spaced 'Web RM' spelling."
 
 $homePath = Join-Path $SiteDirectory 'index.html'
 $homeHtml = Get-Content -LiteralPath $homePath -Raw
@@ -89,10 +134,14 @@ Assert-True (Test-Path -LiteralPath $workerPath) `
     "The cache-busted relevance worker '$workerPath' does not exist."
 
 $worker = Get-Content -LiteralPath $workerPath -Raw
-Assert-True ($worker.Contains('WebLOAD full-query coverage ranking v1')) `
+Assert-True ($worker.Contains('WebLOAD search relevance and typo fallback v2')) `
     "The generated search worker is missing the WebLOAD relevance marker."
 Assert-True ($worker.Contains('g===1?1:K(Math.max(g,.01),4)*1e-3')) `
     "The generated search worker is not prioritizing complete query-term coverage."
+Assert-True ($worker.Contains('o=o.replace(/\*$/g,"")')) `
+    "The generated search worker must remove automatic prefix wildcards before fuzzy matching."
+Assert-True ($worker.Contains('o.length>=4?`${o}~1`:o')) `
+    "The generated search worker is missing the safe one-edit typo fallback."
 Assert-True (-not $worker.Contains('score:a*(1+K(g,2))')) `
     "The generated search worker still contains the upstream partial-match scoring."
 
