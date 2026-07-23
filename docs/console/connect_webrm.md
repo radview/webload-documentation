@@ -12,7 +12,8 @@ WebRM controls the following WebLOAD resources:
 - The number of Virtual Clients controlled by all connected Consoles simultaneously.
 - The number of Probing Clients controlled by all connected Consoles simultaneously.
 
-For additional information about WebRM, see the *WebRM User’s Guide*.
+For server installation, licensing, administration, and troubleshooting, see
+the [WebRM guide](../webrm/overview.md).
 
 
 
@@ -32,7 +33,12 @@ WebRM is very straightforward and easy to use. Much of your interaction with Web
 
 ## Requesting Resources from WebRM
 
-Following the configuration of WebLOAD Console to work with WebRM, configure the connection settings by browsing to the machine where the WebRM server resides. (This is described in *WebRM Installation* in the *WebRM User’s Guide*.) When opening your WebLOAD Console, the connection to WebRM occurs automatically. If the Console fails to connect to the WebRM server, the Console will not open.
+Following the configuration of WebLOAD Console to work with WebRM, configure
+the connection settings by browsing to the machine where the WebRM server
+resides. See [Connect WebLOAD Console to WebRM](../webrm/install_configure.md#connect-webload-console-to-webrm).
+When opening your WebLOAD Console, the connection to WebRM occurs
+automatically. If the Console fails to connect to the WebRM server, the Console
+will not open.
 
 **To request resources from WebRM:**
 
@@ -59,6 +65,6 @@ You can easily change the number of resources granted to you.
 
 1. Edit the Virtual Client and Probing Client settings to reflect the new total number of Virtual and Probing clients you need.
 
-
-
+For more information about resource allocation and command-line requests, see
+[Requesting and managing resources](../webrm/resource_management.md).
 
