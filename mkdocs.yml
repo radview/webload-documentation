@@ -91,6 +91,11 @@ nav:
     - Appendix E - WebLOAD Console Error Messages: console/appendix_e.md
     - Appendix F - Reference Materials: console/appendix_f.md
     - Appendix G - Glossary: console/appendix_g.md
+  - WebRM:
+    - Overview: webrm/overview.md
+    - Installing and Configuring WebRM: webrm/install_configure.md
+    - Requesting and Managing Resources: webrm/resource_management.md
+    - Administration and Troubleshooting: webrm/administration.md
   - Dashboard:
     - Introduction: dashboard/introduction.md
     - Installation: dashboard/installation.md

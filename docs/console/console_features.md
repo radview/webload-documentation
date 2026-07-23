@@ -530,7 +530,7 @@ The Tools tab provides the following functions.
 | Search                | Opens the WebLOAD Console Help screen, displaying the Search tab.                               |
 | JavaScript References | Opens the WebLOAD JavaScript Reference Manual Help screen, displaying the Contents tab.         |
 | Scripting Guide       | Opens the WebLOAD Scripting Guide Help screen, displaying the Contents tab.                     |
-| WebRM Help            | Opens the WebRMUsers Help screen, displaying the Contents tab.                                  |
+| WebRM Help            | Opens the installed WebRM Help. The same information is available in the [online WebRM guide](../webrm/overview.md). |
 | License Information   | Opens the RadView License Information dialog box which displays information about your license. |
 
 ### About Button

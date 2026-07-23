@@ -47,7 +47,9 @@ WebLOAD has the following system requirements. WebLOAD Console, WebLOAD Recorder
 
 > **Notes:**
 >
-> WebLOAD components in each major version will work with all other components of the same version. WebLOAD components are not compatible with other components of a different version. Verify that the WebLOAD components have been upgraded to Version 10.0 on all participating hosts. Running WebLOAD Console Version 10.0 with an earlier version of Load Generator (running on different Hosts) may cause unexpected behavior. 
+> WebLOAD components in the same major version work together. Components from
+> incompatible major versions cannot be mixed. Verify that the Console, Load
+> Generators, Probing Clients, and WebRM installations use compatible versions.
 >
 > The WebLOAD license file is limited to the computer system (machine) on which WebLOAD is initially installed. Before installing WebLOAD, make sure you are installing on the machine with which you intend to work. 
 >
@@ -118,9 +120,12 @@ Install the WebLOAD components as follows:
 
 ### Installing WebRM
 
+For complete installation, configuration, licensing, and administration
+guidance, see the [WebRM guide](webrm/overview.md).
+
 **To install WebRM:** 
 
-1. Browse to the location of the `WebRM-10.0.xxx.en.exe` installation file. 
+1. Browse to the location of the `WebRM-<version>.<build>.exe` installation file.
 
 2. Double-click the file. The WebRM Installation Wizard appears. 
 
@@ -142,7 +147,7 @@ Install the WebLOAD components as follows:
 
     ![WebRM Installation Wizard – Select Start Menu Folder](images/webrm_installation_select_start.png)
 
-
+9. Select the Start Menu folder and click **Next**.
 
 10. WebRM begins the installation. When the WebRM installation process is complete, a dialog box appears stating that the WebRM installation has completed successfully. Click **Finish**. 
 
@@ -409,6 +414,9 @@ You can install a trial version of WebLOAD, which provides 50 virtual clients, a
    You can now begin working with the trial version of WebLOAD. 
 
 ### WebRM Server
+
+See [Installing and configuring WebRM](webrm/install_configure.md) for the
+complete server and Console configuration procedure.
 
 The WebRM Server is a stand-alone tool that manages all resource distribution to WebLOAD Console, which is the machine used to run loads in a WebRM environment. It is the method that controls the number of users allowed to access the product concurrently. 
 
