@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Requesting and managing resources
 
 After WebLOAD Console is configured to use WebRM, it connects to the WebRM

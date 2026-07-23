@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # Installing and configuring WebRM
 
 Install WebRM on a Windows machine that is reachable from every WebLOAD Console

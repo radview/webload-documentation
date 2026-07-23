@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 # WebRM administration and troubleshooting
 
 Run WebRM Administration on the WebRM machine. It provides a live view of the
