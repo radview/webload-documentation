@@ -30,7 +30,10 @@ markdown_extensions:
 plugins:
    - swagger-ui-tag
    - material/search
-   
+
+hooks:
+  - hooks/search_relevance.py
+
 nav:
   - Home: index.md
   - Quick Start: quickstart.md

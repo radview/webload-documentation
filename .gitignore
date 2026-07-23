@@ -1,3 +1,5 @@
 deploy.cmd
 serve.cmd
 site/
+__pycache__/
+*.py[cod]
