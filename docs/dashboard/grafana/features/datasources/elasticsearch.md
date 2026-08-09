@@ -27,6 +27,8 @@ Proxy access means that the Grafana backend will proxy all requests from the bro
 
 Direct access is still supported because in some cases it may be useful to access a Data Source directly depending on the use case and topology of Grafana, the user, and the Data Source.
 
+> **Recommendation:** For a cloud-hosted Elasticsearch cluster (for example Elastic Cloud on AWS/Azure/GCP), or any cluster whose configuration you do not control, always select **proxy** access. With direct access the browser queries Elasticsearch itself, and unless the cluster explicitly sends CORS headers every request is blocked by the browser with errors such as `No 'Access-Control-Allow-Origin' header is present` / `net::ERR_FAILED`. Proxy access avoids this entirely and also keeps your Basic Auth credentials on the server instead of in the browser. Note that in proxy mode the machine running the WebLOAD Dashboard server needs outbound network access to the Elasticsearch URL.
+
 ### Direct access
 If you select direct access you must update your Elasticsearch configuration to allow other domains to access
 Elasticsearch from the browser. You do this by specifying these to options in your **elasticsearch.yml** config file.
@@ -41,12 +43,16 @@ Elasticsearch from the browser. You do this by specifying these to options in yo
 Here you can specify a default for the `time field` and specify the name of your elasticsearch index. You can use
 a time pattern for the index name or a wildcard.
 
+If the data source settings include a **Version** field, do not leave it empty — select the highest version offered in the dropdown. An empty or wrong value can produce malformed queries even when the connection itself works.
+
 ## Metric Query editor
 
 ![](../../img/docs/elasticsearch/query_editor.png)
 
 The Elasticsearch query editor allows you to select multiple metrics and group by multiple terms or filters. Use the plus and minus icons to the right to add / remove
 metrics or group bys. Some metrics and group by have options, click the option text to expand the the row to view and edit metric or group by options.
+
+The **Query** field expects **Lucene query string syntax**, for example `host.name:"myserver01"`. Queries written in Kibana's KQL or ES|QL languages (for example `FROM index | WHERE ...`) are not understood by this data source — rewrite them as a Lucene filter and express the aggregation with the Metric and Group by controls (for example Metric = Average of `system.cpu.total.pct`, Group by = Date Histogram on `@timestamp`).
 
 ## Pipeline metrics
 
