@@ -9,6 +9,22 @@ By integrating WebLOAD scripts with Dynatrace you can rapidly resolve and proact
 - Installing Dynatrace on your local computer.
 - In WebLOAD – [Enabling Dynatrace](set_global_opt.md#the-dynatrace-tab) in the **Dynatrace** tab of the **Global Options** window. When Dynatrace is enabled, WebLOAD adds an identifier in all request headers which identifies them as WebLOAD requests.
 
+You can also enable the integration from the script itself, instead of from the **Dynatrace** tab, by adding the following line to the JavaScript code of the script:
+
+```
+wlGlobals.DynaTraceIntegration = true
+```
+
+When the integration is enabled, WebLOAD adds an `x-dynaTrace` header to every request of the script:
+
+```
+x-dynaTrace: NA=<transaction or page name>;SN=<script name>;VU=<virtual client number>;PC=<page context>
+```
+
+`NA` is the name of the transaction that the request belongs to, or the page name when the request is not part of a transaction. `SN` (Script Name) groups together all the requests of one script; in a load session it is reported as `<agenda name>@<load generator name>`. `VU` is the number of the virtual client that sent the request, and `PC` is the page context.
+
+> **Note:** In WebLOAD 13.4 and earlier, requests sent by playback inside the WebLOAD IDE carry an internal engine name in the `SN` field instead of the script name. Requests sent by virtual clients in a load session are not affected. This is corrected in WebLOAD 14.0.0.317 and later.
+
 After integrating WebLOAD with Dynatrace, you can perform the following:
 
 - [Integrating with Dynatrace](#integrating-with-dynatrace)

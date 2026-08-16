@@ -19,6 +19,28 @@ To enable WebLOAD for AppDynamics:
 
 This causes WebLOAD to send extra data upon every request of the script. The extra data identifies the request as a WebLOAD request, lists the name of the currently running script, and lists the name of the corresponding transaction.
 
+The header is named `WebLOAD-TransactionName`, and its value is built from the name of the agenda and the name of the transaction that the request belongs to:
+
+```
+WebLOAD-TransactionName: <agenda name>.<transaction name>
+```
+
+The agenda name appears without its directory path and without its file extension. An agenda saved as `checkout_flow.wlp` therefore sends the following header for a request inside a transaction named `login`:
+
+```
+WebLOAD-TransactionName: checkout_flow.login
+```
+
+A request that is not part of any transaction carries the agenda name alone, with no separator and no transaction name:
+
+```
+WebLOAD-TransactionName: checkout_flow
+```
+
+The value is derived from the agenda and the transaction and cannot be configured. To control the names that AppDynamics displays, name your agendas and transactions accordingly.
+
+> **Note:** In WebLOAD 13.4 and earlier, requests sent by playback inside the WebLOAD IDE carry an internal engine name in this header instead of the agenda name. Requests sent by virtual clients in a load session are not affected. Until you upgrade to WebLOAD 14.0.0.317 or later, where playback in the IDE also sends the agenda name, either run the script as a load session or set the header explicitly with `wlHttp.Header["WebLOAD-TransactionName"]`.
+
 
 
 ## Configuring AppDynamics to Recognize WebLOAD Transactions
