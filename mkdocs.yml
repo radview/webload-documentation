@@ -56,6 +56,14 @@ nav:
     - Appendix F - Integrating with Perfecto Mobile: recorder/appendix_f.md
     - Appendix G - Selenium Integration: recorder/appendix_g.md
     - Appendix H - Glossary: recorder/appendix_h.md
+  - AI Assistant:
+    - Introduction: ai-assistant/introduction.md
+    - Getting Started: ai-assistant/getting_started.md
+    - Creating and Opening Scripts: ai-assistant/creating_scripts.md
+    - Improving Your Script: ai-assistant/improving_scripts.md
+    - Checking Script Readiness: ai-assistant/script_readiness.md
+    - Troubleshooting Replays: ai-assistant/troubleshooting_replays.md
+    - FAQ: ai-assistant/faq.md
   - Scripting:
     - Introduction: scripting/introduction.md
     - Programming your JavaScript Script: scripting/programming_your_javascript.md
