@@ -21,6 +21,17 @@ No. Every script change is presented as a proposal card and applied only
 after you approve it. Applied changes can be reversed with *undo* during
 the current agent session.
 
+**What does the History button do?**
+For a saved Recorder project, **History** keeps a local, per-chat revision
+record of stable script changes observed by the Recorder Agent. You can inspect
+changes or the full file in unified or side-by-side view, rename a displayed
+revision label, and restore an earlier revision after confirmation. History is
+separate from *undo* and *redo*. Its source and diffs remain on the Recorder
+machine and are not sent as AI context or included in the **Save** diagnostic
+package. Starting **New Chat** creates a new history scope and requests removal
+of the previous chat's local history. See [Using the History button](getting_started.md#using-the-history-button)
+for prerequisites, restore safeguards, and screenshots.
+
 **Does my script leave my machine?**
 The recording, replaying, and editing all happen locally, through the
 WebLOAD AI Recorder Agent installed on your machine. To answer your
