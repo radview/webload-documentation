@@ -1,9 +1,9 @@
 # Introduction
 
 The WebLOAD AI Assistant is a chat-based assistant embedded in the WebLOAD
-Recorder. It helps you create, fix, and optimize load test scripts through
-guided recording, correlation, parameterization, validation, and
-troubleshooting — until you reach a script that is ready for a load test.
+Recorder. It helps you create, repair, and improve load test scripts through
+guided recording, correlation, parameterization, validation, configuration,
+and replay troubleshooting.
 
 The assistant guides you through the process and acts only with your
 involvement: every change it proposes to your script is presented for your
@@ -37,6 +37,10 @@ purchase or evaluate the AI Assistant.
   a concrete review of what is present and what is missing.
 - **Troubleshoot replays** — run the script, read the logs and traffic, and
   explain why a replay fails and what to do about it.
+- **Heal existing scripts** — diagnose a script that used to work and propose
+  the smallest supported repair to the active script.
+- **Inspect and update settings** — explain Current Project Options and script
+  `wlGlobals` values, and propose reviewed changes when needed.
 - **Answer questions** — about your script, the Recorder, WebLOAD scripting,
   and the last replay.
 
@@ -61,9 +65,17 @@ The assistant has two parts:
   needed to answer them, to the cloud service and carries out the resulting
   actions locally.
 
+When redaction is enabled, the Recorder Agent applies built-in pattern-based
+rules to recognized sensitive values such as credentials, tokens, cookies,
+email addresses, and phone numbers before context is sent to the cloud service.
+Redaction is enabled by default, but its mode is administrator-configurable.
+Pattern matching cannot guarantee that every sensitive value will be detected.
+Recording and replay remain under the control of the local Recorder; only the
+context needed for the requested AI operation is sent for processing.
+
 An internet connection and a WebLOAD AI account are required. Metered
 operations such as analysis, correlation, and script updates consume usage
 tokens from your organization's purchased balance; heavier operations (such
-as correlation and iterative healing) consume more than lighter ones (such
-as explaining a script). Your current balance is always visible in the chat
-panel's status bar.
+as correlation and repair cycles) consume more than lighter ones (such as
+explaining a script). Your current balance is shown in the chat panel's status
+bar when it is available.

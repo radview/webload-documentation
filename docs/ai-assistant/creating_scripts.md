@@ -5,22 +5,24 @@
 Tell the assistant to record — for example:
 
 - *Record a new script*
-- *Record http://www.example.com*
+- *Record `http://www.example.com`*
 
 If you did not include a URL, the assistant asks for one. It then opens a
 capture browser on that URL and recording begins. Perform your business flow
 in the browser exactly as a real user would — sign in, search, add to cart,
 check out.
 
-While recording, the assistant reports what is being captured. When you are
-done, either:
+When you are done, stop the recording by any of these methods:
 
 - tell the assistant — *stop recording* — or
-- press **Stop** in the Recorder, or simply close the capture browser.
+- press **Stop** in the Recorder; or
+- close the capture browser.
 
 The recorded traffic becomes a WebLOAD script, which appears in the
-Recorder and in the chat's script panel. The assistant summarizes what was
-captured and suggests next steps.
+Recorder and in the chat's script panel. When you stop through chat, the
+assistant reports the captured request count. If you stop in the Recorder or
+close the browser, the assistant confirms the stop; you can then ask it to
+summarize the script and suggest next steps.
 
 ## Opening an existing script
 
@@ -55,3 +57,9 @@ Ask for the change in plain language:
 The assistant shows a proposal card with the exact change. The script is
 modified only after you approve, and an applied change can be reversed with
 *undo*.
+
+The assistant can also make more advanced localized edits when you identify
+the target clearly, such as adding a request, branch, loop, log message,
+timer, counter, or supported request property. Generated code remains
+intended for the WebLOAD JavaScript 1.7 runtime, and every change still goes
+through review and approval.

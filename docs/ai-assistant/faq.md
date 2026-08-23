@@ -11,7 +11,7 @@ to purchase or evaluate it.
 Tokens meter the assistant's work. Every AI-assisted operation consumes
 tokens from your organization's balance — lighter operations such as
 explaining or analyzing a script cost less; heavier ones such as
-correlation and iterative healing cost more. Tokens are consumed for both
+correlation and repair cycles cost more. Tokens are consumed for both
 successful and unsuccessful attempts. The current balance is shown in the
 chat panel's status bar, and your administrator can purchase additional
 tokens.
@@ -33,11 +33,21 @@ outbound data, contact RadView to discuss your deployment options.
 No. The assistant requires an internet connection to the WebLOAD AI cloud
 service. The WebLOAD Recorder itself remains fully usable offline.
 
+**What information is sent to the cloud service?**
+The local Recorder Agent sends the prompt and the script or diagnostic context
+needed for the requested operation. When redaction is enabled, the agent applies
+built-in pattern-based rules to recognized credentials, tokens, cookies, email
+addresses, phone numbers, and credit-card-like numbers. Redaction is enabled by
+default, but administrators can configure its mode, including disabling it.
+Pattern-based redaction cannot guarantee detection of every sensitive value, so
+submit only data that your organization authorizes for AI processing. Recording
+and replay are performed locally. Local script history is not sent as AI
+context.
+
 **Which browsers and sites can it record?**
 The assistant records through the same capture technology as the WebLOAD
-Recorder, in a dedicated capture browser it opens for the session. Anything
-you can record manually in the Recorder, you can record through the
-assistant.
+Recorder, in a dedicated capture browser it opens for the session. It supports
+browser-based HTTP/S flows that the Recorder capture technology can record.
 
 **Do I need to know WebLOAD's JavaScript to use it?**
 No — that is the point. You describe what you want in plain language, and

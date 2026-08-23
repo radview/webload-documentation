@@ -19,6 +19,11 @@ The assistant inspects the script and the last replay and reports:
   credentials, or an uncorrelated session value;
 - the recommended next steps, in order.
 
+A readiness result is evidence-based. If no replay evidence is available, the
+assistant distinguishes what it can verify from the script structure from
+what still needs a replay. A structural review alone is not proof that the
+script runs successfully.
+
 The readiness check is an assessment — it does not change the script. When
 it recommends an improvement, ask for it explicitly (for example, *run
 correlation* or *parameterize the login fields*) and the assistant starts

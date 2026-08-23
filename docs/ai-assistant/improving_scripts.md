@@ -18,14 +18,24 @@ Ask:
 - *Run correlation on the current script*
 - *Fix the session handling in this script*
 
-The assistant replays the script, scans the responses for values that
-appear in later requests, and proposes correlation rules — for example,
-extracting a value from a response body or from a cookie. Review the
-proposed rules and approve to apply them. After applying, replay the script
-to confirm the result; the assistant reports what improved.
+The assistant scans the recorded responses for values that appear in later
+requests and proposes correlation rules — for example, extracting a value
+from a response body or from a cookie. Review the proposed rules and approve
+to apply them. By default, approval also runs a verification replay and
+reports whether the rules resolved the failure or whether more work is
+needed.
 
 If a specific value is the problem, name it: *correlate the SessionId
 value*.
+
+Automatic discovery covers common values found in recorded response bodies and
+cookies. When you identify a specific dynamic value, the assistant can also
+author supported rules from header or regular-expression evidence, and some
+proven encoded-value transformations. Specialized XML, XPath, JSON/JSPath,
+application-specific replacement expressions, and client-side JavaScript cases
+may need additional diagnosis, manual Recorder correlation, or a new recording.
+The assistant reports when the evidence points to an unsupported or missing
+source rather than claiming that correlation is complete.
 
 ## Parameterization
 
@@ -38,6 +48,11 @@ The assistant identifies hardcoded values worth varying — credentials and
 form values that repeat through the script — and proposes replacing them
 with parameters, naming the exact form fields as they appear in the script.
 Approve to apply.
+
+You can also ask for a specific data source or generation method. Supported
+parameter definitions include local CSV data, numeric ranges, random strings,
+and date/time values. Values can advance for each round, each use, or each
+Virtual Client, depending on the requested update policy.
 
 ## Response validations
 
@@ -71,6 +86,20 @@ load test reports timing per step. Ask:
 
 The assistant proposes transaction boundaries based on the recorded flow;
 review the names and boundaries and approve.
+
+## Project and script settings
+
+The assistant can explain two configuration layers that may contain different
+values:
+
+- **Current Project Options** — Recorder settings for the active project.
+- **Script (wlGlobals)** — values written into the script; these values take
+  precedence at run time.
+
+Ask *show the HTTP options* or *which settings can I change?* to inspect both
+layers. Ask for a specific change, such as *set the project HTTP version to
+HTTP/2* or *enable wlGlobals SaveSource*, to receive a settings proposal for
+review before anything is applied.
 
 ## Approving, rejecting, and undoing
 

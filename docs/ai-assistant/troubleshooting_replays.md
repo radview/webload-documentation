@@ -14,6 +14,11 @@ then explains the first failing step and the most likely cause — for
 example, an expired session value that needs correlation, a request the
 server now rejects, or a script error — and recommends the fix.
 
+The diagnosis separates confirmed evidence from inference. When the available
+logs and traffic do not establish a cause, the assistant says that the result
+is inconclusive and recommends the next evidence-gathering step instead of
+presenting a guess as fact.
+
 When the cause is correlation, the assistant can continue directly into the
 correlation workflow; the fix still arrives as a proposal for your
 approval.
@@ -26,9 +31,11 @@ application changed, or an environment moved — say so:
 - *This script used to work — fix it*
 - *Heal this script*
 
-Framing it this way matters: the goal is to restore known-good behavior,
-and the assistant compares what changed rather than diagnosing from
-scratch.
+Framing it this way matters: the goal is to restore known-good behavior. The
+assistant diagnoses the current replay and prefers the smallest in-place
+repair. If the application flow changed too much for a local repair, it can
+guide you through re-recording, but it cannot automatically hold an old and a
+new recording together to compare, merge, or transplant their changes.
 
 ## Common situations
 
@@ -44,6 +51,10 @@ again from the chat panel.
 particular — need the recorded response bodies. If the assistant reports
 that no saved response is available, replay or record the script and ask
 again.
+
+**Expected requests are missing.** The assistant can inspect active Recorder
+URL and content filters before recommending that you change the filters and
+record again.
 
 **Out of tokens.** Metered operations consume your organization's usage
 tokens. If the balance is exhausted, the chat reports it; contact your

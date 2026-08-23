@@ -28,6 +28,15 @@ Click **Sign in** in the chat panel and enter your WebLOAD AI credentials.
 Sign-in is per user: use your own account rather than a shared one, so that
 sessions and usage are attributed correctly.
 
+If your administrator gave you a temporary password, the sign-in panel asks
+you to choose a new password before continuing. If you cannot remember your
+password, click **Forgot Password?**. Use the link in the recovery email or
+enter the one-time code manually. Contact your administrator if no recovery
+message arrives.
+
+Click **Sign out** in the header to clear the saved WebLOAD AI session and
+tokens from the local Recorder Agent.
+
 Once signed in, the status chips at the top of the panel show your session,
 the Recorder connection, the cloud connection, and your organization's token
 balance.
@@ -48,6 +57,11 @@ The assistant also offers quick-start buttons that match your current state —
 for example **Record a new script** when no script is open, or **Replay and
 diagnose** when one is.
 
+While the assistant is working, the **Send** button becomes **Stop**. Click it
+to request cancellation of the current operation. Queued work is removed, but
+an approved change that is already being applied may finish so the Recorder is
+not left partially updated. Stopping does not undo an applied change.
+
 ## How changes are applied
 
 When you ask for a change — correlation, parameterization, validations,
@@ -58,6 +72,13 @@ proposal.
 
 You can undo an applied change by typing *undo* (and restore it with
 *redo*). Undo history is kept for the current agent session.
+
+For a saved project, click **History** to inspect the local revision history,
+view changes side by side, rename a revision label, or restore an earlier
+revision after confirmation. This history is stored only on the Recorder
+machine and is scoped to the current chat. Starting a new chat requests removal
+of the previous chat's local history. If the cleanup cannot be completed, the
+assistant warns you that old local history remains.
 
 ## The script panel
 
