@@ -1129,6 +1129,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Main window controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-assistant-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding assistant status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3868,6 +3883,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Main window controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-assistant-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding assistant status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3990,6 +4020,55 @@ the current chat session, active workflow, Recorder connection, signed-in user,
 and available token balance. <strong>Taken over</strong> means that a newer Assistant window
 now owns the chat. Continue in that window, or reload the older pane to take the
 chat back.</p>
+<h3 id="understanding-assistant-status">Understanding assistant status</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ready</strong></td>
+<td>The pane can accept a request.</td>
+<td>Type a prompt or choose a quick action.</td>
+</tr>
+<tr>
+<td><strong>Working</strong></td>
+<td>The assistant or Recorder is processing the current request.</td>
+<td>Follow the progress message, or use <strong>Stop</strong> to request cancellation.</td>
+</tr>
+<tr>
+<td><strong>Awaiting review</strong></td>
+<td>A proposed change is waiting for your decision.</td>
+<td>Inspect the description and diff, then <strong>Approve</strong> or <strong>Reject</strong> it.</td>
+</tr>
+<tr>
+<td><strong>Stopped</strong></td>
+<td>Cancellation was accepted. A Recorder operation already in progress may still finish safely.</td>
+<td>Read the final message before starting another request.</td>
+</tr>
+<tr>
+<td><strong>Needs attention</strong></td>
+<td>The operation could not continue, such as when sign-in, tokens, Recorder connectivity, or licensing is unavailable.</td>
+<td>Follow the detail shown beside the status and retry after correcting it.</td>
+</tr>
+<tr>
+<td><strong>Not connected</strong></td>
+<td>The pane has no active Recorder Agent chat connection.</td>
+<td>Reconnect or reload the pane. If the Recorder is unavailable, start or restart it.</td>
+</tr>
+<tr>
+<td><strong>Taken over</strong></td>
+<td>A newer Assistant window owns this chat.</td>
+<td>Continue in the newer window, or reload this pane to take ownership.</td>
+</tr>
+</tbody>
+</table>
+<p>An <strong>Expired</strong> proposal belongs to an older chat or turn and cannot be applied.
+Ask again to generate a proposal for the current script.</p>
 <p>The <strong>Pin</strong> icon in the pane's top-right corner controls whether the Recorder
 keeps the pane docked or allows it to auto-hide. The <strong>X</strong> closes the pane; open
 it again from the Recorder's <strong>View</strong> menu.</p>
@@ -4078,9 +4157,17 @@ not left partially updated. Stopping does not undo an applied change.</p>
 <h2 id="how-changes-are-applied">How changes are applied</h2>
 <p>When you ask for a change — correlation, parameterization, validations,
 transactions, or a script edit — the assistant first shows a <strong>proposal
-card</strong> describing exactly what it wants to change. Nothing is written to
-your script until you click <strong>Approve</strong>. Click <strong>Reject</strong> to discard the
-proposal.</p>
+card</strong> describing exactly what it wants to change. For ordinary proposals,
+the script is unchanged until you click <strong>Approve</strong>. Click <strong>Reject</strong> to
+discard the proposal.</p>
+<p>Correlation discovery is the exception during analysis: the Recorder's
+discovery engine may temporarily rewrite the working script while it scans.
+The assistant restores and verifies the pre-discovery source before showing
+the proposal. A correlation card may therefore describe extracted and replaced
+values without a preview diff; approval runs the real apply and verification
+replay. If the original source cannot be restored and verified, no proposal is
+opened. Reload the saved project before replaying, and do not save over the
+good version shown on disk.</p>
 <p>You can undo an applied change by typing <em>undo</em> (and restore it with
 <em>redo</em>). Undo history is kept for the current agent session.</p>
 <p>For a saved project, use <a href="#using-the-history-button">the History button</a> to

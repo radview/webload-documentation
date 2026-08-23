@@ -1174,6 +1174,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpreting the result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#read-only-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Read-only questions
@@ -3781,6 +3790,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpreting the result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#read-only-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Read-only questions
@@ -3816,6 +3834,9 @@ timings. The readiness check reviews all of that in one question.</p>
 <li><em>Review this script</em></li>
 <li><em>What should be improved before I use this script?</em></li>
 </ul>
+<p>When a script is open, the same assessment is available from the
+<strong>Ready for a load test?</strong> quick action:</p>
+<p><img alt="Readiness and improvement quick actions" src="../images/readiness-quick-actions.png" /></p>
 <p>The assistant inspects the script and the last replay and reports:</p>
 <ul>
 <li>what the script already covers — recorded flow, transactions,
@@ -3828,6 +3849,44 @@ timings. The readiness check reviews all of that in one question.</p>
 assistant distinguishes what it can verify from the script structure from
 what still needs a replay. A structural review alone is not proof that the
 script runs successfully.</p>
+<h2 id="interpreting-the-result">Interpreting the result</h2>
+<table>
+<thead>
+<tr>
+<th>Overall status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ready</strong></td>
+<td>The inspected areas pass and sufficient execution evidence supports the conclusion.</td>
+</tr>
+<tr>
+<td><strong>Ready with minor improvements</strong></td>
+<td>No load-test blocker was found, but small maintainability or measurement improvements remain.</td>
+</tr>
+<tr>
+<td><strong>Not ready</strong></td>
+<td>At least one important or critical gap must be addressed before a load test.</td>
+</tr>
+<tr>
+<td><strong>Cannot determine fully</strong></td>
+<td>The available script or replay evidence is incomplete, so readiness cannot be proven yet.</td>
+</tr>
+</tbody>
+</table>
+<p>The evidence basis explains how strong the result is:</p>
+<ul>
+<li><strong>Static only</strong> — based on script structure; replay behavior is still unknown.</li>
+<li><strong>Execution evidence</strong> — based on a replay and its diagnostics.</li>
+<li><strong>Mixed</strong> — combines the current script with available replay evidence.</li>
+</ul>
+<p>Findings are ordered by impact. <strong>Critical</strong> findings block readiness;
+<strong>important</strong> findings materially affect correctness or measurement; <strong>minor</strong>
+findings improve quality without blocking a run; and <strong>informational</strong> findings
+provide context. An area marked <strong>unknown</strong> needs more evidence rather than an
+assumed pass or failure.</p>
 <p>The readiness check is an assessment — it does not change the script. When
 it recommends an improvement, ask for it explicitly (for example, <em>run
 correlation</em> or <em>parameterize the login fields</em>) and the assistant starts

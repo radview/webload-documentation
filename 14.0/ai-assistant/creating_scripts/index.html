@@ -1134,6 +1134,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Recording a new script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recording-a-useful-business-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording a useful business flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-after-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to do after recording
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3814,6 +3838,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Recording a new script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recording-a-useful-business-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording a useful business flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-after-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to do after recording
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3881,6 +3929,29 @@ Recorder and in the chat's script panel. When you stop through chat, the
 assistant reports the captured request count. If you stop in the Recorder or
 close the browser, the assistant confirms the stop; you can then ask it to
 summarize the script and suggest next steps.</p>
+<h3 id="recording-a-useful-business-flow">Recording a useful business flow</h3>
+<ul>
+<li>Start from a stable entry page and complete one recognizable journey, such
+  as sign-in through checkout, rather than mixing unrelated tasks.</li>
+<li>Wait for each business page to finish before moving on. Background polling,
+  telemetry, and static assets may be captured, but they are not substitutes
+  for the business requests the script must replay.</li>
+<li>Use test accounts and test data approved by your organization. Recorded
+  traffic can contain form values, headers, cookies, and session identifiers.</li>
+<li>Finish the flow before stopping. Closing the capture browser is a stop action,
+  not a pause that can be resumed later.</li>
+</ul>
+<h3 id="what-to-do-after-recording">What to do after recording</h3>
+<ol>
+<li>Save the Recorder project so local <a href="../getting_started/#using-the-history-button">script history</a>
+    can identify it safely.</li>
+<li>Choose <strong>Replay and diagnose</strong>. A successful recording is not yet proof that
+    the captured script can replay with a fresh session.</li>
+<li>Apply only the improvements supported by replay evidence, commonly
+    correlation, parameterization, transactions, or response validations.</li>
+<li>Run <strong>Ready for a load test?</strong> after the script replays cleanly to identify
+    remaining quality gaps.</li>
+</ol>
 <h2 id="opening-an-existing-script">Opening an existing script</h2>
 <p>To work on a script you already have:</p>
 <ul>

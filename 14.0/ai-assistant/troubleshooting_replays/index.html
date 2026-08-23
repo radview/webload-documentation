@@ -1206,6 +1206,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reading-a-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading a diagnosis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#healing-a-script-that-used-to-work" class="md-nav__link">
     <span class="md-ellipsis">
       Healing a script that used to work
@@ -3817,6 +3826,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reading-a-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading a diagnosis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#healing-a-script-that-used-to-work" class="md-nav__link">
     <span class="md-ellipsis">
       Healing a script that used to work
@@ -3879,6 +3897,24 @@ presenting a guess as fact.</p>
 <p>When the cause is correlation, the assistant can continue directly into the
 correlation workflow; the fix still arrives as a proposal for your
 approval.</p>
+<h2 id="reading-a-diagnosis">Reading a diagnosis</h2>
+<p>A failed-replay diagnosis uses three fields:</p>
+<ul>
+<li><strong>Location</strong> — the first trustworthy failing request or diagnostic location.
+    If the exact HTTP request cannot be established, the assistant says so.</li>
+<li><strong>Cause</strong> — the evidence-backed failure category and relevant message, or an
+    explicit statement that the cause remains uncertain.</li>
+<li><strong>Next</strong> — one concrete repair workflow or evidence source to inspect next.</li>
+</ul>
+<p>The first answer is intentionally diagnosis-first. For a broad request such as
+<em>heal this script</em>, the assistant may identify the cause and stop before
+proposing a change. Send the named localized follow-up, for example <em>fix the
+undefined LoginCredentials reference</em>, so the repair proposal targets the
+evidence rather than guessing.</p>
+<p>A connection failure, DNS error, timeout, or missing include/data file is
+normally an environment finding, not a reason to rewrite the script. Correct
+the environment or file dependency and replay again before requesting a script
+change.</p>
 <h2 id="healing-a-script-that-used-to-work">Healing a script that used to work</h2>
 <p>If a script that previously replayed correctly has stopped working — the
 application changed, or an environment moved — say so:</p>
@@ -3891,6 +3927,13 @@ assistant diagnoses the current replay and prefers the smallest in-place
 repair. If the application flow changed too much for a local repair, it can
 guide you through re-recording, but it cannot automatically hold an old and a
 new recording together to compare, merge, or transplant their changes.</p>
+<p>When approved correlation rules do not resolve the replay, an explicit goal
+such as <em>continue correlation until it passes</em> can continue through bounded
+correlation iterations. Each material rule change still requires approval and
+is replayed before another iteration is considered. The correlation loop stops
+when the replay passes, progress stops, evidence is inconclusive, an environment
+blocker is found, or the bounded iteration limit is reached. Other healing
+repairs remain diagnosis-first and proceed through explicit, reviewed changes.</p>
 <h2 id="common-situations">Common situations</h2>
 <p><strong>The Recorder is not responding.</strong> The assistant tells you when it cannot
 reach the WebLOAD Recorder. Start the Recorder (or restart it if it is open
