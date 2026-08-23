@@ -74,6 +74,56 @@ it again from the Recorder's **View** menu.
 12. **Send** — sends the typed request. While the assistant is working, this
    button becomes **Stop**, which requests cancellation of the current work.
 
+## Using the History button
+
+**History** keeps a local revision record of the JavaScript source shown by the
+active Recorder document. It captures source changes made by the assistant and
+changes made directly in the Recorder when the Agent observes a stable source
+change. Capture is asynchronous and best-effort, so a history failure never
+blocks a successful Recorder edit. History is separate from the immediate
+*undo* and *redo* commands and is available only for the current chat.
+
+Before using History:
+
+- save the active Recorder project as a `.wlp` or `.wls` file;
+- start or continue an AI Assistant chat; and
+- keep the Recorder connected to synchronize new revisions, rename them, or
+  restore one. Previously captured revisions may still be browsed while the
+  Recorder is temporarily unavailable.
+
+If the project has not been saved, the dialog explains how to enable history:
+
+![History requires a saved Recorder project](images/history-no-saved-project.png)
+
+After revisions have been captured:
+
+1. Click **History** and select a revision under **Git revisions**. Each entry
+  shows its label, shortened revision identifier, capture time, and added or
+  removed line counts.
+2. Choose **Changes only** to inspect changed sections, or **Full file** to
+  include unchanged source around the revision.
+3. Choose **Unified** for one combined diff, or **Side by side** to compare the
+  previous and resulting source in separate columns.
+4. Click **Rename revision** to change its displayed label. Renaming does not
+  change the script, revision identifier, source, or Git ancestry.
+5. To restore an older version, select it and click **Set as active script**.
+  Review the confirmation carefully before continuing.
+
+Restoring does not discard the current source. The assistant captures the
+current script first, applies the selected complete revision through the
+Recorder, verifies the result, and records the restored state as a new
+revision. If the script is restored but that follow-up history commit fails,
+the assistant reports the successful restore with a history warning. Restore
+is refused while recording or replay is active, or when the chat or active
+project changed, or the selected revision is no longer available in the
+current history.
+
+History source and diffs remain on the Recorder machine and are not added to AI
+context or the **Save** diagnostic package. Starting **New Chat** creates a new
+history scope and requests deletion of the previous chat's local history. If
+the project or chat changes while the dialog is open, close and reopen
+**History** before continuing.
+
 ## Signing in
 
 Click **Sign in** in the chat panel and enter your WebLOAD AI credentials.
@@ -125,12 +175,8 @@ proposal.
 You can undo an applied change by typing *undo* (and restore it with
 *redo*). Undo history is kept for the current agent session.
 
-For a saved project, click **History** to inspect the local revision history,
-view changes side by side, rename a revision label, or restore an earlier
-revision after confirmation. This history is stored only on the Recorder
-machine and is scoped to the current chat. Starting a new chat requests removal
-of the previous chat's local history. If the cleanup cannot be completed, the
-assistant warns you that old local history remains.
+For a saved project, use [the History button](#using-the-history-button) to
+inspect, name, compare, and restore local script revisions.
 
 ## The script panel
 
