@@ -64,6 +64,21 @@ and available token balance. **Taken over** means that a newer Assistant window
 now owns the chat. Continue in that window, or reload the older pane to take the
 chat back.
 
+### Understanding assistant status
+
+| Status | Meaning | What to do |
+| --- | --- | --- |
+| **Ready** | The pane can accept a request. | Type a prompt or choose a quick action. |
+| **Working** | The assistant or Recorder is processing the current request. | Follow the progress message, or use **Stop** to request cancellation. |
+| **Awaiting review** | A proposed change is waiting for your decision. | Inspect the description and diff, then **Approve** or **Reject** it. |
+| **Stopped** | Cancellation was accepted. A Recorder operation already in progress may still finish safely. | Read the final message before starting another request. |
+| **Needs attention** | The operation could not continue, such as when sign-in, tokens, Recorder connectivity, or licensing is unavailable. | Follow the detail shown beside the status and retry after correcting it. |
+| **Not connected** | The pane has no active Recorder Agent chat connection. | Reconnect or reload the pane. If the Recorder is unavailable, start or restart it. |
+| **Taken over** | A newer Assistant window owns this chat. | Continue in the newer window, or reload this pane to take ownership. |
+
+An **Expired** proposal belongs to an older chat or turn and cannot be applied.
+Ask again to generate a proposal for the current script.
+
 The **Pin** icon in the pane's top-right corner controls whether the Recorder
 keeps the pane docked or allows it to auto-hide. The **X** closes the pane; open
 it again from the Recorder's **View** menu.
@@ -168,9 +183,18 @@ not left partially updated. Stopping does not undo an applied change.
 
 When you ask for a change — correlation, parameterization, validations,
 transactions, or a script edit — the assistant first shows a **proposal
-card** describing exactly what it wants to change. Nothing is written to
-your script until you click **Approve**. Click **Reject** to discard the
-proposal.
+card** describing exactly what it wants to change. For ordinary proposals,
+the script is unchanged until you click **Approve**. Click **Reject** to
+discard the proposal.
+
+Correlation discovery is the exception during analysis: the Recorder's
+discovery engine may temporarily rewrite the working script while it scans.
+The assistant restores and verifies the pre-discovery source before showing
+the proposal. A correlation card may therefore describe extracted and replaced
+values without a preview diff; approval runs the real apply and verification
+replay. If the original source cannot be restored and verified, no proposal is
+opened. Reload the saved project before replaying, and do not save over the
+good version shown on disk.
 
 You can undo an applied change by typing *undo* (and restore it with
 *redo*). Undo history is kept for the current agent session.

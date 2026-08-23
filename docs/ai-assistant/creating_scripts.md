@@ -24,6 +24,29 @@ assistant reports the captured request count. If you stop in the Recorder or
 close the browser, the assistant confirms the stop; you can then ask it to
 summarize the script and suggest next steps.
 
+### Recording a useful business flow
+
+- Start from a stable entry page and complete one recognizable journey, such
+  as sign-in through checkout, rather than mixing unrelated tasks.
+- Wait for each business page to finish before moving on. Background polling,
+  telemetry, and static assets may be captured, but they are not substitutes
+  for the business requests the script must replay.
+- Use test accounts and test data approved by your organization. Recorded
+  traffic can contain form values, headers, cookies, and session identifiers.
+- Finish the flow before stopping. Closing the capture browser is a stop action,
+  not a pause that can be resumed later.
+
+### What to do after recording
+
+1. Save the Recorder project so local [script history](getting_started.md#using-the-history-button)
+	can identify it safely.
+2. Choose **Replay and diagnose**. A successful recording is not yet proof that
+	the captured script can replay with a fresh session.
+3. Apply only the improvements supported by replay evidence, commonly
+	correlation, parameterization, transactions, or response validations.
+4. Run **Ready for a load test?** after the script replays cleanly to identify
+	remaining quality gaps.
+
 ## Opening an existing script
 
 To work on a script you already have:

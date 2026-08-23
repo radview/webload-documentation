@@ -23,6 +23,27 @@ When the cause is correlation, the assistant can continue directly into the
 correlation workflow; the fix still arrives as a proposal for your
 approval.
 
+## Reading a diagnosis
+
+A failed-replay diagnosis uses three fields:
+
+- **Location** — the first trustworthy failing request or diagnostic location.
+	If the exact HTTP request cannot be established, the assistant says so.
+- **Cause** — the evidence-backed failure category and relevant message, or an
+	explicit statement that the cause remains uncertain.
+- **Next** — one concrete repair workflow or evidence source to inspect next.
+
+The first answer is intentionally diagnosis-first. For a broad request such as
+*heal this script*, the assistant may identify the cause and stop before
+proposing a change. Send the named localized follow-up, for example *fix the
+undefined LoginCredentials reference*, so the repair proposal targets the
+evidence rather than guessing.
+
+A connection failure, DNS error, timeout, or missing include/data file is
+normally an environment finding, not a reason to rewrite the script. Correct
+the environment or file dependency and replay again before requesting a script
+change.
+
 ## Healing a script that used to work
 
 If a script that previously replayed correctly has stopped working — the
@@ -36,6 +57,14 @@ assistant diagnoses the current replay and prefers the smallest in-place
 repair. If the application flow changed too much for a local repair, it can
 guide you through re-recording, but it cannot automatically hold an old and a
 new recording together to compare, merge, or transplant their changes.
+
+When approved correlation rules do not resolve the replay, an explicit goal
+such as *continue correlation until it passes* can continue through bounded
+correlation iterations. Each material rule change still requires approval and
+is replayed before another iteration is considered. The correlation loop stops
+when the replay passes, progress stops, evidence is inconclusive, an environment
+blocker is found, or the bounded iteration limit is reached. Other healing
+repairs remain diagnosis-first and proceed through explicit, reviewed changes.
 
 ## Common situations
 

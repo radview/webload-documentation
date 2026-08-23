@@ -3,8 +3,9 @@
 A raw recording usually replays incorrectly: session IDs expire, tokens
 change, and every Virtual Client submits the same data. The assistant's
 improvement workflows close that gap. Each one follows the same pattern —
-the assistant analyzes the script, shows you a proposal, and applies it only
-after you approve.
+the assistant analyzes the script and evidence, reports when no change is
+needed, or shows a proposal when a supported change is warranted. A durable
+change is applied only after you approve it.
 
 ## Correlation
 
@@ -37,6 +38,21 @@ may need additional diagnosis, manual Recorder correlation, or a new recording.
 The assistant reports when the evidence points to an unsupported or missing
 source rather than claiming that correlation is complete.
 
+### Understanding correlation results
+
+| Result | Meaning | Next step |
+| --- | --- | --- |
+| A proposal appears | Discovery found rules that can affect the current script. | Review the extracted and replaced values, then approve or reject. A preview diff may be unavailable because the Recorder generates the correlated script during apply. |
+| No rules found | Discovery found no supported dynamic value to apply. | No change was made. Use replay diagnostics if the script still fails. |
+| No applicable rules | Dynamic candidates were seen, but their recorded values do not occur in the script, often because the application re-encodes them. | No change was made. Follow the named unresolved value rather than rerunning the same discovery. |
+| Verification replay passes | The resulting script completed one verification replay successfully. | Continue with parameterization, validations, or readiness review. |
+| Verification replay still fails | The rules were applied, but the script is not yet proven runnable. | Read the new failure location and cause. It may require another correlation rule, a missing recording source, a JavaScript transformation, or a different repair workflow. |
+
+Correlation can only discover evidence that was recorded. If the source
+response was filtered out or never saved, adjust the Recorder filters and
+record again. A value computed or assembled by client-side JavaScript may need
+specialized diagnosis rather than another automatic discovery pass.
+
 ## Parameterization
 
 A recorded script submits the same values on every iteration. Ask:
@@ -53,6 +69,19 @@ You can also ask for a specific data source or generation method. Supported
 parameter definitions include local CSV data, numeric ranges, random strings,
 and date/time values. Values can advance for each round, each use, or each
 Virtual Client, depending on the requested update policy.
+
+A broad repeat request such as *parameterize the script* becomes an audit when
+the script already contains parameters. The assistant reports existing
+definitions and remaining hardcoded candidates; name a specific field or group
+to request another change.
+
+One approved proposal creates at most one parameter definition. A CSV-backed
+proposal can cover at most two reviewed columns, keeping related values such as
+username and password on the same row. A larger dataset is completed through
+additional reviewed requests. The generated backing file is local and contains
+the reviewed schema and sample data. Replace it with your own approved data
+before replay while preserving the delimiter, header setting, column names,
+and column order.
 
 ## Response validations
 
@@ -76,6 +105,18 @@ Validations need recorded response content to work from. If the selected
 request has no saved response, the assistant asks you to replay or record
 first — without changing the script.
 
+For multiple pages, the assistant works sequentially: one request and one
+validation per proposal. Approval applies that check and advances to the next
+page; rejection skips only that page. A request without recorded response
+content is also skipped and named in the final summary. When a content-based
+check needs the response source retained, the proposal states that the request
+will enable `SaveSource` together with the validation.
+
+The validation workflow adds or strengthens supported checks; it does not
+currently provide an automatic repair cycle for an existing validation that
+fails during replay. Diagnose the replay first to determine whether the
+application response changed or the expectation itself needs manual review.
+
 ## Transactions
 
 Transactions wrap business steps — *Login*, *Search*, *Checkout* — so the
@@ -84,8 +125,11 @@ load test reports timing per step. Ask:
 - *Add transactions around each business step*
 - *Wrap the login requests in a transaction named "Login"*
 
-The assistant proposes transaction boundaries based on the recorded flow;
-review the names and boundaries and approve.
+The broad **Add transactions** action audits the current boundaries first and
+reports missing or misplaced coverage without changing the script. Ask for a
+specific recommendation, such as *wrap the login requests in Login*, to receive
+a proposal. The assistant can add, rename, or adjust supported boundaries, but
+does not currently remove a transaction through this workflow.
 
 ## Project and script settings
 
@@ -103,7 +147,7 @@ review before anything is applied.
 
 ## Approving, rejecting, and undoing
 
-- Every change arrives as a **proposal card** — the script is untouched
+- Every durable change arrives as a **proposal card** and remains unapplied
   until you click **Approve**.
 - **Reject** discards the proposal. For correlation discovery, which runs
   inside the Recorder, rejecting also restores the script to its
