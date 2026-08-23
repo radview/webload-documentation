@@ -3872,6 +3872,10 @@ the replay traffic with the recorded traffic, and reads the replay logs. It
 then explains the first failing step and the most likely cause — for
 example, an expired session value that needs correlation, a request the
 server now rejects, or a script error — and recommends the fix.</p>
+<p>The diagnosis separates confirmed evidence from inference. When the available
+logs and traffic do not establish a cause, the assistant says that the result
+is inconclusive and recommends the next evidence-gathering step instead of
+presenting a guess as fact.</p>
 <p>When the cause is correlation, the assistant can continue directly into the
 correlation workflow; the fix still arrives as a proposal for your
 approval.</p>
@@ -3882,9 +3886,11 @@ application changed, or an environment moved — say so:</p>
 <li><em>This script used to work — fix it</em></li>
 <li><em>Heal this script</em></li>
 </ul>
-<p>Framing it this way matters: the goal is to restore known-good behavior,
-and the assistant compares what changed rather than diagnosing from
-scratch.</p>
+<p>Framing it this way matters: the goal is to restore known-good behavior. The
+assistant diagnoses the current replay and prefers the smallest in-place
+repair. If the application flow changed too much for a local repair, it can
+guide you through re-recording, but it cannot automatically hold an old and a
+new recording together to compare, merge, or transplant their changes.</p>
 <h2 id="common-situations">Common situations</h2>
 <p><strong>The Recorder is not responding.</strong> The assistant tells you when it cannot
 reach the WebLOAD Recorder. Start the Recorder (or restart it if it is open
@@ -3896,6 +3902,9 @@ again from the chat panel.</p>
 particular — need the recorded response bodies. If the assistant reports
 that no saved response is available, replay or record the script and ask
 again.</p>
+<p><strong>Expected requests are missing.</strong> The assistant can inspect active Recorder
+URL and content filters before recommending that you change the filters and
+record again.</p>
 <p><strong>Out of tokens.</strong> Metered operations consume your organization's usage
 tokens. If the balance is exhausted, the chat reports it; contact your
 administrator to add tokens.</p>

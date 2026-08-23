@@ -3758,7 +3758,7 @@ to purchase or evaluate it.</p>
 Tokens meter the assistant's work. Every AI-assisted operation consumes
 tokens from your organization's balance — lighter operations such as
 explaining or analyzing a script cost less; heavier ones such as
-correlation and iterative healing cost more. Tokens are consumed for both
+correlation and repair cycles cost more. Tokens are consumed for both
 successful and unsuccessful attempts. The current balance is shown in the
 chat panel's status bar, and your administrator can purchase additional
 tokens.</p>
@@ -3766,6 +3766,16 @@ tokens.</p>
 No. Every script change is presented as a proposal card and applied only
 after you approve it. Applied changes can be reversed with <em>undo</em> during
 the current agent session.</p>
+<p><strong>What does the History button do?</strong>
+For a saved Recorder project, <strong>History</strong> keeps a local, per-chat revision
+record of stable script changes observed by the Recorder Agent. You can inspect
+changes or the full file in unified or side-by-side view, rename a displayed
+revision label, and restore an earlier revision after confirmation. History is
+separate from <em>undo</em> and <em>redo</em>. Its source and diffs remain on the Recorder
+machine and are not sent as AI context or included in the <strong>Save</strong> diagnostic
+package. Starting <strong>New Chat</strong> creates a new history scope and requests removal
+of the previous chat's local history. See <a href="../getting_started/#using-the-history-button">Using the History button</a>
+for prerequisites, restore safeguards, and screenshots.</p>
 <p><strong>Does my script leave my machine?</strong>
 The recording, replaying, and editing all happen locally, through the
 WebLOAD AI Recorder Agent installed on your machine. To answer your
@@ -3776,11 +3786,20 @@ outbound data, contact RadView to discuss your deployment options.</p>
 <p><strong>Can I use the assistant offline?</strong>
 No. The assistant requires an internet connection to the WebLOAD AI cloud
 service. The WebLOAD Recorder itself remains fully usable offline.</p>
+<p><strong>What information is sent to the cloud service?</strong>
+The local Recorder Agent sends the prompt and the script or diagnostic context
+needed for the requested operation. When redaction is enabled, the agent applies
+built-in pattern-based rules to recognized credentials, tokens, cookies, email
+addresses, phone numbers, and credit-card-like numbers. Redaction is enabled by
+default, but administrators can configure its mode, including disabling it.
+Pattern-based redaction cannot guarantee detection of every sensitive value, so
+submit only data that your organization authorizes for AI processing. Recording
+and replay are performed locally. Local script history is not sent as AI
+context.</p>
 <p><strong>Which browsers and sites can it record?</strong>
 The assistant records through the same capture technology as the WebLOAD
-Recorder, in a dedicated capture browser it opens for the session. Anything
-you can record manually in the Recorder, you can record through the
-assistant.</p>
+Recorder, in a dedicated capture browser it opens for the session. It supports
+browser-based HTTP/S flows that the Recorder capture technology can record.</p>
 <p><strong>Do I need to know WebLOAD's JavaScript to use it?</strong>
 No — that is the point. You describe what you want in plain language, and
 the assistant does the WebLOAD-specific work. Experienced users can still

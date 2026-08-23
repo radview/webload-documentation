@@ -3843,9 +3843,9 @@
 
 <h1 id="introduction">Introduction</h1>
 <p>The WebLOAD AI Assistant is a chat-based assistant embedded in the WebLOAD
-Recorder. It helps you create, fix, and optimize load test scripts through
-guided recording, correlation, parameterization, validation, and
-troubleshooting — until you reach a script that is ready for a load test.</p>
+Recorder. It helps you create, repair, and improve load test scripts through
+guided recording, correlation, parameterization, validation, configuration,
+and replay troubleshooting.</p>
 <p>The assistant guides you through the process and acts only with your
 involvement: every change it proposes to your script is presented for your
 review, and you decide whether to apply it.</p>
@@ -3875,6 +3875,10 @@ purchase or evaluate the AI Assistant.</p>
   a concrete review of what is present and what is missing.</li>
 <li><strong>Troubleshoot replays</strong> — run the script, read the logs and traffic, and
   explain why a replay fails and what to do about it.</li>
+<li><strong>Heal existing scripts</strong> — diagnose a script that used to work and propose
+  the smallest supported repair to the active script.</li>
+<li><strong>Inspect and update settings</strong> — explain Current Project Options and script
+  <code>wlGlobals</code> values, and propose reviewed changes when needed.</li>
 <li><strong>Answer questions</strong> — about your script, the Recorder, WebLOAD scripting,
   and the last replay.</li>
 </ul>
@@ -3898,12 +3902,19 @@ purchase or evaluate the AI Assistant.</p>
   needed to answer them, to the cloud service and carries out the resulting
   actions locally.</li>
 </ul>
+<p>When redaction is enabled, the Recorder Agent applies built-in pattern-based
+rules to recognized sensitive values such as credentials, tokens, cookies,
+email addresses, and phone numbers before context is sent to the cloud service.
+Redaction is enabled by default, but its mode is administrator-configurable.
+Pattern matching cannot guarantee that every sensitive value will be detected.
+Recording and replay remain under the control of the local Recorder; only the
+context needed for the requested AI operation is sent for processing.</p>
 <p>An internet connection and a WebLOAD AI account are required. Metered
 operations such as analysis, correlation, and script updates consume usage
 tokens from your organization's purchased balance; heavier operations (such
-as correlation and iterative healing) consume more than lighter ones (such
-as explaining a script). Your current balance is always visible in the chat
-panel's status bar.</p>
+as correlation and repair cycles) consume more than lighter ones (such as
+explaining a script). Your current balance is shown in the chat panel's status
+bar when it is available.</p>
 
 
 

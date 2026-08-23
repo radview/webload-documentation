@@ -1123,6 +1123,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#main-window-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main window controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-history-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the History button
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#signing-in" class="md-nav__link">
     <span class="md-ellipsis">
       Signing in
@@ -3844,6 +3862,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#main-window-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main window controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-history-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the History button
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#signing-in" class="md-nav__link">
     <span class="md-ellipsis">
       Signing in
@@ -3915,10 +3951,109 @@
 <p>Open the WebLOAD Recorder. The assistant lives in the <strong>AI Assistant</strong>
 docking pane inside the Recorder window. If the pane is not visible, enable
 it from the Recorder's <strong>View</strong> menu.</p>
+<h2 id="main-window-controls">Main window controls</h2>
+<p>The buttons in the Assistant pane change with the active script and workflow.
+The example below shows the actions offered when a recorded script is open.
+Account-specific values in the status row have been obscured.</p>
+<p><img alt="WebLOAD AI Assistant main-window actions" src="../images/main-window-actions.png" /></p>
+<ol>
+<li><strong>History</strong> — opens the local revision history for the active script. You
+  can compare revisions, rename a revision label, or restore an earlier
+  revision after confirmation.</li>
+<li><strong>Save</strong> — downloads troubleshooting information; it is not the command for
+  saving the Recorder project. The preferred download is a diagnostic package
+  containing the chat transcript, logs, current script, pending changes,
+  replay information, and environment details. If that package cannot be
+  created, the assistant downloads the chat transcript instead. An empty chat
+  has nothing to save. Share either download only through approved support or
+  QA channels.</li>
+<li><strong>New Chat</strong> — starts a fresh conversation and requests removal of the
+  previous chat's local script history.</li>
+<li><strong>Sign out</strong> — signs out of WebLOAD AI and clears the saved cloud session
+  and tokens from the local Recorder Agent.</li>
+<li><strong>Replay and diagnose</strong> — runs the current script, collects replay evidence,
+  and explains the first failure. A proposed repair still requires approval.</li>
+<li><strong>Ready for a load test?</strong> — performs a read-only readiness assessment and
+  lists verified strengths, missing evidence, and recommended next steps.</li>
+<li><strong>Analyze script</strong> — summarizes the current script's requests, flow, and
+  relevant structure without changing it.</li>
+<li><strong>Run correlation</strong> — searches recorded evidence for dynamic values and
+  proposes supported correlation rules for review.</li>
+<li><strong>Parameterize</strong> — audits hardcoded and repeated values. When suitable
+  changes are needed, it may propose parameters and data sources.</li>
+<li><strong>Add transactions</strong> — audits the current transaction boundaries and
+  reports missing or misplaced coverage. Ask it to apply a specific
+  recommendation to receive a proposal for review.</li>
+</ol>
+<p>The status chips above the conversation are indicators, not buttons. They show
+the current chat session, active workflow, Recorder connection, signed-in user,
+and available token balance. <strong>Taken over</strong> means that a newer Assistant window
+now owns the chat. Continue in that window, or reload the older pane to take the
+chat back.</p>
+<p>The <strong>Pin</strong> icon in the pane's top-right corner controls whether the Recorder
+keeps the pane docked or allows it to auto-hide. The <strong>X</strong> closes the pane; open
+it again from the Recorder's <strong>View</strong> menu.</p>
+<p><img alt="WebLOAD AI Assistant chat composer controls" src="../images/chat-composer-controls.png" /></p>
+<ol>
+<li><strong>Microphone</strong> — starts voice input when speech recognition is available.</li>
+<li><strong>Send</strong> — sends the typed request. While the assistant is working, this
+   button becomes <strong>Stop</strong>, which requests cancellation of the current work.</li>
+</ol>
+<h2 id="using-the-history-button">Using the History button</h2>
+<p><strong>History</strong> keeps a local revision record of the JavaScript source shown by the
+active Recorder document. It captures source changes made by the assistant and
+changes made directly in the Recorder when the Agent observes a stable source
+change. Capture is asynchronous and best-effort, so a history failure never
+blocks a successful Recorder edit. History is separate from the immediate
+<em>undo</em> and <em>redo</em> commands and is available only for the current chat.</p>
+<p>Before using History:</p>
+<ul>
+<li>save the active Recorder project as a <code>.wlp</code> or <code>.wls</code> file;</li>
+<li>start or continue an AI Assistant chat; and</li>
+<li>keep the Recorder connected to synchronize new revisions, rename them, or
+  restore one. Previously captured revisions may still be browsed while the
+  Recorder is temporarily unavailable.</li>
+</ul>
+<p>If the project has not been saved, the dialog explains how to enable history:</p>
+<p><img alt="History requires a saved Recorder project" src="../images/history-no-saved-project.png" /></p>
+<p>After revisions have been captured:</p>
+<ol>
+<li>Click <strong>History</strong> and select a revision under <strong>Git revisions</strong>. Each entry
+  shows its label, shortened revision identifier, capture time, and added or
+  removed line counts.</li>
+<li>Choose <strong>Changes only</strong> to inspect changed sections, or <strong>Full file</strong> to
+  include unchanged source around the revision.</li>
+<li>Choose <strong>Unified</strong> for one combined diff, or <strong>Side by side</strong> to compare the
+  previous and resulting source in separate columns.</li>
+<li>Click <strong>Rename revision</strong> to change its displayed label. Renaming does not
+  change the script, revision identifier, source, or Git ancestry.</li>
+<li>To restore an older version, select it and click <strong>Set as active script</strong>.
+  Review the confirmation carefully before continuing.</li>
+</ol>
+<p>Restoring does not discard the current source. The assistant captures the
+current script first, applies the selected complete revision through the
+Recorder, verifies the result, and records the restored state as a new
+revision. If the script is restored but that follow-up history commit fails,
+the assistant reports the successful restore with a history warning. Restore
+is refused while recording or replay is active, or when the chat or active
+project changed, or the selected revision is no longer available in the
+current history.</p>
+<p>History source and diffs remain on the Recorder machine and are not added to AI
+context or the <strong>Save</strong> diagnostic package. Starting <strong>New Chat</strong> creates a new
+history scope and requests deletion of the previous chat's local history. If
+the project or chat changes while the dialog is open, close and reopen
+<strong>History</strong> before continuing.</p>
 <h2 id="signing-in">Signing in</h2>
 <p>Click <strong>Sign in</strong> in the chat panel and enter your WebLOAD AI credentials.
 Sign-in is per user: use your own account rather than a shared one, so that
 sessions and usage are attributed correctly.</p>
+<p>If your administrator gave you a temporary password, the sign-in panel asks
+you to choose a new password before continuing. If you cannot remember your
+password, click <strong>Forgot Password?</strong>. Use the link in the recovery email or
+enter the one-time code manually. Contact your administrator if no recovery
+message arrives.</p>
+<p>Click <strong>Sign out</strong> in the header to clear the saved WebLOAD AI session and
+tokens from the local Recorder Agent.</p>
 <p>Once signed in, the status chips at the top of the panel show your session,
 the Recorder connection, the cloud connection, and your organization's token
 balance.</p>
@@ -3936,6 +4071,10 @@ balance.</p>
 <p>The assistant also offers quick-start buttons that match your current state —
 for example <strong>Record a new script</strong> when no script is open, or <strong>Replay and
 diagnose</strong> when one is.</p>
+<p>While the assistant is working, the <strong>Send</strong> button becomes <strong>Stop</strong>. Click it
+to request cancellation of the current operation. Queued work is removed, but
+an approved change that is already being applied may finish so the Recorder is
+not left partially updated. Stopping does not undo an applied change.</p>
 <h2 id="how-changes-are-applied">How changes are applied</h2>
 <p>When you ask for a change — correlation, parameterization, validations,
 transactions, or a script edit — the assistant first shows a <strong>proposal
@@ -3944,6 +4083,8 @@ your script until you click <strong>Approve</strong>. Click <strong>Reject</stro
 proposal.</p>
 <p>You can undo an applied change by typing <em>undo</em> (and restore it with
 <em>redo</em>). Undo history is kept for the current agent session.</p>
+<p>For a saved project, use <a href="#using-the-history-button">the History button</a> to
+inspect, name, compare, and restore local script revisions.</p>
 <h2 id="the-script-panel">The script panel</h2>
 <p>When a script is loaded, the script panel on the right side of the chat
 shows its current content. From the panel you can copy the script to the

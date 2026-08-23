@@ -1187,6 +1187,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#project-and-script-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project and script settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#approving-rejecting-and-undoing" class="md-nav__link">
     <span class="md-ellipsis">
       Approving, rejecting, and undoing
@@ -3853,6 +3862,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#project-and-script-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project and script settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#approving-rejecting-and-undoing" class="md-nav__link">
     <span class="md-ellipsis">
       Approving, rejecting, and undoing
@@ -3893,13 +3911,22 @@ it in the requests that follow.</p>
 <li><em>Run correlation on the current script</em></li>
 <li><em>Fix the session handling in this script</em></li>
 </ul>
-<p>The assistant replays the script, scans the responses for values that
-appear in later requests, and proposes correlation rules — for example,
-extracting a value from a response body or from a cookie. Review the
-proposed rules and approve to apply them. After applying, replay the script
-to confirm the result; the assistant reports what improved.</p>
+<p>The assistant scans the recorded responses for values that appear in later
+requests and proposes correlation rules — for example, extracting a value
+from a response body or from a cookie. Review the proposed rules and approve
+to apply them. By default, approval also runs a verification replay and
+reports whether the rules resolved the failure or whether more work is
+needed.</p>
 <p>If a specific value is the problem, name it: <em>correlate the SessionId
 value</em>.</p>
+<p>Automatic discovery covers common values found in recorded response bodies and
+cookies. When you identify a specific dynamic value, the assistant can also
+author supported rules from header or regular-expression evidence, and some
+proven encoded-value transformations. Specialized XML, XPath, JSON/JSPath,
+application-specific replacement expressions, and client-side JavaScript cases
+may need additional diagnosis, manual Recorder correlation, or a new recording.
+The assistant reports when the evidence points to an unsupported or missing
+source rather than claiming that correlation is complete.</p>
 <h2 id="parameterization">Parameterization</h2>
 <p>A recorded script submits the same values on every iteration. Ask:</p>
 <ul>
@@ -3910,6 +3937,10 @@ value</em>.</p>
 form values that repeat through the script — and proposes replacing them
 with parameters, naming the exact form fields as they appear in the script.
 Approve to apply.</p>
+<p>You can also ask for a specific data source or generation method. Supported
+parameter definitions include local CSV data, numeric ranges, random strings,
+and date/time values. Values can advance for each round, each use, or each
+Virtual Client, depending on the requested update policy.</p>
 <h2 id="response-validations">Response validations</h2>
 <p>A replay can "pass" while every page returns an error. Validations make
 success measurable. Ask:</p>
@@ -3938,6 +3969,18 @@ load test reports timing per step. Ask:</p>
 </ul>
 <p>The assistant proposes transaction boundaries based on the recorded flow;
 review the names and boundaries and approve.</p>
+<h2 id="project-and-script-settings">Project and script settings</h2>
+<p>The assistant can explain two configuration layers that may contain different
+values:</p>
+<ul>
+<li><strong>Current Project Options</strong> — Recorder settings for the active project.</li>
+<li><strong>Script (wlGlobals)</strong> — values written into the script; these values take
+  precedence at run time.</li>
+</ul>
+<p>Ask <em>show the HTTP options</em> or <em>which settings can I change?</em> to inspect both
+layers. Ask for a specific change, such as <em>set the project HTTP version to
+HTTP/2</em> or <em>enable wlGlobals SaveSource</em>, to receive a settings proposal for
+review before anything is applied.</p>
 <h2 id="approving-rejecting-and-undoing">Approving, rejecting, and undoing</h2>
 <ul>
 <li>Every change arrives as a <strong>proposal card</strong> — the script is untouched
